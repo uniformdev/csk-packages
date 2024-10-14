@@ -5,12 +5,11 @@ const project = resolve(process.cwd(), 'tsconfig.json');
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
   extends: [
-    "plugin:react-hooks/recommended",
+    'plugin:react-hooks/recommended',
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'prettier',
     'turbo',
-    'plugin:@next/next/recommended',
     'plugin:tailwindcss/recommended',
     'plugin:import/recommended',
   ],

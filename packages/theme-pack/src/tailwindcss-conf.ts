@@ -3,4 +3,4 @@ export {
   generateTailwindcssDimensionKeysPattern,
   generateTailwindcssFontKeysPattern,
   generateTailwindcssBorderKeysPattern,
-} from './utils';
+} from '../src/utils';

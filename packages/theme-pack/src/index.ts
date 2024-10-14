@@ -17,7 +17,7 @@ program
   .option('-d, --dimensions', 'dimensions configuration')
   .option('-f, --fonts', 'fonts configuration')
   .option('-b, --borders', 'borders configuration')
-  .action(args => {
+  .action(async args => {
     if (args?.colors) {
       console.info('Pulling colors...');
       buildColors().catch(e => console.error(e));
@@ -36,7 +36,9 @@ program
       return;
     } else {
       console.info('Pulling all tokens...');
-      Promise.all([buildColors(), buildDimensions(), buildFontsStyle(), buildBorders()]).catch(e => console.error(e));
+      for (const action of [buildColors, buildDimensions, buildFontsStyle, buildBorders]) {
+        await action().catch(e => console.error(e));
+      }
       return;
     }
   });
@@ -48,7 +50,7 @@ program
   .option('-d, --dimensions', 'dimensions configuration')
   .option('-f, --fonts', 'fonts configuration')
   .option('-b, --borders', 'borders configuration')
-  .action(args => {
+  .action(async args => {
     if (args?.colors) {
       console.info('Pushing colors...');
       pushColors().catch(e => console.error(e));
@@ -67,7 +69,9 @@ program
       return;
     } else {
       console.info('Pushing all tokens...');
-      Promise.all([pushColors(), pushDimensions(), pushFonts(), pushBorders()]).catch(e => console.error(e));
+      for (const action of [pushColors, pushDimensions, pushFonts, pushBorders]) {
+        await action().catch(e => console.error(e));
+      }
       return;
     }
   });

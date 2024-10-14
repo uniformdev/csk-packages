@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { DEFAULT_TAILWIND_CONF_PATH, TOKEN_FILE } from '../../constants';
-import { checkEnvironmentVariable, getIntegrationAPIURL, getStylesPath, syncSuccessLog } from '../../utils';
+import { DEFAULT_TAILWIND_CONF_PATH, PATH_TO_STYLE_FOLDER, TOKEN_STYLE_FILE } from '../../constants';
+import { checkEnvironmentVariable, fetchTokenValue, syncSuccessLog } from '../../utils';
 
 const REGEX_FONT_URL = /https?:\/\/[^\s'">]+/g;
 const FONT_FAMILY_PREFIX = 'family';
@@ -16,20 +16,14 @@ const generateTailwindcssConfigCustomFont = (customFontKeys: string[]) =>
   Object.fromEntries(customFontKeys.map(customFontKey => [customFontKey, `var(--font-${customFontKey})`]));
 
 export const buildFontsStyle = async () => {
-  checkEnvironmentVariable(TOKEN_FILE.Fonts);
+  if (!checkEnvironmentVariable(TOKEN_STYLE_FILE.Fonts)) return;
 
-  const fontStylesResponse = await fetch(`${getIntegrationAPIURL('getFontStyles')}`, { cache: 'no-cache' });
+  const fontStylesResponse = await fetchTokenValue('getFontStyles', 'resolve=false');
 
-  if (!fontStylesResponse.ok) {
-    throw `${fontStylesResponse.status} ${fontStylesResponse.statusText}`;
-  }
   const fetchedFontStyles = await fontStylesResponse.text();
 
-  const customFontKeysResponse = await fetch(`${getIntegrationAPIURL('getCustomFontKeys')}`, { cache: 'no-cache' });
+  const customFontKeysResponse = await fetchTokenValue('getCustomFontKeys');
 
-  if (!customFontKeysResponse.ok) {
-    throw `${customFontKeysResponse.status} ${customFontKeysResponse.statusText}`;
-  }
   const fetchedCustomFontKeys = await customFontKeysResponse.json();
 
   const tailwindcssConfigFonts = {
@@ -40,6 +34,7 @@ export const buildFontsStyle = async () => {
     ),
     ...generateTailwindcssConfigCustomFont(fetchedCustomFontKeys),
   };
+
   const themeConfigPath = path.resolve(DEFAULT_TAILWIND_CONF_PATH);
   const themeConfig = JSON.parse(fs.readFileSync(themeConfigPath, 'utf8'));
   const updatedThemeConfig = {
@@ -54,8 +49,8 @@ export const buildFontsStyle = async () => {
 
   fs.writeFileSync(themeConfigPath, JSON.stringify(updatedThemeConfig.theme, null, 2), 'utf8');
 
-  const fontsCssPath = path.resolve(...getStylesPath(), `${TOKEN_FILE.Fonts}.css`);
+  const fontsCssPath = path.resolve(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Fonts}.css`);
   fs.writeFileSync(fontsCssPath, fetchedFontStyles, 'utf8');
 
-  syncSuccessLog(TOKEN_FILE.Fonts, 'pulled');
+  syncSuccessLog(TOKEN_STYLE_FILE.Fonts, 'pulled');
 };

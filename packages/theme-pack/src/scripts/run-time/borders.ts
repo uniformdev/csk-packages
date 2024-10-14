@@ -1,13 +1,11 @@
-import { TOKEN_FILE } from '../../constants';
-import { checkEnvironmentVariable, getIntegrationAPIURL, getRootBordersValue, getTokensStyles } from '../../utils';
+import { TOKEN_STYLE_FILE } from '../../constants';
+import { checkEnvironmentVariable, fetchTokenValue, getRootBordersValue, getTokenStyles } from '../../utils';
 
 export const getBorders = async () => {
-  checkEnvironmentVariable(TOKEN_FILE.Borders);
-  const bordersResponse = await fetch(`${getIntegrationAPIURL('getBorders')}`, { cache: 'no-cache' });
-  if (!bordersResponse.ok) {
-    throw `Pull border configuration: ${bordersResponse.status} ${bordersResponse.statusText}`;
-  }
+  if (!checkEnvironmentVariable(TOKEN_STYLE_FILE.Borders)) return;
+
+  const bordersResponse = await fetchTokenValue('getBorders');
   const borders = await bordersResponse.json();
 
-  return getTokensStyles(borders, getRootBordersValue);
+  return getTokenStyles(borders, getRootBordersValue);
 };

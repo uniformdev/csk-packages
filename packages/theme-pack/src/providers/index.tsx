@@ -2,7 +2,7 @@
 import { FC, PropsWithChildren } from 'react';
 import { getColors, getDimensions, getDefaultFont, getBorders } from '../scripts/run-time';
 
-// @ts-ignore: ToDo add types for src
+// @ts-ignore: ToDo add types for rsc
 export const ThemePackProvider: FC<PropsWithChildren> = async ({ children }) => {
   try {
     const [palette, dimensions, defaultFont, borders] = await Promise.all([

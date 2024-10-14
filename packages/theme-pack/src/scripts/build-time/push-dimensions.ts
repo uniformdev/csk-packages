@@ -1,20 +1,14 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { TOKEN_FILE } from '../../constants';
-import {
-  checkEnvironmentVariable,
-  getIntegrationAPIURL,
-  getStylesPath,
-  isCanaryEnvironment,
-  syncSuccessLog,
-} from '../../utils';
+import { IS_CANARY_ENVIRONMENT, PATH_TO_STYLE_FOLDER, TOKEN_STYLE_FILE } from '../../constants';
+import { checkEnvironmentVariable, pushTokenValue, syncSuccessLog } from '../../utils';
 
 const REGEX_DIMENSION_VARS = /--[^:]+: [^;]+;/g;
 
 export const pushDimensions = async () => {
-  checkEnvironmentVariable(TOKEN_FILE.Dimensions, true);
+  checkEnvironmentVariable(TOKEN_STYLE_FILE.Dimensions, true);
 
-  const dimensionsCssPath = path.resolve(...getStylesPath(), `${TOKEN_FILE.Dimensions}.css`);
+  const dimensionsCssPath = path.resolve(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Dimensions}.css`);
 
   const dimensionsCssFile = fs.readFileSync(dimensionsCssPath, 'utf8');
 
@@ -27,19 +21,7 @@ export const pushDimensions = async () => {
     };
   }, {});
 
-  const response = await fetch(`${getIntegrationAPIURL('setDimensions', isCanaryEnvironment ? 'canary' : '')}`, {
-    cache: 'no-cache',
-    method: 'POST',
-    headers: {
-      'x-api-key': process.env.UNIFORM_API_KEY || '',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(dimensions),
-  });
+  await pushTokenValue('setDimensions', JSON.stringify(dimensions), IS_CANARY_ENVIRONMENT);
 
-  if (!response.ok) {
-    throw `${response.status} ${response.statusText}`;
-  }
-
-  syncSuccessLog(TOKEN_FILE.Dimensions, 'pushed');
+  syncSuccessLog(TOKEN_STYLE_FILE.Dimensions, 'pushed');
 };

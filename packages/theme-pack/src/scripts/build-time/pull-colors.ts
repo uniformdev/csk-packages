@@ -1,31 +1,21 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { DEFAULT_TAILWIND_CONF_PATH, TOKEN_FILE } from '../../constants';
-import {
-  checkEnvironmentVariable,
-  getIntegrationAPIURL,
-  getRootSimpleTokensValue,
-  getStylesPath,
-  syncSuccessLog,
-} from '../../utils';
+import { DEFAULT_TAILWIND_CONF_PATH, PATH_TO_STYLE_FOLDER, TOKEN_STYLE_FILE } from '../../constants';
+import { checkEnvironmentVariable, getRootSimpleTokensValue, fetchTokenValue, syncSuccessLog } from '../../utils';
 
 const generateTailwindcssConfigColors = (colors: Record<string, { light: string; dark: string }>) =>
   Object.fromEntries(Object.entries(colors).map(([key]) => [`${key}`, `var(--${key})`]));
 
 export const buildColors = async () => {
-  checkEnvironmentVariable(TOKEN_FILE.Colors);
+  if (!checkEnvironmentVariable(TOKEN_STYLE_FILE.Colors)) return;
 
-  const response = await fetch(`${getIntegrationAPIURL('getColors')}`, { cache: 'no-cache' });
-
-  if (!response.ok) {
-    throw `${response.status} ${response.statusText}`;
-  }
+  const response = await fetchTokenValue('getColors');
 
   const fetchedPalette = await response.json();
 
   const themeConfigPath = path.resolve(DEFAULT_TAILWIND_CONF_PATH);
 
-  const colorsCssPath = path.resolve(...getStylesPath(), `${TOKEN_FILE.Colors}.css`);
+  const colorsCssPath = path.resolve(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Colors}.css`);
 
   const themeConfig = JSON.parse(fs.readFileSync(themeConfigPath, 'utf8'));
 
@@ -47,5 +37,5 @@ export const buildColors = async () => {
 
   fs.writeFileSync(colorsCssPath, cssPalette, 'utf8');
 
-  syncSuccessLog(TOKEN_FILE.Colors, 'pulled');
+  syncSuccessLog(TOKEN_STYLE_FILE.Colors, 'pulled');
 };

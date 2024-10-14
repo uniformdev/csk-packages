@@ -1,21 +1,15 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { DEFAULT_TAILWIND_CONF_PATH, TOKEN_FILE } from '../../constants';
-import {
-  checkEnvironmentVariable,
-  getIntegrationAPIURL,
-  getRootSimpleTokensValue,
-  getStylesPath,
-  syncSuccessLog,
-} from '../../utils';
+import { DEFAULT_TAILWIND_CONF_PATH, PATH_TO_STYLE_FOLDER, TOKEN_STYLE_FILE } from '../../constants';
+import { checkEnvironmentVariable, fetchTokenValue, getRootSimpleTokensValue, syncSuccessLog } from '../../utils';
 
 const generateTailwindcssConfigDimensions = (dimensions: Record<string, { light: string; dark: string }>) =>
   Object.fromEntries(Object.entries(dimensions).map(([key]) => [`${key}`, `var(--${key})`]));
 
 export const buildDimensions = async () => {
-  checkEnvironmentVariable(TOKEN_FILE.Dimensions);
+  if (!checkEnvironmentVariable(TOKEN_STYLE_FILE.Dimensions)) return;
 
-  const response = await fetch(`${getIntegrationAPIURL('getDimensions')}`, { cache: 'no-cache' });
+  const response = await fetchTokenValue('getDimensions');
 
   if (!response.ok) {
     throw `${response.status} ${response.statusText}`;
@@ -25,7 +19,7 @@ export const buildDimensions = async () => {
 
   const themeConfigPath = path.resolve(DEFAULT_TAILWIND_CONF_PATH);
 
-  const dimensionsCssPath = path.resolve(...getStylesPath(), `${TOKEN_FILE.Dimensions}.css`);
+  const dimensionsCssPath = path.resolve(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Dimensions}.css`);
 
   const themeConfig = JSON.parse(fs.readFileSync(themeConfigPath, 'utf8'));
 
@@ -47,5 +41,5 @@ export const buildDimensions = async () => {
 
   fs.writeFileSync(dimensionsCssPath, cssDimensions, 'utf8');
 
-  syncSuccessLog(TOKEN_FILE.Dimensions, 'pulled');
+  syncSuccessLog(TOKEN_STYLE_FILE.Dimensions, 'pulled');
 };

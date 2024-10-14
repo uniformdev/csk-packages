@@ -1,13 +1,11 @@
-import { TOKEN_FILE } from '../../constants';
-import { checkEnvironmentVariable, getIntegrationAPIURL, getTokensStyles } from '../../utils';
+import { TOKEN_STYLE_FILE } from '../../constants';
+import { checkEnvironmentVariable, fetchTokenValue, getTokenStyles } from '../../utils';
 
 export const getDimensions = async () => {
-  checkEnvironmentVariable(TOKEN_FILE.Dimensions);
-  const dimensionsResponse = await fetch(`${getIntegrationAPIURL('getDimensions')}`, { cache: 'no-cache' });
-  if (!dimensionsResponse.ok) {
-    throw `Pull dimension configuration: ${dimensionsResponse.status} ${dimensionsResponse.statusText}`;
-  }
+  if (!checkEnvironmentVariable(TOKEN_STYLE_FILE.Dimensions)) return;
+
+  const dimensionsResponse = await fetchTokenValue('getDimensions');
   const dimensions = await dimensionsResponse.json();
 
-  return getTokensStyles(dimensions);
+  return getTokenStyles(dimensions);
 };

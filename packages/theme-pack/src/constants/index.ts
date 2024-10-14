@@ -1,6 +1,8 @@
+import path from 'node:path';
+
 export const FG_GREEN = '\x1b[32m';
 
-export enum TOKEN_FILE {
+export enum TOKEN_STYLE_FILE {
   Colors = 'colors',
   Dimensions = 'dimensions',
   Fonts = 'fonts',
@@ -20,3 +22,9 @@ export const DEFAULT_INTEGRATION_URL = 'https://theme-pack-2.vercel.app';
 export const DEFAULT_STYLES_PATH = '/src/styles';
 export const DEFAULT_TAILWIND_CONF_PATH = 'tailwind.config.theme.json';
 export const DEFAULT_TAILWIND_UTILITIES_PATH = 'tailwind.utilities.json';
+
+export const PATH_TO_STYLE_FOLDER = path.join(
+  ...(process.env.STYLES_PATH ?? DEFAULT_STYLES_PATH).split('/').filter(Boolean)
+);
+export const IS_CANARY_ENVIRONMENT =
+  !!process.env.UNIFORM_CLI_BASE_URL && process.env.UNIFORM_CLI_BASE_URL.startsWith('https://canary');

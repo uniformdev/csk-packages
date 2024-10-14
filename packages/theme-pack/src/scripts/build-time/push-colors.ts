@@ -1,20 +1,14 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { TOKEN_FILE } from '../../constants';
-import {
-  checkEnvironmentVariable,
-  getIntegrationAPIURL,
-  getStylesPath,
-  isCanaryEnvironment,
-  syncSuccessLog,
-} from '../../utils';
+import { IS_CANARY_ENVIRONMENT, PATH_TO_STYLE_FOLDER, TOKEN_STYLE_FILE } from '../../constants';
+import { checkEnvironmentVariable, pushTokenValue, syncSuccessLog } from '../../utils';
 
 const REGEX_COLOR_VARS = /--[^:]+: [^;]+;/g;
 
 export const pushColors = async () => {
-  checkEnvironmentVariable(TOKEN_FILE.Colors, true);
+  checkEnvironmentVariable(TOKEN_STYLE_FILE.Colors, true);
 
-  const colorsCssPath = path.resolve(...getStylesPath(), `${TOKEN_FILE.Colors}.css`);
+  const colorsCssPath = path.resolve(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Colors}.css`);
 
   const colorsCssFile = fs.readFileSync(colorsCssPath, 'utf8');
 
@@ -27,19 +21,7 @@ export const pushColors = async () => {
     };
   }, {});
 
-  const response = await fetch(`${getIntegrationAPIURL('setColors', isCanaryEnvironment ? 'canary' : '')}`, {
-    cache: 'no-cache',
-    method: 'POST',
-    headers: {
-      'x-api-key': process.env.UNIFORM_API_KEY || '',
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(palette),
-  });
+  await pushTokenValue('setColors', JSON.stringify(palette), IS_CANARY_ENVIRONMENT);
 
-  if (!response.ok) {
-    throw `${response.status} ${response.statusText}`;
-  }
-
-  syncSuccessLog(TOKEN_FILE.Colors, 'pushed');
+  syncSuccessLog(TOKEN_STYLE_FILE.Colors, 'pushed');
 };

@@ -1,13 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { DEFAULT_TAILWIND_UTILITIES_PATH, TOKEN_FILE } from '../../constants';
-import {
-  checkEnvironmentVariable,
-  getIntegrationAPIURL,
-  getRootBordersValue,
-  getStylesPath,
-  syncSuccessLog,
-} from '../../utils';
+import { DEFAULT_TAILWIND_UTILITIES_PATH, TOKEN_STYLE_FILE, PATH_TO_STYLE_FOLDER } from '../../constants';
+import { checkEnvironmentVariable, fetchTokenValue, getRootBordersValue, syncSuccessLog } from '../../utils';
 
 const generateTailwindcssUtilitiesBorders = (
   borders: Record<string, { color: string; width: string; radius: string; style: string }>
@@ -25,19 +19,15 @@ const generateTailwindcssUtilitiesBorders = (
   }, {});
 
 export const buildBorders = async () => {
-  checkEnvironmentVariable(TOKEN_FILE.Borders);
+  if (!checkEnvironmentVariable(TOKEN_STYLE_FILE.Borders)) return;
 
-  const response = await fetch(`${getIntegrationAPIURL('getBorders')}`, { cache: 'no-cache' });
-
-  if (!response.ok) {
-    throw `${response.status} ${response.statusText}`;
-  }
+  const response = await fetchTokenValue('getBorders');
 
   const fetchedBorders = await response.json();
 
   const utilitiesPath = path.resolve(DEFAULT_TAILWIND_UTILITIES_PATH);
 
-  const bordersCssPath = path.resolve(...getStylesPath(), `${TOKEN_FILE.Borders}.css`);
+  const bordersCssPath = path.resolve(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Borders}.css`);
 
   const utilities = JSON.parse(fs.readFileSync(utilitiesPath, 'utf8'));
 
@@ -51,5 +41,5 @@ export const buildBorders = async () => {
 
   fs.writeFileSync(bordersCssPath, cssBorders, 'utf8');
 
-  syncSuccessLog(TOKEN_FILE.Borders, 'pulled');
+  syncSuccessLog(TOKEN_STYLE_FILE.Borders, 'pulled');
 };
