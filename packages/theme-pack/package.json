@@ -1,0 +1,50 @@
+{
+  "name": "@trsergey/theme-pack",
+  "version": "1.0.15",
+  "description": "Theme Pack command line interface tool",
+  "main": "./cli.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "default": "./cli.js"
+    },
+    "./tailwindcss-conf": {
+      "types": "./dist/tailwindcss-conf.d.mts",
+      "default": "./dist/tailwindcss-conf.mjs"
+    },
+    "./components": {
+      "types": "./dist/components.d.mts",
+      "default": "./dist/components.mjs"
+    }
+  },
+  "types": "./dist/index.d.mts",
+  "scripts": {
+    "theme-pack": "node ./cli.js",
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rimraf dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint \"src/**/*.{js,ts,tsx}\"",
+    "format": "prettier --write \"src/**/*.{js,ts,tsx}\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^9.0.0"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "tsup": "^8.3.0"
+  },
+  "bin": {
+    "theme-pack": "./cli.js"
+  },
+  "files": [
+    "/dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

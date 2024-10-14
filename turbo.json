@@ -1,0 +1,28 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": [".next/**", "!.next/cache/**"]
+    },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    }
+  },
+  "globalEnv": [
+    "UNIFORM_API_KEY",
+    "UNIFORM_CLI_BASE_URL",
+    "UNIFORM_PROJECT_ID",
+    "UNIFORM_PREVIEW_SECRET",
+    "UNIFORM_CLI_BASE_EDGE_URL",
+    "NODE_ENV",
+    "INTEGRATION_URL",
+    "STYLES_PATH",
+    "DEV_MODE"
+  ]
+}

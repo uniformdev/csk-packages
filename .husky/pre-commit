@@ -1,0 +1,26 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npx lint-staged
+
+TMP=$(git show origin/develop:"package.json" | grep '"version":' | sed 's/.*"version": "/''/' | sed 's/",/''/')
+echo "git develop package.json version is: $TMP"
+#get current version
+CURR=$(git show HEAD:"package.json" | grep '"version":' | sed 's/.*"version": "/''/' | sed 's/",/''/')
+echo "git HEAD package.json verson is: $CURR"
+NEW=$(echo $TMP | awk '{split($0,tmp,"."); print tmp[1]"."tmp[2]"."tmp[3]+1}')
+
+cd apps/csk-v-next
+npm --no-git-tag-version --allow-same-version version ${NEW}
+git add package.json
+
+cd ../../packages/theme-pack
+npm --no-git-tag-version --allow-same-version version ${NEW}
+git add package.json
+
+cd ../../
+npm --no-git-tag-version --allow-same-version version ${NEW}
+git add package.json
+git add package-lock.json
+
+exit 0
