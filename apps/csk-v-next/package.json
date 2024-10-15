@@ -1,6 +1,6 @@
 {
   "name": "csk-v-next",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "private": true,
   "engines": {
     "yarn": "please-use-npm",
@@ -17,9 +17,9 @@
     "lint:fix": "next lint --fix",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prepare": "husky",
-    "init": "run-s uniform:push:palette uniform:push:dimensions uniform:push:fonts uniform:push:borders uniform:push:content uniform:publish:manifest",
-    "uniform:pull:palette": "theme-pack pull -c",
-    "uniform:push:palette": "theme-pack push -c",
+    "init": "run-s uniform:push:tokens uniform:push:content uniform:publish:manifest",
+    "uniform:pull:colors": "theme-pack pull -c",
+    "uniform:push:colors": "theme-pack push -c",
     "uniform:pull:dimensions": "theme-pack pull -d",
     "uniform:push:dimensions": "theme-pack push -d",
     "uniform:pull:fonts": "theme-pack pull -f",
