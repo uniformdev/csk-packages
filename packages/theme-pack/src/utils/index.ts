@@ -29,6 +29,9 @@ export const fetchTokenValue = (endPoint: string, ...queryParams: string[]) =>
     if (!response.ok) {
       throw `${response.status} ${response.statusText}`;
     }
+    if (response.status === 204) {
+      throw `${response.status} ${response.statusText}: It looks like the current token configuration hasn't been set up yet.`;
+    }
     return response;
   });
 

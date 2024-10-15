@@ -9,6 +9,11 @@ const generateTailwindcssConfigColors = (colors: Record<string, { light: string;
 export const buildColors = async () => {
   if (!checkEnvironmentVariable(TOKEN_STYLE_FILE.Colors)) return;
 
+  if (!fs.existsSync(PATH_TO_STYLE_FOLDER)) {
+    console.error(`No such directory for style files: ${PATH_TO_STYLE_FOLDER}`);
+    return;
+  }
+
   const response = await fetchTokenValue('getColors');
 
   const fetchedPalette = await response.json();
@@ -17,7 +22,9 @@ export const buildColors = async () => {
 
   const colorsCssPath = path.resolve(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Colors}.css`);
 
-  const themeConfig = JSON.parse(fs.readFileSync(themeConfigPath, 'utf8'));
+  const themeConfig = !fs.existsSync(themeConfigPath)
+    ? undefined
+    : JSON.parse(fs.readFileSync(themeConfigPath, 'utf8'));
 
   const tailwindcssColors = generateTailwindcssConfigColors(fetchedPalette);
 

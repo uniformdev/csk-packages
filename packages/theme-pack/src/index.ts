@@ -37,7 +37,12 @@ program
     } else {
       console.info('Pulling all tokens...');
       for (const action of [buildColors, buildDimensions, buildFontsStyle, buildBorders]) {
-        await action().catch(e => console.error(e));
+        try {
+          await action();
+        } catch (e) {
+          console.error(e);
+          return;
+        }
       }
       return;
     }
@@ -70,7 +75,12 @@ program
     } else {
       console.info('Pushing all tokens...');
       for (const action of [pushColors, pushDimensions, pushFonts, pushBorders]) {
-        await action().catch(e => console.error(e));
+        try {
+          await action();
+        } catch (e) {
+          console.error(e);
+          return;
+        }
       }
       return;
     }

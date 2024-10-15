@@ -15,13 +15,20 @@ export const buildDimensions = async () => {
     throw `${response.status} ${response.statusText}`;
   }
 
+  if (!fs.existsSync(PATH_TO_STYLE_FOLDER)) {
+    console.error(`No such directory for style files: ${PATH_TO_STYLE_FOLDER}`);
+    return;
+  }
+
   const fetchedDimensions = await response.json();
 
   const themeConfigPath = path.resolve(DEFAULT_TAILWIND_CONF_PATH);
 
   const dimensionsCssPath = path.resolve(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Dimensions}.css`);
 
-  const themeConfig = JSON.parse(fs.readFileSync(themeConfigPath, 'utf8'));
+  const themeConfig = !fs.existsSync(themeConfigPath)
+    ? undefined
+    : JSON.parse(fs.readFileSync(themeConfigPath, 'utf8'));
 
   const tailwindcssDimensions = generateTailwindcssConfigDimensions(fetchedDimensions);
 

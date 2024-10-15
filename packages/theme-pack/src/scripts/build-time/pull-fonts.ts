@@ -18,6 +18,11 @@ const generateTailwindcssConfigCustomFont = (customFontKeys: string[]) =>
 export const buildFontsStyle = async () => {
   if (!checkEnvironmentVariable(TOKEN_STYLE_FILE.Fonts)) return;
 
+  if (!fs.existsSync(PATH_TO_STYLE_FOLDER)) {
+    console.error(`No such directory for style files: ${PATH_TO_STYLE_FOLDER}`);
+    return;
+  }
+
   const fontStylesResponse = await fetchTokenValue('getFontStyles', 'resolve=false');
 
   const fetchedFontStyles = await fontStylesResponse.text();
@@ -36,7 +41,9 @@ export const buildFontsStyle = async () => {
   };
 
   const themeConfigPath = path.resolve(DEFAULT_TAILWIND_CONF_PATH);
-  const themeConfig = JSON.parse(fs.readFileSync(themeConfigPath, 'utf8'));
+  const themeConfig = !fs.existsSync(themeConfigPath)
+    ? undefined
+    : JSON.parse(fs.readFileSync(themeConfigPath, 'utf8'));
   const updatedThemeConfig = {
     theme: {
       ...themeConfig.theme,

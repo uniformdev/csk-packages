@@ -21,6 +21,11 @@ const generateTailwindcssUtilitiesBorders = (
 export const buildBorders = async () => {
   if (!checkEnvironmentVariable(TOKEN_STYLE_FILE.Borders)) return;
 
+  if (!fs.existsSync(PATH_TO_STYLE_FOLDER)) {
+    console.error(`No such directory for style files: ${PATH_TO_STYLE_FOLDER}`);
+    return;
+  }
+
   const response = await fetchTokenValue('getBorders');
 
   const fetchedBorders = await response.json();
@@ -29,7 +34,9 @@ export const buildBorders = async () => {
 
   const bordersCssPath = path.resolve(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Borders}.css`);
 
-  const utilities = JSON.parse(fs.readFileSync(utilitiesPath, 'utf8'));
+  const utilities = !fs.existsSync(utilitiesPath)
+    ? undefined
+    : JSON.parse(fs.readFileSync(utilitiesPath, 'utf8') || '{}');
 
   const tailwindcssBorders = generateTailwindcssUtilitiesBorders(fetchedBorders);
 

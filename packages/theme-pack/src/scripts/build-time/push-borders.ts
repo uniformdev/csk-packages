@@ -8,7 +8,14 @@ const REGEX_BORDER_VARS = /--[^:]+: [^;]+;/g;
 export const pushBorders = async () => {
   checkEnvironmentVariable(TOKEN_STYLE_FILE.Borders, true);
 
-  const bordersCssPath = path.resolve(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Borders}.css`);
+  const pathToStyleFile = path.join(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Borders}.css`);
+
+  if (!fs.existsSync(PATH_TO_STYLE_FOLDER)) {
+    console.error(`No such file with styles : ${pathToStyleFile}`);
+    return;
+  }
+
+  const bordersCssPath = path.resolve(pathToStyleFile);
 
   const bordersCssFile = fs.readFileSync(bordersCssPath, 'utf8');
 

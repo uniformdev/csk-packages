@@ -8,7 +8,14 @@ const REGEX_DIMENSION_VARS = /--[^:]+: [^;]+;/g;
 export const pushDimensions = async () => {
   checkEnvironmentVariable(TOKEN_STYLE_FILE.Dimensions, true);
 
-  const dimensionsCssPath = path.resolve(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Dimensions}.css`);
+  const pathToStyleFile = path.join(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Dimensions}.css`);
+
+  if (!fs.existsSync(PATH_TO_STYLE_FOLDER)) {
+    console.error(`No such file with styles : ${pathToStyleFile}`);
+    return;
+  }
+
+  const dimensionsCssPath = path.resolve(pathToStyleFile);
 
   const dimensionsCssFile = fs.readFileSync(dimensionsCssPath, 'utf8');
 

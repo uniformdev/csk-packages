@@ -8,7 +8,14 @@ const REGEX_COLOR_VARS = /--[^:]+: [^;]+;/g;
 export const pushColors = async () => {
   checkEnvironmentVariable(TOKEN_STYLE_FILE.Colors, true);
 
-  const colorsCssPath = path.resolve(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Colors}.css`);
+  const pathToStyleFile = path.join(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Colors}.css`);
+
+  if (!fs.existsSync(PATH_TO_STYLE_FOLDER)) {
+    console.error(`No such file with styles : ${pathToStyleFile}`);
+    return;
+  }
+
+  const colorsCssPath = path.resolve(pathToStyleFile);
 
   const colorsCssFile = fs.readFileSync(colorsCssPath, 'utf8');
 
