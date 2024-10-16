@@ -1,6 +1,6 @@
 import { UniformPlayground, UniformPlaygroundProps } from '@uniformdev/canvas-next-rsc';
+import { ThemePackProvider } from '@uniformdev/theme-pack/components';
 import resolveComponent from '@/components';
-import { ThemePackProvider } from '@trsergey/theme-pack/components';
 
 export default async function PlaygroundPage(props: { searchParams: UniformPlaygroundProps['searchParams'] }) {
   return (
