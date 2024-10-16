@@ -2,18 +2,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { DEFAULT_TAILWIND_CONF_PATH, PATH_TO_STYLE_FOLDER, TOKEN_STYLE_FILE } from '../../constants';
 import { checkEnvironmentVariable, fetchTokenValue, syncSuccessLog } from '../../utils';
+import { getFontUrl, getRootFontsValue } from '../../utils/getTokenStyles';
 
-const REGEX_FONT_URL = /https?:\/\/[^\s'">]+/g;
-const FONT_FAMILY_PREFIX = 'family';
-const GF_SUFFIX = '_GF_';
-
-const getFontName = (fontKey: string) => (fontKey.split(':')[0] || fontKey).replaceAll(GF_SUFFIX, '');
-
-const generateTailwindcssConfigFontStyles = (links: string[]) =>
-  Object.fromEntries(links.map(link => [`${getFontName(link).toLowerCase().replaceAll(' ', '-')}`, getFontName(link)]));
-
-const generateTailwindcssConfigCustomFont = (customFontKeys: string[]) =>
-  Object.fromEntries(customFontKeys.map(customFontKey => [customFontKey, `var(--font-${customFontKey})`]));
+const generateTailwindcssConfigFonts = (fonts: Record<string, string>) =>
+  Object.fromEntries(Object.entries(fonts).map(([key]) => [`${key}`, `var(--${key})`]));
 
 export const buildFontsStyle = async () => {
   if (!checkEnvironmentVariable(TOKEN_STYLE_FILE.Fonts)) return;
@@ -23,41 +15,36 @@ export const buildFontsStyle = async () => {
     return;
   }
 
-  const fontStylesResponse = await fetchTokenValue('getFontStyles', 'resolve=false');
+  const fontsResponse = await fetchTokenValue('getFonts');
+  const defaultFontKeyResponse = await fetchTokenValue('getDefaultFont');
 
-  const fetchedFontStyles = await fontStylesResponse.text();
+  const fetchedFonts = await fontsResponse.json();
+  const fetchedDefaultFontKey = await defaultFontKeyResponse.text();
 
-  const customFontKeysResponse = await fetchTokenValue('getCustomFontKeys');
-
-  const fetchedCustomFontKeys = await customFontKeysResponse.json();
-
-  const tailwindcssConfigFonts = {
-    ...generateTailwindcssConfigFontStyles(
-      [...fetchedFontStyles.matchAll(REGEX_FONT_URL)]
-        .map(([firstItem]) => new URL(firstItem).searchParams.getAll(FONT_FAMILY_PREFIX))
-        .flat()
-    ),
-    ...generateTailwindcssConfigCustomFont(fetchedCustomFontKeys),
-  };
+  const tailwindcssFonts = generateTailwindcssConfigFonts(fetchedFonts);
 
   const themeConfigPath = path.resolve(DEFAULT_TAILWIND_CONF_PATH);
   const themeConfig = !fs.existsSync(themeConfigPath)
     ? undefined
     : JSON.parse(fs.readFileSync(themeConfigPath, 'utf8'));
+
   const updatedThemeConfig = {
     theme: {
       ...themeConfig.theme,
       extend: {
         ...themeConfig.extend,
-        fontFamily: tailwindcssConfigFonts,
+        fontFamily: tailwindcssFonts,
       },
     },
   };
 
+  const cssFonts = getRootFontsValue(fetchedFonts, fetchedDefaultFontKey);
+  const fontUrl = getFontUrl(fetchedFonts);
+
   fs.writeFileSync(themeConfigPath, JSON.stringify(updatedThemeConfig.theme, null, 2), 'utf8');
 
   const fontsCssPath = path.resolve(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Fonts}.css`);
-  fs.writeFileSync(fontsCssPath, fetchedFontStyles, 'utf8');
+  fs.writeFileSync(fontsCssPath, `${fontUrl}${cssFonts}`, 'utf8');
 
   syncSuccessLog(TOKEN_STYLE_FILE.Fonts, 'pulled');
 };
