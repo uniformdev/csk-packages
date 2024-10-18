@@ -10,14 +10,12 @@ export const pushDimensions = async () => {
 
   const pathToStyleFile = path.join(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Dimensions}.css`);
 
-  if (!fs.existsSync(PATH_TO_STYLE_FOLDER)) {
-    console.error(`No such file with styles : ${pathToStyleFile}`);
+  if (!fs.existsSync(pathToStyleFile)) {
+    console.error(`No such file with styles: ${pathToStyleFile}`);
     return;
   }
 
-  const dimensionsCssPath = path.resolve(pathToStyleFile);
-
-  const dimensionsCssFile = fs.readFileSync(dimensionsCssPath, 'utf8');
+  const dimensionsCssFile = fs.readFileSync(path.resolve(pathToStyleFile), 'utf8');
 
   const dimensions = dimensionsCssFile.match(REGEX_DIMENSION_VARS)?.reduce((acc, line) => {
     const [key, value] = line.split(':');

@@ -10,14 +10,12 @@ export const pushBorders = async () => {
 
   const pathToStyleFile = path.join(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Borders}.css`);
 
-  if (!fs.existsSync(PATH_TO_STYLE_FOLDER)) {
-    console.error(`No such file with styles : ${pathToStyleFile}`);
+  if (!fs.existsSync(pathToStyleFile)) {
+    console.error(`No such file with styles: ${pathToStyleFile}`);
     return;
   }
 
-  const bordersCssPath = path.resolve(pathToStyleFile);
-
-  const bordersCssFile = fs.readFileSync(bordersCssPath, 'utf8');
+  const bordersCssFile = fs.readFileSync(path.resolve(pathToStyleFile), 'utf8');
 
   const borders = bordersCssFile
     .match(REGEX_BORDER_VARS)

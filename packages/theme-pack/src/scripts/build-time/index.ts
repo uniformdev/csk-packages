@@ -9,3 +9,6 @@ export { pushFonts } from './push-fonts';
 
 export { buildBorders } from './pull-borders';
 export { pushBorders } from './push-borders';
+
+export { buildAllowedGroups } from './pull-allowedGroups';
+export { pushAllowedGroups } from './push-allowedGroups';

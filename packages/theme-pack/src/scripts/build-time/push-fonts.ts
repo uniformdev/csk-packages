@@ -12,14 +12,12 @@ export const pushFonts = async () => {
 
   const pathToStyleFile = path.join(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Fonts}.css`);
 
-  if (!fs.existsSync(PATH_TO_STYLE_FOLDER)) {
-    console.error(`No such file with styles : ${pathToStyleFile}`);
+  if (!fs.existsSync(pathToStyleFile)) {
+    console.error(`No such file with styles: ${pathToStyleFile}`);
     return;
   }
 
-  const fontsCssPath = path.resolve(pathToStyleFile);
-
-  const fontsCssFile = fs.readFileSync(fontsCssPath, 'utf8');
+  const fontsCssFile = fs.readFileSync(path.resolve(pathToStyleFile), 'utf8');
 
   const fontUrl = FIND_FONTS_URL_REGEX.exec(fontsCssFile)?.[1];
 

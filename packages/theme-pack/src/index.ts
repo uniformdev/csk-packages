@@ -1,9 +1,11 @@
 import { program } from 'commander';
 import {
+  buildAllowedGroups,
   buildBorders,
   buildColors,
   buildDimensions,
   buildFontsStyle,
+  pushAllowedGroups,
   pushBorders,
   pushColors,
   pushDimensions,
@@ -17,6 +19,7 @@ program
   .option('-d, --dimensions', 'dimensions configuration')
   .option('-f, --fonts', 'fonts configuration')
   .option('-b, --borders', 'borders configuration')
+  .option('-g, --groups', 'groups configuration')
   .action(async args => {
     if (args?.colors) {
       console.info('Pulling colors...');
@@ -34,9 +37,13 @@ program
       console.info('Pulling borders...');
       buildBorders().catch(e => console.error(e));
       return;
+    } else if (args?.groups) {
+      console.info('Pulling borders...');
+      buildAllowedGroups().catch(e => console.error(e));
+      return;
     } else {
       console.info('Pulling all tokens...');
-      for (const action of [buildColors, buildDimensions, buildFontsStyle, buildBorders]) {
+      for (const action of [buildColors, buildDimensions, buildFontsStyle, buildBorders, buildAllowedGroups]) {
         try {
           await action();
         } catch (e) {
@@ -55,6 +62,7 @@ program
   .option('-d, --dimensions', 'dimensions configuration')
   .option('-f, --fonts', 'fonts configuration')
   .option('-b, --borders', 'borders configuration')
+  .option('-g, --groups', 'groups configuration')
   .action(async args => {
     if (args?.colors) {
       console.info('Pushing colors...');
@@ -72,9 +80,13 @@ program
       console.info('Pushing borders...');
       pushBorders().catch(e => console.error(e));
       return;
+    } else if (args?.groups) {
+      console.info('Pushing borders...');
+      pushAllowedGroups().catch(e => console.error(e));
+      return;
     } else {
       console.info('Pushing all tokens...');
-      for (const action of [pushColors, pushDimensions, pushFonts, pushBorders]) {
+      for (const action of [pushColors, pushDimensions, pushFonts, pushBorders, pushAllowedGroups]) {
         try {
           await action();
         } catch (e) {

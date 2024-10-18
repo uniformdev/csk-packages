@@ -10,14 +10,12 @@ export const pushColors = async () => {
 
   const pathToStyleFile = path.join(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Colors}.css`);
 
-  if (!fs.existsSync(PATH_TO_STYLE_FOLDER)) {
-    console.error(`No such file with styles : ${pathToStyleFile}`);
+  if (!fs.existsSync(pathToStyleFile)) {
+    console.error(`No such file with styles: ${pathToStyleFile}`);
     return;
   }
 
-  const colorsCssPath = path.resolve(pathToStyleFile);
-
-  const colorsCssFile = fs.readFileSync(colorsCssPath, 'utf8');
+  const colorsCssFile = fs.readFileSync(path.resolve(pathToStyleFile), 'utf8');
 
   const palette = colorsCssFile.match(REGEX_COLOR_VARS)?.reduce((acc, line) => {
     const [key, value] = line.split(':');
