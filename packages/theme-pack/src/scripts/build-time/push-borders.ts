@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { IS_CANARY_ENVIRONMENT, PATH_TO_STYLE_FOLDER, TOKEN_STYLE_FILE } from '../../constants';
 import { checkEnvironmentVariable, pushTokenValue, syncSuccessLog } from '../../utils';
+import { getValueWithAlias } from '../../utils/getTokenStyles';
 
 const REGEX_BORDER_VARS = /--[^:]+: [^;]+;/g;
 
@@ -31,7 +32,7 @@ export const pushBorders = async () => {
         ...acc,
         [borderKey]: {
           ...acc[borderKey],
-          [propertyName]: value?.trim()?.replace(';', ''),
+          [propertyName]: getValueWithAlias(value?.trim()?.replace(';', '')),
         },
       };
     }, {});
