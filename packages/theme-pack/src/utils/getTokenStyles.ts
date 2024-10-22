@@ -1,4 +1,4 @@
-import { REGEX_ALIAS_VALUE, REGEX_BRACKETS } from '../constants';
+import { REGEX_ALIAS_VALUE, REGEX_BRACKETS, ROOT_COLOR_SCHEME_KEY } from '../constants';
 
 export const resolveDesignTokenValue = (value: Record<string, string> | string) => {
   if (typeof value === 'string' && value.startsWith('{') && value.endsWith('}')) {
@@ -21,6 +21,25 @@ export const getRootSimpleTokensValue = (tokens: Record<string, Record<string, s
     .map(([key, value]) => `--${key}: ${resolveDesignTokenValue(value)};\r\n\t`)
     .join('');
   return styleContent ? `:root {\r\n\t${styleContent}}` : '';
+};
+
+export const getColorTokensValue = (tokens: Record<string, Record<string, string> | string>): string => {
+  const colorSchemes = Object.entries(tokens).reduce(
+    (acc, [scheme, tokenValues]) => {
+      const styleContent = Object.entries(tokenValues)
+        .map(([tokenKey, tokenValue]) => `--${tokenKey}: ${resolveDesignTokenValue(tokenValue)};\r\n\t`)
+        .join('');
+
+      acc[scheme] = styleContent;
+      return acc;
+    },
+    {} as Record<string, string>
+  );
+
+  return Object.entries(colorSchemes).reduce((css, [scheme, styles]) => {
+    const selector = scheme === ROOT_COLOR_SCHEME_KEY ? ':root' : `.${scheme}`;
+    return `${css}${selector} {\r\n\t${styles}}\r\n`;
+  }, '');
 };
 
 export const getRootBordersValue = (
