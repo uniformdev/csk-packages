@@ -27,7 +27,7 @@ export const getColorTokensValue = (tokens: Record<string, Record<string, string
   const colorSchemes = Object.entries(tokens).reduce(
     (acc, [scheme, tokenValues]) => {
       const styleContent = Object.entries(tokenValues)
-        .map(([tokenKey, tokenValue]) => `--${tokenKey}: ${tokenValue};\r\n\t`)
+        .map(([tokenKey, tokenValue]) => `--${tokenKey}: ${resolveDesignTokenValue(tokenValue)};\r\n\t`)
         .join('');
 
       acc[scheme] = styleContent;
