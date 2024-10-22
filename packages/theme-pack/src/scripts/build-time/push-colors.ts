@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { IS_CANARY_ENVIRONMENT, PATH_TO_STYLE_FOLDER, TOKEN_STYLE_FILE } from '../../constants';
 import { checkEnvironmentVariable, pushTokenValue, syncSuccessLog } from '../../utils';
+import { getValueWithAlias } from '../../utils/getTokenStyles';
 
 const REGEX_COLOR_VARS = /--[^:]+: [^;]+;/g;
 
@@ -22,7 +23,7 @@ export const pushColors = async () => {
     if (!key || !value) return acc;
     return {
       ...acc,
-      [key?.replace('--', '')]: value?.trim()?.replace(';', ''),
+      [key?.replace('--', '')]: getValueWithAlias(value?.trim()?.replace(';', '')),
     };
   }, {});
 

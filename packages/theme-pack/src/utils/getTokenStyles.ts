@@ -1,6 +1,24 @@
+import { REGEX_ALIAS_VALUE, REGEX_BRACKETS } from '../constants';
+
+export const resolveDesignTokenValue = (value: Record<string, string> | string) => {
+  if (typeof value === 'string' && value.startsWith('{') && value.endsWith('}')) {
+    return `var(--${value.replace(REGEX_BRACKETS, '')})`;
+  } else {
+    return value;
+  }
+};
+
+export const getValueWithAlias = (value: string) => {
+  if (value.startsWith('var(--') && value.endsWith(')')) {
+    return value.match(REGEX_ALIAS_VALUE)?.[1] || '';
+  } else {
+    return value;
+  }
+};
+
 export const getRootSimpleTokensValue = (tokens: Record<string, Record<string, string> | string>) => {
   const styleContent = Object.entries(tokens)
-    .map(([key, value]) => `--${key}: ${value};\r\n\t`)
+    .map(([key, value]) => `--${key}: ${resolveDesignTokenValue(value)};\r\n\t`)
     .join('');
   return styleContent ? `:root {\r\n\t${styleContent}}` : '';
 };
@@ -11,7 +29,7 @@ export const getRootBordersValue = (
   const styleContent = Object.entries(borders)
     .map(
       ([key, value]) =>
-        `--${key}-radius: ${value.radius};\r\n\t--${key}-width: ${value.width};\r\n\t--${key}-color: ${value.color};\r\n\t--${key}-style: ${value.style};\r\n\t`
+        `--${key}-radius: ${resolveDesignTokenValue(value.radius)};\r\n\t--${key}-width: ${resolveDesignTokenValue(value.width)};\r\n\t--${key}-color: ${resolveDesignTokenValue(value.color)};\r\n\t--${key}-style: ${resolveDesignTokenValue(value.style)};\r\n\t`
     )
     .join('');
   return styleContent ? `:root {\r\n\t${styleContent}}` : '';

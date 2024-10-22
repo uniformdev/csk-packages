@@ -1,6 +1,8 @@
 import path from 'node:path';
 
 export const FG_GREEN = '\x1b[32m';
+export const REGEX_BRACKETS = /[{}]/g;
+export const REGEX_ALIAS_VALUE = /var\(--([^)]+)\)/;
 
 export enum TOKEN_STYLE_FILE {
   Colors = 'colors',
