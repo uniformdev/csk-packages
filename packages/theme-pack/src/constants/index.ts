@@ -13,7 +13,7 @@ export enum TOKEN_STYLE_FILE {
 }
 
 export const DEFAULT_COLOR_PREFIXES = ['bg', 'text', 'decoration', 'border', 'ring', 'fill'];
-export const DEFAULT_COLOR_VARIANTS = ['hover', 'dark', 'dark:hover'];
+export const DEFAULT_COLOR_VARIANTS = ['hover'];
 
 export const DEFAULT_DIMENSION_PREFIXES = ['mt', 'mb', 'mr', 'ml', 'pt', 'pb', 'pr', 'pl', 'w', 'h'];
 export const DEFAULT_DIMENSION_VARIANTS: string[] = [];
