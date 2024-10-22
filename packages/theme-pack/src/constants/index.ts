@@ -37,3 +37,5 @@ export const PATH_TO_CONFIG_FOLDER = path.join(
 
 export const IS_CANARY_ENVIRONMENT =
   !!process.env.UNIFORM_CLI_BASE_URL && process.env.UNIFORM_CLI_BASE_URL.startsWith('https://canary');
+
+export const ROOT_COLOR_SCHEME_KEY = 'light';
