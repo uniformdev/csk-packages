@@ -1,6 +1,6 @@
 {
   "name": "@uniformdev/theme-pack",
-  "version": "1.0.28",
+  "version": "1.0.29",
   "description": "Theme Pack contains command line interface tool and utils for working with design tokens",
   "main": "./cli.js",
   "exports": {
@@ -37,6 +37,11 @@
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
     "tsup": "^8.3.0"
+  },
+  "peerDependencies": {
+    "next": ">=14",
+    "react": ">=18",
+    "react-dom": ">=18"
   },
   "bin": {
     "theme-pack": "./cli.js"
