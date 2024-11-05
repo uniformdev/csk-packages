@@ -10,7 +10,8 @@ export const resolveDesignTokenValue = (value: Record<string, string> | string) 
 
 export const getValueWithAlias = (value: string) => {
   if (value.startsWith('var(--') && value.endsWith(')')) {
-    return value.match(REGEX_ALIAS_VALUE)?.[1] || '';
+    const aliasValue = value.match(REGEX_ALIAS_VALUE)?.[1];
+    return aliasValue ? `{${aliasValue}}` : '';
   } else {
     return value;
   }
