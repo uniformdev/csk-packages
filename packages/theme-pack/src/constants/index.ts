@@ -13,13 +13,13 @@ export enum TOKEN_STYLE_FILE {
 }
 
 export const DEFAULT_COLOR_PREFIXES = ['bg', 'text', 'decoration', 'border', 'ring', 'fill'];
-export const DEFAULT_COLOR_VARIANTS = ['hover'];
+export const DEFAULT_COLOR_VARIANTS = ['hover', 'lg', 'md'];
 
 export const DEFAULT_DIMENSION_PREFIXES = ['mt', 'mb', 'mr', 'ml', 'pt', 'pb', 'pr', 'pl', 'w', 'h'];
-export const DEFAULT_DIMENSION_VARIANTS: string[] = [];
+export const DEFAULT_DIMENSION_VARIANTS: string[] = ['lg', 'md'];
 
-export const DEFAULT_FONT_VARIANTS: string[] = [];
-export const DEFAULT_BORDER_VARIANTS: string[] = [];
+export const DEFAULT_FONT_VARIANTS: string[] = ['lg', 'md'];
+export const DEFAULT_BORDER_VARIANTS: string[] = ['lg', 'md'];
 
 export const DEFAULT_INTEGRATION_URL = 'https://theme-pack-2.vercel.app';
 export const DEFAULT_STYLES_PATH = '/src/styles';
