@@ -6,6 +6,5 @@ module.exports = {
   tabWidth: 2,
   arrowParens: 'avoid',
   endOfLine: 'auto',
-  plugins: ['prettier-plugin-tailwindcss'],
   pluginSearchDirs: false,
 };

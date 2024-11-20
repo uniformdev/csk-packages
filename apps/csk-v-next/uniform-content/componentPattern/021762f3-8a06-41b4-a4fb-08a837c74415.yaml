@@ -1,0 +1,228 @@
+composition:
+  _name: Main Header
+  _id: 021762f3-8a06-41b4-a4fb-08a837c74415
+  type: header
+  variant: sticky
+  parameters:
+    color:
+      type: tp2-color-palette-parameter
+      value: text-primary
+    spacing:
+      type: tp2-space-control-parameter
+      value:
+        paddingTop: container-small
+        paddingBottom: container-small
+    displayName:
+      type: text
+      value: Header
+    backgroundColor:
+      type: tp2-color-palette-parameter
+      value: general-color-1
+  slots:
+    headerLeftContent:
+      - _id: 4fb2a9bd-3af3-4951-9ece-9e98588f3bf5
+        type: link
+        slots:
+          linkContent:
+            - _id: 0e763156-16d9-49ae-839e-774b51fc2df6
+              type: image
+              parameters:
+                $viz:
+                  type: $viz
+                  value:
+                    criteria:
+                      clauses:
+                        - op: is
+                          rule: $qk
+                          value: dark
+                          source: theme
+                image:
+                  type: asset
+                  value:
+                    - _id: 918553d3-32bc-4d04-9021-7f64227d3bec
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: b95b71ab-c9e8-436b-864d-19e89c849f8e
+                        url:
+                          value: >-
+                            https://canary-img.uniform.global/p/IazAOKLVROS83ZIvuAc0ww/7euGQmIPSBGrbYonawxOGg-csk-light-logo.svg
+                          type: text
+                        file:
+                          type: file
+                          value: 647956f8-549b-4053-b6b3-3937e0c4ae8e
+                        size:
+                          value: 10446
+                          type: number
+                        title:
+                          type: text
+                          value: csk-light-logo.svg
+                        width:
+                          value: 432
+                          type: number
+                        height:
+                          value: 79
+                          type: number
+                        mediaType:
+                          value: image/svg+xml
+                          type: text
+                      _source: uniform-assets
+                width:
+                  type: number
+                  value: '220'
+                height:
+                  type: number
+                  value: '40'
+                objectFit:
+                  type: tp2-segmented-control-parameter
+                  value: contain
+            - _id: 1d80a3d5-a57a-44e5-9ac8-0b665124f55c
+              type: image
+              parameters:
+                $viz:
+                  type: $viz
+                  value:
+                    criteria:
+                      clauses:
+                        - op: '!is'
+                          rule: $qk
+                          value: dark
+                          source: theme
+                image:
+                  type: asset
+                  value:
+                    - _id: c4ce3975-e77c-40ea-b4b6-dc6ab3c58b70
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: 8ce2b679-8593-4051-b0e4-92ad0c17d1f2
+                        url:
+                          value: >-
+                            https://canary-img.uniform.global/p/IazAOKLVROS83ZIvuAc0ww/iXSR_m5yQMOmyiCIjeljng-csk-dark-logo.svg
+                          type: text
+                        file:
+                          type: file
+                          value: d44e99a7-b1e6-4ece-8c49-e877bbd1c925
+                        size:
+                          value: 10446
+                          type: number
+                        title:
+                          type: text
+                          value: csk-dark-logo.svg
+                        width:
+                          value: 432
+                          type: number
+                        height:
+                          value: 79
+                          type: number
+                        mediaType:
+                          value: image/svg+xml
+                          type: text
+                      _source: uniform-assets
+                width:
+                  type: number
+                  value: '220'
+                height:
+                  type: number
+                  value: '40'
+                objectFit:
+                  type: tp2-segmented-control-parameter
+                  value: contain
+        parameters:
+          link:
+            type: link
+            value:
+              path: /
+              type: projectMapNode
+              nodeId: b90aa0bf-891d-4e40-9899-0d79eb1b26af
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          displayName:
+            type: text
+            value: Logo
+        _overridability:
+          hideLockedParameters: true
+    headerRightContent:
+      - _id: d928186a-75bd-4378-b0bb-cea10a500f5b
+        type: themeSwitcher
+        parameters:
+          iconColor:
+            type: tp2-color-palette-parameter
+            value: general-color-2
+    headerCenterContent:
+      - _id: 5832d439-1459-4a01-b422-fd1e66a71cbb
+        type: navigationLink
+        parameters:
+          link:
+            type: link
+            value:
+              path: https://dev-csk-marketing-site.vercel.app/get-started
+              type: url
+          text:
+            type: text
+            value: Get Started
+          color:
+            type: tp2-color-palette-parameter
+            value: text-primary
+          weight:
+            type: tp2-segmented-control-parameter
+            value: medium
+      - _id: af6efa0f-26ba-4ff6-9106-247c35a60f2d
+        type: navigationLink
+        parameters:
+          link:
+            type: link
+            value:
+              path: https://dev-csk-marketing-site.vercel.app/components
+              type: url
+          text:
+            type: text
+            value: Components
+          color:
+            type: tp2-color-palette-parameter
+            value: text-primary
+          weight:
+            type: tp2-segmented-control-parameter
+            value: medium
+      - _id: b2345a75-1c06-4596-8e50-8163e76287b6
+        type: navigationLink
+        parameters:
+          link:
+            type: link
+            value:
+              path: https://dev-csk-marketing-site.vercel.app/templates
+              type: url
+          text:
+            type: text
+            value: Templates
+          color:
+            type: tp2-color-palette-parameter
+            value: text-primary
+          weight:
+            type: tp2-segmented-control-parameter
+            value: medium
+      - _id: 6f33478e-d7c1-4a8c-8c24-82a1792217d0
+        type: navigationLink
+        parameters:
+          link:
+            type: link
+            value:
+              path: https://dev-csk-marketing-site.vercel.app/recipes
+              type: url
+          text:
+            type: text
+            value: Recipes
+          color:
+            type: tp2-color-palette-parameter
+            value: text-primary
+          weight:
+            type: tp2-segmented-control-parameter
+            value: medium
+  _locales:
+    - en
+created: '2024-10-15T11:53:33.417943+00:00'
+modified: '2024-10-30T11:26:47.838508+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/main-header.jpg

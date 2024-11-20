@@ -16,7 +16,6 @@ This starter is using the latest Next.js 14 (App Router).
    UNIFORM_API_KEY=
    UNIFORM_PROJECT_ID=
    UNIFORM_PREVIEW_SECRET=hello-world
-   INTEGRATION_URL=https://theme-pack-2.vercel.app
    ```
    > Make sure your API key has "Developer" role to be able to push content.
 1. `npm install && npm run init && npm run dev` to install dependencies, set up project and run in dev mode.
@@ -40,11 +39,11 @@ This integration brings Canvas UI extensions for theme management and new useful
 
 1. Open your current team page.
 ![Team page](docs/team_page.png)
-1. Navigate to the `Settings` tab, than `Custom Integrations` and add `Theme Pack 2` as a custom integration using this [manifest](https://github.com/uniformdev/uniform-mesh-integrations/blob/canary/integrations/theme-pack-2/mesh-manifest.canary.json).
+1. Navigate to the `Settings` tab, than `Custom Integrations` and add `Theme Pack 2` as a custom integration using this [manifest](https://github.com/uniformdev/uniform-mesh-integrations/blob/canary/integrations/theme-pack-2/mesh-manifest.stable.json).
 1. Open your project.
 ![Your project](docs/project_page.png)
 1. Navigate to the `Integrations` tab, find the `Theme Pack 2` integration and install it.
-1. Provide your oun color palette or set up it from the code using `npm run uniform:push:palette` command. (see `./styles/colors.css`)
+1. Provide your oun color palette or set up it from the code using `npm run uniform:push:colors` command. (see `./styles/colors.css`)
 1. Provide your oun dimension configuration or set up it from the code using `npm run uniform:push:dimensions` command. (see `./styles/dimensions.css`)
 1. Provide your oun fonts or set up it from the code using `npm run uniform:push:fonts` command. (see `./styles/fonts.css`)
 1. Provide your oun border configuration or set up it from the code using `npm run uniform:push:borders` command. (see `./styles/border.css`)

@@ -9,3 +9,5 @@ export default async function PlaygroundPage(props: { searchParams: UniformPlayg
     </ThemePackProvider>
   );
 }
+
+export const dynamic = 'force-dynamic';

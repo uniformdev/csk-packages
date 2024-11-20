@@ -1,23 +1,23 @@
 import classNames, { ArgumentArray } from 'classnames';
 import { twMerge } from 'tailwind-merge';
 import { Asset } from '@uniformdev/assets';
-import { flattenValues, LinkParamValue } from '@uniformdev/canvas';
+import {
+  flattenValues,
+  LinkParamValue,
+  ResolvedRouteGetResponse,
+  RouteGetResponseEdgehancedComposition,
+} from '@uniformdev/canvas';
+import { SpaceType } from '@/components/ui/Container';
 import { ViewPort } from '@/types';
 
-export const formatProjectMapLink = (projectMapLink?: LinkParamValue) => {
-  if (!projectMapLink) return projectMapLink;
+export const formatUniformLink = (uniformLink?: LinkParamValue) => {
+  if (!uniformLink) return '';
 
-  // If the link is a projectMapNode, that means we can have dynamic input values
-  if ('dynamicInputValues' in projectMapLink) {
-    const { dynamicInputValues = {}, path } = projectMapLink;
-
-    return Object.keys(dynamicInputValues).reduce(
-      (acc, key) => acc?.replace(`:${key}`, `${dynamicInputValues[key]}`),
-      path
-    );
+  if (uniformLink.type === 'email') {
+    return `mailto:${uniformLink.path}`;
   }
 
-  return projectMapLink.path;
+  return uniformLink.path;
 };
 
 type ResolvedAsset = {
@@ -55,3 +55,56 @@ export const resolveViewPort = (
 };
 
 export const cn = (...inputs: ArgumentArray) => twMerge(classNames(inputs));
+
+export const isRouteWithoutErrors = (route: ResolvedRouteGetResponse): route is RouteGetResponseEdgehancedComposition =>
+  'compositionApiResponse' in route && !!route.compositionApiResponse && 'composition' in route.compositionApiResponse;
+
+const DYNAMIC_KEY_REGEX = /:[a-zA-Z_]+/;
+export const resolveRouteToPath = (
+  matchedRoute: string,
+  dynamicInputs: { [dynamicKey: string]: string } | undefined
+): string =>
+  dynamicInputs
+    ? matchedRoute.replace(DYNAMIC_KEY_REGEX, dynamicKey => {
+        return dynamicInputs?.[dynamicKey.substring(1)] || dynamicKey;
+      })
+    : matchedRoute;
+
+const STATIC_UNITS = ['px', 'rem', 'em', 'vh', 'vw', '%', 'auto'];
+const UNIT_REGEX = /\d+(\/\d+)?(\.\d+)?/g;
+export const formatSpaceParameterValue = (
+  spacing?: SpaceType | ViewPort<SpaceType>
+): [SpaceType, Record<keyof SpaceType, string | ViewPort<string>>] => {
+  // Spacing parameter undefined
+  if (!spacing) return [{}, {} as Record<keyof SpaceType, string>];
+
+  // Spacing parameter with view port functionality
+  if ('desktop' in spacing || 'tablet' in spacing || 'mobile' in spacing) {
+    return [
+      {},
+      (Object.keys(spacing) as (keyof ViewPort<SpaceType>)[]).reduce(
+        (acc, device) => {
+          (Object.keys(spacing[device] || {}) as (keyof SpaceType)[]).forEach(property => {
+            const currentValue = spacing?.[device]?.[property];
+            if (typeof currentValue !== 'undefined') {
+              acc[property] = { ...acc[property], [device]: String(currentValue) };
+            }
+          });
+          return acc;
+        },
+        {} as Record<keyof SpaceType, ViewPort<string>>
+      ),
+    ];
+  }
+
+  // Simple spacing parameter
+  return Object.entries(spacing as SpaceType).reduce(
+    (acc, [key, value]) => {
+      const isStaticUnit =
+        typeof value === 'number' || STATIC_UNITS.includes(value.replace(UNIT_REGEX, '')) || value === 'auto';
+
+      return isStaticUnit ? [{ ...acc[0], [key]: value }, acc[1]] : [acc[0], { ...acc[1], [key]: value }];
+    },
+    [{}, {} as Record<keyof SpaceType, string>]
+  );
+};

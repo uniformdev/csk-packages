@@ -6,8 +6,8 @@ const project = resolve(process.cwd(), 'tsconfig.json');
 module.exports = {
   extends: [
     'plugin:react-hooks/recommended',
-    'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:@next/next/recommended',
     'prettier',
     'turbo',
     'plugin:tailwindcss/recommended',
