@@ -1,8 +1,13 @@
 import { Config } from 'tailwindcss';
 import plugin from 'tailwindcss/plugin';
+import {
+  generateTailwindcssColorKeysPattern,
+  generateTailwindcssDimensionKeysPattern,
+  generateTailwindcssFontKeysPattern,
+  generateTailwindcssBorderKeysPattern,
+} from '@uniformdev/theme-pack/tailwindcss-conf';
 import theme from './tailwind.config.theme.json';
 import utilities from './tailwind.utilities.json';
-import { generateTailwindcssColorKeysPattern, generateTailwindcssDimensionKeysPattern, generateTailwindcssFontKeysPattern, generateTailwindcssBorderKeysPattern } from '@uniformdev/theme-pack/tailwindcss-conf'
 
 const safelist = [
   { pattern: /grid-cols-(1[0-2]|[1-9]|none|subgrid)/, variants: ['lg', 'md'] },
@@ -49,6 +54,7 @@ const config: Config = {
   darkMode: 'class',
   content: [
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/hocs/**/*.{js,ts,jsx,tsx,mdx}',
     './src/stories/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
