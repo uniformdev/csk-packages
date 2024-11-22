@@ -4,7 +4,8 @@ const uniformTextParameterHandler: ParameterHandler = {
   supports: ['text'],
   type: 'string',
   hide: true,
-  render: parameter => `<UniformText parameterId="${parameter.id}" placeholder="${parameter.name} goes here" />`,
+  render: parameter =>
+    `<UniformText parameterId="${parameter.id}" placeholder="${parameter.name} goes here" context={context} component={component} />`,
 };
 
 const numberParameterHandler: ParameterHandler = {
@@ -33,7 +34,7 @@ const assetParameterValue: ParameterHandler = {
     `{(flattenValues(${parameter.id} as never) || [])
           .filter(({ url }) => Boolean(url))
           .map(({title, url }, index) => (
-            <img key={index} src={url} width="100px" height="100px" alt={title} />
+            <Image key={index} src={url} width={100} height={100} alt={title} />
           ))}`,
 };
 
@@ -48,14 +49,13 @@ const richTextParameterHandler: ParameterHandler = {
   type: 'RichTextNode',
   hide: true,
   render: parameter =>
-    `<UniformRichText placeholder="Content goes here..." className="max-w-full prose" parameterId="${parameter.id}" />`,
+    `<UniformRichText placeholder="Content goes here..." className="prose max-w-full" parameterId="${parameter.id}" context={context} component={component} />`,
 };
 
 const imageParameterHandler: ParameterHandler = {
   supports: ['image'],
   type: 'string',
-  render: parameter =>
-    `{!!${parameter.id} && <img src={${parameter.id}} width="100px" height="100px" alt="example" />}`,
+  render: parameter => `{!!${parameter.id} && <Image src={${parameter.id}} width={100} height={100} alt="example" />}`,
 };
 
 const jsonParameterHandler: ParameterHandler = {

@@ -1,7 +1,7 @@
 import { program } from 'commander';
 import * as ora from 'ora';
 import { select } from '@inquirer/prompts';
-import { indexComponentFile, reactComponentFile, registerComponentFile } from './steps';
+import { indexComponentFile } from './steps';
 import { getCanvasClient, getPathToCanvasFolder } from './utils';
 
 program
@@ -37,11 +37,11 @@ program
     const pathToIndexFile = indexComponentFile.path(pathGenerateProps);
     await indexComponentFile.write({ definition: selectedComponent, destinationPath: pathToIndexFile });
 
-    const pathToReactComponentFile = reactComponentFile.path(pathGenerateProps);
-    await reactComponentFile.write({ definition: selectedComponent, destinationPath: pathToReactComponentFile });
+    // const pathToReactComponentFile = reactComponentFile.path(pathGenerateProps);
+    // await reactComponentFile.write({ definition: selectedComponent, destinationPath: pathToReactComponentFile });
 
-    const pathToRegisterComponentFile = registerComponentFile.path(pathGenerateProps);
-    await registerComponentFile.write({ definition: selectedComponent, destinationPath: pathToRegisterComponentFile });
+    // const pathToRegisterComponentFile = registerComponentFile.path(pathGenerateProps);
+    // await registerComponentFile.write({ definition: selectedComponent, destinationPath: pathToRegisterComponentFile });
   });
 
 program.parse(process.argv);
