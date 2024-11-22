@@ -1,0 +1,50 @@
+{
+  "name": "@uniformdev/scaffold",
+  "version": "1.0.34",
+  "description": "The Scaffold contains command line interface tool to generate react components based on canvas data",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "main": "./cli.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "default": "./cli.js"
+    }
+  },
+  "types": "./dist/index.d.mts",
+  "scripts": {
+    "scaffold": "node ./cli.js",
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rimraf dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint \"src/**/*.{js,ts,tsx}\"",
+    "format": "prettier --write \"src/**/*.{js,ts,tsx}\""
+  },
+  "keywords": [],
+  "author": "",
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "tsup": "^8.3.0"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^7.1.0",
+    "commander": "^9.0.0",
+    "ora": "^8.1.1"
+  },
+  "peerDependencies": {
+    "next": ">=14",
+    "react": ">=18",
+    "react-dom": ">=18",
+    "@uniformdev/canvas": ">=19"
+  },
+  "bin": {
+    "scaffold": "./cli.js"
+  },
+  "files": [
+    "/dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

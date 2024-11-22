@@ -2,12 +2,22 @@
   "$schema": "https://turbo.build/schema.json",
   "tasks": {
     "build": {
-      "dependsOn": ["^build"],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".next/**", "!.next/cache/**"]
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env*"
+      ],
+      "outputs": [
+        ".next/**",
+        "!.next/cache/**"
+      ]
     },
     "lint": {
-      "dependsOn": ["^lint"]
+      "dependsOn": [
+        "^lint"
+      ]
     },
     "dev": {
       "cache": false,
@@ -25,6 +35,7 @@
     "STYLES_PATH",
     "CONFIG_PATH",
     "DEV_MODE",
-    "VERCEL_URL"
+    "VERCEL_URL",
+    "CUSTOM_CANVAS_FOLDER_PATH"
   ]
 }
