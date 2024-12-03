@@ -1,14 +1,11 @@
-import { FC } from 'react';
 import { ComponentInstance } from '@uniformdev/canvas';
-import { DefaultNotImplementedComponent } from '@uniformdev/canvas-next-rsc/component';
+import { DefaultNotImplementedComponent, ResolveComponentResult } from '@uniformdev/canvas-next-rsc/component';
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type ComponentMapping = Record<string, FC<any>>;
+export type ComponentMapping = Record<string, ResolveComponentResult>;
 
 const createComponentResolver =
   (mappings: ComponentMapping) =>
-  ({ component }: { component: ComponentInstance }) => ({
-    component: mappings[component?.type] || DefaultNotImplementedComponent,
-  });
+  ({ component }: { component: ComponentInstance }) =>
+    mappings[component?.type] ?? { component: DefaultNotImplementedComponent };
 
 export default createComponentResolver;

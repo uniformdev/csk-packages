@@ -1,8 +1,7 @@
-import fs from 'node:fs';
+import { exec } from 'child_process';
 import prettier, { Options } from 'prettier';
 import { CanvasClient, ComponentDefinitionParameter } from '@uniformdev/canvas';
 import { input } from '@inquirer/prompts';
-import { PATH_TO_CUSTOM_CANVAS_FOLDER } from '../constants';
 import { supportedParameterHandlers } from '../parameterHandlers';
 import { ParameterHandler } from '../types';
 
@@ -35,25 +34,16 @@ export const getCanvasClient = async () => {
   });
 };
 
-export const getPathToCanvasFolder = async () => {
-  if (fs.existsSync(PATH_TO_CUSTOM_CANVAS_FOLDER)) return PATH_TO_CUSTOM_CANVAS_FOLDER;
-  return await input({
-    message: `We didn't find canvas folder. Could you please provide path to the canvas folder:`,
-    required: true,
-  });
-};
-
 export const getComponentNameBasedOnId = (componentId?: string) =>
   componentId ? componentId.charAt(0).toUpperCase() + componentId.slice(1) : 'UnknownComponent';
 
-export const getRenderableParameters = (
+export const getSupportedParameters = (
   parameters: ComponentDefinitionParameter[]
 ): (ComponentDefinitionParameter & { handler?: ParameterHandler })[] => {
   const handled = parameters.map(parameter => {
     const handler = supportedParameterHandlers.find(handler => {
       return handler.supports.includes(parameter.type);
     });
-
     return {
       ...parameter,
       handler,
@@ -74,4 +64,19 @@ export const formatWithPrettier = (source: string, option?: Options) =>
     arrowParens: 'avoid',
     endOfLine: 'auto',
     ...option,
+  });
+
+export const runCmdCommand = async (command: string): Promise<string> =>
+  new Promise((resolve, reject) => {
+    exec(command, (error, stdout, stderr) => {
+      if (error) {
+        reject(error.message);
+        return;
+      }
+      if (stderr) {
+        reject(stderr);
+        return;
+      }
+      resolve(stdout);
+    });
   });

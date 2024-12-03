@@ -1,6 +1,6 @@
 {
   "name": "@uniformdev/scaffold",
-  "version": "1.0.34",
+  "version": "1.0.39",
   "description": "The Scaffold contains command line interface tool to generate react components based on canvas data",
   "license": "SEE LICENSE IN LICENSE.txt",
   "main": "./cli.js",
@@ -25,6 +25,11 @@
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
+    "@uniformdev/canvas": ">=19",
+    "next": ">=14",
+    "prettier": ">=3",
+    "react": ">=18",
+    "react-dom": ">=18",
     "tsup": "^8.3.0"
   },
   "dependencies": {
@@ -33,10 +38,11 @@
     "ora": "^8.1.1"
   },
   "peerDependencies": {
+    "@uniformdev/canvas": ">=19",
     "next": ">=14",
+    "prettier": ">=3",
     "react": ">=18",
-    "react-dom": ">=18",
-    "@uniformdev/canvas": ">=19"
+    "react-dom": ">=18"
   },
   "bin": {
     "scaffold": "./cli.js"

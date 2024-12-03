@@ -1,6 +1,8 @@
 import { ParameterHandler } from './types';
 
 const uniformTextParameterHandler: ParameterHandler = {
+  import: ["import { UniformText } from '@uniformdev/canvas-next-rsc/component';"],
+  needsProps: ['context', 'component'],
   supports: ['text'],
   type: 'string',
   hide: true,
@@ -20,13 +22,31 @@ const textParameterHandler: ParameterHandler = {
   render: parameter => `{${parameter.id}}`,
 };
 
+const textArrayParameterHandler: ParameterHandler = {
+  supports: ['multi-select'],
+  type: 'string[]',
+  render: parameter => `{${parameter.id}?.join(', ')}`,
+};
+
+const dateTimeParameterHandler: ParameterHandler = {
+  supports: ['datetime'],
+  type: '{ datetime: string; timeZone: string }',
+  render: parameter => `{${parameter.id}?.datetime} {${parameter.id}?.timeZone}`,
+};
+
 const linkParameterHandler: ParameterHandler = {
+  import: ["import { LinkParamValue } from '@uniformdev/canvas';"],
   supports: ['link'],
   type: 'LinkParamValue',
   render: parameter => `<a href={${parameter.id}?.path ?? '#'}>Link Text</a>`,
 };
 
 const assetParameterValue: ParameterHandler = {
+  import: [
+    "import Image from 'next/image';",
+    "import type { Asset } from '@uniformdev/assets';",
+    "import { flattenValues } from '@uniformdev/canvas';",
+  ],
   supports: ['asset'],
   type: `Asset[]`,
   render: parameter =>
@@ -34,7 +54,7 @@ const assetParameterValue: ParameterHandler = {
     `{(flattenValues(${parameter.id} as never) || [])
           .filter(({ url }) => Boolean(url))
           .map(({title, url }, index) => (
-            <Image key={index} src={url} width={100} height={100} alt={title} />
+            <Image key={index} src={url} width={200} height={200} alt={title} />
           ))}`,
 };
 
@@ -45,6 +65,11 @@ const checkboxParameterHandler: ParameterHandler = {
 };
 
 const richTextParameterHandler: ParameterHandler = {
+  import: [
+    "import { UniformRichText } from '@uniformdev/canvas-next-rsc/component';",
+    "import { RichTextNode } from '@uniformdev/richtext';",
+  ],
+  needsProps: ['context', 'component'],
   supports: ['richText'],
   type: 'RichTextNode',
   hide: true,
@@ -53,9 +78,10 @@ const richTextParameterHandler: ParameterHandler = {
 };
 
 const imageParameterHandler: ParameterHandler = {
+  import: ["import Image from 'next/image';"],
   supports: ['image'],
   type: 'string',
-  render: parameter => `{!!${parameter.id} && <Image src={${parameter.id}} width={100} height={100} alt="example" />}`,
+  render: parameter => `{!!${parameter.id} && <Image src={${parameter.id}} width={200} height={200} alt="example" />}`,
 };
 
 const jsonParameterHandler: ParameterHandler = {
@@ -68,6 +94,8 @@ export const supportedParameterHandlers: ParameterHandler[] = [
   uniformTextParameterHandler,
   numberParameterHandler,
   textParameterHandler,
+  textArrayParameterHandler,
+  dateTimeParameterHandler,
   linkParameterHandler,
   assetParameterValue,
   checkboxParameterHandler,
