@@ -7,6 +7,7 @@ import {
   REQUIRED_ENV_VARIABLES,
   ENV_VARIABLES_VARIANTS,
   ENV_VARIABLES_DEFAULT_VALUES,
+  TEMPLATE_BRANCH_PREFIX,
 } from './constants';
 import { EnvVariable, Module, Template } from './types';
 import { runCmdCommand } from '../../utils';
@@ -47,11 +48,29 @@ export const verifyProjectAlignment = async (spinner: ora.Ora): Promise<boolean>
  * Prompts the user to select a project template.
  * @returns The selected template.
  */
-export const selectTemplate = async (): Promise<Template> =>
-  select<Template>({
+export const selectTemplate = async (): Promise<Template> => {
+  const remoteBranches = await runCmdCommand(GIT_COMMANDS.GIT_REMOTE_BRANCHES);
+
+  const templatesBranches = remoteBranches
+    ?.split('\n')
+    .filter(branch => branch.includes(TEMPLATE_BRANCH_PREFIX))
+    .map(branch => {
+      const templateValue = branch.replace(TEMPLATE_BRANCH_PREFIX, '').trim();
+      const templateName = templateValue
+        .split('-')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+      return {
+        name: templateName,
+        value: templateValue,
+      };
+    });
+
+  return select<Template>({
     message: 'Let’s start by choosing a template for your project:',
-    choices: [{ name: 'Baseline', value: 'baseline' }],
+    choices: [{ name: 'Baseline', value: 'baseline' }, ...templatesBranches],
   });
+};
 
 /**
  * Prompts the user to select modules for the project.

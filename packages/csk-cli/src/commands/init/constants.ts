@@ -1,5 +1,7 @@
 import { EnvVariable, Module } from './types';
 
+export const TEMPLATE_BRANCH_PREFIX = 'origin/templates/';
+
 export const GIT_BRANCHES = {
   GOLD: process.env.GOLD_BRANCH || 'develop',
   FULL_PACK: process.env.FULL_PACK_BRANCH || 'full-pack',
@@ -11,6 +13,7 @@ export const GIT_COMMANDS = {
   ALIGN_WITH_FULL_PACK_BRACH: `git restore --source=origin/${GIT_BRANCHES.FULL_PACK} -- .`,
   GET_CHANGED_FILES: 'git ls-files --modified --others --exclude-standard',
   GIT_ADD: 'git add .',
+  GIT_REMOTE_BRANCHES: 'git branch -r',
 };
 
 export const JSX_COMMENT_REGEX = /{\s*\/\*\s*\/\/\?\s*(.*?)\s*\*\/\s*}/g;

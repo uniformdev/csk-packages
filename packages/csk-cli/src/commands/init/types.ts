@@ -1,4 +1,4 @@
-export type Template = 'baseline';
+export type Template = 'baseline' | string;
 export type Module = 'localization' | 'context-dev-tools' | 'ga' | 'uniform-insights';
 
 export type EnvVariable =
