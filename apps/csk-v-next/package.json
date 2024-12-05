@@ -1,6 +1,6 @@
 {
   "name": "csk-v-next",
-  "version": "1.0.41",
+  "version": "1.0.42",
   "private": true,
   "engines": {
     "yarn": "please-use-npm",
@@ -33,13 +33,15 @@
     "uniform:push:content": "uniform sync push",
     "uniform:publish:manifest": "uniform context manifest publish",
     "uniform:pull:locales": "tsx src/scripts/get-locales.ts",
-    "scaffold": "scaffold add"
+    "scaffold": "scaffold add",
+    "modules-init": "csk-cli init"
   },
   "lint-staged": {
     "*.{ts,tsx}": "eslint"
   },
   "dependencies": {
     "@uniformdev/canvas-next-rsc": "19.208.0",
+    "@uniformdev/csk-cli": "*",
     "@uniformdev/theme-pack": "*",
     "@uniformdev/scaffold": "*",
     "classnames": "^2.5.1",
