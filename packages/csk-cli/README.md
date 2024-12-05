@@ -1,6 +1,6 @@
 # Uniform CSK CLI
 
-The **Uniform CSK CLI** provides a command-line interface (CLI) and utility functions to help you work with design tokens efficiently. It is part of the [Uniform Platform](https://uniform.app). For more details, refer to our [documentation](https://docs.uniform.app).
+The **Uniform CSK CLI** provides a command-line interface (CLI) and utility functions to help you work with modules in csk. It is part of the [Uniform Platform](https://uniform.app). For more details, refer to our [documentation](https://docs.uniform.app).
 
 
 ## Installation
