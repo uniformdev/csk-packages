@@ -43,8 +43,6 @@ const init = async (args: InitArgs): Promise<void> => {
       return;
     }
 
-    await alignWithTemplateBranch(spinner, template);
-
     await alignWithFullPackBranch(spinner);
 
     spinner.start('Installing dependencies...');
@@ -63,6 +61,8 @@ const init = async (args: InitArgs): Promise<void> => {
     await addEnvVariablesToProjectConfiguration(envVariables);
     spinner.succeed('Env variables added to project configuration successfully!');
 
+    await alignWithTemplateBranch(spinner, template);
+
     spinner.succeed('App created successfully!');
   } catch (e) {
     if (e instanceof Error) {
@@ -73,7 +73,7 @@ const init = async (args: InitArgs): Promise<void> => {
         process.exit(1);
       }
     } else {
-      console.error('\n🙁 An unexpected error occurred. Please try again.\n');
+      console.error(`\n🙁 An unexpected error occurred: ${e}\nPlease try again.\n`);
       process.exit(1);
     }
   }
