@@ -1,4 +1,5 @@
 import { ComponentDefinition, ComponentDefinitionParameter } from '@uniformdev/canvas';
+import { IMPORTS, UNIFORM_PARAMETERS } from '../constants';
 
 export type FileHandler = {
   path: (props: { pathToCanvasFolder: string; definition?: ComponentDefinition }) => Promise<string>;
@@ -6,8 +7,8 @@ export type FileHandler = {
 };
 
 export type ParameterHandler = {
-  import?: string[];
-  needsProps?: string[];
+  import?: IMPORTS[];
+  needsProps?: UNIFORM_PARAMETERS[];
   supports: string[];
   type: string;
   render: (parameter: ComponentDefinitionParameter) => string;

@@ -2,15 +2,11 @@ import fs from 'fs';
 import * as ora from 'ora';
 import path from 'path';
 import { input } from '@inquirer/prompts';
+import { END_MAPPER_REGEX, MAPPING_REGEX, REGISTER_IMPORT_REGEX, REGISTER_KEY_REGEX } from '../constants';
 import { FileHandler } from '../types';
 import { formatWithPrettier, getComponentNameBasedOnId, runCmdCommand } from '../utils';
 
 const progressSpinner = ora.default();
-
-const MAPPING_REGEX = /\b[a-zA-Z0-9_]+Mapping\s*=\s*{(?:[^{}]*|\{(?:[^{}]*|\{[^{}]*\})*\})*}/g;
-const REGISTER_IMPORT_REGEX = /(import .+;)(?![\s\S]*import .+)/;
-const REGISTER_KEY_REGEX = (key: string) => new RegExp(`\\b${key}\\s*:\\s*[^,]+,?`, 'g');
-const END_MAPPER_REGEX = /}$/;
 
 export const registerComponentFile: FileHandler = {
   path: async ({ pathToCanvasFolder }) => {

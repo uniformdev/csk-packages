@@ -1,8 +1,9 @@
+import { IMPORTS, UNIFORM_PARAMETERS } from './constants';
 import { ParameterHandler } from './types';
 
 const uniformTextParameterHandler: ParameterHandler = {
-  import: ["import { UniformText } from '@uniformdev/canvas-next-rsc/component';"],
-  needsProps: ['context', 'component'],
+  import: [IMPORTS.UNIFORM_TEXT],
+  needsProps: [UNIFORM_PARAMETERS.CONTEXT, UNIFORM_PARAMETERS.COMPONENT],
   supports: ['text'],
   type: 'string',
   hide: true,
@@ -35,18 +36,14 @@ const dateTimeParameterHandler: ParameterHandler = {
 };
 
 const linkParameterHandler: ParameterHandler = {
-  import: ["import { LinkParamValue } from '@uniformdev/canvas';"],
+  import: [IMPORTS.LINK_PARAM_VALUE],
   supports: ['link'],
   type: 'LinkParamValue',
   render: parameter => `<a href={${parameter.id}?.path ?? '#'}>Link Text</a>`,
 };
 
 const assetParameterValue: ParameterHandler = {
-  import: [
-    "import Image from 'next/image';",
-    "import type { Asset } from '@uniformdev/assets';",
-    "import { flattenValues } from '@uniformdev/canvas';",
-  ],
+  import: [IMPORTS.IMAGE, IMPORTS.ASSET_TYPE, IMPORTS.FLATTEN_VALUES],
   supports: ['asset'],
   type: `Asset[]`,
   render: parameter =>
@@ -65,11 +62,8 @@ const checkboxParameterHandler: ParameterHandler = {
 };
 
 const richTextParameterHandler: ParameterHandler = {
-  import: [
-    "import { UniformRichText } from '@uniformdev/canvas-next-rsc/component';",
-    "import { RichTextNode } from '@uniformdev/richtext';",
-  ],
-  needsProps: ['context', 'component'],
+  import: [IMPORTS.UNIFORM_RICH_TEXT, IMPORTS.RICH_TEXT_NODE],
+  needsProps: [UNIFORM_PARAMETERS.CONTEXT, UNIFORM_PARAMETERS.COMPONENT],
   supports: ['richText'],
   type: 'RichTextNode',
   hide: true,
@@ -78,7 +72,7 @@ const richTextParameterHandler: ParameterHandler = {
 };
 
 const imageParameterHandler: ParameterHandler = {
-  import: ["import Image from 'next/image';"],
+  import: [IMPORTS.IMAGE],
   supports: ['image'],
   type: 'string',
   render: parameter => `{!!${parameter.id} && <Image src={${parameter.id}} width={200} height={200} alt="example" />}`,
