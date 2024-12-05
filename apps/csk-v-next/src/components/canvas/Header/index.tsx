@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { ComponentProps, UniformSlot } from '@uniformdev/canvas-next-rsc/component';
 import BaseHeader, { HeaderProps as BaseHeaderProps } from '@/components/ui/Header';
+import { withPlaygroundWrapper } from '@/hocs';
 
 export type HeaderParameters = Omit<BaseHeaderProps, 'sticky'>;
 enum HeaderSlots {
@@ -26,4 +27,4 @@ const Header: FC<HeaderProps> = ({ backgroundColor, color, spacing, border, cont
   </BaseHeader>
 );
 
-export default Header;
+export default withPlaygroundWrapper(Header);

@@ -37,8 +37,12 @@ const Section: FC<SectionProps> = ({
   fullHeight,
 }) => {
   const variant = component.variant as SectionVariants | undefined;
-
-  const sectionContent = <UniformSlot data={component} context={context} slot={slots.sectionContent} />;
+  const { previewMode } = context || {};
+  const sectionContent = (
+    <div className={cn({ 'm-12': previewMode === 'editor' })}>
+      <UniformSlot data={component} context={context} slot={slots.sectionContent} />
+    </div>
+  );
   const sectionCTA = <UniformSlot data={component} context={context} slot={slots.sectionCTA} />;
   const sectionMedia = <UniformSlot data={component} context={context} slot={slots.sectionMedia} />;
 
@@ -70,7 +74,7 @@ const Section: FC<SectionProps> = ({
     default:
       return (
         <Container
-          className="relative overflow-hidden"
+          className={cn('relative overflow-hidden', { 'p-32': previewMode })}
           {...{ backgroundColor, spacing, border, fluidContent, fullHeight }}
         >
           <div className="absolute left-0 top-0 z-10 size-full overflow-hidden">{sectionMedia}</div>

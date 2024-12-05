@@ -10,11 +10,7 @@ CURR=$(git show HEAD:"package.json" | grep '"version":' | sed 's/.*"version": "/
 echo "git HEAD package.json verson is: $CURR"
 NEW=$(echo $TMP | awk '{split($0,tmp,"."); print tmp[1]"."tmp[2]"."tmp[3]+1}')
 
-cd apps/csk-v-next
-npm --no-git-tag-version --allow-same-version version ${NEW}
-git add package.json
-
-cd ../../packages/theme-pack
+cd packages/theme-pack
 npm --no-git-tag-version --allow-same-version version ${NEW}
 git add package.json
 

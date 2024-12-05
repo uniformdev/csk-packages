@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { ComponentProps, UniformSlot } from '@uniformdev/canvas-next-rsc/component';
 import BaseFooter, { FooterProps as BaseFooterProps } from '@/components/ui/Footer';
+import { withPlaygroundWrapper } from '@/hocs';
 
 export type FooterParameters = BaseFooterProps;
 
@@ -21,4 +22,4 @@ const Footer: FC<FooterProps> = ({ context, component, slots, backgroundColor, s
   />
 );
 
-export default Footer;
+export default withPlaygroundWrapper(Footer);
