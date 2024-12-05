@@ -140,6 +140,26 @@ export const alignWithFullPackBranch = async (spinner: ora.Ora): Promise<void> =
 };
 
 /**
+ * Aligns the current branch with the template branch.
+ *
+ * This function runs the Git command to align the current branch with the template branch.
+ * A spinner is used to indicate the progress. If the alignment fails, the error is logged, and the process halts.
+ *
+ * @param {ora.Ora} spinner - The Ora spinner instance used to display progress.
+ * @returns {Promise<void>} Resolves when the alignment is successful.
+ * @throws Will throw an error if the alignment process fails.
+ */
+export const alignWithTemplateBranch = async (spinner: ora.Ora, template: string): Promise<void> => {
+  try {
+    spinner.start(`Aligning ${template} branch...`);
+    await runCmdCommand(GIT_COMMANDS.ALIGN_WITH_TEMPLATE_BRANCH(template));
+    spinner.succeed(`${template} branch aligned successfully!`);
+  } catch (error) {
+    spinner.fail(`Failed to align ${template} branch: ${error}. Please try again.`);
+  }
+};
+
+/**
  * Retrieves the paths of changed files in the current Git working directory.
  *
  * This function executes a Git command to list all changed files and returns their paths as an array.

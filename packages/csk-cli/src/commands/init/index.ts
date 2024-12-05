@@ -8,6 +8,7 @@ import {
   alignWithFullPackBranch,
   getChangedFilesPath,
   fillEnvVariables,
+  alignWithTemplateBranch,
 } from './utils';
 import { runCmdCommand } from '../../utils';
 
@@ -41,6 +42,8 @@ const init = async (args: InitArgs): Promise<void> => {
       console.info('🚀 Project initialized successfully!');
       return;
     }
+
+    await alignWithTemplateBranch(spinner, template);
 
     await alignWithFullPackBranch(spinner);
 

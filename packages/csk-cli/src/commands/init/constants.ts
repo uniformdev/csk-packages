@@ -11,6 +11,8 @@ export const GIT_COMMANDS = {
   DIFF_QUIET: `git diff --quiet origin/${GIT_BRANCHES.GOLD}`,
   RESET_HARD: `git reset --hard origin/${GIT_BRANCHES.GOLD}`,
   ALIGN_WITH_FULL_PACK_BRACH: `git restore --source=origin/${GIT_BRANCHES.FULL_PACK} -- .`,
+  ALIGN_WITH_TEMPLATE_BRANCH: (template: string) =>
+    `git restore --source=${TEMPLATE_BRANCH_PREFIX}${template} -- . && git add .`,
   GET_CHANGED_FILES: 'git ls-files --modified --others --exclude-standard',
   GIT_ADD: 'git add .',
   GIT_REMOTE_BRANCHES: 'git branch -r',
