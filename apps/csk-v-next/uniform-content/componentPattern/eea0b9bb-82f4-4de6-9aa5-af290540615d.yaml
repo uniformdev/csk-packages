@@ -1,5 +1,5 @@
 composition:
-  _name: Main Hero
+  _name: Hero Section (atomic)
   _id: eea0b9bb-82f4-4de6-9aa5-af290540615d
   type: section
   parameters:
@@ -12,7 +12,7 @@ composition:
         paddingBottom: container-large
     displayName:
       type: text
-      value: Welcome Hero
+      value: Hero Section
     fluidContent:
       type: checkbox
       value: true
@@ -198,9 +198,6 @@ composition:
               mobile: xl
               tablet: xl
               desktop: xl
-          text:
-            type: text
-            value: text
           color:
             type: tp2-color-palette-parameter
             value: text-tertiary
@@ -235,9 +232,6 @@ composition:
               mobile: 5xl
               tablet: 5xl
               desktop: 7xl
-          text:
-            type: text
-            value: Title
           color:
             type: tp2-color-palette-parameter
             value: text-primary
@@ -271,9 +265,6 @@ composition:
               mobile: xl
               tablet: xl
               desktop: xl
-          text:
-            type: text
-            value: Second subtitle
           color:
             type: tp2-color-palette-parameter
             value: text-primary
@@ -303,9 +294,9 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
-created: '2024-09-24T12:22:08.672087+00:00'
-modified: '2024-10-30T11:26:09.747814+00:00'
+created: '2024-11-25T16:05:45.487437+00:00'
+modified: '2024-11-29T18:35:59.949379+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/main-hero.jpg
-categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9
+categoryId: f22b05f0-c4bf-4158-8ebc-4856e4d453af

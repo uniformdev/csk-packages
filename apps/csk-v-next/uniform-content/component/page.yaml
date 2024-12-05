@@ -124,7 +124,8 @@ parameters:
     typeConfig:
       max: 1
 categoryId: c7a1d1d9-cc3f-431c-b55e-6c4af1285108
-previewImageUrl: https://dev-csk-marketing-site.vercel.app/preview-images/page.png
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/page.jpg
 useTeamPermissions: true
 slots:
   - id: pageHeader
@@ -139,7 +140,6 @@ slots:
     name: Page Content
     allowedComponents:
       - accordion
-      - callToAction
       - carousel
       - container
       - divider
@@ -162,6 +162,9 @@ slots:
       - header
       - countdown
       - footer
+      - flexibleHero
+      - fixedHero
+      - conditionalValuesTest
     allowAllComponents: false
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
@@ -175,5 +178,5 @@ slots:
 titleParameter: pageTitle
 thumbnailParameter: openGraphImage
 canBeComposition: true
-created: '2024-09-24T09:52:43.843335+00:00'
-updated: '2024-10-25T08:26:09.502647+00:00'
+created: '2024-11-21T21:38:47.55648+00:00'
+updated: '2024-12-04T15:58:18.221179+00:00'

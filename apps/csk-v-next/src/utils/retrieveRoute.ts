@@ -1,5 +1,5 @@
 import { retrieveRoute as uniformRetrieveRoute } from '@uniformdev/canvas-next-rsc';
-import { locales } from '@/i18n/locales.json';
+import i18n from '@/i18n/locales.json';
 
 const formatPath = (path?: string | string[], locale?: string | null) => {
   if (!locale) return path;
@@ -9,7 +9,7 @@ const formatPath = (path?: string | string[], locale?: string | null) => {
   }
 
   if (Array.isArray(path)) {
-    const isLocaleInPath = path?.some(p => (locales as string[]).includes(p));
+    const isLocaleInPath = path?.some(p => (i18n.locales as string[]).includes(p));
 
     if (isLocaleInPath) {
       return path;
@@ -18,7 +18,7 @@ const formatPath = (path?: string | string[], locale?: string | null) => {
     return [locale, ...path];
   }
 
-  const isLocaleInPath = (locales as string[])?.some(locale => path.includes(locale));
+  const isLocaleInPath = (i18n.locales as string[])?.some(locale => path.includes(locale));
 
   if (isLocaleInPath) {
     return path;

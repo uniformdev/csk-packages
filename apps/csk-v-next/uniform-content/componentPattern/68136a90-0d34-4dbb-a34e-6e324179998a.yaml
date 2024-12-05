@@ -1,10 +1,10 @@
 composition:
-  _name: Main Footer
+  _name: Global Footer
   _id: 68136a90-0d34-4dbb-a34e-6e324179998a
   type: footer
   parameters:
     border:
-      type: tp2-border-selector-parameter
+      type: tp2-token-selector-parameter
       value: border-footer
     spacing:
       type: tp2-space-control-parameter
@@ -22,112 +22,130 @@ composition:
       value: Footer
   slots:
     footerLogo:
-      - _id: cf36ced3-02e4-4c0d-a07b-350e72851772
-        type: image
+      - _id: bd107466-c7e2-4b3b-8d59-5d1ff0c0c8bf
+        type: link
+        slots:
+          linkContent:
+            - _id: cf36ced3-02e4-4c0d-a07b-350e72851772
+              type: image
+              parameters:
+                $viz:
+                  type: $viz
+                  value:
+                    criteria:
+                      clauses:
+                        - op: is
+                          rule: $qk
+                          value: dark
+                          source: theme
+                image:
+                  type: asset
+                  value:
+                    - _id: 59f609e7-91ae-42f9-91c4-57e0f6ea03f7
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: 0ecfb786-6b93-4023-9af6-7693a309a484
+                        url:
+                          value: >-
+                            https://canary-img.uniform.global/p/IazAOKLVROS83ZIvuAc0ww/yAc8oRghSnSOHRtkPeCeLQ-uniform-light-logo.svg
+                          type: text
+                        file:
+                          type: file
+                          value: a66c8bd1-864a-4d5a-8e84-0d210f4855d8
+                        size:
+                          value: 1681
+                          type: number
+                        title:
+                          type: text
+                          value: uniform-light-logo.svg
+                        width:
+                          value: 204
+                          type: number
+                        height:
+                          value: 52
+                          type: number
+                        mediaType:
+                          value: image/svg+xml
+                          type: text
+                      _source: uniform-assets
+                width:
+                  type: number
+                  value: '180'
+                height:
+                  type: number
+                  value: '47'
+                objectFit:
+                  type: tp2-segmented-control-parameter
+                  value: contain
+            - _id: ee663cd6-37e5-4b5e-b629-fdf9a4667eba
+              type: image
+              parameters:
+                $viz:
+                  type: $viz
+                  value:
+                    criteria:
+                      clauses:
+                        - op: '!is'
+                          rule: $qk
+                          value: dark
+                          source: theme
+                image:
+                  type: asset
+                  value:
+                    - _id: f760e22b-3627-4211-bd91-f9a5afa90420
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: 0efbc807-7b4a-4f7d-847b-62fe616b0815
+                        url:
+                          value: >-
+                            https://canary-img.uniform.global/p/IazAOKLVROS83ZIvuAc0ww/xVy7DexLQp6tgXxNH-Z6Jw-uniform-dark-logo.svg
+                          type: text
+                        file:
+                          type: file
+                          value: 47b0c945-547f-48b4-a161-2b26884d4f32
+                        size:
+                          value: 1697
+                          type: number
+                        title:
+                          type: text
+                          value: uniform-dark-logo.svg
+                        width:
+                          value: 204
+                          type: number
+                        height:
+                          value: 52
+                          type: number
+                        mediaType:
+                          value: image/svg+xml
+                          type: text
+                      _source: uniform-assets
+                width:
+                  type: number
+                  value: '180'
+                height:
+                  type: number
+                  value: '47'
+                objectFit:
+                  type: tp2-segmented-control-parameter
+                  value: contain
         parameters:
-          $viz:
-            type: $viz
+          link:
+            type: link
             value:
-              criteria:
-                clauses:
-                  - op: is
-                    rule: $qk
-                    value: dark
-                    source: theme
-          image:
-            type: asset
-            value:
-              - _id: 59f609e7-91ae-42f9-91c4-57e0f6ea03f7
-                type: image
-                fields:
-                  id:
-                    type: text
-                    value: 0ecfb786-6b93-4023-9af6-7693a309a484
-                  url:
-                    value: >-
-                      https://canary-img.uniform.global/p/IazAOKLVROS83ZIvuAc0ww/yAc8oRghSnSOHRtkPeCeLQ-uniform-light-logo.svg
-                    type: text
-                  file:
-                    type: file
-                    value: a66c8bd1-864a-4d5a-8e84-0d210f4855d8
-                  size:
-                    value: 1681
-                    type: number
-                  title:
-                    type: text
-                    value: uniform-light-logo.svg
-                  width:
-                    value: 204
-                    type: number
-                  height:
-                    value: 52
-                    type: number
-                  mediaType:
-                    value: image/svg+xml
-                    type: text
-                _source: uniform-assets
-          width:
-            type: number
-            value: '180'
-          height:
-            type: number
-            value: '47'
-          objectFit:
-            type: tp2-segmented-control-parameter
-            value: contain
-      - _id: ee663cd6-37e5-4b5e-b629-fdf9a4667eba
-        type: image
-        parameters:
-          $viz:
-            type: $viz
-            value:
-              criteria:
-                clauses:
-                  - op: '!is'
-                    rule: $qk
-                    value: dark
-                    source: theme
-          image:
-            type: asset
-            value:
-              - _id: f760e22b-3627-4211-bd91-f9a5afa90420
-                type: image
-                fields:
-                  id:
-                    type: text
-                    value: 0efbc807-7b4a-4f7d-847b-62fe616b0815
-                  url:
-                    value: >-
-                      https://canary-img.uniform.global/p/IazAOKLVROS83ZIvuAc0ww/xVy7DexLQp6tgXxNH-Z6Jw-uniform-dark-logo.svg
-                    type: text
-                  file:
-                    type: file
-                    value: 47b0c945-547f-48b4-a161-2b26884d4f32
-                  size:
-                    value: 1697
-                    type: number
-                  title:
-                    type: text
-                    value: uniform-dark-logo.svg
-                  width:
-                    value: 204
-                    type: number
-                  height:
-                    value: 52
-                    type: number
-                  mediaType:
-                    value: image/svg+xml
-                    type: text
-                _source: uniform-assets
-          width:
-            type: number
-            value: '180'
-          height:
-            type: number
-            value: '47'
-          objectFit:
-            type: tp2-segmented-control-parameter
-            value: contain
+              path: https://www.uniform.dev
+              type: url
+          displayName:
+            type: text
+            value: Uniform Link
+          openInNewTab:
+            type: checkbox
+            value: true
+        _overridability:
+          hideLockedParameters: true
     footerContent:
       - _id: 757f8498-9331-4b59-9723-95cdd187b2f1
         type: flex
@@ -169,18 +187,18 @@ composition:
                     type: flex
                     slots:
                       flexItem:
-                        - _id: 39fce731-d7fd-44a6-ba72-7d001be07de7
-                          type: text
+                        - _id: 88e9100e-b99d-4084-82a8-368fb15b4f20
+                          type: navigationLink
                           parameters:
-                            tag:
-                              type: tp2-segmented-control-parameter
-                              value: p
+                            link:
+                              type: link
+                              locales:
+                                en:
+                                  path: https://docs.uniform.app/docs
+                                  type: url
                             size:
                               type: tp2-segmented-control-parameter
-                              value:
-                                mobile: base
-                                tablet: base
-                                desktop: base
+                              value: base
                             text:
                               type: text
                               value: Documentation
@@ -190,18 +208,21 @@ composition:
                             weight:
                               type: tp2-segmented-control-parameter
                               value: bold
-                        - _id: 6c21604e-129a-45ac-bc6a-27a0ef4b112c
-                          type: text
+                          _overridability:
+                            hideLockedParameters: true
+                        - _id: 74e7610c-8a1d-4b03-824e-2ed660425e58
+                          type: navigationLink
                           parameters:
-                            tag:
-                              type: tp2-segmented-control-parameter
-                              value: p
+                            link:
+                              type: link
+                              locales:
+                                en:
+                                  path: >-
+                                    https://dev-csk-v-next-approuter-storybook.vercel.app
+                                  type: url
                             size:
                               type: tp2-segmented-control-parameter
-                              value:
-                                mobile: base
-                                tablet: base
-                                desktop: base
+                              value: base
                             text:
                               type: text
                               value: Storybook
@@ -211,18 +232,20 @@ composition:
                             weight:
                               type: tp2-segmented-control-parameter
                               value: bold
-                        - _id: 983492f1-199e-4b25-828a-ce92efa4f69a
-                          type: text
+                          _overridability:
+                            hideLockedParameters: true
+                        - _id: 52841642-6197-491e-b3b9-34d7d8586d3d
+                          type: navigationLink
                           parameters:
-                            tag:
-                              type: tp2-segmented-control-parameter
-                              value: p
+                            link:
+                              type: link
+                              locales:
+                                en:
+                                  path: https://www.uniform.dev/demo
+                                  type: url
                             size:
                               type: tp2-segmented-control-parameter
-                              value:
-                                mobile: base
-                                tablet: base
-                                desktop: base
+                              value: base
                             text:
                               type: text
                               value: Demo
@@ -232,6 +255,8 @@ composition:
                             weight:
                               type: tp2-segmented-control-parameter
                               value: bold
+                          _overridability:
+                            hideLockedParameters: true
                     parameters:
                       gap:
                         type: tp2-slider-control-parameter
@@ -274,156 +299,193 @@ composition:
               type: flex
               slots:
                 flexItem:
-                  - _id: 87ed9168-80db-408d-b271-4cbff4d1f913
-                    type: image
+                  - _id: 1d050b85-1622-44c2-ac6f-8f36d8022ebb
+                    type: link
+                    slots:
+                      linkContent:
+                        - _id: 87ed9168-80db-408d-b271-4cbff4d1f913
+                          type: image
+                          parameters:
+                            image:
+                              type: asset
+                              value:
+                                - _id: 5e6a0737-768a-47ae-b3b6-2f1beaad53df
+                                  type: image
+                                  fields:
+                                    id:
+                                      type: text
+                                      value: 804fa820-df03-40ec-8efa-ddf36b976c70
+                                    url:
+                                      value: >-
+                                        https://canary-img.uniform.global/p/p1YFPp51SU2_Wy4G7-pLQQ/hZ04UUPDTiCGGKA6mDycrA-storybook-icon.svg
+                                      type: text
+                                    file:
+                                      type: file
+                                      value: e2b11dba-8b68-492d-9f8f-14116702bd2b
+                                    size:
+                                      value: 5499
+                                      type: number
+                                    title:
+                                      type: text
+                                      value: storybook-icon.svg
+                                    width:
+                                      value: 29
+                                      type: number
+                                    height:
+                                      value: 29
+                                      type: number
+                                    mediaType:
+                                      value: image/svg+xml
+                                      type: text
+                                  _source: uniform-assets
+                            width:
+                              type: number
+                              value: '30'
+                            height:
+                              type: number
+                              value: '30'
+                            objectFit:
+                              type: tp2-segmented-control-parameter
+                              value: ''
                     parameters:
-                      image:
-                        type: asset
+                      link:
+                        type: link
                         value:
-                          - _id: 5e6a0737-768a-47ae-b3b6-2f1beaad53df
-                            type: image
-                            fields:
-                              id:
-                                type: text
-                                value: 804fa820-df03-40ec-8efa-ddf36b976c70
-                              url:
-                                value: >-
-                                  https://canary-img.uniform.global/p/p1YFPp51SU2_Wy4G7-pLQQ/hZ04UUPDTiCGGKA6mDycrA-storybook-icon.svg
-                                type: text
-                              file:
-                                type: file
-                                value: e2b11dba-8b68-492d-9f8f-14116702bd2b
-                              size:
-                                value: 5499
-                                type: number
-                              title:
-                                type: text
-                                value: storybook-icon.svg
-                              width:
-                                value: 29
-                                type: number
-                              height:
-                                value: 29
-                                type: number
-                              mediaType:
-                                value: image/svg+xml
-                                type: text
-                            _source: uniform-assets
-                      width:
-                        type: number
-                        value: '30'
-                      height:
-                        type: number
-                        value: '30'
-                      objectFit:
-                        type: tp2-segmented-control-parameter
-                        value: ''
-                  - _id: 6636b1df-de2f-465b-b8e2-71968fc5c063
-                    type: image
+                          path: >-
+                            https://dev-csk-v-next-approuter-storybook.vercel.app
+                          type: url
+                      displayName:
+                        type: text
+                        value: Storybook Link
+                      openInNewTab:
+                        type: checkbox
+                        value: true
+                    _overridability:
+                      hideLockedParameters: true
+                  - _id: 6f18283f-d276-46e0-a8bb-20749b65a744
+                    type: link
+                    slots:
+                      linkContent:
+                        - _id: 6636b1df-de2f-465b-b8e2-71968fc5c063
+                          type: image
+                          parameters:
+                            $viz:
+                              type: $viz
+                              value:
+                                criteria:
+                                  clauses:
+                                    - op: is
+                                      rule: $qk
+                                      value: dark
+                                      source: theme
+                            image:
+                              type: asset
+                              value:
+                                - _id: 2af9bb94-1d79-4a69-9c1a-d2fb0134446e
+                                  type: image
+                                  fields:
+                                    id:
+                                      type: text
+                                      value: 5fb5390d-c1a1-4506-a586-d4ba42c20f7b
+                                    url:
+                                      value: >-
+                                        https://canary-img.uniform.global/p/IazAOKLVROS83ZIvuAc0ww/MvkG-JokTn6f1UR-E408gQ-github-light-logo.svg
+                                      type: text
+                                    file:
+                                      type: file
+                                      value: 95d6ad35-091b-4a0e-8c9f-ad1c398c4f83
+                                    size:
+                                      value: 1326
+                                      type: number
+                                    title:
+                                      type: text
+                                      value: github-light-logo.svg
+                                    width:
+                                      value: 35
+                                      type: number
+                                    height:
+                                      value: 34
+                                      type: number
+                                    mediaType:
+                                      value: image/svg+xml
+                                      type: text
+                                  _source: uniform-assets
+                            width:
+                              type: number
+                              value: '30'
+                            height:
+                              type: number
+                              value: '30'
+                            objectFit:
+                              type: tp2-segmented-control-parameter
+                              value: ''
+                        - _id: 261e0c54-fda9-4380-96a1-0dd3f8781371
+                          type: image
+                          parameters:
+                            $viz:
+                              type: $viz
+                              value:
+                                criteria:
+                                  clauses:
+                                    - op: '!is'
+                                      rule: $qk
+                                      value: dark
+                                      source: theme
+                            image:
+                              type: asset
+                              value:
+                                - _id: 035087c7-e38b-42d4-8c77-2e632151230a
+                                  type: image
+                                  fields:
+                                    id:
+                                      type: text
+                                      value: d1b7aeaa-38a0-41a3-85e1-0d4d1b3b0990
+                                    url:
+                                      value: >-
+                                        https://canary-img.uniform.global/p/IazAOKLVROS83ZIvuAc0ww/RhO3ui_DQkC3EMfGy3N1Ug-github-dark-logo.svg
+                                      type: text
+                                    file:
+                                      type: file
+                                      value: f6f351b7-03eb-4a20-a6b1-327132c4baff
+                                    size:
+                                      value: 1327
+                                      type: number
+                                    title:
+                                      type: text
+                                      value: github-dark-logo.svg
+                                    width:
+                                      value: 35
+                                      type: number
+                                    height:
+                                      value: 34
+                                      type: number
+                                    mediaType:
+                                      value: image/svg+xml
+                                      type: text
+                                  _source: uniform-assets
+                            width:
+                              type: number
+                              value: '30'
+                            height:
+                              type: number
+                              value: '30'
+                            objectFit:
+                              type: tp2-segmented-control-parameter
+                              value: ''
                     parameters:
-                      $viz:
-                        type: $viz
+                      link:
+                        type: link
                         value:
-                          criteria:
-                            clauses:
-                              - op: is
-                                rule: $qk
-                                value: dark
-                                source: theme
-                      image:
-                        type: asset
-                        value:
-                          - _id: 2af9bb94-1d79-4a69-9c1a-d2fb0134446e
-                            type: image
-                            fields:
-                              id:
-                                type: text
-                                value: 5fb5390d-c1a1-4506-a586-d4ba42c20f7b
-                              url:
-                                value: >-
-                                  https://canary-img.uniform.global/p/IazAOKLVROS83ZIvuAc0ww/MvkG-JokTn6f1UR-E408gQ-github-light-logo.svg
-                                type: text
-                              file:
-                                type: file
-                                value: 95d6ad35-091b-4a0e-8c9f-ad1c398c4f83
-                              size:
-                                value: 1326
-                                type: number
-                              title:
-                                type: text
-                                value: github-light-logo.svg
-                              width:
-                                value: 35
-                                type: number
-                              height:
-                                value: 34
-                                type: number
-                              mediaType:
-                                value: image/svg+xml
-                                type: text
-                            _source: uniform-assets
-                      width:
-                        type: number
-                        value: '30'
-                      height:
-                        type: number
-                        value: '30'
-                      objectFit:
-                        type: tp2-segmented-control-parameter
-                        value: ''
-                  - _id: 261e0c54-fda9-4380-96a1-0dd3f8781371
-                    type: image
-                    parameters:
-                      $viz:
-                        type: $viz
-                        value:
-                          criteria:
-                            clauses:
-                              - op: '!is'
-                                rule: $qk
-                                value: dark
-                                source: theme
-                      image:
-                        type: asset
-                        value:
-                          - _id: 035087c7-e38b-42d4-8c77-2e632151230a
-                            type: image
-                            fields:
-                              id:
-                                type: text
-                                value: d1b7aeaa-38a0-41a3-85e1-0d4d1b3b0990
-                              url:
-                                value: >-
-                                  https://canary-img.uniform.global/p/IazAOKLVROS83ZIvuAc0ww/RhO3ui_DQkC3EMfGy3N1Ug-github-dark-logo.svg
-                                type: text
-                              file:
-                                type: file
-                                value: f6f351b7-03eb-4a20-a6b1-327132c4baff
-                              size:
-                                value: 1327
-                                type: number
-                              title:
-                                type: text
-                                value: github-dark-logo.svg
-                              width:
-                                value: 35
-                                type: number
-                              height:
-                                value: 34
-                                type: number
-                              mediaType:
-                                value: image/svg+xml
-                                type: text
-                            _source: uniform-assets
-                      width:
-                        type: number
-                        value: '30'
-                      height:
-                        type: number
-                        value: '30'
-                      objectFit:
-                        type: tp2-segmented-control-parameter
-                        value: ''
+                          path: https://github.com/uniformdev/csk-v-next
+                          type: url
+                      displayName:
+                        type: text
+                        value: GitHub Link
+                      openInNewTab:
+                        type: checkbox
+                        value: true
+                    _overridability:
+                      hideLockedParameters: true
               parameters:
                 gap:
                   type: tp2-slider-control-parameter
@@ -504,7 +566,7 @@ composition:
                     version: 1
                     children:
                       - mode: normal
-                        text: '2024 Uniform Systems, Inc. All rights reserved. '
+                        text: '2025 Uniform Systems, Inc. All rights reserved. '
                         type: text
                         style: ''
                         detail: 0
@@ -525,13 +587,22 @@ composition:
                         detail: 0
                         format: 0
                         version: 1
-                      - mode: normal
-                        text: Uniform
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 8
+                      - link:
+                          path: https://www.uniform.dev/
+                          type: url
+                        type: link
+                        format: ''
+                        indent: 0
                         version: 1
+                        children:
+                          - mode: normal
+                            text: Uniform
+                            type: text
+                            style: ''
+                            detail: 0
+                            format: 0
+                            version: 1
+                        direction: ltr
                       - mode: normal
                         text: >-
                           , standing on the shoulders of these awesome open
@@ -541,27 +612,22 @@ composition:
                         detail: 0
                         format: 0
                         version: 1
-                      - mode: normal
-                        text: TailwindCSS
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 8
+                      - link:
+                          path: https://tailwindcss.com/
+                          type: url
+                        type: link
+                        format: ''
+                        indent: 0
                         version: 1
-                      - mode: normal
-                        text: ",\_"
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
-                      - mode: normal
-                        text: DaisyUI
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 8
-                        version: 1
+                        children:
+                          - mode: normal
+                            text: TailwindCSS
+                            type: text
+                            style: ''
+                            detail: 0
+                            format: 0
+                            version: 1
+                        direction: ltr
                       - mode: normal
                         text: ",\_"
                         type: text
@@ -569,13 +635,22 @@ composition:
                         detail: 0
                         format: 0
                         version: 1
-                      - mode: normal
-                        text: React
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 8
+                      - link:
+                          path: https://react.dev/
+                          type: url
+                        type: link
+                        format: ''
+                        indent: 0
                         version: 1
+                        children:
+                          - mode: normal
+                            text: React
+                            type: text
+                            style: ''
+                            detail: 0
+                            format: 0
+                            version: 1
+                        direction: ltr
                       - mode: normal
                         text: ", and\_"
                         type: text
@@ -583,42 +658,29 @@ composition:
                         detail: 0
                         format: 0
                         version: 1
-                      - mode: normal
-                        text: Next.js
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 8
+                      - link:
+                          path: https://next.js.org/
+                          type: url
+                        type: link
+                        format: ''
+                        indent: 0
                         version: 1
+                        children:
+                          - mode: normal
+                            text: Next.js
+                            type: text
+                            style: ''
+                            detail: 0
+                            format: 0
+                            version: 1
+                        direction: ltr
                       - mode: normal
-                        text: ". Deployed to\_"
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
-                      - mode: normal
-                        text: Vercel
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 8
-                        version: 1
-                      - mode: normal
-                        text: .
+                        text: ' (app router).'
                         type: text
                         style: ''
                         detail: 0
                         format: 0
                         version: 1
-                    direction: ltr
-                    textStyle: ''
-                    textFormat: 0
-                  - type: paragraph
-                    format: ''
-                    indent: 0
-                    version: 1
-                    children: []
                     direction: ltr
                     textStyle: ''
                     textFormat: 0
@@ -626,6 +688,8 @@ composition:
           color:
             type: tp2-color-palette-parameter
             value: text-primary
-created: '2024-10-15T11:53:35.311165+00:00'
-modified: '2024-10-15T12:01:02.151439+00:00'
+  _locales:
+    - en
+created: '2024-10-15T08:05:43.455858+00:00'
+modified: '2024-12-04T11:38:46.442399+00:00'
 pattern: true

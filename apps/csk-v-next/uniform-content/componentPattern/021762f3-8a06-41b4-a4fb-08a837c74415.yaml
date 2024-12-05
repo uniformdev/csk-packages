@@ -1,5 +1,5 @@
 composition:
-  _name: Main Header
+  _name: Global Header
   _id: 021762f3-8a06-41b4-a4fb-08a837c74415
   type: header
   variant: sticky
@@ -24,98 +24,36 @@ composition:
         type: link
         slots:
           linkContent:
-            - _id: 0e763156-16d9-49ae-839e-774b51fc2df6
-              type: image
-              parameters:
-                $viz:
-                  type: $viz
-                  value:
-                    criteria:
-                      clauses:
-                        - op: is
-                          rule: $qk
-                          value: dark
-                          source: theme
-                image:
-                  type: asset
-                  value:
-                    - _id: 918553d3-32bc-4d04-9021-7f64227d3bec
-                      type: image
-                      fields:
-                        id:
-                          type: text
-                          value: b95b71ab-c9e8-436b-864d-19e89c849f8e
-                        url:
-                          value: >-
-                            https://canary-img.uniform.global/p/IazAOKLVROS83ZIvuAc0ww/7euGQmIPSBGrbYonawxOGg-csk-light-logo.svg
-                          type: text
-                        file:
-                          type: file
-                          value: 647956f8-549b-4053-b6b3-3937e0c4ae8e
-                        size:
-                          value: 10446
-                          type: number
-                        title:
-                          type: text
-                          value: csk-light-logo.svg
-                        width:
-                          value: 432
-                          type: number
-                        height:
-                          value: 79
-                          type: number
-                        mediaType:
-                          value: image/svg+xml
-                          type: text
-                      _source: uniform-assets
-                width:
-                  type: number
-                  value: '220'
-                height:
-                  type: number
-                  value: '40'
-                objectFit:
-                  type: tp2-segmented-control-parameter
-                  value: contain
             - _id: 1d80a3d5-a57a-44e5-9ac8-0b665124f55c
               type: image
               parameters:
-                $viz:
-                  type: $viz
-                  value:
-                    criteria:
-                      clauses:
-                        - op: '!is'
-                          rule: $qk
-                          value: dark
-                          source: theme
                 image:
                   type: asset
                   value:
-                    - _id: c4ce3975-e77c-40ea-b4b6-dc6ab3c58b70
+                    - _id: bf66f619-6751-47ba-8249-28a233e15360
                       type: image
                       fields:
                         id:
                           type: text
-                          value: 8ce2b679-8593-4051-b0e4-92ad0c17d1f2
+                          value: 0f0670b4-a425-40d3-842b-c7c895d500a5
                         url:
                           value: >-
-                            https://canary-img.uniform.global/p/IazAOKLVROS83ZIvuAc0ww/iXSR_m5yQMOmyiCIjeljng-csk-dark-logo.svg
+                            https://canary-img.uniform.global/p/Pwf9WdkMT2e7-O__xKLulg/87GUb2yUTTuswAP4cEpl2A-uniformlogo.svg
                           type: text
                         file:
                           type: file
-                          value: d44e99a7-b1e6-4ece-8c49-e877bbd1c925
+                          value: d7405da9-bafe-4158-836d-f9994daa1ed1
                         size:
-                          value: 10446
+                          value: 454
                           type: number
                         title:
                           type: text
-                          value: csk-dark-logo.svg
+                          value: uniformlogo.svg
                         width:
-                          value: 432
+                          value: 45
                           type: number
                         height:
-                          value: 79
+                          value: 52
                           type: number
                         mediaType:
                           value: image/svg+xml
@@ -123,7 +61,7 @@ composition:
                       _source: uniform-assets
                 width:
                   type: number
-                  value: '220'
+                  value: '50'
                 height:
                   type: number
                   value: '40'
@@ -221,8 +159,8 @@ composition:
             value: medium
   _locales:
     - en
-created: '2024-10-15T11:53:33.417943+00:00'
-modified: '2024-10-30T11:26:47.838508+00:00'
+created: '2024-10-15T08:05:41.05485+00:00'
+modified: '2024-11-28T15:33:19.402409+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/main-header.jpg
