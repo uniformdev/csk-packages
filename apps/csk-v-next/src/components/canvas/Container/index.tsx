@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { ComponentProps, UniformSlot } from '@uniformdev/canvas-next-rsc/component';
-import BaseContainer, { SpaceType } from '@/components/ui/Container';
-import { ViewPort } from '@/types';
+import BaseContainer from '@/components/ui/Container';
+import { SpaceType, ViewPort } from '@/types';
 
 export type ContainerParameters = {
   displayName?: string;

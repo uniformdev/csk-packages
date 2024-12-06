@@ -96,237 +96,162 @@ composition:
     852664d7-7d35-4eb5-97ad-e1c23ce940ca|dc2e95be-21b5-4476-a309-f8a34922f528:
       slots:
         $slotSectionItems:
-          - _id: ddd9b054-3886-4610-8915-c1c0bb3a3e39
-            type: conditionalValuesTest
+          - _id: eebf1227-58aa-41c5-bfc4-089d94cebdba
+            type: fixedHero
             parameters:
-              asset:
+              image:
                 type: asset
-                locales:
-                  en:
-                    - _id: f39ee045-b333-4211-b026-1db25ba46c39
-                      type: image
-                      fields:
-                        id:
-                          type: text
-                          value: 246a9113-763f-4330-b55e-dfa654743828
-                        url:
-                          type: text
-                          value: >-
-                            https://canary-img.uniform.global/p/p1YFPp51SU2_Wy4G7-pLQQ/Vvs4OsF0RXCzYm4vZR_qzA-Rectangle-1-(2).svg
-                        file:
-                          type: file
-                          value: 839c854b-54dd-4051-9052-9f985969cb33
-                        size:
-                          type: number
-                          value: 423
-                        title:
-                          type: text
-                          value: hero-bg-gradient-light.svg
-                        width:
-                          type: number
-                          value: 1016
-                        height:
-                          type: number
-                          value: 330
-                        mediaType:
-                          type: text
-                          value: image/svg+xml
-                      _source: uniform-assets
-                localesConditions:
-                  en:
-                    - id: 0
-                      when:
-                        clauses:
-                          - op: is
-                            rule: $qk
-                            value: dark
-                            source: theme
-                      value:
-                        - _id: 0f4b8916-30e0-4062-8bad-f4a31e0e5774
-                          type: image
-                          fields:
-                            id:
-                              type: text
-                              value: f06e5c52-4afd-4201-ba3d-45bc27d0e88a
-                            url:
-                              type: text
-                              value: >-
-                                https://canary-img.uniform.global/p/DqTtj1y1TDaJztdjtv1GVA/yVaXon4rQPObAjMfdR7bwA-Rectangle-1-(1).svg
-                            file:
-                              type: file
-                              value: d8971550-b20d-4ea9-82ce-159841a7610c
-                            size:
-                              type: number
-                              value: 385
-                            title:
-                              type: text
-                              value: hero-bg-gradient-dark.svg
-                            width:
-                              type: number
-                              value: 1016
-                            height:
-                              type: number
-                              value: 330
-                            mediaType:
-                              type: text
-                              value: image/svg+xml
-                          _source: uniform-assets
-              imageUrl:
-                type: image
-                locales:
-                  en: >-
-                    https://canary-img.uniform.global/p/p1YFPp51SU2_Wy4G7-pLQQ/Vvs4OsF0RXCzYm4vZR_qzA-Rectangle-1-(2).svg
-                localesConditions:
-                  en:
-                    - id: 0
-                      when:
-                        clauses:
-                          - op: is
-                            rule: $qk
-                            value: dark
-                            source: theme
-                      value: >-
-                        https://canary-img.uniform.global/p/DqTtj1y1TDaJztdjtv1GVA/yVaXon4rQPObAjMfdR7bwA-Rectangle-1-(1).svg
-              simpleText:
+                value:
+                  - _id: 966bd5f2-ef69-4c82-99e5-c2c0861ada1b
+                    type: image
+                    fields:
+                      id:
+                        type: text
+                        value: 246a9113-763f-4330-b55e-dfa654743828
+                      url:
+                        type: text
+                        value: >-
+                          https://canary-img.uniform.global/p/p1YFPp51SU2_Wy4G7-pLQQ/Vvs4OsF0RXCzYm4vZR_qzA-Rectangle-1-(2).svg
+                      file:
+                        type: file
+                        value: fc71e19b-826a-42d9-80a2-8ef9d843e37c
+                      size:
+                        type: number
+                        value: 423
+                      title:
+                        type: text
+                        value: hero-bg-gradient-light.svg
+                      width:
+                        type: number
+                        value: 1016
+                      height:
+                        type: number
+                        value: 330
+                      mediaType:
+                        type: text
+                        value: image/svg+xml
+                    _source: uniform-assets
+                conditions:
+                  - id: 0
+                    when:
+                      clauses:
+                        - op: is
+                          rule: $qk
+                          value: dark
+                          source: theme
+                    value:
+                      - _id: 0dc5d0ea-e874-4bf2-bd88-7e0230c2f880
+                        type: image
+                        fields:
+                          id:
+                            type: text
+                            value: f06e5c52-4afd-4201-ba3d-45bc27d0e88a
+                          url:
+                            type: text
+                            value: >-
+                              https://canary-img.uniform.global/p/Pwf9WdkMT2e7-O__xKLulg/ZDZh9i6USd2hfI5lqbq26w-Rectangle-1-(1).svg
+                          file:
+                            type: file
+                            value: 4b1b071d-34ca-47f0-8722-a62379d5eb31
+                          size:
+                            type: number
+                            value: 385
+                          title:
+                            type: text
+                            value: hero-bg-gradient-dark.svg
+                          width:
+                            type: number
+                            value: 1016
+                          height:
+                            type: number
+                            value: 330
+                          mediaType:
+                            type: text
+                            value: image/svg+xml
+                        _source: uniform-assets
+              titleTag:
+                type: tp2-segmented-control-parameter
+                value: h2
+              titleText:
                 type: text
-                locales:
-                  en: Default Light Simple Text
-                localesConditions:
-                  en:
-                    - id: 0
-                      when:
-                        clauses:
-                          - op: is
-                            rule: $qk
-                            value: dark
-                            source: theme
-                      value: Condition When Theme is Dark
-          - _id: 5c683fc1-6d2a-4334-9a84-3958998ef67a
-            type: divider
-            parameters:
-              color:
+                value: Component Starter Kit
+              titleColor:
                 type: tp2-color-palette-parameter
-                value: general-color-3
-              width:
-                type: tp2-slider-control-parameter
-                value: 100%
-              alignment:
+                value: text-primary
+              displayName:
+                type: text
+                value: Welcome Hero
+              descriptionText:
+                type: text
+                value: >-
+                  An essential set of components you need to start building
+                  personalized web experiences with Uniform.
+              contentAlignment:
                 type: tp2-segmented-control-parameter
                 value: center
-              thickness:
-                type: tp2-slider-control-parameter
-                value: 20px
-          - _id: 21d83ac9-8a5f-46f5-8154-38e4d5e51b76
-            type: conditionalValuesTest
-            parameters:
-              $viz:
-                type: $viz
-                value:
-                  criteria:
-                    clauses:
-                      - op: is
-                        rule: $qk
-                        value: light
-                        source: theme
-              asset:
-                type: asset
+              descriptionColor:
+                type: tp2-color-palette-parameter
+                value: text-primary
+              eyebrowTitleText:
+                type: text
+                value: Uniform
+              eyebrowTitleColor:
+                type: tp2-color-palette-parameter
+                value: text-tertiary
+              primaryButtonLink:
+                type: link
                 locales:
                   en:
-                    - _id: 2c9c2dfa-0045-4929-bde7-a35a533e552d
-                      type: image
-                      fields:
-                        id:
-                          type: text
-                          value: 246a9113-763f-4330-b55e-dfa654743828
-                        url:
-                          type: text
-                          value: >-
-                            https://canary-img.uniform.global/p/p1YFPp51SU2_Wy4G7-pLQQ/Vvs4OsF0RXCzYm4vZR_qzA-Rectangle-1-(2).svg
-                        file:
-                          type: file
-                          value: 839c854b-54dd-4051-9052-9f985969cb33
-                        size:
-                          type: number
-                          value: 423
-                        title:
-                          type: text
-                          value: hero-bg-gradient-light.svg
-                        width:
-                          type: number
-                          value: 1016
-                        height:
-                          type: number
-                          value: 330
-                        mediaType:
-                          type: text
-                          value: image/svg+xml
-                      _source: uniform-assets
-              imageUrl:
-                type: image
-                locales:
-                  en: >-
-                    https://canary-img.uniform.global/p/p1YFPp51SU2_Wy4G7-pLQQ/Vvs4OsF0RXCzYm4vZR_qzA-Rectangle-1-(2).svg
-              simpleText:
+                    path: https://dev-csk-marketing-site.vercel.app/components
+                    type: url
+              primaryButtonText:
                 type: text
-                locales:
-                  en: Light Simple Text
-          - _id: 66745661-ba54-434d-b5b8-9e3d07e9d7b6
-            type: conditionalValuesTest
-            parameters:
-              $viz:
-                type: $viz
-                value:
-                  criteria:
-                    clauses:
-                      - op: is
-                        rule: $qk
-                        value: dark
-                        source: theme
-              asset:
-                type: asset
-                locales:
-                  en:
-                    - _id: 966d9155-41a4-45c4-8521-6e19bb409204
-                      type: image
-                      fields:
-                        id:
-                          type: text
-                          value: f06e5c52-4afd-4201-ba3d-45bc27d0e88a
-                        url:
-                          type: text
-                          value: >-
-                            https://canary-img.uniform.global/p/DqTtj1y1TDaJztdjtv1GVA/yVaXon4rQPObAjMfdR7bwA-Rectangle-1-(1).svg
-                        file:
-                          type: file
-                          value: d8971550-b20d-4ea9-82ce-159841a7610c
-                        size:
-                          type: number
-                          value: 385
-                        title:
-                          type: text
-                          value: hero-bg-gradient-dark.svg
-                        width:
-                          type: number
-                          value: 1016
-                        height:
-                          type: number
-                          value: 330
-                        mediaType:
-                          type: text
-                          value: image/svg+xml
-                      _source: uniform-assets
-              imageUrl:
-                type: image
-                locales:
-                  en: >-
-                    https://canary-img.uniform.global/p/DqTtj1y1TDaJztdjtv1GVA/yVaXon4rQPObAjMfdR7bwA-Rectangle-1-(1).svg
-              simpleText:
-                type: text
-                locales:
-                  en: Dark Simple Text
+                value: Browse the components
+    d106a331-2e9b-4cd2-aef8-546c91122fc3|59786267-3106-4c8c-8670-9c56f9b07199:
+      parameters:
+        text:
+          type: text
+          value: >-
+            An essential set of components you need to start building
+            personalized web experiences with Uniform.
+    d106a331-2e9b-4cd2-aef8-546c91122fc3|804f6eac-3561-4f4d-87fc-80ce979d7c2b:
+      slots:
+        $slotSectionItems:
+          - _id: 9c4b8121-bfc8-4298-a4c3-607c33899a93
+            type: button
+            _pattern: 53b59aed-e378-4fcb-9135-20247d92074e
+            _overridability:
+              variants: true
+              parameters:
+                icon: 'yes'
+                link: 'yes'
+                text: 'yes'
+                iconPosition: 'yes'
+              hideLockedParameters: true
+          - _id: 8b493565-c8de-4296-ac79-26b11d710c99
+            type: button
+            _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
+            _overridability:
+              variants: true
+              parameters:
+                icon: 'yes'
+                link: 'yes'
+                text: 'yes'
+                textColor: 'no'
+              hideLockedParameters: true
+    d106a331-2e9b-4cd2-aef8-546c91122fc3|90aa2fcd-bc65-4d44-828b-7e888218a025:
+      parameters:
+        text:
+          type: text
+          value: Component Starter Kit
+    d106a331-2e9b-4cd2-aef8-546c91122fc3|96c5e248-ac86-47b5-a00e-8679f1842f26:
+      parameters:
+        text:
+          type: text
+          value: Uniform
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2024-11-21T21:39:00.047126+00:00'
-modified: '2024-12-04T16:13:46.739723+00:00'
+created: '2024-10-15T08:05:49.245582+00:00'
+modified: '2024-12-04T11:30:25.831542+00:00'
 pattern: false

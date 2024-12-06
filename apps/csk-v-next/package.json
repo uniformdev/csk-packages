@@ -1,6 +1,6 @@
 {
   "name": "csk-v-next",
-  "version": "0.1.177",
+  "version": "0.1.179",
   "private": true,
   "engines": {
     "yarn": "please-use-npm",
@@ -19,14 +19,6 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prepare": "husky",
     "init": "run-s uniform:push:tokens uniform:push:content uniform:publish:manifest",
-    "uniform:pull:colors": "theme-pack pull -c",
-    "uniform:push:colors": "theme-pack push -c",
-    "uniform:pull:dimensions": "theme-pack pull -d",
-    "uniform:push:dimensions": "theme-pack push -d",
-    "uniform:pull:fonts": "theme-pack pull -f",
-    "uniform:push:fonts": "theme-pack push -f",
-    "uniform:pull:borders": "theme-pack pull -b",
-    "uniform:push:borders": "theme-pack push -b",
     "uniform:pull:tokens": "theme-pack pull",
     "uniform:push:tokens": "theme-pack push",
     "uniform:pull:content": "uniform sync pull",
@@ -42,7 +34,7 @@
     "*.{ts,tsx}": "eslint"
   },
   "dependencies": {
-    "@uniformdev/canvas-next-rsc": "19.208.0",
+    "@uniformdev/canvas-next-rsc": "19.209.1",
     "@uniformdev/csk-cli": "*",
     "@uniformdev/scaffold": "*",
     "@uniformdev/theme-pack": "*",
@@ -74,7 +66,7 @@
     "@typescript-eslint/eslint-plugin": "8.1.0",
     "@typescript-eslint/parser": "8.1.0",
     "@typescript-eslint/types": "8.1.0",
-    "@uniformdev/cli": "19.208.0",
+    "@uniformdev/cli": "19.209.1",
     "eslint": "8.57.0",
     "eslint-config-next": "14.2.5",
     "eslint-config-prettier": "9.1.0",
