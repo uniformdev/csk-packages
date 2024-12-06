@@ -1,3 +1,4 @@
+import fs from 'fs/promises';
 import * as ora from 'ora';
 import path from 'path';
 import { select, checkbox, confirm, input } from '@inquirer/prompts';
@@ -90,33 +91,66 @@ export const selectModules = async (): Promise<Module[]> => {
   return modules;
 };
 
-export const fillEnvVariables = async (modules: Module[]) => {
+/**
+ * Fills environment variables by prompting the user to select or input values for required variables.
+ *
+ * @param {Module[]} modules - An array of modules for which environment variables need to be filled.
+ * @returns {Promise<Partial<Record<EnvVariable, string>>>} A promise resolving to an object containing the filled environment variables.
+ */
+export const fillEnvVariables = async (modules: Module[]): Promise<Partial<Record<EnvVariable, string>>> => {
+  // Parse the default environment variables from the .env file
+  const defaultEnvVariables = await parseEnvVariables();
+
+  // Determine required environment variables based on provided modules
   const requiredModuleEnvVariables = modules.map(appModules => REQUIRED_ENV_VARIABLES[appModules]).flat();
   const requiredGeneralEnvVariables = [...REQUIRED_ENV_VARIABLES.general, ...requiredModuleEnvVariables];
 
+  // Object to store the resulting environment variables
   const envVariables: Partial<Record<EnvVariable, string>> = {};
 
   for (const envVariable of requiredGeneralEnvVariables) {
     const possibleVariants = ENV_VARIABLES_VARIANTS[envVariable];
 
     if (possibleVariants?.length) {
+      // Prompt the user to select a variant for the environment variable
       const selectedVariant = await select<string>({
         message: `Select the variant for ${envVariable}:`,
         choices: possibleVariants.map(variant => ({ name: variant, value: variant })),
-        default: ENV_VARIABLES_DEFAULT_VALUES[envVariable],
+        default: defaultEnvVariables[envVariable] || ENV_VARIABLES_DEFAULT_VALUES[envVariable],
       });
 
       envVariables[envVariable] = selectedVariant;
     } else {
+      // Prompt the user to input a value for the environment variable
       const value = await input({
         message: `Enter the value for ${envVariable}:`,
-        default: ENV_VARIABLES_DEFAULT_VALUES[envVariable],
+        default: defaultEnvVariables[envVariable] || ENV_VARIABLES_DEFAULT_VALUES[envVariable],
       });
       envVariables[envVariable] = value;
     }
   }
 
   return envVariables;
+};
+
+/**
+ * Parses environment variables from the .env file into an object.
+ *
+ * @returns {Promise<Record<string, string>>} A promise resolving to an object containing key-value pairs of environment variables.
+ */
+export const parseEnvVariables = async (): Promise<Record<string, string>> => {
+  // Read the contents of the .env file
+  const envVariables = await fs.readFile('.env', 'utf8');
+
+  // Convert the .env file content into an object
+  const envVariablesObject = Object.fromEntries(
+    envVariables
+      .split('\n')
+      .map(line => line.split('='))
+      .filter(([key, value]) => key && value)
+  );
+
+  return envVariablesObject;
 };
 
 /**
