@@ -2,7 +2,13 @@ import { exec } from 'child_process';
 import prettier, { Options } from 'prettier';
 import { CanvasClient, ComponentDefinitionParameter } from '@uniformdev/canvas';
 import { input } from '@inquirer/prompts';
-import { supportedParameterHandlers } from '../parameterHandlers';
+import { supportedParameterHandlers } from './parameterHandlers';
+import {
+  THEME_PACK_PARAMETERS_TYPES,
+  UNIFORM_PARAMETERS,
+  UNIFORM_PARAMETERS_TYPES,
+  VALID_KEY_REGEX,
+} from '../constants';
 import { ParameterHandler } from '../types';
 
 export const getCanvasClient = async () => {
@@ -39,16 +45,33 @@ export const getComponentNameBasedOnId = (componentId?: string) =>
 
 export const getSupportedParameters = (
   parameters: ComponentDefinitionParameter[]
-): (ComponentDefinitionParameter & { handler?: ParameterHandler })[] => {
-  const handled = parameters.map(parameter => {
-    const handler = supportedParameterHandlers.find(handler => {
-      return handler.supports.includes(parameter.type);
+): (ComponentDefinitionParameter & { handler?: ParameterHandler; overriddenId?: string })[] => {
+  const reservedValues = Object.values(UNIFORM_PARAMETERS);
+  const handled = parameters
+    .filter(parameter => !reservedValues.includes(parameter.id as UNIFORM_PARAMETERS))
+    .map((parameter, index) => {
+      const handler = supportedParameterHandlers.find(handler => {
+        return handler.supports.includes(parameter.type as UNIFORM_PARAMETERS_TYPES | THEME_PACK_PARAMETERS_TYPES);
+      });
+      const overriddenId = !parameter?.id?.match(VALID_KEY_REGEX) ? `parameter_${index}` : undefined;
+
+      return {
+        ...parameter,
+        overriddenId,
+        handler: handler
+          ? {
+              ...handler,
+              render: (parameter: ComponentDefinitionParameter) => {
+                if (!overriddenId) {
+                  return handler.render(parameter);
+                } else {
+                  return handler.render({ ...parameter, id: overriddenId });
+                }
+              },
+            }
+          : undefined,
+      };
     });
-    return {
-      ...parameter,
-      handler,
-    };
-  });
 
   return handled.filter(parameter => !!parameter.handler);
 };
