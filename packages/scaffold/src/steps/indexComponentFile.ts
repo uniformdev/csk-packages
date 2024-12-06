@@ -67,7 +67,7 @@ export const indexComponentFile: FileHandler = {
         uniformProps.add(UNIFORM_PARAMETERS.CONTEXT);
       }
 
-      const totalParameters = Object.keys(definition.parameters || {}).length;
+      const totalParameters = (definition.parameters || []).filter(({ type }) => type !== 'group').length;
       const detectedParameters = supportedParameters.length;
       const detectedSlots = slotsMapping.length;
 
