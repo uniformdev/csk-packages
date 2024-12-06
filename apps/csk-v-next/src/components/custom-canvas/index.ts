@@ -1,5 +1,4 @@
 import { ComponentMapping } from '@/utils/createComponentResolver';
-import { ConditionalValuesTest } from './ConditionalValuesTest';
 import Container from './Container';
 import CustomComponent from './CustomComponent';
 
@@ -9,5 +8,4 @@ export const customComponentsMapping: ComponentMapping = {
   customComponent: { component: CustomComponent },
   // This is an overridden CSK Container component.
   container: { component: Container },
-  conditionalValuesTest: { component: ConditionalValuesTest },
 };

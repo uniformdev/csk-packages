@@ -7,8 +7,7 @@ import {
   ResolvedRouteGetResponse,
   RouteGetResponseEdgehancedComposition,
 } from '@uniformdev/canvas';
-import { SpaceType } from '@/components/ui/Container';
-import { ViewPort } from '@/types';
+import { SpaceType, ViewPort } from '@/types';
 
 export const formatUniformLink = (uniformLink?: LinkParamValue) => {
   if (!uniformLink) return '';
