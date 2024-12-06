@@ -1,3 +1,4 @@
+import fs from 'fs/promises';
 import * as ora from 'ora';
 import path from 'path';
 import { select, checkbox, confirm, input } from '@inquirer/prompts';
@@ -7,6 +8,7 @@ import {
   REQUIRED_ENV_VARIABLES,
   ENV_VARIABLES_VARIANTS,
   ENV_VARIABLES_DEFAULT_VALUES,
+  TEMPLATE_BRANCH_PREFIX,
 } from './constants';
 import { EnvVariable, Module, Template } from './types';
 import { runCmdCommand } from '../../utils';
@@ -47,11 +49,29 @@ export const verifyProjectAlignment = async (spinner: ora.Ora): Promise<boolean>
  * Prompts the user to select a project template.
  * @returns The selected template.
  */
-export const selectTemplate = async (): Promise<Template> =>
-  select<Template>({
+export const selectTemplate = async (): Promise<Template> => {
+  const remoteBranches = await runCmdCommand(GIT_COMMANDS.GIT_REMOTE_BRANCHES);
+
+  const templatesBranches = remoteBranches
+    ?.split('\n')
+    .filter(branch => branch.includes(TEMPLATE_BRANCH_PREFIX))
+    .map(branch => {
+      const templateValue = branch.replace(TEMPLATE_BRANCH_PREFIX, '').trim();
+      const templateName = templateValue
+        .split('-')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+      return {
+        name: templateName,
+        value: templateValue,
+      };
+    });
+
+  return select<Template>({
     message: 'Let’s start by choosing a template for your project:',
-    choices: [{ name: 'Baseline', value: 'baseline' }],
+    choices: [{ name: 'Baseline', value: 'baseline' }, ...templatesBranches],
   });
+};
 
 /**
  * Prompts the user to select modules for the project.
@@ -71,33 +91,66 @@ export const selectModules = async (): Promise<Module[]> => {
   return modules;
 };
 
-export const fillEnvVariables = async (modules: Module[]) => {
+/**
+ * Fills environment variables by prompting the user to select or input values for required variables.
+ *
+ * @param {Module[]} modules - An array of modules for which environment variables need to be filled.
+ * @returns {Promise<Partial<Record<EnvVariable, string>>>} A promise resolving to an object containing the filled environment variables.
+ */
+export const fillEnvVariables = async (modules: Module[]): Promise<Partial<Record<EnvVariable, string>>> => {
+  // Parse the default environment variables from the .env file
+  const defaultEnvVariables = await parseEnvVariables();
+
+  // Determine required environment variables based on provided modules
   const requiredModuleEnvVariables = modules.map(appModules => REQUIRED_ENV_VARIABLES[appModules]).flat();
   const requiredGeneralEnvVariables = [...REQUIRED_ENV_VARIABLES.general, ...requiredModuleEnvVariables];
 
+  // Object to store the resulting environment variables
   const envVariables: Partial<Record<EnvVariable, string>> = {};
 
   for (const envVariable of requiredGeneralEnvVariables) {
     const possibleVariants = ENV_VARIABLES_VARIANTS[envVariable];
 
     if (possibleVariants?.length) {
+      // Prompt the user to select a variant for the environment variable
       const selectedVariant = await select<string>({
         message: `Select the variant for ${envVariable}:`,
         choices: possibleVariants.map(variant => ({ name: variant, value: variant })),
-        default: ENV_VARIABLES_DEFAULT_VALUES[envVariable],
+        default: defaultEnvVariables[envVariable] || ENV_VARIABLES_DEFAULT_VALUES[envVariable],
       });
 
       envVariables[envVariable] = selectedVariant;
     } else {
+      // Prompt the user to input a value for the environment variable
       const value = await input({
         message: `Enter the value for ${envVariable}:`,
-        default: ENV_VARIABLES_DEFAULT_VALUES[envVariable],
+        default: defaultEnvVariables[envVariable] || ENV_VARIABLES_DEFAULT_VALUES[envVariable],
       });
       envVariables[envVariable] = value;
     }
   }
 
   return envVariables;
+};
+
+/**
+ * Parses environment variables from the .env file into an object.
+ *
+ * @returns {Promise<Record<string, string>>} A promise resolving to an object containing key-value pairs of environment variables.
+ */
+export const parseEnvVariables = async (): Promise<Record<string, string>> => {
+  // Read the contents of the .env file
+  const envVariables = await fs.readFile('.env', 'utf8');
+
+  // Convert the .env file content into an object
+  const envVariablesObject = Object.fromEntries(
+    envVariables
+      .split('\n')
+      .map(line => line.split('='))
+      .filter(([key, value]) => key && value)
+  );
+
+  return envVariablesObject;
 };
 
 /**
@@ -117,6 +170,26 @@ export const alignWithFullPackBranch = async (spinner: ora.Ora): Promise<void> =
     spinner.succeed('Full-pack branch aligned successfully!');
   } catch (error) {
     spinner.fail(`Failed to align ${GIT_BRANCHES.FULL_PACK} branch: ${error}. Please try again.`);
+  }
+};
+
+/**
+ * Aligns the current branch with the template branch.
+ *
+ * This function runs the Git command to align the current branch with the template branch.
+ * A spinner is used to indicate the progress. If the alignment fails, the error is logged, and the process halts.
+ *
+ * @param {ora.Ora} spinner - The Ora spinner instance used to display progress.
+ * @returns {Promise<void>} Resolves when the alignment is successful.
+ * @throws Will throw an error if the alignment process fails.
+ */
+export const alignWithTemplateBranch = async (spinner: ora.Ora, template: string): Promise<void> => {
+  try {
+    spinner.start(`Aligning ${template} branch...`);
+    await runCmdCommand(GIT_COMMANDS.ALIGN_WITH_TEMPLATE_BRANCH(template));
+    spinner.succeed(`${template} branch aligned successfully!`);
+  } catch (error) {
+    spinner.fail(`Failed to align ${template} branch: ${error}. Please try again.`);
   }
 };
 

@@ -8,6 +8,7 @@ import {
   alignWithFullPackBranch,
   getChangedFilesPath,
   fillEnvVariables,
+  alignWithTemplateBranch,
 } from './utils';
 import { runCmdCommand } from '../../utils';
 
@@ -60,6 +61,12 @@ const init = async (args: InitArgs): Promise<void> => {
     await addEnvVariablesToProjectConfiguration(envVariables);
     spinner.succeed('Env variables added to project configuration successfully!');
 
+    if (template !== 'baseline') {
+      spinner.start(`Applying the ${template} template for your project...`);
+      await alignWithTemplateBranch(spinner, template);
+      spinner.succeed(`${template} template applied successfully!`);
+    }
+
     spinner.succeed('App created successfully!');
   } catch (e) {
     if (e instanceof Error) {
@@ -70,7 +77,7 @@ const init = async (args: InitArgs): Promise<void> => {
         process.exit(1);
       }
     } else {
-      console.error('\n🙁 An unexpected error occurred. Please try again.\n');
+      console.error(`\n🙁 An unexpected error occurred: ${e}\nPlease try again.\n`);
       process.exit(1);
     }
   }
