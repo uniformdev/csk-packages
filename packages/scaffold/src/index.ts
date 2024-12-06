@@ -36,13 +36,25 @@ program
       const pathGenerateProps = { pathToCanvasFolder: PATH_TO_CUSTOM_CANVAS_FOLDER, definition: selectedComponent };
 
       const pathToIndexFile = await indexComponentFile.path(pathGenerateProps);
-      await indexComponentFile.write({ definition: selectedComponent, destinationPath: pathToIndexFile });
+      await indexComponentFile.write({ definition: selectedComponent, destinationPath: pathToIndexFile }).catch(() => {
+        spinner.fail('Oops, something went wrong. We couldn’t generate the component for you.');
+        spinner.stop();
+        throw new Error('Something went wrong');
+      });
 
       const pathToRegisterComponentFile = await registerComponentFile.path(pathGenerateProps);
-      await registerComponentFile.write({
-        definition: selectedComponent,
-        destinationPath: pathToRegisterComponentFile,
-      });
+      await registerComponentFile
+        .write({
+          definition: selectedComponent,
+          destinationPath: pathToRegisterComponentFile,
+        })
+        .catch(() => {
+          spinner.fail(
+            'Oops, something went wrong. We couldn’t connect the component to the mapper. Please check if the required file is available or manually connect a new component.'
+          );
+          spinner.stop();
+          throw new Error('Something went wrong');
+        });
     } catch (error) {
       if (error instanceof Error) {
         if (error.message.includes('force closed')) {
