@@ -30,7 +30,7 @@ export const registerComponentFile: FileHandler = {
 
       const canvasIndex = await fs.promises.readFile(destinationPath, 'utf-8');
 
-      const importFileSection = `import { ${componentName} } from './${componentName}';`;
+      const importFileSection = `import ${componentName} from './${componentName}';`;
 
       // Find the object
       const updatedData = canvasIndex
