@@ -86,7 +86,7 @@ export const indexComponentFile: FileHandler = {
     export type ${componentName}Props = ComponentProps<${componentName}Parameters${slotsMapping.length ? `, '${slotsMapping.join("' | '")}'` : ''}>;`;
 
       const componentSection = `
-    export const ${componentName}:FC<${componentName}Props> = ({
+    const ${componentName}:FC<${componentName}Props> = ({
       ${supportedParameters
         .filter(item => !item.handler?.hideDestructuring)
         .map(({ id, overriddenId }) => `${overriddenId ? `"${id}": ${overriddenId}` : id},`)
@@ -175,6 +175,9 @@ export const indexComponentFile: FileHandler = {
 
     </div>
     );
+
+
+    export default ${componentName};
     `;
 
       await fs.promises.writeFile(
