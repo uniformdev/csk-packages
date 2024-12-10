@@ -1,5 +1,5 @@
 export type Template = 'baseline' | string;
-export type Module = 'localization' | 'context-dev-tools' | 'ga' | 'uniform-insights';
+export type Module = 'localization' | 'ga' | 'uniform-insights';
 
 export type EnvVariable =
   | 'UNIFORM_PROJECT_ID'
