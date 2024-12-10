@@ -32,7 +32,6 @@ export const REQUIRED_ENV_VARIABLES: {
   ],
   'uniform-insights': ['UNIFORM_INSIGHTS_ENDPOINT', 'UNIFORM_INSIGHTS_KEY'],
   localization: [],
-  'context-dev-tools': [],
   ga: [],
 };
 

@@ -39,16 +39,13 @@ export const proceedCodeChange = async (filePath: string, modules: Module[]): Pr
   const metaProgram = MetaScript.compile(updatedContent);
 
   const isLocalizationEnabled = modules.includes('localization');
-  const isContextDevToolsEnabled = modules.includes('context-dev-tools');
   const isGAEnabled = modules.includes('ga');
   const isUniformInsightsEnabled = modules.includes('uniform-insights');
 
   const transformedCode = new MetaScript(metaProgram).transform({
     localization: isLocalizationEnabled,
-    contextDevTools: isContextDevToolsEnabled,
     ga: isGAEnabled,
     uniformInsights: isUniformInsightsEnabled,
-    plugins: isContextDevToolsEnabled || isGAEnabled || isUniformInsightsEnabled,
   });
 
   const fileExtension = path.extname(filePath);

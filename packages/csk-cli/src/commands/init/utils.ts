@@ -82,7 +82,6 @@ export const selectModules = async (): Promise<Module[]> => {
     message: 'Now, select the additional modules you want to include in your project:',
     choices: [
       { name: 'Localization', value: 'localization' },
-      { name: 'Context DevTools', value: 'context-dev-tools' },
       { name: 'GA', value: 'ga' },
       { name: 'Uniform Insights', value: 'uniform-insights' },
     ],
