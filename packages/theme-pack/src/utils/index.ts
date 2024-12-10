@@ -9,7 +9,7 @@ export {
 
 export { getTokenStyles, getRootSimpleTokensValue, getRootBordersValue } from '../utils/getTokenStyles';
 
-export const checkEnvironmentVariable = (tokenFile: TOKEN_STYLE_FILE, isForce: boolean = false) => {
+export const checkEnvironmentVariable = (tokenFile: string, isForce: boolean = false) => {
   if (!isForce && process.env.DEV_MODE === 'true') {
     console.info(`Skip fetch ${tokenFile} from integration in dev mode`);
     return false;
