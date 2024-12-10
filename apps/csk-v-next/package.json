@@ -9,7 +9,7 @@
     "npm": ">=10"
   },
   "scripts": {
-    "dev:watch": "run-s uniform:pull:tokens dev",
+    "dev:watch": "WATCH=true run-s uniform:pull:tokens dev",
     "dev": "npm run uniform:pull:locales && next dev",
     "build": "run-s uniform:pull:tokens uniform:pull:locales next:build",
     "next:build": "next build",
