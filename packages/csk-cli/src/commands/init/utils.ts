@@ -96,7 +96,10 @@ export const selectModules = async (): Promise<Module[]> => {
  * @param {Module[]} modules - An array of modules for which environment variables need to be filled.
  * @returns {Promise<Partial<Record<EnvVariable, string>>>} A promise resolving to an object containing the filled environment variables.
  */
-export const fillEnvVariables = async (modules: Module[]): Promise<Partial<Record<EnvVariable, string>>> => {
+export const fillEnvVariables = async (
+  modules: Module[],
+  isDev: boolean
+): Promise<Partial<Record<EnvVariable, string>>> => {
   // Parse the default environment variables from the .env file
   const defaultEnvVariables = await parseEnvVariables();
 
@@ -109,6 +112,11 @@ export const fillEnvVariables = async (modules: Module[]): Promise<Partial<Recor
 
   for (const envVariable of requiredGeneralEnvVariables) {
     const possibleVariants = ENV_VARIABLES_VARIANTS[envVariable];
+
+    if (!isDev && (envVariable === 'UNIFORM_CLI_BASE_URL' || envVariable === 'UNIFORM_CLI_BASE_EDGE_URL')) {
+      envVariables[envVariable] = ENV_VARIABLES_DEFAULT_VALUES[envVariable];
+      continue;
+    }
 
     if (possibleVariants?.length) {
       // Prompt the user to select a variant for the environment variable

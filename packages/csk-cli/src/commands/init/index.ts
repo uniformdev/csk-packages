@@ -33,7 +33,7 @@ const init = async (args: InitArgs): Promise<void> => {
     // Prompt user for project configuration
     const template = await selectTemplate();
     const modules = await selectModules();
-    const envVariables = await fillEnvVariables(modules);
+    const envVariables = await fillEnvVariables(modules, dev);
 
     // Build and display the project configuration
     const projectConfiguration: ProjectConfiguration = { template, modules, envVariables };

@@ -46,4 +46,6 @@ export const ENV_VARIABLES_DEFAULT_VALUES: Partial<{
   [key in EnvVariable]: string;
 }> = {
   UNIFORM_PREVIEW_SECRET: 'hello-world',
+  UNIFORM_CLI_BASE_URL: 'https://uniform.app',
+  UNIFORM_CLI_BASE_EDGE_URL: 'https://uniform.global',
 };
