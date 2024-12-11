@@ -5,6 +5,7 @@ import {
   buildColors,
   buildDimensions,
   buildFontsStyle,
+  pullLocales,
   pushAllowedGroups,
   pushBorders,
   pushColors,
@@ -20,6 +21,7 @@ program
   .option('-f, --fonts', 'fonts configuration')
   .option('-b, --borders', 'borders configuration')
   .option('-g, --groups', 'groups configuration')
+  .option('-l, --locales', 'locales configuration')
   .action(async args => {
     if (args?.colors) {
       console.info('Pulling colors...');
@@ -38,12 +40,23 @@ program
       buildBorders().catch(e => console.error(e));
       return;
     } else if (args?.groups) {
-      console.info('Pulling borders...');
+      console.info('Pulling groups...');
       buildAllowedGroups().catch(e => console.error(e));
+      return;
+    } else if (args?.locales) {
+      console.info('Pulling locales...');
+      pullLocales().catch(e => console.error(e));
       return;
     } else {
       console.info('Pulling all tokens...');
-      for (const action of [buildColors, buildDimensions, buildFontsStyle, buildBorders, buildAllowedGroups]) {
+      for (const action of [
+        buildColors,
+        buildDimensions,
+        buildFontsStyle,
+        buildBorders,
+        buildAllowedGroups,
+        pullLocales,
+      ]) {
         try {
           await action();
         } catch (e) {
@@ -81,7 +94,7 @@ program
       pushBorders().catch(e => console.error(e));
       return;
     } else if (args?.groups) {
-      console.info('Pushing borders...');
+      console.info('Pushing groups...');
       pushAllowedGroups().catch(e => console.error(e));
       return;
     } else {

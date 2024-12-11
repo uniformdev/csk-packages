@@ -12,7 +12,9 @@ export const pushBorders = async () => {
   const pathToStyleFile = path.join(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Borders}.css`);
 
   if (!fs.existsSync(pathToStyleFile)) {
-    console.error(`No such file with styles: ${pathToStyleFile}`);
+    console.error(
+      `No such file with styles: ${pathToStyleFile}. You can override it by setting STYLES_PATH environment variable.`
+    );
     return;
   }
 

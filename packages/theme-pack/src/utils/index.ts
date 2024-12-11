@@ -1,4 +1,4 @@
-import { DEFAULT_INTEGRATION_URL, FG_GREEN, TOKEN_STYLE_FILE } from '../constants';
+import { CONFIG_FILE, DEFAULT_INTEGRATION_URL, FG_GREEN, TOKEN_STYLE_FILE } from '../constants';
 
 export {
   generateTailwindcssColorKeysPattern,
@@ -54,6 +54,6 @@ export const pushTokenValue = (endPoint: string, body?: BodyInit | null, isCanar
     return response;
   });
 
-export const syncSuccessLog = (token: TOKEN_STYLE_FILE, mode: 'pushed' | 'pulled') => {
+export const syncSuccessLog = (token: TOKEN_STYLE_FILE | CONFIG_FILE, mode: 'pushed' | 'pulled') => {
   console.info(FG_GREEN, `The ${token} configuration was successfully ${mode}`);
 };
