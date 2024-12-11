@@ -3,9 +3,12 @@ import { FC, PropsWithChildren } from 'react';
 import { getTokenConfiguration } from '../scripts/run-time';
 
 // @ts-ignore: ToDo add types for rsc
-export const ThemePackProvider: FC<PropsWithChildren> = async ({ children }) => {
+export const ThemePackProvider: FC<PropsWithChildren<{ isPreviewMode?: boolean }>> = async ({
+  children,
+  isPreviewMode = false,
+}) => {
   try {
-    if (process.env.WATCH !== 'true') {
+    if (!isPreviewMode && process.env.WATCH !== 'true') {
       return <div>{children}</div>;
     }
 
