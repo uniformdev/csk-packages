@@ -24,7 +24,7 @@ export default async function Home(props: PageParameters) {
   if (!isRouteWithoutErrors(route)) return notFound();
 
   return (
-    <ThemePackProvider>
+    <ThemePackProvider isPreviewMode={props.searchParams?.is_incontext_editing_mode === 'true'}>
       <ContextUpdateTransfer
         serverContext={serverContext}
         update={{
