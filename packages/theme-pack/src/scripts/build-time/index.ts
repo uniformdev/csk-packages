@@ -12,3 +12,5 @@ export { pushBorders } from './push-borders';
 
 export { buildAllowedGroups } from './pull-allowedGroups';
 export { pushAllowedGroups } from './push-allowedGroups';
+
+export { pullLocales } from './pull-locales';

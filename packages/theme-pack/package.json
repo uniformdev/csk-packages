@@ -1,6 +1,6 @@
 {
   "name": "@uniformdev/theme-pack",
-  "version": "1.0.53",
+  "version": "1.0.54",
   "description": "Theme Pack contains command line interface tool and utils for working with design tokens",
   "license": "SEE LICENSE IN LICENSE.txt",
   "main": "./cli.js",
@@ -34,6 +34,7 @@
     "commander": "^9.0.0"
   },
   "devDependencies": {
+    "@uniformdev/canvas": ">=19",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
     "next": ">=14",
@@ -42,6 +43,7 @@
     "tsup": "^8.3.0"
   },
   "peerDependencies": {
+    "@uniformdev/canvas": ">=19",
     "next": ">=14",
     "react": ">=18",
     "react-dom": ">=18"

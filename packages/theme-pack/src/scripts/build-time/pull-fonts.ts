@@ -11,7 +11,9 @@ export const buildFontsStyle = async () => {
   if (!checkEnvironmentVariable(TOKEN_STYLE_FILE.Fonts)) return;
 
   if (!fs.existsSync(PATH_TO_STYLE_FOLDER)) {
-    console.error(`No such directory for style files: ${PATH_TO_STYLE_FOLDER}`);
+    console.error(
+      `No such directory for style files: ${PATH_TO_STYLE_FOLDER}. You can override it by setting STYLES_PATH environment variable.`
+    );
     return;
   }
 

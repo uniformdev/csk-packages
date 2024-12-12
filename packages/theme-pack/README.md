@@ -134,4 +134,6 @@ export default config;
 ###  Custom integration url
 ```dotenv
 INTEGRATION_URL=
+CONFIG_PATH=
+LOCALES_PATH=
 ```
