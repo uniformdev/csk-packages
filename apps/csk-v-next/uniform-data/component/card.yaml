@@ -2,7 +2,7 @@
 $schema: https://canary.uniform.app/schemas/json-schema/component-definition/v1.json
 id: card
 name: Card
-icon: card
+icon: card-hearts
 parameters:
   - id: displayName
     name: Display Name
@@ -41,6 +41,7 @@ parameters:
     name: Full Height
     type: checkbox
     typeConfig: null
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/card-default.jpg
 useTeamPermissions: true
@@ -67,8 +68,8 @@ slots:
     patternsInAllowedComponents: false
 titleParameter: displayName
 canBeComposition: false
-created: '2024-09-25T14:22:04.305348+00:00'
-updated: '2024-11-04T14:35:03.518076+00:00'
+created: '2024-12-06T14:01:14.105927+00:00'
+updated: '2024-12-11T21:50:56.343737+00:00'
 variants:
   - id: backgroundImage
     name: Background Image

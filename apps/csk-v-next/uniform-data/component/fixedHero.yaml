@@ -1,5 +1,5 @@
-# yaml-language-server: $schema=<https://canary.uniform.app/schemas/json-schema/component-definition/v1.json>
-$schema: https://canary.uniform.app/schemas/json-schema/component-definition/v1.json
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: fixedHero
 name: Fixed Hero
 icon: image-text
@@ -52,7 +52,9 @@ parameters:
     type: asset
     typeConfig:
       max: 1
-      min: 1
+      min: 0
+      allowedTypes:
+        - image
     allowConditionalValues: true
   - id: 9f8178c3-539f-4a1e-8a4e-71bfcedfe223
     name: Presentation Settings
@@ -108,8 +110,8 @@ useTeamPermissions: true
 slots: []
 titleParameter: displayName
 canBeComposition: false
-created: '2024-12-01T19:46:04.285583+00:00'
-updated: '2024-12-03T10:17:46.587105+00:00'
+created: '2024-12-05T18:51:20.553117+00:00'
+updated: '2024-12-07T20:48:27.047296+00:00'
 variants:
   - id: columns
     name: Columns

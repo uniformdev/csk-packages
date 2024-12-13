@@ -13,8 +13,13 @@ export enum CardVariant {
   BackgroundImage = 'backgroundImage',
 }
 
+export type CardAdditionalProps = {
+  className?: string;
+  contentClassName?: string;
+};
+
 export type CardParameters = ContainerParameters;
-export type CardProps = ComponentProps<CardParameters, CardSlots>;
+export type CardProps = ComponentProps<CardParameters & CardAdditionalProps, CardSlots>;
 
 const Card: FC<CardProps> = ({
   component,
@@ -25,12 +30,14 @@ const Card: FC<CardProps> = ({
   border,
   fluidContent,
   fullHeight,
+  className,
+  contentClassName,
 }) => {
   const isBackgroundImageVariant = component.variant === CardVariant.BackgroundImage;
 
   return (
     <Container
-      className={cn('relative overflow-hidden')}
+      className={cn('relative overflow-hidden', className)}
       {...{ backgroundColor, spacing, border, fluidContent, fullHeight }}
     >
       <div
@@ -40,10 +47,8 @@ const Card: FC<CardProps> = ({
       >
         <UniformSlot data={component} context={context} slot={slots.cardMedia} />
       </div>
-      <div className="relative flex flex-col gap-y-2">
-        <div className="flex flex-col gap-y-2">
-          <UniformSlot data={component} context={context} slot={slots.cardContent} />
-        </div>
+      <div className={cn('relative flex flex-col gap-y-2', contentClassName)}>
+        <UniformSlot data={component} context={context} slot={slots.cardContent} />
       </div>
     </Container>
   );

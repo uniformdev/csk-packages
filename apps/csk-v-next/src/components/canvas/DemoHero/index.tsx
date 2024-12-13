@@ -299,12 +299,16 @@ const FixedHero: FC<DemoHeroProps> = props => (
     {...props}
     // Eyebrow Text Parameters
     eyebrowTitleTag="span"
-    eyebrowTitleSize="xl"
+    eyebrowTitleSize={{
+      mobile: 'xs',
+      tablet: 'lg',
+      desktop: 'xl',
+    }}
     eyebrowTitleWeight="bold"
     eyebrowTitleTransform="uppercase"
     // Title Text Parameters
     titleSize={{
-      mobile: '5xl',
+      mobile: '3xl',
       tablet: '5xl',
       desktop: '7xl',
     }}
@@ -312,7 +316,7 @@ const FixedHero: FC<DemoHeroProps> = props => (
     // Description Text Parameters
     descriptionTag="p"
     descriptionSize={{
-      mobile: 'lg',
+      mobile: 'sm',
       tablet: 'lg',
       desktop: 'xl',
     }}

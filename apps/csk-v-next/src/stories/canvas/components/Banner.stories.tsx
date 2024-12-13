@@ -1,6 +1,7 @@
 import { UniformComposition } from '@uniformdev/canvas-next-rsc';
 import { Text } from '@/components/canvas';
-import Banner, { BannerParameters, BannerVariants, ContentAlignment } from '@/components/canvas/Banner';
+import Banner, { BannerParameters } from '@/components/canvas/Banner';
+import { BannerVariants, ContentAlignment } from '@/components/canvas/Banner/types';
 import { ContainerArgTypes } from '@/stories/argTypes';
 import { createFakeCompositionData, createUniformParameter, fakeContext } from '@/stories/utils';
 import createComponentResolver from '@/utils/createComponentResolver';

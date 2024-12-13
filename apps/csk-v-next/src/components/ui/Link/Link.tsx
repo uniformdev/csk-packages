@@ -3,7 +3,7 @@ import NextLink from 'next/link';
 import { cn } from '@/utils';
 import { LinkProps } from '.';
 
-export const Link: FC<LinkProps> = ({ children, link, openInNewTab, className }) => (
+export const Link: FC<LinkProps> = ({ children, link, openInNewTab, rel, className }) => (
   <NextLink
     href={link}
     className={cn(
@@ -11,6 +11,7 @@ export const Link: FC<LinkProps> = ({ children, link, openInNewTab, className })
       className
     )}
     target={openInNewTab ? '_blank' : '_self'}
+    rel={rel}
   >
     {children}
   </NextLink>

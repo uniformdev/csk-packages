@@ -4,10 +4,8 @@ import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 export function withPlaygroundWrapper<T extends object>(Component: ComponentType<T>): FC<T & ComponentProps> {
   return (props: ComponentProps & T) => {
     const { is_incontext_editing_playground } = props.context?.searchParams ?? {};
-
     const { type: compositionType } = props.context?.composition ?? {};
     const { type: componentType } = props.component ?? {};
-
     // If composiiton type is the same as the component type and is in playground mode for this component
     const isPlayground = !!is_incontext_editing_playground && compositionType === componentType;
 

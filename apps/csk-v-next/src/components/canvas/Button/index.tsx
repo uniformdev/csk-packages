@@ -9,6 +9,11 @@ import { withPlaygroundWrapper } from '@/hocs';
 import { ViewPort } from '@/types';
 import { formatUniformLink, resolveAsset } from '@/utils';
 
+export type ButtonAdditionalProps = {
+  className?: string;
+  onClick?: () => void;
+};
+
 export type ButtonParameters = {
   text?: string;
   link?: LinkParamValue;
@@ -26,7 +31,7 @@ export type ButtonParameters = {
   hoverTextColor?: string;
 };
 
-type ButtonProps = ComponentProps<ButtonParameters>;
+export type ButtonProps = ComponentProps<ButtonParameters & ButtonAdditionalProps>;
 
 const Button: FC<ButtonProps> = ({
   component,
@@ -44,6 +49,8 @@ const Button: FC<ButtonProps> = ({
   textSize,
   hoverButtonColor,
   hoverTextColor,
+  className,
+  onClick,
 }) => {
   const href = formatUniformLink(link);
 
@@ -72,6 +79,8 @@ const Button: FC<ButtonProps> = ({
       href={href}
       border={border}
       size={size}
+      onClick={onClick}
+      className={className}
       textSize={textSize}
       isActive={context.matchedRoute === href}
       textColor={textColor}

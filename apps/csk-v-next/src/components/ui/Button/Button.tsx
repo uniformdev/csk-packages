@@ -1,18 +1,25 @@
 import { FC } from 'react';
-import Link from 'next/link';
+import BaseLink from '@/components/ui/Link';
 import { cn, resolveViewPort } from '@/utils';
 import { ButtonProps, ButtonVariant } from '.';
 
-const ButtonWrapper: FC<ButtonProps> = ({ children, href, className, onClick }) =>
-  href ? (
-    <Link className={className} href={href}>
+const ButtonWrapper: FC<ButtonProps> = ({ children, href, className, onClick }) => {
+  const isExternalLink = href?.startsWith('http');
+  return href ? (
+    <BaseLink
+      className={className}
+      link={href}
+      openInNewTab={isExternalLink}
+      rel={isExternalLink ? 'noopener noreferrer' : ''}
+    >
       {children}
-    </Link>
+    </BaseLink>
   ) : (
     <button onClick={onClick} className={className}>
       {children}
     </button>
   );
+};
 
 export const Button: FC<ButtonProps> = ({
   variant,
@@ -57,7 +64,6 @@ export const Button: FC<ButtonProps> = ({
     [`hover:decoration-${buttonColor}`]: buttonColor,
     '!underline': href === isActive,
   });
-
   return (
     <ButtonWrapper
       href={href}

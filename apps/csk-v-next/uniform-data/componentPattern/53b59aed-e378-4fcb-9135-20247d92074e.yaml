@@ -1,6 +1,6 @@
 composition:
-  _name: Secondary Button
-  _id: 646faee6-b476-43c6-a1a8-eebe85699889
+  _name: Primary Button
+  _id: 53b59aed-e378-4fcb-9135-20247d92074e
   type: button
   parameters:
     size:
@@ -8,7 +8,7 @@ composition:
       value: button-medium
     text:
       type: text
-      value: Learn more
+      value: Docs
     textSize:
       type: tp2-segmented-control-parameter
       value:
@@ -23,25 +23,29 @@ composition:
       value: normal
     buttonColor:
       type: tp2-color-palette-parameter
-      value: button-secondary
+      value: button-primary
     iconPosition:
       type: tp2-segmented-control-parameter
-      value: right
+      value: left
+    textTransform:
+      type: tp2-segmented-control-parameter
+      value: uppercase
     hoverButtonColor:
       type: tp2-color-palette-parameter
-      value: button-secondary-hover
+      value: button-primary-hover
   _overridability:
     variants: true
     parameters:
       icon: 'yes'
       link: 'yes'
       text: 'yes'
-      textColor: 'no'
+      iconPosition: 'yes'
     hideLockedParameters: true
   _locales:
     - en
-created: '2024-09-24T09:52:47.027994+00:00'
-modified: '2024-11-01T09:47:44.420144+00:00'
+created: '2024-12-06T14:01:20.103955+00:00'
+modified: '2024-12-11T21:53:49.035848+00:00'
 pattern: true
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/button-secondary.jpg
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/button.jpg
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

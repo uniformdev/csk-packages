@@ -38,20 +38,20 @@ Besides live preview, setting the preview URL enables visual in-line editing and
 This integration brings Canvas UI extensions for theme management and new useful visual parameters to help control the look and feel of your components.
 
 1. Open your current team page.
-![Team page](docs/team_page.png)
+![Team page](https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/doc/team_page.png)
 1. Navigate to the `Settings` tab, than `Custom Integrations` and add `Theme Pack 2` as a custom integration using this [manifest](https://github.com/uniformdev/uniform-mesh-integrations/blob/canary/integrations/theme-pack-2/mesh-manifest.stable.json).
 1. Open your project.
-![Your project](docs/project_page.png)
+![Your project](https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/doc/project_page.png)
 1. Navigate to the `Integrations` tab, find the `Theme Pack 2` integration and install it.
-1. Provide your oun color palette or set up it from the code using `npm run uniform:push:colors` command. (see `./styles/colors.css`)
-1. Provide your oun dimension configuration or set up it from the code using `npm run uniform:push:dimensions` command. (see `./styles/dimensions.css`)
-1. Provide your oun fonts or set up it from the code using `npm run uniform:push:fonts` command. (see `./styles/fonts.css`)
-1. Provide your oun border configuration or set up it from the code using `npm run uniform:push:borders` command. (see `./styles/border.css`)
+2. Provide your oun color palette or set up it from the code using `npm run push:colors` command. (see `./styles/colors.css`)
+3. Provide your oun dimension configuration or set up it from the code using `npm run push:dimensions` command. (see `./styles/dimensions.css`)
+4. Provide your oun fonts or set up it from the code using `npm run push:fonts` command. (see `./styles/fonts.css`)
+5. Provide your oun border configuration or set up it from the code using `npm run push:borders` command. (see `./styles/border.css`)
 
 ⚠️ Important: After each adding new color or font keys you have to rebuild your application, in order to simplify this process you can use Webhook Settings tab to provide rebuild webhook.
 
 ### 5. Uniform Data sync 
 
-1. Run `npm run uniform:push:content` to push content from disk (see `./uniform-content`) to your project.
-1. Run `npm run uniform:publish:manifest` to publish the manifest with personalization configuration.
-1. Run `npm run uniform:pull:content` to pull content from uniform to `./uniform-content` folder.
+1. Run `npm run push:content` to push content from disk (see `./uniform-content`) to your project.
+1. Run `npm run publish:manifest` to publish the manifest with personalization configuration.
+1. Run `npm run pull:content` to pull content from uniform to `./uniform-content` folder.

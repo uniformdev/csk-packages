@@ -1,11 +1,11 @@
 import { FC, Fragment, ReactNode } from 'react';
-import Link from 'next/link';
 import { Asset } from '@uniformdev/assets';
 import { LinkParamValue } from '@uniformdev/canvas';
 import { ComponentProps, UniformText } from '@uniformdev/canvas-next-rsc/component';
 import { TextParameters as BaseTextParameters } from '@/components/canvas/Text';
 import BaseIconLabel from '@/components/ui/IconLabel';
 import BaseImage from '@/components/ui/Image';
+import BaseLink from '@/components/ui/Link';
 import { withPlaygroundWrapper } from '@/hocs';
 import { cn, formatUniformLink, resolveAsset, resolveRouteToPath } from '@/utils';
 
@@ -37,8 +37,14 @@ const NavigationLink: FC<NavigationLinkProps> = ({
 
   const [resolvedImage] = resolveAsset(icon);
   const { url, title = '' } = resolvedImage || {};
-
-  const Wrapper = href ? ({ children }: { children: ReactNode }) => <Link href={href}>{children}</Link> : Fragment;
+  const isExternalLink = href.startsWith('http');
+  const Wrapper = href
+    ? ({ children }: { children: ReactNode }) => (
+        <BaseLink link={href} openInNewTab={isExternalLink} rel={isExternalLink ? 'noopener noreferrer' : ''}>
+          {children}
+        </BaseLink>
+      )
+    : Fragment;
 
   return (
     <Wrapper>

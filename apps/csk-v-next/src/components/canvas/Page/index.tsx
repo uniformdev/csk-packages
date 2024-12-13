@@ -2,13 +2,15 @@ import { FC } from 'react';
 import { ComponentProps, CustomSlotChildRenderFunc, UniformSlot } from '@uniformdev/canvas-next-rsc/component';
 import BasePage from '@/components/ui/Page';
 
-export type PageParameters = {
-  pageTitle?: string;
-  backgroundColor?: string;
-} & {
+export type PageAdditionalProps = {
   headerCustomRenderer?: CustomSlotChildRenderFunc;
   contentCustomRenderer?: CustomSlotChildRenderFunc;
   footerCustomRenderer?: CustomSlotChildRenderFunc;
+};
+
+export type PageParameters = {
+  pageTitle?: string;
+  backgroundColor?: string;
 };
 
 export enum CommonPageSlots {
@@ -17,7 +19,7 @@ export enum CommonPageSlots {
   PageFooter = 'pageFooter',
 }
 
-export type PageProps = ComponentProps<PageParameters, CommonPageSlots>;
+export type PageProps = ComponentProps<PageParameters & PageAdditionalProps, CommonPageSlots>;
 
 const Page: FC<PageProps> = ({
   slots,

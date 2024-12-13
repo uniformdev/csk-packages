@@ -1,6 +1,5 @@
 import { Asset } from '@uniformdev/assets';
-import { ContentAlignment } from '@/components/canvas/Banner';
-import { DemoHeroParameters as FixedHeroParameters } from '@/components/canvas/DemoHero';
+import { ContentAlignment, DemoHeroParameters as FixedHeroParameters } from '@/components/canvas/DemoHero';
 import { TextParameters } from '@/components/canvas/Text';
 import { IMAGE_ASSET } from '../../assets';
 
