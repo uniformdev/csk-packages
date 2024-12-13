@@ -20,7 +20,7 @@ export const buildAllowedGroups = async () => {
   const allowedGroupsPath = path.resolve(PATH_TO_CONFIG_FOLDER, `${CONFIG_FILE.AllowedGroups}.json`);
 
   if (Object.keys(fetchedAllowedGroups).length === 0) {
-    fs.unlinkSync(allowedGroupsPath);
+    if (fs.existsSync(allowedGroupsPath)) fs.unlinkSync(allowedGroupsPath);
   } else {
     fs.writeFileSync(allowedGroupsPath, JSON.stringify(fetchedAllowedGroups, null, 2), 'utf8');
   }
