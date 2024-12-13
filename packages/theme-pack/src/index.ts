@@ -22,6 +22,8 @@ program
   .option('-b, --borders', 'borders configuration')
   .option('-g, --groups', 'groups configuration')
   .option('-l, --locales', 'locales configuration')
+  .option('-at, --allTokens', 'all tokens')
+  .option('-as, --allSettings', 'all settings')
   .action(async args => {
     if (args?.colors) {
       console.info('Pulling colors...');
@@ -47,8 +49,28 @@ program
       console.info('Pulling locales...');
       pullLocales().catch(e => console.error(e));
       return;
-    } else {
+    } else if (args?.allTokens) {
       console.info('Pulling all tokens...');
+      for (const action of [buildColors, buildDimensions, buildFontsStyle, buildBorders]) {
+        try {
+          await action();
+        } catch (e) {
+          console.error(e);
+          return;
+        }
+      }
+    } else if (args?.allSettings) {
+      console.info('Pulling all settings...');
+      for (const action of [buildAllowedGroups, pullLocales]) {
+        try {
+          await action();
+        } catch (e) {
+          console.error(e);
+          return;
+        }
+      }
+    } else {
+      console.info('Pulling all configuration...');
       for (const action of [
         buildColors,
         buildDimensions,
@@ -76,6 +98,8 @@ program
   .option('-f, --fonts', 'fonts configuration')
   .option('-b, --borders', 'borders configuration')
   .option('-g, --groups', 'groups configuration')
+  .option('-at, --allTokens', 'all tokens')
+  .option('-as, --allSettings', 'all settings')
   .action(async args => {
     if (args?.colors) {
       console.info('Pushing colors...');
@@ -97,8 +121,28 @@ program
       console.info('Pushing groups...');
       pushAllowedGroups().catch(e => console.error(e));
       return;
-    } else {
+    } else if (args?.allTokens) {
       console.info('Pushing all tokens...');
+      for (const action of [pushColors, pushDimensions, pushFonts, pushBorders]) {
+        try {
+          await action();
+        } catch (e) {
+          console.error(e);
+          return;
+        }
+      }
+    } else if (args?.allSettings) {
+      console.info('Pushing all settings...');
+      for (const action of [pushAllowedGroups]) {
+        try {
+          await action();
+        } catch (e) {
+          console.error(e);
+          return;
+        }
+      }
+    } else {
+      console.info('Pushing all configuration...');
       for (const action of [pushColors, pushDimensions, pushFonts, pushBorders, pushAllowedGroups]) {
         try {
           await action();
