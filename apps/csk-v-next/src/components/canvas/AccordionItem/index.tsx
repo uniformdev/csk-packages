@@ -7,12 +7,21 @@ import Container from '@/components/ui/Container';
 import BaseText from '@/components/ui/Text';
 import { cn } from '@/utils';
 
-export type AccordionItemParameters = Pick<ContainerParameters, 'backgroundColor' | 'spacing'> & TextParameters;
+export type AccordionItemParameters = Pick<ContainerParameters, 'backgroundColor' | 'spacing' | 'border'> &
+  TextParameters;
+
+export type AccordionItemAdditionalProps = {
+  className?: string;
+};
+
 enum AccordionItemSlots {
   AccordionItemContent = 'accordionItemContent',
 }
 
-type AccordionItemProps = ComponentProps<AccordionItemParameters, AccordionItemSlots>;
+export type AccordionItemProps = ComponentProps<
+  AccordionItemParameters & AccordionItemAdditionalProps,
+  AccordionItemSlots
+>;
 
 const IconArrowDown: FC<SVGProps<SVGSVGElement>> = ({ className, ...restProps }) => (
   <svg
@@ -67,13 +76,14 @@ const AccordionItem: FC<AccordionItemProps> = ({
   context,
   backgroundColor,
   spacing,
+  className,
 }) => {
   const [isOpened, setOpened] = useState(false);
   const toggleOpenAccordion = useCallback(() => setOpened(isOpened => !isOpened), []);
 
   return (
     <Container {...{ fluidContent: true, fullHeight: false }}>
-      <Container {...{ backgroundColor, spacing, fluidContent: true }}>
+      <Container {...{ backgroundColor, spacing, fluidContent: true, className }}>
         <button onClick={toggleOpenAccordion} className="flex w-full flex-row items-center justify-between text-start">
           <BaseText {...{ alignment, color, size, font, weight, transform, decoration, letterSpacing }}>
             <UniformText

@@ -9,6 +9,12 @@ type Direction = 'row' | 'row-reverse' | 'col' | 'col-reverse';
 type Justify = 'start' | 'end' | 'center' | 'between';
 type AvailableGap = '2' | '8' | '16';
 type Align = 'start' | 'end' | 'center' | 'stretch';
+
+export type FlexAdditionalProps = {
+  className?: string;
+  wrapperClassName?: string;
+};
+
 export type FlexParameters = ContainerParameters & {
   direction?: Direction | ViewPort<Direction>;
   justifyContent?: Justify | ViewPort<Justify>;
@@ -19,7 +25,7 @@ enum FlexSlots {
   FlexItem = 'flexItem',
 }
 
-type FlexProps = ComponentProps<FlexParameters, FlexSlots>;
+export type FlexProps = ComponentProps<FlexParameters & FlexAdditionalProps, FlexSlots>;
 
 const Flex: FC<FlexProps> = ({
   direction,
@@ -34,9 +40,23 @@ const Flex: FC<FlexProps> = ({
   slots,
   component,
   context,
+  className,
+  wrapperClassName,
 }) => (
   <BaseFlex
-    {...{ direction, justifyContent, gap, alignItems, backgroundColor, spacing, border, fluidContent, fullHeight }}
+    {...{
+      direction,
+      justifyContent,
+      gap,
+      alignItems,
+      backgroundColor,
+      spacing,
+      border,
+      fluidContent,
+      fullHeight,
+      wrapperClassName,
+      className,
+    }}
   >
     <UniformSlot data={component} context={context} slot={slots.flexItem} />
   </BaseFlex>

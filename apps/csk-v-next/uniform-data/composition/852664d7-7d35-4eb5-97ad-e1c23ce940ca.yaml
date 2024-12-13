@@ -8,7 +8,7 @@ composition:
       parameters:
         pageTitle:
           type: text
-          value: Uniform’s Component Starter Kit
+          value: Component Starter Kit from Uniform
         twitterCard:
           type: select
           value: summary_large_image
@@ -101,36 +101,7 @@ composition:
             parameters:
               image:
                 type: asset
-                value:
-                  - _id: 966bd5f2-ef69-4c82-99e5-c2c0861ada1b
-                    type: image
-                    fields:
-                      id:
-                        type: text
-                        value: 246a9113-763f-4330-b55e-dfa654743828
-                      url:
-                        type: text
-                        value: >-
-                          https://canary-img.uniform.global/p/p1YFPp51SU2_Wy4G7-pLQQ/Vvs4OsF0RXCzYm4vZR_qzA-Rectangle-1-(2).svg
-                      file:
-                        type: file
-                        value: fc71e19b-826a-42d9-80a2-8ef9d843e37c
-                      size:
-                        type: number
-                        value: 423
-                      title:
-                        type: text
-                        value: hero-bg-gradient-light.svg
-                      width:
-                        type: number
-                        value: 1016
-                      height:
-                        type: number
-                        value: 330
-                      mediaType:
-                        type: text
-                        value: image/svg+xml
-                    _source: uniform-assets
+                value: []
                 conditions:
                   - id: 0
                     when:
@@ -171,7 +142,7 @@ composition:
                         _source: uniform-assets
               titleTag:
                 type: tp2-segmented-control-parameter
-                value: h2
+                value: h1
               titleText:
                 type: text
                 value: Component Starter Kit
@@ -184,8 +155,8 @@ composition:
               descriptionText:
                 type: text
                 value: >-
-                  An essential set of components you need to start building
-                  personalized web experiences with Uniform.
+                  A rich set of components to supercharge building fast, modern,
+                  personalized experiences with Uniform DXP.
               contentAlignment:
                 type: tp2-segmented-control-parameter
                 value: center
@@ -194,7 +165,7 @@ composition:
                 value: text-primary
               eyebrowTitleText:
                 type: text
-                value: Uniform
+                value: Get your next project started on the right foot
               eyebrowTitleColor:
                 type: tp2-color-palette-parameter
                 value: text-tertiary
@@ -206,52 +177,10 @@ composition:
                     type: url
               primaryButtonText:
                 type: text
-                value: Browse the components
-    d106a331-2e9b-4cd2-aef8-546c91122fc3|59786267-3106-4c8c-8670-9c56f9b07199:
-      parameters:
-        text:
-          type: text
-          value: >-
-            An essential set of components you need to start building
-            personalized web experiences with Uniform.
-    d106a331-2e9b-4cd2-aef8-546c91122fc3|804f6eac-3561-4f4d-87fc-80ce979d7c2b:
-      slots:
-        $slotSectionItems:
-          - _id: 9c4b8121-bfc8-4298-a4c3-607c33899a93
-            type: button
-            _pattern: 53b59aed-e378-4fcb-9135-20247d92074e
-            _overridability:
-              variants: true
-              parameters:
-                icon: 'yes'
-                link: 'yes'
-                text: 'yes'
-                iconPosition: 'yes'
-              hideLockedParameters: true
-          - _id: 8b493565-c8de-4296-ac79-26b11d710c99
-            type: button
-            _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
-            _overridability:
-              variants: true
-              parameters:
-                icon: 'yes'
-                link: 'yes'
-                text: 'yes'
-                textColor: 'no'
-              hideLockedParameters: true
-    d106a331-2e9b-4cd2-aef8-546c91122fc3|90aa2fcd-bc65-4d44-828b-7e888218a025:
-      parameters:
-        text:
-          type: text
-          value: Component Starter Kit
-    d106a331-2e9b-4cd2-aef8-546c91122fc3|96c5e248-ac86-47b5-a00e-8679f1842f26:
-      parameters:
-        text:
-          type: text
-          value: Uniform
+                value: Component library
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2024-10-15T08:05:49.245582+00:00'
-modified: '2024-12-04T11:30:25.831542+00:00'
+created: '2024-11-16T22:44:18.031448+00:00'
+modified: '2024-12-07T21:02:29.036947+00:00'
 pattern: false

@@ -12,6 +12,7 @@ export type GridItemProps = HTMLAttributes<HTMLDivElement> & {
   columnSpan?: AvailableColumnSpan | ViewPort<AvailableColumnSpan>;
   rowStart?: AvailableGridRowStart | ViewPort<AvailableGridRowStart>;
   rowSpan?: AvailableGridRowSpan | ViewPort<AvailableGridRowSpan>;
+  className?: string;
 };
 
 export { GridItem as default } from './GridItem';

@@ -21,6 +21,11 @@ type AvailableGridItemSpan =
   | 'span-12'
   | 'span-full';
 type AvailableGridItemRowStart = '1' | '2' | '3' | '4' | '5' | '6';
+
+export type GridItemAdditionalProps = {
+  className?: string;
+};
+
 export type GridItemParameters = {
   displayName?: string;
   columnStart?: AvailableGridItemColumnsCount | ViewPort<AvailableGridItemColumnsCount>;
@@ -32,10 +37,19 @@ enum GridItemSlots {
   Inner = 'inner',
 }
 
-type GridProps = ComponentProps<GridItemParameters, GridItemSlots>;
+export type GridItemProps = ComponentProps<GridItemParameters & GridItemAdditionalProps, GridItemSlots>;
 
-const GridItem: FC<GridProps> = ({ columnStart, columnSpan, rowStart, rowSpan, context, component, slots }) => (
-  <BaseGridItem {...{ columnStart, columnSpan, rowStart, rowSpan }}>
+const GridItem: FC<GridItemProps> = ({
+  columnStart,
+  columnSpan,
+  rowStart,
+  className,
+  rowSpan,
+  context,
+  component,
+  slots,
+}) => (
+  <BaseGridItem {...{ columnStart, columnSpan, rowStart, rowSpan, className }}>
     <UniformSlot data={component} context={context} slot={slots.inner} />
   </BaseGridItem>
 );

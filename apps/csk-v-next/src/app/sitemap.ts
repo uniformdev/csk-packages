@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { ProjectMapClient } from '@uniformdev/project-map';
 
 const projectMap = new ProjectMapClient({
-  apiHost: process.env.UNIFORM_CLI_BASE_URL || 'https://uniform.app',
+  apiHost: process.env.UNIFORM_CLI_BASE_URL,
   apiKey: process.env.UNIFORM_API_KEY,
   projectId: process.env.UNIFORM_PROJECT_ID,
 });

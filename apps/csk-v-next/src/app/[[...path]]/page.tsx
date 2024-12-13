@@ -14,17 +14,16 @@ import retrieveRoute from '@/utils/retrieveRoute';
 
 export default async function Home(props: PageParameters) {
   const route = await retrieveRoute(props, locales.defaultLocale);
+  if (!isRouteWithoutErrors(route)) return notFound();
 
+  const theme = cookies().get('theme')?.value || 'light';
   const serverContext = await createServerUniformContext({
     searchParams: props.searchParams,
   });
-
-  const theme = cookies().get('theme')?.value || 'light';
-
-  if (!isRouteWithoutErrors(route)) return notFound();
+  const isPreviewMode = props.searchParams?.preview === 'true';
 
   return (
-    <ThemePackProvider isPreviewMode={props.searchParams?.is_incontext_editing_mode === 'true'}>
+    <ThemePackProvider isPreviewMode={isPreviewMode}>
       <ContextUpdateTransfer
         serverContext={serverContext}
         update={{

@@ -5,6 +5,7 @@ import Container from '../Container';
 
 export const Flex: FC<FlexProps> = ({
   className,
+  wrapperClassName,
   direction,
   justifyContent,
   gap,
@@ -16,7 +17,7 @@ export const Flex: FC<FlexProps> = ({
   fullHeight,
   children,
 }) => (
-  <Container {...{ backgroundColor, spacing, border, fluidContent, fullHeight }}>
+  <Container {...{ backgroundColor, spacing, border, fluidContent, fullHeight, wrapperClassName }}>
     <div
       className={cn(
         'flex',

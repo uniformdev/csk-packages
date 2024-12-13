@@ -3,6 +3,10 @@ import { ComponentProps, UniformSlot } from '@uniformdev/canvas-next-rsc/compone
 import BaseContainer from '@/components/ui/Container';
 import { SpaceType, ViewPort } from '@/types';
 
+export type ContainerAdditionalProps = {
+  className?: string;
+};
+
 export type ContainerParameters = {
   displayName?: string;
   anchor?: string;
@@ -16,7 +20,7 @@ export enum ContainerSlots {
   ContainerContent = 'containerContent',
 }
 
-export type ContainerProps = ComponentProps<ContainerParameters, ContainerSlots>;
+export type ContainerProps = ComponentProps<ContainerParameters & ContainerAdditionalProps, ContainerSlots>;
 
 const Container: FC<ContainerProps> = ({
   displayName,
@@ -29,8 +33,9 @@ const Container: FC<ContainerProps> = ({
   border,
   fluidContent,
   fullHeight,
+  className,
 }) => (
-  <BaseContainer {...{ title: displayName, id, backgroundColor, spacing, border, fluidContent, fullHeight }}>
+  <BaseContainer {...{ title: displayName, id, backgroundColor, spacing, border, fluidContent, fullHeight, className }}>
     <UniformSlot data={component} context={context} slot={slots.containerContent} />
   </BaseContainer>
 );

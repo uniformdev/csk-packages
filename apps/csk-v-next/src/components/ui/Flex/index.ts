@@ -9,7 +9,15 @@ type Align = 'start' | 'end' | 'center' | 'baseline' | 'stretch';
 
 export type FlexProps = Pick<
   ContainerProps,
-  'className' | 'title' | 'backgroundColor' | 'spacing' | 'border' | 'fluidContent' | 'fullHeight' | 'children'
+  | 'className'
+  | 'wrapperClassName'
+  | 'title'
+  | 'backgroundColor'
+  | 'spacing'
+  | 'border'
+  | 'fluidContent'
+  | 'fullHeight'
+  | 'children'
 > & {
   direction?: Direction | ViewPort<Direction>;
   justifyContent?: Justify | ViewPort<Justify>;

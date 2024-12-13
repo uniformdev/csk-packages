@@ -4,6 +4,7 @@ import { ContainerProps } from '.';
 
 export const Container: FC<ContainerProps> = ({
   className,
+  wrapperClassName,
   style,
   children,
   backgroundColor,
@@ -19,7 +20,13 @@ export const Container: FC<ContainerProps> = ({
   ] = formatSpaceParameterValue(spacing);
 
   return (
-    <div className={cn('px-4 xl:px-0', { 'mx-auto w-full max-w-7xl': !fluidContent, '!px-0': fluidContent })}>
+    <div
+      className={cn(
+        'px-4 xl:px-0',
+        { 'mx-auto w-full max-w-7xl': !fluidContent, '!px-0': fluidContent },
+        wrapperClassName
+      )}
+    >
       <div
         className={cn(
           {

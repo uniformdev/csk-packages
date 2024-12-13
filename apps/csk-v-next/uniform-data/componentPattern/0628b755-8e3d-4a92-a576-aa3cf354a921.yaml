@@ -1,6 +1,6 @@
 composition:
-  _name: Stat Item
-  _id: 7b0d3fc3-d88f-4259-9650-de58fa6aeca7
+  _name: Stat Item With Background
+  _id: 0628b755-8e3d-4a92-a576-aa3cf354a921
   type: flex
   parameters:
     gap:
@@ -11,7 +11,11 @@ composition:
       value: ''
     spacing:
       type: tp2-space-control-parameter
-      value: {}
+      value:
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
     direction:
       type: tp2-segmented-control-parameter
       value:
@@ -30,6 +34,9 @@ composition:
     justifyContent:
       type: tp2-segmented-control-parameter
       value: {}
+    backgroundColor:
+      type: tp2-color-palette-parameter
+      value: general-color-5
   slots:
     flexItem:
       - _id: 29b74799-cf5d-4d42-9f9a-4a4b240f4388
@@ -43,10 +50,13 @@ composition:
             value:
               mobile: 5xl
               tablet: 5xl
-              desktop: 5xl
+              desktop: 2xl
           text:
             type: text
             value: 44 million
+          color:
+            type: tp2-color-palette-parameter
+            value: text-secondary
           weight:
             type: tp2-segmented-control-parameter
             value: bold
@@ -72,6 +82,9 @@ composition:
           text:
             type: text
             value: Transactions every 24 hours
+          color:
+            type: tp2-color-palette-parameter
+            value: text-secondary
           weight:
             type: tp2-segmented-control-parameter
             value: normal
@@ -87,14 +100,15 @@ composition:
     parameters:
       border: 'no'
       spacing: 'no'
-      alignItems: 'no'
+      alignItems: 'yes'
       displayName: 'yes'
-      backgroundColor: 'no'
+      backgroundColor: 'yes'
     hideLockedParameters: true
   _locales:
     - en
-created: '2024-10-17T15:38:56.393781+00:00'
-modified: '2024-10-30T11:23:15.647303+00:00'
+created: '2024-12-06T14:01:17.661287+00:00'
+modified: '2024-12-11T21:55:47.599305+00:00'
 pattern: true
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/stat-item.jpg
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/stat-item-with-background.jpg
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
