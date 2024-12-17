@@ -11,6 +11,6 @@ export type ParameterHandler = {
   needsProps?: UNIFORM_PARAMETERS[];
   supports: UNIFORM_PARAMETERS_TYPES | THEME_PACK_PARAMETERS_TYPES;
   type: string;
-  render: (parameter: ComponentDefinitionParameter) => string;
+  render: (parameter: ComponentDefinitionParameter & { canvasId?: string }) => string;
   hideDestructuring?: boolean;
 };

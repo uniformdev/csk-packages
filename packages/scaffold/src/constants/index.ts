@@ -64,3 +64,4 @@ export const REGISTER_IMPORT_REGEX = /(import .+;)(?![\s\S]*import .+)/;
 export const REGISTER_KEY_REGEX = (key: string) => new RegExp(`\\b${key}\\s*:\\s*[^,]+,?`, 'g');
 export const END_MAPPER_REGEX = /}$/;
 export const VALID_KEY_REGEX = /^[$_a-zA-Z][$_a-zA-Z0-9]*$/gm;
+export const UNDER_STRIKE_REGEX = /_{2,}/;
