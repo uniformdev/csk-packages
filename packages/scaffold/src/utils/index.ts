@@ -5,6 +5,7 @@ import { input } from '@inquirer/prompts';
 import { supportedParameterHandlers } from './parameterHandlers';
 import {
   THEME_PACK_PARAMETERS_TYPES,
+  UNDER_STRIKE_REGEX,
   UNIFORM_PARAMETERS,
   UNIFORM_PARAMETERS_TYPES,
   VALID_KEY_REGEX,
@@ -43,6 +44,21 @@ export const getCanvasClient = async () => {
 export const getComponentNameBasedOnId = (componentId?: string) =>
   componentId ? componentId.charAt(0).toUpperCase() + componentId.slice(1) : 'UnknownComponent';
 
+const overrideParameterId = (parameter: ComponentDefinitionParameter, index: number) => {
+  const isUniformTextType = [UNIFORM_PARAMETERS_TYPES.TEXT, UNIFORM_PARAMETERS_TYPES.RICH_TEXT].includes(
+    parameter.type as UNIFORM_PARAMETERS_TYPES
+  );
+
+  const isValidId = parameter.id?.match(VALID_KEY_REGEX);
+
+  if (isUniformTextType) {
+    const overriddenId = (isValidId ? `_${parameter.id}` : `_parameter${index}`).replace(UNDER_STRIKE_REGEX, '_');
+    return overriddenId === '_' ? undefined : overriddenId;
+  }
+
+  return isValidId ? undefined : `parameter${index}`;
+};
+
 export const getSupportedParameters = (
   parameters: ComponentDefinitionParameter[]
 ): (ComponentDefinitionParameter & { handler?: ParameterHandler; overriddenId?: string })[] => {
@@ -53,7 +69,7 @@ export const getSupportedParameters = (
       const handler = supportedParameterHandlers.find(handler => {
         return handler.supports.includes(parameter.type as UNIFORM_PARAMETERS_TYPES | THEME_PACK_PARAMETERS_TYPES);
       });
-      const overriddenId = !parameter?.id?.match(VALID_KEY_REGEX) ? `parameter_${index}` : undefined;
+      const overriddenId = overrideParameterId(parameter, index + 1);
 
       return {
         ...parameter,
@@ -65,7 +81,7 @@ export const getSupportedParameters = (
                 if (!overriddenId) {
                   return handler.render(parameter);
                 } else {
-                  return handler.render({ ...parameter, id: overriddenId });
+                  return handler.render({ ...parameter, id: overriddenId, canvasId: parameter.id });
                 }
               },
             }

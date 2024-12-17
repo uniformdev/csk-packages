@@ -108,7 +108,7 @@ export const indexComponentFile: FileHandler = {
       {/* Parameters section */}
       ${
         detectedParameters
-          ? `<div className="flex flex-col gap-1">
+          ? `<div className="flex flex-col gap-1 text-black">
         <div className="flex items-center gap-1">
           <h3 className="text-2xl text-black md:text-3xl">Parameters: </h3>
           <div

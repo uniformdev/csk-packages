@@ -6,9 +6,8 @@ const uniformTextParameterHandler: ParameterHandler = {
   needsProps: [UNIFORM_PARAMETERS.CONTEXT, UNIFORM_PARAMETERS.COMPONENT],
   supports: UNIFORM_PARAMETERS_TYPES.TEXT,
   type: 'string',
-  hideDestructuring: true,
   render: parameter =>
-    `<span>Text value: </span><UniformText parameterId="${parameter.id}" placeholder="${parameter.name} goes here" context={context} component={component} />`,
+    `<span>Text value: </span><UniformText parameterId="${parameter.canvasId || parameter.id}" placeholder="${parameter.name} goes here" context={context} component={component} />`,
 };
 
 const numberParameterHandler: ParameterHandler = {
@@ -75,9 +74,8 @@ const richTextParameterHandler: ParameterHandler = {
   needsProps: [UNIFORM_PARAMETERS.CONTEXT, UNIFORM_PARAMETERS.COMPONENT],
   supports: UNIFORM_PARAMETERS_TYPES.RICH_TEXT,
   type: 'RichTextNode',
-  hideDestructuring: true,
   render: parameter =>
-    `<UniformRichText placeholder="Content goes here..." className="prose max-w-full text-current marker:text-current [&_*:not(pre)]:text-current" parameterId="${parameter.id}" context={context} component={component} />`,
+    `<UniformRichText placeholder="Content goes here..." className="prose max-w-full text-current marker:text-current [&_*:not(pre)]:text-current" parameterId="${parameter.canvasId || parameter.id}" context={context} component={component} />`,
 };
 
 const imageParameterHandler: ParameterHandler = {
