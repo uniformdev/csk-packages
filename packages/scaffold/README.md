@@ -18,19 +18,7 @@ npm install @uniformdev/scaffold
 
 ## Usage
 
-To use the package, you can run the following command:
-
-### Command
-
-Run the generate command to create a React component:
-
-```bash
-npx npx scaffold add
-```
-
-### Add a Custom Script to package.json
-
-You can add a custom script to your package.json for easier usage:
+You can add a script command to your package.json for easier usage:
 
 ```json
 "scripts": {
