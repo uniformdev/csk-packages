@@ -30,7 +30,7 @@
     "publish:manifest": "uniform context manifest publish",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "scaffold:add": "scaffold add",
+    "scaffold:add": "csk-cli scaffold",
     "modules:init": "csk-cli init"
   },
   "lint-staged": {
@@ -69,7 +69,6 @@
     "@typescript-eslint/types": "8.1.0",
     "@uniformdev/cli": "19.210.2",
     "@uniformdev/csk-cli": "*",
-    "@uniformdev/scaffold": "*",
     "eslint": "8.57.0",
     "eslint-config-next": "14.2.5",
     "eslint-config-prettier": "9.1.0",

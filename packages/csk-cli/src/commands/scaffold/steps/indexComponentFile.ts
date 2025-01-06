@@ -2,9 +2,10 @@ import fs from 'fs';
 import * as ora from 'ora';
 import path from 'path';
 import { confirm, input } from '@inquirer/prompts';
+import { formatWithPrettier, runCmdCommand } from '../../../utils';
 import { IMPORTS, UNIFORM_PARAMETERS } from '../constants';
 import { FileHandler } from '../types';
-import { formatWithPrettier, getComponentNameBasedOnId, getSupportedParameters, runCmdCommand } from '../utils';
+import { getComponentNameBasedOnId, getSupportedParameters } from '../utils';
 
 const progressSpinner = ora.default();
 

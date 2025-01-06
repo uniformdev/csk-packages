@@ -2,9 +2,10 @@ import fs from 'fs';
 import * as ora from 'ora';
 import path from 'path';
 import { input } from '@inquirer/prompts';
+import { formatWithPrettier, runCmdCommand } from '../../../utils';
 import { END_MAPPER_REGEX, MAPPING_REGEX, REGISTER_IMPORT_REGEX, REGISTER_KEY_REGEX } from '../constants';
 import { FileHandler } from '../types';
-import { formatWithPrettier, getComponentNameBasedOnId, runCmdCommand } from '../utils';
+import { getComponentNameBasedOnId } from '../utils';
 
 const progressSpinner = ora.default();
 

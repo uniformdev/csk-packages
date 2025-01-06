@@ -1,5 +1,5 @@
-import { IMPORTS, THEME_PACK_PARAMETERS_TYPES, UNIFORM_PARAMETERS, UNIFORM_PARAMETERS_TYPES } from '../constants';
-import { ParameterHandler } from '../types';
+import { IMPORTS, THEME_PACK_PARAMETERS_TYPES, UNIFORM_PARAMETERS, UNIFORM_PARAMETERS_TYPES } from './constants';
+import { ParameterHandler } from './types';
 
 const uniformTextParameterHandler: ParameterHandler = {
   import: [IMPORTS.UNIFORM_TEXT],
