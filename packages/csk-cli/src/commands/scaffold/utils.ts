@@ -1,16 +1,14 @@
-import { exec } from 'child_process';
-import prettier, { Options } from 'prettier';
 import { CanvasClient, ComponentDefinitionParameter } from '@uniformdev/canvas';
 import { input } from '@inquirer/prompts';
-import { supportedParameterHandlers } from './parameterHandlers';
 import {
   THEME_PACK_PARAMETERS_TYPES,
   UNDER_STRIKE_REGEX,
   UNIFORM_PARAMETERS,
   UNIFORM_PARAMETERS_TYPES,
   VALID_KEY_REGEX,
-} from '../constants';
-import { ParameterHandler } from '../types';
+} from './constants';
+import { supportedParameterHandlers } from './parameterHandlers';
+import { ParameterHandler } from './types';
 
 export const getCanvasClient = async () => {
   const apiHost = process.env.UNIFORM_CLI_BASE_URL || 'https://uniform.app';
@@ -91,31 +89,3 @@ export const getSupportedParameters = (
 
   return handled.filter(parameter => !!parameter.handler);
 };
-
-export const formatWithPrettier = (source: string, option?: Options) =>
-  prettier.format(source, {
-    parser: 'typescript',
-    printWidth: 120,
-    singleQuote: true,
-    semi: true,
-    trailingComma: 'es5',
-    tabWidth: 2,
-    arrowParens: 'avoid',
-    endOfLine: 'auto',
-    ...option,
-  });
-
-export const runCmdCommand = async (command: string): Promise<string> =>
-  new Promise((resolve, reject) => {
-    exec(command, (error, stdout, stderr) => {
-      if (error) {
-        reject(error.message);
-        return;
-      }
-      if (stderr) {
-        reject(stderr);
-        return;
-      }
-      resolve(stdout);
-    });
-  });

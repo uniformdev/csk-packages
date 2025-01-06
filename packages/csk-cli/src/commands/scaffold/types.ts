@@ -1,5 +1,5 @@
 import { ComponentDefinition, ComponentDefinitionParameter } from '@uniformdev/canvas';
-import { IMPORTS, THEME_PACK_PARAMETERS_TYPES, UNIFORM_PARAMETERS, UNIFORM_PARAMETERS_TYPES } from '../constants';
+import { IMPORTS, THEME_PACK_PARAMETERS_TYPES, UNIFORM_PARAMETERS, UNIFORM_PARAMETERS_TYPES } from './constants';
 
 export type FileHandler = {
   path: (props: { pathToCanvasFolder: string; definition?: ComponentDefinition }) => Promise<string>;

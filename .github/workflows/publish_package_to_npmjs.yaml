@@ -10,7 +10,6 @@ on:
         options:
           - all
           - theme-pack
-          - scaffold
           - csk-cli
       publish_env:
         description: Select the environment to publish to (production or alpha)
@@ -28,7 +27,7 @@ jobs:
       id-token: write
 
     env:
-      PACKAGES: "theme-pack scaffold csk-cli" # Define packages as a single string variable
+      PACKAGES: "theme-pack csk-cli" # Define packages as a single string variable
 
     steps:
       # Step 1: Checkout repository

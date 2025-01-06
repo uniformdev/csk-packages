@@ -14,10 +14,6 @@ cd packages/theme-pack
 npm --no-git-tag-version --allow-same-version version ${NEW}
 git add package.json
 
-cd ../../packages/scaffold
-npm --no-git-tag-version --allow-same-version version ${NEW}
-git add package.json
-
 cd ../../packages/csk-cli
 npm --no-git-tag-version --allow-same-version version ${NEW}
 git add package.json
