@@ -133,7 +133,7 @@ export { default as FlexItem, type FlexItemProps, type FlexItemParameters } from
 export { default as Footer, type FooterProps, type FooterParameters, FooterSlots } from './Footer';
 export { default as Grid, type GridProps, type GridParameters, GridSlots } from './Grid';
 export { default as GridItem, type GridItemProps, type GridItemParameters, GridItemSlots } from './GridItem';
-export { default as Header, type HeaderProps, type HeaderParameters } from './Header';
+export { default as Header, type HeaderProps, type HeaderParameters, HeaderSlots, HeaderVariants } from './Header';
 export { default as IconLabel, type IconLabelProps, type IconLabelParameters } from './IconLabel';
 export { default as Image, type ImageProps, type ImageParameters } from './Image';
 export {
