@@ -1,1 +1,0 @@
-export { ThemePackProvider } from './providers';

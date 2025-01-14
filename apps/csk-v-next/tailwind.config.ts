@@ -57,6 +57,7 @@ const config: Config = {
     './src/hocs/**/*.{js,ts,jsx,tsx,mdx}',
     './src/stories/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    '../../packages/theme-pack/src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   safelist,
   theme,

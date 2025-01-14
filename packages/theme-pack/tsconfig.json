@@ -2,8 +2,44 @@
   "extends": "@repo/typescript-config/react-library.json",
   "compilerOptions": {
     "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@uniformdev/theme-pack/utils/styling": [
+        "./src/utils/styling.ts"
+      ],
+      "@uniformdev/theme-pack/utils/routing": [
+        "./src/utils/routing.ts"
+      ],
+      "@uniformdev/theme-pack/utils/assets": [
+        "./src/utils/assets.ts"
+      ],
+      "@uniformdev/theme-pack/utils/createEmptyPlaceholderResolver": [
+        "./src/utils/createEmptyPlaceholderResolver.ts"
+      ],
+      "@uniformdev/theme-pack/utils/createComponentResolver": [
+        "./src/utils/createComponentResolver.ts"
+      ],
+      "@uniformdev/theme-pack/types": [
+        "./src/types.ts"
+      ],
+      "@uniformdev/theme-pack/hocs/withPlaygroundWrapper": [
+        "./src/hocs/withPlaygroundWrapper.tsx"
+      ],
+      "@uniformdev/theme-pack/components/ui": [
+        "./src/components/ui/index.ts"
+      ],
+      "@uniformdev/theme-pack/components/canvas": [
+        "./src/components/canvas/index.ts"
+      ]
+    }
   },
-  "include": ["src", "turbo"],
-  "exclude": ["node_modules", "dist"],
-  "declaration": true
+  "include": [
+    "src",
+    "turbo"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "declaration": true,
 }
