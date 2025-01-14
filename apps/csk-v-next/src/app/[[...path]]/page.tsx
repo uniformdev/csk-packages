@@ -6,10 +6,12 @@ import {
   PageParameters,
   UniformComposition,
 } from '@uniformdev/canvas-next-rsc';
-import { ThemePackProvider } from '@uniformdev/theme-pack/components';
-import componentResolver from '@/components';
+
+import { emptyPlaceholderResolver } from '@uniformdev/theme-pack/components/canvas/emptyPlaceholders';
+import { ThemePackProvider } from '@uniformdev/theme-pack/components/providers/server';
+import { isRouteWithoutErrors } from '@uniformdev/theme-pack/utils/routing';
+import { componentResolver } from '@/components';
 import locales from '@/i18n/locales.json';
-import { isRouteWithoutErrors } from '@/utils';
 import retrieveRoute from '@/utils/retrieveRoute';
 
 export default async function Home(props: PageParameters) {
@@ -38,11 +40,10 @@ export default async function Home(props: PageParameters) {
         resolveComponent={componentResolver}
         serverContext={serverContext}
         mode="server"
+        resolveEmptyPlaceholder={emptyPlaceholderResolver}
       />
     </ThemePackProvider>
   );
 }
 
-export { generateMetadata } from '@/utils/generateMetadata';
-
-export const dynamic = 'force-dynamic';
+export { generateMetadata } from '@/utils/metadata';

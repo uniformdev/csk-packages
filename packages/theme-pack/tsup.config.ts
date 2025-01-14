@@ -1,10 +1,25 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-  entry: ['src/index.ts', 'src/tailwindcss-conf.ts', 'src/components.ts'],
-  format: ['cjs', 'esm'], // Build for commonJS and ESmodules
-  dts: true, // Generate declaration file (.d.ts)
-  splitting: false,
-  sourcemap: true,
+  entry: [
+    'src/index.ts',
+    'src/types.ts',
+    'src/tailwindcss-conf.ts',
+    'src/utils/styling.ts',
+    'src/utils/routing.ts',
+    'src/utils/assets.ts',
+    'src/utils/createEmptyPlaceholderResolver.ts',
+    'src/utils/createComponentResolver.ts',
+    'src/hocs/withPlaygroundWrapper.tsx',
+    'src/components/providers/server.ts',
+    'src/components/ui/index.ts',
+    'src/components/canvas/index.ts',
+    'src/components/canvas/emptyPlaceholders.tsx',
+  ],
+  format: ['esm'],
+  dts: true,
+  splitting: true,
+  sourcemap: false,
   clean: true,
+  minify: true,
 });

@@ -1,4 +1,4 @@
-import { ComponentMapping } from '@/utils/createComponentResolver';
+import { ComponentMapping } from '@uniformdev/theme-pack/utils/createComponentResolver';
 import Container from './Container';
 import CustomComponent from './CustomComponent';
 

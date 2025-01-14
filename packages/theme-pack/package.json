@@ -1,27 +1,65 @@
 {
   "name": "@uniformdev/theme-pack",
-  "version": "1.0.60",
+  "version": "1.0.61.6",
   "description": "Theme Pack contains command line interface tool and utils for working with design tokens",
   "license": "SEE LICENSE IN LICENSE.txt",
   "main": "./cli.js",
   "exports": {
-    ".": {
-      "types": "./dist/index.d.mts",
-      "default": "./cli.js"
+    "./types": {
+      "types": "./dist/types.d.mts",
+      "default": "./dist/types.mjs"
     },
     "./tailwindcss-conf": {
       "types": "./dist/tailwindcss-conf.d.mts",
       "default": "./dist/tailwindcss-conf.mjs"
     },
-    "./components": {
-      "types": "./dist/components.d.mts",
-      "default": "./dist/components.mjs"
+    "./utils/styling": {
+      "types": "./dist/utils/styling.d.mts",
+      "default": "./dist/utils/styling.mjs"
+    },
+    "./utils/routing": {
+      "types": "./dist/utils/routing.d.mts",
+      "default": "./dist/utils/routing.mjs"
+    },
+    "./utils/assets": {
+      "types": "./dist/utils/assets.d.mts",
+      "default": "./dist/utils/assets.mjs"
+    },
+    "./utils/createEmptyPlaceholderResolver": {
+      "types": "./dist/utils/createEmptyPlaceholderResolver.d.mts",
+      "default": "./dist/utils/createEmptyPlaceholderResolver.mjs"
+    },
+    "./utils/createComponentResolver": {
+      "types": "./dist/utils/createComponentResolver.d.mts",
+      "default": "./dist/utils/createComponentResolver.mjs"
+    },
+    "./hocs/withPlaygroundWrapper": {
+      "types": "./dist/hocs/withPlaygroundWrapper.d.mts",
+      "default": "./dist/hocs/withPlaygroundWrapper.mjs"
+    },
+    "./components/providers/server": {
+      "types": "./dist/components/providers/server.d.mts",
+      "default": "./dist/components/providers/server.mjs"
+    },
+    "./components/ui": {
+      "types": "./dist/components/ui/index.d.mts",
+      "default": "./dist/components/ui/index.mjs"
+    },
+    "./components/canvas": {
+      "types": "./dist/components/canvas/index.d.mts",
+      "default": "./dist/components/canvas/index.mjs"
+    },
+    "./components/canvas/emptyPlaceholders": {
+      "types": "./dist/components/canvas/emptyPlaceholders.d.mts",
+      "default": "./dist/components/canvas/emptyPlaceholders.mjs"
     }
   },
   "types": "./dist/index.d.mts",
   "scripts": {
     "theme-pack": "node ./cli.js",
-    "build": "tsup",
+    "build:tsup": "tsup",
+    "postbuild": "tsx ./src/scripts/copy-content.tsx",
+    "build": "npm run build:tsup && npm run postbuild",
     "dev": "tsup --watch",
     "clean": "rimraf dist",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -31,22 +69,28 @@
   "keywords": [],
   "author": "",
   "dependencies": {
-    "commander": "^9.0.0"
+    "classnames": "^2.5.1",
+    "commander": "^9.0.0",
+    "react-player": "^2.16.0",
+    "react-responsive-masonry": "2.4.1",
+    "tailwind-merge": "^2.5.2"
   },
   "devDependencies": {
-    "@uniformdev/canvas": ">=19",
-    "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
-    "next": ">=14",
-    "react": ">=18",
-    "react-dom": ">=18",
-    "tsup": "^8.3.0"
+    "@types/fs-extra": "^11.0.4",
+    "fs-extra": "^11.2.0",
+    "tsup": "^8.3.0",
+    "tsx": "^4.19.2"
   },
   "peerDependencies": {
+    "@uniformdev/assets": ">=19",
     "@uniformdev/canvas": ">=19",
+    "@uniformdev/canvas-next-rsc": ">=19",
+    "cookies-next": ">=4",
     "next": ">=14",
+    "next-themes": ">=0.3",
     "react": ">=18",
-    "react-dom": ">=18"
+    "react-dom": ">=18",
+    "tailwindcss": ">=3"
   },
   "bin": {
     "theme-pack": "cli.js"
