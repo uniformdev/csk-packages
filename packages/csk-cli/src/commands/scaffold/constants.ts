@@ -46,9 +46,9 @@ export enum IMPORTS {
   RICH_TEXT_NODE = "import { RichTextNode } from '@uniformdev/richtext';",
   DATA_WITH_PROPERTIES = "import { DataWithProperties } from '@uniformdev/canvas';",
 
-  CN = "import { cn } from '@/utils';",
-  VIEWPORT = "import { ViewPort } from '@/types';",
-  SPACE_TYPE = "import { SpaceType } from '@/types';",
+  CN = "import { cn } from '@uniformdev/theme-pack/utils/styling';",
+  VIEWPORT = "import { ViewPort } from '@uniformdev/theme-pack/types';",
+  SPACE_TYPE = "import { SpaceType } from '@uniformdev/theme-pack/types';",
 }
 
 export enum UNIFORM_PARAMETERS {

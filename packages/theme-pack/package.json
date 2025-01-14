@@ -1,6 +1,6 @@
 {
   "name": "@uniformdev/theme-pack",
-  "version": "1.0.62",
+  "version": "1.0.63",
   "description": "Theme Pack contains command line interface tool and utils for working with design tokens",
   "license": "SEE LICENSE IN LICENSE.txt",
   "main": "./cli.js",
@@ -71,8 +71,10 @@
   "dependencies": {
     "classnames": "^2.5.1",
     "commander": "^9.0.0",
+    "cookies-next": "^4.3.0",
+    "next-themes": "^0.3.0",
     "react-player": "^2.16.0",
-    "react-responsive-masonry": "2.4.1",
+    "react-responsive-masonry": "^2.4.1",
     "tailwind-merge": "^2.5.2"
   },
   "devDependencies": {
@@ -85,9 +87,7 @@
     "@uniformdev/assets": ">=19",
     "@uniformdev/canvas": ">=19",
     "@uniformdev/canvas-next-rsc": ">=19",
-    "cookies-next": ">=4",
     "next": ">=14",
-    "next-themes": ">=0.3",
     "react": ">=18",
     "react-dom": ">=18",
     "tailwindcss": ">=3"
