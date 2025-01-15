@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { TextProps as BaseTextProps } from '@uniformdev/theme-pack/components/ui';
-import { ViewPort } from '@uniformdev/theme-pack/types';
+import { ViewPort } from '@uniformdev/theme-pack/types/cskTypes';
 
 type UniformDate = {
   datetime: string;

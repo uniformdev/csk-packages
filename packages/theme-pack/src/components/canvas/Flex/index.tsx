@@ -1,7 +1,7 @@
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { ContainerParameters } from '@uniformdev/theme-pack/components/canvas';
 import { withPlaygroundWrapper } from '@uniformdev/theme-pack/hocs/withPlaygroundWrapper';
-import { ViewPort } from '@uniformdev/theme-pack/types';
+import { ViewPort } from '@uniformdev/theme-pack/types/cskTypes';
 import { Flex } from './flex';
 
 type Direction = 'row' | 'row-reverse' | 'col' | 'col-reverse';

@@ -4,7 +4,7 @@ import { LinkParamValue } from '@uniformdev/canvas';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { ButtonProps as BaseButtonProps } from '@uniformdev/theme-pack/components/ui';
 import { withPlaygroundWrapper } from '@uniformdev/theme-pack/hocs/withPlaygroundWrapper';
-import { ViewPort } from '@uniformdev/theme-pack/types';
+import { ViewPort } from '@uniformdev/theme-pack/types/cskTypes';
 import { Button } from './button';
 
 export type ButtonAdditionalProps = {

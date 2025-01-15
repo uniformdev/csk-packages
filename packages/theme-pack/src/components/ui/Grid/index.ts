@@ -1,5 +1,5 @@
 import { DefaultTheme } from 'tailwindcss/types/generated/default-theme';
-import { ViewPort } from '@uniformdev/theme-pack/types';
+import { ViewPort } from '@uniformdev/theme-pack/types/cskTypes';
 import { ContainerProps } from '../Container';
 
 type AvailableColumnsCount = keyof DefaultTheme['gridTemplateColumns'];

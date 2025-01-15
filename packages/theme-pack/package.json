@@ -1,13 +1,13 @@
 {
   "name": "@uniformdev/theme-pack",
-  "version": "1.0.65",
+  "version": "1.0.66",
   "description": "Theme Pack contains command line interface tool and utils for working with design tokens",
   "license": "SEE LICENSE IN LICENSE.txt",
   "main": "./cli.js",
   "exports": {
-    "./types": {
-      "types": "./dist/types.d.mts",
-      "default": "./dist/types.mjs"
+    "./types/cskTypes": {
+      "types": "./dist/types/cskTypes.d.mts",
+      "default": "./dist/types/cskTypes.mjs"
     },
     "./tailwindcss-conf": {
       "types": "./dist/tailwindcss-conf.d.mts",
@@ -75,13 +75,13 @@
     "next-themes": "^0.3.0",
     "react-player": "^2.16.0",
     "react-responsive-masonry": "^2.4.1",
-    "tailwind-merge": "^2.5.2"
+    "tailwind-merge": "^2.5.2",
+    "ora": "^8.1.1",
+    "@inquirer/prompts": "^7.1.0"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
-    "@types/fs-extra": "^11.0.4",
-    "fs-extra": "^11.2.0",
     "tsup": "^8.3.0",
     "tsx": "^4.19.2"
   },

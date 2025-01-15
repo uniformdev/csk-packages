@@ -4,7 +4,7 @@ import { LinkParamValue } from '@uniformdev/canvas';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { TextParameters as BaseTextParameters } from '@uniformdev/theme-pack/components/canvas';
 import { withPlaygroundWrapper } from '@uniformdev/theme-pack/hocs/withPlaygroundWrapper';
-import { ViewPort } from '@uniformdev/theme-pack/types';
+import { ViewPort } from '@uniformdev/theme-pack/types/cskTypes';
 
 export type NavigationGroupParameters = BaseTextParameters & {
   icon?: Asset[];
