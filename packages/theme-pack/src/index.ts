@@ -1,4 +1,5 @@
 import { program } from 'commander';
+import { extractor } from './commands/extractor';
 import {
   buildAllowedGroups,
   buildBorders,
@@ -153,6 +154,14 @@ program
       }
       return;
     }
+  });
+
+program
+  .command('extract')
+  .description('Extract canvas, ui and content components and utils for them')
+  .action(async () => {
+    await extractor().catch(e => console.error(e));
+    return;
   });
 
 program.parse(process.argv);
