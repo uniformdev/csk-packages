@@ -18,11 +18,13 @@ export default async function Home(props: PageParameters) {
   const route = await retrieveRoute(props, locales.defaultLocale);
   if (!isRouteWithoutErrors(route)) return notFound();
 
-  const theme = cookies().get('theme')?.value || 'light';
+  const cookie = await cookies();
+  const theme = cookie.get('theme')?.value || 'light';
+  const searchParams = await props.searchParams;
   const serverContext = await createServerUniformContext({
-    searchParams: props.searchParams,
+    searchParams,
   });
-  const isPreviewMode = props.searchParams?.preview === 'true';
+  const isPreviewMode = searchParams?.preview === 'true';
 
   return (
     <ThemePackProvider isPreviewMode={isPreviewMode}>

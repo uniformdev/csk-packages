@@ -41,16 +41,19 @@ const formatPath = (path?: string | string[], locale?: string | null): string | 
  * @returns {Promise<ResolvedRouteGetResponse>} - The retrieved route response.
  */
 const retrieveRoute = async (props: Parameters<typeof uniformRetrieveRoute>[0], locale?: string | null) => {
-  const { params = {} } = props;
-  const updatedParams = {
-    ...params,
-    path: formatPath(params.path, locale),
-  };
-
+  const params = await props.params;
+  const updatedParams = getUpdatedParams(params, locale);
   return uniformRetrieveRoute({
     ...props,
     params: updatedParams,
   });
 };
+
+async function getUpdatedParams(params: { path?: string | string[] } | undefined, locale: string | null | undefined) {
+  return Promise.resolve({
+    ...params,
+    path: formatPath(params?.path, locale),
+  });
+}
 
 export default retrieveRoute;
