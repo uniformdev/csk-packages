@@ -19,6 +19,7 @@
     "lint:fix": "next lint --fix",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prepare": "husky",
+    "theme-pack:extract": "theme-pack extract",
     "init": "run-s push:configuration push:content publish:manifest",
     "pull:configuration": "theme-pack pull",
     "push:configuration": "theme-pack push",

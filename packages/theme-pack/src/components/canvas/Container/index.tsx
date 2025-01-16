@@ -1,5 +1,5 @@
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
-import { SpaceType, ViewPort } from '@uniformdev/theme-pack/types';
+import { SpaceType, ViewPort } from '@uniformdev/theme-pack/types/cskTypes';
 
 export type ContainerAdditionalProps = {
   className?: string;

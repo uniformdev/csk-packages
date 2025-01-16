@@ -1,6 +1,6 @@
 import classNames, { ArgumentArray } from 'classnames';
 import { twMerge } from 'tailwind-merge';
-import { SpaceType, ViewPort } from '../types';
+import { SpaceType, ViewPort } from '@uniformdev/theme-pack/types/cskTypes';
 
 const TEMPLATE_REGEX = /\{[^}]+\}/g;
 

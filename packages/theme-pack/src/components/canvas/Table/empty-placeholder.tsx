@@ -1,4 +1,4 @@
-import { ResolveEmptyPlaceholderOptions } from '@uniformdev/theme-pack/types';
+import { ResolveEmptyPlaceholderOptions } from '@uniformdev/theme-pack/types/cskTypes';
 import { DEFAULT_EMPTY_PLACEHOLDER } from '@uniformdev/theme-pack/utils/createEmptyPlaceholderResolver';
 import { TableSlots } from '.';
 

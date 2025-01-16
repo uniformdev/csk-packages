@@ -3,7 +3,7 @@ import { defineConfig } from 'tsup';
 export default defineConfig({
   entry: [
     'src/index.ts',
-    'src/types.ts',
+    'src/types/cskTypes.ts',
     'src/tailwindcss-conf.ts',
     'src/utils/styling.ts',
     'src/utils/routing.ts',

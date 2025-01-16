@@ -1,6 +1,6 @@
 import { HTMLAttributes } from 'react';
 import { DefaultTheme } from 'tailwindcss/types/generated/default-theme';
-import { ViewPort } from '@uniformdev/theme-pack/types';
+import { ViewPort } from '@uniformdev/theme-pack/types/cskTypes';
 
 type AvailableColumnStart = keyof DefaultTheme['gridColumnStart'];
 type AvailableColumnSpan = keyof DefaultTheme['gridColumn'];

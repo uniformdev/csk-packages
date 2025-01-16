@@ -1,5 +1,5 @@
 import { HTMLAttributes } from 'react';
-import { ViewPort } from '@uniformdev/theme-pack/types';
+import { ViewPort } from '@uniformdev/theme-pack/types/cskTypes';
 
 type AvailableAlignSelf = 'auto' | 'start' | 'end' | 'center' | 'stretch';
 type AvailableShrink = '0' | '1';

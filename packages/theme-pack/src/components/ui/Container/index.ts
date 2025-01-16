@@ -1,5 +1,5 @@
 import { HTMLAttributes } from 'react';
-import { SpaceType, ViewPort } from '@uniformdev/theme-pack/types';
+import { SpaceType, ViewPort } from '@uniformdev/theme-pack/types/cskTypes';
 
 export type ContainerProps = HTMLAttributes<HTMLDivElement> & {
   backgroundColor?: string;

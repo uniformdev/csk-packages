@@ -47,8 +47,8 @@ export enum IMPORTS {
   DATA_WITH_PROPERTIES = "import { DataWithProperties } from '@uniformdev/canvas';",
 
   CN = "import { cn } from '@uniformdev/theme-pack/utils/styling';",
-  VIEWPORT = "import { ViewPort } from '@uniformdev/theme-pack/types';",
-  SPACE_TYPE = "import { SpaceType } from '@uniformdev/theme-pack/types';",
+  VIEWPORT = "import { ViewPort } from '@uniformdev/theme-pack/types/cskTypes';",
+  SPACE_TYPE = "import { SpaceType } from '@uniformdev/theme-pack/types/cskTypes';",
 }
 
 export enum UNIFORM_PARAMETERS {
