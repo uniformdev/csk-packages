@@ -36,26 +36,55 @@ STYLES_PATH=
 Wrap your page components using ThemePackProvider from @uniformdev/theme-pack/components:
 
 ```typescript jsx
+import { cookies } from 'next/headers';
 import { notFound } from 'next/navigation';
-import { ResolvedRouteGetResponse, RouteGetResponseEdgehancedComposition } from '@uniformdev/canvas';
-import { PageParameters, retrieveRoute, UniformComposition } from '@uniformdev/canvas-next-rsc';
-import { ThemePackProvider } from '@uniformdev/theme-pack/components';
-import componentResolver from '@/components';
-
-const isRouteWithoutErrors = (route: ResolvedRouteGetResponse): route is RouteGetResponseEdgehancedComposition =>
-        'compositionApiResponse' in route && !!route.compositionApiResponse && 'composition' in route.compositionApiResponse;
+import {
+  createServerUniformContext,
+  ContextUpdateTransfer,
+  PageParameters,
+  UniformComposition,
+} from '@uniformdev/canvas-next-rsc';
+import { emptyPlaceholderResolver } from '@uniformdev/theme-pack/components/canvas/emptyPlaceholders';
+import { ThemePackProvider } from '@uniformdev/theme-pack/components/providers/server';
+import { isRouteWithoutErrors } from '@uniformdev/theme-pack/utils/routing';
+import { componentResolver } from '@/components';
+import locales from '@/i18n/locales.json';
+import retrieveRoute from '@/utils/retrieveRoute';
 
 export default async function Home(props: PageParameters) {
-   const route = await retrieveRoute(props);
+  const route = await retrieveRoute(props, locales.defaultLocale);
+  if (!isRouteWithoutErrors(route)) return notFound();
 
-   if (!isRouteWithoutErrors(route)) return notFound();
+  const theme = cookies().get('theme')?.value || 'light';
+  const serverContext = await createServerUniformContext({
+    searchParams: props.searchParams,
+  });
+  const isPreviewMode = props.searchParams?.preview === 'true';
 
-   return (
-           <ThemePackProvider>
-              <UniformComposition {...props} route={route} resolveComponent={componentResolver} mode="server" />
-           </ThemePackProvider>
-   );
+  return (
+    <ThemePackProvider isPreviewMode={isPreviewMode}>
+      <ContextUpdateTransfer
+        serverContext={serverContext}
+        update={{
+          quirks: {
+            theme,
+          },
+        }}
+      />
+      <UniformComposition
+        {...props}
+        route={route}
+        resolveComponent={componentResolver}
+        serverContext={serverContext}
+        mode="server"
+        resolveEmptyPlaceholder={emptyPlaceholderResolver}
+      />
+    </ThemePackProvider>
+  );
 }
+
+export { generateMetadata } from '@/utils/metadata';
+
 ```
 
 ### Pull Design Tokens
@@ -93,7 +122,26 @@ import {
 import theme from './tailwind.config.theme.json';
 import utilities from './tailwind.utilities.json';
 
-const safelist = [];
+const safelist = [
+  { pattern: /grid-cols-(1[0-2]|[1-9]|none|subgrid)/, variants: ['lg', 'md'] },
+  { pattern: /gap(?:-(x|y))?-(0(\.5)?|1(\.5)?|2(\.5)?|3(\.5)?|[1-9]?[0-9]|px)/, variants: ['lg', 'md'] },
+  { pattern: /flex-(col|row|col-reverse|row-reverse)/, variants: ['lg', 'md'] },
+  { pattern: /justify-(normal|start|end|center|between|around|evenly|stretch)/, variants: ['lg', 'md'] },
+  { pattern: /items-(start|end|center|baseline|stretch)/, variants: ['lg', 'md'] },
+  { pattern: /self-(start|end|center|baseline|stretch)/, variants: ['lg', 'md'] },
+  { pattern: /(col|row)-start-(1[0-2]|[1-9]|none|subgrid)/, variants: ['lg', 'md'] },
+  { pattern: /(col|row)-(auto|span-(1[0-2]|[1-9]|full))/, variants: ['lg', 'md'] },
+  { pattern: /justify-(start|center|end)/ },
+  { pattern: /text-(xs|sm|base|lg|xl|2xl|3xl|4xl|5xl|6xl|7xl|8xl|9xl)/, variants: ['lg', 'md'] },
+  { pattern: /text-(left|center|right)/ },
+  { pattern: /font-(normal|medium|bold|extrabold)/, variants: ['lg', 'md'] },
+  { pattern: /line-clamp-(none|[1-6])/, variants: ['lg:[&>:not(script)]', 'md:[&>:not(script)]', '[&>:not(script)]'] },
+  { pattern: /(uppercase|lowercase|capitalize)/, variants: ['lg', 'md'] },
+  { pattern: /(underline|overline|line-through)/, variants: ['lg', 'md'] },
+  { pattern: /tracking-(tighter|tight|normal|wide|wider|widest)/, variants: ['lg', 'md'] },
+  { pattern: /aspect-(auto|square|video)/ },
+  { pattern: /shrink-(0|1)/ },
+];
 
 const colorKeys = Object.keys(theme.extend.colors || {});
 if (colorKeys.length) {
@@ -116,10 +164,17 @@ if (borderKeys.length) {
 }
 
 const config: Config = {
-  content: ['./src/components/**/*.{js,ts,jsx,tsx,mdx}'],
+  darkMode: 'class',
+  content: [
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './node_modules/@uniformdev/theme-pack/dist/content/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
   safelist,
   theme,
   plugins: [
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    require('@tailwindcss/typography'),
     plugin(function ({ addUtilities }) {
       addUtilities(utilities);
     }),
@@ -127,13 +182,21 @@ const config: Config = {
 };
 
 export default config;
+
 ```
 
 ## Additional environment variable
 
 ###  Custom integration url
 ```dotenv
+// Integration url
 INTEGRATION_URL=
+// Path to the config file
 CONFIG_PATH=
+// Path to the locales file
 LOCALES_PATH=
+// Path to the components folder to extract components from packages  
+COMPONENTS_PATH=
+// Path to the module folders for extracted types, hocs and utils from packages
+MODULES_PATH=
 ```

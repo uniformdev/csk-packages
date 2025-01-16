@@ -32,6 +32,9 @@ export const DEFAULT_CONFIG_PATH = '/';
 export const DEFAULT_TAILWIND_CONF_PATH = 'tailwind.config.theme.json';
 export const DEFAULT_TAILWIND_UTILITIES_PATH = 'tailwind.utilities.json';
 
+export const DEFAULT_COMPONENTS_PATH = '/src/components';
+export const DEFAULT_MODULES_PATH = '/src';
+
 export const PATH_TO_STYLE_FOLDER = path.join(
   ...(process.env.STYLES_PATH ?? DEFAULT_STYLES_PATH).split('/').filter(Boolean)
 );
@@ -42,6 +45,14 @@ export const PATH_TO_CONFIG_FOLDER = path.join(
 
 export const PATH_TO_LOCALES_FOLDER = path.join(
   ...(process.env.LOCALES_PATH ?? DEFAULT_LOCALES_PATH).split('/').filter(Boolean)
+);
+
+export const PATH_TO_COMPONENTS_FOLDER = path.join(
+  ...(process.env.COMPONENTS_PATH ?? DEFAULT_COMPONENTS_PATH).split('/').filter(Boolean)
+);
+
+export const PATH_TO_MODULES_FOLDER = path.join(
+  ...(process.env.MODULES_PATH ?? DEFAULT_MODULES_PATH).split('/').filter(Boolean)
 );
 
 export const IS_CANARY_ENVIRONMENT =

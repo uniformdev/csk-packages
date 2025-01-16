@@ -2,6 +2,7 @@ import path from 'node:path';
 import * as ora from 'ora';
 import { checkbox, select } from '@inquirer/prompts';
 import { getFolders } from './utils';
+import { PATH_TO_COMPONENTS_FOLDER } from '../../constants';
 import { capitalizeFirstLetter } from '../../utils';
 import { copyFolders } from '../../utils/copy';
 
@@ -28,7 +29,7 @@ export const extractComponents = async (targetPath: string) => {
   spinner.start('Extracting files...');
   await copyFolders(
     path.resolve(selectedComponentsTypePath),
-    path.resolve(process.cwd(), 'src', 'components', selectedComponentsType),
+    path.resolve(process.cwd(), PATH_TO_COMPONENTS_FOLDER, selectedComponentsType),
     componentNames.filter((_, index) => selectedComponentIndexes.includes(index))
   );
   spinner.succeed('Files extracted');
