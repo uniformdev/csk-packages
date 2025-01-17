@@ -18,6 +18,7 @@ export const extractFiles = async (targetPath: string) => {
 
   const spinner = ora.default();
   spinner.start('Extracting files...');
+  spinner.info('Files to extract:');
   await copyFiles(
     path.resolve(targetPath),
     path.resolve(process.cwd(), PATH_TO_MODULES_FOLDER, path.basename(targetPath)),

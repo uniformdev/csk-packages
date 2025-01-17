@@ -27,6 +27,7 @@ export const extractComponents = async (targetPath: string) => {
   const spinner = ora.default();
 
   spinner.start('Extracting files...');
+  spinner.info('Components to extract:');
   await copyFolders(
     path.resolve(selectedComponentsTypePath),
     path.resolve(process.cwd(), PATH_TO_COMPONENTS_FOLDER, selectedComponentsType),

@@ -1,5 +1,6 @@
 import { program } from 'commander';
-import { extractor } from './commands/extractor';
+import { extractCanvasComponents, extractor } from './commands/extractor';
+import { EXTRACT_CANVAS_COMPONENTS } from './constants';
 import {
   buildAllowedGroups,
   buildBorders,
@@ -159,8 +160,18 @@ program
 program
   .command('extract')
   .description('Extract canvas, ui and content components and utils for them')
-  .action(async () => {
-    await extractor().catch(e => console.error(e));
+  .option(`-c, --component <component>', 'canvas component to extract: \n${EXTRACT_CANVAS_COMPONENTS.join(', \n')}`)
+  .option(
+    `-cs, --components [components...]', 'canvas components to extract(comma separated): \n${EXTRACT_CANVAS_COMPONENTS.join(', \n')}`
+  )
+  .action(async args => {
+    const extractComponents = [args?.component, ...(args?.components || '').split(',')].filter(Boolean);
+    if (extractComponents.length) {
+      await extractCanvasComponents(extractComponents).catch(e => console.error(e));
+    } else {
+      await extractor().catch(e => console.error(e));
+    }
+
     return;
   });
 
