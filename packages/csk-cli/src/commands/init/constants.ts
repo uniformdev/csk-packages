@@ -7,6 +7,8 @@ export const GIT_BRANCHES = {
   FULL_PACK: process.env.FULL_PACK_BRANCH || 'full-pack',
 };
 
+export const MODULES = ['localization', 'ga', 'uniform-insights'];
+
 export const GIT_COMMANDS = {
   DIFF_QUIET: `git diff --quiet origin/${GIT_BRANCHES.GOLD}`,
   RESET_HARD: `git reset --hard origin/${GIT_BRANCHES.GOLD}`,

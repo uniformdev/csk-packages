@@ -1,6 +1,6 @@
 import * as ora from 'ora';
 import { addEnvVariablesToProjectConfiguration, proceedCodeChange } from './code-changer';
-import { ProjectConfiguration } from './types';
+import { Module, ProjectConfiguration, Template } from './types';
 import {
   selectTemplate,
   verifyProjectAlignment,
@@ -9,11 +9,16 @@ import {
   getChangedFilesPath,
   fillEnvVariables,
   alignWithTemplateBranch,
+  getValidTemplateFromArgs,
+  getValidModulesFromArgs,
+  fillEnvVariablesWithDefaults,
 } from './utils';
 import { runCmdCommand } from '../../utils';
 
 type InitArgs = {
   dev: boolean;
+  template: Template;
+  modules: Module[];
 };
 
 /**
@@ -21,7 +26,8 @@ type InitArgs = {
  */
 const init = async (args: InitArgs): Promise<void> => {
   try {
-    const { dev } = args;
+    const { dev, template: templateFromArgs, modules: modulesFromArgs } = args;
+    const notInteractiveMode = templateFromArgs && modulesFromArgs;
     const spinner = ora.default();
     console.info('🚀 Welcome to the CSK CLI! 🧡\n');
 
@@ -31,9 +37,15 @@ const init = async (args: InitArgs): Promise<void> => {
       if (hasChanges) return;
     }
     // Prompt user for project configuration
-    const template = await selectTemplate();
-    const modules = await selectModules();
-    const envVariables = await fillEnvVariables(modules, dev);
+    const template = templateFromArgs ? await getValidTemplateFromArgs(templateFromArgs) : await selectTemplate();
+    const modules = modulesFromArgs ? await getValidModulesFromArgs(modulesFromArgs, spinner) : await selectModules();
+    const envVariables = notInteractiveMode
+      ? await fillEnvVariablesWithDefaults(modules)
+      : await fillEnvVariables(modules, dev);
+
+    if (notInteractiveMode) {
+      spinner.info('You are runing in non-interactive mode. Please fill .env file manually.');
+    }
 
     // Build and display the project configuration
     const projectConfiguration: ProjectConfiguration = { template, modules, envVariables };

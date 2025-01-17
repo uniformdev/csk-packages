@@ -9,6 +9,7 @@ import {
   ENV_VARIABLES_VARIANTS,
   ENV_VARIABLES_DEFAULT_VALUES,
   TEMPLATE_BRANCH_PREFIX,
+  MODULES,
 } from './constants';
 import { EnvVariable, Module, Template } from './types';
 import { runCmdCommand } from '../../utils';
@@ -73,6 +74,35 @@ export const selectTemplate = async (): Promise<Template> => {
   });
 };
 
+export const getValidTemplateFromArgs = async (template: Template): Promise<string> => {
+  const remoteBranches = await runCmdCommand(GIT_COMMANDS.GIT_REMOTE_BRANCHES);
+
+  const templatesBranches = remoteBranches
+    ?.split('\n')
+    .filter(branch => branch.includes(TEMPLATE_BRANCH_PREFIX))
+    .map(branch => {
+      return branch.replace(TEMPLATE_BRANCH_PREFIX, '').trim();
+    });
+
+  if (!templatesBranches.includes(template)) {
+    throw new Error(`Template "${template}" not found`);
+  }
+
+  return template;
+};
+
+export const getValidModulesFromArgs = async (modules: Module[], spinner: ora.Ora): Promise<Module[]> => {
+  return modules.reduce<Module[]>((acc, moduleFromArgs) => {
+    if (MODULES.includes(moduleFromArgs)) {
+      acc.push(moduleFromArgs);
+      spinner.succeed(`Module "${moduleFromArgs}" found. Adding...`);
+    } else {
+      spinner.fail(`Module "${moduleFromArgs}" not found. Skipping...`);
+    }
+    return acc;
+  }, []);
+};
+
 /**
  * Prompts the user to select modules for the project.
  * @returns The selected modules.
@@ -135,6 +165,26 @@ export const fillEnvVariables = async (
       });
       envVariables[envVariable] = value;
     }
+  }
+
+  return envVariables;
+};
+
+export const fillEnvVariablesWithDefaults = async (
+  modules: Module[]
+): Promise<Partial<Record<EnvVariable, string>>> => {
+  // Parse the default environment variables from the .env file
+  const defaultEnvVariables = await parseEnvVariables();
+
+  // Determine required environment variables based on provided modules
+  const requiredModuleEnvVariables = modules.map(appModules => REQUIRED_ENV_VARIABLES[appModules]).flat();
+  const requiredGeneralEnvVariables = [...REQUIRED_ENV_VARIABLES.general, ...requiredModuleEnvVariables];
+
+  // Object to store the resulting environment variables
+  const envVariables: Partial<Record<EnvVariable, string>> = {};
+
+  for (const envVariable of requiredGeneralEnvVariables) {
+    envVariables[envVariable] = defaultEnvVariables[envVariable] || ENV_VARIABLES_DEFAULT_VALUES[envVariable];
   }
 
   return envVariables;
