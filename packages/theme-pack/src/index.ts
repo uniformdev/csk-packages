@@ -15,6 +15,17 @@ import {
   pushFonts,
 } from '../src/scripts/build-time';
 
+type PullArgs = {
+  colors?: boolean;
+  dimensions?: boolean;
+  fonts?: boolean;
+  borders?: boolean;
+  groups?: boolean;
+  locales?: boolean;
+  allTokens?: boolean;
+  allSettings: boolean;
+};
+
 program
   .command('pull')
   .description('Pull data from the integration')
@@ -26,7 +37,7 @@ program
   .option('-l, --locales', 'locales configuration')
   .option('-at, --allTokens', 'all tokens')
   .option('-as, --allSettings', 'all settings')
-  .action(async args => {
+  .action(async (args: PullArgs) => {
     if (args?.colors) {
       console.info('Pulling colors...');
       buildColors().catch(e => console.error(e));
@@ -92,6 +103,17 @@ program
     }
   });
 
+type PushArgs = {
+  colors?: boolean;
+  dimensions?: boolean;
+  fonts?: boolean;
+  borders?: boolean;
+  groups?: boolean;
+  locales?: boolean;
+  allTokens?: boolean;
+  allSettings: boolean;
+};
+
 program
   .command('push')
   .description('Push data to the integration')
@@ -102,7 +124,7 @@ program
   .option('-g, --groups', 'groups configuration')
   .option('-at, --allTokens', 'all tokens')
   .option('-as, --allSettings', 'all settings')
-  .action(async args => {
+  .action(async (args: PushArgs) => {
     if (args?.colors) {
       console.info('Pushing colors...');
       pushColors().catch(e => console.error(e));
@@ -157,15 +179,19 @@ program
     }
   });
 
+type ExtractArgs = {
+  components?: string[];
+};
+
 program
   .command('extract')
   .description('Extract canvas, ui and content components and utils for them')
-  .option(`-c, --component <component>', 'canvas component to extract: \n${EXTRACT_CANVAS_COMPONENTS.join(', \n')}`)
   .option(
-    `-cs, --components [components...]', 'canvas components to extract(comma separated): \n${EXTRACT_CANVAS_COMPONENTS.join(', \n')}`
+    '-c, --components <components...>',
+    `canvas components to extract: \n${EXTRACT_CANVAS_COMPONENTS.join(', \n')}`
   )
-  .action(async args => {
-    const extractComponents = [args?.component, ...(args?.components || '').split(',')].filter(Boolean);
+  .action(async (args: ExtractArgs) => {
+    const { components: extractComponents = [] } = args;
     if (extractComponents.length) {
       await extractCanvasComponents(extractComponents).catch(e => console.error(e));
     } else {

@@ -3,14 +3,13 @@ import * as ora from 'ora';
 import { checkbox, select } from '@inquirer/prompts';
 import { getFolders } from './utils';
 import { PATH_TO_COMPONENTS_FOLDER } from '../../constants';
-import { capitalizeFirstLetter } from '../../utils';
 import { copyFolders } from '../../utils/copy';
 
 export const extractComponents = async (targetPath: string) => {
   const componentTypes = getFolders(targetPath);
   const selectedComponentsTypeIndex = await select({
     message: 'Select the necessary type of components to extract:',
-    choices: componentTypes.map((name, index) => ({ value: index, name: capitalizeFirstLetter(name) })),
+    choices: componentTypes.map((name, index) => ({ value: index, name })),
     loop: false,
   });
   const selectedComponentsType = componentTypes[selectedComponentsTypeIndex] as string;
