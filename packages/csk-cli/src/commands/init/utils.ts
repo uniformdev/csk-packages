@@ -75,6 +75,10 @@ export const selectTemplate = async (): Promise<Template> => {
 };
 
 export const getValidTemplateFromArgs = async (template: Template): Promise<string> => {
+  if (template === 'baseline') {
+    return template;
+  }
+
   const remoteBranches = await runCmdCommand(GIT_COMMANDS.GIT_REMOTE_BRANCHES);
 
   const templatesBranches = remoteBranches
