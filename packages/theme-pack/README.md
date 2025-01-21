@@ -11,7 +11,8 @@ The **Uniform Theme Pack JavaScript SDK** provides a command-line interface (CLI
    - [Pull Design Tokens](#pull-design-tokens)
    - [Import CSS Files](#import-css-files)
    - [Extend Tailwind Configuration](#extend-tailwind-configuration)
-3. [Additional environment variable](#additional-environment-variable)
+3. [Extractor CLI](#extractor-cli)
+4. [Additional Environment Variables](#additional-environment-variables)
 
 ## Installation
 
@@ -25,7 +26,7 @@ npm i @uniformdev/theme-pack
 
 ### Create CSS Folder
 
-By default, the CSS files will be placed in the ./src/styles directory. You can also specify a custom path using the STYLES_PATH environment variable:
+By default, the CSS files will be placed in the `./src/styles` directory. You can also specify a custom path using the `STYLES_PATH` environment variable:
 
 ```dotenv
 STYLES_PATH=
@@ -33,7 +34,7 @@ STYLES_PATH=
 
 ### Wrap Pages with ThemePackProvider
 
-Wrap your page components using ThemePackProvider from @uniformdev/theme-pack/components:
+Wrap your page using `ThemePackProvider` from `@uniformdev/theme-pack/components/providers/server`:
 
 ```typescript jsx
 import { cookies } from 'next/headers';
@@ -84,7 +85,6 @@ export default async function Home(props: PageParameters) {
 }
 
 export { generateMetadata } from '@/utils/metadata';
-
 ```
 
 ### Pull Design Tokens
@@ -97,7 +97,7 @@ theme-pack pull
 
 ### Import CSS Files
 
-Import the generated CSS files into your layout.tsx or main layout component:
+Import the generated CSS files into your `layout.tsx` or main layout component:
 
 ```jsx
 import '@/styles/colors.css';
@@ -182,14 +182,47 @@ const config: Config = {
 };
 
 export default config;
-
 ```
 
-## Additional environment variable
+## Extractor CLI
 
-###  Custom integration url
+The **Extractor CLI** provides an easy way to extract components and modules for them from the package into your project. This tool supports two modes:
+
+1. **Interactive Mode**: Allows you to select components and modules for them via a menu.
+2. **Command Mode**: Enables quick extraction by specifying canvas components as arguments.
+
+### Usage
+
+To extract components and modules, use the `extract` command:
+
+```bash
+npm run theme-pack extract
+```
+
+#### Options
+
+- `-c, --components <components...>`: Extract specific canvas components. Example components include:
+
+  ```
+  Accordion, DemoHero, Banner, Carousel, Section, Text, Button, etc.
+  ```
+
+#### Example
+
+Extract specific canvas components using command arguments:
+
+```bash
+npm run theme-pack extract -- -c Text Button Accordion
+```
+
+If no arguments are provided, the CLI will prompt you with an interactive menu to select components.
+
+## Additional Environment Variables
+
+### Custom Integration URL
+
 ```dotenv
-// Integration url
+// Integration URL
 INTEGRATION_URL=
 // Path to the config file
 CONFIG_PATH=
@@ -199,4 +232,3 @@ LOCALES_PATH=
 COMPONENTS_PATH=
 // Path to the module folders for extracted types, hocs and utils from packages
 MODULES_PATH=
-```
