@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 import { VideoProps } from '.';
 import { PlayButton } from './play-button';
 
-const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
+const ReactPlayer = dynamic(() => import('react-player/lazy').then(mod => mod.default), { ssr: false });
 
 export const Video: FC<VideoProps> = ({
   url,
