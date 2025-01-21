@@ -30,6 +30,46 @@ Run the command with:
 npm run modules:init
 ```
 
+
+## CLI Arguments
+
+### `--template` / `-t`
+Specifies the template to use for the project.  
+Supported template options include:
+
+- **`baseline`**: A minimal starting point with only essential features.
+- **`coffee-shop`**: A template tailored for a coffee shop business with relevant components.
+- **`radiant`**: A feature-rich template for vibrant and dynamic projects.
+
+**Usage Example**:
+```bash
+csk-cli init --template baseline
+```
+
+---
+
+### `--modules` / `-m`
+Defines the modules to include in the project. You can specify one or more modules, separated by spaces.  
+
+Available module options:
+- **`localization`**: Adds support for managing and displaying multiple languages.
+- **`ga`**: Integrates Google Analytics for tracking and insights.
+- **`uniform-insights`**: Includes tools for enhanced performance and user behavior analytics.
+
+**Usage Example**:
+```bash
+csk-cli init --modules localization ga uniform-insights
+```
+
+---
+
+### Full Example
+To create a project using the `coffee-shop` template and include `localization` and `ga` modules:
+```bash
+csk-cli init --template coffee-shop --modules localization ga
+```
+
+
 ## Additional environment variable
 
 ###  Custom branches name
