@@ -33,8 +33,8 @@ export enum UNIFORM_PARAMETERS_TYPES {
 
 export enum IMPORTS {
   REACT = "import { FC } from 'react';",
-  NEXT_LINK = "import Link from 'next/link';",
-  IMAGE = "import Image from 'next/image';",
+  NEXT_LINK = "import NextLink from 'next/link';",
+  IMAGE = "import NextImage from 'next/image';",
 
   ASSET_TYPE = "import type { Asset } from '@uniformdev/assets';",
   LINK_PARAM_VALUE = "import { LinkParamValue } from '@uniformdev/canvas';",

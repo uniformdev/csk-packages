@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
 import { DemoHeroProps, DemoHeroVariants } from '.';
-import { Button, Image, Text } from './atoms';
+import { BaseHeroButton, BaseHeroImage, BaseHeroText } from './atoms';
 import { ColumnsVariant } from './columns-variant';
 import { DefaultVariant } from './default-variant';
 import { getButtonAlignmentClass, getTextAlignmentClass } from './style-utils';
@@ -89,7 +89,7 @@ export const DemoHero: FC<DemoHeroProps & { isFlexibleHero?: boolean }> = ({
     <UniformSlot data={component} context={context} slot={slots.flexibleHeroContent} />
   ) : (
     <>
-      <Text
+      <BaseHeroText
         {...cleanUpPrefix(
           {
             eyebrowTitleText,
@@ -110,7 +110,7 @@ export const DemoHero: FC<DemoHeroProps & { isFlexibleHero?: boolean }> = ({
         context={context}
         parameterId="eyebrowTitleText"
       />
-      <Text
+      <BaseHeroText
         {...cleanUpPrefix(
           {
             titleText,
@@ -131,7 +131,7 @@ export const DemoHero: FC<DemoHeroProps & { isFlexibleHero?: boolean }> = ({
         context={context}
         parameterId="titleText"
       />
-      <Text
+      <BaseHeroText
         {...cleanUpPrefix(
           {
             descriptionText,
@@ -159,7 +159,7 @@ export const DemoHero: FC<DemoHeroProps & { isFlexibleHero?: boolean }> = ({
     <UniformSlot data={component} context={context} slot={slots.flexibleHeroCta} />
   ) : (
     <>
-      <Button
+      <BaseHeroButton
         {...cleanUpPrefix(
           {
             primaryButtonVariant,
@@ -198,7 +198,7 @@ export const DemoHero: FC<DemoHeroProps & { isFlexibleHero?: boolean }> = ({
     buttonAlignmentClass: getButtonAlignmentClass({ contentAlignment }),
     demoHeroMedia: (
       <>
-        <Image
+        <BaseHeroImage
           image={image}
           {...cleanUpPrefix(
             {

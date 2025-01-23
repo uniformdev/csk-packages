@@ -56,11 +56,13 @@ export default async function Home(props: PageParameters) {
   const route = await retrieveRoute(props, locales.defaultLocale);
   if (!isRouteWithoutErrors(route)) return notFound();
 
-  const theme = cookies().get('theme')?.value || 'light';
+  const cookie = await cookies();
+  const theme = cookie.get('theme')?.value || 'light';
+  const searchParams = await props.searchParams;
   const serverContext = await createServerUniformContext({
-    searchParams: props.searchParams,
+    searchParams,
   });
-  const isPreviewMode = props.searchParams?.preview === 'true';
+  const isPreviewMode = searchParams?.preview === 'true';
 
   return (
     <ThemePackProvider isPreviewMode={isPreviewMode}>
@@ -85,6 +87,7 @@ export default async function Home(props: PageParameters) {
 }
 
 export { generateMetadata } from '@/utils/metadata';
+
 ```
 
 ### Pull Design Tokens
@@ -111,7 +114,7 @@ import '@/styles/borders.css';
 To extend Tailwind CSS with new classes and include generated design tokens, update your Tailwind configuration as shown below:
 
 ```typescript
-import { Config } from 'tailwindcss';
+import type { Config } from 'tailwindcss';
 import plugin from 'tailwindcss/plugin';
 import {
   generateTailwindcssColorKeysPattern,
@@ -119,6 +122,7 @@ import {
   generateTailwindcssFontKeysPattern,
   generateTailwindcssBorderKeysPattern,
 } from '@uniformdev/theme-pack/tailwindcss-conf';
+import typography from '@tailwindcss/typography';
 import theme from './tailwind.config.theme.json';
 import utilities from './tailwind.utilities.json';
 
@@ -163,7 +167,7 @@ if (borderKeys.length) {
   safelist.push(generateTailwindcssBorderKeysPattern(borderKeys));
 }
 
-const config: Config = {
+export default {
   darkMode: 'class',
   content: [
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -173,15 +177,13 @@ const config: Config = {
   safelist,
   theme,
   plugins: [
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    require('@tailwindcss/typography'),
+    typography,
     plugin(function ({ addUtilities }) {
       addUtilities(utilities);
     }),
   ],
-};
+} satisfies Config;
 
-export default config;
 ```
 
 ## Extractor CLI

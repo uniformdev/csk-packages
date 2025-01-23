@@ -20,7 +20,13 @@ type ComponentProps = {
   parameterId: string;
 };
 
-export const Text: FC<TextParameters & ComponentProps> = ({ component, context, parameterId, text, ...props }) =>
+export const BaseHeroText: FC<TextParameters & ComponentProps> = ({
+  component,
+  context,
+  parameterId,
+  text,
+  ...props
+}) =>
   !text && !(context.previewMode === 'editor') ? null : (
     <BaseText {...props}>
       <UniformText
@@ -33,7 +39,7 @@ export const Text: FC<TextParameters & ComponentProps> = ({ component, context, 
     </BaseText>
   );
 
-export const Button: FC<ButtonParameters & { variant?: ButtonVariant } & ComponentProps> = ({
+export const BaseHeroButton: FC<ButtonParameters & { variant?: ButtonVariant } & ComponentProps> = ({
   component,
   context,
   parameterId,
@@ -72,7 +78,7 @@ export const Button: FC<ButtonParameters & { variant?: ButtonVariant } & Compone
   );
 };
 
-export const Image: FC<ImageParameters & Omit<ComponentProps, 'parameterId'>> = ({
+export const BaseHeroImage: FC<ImageParameters & Omit<ComponentProps, 'parameterId'>> = ({
   component,
   context,
   image,
