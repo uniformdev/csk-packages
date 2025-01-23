@@ -1,8 +1,8 @@
 import { FC, ComponentType } from 'react';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 
-export function withPlaygroundWrapper<T extends object>(Component: ComponentType<T>): FC<T & ComponentProps> {
-  return (props: ComponentProps & T) => {
+export function withPlaygroundWrapper<T extends object>(Component: ComponentType<T>): FC<ComponentProps<T>> {
+  return (props: ComponentProps<T>) => {
     const { is_incontext_editing_playground } = props.context?.searchParams ?? {};
     const { type: compositionType } = props.context?.composition ?? {};
     const { type: componentType } = props.component ?? {};

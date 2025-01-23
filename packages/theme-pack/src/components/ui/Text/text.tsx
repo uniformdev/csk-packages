@@ -29,9 +29,12 @@ export const Text: FC<TextProps> = ({
     },
     className
   );
-  return typeof children === 'string' ? (
-    <span className={baseStyles}>{children}</span>
-  ) : (
-    <children.type {...children.props} className={cn(baseStyles, children.props.className)} />
-  );
+
+  if (typeof children === 'string') {
+    return <span className={baseStyles}>{children}</span>;
+  }
+
+  const childrenProps = (children.props || {}) as Record<string, string>;
+
+  return <children.type {...childrenProps} className={cn(baseStyles, childrenProps?.className)} />;
 };
