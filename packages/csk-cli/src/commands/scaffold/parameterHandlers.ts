@@ -58,7 +58,7 @@ const assetParameterValue: ParameterHandler = {
       {(flattenValues(${parameter.id} as never) || [])
         .filter(({ url }) => Boolean(url))
         .map(({ title, url }, index) => (
-            <Image key={index} src={url} width={200} height={200} alt={title} style={{ objectFit: 'cover' }}  />
+            <NextImage key={index} src={url} width={200} height={200} alt={title} style={{ objectFit: 'cover' }}  />
           ))}
     </div>`,
 };
@@ -83,7 +83,7 @@ const imageParameterHandler: ParameterHandler = {
   supports: UNIFORM_PARAMETERS_TYPES.IMAGE_URL,
   type: 'string',
   render: parameter =>
-    `{!!${parameter.id} && <Image src={${parameter.id}} width={200} height={200} alt="example" style={{ objectFit: 'cover' }} />}`,
+    `{!!${parameter.id} && <NextImage src={${parameter.id}} width={200} height={200} alt="example" style={{ objectFit: 'cover' }} />}`,
 };
 
 const jsonParameterHandler: ParameterHandler = {
