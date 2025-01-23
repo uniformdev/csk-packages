@@ -1,6 +1,6 @@
 {
   "name": "@uniformdev/theme-pack",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Theme Pack contains command line interface tool and utils for working with design tokens",
   "license": "SEE LICENSE IN LICENSE.txt",
   "main": "./cli.js",
@@ -69,19 +69,20 @@
   "keywords": [],
   "author": "",
   "dependencies": {
+    "@inquirer/prompts": "^7.1.0",
     "classnames": "^2.5.1",
     "commander": "^9.0.0",
     "cookies-next": "^4.3.0",
     "next-themes": "^0.3.0",
-    "react-player": "^2.16.0",
-    "react-responsive-masonry": "^2.4.1",
-    "tailwind-merge": "^2.5.2",
     "ora": "^8.1.1",
-    "@inquirer/prompts": "^7.1.0"
+    "react-player": "^2.16.0",
+    "react-responsive-masonry": "^2.7.0",
+    "tailwind-merge": "^2.5.2"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
+    "@types/react-responsive-masonry": "^2.6.0",
     "tsup": "^8.3.0",
     "tsx": "^4.19.2"
   },

@@ -48,5 +48,6 @@ export enum FlexibleHeroSlots {
 
 export type DemoHeroProps = ComponentProps<DemoHeroParameters, FlexibleHeroSlots>;
 
-export default { FixedHero, FlexibleHero };
+const DemoHero = { FixedHero, FlexibleHero };
+export default DemoHero;
 export { FlexibleHeroEmptyPlaceholder } from './empty-placeholder';
