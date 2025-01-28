@@ -1,0 +1,67 @@
+{
+  "name": "@uniformdev/csk-cli",
+  "version": "2.0.4",
+  "description": "The Uniform CSK CLI provides a command-line interface (CLI) and utility functions to help you work with modules.",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "main": "./cli.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "default": "./cli.js"
+    },
+    "./tailwindcss-conf": {
+      "types": "./dist/tailwindcss-conf.d.mts",
+      "default": "./dist/tailwindcss-conf.mjs"
+    },
+    "./components": {
+      "types": "./dist/components.d.mts",
+      "default": "./dist/components.mjs"
+    }
+  },
+  "types": "./dist/index.d.mts",
+  "scripts": {
+    "csk-cli": "node ./cli.js",
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rimraf dist",
+    "test": "node --experimental-vm-modules ../../node_modules/jest/bin/jest.js",
+    "lint": "eslint \"src/**/*.{js,ts,tsx}\"",
+    "format": "prettier --write \"src/**/*.{js,ts,tsx}\""
+  },
+  "keywords": [],
+  "author": "",
+  "dependencies": {
+    "@inquirer/prompts": "^7.1.0",
+    "commander": "^9.0.0",
+    "metascript": "^1.0.0",
+    "ora": "^8.1.1"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@types/jest": "^29.5.14",
+    "@uniformdev/canvas": ">=19",
+    "next": ">=14",
+    "prettier": ">=3",
+    "react": ">=18",
+    "react-dom": ">=18",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.3"
+  },
+  "peerDependencies": {
+    "@uniformdev/canvas": ">=19",
+    "next": ">=14",
+    "prettier": ">=3",
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "bin": {
+    "csk-cli": "cli.js"
+  },
+  "files": [
+    "/dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
