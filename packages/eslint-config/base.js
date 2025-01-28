@@ -23,6 +23,7 @@ export const config = [
   {
     rules: {
       'no-console': ['error', { allow: ['info', 'warn', 'error'] }],
+      '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '_', varsIgnorePattern: '_' }],
     },
   },
   {
