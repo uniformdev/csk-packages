@@ -1,0 +1,56 @@
+#!/bin/bash
+
+set -e  # Exit immediately if any command fails
+
+echo "Running lint-staged..."
+npx lint-staged
+
+echo "Running workspace check..."
+npm run workspace:check
+
+# Get version from origin/develop
+if command -v jq &> /dev/null; then
+  TMP=$(git show origin/develop:package.json | jq -r '.version')
+  CURR=$(git show HEAD:package.json | jq -r '.version')
+else
+  TMP=$(git show origin/develop:"package.json" | grep '"version":' | sed -E 's/.*"version": "([^"]+).*/\1/')
+  CURR=$(git show HEAD:"package.json" | grep '"version":' | sed -E 's/.*"version": "([^"]+).*/\1/')
+fi
+
+echo "Git develop package.json version: $TMP"
+echo "Git HEAD package.json version: $CURR"
+
+# Bump patch version
+IFS='.' read -r major minor patch <<< "$TMP"
+NEW="$major.$minor.$((patch + 1))"
+
+echo "New version: $NEW"
+
+# List of packages to update
+PACKAGES=(
+  "apps/csk-v-next"
+  "packages/theme-pack"
+  "packages/csk-cli"
+  "packages/eslint-config"
+  "packages/typescript-config"
+)
+
+# Update versions in all package.json files
+for pkg in "${PACKAGES[@]}"; do
+  if [ -f "$pkg/package.json" ]; then
+    echo "Updating version in $pkg..."
+    (cd "$pkg" && npm --no-git-tag-version --allow-same-version version "$NEW")
+    git add "$pkg/package.json"
+  else
+    echo "Warning: package.json not found in $pkg, skipping..."
+  fi
+done
+
+# Update root package.json and package-lock.json
+echo "Updating root package.json..."
+npm --no-git-tag-version --allow-same-version version "$NEW"
+git add package.json package-lock.json
+
+echo "All versions updated successfully."
+
+exit 0
