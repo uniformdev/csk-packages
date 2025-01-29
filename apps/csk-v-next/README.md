@@ -33,25 +33,25 @@ Besides live preview, setting the preview URL enables visual in-line editing and
 1. Open `Canvas Settings` and configure the preview URL to your localhost endpoint: `http://localhost:3000` and use this for your preview path: `/api/preview?secret=hello-world`
    > Consider changing the `secret` in your .env file. That value must match the `secret` query string used in preview url. The preview can point to a local or deployed version of your Next.js app.
 
-### 4. Install the Theme Pack 2 integration
+### 4. Install the Design Extensions integration
 
 This integration brings Canvas UI extensions for theme management and new useful visual parameters to help control the look and feel of your components.
 
 1. Open your current team page.
-![Team page](https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/doc/team_page.png)
-1. Navigate to the `Settings` tab, than `Custom Integrations` and add `Theme Pack 2` as a custom integration using this [manifest](https://github.com/uniformdev/uniform-mesh-integrations/blob/canary/integrations/theme-pack-2/mesh-manifest.stable.json).
+   ![Team page](https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/doc/team_page.png)
+1. Navigate to the `Settings` tab, than `Custom Integrations` and add `Design Extensions` as a custom integration using this [manifest](https://github.com/uniformdev/uniform-mesh-integrations/blob/canary/integrations/design-extensions/mesh-manifest.stable.json).
 1. Open your project.
-![Your project](https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/doc/project_page.png)
-1. Navigate to the `Integrations` tab, find the `Theme Pack 2` integration and install it.
-2. Provide your oun color palette or set up it from the code using `npm run push:colors` command. (see `./styles/colors.css`)
-3. Provide your oun dimension configuration or set up it from the code using `npm run push:dimensions` command. (see `./styles/dimensions.css`)
-4. Provide your oun fonts or set up it from the code using `npm run push:fonts` command. (see `./styles/fonts.css`)
-5. Provide your oun border configuration or set up it from the code using `npm run push:borders` command. (see `./styles/border.css`)
+   ![Your project](https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/doc/project_page.png)
+1. Navigate to the `Integrations` tab, find the `Design Extensions` integration and install it.
+1. Provide your oun color palette or set up it from the code using `npm run push:colors` command. (see `./styles/colors.css`)
+1. Provide your oun dimension configuration or set up it from the code using `npm run push:dimensions` command. (see `./styles/dimensions.css`)
+1. Provide your oun fonts or set up it from the code using `npm run push:fonts` command. (see `./styles/fonts.css`)
+1. Provide your oun border configuration or set up it from the code using `npm run push:borders` command. (see `./styles/border.css`)
 
 ⚠️ Important: After each adding new color or font keys you have to rebuild your application, in order to simplify this process you can use Webhook Settings tab to provide rebuild webhook.
 
-### 5. Uniform Data sync 
+### 5. Uniform Data sync
 
-1. Run `npm run push:content` to push content from disk (see `./uniform-content`) to your project.
+1. Run `npm run push:data` to push data from disk (see `./uniform-data`) to your project.
 1. Run `npm run publish:manifest` to publish the manifest with personalization configuration.
-1. Run `npm run pull:content` to pull content from uniform to `./uniform-content` folder.
+1. Run `npm run pull:data` to pull data from uniform to `./uniform-data` folder.

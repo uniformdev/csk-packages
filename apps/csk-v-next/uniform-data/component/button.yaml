@@ -1,5 +1,5 @@
-# yaml-language-server: $schema=<https://canary.uniform.app/schemas/json-schema/component-definition/v1.json>
-$schema: https://canary.uniform.app/schemas/json-schema/component-definition/v1.json
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: button
 name: Button
 icon: rectangle-rounded
@@ -29,14 +29,14 @@ parameters:
         - textTransform
   - id: textColor
     name: Text Color
-    type: tp2-color-palette-parameter
+    type: dex-color-palette-parameter
     helpText: Choose a pair of text colors for light and dark mode.
     typeConfig:
       allowColors: []
       selectedGroup: text
   - id: textSize
     name: Text Size
-    type: tp2-segmented-control-parameter
+    type: dex-segmented-control-parameter
     typeConfig:
       options:
         - key: SM
@@ -66,7 +66,7 @@ parameters:
       withViewPort: true
   - id: textWeight
     name: Weight
-    type: tp2-segmented-control-parameter
+    type: dex-segmented-control-parameter
     typeConfig:
       options:
         - key: Normal
@@ -80,12 +80,12 @@ parameters:
       defaultValue: normal
   - id: textFont
     name: Font
-    type: tp2-token-selector-parameter
+    type: dex-token-selector-parameter
     typeConfig:
       selectedTokenType: font
   - id: textTransform
     name: Transform
-    type: tp2-segmented-control-parameter
+    type: dex-segmented-control-parameter
     typeConfig:
       options:
         - key: Uppercase
@@ -111,7 +111,7 @@ parameters:
     localizable: true
   - id: iconPosition
     name: Icon Position
-    type: tp2-segmented-control-parameter
+    type: dex-segmented-control-parameter
     typeConfig:
       options:
         - key: Left
@@ -130,19 +130,19 @@ parameters:
         - size
   - id: buttonColor
     name: Button Color
-    type: tp2-color-palette-parameter
+    type: dex-color-palette-parameter
     helpText: Choose a pair of button colors for light and dark mode.
     typeConfig:
       allowColors: []
       selectedGroup: button
   - id: border
     name: Border
-    type: tp2-token-selector-parameter
+    type: dex-token-selector-parameter
     typeConfig:
       selectedTokenType: border
   - id: size
     name: Size
-    type: tp2-token-selector-parameter
+    type: dex-token-selector-parameter
     typeConfig:
       defaultValue: button-small
       selectedGroup: button
@@ -158,13 +158,13 @@ parameters:
         - hoverTextColor
   - id: hoverButtonColor
     name: Button Color
-    type: tp2-color-palette-parameter
+    type: dex-color-palette-parameter
     typeConfig:
       allowColors: []
       selectedGroup: button
   - id: hoverTextColor
     name: Text Color
-    type: tp2-color-palette-parameter
+    type: dex-color-palette-parameter
     typeConfig:
       allowColors: []
       selectedGroup: text
@@ -176,8 +176,8 @@ slots: []
 titleParameter: text
 thumbnailParameter: icon
 canBeComposition: false
-created: '2024-09-24T09:52:43.523283+00:00'
-updated: '2024-11-01T09:34:55.773945+00:00'
+created: '2025-01-29T10:47:01.205539+00:00'
+updated: '2025-01-29T10:47:01.205539+00:00'
 variants:
   - id: link
     name: Link

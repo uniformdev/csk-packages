@@ -6,7 +6,6 @@ import {
   PageParameters,
   UniformComposition,
 } from '@uniformdev/canvas-next-rsc';
-
 import { emptyPlaceholderResolver } from '@uniformdev/theme-pack/components/canvas/emptyPlaceholders';
 import { ThemePackProvider } from '@uniformdev/theme-pack/components/providers/server';
 import { isRouteWithoutErrors } from '@uniformdev/theme-pack/utils/routing';

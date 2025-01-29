@@ -4,22 +4,22 @@ composition:
   type: flex
   parameters:
     gap:
-      type: tp2-slider-control-parameter
+      type: dex-slider-control-parameter
       value:
         mobile: '2'
         tablet: '8'
         desktop: '8'
     spacing:
-      type: tp2-space-control-parameter
+      type: dex-space-control-parameter
       value: {}
     direction:
-      type: tp2-segmented-control-parameter
+      type: dex-segmented-control-parameter
       value:
         mobile: row
         tablet: row
         desktop: row
     alignItems:
-      type: tp2-segmented-control-parameter
+      type: dex-segmented-control-parameter
       value: {}
     displayName:
       type: text
@@ -28,7 +28,7 @@ composition:
       type: checkbox
       value: true
     justifyContent:
-      type: tp2-segmented-control-parameter
+      type: dex-segmented-control-parameter
       value: {}
   slots:
     flexItem:
@@ -50,7 +50,7 @@ composition:
                           value: f9da45f7-168b-4d00-b43b-f2cc28365985
                         url:
                           value: >-
-                            https://canary-img.uniform.global/p/p1YFPp51SU2_Wy4G7-pLQQ/sZQdDlGWSVGztqy9p6bgsQ-Uniform-Icon-Library_Composability-1.png
+                            https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/YfVl6ySsQH6TJbZlSS61ug-Uniform-Icon-Library_Composability-1.png
                           type: text
                         file:
                           type: file
@@ -83,10 +83,10 @@ composition:
                 hideLockedParameters: true
         parameters:
           shrink:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: '0'
           alignSelf:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value:
               desktop: ''
           displayName:
@@ -100,20 +100,17 @@ composition:
               type: text
               parameters:
                 tag:
-                  type: tp2-segmented-control-parameter
+                  type: dex-segmented-control-parameter
                   value: p
                 size:
-                  type: tp2-segmented-control-parameter
+                  type: dex-segmented-control-parameter
                   value:
                     desktop: 2xl
-                text:
-                  type: text
-                  value: Title
                 color:
-                  type: tp2-color-palette-parameter
+                  type: dex-color-palette-parameter
                   value: text-primary
                 weight:
-                  type: tp2-segmented-control-parameter
+                  type: dex-segmented-control-parameter
                   value: bold
               _overridability:
                 parameters:
@@ -126,7 +123,7 @@ composition:
               type: spacer
               parameters:
                 size:
-                  type: tp2-token-selector-parameter
+                  type: dex-token-selector-parameter
                   value: spacer-extra-small
               _overridability:
                 variants: false
@@ -137,20 +134,17 @@ composition:
               type: text
               parameters:
                 tag:
-                  type: tp2-segmented-control-parameter
+                  type: dex-segmented-control-parameter
                   value: p
                 size:
-                  type: tp2-segmented-control-parameter
+                  type: dex-segmented-control-parameter
                   value:
                     desktop: lg
-                text:
-                  type: text
-                  value: Subtitle
                 color:
-                  type: tp2-color-palette-parameter
+                  type: dex-color-palette-parameter
                   value: text-primary
                 weight:
-                  type: tp2-segmented-control-parameter
+                  type: dex-segmented-control-parameter
                   value: normal
               _overridability:
                 parameters:
@@ -161,7 +155,7 @@ composition:
                 hideLockedParameters: true
         parameters:
           alignSelf:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: {}
           displayName:
             type: text
@@ -173,8 +167,8 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
-created: '2024-12-06T14:01:18.013295+00:00'
-modified: '2024-12-11T21:55:31.394656+00:00'
+created: '2025-01-29T10:47:07.63502+00:00'
+modified: '2025-01-29T10:47:07.63502+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/feature-item.jpg

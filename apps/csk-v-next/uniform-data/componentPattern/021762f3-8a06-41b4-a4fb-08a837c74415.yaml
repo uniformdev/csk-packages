@@ -5,10 +5,10 @@ composition:
   variant: sticky
   parameters:
     color:
-      type: tp2-color-palette-parameter
+      type: dex-color-palette-parameter
       value: text-primary
     spacing:
-      type: tp2-space-control-parameter
+      type: dex-space-control-parameter
       value:
         paddingTop: container-small
         paddingBottom: container-small
@@ -16,7 +16,7 @@ composition:
       type: text
       value: Header
     backgroundColor:
-      type: tp2-color-palette-parameter
+      type: dex-color-palette-parameter
       value: general-color-1
   slots:
     headerLeftContent:
@@ -38,7 +38,7 @@ composition:
                           value: 0f0670b4-a425-40d3-842b-c7c895d500a5
                         url:
                           value: >-
-                            https://canary-img.uniform.global/p/Pwf9WdkMT2e7-O__xKLulg/87GUb2yUTTuswAP4cEpl2A-uniformlogo.svg
+                            https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/ebN0qqKBTVmp_Dc2gD3Gsw-uniformlogo.svg
                           type: text
                         file:
                           type: file
@@ -66,7 +66,7 @@ composition:
                   type: number
                   value: '40'
                 objectFit:
-                  type: tp2-segmented-control-parameter
+                  type: dex-segmented-control-parameter
                   value: contain
         parameters:
           link:
@@ -94,10 +94,10 @@ composition:
             type: text
             value: Get Started
           color:
-            type: tp2-color-palette-parameter
+            type: dex-color-palette-parameter
             value: text-primary
           weight:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: medium
       - _id: af6efa0f-26ba-4ff6-9106-247c35a60f2d
         type: navigationLink
@@ -111,10 +111,10 @@ composition:
             type: text
             value: Components
           color:
-            type: tp2-color-palette-parameter
+            type: dex-color-palette-parameter
             value: text-primary
           weight:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: medium
       - _id: b2345a75-1c06-4596-8e50-8163e76287b6
         type: navigationLink
@@ -128,10 +128,10 @@ composition:
             type: text
             value: Templates
           color:
-            type: tp2-color-palette-parameter
+            type: dex-color-palette-parameter
             value: text-primary
           weight:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: medium
       - _id: 6f33478e-d7c1-4a8c-8c24-82a1792217d0
         type: navigationLink
@@ -145,15 +145,15 @@ composition:
             type: text
             value: Recipes
           color:
-            type: tp2-color-palette-parameter
+            type: dex-color-palette-parameter
             value: text-primary
           weight:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: medium
   _locales:
     - en
-created: '2024-10-15T08:05:41.05485+00:00'
-modified: '2024-12-12T07:37:52.416586+00:00'
+created: '2025-01-29T10:47:07.470956+00:00'
+modified: '2025-01-29T10:47:07.470956+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/main-header.jpg

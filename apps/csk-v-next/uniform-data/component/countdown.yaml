@@ -1,5 +1,5 @@
-# yaml-language-server: $schema=<https://canary.uniform.app/schemas/json-schema/component-definition/v1.json>
-$schema: https://canary.uniform.app/schemas/json-schema/component-definition/v1.json
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: countdown
 name: Countdown
 icon: timer
@@ -25,7 +25,7 @@ parameters:
         - border
   - id: size
     name: Size
-    type: tp2-segmented-control-parameter
+    type: dex-segmented-control-parameter
     typeConfig:
       options:
         - key: Base
@@ -44,16 +44,16 @@ parameters:
       withViewPort: true
   - id: backgroundColor
     name: Background Color
-    type: tp2-color-palette-parameter
+    type: dex-color-palette-parameter
     typeConfig:
       allowColors: []
   - id: textColor
     name: Text Color
-    type: tp2-color-palette-parameter
+    type: dex-color-palette-parameter
     typeConfig: null
   - id: border
     name: Border
-    type: tp2-token-selector-parameter
+    type: dex-token-selector-parameter
     typeConfig:
       selectedTokenType: border
 categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9
@@ -69,8 +69,8 @@ slots:
     patternsInAllowedComponents: false
 titleParameter: displayName
 canBeComposition: false
-created: '2024-10-02T10:39:19.592475+00:00'
-updated: '2024-10-29T13:18:09.607232+00:00'
+created: '2025-01-29T10:47:01.362054+00:00'
+updated: '2025-01-29T10:47:01.362054+00:00'
 variants:
   - id: labelsUnder
     name: Labels Under

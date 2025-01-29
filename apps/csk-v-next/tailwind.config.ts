@@ -1,4 +1,4 @@
-import { Config } from 'tailwindcss';
+import type { Config } from 'tailwindcss';
 import plugin from 'tailwindcss/plugin';
 import {
   generateTailwindcssColorKeysPattern,
@@ -6,6 +6,7 @@ import {
   generateTailwindcssFontKeysPattern,
   generateTailwindcssBorderKeysPattern,
 } from '@uniformdev/theme-pack/tailwindcss-conf';
+import typography from '@tailwindcss/typography';
 import theme from './tailwind.config.theme.json';
 import utilities from './tailwind.utilities.json';
 
@@ -50,24 +51,19 @@ if (borderKeys.length) {
   safelist.push(generateTailwindcssBorderKeysPattern(borderKeys));
 }
 
-const config: Config = {
+export default {
   darkMode: 'class',
   content: [
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/hocs/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/stories/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    '../../packages/theme-pack/src/**/*.{js,ts,jsx,tsx,mdx}',
+    '../../node_modules/@uniformdev/theme-pack/dist/content/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   safelist,
   theme,
   plugins: [
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    require('@tailwindcss/typography'),
+    typography,
     plugin(function ({ addUtilities }) {
       addUtilities(utilities);
     }),
   ],
-};
-
-export default config;
+} satisfies Config;

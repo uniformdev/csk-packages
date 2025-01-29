@@ -1,28 +1,28 @@
 composition:
-  _name: Titled Container
+  _name: Title+Text Container
   _id: 6fc97589-a549-4105-8b4f-387f64ea2780
   type: flex
   parameters:
     gap:
-      type: tp2-slider-control-parameter
+      type: dex-slider-control-parameter
       value:
         mobile: '4'
         tablet: '4'
         desktop: '4'
     direction:
-      type: tp2-segmented-control-parameter
+      type: dex-segmented-control-parameter
       value:
         mobile: col
         tablet: col
         desktop: col
     alignItems:
-      type: tp2-segmented-control-parameter
+      type: dex-segmented-control-parameter
       value: ''
     displayName:
       type: text
       value: Title
     justifyContent:
-      type: tp2-segmented-control-parameter
+      type: dex-segmented-control-parameter
       value:
         desktop: center
   slots:
@@ -31,20 +31,20 @@ composition:
         type: text
         parameters:
           tag:
-            type: tp2-segmented-control-parameter
-            value: span
+            type: dex-segmented-control-parameter
+            value: h2
           size:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value:
               mobile: 3xl
               tablet: 3xl
               desktop: 3xl
-          text:
-            type: text
-            value: Tilte
+          color:
+            type: dex-color-palette-parameter
+            value: text-tertiary
           weight:
-            type: tp2-segmented-control-parameter
-            value: normal
+            type: dex-segmented-control-parameter
+            value: bold
         _overridability:
           parameters:
             tag: 'yes'
@@ -56,19 +56,16 @@ composition:
         type: text
         parameters:
           tag:
-            type: tp2-segmented-control-parameter
-            value: span
+            type: dex-segmented-control-parameter
+            value: p
           size:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value:
               mobile: 3xl
               tablet: 3xl
-              desktop: xl
-          text:
-            type: text
-            value: 'Description '
+              desktop: base
           weight:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: normal
         _overridability:
           parameters:
@@ -93,8 +90,8 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
-created: '2024-10-17T15:38:56.327814+00:00'
-modified: '2024-10-30T11:27:31.788399+00:00'
+created: '2025-01-29T10:47:07.436254+00:00'
+modified: '2025-01-29T10:47:07.436254+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/titled-container.jpg

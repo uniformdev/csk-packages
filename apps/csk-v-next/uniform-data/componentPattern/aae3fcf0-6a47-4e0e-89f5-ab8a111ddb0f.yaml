@@ -1,10 +1,10 @@
 composition:
-  _name: Examples card
+  _name: Card Example
   _id: aae3fcf0-6a47-4e0e-89f5-ab8a111ddb0f
   type: card
   parameters:
     spacing:
-      type: tp2-space-control-parameter
+      type: dex-space-control-parameter
       value:
         marginTop: ''
         marginLeft: ''
@@ -16,7 +16,7 @@ composition:
         paddingBottom: ''
     displayName:
       type: text
-      value: Examples card
+      value: Card Example
     fluidContent:
       type: checkbox
       value: true
@@ -28,49 +28,49 @@ composition:
           image:
             type: asset
             value:
-              - _id: 91af3550-af33-4c81-9265-51c7b24f5fbc
+              - _id: 7aeee203-1857-4dd2-b88d-9dea77906eb2
                 type: image
                 fields:
                   id:
                     type: text
-                    value: fcc5cedf-a9f8-49f6-adb4-314f655d20c1
+                    value: 26fde52f-ea1b-4625-bbed-f5e692f1dc9d
                   url:
                     value: >-
-                      https://canary-img.uniform.global/p/p1YFPp51SU2_Wy4G7-pLQQ/DY-o77s5RGWJXpHKIyIG-Q-javadrip.png
+                      https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/ZowW4KFkQs6c205dq-2rFg-rectangle.jpg
                     type: text
                   file:
                     type: file
-                    value: 5d4beed6-d4c3-43d8-852c-d5444f09bda8
+                    value: 29c50181-91f5-43df-9160-4ac208003bfe
                   size:
-                    value: 819001
+                    value: 148846
                     type: number
                   title:
                     type: text
-                    value: javadrip.png
+                    value: rectangle.jpg
                   width:
-                    value: 806
+                    value: 1600
                     type: number
                   height:
-                    value: 432
+                    value: 689
                     type: number
                   mediaType:
-                    value: image/png
+                    value: image/jpeg
                     type: text
                 _source: uniform-assets
           border:
-            type: tp2-token-selector-parameter
+            type: dex-token-selector-parameter
             value: border-image-radius-small
           height:
             type: number
             value: '220'
           objectFit:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: cover
           overlayColor:
-            type: tp2-color-palette-parameter
+            type: dex-color-palette-parameter
             value: general-color-5
           overlayOpacity:
-            type: tp2-slider-control-parameter
+            type: dex-slider-control-parameter
             value: '0.6'
         _overridability:
           parameters:
@@ -81,22 +81,19 @@ composition:
         type: text
         parameters:
           tag:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: h2
           size:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value:
               mobile: 2xl
               tablet: 2xl
               desktop: 2xl
-          text:
-            type: text
-            value: Title
           color:
-            type: tp2-color-palette-parameter
+            type: dex-color-palette-parameter
             value: text-primary
           weight:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: medium
         _overridability:
           parameters:
@@ -111,7 +108,7 @@ composition:
       parameters:
         text:
           type: text
-          value: Link
+          value: null
   _overridability:
     variants: false
     parameters:
@@ -119,8 +116,8 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
-created: '2024-12-06T14:01:19.040234+00:00'
-modified: '2024-12-11T21:51:05.615887+00:00'
+created: '2025-01-29T10:47:08.507167+00:00'
+modified: '2025-01-29T10:47:08.507167+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/examples-card.jpg

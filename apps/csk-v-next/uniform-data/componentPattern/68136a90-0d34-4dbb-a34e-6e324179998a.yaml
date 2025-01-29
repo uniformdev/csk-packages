@@ -4,10 +4,10 @@ composition:
   type: footer
   parameters:
     border:
-      type: tp2-token-selector-parameter
+      type: dex-token-selector-parameter
       value: border-footer
     spacing:
-      type: tp2-space-control-parameter
+      type: dex-space-control-parameter
       value:
         marginTop: ''
         marginLeft: ''
@@ -49,7 +49,7 @@ composition:
                           value: 0ecfb786-6b93-4023-9af6-7693a309a484
                         url:
                           value: >-
-                            https://canary-img.uniform.global/p/IazAOKLVROS83ZIvuAc0ww/yAc8oRghSnSOHRtkPeCeLQ-uniform-light-logo.svg
+                            https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/r9SJefG7S_aXYPgm9gJlCg-uniform-light-logo.svg
                           type: text
                         file:
                           type: file
@@ -77,7 +77,7 @@ composition:
                   type: number
                   value: '47'
                 objectFit:
-                  type: tp2-segmented-control-parameter
+                  type: dex-segmented-control-parameter
                   value: contain
             - _id: ee663cd6-37e5-4b5e-b629-fdf9a4667eba
               type: image
@@ -102,7 +102,7 @@ composition:
                           value: 0efbc807-7b4a-4f7d-847b-62fe616b0815
                         url:
                           value: >-
-                            https://canary-img.uniform.global/p/IazAOKLVROS83ZIvuAc0ww/xVy7DexLQp6tgXxNH-Z6Jw-uniform-dark-logo.svg
+                            https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/qlyeln3KRzeKBkPmpYBj_Q-uniform-dark-logo.svg
                           type: text
                         file:
                           type: file
@@ -130,7 +130,7 @@ composition:
                   type: number
                   value: '47'
                 objectFit:
-                  type: tp2-segmented-control-parameter
+                  type: dex-segmented-control-parameter
                   value: contain
         parameters:
           link:
@@ -159,29 +159,29 @@ composition:
                     type: text
                     parameters:
                       tag:
-                        type: tp2-segmented-control-parameter
+                        type: dex-segmented-control-parameter
                         value: h1
                       size:
-                        type: tp2-segmented-control-parameter
+                        type: dex-segmented-control-parameter
                         value:
                           desktop: base
                       text:
                         type: text
                         value: Key resources
                       color:
-                        type: tp2-color-palette-parameter
+                        type: dex-color-palette-parameter
                         value: text-tertiary
                       weight:
-                        type: tp2-segmented-control-parameter
+                        type: dex-segmented-control-parameter
                         value: bold
                       transform:
-                        type: tp2-segmented-control-parameter
+                        type: dex-segmented-control-parameter
                         value: uppercase
                   - _id: 1f09d082-3757-4cd9-a9ec-74b681a7cd99
                     type: spacer
                     parameters:
                       size:
-                        type: tp2-token-selector-parameter
+                        type: dex-token-selector-parameter
                         value: spacer-extra-small
                   - _id: 5ea543ff-a1fa-478a-86d7-fe31e2153ccb
                     type: flex
@@ -197,16 +197,16 @@ composition:
                                   path: https://docs.uniform.app/docs
                                   type: url
                             size:
-                              type: tp2-segmented-control-parameter
+                              type: dex-segmented-control-parameter
                               value: base
                             text:
                               type: text
                               value: Documentation
                             color:
-                              type: tp2-color-palette-parameter
+                              type: dex-color-palette-parameter
                               value: text-primary
                             weight:
-                              type: tp2-segmented-control-parameter
+                              type: dex-segmented-control-parameter
                               value: bold
                           _overridability:
                             hideLockedParameters: true
@@ -221,16 +221,16 @@ composition:
                                     https://dev-csk-v-next-approuter-storybook.vercel.app
                                   type: url
                             size:
-                              type: tp2-segmented-control-parameter
+                              type: dex-segmented-control-parameter
                               value: base
                             text:
                               type: text
                               value: Storybook
                             color:
-                              type: tp2-color-palette-parameter
+                              type: dex-color-palette-parameter
                               value: text-primary
                             weight:
-                              type: tp2-segmented-control-parameter
+                              type: dex-segmented-control-parameter
                               value: bold
                           _overridability:
                             hideLockedParameters: true
@@ -244,37 +244,37 @@ composition:
                                   path: https://www.uniform.dev/demo
                                   type: url
                             size:
-                              type: tp2-segmented-control-parameter
+                              type: dex-segmented-control-parameter
                               value: base
                             text:
                               type: text
                               value: Demo
                             color:
-                              type: tp2-color-palette-parameter
+                              type: dex-color-palette-parameter
                               value: text-primary
                             weight:
-                              type: tp2-segmented-control-parameter
+                              type: dex-segmented-control-parameter
                               value: bold
                           _overridability:
                             hideLockedParameters: true
                     parameters:
                       gap:
-                        type: tp2-slider-control-parameter
+                        type: dex-slider-control-parameter
                         value:
                           mobile: '2'
                           tablet: '2'
                           desktop: '2'
                       spacing:
-                        type: tp2-space-control-parameter
+                        type: dex-space-control-parameter
                         value: {}
                       direction:
-                        type: tp2-segmented-control-parameter
+                        type: dex-segmented-control-parameter
                         value:
                           mobile: col
                           tablet: col
                           desktop: col
                       alignItems:
-                        type: tp2-segmented-control-parameter
+                        type: dex-segmented-control-parameter
                         value: {}
                       displayName:
                         type: text
@@ -283,14 +283,14 @@ composition:
                         type: checkbox
                         value: true
                       justifyContent:
-                        type: tp2-segmented-control-parameter
+                        type: dex-segmented-control-parameter
                         value: {}
               parameters:
                 shrink:
-                  type: tp2-segmented-control-parameter
+                  type: dex-segmented-control-parameter
                   value: '0'
                 alignSelf:
-                  type: tp2-segmented-control-parameter
+                  type: dex-segmented-control-parameter
                   value: {}
                 displayName:
                   type: text
@@ -317,7 +317,7 @@ composition:
                                       value: 804fa820-df03-40ec-8efa-ddf36b976c70
                                     url:
                                       value: >-
-                                        https://canary-img.uniform.global/p/p1YFPp51SU2_Wy4G7-pLQQ/hZ04UUPDTiCGGKA6mDycrA-storybook-icon.svg
+                                        https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/Q7UVHY_QRnWXs9O3eKusWw-storybook-icon.svg
                                       type: text
                                     file:
                                       type: file
@@ -345,7 +345,7 @@ composition:
                               type: number
                               value: '30'
                             objectFit:
-                              type: tp2-segmented-control-parameter
+                              type: dex-segmented-control-parameter
                               value: ''
                     parameters:
                       link:
@@ -389,7 +389,7 @@ composition:
                                       value: 5fb5390d-c1a1-4506-a586-d4ba42c20f7b
                                     url:
                                       value: >-
-                                        https://canary-img.uniform.global/p/IazAOKLVROS83ZIvuAc0ww/MvkG-JokTn6f1UR-E408gQ-github-light-logo.svg
+                                        https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/_iga9L1VQxSayRenJ03QVQ-github-light-logo.svg
                                       type: text
                                     file:
                                       type: file
@@ -417,7 +417,7 @@ composition:
                               type: number
                               value: '30'
                             objectFit:
-                              type: tp2-segmented-control-parameter
+                              type: dex-segmented-control-parameter
                               value: ''
                         - _id: 261e0c54-fda9-4380-96a1-0dd3f8781371
                           type: image
@@ -442,7 +442,7 @@ composition:
                                       value: d1b7aeaa-38a0-41a3-85e1-0d4d1b3b0990
                                     url:
                                       value: >-
-                                        https://canary-img.uniform.global/p/IazAOKLVROS83ZIvuAc0ww/RhO3ui_DQkC3EMfGy3N1Ug-github-dark-logo.svg
+                                        https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/vl_e2BsDSGuYBmsDJytReg-github-dark-logo.svg
                                       type: text
                                     file:
                                       type: file
@@ -470,7 +470,7 @@ composition:
                               type: number
                               value: '30'
                             objectFit:
-                              type: tp2-segmented-control-parameter
+                              type: dex-segmented-control-parameter
                               value: ''
                     parameters:
                       link:
@@ -488,22 +488,22 @@ composition:
                       hideLockedParameters: true
               parameters:
                 gap:
-                  type: tp2-slider-control-parameter
+                  type: dex-slider-control-parameter
                   value:
                     mobile: '4'
                     tablet: '4'
                     desktop: '8'
                 spacing:
-                  type: tp2-space-control-parameter
+                  type: dex-space-control-parameter
                   value: {}
                 direction:
-                  type: tp2-segmented-control-parameter
+                  type: dex-segmented-control-parameter
                   value:
                     mobile: row
                     tablet: row
                     desktop: row
                 alignItems:
-                  type: tp2-segmented-control-parameter
+                  type: dex-segmented-control-parameter
                   value: {}
                 displayName:
                   type: text
@@ -512,27 +512,27 @@ composition:
                   type: checkbox
                   value: true
                 justifyContent:
-                  type: tp2-segmented-control-parameter
+                  type: dex-segmented-control-parameter
                   value:
                     mobile: end
         parameters:
           gap:
-            type: tp2-slider-control-parameter
+            type: dex-slider-control-parameter
             value:
               mobile: '16'
               tablet: '16'
               desktop: '32'
           spacing:
-            type: tp2-space-control-parameter
+            type: dex-space-control-parameter
             value: {}
           direction:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value:
               mobile: row
               tablet: row
               desktop: row
           alignItems:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: {}
           displayName:
             type: text
@@ -541,7 +541,7 @@ composition:
             type: checkbox
             value: true
           justifyContent:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value:
               mobile: between
     footerCopyright:
@@ -549,7 +549,7 @@ composition:
         type: richText
         parameters:
           font:
-            type: tp2-token-selector-parameter
+            type: dex-token-selector-parameter
             value: ''
           text:
             type: richText
@@ -604,9 +604,67 @@ composition:
                             version: 1
                         direction: ltr
                       - mode: normal
-                        text: >-
-                          , standing on the shoulders of these awesome open
-                          source projects: 
+                        text: ' leveraging the '
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                      - mode: normal
+                        text: 'TNT Stack:'
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 2
+                        version: 1
+                      - mode: normal
+                        text: ' '
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                      - link:
+                          path: https://www.typescriptlang.org/
+                          type: url
+                        type: link
+                        format: ''
+                        indent: 0
+                        version: 1
+                        children:
+                          - mode: normal
+                            text: TypeScript
+                            type: text
+                            style: ''
+                            detail: 0
+                            format: 0
+                            version: 1
+                        direction: ltr
+                      - mode: normal
+                        text: ",\_"
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                      - link:
+                          path: https://nextjs.org/docs/app
+                          type: url
+                        type: link
+                        format: ''
+                        indent: 0
+                        version: 1
+                        children:
+                          - mode: normal
+                            text: Next.js App Router
+                            type: text
+                            style: ''
+                            detail: 0
+                            format: 0
+                            version: 1
+                        direction: ltr
+                      - mode: normal
+                        text: ' and '
                         type: text
                         style: ''
                         detail: 0
@@ -629,53 +687,7 @@ composition:
                             version: 1
                         direction: ltr
                       - mode: normal
-                        text: ",\_"
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
-                      - link:
-                          path: https://react.dev/
-                          type: url
-                        type: link
-                        format: ''
-                        indent: 0
-                        version: 1
-                        children:
-                          - mode: normal
-                            text: React
-                            type: text
-                            style: ''
-                            detail: 0
-                            format: 0
-                            version: 1
-                        direction: ltr
-                      - mode: normal
-                        text: ", and\_"
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
-                      - link:
-                          path: https://next.js.org/
-                          type: url
-                        type: link
-                        format: ''
-                        indent: 0
-                        version: 1
-                        children:
-                          - mode: normal
-                            text: Next.js
-                            type: text
-                            style: ''
-                            detail: 0
-                            format: 0
-                            version: 1
-                        direction: ltr
-                      - mode: normal
-                        text: ' (app router).'
+                        text: .
                         type: text
                         style: ''
                         detail: 0
@@ -686,11 +698,11 @@ composition:
                     textFormat: 0
                 direction: ltr
           color:
-            type: tp2-color-palette-parameter
+            type: dex-color-palette-parameter
             value: text-primary
   _locales:
     - en
-created: '2024-12-06T14:01:19.644632+00:00'
-modified: '2024-12-11T21:53:00.77237+00:00'
+created: '2025-01-29T10:47:08.70923+00:00'
+modified: '2025-01-29T10:47:08.70923+00:00'
 pattern: true
 categoryId: b1163ce2-5ac7-4347-bc38-a42198180718

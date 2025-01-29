@@ -23,6 +23,7 @@ export type ButtonParameters = {
   border?: string | ViewPort<string>;
   size?: string;
   icon?: Asset[];
+  test?: Asset[];
   textSize?: BaseButtonProps['textSize'];
   iconPosition?: BaseButtonProps['iconPosition'];
   hoverButtonColor?: string;

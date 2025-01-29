@@ -4,7 +4,7 @@ composition:
   type: section
   parameters:
     spacing:
-      type: tp2-space-control-parameter
+      type: dex-space-control-parameter
       value:
         paddingTop: container-large
         paddingLeft: container-small
@@ -17,7 +17,7 @@ composition:
       type: checkbox
       value: true
     contentAlignment:
-      type: tp2-segmented-control-parameter
+      type: dex-segmented-control-parameter
       value: center
   slots:
     sectionCTA:
@@ -56,50 +56,21 @@ composition:
                     source: theme
           image:
             type: asset
-            value:
-              - _id: dee15ce0-f4aa-4b07-9942-22e543ebb027
-                type: image
-                fields:
-                  id:
-                    type: text
-                    value: f06e5c52-4afd-4201-ba3d-45bc27d0e88a
-                  url:
-                    value: >-
-                      https://canary-img.uniform.global/p/p1YFPp51SU2_Wy4G7-pLQQ/32SCYRJwQ7iHMQBhXBfJFw-Rectangle-1-(1).svg
-                    type: text
-                  file:
-                    type: file
-                    value: 7d41e5dc-a1b1-4dd4-890a-a6401719834c
-                  size:
-                    value: 385
-                    type: number
-                  title:
-                    type: text
-                    value: hero-bg-gradient-dark.svg
-                  width:
-                    value: 1016
-                    type: number
-                  height:
-                    value: 330
-                    type: number
-                  mediaType:
-                    value: image/svg+xml
-                    type: text
-                _source: uniform-assets
+            value: []
           priority:
             type: checkbox
             value: true
           objectFit:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: cover
           unoptimized:
             type: checkbox
             value: true
           overlayColor:
-            type: tp2-color-palette-parameter
+            type: dex-color-palette-parameter
             value: general-color-1
           overlayOpacity:
-            type: tp2-slider-control-parameter
+            type: dex-slider-control-parameter
             value: '0.1'
         _overridability:
           parameters:
@@ -135,7 +106,7 @@ composition:
                     value: 246a9113-763f-4330-b55e-dfa654743828
                   url:
                     value: >-
-                      https://canary-img.uniform.global/p/p1YFPp51SU2_Wy4G7-pLQQ/Vvs4OsF0RXCzYm4vZR_qzA-Rectangle-1-(2).svg
+                      https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/69krTvsVTEezu6ZcotziZg-Rectangle-1-(2).svg
                     type: text
                   file:
                     type: file
@@ -160,16 +131,16 @@ composition:
             type: checkbox
             value: true
           objectFit:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: cover
           unoptimized:
             type: checkbox
             value: true
           overlayColor:
-            type: tp2-color-palette-parameter
+            type: dex-color-palette-parameter
             value: general-color-1
           overlayOpacity:
-            type: tp2-slider-control-parameter
+            type: dex-slider-control-parameter
             value: '0.1'
         _overridability:
           parameters:
@@ -187,28 +158,28 @@ composition:
         type: text
         parameters:
           tag:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: p
           font:
-            type: tp2-token-selector-parameter
+            type: dex-token-selector-parameter
             value: dm-sans
           size:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value:
               mobile: xl
               tablet: xl
               desktop: xl
           color:
-            type: tp2-color-palette-parameter
+            type: dex-color-palette-parameter
             value: text-tertiary
           weight:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: bold
           alignment:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: center
           transform:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: uppercase
         _overridability:
           parameters:
@@ -221,25 +192,25 @@ composition:
         type: text
         parameters:
           tag:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: h2
           font:
-            type: tp2-token-selector-parameter
+            type: dex-token-selector-parameter
             value: dm-sans
           size:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value:
               mobile: 5xl
               tablet: 5xl
               desktop: 7xl
           color:
-            type: tp2-color-palette-parameter
+            type: dex-color-palette-parameter
             value: text-primary
           weight:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: bold
           alignment:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: center
         _overridability:
           parameters:
@@ -254,25 +225,25 @@ composition:
         type: text
         parameters:
           tag:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: p
           font:
-            type: tp2-token-selector-parameter
+            type: dex-token-selector-parameter
             value: dm-sans
           size:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value:
               mobile: xl
               tablet: xl
               desktop: xl
           color:
-            type: tp2-color-palette-parameter
+            type: dex-color-palette-parameter
             value: text-primary
           weight:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: normal
           alignment:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: center
         _overridability:
           parameters:
@@ -294,8 +265,8 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
-created: '2024-11-25T16:05:45.487437+00:00'
-modified: '2024-11-29T18:35:59.949379+00:00'
+created: '2025-01-29T10:47:08.446904+00:00'
+modified: '2025-01-29T10:47:08.446904+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/main-hero.jpg

@@ -1,5 +1,5 @@
-# yaml-language-server: $schema=<https://canary.uniform.app/schemas/json-schema/component-definition/v1.json>
-$schema: https://canary.uniform.app/schemas/json-schema/component-definition/v1.json
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: card
 name: Card
 icon: card-hearts
@@ -21,16 +21,16 @@ parameters:
         - fullHeight
   - id: backgroundColor
     name: Background Color
-    type: tp2-color-palette-parameter
+    type: dex-color-palette-parameter
     typeConfig: null
   - id: spacing
     name: Spacing
-    type: tp2-space-control-parameter
+    type: dex-space-control-parameter
     typeConfig:
       selectedGroup: container
   - id: border
     name: Border
-    type: tp2-token-selector-parameter
+    type: dex-token-selector-parameter
     typeConfig:
       selectedTokenType: border
   - id: fluidContent
@@ -68,8 +68,8 @@ slots:
     patternsInAllowedComponents: false
 titleParameter: displayName
 canBeComposition: false
-created: '2024-12-06T14:01:14.105927+00:00'
-updated: '2024-12-11T21:50:56.343737+00:00'
+created: '2025-01-29T10:47:01.200491+00:00'
+updated: '2025-01-29T10:47:01.200491+00:00'
 variants:
   - id: backgroundImage
     name: Background Image

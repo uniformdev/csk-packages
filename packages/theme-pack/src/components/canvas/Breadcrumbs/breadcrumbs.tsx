@@ -10,7 +10,7 @@ export const Breadcrumbs: FC<BreadcrumbsProps> = ({ separator, links, size, colo
   const itemToDisplay =
     links?.reduce<BreadcrumbLink[]>((acc, linkItem) => {
       const { title, link } = (flattenValues(linkItem) as { title?: string; link?: LinkParamValue } | undefined) || {};
-      return !!title ? [...acc, { title, link: formatUniformLink(link) }] : acc;
+      return title ? [...acc, { title, link: formatUniformLink(link) }] : acc;
     }, []) || [];
 
   if (!itemToDisplay.length) {

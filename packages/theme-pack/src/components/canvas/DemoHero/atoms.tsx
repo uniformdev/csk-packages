@@ -46,12 +46,13 @@ export const BaseHeroButton: FC<ButtonParameters & { variant?: ButtonVariant } &
   text,
   ...props
 }) => {
-  const href = formatUniformLink(props.link);
+  const { link, icon } = props;
+  const href = formatUniformLink(link);
 
   if (!text && !href && !(context.previewMode === 'editor')) return null;
 
   const Icon = () => {
-    const [resolvedImage] = resolveAsset(props.icon);
+    const [resolvedImage] = resolveAsset(icon);
     const { url, title = '' } = resolvedImage || {};
     return url ? (
       <BaseImage

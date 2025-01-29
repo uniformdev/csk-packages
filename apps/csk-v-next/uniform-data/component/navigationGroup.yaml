@@ -1,5 +1,5 @@
-# yaml-language-server: $schema=<https://canary.uniform.app/schemas/json-schema/component-definition/v1.json>
-$schema: https://canary.uniform.app/schemas/json-schema/component-definition/v1.json
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: navigationGroup
 name: Navigation Group
 icon: list-tree
@@ -33,16 +33,16 @@ parameters:
         - alignment
   - id: backgroundColor
     name: Background Color
-    type: tp2-color-palette-parameter
+    type: dex-color-palette-parameter
     typeConfig: null
   - id: border
     name: Border
-    type: tp2-token-selector-parameter
+    type: dex-token-selector-parameter
     typeConfig:
       selectedTokenType: border
   - id: size
     name: Size
-    type: tp2-segmented-control-parameter
+    type: dex-segmented-control-parameter
     typeConfig:
       options:
         - key: Base
@@ -60,14 +60,14 @@ parameters:
       withViewPort: false
   - id: color
     name: Color
-    type: tp2-color-palette-parameter
+    type: dex-color-palette-parameter
     typeConfig:
       allowColors: []
       selectedGroup: text
       allowThemeColors: []
   - id: weight
     name: Weight
-    type: tp2-segmented-control-parameter
+    type: dex-segmented-control-parameter
     typeConfig:
       options:
         - key: Normal
@@ -81,12 +81,12 @@ parameters:
       defaultValue: normal
   - id: font
     name: Font
-    type: tp2-token-selector-parameter
+    type: dex-token-selector-parameter
     typeConfig:
       selectedTokenType: font
   - id: transform
     name: Transform
-    type: tp2-segmented-control-parameter
+    type: dex-segmented-control-parameter
     typeConfig:
       options:
         - key: Uppercase
@@ -97,7 +97,7 @@ parameters:
           value: capitalize
   - id: decoration
     name: Decoration
-    type: tp2-segmented-control-parameter
+    type: dex-segmented-control-parameter
     typeConfig:
       options:
         - key: Underline
@@ -108,7 +108,7 @@ parameters:
           value: line-through
   - id: letterSpacing
     name: Letter Spacing
-    type: tp2-segmented-control-parameter
+    type: dex-segmented-control-parameter
     typeConfig:
       options:
         - key: Tighter
@@ -121,7 +121,7 @@ parameters:
           value: wider
   - id: alignment
     name: Alignment
-    type: tp2-segmented-control-parameter
+    type: dex-segmented-control-parameter
     typeConfig:
       options:
         - key: Left
@@ -145,5 +145,5 @@ slots:
 titleParameter: text
 thumbnailParameter: icon
 canBeComposition: false
-created: '2024-10-04T11:43:05.703209+00:00'
-updated: '2024-11-25T11:26:38.719968+00:00'
+created: '2025-01-29T10:47:02.54608+00:00'
+updated: '2025-01-29T10:47:02.54608+00:00'

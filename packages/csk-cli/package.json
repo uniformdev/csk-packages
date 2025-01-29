@@ -1,6 +1,6 @@
 {
   "name": "@uniformdev/csk-cli",
-  "version": "2.0.4",
+  "version": "2.0.9",
   "description": "The Uniform CSK CLI provides a command-line interface (CLI) and utility functions to help you work with modules.",
   "license": "SEE LICENSE IN LICENSE.txt",
   "main": "./cli.js",
@@ -40,13 +40,13 @@
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
     "@types/jest": "^29.5.14",
-    "@uniformdev/canvas": ">=19",
-    "next": ">=14",
+    "@uniformdev/canvas": "20.1.0",
+    "next": "15.1.6",
     "prettier": ">=3",
-    "react": ">=18",
-    "react-dom": ">=18",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "tsup": "^8.3.0",
-    "typescript": "^5.6.3"
+    "typescript": "^5.7.3"
   },
   "peerDependencies": {
     "@uniformdev/canvas": ">=19",

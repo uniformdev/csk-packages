@@ -116,7 +116,7 @@ parameters:
         - favicon
   - id: backgroundColor
     name: Background Color
-    type: tp2-color-palette-parameter
+    type: dex-color-palette-parameter
     typeConfig: null
   - id: favicon
     name: Favicon
@@ -138,10 +138,31 @@ slots:
     patternsInAllowedComponents: false
   - id: pageContent
     name: Page Content
-    allowedComponents: []
-    allowAllComponents: true
+    allowedComponents:
+      - accordion
+      - banner
+      - card
+      - carousel
+      - container
+      - fixedHero
+      - flex
+      - flexibleHero
+      - grid
+      - $p:eea0b9bb-82f4-4de6-9aa5-af290540615d
+      - imageGallery
+      - review
+      - section
+      - table
+      - tabs
+      - testimonial
+      - $p:6fc97589-a549-4105-8b4f-387f64ea2780
+      - $test
+      - $localization
+      - $loop
+      - $personalization
+    allowAllComponents: false
     inheritAllowedComponents: false
-    patternsInAllowedComponents: false
+    patternsInAllowedComponents: true
   - id: pageFooter
     name: Page Footer
     allowedComponents:
@@ -152,5 +173,5 @@ slots:
 titleParameter: pageTitle
 thumbnailParameter: openGraphImage
 canBeComposition: true
-created: '2024-11-16T22:44:11.376352+00:00'
-updated: '2024-12-07T20:52:02.039146+00:00'
+created: '2025-01-29T10:47:02.333016+00:00'
+updated: '2025-01-29T10:47:02.333016+00:00'

@@ -4,26 +4,26 @@ composition:
   type: flex
   parameters:
     gap:
-      type: tp2-slider-control-parameter
+      type: dex-slider-control-parameter
       value: {}
     border:
-      type: tp2-token-selector-parameter
+      type: dex-token-selector-parameter
       value: ''
     spacing:
-      type: tp2-space-control-parameter
+      type: dex-space-control-parameter
       value:
         paddingTop: container-small
         paddingLeft: container-small
         paddingRight: container-small
         paddingBottom: container-small
     direction:
-      type: tp2-segmented-control-parameter
+      type: dex-segmented-control-parameter
       value:
         mobile: col
         tablet: col
         desktop: col
     alignItems:
-      type: tp2-segmented-control-parameter
+      type: dex-segmented-control-parameter
       value: center
     displayName:
       type: text
@@ -32,10 +32,10 @@ composition:
       type: checkbox
       value: true
     justifyContent:
-      type: tp2-segmented-control-parameter
+      type: dex-segmented-control-parameter
       value: {}
     backgroundColor:
-      type: tp2-color-palette-parameter
+      type: dex-color-palette-parameter
       value: general-color-5
   slots:
     flexItem:
@@ -43,25 +43,22 @@ composition:
         type: text
         parameters:
           tag:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: span
           size:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value:
               mobile: 5xl
               tablet: 5xl
               desktop: 2xl
-          text:
-            type: text
-            value: 44 million
           color:
-            type: tp2-color-palette-parameter
+            type: dex-color-palette-parameter
             value: text-secondary
           weight:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: bold
           alignment:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: center
         _overridability:
           parameters:
@@ -73,23 +70,20 @@ composition:
         type: text
         parameters:
           tag:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: span
           size:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value:
               desktop: base
-          text:
-            type: text
-            value: Transactions every 24 hours
           color:
-            type: tp2-color-palette-parameter
+            type: dex-color-palette-parameter
             value: text-secondary
           weight:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: normal
           alignment:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: center
         _overridability:
           parameters:
@@ -106,8 +100,8 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
-created: '2024-12-06T14:01:17.661287+00:00'
-modified: '2024-12-11T21:55:47.599305+00:00'
+created: '2025-01-29T10:47:06.445784+00:00'
+modified: '2025-01-29T10:47:06.445784+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/stat-item-with-background.jpg

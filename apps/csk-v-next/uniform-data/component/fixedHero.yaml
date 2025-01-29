@@ -18,7 +18,7 @@ parameters:
     typeConfig: null
   - id: titleTag
     name: Title HTML Tag
-    type: tp2-segmented-control-parameter
+    type: dex-segmented-control-parameter
     typeConfig:
       options:
         - key: H1
@@ -64,12 +64,9 @@ parameters:
       childrenParams:
         - contentAlignment
         - fullHeight
-        - eyebrowTitleColor
-        - titleColor
-        - descriptionColor
   - id: contentAlignment
     name: Content Alignment
-    type: tp2-segmented-control-parameter
+    type: dex-segmented-control-parameter
     typeConfig:
       options:
         - key: Left
@@ -83,26 +80,6 @@ parameters:
     name: Full Height
     type: checkbox
     typeConfig: null
-  - id: eyebrowTitleColor
-    name: Eyebrow Text Color
-    type: tp2-color-palette-parameter
-    typeConfig:
-      allowColors: []
-      selectedGroup: text
-      allowThemeColors: []
-  - id: titleColor
-    name: Title Color
-    type: tp2-color-palette-parameter
-    typeConfig:
-      allowColors: []
-      selectedGroup: text
-  - id: descriptionColor
-    name: Description Color
-    type: tp2-color-palette-parameter
-    typeConfig:
-      allowColors: []
-      selectedGroup: text
-      allowThemeColors: []
 categoryId: f22b05f0-c4bf-4158-8ebc-4856e4d453af
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/hero-fixed.jpg
@@ -110,8 +87,8 @@ useTeamPermissions: true
 slots: []
 titleParameter: displayName
 canBeComposition: false
-created: '2024-12-05T18:51:20.553117+00:00'
-updated: '2024-12-07T20:48:27.047296+00:00'
+created: '2025-01-29T10:47:01.402162+00:00'
+updated: '2025-01-29T10:47:01.402162+00:00'
 variants:
   - id: columns
     name: Columns

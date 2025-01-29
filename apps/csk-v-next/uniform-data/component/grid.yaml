@@ -1,5 +1,5 @@
-# yaml-language-server: $schema=<https://canary.uniform.app/schemas/json-schema/component-definition/v1.json>
-$schema: https://canary.uniform.app/schemas/json-schema/component-definition/v1.json
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: grid
 name: Grid
 icon: view-grid
@@ -10,7 +10,7 @@ parameters:
     typeConfig: null
   - id: columnsCount
     name: Columns Count
-    type: tp2-slider-control-parameter
+    type: dex-slider-control-parameter
     typeConfig:
       step: 1
       type: steps
@@ -25,7 +25,7 @@ parameters:
       withViewPort: true
   - id: gapX
     name: Gap X
-    type: tp2-slider-control-parameter
+    type: dex-slider-control-parameter
     typeConfig:
       step: 1
       type: custom
@@ -47,7 +47,7 @@ parameters:
       withViewPort: true
   - id: gapY
     name: Gap Y
-    type: tp2-slider-control-parameter
+    type: dex-slider-control-parameter
     typeConfig:
       step: 1
       type: custom
@@ -80,18 +80,18 @@ parameters:
         - fullHeight
   - id: backgroundColor
     name: Background Color
-    type: tp2-color-palette-parameter
+    type: dex-color-palette-parameter
     typeConfig: null
   - id: spacing
     name: Spacing
-    type: tp2-space-control-parameter
+    type: dex-space-control-parameter
     typeConfig:
       type: dimensions
       defaultValue: {}
       selectedGroup: container
   - id: border
     name: Border
-    type: tp2-token-selector-parameter
+    type: dex-token-selector-parameter
     typeConfig:
       selectedTokenType: border
   - id: fluidContent
@@ -115,5 +115,5 @@ slots:
     patternsInAllowedComponents: false
 titleParameter: displayName
 canBeComposition: false
-created: '2024-09-23T09:39:14.658353+00:00'
-updated: '2024-10-29T13:19:46.052735+00:00'
+created: '2025-01-29T10:47:01.756246+00:00'
+updated: '2025-01-29T10:47:01.756246+00:00'

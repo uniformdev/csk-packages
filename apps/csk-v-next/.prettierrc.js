@@ -6,5 +6,4 @@ module.exports = {
   tabWidth: 2,
   arrowParens: 'avoid',
   endOfLine: 'auto',
-  pluginSearchDirs: false,
 };

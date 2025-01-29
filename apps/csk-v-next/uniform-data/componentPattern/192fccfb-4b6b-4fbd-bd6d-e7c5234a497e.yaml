@@ -1,14 +1,14 @@
 composition:
-  _name: Featured card
+  _name: Background Image Card
   _id: 192fccfb-4b6b-4fbd-bd6d-e7c5234a497e
   type: card
   variant: backgroundImage
   parameters:
     border:
-      type: tp2-token-selector-parameter
+      type: dex-token-selector-parameter
       value: ''
     spacing:
-      type: tp2-space-control-parameter
+      type: dex-space-control-parameter
       value:
         marginTop: ''
         marginLeft: ''
@@ -20,7 +20,7 @@ composition:
         paddingBottom: container-small
     displayName:
       type: text
-      value: Featured card
+      value: Background Image Card
     fluidContent:
       type: checkbox
       value: true
@@ -40,7 +40,7 @@ composition:
                     value: ff044480-8310-44f4-9991-82176767a172
                   url:
                     value: >-
-                      https://canary-img.uniform.global/p/p1YFPp51SU2_Wy4G7-pLQQ/Lyqfr7XLQaaAvzXdwUcd1g-featured-bg.png
+                      https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/fUU0Ip-VRpOGWHiS3Xg84A-featured-bg.png
                     type: text
                   file:
                     type: file
@@ -62,13 +62,13 @@ composition:
                     type: text
                 _source: uniform-assets
           border:
-            type: tp2-token-selector-parameter
+            type: dex-token-selector-parameter
             value: border-image-radius-small
           objectFit:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: cover
           overlayOpacity:
-            type: tp2-slider-control-parameter
+            type: dex-slider-control-parameter
             value: ''
         _overridability:
           parameters:
@@ -82,16 +82,13 @@ composition:
             type: checkbox
             value: true
           size:
-            type: tp2-token-selector-parameter
+            type: dex-token-selector-parameter
             value: badge-large
-          text:
-            type: text
-            value: New
           textColor:
-            type: tp2-color-palette-parameter
+            type: dex-color-palette-parameter
             value: text-light
           backgroundColor:
-            type: tp2-color-palette-parameter
+            type: dex-color-palette-parameter
             value: general-color-4
         _overridability:
           parameters:
@@ -101,7 +98,7 @@ composition:
         type: spacer
         parameters:
           size:
-            type: tp2-token-selector-parameter
+            type: dex-token-selector-parameter
             value: spacer-extra-small
         _overridability:
           hideLockedParameters: true
@@ -109,22 +106,19 @@ composition:
         type: text
         parameters:
           tag:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: h2
           size:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value:
               mobile: 2xl
               tablet: 2xl
               desktop: 2xl
-          text:
-            type: text
-            value: Title
           color:
-            type: tp2-color-palette-parameter
+            type: dex-color-palette-parameter
             value: text-light
           weight:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: medium
         _overridability:
           parameters:
@@ -135,25 +129,22 @@ composition:
         type: text
         parameters:
           tag:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: span
           size:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value:
               mobile: xl
               tablet: xl
               desktop: xl
-          text:
-            type: text
-            value: Subtitle
           color:
-            type: tp2-color-palette-parameter
+            type: dex-color-palette-parameter
             value: text-light
           weight:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: normal
           decoration:
-            type: tp2-segmented-control-parameter
+            type: dex-segmented-control-parameter
             value: ''
         _overridability:
           parameters:
@@ -164,7 +155,7 @@ composition:
         type: spacer
         parameters:
           size:
-            type: tp2-token-selector-parameter
+            type: dex-token-selector-parameter
             value: spacer-small
         _overridability:
           hideLockedParameters: true
@@ -172,16 +163,13 @@ composition:
         type: button
         parameters:
           size:
-            type: tp2-token-selector-parameter
+            type: dex-token-selector-parameter
             value: button-small
-          text:
-            type: text
-            value: Link
           textColor:
-            type: tp2-color-palette-parameter
+            type: dex-color-palette-parameter
             value: text-light
           buttonColor:
-            type: tp2-color-palette-parameter
+            type: dex-color-palette-parameter
             value: button-primary
         _overridability:
           parameters:
@@ -194,8 +182,8 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
-created: '2024-12-06T14:01:18.20549+00:00'
-modified: '2024-12-11T21:51:19.808756+00:00'
+created: '2025-01-29T10:47:07.519078+00:00'
+modified: '2025-01-29T10:47:07.519078+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/featured-card.jpg

@@ -4,31 +4,28 @@ composition:
   type: button
   parameters:
     size:
-      type: tp2-token-selector-parameter
+      type: dex-token-selector-parameter
       value: button-medium
-    text:
-      type: text
-      value: Learn more
     textSize:
-      type: tp2-segmented-control-parameter
+      type: dex-segmented-control-parameter
       value:
         mobile: sm
         tablet: sm
         desktop: sm
     textColor:
-      type: tp2-color-palette-parameter
+      type: dex-color-palette-parameter
       value: text-dark
     textWeight:
-      type: tp2-segmented-control-parameter
+      type: dex-segmented-control-parameter
       value: normal
     buttonColor:
-      type: tp2-color-palette-parameter
+      type: dex-color-palette-parameter
       value: button-tertiary
     iconPosition:
-      type: tp2-segmented-control-parameter
+      type: dex-segmented-control-parameter
       value: right
     hoverButtonColor:
-      type: tp2-color-palette-parameter
+      type: dex-color-palette-parameter
       value: button-tertiary-hover
   _overridability:
     variants: true
@@ -40,8 +37,8 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
-created: '2024-10-29T15:51:40.044639+00:00'
-modified: '2024-11-25T11:24:28.467589+00:00'
+created: '2025-01-29T10:47:07.724152+00:00'
+modified: '2025-01-29T10:47:07.724152+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/button-tertiary.jpg
