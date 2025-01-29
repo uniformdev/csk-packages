@@ -5,85 +5,70 @@ composition:
   parameters:
     border:
       type: dex-token-selector-parameter
-      value: border-footer
+      value: border-hero
     spacing:
       type: dex-space-control-parameter
       value:
-        marginTop: ''
-        marginLeft: ''
-        paddingTop: container-medium
-        marginRight: ''
-        paddingLeft: ''
-        marginBottom: ''
-        paddingRight: ''
-        paddingBottom: container-medium
+        marginTop: container-small
+        marginLeft: container-small
+        paddingTop: container-small
+        marginRight: container-small
+        paddingLeft: container-small
+        marginBottom: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
     displayName:
       type: text
       value: Footer
+    fluidContent:
+      type: checkbox
+      value: true
   slots:
     footerLogo:
-      - _id: bd107466-c7e2-4b3b-8d59-5d1ff0c0c8bf
-        type: link
-        slots:
-          linkContent:
-            - _id: ee663cd6-37e5-4b5e-b629-fdf9a4667eba
-              type: image
-              parameters:
-                image:
-                  type: asset
-                  value:
-                    - _id: f760e22b-3627-4211-bd91-f9a5afa90420
-                      type: image
-                      fields:
-                        id:
-                          type: text
-                          value: 0efbc807-7b4a-4f7d-847b-62fe616b0815
-                        url:
-                          value: >-
-                            https://img.uniform.global/p/YBXmRPPzQZ-45Yo5jJzHAw/Qn5luTHpRYaS4U1pNciTxQ-uniform-dark-logo.svg
-                          type: text
-                        file:
-                          type: file
-                          value: 47b0c945-547f-48b4-a161-2b26884d4f32
-                        size:
-                          value: 1697
-                          type: number
-                        title:
-                          type: text
-                          value: uniform-dark-logo.svg
-                        width:
-                          value: 204
-                          type: number
-                        height:
-                          value: 52
-                          type: number
-                        mediaType:
-                          value: image/svg+xml
-                          type: text
-                      _source: uniform-assets
-                width:
-                  type: number
-                  value: '180'
-                height:
-                  type: number
-                  value: '47'
-                objectFit:
-                  type: dex-segmented-control-parameter
-                  value: contain
+      - _id: ee663cd6-37e5-4b5e-b629-fdf9a4667eba
+        type: image
         parameters:
-          link:
-            type: link
+          image:
+            type: asset
             value:
-              path: https://www.uniform.dev
-              type: url
-          displayName:
-            type: text
-            value: Uniform Link
-          openInNewTab:
-            type: checkbox
-            value: true
-        _overridability:
-          hideLockedParameters: true
+              - _id: 96630e24-3ef4-4d5b-a060-9310d300f1e8
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 84f9f966-cd44-4ecd-b1ab-0a3004ca5477
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/YEM1MHEJTqCtdMNPL_aVoA/e1lwAtPPS9-5il5Xbojufg-Frame.png
+                    type: text
+                  file:
+                    type: file
+                    value: ee277de0-93d8-4f6a-ae1b-303de12deeb5
+                  size:
+                    value: 1211
+                    type: number
+                  title:
+                    type: text
+                    value: Frame.png
+                  width:
+                    value: 127
+                    type: number
+                  height:
+                    value: 34
+                    type: number
+                  mediaType:
+                    value: image/png
+                    type: text
+                _source: uniform-assets
+          width:
+            type: number
+            value: '145'
+          height:
+            type: number
+            value: '36'
+          objectFit:
+            type: dex-segmented-control-parameter
+            value: contain
     footerContent:
       - _id: 757f8498-9331-4b59-9723-95cdd187b2f1
         type: flex
@@ -98,23 +83,23 @@ composition:
                     parameters:
                       tag:
                         type: dex-segmented-control-parameter
-                        value: h1
+                        value: h2
                       size:
                         type: dex-segmented-control-parameter
                         value:
                           desktop: base
                       text:
                         type: text
-                        value: Key resources
+                        value: Product
                       color:
                         type: dex-color-palette-parameter
                         value: text-tertiary
                       weight:
                         type: dex-segmented-control-parameter
-                        value: bold
+                        value: medium
                       transform:
                         type: dex-segmented-control-parameter
-                        value: uppercase
+                        value: ''
                   - _id: 1f09d082-3757-4cd9-a9ec-74b681a7cd99
                     type: spacer
                     parameters:
@@ -125,18 +110,48 @@ composition:
                     type: flex
                     slots:
                       flexItem:
-                        - _id: 1226047a-9d32-46c6-8a78-30d6e22e418a
+                        - _id: db48f44b-e83f-44f6-8110-80fa8b174617
                           type: navigationLink
-                          _pattern: 2f1ff1e9-e7c7-43a6-8576-da21a1e199e5
-                        - _id: c4586887-719a-4134-b057-87d2f8ea3ee6
+                          parameters:
+                            link:
+                              type: link
+                              locales:
+                                en:
+                                  path: https://radiant.tailwindui.com/pricing
+                                  type: url
+                            text:
+                              type: text
+                              value: Pricing
+                          _overridability:
+                            hideLockedParameters: true
+                        - _id: 7c9bfe5c-00fa-4048-b1ca-88f46e75b997
                           type: navigationLink
-                          _pattern: 2f1ff1e9-e7c7-43a6-8576-da21a1e199e5
-                        - _id: 8514c1db-00ac-43e1-87d4-8830694a57df
+                          parameters:
+                            link:
+                              type: link
+                              locales:
+                                en:
+                                  path: https://radiant.tailwindui.com/#
+                                  type: url
+                            text:
+                              type: text
+                              value: Analysis
+                          _overridability:
+                            hideLockedParameters: true
+                        - _id: f1510e26-9764-472d-942e-d20448db9875
                           type: navigationLink
-                          _pattern: 2f1ff1e9-e7c7-43a6-8576-da21a1e199e5
-                        - _id: a7e8071c-e27b-4a4f-bb23-9882486d39b3
-                          type: navigationLink
-                          _pattern: 2f1ff1e9-e7c7-43a6-8576-da21a1e199e5
+                          parameters:
+                            link:
+                              type: link
+                              locales:
+                                en:
+                                  path: https://radiant.tailwindui.com/#
+                                  type: url
+                            text:
+                              type: text
+                              value: API
+                          _overridability:
+                            hideLockedParameters: true
                     parameters:
                       gap:
                         type: dex-slider-control-parameter
@@ -175,174 +190,331 @@ composition:
                 displayName:
                   type: text
                   value: Resources
-            - _id: 04a71df4-1cc7-4597-9a7e-fcf8ec1cd326
-              type: flex
+            - _id: e04891f8-65e2-4a4f-b5ee-e024e239dc2f
+              type: flexItem
               slots:
-                flexItem:
-                  - _id: 1d050b85-1622-44c2-ac6f-8f36d8022ebb
-                    type: link
-                    slots:
-                      linkContent:
-                        - _id: 87ed9168-80db-408d-b271-4cbff4d1f913
-                          type: image
-                          parameters:
-                            image:
-                              type: asset
-                              value:
-                                - _id: 5e6a0737-768a-47ae-b3b6-2f1beaad53df
-                                  type: image
-                                  fields:
-                                    id:
-                                      type: text
-                                      value: 804fa820-df03-40ec-8efa-ddf36b976c70
-                                    url:
-                                      value: >-
-                                        https://img.uniform.global/p/YBXmRPPzQZ-45Yo5jJzHAw/rx5p8oTqTRGK2cVhCgVBlQ-storybook-icon.svg
-                                      type: text
-                                    file:
-                                      type: file
-                                      value: e2b11dba-8b68-492d-9f8f-14116702bd2b
-                                    size:
-                                      value: 5499
-                                      type: number
-                                    title:
-                                      type: text
-                                      value: storybook-icon.svg
-                                    width:
-                                      value: 29
-                                      type: number
-                                    height:
-                                      value: 29
-                                      type: number
-                                    mediaType:
-                                      value: image/svg+xml
-                                      type: text
-                                  _source: uniform-assets
-                            width:
-                              type: number
-                              value: '30'
-                            height:
-                              type: number
-                              value: '30'
-                            objectFit:
-                              type: dex-segmented-control-parameter
-                              value: ''
+                inner:
+                  - _id: bc60fc56-d2d9-4561-85b7-166405c6be88
+                    type: text
                     parameters:
-                      link:
-                        type: link
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: h2
+                      size:
+                        type: dex-segmented-control-parameter
                         value:
-                          path: https://unfrm.to/csk-sb
-                          type: url
+                          desktop: base
+                      text:
+                        type: text
+                        value: Company
+                      color:
+                        type: dex-color-palette-parameter
+                        value: text-tertiary
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: medium
+                      transform:
+                        type: dex-segmented-control-parameter
+                        value: ''
+                  - _id: dc216ef7-c6f9-4378-beed-853d7d5a2122
+                    type: spacer
+                    parameters:
+                      size:
+                        type: dex-token-selector-parameter
+                        value: spacer-extra-small
+                  - _id: 034ef3fd-4ed8-4410-b442-b7e56ae0009e
+                    type: flex
+                    slots:
+                      flexItem:
+                        - _id: 1aa3335c-22be-40b4-9f8d-609156b53e63
+                          type: navigationLink
+                          parameters:
+                            link:
+                              type: link
+                              locales:
+                                en:
+                                  path: https://radiant.tailwindui.com/#
+                                  type: url
+                            text:
+                              type: text
+                              value: Careers
+                          _overridability:
+                            hideLockedParameters: true
+                        - _id: bf0afa46-a3f4-45b8-84da-3f7e3558539b
+                          type: navigationLink
+                          parameters:
+                            link:
+                              type: link
+                              locales:
+                                en:
+                                  path: https://radiant.tailwindui.com/blog
+                                  type: url
+                            text:
+                              type: text
+                              value: Blog
+                          _overridability:
+                            hideLockedParameters: true
+                        - _id: b0e06cdb-32e6-47ba-ae2d-9fa80f9d5940
+                          type: navigationLink
+                          parameters:
+                            link:
+                              type: link
+                              locales:
+                                en:
+                                  path: https://radiant.tailwindui.com/company
+                                  type: url
+                            text:
+                              type: text
+                              value: Company
+                          _overridability:
+                            hideLockedParameters: true
+                    parameters:
+                      gap:
+                        type: dex-slider-control-parameter
+                        value:
+                          mobile: '2'
+                          tablet: '2'
+                          desktop: '2'
+                      spacing:
+                        type: dex-space-control-parameter
+                        value: {}
+                      direction:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: col
+                          tablet: col
+                          desktop: col
+                      alignItems:
+                        type: dex-segmented-control-parameter
+                        value: {}
                       displayName:
                         type: text
-                        value: Storybook Link
-                      openInNewTab:
+                        value: Links
+                      fluidContent:
                         type: checkbox
                         value: true
-                    _overridability:
-                      parameters:
-                        link: 'yes'
-                        displayName: 'yes'
-                      hideLockedParameters: true
-                  - _id: 6f18283f-d276-46e0-a8bb-20749b65a744
-                    type: link
-                    slots:
-                      linkContent:
-                        - _id: 261e0c54-fda9-4380-96a1-0dd3f8781371
-                          type: image
-                          parameters:
-                            image:
-                              type: asset
-                              value:
-                                - _id: 035087c7-e38b-42d4-8c77-2e632151230a
-                                  type: image
-                                  fields:
-                                    id:
-                                      type: text
-                                      value: d1b7aeaa-38a0-41a3-85e1-0d4d1b3b0990
-                                    url:
-                                      value: >-
-                                        https://img.uniform.global/p/YBXmRPPzQZ-45Yo5jJzHAw/abTUTx4NQtqIrSN8J7PIkQ-github-dark-logo.svg
-                                      type: text
-                                    file:
-                                      type: file
-                                      value: f6f351b7-03eb-4a20-a6b1-327132c4baff
-                                    size:
-                                      value: 1327
-                                      type: number
-                                    title:
-                                      type: text
-                                      value: github-dark-logo.svg
-                                    width:
-                                      value: 35
-                                      type: number
-                                    height:
-                                      value: 34
-                                      type: number
-                                    mediaType:
-                                      value: image/svg+xml
-                                      type: text
-                                  _source: uniform-assets
-                            width:
-                              type: number
-                              value: '30'
-                            height:
-                              type: number
-                              value: '30'
-                            objectFit:
-                              type: dex-segmented-control-parameter
-                              value: ''
-                    parameters:
-                      link:
-                        type: link
-                        value:
-                          path: https://unfrm.to/csk-repo
-                          type: url
-                      displayName:
-                        type: text
-                        value: GitHub Link
-                      openInNewTab:
-                        type: checkbox
-                        value: true
-                    _overridability:
-                      parameters:
-                        link: 'yes'
-                        displayName: 'yes'
-                      hideLockedParameters: true
+                      justifyContent:
+                        type: dex-segmented-control-parameter
+                        value: {}
               parameters:
-                gap:
-                  type: dex-slider-control-parameter
-                  value:
-                    mobile: '4'
-                    tablet: '4'
-                    desktop: '8'
-                spacing:
-                  type: dex-space-control-parameter
-                  value: {}
-                direction:
+                shrink:
                   type: dex-segmented-control-parameter
-                  value:
-                    mobile: row
-                    tablet: row
-                    desktop: row
-                alignItems:
+                  value: '0'
+                alignSelf:
                   type: dex-segmented-control-parameter
                   value: {}
                 displayName:
                   type: text
-                  value: Icons
-                fluidContent:
-                  type: checkbox
-                  value: true
-                justifyContent:
+                  value: Resources
+            - _id: 54aacf0b-8a62-44b1-bbb9-e21db7925576
+              type: flexItem
+              slots:
+                inner:
+                  - _id: c619c548-d7b9-4145-8ef6-0ae21ac48ed0
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: h2
+                      size:
+                        type: dex-segmented-control-parameter
+                        value:
+                          desktop: base
+                      text:
+                        type: text
+                        value: Support
+                      color:
+                        type: dex-color-palette-parameter
+                        value: text-tertiary
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: medium
+                      transform:
+                        type: dex-segmented-control-parameter
+                        value: ''
+                  - _id: b42c18aa-738a-4efc-a0dc-c4e72766dd77
+                    type: spacer
+                    parameters:
+                      size:
+                        type: dex-token-selector-parameter
+                        value: spacer-extra-small
+                  - _id: acab792f-1c40-4bac-b67d-775791bf67dd
+                    type: flex
+                    slots:
+                      flexItem:
+                        - _id: 2654c264-d0f3-410a-80f0-351d2cee1e7d
+                          type: navigationLink
+                          parameters:
+                            link:
+                              type: link
+                              locales:
+                                en:
+                                  path: https://radiant.tailwindui.com/#
+                                  type: url
+                            text:
+                              type: text
+                              value: Help center
+                          _overridability:
+                            hideLockedParameters: true
+                        - _id: 2436803a-5c5b-418a-821e-74815bbebc10
+                          type: navigationLink
+                          parameters:
+                            link:
+                              type: link
+                              locales:
+                                en:
+                                  path: https://radiant.tailwindui.com/#
+                                  type: url
+                            text:
+                              type: text
+                              value: Community
+                          _overridability:
+                            hideLockedParameters: true
+                    parameters:
+                      gap:
+                        type: dex-slider-control-parameter
+                        value:
+                          mobile: '2'
+                          tablet: '2'
+                          desktop: '2'
+                      spacing:
+                        type: dex-space-control-parameter
+                        value: {}
+                      direction:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: col
+                          tablet: col
+                          desktop: col
+                      alignItems:
+                        type: dex-segmented-control-parameter
+                        value: {}
+                      displayName:
+                        type: text
+                        value: Links
+                      fluidContent:
+                        type: checkbox
+                        value: true
+                      justifyContent:
+                        type: dex-segmented-control-parameter
+                        value: {}
+              parameters:
+                shrink:
                   type: dex-segmented-control-parameter
-                  value:
-                    mobile: end
+                  value: '0'
+                alignSelf:
+                  type: dex-segmented-control-parameter
+                  value: {}
+                displayName:
+                  type: text
+                  value: Resources
+            - _id: d94fe526-35eb-4f82-8b10-f896f702de7b
+              type: flexItem
+              slots:
+                inner:
+                  - _id: 3ae48dfc-4d18-4c84-8329-dacc484958e3
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: h2
+                      size:
+                        type: dex-segmented-control-parameter
+                        value:
+                          desktop: base
+                      text:
+                        type: text
+                        value: Company
+                      color:
+                        type: dex-color-palette-parameter
+                        value: text-tertiary
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: medium
+                      transform:
+                        type: dex-segmented-control-parameter
+                        value: ''
+                  - _id: b7ac509e-bb90-4eee-8309-78e5389e9b4a
+                    type: spacer
+                    parameters:
+                      size:
+                        type: dex-token-selector-parameter
+                        value: spacer-extra-small
+                  - _id: 091eec11-508c-4496-9117-0090d21ffc95
+                    type: flex
+                    slots:
+                      flexItem:
+                        - _id: 9e40c7bc-f134-4bdb-be9c-0040ff62fccb
+                          type: navigationLink
+                          parameters:
+                            link:
+                              type: link
+                              locales:
+                                en:
+                                  path: https://radiant.tailwindui.com/#
+                                  type: url
+                            text:
+                              type: text
+                              value: Terms of service
+                          _overridability:
+                            hideLockedParameters: true
+                        - _id: 401c1717-4997-4dd5-b17c-ce69fbf81d2e
+                          type: navigationLink
+                          parameters:
+                            link:
+                              type: link
+                              locales:
+                                en:
+                                  path: https://radiant.tailwindui.com/#
+                                  type: url
+                            text:
+                              type: text
+                              value: Privacy policy
+                          _overridability:
+                            hideLockedParameters: true
+                    parameters:
+                      gap:
+                        type: dex-slider-control-parameter
+                        value:
+                          mobile: '2'
+                          tablet: '2'
+                          desktop: '2'
+                      spacing:
+                        type: dex-space-control-parameter
+                        value: {}
+                      direction:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: col
+                          tablet: col
+                          desktop: col
+                      alignItems:
+                        type: dex-segmented-control-parameter
+                        value: {}
+                      displayName:
+                        type: text
+                        value: Links
+                      fluidContent:
+                        type: checkbox
+                        value: true
+                      justifyContent:
+                        type: dex-segmented-control-parameter
+                        value: {}
+              parameters:
+                shrink:
+                  type: dex-segmented-control-parameter
+                  value: '0'
+                alignSelf:
+                  type: dex-segmented-control-parameter
+                  value: {}
+                displayName:
+                  type: text
+                  value: Resources
         parameters:
           gap:
             type: dex-slider-control-parameter
             value:
-              mobile: '16'
+              mobile: '8'
               tablet: '16'
               desktop: '32'
           spacing:
@@ -351,7 +523,7 @@ composition:
           direction:
             type: dex-segmented-control-parameter
             value:
-              mobile: row
+              mobile: col
               tablet: row
               desktop: row
           alignItems:
@@ -389,128 +561,7 @@ composition:
                     version: 1
                     children:
                       - mode: normal
-                        text: '2025 Uniform Systems, Inc. All rights reserved. '
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
-                    direction: ltr
-                    textStyle: ''
-                    textFormat: 0
-                  - type: paragraph
-                    format: ''
-                    indent: 0
-                    version: 1
-                    children:
-                      - mode: normal
-                        text: "Built with 💙 by folks at\_"
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
-                      - link:
-                          path: https://unfrm.to/uniformdev
-                          type: url
-                        type: link
-                        format: ''
-                        indent: 0
-                        version: 1
-                        children:
-                          - mode: normal
-                            text: Uniform
-                            type: text
-                            style: ''
-                            detail: 0
-                            format: 0
-                            version: 1
-                        direction: ltr
-                      - mode: normal
-                        text: ' leveraging the '
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
-                      - mode: normal
-                        text: 'TNT Stack:'
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 2
-                        version: 1
-                      - mode: normal
-                        text: ' '
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
-                      - link:
-                          path: https://www.typescriptlang.org/
-                          type: url
-                        type: link
-                        format: ''
-                        indent: 0
-                        version: 1
-                        children:
-                          - mode: normal
-                            text: TypeScript
-                            type: text
-                            style: ''
-                            detail: 0
-                            format: 0
-                            version: 1
-                        direction: ltr
-                      - mode: normal
-                        text: ",\_"
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
-                      - link:
-                          path: https://nextjs.org/docs/app
-                          type: url
-                        type: link
-                        format: ''
-                        indent: 0
-                        version: 1
-                        children:
-                          - mode: normal
-                            text: Next.js App Router
-                            type: text
-                            style: ''
-                            detail: 0
-                            format: 0
-                            version: 1
-                        direction: ltr
-                      - mode: normal
-                        text: ' and '
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
-                      - link:
-                          path: https://tailwindcss.com/
-                          type: url
-                        type: link
-                        format: ''
-                        indent: 0
-                        version: 1
-                        children:
-                          - mode: normal
-                            text: TailwindCSS
-                            type: text
-                            style: ''
-                            detail: 0
-                            format: 0
-                            version: 1
-                        direction: ltr
-                      - mode: normal
-                        text: .
+                        text: "©\_2024\_Radiant Inc."
                         type: text
                         style: ''
                         detail: 0
@@ -523,51 +574,300 @@ composition:
           color:
             type: dex-color-palette-parameter
             value: text-primary
+      - _id: 04a71df4-1cc7-4597-9a7e-fcf8ec1cd326
+        type: flex
+        slots:
+          flexItem:
+            - _id: 50a1b701-21ed-49a8-97dd-7754b69707c2
+              type: link
+              slots:
+                linkContent:
+                  - _id: 87ed9168-80db-408d-b271-4cbff4d1f913
+                    type: image
+                    parameters:
+                      image:
+                        type: asset
+                        value:
+                          - _id: 1e90cc0c-491b-4896-af53-1f78205788f8
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: 3955b390-1314-468a-92df-c0a50ec6c8f1
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/YEM1MHEJTqCtdMNPL_aVoA/FxyYSqvwRrWXqVq0byWHsg-facebook-icon.png
+                                type: text
+                              file:
+                                type: file
+                                value: bf68ce4d-cfbd-40c3-aa63-a15d45294576
+                              size:
+                                value: 321
+                                type: number
+                              title:
+                                type: text
+                                value: facebook-icon.png
+                              width:
+                                value: 16
+                                type: number
+                              height:
+                                value: 16
+                                type: number
+                              mediaType:
+                                value: image/png
+                                type: text
+                            _source: uniform-assets
+                      width:
+                        type: number
+                        value: '16'
+                      height:
+                        type: number
+                        value: '16'
+                      objectFit:
+                        type: dex-segmented-control-parameter
+                        value: ''
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: https://facebook.com/
+                    type: url
+                displayName:
+                  type: text
+                  value: Facebook
+              _overridability:
+                hideLockedParameters: true
+            - _id: a045d40e-227d-4c0b-b105-f9997599fae2
+              type: link
+              slots:
+                linkContent:
+                  - _id: c79ef617-1437-4f99-9220-cb88a705729a
+                    type: image
+                    parameters:
+                      image:
+                        type: asset
+                        value:
+                          - _id: 1d2f1395-393f-4ec3-a875-b71aaed70464
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: 578732a6-04a6-4092-9dc4-8920502be5ad
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/YEM1MHEJTqCtdMNPL_aVoA/eZDFzObpSj2Skmj75C2V_w-x-icon.png
+                                type: text
+                              file:
+                                type: file
+                                value: 53a5aaed-399d-44c0-a849-8e99dafe44a0
+                              size:
+                                value: 316
+                                type: number
+                              title:
+                                type: text
+                                value: x-icon.png
+                              width:
+                                value: 16
+                                type: number
+                              height:
+                                value: 16
+                                type: number
+                              mediaType:
+                                value: image/png
+                                type: text
+                            _source: uniform-assets
+                      width:
+                        type: number
+                        value: '16'
+                      height:
+                        type: number
+                        value: '16'
+                      objectFit:
+                        type: dex-segmented-control-parameter
+                        value: ''
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: https://x.com/
+                    type: url
+                displayName:
+                  type: text
+                  value: X
+              _overridability:
+                hideLockedParameters: true
+            - _id: 94f127c5-d66c-42f4-97d4-9158e137c670
+              type: link
+              slots:
+                linkContent:
+                  - _id: 4942ff9c-90e4-45fb-8887-1fa8f26bcf61
+                    type: image
+                    parameters:
+                      image:
+                        type: asset
+                        value:
+                          - _id: 220b673c-2960-4fd9-8547-7830ca3ee473
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: 8ed34c32-0317-4f3e-99fa-71363ec75bb5
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/YEM1MHEJTqCtdMNPL_aVoA/40AYw2_cQ3aH-XXeTJgjFw-linkedin-icon.png
+                                type: text
+                              file:
+                                type: file
+                                value: 03dc8d0a-80ae-4bfe-8acc-cbf0d8ffd207
+                              size:
+                                value: 266
+                                type: number
+                              title:
+                                type: text
+                                value: linkedin-icon.png
+                              width:
+                                value: 16
+                                type: number
+                              height:
+                                value: 16
+                                type: number
+                              mediaType:
+                                value: image/png
+                                type: text
+                            _source: uniform-assets
+                      width:
+                        type: number
+                        value: '16'
+                      height:
+                        type: number
+                        value: '16'
+                      objectFit:
+                        type: dex-segmented-control-parameter
+                        value: ''
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: https://linkedin.com/
+                    type: url
+                displayName:
+                  type: text
+                  value: Linkedin
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          gap:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '4'
+              tablet: '4'
+              desktop: '8'
+          spacing:
+            type: dex-space-control-parameter
+            value: {}
+          direction:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: row
+              tablet: row
+              desktop: row
+          alignItems:
+            type: dex-segmented-control-parameter
+            value: {}
+          displayName:
+            type: text
+            value: Icons
+          fluidContent:
+            type: checkbox
+            value: true
+          justifyContent:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: end
+    footerCtaSection:
+      - _id: 085f03c5-079f-47ea-86ee-672a897c267b
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: h2
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: lg
+              tablet: lg
+              desktop: lg
+          text:
+            type: text
+            value: Get started
+          color:
+            type: dex-color-palette-parameter
+            value: text-tertiary
+          weight:
+            type: dex-segmented-control-parameter
+            value: bold
+        _overridability:
+          hideLockedParameters: true
+      - _id: cbddb180-8b12-43e3-92a6-3ec73abba92d
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: h2
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: 3xl
+              tablet: 3xl
+              desktop: 5xl
+          text:
+            type: text
+            value: Ready to dive in? Start your free trial today.
+          color:
+            type: dex-color-palette-parameter
+            value: text-primary
+          weight:
+            type: dex-segmented-control-parameter
+            value: medium
+        _overridability:
+          hideLockedParameters: true
+      - _id: fefdd9fc-4242-403b-b591-495570857981
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: p
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: base
+              tablet: base
+              desktop: base
+          text:
+            type: text
+            value: >-
+              Get the cheat codes for selling and unlock your team's revenue
+              potential.
+          color:
+            type: dex-color-palette-parameter
+            value: text-tertiary
+          weight:
+            type: dex-segmented-control-parameter
+            value: normal
+        _overridability:
+          hideLockedParameters: true
+      - _id: b03b877b-b00d-4b0c-8d7e-db6e3fceec7c
+        type: button
+        _pattern: 53b59aed-e378-4fcb-9135-20247d92074e
   _overrides:
-    1226047a-9d32-46c6-8a78-30d6e22e418a:
+    b03b877b-b00d-4b0c-8d7e-db6e3fceec7c:
       parameters:
         link:
           type: link
           locales:
             en:
-              path: https://unfrm.to/csk-docs
+              path: https://radiant.tailwindui.com/#
               type: url
-        text:
-          type: text
-          value: Documentation
-    8514c1db-00ac-43e1-87d4-8830694a57df:
-      parameters:
-        link:
-          type: link
-          locales:
-            en:
-              path: https://unfrm.to/csk-demo
-              type: url
-        text:
-          type: text
-          value: Demo
-    a7e8071c-e27b-4a4f-bb23-9882486d39b3:
-      parameters:
-        link:
-          type: link
-          locales:
-            en:
-              path: https://unfrm.to/csk-demo-request
-              type: url
-        text:
-          type: text
-          value: Request a personal demo
-    c4586887-719a-4134-b057-87d2f8ea3ee6:
-      parameters:
-        link:
-          type: link
-          locales:
-            en:
-              path: https://unfrm.to/csk-sb
-              type: url
-        text:
-          type: text
-          value: Storybook
   _locales:
     - en
 created: '2025-02-17T15:34:18.158903+00:00'

@@ -10,7 +10,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "workspace:check": "manypkg check",
     "workspace:fix": "manypkg fix",
-    "prepare": "husky"
+    "prepare": "husky && husky install"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.6.1",

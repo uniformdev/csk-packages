@@ -1,6 +1,9 @@
 import { ComponentMapping } from '@uniformdev/csk-components/utils/createComponentResolver';
 import Container from './Container';
 import CustomComponent from './CustomComponent';
+import Footer from './Footer';
+import Header from './Header';
+import Page from './Page';
 
 // Here, you can add your own component or customize an existing CSK component with your logic or styles.
 export const customComponentsMapping: ComponentMapping = {
@@ -8,4 +11,7 @@ export const customComponentsMapping: ComponentMapping = {
   customComponent: { component: CustomComponent },
   // This is an overridden CSK Container component.
   container: { component: Container },
+  page: { component: Page },
+  header: { component: Header },
+  footer: { component: Footer },
 };

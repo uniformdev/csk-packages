@@ -36,15 +36,21 @@ composition:
           size:
             type: dex-segmented-control-parameter
             value:
-              mobile: 3xl
-              tablet: 3xl
-              desktop: 3xl
+              mobile: base
+              tablet: base
+              desktop: base
           color:
             type: dex-color-palette-parameter
-            value: text-tertiary
+            value: text-secondary
           weight:
             type: dex-segmented-control-parameter
             value: bold
+          alignment:
+            type: dex-segmented-control-parameter
+            value: left
+          transform:
+            type: dex-segmented-control-parameter
+            value: uppercase
         _overridability:
           parameters:
             tag: 'yes'
@@ -52,23 +58,33 @@ composition:
             text: 'yes'
             color: 'yes'
           hideLockedParameters: true
-      - _id: 9d02d05f-d50a-42bc-90bc-b7d411362280
+      - _id: 88f09845-1939-4cda-9293-85ca88c91a83
         type: text
         parameters:
           tag:
             type: dex-segmented-control-parameter
-            value: p
+            value: h2
           size:
             type: dex-segmented-control-parameter
             value:
-              mobile: 3xl
-              tablet: 3xl
-              desktop: base
+              mobile: 4xl
+              tablet: 4xl
+              desktop: 6xl
+          text:
+            type: text
+            value: Tilte
+          color:
+            type: dex-color-palette-parameter
+            value: text-primary
           weight:
             type: dex-segmented-control-parameter
-            value: normal
+            value: medium
+          alignment:
+            type: dex-segmented-control-parameter
+            value: left
         _overridability:
           parameters:
+            tag: 'yes'
             size: 'yes'
             text: 'yes'
             color: 'yes'
@@ -83,6 +99,7 @@ composition:
           hideLockedParameters: true
   _overridability:
     parameters:
+      border: 'yes'
       spacing: 'yes'
       displayName: 'yes'
       fluidContent: 'yes'

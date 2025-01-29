@@ -1,0 +1,182 @@
+composition:
+  _name: Card Pattern
+  _id: 984cedf9-e2af-446a-937a-08cd93b2d5b4
+  type: card
+  parameters:
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        marginTop: ''
+        marginLeft: ''
+        paddingTop: ''
+        marginRight: ''
+        paddingLeft: ''
+        marginBottom: ''
+        paddingRight: ''
+        paddingBottom: ''
+    displayName:
+      type: text
+      value: Card
+    backgroundColor:
+      type: dex-color-palette-parameter
+      value: general-color-1
+  slots:
+    cardMedia:
+      - _id: fe1ef7c2-59c5-4f86-a46d-dbaad246a039
+        type: image
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: b10a64b3-7e52-47a5-995a-1a4470d8e976
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: ea4161cc-7e6d-4ca4-8e48-3449462ddb28
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/YEM1MHEJTqCtdMNPL_aVoA/2JSk4XLSRfqof2eKwvLbVg-profile.png
+                    type: text
+                  file:
+                    type: file
+                    value: 856e584e-4c34-4bb5-8c3f-1d9ba3f9f9df
+                  size:
+                    value: 212847
+                    type: number
+                  title:
+                    type: text
+                    value: profile.png
+                  width:
+                    value: 3000
+                    type: number
+                  height:
+                    value: 1680
+                    type: number
+                  mediaType:
+                    value: image/png
+                    type: text
+                _source: uniform-assets
+          height:
+            type: number
+            value: '320'
+          objectFit:
+            type: dex-segmented-control-parameter
+            value: cover
+        _overridability:
+          parameters:
+            image: 'yes'
+    cardContent:
+      - _id: 4e446178-2d9c-4cd1-897b-5f3af10d8db2
+        type: flex
+        slots:
+          flexItem:
+            - _id: 42aa2d3b-036b-4178-8687-3ca2051bb91a
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: h2
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    desktop: lg
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-secondary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: bold
+                transform:
+                  type: dex-segmented-control-parameter
+                  value: uppercase
+              _overridability:
+                parameters:
+                  text: 'yes'
+                  color: 'yes'
+            - _id: 798bb0ed-19df-4675-8263-bb2a5eea26de
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: h2
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    desktop: xl
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: medium
+              _overridability:
+                parameters:
+                  text: 'yes'
+                  color: 'yes'
+            - _id: b298850d-a0be-4c53-b853-2b18cb1272e9
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: p
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    desktop: base
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-secondary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+                lineCountRestrictions:
+                  type: dex-slider-control-parameter
+                  value: '2'
+              _overridability:
+                parameters:
+                  text: 'yes'
+                  color: 'yes'
+        parameters:
+          gap:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '4'
+              tablet: '4'
+              desktop: '4'
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              paddingTop: container-medium
+              paddingLeft: container-medium
+              paddingRight: container-medium
+              paddingBottom: container-medium
+          direction:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: col
+              tablet: col
+              desktop: col
+          alignItems:
+            type: dex-segmented-control-parameter
+            value: {}
+          displayName:
+            type: text
+            value: Card Description
+          justifyContent:
+            type: dex-segmented-control-parameter
+            value: {}
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      border: 'yes'
+      backgroundColor: 'yes'
+  _locales:
+    - en
+created: '2025-01-29T10:55:44.75466+00:00'
+modified: '2025-01-29T10:55:44.75466+00:00'
+pattern: true

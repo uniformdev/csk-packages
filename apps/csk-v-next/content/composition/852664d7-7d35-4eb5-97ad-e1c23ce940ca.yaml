@@ -4,11 +4,100 @@ composition:
   _slug: /
   type: page
   _overrides:
+    00cbd528-2a37-4262-a04d-0b7ea6e78af4:
+      parameters:
+        border:
+          type: dex-token-selector-parameter
+          value: ''
+        spacing:
+          type: dex-space-control-parameter
+          value:
+            marginTop: container-medium
+            paddingTop: container-medium
+            paddingLeft: ''
+            marginBottom: container-medium
+            paddingRight: ''
+            paddingBottom: container-medium
+        displayName:
+          type: text
+          value: Titled Section
+        fluidContent:
+          type: checkbox
+          value: null
+        backgroundColor:
+          type: dex-color-palette-parameter
+          value: null
+    3e91a1de-08d3-4b2e-851d-c54df9da5084:
+      parameters:
+        spacing:
+          type: dex-space-control-parameter
+          value:
+            marginTop: container-medium
+            marginBottom: container-medium
+        displayName:
+          type: text
+          value: A snapshot of your entire sales pipeline
+    3eaced0a-023b-47e2-8369-bfa84a8c4fb5:
+      parameters:
+        border:
+          type: dex-token-selector-parameter
+          value:
+            mobile: border-card
+            tablet: border-card
+            desktop: border-card-1
+        backgroundColor:
+          type: dex-color-palette-parameter
+          value: general-color-3
+        lineCountRestrictions:
+          type: dex-slider-control-parameter
+          value: ''
+    43b34c0f-7f9b-4ca6-9b62-c2ae72b789f6:
+      parameters:
+        border:
+          type: dex-token-selector-parameter
+          value:
+            mobile: border-card
+            tablet: border-card
+            desktop: border-card-2
+    45b1174d-98d4-423f-ac3e-eba77b3b53b7:
+      parameters:
+        spacing:
+          type: dex-space-control-parameter
+          value:
+            marginTop: container-medium
+            marginBottom: container-medium
+        displayName:
+          type: text
+          value: Know more about your customers than they do
+    4dbd8b8a-fd60-481c-91a7-cb18a6d81bb2:
+      parameters:
+        border:
+          type: dex-token-selector-parameter
+          value:
+            mobile: border-card
+            tablet: border-card
+            desktop: border-card-4
+        backgroundColor:
+          type: dex-color-palette-parameter
+          value: general-color-3
+    57f5ec1b-f12d-4f54-ac02-de6f3c4376ae:
+      parameters:
+        text:
+          type: text
+          value: See pricing
+    5f779c7d-4d31-45eb-b12d-12fff56569aa:
+      parameters:
+        border:
+          type: dex-token-selector-parameter
+          value:
+            mobile: border-card
+            tablet: border-card
+            desktop: border-card
     852664d7-7d35-4eb5-97ad-e1c23ce940ca:
       parameters:
         pageTitle:
           type: text
-          value: Component Starter Kit from Uniform
+          value: Radiant - Close every deal
         twitterCard:
           type: select
           value: summary_large_image
@@ -18,119 +107,1510 @@ composition:
         twitterImage:
           type: asset
           value:
-            - _id: 9f8f80e7-4111-4e3e-b13b-55b4ce48b835
+            - _id: 8893a84b-da88-469f-9491-419e350e2b01
               type: image
               fields:
                 id:
                   type: text
-                  value: 0ff678c5-794e-4ad2-af0b-861222dd178d
+                  value: 59354daf-8570-4ebc-83d0-15b886a5aaba
                 url:
                   type: text
                   value: >-
-                    https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/0yvN5zM8RC6TAbxfwWCHWQ-meta-image.png
+                    https://img.uniform.global/p/YEM1MHEJTqCtdMNPL_aVoA/eqcYJ98JQl-eM_ApJJMs2g-radiant-og-image.png
                 file:
                   type: file
-                  value: 28f307bf-569a-446d-9700-39e855892108
+                  value: 2dcf4b71-e9db-4ec7-9589-5d9d886b1dc0
                 size:
                   type: number
-                  value: 171834
+                  value: 191733
                 title:
                   type: text
-                  value: meta-image.png
+                  value: radiant-og-image.png
                 width:
                   type: number
-                  value: 1200
+                  value: 1706
                 height:
                   type: number
-                  value: 630
+                  value: 1364
                 mediaType:
                   type: text
                   value: image/png
               _source: uniform-assets
         twitterTitle:
           type: text
-          value: Uniform // Component Starter Kit
+          value: Radiant - Close every deal
         openGraphType:
           type: select
           value: website
         openGraphImage:
           type: asset
           value:
-            - _id: 5ea92564-890d-499f-85bb-244817c46534
+            - _id: c8e45381-8985-4772-9500-cf996edb0593
               type: image
               fields:
                 id:
                   type: text
-                  value: 0ff678c5-794e-4ad2-af0b-861222dd178d
+                  value: 59354daf-8570-4ebc-83d0-15b886a5aaba
                 url:
                   type: text
                   value: >-
-                    https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/0yvN5zM8RC6TAbxfwWCHWQ-meta-image.png
+                    https://img.uniform.global/p/YEM1MHEJTqCtdMNPL_aVoA/eqcYJ98JQl-eM_ApJJMs2g-radiant-og-image.png
                 file:
                   type: file
-                  value: 28f307bf-569a-446d-9700-39e855892108
+                  value: 2dcf4b71-e9db-4ec7-9589-5d9d886b1dc0
                 size:
                   type: number
-                  value: 171834
+                  value: 191733
                 title:
                   type: text
-                  value: meta-image.png
+                  value: radiant-og-image.png
                 width:
                   type: number
-                  value: 1200
+                  value: 1706
                 height:
                   type: number
-                  value: 630
+                  value: 1364
                 mediaType:
                   type: text
                   value: image/png
               _source: uniform-assets
         openGraphTitle:
           type: text
-          value: Uniform // Component Starter Kit
+          value: Radiant - Close every deal
         pageDescription:
           type: text
           value: >-
-            Essential set of components you need to start building
-            personalizable web experiences with Uniform.
+            Radiant helps you sell more by revealing sensitive information about
+            your customers.
+        twitterDescription:
+          type: text
+          value: >-
+            Radiant helps you sell more by revealing sensitive information about
+            your customers.
+        openGraphDescription:
+          type: text
+          value: >-
+            Radiant helps you sell more by revealing sensitive information about
+            your customers.
+    8aa7842d-f805-4cf8-ab3f-d21c331520a9:
+      parameters:
+        border:
+          type: dex-token-selector-parameter
+          value:
+            mobile: border-card
+            tablet: border-card
+            desktop: border-card-2
+        backgroundColor:
+          type: dex-color-palette-parameter
+          value: general-color-3
+        lineCountRestrictions:
+          type: dex-slider-control-parameter
+          value: ''
+    96f8d455-7db9-4824-91f6-42a3cff4c50b:
+      parameters:
+        border:
+          type: dex-token-selector-parameter
+          value:
+            mobile: border-card
+            tablet: border-card
+            desktop: border-card-3
+    9937202e-6834-44e2-b475-ca476e49bc6b:
+      parameters:
+        border:
+          type: dex-token-selector-parameter
+          value:
+            mobile: border-card
+            tablet: border-card
+            desktop: border-card-1
+    a93d463a-c0b5-4b9a-ab78-fdf5db6264ef:
+      parameters:
+        border:
+          type: dex-token-selector-parameter
+          value:
+            mobile: border-card
+            tablet: border-card
+            desktop: border-card-3
+        backgroundColor:
+          type: dex-color-palette-parameter
+          value: general-color-3
+    ad5d048b-5f07-4b50-9786-459175c0de2a:
+      parameters:
+        text:
+          type: text
+          value: Get started
+    cb8ae4d6-43cf-45b3-b7a3-af91891203b3:
+      parameters:
+        border:
+          type: dex-token-selector-parameter
+          value:
+            mobile: border-card
+            tablet: border-card
+            desktop: border-card-4
+    00cbd528-2a37-4262-a04d-0b7ea6e78af4|7a757740-ee67-40ff-9128-13284d173be2:
+      slots:
+        $slotSectionItems:
+          - _id: 6e40af6d-b5ee-4a5b-8cd1-c2affa653dfe
+            type: grid
+            slots:
+              gridInner:
+                - _id: 1ff34546-cbbe-4070-a769-436032995803
+                  type: gridItem
+                  slots:
+                    inner:
+                      - _id: 3eaced0a-023b-47e2-8369-bfa84a8c4fb5
+                        type: card
+                        _pattern: 984cedf9-e2af-446a-937a-08cd93b2d5b4
+                        _overridability:
+                          parameters:
+                            border: 'yes'
+                            backgroundColor: 'yes'
+                  parameters:
+                    rowSpan:
+                      type: dex-slider-control-parameter
+                      value: {}
+                    rowStart:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '1'
+                        tablet: '1'
+                        desktop: '1'
+                    columnSpan:
+                      type: dex-slider-control-parameter
+                      value:
+                        desktop: span-4
+                    columnStart:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '1'
+                        tablet: '1'
+                        desktop: '1'
+                    displayName:
+                      type: text
+                      value: First Item
+                - _id: 256c758d-176e-4f41-be6b-8695abc17af1
+                  type: gridItem
+                  slots:
+                    inner:
+                      - _id: 8aa7842d-f805-4cf8-ab3f-d21c331520a9
+                        type: card
+                        _pattern: 984cedf9-e2af-446a-937a-08cd93b2d5b4
+                        _overridability:
+                          parameters:
+                            border: 'yes'
+                            backgroundColor: 'yes'
+                  parameters:
+                    rowSpan:
+                      type: dex-slider-control-parameter
+                      value: {}
+                    rowStart:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '2'
+                        tablet: '2'
+                        desktop: '1'
+                    columnSpan:
+                      type: dex-slider-control-parameter
+                      value:
+                        desktop: span-2
+                    columnStart:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '1'
+                        tablet: '1'
+                        desktop: '5'
+                    displayName:
+                      type: text
+                      value: Second Item
+                - _id: eeaf4733-fb1d-4035-b6fa-d108648d153e
+                  type: gridItem
+                  slots:
+                    inner:
+                      - _id: 4dbd8b8a-fd60-481c-91a7-cb18a6d81bb2
+                        type: card
+                        _pattern: 984cedf9-e2af-446a-937a-08cd93b2d5b4
+                        _overridability:
+                          parameters:
+                            border: 'yes'
+                            backgroundColor: 'yes'
+                  parameters:
+                    rowSpan:
+                      type: dex-slider-control-parameter
+                      value: {}
+                    rowStart:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '3'
+                        tablet: '3'
+                        desktop: '2'
+                    columnSpan:
+                      type: dex-slider-control-parameter
+                      value:
+                        desktop: span-2
+                    columnStart:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '1'
+                        tablet: '1'
+                        desktop: '1'
+                    displayName:
+                      type: text
+                      value: Third Item
+                - _id: 1ebe5e42-4538-4229-a600-e3660861a0e3
+                  type: gridItem
+                  slots:
+                    inner:
+                      - _id: a93d463a-c0b5-4b9a-ab78-fdf5db6264ef
+                        type: card
+                        _pattern: 984cedf9-e2af-446a-937a-08cd93b2d5b4
+                        _overridability:
+                          parameters:
+                            border: 'yes'
+                            backgroundColor: 'yes'
+                  parameters:
+                    rowSpan:
+                      type: dex-slider-control-parameter
+                      value: {}
+                    rowStart:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '4'
+                        tablet: '4'
+                        desktop: '2'
+                    columnSpan:
+                      type: dex-slider-control-parameter
+                      value:
+                        desktop: span-4
+                    columnStart:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '1'
+                        tablet: '1'
+                        desktop: '3'
+                    displayName:
+                      type: text
+                      value: Fourth Item
+            parameters:
+              gapX:
+                type: dex-slider-control-parameter
+                value:
+                  mobile: '4'
+                  tablet: '4'
+                  desktop: '4'
+              gapY:
+                type: dex-slider-control-parameter
+                value:
+                  mobile: '4'
+                  tablet: '4'
+                  desktop: '4'
+              spacing:
+                type: dex-space-control-parameter
+                value:
+                  marginTop: container-medium
+              displayName:
+                type: text
+                value: Grid Section
+              columnsCount:
+                type: dex-slider-control-parameter
+                value:
+                  mobile: '1'
+                  tablet: '1'
+                  desktop: '6'
+    00cbd528-2a37-4262-a04d-0b7ea6e78af4|88f09845-1939-4cda-9293-85ca88c91a83:
+      parameters:
+        text:
+          type: text
+          value: Customer outreach has never been easier.
+        color:
+          type: dex-color-palette-parameter
+          value: text-light
+    00cbd528-2a37-4262-a04d-0b7ea6e78af4|e0c61059-c78d-4ea6-8beb-7f3eed84f227:
+      parameters:
+        text:
+          type: text
+          value: Outreach
+    3e91a1de-08d3-4b2e-851d-c54df9da5084|7a757740-ee67-40ff-9128-13284d173be2:
+      slots:
+        $slotSectionItems:
+          - _id: e1e1f4cc-a19e-4ca8-9048-7ae5a60827b8
+            type: container
+            slots:
+              containerContent:
+                - _id: 1e683fb5-0d68-4d80-9618-6dcfaccd0390
+                  type: image
+                  parameters:
+                    image:
+                      type: asset
+                      value:
+                        - _id: f5b446f7-fab2-4905-9842-3cbdc46691c3
+                          type: image
+                          fields:
+                            id:
+                              type: text
+                              value: c9848b03-cbd8-4446-aa07-0cee220048d9
+                            url:
+                              type: text
+                              value: >-
+                                https://img.uniform.global/p/YEM1MHEJTqCtdMNPL_aVoA/92l223S8R3eFQRABzRkIIQ-app.png
+                            file:
+                              type: file
+                              value: 3a765019-7de6-4ab9-b55d-ae9fbea23e5c
+                            size:
+                              type: number
+                              value: 250465
+                            title:
+                              type: text
+                              value: app.png
+                            width:
+                              type: number
+                              value: 3648
+                            height:
+                              type: number
+                              value: 2304
+                            mediaType:
+                              type: text
+                              value: image/png
+                          _source: uniform-assets
+                    border:
+                      type: dex-token-selector-parameter
+                      value: border-image-radius-small
+                    height:
+                      type: number
+                      value: '784'
+                    objectFit:
+                      type: dex-segmented-control-parameter
+                      value: cover
+            parameters:
+              border:
+                type: dex-token-selector-parameter
+                value: border-container
+              spacing:
+                type: dex-space-control-parameter
+                value:
+                  marginTop: container-medium
+                  paddingTop: container-small
+                  paddingLeft: container-small
+                  paddingRight: container-small
+                  paddingBottom: container-small
+              displayName:
+                type: text
+                value: App Example
+    3e91a1de-08d3-4b2e-851d-c54df9da5084|88f09845-1939-4cda-9293-85ca88c91a83:
+      parameters:
+        text:
+          type: text
+          value: A snapshot of your entire sales pipeline.
+    3e91a1de-08d3-4b2e-851d-c54df9da5084|e0c61059-c78d-4ea6-8beb-7f3eed84f227:
+      parameters:
+        text:
+          type: text
+          value: null
+    3eaced0a-023b-47e2-8369-bfa84a8c4fb5|42aa2d3b-036b-4178-8687-3ca2051bb91a:
+      parameters:
+        text:
+          type: text
+          value: Networking
+        color:
+          type: dex-color-palette-parameter
+          value: text-tertiary
+    3eaced0a-023b-47e2-8369-bfa84a8c4fb5|798bb0ed-19df-4675-8263-bb2a5eea26de:
+      parameters:
+        text:
+          type: text
+          value: Sell at the speed of light
+        color:
+          type: dex-color-palette-parameter
+          value: text-light
+    3eaced0a-023b-47e2-8369-bfa84a8c4fb5|b298850d-a0be-4c53-b853-2b18cb1272e9:
+      parameters:
+        text:
+          type: text
+          value: >-
+            Our RadiantAI chat assistants analyze the sentiment of your
+            conversations in real time, ensuring you're always one step ahead.
+        color:
+          type: dex-color-palette-parameter
+          value: text-tertiary
+    3eaced0a-023b-47e2-8369-bfa84a8c4fb5|fe1ef7c2-59c5-4f86-a46d-dbaad246a039:
+      parameters:
+        image:
+          type: asset
+          value:
+            - _id: 139035ff-b176-452e-8d26-36b4e2587e82
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: e484159a-1e9e-4796-bad5-277e9dfa82f4
+                url:
+                  type: text
+                  value: >-
+                    https://img.uniform.global/p/YEM1MHEJTqCtdMNPL_aVoA/cK0Gw_imR3aGDLyatwTAkw-networking.png
+                file:
+                  type: file
+                  value: 903b42c1-53ae-49d3-9fd9-66feeec4268c
+                size:
+                  type: number
+                  value: 66190
+                title:
+                  type: text
+                  value: networking.png
+                width:
+                  type: number
+                  value: 847
+                height:
+                  type: number
+                  value: 323
+                mediaType:
+                  type: text
+                  value: image/png
+              _source: uniform-assets
+    43b34c0f-7f9b-4ca6-9b62-c2ae72b789f6|42aa2d3b-036b-4178-8687-3ca2051bb91a:
+      parameters:
+        text:
+          type: text
+          value: Analysis
+    43b34c0f-7f9b-4ca6-9b62-c2ae72b789f6|798bb0ed-19df-4675-8263-bb2a5eea26de:
+      parameters:
+        text:
+          type: text
+          value: Undercut your competitors
+    43b34c0f-7f9b-4ca6-9b62-c2ae72b789f6|b298850d-a0be-4c53-b853-2b18cb1272e9:
+      parameters:
+        text:
+          type: text
+          value: >-
+            With our advanced data mining, you’ll know which companies your
+            leads are talking to and exactly how much they’re being charged.
+    43b34c0f-7f9b-4ca6-9b62-c2ae72b789f6|fe1ef7c2-59c5-4f86-a46d-dbaad246a039:
+      parameters:
+        image:
+          type: asset
+          value:
+            - _id: e0a30939-eb21-4718-970d-9197fd4b7ca2
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: 5a70010f-88b5-44d5-b722-71b2fd965667
+                url:
+                  type: text
+                  value: >-
+                    https://img.uniform.global/p/YEM1MHEJTqCtdMNPL_aVoA/w8gWH5lTSvS4KFIxKTaCFA-competitors.png
+                file:
+                  type: file
+                  value: b7a3970a-84fc-4091-8c90-11edf9bf8986
+                size:
+                  type: number
+                  value: 254926
+                title:
+                  type: text
+                  value: competitors.png
+                width:
+                  type: number
+                  value: 3300
+                height:
+                  type: number
+                  value: 1950
+                mediaType:
+                  type: text
+                  value: image/png
+              _source: uniform-assets
+    45b1174d-98d4-423f-ac3e-eba77b3b53b7|7a757740-ee67-40ff-9128-13284d173be2:
+      slots:
+        $slotSectionItems:
+          - _id: a7a93d90-3edf-4248-8c9b-cfbc5d4cc6bb
+            type: grid
+            slots:
+              gridInner:
+                - _id: 0a78a5d2-7683-4ca4-8ba4-a7ab12231e54
+                  type: gridItem
+                  slots:
+                    inner:
+                      - _id: 9937202e-6834-44e2-b475-ca476e49bc6b
+                        type: card
+                        _pattern: 984cedf9-e2af-446a-937a-08cd93b2d5b4
+                        _overridability:
+                          parameters:
+                            border: 'yes'
+                            backgroundColor: 'yes'
+                  parameters:
+                    rowSpan:
+                      type: dex-slider-control-parameter
+                      value: {}
+                    rowStart:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '1'
+                        tablet: '1'
+                        desktop: '1'
+                    columnSpan:
+                      type: dex-slider-control-parameter
+                      value:
+                        desktop: span-3
+                    columnStart:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '1'
+                        tablet: '1'
+                        desktop: '1'
+                    displayName:
+                      type: text
+                      value: First Item
+                - _id: 07a912dc-fd77-4ed6-a97b-d3e740a13b05
+                  type: gridItem
+                  slots:
+                    inner:
+                      - _id: 43b34c0f-7f9b-4ca6-9b62-c2ae72b789f6
+                        type: card
+                        _pattern: 984cedf9-e2af-446a-937a-08cd93b2d5b4
+                        _overridability:
+                          parameters:
+                            border: 'yes'
+                            backgroundColor: 'yes'
+                  parameters:
+                    rowSpan:
+                      type: dex-slider-control-parameter
+                      value: {}
+                    rowStart:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '2'
+                        tablet: '2'
+                        desktop: '1'
+                    columnSpan:
+                      type: dex-slider-control-parameter
+                      value:
+                        desktop: span-3
+                    columnStart:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '1'
+                        tablet: '1'
+                        desktop: '4'
+                    displayName:
+                      type: text
+                      value: Second Item
+                - _id: e9d9705e-af11-43d5-b6ab-9180265e4f5a
+                  type: gridItem
+                  slots:
+                    inner:
+                      - _id: cb8ae4d6-43cf-45b3-b7a3-af91891203b3
+                        type: card
+                        _pattern: 984cedf9-e2af-446a-937a-08cd93b2d5b4
+                        _overridability:
+                          parameters:
+                            border: 'yes'
+                            backgroundColor: 'yes'
+                  parameters:
+                    rowSpan:
+                      type: dex-slider-control-parameter
+                      value: {}
+                    rowStart:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '3'
+                        tablet: '3'
+                        desktop: '2'
+                    columnSpan:
+                      type: dex-slider-control-parameter
+                      value:
+                        desktop: span-2
+                    columnStart:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '1'
+                        tablet: '1'
+                        desktop: '1'
+                    displayName:
+                      type: text
+                      value: Third Item
+                - _id: 8e31bcd1-2b9a-42bd-bbed-6e3eb2e8ad74
+                  type: gridItem
+                  slots:
+                    inner:
+                      - _id: 5f779c7d-4d31-45eb-b12d-12fff56569aa
+                        type: card
+                        _pattern: 984cedf9-e2af-446a-937a-08cd93b2d5b4
+                        _overridability:
+                          parameters:
+                            border: 'yes'
+                            backgroundColor: 'yes'
+                  parameters:
+                    rowSpan:
+                      type: dex-slider-control-parameter
+                      value: {}
+                    rowStart:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '4'
+                        tablet: '4'
+                        desktop: '2'
+                    columnSpan:
+                      type: dex-slider-control-parameter
+                      value:
+                        desktop: span-2
+                    columnStart:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '1'
+                        tablet: '1'
+                        desktop: '3'
+                    displayName:
+                      type: text
+                      value: Fourth Item
+                - _id: 0d89a96d-02d3-4a22-be73-7de63752da72
+                  type: gridItem
+                  slots:
+                    inner:
+                      - _id: 96f8d455-7db9-4824-91f6-42a3cff4c50b
+                        type: card
+                        _pattern: 984cedf9-e2af-446a-937a-08cd93b2d5b4
+                        _overridability:
+                          parameters:
+                            border: 'yes'
+                            backgroundColor: 'yes'
+                  parameters:
+                    rowSpan:
+                      type: dex-slider-control-parameter
+                      value: {}
+                    rowStart:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '5'
+                        tablet: '5'
+                        desktop: '2'
+                    columnSpan:
+                      type: dex-slider-control-parameter
+                      value:
+                        desktop: span-2
+                    columnStart:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '1'
+                        tablet: '1'
+                        desktop: '5'
+                    displayName:
+                      type: text
+                      value: Fifth Item
+            parameters:
+              gapX:
+                type: dex-slider-control-parameter
+                value:
+                  mobile: '4'
+                  tablet: '4'
+                  desktop: '4'
+              gapY:
+                type: dex-slider-control-parameter
+                value:
+                  mobile: '4'
+                  tablet: '4'
+                  desktop: '4'
+              spacing:
+                type: dex-space-control-parameter
+                value:
+                  marginTop: container-medium
+              displayName:
+                type: text
+                value: Grid Section
+              columnsCount:
+                type: dex-slider-control-parameter
+                value:
+                  mobile: '1'
+                  tablet: '1'
+                  desktop: '6'
+    45b1174d-98d4-423f-ac3e-eba77b3b53b7|88f09845-1939-4cda-9293-85ca88c91a83:
+      parameters:
+        text:
+          type: text
+          value: Know more about your customers than they do.
+    45b1174d-98d4-423f-ac3e-eba77b3b53b7|e0c61059-c78d-4ea6-8beb-7f3eed84f227:
+      parameters:
+        text:
+          type: text
+          value: Sales
+    4dbd8b8a-fd60-481c-91a7-cb18a6d81bb2|42aa2d3b-036b-4178-8687-3ca2051bb91a:
+      parameters:
+        text:
+          type: text
+          value: Meetings
+        color:
+          type: dex-color-palette-parameter
+          value: text-tertiary
+    4dbd8b8a-fd60-481c-91a7-cb18a6d81bb2|798bb0ed-19df-4675-8263-bb2a5eea26de:
+      parameters:
+        text:
+          type: text
+          value: Smart call scheduling
+        color:
+          type: dex-color-palette-parameter
+          value: text-light
+    4dbd8b8a-fd60-481c-91a7-cb18a6d81bb2|b298850d-a0be-4c53-b853-2b18cb1272e9:
+      parameters:
+        text:
+          type: text
+          value: >-
+            Automatically insert intro calls into your leads' calendars without
+            their consent.
+        color:
+          type: dex-color-palette-parameter
+          value: text-tertiary
+    4dbd8b8a-fd60-481c-91a7-cb18a6d81bb2|fe1ef7c2-59c5-4f86-a46d-dbaad246a039:
+      parameters:
+        image:
+          type: asset
+          value:
+            - _id: 7126a1f9-15e7-4352-ad2b-36e7738d6498
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: 040c4fea-66d1-4fb1-b3da-7bb7ed2880cf
+                url:
+                  type: text
+                  value: >-
+                    https://img.uniform.global/p/YEM1MHEJTqCtdMNPL_aVoA/DiFHMYOkRGeKUfrG9eyS6A-meetings.png
+                file:
+                  type: file
+                  value: 86db2455-0ceb-4eb7-8531-369dff3dfce5
+                size:
+                  type: number
+                  value: 81034
+                title:
+                  type: text
+                  value: meetings.png
+                width:
+                  type: number
+                  value: 412
+                height:
+                  type: number
+                  value: 341
+                mediaType:
+                  type: text
+                  value: image/png
+              _source: uniform-assets
+    5f779c7d-4d31-45eb-b12d-12fff56569aa|42aa2d3b-036b-4178-8687-3ca2051bb91a:
+      parameters:
+        text:
+          type: text
+          value: Source
+    5f779c7d-4d31-45eb-b12d-12fff56569aa|798bb0ed-19df-4675-8263-bb2a5eea26de:
+      parameters:
+        text:
+          type: text
+          value: Get the furthest reach
+    5f779c7d-4d31-45eb-b12d-12fff56569aa|b298850d-a0be-4c53-b853-2b18cb1272e9:
+      parameters:
+        text:
+          type: text
+          value: >-
+            Bypass those inconvenient privacy laws to source leads from the most
+            unexpected places.
+    5f779c7d-4d31-45eb-b12d-12fff56569aa|fe1ef7c2-59c5-4f86-a46d-dbaad246a039:
+      parameters:
+        image:
+          type: asset
+          value:
+            - _id: b954236e-1c96-4878-b5a7-a8f8d52e1d08
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: 9e996bf2-b31e-440d-a6e8-6eecd355449f
+                url:
+                  type: text
+                  value: >-
+                    https://img.uniform.global/p/YEM1MHEJTqCtdMNPL_aVoA/P-1Jki4JR9qt-JpyhPZLtg-circles.png
+                file:
+                  type: file
+                  value: 4ad1d9ac-8604-450b-af29-df81de64b290
+                size:
+                  type: number
+                  value: 55893
+                title:
+                  type: text
+                  value: circles.png
+                width:
+                  type: number
+                  value: 352
+                height:
+                  type: number
+                  value: 303
+                mediaType:
+                  type: text
+                  value: image/png
+              _source: uniform-assets
     852664d7-7d35-4eb5-97ad-e1c23ce940ca|dc2e95be-21b5-4476-a309-f8a34922f528:
       slots:
         $slotSectionItems:
-          - _id: eebf1227-58aa-41c5-bfc4-089d94cebdba
-            type: fixedHero
+          - _id: 29e9d3e1-5670-4997-9318-67b134dc80f6
+            type: section
+            slots:
+              sectionCTA:
+                - _id: ad5d048b-5f07-4b50-9786-459175c0de2a
+                  type: button
+                  _pattern: 53b59aed-e378-4fcb-9135-20247d92074e
+                  _overridability:
+                    variants: true
+                    parameters:
+                      icon: 'yes'
+                      link: 'yes'
+                      text: 'yes'
+                      iconPosition: 'yes'
+                    hideLockedParameters: true
+                - _id: 57f5ec1b-f12d-4f54-ac02-de6f3c4376ae
+                  type: button
+                  _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
+                  _overridability:
+                    variants: true
+                    parameters:
+                      icon: 'yes'
+                      link: 'yes'
+                      text: 'yes'
+                      textColor: 'no'
+                    hideLockedParameters: true
+              sectionMedia:
+                - _id: 5b7c94fe-98d6-47b6-80eb-8306f00191fd
+                  type: image
+                  parameters:
+                    image:
+                      type: asset
+                      value:
+                        - _id: 97f4cfea-b098-4a4a-ae2b-851e78fadd92
+                          type: image
+                          fields:
+                            id:
+                              type: text
+                              value: 7c9c5635-2a53-483e-84bb-1f663f479ec3
+                            url:
+                              type: text
+                              value: >-
+                                https://img.uniform.global/p/YEM1MHEJTqCtdMNPL_aVoA/f0gXFKFyTVasjETP6K3Rqw-gradient.png
+                            file:
+                              type: file
+                              value: 8aa3892f-3f89-4044-969a-d9ed31c7a1e6
+                            size:
+                              type: number
+                              value: 1549007
+                            title:
+                              type: text
+                              value: gradient.png
+                            width:
+                              type: number
+                              value: 6688
+                            height:
+                              type: number
+                              value: 1400
+                            mediaType:
+                              type: text
+                              value: image/png
+                          _source: uniform-assets
+              sectionContent:
+                - _id: 0486a1ec-d206-4a90-ba87-d0bfd84ad8c5
+                  type: text
+                  parameters:
+                    tag:
+                      type: dex-segmented-control-parameter
+                      value: h1
+                    size:
+                      type: dex-segmented-control-parameter
+                      value:
+                        mobile: 6xl
+                        tablet: 8xl
+                        desktop: 9xl
+                    text:
+                      type: text
+                      value: Close every deal.
+                    weight:
+                      type: dex-segmented-control-parameter
+                      value: medium
+                - _id: 0add277b-a1f6-4e90-8e13-1f6a0b5c611e
+                  type: text
+                  parameters:
+                    tag:
+                      type: dex-segmented-control-parameter
+                      value: p
+                    size:
+                      type: dex-segmented-control-parameter
+                      value:
+                        mobile: xl
+                        tablet: 2xl
+                        desktop: ''
+                    text:
+                      type: text
+                      value: >-
+                        Radiant helps you sell more by revealing sensitive
+                        information about your customers.
+                    weight:
+                      type: dex-segmented-control-parameter
+                      value: normal
             parameters:
-              image:
-                type: asset
-                value: []
-              titleTag:
-                type: dex-segmented-control-parameter
-                value: h1
-              titleText:
-                type: text
-                value: Component Starter Kit
+              border:
+                type: dex-token-selector-parameter
+                value: border-hero
+              spacing:
+                type: dex-space-control-parameter
+                value:
+                  marginTop: container-small
+                  marginLeft: container-small
+                  paddingTop: container-xlarge
+                  marginRight: container-small
+                  marginBottom: container-small
+                  paddingBottom: container-large
               displayName:
                 type: text
-                value: Welcome Hero
-              descriptionText:
-                type: text
-                value: >-
-                  A rich set of components to supercharge building fast, modern,
-                  personalized experiences with Uniform DXP.
+                value: Hero main
+              fluidContent:
+                type: checkbox
+                value: true
               contentAlignment:
                 type: dex-segmented-control-parameter
-                value: center
-              eyebrowTitleText:
+                value: left
+          - _id: 7c9eea12-7f37-4d2d-90dc-da0ac1813450
+            type: grid
+            slots:
+              gridInner:
+                - _id: 07454f6a-5287-4fdd-bd40-02a2920cb61d
+                  type: image
+                  parameters:
+                    image:
+                      type: asset
+                      value:
+                        - _id: f06f2e76-0a12-418c-8591-2918fe01bdd3
+                          type: image
+                          fields:
+                            id:
+                              type: text
+                              value: 099367c9-3241-40b0-8cf7-9a17483b068c
+                            url:
+                              type: text
+                              value: >-
+                                https://img.uniform.global/p/YEM1MHEJTqCtdMNPL_aVoA/Gq76WkagRxef7XcYdhxJ8A-savvycal.svg
+                            file:
+                              type: file
+                              value: f4124b1d-6f47-46ed-a915-85ccff8047b5
+                            size:
+                              type: number
+                              value: 4319
+                            title:
+                              type: text
+                              value: savvycal.svg
+                            width:
+                              type: number
+                              value: 140
+                            height:
+                              type: number
+                              value: 48
+                            mediaType:
+                              type: text
+                              value: image/svg+xml
+                          _source: uniform-assets
+                    width:
+                      type: number
+                      value: '140'
+                    height:
+                      type: number
+                      value: '48'
+                    objectFit:
+                      type: dex-segmented-control-parameter
+                      value: contain
+                - _id: 4bcb82ab-9c5f-4428-9e02-d73ea0595cfe
+                  type: image
+                  parameters:
+                    image:
+                      type: asset
+                      value:
+                        - _id: 74e1e92e-038a-417e-b20f-ecf5a0af36fb
+                          type: image
+                          fields:
+                            id:
+                              type: text
+                              value: afecaac3-2bef-4828-982e-20e85d1b4ec9
+                            url:
+                              type: text
+                              value: >-
+                                https://img.uniform.global/p/YEM1MHEJTqCtdMNPL_aVoA/sLhyCZXNRcuCqWLm5y96cA-laravel.svg
+                            file:
+                              type: file
+                              value: 376bba29-6920-49e2-a39b-4b4aa3ba5e20
+                            size:
+                              type: number
+                              value: 3121
+                            title:
+                              type: text
+                              value: laravel.svg
+                            width:
+                              type: number
+                              value: 130
+                            height:
+                              type: number
+                              value: 48
+                            mediaType:
+                              type: text
+                              value: image/svg+xml
+                          _source: uniform-assets
+                    width:
+                      type: number
+                      value: '140'
+                    height:
+                      type: number
+                      value: '48'
+                    objectFit:
+                      type: dex-segmented-control-parameter
+                      value: cover
+                - _id: a5af9f1e-4d36-46ec-ba13-95b88db10e21
+                  type: image
+                  parameters:
+                    image:
+                      type: asset
+                      value:
+                        - _id: 0dabcf9b-7378-46c3-8e05-7ac9580e760e
+                          type: image
+                          fields:
+                            id:
+                              type: text
+                              value: 5e3923ed-9caf-4797-8318-e0dc3aa50ac1
+                            url:
+                              type: text
+                              value: >-
+                                https://img.uniform.global/p/YEM1MHEJTqCtdMNPL_aVoA/R9hWqInqQC6Sg4wSPWMJZw-tuple.svg
+                            file:
+                              type: file
+                              value: 40cf341a-9c49-43c5-9afa-4dcc70c1a13b
+                            size:
+                              type: number
+                              value: 899
+                            title:
+                              type: text
+                              value: tuple.svg
+                            width:
+                              type: number
+                              value: 106
+                            height:
+                              type: number
+                              value: 48
+                            mediaType:
+                              type: text
+                              value: image/svg+xml
+                          _source: uniform-assets
+                    width:
+                      type: number
+                      value: '140'
+                    height:
+                      type: number
+                      value: '48'
+                    objectFit:
+                      type: dex-segmented-control-parameter
+                      value: contain
+                - _id: 72159446-4e5a-47d9-884c-44e254c80295
+                  type: image
+                  parameters:
+                    image:
+                      type: asset
+                      value:
+                        - _id: d99a6779-32e2-4b17-873f-a5c41690d1d4
+                          type: image
+                          fields:
+                            id:
+                              type: text
+                              value: cdc27426-c218-4591-830f-470e9f0b20c9
+                            url:
+                              type: text
+                              value: >-
+                                https://img.uniform.global/p/YEM1MHEJTqCtdMNPL_aVoA/IViXskcURb23AKpsGc2kXA-transistor.svg
+                            file:
+                              type: file
+                              value: f2fa982c-116a-4832-b321-83cd2ae73062
+                            size:
+                              type: number
+                              value: 3040
+                            title:
+                              type: text
+                              value: transistor.svg
+                            width:
+                              type: number
+                              value: 158
+                            height:
+                              type: number
+                              value: 48
+                            mediaType:
+                              type: text
+                              value: image/svg+xml
+                          _source: uniform-assets
+                    width:
+                      type: number
+                      value: '140'
+                    height:
+                      type: number
+                      value: '48'
+                    objectFit:
+                      type: dex-segmented-control-parameter
+                      value: contain
+                - _id: 2089836e-3858-4bd4-bd13-a37435bb231f
+                  type: image
+                  parameters:
+                    image:
+                      type: asset
+                      value:
+                        - _id: e97fe924-0450-4220-b360-ab71b138d92e
+                          type: image
+                          fields:
+                            id:
+                              type: text
+                              value: c0d4870c-0c1f-4d60-896a-499953650667
+                            url:
+                              type: text
+                              value: >-
+                                https://img.uniform.global/p/YEM1MHEJTqCtdMNPL_aVoA/G-LS7WvaTICfdgxzCcj9qw-statamic.svg
+                            file:
+                              type: file
+                              value: 330f93a6-3685-40aa-9096-f128ff205ee6
+                            size:
+                              type: number
+                              value: 5134
+                            title:
+                              type: text
+                              value: statamic.svg
+                            width:
+                              type: number
+                              value: 147
+                            height:
+                              type: number
+                              value: 48
+                            mediaType:
+                              type: text
+                              value: image/svg+xml
+                          _source: uniform-assets
+                    width:
+                      type: number
+                      value: '140'
+                    height:
+                      type: number
+                      value: '48'
+                    objectFit:
+                      type: dex-segmented-control-parameter
+                      value: contain
+            parameters:
+              gapX:
+                type: dex-slider-control-parameter
+                value:
+                  mobile: '4'
+                  tablet: '8'
+                  desktop: '4'
+              gapY:
+                type: dex-slider-control-parameter
+                value:
+                  tablet: '4'
+                  desktop: '4'
+              spacing:
+                type: dex-space-control-parameter
+                value:
+                  marginTop: container-medium
+                  marginBottom: container-medium
+              displayName:
                 type: text
-                value: Get your next project started on the right foot
-              primaryButtonLink:
-                type: link
-                locales:
-                  en:
-                    path: https://unfrm.to/csk-docs
-                    type: url
-              primaryButtonText:
+                value: Logos section
+              columnsCount:
+                type: dex-slider-control-parameter
+                value:
+                  mobile: '2'
+                  tablet: '5'
+                  desktop: '5'
+          - _id: 3e91a1de-08d3-4b2e-851d-c54df9da5084
+            type: flex
+            _pattern: 6fc97589-a549-4105-8b4f-387f64ea2780
+            _overridability:
+              parameters:
+                border: 'yes'
+                spacing: 'yes'
+                displayName: 'yes'
+                fluidContent: 'yes'
+                backgroundColor: 'yes'
+              hideLockedParameters: true
+          - _id: 45b1174d-98d4-423f-ac3e-eba77b3b53b7
+            type: flex
+            _pattern: 6fc97589-a549-4105-8b4f-387f64ea2780
+            _overridability:
+              parameters:
+                border: 'yes'
+                spacing: 'yes'
+                displayName: 'yes'
+                fluidContent: 'yes'
+                backgroundColor: 'yes'
+              hideLockedParameters: true
+          - _id: 32a02f3e-ff64-443e-96f3-d1a9faa23d7d
+            type: container
+            slots:
+              containerContent:
+                - _id: 00cbd528-2a37-4262-a04d-0b7ea6e78af4
+                  type: flex
+                  _pattern: 6fc97589-a549-4105-8b4f-387f64ea2780
+                  _overridability:
+                    parameters:
+                      border: 'yes'
+                      spacing: 'yes'
+                      displayName: 'yes'
+                      fluidContent: 'yes'
+                      backgroundColor: 'yes'
+                    hideLockedParameters: true
+            parameters:
+              border:
+                type: dex-token-selector-parameter
+                value: border-cards-container
+              spacing:
+                type: dex-space-control-parameter
+                value:
+                  marginTop: container-medium
+                  paddingTop: container-medium
+                  marginBottom: container-medium
+                  paddingBottom: container-medium
+              displayName:
                 type: text
-                value: Docs
+                value: Customer outreach has never been easier
+              fluidContent:
+                type: checkbox
+                value: true
+              backgroundColor:
+                type: dex-color-palette-parameter
+                value: general-color-2
+    8aa7842d-f805-4cf8-ab3f-d21c331520a9|42aa2d3b-036b-4178-8687-3ca2051bb91a:
+      parameters:
+        text:
+          type: text
+          value: Integrations
+        color:
+          type: dex-color-palette-parameter
+          value: text-tertiary
+    8aa7842d-f805-4cf8-ab3f-d21c331520a9|798bb0ed-19df-4675-8263-bb2a5eea26de:
+      parameters:
+        text:
+          type: text
+          value: Meet leads where they are
+        color:
+          type: dex-color-palette-parameter
+          value: text-light
+    8aa7842d-f805-4cf8-ab3f-d21c331520a9|b298850d-a0be-4c53-b853-2b18cb1272e9:
+      parameters:
+        text:
+          type: text
+          value: >-
+            With thousands of integrations, no one will be able to escape your
+            cold outreach.
+        color:
+          type: dex-color-palette-parameter
+          value: text-tertiary
+    8aa7842d-f805-4cf8-ab3f-d21c331520a9|fe1ef7c2-59c5-4f86-a46d-dbaad246a039:
+      parameters:
+        image:
+          type: asset
+          value:
+            - _id: a8283ecd-5e69-4bb4-a8b4-c99df55dd53e
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: 42b36272-6c2a-45eb-b78e-d3986861ce7d
+                url:
+                  type: text
+                  value: >-
+                    https://img.uniform.global/p/YEM1MHEJTqCtdMNPL_aVoA/3APbuK9vSF2YycEDSVo15Q-integrations.png
+                file:
+                  type: file
+                  value: 01644ba0-f832-43cd-8a23-759506fd7d70
+                size:
+                  type: number
+                  value: 37116
+                title:
+                  type: text
+                  value: integrations.png
+                width:
+                  type: number
+                  value: 417
+                height:
+                  type: number
+                  value: 349
+                mediaType:
+                  type: text
+                  value: image/png
+              _source: uniform-assets
+    96f8d455-7db9-4824-91f6-42a3cff4c50b|42aa2d3b-036b-4178-8687-3ca2051bb91a:
+      parameters:
+        text:
+          type: text
+          value: Limitless
+    96f8d455-7db9-4824-91f6-42a3cff4c50b|798bb0ed-19df-4675-8263-bb2a5eea26de:
+      parameters:
+        text:
+          type: text
+          value: Sell globally
+    96f8d455-7db9-4824-91f6-42a3cff4c50b|b298850d-a0be-4c53-b853-2b18cb1272e9:
+      parameters:
+        text:
+          type: text
+          value: >-
+            Radiant helps you sell in locations currently under international
+            embargo.
+    96f8d455-7db9-4824-91f6-42a3cff4c50b|fe1ef7c2-59c5-4f86-a46d-dbaad246a039:
+      parameters:
+        image:
+          type: asset
+          value:
+            - _id: b928038e-5610-4c39-8a52-b0931022e4bc
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: 5083784e-3722-4a20-aab4-39c99307aac0
+                url:
+                  type: text
+                  value: >-
+                    https://img.uniform.global/p/YEM1MHEJTqCtdMNPL_aVoA/YqTQTbaGTruhZWbVeY_HJw-map.png
+                file:
+                  type: file
+                  value: c1bfa19f-632e-44e6-8c3c-c566bf83f45a
+                size:
+                  type: number
+                  value: 6179
+                title:
+                  type: text
+                  value: map.png
+                width:
+                  type: number
+                  value: 347
+                height:
+                  type: number
+                  value: 319
+                mediaType:
+                  type: text
+                  value: image/png
+              _source: uniform-assets
+    9937202e-6834-44e2-b475-ca476e49bc6b|42aa2d3b-036b-4178-8687-3ca2051bb91a:
+      parameters:
+        text:
+          type: text
+          value: Insight
+    9937202e-6834-44e2-b475-ca476e49bc6b|798bb0ed-19df-4675-8263-bb2a5eea26de:
+      parameters:
+        text:
+          type: text
+          value: Get perfect clarity
+    9937202e-6834-44e2-b475-ca476e49bc6b|b298850d-a0be-4c53-b853-2b18cb1272e9:
+      parameters:
+        text:
+          type: text
+          value: >-
+            Radiant uses social engineering to build a detailed financial
+            picture of your leads. Know their budget, compensation package,
+            social security number, and more.
+    a93d463a-c0b5-4b9a-ab78-fdf5db6264ef|42aa2d3b-036b-4178-8687-3ca2051bb91a:
+      parameters:
+        text:
+          type: text
+          value: Engagement
+    a93d463a-c0b5-4b9a-ab78-fdf5db6264ef|798bb0ed-19df-4675-8263-bb2a5eea26de:
+      parameters:
+        text:
+          type: text
+          value: Become a thought leader
+        color:
+          type: dex-color-palette-parameter
+          value: text-light
+    a93d463a-c0b5-4b9a-ab78-fdf5db6264ef|b298850d-a0be-4c53-b853-2b18cb1272e9:
+      parameters:
+        text:
+          type: text
+          value: >-
+            Radiant helps you sell in locations currently under inteRadiantAI
+            automatically writes LinkedIn posts that relate current events to
+            B2B sales, helping you build a reputation as a thought
+            leader.rnational embargo.
+        color:
+          type: dex-color-palette-parameter
+          value: text-tertiary
+    a93d463a-c0b5-4b9a-ab78-fdf5db6264ef|fe1ef7c2-59c5-4f86-a46d-dbaad246a039:
+      parameters:
+        image:
+          type: asset
+          value:
+            - _id: 545a777a-6097-4368-9052-db145c8e7e25
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: 3888d8f0-b556-4cdd-8ef1-8e8ad2b22a04
+                url:
+                  type: text
+                  value: >-
+                    https://img.uniform.global/p/YEM1MHEJTqCtdMNPL_aVoA/7WS3adk6SbebDHCtf0RgqA-engagement.png
+                file:
+                  type: file
+                  value: 095088d5-faed-4bb5-8f02-698bcedadc8b
+                size:
+                  type: number
+                  value: 70112
+                title:
+                  type: text
+                  value: engagement.png
+                width:
+                  type: number
+                  value: 849
+                height:
+                  type: number
+                  value: 327
+                mediaType:
+                  type: text
+                  value: image/png
+              _source: uniform-assets
+    cb8ae4d6-43cf-45b3-b7a3-af91891203b3|42aa2d3b-036b-4178-8687-3ca2051bb91a:
+      parameters:
+        text:
+          type: text
+          value: Speed
+    cb8ae4d6-43cf-45b3-b7a3-af91891203b3|798bb0ed-19df-4675-8263-bb2a5eea26de:
+      parameters:
+        text:
+          type: text
+          value: Built for power users
+    cb8ae4d6-43cf-45b3-b7a3-af91891203b3|b298850d-a0be-4c53-b853-2b18cb1272e9:
+      parameters:
+        text:
+          type: text
+          value: >-
+            It’s never been faster to cold email your entire contact list using
+            our streamlined keyboard shortcuts.
+    cb8ae4d6-43cf-45b3-b7a3-af91891203b3|fe1ef7c2-59c5-4f86-a46d-dbaad246a039:
+      parameters:
+        image:
+          type: asset
+          value:
+            - _id: a79a0055-9a91-41ae-8fe5-d7d55771caf9
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: 90a9fb73-396b-446c-81d6-407b9dcc062f
+                url:
+                  type: text
+                  value: >-
+                    https://img.uniform.global/p/YEM1MHEJTqCtdMNPL_aVoA/rEs_YF2YTk2TOi1CcaGnBA-keys.png
+                file:
+                  type: file
+                  value: 80712611-996b-4f9d-849e-a72235c17cbc
+                size:
+                  type: number
+                  value: 17730
+                title:
+                  type: text
+                  value: keys.png
+                width:
+                  type: number
+                  value: 351
+                height:
+                  type: number
+                  value: 300
+                mediaType:
+                  type: text
+                  value: image/png
+              _source: uniform-assets
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc

@@ -42,6 +42,12 @@ previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/footer.jpg
 useTeamPermissions: true
 slots:
+  - id: footerCtaSection
+    name: Footer CTA Section
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
   - id: footerLogo
     name: Footer Logo
     allowedComponents:
@@ -52,10 +58,10 @@ slots:
     patternsInAllowedComponents: false
   - id: footerCopyright
     name: Footer Copyright
-    maxComponents: 1
     allowedComponents:
       - text
       - richText
+      - flex
     allowAllComponents: false
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
