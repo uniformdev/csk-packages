@@ -14,14 +14,14 @@ parameters:
     typeConfig:
       step: 1
       type: steps
-      units: ""
+      units: ''
       options: []
       maxValue: 12
       minValue: 1
       defaultValue:
-        mobile: "1"
-        tablet: "1"
-        desktop: "1"
+        mobile: '1'
+        tablet: '1'
+        desktop: '1'
       withViewPort: true
   - id: gapX
     name: Gap X
@@ -32,15 +32,15 @@ parameters:
       unit: px
       options:
         - key: XSmall
-          value: "2"
+          value: '2'
         - key: Small
-          value: "4"
+          value: '4'
         - key: Medium
-          value: "8"
+          value: '8'
         - key: Large
-          value: "16"
+          value: '16'
         - key: XLarge
-          value: "32"
+          value: '32'
       maxValue: 10
       minValue: 0
       defaultValue: {}
@@ -54,15 +54,15 @@ parameters:
       unit: px
       options:
         - key: XSmall
-          value: "2"
+          value: '2'
         - key: Small
-          value: "4"
+          value: '4'
         - key: Medium
-          value: "8"
+          value: '8'
         - key: Large
-          value: "16"
+          value: '16'
         - key: Xlarge
-          value: "32"
+          value: '32'
       maxValue: 10
       minValue: 0
       defaultValue: {}
@@ -115,5 +115,5 @@ slots:
     patternsInAllowedComponents: false
 titleParameter: displayName
 canBeComposition: false
-created: "2024-09-23T09:39:14.658353+00:00"
-updated: "2024-10-29T13:19:46.052735+00:00"
+created: '2025-01-29T10:47:01.756246+00:00'
+updated: '2025-01-29T10:47:01.756246+00:00'
