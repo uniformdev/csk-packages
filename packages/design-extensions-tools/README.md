@@ -122,5 +122,3 @@ design-extensions-tools push [options]
 ```bash
 design-extensions-tools push --allTokens
 ```
-
----

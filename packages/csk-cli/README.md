@@ -106,5 +106,3 @@ The package generates a React component and integrates it into the Canvas resolv
 
 1. **Set Environment Variables**: Ensure `UNIFORM_API_KEY` and `UNIFORM_PROJECT_ID` are set.
 2. **Run the Command**: Use `npm run scaffold:add` as configured in your project.
-
----

@@ -213,5 +213,3 @@ npm run extract:components -- --components Text Button Accordion
 ```
 
 If no arguments are provided, the CLI will extract all available components.
-
----
