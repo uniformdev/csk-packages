@@ -30,11 +30,12 @@
     "push:data": "uniform sync push",
     "uniform:publish": "uniform context manifest publish",
     "scaffold:add": "csk-cli scaffold",
-    "modules:init": "csk-cli init"
+    "recipes:init": "csk-recipes init"
   },
   "dependencies": {
     "@uniformdev/canvas-next-rsc": "20.1.0",
     "@uniformdev/csk-components": "*",
+    "@uniformdev/csk-recipes": "*",
     "@uniformdev/design-extensions-tools": "*",
     "@uniformdev/theme-pack": "*",
     "next": "15.1.6",

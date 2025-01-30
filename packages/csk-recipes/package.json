@@ -1,0 +1,66 @@
+{
+  "name": "@uniformdev/csk-recipes",
+  "version": "2.0.11",
+  "description": "The Uniform CSK Recipes provides a command-line interface (CLI) and utility functions to help you work with recipes.",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "main": "./cli.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "default": "./cli.js"
+    },
+    "./tailwindcss-conf": {
+      "types": "./dist/tailwindcss-conf.d.mts",
+      "default": "./dist/tailwindcss-conf.mjs"
+    },
+    "./components": {
+      "types": "./dist/components.d.mts",
+      "default": "./dist/components.mjs"
+    }
+  },
+  "types": "./dist/index.d.mts",
+  "scripts": {
+    "csk-recipes": "node ./cli.js",
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rimraf dist",
+    "lint": "eslint \"src/**/*.{js,ts,tsx}\"",
+    "format": "prettier --write \"src/**/*.{js,ts,tsx}\""
+  },
+  "keywords": [],
+  "author": "",
+  "dependencies": {
+    "@inquirer/prompts": "^7.1.0",
+    "commander": "^9.0.0",
+    "metascript": "^1.0.0",
+    "ora": "^8.1.1"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@types/jest": "^29.5.14",
+    "@uniformdev/canvas": "20.1.0",
+    "next": "15.1.6",
+    "prettier": ">=3",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "tsup": "^8.3.0",
+    "typescript": "^5.7.3"
+  },
+  "peerDependencies": {
+    "@uniformdev/canvas": ">=19",
+    "next": ">=14",
+    "prettier": ">=3",
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "bin": {
+    "csk-recipes": "cli.js"
+  },
+  "files": [
+    "/dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
