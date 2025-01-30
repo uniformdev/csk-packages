@@ -18,7 +18,7 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "csk-components:extract": "csk-components extract",
+    "extract:components": "csk-components extract",
     "init": "run-s uniform:push uniform:publish",
     "uniform:push": "run-s push:configuration push:data",
     "pull:configuration": "design-extensions-tools pull",

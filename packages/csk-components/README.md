@@ -1,25 +1,14 @@
-# Uniform Theme Pack JavaScript SDK
+# @uniformdev/csk-components
 
-The **Uniform Theme Pack JavaScript SDK** provides a command-line interface (CLI) and utility functions to help you work with design tokens efficiently. It is part of the [Uniform Platform](https://uniform.app). For more details, refer to our [documentation](https://docs.uniform.app).
-
-## Table of Contents
-
-1. [Installation](#installation)
-2. [Setup Instructions](#setup-instructions)
-   - [Create CSS Folder](#create-css-folder)
-   - [Wrap Pages with ThemePackProvider](#wrap-pages-with-themepackprovider)
-   - [Pull Design Tokens](#pull-design-tokens)
-   - [Import CSS Files](#import-css-files)
-   - [Extend Tailwind Configuration](#extend-tailwind-configuration)
-3. [Extractor CLI](#extractor-cli)
-4. [Additional Environment Variables](#additional-environment-variables)
+`@uniformdev/csk-components` is a **Components Starter Kit** that provides a set of basic components for building websites within a Uniform project. These components can be used directly from the package or extracted into your project for customization.
 
 ## Installation
 
-To get started, install the package in your Next.js application:
+To use `@uniformdev/csk-components`, install it as a dependency in your project:
 
 ```bash
-npm i @uniformdev/theme-pack
+npm install @uniformdev/design-extensions-tools
+npm install @uniformdev/csk-components
 ```
 
 ## Setup Instructions
@@ -32,9 +21,9 @@ By default, the CSS files will be placed in the `./src/styles` directory. You ca
 STYLES_PATH=
 ```
 
-### Wrap Pages with ThemePackProvider
+### Wrap Pages with DesignExtensionsProvider
 
-Wrap your page using `ThemePackProvider` from `@uniformdev/csk-components/components/providers/server`:
+Wrap your page using `DesignExtensionsProvider` from `@uniformdev/design-extensions-tools/components/providers/server`:
 
 ```typescript jsx
 import { cookies } from 'next/headers';
@@ -46,8 +35,8 @@ import {
   UniformComposition,
 } from '@uniformdev/canvas-next-rsc';
 import { emptyPlaceholderResolver } from '@uniformdev/csk-components/components/canvas/emptyPlaceholders';
-import { ThemePackProvider } from '@uniformdev/csk-components/components/providers/server';
 import { isRouteWithoutErrors } from '@uniformdev/csk-components/utils/routing';
+import { DesignExtensionsProvider } from '@uniformdev/design-extensions-tools/components/providers/server';
 import { componentResolver } from '@/components';
 import locales from '@/i18n/locales.json';
 import retrieveRoute from '@/utils/retrieveRoute';
@@ -65,7 +54,7 @@ export default async function Home(props: PageParameters) {
   const isPreviewMode = searchParams?.preview === 'true';
 
   return (
-    <ThemePackProvider isPreviewMode={isPreviewMode}>
+    <DesignExtensionsProvider isPreviewMode={isPreviewMode}>
       <ContextUpdateTransfer
         serverContext={serverContext}
         update={{
@@ -82,25 +71,24 @@ export default async function Home(props: PageParameters) {
         mode="server"
         resolveEmptyPlaceholder={emptyPlaceholderResolver}
       />
-    </ThemePackProvider>
+    </DesignExtensionsProvider>
   );
 }
 
 export { generateMetadata } from '@/utils/metadata';
 
 ```
-
 ### Pull Design Tokens
 
 Run the following command to pull and generate CSS variables for all design tokens:
 
 ```bash
-npx theme-pack pull
+design-extensions-tools pull
 ```
 
 ### Import CSS Files
 
-Import the generated CSS files into your `layout.tsx` or main layout component:
+Import the required CSS files into your `layout.tsx` or main layout component:
 
 ```jsx
 import '@/styles/colors.css';
@@ -111,7 +99,7 @@ import '@/styles/borders.css';
 
 ### Extend Tailwind Configuration
 
-To extend Tailwind CSS with new classes and include generated design tokens, update your Tailwind configuration as shown below:
+To extend Tailwind CSS with new classes and include generated design tokens, update your Tailwind configuration as follows:
 
 ```typescript
 import type { Config } from 'tailwindcss';
@@ -172,7 +160,7 @@ export default {
   content: [
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    './node_modules/@uniformdev/csk-components/dist/content/**/*.{js,ts,jsx,tsx,mdx}',
+    './node_modules/@uniformdev/csk-component/dist/content/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   safelist,
   theme,
@@ -186,51 +174,44 @@ export default {
 
 ```
 
-## Extractor CLI
+## Commands
 
-The **Extractor CLI** provides an easy way to extract components and modules for them from the package into your project. This tool supports two modes:
+### `extract` Command
 
-1. **Interactive Mode**: Allows you to select components and modules for them via a menu.
-2. **Command Mode**: Enables quick extraction by specifying canvas components as arguments.
+The `extract` command allows you to copy the source code of canvas, UI, and content components (along with their utilities) directly into your project. This is useful if you want to modify components rather than importing them from the package.
 
-### Usage
+#### Usage
 
-To extract components and modules, use the `extract` command:
+First, add the following script to your `package.json`:
+
+```json
+"scripts": {
+  "extract:components": "csk-components extract",
+}
+```
+
+Run the command using:
 
 ```bash
-npx theme-pack extract
+npm run extract:components -- --components Text Button Accordion
 ```
 
 #### Options
 
-- `-c, --components <components...>`: Extract specific canvas components. Example components include:
-
+- `-c, --components <components...>` – Specifies which canvas components to extract. Example components include:
+  
   ```
   Accordion, DemoHero, Banner, Carousel, Section, Text, Button, etc.
   ```
 
 #### Example
 
-Extract specific canvas components using command arguments:
+Extract specific canvas components:
 
 ```bash
-npx theme-pack extract -c Text Button Accordion
+npm run extract:components -- --components Text Button Accordion
 ```
 
-If no arguments are provided, the CLI will prompt you with an interactive menu to select components.
+If no arguments are provided, the CLI will extract all available components.
 
-## Additional Environment Variables
-
-### Custom Integration URL
-
-```dotenv
-// Integration URL
-INTEGRATION_URL=
-// Path to the config file
-CONFIG_PATH=
-// Path to the locales file
-LOCALES_PATH=
-// Path to the components folder to extract components from packages  
-COMPONENTS_PATH=
-// Path to the module folders for extracted types, hocs and utils from packages
-MODULES_PATH=
+---
