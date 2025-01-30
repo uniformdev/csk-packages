@@ -25,7 +25,7 @@ export const DEFAULT_DIMENSION_VARIANTS: string[] = ['lg', 'md'];
 export const DEFAULT_FONT_VARIANTS: string[] = ['lg', 'md'];
 export const DEFAULT_BORDER_VARIANTS: string[] = ['lg', 'md'];
 
-export const DEFAULT_INTEGRATION_URL = 'https://theme-pack-2.vercel.app';
+export const DEFAULT_INTEGRATION_URL = 'https://design-extensions.vercel.app';
 export const DEFAULT_STYLES_PATH = '/src/styles';
 export const DEFAULT_CONFIG_PATH = '/';
 export const DEFAULT_TAILWIND_CONF_PATH = 'tailwind.config.theme.json';

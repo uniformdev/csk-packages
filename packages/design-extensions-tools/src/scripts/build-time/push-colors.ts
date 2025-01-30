@@ -1,66 +1,56 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { IS_CANARY_ENVIRONMENT, PATH_TO_STYLE_FOLDER, ROOT_COLOR_SCHEME_KEY, TOKEN_STYLE_FILE } from '../../constants';
-import { checkEnvironmentVariable, pushTokenValue, syncSuccessLog } from '../../utils';
-import { getValueWithAlias } from '../../utils/getTokenStyles';
+import {
+  DEFAULT_TAILWIND_CONF_PATH,
+  PATH_TO_STYLE_FOLDER,
+  ROOT_COLOR_SCHEME_KEY,
+  TOKEN_STYLE_FILE,
+} from '../../constants';
+import { checkEnvironmentVariable, fetchTokenValue, syncSuccessLog } from '../../utils';
+import { getColorTokensValue } from '../../utils/getTokenStyles';
 
-type Theme = Record<string, string>;
-type Themes = Record<string, Theme>;
+const generateTailwindcssConfigColors = (colors: Record<string, { light: string; dark: string }>) =>
+  Object.fromEntries(Object.entries(colors).map(([key]) => [`${key}`, `var(--${key})`]));
 
-const parseCSS = (cssText: string): Themes => {
-  const themes: Themes = {};
+export const buildColors = async () => {
+  if (!checkEnvironmentVariable(TOKEN_STYLE_FILE.Colors)) return;
 
-  // Split the CSS text by `}` to isolate each block (root or other)
-  const blocks = cssText.split('}');
-
-  blocks.forEach(block => {
-    if (block.trim()) {
-      const [selector, body] = block.split('{').map(part => part.trim());
-
-      if (selector && body) {
-        const themeName = selector === ':root' ? ROOT_COLOR_SCHEME_KEY : selector.replace('.', '');
-
-        themes[themeName] = extractVariables(body);
-      }
-    }
-  });
-
-  return themes;
-};
-
-const extractVariables = (body: string): Theme => {
-  const variables: Theme = {};
-
-  const declarations = body.split(';');
-
-  declarations.forEach(declaration => {
-    const [key, value] = declaration.split(':').map(str => str.trim());
-
-    if (key && value) {
-      variables[key.replace('--', '')] = getValueWithAlias(value?.trim()?.replace(';', ''));
-    }
-  });
-
-  return variables;
-};
-
-export const pushColors = async () => {
-  checkEnvironmentVariable(TOKEN_STYLE_FILE.Colors, true);
-
-  const pathToStyleFile = path.join(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Colors}.css`);
-
-  if (!fs.existsSync(pathToStyleFile)) {
+  if (!fs.existsSync(PATH_TO_STYLE_FOLDER)) {
     console.error(
-      `No such file with styles: ${pathToStyleFile}. You can override it by setting STYLES_PATH environment variable.`
+      `No such directory for style files: ${PATH_TO_STYLE_FOLDER}. You can override it by setting STYLES_PATH environment variable.`
     );
     return;
   }
 
-  const colorsCssFile = fs.readFileSync(path.resolve(pathToStyleFile), 'utf8');
+  const response = await fetchTokenValue('getColors');
 
-  const palette = parseCSS(colorsCssFile);
+  const fetchedPalette = await response.json();
 
-  await pushTokenValue('setColors', JSON.stringify(palette), IS_CANARY_ENVIRONMENT);
+  const themeConfigPath = path.resolve(DEFAULT_TAILWIND_CONF_PATH);
 
-  syncSuccessLog(TOKEN_STYLE_FILE.Colors, 'pushed');
+  const colorsCssPath = path.resolve(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Colors}.css`);
+
+  const themeConfig = !fs.existsSync(themeConfigPath)
+    ? undefined
+    : JSON.parse(fs.readFileSync(themeConfigPath, 'utf8'));
+
+  const tailwindcssColors = generateTailwindcssConfigColors(fetchedPalette[ROOT_COLOR_SCHEME_KEY] || {});
+
+  const updatedThemeConfig = {
+    theme: {
+      ...themeConfig.theme,
+      extend: {
+        ...themeConfig.extend,
+        colors: tailwindcssColors,
+      },
+    },
+  };
+
+  const cssPalette = getColorTokensValue(fetchedPalette);
+
+  fs.writeFileSync(themeConfigPath, JSON.stringify(updatedThemeConfig.theme, null, 2), 'utf8');
+
+  fs.writeFileSync(colorsCssPath, cssPalette, 'utf8');
+
+  syncSuccessLog(TOKEN_STYLE_FILE.Colors, 'pulled');
 };
