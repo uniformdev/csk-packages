@@ -1,6 +1,6 @@
 {
   "name": "csk-v-next",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "private": true,
   "engines": {
     "yarn": "please-use-npm",
@@ -21,8 +21,8 @@
     "theme-pack:extract": "theme-pack extract",
     "init": "run-s uniform:push uniform:publish",
     "uniform:push": "run-s push:configuration push:data",
-    "pull:configuration": "theme-pack pull",
-    "push:configuration": "theme-pack push",
+    "pull:configuration": "design-extensions-tools pull",
+    "push:configuration": "design-extensions-tools push",
     "pull:locales": "theme-pack pull -l",
     "pull:dev": "uniform sync pull --config ./uniform.config.dev.ts",
     "push:dev": "uniform sync push --config ./uniform.config.dev.ts",
@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "@uniformdev/canvas-next-rsc": "20.1.0",
+    "@uniformdev/design-extensions-tools": "*",
     "@uniformdev/theme-pack": "*",
     "next": "15.1.6",
     "react": "19.0.0",

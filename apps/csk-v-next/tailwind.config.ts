@@ -5,7 +5,7 @@ import {
   generateTailwindcssDimensionKeysPattern,
   generateTailwindcssFontKeysPattern,
   generateTailwindcssBorderKeysPattern,
-} from '@uniformdev/theme-pack/tailwindcss-conf';
+} from '@uniformdev/design-extensions-tools/tailwindcss-conf';
 import typography from '@tailwindcss/typography';
 import theme from './tailwind.config.theme.json';
 import utilities from './tailwind.utilities.json';
