@@ -34,7 +34,7 @@ export const buildColors = async () => {
     ? undefined
     : JSON.parse(fs.readFileSync(themeConfigPath, 'utf8'));
 
-  const tailwindcssColors = generateTailwindcssConfigColors(fetchedPalette[ROOT_COLOR_SCHEME_KEY]);
+  const tailwindcssColors = generateTailwindcssConfigColors(fetchedPalette[ROOT_COLOR_SCHEME_KEY] || {});
 
   const updatedThemeConfig = {
     theme: {

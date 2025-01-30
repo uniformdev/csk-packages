@@ -95,7 +95,7 @@ export { generateMetadata } from '@/utils/metadata';
 Run the following command to pull and generate CSS variables for all design tokens:
 
 ```bash
-theme-pack pull
+npx theme-pack pull
 ```
 
 ### Import CSS Files
@@ -198,7 +198,7 @@ The **Extractor CLI** provides an easy way to extract components and modules for
 To extract components and modules, use the `extract` command:
 
 ```bash
-npm run theme-pack extract
+npx theme-pack extract
 ```
 
 #### Options
@@ -214,7 +214,7 @@ npm run theme-pack extract
 Extract specific canvas components using command arguments:
 
 ```bash
-npm run theme-pack extract -- -c Text Button Accordion
+npx theme-pack extract -c Text Button Accordion
 ```
 
 If no arguments are provided, the CLI will prompt you with an interactive menu to select components.
