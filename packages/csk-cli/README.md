@@ -1,132 +1,110 @@
-# Uniform CSK CLI
+# @uniformdev/csk-cli
 
-The **Uniform CSK CLI** provides a command-line interface (CLI) and utility functions to help you work with modules in csk. It is part of the [Uniform Platform](https://uniform.app). For more details, refer to our [documentation](https://docs.uniform.app).
-
+`@uniformdev/csk-cli` is a command-line interface (CLI) tool designed to streamline the development workflow within Uniform projects. It provides commands for pulling additional data and generating components based on Canvas data.
 
 ## Installation
 
-To get started, install the package in your Next.js application:
+You can install the package as a dependency in your project:
 
 ```bash
-npm i @uniformdev/csk-cli
+npm install @uniformdev/csk-cli --save-dev
 ```
 
-## `init` command
+## Commands
 
-A command designed to help you quickly get started with CSK, allowing you to choose the templates and packages you want to install in your project.
+### `pull` Command
 
-### Usage
-You can add a script command to your package.json for easier usage:
+The `pull` command retrieves additional data for the project. Currently, it supports pulling locales, with potential future expansions.
+
+#### Usage
+
+Add the following script to your `package.json`:
 
 ```json
 "scripts": {
-  "modules:init": "csk-cli init"
+  "pull:locales": "csk-cli pull -l"
 }
 ```
 
-Run the command with:
+Run the command using:
 
 ```bash
-npm run modules:init
+npm run pull:locales
 ```
 
+#### Options
 
-## CLI Arguments
+- `-l, --locales` – Pulls locales configuration.
 
-### `--template` / `-t`
-Specifies the template to use for the project.  
-Supported template options include:
+#### Environment Variables
 
-- **`baseline`**: A minimal starting point with only essential features.
-- **`coffee-shop`**: A template tailored for a coffee shop business with relevant components.
-- **`radiant`**: A feature-rich template for vibrant and dynamic projects.
+Before running the command, configure the following environment variables:
 
-**Usage Example**:
+- `UNIFORM_API_KEY` – Your Uniform API key.
+- `UNIFORM_PROJECT_ID` – The ID of your Uniform project.
+
+These can be set in a `.env` file or provided directly in the CLI environment.
+
+#### Optional Configuration
+
+To specify a custom folder for generated components, set the `CUSTOM_CANVAS_FOLDER_PATH` environment variable:
+
 ```bash
-csk-cli init --template baseline
+LOCALES_PATH=src/i18n
 ```
 
 ---
 
-### `--modules` / `-m`
-Defines the modules to include in the project. You can specify one or more modules, separated by spaces.  
+### `scaffold` Command
 
-Available module options:
-- **`localization`**: Adds support for managing and displaying multiple languages.
-- **`ga`**: Integrates Google Analytics for tracking and insights.
-- **`uniform-insights`**: Includes tools for enhanced performance and user behavior analytics.
+The `scaffold` command generates React components based on Canvas data, making it easier to integrate new components into a Uniform project.
 
-**Usage Example**:
-```bash
-csk-cli init --modules localization ga uniform-insights
-```
+#### Features
 
----
+- **Component Generation**: Automatically generates React components with necessary imports, types, and properties.
+- **Component Registration**: Registers components in the Custom Canvas resolver.
+- **Custom Folder Support**: Allows specifying a custom folder for generated components.
 
-### Full Example
-To create a project using the `coffee-shop` template and include `localization` and `ga` modules:
-```bash
-csk-cli init --template coffee-shop --modules localization ga
-```
+#### Usage
 
-
-## Additional environment variable
-
-###  Custom branches name
-```dotenv
-GOLD_BRANCH=
-FULL_PACK_BRANCH=
-```
-
-## `scaffold` command
-
-A Command designed to generate React components based on Canvas data. This package simplifies the process of creating and registering components in a Uniform project.
-
-### Features
-
-- Component Generation: Generates Canvas React components based on Canvas data with all the necessary imports, types and properties.
-- Component Registration: Automatically registers components in the Custom Canvas resolver.
-- Custom Folder Support: Optionally specify a custom folder path for your components.
-
-
-### Usage
-
-You can add a script command to your package.json for easier usage:
+Add the following script to your `package.json`:
 
 ```json
 "scripts": {
-  "scaffold:add": "scaffold add"
+  "scaffold:add": "csk-cli scaffold"
 }
 ```
 
-Run the command with:
+Run the command using:
 
 ```bash
 npm run scaffold:add
 ```
 
-### Environment Variables
+#### Environment Variables
 
-Before running the command, you can configure the following environment variables:
+Before running the command, configure the following environment variables:
 
-- UNIFORM_API_KEY: Your Uniform API key.
-- UNIFORM_PROJECT_ID: The ID of your Uniform project.
+- `UNIFORM_API_KEY` – Your Uniform API key.
+- `UNIFORM_PROJECT_ID` – The ID of your Uniform project.
 
-These can be set in a .env file or provided directly during the CLI process.
+These can be set in a `.env` file or provided directly in the CLI environment.
 
-### Optional Configuration
+#### Optional Configuration
 
-If you want to use a custom folder for your components, set the CUSTOM_CANVAS_FOLDER_PATH environment variable:
+To specify a custom folder for generated components, set the `CUSTOM_CANVAS_FOLDER_PATH` environment variable:
 
 ```bash
 CUSTOM_CANVAS_FOLDER_PATH=src/components/custom-canvas
 ```
 
-### Generated Code
+#### Generated Code
 
 The package generates a React component and integrates it into the Canvas resolver by updating the component mappings.
 
-### Workflow
+#### Workflow
 
-1. Set Environment Variables: Ensure the required variables (UNIFORM_API_KEY and UNIFORM_PROJECT_ID) are set.
-2. Run the Command: Use npx scaffold add or your custom npm script (npm run scaffold:add).
+1. **Set Environment Variables**: Ensure `UNIFORM_API_KEY` and `UNIFORM_PROJECT_ID` are set.
+2. **Run the Command**: Use `npm run scaffold:add` as configured in your project.
+
+---
