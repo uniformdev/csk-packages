@@ -18,7 +18,7 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "theme-pack:extract": "theme-pack extract",
+    "csk-components:extract": "csk-components extract",
     "init": "run-s uniform:push uniform:publish",
     "uniform:push": "run-s push:configuration push:data",
     "pull:configuration": "design-extensions-tools pull",
@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "@uniformdev/canvas-next-rsc": "20.1.0",
+    "@uniformdev/csk-components": "*",
     "@uniformdev/design-extensions-tools": "*",
     "@uniformdev/theme-pack": "*",
     "next": "15.1.6",

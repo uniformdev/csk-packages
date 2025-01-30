@@ -3,8 +3,8 @@ import { notFound } from 'next/navigation';
 import { Asset } from '@uniformdev/assets';
 import { flattenValues } from '@uniformdev/canvas';
 import { PageParameters } from '@uniformdev/canvas-next-rsc';
-import { resolveAsset } from '@uniformdev/theme-pack/utils/assets';
-import { isRouteWithoutErrors } from '@uniformdev/theme-pack/utils/routing';
+import { resolveAsset } from '@uniformdev/csk-components/utils/assets';
+import { isRouteWithoutErrors } from '@uniformdev/csk-components/utils/routing';
 import locales from '@/i18n/locales.json';
 import retrieveRoute from '@/utils/retrieveRoute';
 

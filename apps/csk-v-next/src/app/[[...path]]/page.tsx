@@ -6,9 +6,9 @@ import {
   PageParameters,
   UniformComposition,
 } from '@uniformdev/canvas-next-rsc';
+import { emptyPlaceholderResolver } from '@uniformdev/csk-components/components/canvas/emptyPlaceholders';
+import { isRouteWithoutErrors } from '@uniformdev/csk-components/utils/routing';
 import { DesignExtensionsProvider } from '@uniformdev/design-extensions-tools/components/providers/server';
-import { emptyPlaceholderResolver } from '@uniformdev/theme-pack/components/canvas/emptyPlaceholders';
-import { isRouteWithoutErrors } from '@uniformdev/theme-pack/utils/routing';
 import { componentResolver } from '@/components';
 import locales from '@/i18n/locales.json';
 import retrieveRoute from '@/utils/retrieveRoute';

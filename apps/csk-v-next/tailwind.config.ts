@@ -56,7 +56,7 @@ export default {
   content: [
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    '../../node_modules/@uniformdev/theme-pack/dist/content/**/*.{js,ts,jsx,tsx,mdx}',
+    '../../node_modules/@uniformdev/csk-components/dist/content/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   safelist,
   theme,

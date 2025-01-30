@@ -1,0 +1,107 @@
+{
+  "name": "@uniformdev/csk-components",
+  "version": "2.0.11",
+  "description": "Components Starter Kit contains basic components for building a website",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "main": "./cli.js",
+  "exports": {
+    "./types/cskTypes": {
+      "types": "./dist/types/cskTypes.d.mts",
+      "default": "./dist/types/cskTypes.mjs"
+    },
+    "./utils/styling": {
+      "types": "./dist/utils/styling.d.mts",
+      "default": "./dist/utils/styling.mjs"
+    },
+    "./utils/routing": {
+      "types": "./dist/utils/routing.d.mts",
+      "default": "./dist/utils/routing.mjs"
+    },
+    "./utils/assets": {
+      "types": "./dist/utils/assets.d.mts",
+      "default": "./dist/utils/assets.mjs"
+    },
+    "./utils/createEmptyPlaceholderResolver": {
+      "types": "./dist/utils/createEmptyPlaceholderResolver.d.mts",
+      "default": "./dist/utils/createEmptyPlaceholderResolver.mjs"
+    },
+    "./utils/createComponentResolver": {
+      "types": "./dist/utils/createComponentResolver.d.mts",
+      "default": "./dist/utils/createComponentResolver.mjs"
+    },
+    "./hocs/withPlaygroundWrapper": {
+      "types": "./dist/hocs/withPlaygroundWrapper.d.mts",
+      "default": "./dist/hocs/withPlaygroundWrapper.mjs"
+    },
+    "./components/ui": {
+      "types": "./dist/components/ui/index.d.mts",
+      "default": "./dist/components/ui/index.mjs"
+    },
+    "./components/canvas": {
+      "types": "./dist/components/canvas/index.d.mts",
+      "default": "./dist/components/canvas/index.mjs"
+    },
+    "./components/canvas/emptyPlaceholders": {
+      "types": "./dist/components/canvas/emptyPlaceholders.d.mts",
+      "default": "./dist/components/canvas/emptyPlaceholders.mjs"
+    }
+  },
+  "types": "./dist/index.d.mts",
+  "scripts": {
+    "theme-pack": "node ./cli.js",
+    "build:tsup": "tsup",
+    "postbuild": "tsx ./src/scripts/copy-content.tsx",
+    "build": "npm run build:tsup && npm run postbuild",
+    "dev": "tsup --watch",
+    "clean": "rimraf dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write \"src/**/*.{js,ts,tsx}\""
+  },
+  "keywords": [],
+  "author": "",
+  "dependencies": {
+    "@inquirer/prompts": "^7.1.0",
+    "@types/react-responsive-masonry": "^2.6.0",
+    "classnames": "^2.5.1",
+    "commander": "^9.0.0",
+    "cookies-next": "^4.3.0",
+    "next-themes": "^0.4.4",
+    "ora": "^8.1.1",
+    "react-player": "^2.16.0",
+    "react-responsive-masonry": "^2.7.0",
+    "tailwind-merge": "^2.5.2"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@uniformdev/assets": "20.1.0",
+    "@uniformdev/canvas": "20.1.0",
+    "@uniformdev/canvas-next-rsc": "20.1.0",
+    "next": "15.1.6",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "tailwindcss": "^3.4.17",
+    "tsup": "^8.3.0",
+    "tsx": "^4.19.2"
+  },
+  "peerDependencies": {
+    "@uniformdev/assets": ">=20",
+    "@uniformdev/canvas": ">=20",
+    "@uniformdev/canvas-next-rsc": ">=20",
+    "next": ">=15",
+    "react": ">=19",
+    "react-dom": ">=19",
+    "tailwindcss": ">=3"
+  },
+  "bin": {
+    "csk-components": "cli.js"
+  },
+  "files": [
+    "/dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

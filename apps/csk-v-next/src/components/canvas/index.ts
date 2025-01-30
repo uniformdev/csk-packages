@@ -1,1 +1,1 @@
-export { default as cskComponentsMapping } from '@uniformdev/theme-pack/components/canvas';
+export { cskComponentsMapping } from '@uniformdev/csk-components/components/canvas';
