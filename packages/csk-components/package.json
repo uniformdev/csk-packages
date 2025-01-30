@@ -48,7 +48,7 @@
   },
   "types": "./dist/index.d.mts",
   "scripts": {
-    "theme-pack": "node ./cli.js",
+    "csk-components": "node ./cli.js",
     "build:tsup": "tsup",
     "postbuild": "tsx ./src/scripts/copy-content.tsx",
     "build": "npm run build:tsup && npm run postbuild",
