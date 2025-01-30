@@ -1,40 +1,20 @@
-# Uniform Theme Pack JavaScript SDK
+# @uniformdev/design-extensions-tools
 
-The **Uniform Theme Pack JavaScript SDK** provides a command-line interface (CLI) and utility functions to help you work with design tokens efficiently. It is part of the [Uniform Platform](https://uniform.app). For more details, refer to our [documentation](https://docs.uniform.app).
-
-## Table of Contents
-
-1. [Installation](#installation)
-2. [Setup Instructions](#setup-instructions)
-   - [Create CSS Folder](#create-css-folder)
-   - [Wrap Pages with ThemePackProvider](#wrap-pages-with-themepackprovider)
-   - [Pull Design Tokens](#pull-design-tokens)
-   - [Import CSS Files](#import-css-files)
-   - [Extend Tailwind Configuration](#extend-tailwind-configuration)
-3. [Extractor CLI](#extractor-cli)
-4. [Additional Environment Variables](#additional-environment-variables)
+`@uniformdev/design-extensions-tools` is a command-line interface (CLI) tool and a set of utilities for working with design extension integrations. It allows you to manage design tokens, UI components, and configurations efficiently.
 
 ## Installation
 
-To get started, install the package in your Next.js application:
+To use `@uniformdev/design-extensions-tools`, install it as a dependency in your project:
 
 ```bash
-npm i @uniformdev/theme-pack
+npm install @uniformdev/design-extensions-tools
 ```
 
 ## Setup Instructions
 
-### Create CSS Folder
+### Wrap Pages with DesignExtensionsProvider
 
-By default, the CSS files will be placed in the `./src/styles` directory. You can also specify a custom path using the `STYLES_PATH` environment variable:
-
-```dotenv
-STYLES_PATH=
-```
-
-### Wrap Pages with ThemePackProvider
-
-Wrap your page using `ThemePackProvider` from `@uniformdev/theme-pack/components/providers/server`:
+Wrap your page using `DesignExtensionsProvider` from `@uniformdev/design-extensions-tools/components/providers/server`:
 
 ```typescript jsx
 import { cookies } from 'next/headers';
@@ -45,9 +25,9 @@ import {
   PageParameters,
   UniformComposition,
 } from '@uniformdev/canvas-next-rsc';
-import { emptyPlaceholderResolver } from '@uniformdev/theme-pack/components/canvas/emptyPlaceholders';
-import { ThemePackProvider } from '@uniformdev/theme-pack/components/providers/server';
-import { isRouteWithoutErrors } from '@uniformdev/theme-pack/utils/routing';
+import { emptyPlaceholderResolver } from '@uniformdev/csk-components/components/canvas/emptyPlaceholders';
+import { isRouteWithoutErrors } from '@uniformdev/csk-components/utils/routing';
+import { DesignExtensionsProvider } from '@uniformdev/design-extensions-tools/components/providers/server';
 import { componentResolver } from '@/components';
 import locales from '@/i18n/locales.json';
 import retrieveRoute from '@/utils/retrieveRoute';
@@ -65,7 +45,7 @@ export default async function Home(props: PageParameters) {
   const isPreviewMode = searchParams?.preview === 'true';
 
   return (
-    <ThemePackProvider isPreviewMode={isPreviewMode}>
+    <DesignExtensionsProvider isPreviewMode={isPreviewMode}>
       <ContextUpdateTransfer
         serverContext={serverContext}
         update={{
@@ -82,155 +62,65 @@ export default async function Home(props: PageParameters) {
         mode="server"
         resolveEmptyPlaceholder={emptyPlaceholderResolver}
       />
-    </ThemePackProvider>
+    </DesignExtensionsProvider>
   );
 }
 
 export { generateMetadata } from '@/utils/metadata';
-
 ```
 
-### Pull Design Tokens
+## Commands
 
-Run the following command to pull and generate CSS variables for all design tokens:
+### `pull` Command
+
+The `pull` command fetches design token data from the integration.
+
+#### Usage
 
 ```bash
-npx theme-pack pull
-```
-
-### Import CSS Files
-
-Import the generated CSS files into your `layout.tsx` or main layout component:
-
-```jsx
-import '@/styles/colors.css';
-import '@/styles/dimensions.css';
-import '@/styles/fonts.css';
-import '@/styles/borders.css';
-```
-
-### Extend Tailwind Configuration
-
-To extend Tailwind CSS with new classes and include generated design tokens, update your Tailwind configuration as shown below:
-
-```typescript
-import type { Config } from 'tailwindcss';
-import plugin from 'tailwindcss/plugin';
-import {
-  generateTailwindcssColorKeysPattern,
-  generateTailwindcssDimensionKeysPattern,
-  generateTailwindcssFontKeysPattern,
-  generateTailwindcssBorderKeysPattern,
-} from '@uniformdev/theme-pack/tailwindcss-conf';
-import typography from '@tailwindcss/typography';
-import theme from './tailwind.config.theme.json';
-import utilities from './tailwind.utilities.json';
-
-const safelist = [
-  { pattern: /grid-cols-(1[0-2]|[1-9]|none|subgrid)/, variants: ['lg', 'md'] },
-  { pattern: /gap(?:-(x|y))?-(0(\.5)?|1(\.5)?|2(\.5)?|3(\.5)?|[1-9]?[0-9]|px)/, variants: ['lg', 'md'] },
-  { pattern: /flex-(col|row|col-reverse|row-reverse)/, variants: ['lg', 'md'] },
-  { pattern: /justify-(normal|start|end|center|between|around|evenly|stretch)/, variants: ['lg', 'md'] },
-  { pattern: /items-(start|end|center|baseline|stretch)/, variants: ['lg', 'md'] },
-  { pattern: /self-(start|end|center|baseline|stretch)/, variants: ['lg', 'md'] },
-  { pattern: /(col|row)-start-(1[0-2]|[1-9]|none|subgrid)/, variants: ['lg', 'md'] },
-  { pattern: /(col|row)-(auto|span-(1[0-2]|[1-9]|full))/, variants: ['lg', 'md'] },
-  { pattern: /justify-(start|center|end)/ },
-  { pattern: /text-(xs|sm|base|lg|xl|2xl|3xl|4xl|5xl|6xl|7xl|8xl|9xl)/, variants: ['lg', 'md'] },
-  { pattern: /text-(left|center|right)/ },
-  { pattern: /font-(normal|medium|bold|extrabold)/, variants: ['lg', 'md'] },
-  { pattern: /line-clamp-(none|[1-6])/, variants: ['lg:[&>:not(script)]', 'md:[&>:not(script)]', '[&>:not(script)]'] },
-  { pattern: /(uppercase|lowercase|capitalize)/, variants: ['lg', 'md'] },
-  { pattern: /(underline|overline|line-through)/, variants: ['lg', 'md'] },
-  { pattern: /tracking-(tighter|tight|normal|wide|wider|widest)/, variants: ['lg', 'md'] },
-  { pattern: /aspect-(auto|square|video)/ },
-  { pattern: /shrink-(0|1)/ },
-];
-
-const colorKeys = Object.keys(theme.extend.colors || {});
-if (colorKeys.length) {
-  safelist.push(generateTailwindcssColorKeysPattern(colorKeys));
-}
-
-const dimensionKeys = Object.keys(theme.extend.spacing || {});
-if (dimensionKeys.length) {
-  safelist.push(...generateTailwindcssDimensionKeysPattern(dimensionKeys));
-}
-
-const fontKeys = Object.keys(theme.extend.fontFamily || {});
-if (fontKeys.length) {
-  safelist.push(generateTailwindcssFontKeysPattern(fontKeys));
-}
-
-const borderKeys = Object.keys(utilities || {}).map(key => key.substring(1));
-if (borderKeys.length) {
-  safelist.push(generateTailwindcssBorderKeysPattern(borderKeys));
-}
-
-export default {
-  darkMode: 'class',
-  content: [
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    './node_modules/@uniformdev/theme-pack/dist/content/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
-  safelist,
-  theme,
-  plugins: [
-    typography,
-    plugin(function ({ addUtilities }) {
-      addUtilities(utilities);
-    }),
-  ],
-} satisfies Config;
-
-```
-
-## Extractor CLI
-
-The **Extractor CLI** provides an easy way to extract components and modules for them from the package into your project. This tool supports two modes:
-
-1. **Interactive Mode**: Allows you to select components and modules for them via a menu.
-2. **Command Mode**: Enables quick extraction by specifying canvas components as arguments.
-
-### Usage
-
-To extract components and modules, use the `extract` command:
-
-```bash
-npx theme-pack extract
+design-extensions-tools pull [options]
 ```
 
 #### Options
 
-- `-c, --components <components...>`: Extract specific canvas components. Example components include:
-
-  ```
-  Accordion, DemoHero, Banner, Carousel, Section, Text, Button, etc.
-  ```
+- `-c, --colors` – Pulls colors configuration.
+- `-d, --dimensions` – Pulls dimensions configuration.
+- `-f, --fonts` – Pulls fonts configuration.
+- `-b, --borders` – Pulls borders configuration.
+- `-g, --groups` – Pulls groups configuration.
+- `-at, --allTokens` – Pulls all tokens.
+- `-as, --allSettings` – Pulls all settings.
 
 #### Example
 
-Extract specific canvas components using command arguments:
-
 ```bash
-npx theme-pack extract -c Text Button Accordion
+design-extensions-tools pull --colors --dimensions
 ```
 
-If no arguments are provided, the CLI will prompt you with an interactive menu to select components.
+### `push` Command
 
-## Additional Environment Variables
+The `push` command sends design token data to the integration.
 
-### Custom Integration URL
+#### Usage
 
-```dotenv
-// Integration URL
-INTEGRATION_URL=
-// Path to the config file
-CONFIG_PATH=
-// Path to the locales file
-LOCALES_PATH=
-// Path to the components folder to extract components from packages  
-COMPONENTS_PATH=
-// Path to the module folders for extracted types, hocs and utils from packages
-MODULES_PATH=
+```bash
+design-extensions-tools push [options]
+```
+
+#### Options
+
+- `-c, --colors` – Pushes colors configuration.
+- `-d, --dimensions` – Pushes dimensions configuration.
+- `-f, --fonts` – Pushes fonts configuration.
+- `-b, --borders` – Pushes borders configuration.
+- `-g, --groups` – Pushes groups configuration.
+- `-at, --allTokens` – Pushes all tokens.
+- `-as, --allSettings` – Pushes all settings.
+
+#### Example
+
+```bash
+design-extensions-tools push --allTokens
+```
+
+---
