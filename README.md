@@ -1,84 +1,98 @@
-# Turborepo starter
+# Uniform Component Starter Kit (CSK6) Monorepo
 
-This Turborepo starter is maintained by the Turborepo core team.
+Welcome to the **Uniform Component Starter Kit (CSK6)** monorepo! This repository contains multiple packages and applications designed to streamline the development workflow with **Next.js 15 App Router**, **TailwindCSS**, and **TypeScript**. It is powered by **Turborepo** to ensure efficient builds and optimized package management.
 
-## Using this example
-
-Run the following command:
-
-```sh
-npx create-turbo@latest
-```
-
-## What's inside?
-
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
+## Repository Structure
 
 ```
-cd my-turborepo
-pnpm build
+.github/              # GitHub Actions for CI/CD
+ └── workflows/       # Automated workflows for package publishing
+.husky/               # Pre-commit hooks to enforce linting rules
+apps/
+ └── csk-v-next/      # Main Next.js 15 App Router application
+packages/
+ ├── csk-cli/         # CLI tool for project setup and automation
+ ├── csk-components/  # Component library for building UI
+ ├── csk-recipes/     # Predefined recipes for integrating features
+ ├── design-extensions-tools/ # Utilities for design extension integration
+ ├── eslint-config/   # Shared ESLint configuration
+ ├── typescript-config/ # Shared TypeScript configuration
+.gitignore            # Ignoring unnecessary files
+.npmrc                # NPM registry settings
+.prettierrc.js        # Prettier formatting rules
+commitlint.config.mjs # Commit message validation
+package-lock.json     # Lock file for dependencies
+package.json          # Root package configuration
+README.md             # You're reading it now!
+turbo.json            # Turborepo configuration
 ```
 
-### Develop
+## Getting Started
 
-To develop all apps and packages, run the following command:
+### 1. Install Dependencies
 
-```
-cd my-turborepo
-pnpm dev
-```
+Ensure you have **Node.js 20+** installed, then run:
 
-### Remote Caching
-
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
+```bash
+npm install
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+### 2. Configure Environment Variables
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+Fill in the `.env` file inside `apps/csk-v-next` with the required settings before running the application.
 
+### 3. Verify Setup
+
+Run the following command to ensure everything is set up correctly:
+
+```bash
+npm run build
 ```
-npx turbo link
+
+### 4. Running the Development Server
+
+Navigate to the application directory and start the server:
+
+```bash
+cd apps/csk-v-next
+npm run dev
 ```
 
-## Useful Links
+### 5. Building the Project
 
-Learn more about the power of Turborepo:
+To build all packages and applications:
 
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+```bash
+npm run build
+```
+
+### 6. Running Linting & Formatting
+
+This monorepo enforces consistent code quality using ESLint and Prettier. Run:
+
+```bash
+npm run lint
+```
+
+### 7. Publishing Packages
+
+This repository includes **GitHub Actions** for NPM package publishing. This shoud be run manually on  github actions.
+
+
+## Pre-commit Hooks
+
+We use **Husky** to enforce linting and commit message validation:
+- **Linting**: Runs on every commit to ensure consistent code quality.
+- **Commit Message Validation**: Enforces proper commit messages to follow best practices.
+
+If a commit message does not follow the required format, it will be rejected.
+
+## Contribution Guidelines
+
+1. Fork the repository and create a new branch.
+2. Make your changes and ensure all tests pass.
+3. Open a pull request and request a review.
+
+## License
+
+This project is licensed under the MIT License.
