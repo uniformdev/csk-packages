@@ -1,6 +1,6 @@
 {
   "name": "csk-v-next",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "private": true,
   "engines": {
     "yarn": "please-use-npm",
@@ -18,23 +18,24 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "theme-pack:extract": "theme-pack extract",
+    "extract:components": "csk-components extract",
     "init": "run-s uniform:push uniform:publish",
     "uniform:push": "run-s push:configuration push:data",
-    "pull:configuration": "theme-pack pull",
-    "push:configuration": "theme-pack push",
-    "pull:locales": "theme-pack pull -l",
+    "pull:configuration": "design-extensions-tools pull",
+    "push:configuration": "design-extensions-tools push",
+    "pull:locales": "csk-cli pull -l",
     "pull:dev": "uniform sync pull --config ./uniform.config.dev.ts",
     "push:dev": "uniform sync push --config ./uniform.config.dev.ts",
     "pull:data": "uniform sync pull",
     "push:data": "uniform sync push",
     "uniform:publish": "uniform context manifest publish",
     "scaffold:add": "csk-cli scaffold",
-    "modules:init": "csk-cli init"
+    "recipes:init": "csk-recipes init"
   },
   "dependencies": {
     "@uniformdev/canvas-next-rsc": "20.1.0",
-    "@uniformdev/theme-pack": "*",
+    "@uniformdev/csk-components": "*",
+    "@uniformdev/design-extensions-tools": "*",
     "next": "15.1.6",
     "react": "19.0.0",
     "react-dom": "19.0.0"
@@ -47,6 +48,7 @@
     "@types/react-dom": "^19.0.0",
     "@uniformdev/cli": "20.1.0",
     "@uniformdev/csk-cli": "*",
+    "@uniformdev/csk-recipes": "*",
     "eslint": "^9.19.0",
     "eslint-config-next": "^15.1.6",
     "eslint-config-prettier": "^10.0.1",

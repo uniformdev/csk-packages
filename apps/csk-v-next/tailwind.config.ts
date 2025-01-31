@@ -5,7 +5,7 @@ import {
   generateTailwindcssDimensionKeysPattern,
   generateTailwindcssFontKeysPattern,
   generateTailwindcssBorderKeysPattern,
-} from '@uniformdev/theme-pack/tailwindcss-conf';
+} from '@uniformdev/design-extensions-tools/tailwindcss-conf';
 import typography from '@tailwindcss/typography';
 import theme from './tailwind.config.theme.json';
 import utilities from './tailwind.utilities.json';
@@ -56,7 +56,7 @@ export default {
   content: [
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    '../../node_modules/@uniformdev/theme-pack/dist/content/**/*.{js,ts,jsx,tsx,mdx}',
+    '../../node_modules/@uniformdev/csk-components/dist/content/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   safelist,
   theme,

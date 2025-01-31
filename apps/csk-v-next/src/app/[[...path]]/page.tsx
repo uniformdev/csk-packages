@@ -6,9 +6,9 @@ import {
   PageParameters,
   UniformComposition,
 } from '@uniformdev/canvas-next-rsc';
-import { emptyPlaceholderResolver } from '@uniformdev/theme-pack/components/canvas/emptyPlaceholders';
-import { ThemePackProvider } from '@uniformdev/theme-pack/components/providers/server';
-import { isRouteWithoutErrors } from '@uniformdev/theme-pack/utils/routing';
+import { emptyPlaceholderResolver } from '@uniformdev/csk-components/components/canvas/emptyPlaceholders';
+import { isRouteWithoutErrors } from '@uniformdev/csk-components/utils/routing';
+import { DesignExtensionsProvider } from '@uniformdev/design-extensions-tools/components/providers/server';
 import { componentResolver } from '@/components';
 import locales from '@/i18n/locales.json';
 import retrieveRoute from '@/utils/retrieveRoute';
@@ -26,7 +26,7 @@ export default async function Home(props: PageParameters) {
   const isPreviewMode = searchParams?.preview === 'true';
 
   return (
-    <ThemePackProvider isPreviewMode={isPreviewMode}>
+    <DesignExtensionsProvider isPreviewMode={isPreviewMode}>
       <ContextUpdateTransfer
         serverContext={serverContext}
         update={{
@@ -43,7 +43,7 @@ export default async function Home(props: PageParameters) {
         mode="server"
         resolveEmptyPlaceholder={emptyPlaceholderResolver}
       />
-    </ThemePackProvider>
+    </DesignExtensionsProvider>
   );
 }
 

@@ -1,0 +1,45 @@
+{
+  "extends": "@repo/typescript-config/react-library.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@uniformdev/csk-components/utils/styling": [
+        "./src/utils/styling.ts"
+      ],
+      "@uniformdev/csk-components/utils/routing": [
+        "./src/utils/routing.ts"
+      ],
+      "@uniformdev/csk-components/utils/assets": [
+        "./src/utils/assets.ts"
+      ],
+      "@uniformdev/csk-components/utils/createEmptyPlaceholderResolver": [
+        "./src/utils/createEmptyPlaceholderResolver.ts"
+      ],
+      "@uniformdev/csk-components/utils/createComponentResolver": [
+        "./src/utils/createComponentResolver.ts"
+      ],
+      "@uniformdev/csk-components/types/cskTypes": [
+        "./src/types/cskTypes.ts"
+      ],
+      "@uniformdev/csk-components/hocs/withPlaygroundWrapper": [
+        "./src/hocs/withPlaygroundWrapper.tsx"
+      ],
+      "@uniformdev/csk-components/components/ui": [
+        "./src/components/ui/index.ts"
+      ],
+      "@uniformdev/csk-components/components/canvas": [
+        "./src/components/canvas/index.ts"
+      ]
+    }
+  },
+  "include": [
+    "src",
+    "turbo"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "declaration": true,
+}
