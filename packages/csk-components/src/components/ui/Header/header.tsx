@@ -7,7 +7,7 @@ import { DesktopHeader } from './desktop';
 const MobileHeader = dynamic(() => import('./mobile').then(mod => mod.MobileHeader));
 
 export const Header: FC<HeaderProps> = ({ sticky, ...headerProps }) => (
-  <header className={cn({ 'sticky top-0 shadow z-10': sticky })}>
+  <header className={cn({ 'sticky top-0 shadow-sm z-10': sticky })}>
     <div className="hidden md:block">
       <DesktopHeader {...headerProps} />
     </div>

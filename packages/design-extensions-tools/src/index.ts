@@ -11,6 +11,7 @@ import {
   pushDimensions,
   pushFonts,
 } from '../src/scripts/build-time';
+import { generateSafelist } from './scripts/build-time/generate-safelist';
 
 type PullArgs = {
   colors?: boolean;
@@ -161,5 +162,10 @@ program
       return;
     }
   });
+
+program
+  .command('generate-tailwindcss-classes')
+  .description('Generate tailwindcss safelist classes')
+  .action(generateSafelist);
 
 program.parse(process.argv);

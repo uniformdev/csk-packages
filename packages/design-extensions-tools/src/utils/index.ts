@@ -5,6 +5,7 @@ export {
   generateTailwindcssDimensionKeysPattern,
   generateTailwindcssBorderKeysPattern,
   generateTailwindcssFontKeysPattern,
+  generateTailwindSafelist,
 } from './generateTailwindcssPatterns';
 
 export { getTokenStyles, getRootSimpleTokensValue, getRootBordersValue } from './getTokenStyles';
@@ -56,4 +57,8 @@ export const pushTokenValue = (endPoint: string, body?: BodyInit | null, isCanar
 
 export const syncSuccessLog = (token: TOKEN_STYLE_FILE | CONFIG_FILE, mode: 'pushed' | 'pulled') => {
   console.info(FG_GREEN, `The ${token} configuration was successfully ${mode}`);
+};
+
+export const generalSuccessLog = (message: string) => {
+  console.info(FG_GREEN, message);
 };

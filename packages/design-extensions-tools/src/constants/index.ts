@@ -20,8 +20,11 @@ export const DEFAULT_COLOR_PREFIXES = ['bg', 'text', 'decoration', 'border', 'ri
 export const DEFAULT_COLOR_VARIANTS = ['hover', 'lg', 'md'];
 
 export const DEFAULT_DIMENSION_PREFIXES = ['mt', 'mb', 'mr', 'ml', 'pt', 'pb', 'pr', 'pl', 'w', 'h'];
+export const DEFAULT_DIMENSION_TABLE_PREFIXES = ['p'];
+export const DEFAULT_DIMENSION_TABLE_VARIANTS = ['[&_td]', '[&_th]'];
 export const DEFAULT_DIMENSION_VARIANTS: string[] = ['lg', 'md'];
 
+export const DEFAULT_FONT_PREFIXES: string[] = ['font'];
 export const DEFAULT_FONT_VARIANTS: string[] = ['lg', 'md'];
 export const DEFAULT_BORDER_VARIANTS: string[] = ['lg', 'md'];
 

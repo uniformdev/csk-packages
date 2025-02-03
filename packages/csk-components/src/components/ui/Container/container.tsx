@@ -23,14 +23,14 @@ export const Container: FC<ContainerProps> = ({
     <div
       className={cn(
         'px-4 xl:px-0',
-        { 'mx-auto w-full max-w-7xl': !fluidContent, '!px-0': fluidContent },
+        { 'mx-auto w-full max-w-7xl': !fluidContent, 'px-0!': fluidContent },
         wrapperClassName
       )}
     >
       <div
         className={cn(
           {
-            '!h-screen': fullHeight,
+            'h-screen!': fullHeight,
             [`bg-${backgroundColor}`]: !!backgroundColor,
             [resolveViewPort(marginTop, 'mt-{value}')]: marginTop,
             [resolveViewPort(marginBottom, 'mb-{value}')]: marginBottom,

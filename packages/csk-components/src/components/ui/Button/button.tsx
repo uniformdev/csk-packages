@@ -43,7 +43,7 @@ export const Button: FC<ButtonProps> = ({
   hoverTextColor,
 }) => {
   const baseStyles = cn(
-    'block w-max font-medium focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50',
+    'block w-max font-medium focus-visible:outline-hidden focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50',
     {
       [`text-${textColor}`]: textColor,
       [`hover:text-${hoverTextColor}`]: hoverTextColor,
@@ -63,7 +63,7 @@ export const Button: FC<ButtonProps> = ({
   });
   const linkStyles = cn('bg-transparent hover:underline hover:opacity-100', {
     [`hover:decoration-${buttonColor}`]: buttonColor,
-    '!underline': href === isActive,
+    'underline!': href === isActive,
   });
   return (
     <ButtonWrapper

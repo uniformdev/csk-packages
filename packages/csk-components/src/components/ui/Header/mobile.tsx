@@ -8,7 +8,7 @@ import Grid from '../Grid';
 import GridItem from '../GridItem';
 
 const IconBurgerMenu: FC<{ isOpen: boolean; onClick: () => void; color?: string }> = ({ isOpen, onClick, color }) => (
-  <button onClick={onClick} aria-label="Menu" className={cn('w-7 h-7 relative focus:outline-none')}>
+  <button onClick={onClick} aria-label="Menu" className={cn('w-7 h-7 relative focus:outline-hidden')}>
     <div className="absolute left-1/2 top-1/2 block w-7 -translate-x-1/2 -translate-y-1/2">
       <span
         aria-hidden="true"

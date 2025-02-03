@@ -22,7 +22,7 @@ export const Video: FC<VideoProps> = ({
   const onPause = useCallback(() => setPlaying(false), []);
 
   return (
-    <div className="relative aspect-video size-full [&_video]:!object-cover">
+    <div className="relative aspect-video size-full [&_video]:object-cover!">
       {url && (
         <ReactPlayer
           className="absolute left-0 top-0"

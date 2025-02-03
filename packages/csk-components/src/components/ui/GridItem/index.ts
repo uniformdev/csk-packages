@@ -1,11 +1,11 @@
 import { HTMLAttributes } from 'react';
-import { DefaultTheme } from 'tailwindcss/types/generated/default-theme';
+import DefaultTheme from 'tailwindcss/defaultTheme';
 import { ViewPort } from '@uniformdev/csk-components/types/cskTypes';
 
-type AvailableColumnStart = keyof DefaultTheme['gridColumnStart'];
-type AvailableColumnSpan = keyof DefaultTheme['gridColumn'];
-type AvailableGridRowStart = keyof DefaultTheme['gridRowStart'];
-type AvailableGridRowSpan = keyof DefaultTheme['gridRow'];
+type AvailableColumnStart = keyof (typeof DefaultTheme)['gridColumnStart'];
+type AvailableColumnSpan = keyof (typeof DefaultTheme)['gridColumn'];
+type AvailableGridRowStart = keyof (typeof DefaultTheme)['gridRowStart'];
+type AvailableGridRowSpan = keyof (typeof DefaultTheme)['gridRow'];
 
 export type GridItemProps = HTMLAttributes<HTMLDivElement> & {
   columnStart?: AvailableColumnStart | ViewPort<AvailableColumnStart>;
