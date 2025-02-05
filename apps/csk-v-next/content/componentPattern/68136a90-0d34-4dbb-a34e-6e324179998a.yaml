@@ -26,30 +26,6 @@ composition:
         type: link
         slots:
           linkContent:
-            - _id: cf36ced3-02e4-4c0d-a07b-350e72851772
-              type: image
-              parameters:
-                $viz:
-                  type: $viz
-                  value:
-                    criteria:
-                      clauses:
-                        - op: is
-                          rule: $qk
-                          value: dark
-                          source: theme
-                image:
-                  type: asset
-                  value: []
-                width:
-                  type: number
-                  value: '180'
-                height:
-                  type: number
-                  value: '47'
-                objectFit:
-                  type: dex-segmented-control-parameter
-                  value: contain
             - _id: ee663cd6-37e5-4b5e-b629-fdf9a4667eba
               type: image
               parameters:
@@ -149,76 +125,15 @@ composition:
                     type: flex
                     slots:
                       flexItem:
-                        - _id: 88e9100e-b99d-4084-82a8-368fb15b4f20
+                        - _id: 1226047a-9d32-46c6-8a78-30d6e22e418a
                           type: navigationLink
-                          parameters:
-                            link:
-                              type: link
-                              locales:
-                                en:
-                                  path: https://docs.uniform.app/docs
-                                  type: url
-                            size:
-                              type: dex-segmented-control-parameter
-                              value: base
-                            text:
-                              type: text
-                              value: Documentation
-                            color:
-                              type: dex-color-palette-parameter
-                              value: text-primary
-                            weight:
-                              type: dex-segmented-control-parameter
-                              value: bold
-                          _overridability:
-                            hideLockedParameters: true
-                        - _id: 74e7610c-8a1d-4b03-824e-2ed660425e58
+                          _pattern: 2f1ff1e9-e7c7-43a6-8576-da21a1e199e5
+                        - _id: c4586887-719a-4134-b057-87d2f8ea3ee6
                           type: navigationLink
-                          parameters:
-                            link:
-                              type: link
-                              locales:
-                                en:
-                                  path: >-
-                                    https://dev-csk-v-next-approuter-storybook.vercel.app
-                                  type: url
-                            size:
-                              type: dex-segmented-control-parameter
-                              value: base
-                            text:
-                              type: text
-                              value: Storybook
-                            color:
-                              type: dex-color-palette-parameter
-                              value: text-primary
-                            weight:
-                              type: dex-segmented-control-parameter
-                              value: bold
-                          _overridability:
-                            hideLockedParameters: true
-                        - _id: 52841642-6197-491e-b3b9-34d7d8586d3d
+                          _pattern: 2f1ff1e9-e7c7-43a6-8576-da21a1e199e5
+                        - _id: 8514c1db-00ac-43e1-87d4-8830694a57df
                           type: navigationLink
-                          parameters:
-                            link:
-                              type: link
-                              locales:
-                                en:
-                                  path: https://www.uniform.dev/demo
-                                  type: url
-                            size:
-                              type: dex-segmented-control-parameter
-                              value: base
-                            text:
-                              type: text
-                              value: Demo
-                            color:
-                              type: dex-color-palette-parameter
-                              value: text-primary
-                            weight:
-                              type: dex-segmented-control-parameter
-                              value: bold
-                          _overridability:
-                            hideLockedParameters: true
+                          _pattern: 2f1ff1e9-e7c7-43a6-8576-da21a1e199e5
                     parameters:
                       gap:
                         type: dex-slider-control-parameter
@@ -328,30 +243,6 @@ composition:
                     type: link
                     slots:
                       linkContent:
-                        - _id: 6636b1df-de2f-465b-b8e2-71968fc5c063
-                          type: image
-                          parameters:
-                            $viz:
-                              type: $viz
-                              value:
-                                criteria:
-                                  clauses:
-                                    - op: is
-                                      rule: $qk
-                                      value: dark
-                                      source: theme
-                            image:
-                              type: asset
-                              value: []
-                            width:
-                              type: number
-                              value: '30'
-                            height:
-                              type: number
-                              value: '30'
-                            objectFit:
-                              type: dex-segmented-control-parameter
-                              value: ''
                         - _id: 261e0c54-fda9-4380-96a1-0dd3f8781371
                           type: image
                           parameters:
@@ -624,9 +515,43 @@ composition:
           color:
             type: dex-color-palette-parameter
             value: text-primary
+  _overrides:
+    1226047a-9d32-46c6-8a78-30d6e22e418a:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: https://docs.uniform.app/docs
+              type: url
+        text:
+          type: text
+          value: Documentation
+    8514c1db-00ac-43e1-87d4-8830694a57df:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: https://www.uniform.dev/demo
+              type: url
+        text:
+          type: text
+          value: Demo
+    c4586887-719a-4134-b057-87d2f8ea3ee6:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: https://dev-csk-v-next-approuter-storybook.vercel.app
+              type: url
+        text:
+          type: text
+          value: Storybook
   _locales:
     - en
 created: '2025-01-29T10:47:08.70923+00:00'
-modified: '2025-02-04T16:10:26.822947+00:00'
+modified: '2025-02-05T15:32:05.546406+00:00'
 pattern: true
 categoryId: b1163ce2-5ac7-4347-bc38-a42198180718
