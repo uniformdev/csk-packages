@@ -40,36 +40,7 @@ composition:
                           source: theme
                 image:
                   type: asset
-                  value:
-                    - _id: 59f609e7-91ae-42f9-91c4-57e0f6ea03f7
-                      type: image
-                      fields:
-                        id:
-                          type: text
-                          value: 0ecfb786-6b93-4023-9af6-7693a309a484
-                        url:
-                          value: >-
-                            https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/r9SJefG7S_aXYPgm9gJlCg-uniform-light-logo.svg
-                          type: text
-                        file:
-                          type: file
-                          value: a66c8bd1-864a-4d5a-8e84-0d210f4855d8
-                        size:
-                          value: 1681
-                          type: number
-                        title:
-                          type: text
-                          value: uniform-light-logo.svg
-                        width:
-                          value: 204
-                          type: number
-                        height:
-                          value: 52
-                          type: number
-                        mediaType:
-                          value: image/svg+xml
-                          type: text
-                      _source: uniform-assets
+                  value: []
                 width:
                   type: number
                   value: '180'
@@ -82,15 +53,6 @@ composition:
             - _id: ee663cd6-37e5-4b5e-b629-fdf9a4667eba
               type: image
               parameters:
-                $viz:
-                  type: $viz
-                  value:
-                    criteria:
-                      clauses:
-                        - op: '!is'
-                          rule: $qk
-                          value: dark
-                          source: theme
                 image:
                   type: asset
                   value:
@@ -380,36 +342,7 @@ composition:
                                       source: theme
                             image:
                               type: asset
-                              value:
-                                - _id: 2af9bb94-1d79-4a69-9c1a-d2fb0134446e
-                                  type: image
-                                  fields:
-                                    id:
-                                      type: text
-                                      value: 5fb5390d-c1a1-4506-a586-d4ba42c20f7b
-                                    url:
-                                      value: >-
-                                        https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/_iga9L1VQxSayRenJ03QVQ-github-light-logo.svg
-                                      type: text
-                                    file:
-                                      type: file
-                                      value: 95d6ad35-091b-4a0e-8c9f-ad1c398c4f83
-                                    size:
-                                      value: 1326
-                                      type: number
-                                    title:
-                                      type: text
-                                      value: github-light-logo.svg
-                                    width:
-                                      value: 35
-                                      type: number
-                                    height:
-                                      value: 34
-                                      type: number
-                                    mediaType:
-                                      value: image/svg+xml
-                                      type: text
-                                  _source: uniform-assets
+                              value: []
                             width:
                               type: number
                               value: '30'
@@ -422,15 +355,6 @@ composition:
                         - _id: 261e0c54-fda9-4380-96a1-0dd3f8781371
                           type: image
                           parameters:
-                            $viz:
-                              type: $viz
-                              value:
-                                criteria:
-                                  clauses:
-                                    - op: '!is'
-                                      rule: $qk
-                                      value: dark
-                                      source: theme
                             image:
                               type: asset
                               value:
@@ -703,6 +627,6 @@ composition:
   _locales:
     - en
 created: '2025-01-29T10:47:08.70923+00:00'
-modified: '2025-01-29T10:47:08.70923+00:00'
+modified: '2025-02-04T16:10:26.822947+00:00'
 pattern: true
 categoryId: b1163ce2-5ac7-4347-bc38-a42198180718
