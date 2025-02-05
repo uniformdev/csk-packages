@@ -82,78 +82,64 @@ composition:
         _overridability:
           hideLockedParameters: true
     headerCenterContent:
-      - _id: 5832d439-1459-4a01-b422-fd1e66a71cbb
+      - _id: 09b1471d-7aa8-419c-85e1-ba30947775ca
         type: navigationLink
-        parameters:
-          link:
-            type: link
-            value:
+        _pattern: f0bb02cd-315f-40d1-8e74-948e09019995
+      - _id: af0e8859-9cc9-4db7-87a6-92db71e075a4
+        type: navigationLink
+        _pattern: f0bb02cd-315f-40d1-8e74-948e09019995
+      - _id: dd90af02-85aa-43ba-a85e-583cb1a8cba7
+        type: navigationLink
+        _pattern: f0bb02cd-315f-40d1-8e74-948e09019995
+      - _id: a3d75824-5bd9-48fd-95a1-dc558627cb92
+        type: navigationLink
+        _pattern: f0bb02cd-315f-40d1-8e74-948e09019995
+  _overrides:
+    09b1471d-7aa8-419c-85e1-ba30947775ca:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
               path: https://dev-csk-marketing-site.vercel.app/get-started
               type: url
-          text:
-            type: text
-            value: Get Started
-          color:
-            type: dex-color-palette-parameter
-            value: text-primary
-          weight:
-            type: dex-segmented-control-parameter
-            value: medium
-      - _id: af6efa0f-26ba-4ff6-9106-247c35a60f2d
-        type: navigationLink
-        parameters:
-          link:
-            type: link
-            value:
-              path: https://dev-csk-marketing-site.vercel.app/components
-              type: url
-          text:
-            type: text
-            value: Components
-          color:
-            type: dex-color-palette-parameter
-            value: text-primary
-          weight:
-            type: dex-segmented-control-parameter
-            value: medium
-      - _id: b2345a75-1c06-4596-8e50-8163e76287b6
-        type: navigationLink
-        parameters:
-          link:
-            type: link
-            value:
-              path: https://dev-csk-marketing-site.vercel.app/templates
-              type: url
-          text:
-            type: text
-            value: Templates
-          color:
-            type: dex-color-palette-parameter
-            value: text-primary
-          weight:
-            type: dex-segmented-control-parameter
-            value: medium
-      - _id: 6f33478e-d7c1-4a8c-8c24-82a1792217d0
-        type: navigationLink
-        parameters:
-          link:
-            type: link
-            value:
-              path: https://dev-csk-marketing-site.vercel.app/recipes
-              type: url
-          text:
-            type: text
-            value: Recipes
-          color:
-            type: dex-color-palette-parameter
-            value: text-primary
-          weight:
-            type: dex-segmented-control-parameter
-            value: medium
+        text:
+          type: text
+          value: Get Started
+    a3d75824-5bd9-48fd-95a1-dc558627cb92:
+      parameters:
+        link:
+          type: link
+          value:
+            path: https://dev-csk-marketing-site.vercel.app/recipes
+            type: url
+        text:
+          type: text
+          value: Recipes
+    af0e8859-9cc9-4db7-87a6-92db71e075a4:
+      parameters:
+        link:
+          type: link
+          value:
+            path: https://dev-csk-marketing-site.vercel.app/components
+            type: url
+        text:
+          type: text
+          value: Components
+    dd90af02-85aa-43ba-a85e-583cb1a8cba7:
+      parameters:
+        link:
+          type: link
+          value:
+            path: https://dev-csk-marketing-site.vercel.app/templates
+            type: url
+        text:
+          type: text
+          value: Templates
   _locales:
     - en
 created: '2025-01-29T10:47:07.470956+00:00'
-modified: '2025-01-29T10:47:07.470956+00:00'
+modified: '2025-02-05T14:53:10.954792+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/main-header.jpg
