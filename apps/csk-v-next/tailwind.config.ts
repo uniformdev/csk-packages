@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss';
 import plugin from 'tailwindcss/plugin';
+import tailwindcssAnimate from 'tailwindcss-animate';
 import {
   generateTailwindcssColorKeysPattern,
   generateTailwindcssDimensionKeysPattern,
@@ -59,9 +60,23 @@ export default {
     '../../node_modules/@uniformdev/csk-components/dist/content/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   safelist,
-  theme,
+  theme: {
+    ...theme,
+    extend: {
+      ...theme.extend,
+      colors: {
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        ...theme.extend.colors,
+      },
+    },
+  },
   plugins: [
     typography,
+    tailwindcssAnimate,
     plugin(function ({ addUtilities }) {
       addUtilities(utilities);
     }),
