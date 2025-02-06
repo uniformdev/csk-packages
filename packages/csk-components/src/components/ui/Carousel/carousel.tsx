@@ -1,9 +1,9 @@
 'use client';
 
 import { FC, useCallback, useEffect, useRef, useState } from 'react';
+import { Container } from '@uniformdev/csk-components/components/ui';
 import { cn } from '@uniformdev/csk-components/utils/styling';
 import { CarouselProps } from '.';
-import Container from '../Container';
 
 export const Carousel: FC<CarouselProps> = ({
   countOfItems,

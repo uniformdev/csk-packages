@@ -1,11 +1,9 @@
 'use client';
 
 import { FC, useState } from 'react';
+import { Container, Grid, GridItem } from '@uniformdev/csk-components/components/ui';
 import { cn } from '@uniformdev/csk-components/utils/styling';
 import { HeaderProps } from './';
-import Container from '../Container';
-import Grid from '../Grid';
-import GridItem from '../GridItem';
 
 const IconBurgerMenu: FC<{ isOpen: boolean; onClick: () => void; color?: string }> = ({ isOpen, onClick, color }) => (
   <button onClick={onClick} aria-label="Menu" className={cn('w-7 h-7 relative focus:outline-none')}>

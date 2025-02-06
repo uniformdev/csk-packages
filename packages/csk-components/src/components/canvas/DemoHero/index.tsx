@@ -1,12 +1,14 @@
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
-import { ContainerParameters } from '@uniformdev/csk-components/components/canvas';
+import {
+  ContainerParameters,
+  TextParameters,
+  ButtonParameters,
+  ImageParameters as BaseImageParameters,
+} from '@uniformdev/csk-components/components/canvas';
 import { ButtonVariant } from '@uniformdev/csk-components/components/ui';
 import { FixedHero } from './fixed-hero';
 import { FlexibleHero } from './flexible-hero';
 import { PrefixedKeys } from './utils';
-import { ButtonParameters } from '../Button';
-import { ImageParameters as BaseImageParameters } from '../Image';
-import { TextParameters } from '../Text';
 
 export enum ContentAlignment {
   Left = 'left',

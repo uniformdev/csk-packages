@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { ComponentInstance } from '@uniformdev/canvas';
 import { CompositionContext, UniformText } from '@uniformdev/canvas-next-rsc/component';
+import { ButtonParameters, ImageParameters, TextParameters } from '@uniformdev/csk-components/components/canvas';
 import {
   Button as BaseButton,
   ButtonVariant,
@@ -10,9 +11,6 @@ import {
 } from '@uniformdev/csk-components/components/ui';
 import { resolveAsset } from '@uniformdev/csk-components/utils/assets';
 import { formatUniformLink } from '@uniformdev/csk-components/utils/routing';
-import { ButtonParameters } from '../Button';
-import { ImageParameters } from '../Image';
-import { TextParameters } from '../Text';
 
 type ComponentProps = {
   component: ComponentInstance;

@@ -1,7 +1,6 @@
 import { FC } from 'react';
+import { Text as BaseText, ImageIcon, VideoIcon } from '@uniformdev/csk-components/components/ui';
 import { MediaPlaceholderType } from '.';
-import { ImageIcon, VideoIcon } from '../_icons';
-import BaseText from '../Text';
 
 export const MediaPlaceholder: FC<MediaPlaceholderType> = ({ type, placeholder }) => {
   const Icon = type === 'video' ? VideoIcon : ImageIcon;

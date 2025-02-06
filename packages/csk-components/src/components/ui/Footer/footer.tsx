@@ -1,6 +1,6 @@
 import { FC } from 'react';
+import { Container } from '@uniformdev/csk-components/components/ui';
 import { FooterProps } from './';
-import Container from '../Container';
 
 export const Footer: FC<FooterProps> = ({
   logo,

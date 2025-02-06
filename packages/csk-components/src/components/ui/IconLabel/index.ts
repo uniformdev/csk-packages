@@ -1,5 +1,5 @@
 import { ReactNode, ReactElement } from 'react';
-import { TextProps as BaseTextProps } from '../Text';
+import { TextProps as BaseTextProps } from '@uniformdev/csk-components/components/ui';
 
 export type IconLabelProps = {
   icon?: ReactNode;

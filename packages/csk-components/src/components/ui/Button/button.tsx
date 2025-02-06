@@ -1,8 +1,8 @@
 import { FC } from 'react';
+import { Link as BaseLink } from '@uniformdev/csk-components/components/ui';
 import { isExternalLink } from '@uniformdev/csk-components/utils/routing';
 import { cn, resolveViewPort } from '@uniformdev/csk-components/utils/styling';
 import { ButtonProps, ButtonVariant } from '.';
-import BaseLink from '../Link';
 
 const ButtonWrapper: FC<ButtonProps> = ({ children, href, className, onClick }) => {
   const isCurrentLinkExternal = isExternalLink(href);

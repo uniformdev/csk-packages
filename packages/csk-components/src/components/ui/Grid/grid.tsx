@@ -1,7 +1,7 @@
 import { FC } from 'react';
+import { Container } from '@uniformdev/csk-components/components/ui';
 import { cn, resolveViewPort } from '@uniformdev/csk-components/utils/styling';
 import { GridProps } from '.';
-import Container from '../Container';
 
 export const Grid: FC<GridProps> = ({
   className,
