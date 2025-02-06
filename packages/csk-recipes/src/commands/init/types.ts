@@ -1,5 +1,5 @@
 export type Template = 'baseline' | string;
-export type Recipe = 'localization' | 'ga' | 'uniform-insights';
+export type Recipe = 'localization' | 'ga' | 'uniform-insights' | 'shadcn';
 
 export type EnvVariable =
   | 'UNIFORM_PROJECT_ID'

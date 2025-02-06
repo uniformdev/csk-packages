@@ -1,5 +1,6 @@
 import * as ora from 'ora';
 import { addEnvVariablesToProjectConfiguration, proceedCodeChange } from './code-changer';
+import { GIT_COMMANDS } from './constants';
 import { Recipe, ProjectConfiguration, Template } from './types';
 import {
   selectTemplate,
@@ -13,7 +14,7 @@ import {
   getValidRecipesFromArgs,
   fillEnvVariablesWithDefaults,
 } from './utils';
-import { runCmdCommand } from '../../utils';
+import { spawnCmdCommand } from '../../utils';
 
 type InitArgs = {
   dev: boolean;
@@ -55,10 +56,14 @@ const init = async (args: InitArgs): Promise<void> => {
       return;
     }
 
+    await spawnCmdCommand(GIT_COMMANDS.GIT_CREATE_BRANCH(`${template}-${recipes.join('-')}`));
+
     await alignWithFullPackBranch(spinner);
 
-    spinner.start('Installing dependencies...');
-    await runCmdCommand('npm install');
+    const installCommand = recipes.includes('shadcn') ? 'npm install --force' : 'npm install';
+
+    spinner.start(`Installing dependencies using ${installCommand} ...`);
+    await spawnCmdCommand(installCommand);
     spinner.succeed('Dependencies installed successfully!');
 
     const changedFiles = await getChangedFilesPath();
@@ -73,11 +78,19 @@ const init = async (args: InitArgs): Promise<void> => {
     await addEnvVariablesToProjectConfiguration(envVariables);
     spinner.succeed('Env variables added to project configuration successfully!');
 
+    await spawnCmdCommand(GIT_COMMANDS.GIT_ADD);
+
+    await spawnCmdCommand(GIT_COMMANDS.COMMIT_CHANGES('feat: recipes applied'));
+
+    await spawnCmdCommand(GIT_COMMANDS.GIT_RESET);
+
     if (template !== 'baseline') {
       spinner.start(`Applying the ${template} template for your project...`);
       await alignWithTemplateBranch(spinner, template);
       spinner.succeed(`${template} template applied successfully!`);
     }
+
+    await spawnCmdCommand(GIT_COMMANDS.COMMIT_CHANGES('feat: template applied'));
 
     spinner.succeed('App created successfully!');
   } catch (e) {

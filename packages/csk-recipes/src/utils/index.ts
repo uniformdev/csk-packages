@@ -1,4 +1,4 @@
-import { exec } from 'child_process';
+import { exec, spawn } from 'child_process';
 import prettier, { Options } from 'prettier';
 
 export const runCmdCommand = async (command: string): Promise<string> =>
@@ -13,6 +13,36 @@ export const runCmdCommand = async (command: string): Promise<string> =>
         return;
       }
       resolve(stdout);
+    });
+  });
+
+export const spawnCmdCommand = async (command: string): Promise<string> =>
+  new Promise((resolve, reject) => {
+    const [cmd = '', ...args] = command.split(' ');
+
+    const process = spawn(cmd, args, { shell: true });
+
+    let output = '';
+    let errorOutput = '';
+
+    process.stdout.on('data', data => {
+      output += data.toString();
+    });
+
+    process.stderr.on('data', data => {
+      errorOutput += data.toString();
+    });
+
+    process.on('close', code => {
+      if (code === 0) {
+        resolve(output.trim());
+      } else {
+        reject(`Command failed with code ${code}: ${errorOutput.trim()}`);
+      }
+    });
+
+    process.on('error', err => {
+      reject(`Failed to start process: ${err.message}`);
     });
   });
 
