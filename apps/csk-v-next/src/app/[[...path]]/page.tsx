@@ -10,6 +10,7 @@ import { emptyPlaceholderResolver } from '@uniformdev/csk-components/components/
 import { isRouteWithoutErrors } from '@uniformdev/csk-components/utils/routing';
 import { DesignExtensionsProvider } from '@uniformdev/design-extensions-tools/components/providers/server';
 import { componentResolver } from '@/components';
+import { Calendar } from '@/components/ui/calendar';
 import locales from '@/i18n/locales.json';
 import retrieveRoute from '@/utils/retrieveRoute';
 
@@ -27,6 +28,7 @@ export default async function Home(props: PageParameters) {
 
   return (
     <DesignExtensionsProvider isPreviewMode={isPreviewMode}>
+      <Calendar />
       <ContextUpdateTransfer
         serverContext={serverContext}
         update={{
