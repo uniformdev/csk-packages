@@ -7,16 +7,18 @@ export const GIT_BRANCHES = {
   FULL_PACK: process.env.FULL_PACK_BRANCH || 'full-pack',
 };
 
-export const RECIPES = ['localization', 'ga', 'uniform-insights'];
+export const RECIPES = ['localization', 'ga', 'uniform-insights', 'shadcn'];
 
 export const GIT_COMMANDS = {
   DIFF_QUIET: `git diff --quiet origin/${GIT_BRANCHES.GOLD}`,
   RESET_HARD: `git reset --hard origin/${GIT_BRANCHES.GOLD}`,
   ALIGN_WITH_FULL_PACK_BRACH: `git restore --source=origin/${GIT_BRANCHES.FULL_PACK} -- .`,
-  ALIGN_WITH_TEMPLATE_BRANCH: (template: string) =>
-    `git restore --source=${TEMPLATE_BRANCH_PREFIX}${template} --worktree -- .`,
+  ALIGN_WITH_TEMPLATE_BRANCH: (template: string) => `git cherry-pick -n ${TEMPLATE_BRANCH_PREFIX}${template} `,
+  COMMIT_CHANGES: (message: string) => `git commit -m "${message}" --no-verify`,
+  GIT_CREATE_BRANCH: (branchName: string) => `git checkout -b ${branchName}`,
   GET_CHANGED_FILES: 'git ls-files --modified --others --exclude-standard',
   GIT_ADD: 'git add .',
+  GIT_RESET: 'git reset --hard',
   GIT_REMOTE_BRANCHES: 'git branch -r',
 };
 
@@ -35,6 +37,7 @@ export const REQUIRED_ENV_VARIABLES: {
   'uniform-insights': ['UNIFORM_INSIGHTS_ENDPOINT', 'UNIFORM_INSIGHTS_KEY'],
   localization: [],
   ga: [],
+  shadcn: [],
 };
 
 export const ENV_VARIABLES_VARIANTS: Partial<{

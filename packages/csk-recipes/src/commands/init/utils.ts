@@ -1,3 +1,4 @@
+import fsSync from 'fs';
 import fs from 'fs/promises';
 import * as ora from 'ora';
 import path from 'path';
@@ -12,7 +13,7 @@ import {
   RECIPES,
 } from './constants';
 import { EnvVariable, Recipe, Template } from './types';
-import { runCmdCommand } from '../../utils';
+import { runCmdCommand, spawnCmdCommand } from '../../utils';
 /**
  * Verifies if the project is aligned with the remote GOLD branch.
  * @param spinner The spinner instance for loading indication.
@@ -118,6 +119,7 @@ export const selectRecipes = async (): Promise<Recipe[]> => {
       { name: 'Localization', value: 'localization' },
       { name: 'GA', value: 'ga' },
       { name: 'Uniform Insights', value: 'uniform-insights' },
+      { name: 'Shadcn', value: 'shadcn' },
     ],
   });
 
@@ -200,6 +202,10 @@ export const fillEnvVariablesWithDefaults = async (
  * @returns {Promise<Record<string, string>>} A promise resolving to an object containing key-value pairs of environment variables.
  */
 export const parseEnvVariables = async (): Promise<Record<string, string>> => {
+  if (!fsSync.existsSync('.env')) {
+    return {};
+  }
+
   // Read the contents of the .env file
   const envVariables = await fs.readFile('.env', 'utf8');
 
@@ -247,7 +253,7 @@ export const alignWithFullPackBranch = async (spinner: ora.Ora): Promise<void> =
 export const alignWithTemplateBranch = async (spinner: ora.Ora, template: string): Promise<void> => {
   try {
     spinner.start(`Aligning ${template} branch...`);
-    await runCmdCommand(GIT_COMMANDS.ALIGN_WITH_TEMPLATE_BRANCH(template));
+    await spawnCmdCommand(GIT_COMMANDS.ALIGN_WITH_TEMPLATE_BRANCH(template));
     spinner.succeed(`${template} branch aligned successfully!`);
   } catch (error) {
     spinner.fail(`Failed to align ${template} branch: ${error}. Please try again.`);

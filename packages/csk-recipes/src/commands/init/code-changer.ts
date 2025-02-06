@@ -13,10 +13,14 @@ import { formatWithPrettier, runCmdCommand } from '../../utils';
  */
 const cleanOutput = async (source: string, fileExtension: string): Promise<string> => {
   const getParser = () => {
-    if (fileExtension === '.json') {
-      return 'json';
+    switch (fileExtension) {
+      case '.json':
+        return 'json';
+      case '.css':
+        return 'css';
+      default:
+        return 'typescript';
     }
-    return 'typescript';
   };
 
   return formatWithPrettier(source, { parser: getParser() });
@@ -41,11 +45,13 @@ export const proceedCodeChange = async (filePath: string, recipes: Recipe[]): Pr
   const isLocalizationEnabled = recipes.includes('localization');
   const isGAEnabled = recipes.includes('ga');
   const isUniformInsightsEnabled = recipes.includes('uniform-insights');
+  const isShadcnEnabled = recipes.includes('shadcn');
 
   const transformedCode = new MetaScript(metaProgram).transform({
     localization: isLocalizationEnabled,
     ga: isGAEnabled,
     uniformInsights: isUniformInsightsEnabled,
+    shadcn: isShadcnEnabled,
   });
 
   const fileExtension = path.extname(filePath);
