@@ -1,7 +1,7 @@
 import { FC } from 'react';
+import { Text as BaseText } from '@uniformdev/csk-components/components/ui';
 import { cn } from '@uniformdev/csk-components/utils/styling';
 import { IconLabelProps } from '.';
-import BaseText from '../Text';
 
 export const IconLabel: FC<IconLabelProps> = ({
   icon,

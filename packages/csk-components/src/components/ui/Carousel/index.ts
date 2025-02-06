@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 import dynamic from 'next/dynamic';
-import { ContainerProps } from '../Container';
+import { ContainerProps } from '@uniformdev/csk-components/components/ui';
 
 export type CarouselProps = Pick<
   ContainerProps,

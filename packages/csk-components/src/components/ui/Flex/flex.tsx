@@ -1,7 +1,7 @@
 import { FC } from 'react';
+import { Container } from '@uniformdev/csk-components/components/ui';
 import { cn, resolveViewPort } from '@uniformdev/csk-components/utils/styling';
 import { FlexProps } from '.';
-import Container from '../Container';
 
 export const Flex: FC<FlexProps> = ({
   className,

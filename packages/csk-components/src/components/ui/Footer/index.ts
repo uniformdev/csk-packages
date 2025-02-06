@@ -1,4 +1,4 @@
-import { ContainerProps } from '../Container';
+import { ContainerProps } from '@uniformdev/csk-components/components/ui';
 
 export type FooterProps = Omit<ContainerProps, 'fullHeight' | 'content'> & {
   logo?: React.ReactNode;

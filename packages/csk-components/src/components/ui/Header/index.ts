@@ -1,5 +1,5 @@
 import { PropsWithChildren, ReactNode } from 'react';
-import { ContainerProps } from '../Container';
+import { ContainerProps } from '@uniformdev/csk-components/components/ui';
 
 export type HeaderProps = PropsWithChildren &
   Omit<ContainerProps, 'fluidContent' | 'fullHeight'> & {

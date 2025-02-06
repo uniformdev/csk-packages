@@ -1,8 +1,6 @@
 import { FC } from 'react';
+import { Container, Grid, GridItem } from '@uniformdev/csk-components/components/ui';
 import { HeaderProps } from './';
-import Container from '../Container';
-import Grid from '../Grid';
-import GridItem from '../GridItem';
 
 export const DesktopHeader: FC<HeaderProps> = ({
   leftSection,
