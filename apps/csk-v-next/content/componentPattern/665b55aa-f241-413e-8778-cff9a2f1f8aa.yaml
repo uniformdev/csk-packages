@@ -1,0 +1,280 @@
+composition:
+  _name: Product Card
+  _id: 665b55aa-f241-413e-8778-cff9a2f1f8aa
+  type: card
+  parameters:
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        marginTop: ''
+        marginLeft: ''
+        paddingTop: ''
+        marginRight: ''
+        paddingLeft: ''
+        marginBottom: ''
+        paddingRight: ''
+        paddingBottom: ''
+  slots:
+    cardMedia:
+      - _id: 61dd629a-df37-4737-97b1-5a76dfca1d93
+        type: container
+        slots:
+          containerContent:
+            - _id: b421ef45-f54a-4969-88fd-4d227891e73f
+              type: container
+              slots:
+                containerContent:
+                  - _id: 0952417a-061c-4634-91df-1341269e4054
+                    type: image
+                    parameters:
+                      image:
+                        type: asset
+                        value:
+                          - _id: e313d1da-0252-4226-ab77-827d7dd45ca3
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: 955cfe0c-01c8-471b-a730-af4bbaf1257e
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/N0QOqjXvSFeXY7i3yzY8ZQ/XNJZd8GHQomkOr3fABE5_Q-black-mountain-chambord-french-press-coffee-maker-1.png
+                                type: text
+                              file:
+                                type: file
+                                value: 8fdaf18d-d1c3-4a83-ae03-f37ca02ac27d
+                              size:
+                                value: 288022
+                                type: number
+                              title:
+                                type: text
+                                value: >-
+                                  black-mountain-chambord-french-press-coffee-maker-1.png
+                              width:
+                                value: 1280
+                                type: number
+                              height:
+                                value: 1280
+                                type: number
+                              mediaType:
+                                value: image/png
+                                type: text
+                            _source: uniform-assets
+                      height:
+                        type: number
+                        value: '329'
+                      objectFit:
+                        type: dex-segmented-control-parameter
+                        value: cover
+                    _overridability:
+                      parameters:
+                        image: 'yes'
+                      hideLockedParameters: true
+                  - _id: 636657b9-259e-44e9-b963-d9f1b4e80a67
+                    type: addToFavorites
+                    parameters:
+                      size:
+                        type: dex-segmented-control-parameter
+                        value: base
+                      addIcon:
+                        type: asset
+                        value:
+                          - _id: 5b108b3e-9296-4377-aeea-c1c7237f202c
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: 114655d8-a917-4822-b76d-0ea27254bd35
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/N0QOqjXvSFeXY7i3yzY8ZQ/wK9epMoPTm6e0QTUfvq5uQ-favourite-icon.svg
+                                type: text
+                              file:
+                                type: file
+                                value: 9a7f1005-090a-4b9f-b34b-1d710d42555a
+                              size:
+                                value: 1311
+                                type: number
+                              title:
+                                type: text
+                                value: favourite-icon.svg
+                              width:
+                                value: 20
+                                type: number
+                              height:
+                                value: 18
+                                type: number
+                              mediaType:
+                                value: image/svg+xml
+                                type: text
+                            _source: uniform-assets
+                      spacing:
+                        type: dex-space-control-parameter
+                        value:
+                          paddingTop: container-xxsmall
+                          paddingLeft: container-xxsmall
+                          paddingRight: container-xxsmall
+                          paddingBottom: container-xxsmall
+                      position:
+                        type: dex-segmented-control-parameter
+                        value: top-right
+                      removeIcon:
+                        type: asset
+                        value:
+                          - _id: 4ce1e00b-6735-4897-a6e3-20caff2157e9
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: ed3bfebf-c740-423b-aa96-ec72b071c9ea
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/N0QOqjXvSFeXY7i3yzY8ZQ/CEVPZhOzT0epCtmTY6Tc7g-favourite-icon-red.svg
+                                type: text
+                              file:
+                                type: file
+                                value: 3ba20a83-631f-40dc-93c4-94fa7fd69508
+                              size:
+                                value: 1749
+                                type: number
+                              title:
+                                type: text
+                                value: favourite-icon-red.svg
+                              width:
+                                value: 20
+                                type: number
+                              height:
+                                value: 18
+                                type: number
+                              mediaType:
+                                value: image/svg+xml
+                                type: text
+                            _source: uniform-assets
+                      backgroundColor:
+                        type: dex-color-palette-parameter
+                        value: general-color-2
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                relative:
+                  type: checkbox
+                  value: true
+                displayName:
+                  type: text
+                  value: Relative Container
+                fluidContent:
+                  type: checkbox
+                  value: true
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          border:
+            type: dex-token-selector-parameter
+            value: border-product-card
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              paddingTop: container-small
+              paddingLeft: container-small
+              paddingRight: container-small
+              paddingBottom: container-small
+          displayName:
+            type: text
+            value: Background Container
+          backgroundColor:
+            type: dex-color-palette-parameter
+            value: general-color-2
+        _overridability:
+          hideLockedParameters: true
+    cardContent:
+      - _id: a8625927-9fe5-40ee-8832-22b979e09ea6
+        type: flex
+        slots:
+          flexItem:
+            - _id: 988f7805-9e0e-4b30-acaf-f97d7dd5099f
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: span
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: 2xl
+                    tablet: 2xl
+                    desktop: 2xl
+                text:
+                  type: text
+                  value: Vintage Drip Coffee Maker
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: bold
+              _overridability:
+                parameters:
+                  text: 'yes'
+                  color: 'yes'
+                hideLockedParameters: true
+            - _id: 8bad3ddd-add0-43d3-a314-5836bf0c7a93
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: span
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    desktop: base
+                text:
+                  type: text
+                  value: $26.95 USD
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+              _overridability:
+                parameters:
+                  text: 'yes'
+                  color: 'yes'
+                hideLockedParameters: true
+        parameters:
+          gap:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '2'
+              tablet: '2'
+              desktop: '2'
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              marginTop: container-small
+          direction:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: col
+              tablet: col
+              desktop: col
+          alignItems:
+            type: dex-segmented-control-parameter
+            value: {}
+          displayName:
+            type: text
+            value: Content Container
+          justifyContent:
+            type: dex-segmented-control-parameter
+            value: {}
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      displayName: 'yes'
+      fluidContent: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2025-01-29T11:09:29.503377+00:00'
+modified: '2025-01-29T11:09:29.503377+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1731065901/csk-v-next/jd-template/product-card.jpg

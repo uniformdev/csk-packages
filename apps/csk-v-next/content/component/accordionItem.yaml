@@ -29,7 +29,6 @@ parameters:
     typeConfig:
       collapsed: true
       childrenParams:
-        - alignment
         - size
         - color
         - weight
@@ -37,7 +36,9 @@ parameters:
         - transform
         - decoration
         - letterSpacing
+        - alignment
         - backgroundColor
+        - border
         - spacing
   - id: size
     name: Size
@@ -133,6 +134,11 @@ parameters:
     name: Background Color
     type: dex-color-palette-parameter
     typeConfig: null
+  - id: border
+    name: Border
+    type: dex-token-selector-parameter
+    typeConfig:
+      selectedTokenType: border
   - id: spacing
     name: Spacing
     type: dex-space-control-parameter
@@ -153,5 +159,5 @@ slots:
     patternsInAllowedComponents: false
 titleParameter: text
 canBeComposition: false
-created: '2025-01-29T10:47:02.414019+00:00'
-updated: '2025-01-29T10:47:02.414019+00:00'
+created: '2025-01-29T11:09:17.91542+00:00'
+updated: '2025-01-29T11:09:17.91542+00:00'

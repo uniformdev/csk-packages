@@ -29,9 +29,8 @@ parameters:
       selectedGroup: container
   - id: border
     name: Border
-    type: dex-token-selector-parameter
-    typeConfig:
-      selectedTokenType: border
+    type: dex-border-selector-parameter
+    typeConfig: null
   - id: fluidContent
     name: Fluid Content
     type: checkbox
@@ -66,5 +65,5 @@ slots:
     patternsInAllowedComponents: false
 titleParameter: displayName
 canBeComposition: false
-created: '2025-01-29T10:47:01.778144+00:00'
-updated: '2025-01-29T10:47:01.778144+00:00'
+created: '2025-01-29T11:09:16.93495+00:00'
+updated: '2025-01-29T11:09:16.93495+00:00'

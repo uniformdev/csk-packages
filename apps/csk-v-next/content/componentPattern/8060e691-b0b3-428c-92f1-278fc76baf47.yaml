@@ -6,6 +6,9 @@ composition:
     size:
       type: dex-token-selector-parameter
       value: button-medium
+    text:
+      type: text
+      value: Learn more
     textSize:
       type: dex-segmented-control-parameter
       value:
@@ -14,7 +17,7 @@ composition:
         desktop: sm
     textColor:
       type: dex-color-palette-parameter
-      value: text-dark
+      value: text-secondary
     textWeight:
       type: dex-segmented-control-parameter
       value: normal
@@ -34,12 +37,17 @@ composition:
       link: 'yes'
       text: 'yes'
       textColor: 'no'
+      textWeight: 'yes'
+      buttonColor: 'yes'
+      textTransform: 'yes'
+      hoverTextColor: 'yes'
+      hoverButtonColor: 'yes'
     hideLockedParameters: true
   _locales:
     - en
-created: '2025-01-29T10:47:07.724152+00:00'
-modified: '2025-01-29T10:47:07.724152+00:00'
+created: '2025-01-29T11:09:28.561982+00:00'
+modified: '2025-01-29T11:09:28.561982+00:00'
 pattern: true
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/button-tertiary.jpg
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/jd-template/tertiary-button.jpg
 categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

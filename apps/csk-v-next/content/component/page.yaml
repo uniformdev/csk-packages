@@ -2,7 +2,7 @@
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: page
 name: Page
-icon: card
+icon: file-document
 parameters:
   - id: acb00032-a954-464b-ac5c-8fdf6bd9f53f
     name: Meta Data
@@ -17,7 +17,7 @@ parameters:
     name: Page Title
     type: text
     typeConfig:
-      required: false
+      required: true
   - id: pageDescription
     name: Page Description
     type: text
@@ -138,29 +138,8 @@ slots:
     patternsInAllowedComponents: false
   - id: pageContent
     name: Page Content
-    allowedComponents:
-      - accordion
-      - banner
-      - card
-      - carousel
-      - container
-      - fixedHero
-      - flex
-      - flexibleHero
-      - grid
-      - $p:eea0b9bb-82f4-4de6-9aa5-af290540615d
-      - imageGallery
-      - review
-      - section
-      - table
-      - tabs
-      - testimonial
-      - $p:6fc97589-a549-4105-8b4f-387f64ea2780
-      - $test
-      - $localization
-      - $loop
-      - $personalization
-    allowAllComponents: false
+    allowedComponents: []
+    allowAllComponents: true
     inheritAllowedComponents: false
     patternsInAllowedComponents: true
   - id: pageFooter
@@ -173,5 +152,5 @@ slots:
 titleParameter: pageTitle
 thumbnailParameter: openGraphImage
 canBeComposition: true
-created: '2025-01-29T10:47:02.333016+00:00'
-updated: '2025-01-29T10:47:02.333016+00:00'
+created: '2025-01-29T11:09:18.41576+00:00'
+updated: '2025-02-05T09:09:05.063666+00:00'

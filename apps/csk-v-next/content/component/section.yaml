@@ -65,6 +65,7 @@ slots:
     allowedComponents:
       - image
       - video
+      - container
     allowAllComponents: false
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
@@ -72,6 +73,9 @@ slots:
     name: Section Content
     allowedComponents:
       - text
+      - container
+      - flex
+      - grid
     allowAllComponents: false
     inheritAllowedComponents: false
     patternsInAllowedComponents: true
@@ -80,13 +84,14 @@ slots:
     allowedComponents:
       - $p:53b59aed-e378-4fcb-9135-20247d92074e
       - $p:646faee6-b476-43c6-a1a8-eebe85699889
+      - $p:8060e691-b0b3-428c-92f1-278fc76baf47
     allowAllComponents: false
     inheritAllowedComponents: false
     patternsInAllowedComponents: true
 titleParameter: displayName
 canBeComposition: false
-created: '2025-01-29T10:47:03.282855+00:00'
-updated: '2025-01-29T10:47:03.282855+00:00'
+created: '2025-01-29T11:09:18.646667+00:00'
+updated: '2025-01-29T11:09:18.646667+00:00'
 variants:
   - id: columns
     name: Columns
