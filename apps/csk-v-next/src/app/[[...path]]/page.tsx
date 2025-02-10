@@ -1,5 +1,4 @@
 import { cookies } from 'next/headers';
-import { notFound } from 'next/navigation';
 import {
   createServerUniformContext,
   ContextUpdateTransfer,
@@ -7,7 +6,6 @@ import {
   UniformComposition,
 } from '@uniformdev/canvas-next-rsc';
 import { emptyPlaceholderResolver } from '@uniformdev/csk-components/components/canvas/emptyPlaceholders';
-import { isRouteWithoutErrors } from '@uniformdev/csk-components/utils/routing';
 import { DesignExtensionsProvider } from '@uniformdev/design-extensions-tools/components/providers/server';
 import { componentResolver } from '@/components';
 import locales from '@/i18n/locales.json';
@@ -15,7 +13,6 @@ import retrieveRoute from '@/utils/retrieveRoute';
 
 export default async function Home(props: PageParameters) {
   const route = await retrieveRoute(props, locales.defaultLocale);
-  if (!isRouteWithoutErrors(route)) return notFound();
 
   const cookie = await cookies();
   const theme = cookie.get('theme')?.value || 'light';
