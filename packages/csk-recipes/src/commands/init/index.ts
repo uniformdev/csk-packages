@@ -60,7 +60,7 @@ const init = async (args: InitArgs): Promise<void> => {
 
     await alignWithFullPackBranch(spinner);
 
-    const installCommand = recipes.includes('shadcn') ? 'npm install --force' : 'npm install';
+    const installCommand = 'npm install --force';
 
     spinner.start(`Installing dependencies using ${installCommand} ...`);
     await spawnCmdCommand(installCommand);
@@ -88,9 +88,9 @@ const init = async (args: InitArgs): Promise<void> => {
       spinner.start(`Applying the ${template} template for your project...`);
       await alignWithTemplateBranch(spinner, template);
       spinner.succeed(`${template} template applied successfully!`);
-    }
 
-    await spawnCmdCommand(GIT_COMMANDS.COMMIT_CHANGES('feat: template applied'));
+      await spawnCmdCommand(GIT_COMMANDS.COMMIT_CHANGES('feat: template applied'));
+    }
 
     spinner.succeed('App created successfully!');
   } catch (e) {
