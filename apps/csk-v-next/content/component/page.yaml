@@ -18,16 +18,19 @@ parameters:
     type: text
     typeConfig:
       required: false
+    localizable: true
   - id: pageDescription
     name: Page Description
     type: text
     typeConfig:
       multiline: true
       linesCount: 5
+    localizable: true
   - id: pageKeywords
     name: Page Keywords
     type: text
     typeConfig: null
+    localizable: true
   - id: f4f80134-525c-4989-b414-145f14500d3d
     name: Open Graph
     type: group
@@ -43,6 +46,7 @@ parameters:
     type: text
     helpText: Fallback to Page Title when the value is not set.
     typeConfig: null
+    localizable: true
   - id: openGraphDescription
     name: Open Graph Description
     type: text
@@ -50,6 +54,7 @@ parameters:
     typeConfig:
       multiline: true
       linesCount: 5
+    localizable: true
   - id: openGraphImage
     name: Open Graph Image
     type: asset
@@ -87,6 +92,7 @@ parameters:
     type: text
     helpText: Fallback to Page Description when the value is not set.
     typeConfig: null
+    localizable: true
   - id: twitterImage
     name: Twitter Image
     type: asset
@@ -172,4 +178,4 @@ titleParameter: pageTitle
 thumbnailParameter: openGraphImage
 canBeComposition: true
 created: '2025-01-29T10:47:02.333016+00:00'
-updated: '2025-02-10T13:29:10.664461+00:00'
+updated: '2025-02-11T12:48:34.992627+00:00'
