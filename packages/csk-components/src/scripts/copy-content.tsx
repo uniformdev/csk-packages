@@ -13,25 +13,25 @@ async function copyContent() {
 
   // Copy components -> canvas
   await copyFolders(
-    path.resolve('./src/components/canvas'),
-    path.resolve('./dist/content/components/canvas'),
+    path.resolve('src', 'components', 'canvas'),
+    path.resolve('dist', 'content', 'components', 'canvas'),
     EXTRACT_CANVAS_COMPONENTS
   );
 
   await copyFolders(
-    path.resolve('./src/components/ui'),
-    path.resolve('./dist/content/components/ui'),
+    path.resolve('src', 'components', 'ui'),
+    path.resolve('dist', 'content', 'components', 'ui'),
     EXTRACT_UI_COMPONENTS
   );
 
   // Copy utils
-  await copyFiles(path.resolve('./src/utils'), path.resolve('./dist/content/utils'), EXTRACT_UTILS);
+  await copyFiles(path.resolve('src', 'utils'), path.resolve('dist', 'content', 'utils'), EXTRACT_UTILS);
 
   // Copy hocs
-  await copyFiles(path.resolve('./src/hocs'), path.resolve('./dist/content/hocs'), EXTRACT_HOCS);
+  await copyFiles(path.resolve('src', 'hocs'), path.resolve('dist', 'content', 'hocs'), EXTRACT_HOCS);
 
   // Copy types
-  await copyFiles(path.resolve('./src/types'), path.resolve('./dist/content/types'), EXTRACT_TYPES);
+  await copyFiles(path.resolve('src', 'types'), path.resolve('dist', 'content', 'types'), EXTRACT_TYPES);
 
   console.info('🎉 Content copied successfully!');
 }

@@ -1,14 +1,14 @@
 import path from 'node:path';
 
-export const DEFAULT_COMPONENTS_PATH = '/src/components';
-export const DEFAULT_MODULES_PATH = '/src';
+export const DEFAULT_COMPONENTS_PATH = path.join('src', 'components');
+export const DEFAULT_MODULES_PATH = path.join('src');
 
 export const PATH_TO_COMPONENTS_FOLDER = path.join(
-  ...(process.env.COMPONENTS_PATH ?? DEFAULT_COMPONENTS_PATH).split('/').filter(Boolean)
+  ...(process.env.COMPONENTS_PATH ?? DEFAULT_COMPONENTS_PATH).split(/[\\/]/).filter(Boolean)
 );
 
 export const PATH_TO_MODULES_FOLDER = path.join(
-  ...(process.env.MODULES_PATH ?? DEFAULT_MODULES_PATH).split('/').filter(Boolean)
+  ...(process.env.MODULES_PATH ?? DEFAULT_MODULES_PATH).split(/[\\/]/).filter(Boolean)
 );
 
 export const EXTRACT_CANVAS_COMPONENTS = [
