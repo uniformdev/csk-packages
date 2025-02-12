@@ -26,17 +26,17 @@ export const DEFAULT_FONT_VARIANTS: string[] = ['lg', 'md'];
 export const DEFAULT_BORDER_VARIANTS: string[] = ['lg', 'md'];
 
 export const DEFAULT_INTEGRATION_URL = 'https://design-extensions.vercel.app';
-export const DEFAULT_STYLES_PATH = '/src/styles';
-export const DEFAULT_CONFIG_PATH = '/';
+export const DEFAULT_STYLES_PATH = path.join('src', 'styles');
+export const DEFAULT_CONFIG_PATH = '';
 export const DEFAULT_TAILWIND_CONF_PATH = 'tailwind.config.theme.json';
 export const DEFAULT_TAILWIND_UTILITIES_PATH = 'tailwind.utilities.json';
 
 export const PATH_TO_STYLE_FOLDER = path.join(
-  ...(process.env.STYLES_PATH ?? DEFAULT_STYLES_PATH).split('/').filter(Boolean)
+  ...(process.env.STYLES_PATH ?? DEFAULT_STYLES_PATH).split(/[\\/]/).filter(Boolean)
 );
 
 export const PATH_TO_CONFIG_FOLDER = path.join(
-  ...(process.env.CONFIG_PATH ?? DEFAULT_CONFIG_PATH).split('/').filter(Boolean)
+  ...(process.env.CONFIG_PATH ?? DEFAULT_CONFIG_PATH).split(/[\\/]/).filter(Boolean)
 );
 
 export const IS_CANARY_ENVIRONMENT =
