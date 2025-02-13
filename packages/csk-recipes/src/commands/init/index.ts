@@ -1,6 +1,6 @@
 import * as ora from 'ora';
-import { addEnvVariablesToProjectConfiguration, proceedCodeChange } from './code-changer';
-import { GIT_COMMANDS } from './constants';
+import { addEnvVariablesToProjectConfiguration, postProcessFile, proceedCodeChange } from './code-changer';
+import { GIT_COMMANDS, META_NOT_PROCESABLE_FILE_EXTENSIONS, RECIPE_ADDITIONAL_FILES } from './constants';
 import { Recipe, ProjectConfiguration, Template } from './types';
 import {
   selectTemplate,
@@ -72,6 +72,10 @@ const init = async (args: InitArgs): Promise<void> => {
       spinner.start(`Processing ${file}...`);
       await proceedCodeChange(file, recipes);
       spinner.succeed(`Processed ${file} successfully!`);
+
+      spinner.start(`Post-processing ${file}...`);
+      await postProcessFile(file, recipes);
+      spinner.succeed(`Post-processed ${file} successfully!`);
     }
 
     spinner.start('Adding env variables to project configuration...');
