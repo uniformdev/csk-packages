@@ -54,3 +54,14 @@ export const ENV_VARIABLES_DEFAULT_VALUES: Partial<{
   UNIFORM_CLI_BASE_URL: 'https://uniform.app',
   UNIFORM_CLI_BASE_EDGE_URL: 'https://uniform.global',
 };
+
+export const RECIPE_ADDITIONAL_FILES: Partial<{
+  [key in Recipe]: string[];
+}> = {
+  localization: [],
+  ga: [],
+  'uniform-insights': [],
+  shadcn: ['components.json'],
+};
+
+export const META_NOT_PROCESABLE_FILE_EXTENSIONS = ['.json'];

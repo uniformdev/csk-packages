@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 import MetaScript from 'metascript';
 import path from 'path';
-import { JSX_COMMENT_REGEX } from './constants';
+import { JSX_COMMENT_REGEX, META_NOT_PROCESABLE_FILE_EXTENSIONS, RECIPE_ADDITIONAL_FILES } from './constants';
 import { EnvVariable, Recipe } from './types';
 import { formatWithPrettier, runCmdCommand } from '../../utils';
 
@@ -66,6 +66,22 @@ export const proceedCodeChange = async (filePath: string, recipes: Recipe[]): Pr
     if (fileExtension !== '.json') {
       await runCmdCommand(`npx next lint --file ${filePath} --fix`);
     }
+  }
+};
+
+export const postProcessFile = async (filePath: string, recipes: Recipe[]) => {
+  if (!META_NOT_PROCESABLE_FILE_EXTENSIONS.some(ext => filePath.endsWith(ext))) {
+    return;
+  }
+
+  const isFileAdditional = Object.values(RECIPE_ADDITIONAL_FILES).some(files => files.includes(filePath));
+  if (!isFileAdditional) {
+    return;
+  }
+
+  const isFileShouldBeIncluded = recipes.some(recipe => RECIPE_ADDITIONAL_FILES[recipe]?.includes(filePath));
+  if (!isFileShouldBeIncluded) {
+    await fs.rm(filePath);
   }
 };
 
