@@ -20,7 +20,7 @@ export default async function Home(props: PageParameters) {
   const serverContext = await createServerUniformContext({
     searchParams,
   });
-  const isPreviewMode = searchParams?.preview === 'true';
+  const isPreviewMode = searchParams?.is_incontext_editing_mode === 'true';
 
   return (
     <DesignExtensionsProvider isPreviewMode={isPreviewMode}>
