@@ -56,16 +56,106 @@ The following scripts are created to facilitate sync of content from / to your p
 
 ## Other scripts
 
-### Design Extension sync
+### **Design Extension Sync**  
 
-TODO: need more work here
-⚠️ Important: After each adding new color or font keys you have to rebuild your application, in order to simplify this process you can use Webhook Settings tab to provide rebuild webhook.
+## ⚠️ Important  
+Whenever you add new **colors, dimensions, fonts, or borders**, your application should recognize these values. To ensure this, you need to run:  
 
-1. Provide your own color palette or set up it from the code using `npm run push:colors` command. (see `./styles/colors.css`)
-1. Provide your own dimension configuration or set up it from the code using `npm run push:dimensions` command. (see `./styles/dimensions.css`)
-1. Provide your own fonts or set up it from the code using `npm run push:fonts` command. (see `./styles/fonts.css`)
-1. Provide your own border configuration or set up it from the code using `npm run push:borders` command. (see `./styles/border.css`)
+```sh
+npm run pull:configuration
+```
 
-### Publishing manifest file via CLI
+This command is automatically executed when running:  
+- **Development mode:**  
+  ```sh
+  npm run dev:watch
+  ```
+- **Build process:**  
+  ```sh
+  npm run build
+  ```
+
+## 🔄 Automatic Synchronization  
+When modifying an **existing value**, your app will automatically fetch the updated configuration in **two cases**:  
+1. If you are in **preview mode** (within the canvas).  
+2. If the **WATCH** environment variable is set to `true`.  
+
+## 🎨 Working with Styles  
+If you prefer managing styles manually, you can modify the predefined configuration files located in the `styles/` directory:  
+
+- `styles/border.css`  
+- `styles/colors.css`  
+- `styles/dimensions.css`  
+- `styles/fonts.css`  
+
+After making changes, push the updated configuration using:  
+```sh
+npm run push:configuration
+```
+This will update the **Design Extensions Integration** with your new styles.  
+
+## 🌙 Dark Mode Integration  
+When developing an application that supports **dark mode**, ensure that your integration recognizes dark theme colors by defining them inside the `.dark` class:  
+
+```css
+.dark {
+  --text-primary: #752B2B;
+  --text-secondary: #391717;
+  --text-tertiary: #6F5454;
+  --text-light: #ED1616;
+  --text-dark: #3E867D;
+}
+```
+
+This ensures that the **Design Extension Integration** correctly identifies and applies dark mode styling. 
+
+## 🗂 Managing Groups in Design Extension  
+By default, the **Design Extension** includes two predefined groups:  
+- `button`  
+- `text`  
+
+### **Understanding `allowGroups.json`**  
+When your project is still using the default configuration, the `allowGroups.json` file will be **empty**. However, if you add a custom group (e.g., `page`), it will be added to this file automatically.  
+
+#### **Example: Adding a Custom Group (Page)**  
+If you introduce a new group, such as `page`, the `allowGroups.json` file will be updated as follows:  
+
+```json
+{
+  "color": [
+    "button",
+    "page",
+    "text"
+  ]
+}
+```
+
+### **Creating and Pushing Custom Groups**  
+You can define your own groups and push them using:  
+```sh
+npm run push:configuration
+```
+
+🔹 **Important:** The **Design Extension Integration** will only display a group **if it contains values**.  
+
+### **Linking Design Tokens to a Group**  
+To assign a **design token** to a specific group, the token's name **must** be prefixed with the group name.  
+
+#### **Example: Assigning Colors to a Group**  
+For the `page` group to be recognized, you should define colors using the `page-` prefix:  
+
+```css
+--page-background-primary: #FFFFFF;
+```
+
+After this, the token will be correctly linked to the **Page** section in your **Design Extension Integration**.  
+
+### **Supported Grouping Categories**  
+Currently, grouping is supported for:  
+✅ **Color tokens**  
+✅ **Dimension tokens**  
+
+
+## Publishing manifest file via CLI
 
 1. Run `npm run publish:manifest` to publish the manifest with A/B testing and personalization configuration.
