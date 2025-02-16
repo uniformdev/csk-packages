@@ -134,6 +134,9 @@ composition:
                         - _id: 8514c1db-00ac-43e1-87d4-8830694a57df
                           type: navigationLink
                           _pattern: 2f1ff1e9-e7c7-43a6-8576-da21a1e199e5
+                        - _id: a7e8071c-e27b-4a4f-bb23-9882486d39b3
+                          type: navigationLink
+                          _pattern: 2f1ff1e9-e7c7-43a6-8576-da21a1e199e5
                     parameters:
                       gap:
                         type: dex-slider-control-parameter
@@ -228,8 +231,7 @@ composition:
                       link:
                         type: link
                         value:
-                          path: >-
-                            https://dev-csk-v-next-approuter-storybook.vercel.app
+                          path: https://unfrm.to/csk-sb
                           type: url
                       displayName:
                         type: text
@@ -238,6 +240,9 @@ composition:
                         type: checkbox
                         value: true
                     _overridability:
+                      parameters:
+                        link: 'yes'
+                        displayName: 'yes'
                       hideLockedParameters: true
                   - _id: 6f18283f-d276-46e0-a8bb-20749b65a744
                     type: link
@@ -291,7 +296,7 @@ composition:
                       link:
                         type: link
                         value:
-                          path: https://github.com/uniformdev/csk-v-next
+                          path: https://unfrm.to/csk-repo
                           type: url
                       displayName:
                         type: text
@@ -300,6 +305,9 @@ composition:
                         type: checkbox
                         value: true
                     _overridability:
+                      parameters:
+                        link: 'yes'
+                        displayName: 'yes'
                       hideLockedParameters: true
               parameters:
                 gap:
@@ -403,7 +411,7 @@ composition:
                         format: 0
                         version: 1
                       - link:
-                          path: https://www.uniform.dev/
+                          path: https://unfrm.to/uniformdev
                           type: url
                         type: link
                         format: ''
@@ -522,7 +530,7 @@ composition:
           type: link
           locales:
             en:
-              path: https://docs.uniform.app/docs
+              path: https://unfrm.to/csk-docs
               type: url
         text:
           type: text
@@ -533,11 +541,22 @@ composition:
           type: link
           locales:
             en:
-              path: https://www.uniform.dev/demo
+              path: https://unfrm.to/csk-demo
               type: url
         text:
           type: text
           value: Demo
+    a7e8071c-e27b-4a4f-bb23-9882486d39b3:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+        text:
+          type: text
+          value: Request a personal demo
     c4586887-719a-4134-b057-87d2f8ea3ee6:
       parameters:
         link:
@@ -551,7 +570,7 @@ composition:
           value: Storybook
   _locales:
     - en
-created: '2025-01-29T10:47:08.70923+00:00'
-modified: '2025-02-05T15:32:05.546406+00:00'
+created: '2025-02-16T20:14:15.12721+00:00'
+modified: '2025-02-16T21:36:32.33374+00:00'
 pattern: true
 categoryId: b1163ce2-5ac7-4347-bc38-a42198180718
