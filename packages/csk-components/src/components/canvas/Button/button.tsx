@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useMemo } from 'react';
 import { UniformText } from '@uniformdev/canvas-next-rsc/component';
 import {
   Image as BaseImage,
@@ -27,14 +27,27 @@ export const Button: FC<ButtonProps> = ({
   hoverTextColor,
   className,
   onClick,
+  text,
 }) => {
   const href = formatUniformLink(link);
 
-  const Icon = () => {
+  const isEditorPreviewMode = context.previewMode === 'editor' && context?.isContextualEditing;
+
+  const iconParameters = useMemo(() => {
     const [resolvedImage] = resolveAsset(icon);
     const { url, title = '' } = resolvedImage || {};
-
     if (!url) return undefined;
+
+    return {
+      url,
+      title,
+    };
+  }, [icon]);
+
+  const Icon = () => {
+    if (!iconParameters) return undefined;
+
+    const { url, title } = iconParameters;
 
     return (
       <BaseImage
@@ -49,6 +62,11 @@ export const Button: FC<ButtonProps> = ({
       />
     );
   };
+
+  const hasContent = !!text || !!iconParameters;
+
+  if (!hasContent && !isEditorPreviewMode) return null;
+
   return (
     <BaseButton
       variant={component.variant as BaseButtonProps['variant']}

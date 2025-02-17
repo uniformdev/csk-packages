@@ -24,8 +24,12 @@ export const BaseHeroText: FC<TextParameters & ComponentProps> = ({
   parameterId,
   text,
   ...props
-}) =>
-  !text && !(context.previewMode === 'editor') ? null : (
+}) => {
+  const isEditorPreviewMode = context.previewMode === 'editor' && context.isContextualEditing;
+
+  if (!text && !isEditorPreviewMode) return null;
+
+  return (
     <BaseText {...props}>
       <UniformText
         placeholder="Text goes here"
@@ -36,6 +40,7 @@ export const BaseHeroText: FC<TextParameters & ComponentProps> = ({
       />
     </BaseText>
   );
+};
 
 export const BaseHeroButton: FC<ButtonParameters & { variant?: ButtonVariant } & ComponentProps> = ({
   component,
@@ -47,7 +52,9 @@ export const BaseHeroButton: FC<ButtonParameters & { variant?: ButtonVariant } &
   const { link, icon } = props;
   const href = formatUniformLink(link);
 
-  if (!text && !href && !(context.previewMode === 'editor')) return null;
+  const isEditorPreviewMode = context.previewMode === 'editor' && context.isContextualEditing;
+
+  if (!text && !href && !isEditorPreviewMode) return null;
 
   const Icon = () => {
     const [resolvedImage] = resolveAsset(icon);
@@ -93,7 +100,7 @@ export const BaseHeroImage: FC<ImageParameters & Omit<ComponentProps, 'parameter
   const [resolvedImage] = resolveAsset(image);
 
   if (!resolvedImage) {
-    const isEditorPreviewMode = context.previewMode === 'editor';
+    const isEditorPreviewMode = context.previewMode === 'editor' && context.isContextualEditing;
     const isPlaceholder = component?._id?.includes('placeholder_');
 
     if (!isEditorPreviewMode || isPlaceholder || !component.variant) {
