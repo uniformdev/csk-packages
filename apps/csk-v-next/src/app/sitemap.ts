@@ -3,12 +3,11 @@ import { ProjectMapClient, getNodeActiveCompositionEdition } from '@uniformdev/p
 import localesConfig from '@/i18n/locales.json';
 
 const projectMap = new ProjectMapClient({
-  apiHost: process.env.UNIFORM_CLI_BASE_URL!,
   apiKey: process.env.UNIFORM_API_KEY!,
   projectId: process.env.UNIFORM_PROJECT_ID!,
 });
 
-const VERCEL_URL = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : '';
+const BASE_URL = process.env.BASE_URL ? `https://${process.env.BASE_URL}` : '';
 // Note:
 // This is a basic implementation of sitemap generation. It is suitable for smaller projects where
 // the total number of sitemap items does not exceed 50,000, which is the limit for a single sitemap file.
@@ -16,7 +15,7 @@ const VERCEL_URL = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` 
 // as suggested in the Next.js documentation:
 // https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap#generating-multiple-sitemaps
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const domain = VERCEL_URL || 'http://localhost:3000';
+  const domain = BASE_URL || 'http://localhost:3000';
   const { nodes } = await projectMap.getNodes({ withCompositionData: true });
 
   if (!nodes) return [];
