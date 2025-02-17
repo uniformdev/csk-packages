@@ -5,7 +5,7 @@ import { ImageProps } from './index';
 type ImagePlaceholderProps = Pick<ImageProps, 'component' | 'context' | 'width' | 'height'>;
 
 export const ImagePlaceholder: FC<ImagePlaceholderProps> = ({ context, component, width, height }) => {
-  const isEditorPreviewMode = context.previewMode === 'editor';
+  const isEditorPreviewMode = context.previewMode === 'editor' && context.isContextualEditing;
   const isPlaceholder = component?._id?.includes('placeholder_');
 
   if (!isEditorPreviewMode || isPlaceholder) {
