@@ -4,7 +4,21 @@ This is the latest version of the Uniform Component Starter Kit (CSK) - version 
 
 > If you are looking for the Next.js Page Router version, check out this older [repo](https://github.com/uniformdev/uniform-component-starter-kit) instead.
 
-Check out more about it [here](https://components.uniform.app).
+## Key changes in v6
+1. This version is built specifically for Next.js 15 and React 19, leveraging the latest Uniform SDK v20+, enabled for all the latest Uniform DXP features!
+1. Minimalistic and simplified approach:
+   - zero external dependencies besides @uniformdev, minimum distractions - essentials only in the core version.
+   - Zero components added by default, can add components into your codebase with `npm run component:extract` and customize how you see fit
+   - More templates and solution recipes coming as stand-alone packages.
+1. Revamped theme management system based on a new Design Extensions integration that supports design tokens
+1. More atomic components supporting the authorable components paradigm
+1. Internationalization / localization ready
+1. Removed daisyui
+1. Included standard sitemap implementation
+1. Server-side rendering by default. Static site generation can be enabled on top.
+1. Dev Experience updates: `component:scaffold` and `component:extract` flows, watch mode for design extension update sync and a developer config for content sync that scopes the operation to developer artifacts only.
+
+Check out more about it [here](https://components.uniform.app) where you can copy and paste components from right into your project!
 
 ## Prerequisites
 
@@ -25,8 +39,8 @@ Run `npx @uniformdev/cli new` and pick `Next.js` -> `Component Starter Kit` from
 1. Create an empty Uniform project in your team.
 1. Setup your .env file using your Uniform project connection details (see .env.example for reference)
    ```bash
-   UNIFORM_API_KEY=
    UNIFORM_PROJECT_ID=
+   UNIFORM_API_KEY=
    UNIFORM_PREVIEW_SECRET=hello-world
    ```
    > Make sure your API key has "Developer" role to be able to push content.
