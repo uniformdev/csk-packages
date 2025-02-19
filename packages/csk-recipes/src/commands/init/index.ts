@@ -51,44 +51,49 @@ const init = async (args: InitArgs): Promise<void> => {
     // Build and display the project configuration
     const projectConfiguration: ProjectConfiguration = { template, recipes, envVariables };
 
-    if (projectConfiguration?.recipes.length === 0) {
+    const isRecipesApplied = projectConfiguration?.recipes.length > 0;
+    const isTemplateApplied = projectConfiguration?.template !== 'baseline';
+
+    if (!isRecipesApplied && !isTemplateApplied) {
       console.info('🚀 Project initialized successfully!');
       return;
     }
 
     await spawnCmdCommand(GIT_COMMANDS.GIT_CREATE_BRANCH(`${template}-${recipes.join('-')}`));
 
-    await alignWithFullPackBranch(spinner);
+    if (isRecipesApplied) {
+      await alignWithFullPackBranch(spinner);
 
-    const installCommand = 'npm install --force';
+      const installCommand = 'npm install --force';
 
-    spinner.start(`Installing dependencies using ${installCommand} ...`);
-    await spawnCmdCommand(installCommand);
-    spinner.succeed('Dependencies installed successfully!');
+      spinner.start(`Installing dependencies using ${installCommand} ...`);
+      await spawnCmdCommand(installCommand);
+      spinner.succeed('Dependencies installed successfully!');
 
-    const changedFiles = await getChangedFilesPath();
+      const changedFiles = await getChangedFilesPath();
 
-    for (const file of changedFiles) {
-      spinner.start(`Processing ${file}...`);
-      await proceedCodeChange(file, recipes);
-      spinner.succeed(`Processed ${file} successfully!`);
+      for (const file of changedFiles) {
+        spinner.start(`Processing ${file}...`);
+        await proceedCodeChange(file, recipes);
+        spinner.succeed(`Processed ${file} successfully!`);
 
-      spinner.start(`Post-processing ${file}...`);
-      await postProcessFile(file, recipes);
-      spinner.succeed(`Post-processed ${file} successfully!`);
+        spinner.start(`Post-processing ${file}...`);
+        await postProcessFile(file, recipes);
+        spinner.succeed(`Post-processed ${file} successfully!`);
+      }
+
+      spinner.start('Adding env variables to project configuration...');
+      await addEnvVariablesToProjectConfiguration(envVariables);
+      spinner.succeed('Env variables added to project configuration successfully!');
+
+      await spawnCmdCommand(GIT_COMMANDS.GIT_ADD);
+
+      await spawnCmdCommand(GIT_COMMANDS.COMMIT_CHANGES('feat: recipes applied'));
+
+      await spawnCmdCommand(GIT_COMMANDS.GIT_RESET);
     }
 
-    spinner.start('Adding env variables to project configuration...');
-    await addEnvVariablesToProjectConfiguration(envVariables);
-    spinner.succeed('Env variables added to project configuration successfully!');
-
-    await spawnCmdCommand(GIT_COMMANDS.GIT_ADD);
-
-    await spawnCmdCommand(GIT_COMMANDS.COMMIT_CHANGES('feat: recipes applied'));
-
-    await spawnCmdCommand(GIT_COMMANDS.GIT_RESET);
-
-    if (template !== 'baseline') {
+    if (isTemplateApplied) {
       spinner.start(`Applying the ${template} template for your project...`);
       await alignWithTemplateBranch(spinner, template);
       spinner.succeed(`${template} template applied successfully!`);
