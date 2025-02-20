@@ -78,6 +78,7 @@ export default async function Home(props: PageParameters) {
 export { generateMetadata } from '@/utils/metadata';
 
 ```
+
 ### Pull Design Tokens
 
 Run the following command to pull and generate CSS variables for all design tokens:
@@ -171,7 +172,6 @@ export default {
     }),
   ],
 } satisfies Config;
-
 ```
 
 ## Commands
@@ -199,7 +199,7 @@ npm run extract:components -- --components Text Button Accordion
 #### Options
 
 - `-c, --components <components...>` – Specifies which canvas components to extract. Example components include:
-  
+
   ```
   Accordion, DemoHero, Banner, Carousel, Section, Text, Button, etc.
   ```

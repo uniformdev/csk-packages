@@ -5,6 +5,7 @@ This is the latest version of the Uniform Component Starter Kit (CSK) - version 
 > If you are looking for the Next.js Page Router version, check out this older [repo](https://github.com/uniformdev/uniform-component-starter-kit) instead.
 
 ## Key changes in v6
+
 1. This version is built specifically for Next.js 15 and React 19, leveraging the latest Uniform SDK v20+, enabled for all the latest Uniform DXP features!
 1. Minimalistic and simplified approach:
    - zero external dependencies besides @uniformdev, minimum distractions - essentials only in the core version.
@@ -45,8 +46,8 @@ Run `npx @uniformdev/cli new` and pick `Next.js` -> `Component Starter Kit` from
    ```
    > Make sure your API key has "Developer" role to be able to push content.
 1. `npm install` to install dependencies
-1. Run `npm run init` to initialize your project. 
-    > This will push all content from disk (`.\content` folder) and your design settings (colors, fonts, borders, etc. for this default theme).
+1. Run `npm run init` to initialize your project.
+   > This will push all content from disk (`.\content` folder) and your design settings (colors, fonts, borders, etc. for this default theme).
 
 ### Step 2. Run locally in dev mode
 
@@ -57,9 +58,6 @@ At this point, you should be able to browse your site on `http://localhost:3000`
 
 This integration brings new parameter types for design and layout control via Uniform UI extensions to help control and manage the look and feel of your components.
 
-1. Open your current team page.
-   ![Team page](https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/doc/team_page.png)
-1. Navigate to the `Settings` tab, than `Custom Integrations` and add `Design Extensions` as a custom integration using this [manifest](https://github.com/uniformdev/uniform-mesh-integrations/blob/canary/integrations/design-extensions/mesh-manifest.stable.json).
 1. Open your project.
    ![Your project](https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/doc/project_page.png)
 1. Navigate to the `Integrations` tab, find the `Design Extensions` integration and install it.
@@ -73,7 +71,7 @@ The following scripts are created to facilitate sync of content between the `./c
 
 Alternatively you can use `npm run pull:content:dev` and `npm run push:content:dev` to pull and push developer-owned content to your local project. The scope of the developer-owned content is defined in the `uniform.config.dev.ts` file.
 
-> Developer-owned content typically scoped to components, content types, component patterns but can vary based on the stage of your project lifecycle and your preferences. For example, at some point, you may not want to sync assets like images, videos, etc. 
+> Developer-owned content typically scoped to components, content types, component patterns but can vary based on the stage of your project lifecycle and your preferences. For example, at some point, you may not want to sync assets like images, videos, etc.
 
 ## Other scripts
 

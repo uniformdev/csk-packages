@@ -33,6 +33,7 @@ npm run recipes:init
 ### CLI Arguments
 
 #### `--template` / `-t`
+
 Specifies the template to use for the project.
 Supported template options include:
 
@@ -41,6 +42,7 @@ Supported template options include:
 - **`radiant`**: A feature-rich template for vibrant and dynamic projects.
 
 **Usage Example**:
+
 ```bash
 csk-recipes init --template baseline
 ```
@@ -48,14 +50,17 @@ csk-recipes init --template baseline
 ---
 
 #### `--recipes` / `-r`
+
 Defines the recipes to include in the project. You can specify one or more recipes, separated by spaces.
 
 Available recipe options:
+
 - **`localization`**: Adds support for managing and displaying multiple languages.
 - **`ga`**: Integrates Google Analytics for tracking and insights.
 - **`uniform-insights`**: Includes tools for enhanced performance and user behavior analytics.
 
 **Usage Example**:
+
 ```bash
 csk-recipes init --recipes localization ga uniform-insights
 ```
@@ -63,15 +68,19 @@ csk-recipes init --recipes localization ga uniform-insights
 ---
 
 #### `--dev` / `-d`
+
 Runs the initialization in development mode.
 
 **Usage Example**:
+
 ```bash
 csk-recipes init --dev
 ```
 
 ### Full Example
+
 To create a project using the `coffee-shop` template and include `localization` and `ga` recipes:
+
 ```bash
 csk-recipes init --template coffee-shop --recipes localization ga
 ```
@@ -79,6 +88,7 @@ csk-recipes init --template coffee-shop --recipes localization ga
 ## Additional Environment Variables
 
 ### Custom Branch Names
+
 You can configure custom branch names using environment variables:
 
 ```dotenv

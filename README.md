@@ -76,16 +76,13 @@ npm run lint
 
 ### 7. Publishing Packages
 
-This repository includes **GitHub Actions** for NPM package publishing. This shoud be run manually on  github actions.
-
+This repository includes **GitHub Actions** for NPM package publishing. This shoud be run manually on github actions.
 
 ## Pre-commit Hooks
 
 We use **Husky** to enforce linting and commit message validation:
+
 - **Linting**: Runs on every commit to ensure consistent code quality.
 - **Commit Message Validation**: Enforces proper commit messages to follow best practices.
 
 If a commit message does not follow the required format, it will be rejected.
-
-
-
