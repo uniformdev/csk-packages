@@ -1,6 +1,6 @@
 import fs from 'fs/promises';
-import MetaScript from 'metascript';
 import path from 'path';
+import MetaScript from '@uniformdev/metascript';
 import { JSX_COMMENT_REGEX, META_NOT_PROCESABLE_FILE_EXTENSIONS, RECIPE_ADDITIONAL_FILES } from './constants';
 import { EnvVariable, Recipe } from './types';
 import { formatWithPrettier, runCmdCommand } from '../../utils';
