@@ -3,7 +3,7 @@
  * Released under the Apache License, Version 2.0
  */
 
-declare module 'metascript' {
+declare module '@uniformdev/metascript' {
   export default class MetaScript {
     /**
      * Original source.

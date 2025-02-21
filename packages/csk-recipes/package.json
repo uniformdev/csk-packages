@@ -1,6 +1,6 @@
 {
   "name": "@uniformdev/csk-recipes",
-  "version": "6.0.6",
+  "version": "6.0.7",
   "description": "command-line interface (CLI) and utility functions to help you work with recipes in a CSK project. It simplifies project initialization by allowing you to choose templates and include specific recipes",
   "license": "SEE LICENSE IN LICENSE.txt",
   "main": "./cli.js",
@@ -31,8 +31,8 @@
   "author": "",
   "dependencies": {
     "@inquirer/prompts": "^7.1.0",
+    "@uniformdev/metascript": "^1.0.0",
     "commander": "^9.0.0",
-    "metascript": "^1.0.0",
     "ora": "^8.1.1"
   },
   "devDependencies": {
