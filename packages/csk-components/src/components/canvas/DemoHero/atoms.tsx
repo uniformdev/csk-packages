@@ -1,16 +1,14 @@
 import { FC } from 'react';
 import { ComponentInstance } from '@uniformdev/canvas';
 import { CompositionContext, UniformText } from '@uniformdev/canvas-next-rsc/component';
-import { ButtonParameters, ImageParameters, TextParameters } from '@uniformdev/csk-components/components/canvas';
-import {
-  Button as BaseButton,
-  ButtonVariant,
-  Image as BaseImage,
-  MediaPlaceholder,
-  Text as BaseText,
-} from '@uniformdev/csk-components/components/ui';
-import { resolveAsset } from '@uniformdev/csk-components/utils/assets';
-import { formatUniformLink } from '@uniformdev/csk-components/utils/routing';
+import { TextParameters } from '@/components/canvas/Text/parameters';
+import BaseButton, { ButtonVariant } from '@/components/ui/Button';
+import BaseImage from '@/components/ui/Image';
+import MediaPlaceholder from '@/components/ui/MediaPlaceholder';
+import BaseText from '@/components/ui/Text';
+import { resolveAsset } from '@/utils/assets';
+import { formatUniformLink } from '@/utils/routing';
+import { BaseButtonParameters, BaseImageParameters } from '.';
 
 type ComponentProps = {
   component: ComponentInstance;
@@ -42,7 +40,7 @@ export const BaseHeroText: FC<TextParameters & ComponentProps> = ({
   );
 };
 
-export const BaseHeroButton: FC<ButtonParameters & { variant?: ButtonVariant } & ComponentProps> = ({
+export const BaseHeroButton: FC<BaseButtonParameters & { variant?: ButtonVariant } & ComponentProps> = ({
   component,
   context,
   parameterId,
@@ -84,7 +82,7 @@ export const BaseHeroButton: FC<ButtonParameters & { variant?: ButtonVariant } &
   );
 };
 
-export const BaseHeroImage: FC<ImageParameters & Omit<ComponentProps, 'parameterId'>> = ({
+export const BaseHeroImage: FC<BaseImageParameters & Omit<ComponentProps, 'parameterId'>> = ({
   component,
   context,
   image,

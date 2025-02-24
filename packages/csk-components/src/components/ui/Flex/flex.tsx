@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { Container } from '@uniformdev/csk-components/components/ui';
-import { cn, resolveViewPort } from '@uniformdev/csk-components/utils/styling';
+import BaseContainer from '@/components/ui/Container';
+import { cn, resolveViewPort } from '@/utils/styling';
 import { FlexProps } from '.';
 
 export const Flex: FC<FlexProps> = ({
@@ -17,7 +17,7 @@ export const Flex: FC<FlexProps> = ({
   fullHeight,
   children,
 }) => (
-  <Container {...{ backgroundColor, spacing, border, fluidContent, fullHeight, wrapperClassName }}>
+  <BaseContainer {...{ backgroundColor, spacing, border, fluidContent, fullHeight, wrapperClassName }}>
     <div
       className={cn(
         'flex',
@@ -32,5 +32,5 @@ export const Flex: FC<FlexProps> = ({
     >
       {children}
     </div>
-  </Container>
+  </BaseContainer>
 );

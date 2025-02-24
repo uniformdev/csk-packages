@@ -1,15 +1,6 @@
-import path from 'node:path';
-
-export const DEFAULT_COMPONENTS_PATH = path.join('src', 'components');
-export const DEFAULT_MODULES_PATH = path.join('src');
-
-export const PATH_TO_COMPONENTS_FOLDER = path.join(
-  ...(process.env.COMPONENTS_PATH ?? DEFAULT_COMPONENTS_PATH).split(/[\\/]/).filter(Boolean)
-);
-
-export const PATH_TO_MODULES_FOLDER = path.join(
-  ...(process.env.MODULES_PATH ?? DEFAULT_MODULES_PATH).split(/[\\/]/).filter(Boolean)
-);
+export const IMPORT_REGEX = /['"](\.\/[^'"]+|@\/[^'"]+)['"]/g;
+export const FILE_EXTENSIONS = ['.tsx', '.ts', '.js', '.jsx'];
+export const SOURCE_CANVAS_FILES = ['index.tsx', 'empty-placeholder.tsx'];
 
 export const EXTRACT_CANVAS_COMPONENTS = [
   'Accordion',

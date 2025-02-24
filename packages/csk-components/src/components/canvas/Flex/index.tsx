@@ -1,7 +1,7 @@
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
-import { ContainerParameters } from '@uniformdev/csk-components/components/canvas';
-import { withPlaygroundWrapper } from '@uniformdev/csk-components/hocs/withPlaygroundWrapper';
-import { ViewPort } from '@uniformdev/csk-components/types/cskTypes';
+import { ContainerParameters } from '@/components/canvas/Container/parameters';
+import { withPlaygroundWrapper } from '@/hocs/withPlaygroundWrapper';
+import { ViewPort } from '@/types/cskTypes';
 import { Flex } from './flex';
 
 type Direction = 'row' | 'row-reverse' | 'col' | 'col-reverse';

@@ -1,5 +1,5 @@
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
-import { ViewPort } from '@uniformdev/csk-components/types/cskTypes';
+import { ViewPort } from '@/types/cskTypes';
 
 type AvailableAlignSelf = 'auto' | 'start' | 'end' | 'center' | 'stretch';
 type AvailableShrink = '0' | '1';

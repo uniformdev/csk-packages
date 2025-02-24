@@ -1,5 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import * as ora from 'ora';
+import { FILE_EXTENSIONS, IMPORT_REGEX, SOURCE_CANVAS_FILES } from '@/constants';
 
 const ensureDir = async (dir: string) => {
   if (!fs.existsSync(dir)) {
@@ -61,4 +63,81 @@ export const copyFiles = async (source: string, destination: string, files: stri
   } catch (err) {
     console.error('❌ Error copying files:', err);
   }
+};
+
+const getImportedFilePath = (subPath: string) => {
+  const directFile = FILE_EXTENSIONS.find(ext => fs.existsSync(subPath + ext));
+  if (directFile) return subPath + directFile;
+
+  const indexFile = FILE_EXTENSIONS.find(ext => fs.existsSync(path.join(subPath, `index${ext}`)));
+  if (indexFile) return path.join(subPath, `index${indexFile}`);
+
+  return undefined;
+};
+
+const getDependenciesFilePaths = (sourceFile: string) => {
+  const content = fs.readFileSync(sourceFile, 'utf8');
+  const imports = content.match(IMPORT_REGEX)?.map(importPath => importPath.replace(/['"]/g, ''));
+
+  const aliases = imports
+    ?.filter(importPath => importPath.startsWith('@/'))
+    .map(importPath => importPath.replace('@/', ''));
+  const relativePaths = imports?.filter(importPath => !importPath.startsWith('@/')).map(importPath => importPath);
+  return { aliases, relativePaths };
+};
+
+const findImportedFiles = async (sourceFile: string, targetPath: string, importsState: Set<string>) => {
+  importsState.add(sourceFile);
+  const { aliases = [], relativePaths = [] } = getDependenciesFilePaths(sourceFile);
+
+  if (aliases.length) {
+    for (const alias of aliases) {
+      const subPath = getImportedFilePath(path.join(targetPath, alias));
+      if (subPath && !importsState.has(subPath)) {
+        await findImportedFiles(subPath, targetPath, importsState);
+      }
+    }
+  }
+
+  if (relativePaths.length) {
+    for (const relative of relativePaths) {
+      const subPath = getImportedFilePath(path.join(path.dirname(sourceFile), relative));
+      if (subPath && !importsState.has(subPath)) {
+        await findImportedFiles(subPath, targetPath, importsState);
+      }
+    }
+  }
+  return;
+};
+
+export const copyCanvasComponentsWithDependencies = async (
+  source: string,
+  destination: string,
+  folders: string[],
+  targetPath: string
+) => {
+  const importsState = new Set<string>();
+
+  const progressSpinner = ora.default();
+  progressSpinner?.start(`Extracting files...`);
+
+  for (const entry of folders) {
+    const srcPath = path.join(source, entry);
+    const itemsToCopy = fs
+      .readdirSync(srcPath, { withFileTypes: true })
+      .filter(item => item.isFile() && SOURCE_CANVAS_FILES.includes(item.name));
+
+    for (const item of itemsToCopy) {
+      await findImportedFiles(path.join(item.parentPath, item.name), targetPath, importsState);
+    }
+  }
+  const filePathsToExtract = Array.from(importsState);
+
+  for (const filePath of filePathsToExtract) {
+    const destPath = path.join(destination, path.relative(targetPath, filePath));
+    await ensureDir(path.dirname(destPath));
+    await fs.promises.copyFile(filePath, destPath);
+  }
+
+  progressSpinner?.succeed(`All files were successfully extracted`);
 };

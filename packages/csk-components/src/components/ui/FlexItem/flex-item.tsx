@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { cn, resolveViewPort } from '@uniformdev/csk-components/utils/styling';
+import { cn, resolveViewPort } from '@/utils/styling';
 import { FlexItemProps } from '.';
 
 export const FlexItem: FC<FlexItemProps> = ({ className, alignSelf, shrink, children }) => (

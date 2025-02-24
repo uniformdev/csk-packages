@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { cn } from '@uniformdev/csk-components/utils/styling';
+import { cn } from '@/utils/styling';
 import { DividerProps } from '.';
 
 export const Divider: FC<DividerProps> = ({ color, thickness, width, alignment }) => (

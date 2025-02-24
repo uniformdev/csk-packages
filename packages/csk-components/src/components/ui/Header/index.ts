@@ -1,8 +1,8 @@
 import { PropsWithChildren, ReactNode } from 'react';
-import { ContainerProps } from '@uniformdev/csk-components/components/ui';
+import { ContainerProps as BaseContainerProps } from '@/components/ui/Container';
 
 export type HeaderProps = PropsWithChildren &
-  Omit<ContainerProps, 'fluidContent' | 'fullHeight'> & {
+  Omit<BaseContainerProps, 'fluidContent' | 'fullHeight'> & {
     leftSection?: ReactNode;
     rightSection?: ReactNode;
     color?: string;

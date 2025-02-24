@@ -1,9 +1,9 @@
 'use client';
 
 import { FC } from 'react';
-import { Video as BaseVideo } from '@uniformdev/csk-components/components/ui';
-import { resolveAsset } from '@uniformdev/csk-components/utils/assets';
-import { VideoProps } from './index';
+import BaseVideo from '@/components/ui/Video';
+import { resolveAsset } from '@/utils/assets';
+import { VideoProps } from '.';
 import { VideoPlaceholder } from './placeholder';
 
 export const Video: FC<VideoProps> = ({

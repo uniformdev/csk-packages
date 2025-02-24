@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { UniformRichText } from '@uniformdev/canvas-next-rsc/component';
-import { Text as BaseText } from '@uniformdev/csk-components/components/ui';
-import { cn } from '@uniformdev/csk-components/utils/styling';
+import BaseText from '@/components/ui/Text';
+import { cn } from '@/utils/styling';
 import { RichTextProps } from '.';
 
 export const RichText: FC<RichTextProps> = ({ color, lineCountRestrictions, font, component, className }) => (

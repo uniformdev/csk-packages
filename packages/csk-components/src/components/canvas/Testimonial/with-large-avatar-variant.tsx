@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Container } from '@uniformdev/csk-components/components/ui';
+import Container from '@/components/ui/Container';
 import { TestimonialProps } from '.';
 
 type WithLargeAvatarVariantProps = Pick<

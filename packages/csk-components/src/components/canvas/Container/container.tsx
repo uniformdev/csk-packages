@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
-import { Container as BaseContainer } from '@uniformdev/csk-components/components/ui';
+import BaseContainer from '@/components/ui/Container';
 import { ContainerProps } from '.';
 
 export const Container: FC<ContainerProps> = ({

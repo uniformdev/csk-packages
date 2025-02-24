@@ -1,5 +1,5 @@
 import { FC, SVGProps } from 'react';
-import { cn } from '@uniformdev/csk-components/utils/styling';
+import { cn } from '@/utils/styling';
 
 const ImageIcon: FC<SVGProps<SVGSVGElement>> = ({ className, ...restProps }) => (
   <svg

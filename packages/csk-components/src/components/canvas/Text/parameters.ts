@@ -1,11 +1,6 @@
-import { ReactNode, ReactElement } from 'react';
 import { TextProps as BaseTextProps } from '@/components/ui/Text';
 
-export type IconLabelProps = {
-  icon?: ReactNode;
-  children: ReactElement | string;
-  textClassName?: string;
-
+export type TextParameters = {
   text?: string;
   tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
   size?: BaseTextProps['size'];
@@ -18,5 +13,3 @@ export type IconLabelProps = {
   letterSpacing?: BaseTextProps['letterSpacing'];
   lineCountRestrictions?: string;
 };
-
-export { IconLabel as default } from './icon-label';

@@ -1,18 +1,8 @@
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
-import { SpaceType, ViewPort } from '@uniformdev/csk-components/types/cskTypes';
+import { ContainerParameters } from './parameters';
 
 export type ContainerAdditionalProps = {
   className?: string;
-};
-
-export type ContainerParameters = {
-  displayName?: string;
-  anchor?: string;
-  backgroundColor?: string;
-  spacing?: SpaceType | ViewPort<SpaceType>;
-  border?: string | ViewPort<string>;
-  fluidContent?: boolean;
-  fullHeight?: boolean;
 };
 
 export enum ContainerSlots {
@@ -21,4 +11,5 @@ export enum ContainerSlots {
 
 export type ContainerProps = ComponentProps<ContainerParameters & ContainerAdditionalProps, ContainerSlots>;
 
+export { type ContainerParameters } from './parameters';
 export { Container as default } from './container';

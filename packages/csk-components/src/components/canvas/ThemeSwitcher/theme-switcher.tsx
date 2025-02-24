@@ -5,12 +5,9 @@ import dynamic from 'next/dynamic';
 import { useUniformContext } from '@uniformdev/canvas-next-rsc/component';
 import { ThemeSwitcherProps } from '.';
 
-const BaseThemeSwitcher = dynamic(
-  () => import('@uniformdev/csk-components/components/ui').then(mod => mod.ThemeSwitcher),
-  {
-    ssr: false,
-  }
-);
+const BaseThemeSwitcher = dynamic(() => import('@/components/ui/ThemeSwitcher').then(mod => mod.default), {
+  ssr: false,
+});
 
 export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ iconColor }) => {
   const { context } = useUniformContext();

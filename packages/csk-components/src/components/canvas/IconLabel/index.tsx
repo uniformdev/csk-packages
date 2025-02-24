@@ -1,10 +1,10 @@
 import { Asset } from '@uniformdev/assets';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
-import { TextParameters as BaseTextParameters } from '@uniformdev/csk-components/components/canvas';
-import { withPlaygroundWrapper } from '@uniformdev/csk-components/hocs/withPlaygroundWrapper';
+import { TextParameters } from '@/components/canvas/Text/parameters';
+import { withPlaygroundWrapper } from '@/hocs/withPlaygroundWrapper';
 import { IconLabel } from './icon-label';
 
-export type IconLabelParameters = BaseTextParameters & {
+export type IconLabelParameters = TextParameters & {
   icon?: Asset[];
 };
 

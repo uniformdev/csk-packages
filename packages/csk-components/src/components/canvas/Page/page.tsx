@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
-import { Page as BasePage } from '@uniformdev/csk-components/components/ui';
+import BasePage from '@/components/ui/Page';
 import { PageProps } from '.';
 
 export const Page: FC<PageProps> = ({

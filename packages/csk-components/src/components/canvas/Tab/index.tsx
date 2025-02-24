@@ -1,5 +1,5 @@
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
-import { withPlaygroundWrapper } from '@uniformdev/csk-components/hocs/withPlaygroundWrapper';
+import { withPlaygroundWrapper } from '@/hocs/withPlaygroundWrapper';
 import { Tab } from './tab';
 
 export type TabParameters = { title?: string };

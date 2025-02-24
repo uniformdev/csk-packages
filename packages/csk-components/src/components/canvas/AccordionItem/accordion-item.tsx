@@ -2,8 +2,9 @@
 
 import { FC, useCallback, useState } from 'react';
 import { UniformSlot, UniformText } from '@uniformdev/canvas-next-rsc/component';
-import { Container, Text as BaseText } from '@uniformdev/csk-components/components/ui';
-import { cn } from '@uniformdev/csk-components/utils/styling';
+import Container from '@/components/ui/Container';
+import BaseText from '@/components/ui/Text';
+import { cn } from '@/utils/styling';
 import { AccordionItemProps } from '.';
 import { IconArrowDown } from './icon-arrow-down';
 import { IconArrowUp } from './icon-arrow-up';

@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Container } from '@uniformdev/csk-components/components/ui';
+import BaseContainer from '@/components/ui/Container';
 import { FooterProps } from './';
 
 export const Footer: FC<FooterProps> = ({
@@ -12,14 +12,14 @@ export const Footer: FC<FooterProps> = ({
   fluidContent,
 }) => (
   <footer>
-    <Container {...{ backgroundColor, spacing, border, fluidContent }}>
-      <Container className="flex w-full flex-col justify-between gap-4 md:flex-row">
+    <BaseContainer {...{ backgroundColor, spacing, border, fluidContent }}>
+      <BaseContainer className="flex w-full flex-col justify-between gap-4 md:flex-row">
         <div className="flex flex-col gap-2 gap-y-4 md:w-1/2">
           {logo}
           {copyright}
         </div>
         <div>{content}</div>
-      </Container>
-    </Container>
+      </BaseContainer>
+    </BaseContainer>
   </footer>
 );

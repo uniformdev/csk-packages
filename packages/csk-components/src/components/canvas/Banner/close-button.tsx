@@ -1,5 +1,5 @@
 import { FC, MouseEventHandler, SVGProps } from 'react';
-import { cn } from '@uniformdev/csk-components/utils/styling';
+import { cn } from '@/utils/styling';
 
 const CloseIcon: FC<SVGProps<SVGSVGElement>> = ({ className, ...restProps }) => (
   <svg

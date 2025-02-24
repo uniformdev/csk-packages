@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 import { DefaultTheme } from 'tailwindcss/types/generated/default-theme';
-import { ViewPort } from '@uniformdev/csk-components/types/cskTypes';
+import { ViewPort } from '@/types/cskTypes';
 
 type TextSize = keyof DefaultTheme['fontSize'];
 

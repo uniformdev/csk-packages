@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
-import { FlexItem as BaseFlexItem } from '@uniformdev/csk-components/components/ui';
+import BaseFlexItem from '@/components/ui/FlexItem';
 import { FlexItemProps } from '.';
 
 export const FlexItem: FC<FlexItemProps> = ({ alignSelf, shrink, context, component, slots }) => (

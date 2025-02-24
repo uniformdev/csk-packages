@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
-import { cn, resolveViewPort } from '@uniformdev/csk-components/utils/styling';
+import { cn, resolveViewPort } from '@/utils/styling';
 import { NavigationGroupProps } from '.';
 
 type NavigationGroupDesktopContentProps = Pick<

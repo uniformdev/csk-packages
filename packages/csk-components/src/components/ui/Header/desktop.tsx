@@ -1,5 +1,7 @@
 import { FC } from 'react';
-import { Container, Grid, GridItem } from '@uniformdev/csk-components/components/ui';
+import BaseContainer from '@/components/ui/Container';
+import BaseGrid from '@/components/ui/Grid';
+import BaseGridItem from '@/components/ui/GridItem';
 import { HeaderProps } from './';
 
 export const DesktopHeader: FC<HeaderProps> = ({
@@ -12,16 +14,18 @@ export const DesktopHeader: FC<HeaderProps> = ({
   className,
 }) => (
   <nav>
-    <Container fluidContent {...{ backgroundColor, spacing, border, className }}>
-      <Grid className="items-center" columnsCount="12">
-        <GridItem columnSpan="span-3">{<div className="flex items-center justify-start">{leftSection}</div>}</GridItem>
-        <GridItem columnSpan="span-6">
+    <BaseContainer fluidContent {...{ backgroundColor, spacing, border, className }}>
+      <BaseGrid className="items-center" columnsCount="12">
+        <BaseGridItem columnSpan="span-3">
+          {<div className="flex items-center justify-start">{leftSection}</div>}
+        </BaseGridItem>
+        <BaseGridItem columnSpan="span-6">
           <div className="flex items-center justify-center gap-x-8">{children}</div>
-        </GridItem>
-        <GridItem columnSpan="span-3">
+        </BaseGridItem>
+        <BaseGridItem columnSpan="span-3">
           <div className="flex items-center justify-end gap-x-4">{rightSection}</div>
-        </GridItem>
-      </Grid>
-    </Container>
+        </BaseGridItem>
+      </BaseGrid>
+    </BaseContainer>
   </nav>
 );

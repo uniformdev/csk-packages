@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { MediaPlaceholder } from '@uniformdev/csk-components/components/ui';
-import { ImageProps } from './index';
+import MediaPlaceholder from '@/components/ui/MediaPlaceholder';
+import { ImageProps } from '.';
 
 type ImagePlaceholderProps = Pick<ImageProps, 'component' | 'context' | 'width' | 'height'>;
 

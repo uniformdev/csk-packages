@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import NextImage from 'next/image';
-import { cn, resolveViewPort } from '@uniformdev/csk-components/utils/styling';
+import { cn, resolveViewPort } from '@/utils/styling';
 import { ImageProps } from './';
 
 export const Image: FC<ImageProps> = ({

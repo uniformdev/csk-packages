@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
-import { Container } from '@uniformdev/csk-components/components/ui';
+import Container from '@/components/ui/Container';
 import { AccordionProps } from '.';
 
 export const Accordion: FC<AccordionProps> = ({

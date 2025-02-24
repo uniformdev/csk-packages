@@ -1,5 +1,6 @@
 import { FC, ReactNode } from 'react';
-import { Container, Rating } from '@uniformdev/csk-components/components/ui';
+import Container from '@/components/ui/Container';
+import Rating from '@/components/ui/Rating';
 import { ReviewProps } from '.';
 
 type DefaultVariantProps = ReviewProps & {

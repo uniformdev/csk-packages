@@ -1,5 +1,5 @@
-import { ResolveEmptyPlaceholderOptions } from '@uniformdev/csk-components/types/cskTypes';
-import { DEFAULT_EMPTY_PLACEHOLDER } from '@uniformdev/csk-components/utils/createEmptyPlaceholderResolver';
+import { ResolveEmptyPlaceholderOptions } from '@/types/cskTypes';
+import { DEFAULT_EMPTY_PLACEHOLDER } from '@/utils/createEmptyPlaceholderResolver';
 import { TableSlots } from '.';
 
 export const TableEmptyPlaceholder = (props: ResolveEmptyPlaceholderOptions) => {

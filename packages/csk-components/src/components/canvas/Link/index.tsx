@@ -1,6 +1,6 @@
 import { LinkParamValue } from '@uniformdev/canvas';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
-import { withPlaygroundWrapper } from '@uniformdev/csk-components/hocs/withPlaygroundWrapper';
+import { withPlaygroundWrapper } from '@/hocs/withPlaygroundWrapper';
 import { Link } from './link';
 
 export type LinkParameters = {

@@ -2,7 +2,7 @@
 
 import { FC } from 'react';
 import { UniformSlot, CustomSlotChildRenderFunc } from '@uniformdev/canvas-next-rsc/component';
-import { Carousel as BaseCarousel } from '@uniformdev/csk-components/components/ui';
+import BaseCarousel from '@/components/ui/Carousel';
 import { CarouselProps } from '.';
 
 const itemRenderFunc: CustomSlotChildRenderFunc = ({ child, key }) => (

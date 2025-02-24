@@ -1,5 +1,5 @@
 import { program } from 'commander';
-import { extractCanvasComponents, extractor } from './commands/extractor';
+import { extractCanvasComponents } from './commands/extractor';
 import { EXTRACT_CANVAS_COMPONENTS } from './constants';
 
 type ExtractArgs = {
@@ -15,11 +15,7 @@ program
   )
   .action(async (args: ExtractArgs) => {
     const { components: extractComponents = [] } = args;
-    if (extractComponents.length) {
-      await extractCanvasComponents(extractComponents).catch(e => console.error(e));
-    } else {
-      await extractor().catch(e => console.error(e));
-    }
+    await extractCanvasComponents(extractComponents).catch(e => console.error(e));
 
     return;
   });

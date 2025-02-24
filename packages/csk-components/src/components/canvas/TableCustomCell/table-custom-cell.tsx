@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
-import { cn } from '@uniformdev/csk-components/utils/styling';
+import { cn } from '@/utils/styling';
 import { AlignmentMap, TableCustomCellProps } from '.';
 
 export const TableCustomCell: FC<TableCustomCellProps> = ({ component, context, slots, alignment }) => (

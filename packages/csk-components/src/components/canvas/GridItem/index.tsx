@@ -1,6 +1,6 @@
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
-import { withPlaygroundWrapper } from '@uniformdev/csk-components/hocs/withPlaygroundWrapper';
-import { ViewPort } from '@uniformdev/csk-components/types/cskTypes';
+import { withPlaygroundWrapper } from '@/hocs/withPlaygroundWrapper';
+import { ViewPort } from '@/types/cskTypes';
 import { GridItem } from './grid-item';
 
 type AvailableGridItemColumnsCount = '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12';

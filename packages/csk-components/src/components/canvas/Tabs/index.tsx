@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
-import { ContainerParameters } from '@uniformdev/csk-components/components/canvas';
-import { withPlaygroundWrapper } from '@uniformdev/csk-components/hocs/withPlaygroundWrapper';
+import { ContainerParameters } from '@/components/canvas/Container/parameters';
+import { withPlaygroundWrapper } from '@/hocs/withPlaygroundWrapper';
 
 export type TabsParameters = ContainerParameters & {
   color?: string;

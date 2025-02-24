@@ -1,9 +1,9 @@
 import { ReactElement } from 'react';
 import dynamic from 'next/dynamic';
-import { ContainerProps } from '@uniformdev/csk-components/components/ui';
+import { ContainerProps as BaseContainerProps } from '@/components/ui/Container';
 
 export type CarouselProps = Pick<
-  ContainerProps,
+  BaseContainerProps,
   'title' | 'backgroundColor' | 'spacing' | 'border' | 'fluidContent' | 'fullHeight'
 > & {
   countOfItems?: number;

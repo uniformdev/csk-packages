@@ -1,8 +1,8 @@
 'use client';
 
 import { FC, useCallback, useEffect, useRef, useState } from 'react';
-import { Container } from '@uniformdev/csk-components/components/ui';
-import { cn } from '@uniformdev/csk-components/utils/styling';
+import BaseContainer from '@/components/ui/Container';
+import { cn } from '@/utils/styling';
 import { CarouselProps } from '.';
 
 export const Carousel: FC<CarouselProps> = ({
@@ -62,13 +62,13 @@ export const Carousel: FC<CarouselProps> = ({
   );
 
   return (
-    <Container {...{ backgroundColor, spacing, border, fluidContent, fullHeight }}>
+    <BaseContainer {...{ backgroundColor, spacing, border, fluidContent, fullHeight }}>
       <div className="relative">
         <div ref={container} className="flex flex-row items-center overflow-x-hidden scroll-smooth">
           {children}
         </div>
         {renderCarouselButtons()}
       </div>
-    </Container>
+    </BaseContainer>
   );
 };

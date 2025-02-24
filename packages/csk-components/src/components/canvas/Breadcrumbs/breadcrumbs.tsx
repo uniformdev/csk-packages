@@ -1,8 +1,9 @@
 import { FC } from 'react';
 import { flattenValues, LinkParamValue } from '@uniformdev/canvas';
-import { Button as BaseButton, ButtonVariant, Text as BaseText } from '@uniformdev/csk-components/components/ui';
-import { formatUniformLink } from '@uniformdev/csk-components/utils/routing';
-import { cn } from '@uniformdev/csk-components/utils/styling';
+import BaseButton, { ButtonVariant } from '@/components/ui/Button';
+import BaseText from '@/components/ui/Text';
+import { formatUniformLink } from '@/utils/routing';
+import { cn } from '@/utils/styling';
 import { BreadcrumbLink, BreadcrumbsProps } from '.';
 import { getSeparator } from './helpers';
 

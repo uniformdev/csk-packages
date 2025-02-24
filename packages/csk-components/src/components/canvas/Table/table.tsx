@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
-import { Container } from '@uniformdev/csk-components/components/ui';
+import Container from '@/components/ui/Container';
 import { TableProps } from '.';
 import { getTableClasses } from './style-utils';
 

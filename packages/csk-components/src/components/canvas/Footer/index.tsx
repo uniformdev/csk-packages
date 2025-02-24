@@ -1,6 +1,6 @@
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
-import { FooterProps as BaseFooterProps } from '@uniformdev/csk-components/components/ui';
-import { withPlaygroundWrapper } from '@uniformdev/csk-components/hocs/withPlaygroundWrapper';
+import { FooterProps as BaseFooterProps } from '@/components/ui/Footer';
+import { withPlaygroundWrapper } from '@/hocs/withPlaygroundWrapper';
 import { Footer } from './footer';
 
 export type FooterParameters = BaseFooterProps;

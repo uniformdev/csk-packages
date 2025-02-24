@@ -186,14 +186,14 @@ First, add the following script to your `package.json`:
 
 ```json
 "scripts": {
-  "extract:components": "csk-components extract",
+    "component:extract": "csk-components extract",
 }
 ```
 
 Run the command using:
 
 ```bash
-npm run extract:components -- --components Text Button Accordion
+npm run component:extract
 ```
 
 #### Options
@@ -209,7 +209,7 @@ npm run extract:components -- --components Text Button Accordion
 Extract specific canvas components:
 
 ```bash
-npm run extract:components -- --components Text Button Accordion
+npm run component:extract -- --components Text Button Accordion
 ```
 
 If no arguments are provided, the CLI will extract all available components.

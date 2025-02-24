@@ -1,4 +1,4 @@
-import { cn } from '@uniformdev/csk-components/utils/styling';
+import { cn } from '@/utils/styling';
 import { ContentAlignment, SectionParameters } from '.';
 
 type AlignmentClass = {

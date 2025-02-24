@@ -1,12 +1,12 @@
 import { DefaultTheme } from 'tailwindcss/types/generated/default-theme';
-import { ContainerProps } from '@uniformdev/csk-components/components/ui';
-import { ViewPort } from '@uniformdev/csk-components/types/cskTypes';
+import { ContainerProps as BaseContainerProps } from '@/components/ui/Container';
+import { ViewPort } from '@/types/cskTypes';
 
 type AvailableColumnsCount = keyof DefaultTheme['gridTemplateColumns'];
 type AvailableGap = keyof DefaultTheme['spacing'];
 
 export type GridProps = Pick<
-  ContainerProps,
+  BaseContainerProps,
   'title' | 'backgroundColor' | 'spacing' | 'border' | 'fluidContent' | 'fullHeight' | 'children'
 > & {
   columnsCount?: AvailableColumnsCount | ViewPort<AvailableColumnsCount>;

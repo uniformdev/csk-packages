@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import dynamic from 'next/dynamic';
-import { cn } from '@uniformdev/csk-components/utils/styling';
+import { cn } from '@/utils/styling';
 import { HeaderProps } from './';
 import { DesktopHeader } from './desktop';
 

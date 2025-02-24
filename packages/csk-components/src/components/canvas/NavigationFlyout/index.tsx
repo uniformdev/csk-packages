@@ -2,11 +2,11 @@ import dynamic from 'next/dynamic';
 import { Asset } from '@uniformdev/assets';
 import { LinkParamValue } from '@uniformdev/canvas';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
-import { TextParameters as BaseTextParameters } from '@uniformdev/csk-components/components/canvas';
-import { withPlaygroundWrapper } from '@uniformdev/csk-components/hocs/withPlaygroundWrapper';
-import { ViewPort } from '@uniformdev/csk-components/types/cskTypes';
+import { TextParameters } from '@/components/canvas/Text/parameters';
+import { withPlaygroundWrapper } from '@/hocs/withPlaygroundWrapper';
+import { ViewPort } from '@/types/cskTypes';
 
-export type NavigationFlyoutParameters = BaseTextParameters & {
+export type NavigationFlyoutParameters = TextParameters & {
   icon?: Asset[];
   link?: LinkParamValue;
   backgroundColor?: string;
