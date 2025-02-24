@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from 'react';
 import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
-import { ArrowIcon } from '@uniformdev/csk-components/components/ui';
-import { cn } from '@uniformdev/csk-components/utils/styling';
+import { ArrowIcon } from '@/components/ui/_icons';
+import { cn } from '@/utils/styling';
 import { NavigationGroupProps } from '.';
 
 type NavigationGroupMobileContentProps = Pick<NavigationGroupProps, 'backgroundColor' | 'context' | 'slots'> & {

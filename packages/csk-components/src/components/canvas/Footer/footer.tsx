@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
-import { Footer as BaseFooter } from '@uniformdev/csk-components/components/ui';
+import BaseFooter from '@/components/ui/Footer';
 import { FooterProps } from '.';
 
 export const Footer: FC<FooterProps> = ({

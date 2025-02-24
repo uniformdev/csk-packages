@@ -3,7 +3,7 @@
 import { FC } from 'react';
 import { setCookie } from 'cookies-next';
 import { useTheme } from 'next-themes';
-import { cn } from '@uniformdev/csk-components/utils/styling';
+import { cn } from '@/utils/styling';
 import { ThemeSwitcherProps } from '.';
 
 enum Theme {

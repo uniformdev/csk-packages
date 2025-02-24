@@ -1,6 +1,6 @@
 import { CompositionContext } from '@uniformdev/canvas-next-rsc/component';
-import { resolveRouteToPath } from '@uniformdev/csk-components/utils/routing';
-import { cn } from '@uniformdev/csk-components/utils/styling';
+import { resolveRouteToPath } from '@/utils/routing';
+import { cn } from '@/utils/styling';
 type BaseIconLabelClassesProps = {
   activeState?: boolean;
   context: CompositionContext;

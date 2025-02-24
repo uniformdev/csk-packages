@@ -1,7 +1,7 @@
 import { DataWithProperties } from '@uniformdev/canvas';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
-import { TextParameters } from '@uniformdev/csk-components/components/canvas';
-import { withPlaygroundWrapper } from '@uniformdev/csk-components/hocs/withPlaygroundWrapper';
+import { TextParameters } from '@/components/canvas/Text/parameters';
+import { withPlaygroundWrapper } from '@/hocs/withPlaygroundWrapper';
 import { Breadcrumbs } from './breadcrumbs';
 
 export type BreadcrumbLink = {

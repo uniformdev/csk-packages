@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
-import { Header as BaseHeader } from '@uniformdev/csk-components/components/ui';
+import BaseHeader from '@/components/ui/Header';
 import { HeaderProps, HeaderVariants } from '.';
 
 export const Header: FC<HeaderProps> = ({ backgroundColor, color, spacing, border, context, component, slots }) => (

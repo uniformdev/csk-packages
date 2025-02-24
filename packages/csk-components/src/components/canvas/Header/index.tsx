@@ -1,6 +1,6 @@
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
-import { HeaderProps as BaseHeaderProps } from '@uniformdev/csk-components/components/ui';
-import { withPlaygroundWrapper } from '@uniformdev/csk-components/hocs/withPlaygroundWrapper';
+import { HeaderProps as BaseHeaderProps } from '@/components/ui/Header';
+import { withPlaygroundWrapper } from '@/hocs/withPlaygroundWrapper';
 import { Header } from './header';
 
 export type HeaderParameters = Omit<BaseHeaderProps, 'sticky'>;

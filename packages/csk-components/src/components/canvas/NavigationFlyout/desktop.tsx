@@ -1,7 +1,8 @@
 import { FC } from 'react';
 import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
-import { Grid, GridItem } from '@uniformdev/csk-components/components/ui';
-import { cn, resolveViewPort } from '@uniformdev/csk-components/utils/styling';
+import Grid from '@/components/ui/Grid';
+import GridItem from '@/components/ui/GridItem';
+import { cn, resolveViewPort } from '@/utils/styling';
 import { NavigationFlyoutProps } from '.';
 
 type NavigationFlyoutPropsDesktopContentProps = Pick<

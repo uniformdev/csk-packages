@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { cn, formatSpaceParameterValue, resolveViewPort } from '@uniformdev/csk-components/utils/styling';
+import { cn, formatSpaceParameterValue, resolveViewPort } from '@/utils/styling';
 import { ContainerProps } from '.';
 
 export const Container: FC<ContainerProps> = ({

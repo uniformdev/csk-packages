@@ -1,4 +1,4 @@
-import createComponentResolver, { ComponentMapping } from '@uniformdev/csk-components/utils/createComponentResolver';
+import createComponentResolver, { ComponentMapping } from '@/utils/createComponentResolver';
 import Accordion from './Accordion';
 import AccordionItem from './AccordionItem';
 import Badge from './Badge';

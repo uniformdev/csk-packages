@@ -3,7 +3,7 @@
 import { FC, ReactNode } from 'react';
 import Masonry from 'react-responsive-masonry';
 import { UniformSlotProps } from '@uniformdev/canvas-next-rsc/component';
-import { cn } from '@uniformdev/csk-components/utils/styling';
+import { cn } from '@/utils/styling';
 import { ImageGalleryProps } from '.';
 
 const DEFAULT_GALLERY_CONFIG = {

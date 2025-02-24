@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { Container } from '@uniformdev/csk-components/components/ui';
-import { cn, resolveViewPort } from '@uniformdev/csk-components/utils/styling';
+import BaseContainer from '@/components/ui/Container';
+import { cn, resolveViewPort } from '@/utils/styling';
 import { GridProps } from '.';
 
 export const Grid: FC<GridProps> = ({
@@ -15,7 +15,7 @@ export const Grid: FC<GridProps> = ({
   fullHeight,
   children,
 }) => (
-  <Container {...{ backgroundColor, spacing, border, fluidContent, fullHeight }}>
+  <BaseContainer {...{ backgroundColor, spacing, border, fluidContent, fullHeight }}>
     <div
       className={cn(
         'grid',
@@ -29,5 +29,5 @@ export const Grid: FC<GridProps> = ({
     >
       {children}
     </div>
-  </Container>
+  </BaseContainer>
 );

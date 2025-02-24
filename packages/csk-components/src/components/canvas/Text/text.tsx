@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { UniformText } from '@uniformdev/canvas-next-rsc/component';
-import { Text as BaseText } from '@uniformdev/csk-components/components/ui';
+import BaseText from '@/components/ui/Text';
 import { TextProps } from '.';
 
 export const Text: FC<TextProps> = ({

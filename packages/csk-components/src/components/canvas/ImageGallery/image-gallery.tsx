@@ -2,8 +2,9 @@
 
 import { FC } from 'react';
 import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
-import { Container, Image as BaseImage } from '@uniformdev/csk-components/components/ui';
-import { resolveAsset } from '@uniformdev/csk-components/utils/assets';
+import Container from '@/components/ui/Container';
+import BaseImage from '@/components/ui/Image';
+import { resolveAsset } from '@/utils/assets';
 import { ImageGalleryProps } from '.';
 import { GalleryInner } from './gallery-inner';
 

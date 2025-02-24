@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { MediaPlaceholder } from '@uniformdev/csk-components/components/ui';
-import { VideoProps } from './index';
+import MediaPlaceholder from '@/components/ui/MediaPlaceholder';
+import { VideoProps } from '.';
 
 type VideoPlaceholderProps = Pick<VideoProps, 'component' | 'context'>;
 

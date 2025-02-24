@@ -1,4 +1,4 @@
-import { cn, resolveViewPort } from '@uniformdev/csk-components/utils/styling';
+import { cn, resolveViewPort } from '@/utils/styling';
 import { CountdownParameters, CountdownVariants } from '.';
 
 type UnitClass = {

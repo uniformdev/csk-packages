@@ -2,7 +2,7 @@
 
 import { FC, useCallback, useState, MouseEvent, useRef, useEffect } from 'react';
 import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
-import { cn } from '@uniformdev/csk-components/utils/styling';
+import { cn } from '@/utils/styling';
 import { ModalProps } from '.';
 import { CloseIcon } from './close-icon';
 import { getCloseButtonClasses, getDialogClasses, getFormClasses } from './style-utils';

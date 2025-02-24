@@ -1,8 +1,10 @@
 'use client';
 
 import { FC, useState } from 'react';
-import { Container, Grid, GridItem } from '@uniformdev/csk-components/components/ui';
-import { cn } from '@uniformdev/csk-components/utils/styling';
+import BaseContainer from '@/components/ui/Container';
+import BaseGrid from '@/components/ui/Grid';
+import BaseGridItem from '@/components/ui/GridItem';
+import { cn } from '@/utils/styling';
 import { HeaderProps } from './';
 
 const IconBurgerMenu: FC<{ isOpen: boolean; onClick: () => void; color?: string }> = ({ isOpen, onClick, color }) => (
@@ -53,7 +55,7 @@ export const MobileHeader: FC<HeaderProps> = ({
 
   return (
     <nav>
-      <Container
+      <BaseContainer
         id="mobile-header"
         fluidContent
         {...{
@@ -63,19 +65,19 @@ export const MobileHeader: FC<HeaderProps> = ({
           className,
         }}
       >
-        <Grid className="items-center" columnsCount="12">
-          <GridItem columnSpan="span-2">
+        <BaseGrid className="items-center" columnsCount="12">
+          <BaseGridItem columnSpan="span-2">
             <IconBurgerMenu isOpen={isBurgerMenuOpen} onClick={onMenuClick} color={color} />
-          </GridItem>
-          <GridItem columnSpan="span-6">
+          </BaseGridItem>
+          <BaseGridItem columnSpan="span-6">
             {<div className="flex items-center justify-start">{leftSection}</div>}
-          </GridItem>
-          <GridItem columnSpan="span-4">
+          </BaseGridItem>
+          <BaseGridItem columnSpan="span-4">
             <div className="flex items-center justify-end gap-x-4">{rightSection}</div>
-          </GridItem>
-        </Grid>
-      </Container>
-      <Container
+          </BaseGridItem>
+        </BaseGrid>
+      </BaseContainer>
+      <BaseContainer
         fluidContent
         className={cn({
           'min-h-screen': isBurgerMenuOpen,
@@ -89,7 +91,7 @@ export const MobileHeader: FC<HeaderProps> = ({
             <div className="flex flex-col items-center justify-center gap-y-8">{children}</div>
           </div>
         )}
-      </Container>
+      </BaseContainer>
     </nav>
   );
 };

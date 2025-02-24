@@ -1,6 +1,6 @@
 import { Asset } from '@uniformdev/assets';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
-import { ViewPort } from '@uniformdev/csk-components/types/cskTypes';
+import { ViewPort } from '@/types/cskTypes';
 
 export type ImageParameters = {
   image?: Asset[];

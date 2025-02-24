@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
-import { GridItem as BaseGridItem } from '@uniformdev/csk-components/components/ui';
+import BaseGridItem from '@/components/ui/GridItem';
 import { GridItemProps } from '.';
 
 export const GridItem: FC<GridItemProps> = ({

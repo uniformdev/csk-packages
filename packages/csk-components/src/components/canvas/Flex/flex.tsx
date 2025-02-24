@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
-import { Flex as BaseFlex } from '@uniformdev/csk-components/components/ui';
+import BaseFlex from '@/components/ui/Flex';
 import { FlexProps } from '.';
 
 export const Flex: FC<FlexProps> = ({

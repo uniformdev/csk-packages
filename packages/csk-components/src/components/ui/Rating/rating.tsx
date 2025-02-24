@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { cn } from '@uniformdev/csk-components/utils/styling';
+import { cn } from '@/utils/styling';
 import { RatingProps } from '.';
 
 export const Rating: FC<RatingProps> = ({ rating, showReviewLabel, starsColor, activeStarsColor }) => (

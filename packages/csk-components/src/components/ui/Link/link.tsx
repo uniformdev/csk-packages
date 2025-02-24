@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import NextLink from 'next/link';
-import { cn } from '@uniformdev/csk-components/utils/styling';
+import { cn } from '@/utils/styling';
 import { LinkProps } from '.';
 
 export const Link: FC<LinkProps> = ({ children, link, openInNewTab, rel, className }) => (

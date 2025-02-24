@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { cn } from '@uniformdev/csk-components/utils/styling';
+import { cn } from '@/utils/styling';
 import { PageProps } from '.';
 
 export const Page: FC<PageProps> = ({ className, header, footer, children, backgroundColor, ...restProps }) => (

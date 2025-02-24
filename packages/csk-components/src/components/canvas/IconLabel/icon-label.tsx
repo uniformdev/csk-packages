@@ -1,7 +1,8 @@
 import { FC } from 'react';
 import { UniformText } from '@uniformdev/canvas-next-rsc/component';
-import { IconLabel as BaseIconLabel, Image as BaseImage } from '@uniformdev/csk-components/components/ui';
-import { resolveAsset } from '@uniformdev/csk-components/utils/assets';
+import BaseIconLabel from '@/components/ui/IconLabel';
+import BaseImage from '@/components/ui/Image';
+import { resolveAsset } from '@/utils/assets';
 import { IconLabelProps } from '.';
 
 export const IconLabel: FC<IconLabelProps> = ({

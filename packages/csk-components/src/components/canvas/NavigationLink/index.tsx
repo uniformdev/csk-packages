@@ -1,12 +1,11 @@
 import { Asset } from '@uniformdev/assets';
 import { LinkParamValue } from '@uniformdev/canvas';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
-import { TextParameters as BaseTextParameters } from '@uniformdev/csk-components/components/canvas';
-import { withPlaygroundWrapper } from '@uniformdev/csk-components/hocs/withPlaygroundWrapper';
-
+import { TextParameters } from '@/components/canvas/Text/parameters';
+import { withPlaygroundWrapper } from '@/hocs/withPlaygroundWrapper';
 import { NavigationLink } from './navigation-link';
 
-export type NavigationLinkParameters = BaseTextParameters & {
+export type NavigationLinkParameters = TextParameters & {
   icon?: Asset[];
   link?: LinkParamValue;
   activeState?: boolean;

@@ -1,5 +1,5 @@
 import { FC, Fragment, PropsWithChildren } from 'react';
-import { Link as BaseLink } from '@uniformdev/csk-components/components/ui';
+import BaseLink from '@/components/ui/Link';
 
 type WrapperProps = PropsWithChildren & {
   href: string;

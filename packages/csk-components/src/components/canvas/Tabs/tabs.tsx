@@ -3,8 +3,7 @@
 import { FC, useCallback, useEffect, useMemo, useState } from 'react';
 import { flattenValues } from '@uniformdev/canvas';
 import { UniformSlot, UniformText } from '@uniformdev/canvas-next-rsc/component';
-import { TabParameters } from '@uniformdev/csk-components/components/canvas';
-import { Container } from '@uniformdev/csk-components/components/ui';
+import Container from '@/components/ui/Container';
 import { TabsProps, TabsVariants } from '.';
 import { getButtonClasses, getButtonContainerClasses } from './style-utils';
 
@@ -25,7 +24,7 @@ export const Tabs: FC<TabsProps> = ({
   const tabItems = useMemo(() => {
     if (!component?.slots?.tabItems) return [];
     return component.slots.tabItems.map(tabComponent => ({
-      ...(flattenValues(tabComponent) as TabParameters),
+      ...(flattenValues(tabComponent) as { title?: string }),
       id: tabComponent._id as string,
     }));
   }, [component?.slots?.tabItems]);

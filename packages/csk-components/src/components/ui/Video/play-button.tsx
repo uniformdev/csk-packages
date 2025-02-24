@@ -1,5 +1,5 @@
 import { FC, SVGProps, HTMLAttributes } from 'react';
-import { cn } from '@uniformdev/csk-components/utils/styling';
+import { cn } from '@/utils/styling';
 
 const PlayIcon: FC<SVGProps<SVGSVGElement>> = ({ className, ...restProps }) => (
   <svg

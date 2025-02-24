@@ -1,6 +1,4 @@
-import createEmptyPlaceholderResolver, {
-  EmptyPlaceholderMapping,
-} from '@uniformdev/csk-components/utils/createEmptyPlaceholderResolver';
+import createEmptyPlaceholderResolver, { EmptyPlaceholderMapping } from '@/utils/createEmptyPlaceholderResolver';
 
 // Empty Placeholders
 import { AccordionEmptyPlaceholder } from './Accordion/empty-placeholder';

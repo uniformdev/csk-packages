@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { Image as BaseImage } from '@uniformdev/csk-components/components/ui';
-import { resolveAsset } from '@uniformdev/csk-components/utils/assets';
+import BaseImage from '@/components/ui/Image';
+import { resolveAsset } from '@/utils/assets';
 import { ImageProps } from '.';
 import { ImagePlaceholder } from './placeholder';
 

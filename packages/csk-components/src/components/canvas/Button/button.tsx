@@ -1,12 +1,9 @@
 import { FC, useMemo } from 'react';
 import { UniformText } from '@uniformdev/canvas-next-rsc/component';
-import {
-  Image as BaseImage,
-  Button as BaseButton,
-  ButtonProps as BaseButtonProps,
-} from '@uniformdev/csk-components/components/ui';
-import { resolveAsset } from '@uniformdev/csk-components/utils/assets';
-import { formatUniformLink } from '@uniformdev/csk-components/utils/routing';
+import BaseButton, { ButtonProps as BaseButtonProps } from '@/components/ui/Button';
+import BaseImage from '@/components/ui/Image';
+import { resolveAsset } from '@/utils/assets';
+import { formatUniformLink } from '@/utils/routing';
 import { ButtonProps } from '.';
 
 export const Button: FC<ButtonProps> = ({

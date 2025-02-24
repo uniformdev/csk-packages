@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
-import { Container } from '@uniformdev/csk-components/components/ui';
-import { cn } from '@uniformdev/csk-components/utils/styling';
+import Container from '@/components/ui/Container';
+import { cn } from '@/utils/styling';
 import { CardProps, CardVariants } from '.';
 
 export const Card: FC<CardProps> = ({

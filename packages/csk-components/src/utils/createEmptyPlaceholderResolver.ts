@@ -1,6 +1,6 @@
 import { ComponentType } from 'react';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
-import { ResolveEmptyPlaceholderOptions } from '@uniformdev/csk-components/types/cskTypes';
+import { ResolveEmptyPlaceholderOptions } from '@/types/cskTypes';
 
 export const DEFAULT_EMPTY_PLACEHOLDER = { component: null };
 
