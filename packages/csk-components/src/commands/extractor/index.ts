@@ -2,12 +2,8 @@ import path from 'node:path';
 import * as ora from 'ora';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { select } from '@inquirer/prompts';
-import { extractComponents } from './extractComponents';
-import { extractFiles } from './extractFiles';
-import { getFolders } from './utils';
+import { extractCanvasComponentsWithDependencies } from './extractComponents';
 import { EXTRACT_CANVAS_COMPONENTS, PATH_TO_COMPONENTS_FOLDER } from '../../constants';
-import { capitalizeFirstLetter } from '../../utils';
 import { copyFolders } from '../../utils/copy';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -44,21 +40,7 @@ export const extractCanvasComponents = async (componentNames: string[]) => {
 export const extractor = async () => {
   try {
     console.info('Uniform Extractor');
-    const modules = getFolders(targetPath);
-    const selectedExtractTypeIndex = await select({
-      message: 'Choose the appropriate module for extraction:',
-      choices: modules.map((name, index) => ({ value: index, name: capitalizeFirstLetter(name) })),
-      loop: false,
-    });
-    const selectedExtractModule = modules[selectedExtractTypeIndex] as string;
-    const selectedExtractModulePath = path.resolve(targetPath, selectedExtractModule);
-
-    if (selectedExtractModule === 'components') {
-      await extractComponents(selectedExtractModulePath);
-    } else {
-      await extractFiles(selectedExtractModulePath);
-    }
-
+    await extractCanvasComponentsWithDependencies(targetPath);
     return;
   } catch (error) {
     if (error instanceof Error) {

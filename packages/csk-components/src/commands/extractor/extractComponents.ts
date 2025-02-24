@@ -3,7 +3,7 @@ import * as ora from 'ora';
 import { checkbox, select } from '@inquirer/prompts';
 import { getFolders } from './utils';
 import { PATH_TO_COMPONENTS_FOLDER } from '../../constants';
-import { copyFolders } from '../../utils/copy';
+import { copyCanvasComponentsWithDependencies, copyFolders } from '../../utils/copy';
 
 export const extractComponents = async (targetPath: string) => {
   const componentTypes = getFolders(targetPath);
@@ -33,6 +33,26 @@ export const extractComponents = async (targetPath: string) => {
     componentNames.filter((_, index) => selectedComponentIndexes.includes(index))
   );
   spinner.succeed('Files extracted');
+
+  return;
+};
+
+export const extractCanvasComponentsWithDependencies = async (targetPath: string) => {
+  const storedCanvasComponentsPath = path.resolve(targetPath, 'components', 'canvas');
+  const storedCanvasComponents = getFolders(storedCanvasComponentsPath);
+  const selectedComponentIndexes = await checkbox({
+    message: 'Select the canvas components to extract:',
+    choices: storedCanvasComponents.map((name, index) => ({ value: index, name })),
+    loop: false,
+    instructions: true,
+    required: true,
+  });
+  await copyCanvasComponentsWithDependencies(
+    path.resolve(storedCanvasComponentsPath),
+    path.resolve(process.cwd(), 'src'),
+    storedCanvasComponents.filter((_, index) => selectedComponentIndexes.includes(index)),
+    targetPath
+  );
 
   return;
 };

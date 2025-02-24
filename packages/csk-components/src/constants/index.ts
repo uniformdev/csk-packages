@@ -1,5 +1,9 @@
 import path from 'node:path';
 
+export const IMPORT_REGEX = /['"](\.\/[^'"]+|@\/[^'"]+)['"]/g;
+export const FILE_EXTENSIONS = ['.tsx', '.ts', '.js', '.jsx'];
+export const SOURCE_CANVAS_FILES = ['index.tsx', 'empty-placeholder.tsx'];
+
 export const DEFAULT_COMPONENTS_PATH = path.join('src', 'components');
 export const DEFAULT_MODULES_PATH = path.join('src');
 
