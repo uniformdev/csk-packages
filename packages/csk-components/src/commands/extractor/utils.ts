@@ -11,5 +11,3 @@ const getItems = (targetPath: string, type: ItemType) =>
     .map(dir => dir.name);
 
 export const getFolders = (targetPath: string) => getItems(targetPath, ItemType.Folder);
-
-export const getFiles = (targetPath: string) => getItems(targetPath, ItemType.File);

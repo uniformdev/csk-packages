@@ -2,45 +2,56 @@ import path from 'node:path';
 import * as ora from 'ora';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { extractCanvasComponentsWithDependencies } from './extractComponents';
-import { EXTRACT_CANVAS_COMPONENTS, PATH_TO_COMPONENTS_FOLDER } from '../../constants';
-import { copyFolders } from '../../utils/copy';
+import { checkbox } from '@inquirer/prompts';
+import { getFolders } from './utils';
+import { copyCanvasComponentsWithDependencies } from '../../utils/copy';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const targetPath = path.resolve(__dirname, 'content');
 
 export const extractCanvasComponents = async (componentNames: string[]) => {
-  if (
-    componentNames.some(componentName => {
-      const isCanvasComponent = EXTRACT_CANVAS_COMPONENTS.includes(componentName);
-      if (!isCanvasComponent) {
-        console.error('Invalid component name:', componentName);
-      }
-      return !isCanvasComponent;
-    })
-  ) {
-    return;
-  }
-
-  const spinner = ora.default();
-
-  spinner.start('Extracting files...');
-  spinner.info('Canvas components to extract:');
-  await copyFolders(
-    path.resolve(path.resolve(targetPath, 'components', 'canvas')),
-    path.resolve(process.cwd(), PATH_TO_COMPONENTS_FOLDER, 'canvas'),
-    componentNames
-  );
-  spinner.succeed('Files extracted');
-
-  return;
-};
-
-export const extractor = async () => {
   try {
-    console.info('Uniform Extractor');
-    await extractCanvasComponentsWithDependencies(targetPath);
+    const spinner = ora.default();
+    const storedCanvasComponentsPath = path.resolve(targetPath, 'components', 'canvas');
+    const storedCanvasComponents = getFolders(storedCanvasComponentsPath);
+
+    if (
+      componentNames.some(componentName => {
+        const isCanvasComponent = storedCanvasComponents.includes(componentName);
+        if (!isCanvasComponent) {
+          console.error('Invalid component name:', componentName);
+        }
+        return !isCanvasComponent;
+      })
+    ) {
+      return;
+    }
+    spinner.info('Uniform Extractor');
+
+    if (componentNames.length) {
+      spinner.info('Canvas components to extract:');
+      spinner.info(componentNames.join(', '));
+    } else {
+      const selectedComponentIndexes = await checkbox({
+        message: 'Select the canvas components to extract:',
+        choices: storedCanvasComponents.map((name, index) => ({ value: index, name })),
+        loop: false,
+        instructions: true,
+        required: true,
+      });
+      componentNames = storedCanvasComponents.filter((_, index) => selectedComponentIndexes.includes(index));
+    }
+
+    spinner.start('Extracting canvas components...');
+    await copyCanvasComponentsWithDependencies(
+      path.resolve(storedCanvasComponentsPath),
+      path.resolve(process.cwd(), 'src'),
+      componentNames,
+      targetPath
+    );
+    spinner.succeed('Canvas components successfully extracted');
+
     return;
   } catch (error) {
     if (error instanceof Error) {
