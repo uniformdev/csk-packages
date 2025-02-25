@@ -45,8 +45,14 @@ parameters:
     type: dex-segmented-control-parameter
     typeConfig:
       options:
+        - key: XS
+          value: xs
+        - key: SM
+          value: sm
         - key: Base
           value: base
+        - key: LG
+          value: lg
         - key: XL
           value: xl
         - key: 2XL
@@ -57,7 +63,7 @@ parameters:
           value: 5xl
         - key: 7XL
           value: 7xl
-      withViewPort: false
+      withViewPort: true
   - id: color
     name: Color
     type: dex-color-palette-parameter
@@ -159,4 +165,4 @@ slots:
 titleParameter: text
 canBeComposition: false
 created: '2025-01-29T10:47:02.414019+00:00'
-updated: '2025-02-19T10:34:32.06317+00:00'
+updated: '2025-02-24T18:39:14.248894+00:00'
