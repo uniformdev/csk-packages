@@ -7,6 +7,7 @@ import retrieveRoute from '@/utils/retrieveRoute';
 
 export default async function Home(props: PageParameters) {
   const route = await retrieveRoute(props, locales.defaultLocale);
+
   const searchParams = await props.searchParams;
   const isPreviewMode = searchParams?.is_incontext_editing_mode === 'true';
   return (
