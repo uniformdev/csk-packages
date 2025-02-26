@@ -1,0 +1,27 @@
+id: authorList
+displayName: Author List
+path: /query
+custom:
+  allowedContentTypes:
+    - author
+method: GET
+purgeKey: 09152b75-3a6c-4312-b031-23a219c28bbb
+archetype: queryEntries
+variables:
+  limit:
+    type: text
+    default: '20'
+  offset:
+    type: text
+    default: '0'
+  filters:
+    type: text
+    default: '{}'
+  orderBy:
+    type: text
+    default: ''
+  contentTypes:
+    type: text
+    default: ''
+dataSourceId: uniformContent
+allowedOnComponents: []

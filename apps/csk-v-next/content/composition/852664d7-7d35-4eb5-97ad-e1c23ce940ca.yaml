@@ -3,18 +3,83 @@ composition:
   _id: 852664d7-7d35-4eb5-97ad-e1c23ce940ca
   _slug: /
   type: page
+  _dataResources:
+    Product List Content:
+      type: productList
+      variables:
+        limit: '3'
+        locale: ${locale}
+        search: ''
+        filters: >-
+          {"type[eq]":"product","fields.category[eq]":"2f6cc670-cdaa-4532-b70e-424206c8d0ba"}
+        contentTypes: product
+      isPatternParameter: true
+      ignorePatternParameterDefault: false
   _overrides:
+    14fe9d41-5138-402b-b3b7-f8b2013ecf50:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: /:locale/coffee-makers
+              type: projectMapNode
+              nodeId: c9869cee-a65c-4064-b296-78c4a5ba4ffc
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+        text:
+          type: text
+          value: Coffee Makers
+    1c0ab793-041c-4120-a82f-0da8d9c5fe56:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: /:locale/coffee-beans
+              type: projectMapNode
+              nodeId: 9db6eee2-5e3b-4e3e-9e26-836d3973217c
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+        text:
+          type: text
+          value: Coffee Beans
+    1fc9f4b5-b1ea-4e47-b430-d985b4ec2b41:
+      parameters:
+        displayName:
+          type: text
+          value: Find the perfect bean
+    4985d1ca-6d4a-4857-9313-eed9ecb9bc3c:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: /:locale/coffee-makers
+              type: projectMapNode
+              nodeId: c9869cee-a65c-4064-b296-78c4a5ba4ffc
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+        text:
+          type: text
+          value: See all
     852664d7-7d35-4eb5-97ad-e1c23ce940ca:
       parameters:
         pageTitle:
           type: text
-          value: Component Starter Kit from Uniform
+          value: Java Drip – Premium Coffee Makers, Beans, and Accessories
         twitterCard:
           type: select
           value: summary_large_image
         pageKeywords:
           type: text
-          value: uniform, nextjs, composable, cms, commerce
+          value: >-
+            uniform, java drip, coffee store, coffee makers, coffee beans,
+            coffee accessories, premium coffee, best coffee makers, coffee
+            brewing
         twitterImage:
           type: asset
           value:
@@ -27,7 +92,7 @@ composition:
                 url:
                   type: text
                   value: >-
-                    https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/0yvN5zM8RC6TAbxfwWCHWQ-meta-image.png
+                    https://img.uniform.global/p/9o2WElVoQyWkFgWAU79vAQ/BwaCxKacSR28cgDKRwJFKg-meta-image.png
                 file:
                   type: file
                   value: 28f307bf-569a-446d-9700-39e855892108
@@ -56,81 +121,246 @@ composition:
         openGraphImage:
           type: asset
           value:
-            - _id: 5ea92564-890d-499f-85bb-244817c46534
+            - _id: e1e1d26c-dcb6-409f-adba-3d6ca12e6ed4
               type: image
               fields:
                 id:
                   type: text
-                  value: 0ff678c5-794e-4ad2-af0b-861222dd178d
+                  value: 240cb8b5-fdea-4570-af4f-cad7878eec92
                 url:
                   type: text
                   value: >-
-                    https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/0yvN5zM8RC6TAbxfwWCHWQ-meta-image.png
+                    https://img.uniform.global/p/N0QOqjXvSFeXY7i3yzY8ZQ/P-zIoa0HSke1WJjOAlQ00w-jd-earth-to-bean.jpg
                 file:
                   type: file
-                  value: 28f307bf-569a-446d-9700-39e855892108
+                  value: e18fb21b-0e5c-413c-bff7-816c37aeaa0a
                 size:
                   type: number
-                  value: 171834
+                  value: 945417
                 title:
                   type: text
-                  value: meta-image.png
+                  value: jd-earth-to-bean.jpg
                 width:
                   type: number
-                  value: 1200
+                  value: 2600
                 height:
                   type: number
-                  value: 630
+                  value: 1300
                 mediaType:
                   type: text
-                  value: image/png
+                  value: image/jpeg
               _source: uniform-assets
         openGraphTitle:
           type: text
-          value: Uniform // Component Starter Kit
+          value: Java Drip // Premium Coffee Makers, Beans, and Accessories
         pageDescription:
           type: text
           value: >-
-            Essential set of components you need to start building
-            personalizable web experiences with Uniform.
+            Discover Java Drip’s premium selection of coffee makers, quality
+            coffee beans, and stylish accessories. Elevate your coffee
+            experience with our carefully curated products for coffee lovers.
+        openGraphDescription:
+          type: text
+          value: >-
+            Discover Java Drip’s premium selection of coffee makers, quality
+            coffee beans, and stylish accessories. Elevate your coffee
+            experience with our carefully curated products for coffee lovers.
+    9d607fb8-aac2-468f-9370-193972317c55:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: /:locale/coffee-beans
+              type: projectMapNode
+              nodeId: 9db6eee2-5e3b-4e3e-9e26-836d3973217c
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+        text:
+          type: text
+          value: See all
+    13a58c2b-eced-49bc-98fb-13c6ed96c9e7|3090a8f6-e088-4d8f-a8f0-e6dff9ddb28a:
+      slots:
+        $slotSectionItems:
+          - _id: 3faa3ed8-4ca0-4096-b6f6-3b155b375580
+            type: grid
+            _pattern: 90cf0a21-78be-4cc6-b460-acb78b5c1f31
+            _overridability:
+              hideLockedParameters: true
+    1fc9f4b5-b1ea-4e47-b430-d985b4ec2b41|23ef179e-28e2-4551-83b4-80296f479519:
+      slots:
+        $slotSectionItems:
+          - _id: 9d607fb8-aac2-468f-9370-193972317c55
+            type: button
+            _pattern: 53b59aed-e378-4fcb-9135-20247d92074e
+            _overridability:
+              variants: true
+              parameters:
+                icon: 'yes'
+                link: 'yes'
+                text: 'yes'
+                fullWidth: 'yes'
+                textWeight: 'no'
+                buttonColor: 'yes'
+                iconPosition: 'yes'
+                textTransform: 'no'
+                hoverTextColor: 'no'
+                hoverButtonColor: 'no'
+              hideLockedParameters: true
+    22e9a49c-1d3e-4697-9a96-9a873d2f36d8|5d86f5e9-47d6-4e77-a139-83228ec0be41:
+      slots:
+        $slotSectionItems:
+          - _id: 14fe9d41-5138-402b-b3b7-f8b2013ecf50
+            type: button
+            _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
+            _overridability:
+              variants: true
+              parameters:
+                icon: 'yes'
+                link: 'yes'
+                text: 'yes'
+                fullWidth: 'yes'
+                textColor: 'no'
+              hideLockedParameters: true
+          - _id: 1c0ab793-041c-4120-a82f-0da8d9c5fe56
+            type: button
+            _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
+            _overridability:
+              variants: true
+              parameters:
+                icon: 'yes'
+                link: 'yes'
+                text: 'yes'
+                fullWidth: 'yes'
+                textColor: 'no'
+              hideLockedParameters: true
+    3074410a-05a6-475d-a592-d12154625515|23ef179e-28e2-4551-83b4-80296f479519:
+      slots:
+        $slotSectionItems:
+          - _id: 4985d1ca-6d4a-4857-9313-eed9ecb9bc3c
+            type: button
+            _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
+            _overridability:
+              variants: true
+              parameters:
+                icon: 'yes'
+                link: 'yes'
+                text: 'yes'
+                fullWidth: 'yes'
+                textColor: 'no'
+              hideLockedParameters: true
     852664d7-7d35-4eb5-97ad-e1c23ce940ca|dc2e95be-21b5-4476-a309-f8a34922f528:
       slots:
         $slotSectionItems:
-          - _id: eebf1227-58aa-41c5-bfc4-089d94cebdba
-            type: fixedHero
+          - _id: 22e9a49c-1d3e-4697-9a96-9a873d2f36d8
+            type: featuredSection
+            _pattern: d7181e81-f3d1-4e21-af6f-1e73c8dfa6b5
+            _overridability:
+              parameters:
+                displayName: 'yes'
+              hideLockedParameters: true
+          - _id: 1c7f01d0-639b-472d-8aae-c3f5d9a42bcd
+            type: section
+            slots:
+              sectionContent:
+                - _id: aa48ac0f-90c3-4520-a230-c20f5e8857e0
+                  type: text
+                  parameters:
+                    tag:
+                      type: dex-segmented-control-parameter
+                      value: h2
+                    size:
+                      type: dex-segmented-control-parameter
+                      value:
+                        mobile: 2xl
+                        tablet: 4xl
+                        desktop: 4xl
+                    text:
+                      type: text
+                      value: Why we’re obsessed with coffee
+                    color:
+                      type: dex-color-palette-parameter
+                      value: text-primary
+                    weight:
+                      type: dex-segmented-control-parameter
+                      value: bold
+                - _id: 6557bad8-7b2d-4aa7-b28b-5fe992eacd6f
+                  type: text
+                  parameters:
+                    tag:
+                      type: dex-segmented-control-parameter
+                      value: span
+                    size:
+                      type: dex-segmented-control-parameter
+                      value: {}
+                    text:
+                      type: text
+                      value: >-
+                        At Jada Drip, coffee isn’t just a drink—it’s an
+                        experience, a ritual, and a connection. From the perfect
+                        grind to the rich aroma, we’re passionate about every
+                        step of the journey that brings the finest coffee to
+                        your cup. Our obsession drives us to source only the
+                        highest quality beans, create state-of-the-art brewing
+                        equipment, and offer accessories that elevate your daily
+                        coffee routine. Join us in celebrating the art of
+                        coffee, one sip at a time
+                    color:
+                      type: dex-color-palette-parameter
+                      value: text-primary
+                    weight:
+                      type: dex-segmented-control-parameter
+                      value: normal
+                    alignment:
+                      type: dex-segmented-control-parameter
+                      value: center
             parameters:
-              image:
-                type: asset
-                value: []
-              titleTag:
-                type: dex-segmented-control-parameter
-                value: h1
-              titleText:
-                type: text
-                value: Component Starter Kit
+              spacing:
+                type: dex-space-control-parameter
+                value:
+                  paddingTop: container-xlarge
+                  paddingBottom: container-medium
               displayName:
                 type: text
-                value: Welcome Hero
-              descriptionText:
-                type: text
-                value: >-
-                  A rich set of components to supercharge building fast, modern,
-                  personalized experiences with Uniform DXP.
+                value: Why we’re obsessed with coffee
               contentAlignment:
                 type: dex-segmented-control-parameter
                 value: center
-              eyebrowTitleText:
-                type: text
-                value: Get your next project started on the right foot
-              primaryButtonLink:
-                type: link
-                locales:
-                  en:
-                    path: https://unfrm.to/csk-docs
-                    type: url
-              primaryButtonText:
-                type: text
-                value: Docs
+          - _id: 3074410a-05a6-475d-a592-d12154625515
+            type: container
+            _pattern: 4a0a5fb2-25d0-4563-955b-714233ddffe6
+            _dataResources:
+              Product List Content:
+                type: productList
+                variables:
+                  limit: '3'
+                  locale: ${locale}
+                  search: ''
+                  filters: >-
+                    {"type[eq]":"product","fields.category[eq]":"2f6cc670-cdaa-4532-b70e-424206c8d0ba"}
+                  orderBy: creator_ASC
+                  contentTypes: product
+            _overridability:
+              parameters:
+                displayName: 'yes'
+                backgroundColor: 'yes'
+              hideLockedParameters: true
+          - _id: 1fc9f4b5-b1ea-4e47-b430-d985b4ec2b41
+            type: container
+            _pattern: 00a7ebd9-8743-4158-aa06-bc671a05529b
+            _overridability:
+              parameters:
+                displayName: 'yes'
+                backgroundColor: 'yes'
+              hideLockedParameters: true
+          - _id: 13a58c2b-eced-49bc-98fb-13c6ed96c9e7
+            type: grid
+            _pattern: 2fa494d2-d69a-49bc-b728-229a1684d77f
+            _overridability:
+              parameters:
+                displayName: 'yes'
+              hideLockedParameters: true
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc

@@ -30,9 +30,8 @@ parameters:
       selectedGroup: container
   - id: border
     name: Border
-    type: dex-token-selector-parameter
-    typeConfig:
-      selectedTokenType: border
+    type: dex-border-selector-parameter
+    typeConfig: null
   - id: fluidContent
     name: Fluid Content
     type: checkbox
