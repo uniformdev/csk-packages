@@ -1,6 +1,6 @@
 import * as ora from 'ora';
 import { addEnvVariablesToProjectConfiguration, postProcessFile, proceedCodeChange } from './code-changer';
-import { GIT_COMMANDS, META_NOT_PROCESABLE_FILE_EXTENSIONS, RECIPE_ADDITIONAL_FILES } from './constants';
+import { GIT_COMMANDS } from './constants';
 import { Recipe, ProjectConfiguration, Template } from './types';
 import {
   selectTemplate,
@@ -13,6 +13,7 @@ import {
   getValidTemplateFromArgs,
   getValidRecipesFromArgs,
   fillEnvVariablesWithDefaults,
+  optionsForResetBranch,
 } from './utils';
 import { spawnCmdCommand } from '../../utils';
 
@@ -59,7 +60,21 @@ const init = async (args: InitArgs): Promise<void> => {
       return;
     }
 
-    await spawnCmdCommand(GIT_COMMANDS.GIT_CREATE_BRANCH(`${template}-${recipes.join('-')}`));
+    const branchNameBase = `${template}${isRecipesApplied ? `-${recipes.join('-')}` : ''}`;
+    const isBranchExists = await spawnCmdCommand(GIT_COMMANDS.GIT_CHECK_BRANCH_EXISTS(branchNameBase));
+
+    if (isBranchExists) {
+      const shouldResetBranch = await optionsForResetBranch();
+      const branchName = shouldResetBranch ? branchNameBase : `${branchNameBase}-${Date.now()}`;
+
+      await spawnCmdCommand(
+        shouldResetBranch
+          ? GIT_COMMANDS.GIT_CREATE_BRANCH_FORCE(branchName)
+          : GIT_COMMANDS.GIT_CREATE_BRANCH(branchName)
+      );
+    } else {
+      await spawnCmdCommand(GIT_COMMANDS.GIT_CREATE_BRANCH(branchNameBase));
+    }
 
     if (isRecipesApplied) {
       await alignWithFullPackBranch(spinner);

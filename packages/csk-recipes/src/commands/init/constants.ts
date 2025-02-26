@@ -9,6 +9,8 @@ export const GIT_BRANCHES = {
 
 export const RECIPES = ['localization', 'ga', 'uniform-insights', 'shadcn'];
 
+export const TEMPLATES_TO_IGNORE = ['radiant'];
+
 export const GIT_COMMANDS = {
   DIFF_QUIET: `git diff --quiet origin/${GIT_BRANCHES.GOLD}`,
   RESET_HARD: `git reset --hard origin/${GIT_BRANCHES.GOLD}`,
@@ -16,6 +18,8 @@ export const GIT_COMMANDS = {
   ALIGN_WITH_TEMPLATE_BRANCH: (template: string) => `git cherry-pick -n ${TEMPLATE_BRANCH_PREFIX}${template} `,
   COMMIT_CHANGES: (message: string) => `git commit -m "${message}" --no-verify`,
   GIT_CREATE_BRANCH: (branchName: string) => `git checkout -b ${branchName}`,
+  GIT_CREATE_BRANCH_FORCE: (branchName: string) => `git checkout ${branchName} && git reset --hard origin/develop`,
+  GIT_CHECK_BRANCH_EXISTS: (branchName: string) => `git branch --list ${branchName}`,
   GET_CHANGED_FILES: 'git ls-files --modified --others --exclude-standard',
   GIT_ADD: 'git add .',
   GIT_RESET: 'git reset --hard',
