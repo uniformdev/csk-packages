@@ -11,6 +11,7 @@ import {
   ENV_VARIABLES_DEFAULT_VALUES,
   TEMPLATE_BRANCH_PREFIX,
   RECIPES,
+  TEMPLATES_TO_IGNORE,
 } from './constants';
 import { EnvVariable, Recipe, Template } from './types';
 import { runCmdCommand, spawnCmdCommand } from '../../utils';
@@ -67,11 +68,22 @@ export const selectTemplate = async (): Promise<Template> => {
         name: templateName,
         value: templateValue,
       };
-    });
+    })
+    .filter(template => !TEMPLATES_TO_IGNORE.includes(template.value));
 
   return select<Template>({
     message: 'Let’s start by choosing a template for your project:',
     choices: [{ name: 'Baseline', value: 'baseline' }, ...templatesBranches],
+  });
+};
+
+/**
+ * Prompts the user to reset the branch.
+ * @returns confirmation result
+ */
+export const optionsForResetBranch = async (): Promise<boolean> => {
+  return confirm({
+    message: '❗❗❗A this configuration already exists. Would you like to override it?',
   });
 };
 
