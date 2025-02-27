@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import * as ora from 'ora';
 import { FILE_EXTENSIONS, IMPORT_REGEX, SOURCE_CANVAS_FILES } from '@/constants';
+import { confirm } from '@inquirer/prompts';
 
 const ensureDir = async (dir: string) => {
   if (!fs.existsSync(dir)) {
@@ -114,12 +115,12 @@ export const copyCanvasComponentsWithDependencies = async (
   source: string,
   destination: string,
   folders: string[],
-  targetPath: string
+  targetPath: string,
+  spinner?: ora.Ora
 ) => {
   const importsState = new Set<string>();
 
-  const progressSpinner = ora.default();
-  progressSpinner?.start(`Extracting files...`);
+  spinner?.start('Searching for all canvas components and their dependencies...');
 
   for (const entry of folders) {
     const srcPath = path.join(source, entry);
@@ -133,11 +134,34 @@ export const copyCanvasComponentsWithDependencies = async (
   }
   const filePathsToExtract = Array.from(importsState);
 
-  for (const filePath of filePathsToExtract) {
+  const filePathsToOverride = filePathsToExtract.filter(sourceFile => {
+    const destPath = path.join(destination, path.relative(targetPath, sourceFile));
+    return fs.existsSync(destPath) && fs.readFileSync(destPath, 'utf8') !== fs.readFileSync(sourceFile, 'utf8');
+  });
+
+  const shouldOverride = await (async () => {
+    if (!filePathsToOverride.length) return true;
+    spinner?.stop();
+    const previewPaths = filePathsToOverride
+      .slice(0, 5)
+      .map(filePath => path.relative(process.cwd(), path.join(destination, path.relative(targetPath, filePath))))
+      .join('\n\t');
+    const additionalFiles = filePathsToOverride.length > 5 ? '\n\t...' : '';
+
+    return confirm({
+      message: `Found ${filePathsToOverride.length} files that will be overridden:\n\t${previewPaths}${additionalFiles}\nDo you want to override them?`,
+    });
+  })();
+
+  const finalFilePathsToExtract = shouldOverride
+    ? filePathsToExtract
+    : filePathsToExtract.filter(filePath => !filePathsToOverride.includes(filePath));
+
+  spinner?.start('Extracting canvas components and their dependencies...');
+
+  for (const filePath of finalFilePathsToExtract) {
     const destPath = path.join(destination, path.relative(targetPath, filePath));
     await ensureDir(path.dirname(destPath));
     await fs.promises.copyFile(filePath, destPath);
   }
-
-  progressSpinner?.succeed(`All files were successfully extracted`);
 };

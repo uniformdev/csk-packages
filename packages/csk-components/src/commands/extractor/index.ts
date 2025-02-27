@@ -27,11 +27,11 @@ export const extractCanvasComponents = async (componentNames: string[]) => {
     ) {
       return;
     }
-    spinner.info('Uniform Extractor');
+    spinner.info('Welcome to Uniform Extractor');
 
     if (componentNames.length) {
       spinner.info('Canvas components to extract:');
-      spinner.info(componentNames.join(', '));
+      spinner.info(`${componentNames.join(', ')};`);
     } else {
       const selectedComponentIndexes = await checkbox({
         message: 'Select the canvas components to extract:',
@@ -43,14 +43,15 @@ export const extractCanvasComponents = async (componentNames: string[]) => {
       componentNames = storedCanvasComponents.filter((_, index) => selectedComponentIndexes.includes(index));
     }
 
-    spinner.start('Extracting canvas components...');
+    spinner.start('Extracting canvas components and their dependencies...');
     await copyCanvasComponentsWithDependencies(
       path.resolve(storedCanvasComponentsPath),
       path.resolve(process.cwd(), 'src'),
       componentNames,
-      targetPath
+      targetPath,
+      spinner
     );
-    spinner.succeed('Canvas components successfully extracted');
+    spinner.succeed('Canvas components and their dependencies successfully extracted');
 
     return;
   } catch (error) {
