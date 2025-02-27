@@ -2,7 +2,7 @@ import { ComponentType } from 'react';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { ResolveEmptyPlaceholderOptions } from '@/types/cskTypes';
 
-export const DEFAULT_EMPTY_PLACEHOLDER = { component: null };
+export const DEFAULT_EMPTY_PLACEHOLDER = { component: () => <div className="h-20 w-full" /> };
 
 export type EmptyPlaceholderMapping = Record<
   string,

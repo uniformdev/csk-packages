@@ -8,7 +8,7 @@ export default defineConfig({
     'src/utils/styling.ts',
     'src/utils/routing.ts',
     'src/utils/assets.ts',
-    'src/utils/createEmptyPlaceholderResolver.ts',
+    'src/utils/createEmptyPlaceholderResolver.tsx',
     'src/utils/createComponentResolver.ts',
     'src/hocs/withPlaygroundWrapper.tsx',
     'src/components/providers/server.ts',
