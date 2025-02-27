@@ -72,7 +72,7 @@ export const EXTRACT_UI_COMPONENTS = [
 export const EXTRACT_UTILS = [
   'assets.ts',
   'createComponentResolver.ts',
-  'createEmptyPlaceholderResolver.ts',
+  'createEmptyPlaceholderResolver.tsx',
   'routing.ts',
   'styling.ts',
 ];
