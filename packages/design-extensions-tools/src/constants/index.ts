@@ -39,7 +39,6 @@ export const PATH_TO_CONFIG_FOLDER = path.join(
   ...(process.env.CONFIG_PATH ?? DEFAULT_CONFIG_PATH).split(/[\\/]/).filter(Boolean)
 );
 
-export const IS_CANARY_ENVIRONMENT =
-  !!process.env.UNIFORM_CLI_BASE_URL && process.env.UNIFORM_CLI_BASE_URL.startsWith('https://canary');
+export const BASE_API_URL = process.env.UNIFORM_CLI_BASE_URL || 'https://uniform.app';
 
 export const ROOT_COLOR_SCHEME_KEY = 'light';

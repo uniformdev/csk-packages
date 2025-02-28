@@ -1,4 +1,4 @@
-import { CONFIG_FILE, DEFAULT_INTEGRATION_URL, FG_GREEN, TOKEN_STYLE_FILE } from '../constants';
+import { BASE_API_URL, CONFIG_FILE, DEFAULT_INTEGRATION_URL, FG_GREEN, TOKEN_STYLE_FILE } from '../constants';
 
 export {
   generateTailwindcssColorKeysPattern,
@@ -35,9 +35,9 @@ export const fetchTokenValue = (endPoint: string, ...queryParams: string[]) =>
     return response;
   });
 
-export const pushTokenValue = (endPoint: string, body?: BodyInit | null, isCanary = false) =>
+export const pushTokenValue = (endPoint: string, body?: BodyInit | null) =>
   fetch(
-    `${process.env.INTEGRATION_URL || DEFAULT_INTEGRATION_URL}/api/${endPoint}?projectId=${process.env.UNIFORM_PROJECT_ID}${isCanary ? `&env=canary` : ''}`,
+    `${process.env.INTEGRATION_URL || DEFAULT_INTEGRATION_URL}/api/${endPoint}?projectId=${process.env.UNIFORM_PROJECT_ID}&baseUrl=${BASE_API_URL}`,
     {
       cache: 'no-cache',
       method: 'POST',

@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { IS_CANARY_ENVIRONMENT, PATH_TO_STYLE_FOLDER, TOKEN_STYLE_FILE } from '../../constants';
+import { PATH_TO_STYLE_FOLDER, TOKEN_STYLE_FILE } from '../../constants';
 import { checkEnvironmentVariable, pushTokenValue, syncSuccessLog } from '../../utils';
 import { getFontFamilyName } from '../../utils/getTokenStyles';
 
@@ -51,8 +51,8 @@ export const pushFonts = async () => {
     {}
   );
 
-  await pushTokenValue('setFonts', JSON.stringify(resolvedFonts), IS_CANARY_ENVIRONMENT);
-  await pushTokenValue('setDefaultFont', JSON.stringify({ defaultFont }), IS_CANARY_ENVIRONMENT);
+  await pushTokenValue('setFonts', JSON.stringify(resolvedFonts));
+  await pushTokenValue('setDefaultFont', JSON.stringify({ defaultFont }));
 
   syncSuccessLog(TOKEN_STYLE_FILE.Fonts, 'pushed');
 };
