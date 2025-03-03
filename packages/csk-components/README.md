@@ -26,16 +26,8 @@ STYLES_PATH=
 Wrap your page using `DesignExtensionsProvider` from `@uniformdev/design-extensions-tools/components/providers/server`:
 
 ```typescript jsx
-import { cookies } from 'next/headers';
-import { notFound } from 'next/navigation';
-import {
-  createServerUniformContext,
-  ContextUpdateTransfer,
-  PageParameters,
-  UniformComposition,
-} from '@uniformdev/canvas-next-rsc';
+import { PageParameters, UniformComposition } from '@uniformdev/canvas-next-rsc';
 import { emptyPlaceholderResolver } from '@uniformdev/csk-components/components/canvas/emptyPlaceholders';
-import { isRouteWithoutErrors } from '@uniformdev/csk-components/utils/routing';
 import { DesignExtensionsProvider } from '@uniformdev/design-extensions-tools/components/providers/server';
 import { componentResolver } from '@/components';
 import locales from '@/i18n/locales.json';
@@ -43,31 +35,14 @@ import retrieveRoute from '@/utils/retrieveRoute';
 
 export default async function Home(props: PageParameters) {
   const route = await retrieveRoute(props, locales.defaultLocale);
-  if (!isRouteWithoutErrors(route)) return notFound();
-
-  const cookie = await cookies();
-  const theme = cookie.get('theme')?.value || 'light';
   const searchParams = await props.searchParams;
-  const serverContext = await createServerUniformContext({
-    searchParams,
-  });
-  const isPreviewMode = searchParams?.preview === 'true';
-
+  const isPreviewMode = searchParams?.is_incontext_editing_mode === 'true';
   return (
     <DesignExtensionsProvider isPreviewMode={isPreviewMode}>
-      <ContextUpdateTransfer
-        serverContext={serverContext}
-        update={{
-          quirks: {
-            theme,
-          },
-        }}
-      />
       <UniformComposition
         {...props}
         route={route}
         resolveComponent={componentResolver}
-        serverContext={serverContext}
         mode="server"
         resolveEmptyPlaceholder={emptyPlaceholderResolver}
       />
@@ -83,8 +58,17 @@ export { generateMetadata } from '@/utils/metadata';
 
 Run the following command to pull and generate CSS variables for all design tokens:
 
+First, add the following scripts to your `package.json`:
+
+```json
+"scripts": {
+    "pull:dex": "design-extensions-tools pull",
+    "push:dex": "design-extensions-tools push",
+}
+```
+
 ```bash
-design-extensions-tools pull
+npm run pull:dex
 ```
 
 ### Import CSS Files
@@ -110,7 +94,7 @@ import {
   generateTailwindcssDimensionKeysPattern,
   generateTailwindcssFontKeysPattern,
   generateTailwindcssBorderKeysPattern,
-} from '@uniformdev/csk-components/tailwindcss-conf';
+} from '@uniformdev/design-extensions-tools/tailwindcss-conf';
 import typography from '@tailwindcss/typography';
 import theme from './tailwind.config.theme.json';
 import utilities from './tailwind.utilities.json';
@@ -161,7 +145,7 @@ export default {
   content: [
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    './node_modules/@uniformdev/csk-component/dist/content/**/*.{js,ts,jsx,tsx,mdx}',
+    './node_modules/@uniformdev/csk-components/dist/content/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   safelist,
   theme,
