@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { IS_CANARY_ENVIRONMENT, PATH_TO_STYLE_FOLDER, TOKEN_STYLE_FILE } from '../../constants';
+import { PATH_TO_STYLE_FOLDER, TOKEN_STYLE_FILE } from '../../constants';
 import { checkEnvironmentVariable, pushTokenValue, syncSuccessLog } from '../../utils';
 import { getValueWithAlias } from '../../utils/getTokenStyles';
 
@@ -39,7 +39,7 @@ export const pushBorders = async () => {
       };
     }, {});
 
-  await pushTokenValue('setBorders', JSON.stringify(borders), IS_CANARY_ENVIRONMENT);
+  await pushTokenValue('setBorders', JSON.stringify(borders));
 
   syncSuccessLog(TOKEN_STYLE_FILE.Borders, 'pushed');
 };

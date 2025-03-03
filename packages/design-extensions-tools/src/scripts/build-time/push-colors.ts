@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { IS_CANARY_ENVIRONMENT, PATH_TO_STYLE_FOLDER, ROOT_COLOR_SCHEME_KEY, TOKEN_STYLE_FILE } from '../../constants';
+import { PATH_TO_STYLE_FOLDER, ROOT_COLOR_SCHEME_KEY, TOKEN_STYLE_FILE } from '../../constants';
 import { checkEnvironmentVariable, pushTokenValue, syncSuccessLog } from '../../utils';
 import { getValueWithAlias } from '../../utils/getTokenStyles';
 
@@ -60,7 +60,7 @@ export const pushColors = async () => {
 
   const palette = parseCSS(colorsCssFile);
 
-  await pushTokenValue('setColors', JSON.stringify(palette), IS_CANARY_ENVIRONMENT);
+  await pushTokenValue('setColors', JSON.stringify(palette));
 
   syncSuccessLog(TOKEN_STYLE_FILE.Colors, 'pushed');
 };
