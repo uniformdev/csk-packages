@@ -1,3 +1,4 @@
+import { cskComponentsNames } from '@/constants';
 import createEmptyPlaceholderResolver, { EmptyPlaceholderMapping } from '@/utils/createEmptyPlaceholderResolver';
 
 // Empty Placeholders
@@ -21,24 +22,24 @@ import { TabsEmptyPlaceholder } from './Tabs/empty-placeholder';
 import { TestimonialEmptyPlaceholder } from './Testimonial/empty-placeholder';
 
 const cskEmptyPlaceholderMapping: EmptyPlaceholderMapping = {
-  accordion: AccordionEmptyPlaceholder,
-  banner: BannerEmptyPlaceholder,
-  card: CardEmptyPlaceholder,
-  carousel: CarouselEmptyPlaceholder,
-  countdown: CountdownEmptyPlaceholder,
-  flexibleHero: FlexibleHeroEmptyPlaceholder,
-  footer: FooterEmptyPlaceholder,
-  header: HeaderEmptyPlaceholder,
-  imageGallery: ImageGalleryEmptyPlaceholder,
-  modal: ModalEmptyPlaceholder,
-  navigationFlyout: NavigationFlyoutEmptyPlaceholder,
-  navigationGroup: NavigationGroupEmptyPlaceholder,
-  page: PageEmptyPlaceholder,
-  review: ReviewEmptyPlaceholder,
-  section: SectionEmptyPlaceholder,
-  table: TableEmptyPlaceholder,
-  tabs: TabsEmptyPlaceholder,
-  testimonial: TestimonialEmptyPlaceholder,
+  [cskComponentsNames.Accordion]: AccordionEmptyPlaceholder,
+  [cskComponentsNames.Banner]: BannerEmptyPlaceholder,
+  [cskComponentsNames.Card]: CardEmptyPlaceholder,
+  [cskComponentsNames.Carousel]: CarouselEmptyPlaceholder,
+  [cskComponentsNames.Countdown]: CountdownEmptyPlaceholder,
+  [cskComponentsNames.FlexibleHero]: FlexibleHeroEmptyPlaceholder,
+  [cskComponentsNames.Footer]: FooterEmptyPlaceholder,
+  [cskComponentsNames.Header]: HeaderEmptyPlaceholder,
+  [cskComponentsNames.ImageGallery]: ImageGalleryEmptyPlaceholder,
+  [cskComponentsNames.Modal]: ModalEmptyPlaceholder,
+  [cskComponentsNames.NavigationFlyout]: NavigationFlyoutEmptyPlaceholder,
+  [cskComponentsNames.NavigationGroup]: NavigationGroupEmptyPlaceholder,
+  [cskComponentsNames.Page]: PageEmptyPlaceholder,
+  [cskComponentsNames.Review]: ReviewEmptyPlaceholder,
+  [cskComponentsNames.Section]: SectionEmptyPlaceholder,
+  [cskComponentsNames.Table]: TableEmptyPlaceholder,
+  [cskComponentsNames.Tabs]: TabsEmptyPlaceholder,
+  [cskComponentsNames.Testimonial]: TestimonialEmptyPlaceholder,
 };
 
 export default cskEmptyPlaceholderMapping;
