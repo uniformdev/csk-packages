@@ -2,6 +2,14 @@ export const IMPORT_REGEX = /['"](\.\/[^'"]+|@\/[^'"]+)['"]/g;
 export const FILE_EXTENSIONS = ['.tsx', '.ts', '.js', '.jsx'];
 export const SOURCE_CANVAS_FILES = ['index.tsx', 'empty-placeholder.tsx'];
 
+export const MAPPING_REGEX = /\b[a-zA-Z0-9_]+Mapping\s*=\s*{(?:[^{}]*|\{(?:[^{}]*|\{[^{}]*\})*\})*}/g;
+export const REGISTER_IMPORT_REGEX = /(import .+;)(?![\s\S]*import .+)/;
+export const REGISTER_KEY_REGEX = (key: string) => new RegExp(`\\b${key}\\s*:\\s*[^,]+,?`, 'g');
+export const END_MAPPER_REGEX = /}$/;
+
+export const INITIAL_RESOLVER = `export { cskComponentsMapping } from '@uniformdev/csk-components/components/canvas';\n`;
+export const START_RESOLVER = `import baseCskComponentsMapping from '@uniformdev/csk-components/components/canvas';\n\nexport const cskComponentsMapping = {\n  ...baseCskComponentsMapping,\n};\n`;
+
 export const EXTRACT_CANVAS_COMPONENTS = [
   'Accordion',
   'AccordionItem',

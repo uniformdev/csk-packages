@@ -111,6 +111,8 @@ const findImportedFiles = async (sourceFile: string, targetPath: string, imports
   return;
 };
 
+const MAX_FILES_TO_PREVIEW = 5;
+
 export const copyCanvasComponentsWithDependencies = async (
   source: string,
   destination: string,
@@ -118,50 +120,55 @@ export const copyCanvasComponentsWithDependencies = async (
   targetPath: string,
   spinner?: ora.Ora
 ) => {
-  const importsState = new Set<string>();
+  try {
+    const importsState = new Set<string>();
 
-  spinner?.start('Searching for all canvas components and their dependencies...');
+    spinner?.start('Searching for all canvas components and their dependencies...');
 
-  for (const entry of folders) {
-    const srcPath = path.join(source, entry);
-    const itemsToCopy = fs
-      .readdirSync(srcPath, { withFileTypes: true })
-      .filter(item => item.isFile() && SOURCE_CANVAS_FILES.includes(item.name));
+    for (const entry of folders) {
+      const srcPath = path.join(source, entry);
+      const itemsToCopy = fs
+        .readdirSync(srcPath, { withFileTypes: true })
+        .filter(item => item.isFile() && SOURCE_CANVAS_FILES.includes(item.name));
 
-    for (const item of itemsToCopy) {
-      await findImportedFiles(path.join(item.parentPath, item.name), targetPath, importsState);
+      for (const item of itemsToCopy) {
+        await findImportedFiles(path.join(item.parentPath, item.name), targetPath, importsState);
+      }
     }
-  }
-  const filePathsToExtract = Array.from(importsState);
+    const filePathsToExtract = Array.from(importsState);
 
-  const filePathsToOverride = filePathsToExtract.filter(sourceFile => {
-    const destPath = path.join(destination, path.relative(targetPath, sourceFile));
-    return fs.existsSync(destPath) && fs.readFileSync(destPath, 'utf8') !== fs.readFileSync(sourceFile, 'utf8');
-  });
-
-  const shouldOverride = await (async () => {
-    if (!filePathsToOverride.length) return true;
-    spinner?.stop();
-    const previewPaths = filePathsToOverride
-      .slice(0, 5)
-      .map(filePath => path.relative(process.cwd(), path.join(destination, path.relative(targetPath, filePath))))
-      .join('\n\t');
-    const additionalFiles = filePathsToOverride.length > 5 ? '\n\t...' : '';
-
-    return confirm({
-      message: `Found ${filePathsToOverride.length} files that will be overridden:\n\t${previewPaths}${additionalFiles}\nDo you want to override them?`,
+    const filePathsToOverride = filePathsToExtract.filter(sourceFile => {
+      const destPath = path.join(destination, path.relative(targetPath, sourceFile));
+      return fs.existsSync(destPath) && fs.readFileSync(destPath, 'utf8') !== fs.readFileSync(sourceFile, 'utf8');
     });
-  })();
 
-  const finalFilePathsToExtract = shouldOverride
-    ? filePathsToExtract
-    : filePathsToExtract.filter(filePath => !filePathsToOverride.includes(filePath));
+    const shouldOverride = await (async () => {
+      if (!filePathsToOverride.length) return true;
+      spinner?.stop();
+      const previewPaths = filePathsToOverride
+        .slice(0, MAX_FILES_TO_PREVIEW)
+        .map(filePath => path.relative(process.cwd(), path.join(destination, path.relative(targetPath, filePath))))
+        .join('\n\t');
+      const additionalFiles = filePathsToOverride.length > MAX_FILES_TO_PREVIEW ? '\n\t...' : '';
 
-  spinner?.start('Extracting canvas components and their dependencies...');
+      return confirm({
+        message: `Found ${filePathsToOverride.length} files that will be overridden:\n\t${previewPaths}${additionalFiles}\nDo you want to override them?`,
+      });
+    })();
 
-  for (const filePath of finalFilePathsToExtract) {
-    const destPath = path.join(destination, path.relative(targetPath, filePath));
-    await ensureDir(path.dirname(destPath));
-    await fs.promises.copyFile(filePath, destPath);
+    const finalFilePathsToExtract = shouldOverride
+      ? filePathsToExtract
+      : filePathsToExtract.filter(filePath => !filePathsToOverride.includes(filePath));
+
+    spinner?.start('Extracting canvas components and their dependencies...');
+
+    for (const filePath of finalFilePathsToExtract) {
+      const destPath = path.join(destination, path.relative(targetPath, filePath));
+      await ensureDir(path.dirname(destPath));
+      await fs.promises.copyFile(filePath, destPath);
+    }
+  } catch (err) {
+    spinner?.stop();
+    throw err;
   }
 };
