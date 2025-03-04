@@ -2,6 +2,7 @@ import path from 'node:path';
 import * as ora from 'ora';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { registerCanvasComponents } from '@/utils/register';
 import { checkbox } from '@inquirer/prompts';
 import { getFolders } from './utils';
 import { copyCanvasComponentsWithDependencies } from '../../utils/copy';
@@ -52,6 +53,10 @@ export const extractCanvasComponents = async (componentNames: string[]) => {
       spinner
     );
     spinner.succeed('Canvas components and their dependencies successfully extracted');
+
+    spinner?.start('Starting registration...');
+    const destination = path.resolve(process.cwd(), 'src');
+    await registerCanvasComponents(destination, componentNames, spinner);
 
     return;
   } catch (error) {
