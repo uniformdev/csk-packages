@@ -1,0 +1,33 @@
+{
+  "name": "csk-v-next-storybook",
+  "version": "6.0.18",
+  "description": "CSK vNext Storybook is an interactive Storybook build showcasing components from the CSK vNext component starter kit. It provides detailed documentation, live previews, and testing capabilities for easy integration into your projects.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "build": "storybook build",
+    "lint": "eslint \"src/**/*.{js,ts,tsx}\"",
+    "lint:fix": "eslint \"src/**/*.{js,ts,tsx}\" --fix",
+    "format": "prettier --write \"src/**/*.{js,ts,tsx}\""
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^3.2.3",
+    "@repo/eslint-config": "*",
+    "@repo/typescript-config": "*",
+    "@storybook/addon-essentials": "^8.4.7",
+    "@storybook/addon-interactions": "^8.4.7",
+    "@storybook/addon-links": "^8.4.7",
+    "@storybook/addon-onboarding": "^8.4.7",
+    "@storybook/blocks": "^8.4.7",
+    "@storybook/nextjs": "^8.4.7",
+    "@storybook/react": "^8.4.7",
+    "@storybook/test": "^8.4.7",
+    "@tailwindcss/typography": "^0.5.16",
+    "@uniformdev/canvas-next-rsc": "^20.6.1",
+    "@uniformdev/csk-components": "*",
+    "@uniformdev/design-extensions-tools": "*",
+    "eslint-plugin-storybook": "^0.11.2",
+    "storybook": "^8.4.7",
+    "tailwindcss": "^3.4.17"
+  }
+}
