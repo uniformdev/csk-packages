@@ -1,0 +1,87 @@
+composition:
+  _name: Samsung Galaxy S24+
+  _id: 9f32c9a8-4d9b-41b6-b707-5adf7bf2482f
+  _slug: samsung-galaxy-s24-plus
+  type: page
+  _overrides:
+    9f32c9a8-4d9b-41b6-b707-5adf7bf2482f:
+      parameters:
+        $enr:
+          type: $enr
+          value:
+            - cat: platform
+              key: android
+              str: 5
+            - cat: device
+              key: mobilePhone
+              str: 5
+            - cat: brand
+              key: samsung
+              str: 5
+    9f32c9a8-4d9b-41b6-b707-5adf7bf2482f|dc2e95be-21b5-4476-a309-f8a34922f528:
+      slots:
+        $slotSectionItems:
+          - _id: 797cf152-bafd-4d51-bedc-979343bbd1bb
+            type: fixedHero
+            variant: columns
+            parameters:
+              $enr:
+                type: $enr
+                value:
+                  - cat: brand
+                    key: samsung
+                    str: 5
+                  - cat: platform
+                    key: android
+                    str: 5
+                  - cat: int
+                    key: devices
+                    str: 5
+              image:
+                type: asset
+                value:
+                  - _id: e889fcc4-e372-4312-85c2-0853a463c743
+                    type: image
+                    fields:
+                      id:
+                        type: text
+                        value: 4219b1db-71f4-43bd-a343-86154c74e2ae
+                      url:
+                        type: text
+                        value: >-
+                          https://img.uniform.global/p/NNwYKQxtRVSY-BaCP67Jkw/vranA3awSgKEJ5qiVJ5EKQ-galaxy_ai.png
+                      file:
+                        type: file
+                        value: f5dbeec4-2147-4b15-b116-8ef94bf71d52
+                      size:
+                        type: number
+                        value: 714686
+                      title:
+                        type: text
+                        value: galaxy_ai.png
+                      width:
+                        type: number
+                        value: 1596
+                      height:
+                        type: number
+                        value: 1198
+                      mediaType:
+                        type: text
+                        value: image/png
+                    _source: uniform-assets
+              titleTag:
+                type: dex-segmented-control-parameter
+                value: h2
+              titleText:
+                type: text
+                locales:
+                  en: Get Samsung Galaxy S24+
+              contentAlignment:
+                type: dex-segmented-control-parameter
+                value: center
+  _locales:
+    - en
+  _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
+created: '2025-03-05T16:33:37.26481+00:00'
+modified: '2025-03-05T16:41:54.022504+00:00'
+pattern: false

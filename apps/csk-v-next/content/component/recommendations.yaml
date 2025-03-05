@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: recommendations
+name: Recommendations
+icon: bulb
+parameters: []
+useTeamPermissions: true
+slots:
+  - id: recommendations
+    name: Recommendations
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+canBeComposition: true
+created: '2025-03-05T16:15:03.553593+00:00'
+updated: '2025-03-05T16:15:03.553593+00:00'

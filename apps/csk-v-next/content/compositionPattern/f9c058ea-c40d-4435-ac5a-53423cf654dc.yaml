@@ -14,7 +14,7 @@ composition:
               value: 9f964074-61ec-4afb-8d5b-8cb499257744
             url:
               value: >-
-                https://img.uniform.global/p/YBXmRPPzQZ-45Yo5jJzHAw/y_wecb8sSSOU9U9OFam3mQ-favicon.png
+                https://img.uniform.global/p/yHxHcO2dSzyUr7XpaQrIaA/KOcyxFllQxaL-iT5h53xPg-favicon.png
               type: text
             file:
               type: file
@@ -47,6 +47,108 @@ composition:
         type: footer
         _pattern: 68136a90-0d34-4dbb-a34e-6e324179998a
     pageHeader:
+      - _id: c8bea736-dfee-49c5-83a4-e586793436ae
+        type: $personalization
+        slots:
+          pz:
+            - _id: 23f12ad9-4dd7-4c4f-bb84-76a3bceb2f32
+              type: banner
+              slots:
+                bannerContent:
+                  - _id: 7d3a8b06-ecaa-4243-bc37-12505db5256f
+                    type: container
+                    slots:
+                      containerContent:
+                        - _id: 71008e7a-b8f3-4f74-a58d-3820b782bfbd
+                          type: richText
+                          parameters:
+                            font:
+                              type: dex-token-selector-parameter
+                              value: space-mono
+                            text:
+                              type: richText
+                              locales:
+                                en:
+                                  root:
+                                    type: root
+                                    format: ''
+                                    indent: 0
+                                    version: 1
+                                    children:
+                                      - type: paragraph
+                                        format: ''
+                                        indent: 0
+                                        version: 1
+                                        children:
+                                          - mode: normal
+                                            text: Best deals
+                                            type: text
+                                            style: ''
+                                            detail: 0
+                                            format: 9
+                                            version: 1
+                                          - mode: normal
+                                            text: ' on iPhone 16 Pro Max!'
+                                            type: text
+                                            style: ''
+                                            detail: 0
+                                            format: 1
+                                            version: 1
+                                        direction: ltr
+                                        textStyle: ''
+                                        textFormat: 9
+                                    direction: ltr
+                                    textFormat: 9
+                          _overridability:
+                            hideLockedParameters: true
+                        - _id: 18b80bf5-49b0-45ed-997f-957e94cc57b5
+                          type: button
+                          _pattern: 31191bc7-7e6e-4748-89c2-8e73db05237d
+                    parameters:
+                      spacing:
+                        type: dex-space-control-parameter
+                        value:
+                          mobile: {}
+                          tablet: {}
+                          desktop: {}
+                      fluidContent:
+                        type: checkbox
+                        value: true
+                      backgroundColor:
+                        type: dex-color-palette-parameter
+                        value: general-color-1
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: brand_apple
+                        r: '90'
+                        op: '>'
+                    name: ''
+                spacing:
+                  type: dex-space-control-parameter
+                  value:
+                    mobile: {}
+                    tablet: {}
+                    desktop: {}
+                displayName:
+                  type: text
+                  locales:
+                    en: Promo banner
+                contentAlignment:
+                  type: dex-segmented-control-parameter
+                  value: center
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          trackingEventName:
+            type: text
+            value: Promo Banner
+        _overridability:
+          hideLockedParameters: true
       - _id: 38f88562-6b70-411b-a550-ada8514eef22
         type: header
         _pattern: 021762f3-8a06-41b4-a4fb-08a837c74415
@@ -60,6 +162,22 @@ composition:
         _overridability:
           hideLockedParameters: true
   _overrides:
+    18b80bf5-49b0-45ed-997f-957e94cc57b5:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: /${locale}/iphone-16
+              type: projectMapNode
+              nodeId: a58402c5-1478-46e4-867d-206714c5f93f
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+        text:
+          type: text
+          locales:
+            en: Learn more
     38f88562-6b70-411b-a550-ada8514eef22|09b1471d-7aa8-419c-85e1-ba30947775ca:
       parameters:
         link:
@@ -108,8 +226,8 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
-created: '2025-02-17T15:34:21.534803+00:00'
-modified: '2025-02-17T15:34:21.534803+00:00'
+created: '2025-03-05T16:00:58.553743+00:00'
+modified: '2025-03-05T16:29:43.635613+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/global-composition.png

@@ -1,0 +1,91 @@
+composition:
+  _name: iPhone 16
+  _id: 5efc78bb-b4ca-4dc3-bd25-09a90a9f2b71
+  _slug: iphone-16
+  type: page
+  _overrides:
+    5efc78bb-b4ca-4dc3-bd25-09a90a9f2b71:
+      parameters:
+        $enr:
+          type: $enr
+          value:
+            - cat: brand
+              key: apple
+              str: 5
+            - cat: platform
+              key: ios
+              str: 5
+            - cat: int
+              key: devices
+              str: 5
+    5efc78bb-b4ca-4dc3-bd25-09a90a9f2b71|dc2e95be-21b5-4476-a309-f8a34922f528:
+      slots:
+        $slotSectionItems:
+          - _id: 470647d6-0d96-4bf8-8e98-d040042e54a8
+            type: fixedHero
+            variant: columns
+            parameters:
+              $enr:
+                type: $enr
+                value:
+                  - cat: brand
+                    key: apple
+                    str: 5
+                  - cat: int
+                    key: devices
+                    str: 5
+                  - cat: platform
+                    key: ios
+                    str: 5
+              image:
+                type: asset
+                value:
+                  - _id: c5a2db78-fc9d-4fb3-a664-aec9f2f6ffcf
+                    type: image
+                    fields:
+                      id:
+                        type: text
+                        value: 5c8a7c1b-a1f5-4771-8411-3fe7740fa129
+                      url:
+                        type: text
+                        value: >-
+                          https://img.uniform.global/p/NNwYKQxtRVSY-BaCP67Jkw/EYdS22unTvm_4TFeIeS6ag-iphone.png
+                      file:
+                        type: file
+                        value: 6a3c8100-c04a-4783-bbd8-c420bdfaf3a7
+                      size:
+                        type: number
+                        value: 1071258
+                      title:
+                        type: text
+                        value: iphone.png
+                      width:
+                        type: number
+                        value: 1300
+                      height:
+                        type: number
+                        value: 1822
+                      mediaType:
+                        type: text
+                        value: image/png
+                    _source: uniform-assets
+              titleTag:
+                type: dex-segmented-control-parameter
+                value: h2
+              titleText:
+                type: text
+                locales:
+                  en: Latest Apple iPhone 16
+              contentAlignment:
+                type: dex-segmented-control-parameter
+                value: center
+              eyebrowTitleText:
+                type: text
+                locales:
+                  en: with Apple Intelligence
+  _locales:
+    - en
+  _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
+created: '2025-03-05T16:28:18.073086+00:00'
+modified: '2025-03-05T16:40:24.49225+00:00'
+pattern: false

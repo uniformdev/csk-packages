@@ -96,44 +96,91 @@ composition:
     852664d7-7d35-4eb5-97ad-e1c23ce940ca|dc2e95be-21b5-4476-a309-f8a34922f528:
       slots:
         $slotSectionItems:
-          - _id: eebf1227-58aa-41c5-bfc4-089d94cebdba
-            type: fixedHero
+          - _id: 61d9020d-d362-4085-a027-452d1a691e10
+            type: $personalization
+            slots:
+              pz:
+                - _id: 3f15f32b-40c4-41f2-82e8-8fc9ef2d4abf
+                  type: fixedHero
+                  parameters:
+                    $pzCrit:
+                      type: $pzCrit
+                      value:
+                        crit:
+                          - l: brand_apple
+                            r: '50'
+                            op: '>'
+                        name: 'Fixed Hero: Personalized for Apple'
+                    titleTag:
+                      type: dex-segmented-control-parameter
+                      value: h1
+                    titleText:
+                      type: text
+                      locales:
+                        en: Latest iPhone 16 is here!
+                    displayName:
+                      type: text
+                      locales:
+                        en: Personalized for Apple
+                    contentAlignment:
+                      type: dex-segmented-control-parameter
+                      value: right
+                    eyebrowTitleText:
+                      type: text
+                      locales:
+                        en: Put Apple Intelligence to work!
+                    primaryButtonLink:
+                      type: link
+                      locales:
+                        en:
+                          path: https://unfrm.to/csk-docs
+                          type: url
+                    primaryButtonText:
+                      type: text
+                      locales:
+                        en: Shop now
+                - _id: eebf1227-58aa-41c5-bfc4-089d94cebdba
+                  type: fixedHero
+                  parameters:
+                    image:
+                      type: asset
+                      value: []
+                    titleTag:
+                      type: dex-segmented-control-parameter
+                      value: h1
+                    titleText:
+                      type: text
+                      value: Component Starter Kit
+                    displayName:
+                      type: text
+                      value: Welcome Hero
+                    descriptionText:
+                      type: text
+                      value: >-
+                        A rich set of components to supercharge building fast,
+                        modern, personalized experiences with Uniform DXP.
+                    contentAlignment:
+                      type: dex-segmented-control-parameter
+                      value: center
+                    eyebrowTitleText:
+                      type: text
+                      value: Get your next project started on the right foot
+                    primaryButtonLink:
+                      type: link
+                      locales:
+                        en:
+                          path: https://unfrm.to/csk-docs
+                          type: url
+                    primaryButtonText:
+                      type: text
+                      value: Docs
             parameters:
-              image:
-                type: asset
-                value: []
-              titleTag:
-                type: dex-segmented-control-parameter
-                value: h1
-              titleText:
+              trackingEventName:
                 type: text
-                value: Component Starter Kit
-              displayName:
-                type: text
-                value: Welcome Hero
-              descriptionText:
-                type: text
-                value: >-
-                  A rich set of components to supercharge building fast, modern,
-                  personalized experiences with Uniform DXP.
-              contentAlignment:
-                type: dex-segmented-control-parameter
-                value: center
-              eyebrowTitleText:
-                type: text
-                value: Get your next project started on the right foot
-              primaryButtonLink:
-                type: link
-                locales:
-                  en:
-                    path: https://unfrm.to/csk-docs
-                    type: url
-              primaryButtonText:
-                type: text
-                value: Docs
+                value: Home Hero
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-02-17T15:34:22.394086+00:00'
-modified: '2025-02-17T15:34:22.394086+00:00'
+created: '2025-03-05T16:00:59.363728+00:00'
+modified: '2025-03-05T16:55:28.894722+00:00'
 pattern: false

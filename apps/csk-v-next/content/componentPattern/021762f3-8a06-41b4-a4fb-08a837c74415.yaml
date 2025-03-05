@@ -38,7 +38,7 @@ composition:
                           value: 0f0670b4-a425-40d3-842b-c7c895d500a5
                         url:
                           value: >-
-                            https://img.uniform.global/p/YBXmRPPzQZ-45Yo5jJzHAw/yw_nl-x6RgCEUl3LVg1uqQ-uniformlogo.svg
+                            https://img.uniform.global/p/yHxHcO2dSzyUr7XpaQrIaA/7UkI7aBiQbePW7lDJvgNTQ-uniformlogo.svg
                           type: text
                         file:
                           type: file
@@ -81,39 +81,91 @@ composition:
             value: Logo
         _overridability:
           hideLockedParameters: true
+    headerRightContent:
+      - _id: e092ed79-bd89-4d8b-9686-0dfb7fbbb594
+        type: chat
+        _overridability:
+          hideLockedParameters: true
     headerCenterContent:
-      - _id: 09b1471d-7aa8-419c-85e1-ba30947775ca
+      - _id: 1d71a537-165a-433f-be6a-1456670882db
         type: navigationLink
-        _pattern: f0bb02cd-315f-40d1-8e74-948e09019995
-      - _id: af0e8859-9cc9-4db7-87a6-92db71e075a4
+        parameters:
+          link:
+            type: link
+            locales:
+              en:
+                path: /${locale}/iphone-16
+                type: projectMapNode
+                nodeId: a58402c5-1478-46e4-867d-206714c5f93f
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+          text:
+            type: text
+            locales:
+              en: iPhone 16
+          color:
+            type: dex-color-palette-parameter
+            value: text-primary
+          weight:
+            type: dex-segmented-control-parameter
+            value: medium
+        _overridability:
+          hideLockedParameters: true
+      - _id: 54eac6a9-aae5-4e2d-b817-cbcfeb287b73
         type: navigationLink
-        _pattern: f0bb02cd-315f-40d1-8e74-948e09019995
-  _overrides:
-    09b1471d-7aa8-419c-85e1-ba30947775ca:
-      parameters:
-        link:
-          type: link
-          locales:
-            en:
-              path: https://dev-csk-marketing-site.vercel.app/get-started
-              type: url
-        text:
-          type: text
-          value: Get Started
-    af0e8859-9cc9-4db7-87a6-92db71e075a4:
-      parameters:
-        link:
-          type: link
-          value:
-            path: https://dev-csk-marketing-site.vercel.app/components
-            type: url
-        text:
-          type: text
-          value: Components
+        parameters:
+          link:
+            type: link
+            locales:
+              en:
+                path: /${locale}/samsung-galaxy-s23
+                type: projectMapNode
+                nodeId: 6ff908b5-3bee-41bc-b2d3-33965bab7fdd
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+          text:
+            type: text
+            locales:
+              en: Galaxy S23
+          color:
+            type: dex-color-palette-parameter
+            value: text-primary
+          weight:
+            type: dex-segmented-control-parameter
+            value: medium
+        _overridability:
+          hideLockedParameters: true
+      - _id: b631a47d-4701-4f5e-9001-6ba96c298364
+        type: navigationLink
+        parameters:
+          link:
+            type: link
+            locales:
+              en:
+                path: /${locale}/samsung-galaxy-s24-plus
+                type: projectMapNode
+                nodeId: 17f5c1e0-3bef-475c-aff7-3f7f71c1d98b
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+          text:
+            type: text
+            locales:
+              en: Galaxy S24+
+          color:
+            type: dex-color-palette-parameter
+            value: text-primary
+          weight:
+            type: dex-segmented-control-parameter
+            value: medium
+        _overridability:
+          hideLockedParameters: true
   _locales:
     - en
-created: '2025-02-17T15:34:18.087161+00:00'
-modified: '2025-02-17T15:34:18.087161+00:00'
+created: '2025-03-05T16:00:56.543421+00:00'
+modified: '2025-03-05T16:45:34.116693+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/main-header.jpg

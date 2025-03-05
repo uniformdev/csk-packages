@@ -1,0 +1,88 @@
+composition:
+  _name: Samsung Galaxy S23
+  _id: acd65fad-26b8-41a0-a3fc-3b0d8dcf7645
+  _slug: samsung-galaxy-s23
+  type: page
+  _overrides:
+    acd65fad-26b8-41a0-a3fc-3b0d8dcf7645:
+      parameters:
+        $enr:
+          type: $enr
+          value:
+            - cat: platform
+              key: android
+              str: 5
+            - cat: device
+              key: mobilePhone
+              str: 5
+            - cat: brand
+              key: samsung
+              str: 5
+    acd65fad-26b8-41a0-a3fc-3b0d8dcf7645|dc2e95be-21b5-4476-a309-f8a34922f528:
+      slots:
+        $slotSectionItems:
+          - _id: 55e0ff1d-c5cb-4604-9a41-abedf7efdca7
+            type: fixedHero
+            variant: columnsReverse
+            parameters:
+              $enr:
+                type: $enr
+                value:
+                  - cat: brand
+                    key: samsung
+                    str: 5
+                  - cat: int
+                    key: devices
+                    str: 5
+                  - cat: platform
+                    key: android
+                    str: 5
+              image:
+                type: asset
+                value:
+                  - _id: cb0cc1df-87e4-46d1-a79c-8322a85dc7e9
+                    type: image
+                    fields:
+                      id:
+                        type: text
+                        value: 9071b0d3-0eeb-4875-b659-ba1883f99c81
+                      url:
+                        type: text
+                        value: >-
+                          https://img.uniform.global/p/NNwYKQxtRVSY-BaCP67Jkw/GGgPdEMmRUGJmh-ac9BIEw-samsung.png
+                      file:
+                        type: file
+                        value: b13e00cd-bb95-415b-a346-b087d16305fd
+                      size:
+                        type: number
+                        value: 2012282
+                      title:
+                        type: text
+                        value: samsung.png
+                      width:
+                        type: number
+                        value: 3192
+                      height:
+                        type: number
+                        value: 2396
+                      mediaType:
+                        type: text
+                        value: image/png
+                    _source: uniform-assets
+              titleTag:
+                type: dex-segmented-control-parameter
+                value: h2
+              titleText:
+                type: text
+                locales:
+                  en: Samsung Galaxy S23
+              primaryButtonText:
+                type: text
+                locales:
+                  en: Buy now
+  _locales:
+    - en
+  _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
+created: '2025-03-05T16:35:17.769282+00:00'
+modified: '2025-03-05T16:42:53.465365+00:00'
+pattern: false
