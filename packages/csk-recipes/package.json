@@ -1,6 +1,6 @@
 {
   "name": "@uniformdev/csk-recipes",
-  "version": "6.0.17",
+  "version": "6.0.18",
   "description": "command-line interface (CLI) and utility functions to help you work with recipes in a CSK project. It simplifies project initialization by allowing you to choose templates and include specific recipes",
   "license": "SEE LICENSE IN LICENSE.txt",
   "main": "./cli.js",
@@ -25,6 +25,7 @@
     "dev": "tsup --watch",
     "clean": "rimraf dist",
     "lint": "eslint \"src/**/*.{js,ts,tsx}\"",
+    "lint:fix": "eslint \"src/**/*.{js,ts,tsx}\" --fix",
     "format": "prettier --write \"src/**/*.{js,ts,tsx}\""
   },
   "keywords": [],
