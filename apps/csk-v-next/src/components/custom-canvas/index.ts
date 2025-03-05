@@ -1,4 +1,5 @@
 import { ComponentMapping } from '@uniformdev/csk-components/utils/createComponentResolver';
+import { Chat } from '@/chat/chat';
 import Container from './Container';
 import CustomComponent from './CustomComponent';
 
@@ -8,4 +9,5 @@ export const customComponentsMapping: ComponentMapping = {
   customComponent: { component: CustomComponent },
   // This is an overridden CSK Container component.
   container: { component: Container },
+  chat: { component: Chat },
 };
