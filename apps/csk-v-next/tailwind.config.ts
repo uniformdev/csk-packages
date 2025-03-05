@@ -1,5 +1,8 @@
 import type { Config } from 'tailwindcss';
 import plugin from 'tailwindcss/plugin';
+//? if (shadcn) {
+import tailwindcssAnimate from 'tailwindcss-animate';
+//? }
 import {
   generateTailwindcssColorKeysPattern,
   generateTailwindcssDimensionKeysPattern,
@@ -56,12 +59,38 @@ export default {
   content: [
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    //? if (monorepo) {
     '../../node_modules/@uniformdev/csk-components/dist/content/**/*.{js,ts,jsx,tsx,mdx}',
+    //? }
+    //? if (!monorepo) {
+    //? write('"./node_modules/@uniformdev/csk-components/dist/content/**/*.{js,ts,jsx,tsx,mdx}",');
+    //? }
   ],
   safelist,
-  theme,
+  //? if (shadcn) {
+  theme: {
+    ...theme,
+    extend: {
+      ...theme.extend,
+      colors: {
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        ...theme.extend.colors,
+      },
+    },
+  },
+  //? }
+  //? if (!shadcn) {
+  //? write('theme,\n');
+  //? }
   plugins: [
     typography,
+    //? if (shadcn) {
+    tailwindcssAnimate,
+    //? }
     plugin(function ({ addUtilities }) {
       addUtilities(utilities);
     }),
