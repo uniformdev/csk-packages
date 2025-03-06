@@ -18,6 +18,7 @@ import {
   RECIPES,
   TEMPLATES_WHITE_LIST,
   PACKAGE_JSON_COPY_FILE,
+  TEMPLATE_BRANCH_PREFIX_LOCAL,
 } from './constants';
 import { EnvVariable, Recipe, Template } from './types';
 import { runCmdCommand, spawnCmdCommand } from '../../utils';
@@ -286,6 +287,10 @@ export const copyDirectory = (sourceDir: string, targetDir: string): void => {
   });
 };
 
+export const getExternalBranchName = (template: string): string => {
+  return template === 'baseline' ? GIT_BRANCHES.FULL_PACK : `${TEMPLATE_BRANCH_PREFIX_LOCAL}${template}`;
+};
+
 /**
  * Aligns the current branch with the full-pack branch.
  * Clones the repository, copies necessary files, and cleans up.
@@ -293,54 +298,18 @@ export const copyDirectory = (sourceDir: string, targetDir: string): void => {
  * @param {ora.Ora} spinner - Spinner instance for progress indication
  * @throws {Error} If alignment process fails
  */
-export const alignWithFullPackBranch = async (spinner: ora.Ora): Promise<void> => {
-  try {
-    spinner.start(`Aligning ${GIT_BRANCHES.FULL_PACK} branch...`);
+export const alignWithExternalBranch = async (branchName: string): Promise<void> => {
+  const pathToClonedRepo = path.join(process.cwd(), 'csk-packages');
+  const appPath = path.join(pathToClonedRepo, 'apps', 'csk-v-next');
 
-    const pathToClonedRepo = path.join(process.cwd(), 'csk-packages');
-    const appPath = path.join(pathToClonedRepo, 'apps', 'csk-v-next');
-
-    if (fsSync.existsSync(pathToClonedRepo)) {
-      fsSync.rmSync(pathToClonedRepo, { recursive: true, force: true });
-    }
-
-    await spawnCmdCommand(GIT_COMMANDS.ALIGN_WITH_FULL_PACK_BRACH);
-    copyDirectory(appPath, process.cwd());
-
+  if (fsSync.existsSync(pathToClonedRepo)) {
     fsSync.rmSync(pathToClonedRepo, { recursive: true, force: true });
-
-    spinner.succeed('Full-pack branch aligned successfully!');
-  } catch (error) {
-    spinner.fail(`Failed to align ${GIT_BRANCHES.FULL_PACK} branch: ${error}. Please try again.`);
   }
-};
 
-/**
- * Aligns the current branch with a specific template branch.
- * Clones the repository, copies necessary files, and cleans up.
- *
- * @param {ora.Ora} spinner - Spinner instance for progress indication
- * @param {string} template - Template branch name to align with
- * @throws {Error} If alignment process fails
- */
-export const alignWithTemplateBranch = async (spinner: ora.Ora, template: string): Promise<void> => {
-  try {
-    spinner.start(`Aligning ${template} branch...`);
-    const pathToClonedRepo = path.join(process.cwd(), 'csk-packages');
-    const appPath = path.join(pathToClonedRepo, 'apps', 'csk-v-next');
+  await spawnCmdCommand(GIT_COMMANDS.ALIGN_WITH_EXTERNAL_BRANCH(branchName));
+  copyDirectory(appPath, process.cwd());
 
-    if (fsSync.existsSync(pathToClonedRepo)) {
-      fsSync.rmSync(pathToClonedRepo, { recursive: true, force: true });
-    }
-    await spawnCmdCommand(GIT_COMMANDS.ALIGN_WITH_TEMPLATE_BRANCH(template));
-    copyDirectory(appPath, process.cwd());
-
-    fsSync.rmSync(pathToClonedRepo, { recursive: true, force: true });
-
-    spinner.succeed(`${template} branch aligned successfully!`);
-  } catch (error) {
-    spinner.fail(`Failed to align ${template} branch: ${error}. Please try again.`);
-  }
+  fsSync.rmSync(pathToClonedRepo, { recursive: true, force: true });
 };
 
 /**
@@ -424,5 +393,23 @@ export const cleanupProject = async (): Promise<void> => {
 
   if (fsSync.existsSync(packageJsonCopyPath)) {
     await fs.rm(packageJsonCopyPath);
+  }
+};
+
+export const startLog = (spinner: ora.Ora, message: string, verbose: boolean): void => {
+  if (verbose) {
+    spinner.start(message);
+  }
+};
+
+export const successLog = (spinner: ora.Ora, message: string, verbose: boolean): void => {
+  if (verbose) {
+    spinner.succeed(message);
+  }
+};
+
+export const failLog = (spinner: ora.Ora, message: string, verbose: boolean): void => {
+  if (verbose) {
+    spinner.fail(message);
   }
 };

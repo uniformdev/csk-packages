@@ -5,22 +5,23 @@ import {
   preProcessFile,
   proceedCodeChange,
 } from './code-changer';
-import { TEMPLATE_PRE_PROCESS_FILE_WHITELIST } from './constants';
 import { Recipe, ProjectConfiguration, Template } from './types';
 import {
   selectTemplate,
   verifyProjectAlignment,
   selectRecipes,
-  alignWithFullPackBranch,
   getChangedFilesPath,
   fillEnvVariables,
-  alignWithTemplateBranch,
   getValidTemplateFromArgs,
   getValidRecipesFromArgs,
   fillEnvVariablesWithDefaults,
   checkIsMonorepo,
   copyPackageJson,
   cleanupProject,
+  getExternalBranchName,
+  alignWithExternalBranch,
+  startLog,
+  successLog,
 } from './utils';
 import { spawnCmdCommand } from '../../utils';
 
@@ -28,6 +29,7 @@ type InitArgs = {
   dev: boolean;
   template: Template;
   recipes: Recipe[];
+  verbose: boolean;
 };
 
 /**
@@ -35,7 +37,7 @@ type InitArgs = {
  */
 const init = async (args: InitArgs): Promise<void> => {
   try {
-    const { dev, template: templateFromArgs, recipes: recipesFromArgs } = args;
+    const { dev, template: templateFromArgs, recipes: recipesFromArgs, verbose } = args;
     const notInteractiveMode = templateFromArgs && recipesFromArgs;
     const isMonorepo = checkIsMonorepo();
     const spinner = ora.default();
@@ -68,67 +70,51 @@ const init = async (args: InitArgs): Promise<void> => {
       return;
     }
 
-    if (isRecipesApplied) {
+    const externalBranchName = getExternalBranchName(template);
+
+    if (externalBranchName) {
       if (!isMonorepo) {
         await copyPackageJson();
       }
-      await alignWithFullPackBranch(spinner);
+
+      if (!verbose) {
+        spinner.start(`Starting preparing your app, it can take a while...`);
+      }
+
+      startLog(spinner, `Aligning ${externalBranchName} branch...`, verbose);
+      await alignWithExternalBranch(externalBranchName);
+      successLog(spinner, `${externalBranchName} branch aligned successfully!`, verbose);
 
       const installCommand = 'npm install --force';
 
-      spinner.start(`Installing dependencies using ${installCommand} ...`);
+      startLog(spinner, `Installing dependencies using ${installCommand} ...`, verbose);
       await spawnCmdCommand(installCommand);
-      spinner.succeed('Dependencies installed successfully!');
+      successLog(spinner, 'Dependencies installed successfully!', verbose);
 
       const changedFiles = await getChangedFilesPath();
 
       for (const file of changedFiles) {
-        spinner.start(`Pre-processing ${file}...`);
+        startLog(spinner, `Pre-processing ${file}...`, verbose);
         await preProcessFile(file, isMonorepo);
-        spinner.succeed(`Pre-processed ${file} successfully!`);
+        successLog(spinner, `Pre-processed ${file} successfully!`, verbose);
 
-        spinner.start(`Processing ${file}...`);
+        startLog(spinner, `Processing ${file}...`, verbose);
         await proceedCodeChange(file, recipes, isMonorepo);
-        spinner.succeed(`Processed ${file} successfully!`);
+        successLog(spinner, `Processed ${file} successfully!`, verbose);
 
-        spinner.start(`Post-processing ${file}...`);
+        startLog(spinner, `Post-processing ${file}...`, verbose);
         await postProcessFile(file, recipes);
-        spinner.succeed(`Post-processed ${file} successfully!`);
+        successLog(spinner, `Post-processed ${file} successfully!`, verbose);
       }
 
-      spinner.start('Adding env variables to project configuration...');
+      startLog(spinner, 'Adding env variables to project configuration...', verbose);
       await addEnvVariablesToProjectConfiguration(envVariables);
-      spinner.succeed('Env variables added to project configuration successfully!');
-
-      if (!isTemplateApplied && !isMonorepo) {
-        spinner.start('Cleaning up project...');
-        await cleanupProject();
-        spinner.succeed('Project cleaned up successfully!');
-      }
-    }
-
-    if (isTemplateApplied) {
-      spinner.start(`Applying the ${template} template for your project...`);
-      await alignWithTemplateBranch(spinner, template);
-
-      const changedFiles = await getChangedFilesPath();
-
-      for (const filePath of changedFiles) {
-        const isFileShouldBePreProcessed = TEMPLATE_PRE_PROCESS_FILE_WHITELIST.some(file => filePath.includes(file));
-
-        if (isFileShouldBePreProcessed) {
-          spinner.start(`Pre-processing template ${filePath}...`);
-          await preProcessFile(filePath, isMonorepo);
-          spinner.succeed(`Pre-processed template ${filePath} successfully!`);
-        }
-      }
-
-      spinner.succeed(`${template} template applied successfully!`);
+      successLog(spinner, 'Env variables added to project configuration successfully!', verbose);
 
       if (!isMonorepo) {
-        spinner.start('Cleaning up project...');
+        startLog(spinner, 'Cleaning up project...', verbose);
         await cleanupProject();
-        spinner.succeed('Project cleaned up successfully!');
+        successLog(spinner, 'Project cleaned up successfully!', verbose);
       }
     }
 

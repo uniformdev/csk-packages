@@ -13,10 +13,10 @@ export const RECIPES = ['localization', 'ga', 'uniform-insights', 'shadcn'];
 export const TEMPLATES_WHITE_LIST = ['coffee-shop'];
 
 export const GIT_COMMANDS = {
-  ALIGN_WITH_FULL_PACK_BRACH: `git clone https://github.com/uniformdev/csk-packages.git --branch ${GIT_BRANCHES.FULL_PACK}`,
-  ALIGN_WITH_TEMPLATE_BRANCH: (template: string) =>
-    `git clone https://github.com/uniformdev/csk-packages.git --branch ${TEMPLATE_BRANCH_PREFIX_LOCAL}${template} `,
+  ALIGN_WITH_EXTERNAL_BRANCH: (branchName: string) =>
+    `git clone https://github.com/uniformdev/csk-packages.git --branch ${branchName}`,
   GIT_REMOTE_BRANCHES: 'git ls-remote --heads https://github.com/uniformdev/csk-packages.git',
+  GET_CHANGED_FILES: 'git ls-files --modified --others --exclude-standard',
 };
 
 export const JSX_COMMENT_REGEX = /{\s*\/\*\s*\/\/\?\s*(.*?)\s*\*\/\s*}/g;
