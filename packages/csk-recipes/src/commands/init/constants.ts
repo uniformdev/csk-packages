@@ -13,6 +13,8 @@ export const RECIPES = ['localization', 'ga', 'uniform-insights', 'shadcn'];
 export const TEMPLATES_WHITE_LIST = ['coffee-shop'];
 
 export const GIT_COMMANDS = {
+  DIFF_QUIET: `git diff --quiet origin/${GIT_BRANCHES.GOLD}`,
+  RESET_HARD: `git reset --hard origin/${GIT_BRANCHES.GOLD}`,
   ALIGN_WITH_EXTERNAL_BRANCH: (branchName: string) =>
     `git clone https://github.com/uniformdev/csk-packages.git --branch ${branchName}`,
   GIT_REMOTE_BRANCHES: 'git ls-remote --heads https://github.com/uniformdev/csk-packages.git',
