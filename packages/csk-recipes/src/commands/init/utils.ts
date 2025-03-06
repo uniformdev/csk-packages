@@ -297,7 +297,7 @@ export const copyDirectory = (sourceDir: string, targetDir: string): void => {
  * @returns {string} The formatted branch name
  */
 export const getExternalBranchName = (template: string): string => {
-  return template === 'baseline' ? GIT_BRANCHES.FULL_PACK : `${TEMPLATE_BRANCH_PREFIX_LOCAL}${template}`;
+  return template === 'baseline' ? GIT_BRANCHES.BASELINE_RECIPES : `${TEMPLATE_BRANCH_PREFIX_LOCAL}${template}`;
 };
 
 /**

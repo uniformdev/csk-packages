@@ -5,7 +5,7 @@ export const TEMPLATE_BRANCH_PREFIX_LOCAL = 'templates/';
 
 export const GIT_BRANCHES = {
   GOLD: process.env.GOLD_BRANCH || 'main',
-  FULL_PACK: process.env.FULL_PACK_BRANCH || 'full-pack',
+  BASELINE_RECIPES: process.env.BASELINE_RECIPES_BRANCH || 'baseline-recipes',
 };
 
 export const RECIPES = ['localization', 'ga', 'uniform-insights', 'shadcn'];

@@ -93,5 +93,5 @@ You can configure custom branch names using environment variables:
 
 ```dotenv
 GOLD_BRANCH=
-FULL_PACK_BRANCH=
+BASELINE_RECIPES_BRANCH=
 ```
