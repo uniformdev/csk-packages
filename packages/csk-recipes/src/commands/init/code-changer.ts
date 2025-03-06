@@ -15,8 +15,9 @@ import { formatWithPrettier, runCmdCommand } from '../../utils';
 /**
  * Filters out skipped lines and formats the cleaned output code.
  *
- * @param {Line[]} lines - The lines of code with metadata.
- * @returns {string} - The cleaned source code.
+ * @param {string} source - The source code to clean and format
+ * @param {string} fileExtension - The extension of the file being processed (e.g., '.ts', '.json', '.css')
+ * @returns {Promise<string>} The cleaned and formatted source code
  */
 const cleanOutput = async (source: string, fileExtension: string): Promise<string> => {
   const getParser = () => {
@@ -37,9 +38,10 @@ const cleanOutput = async (source: string, fileExtension: string): Promise<strin
  * Processes a file by transforming its content based on the provided recipes,
  * cleaning the output, and optionally running a linter for non-JSON files.
  *
- * @param {string} filePath - The path to the file to process.
- * @param {Recipe[]} recipes - The list of recipes to enable in the transformation.
- * @returns {Promise<void>} - A promise that resolves when the operation is complete.
+ * @param {string} filePath - The path to the file to process
+ * @param {Recipe[]} recipes - The list of recipes to enable in the transformation
+ * @param {boolean} isMonorepo - Whether the project is a monorepo
+ * @returns {Promise<void>} A promise that resolves when the operation is complete
  */
 export const proceedCodeChange = async (filePath: string, recipes: Recipe[], isMonorepo: boolean): Promise<void> => {
   if (!fsSync.existsSync(filePath)) {
@@ -89,6 +91,14 @@ export const proceedCodeChange = async (filePath: string, recipes: Recipe[], isM
   }
 };
 
+/**
+ * Post-processes files based on recipe selection, removing files that are not needed
+ * for the selected recipes.
+ *
+ * @param {string} filePath - The path to the file to process
+ * @param {Recipe[]} recipes - The list of selected recipes
+ * @returns {Promise<void>} A promise that resolves when the operation is complete
+ */
 export const postProcessFile = async (filePath: string, recipes: Recipe[]) => {
   const isFileAdditional = Object.values(RECIPE_ADDITIONAL_FILES).some(files => files.includes(filePath));
   if (!isFileAdditional) {
@@ -101,6 +111,14 @@ export const postProcessFile = async (filePath: string, recipes: Recipe[]) => {
   }
 };
 
+/**
+ * Pre-processes files before the main transformation, handling monorepo-specific
+ * configurations and removing unnecessary files.
+ *
+ * @param {string} filePath - The path to the file to process
+ * @param {boolean} isMonorepo - Whether the project is a monorepo
+ * @returns {Promise<void>} A promise that resolves when the operation is complete
+ */
 export const preProcessFile = async (filePath: string, isMonorepo: boolean) => {
   const isFileShouldRemoved = FILES_TO_IGNORE_OUTSIDE_OF_MONOREPO.some(file => filePath.includes(file));
 
@@ -112,13 +130,15 @@ export const preProcessFile = async (filePath: string, isMonorepo: boolean) => {
     if (filePath.includes('package.json')) {
       await processPackageJson();
     }
-
-    if (filePath.includes('tailwind.config.ts')) {
-      await processTailwindcssConf();
-    }
   }
 };
 
+/**
+ * Processes the package.json file to ensure dependencies and project name are correctly
+ * configured based on the template and current project settings.
+ *
+ * @returns {Promise<void>} A promise that resolves when the operation is complete
+ */
 const processPackageJson = async () => {
   try {
     const [beforeChanges, afterChanges] = await Promise.all([
@@ -154,21 +174,13 @@ const processPackageJson = async () => {
   }
 };
 
-const processTailwindcssConf = async () => {
-  try {
-    const tailwindcssConf = await fs.readFile(path.join(process.cwd(), 'tailwind.config.ts'), 'utf8');
-
-    const updatedTailwindcssConf = tailwindcssConf.replace(
-      '../../node_modules/@uniformdev/csk-components',
-      './node_modules/@uniformdev/csk-components'
-    );
-
-    await fs.writeFile(path.join(process.cwd(), 'tailwind.config.ts'), updatedTailwindcssConf);
-  } catch (error) {
-    console.error('Error processing tailwind.config.ts:', error);
-  }
-};
-
+/**
+ * Adds environment variables to the project configuration by creating or updating
+ * the .env file with the provided variables.
+ *
+ * @param {Partial<Record<EnvVariable, string>>} envVariables - Object containing environment variables to add
+ * @returns {Promise<void>} A promise that resolves when the operation is complete
+ */
 export const addEnvVariablesToProjectConfiguration = async (envVariables: Partial<Record<EnvVariable, string>>) => {
   const envVariablesString = Object.entries(envVariables)
     .map(([key, value]) => `${key}=${value}`)

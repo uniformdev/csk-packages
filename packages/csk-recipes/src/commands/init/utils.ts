@@ -29,6 +29,7 @@ import { runCmdCommand, spawnCmdCommand } from '../../utils';
  *
  * @param {ora.Ora} spinner - The spinner instance for loading indication
  * @returns {Promise<boolean>} True if the project has changes and user chose not to update, false otherwise
+ * @throws {Error} If git commands fail during verification
  */
 export const verifyProjectAlignment = async (spinner: ora.Ora): Promise<boolean> => {
   spinner.start('Verifying your project setup and branch alignment...');
@@ -63,6 +64,7 @@ export const verifyProjectAlignment = async (spinner: ora.Ora): Promise<boolean>
  * Fetches remote branches and filters them for template branches.
  *
  * @returns {Promise<Template>} The selected template value
+ * @throws {Error} If git command fails to fetch remote branches
  */
 export const selectTemplate = async (): Promise<Template> => {
   const remoteBranches = await runCmdCommand(GIT_COMMANDS.GIT_REMOTE_BRANCHES);
@@ -267,6 +269,7 @@ export const parseEnvVariables = async (): Promise<Record<string, string>> => {
  *
  * @param {string} sourceDir - Source directory path
  * @param {string} targetDir - Target directory path
+ * @throws {Error} If directory operations fail
  */
 export const copyDirectory = (sourceDir: string, targetDir: string): void => {
   if (!fsSync.existsSync(targetDir)) {
@@ -287,6 +290,12 @@ export const copyDirectory = (sourceDir: string, targetDir: string): void => {
   });
 };
 
+/**
+ * Gets the external branch name based on the template.
+ *
+ * @param {string} template - The template name
+ * @returns {string} The formatted branch name
+ */
 export const getExternalBranchName = (template: string): string => {
   return template === 'baseline' ? GIT_BRANCHES.FULL_PACK : `${TEMPLATE_BRANCH_PREFIX_LOCAL}${template}`;
 };
@@ -295,7 +304,7 @@ export const getExternalBranchName = (template: string): string => {
  * Aligns the current branch with the full-pack branch.
  * Clones the repository, copies necessary files, and cleans up.
  *
- * @param {ora.Ora} spinner - Spinner instance for progress indication
+ * @param {string} branchName - The name of the branch to align with
  * @throws {Error} If alignment process fails
  */
 export const alignWithExternalBranch = async (branchName: string): Promise<void> => {
@@ -359,6 +368,7 @@ export const resolvePath = (baseDir: string, relativePath: string): string => {
  * Looks for 'apps' and 'packages' directories in the parent structure.
  *
  * @returns {boolean} True if the directory is part of a monorepo, false otherwise
+ * @throws {Error} If directory read operations fail
  */
 export const checkIsMonorepo = () => {
   const currentDir = process.cwd();
@@ -375,6 +385,7 @@ export const checkIsMonorepo = () => {
  * Creates a copy of the package.json file with a predefined name.
  *
  * @returns {Promise<void>}
+ * @throws {Error} If file copy operation fails
  */
 export const copyPackageJson = async (): Promise<void> => {
   const sourcePath = path.join(process.cwd(), 'package.json');
@@ -384,9 +395,10 @@ export const copyPackageJson = async (): Promise<void> => {
 };
 
 /**
- * Cleansup, and remove unused file
+ * Cleans up and removes unused files.
  *
  * @returns {Promise<void>}
+ * @throws {Error} If file removal operation fails
  */
 export const cleanupProject = async (): Promise<void> => {
   const packageJsonCopyPath = path.join(process.cwd(), PACKAGE_JSON_COPY_FILE);
@@ -396,18 +408,39 @@ export const cleanupProject = async (): Promise<void> => {
   }
 };
 
+/**
+ * Logs a start message using the spinner if verbose mode is enabled.
+ *
+ * @param {ora.Ora} spinner - The spinner instance
+ * @param {string} message - The message to display
+ * @param {boolean} verbose - Whether verbose mode is enabled
+ */
 export const startLog = (spinner: ora.Ora, message: string, verbose: boolean): void => {
   if (verbose) {
     spinner.start(message);
   }
 };
 
+/**
+ * Logs a success message using the spinner if verbose mode is enabled.
+ *
+ * @param {ora.Ora} spinner - The spinner instance
+ * @param {string} message - The message to display
+ * @param {boolean} verbose - Whether verbose mode is enabled
+ */
 export const successLog = (spinner: ora.Ora, message: string, verbose: boolean): void => {
   if (verbose) {
     spinner.succeed(message);
   }
 };
 
+/**
+ * Logs a failure message using the spinner if verbose mode is enabled.
+ *
+ * @param {ora.Ora} spinner - The spinner instance
+ * @param {string} message - The message to display
+ * @param {boolean} verbose - Whether verbose mode is enabled
+ */
 export const failLog = (spinner: ora.Ora, message: string, verbose: boolean): void => {
   if (verbose) {
     spinner.fail(message);

@@ -4,7 +4,7 @@ export const TEMPLATE_BRANCH_PREFIX = 'refs/heads/templates/';
 export const TEMPLATE_BRANCH_PREFIX_LOCAL = 'templates/';
 
 export const GIT_BRANCHES = {
-  GOLD: process.env.GOLD_BRANCH || 'develop',
+  GOLD: process.env.GOLD_BRANCH || 'main',
   FULL_PACK: process.env.FULL_PACK_BRANCH || 'full-pack',
 };
 
