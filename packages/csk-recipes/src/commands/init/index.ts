@@ -1,6 +1,11 @@
 import * as ora from 'ora';
-import { addEnvVariablesToProjectConfiguration, postProcessFile, proceedCodeChange } from './code-changer';
-import { GIT_COMMANDS } from './constants';
+import {
+  addEnvVariablesToProjectConfiguration,
+  postProcessFile,
+  preProcessFile,
+  proceedCodeChange,
+} from './code-changer';
+import { GIT_COMMANDS, TEMPLATE_PRE_PROCESS_FILE_WHITELIST } from './constants';
 import { Recipe, ProjectConfiguration, Template } from './types';
 import {
   selectTemplate,
@@ -14,6 +19,9 @@ import {
   getValidRecipesFromArgs,
   fillEnvVariablesWithDefaults,
   optionsForResetBranch,
+  checkIsMonorepo,
+  copyPackageJson,
+  cleanupProject,
 } from './utils';
 import { spawnCmdCommand } from '../../utils';
 
@@ -30,6 +38,7 @@ const init = async (args: InitArgs): Promise<void> => {
   try {
     const { dev, template: templateFromArgs, recipes: recipesFromArgs } = args;
     const notInteractiveMode = templateFromArgs && recipesFromArgs;
+    const isMonorepo = checkIsMonorepo();
     const spinner = ora.default();
     console.info('🚀 Welcome to the CSK CLI! 🧡\n');
 
@@ -77,6 +86,9 @@ const init = async (args: InitArgs): Promise<void> => {
     }
 
     if (isRecipesApplied) {
+      if (!isMonorepo) {
+        await copyPackageJson();
+      }
       await alignWithFullPackBranch(spinner);
 
       const installCommand = 'npm install --force';
@@ -88,8 +100,12 @@ const init = async (args: InitArgs): Promise<void> => {
       const changedFiles = await getChangedFilesPath();
 
       for (const file of changedFiles) {
+        spinner.start(`Pre-processing ${file}...`);
+        await preProcessFile(file, isMonorepo);
+        spinner.succeed(`Pre-processed ${file} successfully!`);
+
         spinner.start(`Processing ${file}...`);
-        await proceedCodeChange(file, recipes);
+        await proceedCodeChange(file, recipes, isMonorepo);
         spinner.succeed(`Processed ${file} successfully!`);
 
         spinner.start(`Post-processing ${file}...`);
@@ -101,6 +117,12 @@ const init = async (args: InitArgs): Promise<void> => {
       await addEnvVariablesToProjectConfiguration(envVariables);
       spinner.succeed('Env variables added to project configuration successfully!');
 
+      if (!isTemplateApplied && !isMonorepo) {
+        spinner.start('Cleaning up project...');
+        await cleanupProject();
+        spinner.succeed('Project cleaned up successfully!');
+      }
+
       await spawnCmdCommand(GIT_COMMANDS.GIT_ADD);
 
       await spawnCmdCommand(GIT_COMMANDS.COMMIT_CHANGES('feat: recipes applied'));
@@ -111,14 +133,35 @@ const init = async (args: InitArgs): Promise<void> => {
     if (isTemplateApplied) {
       spinner.start(`Applying the ${template} template for your project...`);
       await alignWithTemplateBranch(spinner, template);
+
+      const changedFiles = await getChangedFilesPath();
+
+      for (const filePath of changedFiles) {
+        const isFileShouldBePreProcessed = TEMPLATE_PRE_PROCESS_FILE_WHITELIST.some(file => filePath.includes(file));
+
+        if (isFileShouldBePreProcessed) {
+          spinner.start(`Pre-processing template ${filePath}...`);
+          await preProcessFile(filePath, isMonorepo);
+          spinner.succeed(`Pre-processed template ${filePath} successfully!`);
+        }
+      }
+
       spinner.succeed(`${template} template applied successfully!`);
 
+      if (!isMonorepo) {
+        spinner.start('Cleaning up project...');
+        await cleanupProject();
+        spinner.succeed('Project cleaned up successfully!');
+      }
+
+      await spawnCmdCommand(GIT_COMMANDS.GIT_ADD);
       await spawnCmdCommand(GIT_COMMANDS.COMMIT_CHANGES('feat: template applied'));
     }
 
     spinner.succeed('App created successfully!');
   } catch (e) {
     if (e instanceof Error) {
+      console.error('e', e);
       if (e.message.includes('force closed')) {
         console.info('\n👋 See you next time! 🧡\n');
       } else {

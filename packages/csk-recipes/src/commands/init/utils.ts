@@ -1,3 +1,8 @@
+/**
+ * Utility functions for project initialization and setup.
+ * @module init/utils
+ */
+
 import fsSync from 'fs';
 import fs from 'fs/promises';
 import * as ora from 'ora';
@@ -11,14 +16,18 @@ import {
   ENV_VARIABLES_DEFAULT_VALUES,
   TEMPLATE_BRANCH_PREFIX,
   RECIPES,
-  TEMPLATES_TO_IGNORE,
+  TEMPLATES_WHITE_LIST,
+  PACKAGE_JSON_COPY_FILE,
 } from './constants';
 import { EnvVariable, Recipe, Template } from './types';
 import { runCmdCommand, spawnCmdCommand } from '../../utils';
+
 /**
  * Verifies if the project is aligned with the remote GOLD branch.
- * @param spinner The spinner instance for loading indication.
- * @returns True if the project has changes, false otherwise.
+ * Checks for uncommitted changes and offers to update the branch if needed.
+ *
+ * @param {ora.Ora} spinner - The spinner instance for loading indication
+ * @returns {Promise<boolean>} True if the project has changes and user chose not to update, false otherwise
  */
 export const verifyProjectAlignment = async (spinner: ora.Ora): Promise<boolean> => {
   spinner.start('Verifying your project setup and branch alignment...');
@@ -49,8 +58,10 @@ export const verifyProjectAlignment = async (spinner: ora.Ora): Promise<boolean>
 };
 
 /**
- * Prompts the user to select a project template.
- * @returns The selected template.
+ * Prompts the user to select a project template from available options.
+ * Fetches remote branches and filters them for template branches.
+ *
+ * @returns {Promise<Template>} The selected template value
  */
 export const selectTemplate = async (): Promise<Template> => {
   const remoteBranches = await runCmdCommand(GIT_COMMANDS.GIT_REMOTE_BRANCHES);
@@ -59,27 +70,31 @@ export const selectTemplate = async (): Promise<Template> => {
     ?.split('\n')
     .filter(branch => branch.includes(TEMPLATE_BRANCH_PREFIX))
     .map(branch => {
-      const templateValue = branch.replace(TEMPLATE_BRANCH_PREFIX, '').trim();
+      const match = branch.match(/refs\/heads\/.+/);
+
+      const templateValue = match?.[0]?.replace(TEMPLATE_BRANCH_PREFIX, '');
+
       const templateName = templateValue
-        .split('-')
+        ?.split('-')
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ');
       return {
         name: templateName,
-        value: templateValue,
+        value: templateValue || '',
       };
     })
-    .filter(template => !TEMPLATES_TO_IGNORE.includes(template.value));
+    .filter(template => TEMPLATES_WHITE_LIST.includes(template.value));
 
   return select<Template>({
-    message: 'Let’s start by choosing a template for your project:',
+    message: "Let's start by choosing a template for your project:",
     choices: [{ name: 'Baseline', value: 'baseline' }, ...templatesBranches],
   });
 };
 
 /**
- * Prompts the user to reset the branch.
- * @returns confirmation result
+ * Prompts the user to confirm if they want to override existing configuration.
+ *
+ * @returns {Promise<boolean>} True if user confirms override, false otherwise
  */
 export const optionsForResetBranch = async (): Promise<boolean> => {
   return confirm({
@@ -87,6 +102,13 @@ export const optionsForResetBranch = async (): Promise<boolean> => {
   });
 };
 
+/**
+ * Validates a template argument against available remote branches.
+ *
+ * @param {Template} template - The template to validate
+ * @returns {Promise<string>} The validated template name
+ * @throws {Error} If the template is not found in remote branches
+ */
 export const getValidTemplateFromArgs = async (template: Template): Promise<string> => {
   if (template === 'baseline') {
     return template;
@@ -98,7 +120,9 @@ export const getValidTemplateFromArgs = async (template: Template): Promise<stri
     ?.split('\n')
     .filter(branch => branch.includes(TEMPLATE_BRANCH_PREFIX))
     .map(branch => {
-      return branch.replace(TEMPLATE_BRANCH_PREFIX, '').trim();
+      const match = branch.match(/refs\/heads\/.+/);
+
+      return match?.[0]?.replace(TEMPLATE_BRANCH_PREFIX, '');
     });
 
   if (!templatesBranches.includes(template)) {
@@ -108,6 +132,13 @@ export const getValidTemplateFromArgs = async (template: Template): Promise<stri
   return template;
 };
 
+/**
+ * Validates recipe arguments against available recipes.
+ *
+ * @param {Recipe[]} recipes - Array of recipes to validate
+ * @param {ora.Ora} spinner - Spinner instance for progress indication
+ * @returns {Promise<Recipe[]>} Array of validated recipes
+ */
 export const getValidRecipesFromArgs = async (recipes: Recipe[], spinner: ora.Ora): Promise<Recipe[]> => {
   return recipes.reduce<Recipe[]>((acc, recipeFromArgs) => {
     if (RECIPES.includes(recipeFromArgs)) {
@@ -121,8 +152,9 @@ export const getValidRecipesFromArgs = async (recipes: Recipe[], spinner: ora.Or
 };
 
 /**
- * Prompts the user to select recipes for the project.
- * @returns The selected recipes.
+ * Prompts the user to select additional recipes for the project.
+ *
+ * @returns {Promise<Recipe[]>} Array of selected recipes
  */
 export const selectRecipes = async (): Promise<Recipe[]> => {
   const recipes = await checkbox<Recipe>({
@@ -139,10 +171,12 @@ export const selectRecipes = async (): Promise<Recipe[]> => {
 };
 
 /**
- * Fills environment variables by prompting the user to select or input values for required variables.
+ * Fills environment variables by prompting the user to select or input values.
+ * Handles both development and production environments differently.
  *
- * @param {Recipe[]} recipes - An array of recipes for which environment variables need to be filled.
- * @returns {Promise<Partial<Record<EnvVariable, string>>>} A promise resolving to an object containing the filled environment variables.
+ * @param {Recipe[]} recipes - Array of recipes for which environment variables are needed
+ * @param {boolean} isDev - Whether the environment is development
+ * @returns {Promise<Partial<Record<EnvVariable, string>>>} Object containing filled environment variables
  */
 export const fillEnvVariables = async (
   recipes: Recipe[],
@@ -188,6 +222,12 @@ export const fillEnvVariables = async (
   return envVariables;
 };
 
+/**
+ * Fills environment variables with default values without user prompts.
+ *
+ * @param {Recipe[]} recipes - Array of recipes for which environment variables are needed
+ * @returns {Promise<Partial<Record<EnvVariable, string>>>} Object containing environment variables with default values
+ */
 export const fillEnvVariablesWithDefaults = async (
   recipes: Recipe[]
 ): Promise<Partial<Record<EnvVariable, string>>> => {
@@ -209,9 +249,9 @@ export const fillEnvVariablesWithDefaults = async (
 };
 
 /**
- * Parses environment variables from the .env file into an object.
+ * Parses environment variables from the .env file.
  *
- * @returns {Promise<Record<string, string>>} A promise resolving to an object containing key-value pairs of environment variables.
+ * @returns {Promise<Record<string, string>>} Object containing environment variables from .env file
  */
 export const parseEnvVariables = async (): Promise<Record<string, string>> => {
   if (!fsSync.existsSync('.env')) {
@@ -233,19 +273,53 @@ export const parseEnvVariables = async (): Promise<Record<string, string>> => {
 };
 
 /**
- * Aligns the current branch with the `full-pack` branch.
+ * Recursively copies a directory and its contents to a target location.
  *
- * This function runs the Git command to align the current branch with the `full-pack` branch.
- * A spinner is used to indicate the progress. If the alignment fails, the error is logged, and the process halts.
+ * @param {string} sourceDir - Source directory path
+ * @param {string} targetDir - Target directory path
+ */
+export const copyDirectory = (sourceDir: string, targetDir: string): void => {
+  if (!fsSync.existsSync(targetDir)) {
+    fsSync.mkdirSync(targetDir, { recursive: true }); // Create target directory if it doesn't exist
+  }
+
+  fsSync.readdirSync(sourceDir).forEach((file: string) => {
+    const sourcePath = path.join(sourceDir, file);
+    const targetPath = path.join(targetDir, file);
+
+    const isDirectory = fsSync.lstatSync(sourcePath).isDirectory();
+
+    if (isDirectory) {
+      copyDirectory(sourcePath, targetPath); // Recursively copy subdirectories
+    } else {
+      fsSync.copyFileSync(sourcePath, targetPath); // Copy files
+    }
+  });
+};
+
+/**
+ * Aligns the current branch with the full-pack branch.
+ * Clones the repository, copies necessary files, and cleans up.
  *
- * @param {ora.Ora} spinner - The Ora spinner instance used to display progress.
- * @returns {Promise<void>} Resolves when the alignment is successful.
- * @throws Will throw an error if the alignment process fails.
+ * @param {ora.Ora} spinner - Spinner instance for progress indication
+ * @throws {Error} If alignment process fails
  */
 export const alignWithFullPackBranch = async (spinner: ora.Ora): Promise<void> => {
   try {
     spinner.start(`Aligning ${GIT_BRANCHES.FULL_PACK} branch...`);
-    await runCmdCommand(GIT_COMMANDS.ALIGN_WITH_FULL_PACK_BRACH);
+
+    const pathToClonedRepo = path.join(process.cwd(), 'csk-packages');
+    const appPath = path.join(pathToClonedRepo, 'apps', 'csk-v-next');
+
+    if (fsSync.existsSync(pathToClonedRepo)) {
+      fsSync.rmSync(pathToClonedRepo, { recursive: true, force: true });
+    }
+
+    await spawnCmdCommand(GIT_COMMANDS.ALIGN_WITH_FULL_PACK_BRACH);
+    copyDirectory(appPath, process.cwd());
+
+    fsSync.rmSync(pathToClonedRepo, { recursive: true, force: true });
+
     spinner.succeed('Full-pack branch aligned successfully!');
   } catch (error) {
     spinner.fail(`Failed to align ${GIT_BRANCHES.FULL_PACK} branch: ${error}. Please try again.`);
@@ -253,19 +327,27 @@ export const alignWithFullPackBranch = async (spinner: ora.Ora): Promise<void> =
 };
 
 /**
- * Aligns the current branch with the template branch.
+ * Aligns the current branch with a specific template branch.
+ * Clones the repository, copies necessary files, and cleans up.
  *
- * This function runs the Git command to align the current branch with the template branch.
- * A spinner is used to indicate the progress. If the alignment fails, the error is logged, and the process halts.
- *
- * @param {ora.Ora} spinner - The Ora spinner instance used to display progress.
- * @returns {Promise<void>} Resolves when the alignment is successful.
- * @throws Will throw an error if the alignment process fails.
+ * @param {ora.Ora} spinner - Spinner instance for progress indication
+ * @param {string} template - Template branch name to align with
+ * @throws {Error} If alignment process fails
  */
 export const alignWithTemplateBranch = async (spinner: ora.Ora, template: string): Promise<void> => {
   try {
     spinner.start(`Aligning ${template} branch...`);
+    const pathToClonedRepo = path.join(process.cwd(), 'csk-packages');
+    const appPath = path.join(pathToClonedRepo, 'apps', 'csk-v-next');
+
+    if (fsSync.existsSync(pathToClonedRepo)) {
+      fsSync.rmSync(pathToClonedRepo, { recursive: true, force: true });
+    }
     await spawnCmdCommand(GIT_COMMANDS.ALIGN_WITH_TEMPLATE_BRANCH(template));
+    copyDirectory(appPath, process.cwd());
+
+    fsSync.rmSync(pathToClonedRepo, { recursive: true, force: true });
+
     spinner.succeed(`${template} branch aligned successfully!`);
   } catch (error) {
     spinner.fail(`Failed to align ${template} branch: ${error}. Please try again.`);
@@ -275,10 +357,8 @@ export const alignWithTemplateBranch = async (spinner: ora.Ora, template: string
 /**
  * Retrieves the paths of changed files in the current Git working directory.
  *
- * This function executes a Git command to list all changed files and returns their paths as an array.
- *
- * @returns {Promise<string[]>} A promise that resolves to an array of file paths.
- * @throws Will throw an error if the command to get changed files fails.
+ * @returns {Promise<string[]>} Array of changed file paths
+ * @throws {Error} If Git command fails
  */
 export const getChangedFilesPath = async (): Promise<string[]> => {
   try {
@@ -293,11 +373,12 @@ export const getChangedFilesPath = async (): Promise<string[]> => {
 };
 
 /**
- * Resolves a relative path against a base directory, ensuring compatibility across Unix and Windows.
+ * Resolves a relative path against a base directory.
+ * Ensures compatibility across Unix and Windows systems.
  *
- * @param {string} baseDir - The base directory (absolute path).
- * @param {string} relativePath - The relative path to resolve.
- * @returns {string} The resolved and normalized path.
+ * @param {string} baseDir - The base directory (absolute path)
+ * @param {string} relativePath - The relative path to resolve
+ * @returns {string} The resolved and normalized path
  */
 export const resolvePath = (baseDir: string, relativePath: string): string => {
   // Normalize paths for cross-platform compatibility
@@ -313,4 +394,46 @@ export const resolvePath = (baseDir: string, relativePath: string): string => {
   const resolvedPath = path.join(path.sep, ...baseDirSegments, normalizedRelativePath);
 
   return path.normalize(resolvedPath); // Return the normalized path
+};
+
+/**
+ * Checks if the current directory is part of a monorepo structure.
+ * Looks for 'apps' and 'packages' directories in the parent structure.
+ *
+ * @returns {boolean} True if the directory is part of a monorepo, false otherwise
+ */
+export const checkIsMonorepo = () => {
+  const currentDir = process.cwd();
+
+  const monorepoRoot = path.join(currentDir, '..', '..');
+
+  const isAppFolders = fsSync.readdirSync(monorepoRoot).some(folder => folder.includes('apps'));
+  const isPackagesFolders = fsSync.readdirSync(monorepoRoot).some(folder => folder.includes('packages'));
+
+  return isAppFolders && isPackagesFolders;
+};
+
+/**
+ * Creates a copy of the package.json file with a predefined name.
+ *
+ * @returns {void}
+ */
+export const copyPackageJson = (): void => {
+  const sourcePath = path.join(process.cwd(), 'package.json');
+  const targetPath = path.join(process.cwd(), PACKAGE_JSON_COPY_FILE);
+
+  fsSync.copyFileSync(sourcePath, targetPath);
+};
+
+/**
+ * Cleansup, and remove unused file
+ *
+ * @returns {Promise<void>}
+ */
+export const cleanupProject = async (): Promise<void> => {
+  const packageJsonCopyPath = path.join(process.cwd(), PACKAGE_JSON_COPY_FILE);
+
+  if (fsSync.existsSync(packageJsonCopyPath)) {
+    await fs.rm(packageJsonCopyPath);
+  }
 };

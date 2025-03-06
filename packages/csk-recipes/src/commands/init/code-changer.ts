@@ -1,8 +1,16 @@
+import fsSync from 'fs';
 import fs from 'fs/promises';
 import path from 'path';
 import MetaScript from '@uniformdev/metascript';
-import { JSX_COMMENT_REGEX, META_NOT_PROCESABLE_FILE_EXTENSIONS, RECIPE_ADDITIONAL_FILES } from './constants';
+import {
+  FILES_TO_IGNORE_OUTSIDE_OF_MONOREPO,
+  JSX_COMMENT_REGEX,
+  META_NOT_PROCESABLE_FILE_EXTENSIONS,
+  PACKAGE_JSON_COPY_FILE,
+  RECIPE_ADDITIONAL_FILES,
+} from './constants';
 import { EnvVariable, Recipe } from './types';
+import { checkIsMonorepo } from './utils';
 import { formatWithPrettier, runCmdCommand } from '../../utils';
 
 /**
@@ -34,7 +42,11 @@ const cleanOutput = async (source: string, fileExtension: string): Promise<strin
  * @param {Recipe[]} recipes - The list of recipes to enable in the transformation.
  * @returns {Promise<void>} - A promise that resolves when the operation is complete.
  */
-export const proceedCodeChange = async (filePath: string, recipes: Recipe[]): Promise<void> => {
+export const proceedCodeChange = async (filePath: string, recipes: Recipe[], isMonorepo: boolean): Promise<void> => {
+  if (!fsSync.existsSync(filePath)) {
+    return;
+  }
+
   const sourceCode = await fs.readFile(filePath, 'utf8');
 
   // Replace JSX-style comments with JavaScript comments for MetaScript compatibility
@@ -52,6 +64,7 @@ export const proceedCodeChange = async (filePath: string, recipes: Recipe[]): Pr
     ga: isGAEnabled,
     uniformInsights: isUniformInsightsEnabled,
     shadcn: isShadcnEnabled,
+    monorepo: isMonorepo,
   });
 
   const fileExtension = path.extname(filePath);
@@ -82,6 +95,74 @@ export const postProcessFile = async (filePath: string, recipes: Recipe[]) => {
   const isFileShouldBeIncluded = recipes.some(recipe => RECIPE_ADDITIONAL_FILES[recipe]?.includes(filePath));
   if (!isFileShouldBeIncluded) {
     await fs.rm(filePath);
+  }
+};
+
+export const preProcessFile = async (filePath: string, isMonorepo: boolean) => {
+  const isFileShouldRemoved = FILES_TO_IGNORE_OUTSIDE_OF_MONOREPO.some(file => filePath.includes(file));
+
+  if (isFileShouldRemoved) {
+    await fs.rm(filePath);
+  }
+
+  if (!isMonorepo) {
+    if (filePath.includes('package.json')) {
+      await processPackageJson();
+    }
+
+    if (filePath.includes('tailwind.config.ts')) {
+      await processTailwindcssConf();
+    }
+  }
+};
+
+const processPackageJson = async () => {
+  try {
+    const [beforeChanges, afterChanges] = await Promise.all([
+      fs.readFile(PACKAGE_JSON_COPY_FILE, 'utf8'),
+      fs.readFile(path.join(process.cwd(), 'package.json'), 'utf8'),
+    ]);
+
+    const beforeJson = JSON.parse(beforeChanges);
+    const afterJson = JSON.parse(afterChanges);
+
+    afterJson.name = beforeJson.name;
+
+    const updateDependencies = (type: 'dependencies' | 'devDependencies') => {
+      const baseDependencies: [string, string][] = Object.entries(beforeJson[type] || {});
+      const afterDependencies: [string, string][] = Object.entries(afterJson[type] || {});
+
+      for (const [depName, depVersion] of afterDependencies) {
+        if (depVersion.includes('*')) {
+          const baseDep = baseDependencies.find(([baseDepName]) => baseDepName === depName);
+          if (baseDep) {
+            afterJson[type][depName] = baseDep[1];
+          }
+        }
+      }
+    };
+
+    updateDependencies('dependencies');
+    updateDependencies('devDependencies');
+
+    await fs.writeFile(path.join(process.cwd(), 'package.json'), JSON.stringify(afterJson, null, 2));
+  } catch (error) {
+    console.error('Error processing package.json:', error);
+  }
+};
+
+const processTailwindcssConf = async () => {
+  try {
+    const tailwindcssConf = await fs.readFile(path.join(process.cwd(), 'tailwind.config.ts'), 'utf8');
+
+    const updatedTailwindcssConf = tailwindcssConf.replace(
+      '../../node_modules/@uniformdev/csk-components',
+      './node_modules/@uniformdev/csk-components'
+    );
+
+    await fs.writeFile(path.join(process.cwd(), 'tailwind.config.ts'), updatedTailwindcssConf);
+  } catch (error) {
+    console.error('Error processing tailwind.config.ts:', error);
   }
 };
 
