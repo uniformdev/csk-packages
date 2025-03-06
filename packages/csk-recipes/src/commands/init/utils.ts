@@ -92,17 +92,6 @@ export const selectTemplate = async (): Promise<Template> => {
 };
 
 /**
- * Prompts the user to confirm if they want to override existing configuration.
- *
- * @returns {Promise<boolean>} True if user confirms override, false otherwise
- */
-export const optionsForResetBranch = async (): Promise<boolean> => {
-  return confirm({
-    message: '❗❗❗A this configuration already exists. Would you like to override it?',
-  });
-};
-
-/**
  * Validates a template argument against available remote branches.
  *
  * @param {Template} template - The template to validate
@@ -416,13 +405,13 @@ export const checkIsMonorepo = () => {
 /**
  * Creates a copy of the package.json file with a predefined name.
  *
- * @returns {void}
+ * @returns {Promise<void>}
  */
-export const copyPackageJson = (): void => {
+export const copyPackageJson = async (): Promise<void> => {
   const sourcePath = path.join(process.cwd(), 'package.json');
   const targetPath = path.join(process.cwd(), PACKAGE_JSON_COPY_FILE);
 
-  fsSync.copyFileSync(sourcePath, targetPath);
+  return fs.copyFile(sourcePath, targetPath);
 };
 
 /**

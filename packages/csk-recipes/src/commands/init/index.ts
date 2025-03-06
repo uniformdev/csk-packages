@@ -5,7 +5,7 @@ import {
   preProcessFile,
   proceedCodeChange,
 } from './code-changer';
-import { GIT_COMMANDS, TEMPLATE_PRE_PROCESS_FILE_WHITELIST } from './constants';
+import { TEMPLATE_PRE_PROCESS_FILE_WHITELIST } from './constants';
 import { Recipe, ProjectConfiguration, Template } from './types';
 import {
   selectTemplate,
@@ -18,7 +18,6 @@ import {
   getValidTemplateFromArgs,
   getValidRecipesFromArgs,
   fillEnvVariablesWithDefaults,
-  optionsForResetBranch,
   checkIsMonorepo,
   copyPackageJson,
   cleanupProject,
@@ -69,22 +68,6 @@ const init = async (args: InitArgs): Promise<void> => {
       return;
     }
 
-    const branchNameBase = `${template}${isRecipesApplied ? `-${recipes.join('-')}` : ''}`;
-    const isBranchExists = await spawnCmdCommand(GIT_COMMANDS.GIT_CHECK_BRANCH_EXISTS(branchNameBase));
-
-    if (isBranchExists) {
-      const shouldResetBranch = await optionsForResetBranch();
-      const branchName = shouldResetBranch ? branchNameBase : `${branchNameBase}-${Date.now()}`;
-
-      await spawnCmdCommand(
-        shouldResetBranch
-          ? GIT_COMMANDS.GIT_CREATE_BRANCH_FORCE(branchName)
-          : GIT_COMMANDS.GIT_CREATE_BRANCH(branchName)
-      );
-    } else {
-      await spawnCmdCommand(GIT_COMMANDS.GIT_CREATE_BRANCH(branchNameBase));
-    }
-
     if (isRecipesApplied) {
       if (!isMonorepo) {
         await copyPackageJson();
@@ -122,12 +105,6 @@ const init = async (args: InitArgs): Promise<void> => {
         await cleanupProject();
         spinner.succeed('Project cleaned up successfully!');
       }
-
-      await spawnCmdCommand(GIT_COMMANDS.GIT_ADD);
-
-      await spawnCmdCommand(GIT_COMMANDS.COMMIT_CHANGES('feat: recipes applied'));
-
-      await spawnCmdCommand(GIT_COMMANDS.GIT_RESET);
     }
 
     if (isTemplateApplied) {
@@ -153,15 +130,11 @@ const init = async (args: InitArgs): Promise<void> => {
         await cleanupProject();
         spinner.succeed('Project cleaned up successfully!');
       }
-
-      await spawnCmdCommand(GIT_COMMANDS.GIT_ADD);
-      await spawnCmdCommand(GIT_COMMANDS.COMMIT_CHANGES('feat: template applied'));
     }
 
     spinner.succeed('App created successfully!');
   } catch (e) {
     if (e instanceof Error) {
-      console.error('e', e);
       if (e.message.includes('force closed')) {
         console.info('\n👋 See you next time! 🧡\n');
       } else {

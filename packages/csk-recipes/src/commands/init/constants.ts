@@ -13,18 +13,9 @@ export const RECIPES = ['localization', 'ga', 'uniform-insights', 'shadcn'];
 export const TEMPLATES_WHITE_LIST = ['coffee-shop'];
 
 export const GIT_COMMANDS = {
-  DIFF_QUIET: `git diff --quiet origin/${GIT_BRANCHES.GOLD}`,
-  RESET_HARD: `git reset --hard origin/${GIT_BRANCHES.GOLD}`,
   ALIGN_WITH_FULL_PACK_BRACH: `git clone https://github.com/uniformdev/csk-packages.git --branch ${GIT_BRANCHES.FULL_PACK}`,
   ALIGN_WITH_TEMPLATE_BRANCH: (template: string) =>
     `git clone https://github.com/uniformdev/csk-packages.git --branch ${TEMPLATE_BRANCH_PREFIX_LOCAL}${template} `,
-  COMMIT_CHANGES: (message: string) => `git commit -m "${message}" --no-verify`,
-  GIT_CREATE_BRANCH: (branchName: string) => `git checkout -b ${branchName}`,
-  GIT_CREATE_BRANCH_FORCE: (branchName: string) => `git checkout ${branchName} && git reset --hard origin/develop`,
-  GIT_CHECK_BRANCH_EXISTS: (branchName: string) => `git branch --list ${branchName}`,
-  GET_CHANGED_FILES: 'git ls-files --modified --others --exclude-standard',
-  GIT_ADD: 'git add .',
-  GIT_RESET: 'git reset --hard',
   GIT_REMOTE_BRANCHES: 'git ls-remote --heads https://github.com/uniformdev/csk-packages.git',
 };
 
