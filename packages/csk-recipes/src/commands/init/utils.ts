@@ -446,3 +446,18 @@ export const failLog = (spinner: ora.Ora, message: string, verbose: boolean): vo
     spinner.fail(message);
   }
 };
+
+/**
+ * Executes a function with logs and error handling.
+ */
+export const executeWithLogs = async (
+  fn: () => Promise<unknown>,
+  spinner: ora.Ora,
+  startMsg: string,
+  successMsg: string,
+  verbose: boolean
+) => {
+  startLog(spinner, startMsg, verbose);
+  await fn();
+  successLog(spinner, successMsg, verbose);
+};
