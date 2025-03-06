@@ -5,12 +5,11 @@ import MetaScript from '@uniformdev/metascript';
 import {
   FILES_TO_IGNORE_OUTSIDE_OF_MONOREPO,
   JSX_COMMENT_REGEX,
-  META_NOT_PROCESABLE_FILE_EXTENSIONS,
+  META_NOT_PROCESABLE_FILE_PATH_SEGMENTS,
   PACKAGE_JSON_COPY_FILE,
   RECIPE_ADDITIONAL_FILES,
 } from './constants';
 import { EnvVariable, Recipe } from './types';
-import { checkIsMonorepo } from './utils';
 import { formatWithPrettier, runCmdCommand } from '../../utils';
 
 /**
@@ -44,6 +43,14 @@ const cleanOutput = async (source: string, fileExtension: string): Promise<strin
  */
 export const proceedCodeChange = async (filePath: string, recipes: Recipe[], isMonorepo: boolean): Promise<void> => {
   if (!fsSync.existsSync(filePath)) {
+    return;
+  }
+
+  const isMetaProcessablepathSegment = !META_NOT_PROCESABLE_FILE_PATH_SEGMENTS.some(segment =>
+    filePath.includes(segment)
+  );
+
+  if (!isMetaProcessablepathSegment) {
     return;
   }
 
@@ -83,10 +90,6 @@ export const proceedCodeChange = async (filePath: string, recipes: Recipe[], isM
 };
 
 export const postProcessFile = async (filePath: string, recipes: Recipe[]) => {
-  if (!META_NOT_PROCESABLE_FILE_EXTENSIONS.some(ext => filePath.endsWith(ext))) {
-    return;
-  }
-
   const isFileAdditional = Object.values(RECIPE_ADDITIONAL_FILES).some(files => files.includes(filePath));
   if (!isFileAdditional) {
     return;

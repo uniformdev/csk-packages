@@ -61,10 +61,8 @@ export const RECIPE_ADDITIONAL_FILES: Partial<{
   shadcn: ['components.json'],
 };
 
-export const META_NOT_PROCESABLE_FILE_EXTENSIONS = ['.json'];
+export const META_NOT_PROCESABLE_FILE_PATH_SEGMENTS = ['content/', '.json', '.yaml'];
 
 export const FILES_TO_IGNORE_OUTSIDE_OF_MONOREPO = ['.lintstagedrc'];
-
-export const TEMPLATE_PRE_PROCESS_FILE_WHITELIST = ['.lintstagedrc', 'package.json', 'tailwind.config.ts'];
 
 export const PACKAGE_JSON_COPY_FILE = 'package-copy.json';
