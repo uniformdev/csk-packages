@@ -25,7 +25,19 @@ const Chat: FC<ChatProps> = ({ component, context, slots }) => {
   const { messages, input, handleInputChange, handleSubmit, append, status } = useChat({
     maxSteps: MAX_STEPS,
     async onToolCall({ toolCall }) {
+      console.info('toolCall', toolCall);
       if (toolCall.toolName === 'getInterests') {
+        console.info(
+          'Result:',
+          JSON.stringify(
+            Object.entries(interests)
+              .map(([key, items]) => {
+                const values = items!.map(i => i.id).slice(0, 2);
+                return converter[key as EnrichmentKeys[number]](values);
+              })
+              .join(' ')
+          )
+        );
         return Object.entries(interests)
           .map(([key, items]) => {
             const values = items!.map(i => i.id).slice(0, 2);
@@ -45,8 +57,12 @@ const Chat: FC<ChatProps> = ({ component, context, slots }) => {
           )
           .shift();
 
-        if (!found) return "Oops! I couldn't find that interest. Please try again.";
+        if (!found) {
+          console.info('Result: no found');
+          return "Oops! I couldn't find that interest. Please try again.";
+        }
 
+        console.info('Result', JSON.stringify({ ...found, str: 100 }));
         await localContext?.update({
           enrichments: [{ ...found, str: 100 }],
         });

@@ -110,6 +110,7 @@ export async function POST(req: Request) {
                 const recommendedProducts = await getProductRecommendations({
                   scoreCookie,
                 });
+                console.info('Recommended products:', JSON.stringify(recommendedProducts));
                 return JSON.stringify(recommendedProducts);
               },
             }),
