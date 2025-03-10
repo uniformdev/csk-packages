@@ -5,79 +5,11 @@ composition:
   type: recommendations
   slots:
     recommendations:
-      - _id: efe3a024-be69-4c1a-9f72-2acc34a0bc70
-        type: $personalization
-        slots:
-          pz:
-            - _id: 87b766d3-1eca-4ca7-85e4-1f8b8d6e1474
-              type: productRecommendation
-              parameters:
-                title:
-                  type: text
-                  locales:
-                    en: Apple iPhone 16 Pro
-                $pzCrit:
-                  type: $pzCrit
-                  value:
-                    crit:
-                      - l: brand_apple
-                        r: '50'
-                        op: '>'
-                    name: 'Product Recommendation: Apple iPhone 16 Pro'
-            - _id: 4372db69-48fa-4513-852a-d0e5b085bfe9
-              type: productRecommendation
-              parameters:
-                title:
-                  type: text
-                  locales:
-                    en: Apple iPhone 16 Pro Max
-                $pzCrit:
-                  type: $pzCrit
-                  value:
-                    crit:
-                      - l: brand_apple
-                        r: '50'
-                        op: '>'
-                    name: 'Product Recommendation: Apple iPhone 16 Pro Max'
-            - _id: d8436f78-ddff-416a-8427-07d31101b2d1
-              type: productRecommendation
-              parameters:
-                title:
-                  type: text
-                  locales:
-                    en: Samsung Galaxy S23
-                $pzCrit:
-                  type: $pzCrit
-                  value:
-                    crit:
-                      - l: brand_samsung
-                        r: '50'
-                        op: '>'
-                    name: 'Product Recommendation: Samsung Galaxy S23'
-            - _id: cad5f766-2b9d-4894-b832-3bef6894be92
-              type: productRecommendation
-              parameters:
-                title:
-                  type: text
-                  locales:
-                    en: Samsung Galaxy S24+
-                $pzCrit:
-                  type: $pzCrit
-                  value:
-                    crit:
-                      - l: brand_samsung
-                        r: '50'
-                        op: '>'
-                    name: 'Product Recommendation: Samsung Galaxy S24+'
-        parameters:
-          count:
-            type: number
-            value: '3'
-          trackingEventName:
-            type: text
-            value: Recs
+      - _id: 50de685e-a329-495a-969c-41bac7083d85
+        type: productRecommendation
+        _pattern: 8eb83f63-2307-42af-b527-d573e8932fd1
   _locales:
     - en
 created: '2025-03-05T16:46:56.255133+00:00'
-modified: '2025-03-05T22:04:40.682573+00:00'
+modified: '2025-03-07T10:58:20.888804+00:00'
 pattern: false

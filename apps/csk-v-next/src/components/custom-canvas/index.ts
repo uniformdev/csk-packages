@@ -1,7 +1,9 @@
 import { ComponentMapping } from '@uniformdev/csk-components/utils/createComponentResolver';
-import { Chat } from '@/chat/chat';
+import Chat from './Chat';
 import Container from './Container';
 import CustomComponent from './CustomComponent';
+import ProductRecommendation from './ProductRecommendation';
+import Recommendations from './Recommendations';
 
 // Here, you can add your own component or customize an existing CSK component with your logic or styles.
 export const customComponentsMapping: ComponentMapping = {
@@ -10,4 +12,6 @@ export const customComponentsMapping: ComponentMapping = {
   // This is an overridden CSK Container component.
   container: { component: Container },
   chat: { component: Chat },
+  recommendations: { component: Recommendations },
+  productRecommendation: { component: ProductRecommendation },
 };

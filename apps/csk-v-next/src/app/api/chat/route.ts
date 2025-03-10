@@ -1,16 +1,27 @@
 import { NextResponse } from 'next/server';
-import { convertToCoreMessages, createDataStreamResponse, streamText } from 'ai';
+import { CoreMessage, createDataStreamResponse, streamText, tool } from 'ai';
 import { parse } from 'cookie';
 import { z } from 'zod';
-import { CANVAS_PERSONALIZE_SLOT, CanvasClient, mapSlotToPersonalizedVariations } from '@uniformdev/canvas';
+import {
+  CANVAS_PERSONALIZE_SLOT,
+  CanvasClient,
+  flattenValues,
+  mapSlotToPersonalizedVariations,
+} from '@uniformdev/canvas';
 import { getManifest } from '@uniformdev/canvas-next-rsc';
 import { Context, CookieTransitionDataStore, ManifestV2 } from '@uniformdev/context';
+import {
+  GET_INTERESTS_DESCRIPTION,
+  PRODUCT_RECOMMENDATION_TYPE,
+  PRODUCT_RECOMMENDATIONS_SLOT_NAME,
+  RECOMMEND_PRODUCTS_DESCRIPTION,
+  RECOMMENDATIONS_COMPOSITION_SLUG,
+  SET_INTERESTS_DESCRIPTION,
+  SUGGESTIONS_SLOT_NAME,
+  SYSTEM_PROMPT,
+} from '@/chat/constants';
+import locales from '@/i18n/locales.json';
 import { openai } from '@ai-sdk/openai';
-
-// Allow streaming responses up to 30 seconds
-export const maxDuration = 30;
-
-const SUGGESTIONS_SLOT_NAME = 'recommendations';
 
 const canvasClient = new CanvasClient({
   apiKey: process.env.UNIFORM_API_KEY,
@@ -19,23 +30,31 @@ const canvasClient = new CanvasClient({
 
 const getRecommendationsComposition = async () => {
   const { composition } = await canvasClient.getCompositionBySlug({
-    slug: 'product-recommendations',
+    slug: RECOMMENDATIONS_COMPOSITION_SLUG,
+    locale: locales.defaultLocale,
   });
   return composition;
 };
 
-type SuggestedProduct = {
-  title: string;
-};
-
 const getProductRecommendations = async ({ scoreCookie }: { scoreCookie: string | undefined }) => {
   const composition = await getRecommendationsComposition();
-  const suggestions = composition.slots?.[SUGGESTIONS_SLOT_NAME][0];
-  const variants = suggestions?.slots?.[CANVAS_PERSONALIZE_SLOT] || [];
-  const mapped = mapSlotToPersonalizedVariations(variants);
+
+  const productSuggestions = composition.slots?.[SUGGESTIONS_SLOT_NAME].find(
+    slot => slot.type === PRODUCT_RECOMMENDATION_TYPE
+  )?.slots?.[PRODUCT_RECOMMENDATIONS_SLOT_NAME][0];
+
+  const { trackingEventName, count } = flattenValues(productSuggestions) as {
+    trackingEventName: string;
+    count: string;
+  };
+
+  const variants = productSuggestions?.slots?.[CANVAS_PERSONALIZE_SLOT];
+
+  if (!trackingEventName || !count || !variants) {
+    return [];
+  }
 
   const manifest = await getManifest({ searchParams: {} });
-
   const context = new Context({
     manifest: manifest as ManifestV2,
     defaultConsent: true,
@@ -45,21 +64,23 @@ const getProductRecommendations = async ({ scoreCookie }: { scoreCookie: string 
   });
 
   const { variations } = await context.personalize({
-    name: 'Recs',
-    variations: mapped,
-    take: 3,
+    name: trackingEventName,
+    variations: mapSlotToPersonalizedVariations(variants),
+    take: parseInt(count),
   });
 
-  const suggestedProducts: SuggestedProduct[] = variations.map(r => ({
-    title: r.parameters!.title.value as string,
-  }));
+  const suggestedProducts = variations
+    .map(variation => ({
+      title: (flattenValues(variation)?.displayName || '') as string,
+    }))
+    .filter(({ title }) => title);
 
   return suggestedProducts;
 };
 
 export async function POST(req: Request) {
   try {
-    const { messages } = await req.json();
+    const { messages }: { messages: CoreMessage[] } = await req.json();
     const cookieValue = req.headers.get('cookie') || '';
     const parsedCookie = parse(cookieValue);
     const scoreCookie = parsedCookie['ufvd'];
@@ -68,23 +89,22 @@ export async function POST(req: Request) {
       execute: dataStream => {
         const result = streamText({
           model: openai('gpt-4-turbo'),
-          messages: convertToCoreMessages(messages),
-          system:
-            'The user is asking for product recommendations based on their interests. You are only allowed to recommend products based on interests of the user. If the user does not have any interests, do not recommend any products.',
+          messages,
+          system: SYSTEM_PROMPT,
+          experimental_activeTools: ['getInterests', 'setInterests', 'recommendProducts'],
           tools: {
-            getInterests: {
-              description: 'Call this to get the users interests',
+            getInterests: tool({
+              description: GET_INTERESTS_DESCRIPTION,
               parameters: z.object({}),
-            },
-            setInterests: {
-              description: 'Call this to set the users interests',
+            }),
+            setInterests: tool({
+              description: SET_INTERESTS_DESCRIPTION,
               parameters: z.object({
                 interest: z.string(),
               }),
-            },
-            recommendProducts: {
-              description:
-                'Only call once. Call this without asking the user their interests. Recommended products with be returned in JSON. Use "title" field to display the product title.',
+            }),
+            recommendProducts: tool({
+              description: RECOMMEND_PRODUCTS_DESCRIPTION,
               parameters: z.object({}),
               async execute() {
                 const recommendedProducts = await getProductRecommendations({
@@ -92,7 +112,7 @@ export async function POST(req: Request) {
                 });
                 return JSON.stringify(recommendedProducts);
               },
-            },
+            }),
           },
         });
         result.consumeStream();
@@ -100,7 +120,8 @@ export async function POST(req: Request) {
           sendReasoning: true,
         });
       },
-      onError: () => {
+      onError: e => {
+        console.error(e);
         return 'Oops, an error occured!';
       },
     });

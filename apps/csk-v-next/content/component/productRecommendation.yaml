@@ -10,8 +10,14 @@ parameters:
     typeConfig: null
     localizable: true
 useTeamPermissions: true
-slots: []
+slots:
+  - id: products
+    name: Products
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
 titleParameter: title
 canBeComposition: false
 created: '2025-03-05T16:13:38.242298+00:00'
-updated: '2025-03-05T16:13:38.242298+00:00'
+updated: '2025-03-07T10:56:27.060494+00:00'

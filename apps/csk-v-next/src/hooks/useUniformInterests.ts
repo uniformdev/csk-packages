@@ -1,7 +1,8 @@
 import { useMemo } from 'react';
 import { AppDirectoryContext } from '@uniformdev/canvas-next-rsc-shared';
-import { EnrichmentKeys } from '../constants';
-import { EnrichmentKey } from '../models';
+import { EnrichmentKeys } from '@/chat/constants';
+
+type EnrichmentKey = (typeof EnrichmentKeys)[number];
 
 export type UniformInterestsResult = {
   interests: Readonly<Partial<Record<EnrichmentKey, ReadonlyArray<{ id: string; score: number }>>>>;

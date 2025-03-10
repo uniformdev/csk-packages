@@ -84,6 +84,11 @@ composition:
     headerRightContent:
       - _id: e092ed79-bd89-4d8b-9686-0dfb7fbbb594
         type: chat
+        slots:
+          recommendations:
+            - _id: f97638b6-a112-4b3e-930a-19e0bce92ec7
+              type: productRecommendation
+              _pattern: 8eb83f63-2307-42af-b527-d573e8932fd1
         _overridability:
           hideLockedParameters: true
     headerCenterContent:
@@ -165,7 +170,7 @@ composition:
   _locales:
     - en
 created: '2025-03-05T16:00:56.543421+00:00'
-modified: '2025-03-05T16:45:34.116693+00:00'
+modified: '2025-03-07T11:43:32.550114+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/main-header.jpg
