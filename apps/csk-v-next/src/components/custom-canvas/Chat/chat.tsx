@@ -25,46 +25,44 @@ const Chat: FC<ChatProps> = ({ component, context, slots }) => {
   const { messages, input, handleInputChange, handleSubmit, append, status } = useChat({
     maxSteps: MAX_STEPS,
     async onToolCall({ toolCall }) {
-      console.info('toolCall', toolCall);
       if (toolCall.toolName === 'getInterests') {
-        console.info(
-          'Result:',
-          JSON.stringify(
-            Object.entries(interests)
-              .map(([key, items]) => {
-                const values = items!.map(i => i.id).slice(0, 2);
-                return converter[key as EnrichmentKeys[number]](values);
-              })
-              .join(' ')
-          )
-        );
-        return Object.entries(interests)
+        const result = Object.entries(interests)
           .map(([key, items]) => {
             const values = items!.map(i => i.id).slice(0, 2);
             return converter[key as EnrichmentKeys[number]](values);
           })
           .join(' ');
+        console.info(`ToolCall: ${toolCall.toolName} Result: ${result}`, toolCall);
+        return result;
       } else if (toolCall.toolName === 'setInterests') {
-        const { interest } = toolCall.args as { interest: string };
+        const { interest } = toolCall.args as { interest: string | undefined };
 
-        const found = enrichments
-          .flatMap(enrichment =>
-            enrichment.values
-              .filter(
-                v => v.id.toLowerCase() === interest.toLowerCase() || v.value.toLowerCase() === interest.toLowerCase()
-              )
-              .map(v => ({ cat: enrichment.id, key: v.id }))
-          )
-          .shift();
+        const interestKeys = interest?.split(',').map(i => i.trim()) || [];
 
-        if (!found) {
-          console.info('Result: no found');
+        const founds = interestKeys.map(interestKey =>
+          enrichments
+            .flatMap(enrichment =>
+              enrichment.values
+                .filter(
+                  v =>
+                    v.id.toLowerCase() === interestKey.toLowerCase() ||
+                    v.value.toLowerCase() === interestKey.toLowerCase()
+                )
+                .map(v => ({ cat: enrichment.id, key: v.id }))
+            )
+            .shift()
+        );
+
+        if (!founds.length) {
+          console.info(`ToolCall: ${toolCall.toolName} Result: no found`, toolCall);
           return "Oops! I couldn't find that interest. Please try again.";
         }
 
-        console.info('Result', JSON.stringify({ ...found, str: 100 }));
+        console.info(`ToolCall: ${toolCall.toolName} Result: ${JSON.stringify(founds)}`, toolCall);
         await localContext?.update({
-          enrichments: [{ ...found, str: 100 }],
+          enrichments: founds
+            .filter((found): found is { cat: string; key: string } => Boolean(found?.cat && found?.key))
+            .map(found => ({ ...found, str: 100 })),
         });
 
         return 'Thank you for sharing your interests!';

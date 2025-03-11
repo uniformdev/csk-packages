@@ -1,4 +1,4 @@
-import React, { FC, memo, useEffect, useState } from 'react';
+import React, { FC, memo, useEffect, useMemo, useState } from 'react';
 import { Message } from 'ai';
 import Markdown from 'react-markdown';
 import { AiIcon } from './icon/AiIcon';
@@ -13,6 +13,8 @@ type AiMessageProps = {
 const AiMessageComponent: FC<AiMessageProps> = ({ status, message, recommendedProducts }) => {
   const [clonedHtml, setClonedHtml] = useState('');
 
+  const slotId = useMemo(() => `${message.id}-recommendProducts`, [message.id]);
+
   useEffect(() => {
     try {
       if (status === 'ready') {
@@ -25,7 +27,7 @@ const AiMessageComponent: FC<AiMessageProps> = ({ status, message, recommendedPr
             JSON.parse(part.toolInvocation.result || '[]').length > 0
         );
 
-        const element = document.getElementById(message.id);
+        const element = document.getElementById(slotId);
         if (recommendProducts && element) {
           setClonedHtml(element.outerHTML);
         }
@@ -34,7 +36,7 @@ const AiMessageComponent: FC<AiMessageProps> = ({ status, message, recommendedPr
     } catch (error) {
       console.error(error);
     }
-  }, [message.parts, status, message.id]);
+  }, [message.parts, status, slotId]);
 
   return (
     <div className="my-4 flex flex-1 gap-3 text-sm text-gray-600">
@@ -48,13 +50,11 @@ const AiMessageComponent: FC<AiMessageProps> = ({ status, message, recommendedPr
         <Markdown>{message.content}</Markdown>
 
         {!clonedHtml ? (
-          <div id={message.id} className="hidden">
+          <div id={slotId} className="hidden">
             {recommendedProducts}
           </div>
         ) : (
-          <div>
-            <div className="py-2 *:!block" dangerouslySetInnerHTML={{ __html: clonedHtml }} />
-          </div>
+          <div id={`${slotId}-clone`} className="py-2 *:!block" dangerouslySetInnerHTML={{ __html: clonedHtml }} />
         )}
       </div>
     </div>
