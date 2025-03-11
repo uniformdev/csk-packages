@@ -36,7 +36,11 @@ const safelist = [
 
 const colorKeys = Object.keys(theme.extend.colors || {});
 if (colorKeys.length) {
-  safelist.push(generateTailwindcssColorKeysPattern(colorKeys));
+  safelist.push(
+    generateTailwindcssColorKeysPattern(colorKeys, {
+      prefixes: ['from', 'to'],
+    })
+  );
 }
 
 const dimensionKeys = Object.keys(theme.extend.spacing || {});
