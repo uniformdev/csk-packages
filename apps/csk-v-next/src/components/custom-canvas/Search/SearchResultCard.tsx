@@ -34,9 +34,9 @@ export const SearchResultCard = ({ title, shortDescription, thumbnail, author, t
 
   return (
     <div className="flex h-full flex-col">
-      <div className="flex h-full flex-1 flex-col">
+      <div className="flex flex-col">
         {thumbnailAsset ? (
-          <div className="flex w-full items-center justify-center">
+          <div className="flex min-h-[200px] w-full items-center justify-center">
             <Image src={thumbnailAsset.url} alt={title} width={250} height={250} className="object-cover" />
           </div>
         ) : (
@@ -45,22 +45,24 @@ export const SearchResultCard = ({ title, shortDescription, thumbnail, author, t
           </div>
         )}
       </div>
-      <div className="p-4">
-        <h1 className="mb-2 text-lg font-semibold">{title}</h1>
-        <div className="text-sm text-gray-600">{shortDescription}</div>
-      </div>
-      <div>
-        <div className="flex flex-wrap gap-3 p-4">
-          {flattenTags?.map(tag => (
-            <span key={tag?.name} className="rounded-full bg-blue-200 px-4 py-1 text-sm text-black transition-all">
-              🏷️ {tag?.name}
-            </span>
-          ))}
-          {flattenAuthor?.name && (
-            <span className="rounded-full bg-orange-300 px-4 py-1 text-sm text-black  transition-all">
-              ✍️ {flattenAuthor?.name}
-            </span>
-          )}
+      <div className="flex h-full flex-col justify-between">
+        <div className="p-4">
+          <h1 className="mb-2 text-lg font-semibold">{title}</h1>
+          <div className="text-sm text-gray-600">{shortDescription}</div>
+        </div>
+        <div>
+          <div className="flex flex-wrap gap-3 px-4 text-[10px]">
+            {flattenTags?.map(tag => (
+              <span key={tag?.name} className="rounded-full bg-blue-200 px-4 py-1 text-black transition-all">
+                🏷️ {tag?.name}
+              </span>
+            ))}
+            {flattenAuthor?.name && (
+              <span className="rounded-full bg-orange-300 px-4 py-1 text-black transition-all">
+                ✍️ {flattenAuthor?.name}
+              </span>
+            )}
+          </div>
         </div>
       </div>
     </div>

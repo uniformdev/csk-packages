@@ -1,34 +1,21 @@
 import { Asset } from '@uniformdev/assets';
-import { ComponentParameter } from '@uniformdev/canvas';
+import { DataWithProperties } from '@uniformdev/canvas';
 //Define the structure of a knowledge base article
 interface SearchResult {
   id: string;
   title: string;
   shortDescription: string;
-  thumbnail: {
+
+  thumbnail?: {
     value: Asset[];
   };
-  author: {
-    entry: {
-      fields: ComponentParameter<{
-        name: string;
-      }>;
-    };
+  author?: {
+    entry: DataWithProperties;
   };
-  tags: {
-    entry: {
-      fields: ComponentParameter<{
-        name: string;
-      }>;
-    };
+  tags?: {
+    entry: DataWithProperties;
   }[];
   // Add other necessary fields if needed
-}
-interface RichTextDescription {
-  type: string;
-  value: {
-    root: any; // Use the proper type if available
-  };
 }
 
 // Define the structure of the response from the API
@@ -50,10 +37,4 @@ interface Facets {
   [facetField: string]: FacetValueCounts;
 }
 
-export {
-  type SearchResult,
-  type SearchResultsWithPagination,
-  type Facets,
-  type FacetValueCounts,
-  type RichTextDescription,
-};
+export { type SearchResult, type SearchResultsWithPagination, type Facets, type FacetValueCounts };

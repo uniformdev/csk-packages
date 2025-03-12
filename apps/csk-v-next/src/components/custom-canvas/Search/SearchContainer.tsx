@@ -195,8 +195,8 @@ export const SearchContainer = ({
                         </div>
                       ))
                     ) : searchResults?.length > 0 ? (
-                      searchResults.map((r, key) => (
-                        <div key={key} className="rounded-md border bg-white p-4 shadow-sm">
+                      searchResults.map(r => (
+                        <div key={r.id} className="rounded-md border bg-white p-4 shadow-sm">
                           <Suspense>
                             <SearchResultCard {...r} />
                           </Suspense>

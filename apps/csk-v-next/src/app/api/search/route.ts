@@ -16,7 +16,7 @@ export const GET = async function handler(req: NextRequest) {
 
       // Extract query parameters from the searchParams with default values
       const page = Number(searchParams.get('page')) || 0;
-      const perPage = Number(searchParams.get('perPage')) || 10;
+      const perPage = Number(searchParams.get('perPage')) || 50;
       const search = searchParams.get('search') || '';
       const filters = searchParams.get('filters') || '';
       const parsedFilters = filters ? JSON.parse(filters as string) : {};
@@ -24,7 +24,7 @@ export const GET = async function handler(req: NextRequest) {
 
       const articles: SearchResultsWithPagination = await getKnowledgeBaseArticles({
         page: Number(page) || 0,
-        perPage: Number(perPage) || 10,
+        perPage: Number(perPage) || 50,
         search: search?.toString() || '',
         filters: parsedFilters,
         orderBy: orderBy?.toString(),
