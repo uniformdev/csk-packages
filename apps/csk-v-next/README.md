@@ -1,5 +1,7 @@
 # Uniform Component Starter Kit
 
+coffee shop template
+
 This is the latest version of the Uniform Component Starter Kit (CSK) - version 6, built specifically for Next.js 15 App Router leveraging React 19, TailwindCSS and TypeScript.
 
 > If you are looking for the Next.js Page Router version, check out this older [repo](https://github.com/uniformdev/uniform-component-starter-kit) instead.
