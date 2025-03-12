@@ -17,6 +17,8 @@ import QuirkSelector from './QuirkSelector';
 import ReadMore from './ReadMore';
 import RemoveButton from './RemoveButton';
 import RichText from './RichText';
+import SearchContainer from './Search/SearchContainer';
+import SearchResultCard from './Search/SearchResultCard';
 
 // Here, you can add your own component or customize an existing CSK component with your logic or styles.
 export const customComponentsMapping: ComponentMapping = {
@@ -41,4 +43,7 @@ export const customComponentsMapping: ComponentMapping = {
   addToCardButton: { component: AddToCardButton },
   completeCheckoutButton: { component: CompleteCheckoutButton },
   quirkSelector: { component: QuirkSelector },
+
+  searchContainer: { component: SearchContainer },
+  searchResultCard: { component: SearchResultCard },
 };

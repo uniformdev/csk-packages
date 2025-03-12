@@ -1,14 +1,17 @@
-created: '2025-01-29T11:10:24.236507+00:00'
-modified: '2025-02-05T09:00:30.947412+00:00'
+created: '2025-03-07T10:45:22.133349+00:00'
+modified: '2025-03-12T09:40:22.755799+00:00'
 pattern: false
 entry:
   _id: 636c462b-e507-4176-b366-cb8ac7cb78e0
   _name: 'Picking the Right Bean: A Guide to Coffee Selection'
   _slug: picking-the-right-bean-a-guide-to-coffee-selection
   _thumbnail: >-
-    https://img.uniform.global/p/N0QOqjXvSFeXY7i3yzY8ZQ/-45RFK54RfCuwt2tQVT7Lg-picking-the-right-bean-a-guide-to-coffee-selection.jpg
+    https://img.uniform.global/p/sUD45a7PTTu62k01GojEEw/FrUKEZPdS62S-cRoMRk4Cg-picking-the-right-bean-a-guide-to-coffee-selection.jpg
   type: article
   fields:
+    tags:
+      type: contentReference
+      value: ${#jptr:/ref-636c462b-e507-4176-b366-cb8ac7cb78e0-tags/entries}
     title:
       type: text
       value: 'Picking the Right Bean: A Guide to Coffee Selection'
@@ -94,7 +97,7 @@ entry:
                     value: f7df46ef-3544-46e5-8105-7e926992988f
                   url:
                     value: >-
-                      https://img.uniform.global/p/N0QOqjXvSFeXY7i3yzY8ZQ/Ib8LMdACR76zeP0CLH3q3g-arabica-vs-robusta.jpg
+                      https://img.uniform.global/p/sUD45a7PTTu62k01GojEEw/CXVRTfj6RnO_VF2odIFDMw-arabica-vs-robusta.jpg
                     type: text
                   file:
                     type: file
@@ -644,7 +647,7 @@ entry:
                           direction: ltr
                           textStyle: ''
                           textFormat: 0
-                      direction: null
+                      direction: ltr
                       headerState: 0
                       backgroundColor: null
                     - type: tablecell
@@ -670,7 +673,7 @@ entry:
                           direction: ltr
                           textStyle: ''
                           textFormat: 0
-                      direction: null
+                      direction: ltr
                       headerState: 0
                       backgroundColor: null
                     - type: tablecell
@@ -696,10 +699,10 @@ entry:
                           direction: ltr
                           textStyle: ''
                           textFormat: 0
-                      direction: null
+                      direction: ltr
                       headerState: 0
                       backgroundColor: null
-                  direction: null
+                  direction: ltr
                 - type: tablerow
                   format: ''
                   indent: 0
@@ -727,7 +730,7 @@ entry:
                           direction: ltr
                           textStyle: ''
                           textFormat: 0
-                      direction: null
+                      direction: ltr
                       headerState: 0
                       backgroundColor: null
                     - type: tablecell
@@ -755,7 +758,7 @@ entry:
                           direction: ltr
                           textStyle: ''
                           textFormat: 0
-                      direction: null
+                      direction: ltr
                       headerState: 0
                       backgroundColor: null
                     - type: tablecell
@@ -781,10 +784,10 @@ entry:
                           direction: ltr
                           textStyle: ''
                           textFormat: 0
-                      direction: null
+                      direction: ltr
                       headerState: 0
                       backgroundColor: null
-                  direction: null
+                  direction: ltr
                 - type: tablerow
                   format: ''
                   indent: 0
@@ -812,7 +815,7 @@ entry:
                           direction: ltr
                           textStyle: ''
                           textFormat: 0
-                      direction: null
+                      direction: ltr
                       headerState: 0
                       backgroundColor: null
                     - type: tablecell
@@ -841,7 +844,7 @@ entry:
                           direction: ltr
                           textStyle: ''
                           textFormat: 0
-                      direction: null
+                      direction: ltr
                       headerState: 0
                       backgroundColor: null
                     - type: tablecell
@@ -867,10 +870,10 @@ entry:
                           direction: ltr
                           textStyle: ''
                           textFormat: 0
-                      direction: null
+                      direction: ltr
                       headerState: 0
                       backgroundColor: null
-                  direction: null
+                  direction: ltr
                 - type: tablerow
                   format: ''
                   indent: 0
@@ -898,7 +901,7 @@ entry:
                           direction: ltr
                           textStyle: ''
                           textFormat: 0
-                      direction: null
+                      direction: ltr
                       headerState: 0
                       backgroundColor: null
                     - type: tablecell
@@ -926,7 +929,7 @@ entry:
                           direction: ltr
                           textStyle: ''
                           textFormat: 0
-                      direction: null
+                      direction: ltr
                       headerState: 0
                       backgroundColor: null
                     - type: tablecell
@@ -952,11 +955,11 @@ entry:
                           direction: ltr
                           textStyle: ''
                           textFormat: 0
-                      direction: null
+                      direction: ltr
                       headerState: 0
                       backgroundColor: null
-                  direction: null
-              direction: null
+                  direction: ltr
+              direction: ltr
             - tag: h4
               type: heading
               format: ''
@@ -1283,7 +1286,7 @@ entry:
                 value: 5bbc5b07-ed0c-4b99-b210-65d7010f94f5
               url:
                 value: >-
-                  https://img.uniform.global/p/N0QOqjXvSFeXY7i3yzY8ZQ/-45RFK54RfCuwt2tQVT7Lg-picking-the-right-bean-a-guide-to-coffee-selection.jpg
+                  https://img.uniform.global/p/sUD45a7PTTu62k01GojEEw/FrUKEZPdS62S-cRoMRk4Cg-picking-the-right-bean-a-guide-to-coffee-selection.jpg
                 type: text
               file:
                 type: file
@@ -1311,6 +1314,11 @@ entry:
         Is it just a cup of coffee or is there more than meets the eye? See what
         kind of coffee is best for your taste buds.
   _dataResources:
+    ref-636c462b-e507-4176-b366-cb8ac7cb78e0-tags:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: 23513548-bc2b-4f36-b65f-b788622b95cd
     ref-636c462b-e507-4176-b366-cb8ac7cb78e0-author:
       type: uniformContentInternalReference
       variables:

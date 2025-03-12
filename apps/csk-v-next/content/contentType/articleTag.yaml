@@ -1,13 +1,17 @@
-id: author
-name: Author
-created: '2025-03-07T10:45:09.705261+00:00'
-updated: '2025-03-12T09:35:48.874662+00:00'
+id: articleTag
+name: Article Tag
+created: '2025-03-12T09:31:42.617621+00:00'
+updated: '2025-03-12T09:50:32.137275+00:00'
 slugSettings:
   required: 'no'
 useTeamPermissions: true
 fields:
   - id: name
     name: Name
+    type: text
+    typeConfig: null
+  - id: tag
+    name: Tag
     type: text
     typeConfig: null
   - id: about
@@ -21,10 +25,11 @@ fields:
     type: asset
     typeConfig:
       max: 1
-    localizable: true
+      allowedTypes:
+        - image
 entryName: name
 thumbnailField: thumbnail
 description: ''
-icon: user
+icon: hashtag
 type: contentType
 permissions: []

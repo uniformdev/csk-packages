@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: searchContainer
+name: Article Search Component
+icon: search-found
+parameters:
+  - id: title
+    name: Title
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: selectedFacets
+    name: Selected Facets
+    type: multi-select
+    typeConfig:
+      options:
+        - text: Author
+          value: author.name
+        - text: Tags
+          value: tags.name
+useTeamPermissions: true
+slots: []
+titleParameter: title
+canBeComposition: false
+created: '2025-03-12T09:15:11.396218+00:00'
+updated: '2025-03-12T10:07:10.340206+00:00'

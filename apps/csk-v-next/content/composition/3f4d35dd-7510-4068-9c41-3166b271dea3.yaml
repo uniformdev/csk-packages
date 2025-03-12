@@ -77,14 +77,21 @@ composition:
     9a8e179f-df98-4297-b6e8-74da7f904a12|2058ad6d-25b3-4eea-a276-cb996b4188cc:
       slots:
         $slotSectionItems:
-          - _id: 4bf15cf5-9a47-4336-8501-8cb1404e065f
-            type: grid
-            _pattern: 56b810a4-2f30-4984-adb2-3c26d816b506
-            _overridability:
-              hideLockedParameters: true
+          - _id: bcfe0351-4c45-4af3-bcee-514ad449b98b
+            type: searchContainer
+            parameters:
+              title:
+                type: text
+                locales:
+                  en: Test
+              selectedFacets:
+                type: multi-select
+                value:
+                  - author.name
+                  - tags.name
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-01-29T11:09:35.880077+00:00'
-modified: '2025-01-29T11:09:35.880077+00:00'
+created: '2025-03-07T10:45:03.865317+00:00'
+modified: '2025-03-12T10:04:04.664755+00:00'
 pattern: false
