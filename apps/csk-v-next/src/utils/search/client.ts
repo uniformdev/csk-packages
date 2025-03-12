@@ -1,4 +1,4 @@
-import { CANVAS_PUBLISHED_STATE, ContentClient } from '@uniformdev/canvas';
+import { CANVAS_PUBLISHED_STATE, ContentClient, EntryFilters, GetEntriesResponse } from '@uniformdev/canvas';
 import { SearchResultsWithPagination, SearchResult } from '@/types/search';
 
 export enum UniformContentType {
@@ -30,7 +30,7 @@ export const getKnowledgeBaseArticles = async ({
   page?: number;
   perPage?: number;
   preview?: boolean;
-  filters?: any;
+  filters?: EntryFilters;
   search?: string;
   orderBy?: string;
   facetFields?: string[]; // Renamed from `facets` to `facetFields`
@@ -52,7 +52,8 @@ export const getKnowledgeBaseArticles = async ({
     facetBy: facetFields.join(','), // Use join to create comma-separated string if necessary
   });
 
-  const { facets } = response as any; // Facets in response remain unchanged
+  const { facets = {} } = response as GetEntriesResponse; // Facets in response remain unchanged
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const items: SearchResult[] = response.entries.map((entryResponse: any) => {
     const entry = entryResponse.entry;
     return {

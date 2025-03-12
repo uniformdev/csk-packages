@@ -11,6 +11,7 @@ function SearchInput({ onSearch }: SearchInputProps) {
 
   return (
     <input
+      // eslint-disable-next-line tailwindcss/no-custom-classname
       className="
         search-input
         w-full

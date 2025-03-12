@@ -42,7 +42,7 @@ export const SearchResultCard = ({ title, shortDescription, thumbnail, author, t
 
   return (
     <Link href={newPath}>
-      <div className="flex h-full flex-col transition-all duration-300 hover:scale-105">
+      <div className="flex h-full flex-col transition-all duration-300 hover:scale-95">
         <div className="flex flex-col">
           {thumbnailAsset ? (
             <div className="flex min-h-[200px] w-full items-center justify-center">

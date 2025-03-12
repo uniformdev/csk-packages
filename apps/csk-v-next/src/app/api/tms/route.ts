@@ -13,13 +13,12 @@ const workflowTranslatedStageId = process.env.WORKFLOW_TRANSLATED_STAGE_ID
   : undefined;
 
 export async function POST(request: NextRequest) {
-  console.log('translation-callback');
+  console.info('translation-callback');
   const payload = (await request.json()) as TranslationRequestPayload;
   const translationPayload = payload.translationPayload;
 
   if (!translationPayload) {
-    // eslint-disable-next-line no-console
-    console.log('no translation payload');
+    console.info('no translation payload');
     return NextResponse.json({ updated: false }, { status: 500 });
   }
 
@@ -28,8 +27,7 @@ export async function POST(request: NextRequest) {
   const uniformEntityType = translationPayload.metadata.entityType;
   const uniformEntityId = translationPayload.metadata.entity.id;
 
-  // eslint-disable-next-line no-console
-  console.log(
+  console.info(
     `process translation payload (project: ${uniformProjectId}, release: ${
       uniformReleaseId || 'n/a'
     }, entityType: ${uniformEntityType}, entity: ${uniformEntityId})`
@@ -54,36 +52,29 @@ export async function POST(request: NextRequest) {
     contentClient,
     translationPayload,
     updateComposition: async ({ canvasClient, composition }) => {
-      // eslint-disable-next-line no-console
-      console.log('update composition: start');
+      console.info('update composition: start');
       const compositionWithWorkflow = ensureWorkflowStage(composition);
       await canvasClient.updateComposition(compositionWithWorkflow);
-      // eslint-disable-next-line no-console
-      console.log('update composition: done');
+      console.info('update composition: done');
       return true;
     },
     updateEntry: async ({ contentClient, entry }) => {
-      // eslint-disable-next-line no-console
-      console.log('update entry: start');
+      console.info('update entry: start');
       const entryWithWorkflow = ensureWorkflowStage(entry);
       await contentClient.upsertEntry(entryWithWorkflow);
-      // eslint-disable-next-line no-console
-      console.log('update entry: done');
+      console.info('update entry: done');
       return true;
     },
     onNotFound: ({ translationPayload }) => {
       const entityType = translationPayload.metadata.entityType;
       const entityId = translationPayload.metadata.entity.id;
-      // eslint-disable-next-line no-console
-      console.log(`skip: can not find ${entityType} (${entityId})`);
+      console.info(`skip: can not find ${entityType} (${entityId})`);
     },
     onNotTranslatedResult: ({ updated, errorKind, errorText }) => {
       if (errorKind !== undefined) {
-        // eslint-disable-next-line no-console
         console.warn(errorText || 'Unknown error');
       } else if (!updated) {
-        // eslint-disable-next-line no-console
-        console.log('Translation has no updates');
+        console.info('Translation has no updates');
       }
     },
   });
