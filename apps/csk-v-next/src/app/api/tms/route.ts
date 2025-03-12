@@ -13,6 +13,7 @@ const workflowTranslatedStageId = process.env.WORKFLOW_TRANSLATED_STAGE_ID
   : undefined;
 
 export async function POST(request: NextRequest) {
+  console.log('translation-callback');
   const payload = (await request.json()) as TranslationRequestPayload;
   const translationPayload = payload.translationPayload;
 
