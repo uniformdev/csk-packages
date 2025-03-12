@@ -22,10 +22,10 @@ interface FilterDef {
 }
 
 export default function FilterPanel({ facets, onChange, filterDefs }: FilterPanelProps) {
-  const handleCheckbox = (facetName: string, bucketValue: string, checked: boolean) => {
+  const handleCheckbox = (facetName: string, bucketValue: string) => {
     // If checked = true, set filter. If false, remove filter
     onChange({
-      [facetName]: checked ? bucketValue : null,
+      [facetName]: bucketValue,
     });
   };
 
@@ -42,11 +42,7 @@ export default function FilterPanel({ facets, onChange, filterDefs }: FilterPane
             <div className="flex flex-col space-y-2">
               {facet.buckets.map(bucket => (
                 <label key={bucket.value} className="inline-flex items-center">
-                  <input
-                    type="checkbox"
-                    className="mr-2"
-                    onChange={e => handleCheckbox(facet.name, bucket.value, e.target.checked)}
-                  />
+                  <input type="checkbox" className="mr-2" onChange={e => handleCheckbox(facet.name, bucket.value)} />
                   <span>
                     {bucket.value} ({bucket.count})
                   </span>

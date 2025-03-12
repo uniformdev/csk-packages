@@ -3,6 +3,8 @@ import React, { useState, useEffect, Suspense, lazy } from 'react';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 
 import { Grid, GridItem } from '@uniformdev/csk-components/components/ui';
+import { cn } from '@uniformdev/csk-components/utils/styling';
+import Loading from '@/components/custom-ui/Loading';
 import { Facets, SearchResult, SearchResultsWithPagination } from '@/types/search';
 import { Facet } from './FilterPanel';
 import SearchInput from './SearchInput';
@@ -16,6 +18,7 @@ export const SearchContainer = ({
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [filters, setFilters] = useState<Record<string, any>>({});
   const [searchResults, setSearchResults] = useState<SearchResult[] | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [facets, setFacets] = useState<Facets>({});
   const [filterDefs, setFilterDefs] = useState<{ filterName: string; filterField: string }[]>([]);
   useEffect(() => {
@@ -34,6 +37,8 @@ export const SearchContainer = ({
         // e.g. "fields.category.name,fields.tags.name"
         const facetByParams = pairs.map(p => `${p.filterField}`).join(',');
 
+        setIsLoading(true);
+
         const response = await fetch(
           `/api/search?search=${encodeURIComponent(searchTerm)}&filters=${encodeURIComponent(
             JSON.stringify(filters)
@@ -49,6 +54,10 @@ export const SearchContainer = ({
       } catch (error) {
         console.error('Failed to fetch search results:', error);
         setSearchResults([]);
+      } finally {
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 1000);
       }
     };
     fetchSearchResults();
@@ -59,18 +68,20 @@ export const SearchContainer = ({
     // If the user checks a box, set that filter
     const [facetName, value] = Object.entries(filter)[0];
     setFilters(prev => {
-      if (!value) {
-        const temp = { ...prev };
-        delete temp[facetName];
-        return temp;
-      }
-
       if (prev[facetName]) {
         const prevValue = prev[facetName];
 
         const prevInValue = prevValue['in'];
 
-        return { ...prev, [facetName]: { in: [value, ...prevInValue] } };
+        const newValue = prevInValue.includes(value) ? prevInValue.filter(v => v !== value) : [value, ...prevInValue];
+
+        if (newValue?.length === 0) {
+          const temp = { ...prev };
+          delete temp[facetName];
+          return temp;
+        }
+
+        return { ...prev, [facetName]: { in: newValue } };
       }
 
       return { ...prev, [facetName]: { in: [value] } };
@@ -130,8 +141,8 @@ export const SearchContainer = ({
           </aside>
         </GridItem>
         <GridItem columnStart={'4'} columnSpan={'span-9'}>
-          <main className="">
-            <div className="">
+          <main>
+            <div>
               <SearchInput onSearch={setSearchTerm} />
 
               {activeFilters.length > 0 && (
@@ -161,6 +172,15 @@ export const SearchContainer = ({
                     </div>
                   }
                 >
+                  <div
+                    className={cn('flex justify-center transition-all duration-300', {
+                      'invisible h-0 opacity-0': !isLoading,
+                      'visible py-8 opacity-100': isLoading,
+                    })}
+                  >
+                    <Loading />
+                  </div>
+
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
                     {searchResults === null ? (
                       [...Array(6)].map((_, i) => (
