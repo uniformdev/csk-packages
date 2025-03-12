@@ -15,6 +15,7 @@ interface SearchResult {
   tags?: {
     entry: DataWithProperties;
   }[];
+  slug: string;
   // Add other necessary fields if needed
 }
 
