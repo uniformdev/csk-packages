@@ -52,12 +52,12 @@ export const SearchResultCard = ({ title, shortDescription, thumbnail, author, t
       <div>
         <div className="flex flex-wrap gap-3 p-4">
           {flattenTags?.map(tag => (
-            <span key={tag?.name} className="rounded-full bg-blue-200 px-4 py-1 text-sm text-blue-800 transition-all">
+            <span key={tag?.name} className="rounded-full bg-blue-200 px-4 py-1 text-sm text-black transition-all">
               🏷️ {tag?.name}
             </span>
           ))}
           {flattenAuthor?.name && (
-            <span className="rounded-full bg-orange-300 px-4 py-1 text-sm text-orange-900  transition-all">
+            <span className="rounded-full bg-orange-300 px-4 py-1 text-sm text-black  transition-all">
               ✍️ {flattenAuthor?.name}
             </span>
           )}

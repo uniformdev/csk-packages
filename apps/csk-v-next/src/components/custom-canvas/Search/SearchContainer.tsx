@@ -16,11 +16,13 @@ export const SearchContainer = ({
   selectedFacets = [],
 }: ComponentProps<SearchComponentProps, SearchComponentSlots>) => {
   const [searchTerm, setSearchTerm] = useState<string>('');
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [filters, setFilters] = useState<Record<string, any>>({});
   const [searchResults, setSearchResults] = useState<SearchResult[] | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [facets, setFacets] = useState<Facets>({});
   const [filterDefs, setFilterDefs] = useState<{ filterName: string; filterField: string }[]>([]);
+
   useEffect(() => {
     const fetchSearchResults = async () => {
       try {
@@ -73,7 +75,9 @@ export const SearchContainer = ({
 
         const prevInValue = prevValue['in'];
 
-        const newValue = prevInValue.includes(value) ? prevInValue.filter(v => v !== value) : [value, ...prevInValue];
+        const newValue = prevInValue.includes(value)
+          ? prevInValue.filter((v: string) => v !== value)
+          : [value, ...prevInValue];
 
         if (newValue?.length === 0) {
           const temp = { ...prev };
@@ -152,7 +156,7 @@ export const SearchContainer = ({
                       {val}
                     </div>
                   ))}
-                  <button onClick={clearAllFilters} className="ml-auto text-sm text-blue-600">
+                  <button onClick={clearAllFilters} className="ml-auto text-sm text-black">
                     Clear all
                   </button>
                 </div>
