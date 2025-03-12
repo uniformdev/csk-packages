@@ -1,0 +1,223 @@
+composition:
+  _name: Small Article Card
+  _id: c895d189-c093-4ee8-aeef-5cdccd7efd2e
+  type: flexCard
+  parameters:
+    displayName:
+      type: text
+      value: Small Article Card
+  slots:
+    cardMedia:
+      - _id: 190f4e8e-91eb-40b2-a5df-bc797d0cca22
+        type: container
+        slots:
+          containerContent:
+            - _id: f02a551f-116f-48d2-99b3-21ebe2ca74e5
+              type: image
+              parameters:
+                image:
+                  type: asset
+                  value:
+                    - _id: f939d422-13d6-4793-aefd-d4584616134a
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: 19be2e44-eeb0-4f3c-9d66-203466b7861c
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/N0QOqjXvSFeXY7i3yzY8ZQ/L52FrjxeQYy0O66QswB-gg-beans-logo.svg
+                          type: text
+                        file:
+                          type: file
+                          value: 524add33-dc9e-498b-b9ac-1af275970564
+                        size:
+                          value: 2725
+                          type: number
+                        title:
+                          type: text
+                          value: beans-logo.svg
+                        width:
+                          value: 84
+                          type: number
+                        height:
+                          value: 73
+                          type: number
+                        mediaType:
+                          value: image/svg+xml
+                          type: text
+                      _source: uniform-assets
+                width:
+                  type: number
+                  value: '83'
+                border:
+                  type: dex-token-selector-parameter
+                  value: ''
+                height:
+                  type: number
+                  value: '72'
+                objectFit:
+                  type: dex-segmented-control-parameter
+                  value: cover
+              _overridability:
+                parameters:
+                  image: 'yes'
+                  width: 'no'
+                  height: 'no'
+                  objectFit: 'yes'
+                hideLockedParameters: true
+        parameters:
+          border:
+            type: dex-token-selector-parameter
+            value: border-small-article-card
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              paddingBottom: container-small
+          fitContent:
+            type: checkbox
+            value: true
+          displayName:
+            type: text
+            value: Logo Container
+          fluidContent:
+            type: checkbox
+            value: true
+        _overridability:
+          hideLockedParameters: true
+    cardContent:
+      - _id: a8707980-d15a-4762-9dea-c3e8ec9e040d
+        type: flex
+        slots:
+          flexItem:
+            - _id: 78f51974-be44-4ed8-b379-47237f91d7e3
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: span
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: 2xl
+                    tablet: 2xl
+                    desktop: 2xl
+                text:
+                  type: text
+                  value: Picking the right bean
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: bold
+              _overridability:
+                parameters:
+                  text: 'yes'
+                hideLockedParameters: true
+            - _id: e0aba200-251a-45f1-a1c2-ac94bbb9ca3f
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: span
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: base
+                    tablet: base
+                    desktop: base
+                text:
+                  type: text
+                  value: >-
+                    Is it just a cup of coffee or is there more than meets the
+                    eye? See what kind of coffee is best for your taste buds.
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+              _overridability:
+                parameters:
+                  text: 'yes'
+                hideLockedParameters: true
+        parameters:
+          gap:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '2'
+              tablet: '2'
+              desktop: '2'
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              mobile:
+                paddingTop: container-small
+                paddingBottom: container-small
+              tablet:
+                paddingTop: container-small
+                paddingBottom: container-small
+              desktop:
+                paddingTop: container-small
+                paddingBottom: container-small
+          direction:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: col
+              tablet: col
+              desktop: col
+          alignItems:
+            type: dex-segmented-control-parameter
+            value: {}
+          displayName:
+            type: text
+            value: Content
+          fluidContent:
+            type: checkbox
+            value: true
+          justifyContent:
+            type: dex-segmented-control-parameter
+            value: {}
+        _overridability:
+          hideLockedParameters: true
+      - _id: 4a7ce726-321d-4e77-ac0e-a11e42946127
+        type: button
+        variant: link
+        parameters:
+          size:
+            type: dex-token-selector-parameter
+            value: ''
+          text:
+            type: text
+            value: 'READ » '
+          textSize:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: sm
+              tablet: sm
+              desktop: sm
+          textColor:
+            type: dex-color-palette-parameter
+            value: text-link
+          textWeight:
+            type: dex-segmented-control-parameter
+            value: bold
+          textTransform:
+            type: dex-segmented-control-parameter
+            value: uppercase
+        _overridability:
+          parameters:
+            link: 'yes'
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      displayName: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2025-01-29T11:09:29.733196+00:00'
+modified: '2025-01-29T11:09:29.733196+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/jd-template/small-article-card_pyy7q2.jpg

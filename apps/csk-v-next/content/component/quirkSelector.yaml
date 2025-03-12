@@ -1,0 +1,138 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: quirkSelector
+name: Quirk Selector
+icon: rectangle-rounded
+parameters:
+  - id: quirkId
+    name: Quirk Id
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: variants
+    name: Variants
+    type: text
+    helpText: Use ‘,’ as a separator.
+    typeConfig: null
+    localizable: true
+  - id: 2c0fb9ff-9fbe-456b-90e7-48e768e43211
+    name: Text
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - textColor
+        - textSize
+        - textWeight
+        - textFont
+        - textTransform
+  - id: textColor
+    name: Text Color
+    type: dex-color-palette-parameter
+    helpText: Choose a pair of text colors for light and dark mode.
+    typeConfig:
+      allowColors: []
+      selectedGroup: text
+  - id: textSize
+    name: Text Size
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: SM
+          value: sm
+        - key: Base
+          value: base
+        - key: LG
+          value: lg
+        - key: XL
+          value: xl
+        - key: 2XL
+          value: 2xl
+        - key: 3XL
+          value: 3xl
+        - key: 4XL
+          value: 4xl
+        - key: 5XL
+          value: 5xl
+        - key: 6XL
+          value: 6xl
+        - key: 7XL
+          value: 7xl
+      defaultValue:
+        mobile: sm
+        tablet: sm
+        desktop: sm
+      withViewPort: true
+  - id: textWeight
+    name: Weight
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Normal
+          value: normal
+        - key: Medium
+          value: medium
+        - key: Bold
+          value: bold
+        - key: Extrabold
+          value: extrabold
+      defaultValue: normal
+  - id: textFont
+    name: Font
+    type: dex-token-selector-parameter
+    typeConfig:
+      selectedTokenType: font
+  - id: textTransform
+    name: Transform
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Uppercase
+          value: uppercase
+        - key: Lowercase
+          value: lowercase
+        - key: Capitalize
+          value: capitalize
+  - id: dabcd8b5-e637-436b-a481-07566abd6181
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - backgroundColor
+        - border
+        - size
+        - fullWidth
+  - id: backgroundColor
+    name: Background Color
+    type: dex-color-palette-parameter
+    helpText: Choose a pair of background colors for light and dark mode.
+  - id: border
+    name: Border
+    type: dex-token-selector-parameter
+    typeConfig:
+      selectedTokenType: border
+  - id: size
+    name: Size
+    type: dex-token-selector-parameter
+    typeConfig:
+      defaultValue: button-small
+      selectedGroup: button
+      allowDimensions: []
+      selectedTokenType: dimension
+  - id: fullWidth
+    name: Full Width
+    type: checkbox
+    typeConfig: null
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/button.jpg
+useTeamPermissions: true
+slots: []
+thumbnailParameter: icon
+canBeComposition: false
+created: '2025-03-10T11:40:04.90033+00:00'
+updated: '2025-03-10T14:34:03.194063+00:00'
+variants:
+  - id: link
+    name: Link

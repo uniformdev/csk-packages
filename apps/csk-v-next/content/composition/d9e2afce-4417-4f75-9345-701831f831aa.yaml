@@ -1,0 +1,160 @@
+composition:
+  _name: Coffee Beans
+  _id: d9e2afce-4417-4f75-9345-701831f831aa
+  _slug: coffee-beans
+  type: page
+  _overrides:
+    d9e2afce-4417-4f75-9345-701831f831aa:
+      parameters:
+        $enr:
+          type: $enr
+          value:
+            - cat: int
+              key: beans
+              str: 5
+        pageTitle:
+          type: text
+          value: >-
+            Premium Coffee Beans - Freshly Roasted for Perfect Flavor | Buy
+            Coffee Beans Online
+        pageKeywords:
+          type: text
+          value: >-
+            coffee beans, buy coffee beans, best coffee beans, fresh coffee
+            beans, coffee beans for sale
+        openGraphImage:
+          type: asset
+          value:
+            - _id: a676c4f9-35fc-4830-bf84-01c3ac337a6d
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: 995568b1-190f-4ee1-8e89-5429489f2a00
+                url:
+                  type: text
+                  value: >-
+                    https://img.uniform.global/p/N0QOqjXvSFeXY7i3yzY8ZQ/CAU86N9nT2Om2a30Uus3fw-coffee-beans-og-image.png
+                file:
+                  type: file
+                  value: 1f267bcc-ab64-4d81-8165-bf104cb6159a
+                size:
+                  type: number
+                  value: 831079
+                title:
+                  type: text
+                  value: coffee-beans-og-image.png
+                width:
+                  type: number
+                  value: 1808
+                height:
+                  type: number
+                  value: 908
+                mediaType:
+                  type: text
+                  value: image/png
+              _source: uniform-assets
+        openGraphTitle:
+          type: text
+          value: >-
+            Premium Coffee Beans - Freshly Roasted for Perfect Flavor | Buy
+            Coffee Beans Online
+        pageDescription:
+          type: text
+          value: >-
+            Explore our selection of premium coffee beans, sourced from the best
+            coffee-growing regions. Freshly roasted and available in various
+            roasts, find the perfect beans for your coffee ritual. Order online
+            for delivery!
+        openGraphDescription:
+          type: text
+          value: >-
+            Explore our selection of premium coffee beans, sourced from the best
+            coffee-growing regions. Freshly roasted and available in various
+            roasts, find the perfect beans for your coffee ritual. Order online
+            for delivery!
+    a031e4b5-bc6b-4e75-80e2-f26f2b8d1362|215f54df-5063-4f0a-81c0-d8bda909b52c:
+      parameters:
+        image:
+          type: asset
+          value:
+            - _id: 9f6fc446-c712-4878-b1f4-f9498a708087
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: c424e408-6515-49b8-9147-a2ef08c1c4ff
+                url:
+                  type: text
+                  value: >-
+                    https://img.uniform.global/p/N0QOqjXvSFeXY7i3yzY8ZQ/932R_UExSXqaVAFunQp8zw-vietnamese-coffee-filter-drip.jpeg
+                file:
+                  type: file
+                  value: 3d357e0d-0888-4acb-a023-471a4c5f2064
+                size:
+                  type: number
+                  value: 243065
+                title:
+                  type: text
+                  value: vietnamese-coffee-filter-drip.jpeg
+                width:
+                  type: number
+                  value: 2600
+                height:
+                  type: number
+                  value: 1300
+                mediaType:
+                  type: text
+                  value: image/jpeg
+              _source: uniform-assets
+        overlayColor:
+          type: dex-color-palette-parameter
+          value: general-color-1
+        overlayOpacity:
+          type: dex-slider-control-parameter
+          value: '0.5'
+    a031e4b5-bc6b-4e75-80e2-f26f2b8d1362|edea6a24-f36d-48c7-acdb-e0dbd8ed511e:
+      parameters:
+        text:
+          type: text
+          value: Discover the Best Coffee Beans for Every Brew
+    d9e2afce-4417-4f75-9345-701831f831aa|dc2e95be-21b5-4476-a309-f8a34922f528:
+      slots:
+        $slotSectionItems:
+          - _id: a031e4b5-bc6b-4e75-80e2-f26f2b8d1362
+            type: section
+            _pattern: 90b32c21-f5d8-4a40-b971-c97c359ecce9
+            _overridability:
+              parameters:
+                displayName: 'yes'
+              hideLockedParameters: true
+          - _id: 7e5a5c40-8f1c-4e1a-9e1a-9824092ab678
+            type: grid
+            _pattern: 0c4c3dd0-72d3-4d77-878a-e2d06d56017e
+            _dataResources:
+              Product List Content:
+                type: productList
+                variables:
+                  limit: '6'
+                  locale: ${locale}
+                  search: ''
+                  filters: >-
+                    {"type[eq]":"product","fields.category[eq]":"ae8e04c4-f20b-46f5-9eb4-7d8f82bbee38"}
+                  contentTypes: product
+              Multiple Brand Category Content:
+                type: multipleBrandCategory
+                variables:
+                  locale: ${locale}
+                  entryIds: 725d0924-c684-49f1-ba91-b0dfd695823d
+              Multiple Product Category Content:
+                type: multipleProductCategory
+                variables:
+                  locale: ${locale}
+                  entryIds: >-
+                    9853aed9-07d5-4d58-a45b-c23157e149fe,4e8f00c8-a2da-4a73-8431-8888d88def25,2b754075-62b2-49bd-aa8a-dd47435e9791
+  _locales:
+    - en
+  _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
+created: '2025-02-26T15:55:59.179277+00:00'
+modified: '2025-02-26T21:50:09.230604+00:00'
+pattern: false

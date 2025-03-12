@@ -1,0 +1,17 @@
+id: addedToCart
+name: Added to Cart
+cap: 100
+crit:
+  op: '|'
+  type: G
+  clauses:
+    - type: EVT
+      event:
+        cs: false
+        op: '='
+        rhs: added-to-cart
+dur: s
+description: ''
+str: 10
+conversion:
+  freq: O
