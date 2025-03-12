@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect, Suspense, lazy } from 'react';
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
+import { ComponentProps, UniformText } from '@uniformdev/canvas-next-rsc/component';
 
 import { Grid, GridItem } from '@uniformdev/csk-components/components/ui';
 import { cn } from '@uniformdev/csk-components/utils/styling';
@@ -14,6 +14,8 @@ const FilterPanel = lazy(() => import('./FilterPanel'));
 
 export const SearchContainer = ({
   selectedFacets = [],
+  context,
+  component,
 }: ComponentProps<SearchComponentProps, SearchComponentSlots>) => {
   const [searchTerm, setSearchTerm] = useState<string>('');
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -120,7 +122,12 @@ export const SearchContainer = ({
       <Grid columnsCount={'12'} gapX="8" gapY="8">
         <GridItem columnStart={'1'} columnSpan={'span-3'}>
           <aside className="w-full">
-            <h2 className="mb-4 text-xl font-bold">Filters</h2>
+            <UniformText
+              parameterId="title"
+              className="mb-4 pb-4 mb-4 text-xl font-bold"
+              context={context}
+              component={component}
+            />
             <Suspense
               fallback={
                 <div className="animate-pulse space-y-4">

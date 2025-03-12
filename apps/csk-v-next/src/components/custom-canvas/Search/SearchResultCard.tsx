@@ -61,8 +61,8 @@ export const SearchResultCard = ({ title, shortDescription, thumbnail, author, t
           </div>
           <div>
             <div className="flex flex-wrap gap-3 px-4 text-[10px]">
-              {flattenTags?.map(tag => (
-                <span key={tag?.name} className="rounded-full bg-blue-200 px-4 py-1 text-black transition-all">
+              {flattenTags?.map((tag, index) => (
+                <span key={index} className="rounded-full bg-blue-200 px-4 py-1 text-black transition-all">
                   🏷️ {tag?.name}
                 </span>
               ))}

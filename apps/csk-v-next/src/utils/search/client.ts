@@ -8,6 +8,7 @@ const getContentClient = () => {
   return new ContentClient({
     apiKey: process.env.UNIFORM_API_KEY,
     projectId: process.env.UNIFORM_PROJECT_ID,
+    edgeApiHost: process.env.UNIFORM_CLI_BASE_EDGE_URL,
   });
 };
 
@@ -62,8 +63,8 @@ export const getKnowledgeBaseArticles = async ({
       shortDescription: entry.fields.shortDescription.value,
       thumbnail: entry.fields.thumbnail,
       slug: entry._slug || undefined,
-      author: entry.fields.author.value,
-      tags: entry.fields.tags.value,
+      author: entry.fields.author?.value,
+      tags: entry.fields.tags?.value,
       contentType: entry.type,
     };
   });
