@@ -67,6 +67,14 @@ export const verifyProjectAlignment = async (spinner: ora.Ora): Promise<boolean>
  * @throws {Error} If git command fails to fetch remote branches
  */
 export const selectTemplate = async (): Promise<Template> => {
+  const shoudInstallTemplate = await confirm({
+    message: 'Do you want to install a template for current project?',
+  });
+
+  if (!shoudInstallTemplate) {
+    return 'baseline';
+  }
+
   const remoteBranches = await runCmdCommand(GIT_COMMANDS.GIT_REMOTE_BRANCHES);
 
   const templatesBranches = remoteBranches
@@ -90,7 +98,7 @@ export const selectTemplate = async (): Promise<Template> => {
 
   return select<Template>({
     message: "Let's start by choosing a template for your project:",
-    choices: [{ name: 'Baseline', value: 'baseline' }, ...templatesBranches],
+    choices: [...templatesBranches],
   });
 };
 
