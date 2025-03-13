@@ -20,14 +20,14 @@ You can add a script command to your `package.json` for easier usage:
 
 ```json
 "scripts": {
-  "recipes:init": "csk-recipes init"
+  "recipes": "csk-recipes init"
 }
 ```
 
 Run the command with:
 
 ```bash
-npm run recipes:init
+npm run recipes
 ```
 
 ### CLI Arguments
