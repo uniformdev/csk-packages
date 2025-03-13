@@ -178,27 +178,18 @@ export const selectRecipes = async (): Promise<Recipe[]> => {
  * @param {boolean} isDev - Whether the environment is development
  * @returns {Promise<Partial<Record<EnvVariable, string>>>} Object containing filled environment variables
  */
-export const fillEnvVariables = async (
-  recipes: Recipe[],
-  isDev: boolean
-): Promise<Partial<Record<EnvVariable, string>>> => {
+export const fillEnvVariables = async (recipes: Recipe[]): Promise<Partial<Record<EnvVariable, string>>> => {
   // Parse the default environment variables from the .env file
   const defaultEnvVariables = await parseEnvVariables();
 
   // Determine required environment variables based on provided recipes
   const requiredModuleEnvVariables = recipes.map(appRecipes => REQUIRED_ENV_VARIABLES[appRecipes]).flat();
-  const requiredGeneralEnvVariables = [...REQUIRED_ENV_VARIABLES.general, ...requiredModuleEnvVariables];
 
   // Object to store the resulting environment variables
-  const envVariables: Partial<Record<EnvVariable, string>> = {};
+  const envVariables: Partial<Record<EnvVariable, string>> = defaultEnvVariables;
 
-  for (const envVariable of requiredGeneralEnvVariables) {
+  for (const envVariable of requiredModuleEnvVariables) {
     const possibleVariants = ENV_VARIABLES_VARIANTS[envVariable];
-
-    if (!isDev && (envVariable === 'UNIFORM_CLI_BASE_URL' || envVariable === 'UNIFORM_CLI_BASE_EDGE_URL')) {
-      envVariables[envVariable] = ENV_VARIABLES_DEFAULT_VALUES[envVariable];
-      continue;
-    }
 
     if (possibleVariants?.length) {
       // Prompt the user to select a variant for the environment variable

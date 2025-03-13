@@ -54,7 +54,7 @@ const init = async ({
 
     const envVariables = notInteractiveMode
       ? await fillEnvVariablesWithDefaults(recipes)
-      : await fillEnvVariables(recipes, dev);
+      : await fillEnvVariables(recipes);
 
     if (notInteractiveMode) {
       spinner.info('You are running in non-interactive mode. Please fill .env file manually.');

@@ -24,15 +24,8 @@ export const GIT_COMMANDS = {
 export const JSX_COMMENT_REGEX = /{\s*\/\*\s*\/\/\?\s*(.*?)\s*\*\/\s*}/g;
 
 export const REQUIRED_ENV_VARIABLES: {
-  [key in Recipe | 'general']: EnvVariable[];
+  [key in Recipe]: EnvVariable[];
 } = {
-  general: [
-    'UNIFORM_CLI_BASE_URL',
-    'UNIFORM_CLI_BASE_EDGE_URL',
-    'UNIFORM_PROJECT_ID',
-    'UNIFORM_API_KEY',
-    'UNIFORM_PREVIEW_SECRET',
-  ],
   'uniform-insights': ['UNIFORM_INSIGHTS_ENDPOINT', 'UNIFORM_INSIGHTS_KEY'],
   localization: [],
   ga: [],
