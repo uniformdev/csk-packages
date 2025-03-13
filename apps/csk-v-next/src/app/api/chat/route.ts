@@ -11,12 +11,12 @@ import {
 import { getManifest } from '@uniformdev/canvas-next-rsc';
 import { Context, CookieTransitionDataStore, ManifestV2 } from '@uniformdev/context';
 import {
-  GET_INTERESTS_DESCRIPTION,
+  GET_USER_INTERESTS_DESCRIPTION,
   PRODUCT_RECOMMENDATION_TYPE,
   PRODUCT_RECOMMENDATIONS_SLOT_NAME,
   RECOMMEND_PRODUCTS_DESCRIPTION,
   RECOMMENDATIONS_COMPOSITION_SLUG,
-  SET_INTERESTS_DESCRIPTION,
+  SET_USER_INTERESTS_DESCRIPTION,
   SUGGESTIONS_SLOT_NAME,
   SYSTEM_PROMPT,
 } from '@/chat/constants';
@@ -55,6 +55,7 @@ const getProductRecommendations = async ({ scoreCookie }: { scoreCookie: string 
   }
 
   const manifest = await getManifest({ searchParams: {} });
+
   const context = new Context({
     manifest: manifest as ManifestV2,
     defaultConsent: true,
@@ -91,16 +92,22 @@ export async function POST(req: Request) {
           model: openai('gpt-4-turbo'),
           messages,
           system: SYSTEM_PROMPT,
-          experimental_activeTools: ['getInterests', 'setInterests', 'recommendProducts'],
+          experimental_activeTools: ['getUserInterests', 'setUserInterests', 'recommendProducts'],
           tools: {
-            getInterests: tool({
-              description: GET_INTERESTS_DESCRIPTION,
+            getUserInterests: tool({
+              description: GET_USER_INTERESTS_DESCRIPTION,
               parameters: z.object({}),
             }),
-            setInterests: tool({
-              description: SET_INTERESTS_DESCRIPTION,
+            setUserInterests: tool({
+              description: SET_USER_INTERESTS_DESCRIPTION,
               parameters: z.object({
-                interest: z.string(),
+                interests: z.array(
+                  z.object({
+                    cat: z.string(),
+                    key: z.string(),
+                    str: z.number(),
+                  })
+                ),
               }),
             }),
             recommendProducts: tool({

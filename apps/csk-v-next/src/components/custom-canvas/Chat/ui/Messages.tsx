@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import { Message } from 'ai';
-import { AUTO_PROMPT } from '@/chat/constants';
 import { useScrollToBottom } from '@/hooks/useScrollToBottom';
 import { AiMessage } from './AiMessage';
 import { Thinking } from './Thinking';

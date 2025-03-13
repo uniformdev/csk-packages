@@ -2,18 +2,19 @@
 
 import { FC, useEffect, useState } from 'react';
 import { UniformSlot, useUniformContext } from '@uniformdev/canvas-next-rsc/component';
+import { EnrichmentData } from '@uniformdev/context';
 import { cn } from '@uniformdev/csk-components/utils/styling';
-import { AUTO_PROMPT, MAX_STEPS } from '@/chat/constants';
-import enrichments from '@/chat/enrichments.json';
 import { useUniformInterests } from '@/hooks/useUniformInterests';
 import { useChat } from '@ai-sdk/react';
 import { ChatProps } from '.';
-import { converter, EnrichmentKeys } from './enrichment';
 import { ChatButton } from './ui/ChatButton';
 import { Drawers } from './ui/Drawers';
 import { Messages } from './ui/Messages';
 import { SubmitButton } from './ui/SubmitButton';
 import { Textarea } from './ui/Textarea';
+
+const MAX_STEPS = 5;
+const AUTO_PROMPT = 'Quietly request my interests and greet me with some products I might be interested in.';
 
 const Chat: FC<ChatProps> = ({ component, context, slots }) => {
   const [open, setOpen] = useState(false);
@@ -25,47 +26,19 @@ const Chat: FC<ChatProps> = ({ component, context, slots }) => {
   const { messages, input, handleInputChange, handleSubmit, append, status } = useChat({
     maxSteps: MAX_STEPS,
     async onToolCall({ toolCall }) {
-      if (toolCall.toolName === 'getInterests') {
-        const result = Object.entries(interests)
-          .map(([key, items]) => {
-            const values = items!.map(i => i.id).slice(0, 2);
-            return converter[key as EnrichmentKeys[number]](values);
-          })
-          .join(' ');
-        console.info(`ToolCall: ${toolCall.toolName} Result: ${result}`, toolCall);
-        return result;
-      } else if (toolCall.toolName === 'setInterests') {
-        const { interest } = toolCall.args as { interest: string | undefined };
+      if (toolCall.toolName === 'getUserInterests') {
+        console.info(`ToolCall: ${toolCall.toolName} Result: ${JSON.stringify(interests)}`, toolCall);
+        return JSON.stringify(interests);
+      } else if (toolCall.toolName === 'setUserInterests') {
+        const { interests } = toolCall.args as { interests: EnrichmentData[] };
 
-        const interestKeys = interest?.split(',').map(i => i.trim()) || [];
-
-        const founds = interestKeys.map(interestKey =>
-          enrichments
-            .flatMap(enrichment =>
-              enrichment.values
-                .filter(
-                  v =>
-                    v.id.toLowerCase() === interestKey.toLowerCase() ||
-                    v.value.toLowerCase() === interestKey.toLowerCase()
-                )
-                .map(v => ({ cat: enrichment.id, key: v.id }))
-            )
-            .shift()
-        );
-
-        if (!founds.length) {
-          console.info(`ToolCall: ${toolCall.toolName} Result: no found`, toolCall);
-          return "Oops! I couldn't find that interest. Please try again.";
-        }
-
-        console.info(`ToolCall: ${toolCall.toolName} Result: ${JSON.stringify(founds)}`, toolCall);
+        console.info(`ToolCall: ${toolCall.toolName} Result: ${JSON.stringify(interests)}`, toolCall);
+        await localContext?.forget(true);
         await localContext?.update({
-          enrichments: founds
-            .filter((found): found is { cat: string; key: string } => Boolean(found?.cat && found?.key))
-            .map(found => ({ ...found, str: 100 })),
+          enrichments: interests,
         });
 
-        return 'Thank you for sharing your interests!';
+        return JSON.stringify({ success: true, updatedInterests: interests });
       }
     },
   });

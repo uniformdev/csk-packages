@@ -1,45 +1,47 @@
-import enrichments from './enrichments.json';
-import { mapValuesToString } from './utils';
+import { UncachedEnrichmentClient } from '@uniformdev/context/api';
 
-export const BRAND_ENRICHMENT_KEY = 'brand';
-export const DEVICE_ENRICHMENT_KEY = 'device';
-export const INTEREST_ENRICHMENT_KEY = 'interest';
-export const PLATFORM_ENRICHMENT_KEY = 'platform';
+const enrichmentClient = new UncachedEnrichmentClient({
+  apiKey: process.env.UNIFORM_API_KEY,
+  projectId: process.env.UNIFORM_PROJECT_ID,
+});
 
-export const EnrichmentKeys = [
-  BRAND_ENRICHMENT_KEY,
-  DEVICE_ENRICHMENT_KEY,
-  INTEREST_ENRICHMENT_KEY,
-  PLATFORM_ENRICHMENT_KEY,
-] as const;
+const { enrichments } = await enrichmentClient.get();
 
 export const RECOMMENDATIONS_COMPOSITION_SLUG = 'product-recommendations';
 export const SUGGESTIONS_SLOT_NAME = 'recommendations';
 export const PRODUCT_RECOMMENDATION_TYPE = 'productRecommendation';
 export const PRODUCT_RECOMMENDATIONS_SLOT_NAME = 'products';
 
-export const AUTO_PROMPT = 'Quietly request my interests and greet me with some products I might be interested in.';
-
-export const MAX_STEPS = 5;
-
 export const SYSTEM_PROMPT = `
-You are an AI assistant that helps users see product recommendations. 
-Your job is to work with user interests. Use the tools to get the current interests, update them when needed, and then show product recommendations. 
-The AI recommends products only based on the response from recommendProducts. 
-When the user shares his interests or expresses that he is looking for something, after setting the interest, call recommendProducts and display the message based on its response. 
-Remember that users can change their interests at any time, and that will expand the list of recommendations.
-  `;
+                You are an intelligent AI assistant that personalizes user interactions based on their interests. Your tasks are as follows:
 
-export const GET_INTERESTS_DESCRIPTION = `
-This tool is used to get the user's current interests. No extra information is needed.
-`;
+                1. **Retrieve User Interests**: Use the \`getUserInterests\` tool to fetch the user's current interests.
+                2. **Analyze Messages**: Understand user preferences based on conversation context.
+                3. **Update Interests**: Use the \`setUserInterests\` tool to completely overwrite the user's interest profile with a new schema.
+                4. **Recommend Products**: Once interests are updated, use the \`recommendProducts\` tool to fetch personalized product recommendations.
+                5. **Score Adjustments**: Ensure that interest scores are within the category's defined cap. Prioritize strong preferences while maintaining balance.
 
-export const SET_INTERESTS_DESCRIPTION = `
-This tool updates the user's interests based on a new message. 
-When processing the message, extract one or more interests and list them separated by commas. 
-The available interests for setting are: ${mapValuesToString(enrichments)}. 
-After the tool is called, the AI should wait 3 seconds and then call recommendations as a separate api request.
-`;
+                ### **Interest Schema**
+                Below is the full schema of available interest categories, their maximum possible scores (\`cap\`), and the valid keys for each category:
+
+                \`\`\`json
+                ${JSON.stringify(enrichments)}
+                \`\`\`
+
+                - **Scoring Rules**:
+                  - Each category has a maximum score limit (\`cap\`), meaning no interest key can exceed this value.
+                  - If a user expresses strong preference for a brand, assign 100 to that brand.
+                  - If a user dislikes a category, assign 0.
+                  - Partial interest should be scaled accordingly (e.g., moderate interest = 50).
+
+                Your goal is to refine the user’s interest profile by interpreting messages accurately and ensuring balance across categories.
+            `;
+
+export const GET_USER_INTERESTS_DESCRIPTION =
+  'Retrieves the current interest profile of the user. Interests are categorized and contain key-value pairs with corresponding interest scores.';
+
+export const SET_USER_INTERESTS_DESCRIPTION =
+  "Completely overwrites the user's interest profile with a new set of interest values. The tool receives the full schema, ensuring all interest categories are updated at once. Any missing categories will be considered as having no interest. After the tool is called, the AI should wait 3 seconds and then call recommendations as a separate api request.";
 
 export const RECOMMEND_PRODUCTS_DESCRIPTION = `
 This tool gets product recommendations using the general user's interests. 
