@@ -160,8 +160,8 @@ export const selectRecipes = async (): Promise<Recipe[]> => {
   const recipes = await checkbox<Recipe>({
     message: 'Now, select the additional recipes you want to include in your project:',
     choices: [
-      { name: 'Localization', value: 'localization' },
-      { name: 'GA', value: 'ga' },
+      { name: 'Multi-market Localization', value: 'localization' },
+      { name: 'Google Analytics', value: 'ga' },
       { name: 'Uniform Insights', value: 'uniform-insights' },
       { name: 'Shadcn', value: 'shadcn' },
     ],

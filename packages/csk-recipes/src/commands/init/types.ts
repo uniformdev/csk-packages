@@ -8,7 +8,8 @@ export type EnvVariable =
   | 'UNIFORM_CLI_BASE_EDGE_URL'
   | 'UNIFORM_PREVIEW_SECRET'
   | 'UNIFORM_INSIGHTS_ENDPOINT'
-  | 'UNIFORM_INSIGHTS_KEY';
+  | 'UNIFORM_INSIGHTS_KEY'
+  | 'GOOGLE_ANALYTICS_ID';
 
 export type ProjectConfiguration = {
   template: Template;

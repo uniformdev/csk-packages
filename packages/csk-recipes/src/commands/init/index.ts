@@ -116,6 +116,15 @@ const setupProject = async ({
     await processFile(file, recipes, isMonorepo, spinner, verbose);
   }
 
+  //we need to install dependencies again after processing the files to rebuild the package-lock.json
+  await executeWithLogs(
+    () => spawnCmdCommand('npm install --force'),
+    spinner,
+    'Installing dependencies...',
+    'Dependencies installed successfully!',
+    verbose
+  );
+
   await executeWithLogs(
     () => addEnvVariablesToProjectConfiguration(envVariables),
     spinner,
