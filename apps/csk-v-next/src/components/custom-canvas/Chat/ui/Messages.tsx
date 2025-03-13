@@ -8,10 +8,9 @@ import { UserMessage } from './UserMessage';
 type MessagesProps = {
   status: 'submitted' | 'streaming' | 'ready' | 'error';
   messages: Message[];
-  recommendedProducts: React.ReactNode;
 };
 
-export const Messages: FC<MessagesProps> = ({ status, messages, recommendedProducts }) => {
+export const Messages: FC<MessagesProps> = ({ status, messages }) => {
   const [messagesContainerRef, messagesEndRef] = useScrollToBottom<HTMLDivElement>();
 
   return (
@@ -19,12 +18,7 @@ export const Messages: FC<MessagesProps> = ({ status, messages, recommendedProdu
       {messages.map(m => (
         <div key={m.id}>
           {m.role !== 'user' ? (
-            <AiMessage
-              status={status}
-              message={m}
-              recommendedProducts={recommendedProducts}
-              isLast={m.id === messages[messages.length - 1].id}
-            />
+            <AiMessage status={status} message={m} isLast={m.id === messages[messages.length - 1].id} />
           ) : (
             <UserMessage key={m.id} message={m} />
           )}

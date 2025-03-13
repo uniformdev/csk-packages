@@ -1,10 +1,9 @@
 'use client';
 
 import { FC, useEffect, useState } from 'react';
-import { UniformSlot, useUniformContext } from '@uniformdev/canvas-next-rsc/component';
+import { useUniformContext } from '@uniformdev/canvas-next-rsc/component';
 import { EnrichmentData } from '@uniformdev/context';
 import { cn } from '@uniformdev/csk-components/utils/styling';
-import { useUniformInterests } from '@/hooks/useUniformInterests';
 import { useChat } from '@ai-sdk/react';
 import { ChatProps } from '.';
 import { ChatButton } from './ui/ChatButton';
@@ -16,25 +15,27 @@ import { Textarea } from './ui/Textarea';
 const MAX_STEPS = 5;
 const AUTO_PROMPT = 'Quietly request my interests and greet me with some products I might be interested in.';
 
-const Chat: FC<ChatProps> = ({ component, context, slots }) => {
+const Chat: FC<ChatProps & { recommendations: React.ReactNode }> = () => {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(false);
 
-  const { context: localContext } = useUniformContext() || {};
-  const { interests, count: interestCount } = useUniformInterests(localContext);
+  const { context } = useUniformContext() || {};
+  const { scores } = context || {};
+
+  const interestCount = Object.values(scores || {}).reduce<number>((acc, value) => acc + value, 0) || 0;
 
   const { messages, input, handleInputChange, handleSubmit, append, status } = useChat({
     maxSteps: MAX_STEPS,
     async onToolCall({ toolCall }) {
       if (toolCall.toolName === 'getUserInterests') {
-        console.info(`ToolCall: ${toolCall.toolName} Result: ${JSON.stringify(interests)}`, toolCall);
-        return JSON.stringify(interests);
+        console.info(`ToolCall: ${toolCall.toolName} Result: ${JSON.stringify(scores, null, 2)}`, toolCall);
+        return JSON.stringify(scores);
       } else if (toolCall.toolName === 'setUserInterests') {
         const { interests } = toolCall.args as { interests: EnrichmentData[] };
 
-        console.info(`ToolCall: ${toolCall.toolName} Result: ${JSON.stringify(interests)}`, toolCall);
-        await localContext?.forget(true);
-        await localContext?.update({
+        console.info(`ToolCall: ${toolCall.toolName} Result: ${JSON.stringify(interests, null, 2)}`, toolCall);
+        await context?.forget(true);
+        await context?.update({
           enrichments: interests,
         });
 
@@ -63,11 +64,7 @@ const Chat: FC<ChatProps> = ({ component, context, slots }) => {
         <div className="flex h-full flex-col px-4 py-6 sm:px-6">
           <h2 className="text-base font-semibold text-gray-900">Talk to your site</h2>
           <p className="text-sm leading-3 text-[#6b7280]">Powered by Uniform Context</p>
-          <Messages
-            status={status}
-            messages={filteredMessages}
-            recommendedProducts={<UniformSlot data={component} context={context} slot={slots.recommendations} />}
-          />
+          <Messages status={status} messages={filteredMessages} />
           <div className="relative w-full flex-col gap-4">
             <Textarea
               placeholder="Send a message..."

@@ -9,6 +9,10 @@ const Recommendations: FC<ComponentProps<Record<string, unknown>, Recommendation
   component,
   context,
   slots,
-}) => <UniformSlot data={component} context={context} slot={slots.recommendations} />;
+}) => (
+  <div className="flex flex-row flex-wrap gap-4 *:*:h-full *:w-[300px]">
+    <UniformSlot data={component} context={context} slot={slots.recommendations} />
+  </div>
+);
 
 export default Recommendations;

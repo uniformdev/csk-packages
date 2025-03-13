@@ -7,11 +7,6 @@ const enrichmentClient = new UncachedEnrichmentClient({
 
 const { enrichments } = await enrichmentClient.get();
 
-export const RECOMMENDATIONS_COMPOSITION_SLUG = 'product-recommendations';
-export const SUGGESTIONS_SLOT_NAME = 'recommendations';
-export const PRODUCT_RECOMMENDATION_TYPE = 'productRecommendation';
-export const PRODUCT_RECOMMENDATIONS_SLOT_NAME = 'products';
-
 export const SYSTEM_PROMPT = `
                 You are an intelligent AI assistant that personalizes user interactions based on their interests. Your tasks are as follows:
 
@@ -44,9 +39,10 @@ export const SET_USER_INTERESTS_DESCRIPTION =
   "Completely overwrites the user's interest profile with a new set of interest values. The tool receives the full schema, ensuring all interest categories are updated at once. Any missing categories will be considered as having no interest. After the tool is called, the AI should wait 3 seconds and then call recommendations as a separate api request.";
 
 export const RECOMMEND_PRODUCTS_DESCRIPTION = `
-This tool gets product recommendations using the general user's interests. 
-It returns product titles, which are shown to the user as product cards. 
-The AI recommends products only based on the response from this tool. 
+This tool gets product recommendations based on the user's general interests. 
+It returns JSON object with suggestedProducts and composition fields, AI does not have to analyzing composition field. 
+The AI recommends products only using titles from suggestedProducts field. 
 The AI should display all recommendations titles always and may bold the most suitable ones based on the user's general interests. 
 If some recommendations titles are not suitable for the user message but exist in the recommendations list, the AI should display them as general recommendations.
+
 `;

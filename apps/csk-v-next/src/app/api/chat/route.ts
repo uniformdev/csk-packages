@@ -12,12 +12,8 @@ import { getManifest } from '@uniformdev/canvas-next-rsc';
 import { Context, CookieTransitionDataStore, ManifestV2 } from '@uniformdev/context';
 import {
   GET_USER_INTERESTS_DESCRIPTION,
-  PRODUCT_RECOMMENDATION_TYPE,
-  PRODUCT_RECOMMENDATIONS_SLOT_NAME,
   RECOMMEND_PRODUCTS_DESCRIPTION,
-  RECOMMENDATIONS_COMPOSITION_SLUG,
   SET_USER_INTERESTS_DESCRIPTION,
-  SUGGESTIONS_SLOT_NAME,
   SYSTEM_PROMPT,
 } from '@/chat/constants';
 import locales from '@/i18n/locales.json';
@@ -27,6 +23,9 @@ const canvasClient = new CanvasClient({
   apiKey: process.env.UNIFORM_API_KEY,
   projectId: process.env.UNIFORM_PROJECT_ID,
 });
+
+const RECOMMENDATIONS_COMPOSITION_SLUG = 'product-recommendations';
+const SUGGESTIONS_SLOT_NAME = 'recommendations';
 
 const getRecommendationsComposition = async () => {
   const { composition } = await canvasClient.getCompositionBySlug({
@@ -39,9 +38,12 @@ const getRecommendationsComposition = async () => {
 const getProductRecommendations = async ({ scoreCookie }: { scoreCookie: string | undefined }) => {
   const composition = await getRecommendationsComposition();
 
-  const productSuggestions = composition.slots?.[SUGGESTIONS_SLOT_NAME].find(
-    slot => slot.type === PRODUCT_RECOMMENDATION_TYPE
-  )?.slots?.[PRODUCT_RECOMMENDATIONS_SLOT_NAME][0];
+  const productSuggestions = composition.slots?.[SUGGESTIONS_SLOT_NAME][0];
+  if (!productSuggestions) {
+    return {
+      suggestedProducts: [],
+    };
+  }
 
   const { trackingEventName, count } = flattenValues(productSuggestions) as {
     trackingEventName: string;
@@ -51,7 +53,9 @@ const getProductRecommendations = async ({ scoreCookie }: { scoreCookie: string 
   const variants = productSuggestions?.slots?.[CANVAS_PERSONALIZE_SLOT];
 
   if (!trackingEventName || !count || !variants) {
-    return [];
+    return {
+      suggestedProducts: [],
+    };
   }
 
   const manifest = await getManifest({ searchParams: {} });
@@ -76,7 +80,16 @@ const getProductRecommendations = async ({ scoreCookie }: { scoreCookie: string 
     }))
     .filter(({ title }) => title);
 
-  return suggestedProducts;
+  return {
+    suggestedProducts,
+    composition: {
+      ...composition,
+      slots: {
+        ...composition.slots,
+        [SUGGESTIONS_SLOT_NAME]: variations,
+      },
+    },
+  };
 };
 
 export async function POST(req: Request) {
@@ -117,7 +130,7 @@ export async function POST(req: Request) {
                 const recommendedProducts = await getProductRecommendations({
                   scoreCookie,
                 });
-                console.info('Recommended products:', JSON.stringify(recommendedProducts));
+                console.info('Recommended products:', JSON.stringify(recommendedProducts.suggestedProducts, null, 2));
                 return JSON.stringify(recommendedProducts);
               },
             }),

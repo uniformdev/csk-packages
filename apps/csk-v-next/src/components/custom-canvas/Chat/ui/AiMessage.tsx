@@ -1,42 +1,48 @@
 import React, { FC, memo, useEffect, useMemo, useState } from 'react';
 import { Message } from 'ai';
 import Markdown from 'react-markdown';
+import { productRecommendations } from '../actions';
 import { AiIcon } from './icon/AiIcon';
 
 type AiMessageProps = {
   status: 'submitted' | 'streaming' | 'ready' | 'error';
   message: Message;
-  recommendedProducts: React.ReactNode;
   isLast: boolean;
 };
 
-const AiMessageComponent: FC<AiMessageProps> = ({ status, message, recommendedProducts }) => {
-  const [clonedHtml, setClonedHtml] = useState('');
+const AiMessageComponent: FC<AiMessageProps> = ({ status, message }) => {
+  const [recommendProductsComponent, setRecommendProductsComponent] = useState<React.ReactNode | null>(null);
 
-  const slotId = useMemo(() => `${message.id}-recommendProducts`, [message.id]);
+  const resultRecommendProducts = useMemo(() => {
+    const result = message.parts?.find(
+      part =>
+        part.type === 'tool-invocation' &&
+        'toolInvocation' in part &&
+        part.toolInvocation.toolName == 'recommendProducts' &&
+        'result' in part.toolInvocation &&
+        JSON.parse(part.toolInvocation.result || '{}')
+    );
+    const { suggestedProducts, composition } = JSON.parse(
+      result && 'toolInvocation' in result && 'result' in result.toolInvocation ? result?.toolInvocation?.result : '{}'
+    );
+    return { suggestedProducts, composition };
+  }, [message.parts]);
 
   useEffect(() => {
-    try {
-      if (status === 'ready') {
-        const recommendProducts = message.parts?.find(
-          part =>
-            part.type === 'tool-invocation' &&
-            'toolInvocation' in part &&
-            part.toolInvocation.toolName == 'recommendProducts' &&
-            'result' in part.toolInvocation &&
-            JSON.parse(part.toolInvocation.result || '[]').length > 0
-        );
+    const run = async () => {
+      const recommendProducts = await productRecommendations(resultRecommendProducts?.composition);
+      setRecommendProductsComponent(recommendProducts);
+    };
 
-        const element = document.getElementById(slotId);
-        if (recommendProducts && element) {
-          setClonedHtml(element.outerHTML);
-        }
-        return;
-      }
-    } catch (error) {
-      console.error(error);
+    if (resultRecommendProducts?.suggestedProducts?.length > 0 && !recommendProductsComponent && status === 'ready') {
+      run();
     }
-  }, [message.parts, status, slotId]);
+  }, [
+    recommendProductsComponent,
+    resultRecommendProducts.composition,
+    resultRecommendProducts.suggestedProducts.length,
+    status,
+  ]);
 
   return (
     <div className="my-4 flex flex-1 gap-3 text-sm text-gray-600">
@@ -49,13 +55,7 @@ const AiMessageComponent: FC<AiMessageProps> = ({ status, message, recommendedPr
         </p>
         <Markdown>{message.content}</Markdown>
 
-        {!clonedHtml ? (
-          <div id={slotId} className="hidden">
-            {recommendedProducts}
-          </div>
-        ) : (
-          <div id={`${slotId}-clone`} className="py-2 *:!block" dangerouslySetInnerHTML={{ __html: clonedHtml }} />
-        )}
+        {recommendProductsComponent && <div className="py-2">{recommendProductsComponent}</div>}
       </div>
     </div>
   );
