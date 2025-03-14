@@ -1,1 +1,5 @@
-export { cskComponentsMapping } from '@uniformdev/csk-components/components/canvas';
+import baseCskComponentsMapping from '@uniformdev/csk-components/components/canvas';
+
+export const cskComponentsMapping = {
+  ...baseCskComponentsMapping,
+};

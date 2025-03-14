@@ -80,10 +80,14 @@ parameters:
     type: dex-segmented-control-parameter
     typeConfig:
       options:
+        - key: Light
+          value: light
         - key: Normal
           value: normal
         - key: Medium
           value: medium
+        - key: Semibold
+          value: semibold
         - key: Bold
           value: bold
         - key: Extrabold
@@ -140,6 +144,7 @@ parameters:
           value: center
         - key: Right
           value: right
+      withViewPort: true
   - id: lineCountRestrictions
     name: Line Count Restrictions
     type: dex-slider-control-parameter
@@ -172,5 +177,5 @@ useTeamPermissions: true
 slots: []
 titleParameter: text
 canBeComposition: false
-created: '2025-02-17T15:34:16.686516+00:00'
-updated: '2025-02-24T15:02:40.517913+00:00'
+created: '2025-03-04T20:14:50.139428+00:00'
+updated: '2025-03-06T15:25:44.090744+00:00'

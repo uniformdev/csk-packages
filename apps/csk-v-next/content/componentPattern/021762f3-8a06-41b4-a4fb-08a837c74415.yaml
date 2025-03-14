@@ -2,72 +2,58 @@ composition:
   _name: Global Header
   _id: 021762f3-8a06-41b4-a4fb-08a837c74415
   type: header
-  variant: sticky
   parameters:
     color:
       type: dex-color-palette-parameter
-      value: text-primary
+      value: general-color-1
     spacing:
       type: dex-space-control-parameter
       value:
-        paddingTop: container-small
-        paddingBottom: container-small
+        mobile:
+          paddingTop: container-small
+          paddingBottom: container-small
+        tablet:
+          paddingTop: container-small
+          paddingBottom: container-small
+        desktop:
+          paddingTop: container-small
+          paddingBottom: container-small
     displayName:
       type: text
       value: Header
     backgroundColor:
       type: dex-color-palette-parameter
-      value: general-color-1
+      value: general-color-3
   slots:
     headerLeftContent:
       - _id: 4fb2a9bd-3af3-4951-9ece-9e98588f3bf5
         type: link
         slots:
           linkContent:
-            - _id: 1d80a3d5-a57a-44e5-9ac8-0b665124f55c
-              type: image
+            - _id: 24a94c6f-a784-434a-8ea7-924c829f0a83
+              type: text
               parameters:
-                image:
-                  type: asset
-                  value:
-                    - _id: bf66f619-6751-47ba-8249-28a233e15360
-                      type: image
-                      fields:
-                        id:
-                          type: text
-                          value: 0f0670b4-a425-40d3-842b-c7c895d500a5
-                        url:
-                          value: >-
-                            https://img.uniform.global/p/YBXmRPPzQZ-45Yo5jJzHAw/yw_nl-x6RgCEUl3LVg1uqQ-uniformlogo.svg
-                          type: text
-                        file:
-                          type: file
-                          value: d7405da9-bafe-4158-836d-f9994daa1ed1
-                        size:
-                          value: 454
-                          type: number
-                        title:
-                          type: text
-                          value: uniformlogo.svg
-                        width:
-                          value: 45
-                          type: number
-                        height:
-                          value: 52
-                          type: number
-                        mediaType:
-                          value: image/svg+xml
-                          type: text
-                      _source: uniform-assets
-                width:
-                  type: number
-                  value: '50'
-                height:
-                  type: number
-                  value: '40'
-                objectFit:
+                tag:
                   type: dex-segmented-control-parameter
-                  value: contain
+                  value: p
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: lg
+                    tablet: lg
+                    desktop: lg
+                text:
+                  type: text
+                  locales:
+                    en: "Digital Experience\LAssembly"
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-secondary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: semibold
+              _overridability:
+                hideLockedParameters: true
         parameters:
           link:
             type: link
@@ -81,39 +67,64 @@ composition:
             value: Logo
         _overridability:
           hideLockedParameters: true
-    headerCenterContent:
-      - _id: 09b1471d-7aa8-419c-85e1-ba30947775ca
-        type: navigationLink
-        _pattern: f0bb02cd-315f-40d1-8e74-948e09019995
-      - _id: af0e8859-9cc9-4db7-87a6-92db71e075a4
-        type: navigationLink
-        _pattern: f0bb02cd-315f-40d1-8e74-948e09019995
+    headerRightContent:
+      - _id: 94874de3-bdc7-4a4d-a113-34100a71b3c7
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: p
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              desktop: base
+          text:
+            type: text
+            locales:
+              en: April 10, 2025 at 9:30 am EST
+          color:
+            type: dex-color-palette-parameter
+            value: text-secondary
+          weight:
+            type: dex-segmented-control-parameter
+            value: light
+        _overridability:
+          hideLockedParameters: true
+      - _id: 0fbe5a33-b284-45c0-b256-f29f5c846f02
+        type: button
+        _pattern: 53b59aed-e378-4fcb-9135-20247d92074e
+      - _id: 6bc42195-fa25-4382-bdcf-23351ebdc0c5
+        type: button
+        _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
   _overrides:
-    09b1471d-7aa8-419c-85e1-ba30947775ca:
+    0fbe5a33-b284-45c0-b256-f29f5c846f02:
       parameters:
         link:
           type: link
           locales:
             en:
-              path: https://dev-csk-marketing-site.vercel.app/get-started
+              path: '#'
               type: url
         text:
           type: text
-          value: Get Started
-    af0e8859-9cc9-4db7-87a6-92db71e075a4:
+          locales:
+            en: Speakers
+    6bc42195-fa25-4382-bdcf-23351ebdc0c5:
       parameters:
         link:
           type: link
-          value:
-            path: https://dev-csk-marketing-site.vercel.app/components
-            type: url
+          locales:
+            en:
+              path: '#'
+              type: url
         text:
           type: text
-          value: Components
+          locales:
+            en: Register
   _locales:
     - en
-created: '2025-02-17T15:34:18.087161+00:00'
-modified: '2025-02-17T15:34:18.087161+00:00'
+created: '2025-03-04T20:14:51.252283+00:00'
+modified: '2025-03-05T13:35:56.51779+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/main-header.jpg

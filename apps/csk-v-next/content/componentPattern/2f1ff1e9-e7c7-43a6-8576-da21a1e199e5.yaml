@@ -3,12 +3,15 @@ composition:
   _id: 2f1ff1e9-e7c7-43a6-8576-da21a1e199e5
   type: navigationLink
   parameters:
+    size:
+      type: dex-segmented-control-parameter
+      value: lg
     color:
       type: dex-color-palette-parameter
-      value: text-primary
+      value: text-secondary
     weight:
       type: dex-segmented-control-parameter
-      value: bold
+      value: normal
   _overridability:
     parameters:
       icon: 'yes'
@@ -18,7 +21,7 @@ composition:
       activeState: 'yes'
   _locales:
     - en
-created: '2025-02-17T15:34:18.269258+00:00'
-modified: '2025-02-17T15:34:18.269258+00:00'
+created: '2025-03-04T20:14:51.450402+00:00'
+modified: '2025-03-06T11:28:08.974756+00:00'
 pattern: true
 categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

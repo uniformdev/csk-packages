@@ -8,7 +8,11 @@ parameters:
     name: Size
     type: dex-token-selector-parameter
     typeConfig:
-      defaultValue: spacer-small
+      defaultValue:
+        mobile: spacer-small
+        tablet: spacer-small
+        desktop: spacer-small
+      withViewPort: true
       selectedGroup: spacer
       allowDimensions: []
       selectedTokenType: dimension
@@ -18,8 +22,8 @@ previewImageUrl: >-
 useTeamPermissions: true
 slots: []
 canBeComposition: false
-created: '2025-02-17T15:34:15.695573+00:00'
-updated: '2025-02-17T15:34:15.695573+00:00'
+created: '2025-03-04T20:14:49.301254+00:00'
+updated: '2025-03-06T15:30:19.042624+00:00'
 variants:
   - id: horizontal
     name: Horizontal

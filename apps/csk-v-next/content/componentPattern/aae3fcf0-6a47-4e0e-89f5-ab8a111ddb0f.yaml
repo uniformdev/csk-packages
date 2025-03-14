@@ -1,5 +1,5 @@
 composition:
-  _name: Card Example
+  _name: Speaker Card
   _id: aae3fcf0-6a47-4e0e-89f5-ab8a111ddb0f
   type: card
   parameters:
@@ -16,7 +16,7 @@ composition:
         paddingBottom: ''
     displayName:
       type: text
-      value: Card Example
+      value: Speaker Card
     fluidContent:
       type: checkbox
       value: true
@@ -36,7 +36,7 @@ composition:
                     value: 26fde52f-ea1b-4625-bbed-f5e692f1dc9d
                   url:
                     value: >-
-                      https://img.uniform.global/p/YBXmRPPzQZ-45Yo5jJzHAw/f3U-i929T6mP6Wb9Xw17Ug-rectangle.jpg
+                      https://img.uniform.global/p/yHxHcO2dSzyUr7XpaQrIaA/1jlIER8CQaaM5MlQvHbnZw-rectangle.jpg
                     type: text
                   file:
                     type: file
@@ -59,56 +59,95 @@ composition:
                 _source: uniform-assets
           border:
             type: dex-token-selector-parameter
-            value: border-image-radius-small
+            value: ''
           height:
             type: number
-            value: '220'
+            value: '250'
           objectFit:
             type: dex-segmented-control-parameter
-            value: cover
+            value: contain
           overlayColor:
             type: dex-color-palette-parameter
             value: general-color-5
           overlayOpacity:
             type: dex-slider-control-parameter
-            value: '0.6'
+            value: ''
         _overridability:
           parameters:
             image: 'yes'
           hideLockedParameters: true
     cardContent:
-      - _id: 06f3f1a7-27c7-4928-beee-233d720b84c0
-        type: text
+      - _id: d99f50ac-3cf5-4de4-8c6a-3b9b376d2808
+        type: flex
+        slots:
+          flexItem:
+            - _id: 06f3f1a7-27c7-4928-beee-233d720b84c0
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: p
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: sm
+                    tablet: base
+                    desktop: base
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: semibold
+              _overridability:
+                parameters:
+                  tag: 'yes'
+                  text: 'yes'
+                hideLockedParameters: true
+            - _id: d8fc533f-d065-49d5-9675-20d4f3b3f3ad
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: p
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: sm
+                    tablet: base
+                    desktop: base
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+              _overridability:
+                parameters:
+                  tag: 'yes'
+                  text: 'yes'
+                hideLockedParameters: true
         parameters:
-          tag:
-            type: dex-segmented-control-parameter
-            value: h2
-          size:
+          gap:
+            type: dex-slider-control-parameter
+            value: {}
+          direction:
             type: dex-segmented-control-parameter
             value:
-              mobile: 2xl
-              tablet: 2xl
-              desktop: 2xl
-          color:
-            type: dex-color-palette-parameter
-            value: text-primary
-          weight:
+              mobile: col
+              tablet: col
+              desktop: col
+          alignItems:
             type: dex-segmented-control-parameter
-            value: medium
+            value: center
+          justifyContent:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: ''
+              tablet: ''
+              desktop: ''
         _overridability:
-          parameters:
-            tag: 'yes'
-            text: 'yes'
           hideLockedParameters: true
-      - _id: e0b7bb8e-b912-4c20-97eb-7831d87eb739
-        type: button
-        _pattern: 31191bc7-7e6e-4748-89c2-8e73db05237d
-  _overrides:
-    e0b7bb8e-b912-4c20-97eb-7831d87eb739:
-      parameters:
-        text:
-          type: text
-          value: null
   _overridability:
     variants: false
     parameters:
@@ -116,8 +155,8 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
-created: '2025-02-17T15:34:18.962516+00:00'
-modified: '2025-02-17T15:34:18.962516+00:00'
+created: '2025-03-04T20:14:51.601472+00:00'
+modified: '2025-03-06T14:40:58.557947+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/examples-card.jpg
