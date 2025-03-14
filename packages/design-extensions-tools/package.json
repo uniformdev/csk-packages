@@ -1,6 +1,6 @@
 {
   "name": "@uniformdev/design-extensions-tools",
-  "version": "6.0.20",
+  "version": "6.0.21",
   "description": "Command-line interface (CLI) tool and a set of utilities for working with design extension integrations",
   "license": "SEE LICENSE IN LICENSE.txt",
   "main": "./cli.js",
@@ -31,6 +31,7 @@
   "dependencies": {
     "@inquirer/prompts": "^7.1.0",
     "commander": "^9.0.0",
+    "dotenv": "16.4.7",
     "ora": "^8.1.1"
   },
   "devDependencies": {

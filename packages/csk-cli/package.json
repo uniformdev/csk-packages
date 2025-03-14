@@ -1,6 +1,6 @@
 {
   "name": "@uniformdev/csk-cli",
-  "version": "6.0.20",
+  "version": "6.0.21",
   "description": "Command-line interface (CLI) tool designed to streamline the development workflow within Uniform projects. It provides commands for pulling additional data and generating components based on Canvas data",
   "license": "SEE LICENSE IN LICENSE.txt",
   "main": "./cli.js",
@@ -34,6 +34,7 @@
   "dependencies": {
     "@inquirer/prompts": "^7.1.0",
     "commander": "^9.0.0",
+    "dotenv": "16.4.7",
     "ora": "^8.1.1"
   },
   "devDependencies": {
