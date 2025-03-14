@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: hubspotForm
+name: Hubspot Form
+icon: format-heading
+parameters:
+  - id: formId
+    name: Form Id
+    type: text
+    typeConfig: null
+  - id: 50f9193b-b15a-4563-be58-a57d760f7280
+    name: Skeleton Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - countOfVirtualFields
+        - backgroundColor
+  - id: countOfVirtualFields
+    name: Count of virtual fields
+    type: number
+    typeConfig:
+      max: '100'
+      min: '1'
+      required: true
+  - id: backgroundColor
+    name: Background Color
+    type: dex-color-palette-parameter
+    typeConfig: null
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2025-03-14T11:58:15.502709+00:00'
+updated: '2025-03-14T11:59:59.018725+00:00'

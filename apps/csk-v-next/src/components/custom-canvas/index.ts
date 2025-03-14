@@ -5,6 +5,7 @@ import Countdown from './Countdown';
 import Footer from './Footer';
 import Grid from './Grid';
 import Header from './Header';
+import HubspotForm from './HubspotForm';
 import Section from './Section';
 import Spacer from './Spacer';
 import Text from './Text';
@@ -20,4 +21,5 @@ export const customComponentsMapping: ComponentMapping = {
   grid: { component: Grid },
   footer: { component: Footer },
   spacer: { component: Spacer },
+  hubspotForm: { component: HubspotForm },
 };

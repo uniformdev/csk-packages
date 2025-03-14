@@ -1,0 +1,183 @@
+.Form {
+  input[type='text'],
+  input[type='email'],
+  input[type='number'],
+  input[type='tel'],
+  input[type='password'] {
+    border-radius: 0;
+    appearance: none;
+    background-color: var(--general-color-1);
+    border: 1px solid var(--button-tertiary-hover);
+    color: var(--text-primary);
+    font-size: 16px;
+    line-height: 24px;
+    padding: 9px 16px;
+    width: 100%;
+
+    &:focus {
+      outline: 1px solid var(--button-primary);
+    }
+
+    &:hover {
+      outline: 1px solid var(--button-primary);
+    }
+  }
+
+  input[type='checkbox'] {
+    background-color: var(--general-color-1);
+    height: 0;
+    width: 0;
+  }
+
+  :global(label.hs-form-booleancheckbox-display) {
+    cursor: pointer;
+  }
+  :global(label.hs-form-booleancheckbox-display):hover input[type='checkbox']:checked + span::before {
+    background-color: var(--button-primary);
+  }
+
+  :global(label.hs-form-booleancheckbox-display):hover input[type='checkbox'] + span::before {
+    background-color: var(--button-tertiary-hover);
+  }
+
+  :global(label.hs-form-booleancheckbox-display) input[type='checkbox'] + span::before {
+    content: '';
+    display: inline-block;
+    vertical-align: top;
+    height: 24px;
+    width: 24px;
+    margin-right: 0.6em;
+    color: rgba(0, 0, 0, 0.275);
+    border: solid 0.06em;
+    border-radius: 0.2em;
+    background:
+      url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xml:space="preserve" fill="white" viewBox="0 0 9 9"><rect x="0" y="4.3" transform="matrix(-0.707 -0.7072 0.7072 -0.707 0.5891 10.4702)" width="4.3" height="1.6" /><rect x="2.2" y="2.9" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 12.1877 2.9833)" width="6.1" height="1.7" /></svg>')
+        no-repeat center,
+      var(--general-color-1);
+    background-size: 0;
+    will-change: color, border, background, background-size, box-shadow;
+    transform: translate3d(0, 0, 0);
+    transition:
+      color 0.1s,
+      border 0.1s,
+      background 0.15s,
+      box-shadow 0.1s;
+  }
+
+  :global(label.hs-form-booleancheckbox-display) input[type='checkbox']:checked + span:before {
+    background-color: var(--button-primary-hover);
+    background-size: 0.75em;
+    color: rgba(0, 0, 0, 0.075);
+  }
+  :global(label.hs-form-booleancheckbox-display) input[type='checkbox']:checked:enabled:active + span:before,
+  :global(label.hs-form-booleancheckbox-display) input[type='checkbox']:checked:enabled + span:active:before {
+    background-color: var(--button-primary-hover);
+    color: rgba(0, 0, 0, 0.275);
+  }
+  :global(label.hs-form-booleancheckbox-display) input[type='checkbox']:focus:active + span:before,
+  :global(label.hs-form-booleancheckbox-display) input[type='checkbox']:disabled + span:before {
+    opacity: 0.5;
+  }
+
+  input[type='submit'] {
+    font-family: var(--primary-font-family);
+    background-color: var(--button-primary);
+    border: 1px solid var(--button-primary);
+    color: var(--text-secondary);
+    width: 100%;
+    padding: 17px 30px;
+    font-size: 22px;
+    line-height: 25px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--button-primary-hover);
+      border: 1px solid var(--button-primary-hover);
+    }
+  }
+
+  select {
+    border-radius: 0;
+    background-color: var(--general-color-1);
+    border: 1px solid var(--button-primary);
+    color: var(--text-primary);
+    font-size: 16px;
+    line-height: 24px;
+    padding: 9px 16px;
+    width: 100%;
+    cursor: pointer;
+    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none; /* Safari and Chrome */
+    appearance: none;
+    background-image: url('/img/icons/dropdown-arrow.svg');
+    background-position-y: 12px;
+    background-position-x: calc(100% - 12px);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+
+    &:focus {
+      outline: 1px solid var(--button-primary);
+      background-color: var(--button-tertiary-hover);
+    }
+
+    &:hover {
+      outline: 1px solid var(--button-primary);
+    }
+  }
+
+  :global(div.hs-dependent-field > div.field),
+  form > div:not(:first-child):not(div.hs-dependent-field) {
+    margin-top: 16px;
+  }
+
+  :global(label.hs-error-msg),
+  :global(div.hs_error_rollup) {
+    color: var(--general-color-4);
+  }
+
+  :global(label.hs-form-booleancheckbox-display) {
+    display: flex;
+    align-items: flex-start;
+
+    & > span {
+      font-size: 14px;
+    }
+  }
+
+  :global(div.hs-fieldtype-booleancheckbox) {
+    margin: 32px 0;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  :global(input.error),
+  :global(select.error) {
+    border-color: var(--general-color-4);
+
+    &:hover,
+    &:focus {
+      outline: 1px solid var(--general-color-4);
+    }
+  }
+
+  :global(div.submitted-message) {
+    color: var(--text-secondary);
+    font-size: 48px;
+    line-height: 1;
+    font-weight: 700;
+    font-family: var(--primary-font-family);
+
+    @media (min-width: 1024px) {
+      color: var(--button-primary-hover);
+      text-align: center;
+    }
+  }
+
+  :global(div.hs_error_rollup) {
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+}

@@ -955,82 +955,18 @@ composition:
                             type: text
                             locales:
                               en: Text section
-                      - _id: 1c5c6b4a-680c-400b-b3b3-33cc5eef1e4d
-                        type: flex
-                        slots:
-                          flexItem:
-                            - _id: 475eda74-d7b6-428c-828c-450c2c22a00d
-                              type: button
-                              parameters:
-                                link:
-                                  type: link
-                                  locales:
-                                    en:
-                                      path: '#'
-                                      type: url
-                                size:
-                                  type: dex-token-selector-parameter
-                                  value: button-large
-                                text:
-                                  type: text
-                                  locales:
-                                    en: Get your free ticket
-                                border:
-                                  type: dex-token-selector-parameter
-                                  value: border-primary
-                                textSize:
-                                  type: dex-segmented-control-parameter
-                                  value:
-                                    mobile: sm
-                                    tablet: sm
-                                    desktop: 2xl
-                                textColor:
-                                  type: dex-color-palette-parameter
-                                  value: text-secondary
-                                textWeight:
-                                  type: dex-segmented-control-parameter
-                                  value: semibold
-                                buttonColor:
-                                  type: dex-color-palette-parameter
-                                  value: button-primary
-                                hoverTextColor:
-                                  type: dex-color-palette-parameter
-                                  value: text-secondary
-                                hoverButtonColor:
-                                  type: dex-color-palette-parameter
-                                  value: button-primary-hover
+                      - _id: 8cfef1c6-b445-4035-b058-aff855d01743
+                        type: hubspotForm
                         parameters:
-                          gap:
-                            type: dex-slider-control-parameter
-                            value: {}
-                          spacing:
-                            type: dex-space-control-parameter
-                            value:
-                              mobile: {}
-                              tablet: {}
-                              desktop: {}
-                          direction:
-                            type: dex-segmented-control-parameter
-                            value:
-                              mobile: row
-                              tablet: row
-                              desktop: row
-                          alignItems:
-                            type: dex-segmented-control-parameter
-                            value: {}
-                          displayName:
+                          formId:
                             type: text
-                            locales:
-                              en: Button Wrapper
-                          fluidContent:
-                            type: checkbox
-                            value: true
-                          justifyContent:
-                            type: dex-segmented-control-parameter
-                            value:
-                              mobile: center
-                              tablet: end
-                              desktop: end
+                            value: 43fa7cb2-bf19-434f-849a-40a0c9cafb02
+                          backgroundColor:
+                            type: dex-color-palette-parameter
+                            value: general-color-5
+                          countOfVirtualFields:
+                            type: number
+                            value: '3'
                   parameters:
                     gapX:
                       type: dex-slider-control-parameter
@@ -1102,7 +1038,7 @@ composition:
                 value: true
               contentAlignment:
                 type: dex-segmented-control-parameter
-                value: center
+                value: left
     9d8fc344-1b3b-4f9a-b7d6-ad7fea41bcba|06f3f1a7-27c7-4928-beee-233d720b84c0:
       parameters:
         text:
@@ -1245,5 +1181,5 @@ composition:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-03-04T20:14:54.25164+00:00'
-modified: '2025-03-06T15:36:58.125942+00:00'
+modified: '2025-03-14T13:35:06.505763+00:00'
 pattern: false
