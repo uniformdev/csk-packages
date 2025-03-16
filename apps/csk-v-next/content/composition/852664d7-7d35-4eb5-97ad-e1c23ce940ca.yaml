@@ -104,7 +104,7 @@ composition:
         text:
           type: text
           locales:
-            en: "CTO, \LUniform.dev"
+            en: CTO, Uniform
     13073265-a927-4f0a-ad93-e8d40ce044ec|fbb7fcd0-5300-4ab2-90e4-492181d65867:
       parameters:
         image:
@@ -144,93 +144,35 @@ composition:
         text:
           type: text
           locales:
-            en: Alex Shyba
+            en: TBC
     552be212-5cb9-49c7-ab87-4d40205778e3|d8fc533f-d065-49d5-9675-20d4f3b3f3ad:
       parameters:
         text:
           type: text
           locales:
-            en: "CTO, \LUniform.dev"
+            en: Telus
     552be212-5cb9-49c7-ab87-4d40205778e3|fbb7fcd0-5300-4ab2-90e4-492181d65867:
       parameters:
         image:
           type: asset
-          value:
-            - _id: 6b4ad190-4095-40ff-a14b-294ba5e04c35
-              type: image
-              fields:
-                id:
-                  type: text
-                  value: ad81ce72-8938-42bc-9723-306745b4ebe1
-                url:
-                  type: text
-                  value: >-
-                    https://img.uniform.global/p/FXZI1o5aQJqLQuqxEFWw6A/8I07ejxzQO68lhukPlhBsw-speaker-alex-shyba.png
-                file:
-                  type: file
-                  value: 90786e77-49e2-49e0-889e-c037c8557f58
-                size:
-                  type: number
-                  value: 96233
-                title:
-                  type: text
-                  value: speaker-alex-shyba.png
-                width:
-                  type: number
-                  value: 434
-                height:
-                  type: number
-                  value: 500
-                mediaType:
-                  type: text
-                  value: image/png
-              _source: uniform-assets
+          value: null
     740db0df-81c2-44a1-b54e-ecf8abc621ff|06f3f1a7-27c7-4928-beee-233d720b84c0:
       parameters:
         text:
           type: text
           locales:
-            en: Alex Shyba
+            en: TBC
     740db0df-81c2-44a1-b54e-ecf8abc621ff|d8fc533f-d065-49d5-9675-20d4f3b3f3ad:
       parameters:
         text:
           type: text
           locales:
-            en: "CTO, \LUniform.dev"
+            en: Telus
     740db0df-81c2-44a1-b54e-ecf8abc621ff|fbb7fcd0-5300-4ab2-90e4-492181d65867:
       parameters:
         image:
           type: asset
-          value:
-            - _id: 6b4ad190-4095-40ff-a14b-294ba5e04c35
-              type: image
-              fields:
-                id:
-                  type: text
-                  value: ad81ce72-8938-42bc-9723-306745b4ebe1
-                url:
-                  type: text
-                  value: >-
-                    https://img.uniform.global/p/FXZI1o5aQJqLQuqxEFWw6A/8I07ejxzQO68lhukPlhBsw-speaker-alex-shyba.png
-                file:
-                  type: file
-                  value: 90786e77-49e2-49e0-889e-c037c8557f58
-                size:
-                  type: number
-                  value: 96233
-                title:
-                  type: text
-                  value: speaker-alex-shyba.png
-                width:
-                  type: number
-                  value: 434
-                height:
-                  type: number
-                  value: 500
-                mediaType:
-                  type: text
-                  value: image/png
-              _source: uniform-assets
+          value: null
     852664d7-7d35-4eb5-97ad-e1c23ce940ca|dc2e95be-21b5-4476-a309-f8a34922f528:
       slots:
         $slotSectionItems:
@@ -297,7 +239,7 @@ composition:
                           text:
                             type: text
                             locales:
-                              en: H1 Lorem ipsum write-on event tagline
+                              en: Digital Experiences at scale powered by AI
                           color:
                             type: dex-color-palette-parameter
                             value: text-secondary
@@ -470,7 +412,7 @@ composition:
                     text:
                       type: text
                       locales:
-                        en: H2 Lorem ipsum intro text
+                        en: The future of Digital Experiences
                     color:
                       type: dex-color-palette-parameter
                       value: text-tertiary
@@ -482,7 +424,10 @@ composition:
                   parameters:
                     size:
                       type: dex-token-selector-parameter
-                      value: spacer-small
+                      value:
+                        mobile: spacer-small
+                        tablet: spacer-small
+                        desktop: spacer-small
                 - _id: 74be170c-3ec8-481a-9c88-abe589e06f8a
                   type: text
                   parameters:
@@ -499,12 +444,78 @@ composition:
                       type: text
                       locales:
                         en: >-
-                          Lorem ipsum dolor sit amet, consectetuer adipiscing
-                          elit, sed diam nonummy nper suscipit lobortis nisl ut
-                          aliquip ex ea commodo consequat. Duis autem vel eum
-                          iriure dolor in hendrerit in vulputate velit esse molt
-                          lnonummy nibh euismod tincidunt ut laoreet dolore
-                          magn.
+                          Join Digital Experience Assembly to learn about the
+                          future for digital experiences. Understand how AI can
+                          be used to 10x the production of digital experiences,
+                          from thought to optimization.
+                    color:
+                      type: dex-color-palette-parameter
+                      value: text-primary
+                    weight:
+                      type: dex-segmented-control-parameter
+                      value: light
+                - _id: 8858f7a1-a5a7-424e-8382-0a9ef79f8a2c
+                  type: spacer
+                  parameters:
+                    size:
+                      type: dex-token-selector-parameter
+                      value:
+                        mobile: spacer-small
+                        tablet: spacer-small
+                        desktop: spacer-small
+                - _id: 089aada0-8524-480f-81a6-04fe425a3bfa
+                  type: text
+                  parameters:
+                    tag:
+                      type: dex-segmented-control-parameter
+                      value: p
+                    size:
+                      type: dex-segmented-control-parameter
+                      value:
+                        mobile: xl
+                        tablet: xl
+                        desktop: 2xl
+                    text:
+                      type: text
+                      locales:
+                        en: >-
+                          Learn from Canada's largest telco, Telus, how they
+                          have optimized speed to market, launching 20x faster
+                          and reduced cost by empowering their web producers.
+                    color:
+                      type: dex-color-palette-parameter
+                      value: text-primary
+                    weight:
+                      type: dex-segmented-control-parameter
+                      value: light
+                - _id: a05e438b-d574-43eb-a8a9-931d10fc393e
+                  type: spacer
+                  parameters:
+                    size:
+                      type: dex-token-selector-parameter
+                      value:
+                        mobile: spacer-small
+                        tablet: spacer-small
+                        desktop: spacer-small
+                - _id: e5bf6592-81cb-43d8-9c02-8dc6f8b8a31e
+                  type: text
+                  parameters:
+                    tag:
+                      type: dex-segmented-control-parameter
+                      value: p
+                    size:
+                      type: dex-segmented-control-parameter
+                      value:
+                        mobile: xl
+                        tablet: xl
+                        desktop: 2xl
+                    text:
+                      type: text
+                      locales:
+                        en: >-
+                          Experience first hand the latest capabilities of
+                          Uniform, where AI enables digital teams to optimize
+                          conversions and deliver better and faster experiences.
                     color:
                       type: dex-color-palette-parameter
                       value: text-primary
@@ -565,7 +576,7 @@ composition:
                     text:
                       type: text
                       locales:
-                        en: H2 Lorem ipsum intro text
+                        en: Speakers
                     color:
                       type: dex-color-palette-parameter
                       value: text-tertiary
@@ -746,8 +757,8 @@ composition:
                           targetDate:
                             type: datetime
                             value:
-                              datetime: '2025-04-16T22:00:00.000Z'
-                              timeZone: Europe/Warsaw
+                              datetime: '2025-04-10T13:30:00.000Z'
+                              timeZone: America/New_York
                           displayName:
                             type: text
                             locales:
@@ -858,7 +869,7 @@ composition:
                                 text:
                                   type: text
                                   locales:
-                                    en: H2 Free virtual ticket
+                                    en: Register now
                                 color:
                                   type: dex-color-palette-parameter
                                   value: text-tertiary
@@ -890,8 +901,8 @@ composition:
                                   type: text
                                   locales:
                                     en: >-
-                                      Lorem ipsum includes access to all
-                                      workshops, livestreams and expos
+                                      Register to join Digital Experience
+                                      Assembly.
                                 weight:
                                   type: dex-segmented-control-parameter
                                   value: normal
@@ -919,7 +930,7 @@ composition:
                                 text:
                                   type: text
                                   locales:
-                                    en: November 11, 2022, 2:00 EST
+                                    en: April 10th, 2025, 9:30am - 11.00am EST
                                 color:
                                   type: dex-color-palette-parameter
                                   value: text-tertiary
@@ -955,7 +966,7 @@ composition:
                             type: text
                             locales:
                               en: Text section
-                      - _id: 8cfef1c6-b445-4035-b058-aff855d01743
+                      - _id: 65556242-0aad-4ae4-9aa9-ecd870244eb9
                         type: hubspotForm
                         parameters:
                           formId:
@@ -1044,89 +1055,89 @@ composition:
         text:
           type: text
           locales:
-            en: Alex Shyba
+            en: Gene De Libero
     9d8fc344-1b3b-4f9a-b7d6-ad7fea41bcba|d8fc533f-d065-49d5-9675-20d4f3b3f3ad:
       parameters:
         text:
           type: text
           locales:
-            en: "CTO, \LUniform.dev"
+            en: Digital Mindshare
     9d8fc344-1b3b-4f9a-b7d6-ad7fea41bcba|fbb7fcd0-5300-4ab2-90e4-492181d65867:
       parameters:
         image:
           type: asset
           value:
-            - _id: 6b4ad190-4095-40ff-a14b-294ba5e04c35
+            - _id: 9f7a3296-3f79-4dec-9cc1-742e9b206ab1
               type: image
               fields:
                 id:
                   type: text
-                  value: ad81ce72-8938-42bc-9723-306745b4ebe1
+                  value: e4521955-3770-4157-8417-7dcd3d5ca66e
                 url:
                   type: text
                   value: >-
-                    https://img.uniform.global/p/FXZI1o5aQJqLQuqxEFWw6A/8I07ejxzQO68lhukPlhBsw-speaker-alex-shyba.png
+                    https://img.uniform.global/p/gvXUXZNbRq2PH10DKBVFJQ/nupKYSnFQKKv2BNgOxn0cQ-Gene_DeLibero_Headshot_Optimized.jpg
                 file:
                   type: file
-                  value: 90786e77-49e2-49e0-889e-c037c8557f58
+                  value: 1d40b1ee-ccdc-4c85-b08c-2afb4a8e32b3
                 size:
                   type: number
-                  value: 96233
+                  value: 111950
                 title:
                   type: text
-                  value: speaker-alex-shyba.png
+                  value: Gene_DeLibero_Headshot_Optimized.jpg
                 width:
                   type: number
-                  value: 434
+                  value: 607
                 height:
                   type: number
-                  value: 500
+                  value: 853
                 mediaType:
                   type: text
-                  value: image/png
+                  value: image/jpeg
               _source: uniform-assets
     c8193ae2-8ea6-4f08-a25a-ec28944632df|06f3f1a7-27c7-4928-beee-233d720b84c0:
       parameters:
         text:
           type: text
           locales:
-            en: Alex Shyba
+            en: Andrew Kumar
     c8193ae2-8ea6-4f08-a25a-ec28944632df|d8fc533f-d065-49d5-9675-20d4f3b3f3ad:
       parameters:
         text:
           type: text
           locales:
-            en: "CTO, \LUniform.dev"
+            en: "VP, \LUniform"
     c8193ae2-8ea6-4f08-a25a-ec28944632df|fbb7fcd0-5300-4ab2-90e4-492181d65867:
       parameters:
         image:
           type: asset
           value:
-            - _id: 6b4ad190-4095-40ff-a14b-294ba5e04c35
+            - _id: b44a3ef5-1d75-4b9d-b19f-ca1305b516a6
               type: image
               fields:
                 id:
                   type: text
-                  value: ad81ce72-8938-42bc-9723-306745b4ebe1
+                  value: 06b791c2-13db-474c-a643-2fa621828d47
                 url:
                   type: text
                   value: >-
-                    https://img.uniform.global/p/FXZI1o5aQJqLQuqxEFWw6A/8I07ejxzQO68lhukPlhBsw-speaker-alex-shyba.png
+                    https://img.uniform.global/p/gvXUXZNbRq2PH10DKBVFJQ/_046oXwVSNKNULKTCZwJjQ-andrew-kumar-photo.png
                 file:
                   type: file
-                  value: 90786e77-49e2-49e0-889e-c037c8557f58
+                  value: f1a3f17c-6e60-4840-afa5-67b55c22f255
                 size:
                   type: number
-                  value: 96233
+                  value: 12908
                 title:
                   type: text
-                  value: speaker-alex-shyba.png
+                  value: andrew-kumar-photo.png
                 width:
                   type: number
-                  value: 434
+                  value: 512
                 height:
                   type: number
-                  value: 500
+                  value: 512
                 mediaType:
                   type: text
                   value: image/png
@@ -1136,40 +1147,40 @@ composition:
         text:
           type: text
           locales:
-            en: Alex Shyba
+            en: Lars Birkholm Petersen
     f7705b80-60c4-4eb3-a88d-a308b09400ee|d8fc533f-d065-49d5-9675-20d4f3b3f3ad:
       parameters:
         text:
           type: text
           locales:
-            en: "CTO, \LUniform.dev"
+            en: "CEO, \LUniform"
     f7705b80-60c4-4eb3-a88d-a308b09400ee|fbb7fcd0-5300-4ab2-90e4-492181d65867:
       parameters:
         image:
           type: asset
           value:
-            - _id: 6b4ad190-4095-40ff-a14b-294ba5e04c35
+            - _id: 30ba7361-1ff4-47ff-bb96-bb0e7e05b4a1
               type: image
               fields:
                 id:
                   type: text
-                  value: ad81ce72-8938-42bc-9723-306745b4ebe1
+                  value: 6870874d-abe4-4900-84d5-dfcdbee6aa00
                 url:
                   type: text
                   value: >-
-                    https://img.uniform.global/p/FXZI1o5aQJqLQuqxEFWw6A/8I07ejxzQO68lhukPlhBsw-speaker-alex-shyba.png
+                    https://img.uniform.global/p/gvXUXZNbRq2PH10DKBVFJQ/zkbSCcwRQCijcZhubBToqQ-lars-birkholm-petersen-photo.png
                 file:
                   type: file
-                  value: 90786e77-49e2-49e0-889e-c037c8557f58
+                  value: 96e7aa29-9335-4578-9846-d2bf71a95843
                 size:
                   type: number
-                  value: 96233
+                  value: 14066
                 title:
                   type: text
-                  value: speaker-alex-shyba.png
+                  value: lars-birkholm-petersen-photo.png
                 width:
                   type: number
-                  value: 434
+                  value: 438
                 height:
                   type: number
                   value: 500
@@ -1180,6 +1191,6 @@ composition:
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-03-04T20:14:54.25164+00:00'
-modified: '2025-03-14T13:35:06.505763+00:00'
+created: '2025-03-09T11:33:29.56583+00:00'
+modified: '2025-03-16T16:01:09.586198+00:00'
 pattern: false
