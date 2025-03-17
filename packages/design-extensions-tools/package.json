@@ -1,8 +1,11 @@
 {
   "name": "@uniformdev/design-extensions-tools",
-  "version": "6.0.21",
+  "version": "6.0.22",
   "description": "Command-line interface (CLI) tool and a set of utilities for working with design extension integrations",
   "license": "SEE LICENSE IN LICENSE.txt",
+  "engines": {
+    "node": "^18.18.0 || ^19.8.0 || >= 20.0.0"
+  },
   "main": "./cli.js",
   "exports": {
     "./tailwindcss-conf": {

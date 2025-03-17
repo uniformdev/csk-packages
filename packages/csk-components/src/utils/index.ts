@@ -1,6 +1,6 @@
 import { exec } from 'child_process';
 import prettier, { Options } from 'prettier';
-import { cskComponentsNames } from '@/constants';
+import { cskComponentsNames } from '../constants';
 
 export const runCmdCommand = async (command: string): Promise<string> =>
   new Promise((resolve, reject) => {

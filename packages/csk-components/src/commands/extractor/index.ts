@@ -2,10 +2,10 @@ import path from 'node:path';
 import * as ora from 'ora';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { registerCanvasComponents } from '@/utils/register';
 import { checkbox } from '@inquirer/prompts';
 import { getFolders } from './utils';
 import { copyCanvasComponentsWithDependencies } from '../../utils/copy';
+import { registerCanvasComponents } from '../../utils/register';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);

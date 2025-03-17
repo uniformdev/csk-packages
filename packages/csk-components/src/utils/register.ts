@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import * as ora from 'ora';
+import { formatWithPrettier, getComponentEntries, runCmdCommand } from '.';
 import {
   MAPPING_REGEX,
   REGISTER_IMPORT_REGEX,
@@ -8,8 +9,7 @@ import {
   END_MAPPER_REGEX,
   INITIAL_RESOLVER,
   START_RESOLVER,
-} from '@/constants';
-import { formatWithPrettier, getComponentEntries, runCmdCommand } from '.';
+} from '../constants';
 
 const updateImports = (content: string, importSection: string, componentName: string, spinner?: ora.Ora): string =>
   content.replace(REGISTER_IMPORT_REGEX, match => {
