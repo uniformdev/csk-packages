@@ -8,8 +8,9 @@ type UnitClass = {
   size?: CountdownParameters['size'];
 };
 export const getUnitClass = ({ variant, backgroundColor, border, size }: UnitClass) =>
-  cn('flex w-fit p-4 text-center gap-2 items-center leading-none', {
+  cn('flex w-fit p-2 sm:p-4 text-center gap-2 items-center leading-none', {
     'flex-col': variant === CountdownVariants.LabelsUnder,
+    'flex-col sm:flex-row': variant !== CountdownVariants.LabelsUnder,
     [`bg-${backgroundColor}`]: !!backgroundColor,
     [resolveViewPort(border, '{value}')]: border,
     ['items-center']: border,
@@ -21,6 +22,6 @@ type TextClass = {
   textColor?: CountdownParameters['textColor'];
 };
 export const getTextClass = ({ textColor }: TextClass) =>
-  cn('flex gap-5 flex-wrap font-bold flex-row justify-center', {
+  cn('flex gap-2 sm:gap-5 flex-wrap font-bold flex-col sm:flex-row justify-center items-center', {
     [`text-${textColor}`]: textColor,
   });

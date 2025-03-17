@@ -153,71 +153,6 @@ composition:
               type: flex
               slots:
                 flexItem:
-                  - _id: 1d050b85-1622-44c2-ac6f-8f36d8022ebb
-                    type: link
-                    slots:
-                      linkContent:
-                        - _id: 87ed9168-80db-408d-b271-4cbff4d1f913
-                          type: image
-                          parameters:
-                            image:
-                              type: asset
-                              value:
-                                - _id: 1e079f85-ec4d-4dbb-ad9a-3a9a84978ab3
-                                  type: image
-                                  fields:
-                                    id:
-                                      type: text
-                                      value: cd75a1e7-0eb4-4d44-ac4b-18d89d2406d5
-                                    url:
-                                      value: >-
-                                        https://img.uniform.global/p/FXZI1o5aQJqLQuqxEFWw6A/THnwgAfvT9u5Av-m-JRoXQ-linkedin.svg
-                                      type: text
-                                    file:
-                                      type: file
-                                      value: a85050b8-ed92-41d5-a545-057275efad25
-                                    size:
-                                      value: 1891
-                                      type: number
-                                    title:
-                                      type: text
-                                      value: linkedin.svg
-                                    width:
-                                      value: 23
-                                      type: number
-                                    height:
-                                      value: 24
-                                      type: number
-                                    mediaType:
-                                      value: image/svg+xml
-                                      type: text
-                                  _source: uniform-assets
-                            width:
-                              type: number
-                              value: '30'
-                            height:
-                              type: number
-                              value: '30'
-                            objectFit:
-                              type: dex-segmented-control-parameter
-                              value: ''
-                    parameters:
-                      link:
-                        type: link
-                        value:
-                          path: '#'
-                          type: url
-                      displayName:
-                        type: text
-                        value: LinkedIn
-                      openInNewTab:
-                        type: checkbox
-                        value: true
-                    _overridability:
-                      parameters:
-                        link: 'yes'
-                        displayName: 'yes'
-                      hideLockedParameters: true
                   - _id: 6f18283f-d276-46e0-a8bb-20749b65a744
                     type: link
                     slots:
@@ -228,30 +163,30 @@ composition:
                             image:
                               type: asset
                               value:
-                                - _id: 79ec793c-4e04-4bd8-b410-5e8535506333
+                                - _id: f0726bb7-d01c-4f77-92b5-aed456a27478
                                   type: image
                                   fields:
                                     id:
                                       type: text
-                                      value: 322c2e99-d524-471e-9e92-b6750d0e7b6b
+                                      value: 60ebb9c5-f111-4e24-9099-9dcab7939925
                                     url:
                                       value: >-
-                                        https://img.uniform.global/p/FXZI1o5aQJqLQuqxEFWw6A/GDiUrMZkQXKlX64BdGBA7A-twitter.svg
+                                        https://img.uniform.global/p/FXZI1o5aQJqLQuqxEFWw6A/e6-rjMpfRrCVgjr0p45zBQ-twitter.svg
                                       type: text
                                     file:
                                       type: file
-                                      value: 0faf1b0c-fc5a-47b0-83cd-2c21c1ccd81b
+                                      value: b99bf69b-ebba-49cc-bf81-2222a70ad9c3
                                     size:
-                                      value: 969
+                                      value: 493
                                       type: number
                                     title:
                                       type: text
                                       value: twitter.svg
                                     width:
-                                      value: 24
+                                      value: 30
                                       type: number
                                     height:
-                                      value: 24
+                                      value: 30
                                       type: number
                                     mediaType:
                                       value: image/svg+xml
@@ -259,10 +194,10 @@ composition:
                                   _source: uniform-assets
                             width:
                               type: number
-                              value: '30'
+                              value: '24'
                             height:
                               type: number
-                              value: '30'
+                              value: '24'
                             objectFit:
                               type: dex-segmented-control-parameter
                               value: ''
@@ -270,11 +205,76 @@ composition:
                       link:
                         type: link
                         value:
-                          path: '#'
+                          path: https://twitter.com/uniformdev
                           type: url
                       displayName:
                         type: text
-                        value: Twitter
+                        value: x.com
+                      openInNewTab:
+                        type: checkbox
+                        value: true
+                    _overridability:
+                      parameters:
+                        link: 'yes'
+                        displayName: 'yes'
+                      hideLockedParameters: true
+                  - _id: 1d050b85-1622-44c2-ac6f-8f36d8022ebb
+                    type: link
+                    slots:
+                      linkContent:
+                        - _id: 87ed9168-80db-408d-b271-4cbff4d1f913
+                          type: image
+                          parameters:
+                            image:
+                              type: asset
+                              value:
+                                - _id: c1204a0c-7e45-467a-89bc-22c979d8f0f2
+                                  type: image
+                                  fields:
+                                    id:
+                                      type: text
+                                      value: dff4491a-0f81-4ee6-8d25-c0f18e3a5fd0
+                                    url:
+                                      value: >-
+                                        https://img.uniform.global/p/FXZI1o5aQJqLQuqxEFWw6A/as4KCfe4QNWWPq2PuAjrLg-linkedin.svg
+                                      type: text
+                                    file:
+                                      type: file
+                                      value: ed1d2cc7-1a68-4359-93d7-c7a62ec35069
+                                    size:
+                                      value: 631
+                                      type: number
+                                    title:
+                                      type: text
+                                      value: linkedin.svg
+                                    width:
+                                      value: 150
+                                      type: number
+                                    height:
+                                      value: 150
+                                      type: number
+                                    mediaType:
+                                      value: image/svg+xml
+                                      type: text
+                                  _source: uniform-assets
+                            width:
+                              type: number
+                              value: '24'
+                            height:
+                              type: number
+                              value: '24'
+                            objectFit:
+                              type: dex-segmented-control-parameter
+                              value: ''
+                    parameters:
+                      link:
+                        type: link
+                        value:
+                          path: https://www.linkedin.com/company/uniformdev/
+                          type: url
+                      displayName:
+                        type: text
+                        value: LinkedIn
                       openInNewTab:
                         type: checkbox
                         value: true
@@ -293,30 +293,30 @@ composition:
                             image:
                               type: asset
                               value:
-                                - _id: 79482e38-fc94-4784-b442-cfeffcacf146
+                                - _id: a81d8e13-b241-470b-b845-e766eb028dd1
                                   type: image
                                   fields:
                                     id:
                                       type: text
-                                      value: 6c725db9-2ddc-488f-aabb-b98fb0308fce
+                                      value: 265d2658-6307-4ce0-b695-6849208aba13
                                     url:
                                       value: >-
-                                        https://img.uniform.global/p/FXZI1o5aQJqLQuqxEFWw6A/2T5W36NSROOIUfGDRQBQ_g-discord.svg
+                                        https://img.uniform.global/p/FXZI1o5aQJqLQuqxEFWw6A/loPFBWqyQaKhGelWmJTfyA-github.svg
                                       type: text
                                     file:
                                       type: file
-                                      value: 1821e4f6-14d0-4dff-bf77-90dba2237b91
+                                      value: ae06cf04-d75b-4730-a357-36f99d95aea0
                                     size:
-                                      value: 1995
+                                      value: 1585
                                       type: number
                                     title:
                                       type: text
-                                      value: discord.svg
+                                      value: github.svg
                                     width:
-                                      value: 23
+                                      value: 150
                                       type: number
                                     height:
-                                      value: 24
+                                      value: 150
                                       type: number
                                     mediaType:
                                       value: image/svg+xml
@@ -324,10 +324,10 @@ composition:
                                   _source: uniform-assets
                             width:
                               type: number
-                              value: '30'
+                              value: '24'
                             height:
                               type: number
-                              value: '30'
+                              value: '24'
                             objectFit:
                               type: dex-segmented-control-parameter
                               value: ''
@@ -335,11 +335,76 @@ composition:
                       link:
                         type: link
                         value:
-                          path: '#'
+                          path: https://github.com/uniformdev
                           type: url
                       displayName:
                         type: text
-                        value: Discord
+                        value: Github
+                      openInNewTab:
+                        type: checkbox
+                        value: true
+                    _overridability:
+                      parameters:
+                        link: 'yes'
+                        displayName: 'yes'
+                      hideLockedParameters: true
+                  - _id: 406521b6-6e2c-4d52-a8da-d5ae3c9afdd2
+                    type: link
+                    slots:
+                      linkContent:
+                        - _id: 4388cb00-fd77-48a5-8bd5-da143b0e8fb8
+                          type: image
+                          parameters:
+                            image:
+                              type: asset
+                              value:
+                                - _id: a7ee3b25-dd07-4452-b21a-df36e43f2f1a
+                                  type: image
+                                  fields:
+                                    id:
+                                      type: text
+                                      value: 090b0fd1-365d-42e0-9446-fcfbf91a4ec3
+                                    url:
+                                      value: >-
+                                        https://img.uniform.global/p/FXZI1o5aQJqLQuqxEFWw6A/BX7JE98UTDC7kPADuIUY4w-bluesky.svg
+                                      type: text
+                                    file:
+                                      type: file
+                                      value: cb834821-2b7c-459a-9037-3390227d12e4
+                                    size:
+                                      value: 1704
+                                      type: number
+                                    title:
+                                      type: text
+                                      value: bluesky.svg
+                                    width:
+                                      value: 170
+                                      type: number
+                                    height:
+                                      value: 150
+                                      type: number
+                                    mediaType:
+                                      value: image/svg+xml
+                                      type: text
+                                  _source: uniform-assets
+                            width:
+                              type: number
+                              value: '24'
+                            height:
+                              type: number
+                              value: '24'
+                            objectFit:
+                              type: dex-segmented-control-parameter
+                              value: ''
+                    parameters:
+                      link:
+                        type: link
+                        value:
+                          path: https://bsky.app/profile/uniform.dev
+                          type: url
+                      displayName:
+                        type: text
+                        value: Bluesky
                       openInNewTab:
                         type: checkbox
                         value: true
@@ -354,7 +419,7 @@ composition:
                   value:
                     mobile: '4'
                     tablet: '4'
-                    desktop: '8'
+                    desktop: '4'
                 spacing:
                   type: dex-space-control-parameter
                   value: {}
@@ -416,18 +481,21 @@ composition:
           type: link
           locales:
             en:
-              path: '#'
+              path: https://www.uniform.dev/about-us
               type: url
         text:
           type: text
-          value: Code of conduct
+          value: About us
+        activeState:
+          type: checkbox
+          value: null
     c4586887-719a-4134-b057-87d2f8ea3ee6:
       parameters:
         link:
           type: link
           locales:
             en:
-              path: '#'
+              path: https://www.uniform.dev/contact
               type: url
         text:
           type: text
@@ -435,6 +503,6 @@ composition:
   _locales:
     - en
 created: '2025-03-04T20:14:51.290983+00:00'
-modified: '2025-03-06T11:48:24.377108+00:00'
+modified: '2025-03-17T18:21:25.761911+00:00'
 pattern: true
 categoryId: b1163ce2-5ac7-4347-bc38-a42198180718
