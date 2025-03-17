@@ -1,8 +1,11 @@
 {
   "name": "@uniformdev/csk-recipes",
-  "version": "6.0.21",
+  "version": "6.0.22",
   "description": "command-line interface (CLI) and utility functions to help you work with recipes in a CSK project. It simplifies project initialization by allowing you to choose templates and include specific recipes",
   "license": "SEE LICENSE IN LICENSE.txt",
+  "engines": {
+    "node": "^18.18.0 || ^19.8.0 || >= 20.0.0"
+  },
   "main": "./cli.js",
   "exports": {
     ".": {

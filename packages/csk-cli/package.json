@@ -1,8 +1,11 @@
 {
   "name": "@uniformdev/csk-cli",
-  "version": "6.0.21",
+  "version": "6.0.22",
   "description": "Command-line interface (CLI) tool designed to streamline the development workflow within Uniform projects. It provides commands for pulling additional data and generating components based on Canvas data",
   "license": "SEE LICENSE IN LICENSE.txt",
+  "engines": {
+    "node": "^18.18.0 || ^19.8.0 || >= 20.0.0"
+  },
   "main": "./cli.js",
   "exports": {
     ".": {

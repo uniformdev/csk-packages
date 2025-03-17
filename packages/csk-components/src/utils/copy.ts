@@ -1,8 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import * as ora from 'ora';
-import { FILE_EXTENSIONS, IMPORT_REGEX, SOURCE_CANVAS_FILES } from '@/constants';
 import { confirm } from '@inquirer/prompts';
+import { FILE_EXTENSIONS, IMPORT_REGEX, SOURCE_CANVAS_FILES } from '../constants';
 
 const ensureDir = async (dir: string) => {
   if (!fs.existsSync(dir)) {
@@ -132,7 +132,7 @@ export const copyCanvasComponentsWithDependencies = async (
         .filter(item => item.isFile() && SOURCE_CANVAS_FILES.includes(item.name));
 
       for (const item of itemsToCopy) {
-        await findImportedFiles(path.join(item.parentPath, item.name), targetPath, importsState);
+        await findImportedFiles(path.join(item?.path || item.parentPath, item.name), targetPath, importsState);
       }
     }
     const filePathsToExtract = Array.from(importsState);
