@@ -15,6 +15,7 @@ type ColumnsVariantProps = {
   sectionCTA: React.ReactNode;
   textAlignmentClass: string;
   buttonAlignmentClass: string;
+  anchor: SectionParameters['anchor'];
 };
 
 export const ColumnsVariant: FC<ColumnsVariantProps> = ({
@@ -24,13 +25,14 @@ export const ColumnsVariant: FC<ColumnsVariantProps> = ({
   fluidContent,
   fullHeight,
   variant,
+  anchor,
   sectionMedia,
   sectionContent,
   sectionCTA,
   textAlignmentClass,
   buttonAlignmentClass,
 }) => (
-  <Container {...{ backgroundColor, spacing, border, fluidContent, fullHeight }}>
+  <Container {...{ backgroundColor, spacing, border, fluidContent, fullHeight, id: anchor }}>
     <div className={cn('grid grid-cols-1 items-center gap-4 px-4 lg:grid-cols-2 xl:px-0')}>
       <div className={cn('aspect-square', { 'order-last': variant === SectionVariants.ColumnsReverse })}>
         <div className="flex size-full items-center justify-center overflow-hidden">{sectionMedia}</div>

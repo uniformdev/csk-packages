@@ -15,6 +15,7 @@ type DefaultVariantProps = {
   sectionCTA: React.ReactNode;
   textAlignmentClass: string;
   buttonAlignmentClass: string;
+  anchor: SectionParameters['anchor'];
 };
 
 export const DefaultVariant: FC<DefaultVariantProps> = ({
@@ -26,10 +27,11 @@ export const DefaultVariant: FC<DefaultVariantProps> = ({
   sectionMedia,
   sectionContent,
   textAlignmentClass,
+  anchor,
 }) => (
   <Container
     className={cn('relative overflow-hidden')}
-    {...{ backgroundColor, spacing, border, fluidContent, fullHeight }}
+    {...{ backgroundColor, spacing, border, fluidContent, fullHeight, id: anchor }}
   >
     <div className="absolute left-0 top-0 size-full overflow-hidden">{sectionMedia}</div>
     <Container className="relative flex flex-col gap-8">

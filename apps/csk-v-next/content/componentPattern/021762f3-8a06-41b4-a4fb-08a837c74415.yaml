@@ -26,45 +26,28 @@ composition:
       value: general-color-3
   slots:
     headerLeftContent:
-      - _id: 4fb2a9bd-3af3-4951-9ece-9e98588f3bf5
-        type: link
-        slots:
-          linkContent:
-            - _id: 24a94c6f-a784-434a-8ea7-924c829f0a83
-              type: text
-              parameters:
-                tag:
-                  type: dex-segmented-control-parameter
-                  value: p
-                size:
-                  type: dex-segmented-control-parameter
-                  value:
-                    mobile: lg
-                    tablet: lg
-                    desktop: lg
-                text:
-                  type: text
-                  locales:
-                    en: "Digital Experience\LAssembly"
-                color:
-                  type: dex-color-palette-parameter
-                  value: text-secondary
-                weight:
-                  type: dex-segmented-control-parameter
-                  value: semibold
-              _overridability:
-                hideLockedParameters: true
+      - _id: 24a94c6f-a784-434a-8ea7-924c829f0a83
+        type: text
         parameters:
-          link:
-            type: link
+          tag:
+            type: dex-segmented-control-parameter
+            value: p
+          size:
+            type: dex-segmented-control-parameter
             value:
-              path: /
-              type: projectMapNode
-              nodeId: b90aa0bf-891d-4e40-9899-0d79eb1b26af
-              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-          displayName:
+              mobile: lg
+              tablet: lg
+              desktop: lg
+          text:
             type: text
-            value: Logo
+            locales:
+              en: "Digital Experience\LAssembly"
+          color:
+            type: dex-color-palette-parameter
+            value: text-secondary
+          weight:
+            type: dex-segmented-control-parameter
+            value: semibold
         _overridability:
           hideLockedParameters: true
     headerRightContent:
@@ -124,7 +107,7 @@ composition:
   _locales:
     - en
 created: '2025-03-04T20:14:51.252283+00:00'
-modified: '2025-03-05T13:35:56.51779+00:00'
+modified: '2025-03-17T10:33:38.257195+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/main-header.jpg

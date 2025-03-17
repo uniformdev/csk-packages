@@ -680,6 +680,10 @@ composition:
                       type: checkbox
                       value: true
             parameters:
+              anchor:
+                type: text
+                locales:
+                  en: speakers
               spacing:
                 type: dex-space-control-parameter
                 value:
@@ -1028,6 +1032,9 @@ composition:
                       type: dex-color-palette-parameter
                       value: general-color-1
             parameters:
+              anchor:
+                type: text
+                value: ticket
               spacing:
                 type: dex-space-control-parameter
                 value:
@@ -1188,9 +1195,25 @@ composition:
                   type: text
                   value: image/png
               _source: uniform-assets
+    852664d7-7d35-4eb5-97ad-e1c23ce940ca|38f88562-6b70-411b-a550-ada8514eef22|0fbe5a33-b284-45c0-b256-f29f5c846f02:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: '#speakers'
+              type: url
+    852664d7-7d35-4eb5-97ad-e1c23ce940ca|38f88562-6b70-411b-a550-ada8514eef22|6bc42195-fa25-4382-bdcf-23351ebdc0c5:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: '#ticket'
+              type: url
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-03-09T11:33:29.56583+00:00'
-modified: '2025-03-16T16:01:09.586198+00:00'
+created: '2025-03-04T20:14:54.25164+00:00'
+modified: '2025-03-17T10:30:12.486442+00:00'
 pattern: false
