@@ -1,0 +1,1171 @@
+composition:
+  _name: Registration Completed - Thank you
+  _id: 2d1a57a8-38cb-4d7d-9b23-f5b83c9979b2
+  type: page
+  parameters:
+    favicon:
+      type: asset
+      value:
+        - _id: 990d93a6-21a8-46d5-9355-fc36fbe61e8b
+          type: image
+          fields:
+            id:
+              type: text
+              value: 0f0670b4-a425-40d3-842b-c7c895d500a5
+            url:
+              value: >-
+                https://img.uniform.global/p/9VlMgIbZQQKI2wzV-L0jow/FLwt6eFQRM6iAo9qmVxRxw-uniformlogo.svg
+              type: text
+            file:
+              type: file
+              value: 3295cc71-bf13-4b4e-9d67-14959d233d3a
+            size:
+              value: 454
+              type: number
+            title:
+              type: text
+              value: uniformlogo.svg
+            width:
+              value: 45
+              type: number
+            height:
+              value: 52
+              type: number
+            mediaType:
+              value: image/svg+xml
+              type: text
+          _source: uniform-assets
+    pageTitle:
+      type: text
+      locales:
+        en: Thank you! - Uniform DXA
+    backgroundColor:
+      type: dex-color-palette-parameter
+      value: page-background-primary
+  slots:
+    pageFooter:
+      - _id: fa07d1c8-eed2-4669-8934-55fd8d57b956
+        type: footer
+        _pattern: 68136a90-0d34-4dbb-a34e-6e324179998a
+    pageHeader:
+      - _id: b95f37e7-b60e-474b-b588-df0e5b44b2aa
+        type: header
+        slots:
+          headerLeftContent:
+            - _id: >-
+                b95f37e7-b60e-474b-b588-df0e5b44b2aa|24a94c6f-a784-434a-8ea7-924c829f0a83
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: p
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: lg
+                    tablet: lg
+                    desktop: lg
+                text:
+                  type: text
+                  locales:
+                    en: "Digital Experience\LAssembly"
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-secondary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: semibold
+              _overridability:
+                hideLockedParameters: true
+          headerRightContent:
+            - _id: >-
+                b95f37e7-b60e-474b-b588-df0e5b44b2aa|94874de3-bdc7-4a4d-a113-34100a71b3c7
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: p
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    desktop: base
+                text:
+                  type: text
+                  locales:
+                    en: April 10, 2025 at 9:30 am EST
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-secondary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: light
+              _overridability:
+                hideLockedParameters: true
+            - _id: >-
+                b95f37e7-b60e-474b-b588-df0e5b44b2aa|6bc42195-fa25-4382-bdcf-23351ebdc0c5
+              type: button
+              _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
+        parameters:
+          color:
+            type: dex-color-palette-parameter
+            value: general-color-1
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              mobile:
+                paddingTop: container-small
+                paddingBottom: container-small
+              tablet:
+                paddingTop: container-small
+                paddingBottom: container-small
+              desktop:
+                paddingTop: container-small
+                paddingBottom: container-small
+          displayName:
+            type: text
+            value: Header
+          backgroundColor:
+            type: dex-color-palette-parameter
+            value: general-color-3
+    pageContent:
+      - _id: 87e65a9a-d532-4f0e-afc5-b3f2ded4097e
+        type: container
+        slots:
+          containerContent:
+            - _id: b9d2dedc-02a9-493d-8044-23736a16c378
+              type: container
+              slots:
+                containerContent:
+                  - _id: e71518de-b7cb-4d11-8dd1-87a03942adb0
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: h1
+                      size:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: 5xl
+                          tablet: 6xl
+                          desktop: 7xl
+                      text:
+                        type: text
+                        locales:
+                          en: Thank you!
+                      color:
+                        type: dex-color-palette-parameter
+                        value: text-secondary
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: bold
+                      alignment:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: center
+                          tablet: center
+                          desktop: center
+                  - _id: 791ba520-c623-4130-94a8-2dda9bec69de
+                    type: spacer
+                    parameters:
+                      size:
+                        type: dex-token-selector-parameter
+                        value:
+                          mobile: spacer-small
+                          tablet: spacer-small
+                          desktop: spacer-small
+                  - _id: 5a523d40-4d76-451b-81e4-6544d777b7e6
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: p
+                      size:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: xl
+                          tablet: xl
+                          desktop: xl
+                      text:
+                        type: text
+                        locales:
+                          en: >-
+                            A member of the Uniform team will be in contact with
+                            you shortly. In the meantime, please feel free to
+                            schedule a time that works best for you.
+                      color:
+                        type: dex-color-palette-parameter
+                        value: text-secondary
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: medium
+                      alignment:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: center
+                          tablet: center
+                          desktop: center
+              parameters:
+                spacing:
+                  type: dex-space-control-parameter
+                  value:
+                    mobile: {}
+                    tablet: {}
+                    desktop: {}
+        parameters:
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              mobile:
+                paddingTop: container-medium
+                paddingBottom: container-medium
+              tablet:
+                paddingTop: container-large
+                paddingBottom: container-large
+              desktop:
+                paddingTop: container-xlarge
+                paddingBottom: container-xlarge
+          displayName:
+            type: text
+            locales:
+              en: Hero
+          fluidContent:
+            type: checkbox
+            value: true
+          backgroundColor:
+            type: dex-color-palette-parameter
+            value: general-color-3
+      - _id: 33311e8e-acad-4964-9937-44813f277cb8
+        type: container
+        slots:
+          containerContent:
+            - _id: 5560b7d6-c375-4cfc-9b35-30a0f2502e9b
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: h2
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: xl
+                    tablet: xl
+                    desktop: 2xl
+                text:
+                  type: text
+                  locales:
+                    en: Related stories
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: semibold
+                alignment:
+                  type: dex-segmented-control-parameter
+                  value: {}
+            - _id: da669b63-39a9-4609-964d-55b1463b9fad
+              type: spacer
+              parameters:
+                size:
+                  type: dex-token-selector-parameter
+                  value:
+                    mobile: spacer-small
+                    tablet: spacer-small
+                    desktop: spacer-small
+            - _id: da742b57-4ce6-41c5-aa04-cd743dd3a9a9
+              type: grid
+              slots:
+                gridInner:
+                  - _id: 621f0547-ee08-4bd1-8aeb-718b84a3b5b6
+                    type: link
+                    slots:
+                      linkContent:
+                        - _id: d6a10ae6-a57b-4db7-9d5e-33793308ddd8
+                          type: card
+                          slots:
+                            cardMedia:
+                              - _id: 2afe0c91-3b76-4226-b815-b88cbe94d353
+                                type: image
+                                parameters:
+                                  image:
+                                    type: asset
+                                    value:
+                                      - _id: 27953e2c-eeb9-4f9c-96c6-d1c9b6527fb6
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: c67152cf-1adb-4350-bec2-4103dafda476
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/FXZI1o5aQJqLQuqxEFWw6A/KT8oHQcoTcqci-Rf_kCxDg-image.png
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: eb62a4e5-e658-4aad-9ee4-72fd0401f177
+                                          size:
+                                            value: 254466
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: image.png
+                                          width:
+                                            value: 1280
+                                            type: number
+                                          height:
+                                            value: 720
+                                            type: number
+                                          mediaType:
+                                            value: image/png
+                                            type: text
+                                        _source: uniform-assets
+                                  border:
+                                    type: dex-token-selector-parameter
+                                    value: ''
+                                  height:
+                                    type: number
+                                    value: '290'
+                                  objectFit:
+                                    type: dex-segmented-control-parameter
+                                    value: contain
+                                  overlayColor:
+                                    type: dex-color-palette-parameter
+                                    value: general-color-5
+                                  overlayOpacity:
+                                    type: dex-slider-control-parameter
+                                    value: ''
+                                _overridability:
+                                  parameters:
+                                    image: 'yes'
+                                  hideLockedParameters: true
+                            cardContent:
+                              - _id: 2e01ca54-e7b6-423b-86db-3e6154647c7f
+                                type: flex
+                                slots:
+                                  flexItem:
+                                    - _id: 552fdbf4-b58d-4342-9768-0211f006fa77
+                                      type: text
+                                      parameters:
+                                        tag:
+                                          type: dex-segmented-control-parameter
+                                          value: p
+                                        size:
+                                          type: dex-segmented-control-parameter
+                                          value:
+                                            mobile: base
+                                            tablet: lg
+                                            desktop: xl
+                                        text:
+                                          type: text
+                                          locales:
+                                            en: >-
+                                              The Composable DXP: faster, simpler
+                                              experience management
+                                        color:
+                                          type: dex-color-palette-parameter
+                                          value: text-primary
+                                        weight:
+                                          type: dex-segmented-control-parameter
+                                          value: semibold
+                                        alignment:
+                                          type: dex-segmented-control-parameter
+                                          value: {}
+                                      _overridability:
+                                        parameters:
+                                          tag: 'yes'
+                                          text: 'yes'
+                                        hideLockedParameters: true
+                                    - _id: 4b88f2b5-2a6f-4620-9ccd-6bf7eadae627
+                                      type: spacer
+                                      parameters:
+                                        size:
+                                          type: dex-token-selector-parameter
+                                          value:
+                                            mobile: spacer-extra-small
+                                            tablet: spacer-extra-small
+                                            desktop: spacer-extra-small
+                                    - _id: 7c9987bc-4c3f-41d0-ab11-e4f2aca5bd65
+                                      type: text
+                                      parameters:
+                                        tag:
+                                          type: dex-segmented-control-parameter
+                                          value: p
+                                        size:
+                                          type: dex-segmented-control-parameter
+                                          value:
+                                            mobile: sm
+                                            tablet: base
+                                            desktop: sm
+                                        text:
+                                          type: text
+                                          locales:
+                                            en: >-
+                                              Composable DXPs streamline omnichannel
+                                              management by replacing costly, complex
+                                              legacy systems with scalable, intuitive
+                                              platforms that accelerate digital
+                                              production and integration.
+                                        color:
+                                          type: dex-color-palette-parameter
+                                          value: text-grey
+                                        weight:
+                                          type: dex-segmented-control-parameter
+                                          value: normal
+                                        alignment:
+                                          type: dex-segmented-control-parameter
+                                          value: {}
+                                      _overridability:
+                                        parameters:
+                                          tag: 'yes'
+                                          text: 'yes'
+                                        hideLockedParameters: true
+                                parameters:
+                                  gap:
+                                    type: dex-slider-control-parameter
+                                    value: {}
+                                  spacing:
+                                    type: dex-space-control-parameter
+                                    value:
+                                      mobile: {}
+                                      tablet: {}
+                                      desktop: {}
+                                  direction:
+                                    type: dex-segmented-control-parameter
+                                    value:
+                                      mobile: col
+                                      tablet: col
+                                      desktop: col
+                                  alignItems:
+                                    type: dex-segmented-control-parameter
+                                    value: start
+                                  fluidContent:
+                                    type: checkbox
+                                    value: true
+                                  justifyContent:
+                                    type: dex-segmented-control-parameter
+                                    value:
+                                      mobile: ''
+                                      tablet: ''
+                                      desktop: ''
+                                _overridability:
+                                  hideLockedParameters: true
+                          parameters:
+                            spacing:
+                              type: dex-space-control-parameter
+                              value:
+                                marginTop: ''
+                                marginLeft: ''
+                                paddingTop: ''
+                                marginRight: ''
+                                paddingLeft: ''
+                                marginBottom: ''
+                                paddingRight: ''
+                                paddingBottom: ''
+                            displayName:
+                              type: text
+                              value: >-
+                                The Composable DXP: faster, simpler experience
+                                management
+                            fluidContent:
+                              type: checkbox
+                              value: true
+                          _overridability:
+                            variants: false
+                            parameters:
+                              displayName: 'yes'
+                            hideLockedParameters: true
+                    parameters:
+                      link:
+                        type: link
+                        value:
+                          path: >-
+                            https://www.uniform.dev/blogs/the-composable-dxp-faster-simpler-experience-management
+                          type: url
+                      displayName:
+                        type: text
+                        locales:
+                          en: Blog Post Card
+                  - _id: 20f2759d-5698-42ea-9b50-1a2dd1beb703
+                    type: link
+                    slots:
+                      linkContent:
+                        - _id: e3338de4-4674-4059-b7aa-e72f004117f4
+                          type: card
+                          slots:
+                            cardMedia:
+                              - _id: e400726c-18b9-4c9b-a1ce-a8d51a6d5561
+                                type: image
+                                parameters:
+                                  image:
+                                    type: asset
+                                    value:
+                                      - _id: 3d52d205-fb39-41ae-8283-bca5d1ae6722
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: 7ab814cc-9143-486d-a1a7-abaac230658f
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/FXZI1o5aQJqLQuqxEFWw6A/CoZUFkNQQ3OzzC4csSaGVA-image.png
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: ac710bd4-bb60-406c-b681-b453a6c8836b
+                                          size:
+                                            value: 1976628
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: image.png
+                                          width:
+                                            value: 4001
+                                            type: number
+                                          height:
+                                            value: 2251
+                                            type: number
+                                          mediaType:
+                                            value: image/png
+                                            type: text
+                                        _source: uniform-assets
+                                  border:
+                                    type: dex-token-selector-parameter
+                                    value: ''
+                                  height:
+                                    type: number
+                                    value: '290'
+                                  objectFit:
+                                    type: dex-segmented-control-parameter
+                                    value: contain
+                                  overlayColor:
+                                    type: dex-color-palette-parameter
+                                    value: general-color-5
+                                  overlayOpacity:
+                                    type: dex-slider-control-parameter
+                                    value: ''
+                                _overridability:
+                                  parameters:
+                                    image: 'yes'
+                                  hideLockedParameters: true
+                            cardContent:
+                              - _id: 9c719f65-cd03-49c2-a934-704296840dbc
+                                type: flex
+                                slots:
+                                  flexItem:
+                                    - _id: b64d5239-aa4e-4140-862d-34c2b322e26b
+                                      type: text
+                                      parameters:
+                                        tag:
+                                          type: dex-segmented-control-parameter
+                                          value: p
+                                        size:
+                                          type: dex-segmented-control-parameter
+                                          value:
+                                            mobile: base
+                                            tablet: lg
+                                            desktop: xl
+                                        text:
+                                          type: text
+                                          locales:
+                                            en: Composable DXP lessons from 2024
+                                        color:
+                                          type: dex-color-palette-parameter
+                                          value: text-primary
+                                        weight:
+                                          type: dex-segmented-control-parameter
+                                          value: semibold
+                                        alignment:
+                                          type: dex-segmented-control-parameter
+                                          value: {}
+                                      _overridability:
+                                        parameters:
+                                          tag: 'yes'
+                                          text: 'yes'
+                                        hideLockedParameters: true
+                                    - _id: 76b204c2-16bb-461b-9dbc-91d5824acca8
+                                      type: spacer
+                                      parameters:
+                                        size:
+                                          type: dex-token-selector-parameter
+                                          value:
+                                            mobile: spacer-extra-small
+                                            tablet: spacer-extra-small
+                                            desktop: spacer-extra-small
+                                    - _id: 427e72ce-9faa-4362-9547-46409342a908
+                                      type: text
+                                      parameters:
+                                        tag:
+                                          type: dex-segmented-control-parameter
+                                          value: p
+                                        size:
+                                          type: dex-segmented-control-parameter
+                                          value:
+                                            mobile: sm
+                                            tablet: base
+                                            desktop: sm
+                                        text:
+                                          type: text
+                                          locales:
+                                            en: >-
+                                              As we move into 2025, composable DXPs
+                                              and headless architectures continue to
+                                              reshape the digital landscape, building
+                                              on both the successes and challenges of
+                                              2024.
+                                        color:
+                                          type: dex-color-palette-parameter
+                                          value: text-grey
+                                        weight:
+                                          type: dex-segmented-control-parameter
+                                          value: normal
+                                        alignment:
+                                          type: dex-segmented-control-parameter
+                                          value: {}
+                                      _overridability:
+                                        parameters:
+                                          tag: 'yes'
+                                          text: 'yes'
+                                        hideLockedParameters: true
+                                parameters:
+                                  gap:
+                                    type: dex-slider-control-parameter
+                                    value: {}
+                                  spacing:
+                                    type: dex-space-control-parameter
+                                    value:
+                                      mobile: {}
+                                      tablet: {}
+                                      desktop: {}
+                                  direction:
+                                    type: dex-segmented-control-parameter
+                                    value:
+                                      mobile: col
+                                      tablet: col
+                                      desktop: col
+                                  alignItems:
+                                    type: dex-segmented-control-parameter
+                                    value: start
+                                  fluidContent:
+                                    type: checkbox
+                                    value: true
+                                  justifyContent:
+                                    type: dex-segmented-control-parameter
+                                    value:
+                                      mobile: ''
+                                      tablet: ''
+                                      desktop: ''
+                                _overridability:
+                                  hideLockedParameters: true
+                          parameters:
+                            spacing:
+                              type: dex-space-control-parameter
+                              value:
+                                marginTop: ''
+                                marginLeft: ''
+                                paddingTop: ''
+                                marginRight: ''
+                                paddingLeft: ''
+                                marginBottom: ''
+                                paddingRight: ''
+                                paddingBottom: ''
+                            displayName:
+                              type: text
+                              value: Composable DXP lessons from 2024
+                            fluidContent:
+                              type: checkbox
+                              value: true
+                          _overridability:
+                            variants: false
+                            parameters:
+                              displayName: 'yes'
+                            hideLockedParameters: true
+                    parameters:
+                      link:
+                        type: link
+                        value:
+                          path: >-
+                            https://www.uniform.dev/blogs/composable-dxp-lessons-learned-in-2024
+                          type: url
+                      displayName:
+                        type: text
+                        locales:
+                          en: Blog Post Card
+                  - _id: c5eb0832-61d8-4ab2-838f-9b85839d1244
+                    type: link
+                    slots:
+                      linkContent:
+                        - _id: 400ed2fe-84bd-4416-bade-e5f0bea02363
+                          type: card
+                          slots:
+                            cardMedia:
+                              - _id: 331b892b-3e6c-4cd0-8e46-1141c8e3e66a
+                                type: image
+                                parameters:
+                                  image:
+                                    type: asset
+                                    value:
+                                      - _id: 207e436d-88d9-4304-86fb-d80bfcfad527
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: abe9f34a-95c8-4088-b74e-caf56052c2b2
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/FXZI1o5aQJqLQuqxEFWw6A/VRMwMZSkSRaVyAhyTttqTw-image.png
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: 70756f13-4ebb-4282-a2ed-3d93c07cc5aa
+                                          size:
+                                            value: 216114
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: image.png
+                                          width:
+                                            value: 1920
+                                            type: number
+                                          height:
+                                            value: 1081
+                                            type: number
+                                          mediaType:
+                                            value: image/png
+                                            type: text
+                                        _source: uniform-assets
+                                  border:
+                                    type: dex-token-selector-parameter
+                                    value: ''
+                                  height:
+                                    type: number
+                                    value: '290'
+                                  objectFit:
+                                    type: dex-segmented-control-parameter
+                                    value: contain
+                                  overlayColor:
+                                    type: dex-color-palette-parameter
+                                    value: general-color-5
+                                  overlayOpacity:
+                                    type: dex-slider-control-parameter
+                                    value: ''
+                                _overridability:
+                                  parameters:
+                                    image: 'yes'
+                                  hideLockedParameters: true
+                            cardContent:
+                              - _id: 9de2c108-0260-429e-a6ae-59fb2126a5f1
+                                type: flex
+                                slots:
+                                  flexItem:
+                                    - _id: bc2904d0-4877-40d2-98de-f95fea0c25b1
+                                      type: text
+                                      parameters:
+                                        tag:
+                                          type: dex-segmented-control-parameter
+                                          value: p
+                                        size:
+                                          type: dex-segmented-control-parameter
+                                          value:
+                                            mobile: base
+                                            tablet: lg
+                                            desktop: xl
+                                        text:
+                                          type: text
+                                          locales:
+                                            en: >-
+                                              Choosing the right digital experience
+                                              platform for your needs
+                                        color:
+                                          type: dex-color-palette-parameter
+                                          value: text-primary
+                                        weight:
+                                          type: dex-segmented-control-parameter
+                                          value: semibold
+                                        alignment:
+                                          type: dex-segmented-control-parameter
+                                          value: {}
+                                      _overridability:
+                                        parameters:
+                                          tag: 'yes'
+                                          text: 'yes'
+                                        hideLockedParameters: true
+                                    - _id: 85c8ff4c-06d3-43d6-bb8a-40db60194b1f
+                                      type: spacer
+                                      parameters:
+                                        size:
+                                          type: dex-token-selector-parameter
+                                          value:
+                                            mobile: spacer-extra-small
+                                            tablet: spacer-extra-small
+                                            desktop: spacer-extra-small
+                                    - _id: 2ab3a518-c76d-4444-bf95-d566e5feaf87
+                                      type: text
+                                      parameters:
+                                        tag:
+                                          type: dex-segmented-control-parameter
+                                          value: p
+                                        size:
+                                          type: dex-segmented-control-parameter
+                                          value:
+                                            mobile: sm
+                                            tablet: base
+                                            desktop: sm
+                                        text:
+                                          type: text
+                                          locales:
+                                            en: >-
+                                              As brands shift toward modern,
+                                              composable DXPs that balance intuitive
+                                              management with advanced front-end
+                                              capabilities, organizations must
+                                              navigate an evolving landscape to find a
+                                              solution that meets their complex needs.
+                                        color:
+                                          type: dex-color-palette-parameter
+                                          value: text-grey
+                                        weight:
+                                          type: dex-segmented-control-parameter
+                                          value: normal
+                                        alignment:
+                                          type: dex-segmented-control-parameter
+                                          value: {}
+                                      _overridability:
+                                        parameters:
+                                          tag: 'yes'
+                                          text: 'yes'
+                                        hideLockedParameters: true
+                                parameters:
+                                  gap:
+                                    type: dex-slider-control-parameter
+                                    value: {}
+                                  spacing:
+                                    type: dex-space-control-parameter
+                                    value:
+                                      mobile: {}
+                                      tablet: {}
+                                      desktop: {}
+                                  direction:
+                                    type: dex-segmented-control-parameter
+                                    value:
+                                      mobile: col
+                                      tablet: col
+                                      desktop: col
+                                  alignItems:
+                                    type: dex-segmented-control-parameter
+                                    value: start
+                                  fluidContent:
+                                    type: checkbox
+                                    value: true
+                                  justifyContent:
+                                    type: dex-segmented-control-parameter
+                                    value:
+                                      mobile: ''
+                                      tablet: ''
+                                      desktop: ''
+                                _overridability:
+                                  hideLockedParameters: true
+                          parameters:
+                            spacing:
+                              type: dex-space-control-parameter
+                              value:
+                                marginTop: ''
+                                marginLeft: ''
+                                paddingTop: ''
+                                marginRight: ''
+                                paddingLeft: ''
+                                marginBottom: ''
+                                paddingRight: ''
+                                paddingBottom: ''
+                            displayName:
+                              type: text
+                              value: >-
+                                Choosing the right digital experience platform
+                                for your needs
+                            fluidContent:
+                              type: checkbox
+                              value: true
+                          _overridability:
+                            variants: false
+                            parameters:
+                              displayName: 'yes'
+                            hideLockedParameters: true
+                    parameters:
+                      link:
+                        type: link
+                        value:
+                          path: >-
+                            https://www.uniform.dev/blogs/choosing-the-right-digital-experience-platform-for-your-needs
+                          type: url
+                      displayName:
+                        type: text
+                        locales:
+                          en: Blog Post Card
+                  - _id: 259af916-835f-4c9f-9ea1-a43b28df48f7
+                    type: link
+                    slots:
+                      linkContent:
+                        - _id: a896f692-5d21-4a2e-8b95-5c2edd2c2af4
+                          type: card
+                          slots:
+                            cardMedia:
+                              - _id: bf5bdb35-3537-4164-97f1-7bd95ba0e2a9
+                                type: image
+                                parameters:
+                                  image:
+                                    type: asset
+                                    value:
+                                      - _id: 75c7ecd4-f371-4675-83df-ae12f4b8ea4f
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: 8cf0770c-e5bd-4104-b20d-5d42ccc0fee5
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/FXZI1o5aQJqLQuqxEFWw6A/hFYdKstzSYCLxG7p7WtB7A-image.png
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: 7140ef27-9e70-40c9-8008-039da65c6f0c
+                                          size:
+                                            value: 2120150
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: image.png
+                                          width:
+                                            value: 8000
+                                            type: number
+                                          height:
+                                            value: 4500
+                                            type: number
+                                          mediaType:
+                                            value: image/png
+                                            type: text
+                                        _source: uniform-assets
+                                  border:
+                                    type: dex-token-selector-parameter
+                                    value: ''
+                                  height:
+                                    type: number
+                                    value: '290'
+                                  objectFit:
+                                    type: dex-segmented-control-parameter
+                                    value: contain
+                                  overlayColor:
+                                    type: dex-color-palette-parameter
+                                    value: general-color-5
+                                  overlayOpacity:
+                                    type: dex-slider-control-parameter
+                                    value: ''
+                                _overridability:
+                                  parameters:
+                                    image: 'yes'
+                                  hideLockedParameters: true
+                            cardContent:
+                              - _id: 8d504f6e-3bd8-41a6-9336-9b369de7703b
+                                type: flex
+                                slots:
+                                  flexItem:
+                                    - _id: ca57bedb-70ba-473d-8a59-d621837b9df7
+                                      type: text
+                                      parameters:
+                                        tag:
+                                          type: dex-segmented-control-parameter
+                                          value: p
+                                        size:
+                                          type: dex-segmented-control-parameter
+                                          value:
+                                            mobile: base
+                                            tablet: lg
+                                            desktop: xl
+                                        text:
+                                          type: text
+                                          locales:
+                                            en: 'Uniform DXCP: the what, why, and how'
+                                        color:
+                                          type: dex-color-palette-parameter
+                                          value: text-primary
+                                        weight:
+                                          type: dex-segmented-control-parameter
+                                          value: semibold
+                                        alignment:
+                                          type: dex-segmented-control-parameter
+                                          value: {}
+                                      _overridability:
+                                        parameters:
+                                          tag: 'yes'
+                                          text: 'yes'
+                                        hideLockedParameters: true
+                                    - _id: 8d12ad67-832c-47dc-af16-98ec7eb973af
+                                      type: spacer
+                                      parameters:
+                                        size:
+                                          type: dex-token-selector-parameter
+                                          value:
+                                            mobile: spacer-extra-small
+                                            tablet: spacer-extra-small
+                                            desktop: spacer-extra-small
+                                    - _id: 9b207324-4e12-4c81-a0a2-4da934af7841
+                                      type: text
+                                      parameters:
+                                        tag:
+                                          type: dex-segmented-control-parameter
+                                          value: p
+                                        size:
+                                          type: dex-segmented-control-parameter
+                                          value:
+                                            mobile: sm
+                                            tablet: base
+                                            desktop: sm
+                                        text:
+                                          type: text
+                                          locales:
+                                            en: >-
+                                              What Uniform DXCP is, why it exists, and
+                                              how it helps you go composable.
+                                        color:
+                                          type: dex-color-palette-parameter
+                                          value: text-grey
+                                        weight:
+                                          type: dex-segmented-control-parameter
+                                          value: normal
+                                        alignment:
+                                          type: dex-segmented-control-parameter
+                                          value: {}
+                                      _overridability:
+                                        parameters:
+                                          tag: 'yes'
+                                          text: 'yes'
+                                        hideLockedParameters: true
+                                parameters:
+                                  gap:
+                                    type: dex-slider-control-parameter
+                                    value: {}
+                                  spacing:
+                                    type: dex-space-control-parameter
+                                    value:
+                                      mobile: {}
+                                      tablet: {}
+                                      desktop: {}
+                                  direction:
+                                    type: dex-segmented-control-parameter
+                                    value:
+                                      mobile: col
+                                      tablet: col
+                                      desktop: col
+                                  alignItems:
+                                    type: dex-segmented-control-parameter
+                                    value: start
+                                  fluidContent:
+                                    type: checkbox
+                                    value: true
+                                  justifyContent:
+                                    type: dex-segmented-control-parameter
+                                    value:
+                                      mobile: ''
+                                      tablet: ''
+                                      desktop: ''
+                                _overridability:
+                                  hideLockedParameters: true
+                          parameters:
+                            spacing:
+                              type: dex-space-control-parameter
+                              value:
+                                marginTop: ''
+                                marginLeft: ''
+                                paddingTop: ''
+                                marginRight: ''
+                                paddingLeft: ''
+                                marginBottom: ''
+                                paddingRight: ''
+                                paddingBottom: ''
+                            displayName:
+                              type: text
+                              value: 'Uniform DXCP: the what, why, and how'
+                            fluidContent:
+                              type: checkbox
+                              value: true
+                          _overridability:
+                            variants: false
+                            parameters:
+                              displayName: 'yes'
+                            hideLockedParameters: true
+                    parameters:
+                      link:
+                        type: link
+                        value:
+                          path: >-
+                            https://www.uniform.dev/blogs/uniform-dxcp-the-what-why-and-how
+                          type: url
+                      displayName:
+                        type: text
+                        locales:
+                          en: Blog Post Card
+              parameters:
+                gapX:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: '4'
+                    tablet: '8'
+                    desktop: '8'
+                gapY:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: '4'
+                    tablet: '8'
+                    desktop: '8'
+                spacing:
+                  type: dex-space-control-parameter
+                  value:
+                    mobile: {}
+                    tablet: {}
+                    desktop: {}
+                alignItems:
+                  type: dex-segmented-control-parameter
+                  value: {}
+                displayName:
+                  type: text
+                  locales:
+                    en: Cards
+                columnsCount:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: '1'
+                    tablet: '2'
+                    desktop: '2'
+                fluidContent:
+                  type: checkbox
+                  value: true
+        parameters:
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              mobile:
+                paddingTop: container-medium
+                paddingBottom: container-medium
+              tablet:
+                paddingTop: container-medium
+                paddingBottom: container-medium
+              desktop:
+                paddingTop: container-large
+                paddingBottom: container-large
+          displayName:
+            type: text
+            locales:
+              en: Read more articles
+  _overrides:
+    b95f37e7-b60e-474b-b588-df0e5b44b2aa|6bc42195-fa25-4382-bdcf-23351ebdc0c5:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: https://www.uniform.dev/demo
+              type: url
+        text:
+          type: text
+          locales:
+            en: Request a demo
+  _locales:
+    - en
+created: '2025-03-17T11:29:51.992896+00:00'
+modified: '2025-03-17T11:32:49.536435+00:00'
+pattern: false
