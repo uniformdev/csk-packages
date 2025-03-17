@@ -21,6 +21,7 @@ import {
   getExternalBranchName,
   alignWithExternalBranch,
   executeWithLogs,
+  verifyGitProject,
 } from './utils';
 import { spawnCmdCommand } from '../../utils';
 
@@ -44,7 +45,13 @@ const init = async ({
   console.info('🚀 Welcome to the CSK CLI! 🧡\n');
 
   try {
-    if (!dev && (await verifyProjectAlignment(spinner))) return;
+    const { hasGit, wantsContinue } = await verifyGitProject(spinner);
+
+    if (!hasGit && !wantsContinue) return;
+
+    if (hasGit) {
+      if (!dev && (await verifyProjectAlignment(spinner))) return;
+    }
 
     const isMonorepo = checkIsMonorepo();
     const notInteractiveMode = Boolean(templateFromArgs && recipesFromArgs);
