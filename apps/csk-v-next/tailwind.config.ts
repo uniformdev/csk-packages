@@ -63,6 +63,9 @@ export default {
   content: [
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    //? if (aiAssistant) {
+    './src/modules/**/*.{js,ts,jsx,tsx,mdx}',
+    //? }
     //? if (monorepo) {
     '../../node_modules/@uniformdev/csk-components/dist/content/**/*.{js,ts,jsx,tsx,mdx}',
     //? }

@@ -1,4 +1,7 @@
 import { ComponentMapping } from '@uniformdev/csk-components/utils/createComponentResolver';
+//? if (aiAssistant) {
+import Chat from '@/modules/chat';
+//? }
 import AccordionItem from './AccordionItem';
 import AddToCardButton from './AddToCardButton';
 import Button from './Button';
@@ -15,6 +18,9 @@ import ModalLayout from './ModalLayout';
 import QuantitySelector from './QuantitySelector';
 import QuirkSelector from './QuirkSelector';
 import ReadMore from './ReadMore';
+//? if (aiAssistant) {
+import Recommendations from './Recommendations';
+//? }
 import RemoveButton from './RemoveButton';
 import RichText from './RichText';
 
@@ -24,21 +30,28 @@ export const customComponentsMapping: ComponentMapping = {
   customComponent: { component: CustomComponent },
   // This is an overridden CSK Container component.
   container: { component: Container },
-  addToFavorites: { component: () => null },
+  // Coffee Shop custom components
   accordionItem: { component: AccordionItem },
+  addToCardButton: { component: AddToCardButton },
+  addToFavorites: { component: () => null },
   button: { component: Button },
+  //? if (aiAssistant) {
+  chat: { component: Chat },
+  //? }
+  completeCheckoutButton: { component: CompleteCheckoutButton },
   featuredSection: { component: FeaturedSection },
-  richText: { component: RichText },
-  readMore: { component: ReadMore },
-  removeButton: { component: RemoveButton },
-  grid: { component: Grid },
-  flexCard: { component: FlexCard },
   flex: { component: Flex },
+  flexCard: { component: FlexCard },
+  grid: { component: Grid },
   gridItem: { component: GridItem },
   input: { component: Input },
-  quantitySelector: { component: QuantitySelector },
   modalLayout: { component: ModalLayout },
-  addToCardButton: { component: AddToCardButton },
-  completeCheckoutButton: { component: CompleteCheckoutButton },
+  quantitySelector: { component: QuantitySelector },
   quirkSelector: { component: QuirkSelector },
+  readMore: { component: ReadMore },
+  //? if (aiAssistant) {
+  recommendations: { component: Recommendations },
+  //? }
+  removeButton: { component: RemoveButton },
+  richText: { component: RichText },
 };
