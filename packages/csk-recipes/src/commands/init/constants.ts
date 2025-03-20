@@ -13,8 +13,9 @@ export const RECIPES = ['localization', 'ga', 'uniform-insights', 'shadcn'];
 export const TEMPLATES_WHITE_LIST = ['coffee-shop'];
 
 export const GIT_COMMANDS = {
-  DIFF_QUIET: `git diff --quiet origin/${GIT_BRANCHES.GOLD}`,
-  RESET_HARD: `git reset --hard origin/${GIT_BRANCHES.GOLD}`,
+  CHECK_IF_GIT: 'git status >/dev/null 2>&1',
+  DIFF_QUIET: `[[ $(git rev-parse --abbrev-ref HEAD) == "${GIT_BRANCHES.GOLD}" ]] && [ -z "$(git status --porcelain)" ] && git diff --quiet origin/${GIT_BRANCHES.GOLD} && echo true || exit 1`,
+  RESET_HARD: `git reset --hard origin/${GIT_BRANCHES.GOLD} && git clean -fd`,
   ALIGN_WITH_EXTERNAL_BRANCH: (branchName: string) =>
     `git clone https://github.com/uniformdev/csk-packages.git --branch ${branchName}`,
   GIT_REMOTE_BRANCHES: 'git ls-remote --heads https://github.com/uniformdev/csk-packages.git',

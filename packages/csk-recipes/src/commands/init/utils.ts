@@ -59,6 +59,38 @@ export const verifyProjectAlignment = async (spinner: ora.Ora): Promise<boolean>
   return false;
 };
 
+export const verifyGitProject = async (
+  spinner: ora.Ora
+): Promise<{
+  hasGit: boolean;
+  wantsContinue: boolean;
+}> => {
+  const hasGit = await runCmdCommand(GIT_COMMANDS.CHECK_IF_GIT).then(
+    () => true,
+    () => false
+  );
+
+  if (!hasGit) {
+    const wantsContinue = await confirm({
+      message:
+        'You are not in a Git repository. Proceeding with CLI recipes may make irreversible changes. Do you want to continue?',
+    });
+
+    if (!wantsContinue) {
+      spinner.fail('You are not ready to continue. Aborting...');
+      return {
+        hasGit,
+        wantsContinue: false,
+      };
+    }
+  }
+
+  return {
+    hasGit,
+    wantsContinue: true,
+  };
+};
+
 /**
  * Prompts the user to select a project template from available options.
  * Fetches remote branches and filters them for template branches.
@@ -227,12 +259,11 @@ export const fillEnvVariablesWithDefaults = async (
 
   // Determine required environment variables based on provided recipes
   const requiredModuleEnvVariables = recipes.map(appRecipes => REQUIRED_ENV_VARIABLES[appRecipes]).flat();
-  const requiredGeneralEnvVariables = [...REQUIRED_ENV_VARIABLES.general, ...requiredModuleEnvVariables];
 
   // Object to store the resulting environment variables
   const envVariables: Partial<Record<EnvVariable, string>> = {};
 
-  for (const envVariable of requiredGeneralEnvVariables) {
+  for (const envVariable of requiredModuleEnvVariables) {
     envVariables[envVariable] = defaultEnvVariables[envVariable] || ENV_VARIABLES_DEFAULT_VALUES[envVariable];
   }
 
