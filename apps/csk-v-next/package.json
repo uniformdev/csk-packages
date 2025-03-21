@@ -1,6 +1,6 @@
 {
   "name": "csk-v-next",
-  "version": "6.0.24",
+  "version": "6.0.25",
   "private": true,
   "engines": {
     "yarn": "please-use-npm",
@@ -10,7 +10,7 @@
   },
   "scripts": {
     "dev": "run-s pull:dex pull:locales next:dev",
-    "build": "run-s pull:dex next:build",
+    "build": "run-s pull:locales pull:dex next:build",
     "start": "next start",
     "dev:watch": "cross-env WATCH=true run-s pull:dex next:dev",
     "next:dev": "next dev",
