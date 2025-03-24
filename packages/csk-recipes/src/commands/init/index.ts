@@ -57,7 +57,9 @@ const init = async ({
     const notInteractiveMode = Boolean(templateFromArgs && recipesFromArgs);
 
     const template = templateFromArgs ? await getValidTemplateFromArgs(templateFromArgs) : await selectTemplate();
-    const recipes = recipesFromArgs ? await getValidRecipesFromArgs(recipesFromArgs, spinner) : await selectRecipes();
+    const recipes = recipesFromArgs
+      ? await getValidRecipesFromArgs(recipesFromArgs, spinner)
+      : await selectRecipes(template);
 
     const envVariables = notInteractiveMode
       ? await fillEnvVariablesWithDefaults(recipes)

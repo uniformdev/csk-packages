@@ -1,5 +1,5 @@
-export type Template = 'baseline' | string;
-export type Recipe = 'localization' | 'ga' | 'uniform-insights' | 'shadcn';
+export type Template = 'baseline' | 'coffee-shop' | string;
+export type Recipe = 'localization' | 'ga' | 'uniform-insights' | 'shadcn' | 'ai-assistant';
 
 export type EnvVariable =
   | 'UNIFORM_PROJECT_ID'
@@ -9,7 +9,8 @@ export type EnvVariable =
   | 'UNIFORM_PREVIEW_SECRET'
   | 'UNIFORM_INSIGHTS_ENDPOINT'
   | 'UNIFORM_INSIGHTS_KEY'
-  | 'GOOGLE_ANALYTICS_ID';
+  | 'GOOGLE_ANALYTICS_ID'
+  | 'OPENAI_API_KEY';
 
 export type ProjectConfiguration = {
   template: Template;

@@ -19,6 +19,7 @@ import {
   TEMPLATES_WHITE_LIST,
   PACKAGE_JSON_COPY_FILE,
   TEMPLATE_BRANCH_PREFIX_LOCAL,
+  TEMPLATES_SPECIFIC_RECIPES,
 } from './constants';
 import { EnvVariable, Recipe, Template } from './types';
 import { runCmdCommand, spawnCmdCommand } from '../../utils';
@@ -188,7 +189,9 @@ export const getValidRecipesFromArgs = async (recipes: Recipe[], spinner: ora.Or
  *
  * @returns {Promise<Recipe[]>} Array of selected recipes
  */
-export const selectRecipes = async (): Promise<Recipe[]> => {
+export const selectRecipes = async (template?: Template): Promise<Recipe[]> => {
+  const templateRecipes = template ? TEMPLATES_SPECIFIC_RECIPES[template] || [] : [];
+
   const recipes = await checkbox<Recipe>({
     message: 'Now, select the additional recipes you want to include in your project:',
     choices: [
@@ -196,6 +199,7 @@ export const selectRecipes = async (): Promise<Recipe[]> => {
       { name: 'Google Analytics', value: 'ga' },
       { name: 'Uniform Insights', value: 'uniform-insights' },
       { name: 'Shadcn', value: 'shadcn' },
+      ...templateRecipes,
     ],
   });
 
