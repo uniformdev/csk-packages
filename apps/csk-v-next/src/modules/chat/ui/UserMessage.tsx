@@ -1,6 +1,6 @@
 import { memo } from 'react';
-import Markdown from 'react-markdown';
 import { Message } from '@ai-sdk/react';
+import { Markdown } from './Markdown';
 
 const UserMessageComponent = ({ message }: { message: Message }) => (
   <div className="my-4 flex flex-1 gap-3 text-sm text-gray-600">
@@ -22,9 +22,11 @@ const UserMessageComponent = ({ message }: { message: Message }) => (
     </span>
     <div>
       <p className="italic leading-relaxed">
-        <span className="block font-bold italic text-gray-700">You</span>
+        <span className="block text-lg font-bold italic text-gray-700">You</span>
       </p>
-      <Markdown>{message.content}</Markdown>
+      <div className="text-base">
+        <Markdown>{message.content}</Markdown>
+      </div>
     </div>
   </div>
 );

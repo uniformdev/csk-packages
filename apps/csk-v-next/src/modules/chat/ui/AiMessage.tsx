@@ -1,9 +1,9 @@
 import React, { FC, memo, useEffect, useMemo, useState } from 'react';
 import { Message } from 'ai';
-import Markdown from 'react-markdown';
 import { AiIcon } from './AiIcon';
 import { renderComposition } from '../server-actions/renderComposition';
 import { getRecommendation } from '../utils';
+import { Markdown } from './Markdown';
 
 type AiMessageProps = {
   status: 'submitted' | 'streaming' | 'ready' | 'error';
@@ -36,9 +36,11 @@ const AiMessageComponent: FC<AiMessageProps> = ({ status, message }) => {
       </span>
       <div>
         <p className="leading-relaxed">
-          <span className="block font-bold text-gray-700">AI</span>
+          <span className="block text-lg font-bold text-gray-700">AI</span>
         </p>
-        <Markdown>{message.content}</Markdown>
+        <div className="text-base">
+          <Markdown>{message.content}</Markdown>
+        </div>
 
         {recommendProductsComponent && <div className="py-2">{recommendProductsComponent}</div>}
       </div>
