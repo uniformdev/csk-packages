@@ -1,12 +1,11 @@
 'use client';
 
 import { FC, useEffect, useRef, useState } from 'react';
-import { useUniformContext } from '@uniformdev/canvas-next-rsc/component';
+import { useScores, useUniformContext } from '@uniformdev/canvas-next-rsc-client';
 import { EnrichmentData } from '@uniformdev/context';
 import { cn } from '@uniformdev/csk-components/utils/styling';
 import { Drawers } from '@/components/custom-ui/Drawers';
 import { useChat } from '@ai-sdk/react';
-import { ChatProps } from '.';
 import ChatButton from './ui/ChatButton';
 import { Messages } from './ui/Messages';
 import { SubmitButton } from './ui/SubmitButton';
@@ -16,14 +15,14 @@ import { getRecommendation } from './utils';
 const MAX_STEPS = 5;
 const AUTO_PROMPT = "Based on my interests, recommend me some products. Don't call setUserInterests for now.";
 
-const Chat: FC<ChatProps> = () => {
+const Chat: FC = () => {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(false);
 
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
-  const { context } = useUniformContext() || {};
-  const { scores } = context || {};
+  const { context } = useUniformContext();
+  const scores = useScores();
 
   useEffect(() => {
     if (open && textareaRef.current) {

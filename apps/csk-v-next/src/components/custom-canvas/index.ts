@@ -1,5 +1,4 @@
 import { ComponentMapping } from '@uniformdev/csk-components/utils/createComponentResolver';
-import Chat from '@/modules/chat';
 import AccordionItem from './AccordionItem';
 import AddToCardButton from './AddToCardButton';
 import Button from './Button';
@@ -31,7 +30,6 @@ export const customComponentsMapping: ComponentMapping = {
   addToCardButton: { component: AddToCardButton },
   addToFavorites: { component: () => null },
   button: { component: Button },
-  chat: { component: Chat },
   completeCheckoutButton: { component: CompleteCheckoutButton },
   featuredSection: { component: FeaturedSection },
   flex: { component: Flex },

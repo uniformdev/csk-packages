@@ -70,10 +70,6 @@ composition:
             type: dex-segmented-control-parameter
             value: fill
     footerContent:
-      - _id: cbdecbd1-bfb6-48dc-b25d-eb1581329c92
-        type: chat
-        _overridability:
-          hideLockedParameters: true
       - _id: 757f8498-9331-4b59-9723-95cdd187b2f1
         type: flex
         slots:
@@ -219,21 +215,6 @@ composition:
               type: flex
               slots:
                 flexItem:
-                  - _id: 87ed9168-80db-408d-b271-4cbff4d1f913
-                    type: image
-                    parameters:
-                      image:
-                        type: asset
-                        value: []
-                      width:
-                        type: number
-                        value: '30'
-                      height:
-                        type: number
-                        value: '30'
-                      objectFit:
-                        type: dex-segmented-control-parameter
-                        value: ''
                   - _id: 261e0c54-fda9-4380-96a1-0dd3f8781371
                     type: image
                     parameters:
@@ -483,6 +464,6 @@ composition:
   _locales:
     - en
 created: '2025-03-25T04:28:03.647097+00:00'
-modified: '2025-03-25T04:28:03.647097+00:00'
+modified: '2025-03-25T20:43:26.146858+00:00'
 pattern: true
 categoryId: b1163ce2-5ac7-4347-bc38-a42198180718

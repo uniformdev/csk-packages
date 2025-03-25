@@ -9,6 +9,7 @@ import '@/styles/fonts.css';
 import '@/styles/borders.css';
 import { customFontVariables } from '@/fonts';
 import { CardProvider } from '@/modules/cart/CardProvider';
+import Chat from '@/modules/chat';
 import { UniformClientContext } from '@/utils/clientContext';
 import { GoogleAnalytics } from '@next/third-parties/google';
 
@@ -19,7 +20,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <CardProvider>
           <NextIntlClientProvider>
             <NextThemeProvider attribute="class" defaultTheme="light" enableSystem>
-              <UniformContext clientContextComponent={UniformClientContext}>{children}</UniformContext>
+              <UniformContext clientContextComponent={UniformClientContext}>
+                {children}
+                <Chat />
+              </UniformContext>
             </NextThemeProvider>
           </NextIntlClientProvider>
         </CardProvider>
