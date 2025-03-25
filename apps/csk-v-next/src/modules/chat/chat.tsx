@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, useEffect, useState } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import { useUniformContext } from '@uniformdev/canvas-next-rsc/component';
 import { EnrichmentData } from '@uniformdev/context';
 import { cn } from '@uniformdev/csk-components/utils/styling';
@@ -20,8 +20,16 @@ const Chat: FC<ChatProps> = () => {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(false);
 
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+
   const { context } = useUniformContext() || {};
   const { scores } = context || {};
+
+  useEffect(() => {
+    if (open && textareaRef.current) {
+      textareaRef.current.focus();
+    }
+  }, [open]);
 
   const { messages, input, handleInputChange, handleSubmit, append, status } = useChat({
     maxSteps: MAX_STEPS,
@@ -86,11 +94,11 @@ const Chat: FC<ChatProps> = () => {
               })}
             />
             <Textarea
+              ref={textareaRef}
               placeholder="Send a message..."
               value={input}
               onChange={handleInputChange}
               className={cn('overflow-hidden resize-none rounded-2xl !text-base bg-muted pb-10 pr-10')}
-              autoFocus
               onKeyDown={event => {
                 if (event.key === 'Enter' && !event.shiftKey && !event.nativeEvent.isComposing) {
                   event.preventDefault();
