@@ -17,6 +17,11 @@ parameters:
     helpText: Select type and target link to set the button's link.
     typeConfig: null
     localizable: true
+  - id: productSlug
+    name: Product Slug
+    type: text
+    typeConfig: null
+    localizable: true
   - id: 2c0fb9ff-9fbe-456b-90e7-48e768e43211
     name: Text
     type: group
@@ -182,8 +187,8 @@ slots: []
 titleParameter: text
 thumbnailParameter: icon
 canBeComposition: false
-created: '2025-03-10T10:51:43.238544+00:00'
-updated: '2025-03-10T10:51:43.238544+00:00'
+created: '2025-03-25T04:27:28.827249+00:00'
+updated: '2025-03-25T10:53:09.072658+00:00'
 variants:
   - id: link
     name: Link

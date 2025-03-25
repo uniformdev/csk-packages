@@ -4,19 +4,22 @@ import { FC } from 'react';
 import { useUniformContext } from '@uniformdev/canvas-next-rsc/component';
 import { Button as CSKButton, ButtonProps as CSKButtonProps } from '@uniformdev/csk-components/components/canvas';
 import { cn } from '@uniformdev/csk-components/utils/styling';
+import { useCard } from '@/modules/cart/CardProvider';
 
 type AddToCardButtonProps = CSKButtonProps & {
   fullWidth?: boolean;
+  productSlug: string;
 };
 
-const AddToCardButton: FC<AddToCardButtonProps> = ({ fullWidth, ...props }) => {
+const AddToCardButton: FC<AddToCardButtonProps> = ({ fullWidth, productSlug, ...props }) => {
   const { context } = useUniformContext();
+  const { addToCard } = useCard();
 
   const onClick = async () => {
     await context?.update({
       events: [{ event: 'added-to-cart' }],
     });
-    alert('This button just place where you can add your custom logic');
+    addToCard(productSlug, 1);
   };
 
   return (

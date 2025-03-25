@@ -71,20 +71,12 @@ composition:
         openGraphDescription:
           type: text
           value: ${#jptr:/Product Content/entry/fields/shortDescription/value}
-    54c60ba7-8974-4630-9f2c-5fd7e71ced12|9dd61dd8-f365-4791-a32f-814394a075bd:
+    54c60ba7-8974-4630-9f2c-5fd7e71ced12|3e88bc6a-0588-4b36-aa7d-ede679a7c3c6:
       parameters:
-        link:
-          type: link
+        productSlug:
+          type: text
           locales:
-            en:
-              path: /:locale/products/:product-slug
-              type: projectMapNode
-              nodeId: 702b0e0b-3858-4b5d-99e4-bdb98097ca0f
-              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-              dynamicInputValues:
-                locale: ${locale}
-                mini-cart: 'true'
-                product-slug: ${product-slug}
+            en: ${product-slug}
     833bb86c-158d-4463-84b8-dc8d8ccc6433|0b5b3f31-e62b-4267-bca0-4b8ec1773811:
       parameters:
         link:
@@ -143,6 +135,6 @@ composition:
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-01-29T11:09:35.833246+00:00'
-modified: '2025-01-29T11:09:35.833246+00:00'
+created: '2025-03-25T04:27:52.309699+00:00'
+modified: '2025-03-25T10:53:39.970573+00:00'
 pattern: false
