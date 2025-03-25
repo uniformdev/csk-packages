@@ -1,6 +1,7 @@
 import { NextConfig } from 'next';
+import createNextIntlPlugin from 'next-intl/plugin';
 import { withUniformConfig } from '@uniformdev/canvas-next-rsc/config';
-
+const withNextIntl = createNextIntlPlugin();
 /** @type {NextConfig} */
 const nextConfig: NextConfig = {
   images: {
@@ -8,5 +9,4 @@ const nextConfig: NextConfig = {
     deviceSizes: [320, 420, 640, 768, 1024, 1280, 1536],
   },
 };
-
-export default withUniformConfig(nextConfig);
+export default withNextIntl(withUniformConfig(nextConfig));

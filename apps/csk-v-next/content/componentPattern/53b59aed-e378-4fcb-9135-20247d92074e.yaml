@@ -6,6 +6,12 @@ composition:
     size:
       type: dex-token-selector-parameter
       value: button-medium
+    text:
+      type: text
+      value: Docs
+    border:
+      type: dex-token-selector-parameter
+      value: border-button-primary
     textSize:
       type: dex-segmented-control-parameter
       value:
@@ -17,7 +23,7 @@ composition:
       value: text-light
     textWeight:
       type: dex-segmented-control-parameter
-      value: normal
+      value: bold
     buttonColor:
       type: dex-color-palette-parameter
       value: button-primary
@@ -27,14 +33,24 @@ composition:
     textTransform:
       type: dex-segmented-control-parameter
       value: uppercase
+    hoverTextColor:
+      type: dex-color-palette-parameter
+      value: text-primary
     hoverButtonColor:
       type: dex-color-palette-parameter
-      value: button-primary-hover
+      value: button-secondary
   _overridability:
     variants: true
     parameters:
       link: 'yes'
       text: 'yes'
+      fullWidth: 'yes'
+      textWeight: 'no'
+      buttonColor: 'yes'
+      iconPosition: 'yes'
+      textTransform: 'no'
+      hoverTextColor: 'no'
+      hoverButtonColor: 'no'
     hideLockedParameters: true
   _locales:
     - en

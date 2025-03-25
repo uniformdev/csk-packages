@@ -1,0 +1,90 @@
+composition:
+  _name: Articles
+  _id: 3f4d35dd-7510-4068-9c41-3166b271dea3
+  _slug: articles
+  type: page
+  _overrides:
+    3f4d35dd-7510-4068-9c41-3166b271dea3:
+      parameters:
+        pageTitle:
+          type: text
+          value: Java Drip Coffee Shop Articles - Discover Your Perfect Brew
+        pageKeywords:
+          type: text
+          value: >-
+            Coffee, Coffee Beans, Brewing Techniques, Coffee Tips, Coffee
+            Articles, Java Drip, Espresso, Specialty Coffee
+        openGraphType:
+          type: select
+          value: website
+        openGraphImage:
+          type: asset
+          value:
+            - _id: 516bf10a-161d-4c99-a806-b2b173621852
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: d0565648-3211-4de9-9b30-ef03c342b554
+                url:
+                  type: text
+                  value: >-
+                    https://img.uniform.global/p/N0QOqjXvSFeXY7i3yzY8ZQ/XFhGQy_RS--9v8_85oAmrA-articles-og-image.png
+                file:
+                  type: file
+                  value: bcfc68fe-28a6-4cd7-82d1-18dd2b597b79
+                size:
+                  type: number
+                  value: 1805651
+                title:
+                  type: text
+                  value: articles-og-image.png
+                width:
+                  type: number
+                  value: 1808
+                height:
+                  type: number
+                  value: 908
+                mediaType:
+                  type: text
+                  value: image/png
+              _source: uniform-assets
+        openGraphTitle:
+          type: text
+          value: Java Drip Coffee Shop Articles - Discover Your Perfect Brew
+        pageDescription:
+          type: text
+          value: >-
+            Explore our collection of coffee articles. From choosing the right
+            coffee beans to mastering the perfect brewing techniques, discover
+            all you need to know about coffee here.
+        openGraphDescription:
+          type: text
+          value: >-
+            Explore our collection of coffee articles. From choosing the right
+            coffee beans to mastering the perfect brewing techniques, discover
+            all you need to know about coffee here.
+    3f4d35dd-7510-4068-9c41-3166b271dea3|dc2e95be-21b5-4476-a309-f8a34922f528:
+      slots:
+        $slotSectionItems:
+          - _id: 9a8e179f-df98-4297-b6e8-74da7f904a12
+            type: container
+            _pattern: d9dd4b0a-358f-4b10-be48-77c5088020cc
+            _overridability:
+              parameters:
+                displayName: 'yes'
+              hideLockedParameters: true
+    9a8e179f-df98-4297-b6e8-74da7f904a12|2058ad6d-25b3-4eea-a276-cb996b4188cc:
+      slots:
+        $slotSectionItems:
+          - _id: 4bf15cf5-9a47-4336-8501-8cb1404e065f
+            type: grid
+            _pattern: 56b810a4-2f30-4984-adb2-3c26d816b506
+            _overridability:
+              hideLockedParameters: true
+  _locales:
+    - en
+  _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
+created: '2025-01-29T11:09:35.880077+00:00'
+modified: '2025-01-29T11:09:35.880077+00:00'
+pattern: false

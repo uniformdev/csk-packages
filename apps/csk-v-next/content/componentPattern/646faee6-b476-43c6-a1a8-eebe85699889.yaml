@@ -6,6 +6,12 @@ composition:
     size:
       type: dex-token-selector-parameter
       value: button-medium
+    text:
+      type: text
+      value: Learn more
+    border:
+      type: dex-token-selector-parameter
+      value: border-button-secondary
     textSize:
       type: dex-segmented-control-parameter
       value:
@@ -14,24 +20,32 @@ composition:
         desktop: sm
     textColor:
       type: dex-color-palette-parameter
-      value: text-light
+      value: text-primary
     textWeight:
       type: dex-segmented-control-parameter
-      value: normal
+      value: bold
     buttonColor:
       type: dex-color-palette-parameter
       value: button-secondary
     iconPosition:
       type: dex-segmented-control-parameter
       value: right
+    textTransform:
+      type: dex-segmented-control-parameter
+      value: uppercase
+    hoverTextColor:
+      type: dex-color-palette-parameter
+      value: text-secondary
     hoverButtonColor:
       type: dex-color-palette-parameter
-      value: button-secondary-hover
+      value: button-primary
   _overridability:
     variants: true
     parameters:
       link: 'yes'
       text: 'yes'
+      fullWidth: 'yes'
+      textColor: 'no'
     hideLockedParameters: true
   _locales:
     - en

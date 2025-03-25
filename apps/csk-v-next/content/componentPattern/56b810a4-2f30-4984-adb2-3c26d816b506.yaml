@@ -1,0 +1,125 @@
+composition:
+  _name: Articles Grid
+  _id: 56b810a4-2f30-4984-adb2-3c26d816b506
+  type: grid
+  parameters:
+    gapX:
+      type: dex-slider-control-parameter
+      value:
+        tablet: '4'
+        desktop: '4'
+    gapY:
+      type: dex-slider-control-parameter
+      value:
+        mobile: '4'
+        tablet: '4'
+        desktop: '4'
+    displayName:
+      type: text
+      value: Articles Grid
+    columnsCount:
+      type: dex-slider-control-parameter
+      value:
+        mobile: '1'
+        tablet: '2'
+        desktop: '3'
+  slots:
+    gridInner:
+      - _id: 9776e926-539a-4dd4-861b-b691fb2e38f1
+        type: $loop
+        slots:
+          body:
+            - _id: 1feafed2-fa34-4b23-ab8e-d8f9252279df
+              type: flexCard
+              _pattern: d4bbbede-ffc9-481f-ae83-2d5339f26ee0
+        _dataResources:
+          Article List Content entries Loop Item:
+            type: sys-reserved-loop
+            variables:
+              connectedData: '#jptr:/Article List Content/entries:fa=c'
+        _overridability:
+          hideLockedParameters: true
+  _dataResources:
+    Article List Content:
+      type: articleList
+      variables:
+        locale: ${locale}
+        search: ''
+        contentTypes: article
+      isPatternParameter: true
+      ignorePatternParameterDefault: false
+  _overrides:
+    1feafed2-fa34-4b23-ab8e-d8f9252279df:
+      parameters:
+        displayName:
+          type: text
+          value: >-
+            ${#jptr:/Article List Content entries Loop
+            Item/entry/fields/title/value}
+    1feafed2-fa34-4b23-ab8e-d8f9252279df|1a083f8a-3c62-4534-80b0-f4b0974b3879:
+      parameters:
+        image:
+          type: asset
+          value:
+            - _id: 716a6eff-dd32-43db-acde-8adc12ffe7f2
+              type: image
+              fields:
+                url:
+                  type: text
+                  value: >-
+                    ${#jptr:/Article List Content entries Loop
+                    Item/entry/fields/thumbnail/value/0/fields/url/value}
+                title:
+                  type: text
+                  value: >-
+                    ${#jptr:/Article List Content entries Loop
+                    Item/entry/fields/title/value}
+                description:
+                  type: text
+                  value: >-
+                    ${#jptr:/Article List Content entries Loop
+                    Item/entry/fields/title/value}
+              _source: custom-url
+    1feafed2-fa34-4b23-ab8e-d8f9252279df|31496ca8-d0f1-47c2-a3e8-55c6515ada4d:
+      parameters:
+        text:
+          type: text
+          value: >-
+            by ${#jptr:/Article List Content entries Loop
+            Item/entry/fields/author/value/entry/fields/name/value}
+    1feafed2-fa34-4b23-ab8e-d8f9252279df|91a39649-d9d5-4f11-9090-203b4fea8a13:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: /:locale/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article List Content entries Loop Item/entry/_slug}
+    1feafed2-fa34-4b23-ab8e-d8f9252279df|ae7909ec-a83b-4a6a-9966-5ca24b372679:
+      parameters:
+        text:
+          type: text
+          value: >-
+            ${#jptr:/Article List Content entries Loop
+            Item/entry/fields/title/value}
+    1feafed2-fa34-4b23-ab8e-d8f9252279df|e78908dc-dc95-40d7-9fd3-aea7a3fa1f4f:
+      parameters:
+        text:
+          type: text
+          value: >-
+            ${#jptr:/Article List Content entries Loop
+            Item/entry/fields/shortDescription/value}
+  _overridability:
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2025-01-29T11:09:27.508339+00:00'
+modified: '2025-01-29T11:09:27.508339+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/jd-template/articles-grid.jpg
