@@ -69,7 +69,7 @@ const Chat: FC<ChatProps> = () => {
 
   return (
     <div>
-      <div className="fixed bottom-0 right-0 p-12">
+      <div className="fixed bottom-0 right-0 p-16">
         <ChatButton disabled={!active} onClick={() => setOpen(true)} />
       </div>
 

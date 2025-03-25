@@ -1,13 +1,14 @@
 import { FC, MouseEventHandler } from 'react';
 import { cn } from '@uniformdev/csk-components/utils/styling';
+import Tooltip from '@/components/custom-ui/Tooltip';
 
 interface ChatButtonProps {
   disabled?: boolean | undefined;
   onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
 }
 
-const ChatButton: FC<ChatButtonProps> = ({ disabled, onClick }) => {
-  return (
+const ChatButton: FC<ChatButtonProps> = ({ disabled, onClick }) => (
+  <Tooltip text={disabled ? 'Visit more pages to activate' : 'Open chat with AI assistant'}>
     <button className="text-white" type="button" aria-haspopup="dialog" onClick={onClick} disabled={disabled}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -15,8 +16,8 @@ const ChatButton: FC<ChatButtonProps> = ({ disabled, onClick }) => {
         height="96"
         viewBox="0 0 75 96"
         fill="none"
-        className={cn('transition-all duration-1000 grayscale hover:[animation-play-state:paused]', {
-          'animate-wobble-bounce grayscale-0': !disabled,
+        className={cn('transition-all duration-1000 opacity-50 hover:[animation-play-state:paused]', {
+          'animate-wobble-bounce opacity-100': !disabled,
         })}
       >
         <path d="M15.6546 92.6168L58.3549 93L61 76.3833L14 76L15.6546 92.6168Z" fill="white" />
@@ -53,8 +54,8 @@ const ChatButton: FC<ChatButtonProps> = ({ disabled, onClick }) => {
         `}
       </style>
     </button>
-  );
-};
+  </Tooltip>
+);
 ChatButton.displayName = 'ChatButton';
 
 export default ChatButton;
