@@ -68,6 +68,17 @@ parameters:
       minValue: 0
       defaultValue: {}
       withViewPort: true
+  - id: alignItems
+    name: Align Items
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Start
+          value: start
+        - key: Center
+          value: center
+        - key: End
+          value: end
   - id: 9f4a3823-8aad-4b30-a7bf-e5134643b0b3
     name: More Presentation Settings
     type: group

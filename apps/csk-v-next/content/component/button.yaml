@@ -129,6 +129,7 @@ parameters:
         - buttonColor
         - border
         - size
+        - fullWidth
   - id: buttonColor
     name: Button Color
     type: dex-color-palette-parameter
@@ -149,6 +150,10 @@ parameters:
       selectedGroup: button
       allowDimensions: []
       selectedTokenType: dimension
+  - id: fullWidth
+    name: Full Width
+    type: checkbox
+    typeConfig: null
   - id: daea4af1-5dea-489f-b73c-9ca882aa6e6d
     name: Hover
     type: group

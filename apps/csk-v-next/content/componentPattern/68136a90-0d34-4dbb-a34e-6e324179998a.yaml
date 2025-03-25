@@ -3,9 +3,6 @@ composition:
   _id: 68136a90-0d34-4dbb-a34e-6e324179998a
   type: footer
   parameters:
-    border:
-      type: dex-token-selector-parameter
-      value: border-footer
     spacing:
       type: dex-space-control-parameter
       value:
@@ -20,71 +17,63 @@ composition:
     displayName:
       type: text
       value: Footer
+    fluidContent:
+      type: checkbox
+      value: true
+    backgroundColor:
+      type: dex-color-palette-parameter
+      value: general-color-3
   slots:
     footerLogo:
-      - _id: bd107466-c7e2-4b3b-8d59-5d1ff0c0c8bf
-        type: link
-        slots:
-          linkContent:
-            - _id: ee663cd6-37e5-4b5e-b629-fdf9a4667eba
-              type: image
-              parameters:
-                image:
-                  type: asset
-                  value:
-                    - _id: f760e22b-3627-4211-bd91-f9a5afa90420
-                      type: image
-                      fields:
-                        id:
-                          type: text
-                          value: 0efbc807-7b4a-4f7d-847b-62fe616b0815
-                        url:
-                          value: >-
-                            https://img.uniform.global/p/YBXmRPPzQZ-45Yo5jJzHAw/Qn5luTHpRYaS4U1pNciTxQ-uniform-dark-logo.svg
-                          type: text
-                        file:
-                          type: file
-                          value: 47b0c945-547f-48b4-a161-2b26884d4f32
-                        size:
-                          value: 1697
-                          type: number
-                        title:
-                          type: text
-                          value: uniform-dark-logo.svg
-                        width:
-                          value: 204
-                          type: number
-                        height:
-                          value: 52
-                          type: number
-                        mediaType:
-                          value: image/svg+xml
-                          type: text
-                      _source: uniform-assets
-                width:
-                  type: number
-                  value: '180'
-                height:
-                  type: number
-                  value: '47'
-                objectFit:
-                  type: dex-segmented-control-parameter
-                  value: contain
+      - _id: ee663cd6-37e5-4b5e-b629-fdf9a4667eba
+        type: image
         parameters:
-          link:
-            type: link
+          image:
+            type: asset
             value:
-              path: https://www.uniform.dev
-              type: url
-          displayName:
-            type: text
-            value: Uniform Link
-          openInNewTab:
-            type: checkbox
-            value: true
+              - _id: 6ddc02a6-2615-45de-885d-e81ae5da2f8b
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: dd702947-d211-49fe-80cd-93c23ca30bf8
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/ovl3f_RJSNmuo41YikmFlA/44D731TyTk-nwHrrHWPM1g-jd-logo-white.svg
+                    type: text
+                  file:
+                    type: file
+                    value: 141d102a-81f1-4ccb-8efd-45d4b08374c4
+                  size:
+                    value: 5252
+                    type: number
+                  title:
+                    type: text
+                    value: jd-logo-white.svg
+                  width:
+                    value: 408
+                    type: number
+                  height:
+                    value: 65
+                    type: number
+                  mediaType:
+                    value: image/svg+xml
+                    type: text
+                _source: uniform-assets
+          width:
+            type: number
+            value: '190'
+          height:
+            type: number
+            value: '45'
+          objectFit:
+            type: dex-segmented-control-parameter
+            value: fill
+    footerContent:
+      - _id: cbdecbd1-bfb6-48dc-b25d-eb1581329c92
+        type: chat
         _overridability:
           hideLockedParameters: true
-    footerContent:
       - _id: 757f8498-9331-4b59-9723-95cdd187b2f1
         type: flex
         slots:
@@ -108,7 +97,7 @@ composition:
                         value: Key resources
                       color:
                         type: dex-color-palette-parameter
-                        value: text-tertiary
+                        value: text-secondary
                       weight:
                         type: dex-segmented-control-parameter
                         value: bold
@@ -125,18 +114,69 @@ composition:
                     type: flex
                     slots:
                       flexItem:
-                        - _id: 1226047a-9d32-46c6-8a78-30d6e22e418a
-                          type: navigationLink
-                          _pattern: 2f1ff1e9-e7c7-43a6-8576-da21a1e199e5
-                        - _id: c4586887-719a-4134-b057-87d2f8ea3ee6
-                          type: navigationLink
-                          _pattern: 2f1ff1e9-e7c7-43a6-8576-da21a1e199e5
-                        - _id: 8514c1db-00ac-43e1-87d4-8830694a57df
-                          type: navigationLink
-                          _pattern: 2f1ff1e9-e7c7-43a6-8576-da21a1e199e5
-                        - _id: a7e8071c-e27b-4a4f-bb23-9882486d39b3
-                          type: navigationLink
-                          _pattern: 2f1ff1e9-e7c7-43a6-8576-da21a1e199e5
+                        - _id: 39fce731-d7fd-44a6-ba72-7d001be07de7
+                          type: text
+                          parameters:
+                            tag:
+                              type: dex-segmented-control-parameter
+                              value: p
+                            size:
+                              type: dex-segmented-control-parameter
+                              value:
+                                mobile: base
+                                tablet: base
+                                desktop: base
+                            text:
+                              type: text
+                              value: Documentation
+                            color:
+                              type: dex-color-palette-parameter
+                              value: text-secondary
+                            weight:
+                              type: dex-segmented-control-parameter
+                              value: medium
+                        - _id: 6c21604e-129a-45ac-bc6a-27a0ef4b112c
+                          type: text
+                          parameters:
+                            tag:
+                              type: dex-segmented-control-parameter
+                              value: p
+                            size:
+                              type: dex-segmented-control-parameter
+                              value:
+                                mobile: base
+                                tablet: base
+                                desktop: base
+                            text:
+                              type: text
+                              value: Storybook
+                            color:
+                              type: dex-color-palette-parameter
+                              value: text-secondary
+                            weight:
+                              type: dex-segmented-control-parameter
+                              value: medium
+                        - _id: 983492f1-199e-4b25-828a-ce92efa4f69a
+                          type: text
+                          parameters:
+                            tag:
+                              type: dex-segmented-control-parameter
+                              value: p
+                            size:
+                              type: dex-segmented-control-parameter
+                              value:
+                                mobile: base
+                                tablet: base
+                                desktop: base
+                            text:
+                              type: text
+                              value: Demo
+                            color:
+                              type: dex-color-palette-parameter
+                              value: text-secondary
+                            weight:
+                              type: dex-segmented-control-parameter
+                              value: medium
                     parameters:
                       gap:
                         type: dex-slider-control-parameter
@@ -179,136 +219,65 @@ composition:
               type: flex
               slots:
                 flexItem:
-                  - _id: 1d050b85-1622-44c2-ac6f-8f36d8022ebb
-                    type: link
-                    slots:
-                      linkContent:
-                        - _id: 87ed9168-80db-408d-b271-4cbff4d1f913
-                          type: image
-                          parameters:
-                            image:
-                              type: asset
-                              value:
-                                - _id: 5e6a0737-768a-47ae-b3b6-2f1beaad53df
-                                  type: image
-                                  fields:
-                                    id:
-                                      type: text
-                                      value: 804fa820-df03-40ec-8efa-ddf36b976c70
-                                    url:
-                                      value: >-
-                                        https://img.uniform.global/p/YBXmRPPzQZ-45Yo5jJzHAw/rx5p8oTqTRGK2cVhCgVBlQ-storybook-icon.svg
-                                      type: text
-                                    file:
-                                      type: file
-                                      value: e2b11dba-8b68-492d-9f8f-14116702bd2b
-                                    size:
-                                      value: 5499
-                                      type: number
-                                    title:
-                                      type: text
-                                      value: storybook-icon.svg
-                                    width:
-                                      value: 29
-                                      type: number
-                                    height:
-                                      value: 29
-                                      type: number
-                                    mediaType:
-                                      value: image/svg+xml
-                                      type: text
-                                  _source: uniform-assets
-                            width:
-                              type: number
-                              value: '30'
-                            height:
-                              type: number
-                              value: '30'
-                            objectFit:
-                              type: dex-segmented-control-parameter
-                              value: ''
+                  - _id: 87ed9168-80db-408d-b271-4cbff4d1f913
+                    type: image
                     parameters:
-                      link:
-                        type: link
-                        value:
-                          path: https://unfrm.to/csk-sb
-                          type: url
-                      displayName:
-                        type: text
-                        value: Storybook Link
-                      openInNewTab:
-                        type: checkbox
-                        value: true
-                    _overridability:
-                      parameters:
-                        link: 'yes'
-                        displayName: 'yes'
-                      hideLockedParameters: true
-                  - _id: 6f18283f-d276-46e0-a8bb-20749b65a744
-                    type: link
-                    slots:
-                      linkContent:
-                        - _id: 261e0c54-fda9-4380-96a1-0dd3f8781371
-                          type: image
-                          parameters:
-                            image:
-                              type: asset
-                              value:
-                                - _id: 035087c7-e38b-42d4-8c77-2e632151230a
-                                  type: image
-                                  fields:
-                                    id:
-                                      type: text
-                                      value: d1b7aeaa-38a0-41a3-85e1-0d4d1b3b0990
-                                    url:
-                                      value: >-
-                                        https://img.uniform.global/p/YBXmRPPzQZ-45Yo5jJzHAw/abTUTx4NQtqIrSN8J7PIkQ-github-dark-logo.svg
-                                      type: text
-                                    file:
-                                      type: file
-                                      value: f6f351b7-03eb-4a20-a6b1-327132c4baff
-                                    size:
-                                      value: 1327
-                                      type: number
-                                    title:
-                                      type: text
-                                      value: github-dark-logo.svg
-                                    width:
-                                      value: 35
-                                      type: number
-                                    height:
-                                      value: 34
-                                      type: number
-                                    mediaType:
-                                      value: image/svg+xml
-                                      type: text
-                                  _source: uniform-assets
-                            width:
-                              type: number
-                              value: '30'
-                            height:
-                              type: number
-                              value: '30'
-                            objectFit:
-                              type: dex-segmented-control-parameter
-                              value: ''
+                      image:
+                        type: asset
+                        value: []
+                      width:
+                        type: number
+                        value: '30'
+                      height:
+                        type: number
+                        value: '30'
+                      objectFit:
+                        type: dex-segmented-control-parameter
+                        value: ''
+                  - _id: 261e0c54-fda9-4380-96a1-0dd3f8781371
+                    type: image
                     parameters:
-                      link:
-                        type: link
+                      image:
+                        type: asset
                         value:
-                          path: https://unfrm.to/csk-repo
-                          type: url
-                      displayName:
-                        type: text
-                        value: GitHub Link
-                      openInNewTab:
-                        type: checkbox
-                        value: true
-                    _overridability:
-                      parameters:
-                        link: 'yes'
-                        displayName: 'yes'
-                      hideLockedParameters: true
+                          - _id: ee057780-e4c6-4756-846a-d564073447ed
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: e69c04dc-5c4f-4951-8102-08d9a8df8913
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/ovl3f_RJSNmuo41YikmFlA/qB86NpU9QF6AEzoKNuq_kA-github.svg
+                                type: text
+                              file:
+                                type: file
+                                value: 5dc97933-41b8-4b8c-8ad9-0da1ee098fa3
+                              size:
+                                value: 1326
+                                type: number
+                              title:
+                                type: text
+                                value: github.svg
+                              width:
+                                value: 35
+                                type: number
+                              height:
+                                value: 34
+                                type: number
+                              mediaType:
+                                value: image/svg+xml
+                                type: text
+                            _source: uniform-assets
+                      width:
+                        type: number
+                        value: '30'
+                      height:
+                        type: number
+                        value: '30'
+                      objectFit:
+                        type: dex-segmented-control-parameter
+                        value: ''
               parameters:
                 gap:
                   type: dex-slider-control-parameter
@@ -427,67 +396,9 @@ composition:
                             version: 1
                         direction: ltr
                       - mode: normal
-                        text: ' leveraging the '
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
-                      - mode: normal
-                        text: 'TNT Stack:'
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 2
-                        version: 1
-                      - mode: normal
-                        text: ' '
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
-                      - link:
-                          path: https://www.typescriptlang.org/
-                          type: url
-                        type: link
-                        format: ''
-                        indent: 0
-                        version: 1
-                        children:
-                          - mode: normal
-                            text: TypeScript
-                            type: text
-                            style: ''
-                            detail: 0
-                            format: 0
-                            version: 1
-                        direction: ltr
-                      - mode: normal
-                        text: ",\_"
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
-                      - link:
-                          path: https://nextjs.org/docs/app
-                          type: url
-                        type: link
-                        format: ''
-                        indent: 0
-                        version: 1
-                        children:
-                          - mode: normal
-                            text: Next.js App Router
-                            type: text
-                            style: ''
-                            detail: 0
-                            format: 0
-                            version: 1
-                        direction: ltr
-                      - mode: normal
-                        text: ' and '
+                        text: >-
+                          , standing on the shoulders of these awesome open
+                          source projects:
                         type: text
                         style: ''
                         detail: 0
@@ -510,7 +421,53 @@ composition:
                             version: 1
                         direction: ltr
                       - mode: normal
-                        text: .
+                        text: ",\_"
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                      - link:
+                          path: https://react.dev/
+                          type: url
+                        type: link
+                        format: ''
+                        indent: 0
+                        version: 1
+                        children:
+                          - mode: normal
+                            text: React
+                            type: text
+                            style: ''
+                            detail: 0
+                            format: 0
+                            version: 1
+                        direction: ltr
+                      - mode: normal
+                        text: ", and\_"
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                      - link:
+                          path: https://next.js.org/
+                          type: url
+                        type: link
+                        format: ''
+                        indent: 0
+                        version: 1
+                        children:
+                          - mode: normal
+                            text: Next.js
+                            type: text
+                            style: ''
+                            detail: 0
+                            format: 0
+                            version: 1
+                        direction: ltr
+                      - mode: normal
+                        text: ' (app router).'
                         type: text
                         style: ''
                         detail: 0
@@ -522,55 +479,10 @@ composition:
                 direction: ltr
           color:
             type: dex-color-palette-parameter
-            value: text-primary
-  _overrides:
-    1226047a-9d32-46c6-8a78-30d6e22e418a:
-      parameters:
-        link:
-          type: link
-          locales:
-            en:
-              path: https://unfrm.to/csk-docs
-              type: url
-        text:
-          type: text
-          value: Documentation
-    8514c1db-00ac-43e1-87d4-8830694a57df:
-      parameters:
-        link:
-          type: link
-          locales:
-            en:
-              path: https://unfrm.to/csk-demo
-              type: url
-        text:
-          type: text
-          value: Demo
-    a7e8071c-e27b-4a4f-bb23-9882486d39b3:
-      parameters:
-        link:
-          type: link
-          locales:
-            en:
-              path: https://unfrm.to/csk-demo-request
-              type: url
-        text:
-          type: text
-          value: Request a personal demo
-    c4586887-719a-4134-b057-87d2f8ea3ee6:
-      parameters:
-        link:
-          type: link
-          locales:
-            en:
-              path: https://unfrm.to/csk-sb
-              type: url
-        text:
-          type: text
-          value: Storybook
+            value: text-secondary
   _locales:
     - en
-created: '2025-02-17T15:34:18.158903+00:00'
-modified: '2025-02-17T15:34:18.158903+00:00'
+created: '2025-03-25T04:28:03.647097+00:00'
+modified: '2025-03-25T04:28:03.647097+00:00'
 pattern: true
 categoryId: b1163ce2-5ac7-4347-bc38-a42198180718

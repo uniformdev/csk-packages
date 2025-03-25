@@ -1,0 +1,44 @@
+composition:
+  _name: Segment Quirk Selector
+  _id: 0bc0e924-445c-47de-9217-3dc6f889f1e7
+  type: quirkSelector
+  parameters:
+    size:
+      type: dex-token-selector-parameter
+      value: button-small
+    border:
+      type: dex-token-selector-parameter
+      value: border-button-secondary
+    quirkId:
+      type: text
+      locales:
+        en: segment
+    textSize:
+      type: dex-segmented-control-parameter
+      value:
+        mobile: sm
+        tablet: sm
+        desktop: sm
+    variants:
+      type: text
+      locales:
+        en: aficionado,occasional,newb
+    textColor:
+      type: dex-color-palette-parameter
+      value: text-primary
+    textWeight:
+      type: dex-segmented-control-parameter
+      value: bold
+    textTransform:
+      type: dex-segmented-control-parameter
+      value: uppercase
+    backgroundColor:
+      type: dex-color-palette-parameter
+      value: general-color-1
+  _overridability:
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2025-03-10T14:32:24.368254+00:00'
+modified: '2025-03-10T14:32:43.455986+00:00'
+pattern: true

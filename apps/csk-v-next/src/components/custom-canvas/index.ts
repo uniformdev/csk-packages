@@ -1,6 +1,24 @@
 import { ComponentMapping } from '@uniformdev/csk-components/utils/createComponentResolver';
+import Chat from '@/modules/chat';
+import AccordionItem from './AccordionItem';
+import AddToCardButton from './AddToCardButton';
+import Button from './Button';
+import CompleteCheckoutButton from './CompleteCheckoutButton';
 import Container from './Container';
 import CustomComponent from './CustomComponent';
+import FeaturedSection from './FeaturedSection';
+import Flex from './Flex';
+import FlexCard from './FlexCard';
+import Grid from './Grid';
+import GridItem from './GridItem';
+import Input from './Input';
+import ModalLayout from './ModalLayout';
+import QuantitySelector from './QuantitySelector';
+import QuirkSelector from './QuirkSelector';
+import ReadMore from './ReadMore';
+import Recommendations from './Recommendations';
+import RemoveButton from './RemoveButton';
+import RichText from './RichText';
 
 // Here, you can add your own component or customize an existing CSK component with your logic or styles.
 export const customComponentsMapping: ComponentMapping = {
@@ -8,4 +26,24 @@ export const customComponentsMapping: ComponentMapping = {
   customComponent: { component: CustomComponent },
   // This is an overridden CSK Container component.
   container: { component: Container },
+  // Coffee Shop custom components
+  accordionItem: { component: AccordionItem },
+  addToCardButton: { component: AddToCardButton },
+  addToFavorites: { component: () => null },
+  button: { component: Button },
+  chat: { component: Chat },
+  completeCheckoutButton: { component: CompleteCheckoutButton },
+  featuredSection: { component: FeaturedSection },
+  flex: { component: Flex },
+  flexCard: { component: FlexCard },
+  grid: { component: Grid },
+  gridItem: { component: GridItem },
+  input: { component: Input },
+  modalLayout: { component: ModalLayout },
+  quantitySelector: { component: QuantitySelector },
+  quirkSelector: { component: QuirkSelector },
+  readMore: { component: ReadMore },
+  recommendations: { component: Recommendations },
+  removeButton: { component: RemoveButton },
+  richText: { component: RichText },
 };
