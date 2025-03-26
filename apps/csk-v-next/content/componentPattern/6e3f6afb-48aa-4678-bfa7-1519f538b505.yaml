@@ -3,6 +3,12 @@ composition:
   _id: 6e3f6afb-48aa-4678-bfa7-1519f538b505
   type: container
   parameters:
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        mobile: {}
+        tablet: {}
+        desktop: {}
     displayName:
       type: text
       value: Cart Items List
@@ -182,75 +188,85 @@ composition:
           fluidContent:
             type: checkbox
             value: true
-      - _id: b7c2112d-fa30-4565-93cd-748fc7b621dc
-        type: $loop
+      - _id: c1cba995-4c3d-471d-866b-7ece3a936b20
+        type: shoppingCart
         slots:
-          body:
-            - _id: 44ad0d92-abca-4a0b-b933-aa341f324d1e
-              type: container
+          products:
+            - _id: b7c2112d-fa30-4565-93cd-748fc7b621dc
+              type: $loop
               slots:
-                containerContent:
-                  - _id: a04e8cfe-21fb-4a7e-a705-e07a484013d6
-                    type: grid
-                    _pattern: 4f048835-75c4-4aab-b51a-dd23ca6f29ae
-                  - _id: dbc4868c-f617-4dad-b57b-7edbc26c0686
+                body:
+                  - _id: 44ad0d92-abca-4a0b-b933-aa341f324d1e
                     type: container
                     slots:
                       containerContent:
-                        - _id: 49c49e96-c0d5-4c38-9fd3-0a17c5defa36
-                          type: divider
+                        - _id: a04e8cfe-21fb-4a7e-a705-e07a484013d6
+                          type: grid
+                          _pattern: 4f048835-75c4-4aab-b51a-dd23ca6f29ae
+                        - _id: dbc4868c-f617-4dad-b57b-7edbc26c0686
+                          type: container
+                          slots:
+                            containerContent:
+                              - _id: 49c49e96-c0d5-4c38-9fd3-0a17c5defa36
+                                type: divider
+                                parameters:
+                                  color:
+                                    type: dex-color-palette-parameter
+                                    value: general-color-12
+                                  width:
+                                    type: dex-slider-control-parameter
+                                    value: 100%
+                                  alignment:
+                                    type: dex-segmented-control-parameter
+                                    value: center
+                                  thickness:
+                                    type: dex-slider-control-parameter
+                                    value: 1px
+                                _overridability:
+                                  hideLockedParameters: true
                           parameters:
-                            color:
-                              type: dex-color-palette-parameter
-                              value: general-color-12
-                            width:
-                              type: dex-slider-control-parameter
-                              value: 100%
-                            alignment:
-                              type: dex-segmented-control-parameter
-                              value: center
-                            thickness:
-                              type: dex-slider-control-parameter
-                              value: 1px
+                            spacing:
+                              type: dex-space-control-parameter
+                              value:
+                                paddingTop: container-small
+                                paddingBottom: container-small
+                            displayName:
+                              type: text
+                              value: Divider
+                            fluidContent:
+                              type: checkbox
+                              value: true
                           _overridability:
                             hideLockedParameters: true
                     parameters:
                       spacing:
                         type: dex-space-control-parameter
                         value:
-                          paddingTop: container-small
-                          paddingBottom: container-small
+                          mobile: {}
+                          tablet: {}
+                          desktop: {}
                       displayName:
                         type: text
-                        value: Divider
-                      fluidContent:
-                        type: checkbox
-                        value: true
+                        value: >-
+                          ${#jptr:/Product List Content entries Loop
+                          Item/entry/_slug}
                     _overridability:
                       hideLockedParameters: true
-              parameters:
-                spacing:
-                  type: dex-space-control-parameter
-                  value: {}
-                displayName:
-                  type: text
-                  value: >-
-                    ${#jptr:/Product List Content entries Loop
-                    Item/entry/fields/name/value}
-              _overridability:
-                hideLockedParameters: true
-        _dataResources:
-          Product List Content entries Loop Item:
-            type: sys-reserved-loop
-            variables:
-              connectedData: '#jptr:/Product List Content/entries:fa=c'
+              _dataResources:
+                Product List Content entries Loop Item:
+                  type: sys-reserved-loop
+                  variables:
+                    connectedData: '#jptr:/Product List Content/entries:fa=c'
+        _overridability:
+          hideLockedParameters: true
   _dataResources:
     Product List Content:
       type: productList
       variables:
-        limit: '3'
+        limit: '50'
         locale: ${locale}
         search: ''
+        filters: '{"type[eq]":"product"}'
         contentTypes: product
       isPatternParameter: true
       ignorePatternParameterDefault: false
@@ -311,8 +327,8 @@ composition:
             Item/entry/fields/name/value}
   _locales:
     - en
-created: '2025-01-29T11:09:29.876148+00:00'
-modified: '2025-01-29T11:09:29.876148+00:00'
+created: '2025-03-25T04:28:02.103922+00:00'
+modified: '2025-03-26T10:14:38.018944+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/jd-template/cart-items-list.jpg

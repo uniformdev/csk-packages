@@ -73,6 +73,9 @@ composition:
           value: ${#jptr:/Product Content/entry/fields/shortDescription/value}
     54c60ba7-8974-4630-9f2c-5fd7e71ced12|3e88bc6a-0588-4b36-aa7d-ede679a7c3c6:
       parameters:
+        product:
+          type: json
+          value: null
         productSlug:
           type: text
           locales:

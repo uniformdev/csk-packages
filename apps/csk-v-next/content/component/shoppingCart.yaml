@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: shoppingCart
+name: Shopping Cart
+icon: shopping-cart
+parameters: []
+useTeamPermissions: true
+slots:
+  - id: products
+    name: Products
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+canBeComposition: false
+created: '2025-03-26T09:35:05.764763+00:00'
+updated: '2025-03-26T10:04:06.47386+00:00'

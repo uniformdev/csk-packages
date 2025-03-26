@@ -12,6 +12,7 @@ export const Container: FC<ContainerProps> = ({
   border = '',
   fluidContent = false,
   fullHeight = false,
+  title,
   ...rest
 }) => {
   const [
@@ -21,6 +22,7 @@ export const Container: FC<ContainerProps> = ({
 
   return (
     <div
+      title={title}
       className={cn(
         'px-4 xl:px-0',
         { 'mx-auto w-full max-w-7xl': !fluidContent, '!px-0': fluidContent },
