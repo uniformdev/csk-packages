@@ -80,94 +80,14 @@ composition:
     561b0ea9-866d-4925-b9fa-aeff9a3d777c|dc2e95be-21b5-4476-a309-f8a34922f528:
       slots:
         $slotSectionItems:
-          - _id: 7563e4c8-a5c4-45e6-93d4-21d2715333ad
-            type: container
-            _pattern: 6e3f6afb-48aa-4678-bfa7-1519f538b505
-          - _id: a45a0e9b-6471-4cf2-b495-dd2ee8b0bc00
+          - _id: 75036136-9299-41af-93e7-8c4eef15b1ee
             type: flex
             slots:
               flexItem:
-                - _id: 914b98d0-10f9-443d-807c-b41cda9e8dbc
-                  type: flex
+                - _id: a4be99cc-5d3e-4f6a-8f58-10378b0d5186
+                  type: shoppingCart
                   slots:
-                    flexItem:
-                      - _id: 2a286ec0-b57b-4b1a-bbb6-115a08b077b3
-                        type: text
-                        parameters:
-                          tag:
-                            type: dex-segmented-control-parameter
-                            value: span
-                          size:
-                            type: dex-segmented-control-parameter
-                            value:
-                              mobile: 2xl
-                              tablet: 2xl
-                              desktop: 2xl
-                          text:
-                            type: text
-                            value: 'Subtotal:'
-                          weight:
-                            type: dex-segmented-control-parameter
-                            value: bold
-                      - _id: 80b218c3-fff1-47da-a2b9-a2486f1d3ac9
-                        type: text
-                        parameters:
-                          tag:
-                            type: dex-segmented-control-parameter
-                            value: span
-                          size:
-                            type: dex-segmented-control-parameter
-                            value:
-                              mobile: 2xl
-                              tablet: 2xl
-                              desktop: 2xl
-                          text:
-                            type: text
-                            value: $58.90
-                          weight:
-                            type: dex-segmented-control-parameter
-                            value: bold
-                  parameters:
-                    gap:
-                      type: dex-slider-control-parameter
-                      value:
-                        mobile: '4'
-                        tablet: '4'
-                        desktop: '4'
-                    spacing:
-                      type: dex-space-control-parameter
-                      value:
-                        mobile: {}
-                        tablet: {}
-                        desktop: {}
-                    direction:
-                      type: dex-segmented-control-parameter
-                      value:
-                        mobile: row
-                        tablet: row
-                        desktop: row
-                    alignItems:
-                      type: dex-segmented-control-parameter
-                      value:
-                        mobile: end
-                        tablet: end
-                        desktop: end
-                    displayName:
-                      type: text
-                      value: Subtotal Section
-                    fluidContent:
-                      type: checkbox
-                      value: true
-                    justifyContent:
-                      type: dex-segmented-control-parameter
-                      value:
-                        mobile: end
-                        tablet: end
-                        desktop: end
-                - _id: e6501b14-0b4e-44a7-8bbc-21f9ce4f98dc
-                  type: flex
-                  slots:
-                    flexItem:
+                    checkoutButton:
                       - _id: d4d3e6e2-f611-4f99-9fd4-cd0a1e2b77fa
                         type: button
                         _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
@@ -179,56 +99,25 @@ composition:
                             fullWidth: 'yes'
                             textColor: 'no'
                           hideLockedParameters: true
-                  parameters:
-                    gap:
-                      type: dex-slider-control-parameter
-                      value: {}
-                    spacing:
-                      type: dex-space-control-parameter
-                      value:
-                        mobile:
-                          marginTop: container-medium
-                        tablet:
-                          marginTop: container-medium
-                        desktop:
-                          marginTop: container-medium
-                    direction:
-                      type: dex-segmented-control-parameter
-                      value:
-                        mobile: row
-                        tablet: row
-                        desktop: row
-                    alignItems:
-                      type: dex-segmented-control-parameter
-                      value: {}
-                    displayName:
-                      type: text
-                      value: Button Section
-                    fluidContent:
-                      type: checkbox
-                      value: true
-                    justifyContent:
-                      type: dex-segmented-control-parameter
-                      value:
-                        mobile: end
-                        tablet: end
-                        desktop: end
             parameters:
               gap:
                 type: dex-slider-control-parameter
-                value: {}
+                value:
+                  mobile: '4'
+                  tablet: '4'
+                  desktop: '4'
               spacing:
                 type: dex-space-control-parameter
                 value:
                   mobile:
-                    marginTop: container-medium
-                    marginBottom: container-medium
+                    paddingTop: container-medium
+                    paddingBottom: container-medium
                   tablet:
-                    marginTop: container-medium
-                    marginBottom: container-medium
+                    paddingTop: container-medium
+                    paddingBottom: container-medium
                   desktop:
-                    marginTop: container-medium
-                    marginBottom: container-medium
+                    paddingTop: container-medium
+                    paddingBottom: container-medium
               direction:
                 type: dex-segmented-control-parameter
                 value:
@@ -240,13 +129,14 @@ composition:
                 value: {}
               displayName:
                 type: text
-                value: Cart Header
+                locales:
+                  en: Cart Content
               justifyContent:
                 type: dex-segmented-control-parameter
                 value: {}
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-03-07T10:45:03.847545+00:00'
-modified: '2025-03-07T12:04:30.581906+00:00'
+created: '2025-03-25T04:27:48.992312+00:00'
+modified: '2025-03-26T14:50:29.44223+00:00'
 pattern: false

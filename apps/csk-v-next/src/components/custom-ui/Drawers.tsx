@@ -76,7 +76,7 @@ export const Drawers: FC<PropsWithChildren<{ open: boolean; setOpen: Dispatch<Se
             <button
               type="button"
               onClick={() => setOpen(false)}
-              className="rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-300"
+              className="rounded-md text-black hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-300"
             >
               <span className="sr-only">Close panel</span>
               <svg

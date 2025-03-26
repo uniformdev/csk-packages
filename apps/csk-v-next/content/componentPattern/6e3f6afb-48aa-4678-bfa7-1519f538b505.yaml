@@ -190,73 +190,6 @@ composition:
             value: true
       - _id: c1cba995-4c3d-471d-866b-7ece3a936b20
         type: shoppingCart
-        slots:
-          products:
-            - _id: b7c2112d-fa30-4565-93cd-748fc7b621dc
-              type: $loop
-              slots:
-                body:
-                  - _id: 44ad0d92-abca-4a0b-b933-aa341f324d1e
-                    type: container
-                    slots:
-                      containerContent:
-                        - _id: a04e8cfe-21fb-4a7e-a705-e07a484013d6
-                          type: grid
-                          _pattern: 4f048835-75c4-4aab-b51a-dd23ca6f29ae
-                        - _id: dbc4868c-f617-4dad-b57b-7edbc26c0686
-                          type: container
-                          slots:
-                            containerContent:
-                              - _id: 49c49e96-c0d5-4c38-9fd3-0a17c5defa36
-                                type: divider
-                                parameters:
-                                  color:
-                                    type: dex-color-palette-parameter
-                                    value: general-color-12
-                                  width:
-                                    type: dex-slider-control-parameter
-                                    value: 100%
-                                  alignment:
-                                    type: dex-segmented-control-parameter
-                                    value: center
-                                  thickness:
-                                    type: dex-slider-control-parameter
-                                    value: 1px
-                                _overridability:
-                                  hideLockedParameters: true
-                          parameters:
-                            spacing:
-                              type: dex-space-control-parameter
-                              value:
-                                paddingTop: container-small
-                                paddingBottom: container-small
-                            displayName:
-                              type: text
-                              value: Divider
-                            fluidContent:
-                              type: checkbox
-                              value: true
-                          _overridability:
-                            hideLockedParameters: true
-                    parameters:
-                      spacing:
-                        type: dex-space-control-parameter
-                        value:
-                          mobile: {}
-                          tablet: {}
-                          desktop: {}
-                      displayName:
-                        type: text
-                        value: >-
-                          ${#jptr:/Product List Content entries Loop
-                          Item/entry/_slug}
-                    _overridability:
-                      hideLockedParameters: true
-              _dataResources:
-                Product List Content entries Loop Item:
-                  type: sys-reserved-loop
-                  variables:
-                    connectedData: '#jptr:/Product List Content/entries:fa=c'
         _overridability:
           hideLockedParameters: true
   _dataResources:
@@ -270,65 +203,10 @@ composition:
         contentTypes: product
       isPatternParameter: true
       ignorePatternParameterDefault: false
-  _overrides:
-    a04e8cfe-21fb-4a7e-a705-e07a484013d6:
-      parameters:
-        displayName:
-          type: text
-          value: >-
-            ${#jptr:/Product List Content entries Loop
-            Item/entry/fields/name/value}
-    a04e8cfe-21fb-4a7e-a705-e07a484013d6|343d0838-294f-429d-abff-03fdfc3da33e:
-      parameters:
-        text:
-          type: text
-          value: >-
-            ${#jptr:/Product List Content entries Loop
-            Item/entry/fields/variants/value/0/fields/currency/value}
-            ${#jptr:/Product List Content entries Loop
-            Item/entry/fields/variants/value/0/fields/price/value}
-    a04e8cfe-21fb-4a7e-a705-e07a484013d6|c528e462-6a4f-4c13-9d02-f58663c69855:
-      parameters:
-        image:
-          type: asset
-          value:
-            - _id: fc40d8c7-f022-4e7d-9f05-947d87c3d8c9
-              type: image
-              fields:
-                url:
-                  type: text
-                  value: >-
-                    ${#jptr:/Product List Content entries Loop
-                    Item/entry/fields/primaryImage/value/0/fields/url/value}
-                title:
-                  type: text
-                  value: >-
-                    ${#jptr:/Product List Content entries Loop
-                    Item/entry/fields/name/value}
-                description:
-                  type: text
-                  value: >-
-                    ${#jptr:/Product List Content entries Loop
-                    Item/entry/fields/name/value}
-              _source: custom-url
-    a04e8cfe-21fb-4a7e-a705-e07a484013d6|d867fe8e-8ea3-4e46-a6a4-33efc04e71e6:
-      parameters:
-        text:
-          type: text
-          value: >-
-            ${#jptr:/Product List Content entries Loop
-            Item/entry/fields/variants/value/0/fields/code/value}
-    a04e8cfe-21fb-4a7e-a705-e07a484013d6|f8e535bb-d461-4469-975d-81e9b15487cf:
-      parameters:
-        text:
-          type: text
-          value: >-
-            ${#jptr:/Product List Content entries Loop
-            Item/entry/fields/name/value}
   _locales:
     - en
 created: '2025-03-25T04:28:02.103922+00:00'
-modified: '2025-03-26T10:14:38.018944+00:00'
+modified: '2025-03-26T13:03:13.331208+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/jd-template/cart-items-list.jpg

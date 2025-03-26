@@ -1,4 +1,3 @@
-import { Asset } from '@uniformdev/assets';
 export type StoredCartItem = {
   productSlug: string;
   quantity: number;
@@ -13,20 +12,30 @@ export type ProductVariant = {
   currency: string;
   price: number;
   title: string;
-  imageGallery: Asset[];
+  imageGallery: {
+    url: string;
+    title: string;
+  }[];
 };
 
 export type Brand = {
   title: string;
   description: string;
-  logo: Asset[];
+  logo: {
+    url: string;
+    title: string;
+  }[];
 };
 
 export type Product = {
+  slug: string;
   title: string;
   name: string;
   shortDescription: string;
-  primaryImage: Asset[];
+  primaryImage: {
+    url: string;
+    title: string;
+  }[];
   brand: Brand;
   variants: ProductVariant[];
   recommendations: Product[];

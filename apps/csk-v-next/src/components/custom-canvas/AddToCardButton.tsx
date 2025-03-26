@@ -4,7 +4,7 @@ import { FC } from 'react';
 import { useUniformContext } from '@uniformdev/canvas-next-rsc/component';
 import { Button as CSKButton, ButtonProps as CSKButtonProps } from '@uniformdev/csk-components/components/canvas';
 import { cn } from '@uniformdev/csk-components/utils/styling';
-import { useCard } from '@/modules/cart/CardProvider';
+import { useCard } from '@/modules/cart';
 
 type AddToCardButtonProps = CSKButtonProps & {
   fullWidth?: boolean;

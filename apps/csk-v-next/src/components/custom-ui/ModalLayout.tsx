@@ -10,8 +10,8 @@ type Props = PropsWithChildren<
   }
 >;
 
-const ModalLayout: FC<Props> = ({ isOpen, onCloseModal, children, backgroundColor, border, spacing }) => (
-  <div className={cn('fixed inset-0 z-10', { 'pointer-events-none': !isOpen })}>
+const ModalLayout: FC<Props> = ({ isOpen, onCloseModal, children, border, spacing }) => (
+  <div className={cn('fixed inset-0 z-10 h-full', { 'pointer-events-none': !isOpen })}>
     <button
       className={cn('fixed inset-0 bg-slate-500/[.5] transition-opacity duration-300 ease-in-out', {
         'pointer-events-none opacity-0': !isOpen,
@@ -20,11 +20,12 @@ const ModalLayout: FC<Props> = ({ isOpen, onCloseModal, children, backgroundColo
     />
     <Container
       wrapperClassName={cn(
-        'h-full absolute md:translate-x-4 top-0 right-0 bottom-0 md:w-[558px] w-full transition-opacity duration-300 ease-in-out',
+        'h-full min-h-screen absolute md:translate-x-4 top-0 right-0 bottom-0 md:w-[558px] w-full transition-opacity duration-300 ease-in-out',
         { 'opacity-100 overflow-y-auto': isOpen },
         { 'pointer-events-none opacity-0': !isOpen }
       )}
-      backgroundColor={backgroundColor}
+      className="h-full"
+      backgroundColor="white"
       border={border}
       spacing={spacing}
       fluidContent

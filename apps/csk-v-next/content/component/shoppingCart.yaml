@@ -6,12 +6,15 @@ icon: shopping-cart
 parameters: []
 useTeamPermissions: true
 slots:
-  - id: products
-    name: Products
-    allowedComponents: []
-    allowAllComponents: true
+  - id: checkoutButton
+    name: Checkout Button
+    maxComponents: 1
+    minComponents: 0
+    allowedComponents:
+      - button
+    allowAllComponents: false
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
 canBeComposition: false
 created: '2025-03-26T09:35:05.764763+00:00'
-updated: '2025-03-26T10:04:06.47386+00:00'
+updated: '2025-03-26T14:48:13.216522+00:00'

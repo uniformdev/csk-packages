@@ -31,7 +31,7 @@ export async function GET(req: Request) {
   const productSlugs = searchParams.getAll('productSlugs');
 
   if (!productSlugs || productSlugs.length === 0) {
-    return new Response('Product slugs are required', { status: 400 });
+    return new Response(JSON.stringify([]), { status: 200 });
   }
 
   const contentClient = new ContentClient({
@@ -50,9 +50,13 @@ export async function GET(req: Request) {
 
   const products = entries.map(entryResponse => {
     const flattened = flattenValues(entryResponse.entry);
+
     if (!flattened) return null;
 
-    return transformEntry(flattened);
+    return {
+      ...transformEntry(flattened),
+      slug: entryResponse.entry?._slug,
+    };
   });
 
   return new Response(JSON.stringify(products), { status: 200 });

@@ -3,14 +3,15 @@
 import { FC } from 'react';
 import dynamic from 'next/dynamic';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
-import ShoppingCartItemSkeleton from '../custom-ui/ShoppingCartItemSkeleton';
-const ShoppingCartClient = dynamic(() => import('./ShoppingCartClient'), {
+import { ShoppingCartSkeleton } from '@/modules/cart';
+
+const ShoppingCartClient = dynamic(() => import('./ShoppingCartClient').then(mod => mod.default), {
   ssr: false,
-  loading: () => <ShoppingCartItemSkeleton />,
+  loading: () => <ShoppingCartSkeleton />,
 });
 
 enum ShoppingCartSlots {
-  Products = 'products',
+  CheckoutButton = 'checkoutButton',
 }
 
 type ShoppingCartProps = ComponentProps<unknown, ShoppingCartSlots>;

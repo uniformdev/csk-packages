@@ -7,7 +7,6 @@ interface SetItemOptions {
 
 type SetValue<T> = (value: T, options?: SetItemOptions) => void;
 
-// Cross-Origin Resource Sharing to support Uniform platform Fake Commerce integration
 const useStorage = <T>(key: string, initialValue: T): [T, SetValue<T>] => {
   const [value, setStoredValue] = useState<T>(getStorageItem(key) || initialValue);
 

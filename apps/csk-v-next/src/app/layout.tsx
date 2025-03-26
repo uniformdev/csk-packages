@@ -8,7 +8,7 @@ import '@/styles/dimensions.css';
 import '@/styles/fonts.css';
 import '@/styles/borders.css';
 import { customFontVariables } from '@/fonts';
-import { CardProvider } from '@/modules/cart/CardProvider';
+import { CardProvider } from '@/modules/cart';
 import Chat from '@/modules/chat';
 import { UniformClientContext } from '@/utils/clientContext';
 import { GoogleAnalytics } from '@next/third-parties/google';

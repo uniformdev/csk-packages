@@ -1,0 +1,18 @@
+id: test
+displayName: Test
+ttl: 30
+path: ''
+custom:
+  proposedName: ''
+method: GET
+purgeKey: 1b76b070-af59-4d0c-acac-e72740b223ae
+archetype: default
+variables:
+  Some:
+    type: text
+    default: ''
+parameters:
+  - key: Some new
+    value: ${Some}
+dataSourceId: yourapi
+allowedOnComponents: []

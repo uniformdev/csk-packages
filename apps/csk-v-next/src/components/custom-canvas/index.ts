@@ -18,7 +18,6 @@ import ReadMore from './ReadMore';
 import Recommendations from './Recommendations';
 import RemoveButton from './RemoveButton';
 import RichText from './RichText';
-
 import ShoppingCart from './ShoppingCart';
 
 // Here, you can add your own component or customize an existing CSK component with your logic or styles.
