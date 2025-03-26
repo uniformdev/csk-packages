@@ -1,1 +1,1 @@
-export { GET, POST } from '@/modules/cart/route';
+export { GET } from '@/modules/cart/route';

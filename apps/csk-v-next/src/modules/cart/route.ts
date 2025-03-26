@@ -1,25 +1,59 @@
-import { getCartByUserId, updateCart } from './supabase';
+import { ContentClient, flattenValues } from '@uniformdev/canvas';
 
-export async function POST(req: Request) {
-  try {
-    const { cart, userId } = await req.json();
-
-    const result = await updateCart(cart, userId);
-
-    return new Response(JSON.stringify(result), { status: 200 });
-  } catch {
-    return new Response('Internal Server Error', { status: 500 });
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const transformEntry = (data: any): Record<string, any> => {
+  if (data?.entry) {
+    return transformEntry(flattenValues(data.entry, { levels: 3 }));
   }
-}
+
+  if (data?.fields) {
+    return transformEntry(data.fields);
+  }
+
+  if (Array.isArray(data)) {
+    return data.map(item => transformEntry(item));
+  }
+
+  if (typeof data === 'object' && data !== null) {
+    const result: Record<string, unknown> = {};
+    for (const [key, value] of Object.entries(data)) {
+      result[key] = transformEntry(value);
+    }
+    return result;
+  }
+
+  return data;
+};
 
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
-  const userId = searchParams.get('userId');
 
-  if (!userId) {
-    return new Response('User ID is required', { status: 400 });
+  const productSlugs = searchParams.getAll('productSlugs');
+
+  if (!productSlugs || productSlugs.length === 0) {
+    return new Response('Product slugs are required', { status: 400 });
   }
 
-  const result = await getCartByUserId(userId);
-  return new Response(JSON.stringify(result), { status: 200 });
+  const contentClient = new ContentClient({
+    apiKey: process.env.UNIFORM_API_KEY,
+    projectId: process.env.UNIFORM_PROJECT_ID,
+  });
+
+  const { entries } = await contentClient.getEntries({
+    filters: {
+      slug: {
+        in: productSlugs as string & string[],
+      },
+    },
+    locale: 'en',
+  });
+
+  const products = entries.map(entryResponse => {
+    const flattened = flattenValues(entryResponse.entry);
+    if (!flattened) return null;
+
+    return transformEntry(flattened);
+  });
+
+  return new Response(JSON.stringify(products), { status: 200 });
 }

@@ -1,1 +1,1 @@
-export const USER_ID_COOKIE_NAME = 'userId';
+export const CART_STORAGE_KEY = 'cart';
