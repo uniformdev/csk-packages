@@ -1,0 +1,28 @@
+id: promptItem
+name: Prompt Item
+created: '2025-03-26T10:56:01.94534+00:00'
+updated: '2025-03-26T11:43:37.357335+00:00'
+slugSettings: {}
+useTeamPermissions: true
+fields:
+  - id: name
+    name: Name
+    type: text
+    helpText: Name of the prompt to connect to the model configuration
+    typeConfig: null
+    localizable: true
+  - id: value
+    name: Value
+    type: text
+    helpText: >-
+      Provide a text prompt. Create variables by enclosing their name in double
+      curly braces as in {{variable}}.
+    typeConfig:
+      multiline: true
+      linesCount: 100
+    localizable: true
+entryName: name
+description: ''
+icon: info
+type: block
+permissions: []

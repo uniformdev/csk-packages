@@ -1,4 +1,5 @@
 import { Message } from 'ai';
+import { ToolsName } from './constants';
 import { ProductRecommendations } from './types';
 
 export const getRecommendation = (message: Message): ProductRecommendations => {
@@ -6,7 +7,7 @@ export const getRecommendation = (message: Message): ProductRecommendations => {
     part =>
       part.type === 'tool-invocation' &&
       'toolInvocation' in part &&
-      part.toolInvocation.toolName == 'recommendProducts' &&
+      part.toolInvocation.toolName == ToolsName.RECOMMEND_PRODUCTS &&
       'result' in part.toolInvocation &&
       Boolean(part.toolInvocation.result)
   );
@@ -15,3 +16,6 @@ export const getRecommendation = (message: Message): ProductRecommendations => {
   );
   return { suggestedProducts, composition };
 };
+
+export const replacePromptVariables = (template: string, values: Record<string, string>, fallback = ''): string =>
+  template.replace(/{{(.*?)}}/g, (_, key) => (key in values ? values[key] : fallback));

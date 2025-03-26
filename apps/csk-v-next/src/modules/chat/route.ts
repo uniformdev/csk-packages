@@ -12,21 +12,14 @@ import { getManifest } from '@uniformdev/canvas-next-rsc';
 import { Context, CookieTransitionDataStore, ManifestV2 } from '@uniformdev/context';
 import locales from '@/i18n/locales.json';
 import { openai } from '@ai-sdk/openai';
-import {
-  GET_USER_INTERESTS_DESCRIPTION,
-  RECOMMEND_PRODUCTS_DESCRIPTION,
-  SET_USER_INTERESTS_DESCRIPTION,
-  SYSTEM_PROMPT,
-} from './constants';
+import { RECOMMENDATIONS_COMPOSITION_SLUG, SUGGESTIONS_SLOT_NAME, ToolsName } from './constants';
+import { getPromptsFromUniform } from './prompts';
 import { ProductRecommendations } from './types';
 
 const canvasClient = new CanvasClient({
   apiKey: process.env.UNIFORM_API_KEY,
   projectId: process.env.UNIFORM_PROJECT_ID,
 });
-
-const RECOMMENDATIONS_COMPOSITION_SLUG = 'product-recommendations';
-const SUGGESTIONS_SLOT_NAME = 'recommendations';
 
 const getRecommendationsComposition = async () => {
   const { composition } = await canvasClient.getCompositionBySlug({
@@ -106,21 +99,26 @@ export async function POST(req: Request) {
     const cookieValue = req.headers.get('cookie') || '';
     const parsedCookie = parse(cookieValue);
     const scoreCookie = parsedCookie['ufvd'];
+    const prompts = getPromptsFromUniform();
 
     return createDataStreamResponse({
       execute: dataStream => {
         const result = streamText({
           model: openai('gpt-4-turbo'),
           messages,
-          system: SYSTEM_PROMPT,
-          experimental_activeTools: ['getUserInterests', 'setUserInterests', 'recommendProducts'],
+          system: prompts[ToolsName.SYSTEM],
+          experimental_activeTools: [
+            ToolsName.GET_USER_INTERESTS,
+            ToolsName.SET_USER_INTERESTS,
+            ToolsName.RECOMMEND_PRODUCTS,
+          ],
           tools: {
-            getUserInterests: tool({
-              description: GET_USER_INTERESTS_DESCRIPTION,
+            [ToolsName.GET_USER_INTERESTS]: tool({
+              description: prompts[ToolsName.GET_USER_INTERESTS],
               parameters: z.object({}),
             }),
-            setUserInterests: tool({
-              description: SET_USER_INTERESTS_DESCRIPTION,
+            [ToolsName.SET_USER_INTERESTS]: tool({
+              description: prompts[ToolsName.SET_USER_INTERESTS],
               parameters: z.object({
                 interests: z.array(
                   z.object({
@@ -131,8 +129,8 @@ export async function POST(req: Request) {
                 ),
               }),
             }),
-            recommendProducts: tool({
-              description: RECOMMEND_PRODUCTS_DESCRIPTION,
+            [ToolsName.RECOMMEND_PRODUCTS]: tool({
+              description: prompts[ToolsName.RECOMMEND_PRODUCTS],
               parameters: z.object({}),
               async execute() {
                 const recommendedProducts = await getProductRecommendations({

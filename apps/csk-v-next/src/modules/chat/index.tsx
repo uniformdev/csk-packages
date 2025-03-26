@@ -6,6 +6,7 @@ import { EnrichmentData } from '@uniformdev/context';
 import { cn } from '@uniformdev/csk-components/utils/styling';
 import { Drawers } from '@/components/custom-ui/Drawers';
 import { useChat } from '@ai-sdk/react';
+import { ToolsName } from './constants';
 import ChatButton from './ui/ChatButton';
 import { Messages } from './ui/Messages';
 import { SubmitButton } from './ui/SubmitButton';
@@ -33,10 +34,10 @@ const Chat: FC = () => {
   const { messages, input, handleInputChange, handleSubmit, append, status } = useChat({
     maxSteps: MAX_STEPS,
     async onToolCall({ toolCall }) {
-      if (toolCall.toolName === 'getUserInterests') {
+      if (toolCall.toolName === ToolsName.GET_USER_INTERESTS) {
         console.info(`${toolCall.toolName}: ${JSON.stringify(scores, null, 2)}`);
         return JSON.stringify(scores);
-      } else if (toolCall.toolName === 'setUserInterests') {
+      } else if (toolCall.toolName === ToolsName.SET_USER_INTERESTS) {
         const { interests } = toolCall.args as { interests: EnrichmentData[] };
 
         console.info(`${toolCall.toolName}: ${JSON.stringify(interests, null, 2)}`);
