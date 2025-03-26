@@ -19,11 +19,12 @@ const AUTO_PROMPT = "Based on my interests, recommend me some products. Don't ca
 const Chat: FC = () => {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(false);
+  const scores = useScores();
+  const { context } = useUniformContext();
+  const [recommendationReceivedIndex, setRecommendationReceivedIndex] = useState<number>(-1);
 
   const textareaRef = useRef<HTMLTextAreaElement>(null);
-
-  const { context } = useUniformContext();
-  const scores = useScores();
+  const prevScoresRef = useRef(scores);
 
   useEffect(() => {
     if (open && textareaRef.current) {
@@ -52,26 +53,37 @@ const Chat: FC = () => {
   });
 
   useEffect(() => {
-    if (!messages.length && !!Object.keys(scores || {}).length) {
-      append({
-        content: AUTO_PROMPT,
-        role: 'user',
-      });
-    }
-  }, [append, messages.length, scores]);
-
-  useEffect(() => {
-    if (active || messages.length > 2) return;
-
-    const isRecommendation = messages.some(m => {
+    const indexWithRecommendation = messages.findIndex(m => {
       const { suggestedProducts } = getRecommendation(m);
       return suggestedProducts.length > 0;
     });
 
-    if (isRecommendation) {
+    if (indexWithRecommendation !== -1) {
+      setRecommendationReceivedIndex(indexWithRecommendation);
       setActive(true);
+    } else {
+      setActive(false);
     }
-  }, [active, messages]);
+  }, [messages]);
+
+  useEffect(() => {
+    if (recommendationReceivedIndex !== -1) {
+      return;
+    }
+
+    if (JSON.stringify(prevScoresRef.current) !== JSON.stringify(scores)) {
+      prevScoresRef.current = scores;
+
+      const hasNonZeroScore = scores && Object.values(scores).some(value => value !== 0);
+
+      if (hasNonZeroScore) {
+        append({
+          content: AUTO_PROMPT,
+          role: 'user',
+        });
+      }
+    }
+  }, [scores, recommendationReceivedIndex, append]);
 
   const showThinking = !['ready', 'error'].includes(status);
 
@@ -85,7 +97,7 @@ const Chat: FC = () => {
         <div className="flex h-full flex-col px-4 py-6 sm:px-6">
           <h2 className="text-base font-semibold text-gray-900">Talk to your site</h2>
           <p className="text-sm leading-3 text-[#6b7280]">Powered by Uniform Context</p>
-          <Messages status={status} messages={messages} />
+          <Messages status={status} messages={messages} recommendationReceivedIndex={recommendationReceivedIndex} />
           <div className="relative w-full flex-col gap-4">
             <div
               title={status}
