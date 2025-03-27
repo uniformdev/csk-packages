@@ -21,7 +21,6 @@ import RemoveButton from './RemoveButton';
 import RichText from './RichText';
 import ShoppingCart from './ShoppingCart';
 import ShoppingCartIcon from './ShoppingCartIcon';
-
 // Here, you can add your own component or customize an existing CSK component with your logic or styles.
 export const customComponentsMapping: ComponentMapping = {
   // This is a simple example of how you can add your own components.
@@ -31,7 +30,6 @@ export const customComponentsMapping: ComponentMapping = {
   // Coffee Shop custom components
   accordionItem: { component: AccordionItem },
   addToCardButton: { component: AddToCardButton },
-  addToFavorites: { component: () => null },
   button: { component: Button },
   completeCheckoutButton: { component: CompleteCheckoutButton },
   featuredSection: { component: FeaturedSection },
@@ -50,4 +48,5 @@ export const customComponentsMapping: ComponentMapping = {
   shoppingCart: { component: ShoppingCart },
   shoppingCartIcon: { component: ShoppingCartIcon },
   enrichmentSetter: { component: EnrichmentSetter },
+  addToFavorites: { component: null },
 };

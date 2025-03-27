@@ -8,7 +8,7 @@ import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { ContainerProps } from '@uniformdev/csk-components/components/ui';
 import { ShoppingCartSkeleton } from '@/modules/cart';
 
-const AddToFavoritesClient = dynamic(() => import('./addToFavorites').then(mod => mod.default), {
+const AddToFavoritesClient = dynamic(() => import('./add-to-favorites').then(mod => mod.default), {
   ssr: false,
   loading: () => <ShoppingCartSkeleton />,
 });

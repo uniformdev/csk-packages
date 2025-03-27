@@ -3,7 +3,7 @@ import { DefaultTheme } from 'tailwindcss/types/generated/default-theme';
 import { Asset } from '@uniformdev/assets';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { ContainerProps } from '@uniformdev/csk-components/components/ui';
-import AddToFavoritesClient from './addToFavoritesClient';
+import AddToFavoritesClient from './add-to-favorites-client';
 
 type IconSize = keyof DefaultTheme['fontSize'];
 

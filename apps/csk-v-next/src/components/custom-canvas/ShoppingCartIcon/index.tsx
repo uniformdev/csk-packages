@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 import { NavigationLinkProps as CSKNavigationLinkProps } from '@uniformdev/csk-components/components/canvas';
 import { ShoppingCartIconSkeleton } from '@/modules/cart';
 
-const ShoppingCartIconClient = dynamic(() => import('./shoppingCartIcon').then(mod => mod.default), {
+const ShoppingCartIconClient = dynamic(() => import('./shopping-cart-icon').then(mod => mod.default), {
   ssr: false,
   loading: () => <ShoppingCartIconSkeleton />,
 });
