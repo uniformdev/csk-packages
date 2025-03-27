@@ -5,7 +5,8 @@ import { ComponentProps, UniformSlot } from '@uniformdev/canvas-next-rsc/compone
 import { cn } from '@uniformdev/csk-components/utils/styling';
 import { ShoppingCartItem } from '@/modules/cart';
 import { useCard } from '@/modules/cart';
-import { ShoppingCartItemSkeleton } from '@/modules/cart/ui/skeleton/ShoppingCartItemSkeleton';
+import { ShoppingCartSkeleton } from '@/modules/cart/ui/skeleton/ShoppingCartSkeleton';
+
 enum ShoppingCartSlots {
   CheckoutButton = 'checkoutButton',
   EmptyCartContent = 'emptyCartContent',
@@ -37,7 +38,7 @@ const ShoppingCart: FC<ShoppingCartProps> = ({ component, context, slots, primar
   const hasItems = Boolean(cartProducts.length);
 
   if (isCartLoading && !hasItems) {
-    return <ShoppingCartItemSkeleton />;
+    return <ShoppingCartSkeleton />;
   }
 
   return (
