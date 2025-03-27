@@ -10,6 +10,7 @@ import '@/styles/borders.css';
 import { customFontVariables } from '@/fonts';
 import { CardProvider } from '@/modules/cart';
 import Chat from '@/modules/chat';
+import { FavoritesProvider } from '@/modules/favorites';
 import { UniformClientContext } from '@/utils/clientContext';
 import { GoogleAnalytics } from '@next/third-parties/google';
 
@@ -17,16 +18,18 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={customFontVariables}>
-        <CardProvider>
-          <NextIntlClientProvider>
-            <NextThemeProvider attribute="class" defaultTheme="light" enableSystem>
-              <UniformContext clientContextComponent={UniformClientContext}>
-                {children}
-                <Chat />
-              </UniformContext>
-            </NextThemeProvider>
-          </NextIntlClientProvider>
-        </CardProvider>
+        <FavoritesProvider>
+          <CardProvider>
+            <NextIntlClientProvider>
+              <NextThemeProvider attribute="class" defaultTheme="light" enableSystem>
+                <UniformContext clientContextComponent={UniformClientContext}>
+                  {children}
+                  <Chat />
+                </UniformContext>
+              </NextThemeProvider>
+            </NextIntlClientProvider>
+          </CardProvider>
+        </FavoritesProvider>
       </body>
       {process.env.GOOGLE_ANALYTICS_ID && <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_ID} />}
     </html>

@@ -1,8 +1,8 @@
 'use client';
 
 import { createContext, useContext, FC, PropsWithChildren, useMemo, useCallback, useEffect, useState } from 'react';
+import useStorage from '@/hooks/useStorage';
 import { CART_STORAGE_KEY } from '../constants';
-import useStorage from '../hooks/useStorage';
 import { Product, StoredCart } from '../types';
 import ShoppingCartModal from '../ui/ShoppingCartModal';
 
