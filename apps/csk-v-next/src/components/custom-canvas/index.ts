@@ -5,6 +5,7 @@ import Button from './Button';
 import CompleteCheckoutButton from './CompleteCheckoutButton';
 import Container from './Container';
 import CustomComponent from './CustomComponent';
+import EnrichmentSetter from './EnrichmentSetter';
 import FeaturedSection from './FeaturedSection';
 import Flex from './Flex';
 import FlexCard from './FlexCard';
@@ -12,7 +13,6 @@ import Grid from './Grid';
 import GridItem from './GridItem';
 import Input from './Input';
 import ModalLayout from './ModalLayout';
-import ProductDetailsPage from './ProductDetailsPage';
 import QuantitySelector from './QuantitySelector';
 import QuirkSelector from './QuirkSelector';
 import ReadMore from './ReadMore';
@@ -49,5 +49,5 @@ export const customComponentsMapping: ComponentMapping = {
   richText: { component: RichText },
   shoppingCart: { component: ShoppingCart },
   shoppingCartIcon: { component: ShoppingCartIcon },
-  productDetailsPage: { component: ProductDetailsPage },
+  enrichmentSetter: { component: EnrichmentSetter },
 };

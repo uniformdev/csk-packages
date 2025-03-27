@@ -135,9 +135,42 @@ composition:
               parameters:
                 open: 'yes'
               hideLockedParameters: true
+          - _id: 3cf0ecbb-5fc1-428a-8e47-66949654bc51
+            type: enrichmentSetter
+            parameters:
+              enrichments:
+                type: $block
+                value:
+                  - _id: b6a73641-a9c6-453a-b8e0-b03eaf98ff27
+                    type: $loop
+                    fields:
+                      body:
+                        type: $block
+                        value:
+                          - _id: 14e46419-085b-465e-8044-79302bb9eec6
+                            type: enrichment
+                            fields:
+                              cat:
+                                type: text
+                                value: subCategory
+                              key:
+                                type: text
+                                value: >-
+                                  ${#jptr:/Loop Product Category
+                                  Items/entry/_slug}
+                              str:
+                                type: text
+                                value: '5'
+                    _dataResources:
+                      Loop Product Category Items:
+                        type: sys-reserved-loop
+                        variables:
+                          connectedData: >-
+                            #jptr:/Product
+                            Content/entry/fields/category/value:fa=c
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-03-25T04:27:52.309699+00:00'
-modified: '2025-03-25T10:53:39.970573+00:00'
+modified: '2025-03-27T12:48:44.489621+00:00'
 pattern: false
