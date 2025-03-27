@@ -12,6 +12,7 @@ import Grid from './Grid';
 import GridItem from './GridItem';
 import Input from './Input';
 import ModalLayout from './ModalLayout';
+import ProductDetailsPage from './ProductDetailsPage';
 import QuantitySelector from './QuantitySelector';
 import QuirkSelector from './QuirkSelector';
 import ReadMore from './ReadMore';
@@ -48,4 +49,5 @@ export const customComponentsMapping: ComponentMapping = {
   richText: { component: RichText },
   shoppingCart: { component: ShoppingCart },
   shoppingCartIcon: { component: ShoppingCartIcon },
+  productDetailsPage: { component: ProductDetailsPage },
 };
