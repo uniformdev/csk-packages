@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { ShoppingMiniCartSkeleton } from '@/modules/cart';
 
-const ShoppingCartClient = dynamic(() => import('./ShoppingCartClient').then(mod => mod.default), {
+const ShoppingCartClient = dynamic(() => import('./shoppingCart').then(mod => mod.default), {
   ssr: false,
   loading: () => <ShoppingMiniCartSkeleton />,
 });
