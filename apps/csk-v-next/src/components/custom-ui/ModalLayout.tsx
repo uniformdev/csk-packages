@@ -20,12 +20,11 @@ const ModalLayout: FC<Props> = ({ isOpen, onCloseModal, children, border, spacin
     />
     <Container
       wrapperClassName={cn(
-        'h-full min-h-screen absolute md:translate-x-4 top-0 right-0 bottom-0 md:w-[558px] w-full transition-opacity duration-300 ease-in-out',
+        'h-full min-h-screen bg-white absolute md:translate-x-4 top-0 right-0 bottom-0 md:w-[558px] w-full transition-opacity duration-300 ease-in-out',
         { 'opacity-100 overflow-y-auto': isOpen },
         { 'pointer-events-none opacity-0': !isOpen }
       )}
-      className="h-full"
-      backgroundColor="white"
+      className="h-full bg-white"
       border={border}
       spacing={spacing}
       fluidContent

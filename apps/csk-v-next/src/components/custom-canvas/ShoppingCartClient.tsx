@@ -1,19 +1,24 @@
 'use client';
 
 import { FC, useCallback } from 'react';
-import Image from 'next/image';
 import { ComponentProps, UniformSlot } from '@uniformdev/canvas-next-rsc/component';
-import { ShoppingCartSkeleton, ShoppingCartItem } from '@/modules/cart';
+import { cn } from '@uniformdev/csk-components/utils/styling';
+import { ShoppingCartItem } from '@/modules/cart';
 import { useCard } from '@/modules/cart';
-import InformationContent from '../custom-ui/InformationContent';
-
+import { ShoppingCartItemSkeleton } from '@/modules/cart/ui/skeleton/ShoppingCartItemSkeleton';
 enum ShoppingCartSlots {
   CheckoutButton = 'checkoutButton',
+  EmptyCartContent = 'emptyCartContent',
 }
 
-type ShoppingCartProps = ComponentProps<unknown, ShoppingCartSlots>;
+type ShoppingCartParameters = {
+  primaryTextColor?: string;
+  secondaryTextColor?: string;
+};
 
-const ShoppingCart: FC<ShoppingCartProps> = ({ component, context, slots }) => {
+type ShoppingCartProps = ComponentProps<ShoppingCartParameters, ShoppingCartSlots>;
+
+const ShoppingCart: FC<ShoppingCartProps> = ({ component, context, slots, primaryTextColor, secondaryTextColor }) => {
   const { cartProducts, updateCard, removeFromCard, isCartLoading, total, storedCart } = useCard();
   const updateItemQuantity = useCallback(
     (productKey: string, newQuantity: number) => {
@@ -32,11 +37,15 @@ const ShoppingCart: FC<ShoppingCartProps> = ({ component, context, slots }) => {
   const hasItems = Boolean(cartProducts.length);
 
   if (isCartLoading && !hasItems) {
-    return <ShoppingCartSkeleton />;
+    return <ShoppingCartItemSkeleton />;
   }
 
   return (
-    <div className="text-black md:pt-14 lg:mb-8">
+    <div
+      className={cn('md:pt-14 lg:mb-8', {
+        [`text-${primaryTextColor}`]: !!primaryTextColor,
+      })}
+    >
       {hasItems && (
         <div className="hidden flex-row border-b pb-4 font-bold md:flex">
           <div className="basis-3/5">ITEM</div>
@@ -47,7 +56,6 @@ const ShoppingCart: FC<ShoppingCartProps> = ({ component, context, slots }) => {
       {hasItems ? (
         cartProducts.map(cartItem => {
           const productFromCart = storedCart[cartItem.slug];
-
           return (
             <ShoppingCartItem
               key={cartItem.slug}
@@ -55,23 +63,12 @@ const ShoppingCart: FC<ShoppingCartProps> = ({ component, context, slots }) => {
               removeItemFromCart={removeItemFromCart}
               quantity={productFromCart?.quantity}
               product={cartItem}
+              secondaryTextColor={secondaryTextColor}
             />
           );
         })
       ) : (
-        <InformationContent
-          title="Your shopping cart is empty"
-          text="Products added to the cart will appear here."
-          imageComponent={
-            <Image
-              src="https://res.cloudinary.com/uniform-demos/image/upload/v1692282886/csk-icons/icon-cart_zzou3e_yovtho.svg"
-              width={75}
-              height={75}
-              alt="cart icon"
-              unoptimized
-            />
-          }
-        />
+        <UniformSlot context={context} slot={slots.emptyCartContent} data={component} />
       )}
       {hasItems && (
         <div className="flex flex-col gap-4 pt-9">

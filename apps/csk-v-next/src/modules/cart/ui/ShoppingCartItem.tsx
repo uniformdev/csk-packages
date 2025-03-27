@@ -11,6 +11,7 @@ export type ShoppingCartItemProps = {
   isInModal?: boolean;
   updateItemQuantity?: (productKey: string, newQuantity: number) => void;
   removeItemFromCart?: (productKey: string) => void;
+  secondaryTextColor?: string;
 };
 
 export const ShoppingCartItem: FC<ShoppingCartItemProps> = ({
@@ -19,6 +20,7 @@ export const ShoppingCartItem: FC<ShoppingCartItemProps> = ({
   isInModal = false,
   updateItemQuantity,
   removeItemFromCart,
+  secondaryTextColor,
 }) => {
   const { primaryImage, slug, name, variants } = product;
 
@@ -97,9 +99,13 @@ export const ShoppingCartItem: FC<ShoppingCartItemProps> = ({
                   unoptimized
                   src="https://res.cloudinary.com/uniform-demos/image/upload/v1692282950/csk-icons/icon-cross-blue_qyhkct_o7gzai.svg"
                   alt="icon-cross"
-                  className="w-3 fill-blue-500 stroke-transparent duration-300 group-hover:stroke-blue-400"
+                  className="w-3  stroke-transparent duration-300 "
                 />
-                <span className="pl-2 text-sm font-bold text-blue-500 duration-300 group-hover:underline">
+                <span
+                  className={classNames('pl-2 text-sm font-bold', {
+                    [`text-${secondaryTextColor}`]: !!secondaryTextColor,
+                  })}
+                >
                   &nbsp;{'Remove'}
                 </span>
               </button>
@@ -117,7 +123,7 @@ export const ShoppingCartItem: FC<ShoppingCartItemProps> = ({
               quantity={quantity}
             />
           ) : (
-            <span className="select-none font-bold text-black">{quantity}</span>
+            <span className="select-none font-bold">{quantity}</span>
           )}
         </div>
         <div>

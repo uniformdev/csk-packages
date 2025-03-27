@@ -3,9 +3,35 @@ $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: shoppingCart
 name: Shopping Cart
 icon: shopping-cart
-parameters: []
+parameters:
+  - id: 9997d65b-30fd-4887-9672-618110e9613d
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - primaryTextColor
+        - secondaryTextColor
+  - id: primaryTextColor
+    name: Primary Text Color
+    type: dex-color-palette-parameter
+    typeConfig:
+      allowColors: []
+      selectedGroup: text
+  - id: secondaryTextColor
+    name: Secondary Text Color
+    type: dex-color-palette-parameter
+    typeConfig:
+      allowColors: []
+      selectedGroup: text
 useTeamPermissions: true
 slots:
+  - id: emptyCartContent
+    name: Empty Cart Content
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
   - id: checkoutButton
     name: Checkout Button
     maxComponents: 1
@@ -17,4 +43,4 @@ slots:
     patternsInAllowedComponents: false
 canBeComposition: false
 created: '2025-03-26T09:35:05.764763+00:00'
-updated: '2025-03-26T14:48:13.216522+00:00'
+updated: '2025-03-27T09:37:45.636791+00:00'

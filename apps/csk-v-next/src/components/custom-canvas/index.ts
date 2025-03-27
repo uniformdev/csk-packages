@@ -19,6 +19,7 @@ import Recommendations from './Recommendations';
 import RemoveButton from './RemoveButton';
 import RichText from './RichText';
 import ShoppingCart from './ShoppingCart';
+import ShoppingCartIcon from './ShoppingCartIcon';
 
 // Here, you can add your own component or customize an existing CSK component with your logic or styles.
 export const customComponentsMapping: ComponentMapping = {
@@ -46,4 +47,5 @@ export const customComponentsMapping: ComponentMapping = {
   removeButton: { component: RemoveButton },
   richText: { component: RichText },
   shoppingCart: { component: ShoppingCart },
+  shoppingCartIcon: { component: ShoppingCartIcon },
 };

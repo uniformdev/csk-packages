@@ -14,7 +14,7 @@ const ProductQuantityItem: FC<ProductQuantityItemProps> = ({ quantity, onClickIn
     </Button>
 
     <div className="flex w-full items-center justify-center border-x border-gray-100">
-      <span className="select-none font-bold text-black">{quantity}</span>
+      <span className="select-none font-bold">{quantity}</span>
     </div>
     <Button className="w-14 text-2xl" onClick={onClickIncrement}>
       +

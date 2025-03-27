@@ -13,6 +13,7 @@ type CardContextType = {
   removeFromCard: (productSlug: string) => void;
   updateCard: (productSlug: string, quantity: number) => void;
   total: number;
+  totalQuantity: number;
   isCartLoading: boolean;
   isModalCartOpen: boolean;
   setIsModalCartOpen: (isModalCartOpen: boolean) => void;
@@ -79,6 +80,13 @@ export const CardProvider: FC<PropsWithChildren> = ({ children }) => {
     return Math.round(cartTotal * 100) / 100;
   }, [storedCart, cartProducts]);
 
+  const totalQuantity = useMemo(() => {
+    return cartProducts.reduce((acc, product) => {
+      const productFromCart = storedCart[product.slug];
+      return acc + (productFromCart?.quantity || 0);
+    }, 0);
+  }, [storedCart, cartProducts]);
+
   useEffect(() => {
     const fetchCart = async () => {
       setIsCartLoading(true);
@@ -103,6 +111,7 @@ export const CardProvider: FC<PropsWithChildren> = ({ children }) => {
       removeFromCard,
       updateCard,
       total,
+      totalQuantity,
       isCartLoading,
       isModalCartOpen,
       setIsModalCartOpen,
@@ -117,6 +126,7 @@ export const CardProvider: FC<PropsWithChildren> = ({ children }) => {
       isCartLoading,
       isModalCartOpen,
       setIsModalCartOpen,
+      totalQuantity,
     ]
   );
 
