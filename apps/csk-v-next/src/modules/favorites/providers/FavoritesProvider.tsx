@@ -47,7 +47,11 @@ export const FavoritesProvider: FC<PropsWithChildren> = ({ children }) => {
       setIsFavoritesLoading(false);
     };
 
-    fetchFavorites();
+    const hasFavorites = Object.keys(storedFavorites).length > 0;
+
+    if (hasFavorites) {
+      fetchFavorites();
+    }
   }, [storedFavorites]);
 
   const value = useMemo(
