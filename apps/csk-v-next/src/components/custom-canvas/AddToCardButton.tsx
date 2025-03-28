@@ -9,9 +9,10 @@ import { useCard } from '@/modules/cart';
 type AddToCardButtonProps = CSKButtonProps & {
   fullWidth?: boolean;
   productSlug: string;
+  openMiniCart?: boolean;
 };
 
-const AddToCardButton: FC<AddToCardButtonProps> = ({ fullWidth, productSlug, ...props }) => {
+const AddToCardButton: FC<AddToCardButtonProps> = ({ fullWidth, productSlug, openMiniCart, ...props }) => {
   const { context } = useUniformContext();
   const { addToCard } = useCard();
 
@@ -19,7 +20,7 @@ const AddToCardButton: FC<AddToCardButtonProps> = ({ fullWidth, productSlug, ...
     await context?.update({
       events: [{ event: 'added-to-cart' }],
     });
-    addToCard(productSlug, 1);
+    addToCard(productSlug, 1, openMiniCart);
   };
 
   return (

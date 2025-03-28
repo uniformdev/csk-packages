@@ -9,7 +9,7 @@ import ShoppingCartModal from '../ui/ShoppingCartModal';
 type CardContextType = {
   storedCart: StoredCart;
   cartProducts: Product[];
-  addToCard: (productSlug: string, quantity: number) => void;
+  addToCard: (productSlug: string, quantity: number, openMiniCart?: boolean) => void;
   removeFromCard: (productSlug: string) => void;
   updateCard: (productSlug: string, quantity: number) => void;
   total: number;
@@ -28,7 +28,7 @@ export const CardProvider: FC<PropsWithChildren> = ({ children }) => {
   const [isModalCartOpen, setIsModalCartOpen] = useState(false);
 
   const addToCard = useCallback(
-    (productSlug: string, quantity: number) => {
+    (productSlug: string, quantity: number, openMiniCart?: boolean) => {
       const productFromCart = storedCart[productSlug];
 
       const updatedProduct = productFromCart
@@ -39,7 +39,7 @@ export const CardProvider: FC<PropsWithChildren> = ({ children }) => {
 
       setStoredCart(updatedCart);
 
-      if (!isModalCartOpen) {
+      if (!isModalCartOpen && openMiniCart) {
         setIsModalCartOpen(true);
       }
     },
