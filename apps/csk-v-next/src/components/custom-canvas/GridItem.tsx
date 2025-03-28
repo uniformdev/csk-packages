@@ -6,6 +6,6 @@ import {
 
 type GridItemProps = CSKGridItemProps;
 
-const GridItem: FC<GridItemProps> = props => <CSKGridItem className="h-full" {...props} />;
+const GridItem: FC<GridItemProps> = props => <CSKGridItem {...props} />;
 
 export default GridItem;

@@ -128,7 +128,7 @@ export const ShoppingCartItem: FC<ShoppingCartItemProps> = ({
         </div>
         <div>
           <div className={classNames('font-bold block pb-2', { 'md:hidden': !isInModal })}>Price</div>
-          <div className="text-xl md:text-2xl">{`${currency} ${price}`}</div>
+          <div className="text-xl md:text-2xl">{`${currency}${price}`}</div>
         </div>
       </div>
     </div>

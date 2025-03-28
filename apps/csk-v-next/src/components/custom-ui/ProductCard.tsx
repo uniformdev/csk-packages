@@ -40,7 +40,7 @@ export const ProductCard: FC<ProductCardProps> = ({
         </div>
 
         <div className="relative mt-4 flex flex-col gap-y-2">
-          <Flex fluidContent direction="col" gap="2">
+          <Flex fluidContent direction="col" gap="1">
             <Text weight="bold" size="2xl" color={textColor}>
               {title}
             </Text>
