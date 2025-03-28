@@ -1,0 +1,55 @@
+import React, { FC } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Button } from '@uniformdev/csk-components/components/ui';
+import { cn } from '@uniformdev/csk-components/utils/styling';
+import scaleWidthAndHeightWithAspectRatio from '@/modules/search/utils/scaleWidthAndHeightWithAspectRatio';
+import { Article, ContentType, WithUniformContentEntrySystemParams } from '../types';
+
+export type ArticleCardProps = WithUniformContentEntrySystemParams<Article> & {
+  contentType: ContentType.Article;
+  textColor?: string;
+  border?: string;
+};
+
+const ArticleResultCard: FC<ArticleCardProps> = ({
+  title,
+  thumbnail,
+  shortDescription,
+  author,
+  textColor,
+  slug,
+  border,
+}) => {
+  const asset = thumbnail[0];
+
+  if (!asset) return null;
+
+  const { width, height } = scaleWidthAndHeightWithAspectRatio({
+    width: asset.width,
+    height: asset.height,
+    maxWidth: 500,
+  });
+
+  return (
+    <Link
+      href={`/articles/${slug}`}
+      className={cn('flex flex-col gap-y-4 p-4 hover:scale-[1.02] hover:shadow-md transition-all duration-300', {
+        [`text-${textColor}`]: textColor,
+        border,
+      })}
+    >
+      <Image className="aspect-video object-cover" src={asset.url} alt={title} width={width} height={height} />
+      <div className="flex flex-col gap-y-4">
+        <p className="text-2xl font-bold">{title}</p>
+        {shortDescription && <p className="text-base">{shortDescription}</p>}
+        {author && <p className="text-base">by {author.name}</p>}
+        <Button className="hover:bg-button-primary border-button-secondary bg-button-secondary text-text-primary hover:text-text-secondary mt-auto border px-6 py-3 text-sm uppercase">
+          Read Article
+        </Button>
+      </div>
+    </Link>
+  );
+};
+
+export default ArticleResultCard;

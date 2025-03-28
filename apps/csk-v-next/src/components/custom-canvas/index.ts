@@ -6,6 +6,11 @@ import CompleteCheckoutButton from './CompleteCheckoutButton';
 import Container from './Container';
 import CustomComponent from './CustomComponent';
 import EnrichmentSetter from './EnrichmentSetter';
+import EntriesSearchBox from './EntriesSearchBox';
+import EntriesSearchEngine from './EntriesSearchEngine';
+import EntriesSearchFilters from './EntriesSearchFilters';
+import EntriesSearchList from './EntriesSearchList';
+import EntriesSearchPagination from './EntriesSearchPagination';
 import Favorites from './Favorites';
 import FavoritesIcon from './FavoritesIcon';
 import FeaturedSection from './FeaturedSection';
@@ -55,4 +60,9 @@ export const customComponentsMapping: ComponentMapping = {
   productCard: { component: ProductCard },
   favorites: { component: Favorites },
   favoritesIcon: { component: FavoritesIcon },
+  entriesSearchEngine: { component: EntriesSearchEngine },
+  entriesSearchBox: { component: EntriesSearchBox },
+  entriesSearchFilters: { component: EntriesSearchFilters },
+  entriesSearchList: { component: EntriesSearchList },
+  entriesSearchPagination: { component: EntriesSearchPagination },
 };
