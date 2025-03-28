@@ -31,6 +31,9 @@ composition:
     buttonColor:
       type: dex-color-palette-parameter
       value: button-secondary
+    openMiniCart:
+      type: checkbox
+      value: true
     textTransform:
       type: dex-segmented-control-parameter
       value: uppercase
@@ -44,9 +47,10 @@ composition:
     parameters:
       product: 'yes'
       productSlug: 'yes'
+      openMiniCart: 'yes'
     hideLockedParameters: true
   _locales:
     - en
 created: '2025-03-25T04:28:00.188482+00:00'
-modified: '2025-03-25T10:53:14.883426+00:00'
+modified: '2025-03-28T11:27:10.70688+00:00'
 pattern: true
