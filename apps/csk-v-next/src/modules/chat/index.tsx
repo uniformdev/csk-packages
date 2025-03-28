@@ -1,6 +1,7 @@
 'use client';
 
 import { FC, useEffect, useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { useScores, useUniformContext } from '@uniformdev/canvas-next-rsc-client';
 import { EnrichmentData } from '@uniformdev/context';
 import { cn } from '@uniformdev/csk-components/utils/styling';
@@ -19,9 +20,11 @@ const AUTO_PROMPT = "Based on my interests, recommend me some products. Don't ca
 const Chat: FC = () => {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(false);
+  const pathname = usePathname();
+  const [recommendationReceivedIndex, setRecommendationReceivedIndex] = useState<number>(-1);
+
   const scores = useScores();
   const { context } = useUniformContext();
-  const [recommendationReceivedIndex, setRecommendationReceivedIndex] = useState<number>(-1);
 
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const prevScoresRef = useRef(scores);
@@ -31,6 +34,10 @@ const Chat: FC = () => {
       textareaRef.current.focus();
     }
   }, [open]);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
   const { messages, input, handleInputChange, handleSubmit, append, status } = useChat({
     maxSteps: MAX_STEPS,
