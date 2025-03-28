@@ -38,7 +38,7 @@ composition:
                                 value: 955cfe0c-01c8-471b-a730-af4bbaf1257e
                               url:
                                 value: >-
-                                  https://img.uniform.global/p/N0QOqjXvSFeXY7i3yzY8ZQ/XNJZd8GHQomkOr3fABE5_Q-black-mountain-chambord-french-press-coffee-maker-1.png
+                                  https://img.uniform.global/p/ovl3f_RJSNmuo41YikmFlA/3q5jQokrTgmuWC2VL0yDkg-black-mountain-chambord-french-press-coffee-maker-1.png
                                 type: text
                               file:
                                 type: file
@@ -70,92 +70,13 @@ composition:
                       parameters:
                         image: 'yes'
                       hideLockedParameters: true
-                  - _id: 636657b9-259e-44e9-b963-d9f1b4e80a67
-                    type: addToFavorites
-                    parameters:
-                      size:
-                        type: dex-segmented-control-parameter
-                        value: base
-                      addIcon:
-                        type: asset
-                        value:
-                          - _id: 5b108b3e-9296-4377-aeea-c1c7237f202c
-                            type: image
-                            fields:
-                              id:
-                                type: text
-                                value: 114655d8-a917-4822-b76d-0ea27254bd35
-                              url:
-                                value: >-
-                                  https://img.uniform.global/p/N0QOqjXvSFeXY7i3yzY8ZQ/wK9epMoPTm6e0QTUfvq5uQ-favourite-icon.svg
-                                type: text
-                              file:
-                                type: file
-                                value: 9a7f1005-090a-4b9f-b34b-1d710d42555a
-                              size:
-                                value: 1311
-                                type: number
-                              title:
-                                type: text
-                                value: favourite-icon.svg
-                              width:
-                                value: 20
-                                type: number
-                              height:
-                                value: 18
-                                type: number
-                              mediaType:
-                                value: image/svg+xml
-                                type: text
-                            _source: uniform-assets
-                      spacing:
-                        type: dex-space-control-parameter
-                        value:
-                          paddingTop: container-xxsmall
-                          paddingLeft: container-xxsmall
-                          paddingRight: container-xxsmall
-                          paddingBottom: container-xxsmall
-                      position:
-                        type: dex-segmented-control-parameter
-                        value: top-right
-                      removeIcon:
-                        type: asset
-                        value:
-                          - _id: 4ce1e00b-6735-4897-a6e3-20caff2157e9
-                            type: image
-                            fields:
-                              id:
-                                type: text
-                                value: ed3bfebf-c740-423b-aa96-ec72b071c9ea
-                              url:
-                                value: >-
-                                  https://img.uniform.global/p/N0QOqjXvSFeXY7i3yzY8ZQ/CEVPZhOzT0epCtmTY6Tc7g-favourite-icon-red.svg
-                                type: text
-                              file:
-                                type: file
-                                value: 3ba20a83-631f-40dc-93c4-94fa7fd69508
-                              size:
-                                value: 1749
-                                type: number
-                              title:
-                                type: text
-                                value: favourite-icon-red.svg
-                              width:
-                                value: 20
-                                type: number
-                              height:
-                                value: 18
-                                type: number
-                              mediaType:
-                                value: image/svg+xml
-                                type: text
-                            _source: uniform-assets
-                      backgroundColor:
-                        type: dex-color-palette-parameter
-                        value: general-color-1
-                    _overridability:
-                      hideLockedParameters: true
               parameters:
+                spacing:
+                  type: dex-space-control-parameter
+                  value:
+                    mobile: {}
+                    tablet: {}
+                    desktop: {}
                 relative:
                   type: checkbox
                   value: true
@@ -174,10 +95,21 @@ composition:
           spacing:
             type: dex-space-control-parameter
             value:
-              paddingTop: container-small
-              paddingLeft: container-small
-              paddingRight: container-small
-              paddingBottom: container-small
+              mobile:
+                paddingTop: container-small
+                paddingLeft: container-small
+                paddingRight: container-small
+                paddingBottom: container-small
+              tablet:
+                paddingTop: container-small
+                paddingLeft: container-small
+                paddingRight: container-small
+                paddingBottom: container-small
+              desktop:
+                paddingTop: container-small
+                paddingLeft: container-small
+                paddingRight: container-small
+                paddingBottom: container-small
           displayName:
             type: text
             value: Background Container
@@ -273,8 +205,8 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
-created: '2025-01-29T11:09:29.503377+00:00'
-modified: '2025-01-29T11:09:29.503377+00:00'
+created: '2025-03-25T04:28:09.508466+00:00'
+modified: '2025-03-27T13:35:05.317108+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1731065901/csk-v-next/jd-template/product-card.jpg

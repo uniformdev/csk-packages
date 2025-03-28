@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: entriesSearchEngine
+name: Entries Search Engine
+icon: search
+parameters:
+  - id: contentType
+    name: Content Type
+    type: select
+    typeConfig:
+      options:
+        - text: Article
+          value: article
+        - text: Product
+          value: product
+      required: true
+  - id: itemsPerPage
+    name: Items Per Page
+    type: number
+    typeConfig:
+      min: '1'
+      required: true
+  - id: filterBy
+    name: Filter By
+    type: $block
+    typeConfig:
+      required: true
+      allowedTypes:
+        - filterBy
+categoryId: 624b55ca-4671-46e2-8fd5-4a9b34b4c121
+useTeamPermissions: true
+slots:
+  - id: content
+    name: Content
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+canBeComposition: false
+created: '2025-03-26T19:00:03.642504+00:00'
+updated: '2025-03-27T20:37:24.067463+00:00'

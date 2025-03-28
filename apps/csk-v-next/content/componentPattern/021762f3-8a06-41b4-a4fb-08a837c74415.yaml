@@ -84,14 +84,30 @@ composition:
         _overridability:
           hideLockedParameters: true
     headerRightContent:
-      - _id: a3d8a68d-9f5a-4b15-a208-f8ddefdd36fd
-        type: navigationLink
+      - _id: 2b8f1b07-be12-44eb-a109-4edb0564b6fe
+        type: favoritesIcon
         parameters:
-          icon:
+          link:
+            type: link
+            locales:
+              en:
+                path: /${locale}/favorites
+                type: projectMapNode
+                nodeId: 4de4c5ea-3448-49f5-aa21-b3ab8147b8fd
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+          size:
+            type: dex-segmented-control-parameter
+            value: 2xl
+          weight:
+            type: dex-segmented-control-parameter
+            value: normal
+          emptyFavoritesIcon:
             type: asset
             locales:
               en:
-                - _id: 69f804c8-1549-4eac-a14c-1b9ebca87293
+                - _id: 57bac0ec-8aae-4530-9b7e-1dda6f4da043
                   type: image
                   fields:
                     id:
@@ -103,7 +119,7 @@ composition:
                       type: text
                     file:
                       type: file
-                      value: 9a7f1005-090a-4b9f-b34b-1d710d42555a
+                      value: f26fdfa3-f940-42a2-98b4-7d95da711ff9
                     size:
                       value: 1311
                       type: number
@@ -121,22 +137,40 @@ composition:
                       type: text
                   _source: uniform-assets
             value: []
-          link:
-            type: link
+          filledFavoritesIcon:
+            type: asset
             locales:
               en:
-                path: /${locale}/favorites
-                type: projectMapNode
-                nodeId: 4de4c5ea-3448-49f5-aa21-b3ab8147b8fd
-                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-                dynamicInputValues:
-                  locale: ${locale}
-          size:
-            type: dex-segmented-control-parameter
-            value: 2xl
-          weight:
-            type: dex-segmented-control-parameter
-            value: normal
+                - _id: 94a7560a-3930-47b5-858d-024c8e4bf8bf
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: ed3bfebf-c740-423b-aa96-ec72b071c9ea
+                    url:
+                      value: >-
+                        https://img.uniform.global/p/ovl3f_RJSNmuo41YikmFlA/VJLhFoGNT1aIRq76AETU7Q-favourite-icon-red.svg
+                      type: text
+                    file:
+                      type: file
+                      value: 192f94ca-e00f-4b7b-bf62-312c4292a24c
+                    size:
+                      value: 1749
+                      type: number
+                    title:
+                      type: text
+                      value: favourite-icon-red.svg
+                    width:
+                      value: 20
+                      type: number
+                    height:
+                      value: 18
+                      type: number
+                    mediaType:
+                      value: image/svg+xml
+                      type: text
+                  _source: uniform-assets
+            value: []
         _overridability:
           hideLockedParameters: true
       - _id: 7034b802-1c54-4e50-8d6c-34339f57fa65
@@ -1289,7 +1323,7 @@ composition:
   _locales:
     - en
 created: '2025-03-25T04:28:04.02755+00:00'
-modified: '2025-03-27T11:01:36.727839+00:00'
+modified: '2025-03-28T09:22:32.723701+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/jd-template/main-header_klwsr5.jpg

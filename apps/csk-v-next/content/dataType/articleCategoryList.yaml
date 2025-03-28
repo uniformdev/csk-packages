@@ -1,15 +1,15 @@
-id: authorList
-displayName: Author List
+id: articleCategoryList
+displayName: Article Category List
 ttl: 30
-body: ''
 path: /query
 custom:
+  proposedName: Query Article Category
   allowedOrderBy:
     - name_ASC
   allowedContentTypes:
-    - author
+    - articleCategory
 method: GET
-purgeKey: 6e156f37-b681-4c0a-88ed-8cf71ff597fe
+purgeKey: e090d23a-acd3-4606-8ace-c6593ae41e40
 archetype: queryEntries
 variables:
   limit:

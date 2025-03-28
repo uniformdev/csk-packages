@@ -4,13 +4,13 @@ id: addToFavorites
 name: 'Add To Favorites '
 icon: screen
 parameters:
+  - id: displayName
+    name: Display Name
+    type: text
+    typeConfig: null
+    localizable: true
   - id: addIcon
     name: Add Icon
-    type: asset
-    typeConfig:
-      max: 1
-  - id: removeIcon
-    name: Remove Icon
     type: asset
     typeConfig:
       max: 1
@@ -61,9 +61,14 @@ parameters:
         - key: Top Right
           value: top-right
       defaultValue: block
+  - id: removeIcon
+    name: Remove Icon
+    type: asset
+    typeConfig:
+      max: 1
 useTeamPermissions: true
 slots: []
 thumbnailParameter: addIcon
 canBeComposition: false
-created: '2025-01-29T11:09:17.926346+00:00'
-updated: '2025-01-29T11:09:17.926346+00:00'
+created: '2025-03-25T04:27:29.350021+00:00'
+updated: '2025-03-27T12:40:48.519712+00:00'

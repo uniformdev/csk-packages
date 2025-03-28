@@ -6,8 +6,15 @@ composition:
     spacing:
       type: dex-space-control-parameter
       value:
-        paddingTop: container-large
-        paddingBottom: container-large
+        mobile:
+          paddingTop: container-large
+          paddingBottom: container-large
+        tablet:
+          paddingTop: container-large
+          paddingBottom: container-large
+        desktop:
+          paddingTop: container-large
+          paddingBottom: container-large
     displayName:
       type: text
       value: Making coffee
@@ -158,36 +165,9 @@ composition:
               type: $loop
               slots:
                 body:
-                  - _id: 60531cfa-687f-49db-8385-8ce8b4565ca5
-                    type: link
-                    slots:
-                      linkContent:
-                        - _id: >-
-                            d7d75af3-b9ba-401d-a556-534cb606d397|5e2caaf5-19e4-4fde-9478-d9efa1f60cc1
-                          type: card
-                          _pattern: 665b55aa-f241-413e-8778-cff9a2f1f8aa
-                    parameters:
-                      link:
-                        type: link
-                        value:
-                          path: >-
-                            /en/products/${#jptr:/Product List Content entries
-                            Loop Item/entry/_slug}
-                          type: projectMapNode
-                          nodeId: 702b0e0b-3858-4b5d-99e4-bdb98097ca0f
-                          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-                          dynamicInputValues:
-                            locale: en
-                            product-slug: >-
-                              ${#jptr:/Product List Content entries Loop
-                              Item/entry/_slug}
-                      displayName:
-                        type: text
-                        value: >-
-                          ${#jptr:/Product List Content entries Loop
-                          Item/entry/fields/name/value}
-                    _overridability:
-                      hideLockedParameters: true
+                  - _id: d06ab335-2ea8-4252-9ff4-73055f70e55e
+                    type: productCard
+                    _pattern: 52b2cfa0-9e8d-446e-bc8b-425d8f806a09
               _dataResources:
                 Product List Content entries Loop Item:
                   type: sys-reserved-loop
@@ -234,59 +214,45 @@ composition:
       isPatternParameter: true
       ignorePatternParameterDefault: false
   _overrides:
-    d7d75af3-b9ba-401d-a556-534cb606d397|5e2caaf5-19e4-4fde-9478-d9efa1f60cc1:
+    d06ab335-2ea8-4252-9ff4-73055f70e55e:
       parameters:
-        displayName:
+        link:
+          type: link
+          locales:
+            en:
+              path: >-
+                /${locale}/products/${#jptr:/Product List Content entries Loop
+                Item/entry/_slug}
+              type: projectMapNode
+              nodeId: 702b0e0b-3858-4b5d-99e4-bdb98097ca0f
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                product-slug: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+        slug:
           type: text
-          value: >-
-            ${#jptr:/Product List Content entries Loop
-            Item/entry/fields/name/value}
-        fluidContent:
-          type: checkbox
-          value: true
-    d7d75af3-b9ba-401d-a556-534cb606d397|5e2caaf5-19e4-4fde-9478-d9efa1f60cc1|0952417a-061c-4634-91df-1341269e4054:
-      parameters:
+          locales:
+            en: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
         image:
           type: asset
-          value:
-            - _id: c326eb89-99d7-4c2d-bc37-df4b99d0d44e
-              type: image
-              fields:
-                url:
-                  type: text
-                  value: >-
-                    ${#jptr:/Product List Content entries Loop
-                    Item/entry/fields/primaryImage/value/0/fields/url/value}
-                title:
-                  type: text
-                  value: >-
-                    ${#jptr:/Product List Content entries Loop
-                    Item/entry/fields/name/value}
-                description:
-                  type: text
-                  value: >-
-                    ${#jptr:/Product List Content entries Loop
-                    Item/entry/fields/name/value}
-              _source: custom-url
-    d7d75af3-b9ba-401d-a556-534cb606d397|5e2caaf5-19e4-4fde-9478-d9efa1f60cc1|8bad3ddd-add0-43d3-a314-5836bf0c7a93:
-      parameters:
-        text:
+          locales:
+            en: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/primaryImage/value}
+        price:
           type: text
-          value: >-
-            ${#jptr:/Product List Content entries Loop
-            Item/entry/fields/variants/value/0/fields/currency/value}
-            ${#jptr:/Product List Content entries Loop
-            Item/entry/fields/variants/value/0/fields/price/value}
-        color:
-          type: dex-color-palette-parameter
-          value: text-primary
-    d7d75af3-b9ba-401d-a556-534cb606d397|5e2caaf5-19e4-4fde-9478-d9efa1f60cc1|988f7805-9e0e-4b30-acaf-f97d7dd5099f:
-      parameters:
-        text:
+          locales:
+            en: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/currency/value}
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value}
+        title:
           type: text
-          value: >-
-            ${#jptr:/Product List Content entries Loop
-            Item/entry/fields/name/value}
+          locales:
+            en: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/title/value}
   _overridability:
     parameters:
       displayName: 'yes'
@@ -294,8 +260,8 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
-created: '2025-01-29T11:09:26.563695+00:00'
-modified: '2025-01-29T11:09:26.563695+00:00'
+created: '2025-03-25T04:28:12.319656+00:00'
+modified: '2025-03-27T15:44:22.7055+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1731065902/csk-v-next/jd-template/secondary-product-list.jpg

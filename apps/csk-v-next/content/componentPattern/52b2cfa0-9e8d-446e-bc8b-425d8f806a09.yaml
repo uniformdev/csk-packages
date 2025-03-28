@@ -1,0 +1,87 @@
+composition:
+  _name: Main Product Card
+  _id: 52b2cfa0-9e8d-446e-bc8b-425d8f806a09
+  type: productCard
+  parameters:
+    addToFavoritesIcon:
+      type: asset
+      locales:
+        en:
+          - _id: 2d6a4b6a-3a56-40c4-ba54-f3058049a379
+            type: image
+            fields:
+              id:
+                type: text
+                value: 114655d8-a917-4822-b76d-0ea27254bd35
+              url:
+                value: >-
+                  https://img.uniform.global/p/ovl3f_RJSNmuo41YikmFlA/h-lL66IuTrW557BvjGo9FQ-favourite-icon.svg
+                type: text
+              file:
+                type: file
+                value: f26fdfa3-f940-42a2-98b4-7d95da711ff9
+              size:
+                value: 1311
+                type: number
+              title:
+                type: text
+                value: favourite-icon.svg
+              width:
+                value: 20
+                type: number
+              height:
+                value: 18
+                type: number
+              mediaType:
+                value: image/svg+xml
+                type: text
+            _source: uniform-assets
+      value: []
+    removeFromFavoritesIcon:
+      type: asset
+      locales:
+        en:
+          - _id: 3e39710b-1f25-48d4-a4f1-8e37f10eea08
+            type: image
+            fields:
+              id:
+                type: text
+                value: ed3bfebf-c740-423b-aa96-ec72b071c9ea
+              url:
+                value: >-
+                  https://img.uniform.global/p/ovl3f_RJSNmuo41YikmFlA/VJLhFoGNT1aIRq76AETU7Q-favourite-icon-red.svg
+                type: text
+              file:
+                type: file
+                value: 192f94ca-e00f-4b7b-bf62-312c4292a24c
+              size:
+                value: 1749
+                type: number
+              title:
+                type: text
+                value: favourite-icon-red.svg
+              width:
+                value: 20
+                type: number
+              height:
+                value: 18
+                type: number
+              mediaType:
+                value: image/svg+xml
+                type: text
+            _source: uniform-assets
+      value: []
+  _overridability:
+    parameters:
+      link: 'yes'
+      slug: 'yes'
+      image: 'yes'
+      price: 'yes'
+      title: 'yes'
+      textColor: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2025-03-27T14:56:59.911899+00:00'
+modified: '2025-03-27T15:43:15.948186+00:00'
+pattern: true

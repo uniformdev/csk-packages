@@ -12,11 +12,6 @@ composition:
         search: ''
         contentTypes: product
   _overrides:
-    1067475e-dddb-46bd-9bf7-a499360f79ad:
-      parameters:
-        spacing:
-          type: dex-space-control-parameter
-          value: {}
     476baa17-efbe-44f6-926d-c32162728978:
       parameters:
         pageTitle:
@@ -95,22 +90,9 @@ composition:
     4be3cf1f-a4a0-4657-bfca-776fc40dd827|2058ad6d-25b3-4eea-a276-cb996b4188cc:
       slots:
         $slotSectionItems:
-          - _id: 1067475e-dddb-46bd-9bf7-a499360f79ad
-            type: grid
-            _pattern: 7af3df14-8092-4f3d-bb2c-ff9778e3c884
-            _dataResources:
-              Product List Content:
-                type: productList
-                variables:
-                  limit: '5'
-                  locale: ${locale}
-                  search: ''
-                  contentTypes: product
-            _overridability:
-              parameters:
-                spacing: 'yes'
-                displayName: 'yes'
-              hideLockedParameters: true
+          - _id: 5180a2c7-5e54-4764-aef4-a64d574d92ab
+            type: favorites
+            _pattern: d80bafe3-ac5f-4304-8ca5-b3d78f820ddb
     4be3cf1f-a4a0-4657-bfca-776fc40dd827|5feefc71-05dd-4004-bfe9-3dd6876628b4:
       parameters:
         text:
@@ -119,6 +101,6 @@ composition:
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-01-29T11:09:35.88211+00:00'
-modified: '2025-01-29T11:09:35.88211+00:00'
+created: '2025-03-25T04:27:50.529009+00:00'
+modified: '2025-03-28T08:53:28.169247+00:00'
 pattern: false

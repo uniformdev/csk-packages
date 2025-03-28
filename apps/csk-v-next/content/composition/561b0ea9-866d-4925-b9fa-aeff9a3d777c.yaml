@@ -99,6 +99,135 @@ composition:
                             fullWidth: 'yes'
                             textColor: 'no'
                           hideLockedParameters: true
+                    emptyCartContent:
+                      - _id: eee68ffb-8877-4a0d-914f-23507f06cb0f
+                        type: flex
+                        slots:
+                          flexItem:
+                            - _id: f7e47db0-8c90-4aed-895f-03c25c3b4d1e
+                              type: text
+                              parameters:
+                                tag:
+                                  type: dex-segmented-control-parameter
+                                  value: span
+                                size:
+                                  type: dex-segmented-control-parameter
+                                  value:
+                                    mobile: 3xl
+                                    tablet: 3xl
+                                    desktop: 3xl
+                                text:
+                                  type: text
+                                  locales:
+                                    en: Your shopping cart is empty
+                                color:
+                                  type: dex-color-palette-parameter
+                                  value: text-primary
+                                weight:
+                                  type: dex-segmented-control-parameter
+                                  value: bold
+                            - _id: 3ff5c08e-a565-417d-b0e2-3268904074eb
+                              type: image
+                              parameters:
+                                image:
+                                  type: asset
+                                  value:
+                                    - _id: 830ceea6-5ecb-4760-99d4-086687aef754
+                                      type: image
+                                      fields:
+                                        id:
+                                          type: text
+                                          value: 8190d633-06e4-48f6-b8d3-0917ce89c65b
+                                        url:
+                                          type: text
+                                          value: >-
+                                            https://img.uniform.global/p/LP10biebQ3mceUhiJEdfvg/UrbJX2n_RjmKKF5P_N9noA-icon-cart_zzou3e_yovtho.svg
+                                        file:
+                                          type: file
+                                          value: fef7dc0d-c82a-4b7c-b3ee-8d97849b82aa
+                                        size:
+                                          type: number
+                                          value: 1021
+                                        title:
+                                          type: text
+                                          value: icon-cart_zzou3e_yovtho.svg
+                                        width:
+                                          type: number
+                                          value: 30
+                                        height:
+                                          type: number
+                                          value: 30
+                                        mediaType:
+                                          type: text
+                                          value: image/svg+xml
+                                      _source: uniform-assets
+                                width:
+                                  type: number
+                                  value: '100'
+                                height:
+                                  type: number
+                                  value: '100'
+                                objectFit:
+                                  type: dex-segmented-control-parameter
+                                  value: cover
+                            - _id: 80e192fa-7bd5-4006-8e48-1a7e0d28effd
+                              type: text
+                              parameters:
+                                tag:
+                                  type: dex-segmented-control-parameter
+                                  value: span
+                                size:
+                                  type: dex-segmented-control-parameter
+                                  value:
+                                    mobile: lg
+                                    tablet: lg
+                                    desktop: xl
+                                text:
+                                  type: text
+                                  locales:
+                                    en: Your shopping cart is empty
+                                color:
+                                  type: dex-color-palette-parameter
+                                  value: text-primary
+                                weight:
+                                  type: dex-segmented-control-parameter
+                                  value: normal
+                        parameters:
+                          gap:
+                            type: dex-slider-control-parameter
+                            value:
+                              mobile: '8'
+                              tablet: '8'
+                              desktop: '8'
+                          direction:
+                            type: dex-segmented-control-parameter
+                            value:
+                              mobile: col
+                              tablet: col
+                              desktop: col
+                          alignItems:
+                            type: dex-segmented-control-parameter
+                            value:
+                              mobile: center
+                              tablet: center
+                              desktop: center
+                          displayName:
+                            type: text
+                            locales:
+                              en: 'The shopping cart is empty '
+                          justifyContent:
+                            type: dex-segmented-control-parameter
+                            value:
+                              mobile: center
+                              tablet: center
+                              desktop: center
+                  parameters:
+                    primaryTextColor:
+                      type: dex-color-palette-parameter
+                      value: text-primary
+                    secondaryTextColor:
+                      type: dex-color-palette-parameter
+                      value: text-link
             parameters:
               gap:
                 type: dex-slider-control-parameter
@@ -138,5 +267,5 @@ composition:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-03-25T04:27:48.992312+00:00'
-modified: '2025-03-26T14:50:29.44223+00:00'
+modified: '2025-03-27T09:38:12.398924+00:00'
 pattern: false

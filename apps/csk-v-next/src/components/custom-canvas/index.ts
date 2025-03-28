@@ -6,6 +6,8 @@ import CompleteCheckoutButton from './CompleteCheckoutButton';
 import Container from './Container';
 import CustomComponent from './CustomComponent';
 import EnrichmentSetter from './EnrichmentSetter';
+import Favorites from './Favorites';
+import FavoritesIcon from './FavoritesIcon';
 import FeaturedSection from './FeaturedSection';
 import Flex from './Flex';
 import FlexCard from './FlexCard';
@@ -13,6 +15,7 @@ import Grid from './Grid';
 import GridItem from './GridItem';
 import Input from './Input';
 import ModalLayout from './ModalLayout';
+import ProductCard from './ProductCard';
 import QuantitySelector from './QuantitySelector';
 import QuirkSelector from './QuirkSelector';
 import ReadMore from './ReadMore';
@@ -49,4 +52,7 @@ export const customComponentsMapping: ComponentMapping = {
   shoppingCartIcon: { component: ShoppingCartIcon },
   enrichmentSetter: { component: EnrichmentSetter },
   addToFavorites: { component: null },
+  productCard: { component: ProductCard },
+  favorites: { component: Favorites },
+  favoritesIcon: { component: FavoritesIcon },
 };

@@ -1,0 +1,22 @@
+id: filterByItem
+name: Filter By Item
+created: '2025-03-26T20:52:22.66116+00:00'
+updated: '2025-03-26T20:52:22.66116+00:00'
+slugSettings: {}
+useTeamPermissions: true
+fields:
+  - id: title
+    name: Title
+    type: text
+    typeConfig:
+      required: true
+  - id: value
+    name: Value
+    type: text
+    typeConfig:
+      required: true
+entryName: title
+description: ''
+icon: arrows-expand-up-right
+type: block
+permissions: []

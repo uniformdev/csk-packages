@@ -22,6 +22,9 @@ composition:
       - _id: baf65f29-3f6b-460f-8206-f46f74460edd
         type: card
         _pattern: 665b55aa-f241-413e-8778-cff9a2f1f8aa
+      - _id: 3e77fee8-e36e-44e2-845c-142a4942b132
+        type: addToCardButton
+        _pattern: 20161830-c75e-4695-8622-41032f5be75d
   _dataResources:
     Single Product Content:
       type: singleProduct
@@ -31,6 +34,12 @@ composition:
       isPatternParameter: true
       ignorePatternParameterDefault: true
   _overrides:
+    3e77fee8-e36e-44e2-845c-142a4942b132:
+      parameters:
+        productSlug:
+          type: text
+          locales:
+            en: ${#jptr:/Single Product Content/entry/_slug}
     baf65f29-3f6b-460f-8206-f46f74460edd:
       parameters:
         displayName:
@@ -62,8 +71,8 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
-created: '2025-03-18T20:14:39.454454+00:00'
-modified: '2025-03-18T20:23:09.769177+00:00'
+created: '2025-03-25T04:28:10.449533+00:00'
+modified: '2025-03-27T15:45:52.165492+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1731065901/csk-v-next/jd-template/product-card.jpg
