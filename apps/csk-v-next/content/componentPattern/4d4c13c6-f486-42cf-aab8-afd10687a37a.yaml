@@ -6,8 +6,15 @@ composition:
     spacing:
       type: dex-space-control-parameter
       value:
-        paddingTop: container-large
-        paddingBottom: container-large
+        mobile:
+          paddingTop: container-large
+          paddingBottom: container-large
+        tablet:
+          paddingTop: container-large
+          paddingBottom: container-large
+        desktop:
+          paddingTop: container-large
+          paddingBottom: container-large
     displayName:
       type: text
       value: Making coffee
@@ -137,36 +144,9 @@ composition:
               type: $loop
               slots:
                 body:
-                  - _id: 105be942-012a-4a74-8e74-6be53ed8ab0c
-                    type: link
-                    slots:
-                      linkContent:
-                        - _id: >-
-                            d7d75af3-b9ba-401d-a556-534cb606d397|5e2caaf5-19e4-4fde-9478-d9efa1f60cc1
-                          type: card
-                          _pattern: 665b55aa-f241-413e-8778-cff9a2f1f8aa
-                    parameters:
-                      link:
-                        type: link
-                        value:
-                          path: >-
-                            /en/products/${#jptr:/Product List Content entries
-                            Loop Item/entry/_slug}
-                          type: projectMapNode
-                          nodeId: 702b0e0b-3858-4b5d-99e4-bdb98097ca0f
-                          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-                          dynamicInputValues:
-                            locale: en
-                            product-slug: >-
-                              ${#jptr:/Product List Content entries Loop
-                              Item/entry/_slug}
-                      displayName:
-                        type: text
-                        value: >-
-                          ${#jptr:/Product List Content entries Loop
-                          Item/entry/fields/name/value}
-                    _overridability:
-                      hideLockedParameters: true
+                  - _id: ee4358a5-05ce-4926-a12e-4d42dfa679e2
+                    type: productCard
+                    _pattern: 52b2cfa0-9e8d-446e-bc8b-425d8f806a09
               _dataResources:
                 Product List Content entries Loop Item:
                   type: sys-reserved-loop
@@ -212,6 +192,45 @@ composition:
       isPatternParameter: true
       ignorePatternParameterDefault: true
   _overrides:
+    ee4358a5-05ce-4926-a12e-4d42dfa679e2:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: >-
+                /${locale}/products/${#jptr:/Product List Content entries Loop
+                Item/entry/_slug}
+              type: projectMapNode
+              nodeId: 702b0e0b-3858-4b5d-99e4-bdb98097ca0f
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                product-slug: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+        slug:
+          type: text
+          locales:
+            en: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+        image:
+          type: asset
+          locales:
+            en: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/primaryImage/value}
+        price:
+          type: text
+          locales:
+            en: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/currency/value}
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value}
+        title:
+          type: text
+          locales:
+            en: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/title/value}
     d7d75af3-b9ba-401d-a556-534cb606d397|5e2caaf5-19e4-4fde-9478-d9efa1f60cc1:
       parameters:
         displayName:
@@ -272,8 +291,8 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
-created: '2025-01-29T11:09:27.514166+00:00'
-modified: '2025-01-29T11:09:27.514166+00:00'
+created: '2025-03-25T04:28:12.883367+00:00'
+modified: '2025-03-28T09:46:26.487973+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/jd-template/secondary-product-recommendations.jpg

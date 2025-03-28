@@ -266,35 +266,9 @@ composition:
                     type: $loop
                     slots:
                       body:
-                        - _id: 4be9fa8d-0c2c-4f59-8b7f-3dcc77d11021
-                          type: link
-                          slots:
-                            linkContent:
-                              - _id: 8fc73c05-9552-49ee-b021-f2a98bc39958
-                                type: card
-                                _pattern: 665b55aa-f241-413e-8778-cff9a2f1f8aa
-                          parameters:
-                            link:
-                              type: link
-                              value:
-                                path: >-
-                                  /en/products/${#jptr:/Product List Content
-                                  entries Loop Item/entry/_slug}
-                                type: projectMapNode
-                                nodeId: 702b0e0b-3858-4b5d-99e4-bdb98097ca0f
-                                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-                                dynamicInputValues:
-                                  locale: en
-                                  product-slug: >-
-                                    ${#jptr:/Product List Content entries Loop
-                                    Item/entry/_slug}
-                            displayName:
-                              type: text
-                              value: >-
-                                ${#jptr:/Product List Content entries Loop
-                                Item/entry/fields/name/value}
-                          _overridability:
-                            hideLockedParameters: true
+                        - _id: e39f64b6-02ee-47b5-9b83-881b5ab05721
+                          type: productCard
+                          _pattern: 52b2cfa0-9e8d-446e-bc8b-425d8f806a09
                     _dataResources:
                       Product List Content entries Loop Item:
                         type: sys-reserved-loop
@@ -314,7 +288,7 @@ composition:
                   value:
                     mobile: '4'
                     tablet: '4'
-                    desktop: '2'
+                    desktop: '4'
                 spacing:
                   type: dex-space-control-parameter
                   value: {}
@@ -393,6 +367,45 @@ composition:
         fluidContent:
           type: checkbox
           value: true
+    e39f64b6-02ee-47b5-9b83-881b5ab05721:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: >-
+                /${locale}/products/${#jptr:/Product List Content entries Loop
+                Item/entry/_slug}
+              type: projectMapNode
+              nodeId: 702b0e0b-3858-4b5d-99e4-bdb98097ca0f
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                product-slug: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+        slug:
+          type: text
+          locales:
+            en: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+        image:
+          type: asset
+          locales:
+            en: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/primaryImage/value}
+        price:
+          type: text
+          locales:
+            en: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/currency/value}
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value}
+        title:
+          type: text
+          locales:
+            en: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/title/value}
     8fc73c05-9552-49ee-b021-f2a98bc39958|0952417a-061c-4634-91df-1341269e4054:
       parameters:
         image:
@@ -435,8 +448,8 @@ composition:
             Item/entry/fields/name/value}
   _locales:
     - en
-created: '2025-01-29T11:09:26.559871+00:00'
-modified: '2025-01-29T11:09:26.559871+00:00'
+created: '2025-03-25T04:28:10.893557+00:00'
+modified: '2025-03-28T09:39:30.669106+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1731065904/csk-v-next/jd-template/product-list-grid.jpg
