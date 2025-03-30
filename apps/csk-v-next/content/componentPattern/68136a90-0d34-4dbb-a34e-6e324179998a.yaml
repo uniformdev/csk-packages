@@ -28,6 +28,67 @@ composition:
       value: general-color-2
   slots:
     footerLogo:
+      - _id: 7cdc74ce-1b3d-41e9-900c-70007df8a132
+        type: richText
+        parameters:
+          font:
+            type: dex-token-selector-parameter
+            value: ibm-plex-sans
+          text:
+            type: richText
+            locales:
+              en:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: 'Built with our '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - link:
+                            path: https://components.uniform.app/
+                            type: url
+                          type: link
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Component Starter Kit
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 1
+                              version: 1
+                          direction: ltr
+                          textFormat: 1
+                        - mode: normal
+                          text: ' 🧩'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                  direction: ltr
+          color:
+            type: dex-color-palette-parameter
+            value: text-secondary
+        _overridability:
+          hideLockedParameters: true
       - _id: bd107466-c7e2-4b3b-8d59-5d1ff0c0c8bf
         type: link
         slots:
@@ -503,6 +564,6 @@ composition:
   _locales:
     - en
 created: '2025-03-09T11:33:27.6008+00:00'
-modified: '2025-03-17T20:14:27.072722+00:00'
+modified: '2025-03-25T15:14:27.953094+00:00'
 pattern: true
 categoryId: b1163ce2-5ac7-4347-bc38-a42198180718

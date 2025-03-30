@@ -14,7 +14,7 @@ composition:
               value: 0f0670b4-a425-40d3-842b-c7c895d500a5
             url:
               value: >-
-                https://img.uniform.global/p/9VlMgIbZQQKI2wzV-L0jow/FLwt6eFQRM6iAo9qmVxRxw-uniformlogo.svg
+                https://img.uniform.global/p/gvXUXZNbRq2PH10DKBVFJQ/o1fgYSBMSL2gbqH4hUOCEg-uniformlogo.svg
               type: text
             file:
               type: file
@@ -92,13 +92,17 @@ composition:
                 text:
                   type: text
                   locales:
-                    en: April 10, 2025 at 9:30 am EST
+                    en: 'April 10, 2025 at 9:30 am EST '
                 color:
                   type: dex-color-palette-parameter
                   value: text-secondary
                 weight:
                   type: dex-segmented-control-parameter
                   value: light
+                alignment:
+                  type: dex-segmented-control-parameter
+                  value:
+                    desktop: left
               _overridability:
                 hideLockedParameters: true
             - _id: >-
@@ -189,9 +193,8 @@ composition:
                         type: text
                         locales:
                           en: >-
-                            A member of the Uniform team will be in contact with
-                            you shortly. In the meantime, please feel free to
-                            schedule a time that works best for you.
+                            You are registered for Uniform Digital Experience
+                            Assembly
                       color:
                         type: dex-color-palette-parameter
                         value: text-secondary
@@ -234,6 +237,333 @@ composition:
           backgroundColor:
             type: dex-color-palette-parameter
             value: general-color-3
+      - _id: 43f477d4-de10-4cf4-92b8-7cec1177a10f
+        type: container
+        slots:
+          containerContent:
+            - _id: b78bb75c-61a7-4e9f-8ebf-25f5cabbd40b
+              type: section
+              slots:
+                sectionMedia:
+                  - _id: 3c140ce2-ff8d-4c98-9191-52b1a88c7a09
+                    type: image
+                    parameters:
+                      image:
+                        type: asset
+                        value:
+                          - _id: 0d72c47b-83c8-4489-b714-1324aeaab056
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: a618bad4-3826-42fa-89bd-baf619c1072d
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/gvXUXZNbRq2PH10DKBVFJQ/D2PRs9khSbq6fWtiEpfXeA-countdown-bg.svg
+                                type: text
+                              file:
+                                type: file
+                                value: 4959f034-a2bb-4cda-888f-fa5ebde75462
+                              size:
+                                value: 1729
+                                type: number
+                              title:
+                                type: text
+                                value: countdown-bg.svg
+                              width:
+                                value: 638
+                                type: number
+                              height:
+                                value: 147
+                                type: number
+                              mediaType:
+                                value: image/svg+xml
+                                type: text
+                            _source: uniform-assets
+                      objectFit:
+                        type: dex-segmented-control-parameter
+                        value: contain
+                sectionContent:
+                  - _id: bf880e55-80be-4e95-b88f-95d6604c0c0a
+                    type: countdown
+                    parameters:
+                      size:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: 5xl
+                          tablet: 5xl
+                          desktop: 7xl
+                      textColor:
+                        type: dex-color-palette-parameter
+                        value: general-color-1
+                      targetDate:
+                        type: datetime
+                        value:
+                          datetime: '2025-04-10T13:30:00.000Z'
+                          timeZone: America/New_York
+                      displayName:
+                        type: text
+                        locales:
+                          en: Countdown
+              parameters:
+                spacing:
+                  type: dex-space-control-parameter
+                  value:
+                    mobile: {}
+                    tablet: {}
+                    desktop:
+                      paddingTop: container-large
+                      paddingBottom: container-large
+                displayName:
+                  type: text
+                  locales:
+                    en: Countdown Section
+                backgroundColor:
+                  type: dex-color-palette-parameter
+                  value: general-color-3
+                contentAlignment:
+                  type: dex-segmented-control-parameter
+                  value: center
+        parameters:
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              mobile:
+                paddingTop: container-medium
+                paddingBottom: container-medium
+              tablet:
+                paddingTop: container-medium
+                paddingBottom: container-medium
+              desktop:
+                paddingTop: container-medium
+                paddingBottom: container-medium
+          displayName:
+            type: text
+            locales:
+              en: Countdown
+          fluidContent:
+            type: checkbox
+            value: true
+          backgroundColor:
+            type: dex-color-palette-parameter
+            value: general-color-3
+      - _id: eaebc9f2-b872-46bb-b4a5-7cd60f0a0c0e
+        type: section
+        slots:
+          sectionMedia:
+            - _id: 1a361dc0-d3d5-405c-a6d7-92d255dda715
+              type: image
+              parameters:
+                image:
+                  type: asset
+                  value:
+                    - _id: 9a24ca07-e266-4df4-a87d-7157c6fefc8f
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: 3fc211e7-ccd3-47b6-b971-7dc631afedf7
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/gvXUXZNbRq2PH10DKBVFJQ/GA772PioTFet-3GYelBGCg-dxa-hero-bg.svg
+                          type: text
+                        file:
+                          type: file
+                          value: 590c9df9-0f1f-4d27-a662-453dd2610cce
+                        size:
+                          value: 5983
+                          type: number
+                        title:
+                          type: text
+                          value: dxa-hero-bg.svg
+                        width:
+                          value: 1221
+                          type: number
+                        height:
+                          value: 854
+                          type: number
+                        mediaType:
+                          value: image/svg+xml
+                          type: text
+                      _source: uniform-assets
+                priority:
+                  type: checkbox
+                  value: true
+                objectFit:
+                  type: dex-segmented-control-parameter
+                  value: contain
+          sectionContent:
+            - _id: 2f123772-4bcb-4526-a37b-c5d7ec5e01d8
+              type: flex
+              slots:
+                flexItem:
+                  - _id: af2e576b-0db9-448e-8b65-d6cc01b9e3a9
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: h1
+                      size:
+                        type: dex-segmented-control-parameter
+                        value:
+                          desktop: 2xl
+                      text:
+                        type: text
+                        locales:
+                          en: Digital Experiences at scale powered by AI
+                      color:
+                        type: dex-color-palette-parameter
+                        value: text-secondary
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: normal
+                  - _id: ae3ba302-1700-4475-a51f-2e7b784e1a3a
+                    type: image
+                    parameters:
+                      image:
+                        type: asset
+                        value:
+                          - _id: 60515014-e226-400c-a5d2-7ba9579ec715
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: c9ea9d08-14e6-48cd-b815-4ac288e3a58f
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/gvXUXZNbRq2PH10DKBVFJQ/TJD-oF_mTLqUtFqHNHjzkw-dxa-logo.svg
+                                type: text
+                              file:
+                                type: file
+                                value: 70c82182-c85c-4c74-b86b-57835a2792ac
+                              size:
+                                value: 6994
+                                type: number
+                              title:
+                                type: text
+                                value: dxa-logo.svg
+                              width:
+                                value: 673
+                                type: number
+                              height:
+                                value: 269
+                                type: number
+                              mediaType:
+                                value: image/svg+xml
+                                type: text
+                            _source: uniform-assets
+                      width:
+                        type: number
+                        value: '673'
+                      height:
+                        type: number
+                        value: '269'
+                      objectFit:
+                        type: dex-segmented-control-parameter
+                        value: cover
+                  - _id: b4850e6d-295c-4cc5-99d2-1670a36b59fe
+                    type: flexItem
+                    slots:
+                      inner:
+                        - _id: 018f8dfb-64cc-4600-b9d5-bc1adb21cc6a
+                          type: image
+                          parameters:
+                            image:
+                              type: asset
+                              value:
+                                - _id: 95b8e562-b15f-4701-a6ac-a684438054fe
+                                  type: image
+                                  fields:
+                                    id:
+                                      type: text
+                                      value: 210a020b-c936-46c2-8cf7-35ee6178b44f
+                                    url:
+                                      value: >-
+                                        https://img.uniform.global/p/gvXUXZNbRq2PH10DKBVFJQ/wmTrlZmbT3uxC10_vY4RbA-uniform-logo.svg
+                                      type: text
+                                    file:
+                                      type: file
+                                      value: fddfc1d1-a646-42b5-a7a4-2ad483cc7c00
+                                    size:
+                                      value: 2107
+                                      type: number
+                                    title:
+                                      type: text
+                                      value: uniform-logo.svg
+                                    width:
+                                      value: 147
+                                      type: number
+                                    height:
+                                      value: 42
+                                      type: number
+                                    mediaType:
+                                      value: image/svg+xml
+                                      type: text
+                                  _source: uniform-assets
+                            width:
+                              type: number
+                              value: '147'
+                            height:
+                              type: number
+                              value: '42'
+                            objectFit:
+                              type: dex-segmented-control-parameter
+                              value: cover
+                    parameters:
+                      alignSelf:
+                        type: dex-segmented-control-parameter
+                        value:
+                          desktop: end
+              parameters:
+                gap:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: '8'
+                    tablet: '8'
+                    desktop: '16'
+                direction:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: col
+                    tablet: col
+                    desktop: col
+                alignItems:
+                  type: dex-segmented-control-parameter
+                  value: center
+                displayName:
+                  type: text
+                  locales:
+                    en: Hero content
+                justifyContent:
+                  type: dex-segmented-control-parameter
+                  value:
+                    desktop: center
+        parameters:
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              mobile:
+                paddingTop: container-small
+                paddingBottom: container-small
+              tablet:
+                paddingTop: container-medium
+                paddingBottom: container-medium
+              desktop:
+                paddingTop: container-large
+                paddingBottom: container-large
+          displayName:
+            type: text
+            locales:
+              en: Hero
+          fluidContent:
+            type: checkbox
+            value: true
+          backgroundColor:
+            type: dex-color-palette-parameter
+            value: general-color-3
+          contentAlignment:
+            type: dex-segmented-control-parameter
+            value: center
       - _id: 33311e8e-acad-4964-9937-44813f277cb8
         type: container
         slots:
@@ -295,7 +625,7 @@ composition:
                                             value: c67152cf-1adb-4350-bec2-4103dafda476
                                           url:
                                             value: >-
-                                              https://img.uniform.global/p/FXZI1o5aQJqLQuqxEFWw6A/KT8oHQcoTcqci-Rf_kCxDg-image.png
+                                              https://img.uniform.global/p/gvXUXZNbRq2PH10DKBVFJQ/87YAF4GWQ9yWz-T4pUu3EQ-image.png
                                             type: text
                                           file:
                                             type: file
@@ -504,7 +834,7 @@ composition:
                                             value: 7ab814cc-9143-486d-a1a7-abaac230658f
                                           url:
                                             value: >-
-                                              https://img.uniform.global/p/FXZI1o5aQJqLQuqxEFWw6A/CoZUFkNQQ3OzzC4csSaGVA-image.png
+                                              https://img.uniform.global/p/gvXUXZNbRq2PH10DKBVFJQ/VBg_qp7xQ9mvtJ-vMVMqoA-image.png
                                             type: text
                                           file:
                                             type: file
@@ -709,7 +1039,7 @@ composition:
                                             value: abe9f34a-95c8-4088-b74e-caf56052c2b2
                                           url:
                                             value: >-
-                                              https://img.uniform.global/p/FXZI1o5aQJqLQuqxEFWw6A/VRMwMZSkSRaVyAhyTttqTw-image.png
+                                              https://img.uniform.global/p/gvXUXZNbRq2PH10DKBVFJQ/bm3Q0stqSpmjG6dPXWeBsg-image.png
                                             type: text
                                           file:
                                             type: file
@@ -919,7 +1249,7 @@ composition:
                                             value: 7daa9dc2-b372-4031-a5b8-73e32ce3bb5f
                                           url:
                                             value: >-
-                                              https://img.uniform.global/p/FXZI1o5aQJqLQuqxEFWw6A/Q4duC3lPRoG2UxR0OEGXng-image.png
+                                              https://img.uniform.global/p/gvXUXZNbRq2PH10DKBVFJQ/qoy1FMYmSzWq0dmTKUEXLg-image.png
                                             type: text
                                           file:
                                             type: file
@@ -1174,6 +1504,6 @@ composition:
             en: Request a demo
   _locales:
     - en
-created: '2025-03-17T11:29:51.992896+00:00'
-modified: '2025-03-17T18:53:56.063862+00:00'
+created: '2025-03-17T16:43:05.406426+00:00'
+modified: '2025-03-18T18:13:53.593526+00:00'
 pattern: false

@@ -28,6 +28,7 @@ parameters:
       collapsed: true
       childrenParams:
         - backgroundColor
+        - backgroundImage
         - anchor
         - spacing
         - border
@@ -37,6 +38,14 @@ parameters:
     name: Background Color
     type: dex-color-palette-parameter
     typeConfig: null
+  - id: backgroundImage
+    name: Background Image
+    type: asset
+    typeConfig:
+      max: 1
+      allowedTypes:
+        - image
+    localizable: true
   - id: anchor
     name: Anchor
     type: text
@@ -100,8 +109,8 @@ slots:
     patternsInAllowedComponents: true
 titleParameter: displayName
 canBeComposition: false
-created: '2025-03-04T20:14:49.307718+00:00'
-updated: '2025-03-17T10:27:38.601583+00:00'
+created: '2025-03-09T11:33:23.161552+00:00'
+updated: '2025-03-30T17:26:33.711609+00:00'
 variants:
   - id: columns
     name: Columns
