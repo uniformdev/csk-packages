@@ -3,6 +3,7 @@ import { SpaceType, ViewPort } from '@/types/cskTypes';
 
 export type ContainerProps = HTMLAttributes<HTMLDivElement> & {
   backgroundColor?: string;
+  backgroundImageUrl?: string;
   spacing?: SpaceType | ViewPort<SpaceType>;
   border?: string | ViewPort<string>;
   fluidContent?: boolean;

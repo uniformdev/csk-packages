@@ -1,3 +1,4 @@
+import { Asset } from '@uniformdev/assets';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { ContainerParameters } from '@/components/custom-canvas/Container';
 
@@ -9,6 +10,7 @@ export enum ContentAlignment {
 
 export type SectionParameters = ContainerParameters & {
   contentAlignment?: ContentAlignment;
+  backgroundImage?: Asset[];
 };
 
 export enum SectionVariants {

@@ -5,7 +5,7 @@ import { ContainerProps } from '.';
 export const Container: FC<ContainerProps> = ({
   className,
   wrapperClassName,
-  style,
+  style = {},
   children,
   backgroundColor,
   spacing,

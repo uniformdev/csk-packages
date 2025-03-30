@@ -64,18 +64,6 @@
       box-shadow 0.1s;
   }
 
-  :global(.hs-form-field) {
-    position: relative;
-  }
-
-  :global(.hs-error-msgs) {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    
-  }
-
   :global(label.hs-form-booleancheckbox-display) input[type='checkbox']:checked + span:before {
     background-color: var(--button-primary-hover);
     background-size: 0.75em;
@@ -139,7 +127,7 @@
 
   :global(div.hs-dependent-field > div.field),
   form > div:not(:first-child):not(div.hs-dependent-field) {
-    margin-top: 32px;
+    margin-top: 16px;
   }
 
   :global(label.hs-error-msg),

@@ -36,18 +36,20 @@ const HubSpotForm: FC<HubspotFormProps> = ({ formId, countOfVirtualFields, backg
       <div id={targetFormId} className={styles.Form}>
         <div className={classNames({ 'animate-pulse': !process.env.NEXT_PUBLIC_E2E_TEST })}>
           {[...Array(Number(countOfVirtualFields) || 1).keys()].map((item, index: number) => (
-            <div key={item} className={classNames('pt-8', { '!pb-0': Number(countOfVirtualFields) - 1 === index })}>
-              <div className={classNames('h-2.5 mb-2 w-2/5', backgroundColorClass)} />
+            <div
+              key={item}
+              className={classNames('pt-[22px] pb-[16px]', { '!pb-0': Number(countOfVirtualFields) - 1 === index })}
+            >
               <div className={classNames('h-11', backgroundColorClass)} />
             </div>
           ))}
           <div className="pb-8 pt-4">
-            <div className={classNames('h-2.5 mb-2', backgroundColorClass)} />
-            <div className={classNames('h-2.5 mb-2', backgroundColorClass)} />
-            <div className={classNames('h-2.5', backgroundColorClass)} />
+            <div className={classNames('h-2 mb-[11px]', backgroundColorClass)} />
+            <div className={classNames('h-2 mb-[11px]', backgroundColorClass)} />
+            <div className={classNames('h-2', backgroundColorClass)} />
           </div>
 
-          <div className={classNames('h-[62px]', backgroundColorClass)} />
+          <div className={classNames('h-[61px]', backgroundColorClass)} />
         </div>
       </div>
     </>

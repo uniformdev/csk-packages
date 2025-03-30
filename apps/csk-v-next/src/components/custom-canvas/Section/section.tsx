@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
+import { resolveAsset } from '@/utils/assets';
 import { SectionProps, SectionVariants } from '.';
 import { ColumnsVariant } from './columns-variant';
 import { DefaultVariant } from './default-variant';
@@ -12,6 +13,7 @@ export const Section: FC<SectionProps> = ({
   anchor,
   context,
   backgroundColor,
+  backgroundImage,
   spacing,
   border,
   fluidContent,
@@ -23,6 +25,7 @@ export const Section: FC<SectionProps> = ({
   const variantProps = {
     variant,
     backgroundColor,
+    backgroundImageUrl: resolveAsset(backgroundImage)?.[0]?.url || '',
     spacing,
     border,
     fluidContent,
