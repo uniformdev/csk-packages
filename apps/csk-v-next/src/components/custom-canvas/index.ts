@@ -6,7 +6,6 @@ import CompleteCheckoutButton from './CompleteCheckoutButton';
 import Container from './Container';
 import CustomComponent from './CustomComponent';
 import DynamicRecommendations from './DynamicRecommendations';
-import EnrichmentSetter from './EnrichmentSetter';
 import EntriesSearchBox from './EntriesSearchBox';
 import EntriesSearchEngine from './EntriesSearchEngine';
 import EntriesSearchFilters from './EntriesSearchFilters';
@@ -56,7 +55,6 @@ export const customComponentsMapping: ComponentMapping = {
   richText: { component: RichText },
   shoppingCart: { component: ShoppingCart },
   shoppingCartIcon: { component: ShoppingCartIcon },
-  enrichmentSetter: { component: EnrichmentSetter },
   addToFavorites: { component: null },
   productCard: { component: ProductCard },
   favorites: { component: Favorites },
