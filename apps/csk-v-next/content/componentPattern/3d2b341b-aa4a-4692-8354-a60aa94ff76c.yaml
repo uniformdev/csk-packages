@@ -18,12 +18,21 @@ composition:
     spacing:
       type: dex-space-control-parameter
       value:
-        marginTop: ''
-        marginLeft: ''
-        paddingTop: container-small
-        paddingLeft: container-small
-        paddingRight: container-small
-        paddingBottom: container-small
+        mobile:
+          paddingTop: container-xsmall
+          paddingLeft: container-xsmall
+          paddingRight: container-xsmall
+          paddingBottom: container-xsmall
+        tablet:
+          paddingTop: container-xsmall
+          paddingLeft: container-xsmall
+          paddingRight: container-xsmall
+          paddingBottom: container-xsmall
+        desktop:
+          paddingTop: container-xsmall
+          paddingLeft: container-xsmall
+          paddingRight: container-xsmall
+          paddingBottom: container-xsmall
     alignItems:
       type: dex-segmented-control-parameter
       value: center
@@ -59,7 +68,7 @@ composition:
                           value: 5990be9d-277f-4298-ad75-4065e54c82b1
                         url:
                           value: >-
-                            https://img.uniform.global/p/sUD45a7PTTu62k01GojEEw/JCBoOvMeRTGzkHySzLgdsA-ember-luxury-ottoman-coffee-espresso-set-2.png
+                            https://img.uniform.global/p/ovl3f_RJSNmuo41YikmFlA/bQNuprQoQF-K-8yIRq6mFQ-ember-luxury-ottoman-coffee-espresso-set-2.png
                           type: text
                         file:
                           type: file
@@ -252,97 +261,60 @@ composition:
         type: gridItem
         slots:
           inner:
-            - _id: e4516845-6900-4161-8386-6e0f63b73f54
-              type: flex
+            - _id: fa64b7b0-d009-4811-9d23-510515103d7b
+              type: link
               slots:
-                flexItem:
-                  - _id: fa64b7b0-d009-4811-9d23-510515103d7b
-                    type: link
-                    slots:
-                      linkContent:
-                        - _id: 656265eb-730d-499b-b280-fbb3fab6df7a
-                          type: image
-                          parameters:
-                            image:
-                              type: asset
-                              value:
-                                - _id: 82d7bd95-31ab-42c9-a2a6-93552c6be63e
-                                  type: image
-                                  fields:
-                                    id:
-                                      type: text
-                                      value: 511356c8-8058-4312-9d7b-6d73218b67c1
-                                    url:
-                                      value: >-
-                                        https://img.uniform.global/p/sUD45a7PTTu62k01GojEEw/BDCUEL1zRKu9yRRGP-9PiQ-arrow-right.svg
-                                      type: text
-                                    file:
-                                      type: file
-                                      value: e3bd27b1-3ba0-4a25-9b88-c67ff0f5175c
-                                    size:
-                                      value: 300
-                                      type: number
-                                    title:
-                                      type: text
-                                      value: arrow-right.svg
-                                    width:
-                                      value: 29
-                                      type: number
-                                    height:
-                                      value: 29
-                                      type: number
-                                    mediaType:
-                                      value: image/svg+xml
-                                      type: text
-                                  _source: uniform-assets
-                            height:
-                              type: number
-                              value: '20'
-                            objectFit:
-                              type: dex-segmented-control-parameter
-                              value: fill
-                          _overridability:
-                            hideLockedParameters: true
+                linkContent:
+                  - _id: 656265eb-730d-499b-b280-fbb3fab6df7a
+                    type: image
                     parameters:
-                      displayName:
-                        type: text
-                        value: Link
+                      image:
+                        type: asset
+                        value:
+                          - _id: c69e40fa-7298-447b-8e6e-67e9550d0e76
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: 253e6ca5-a8d0-4084-a7ad-ad4481f9c587
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/LP10biebQ3mceUhiJEdfvg/YLTnWGZyTYWGlsSoro57yg-chevron-right.svg
+                                type: text
+                              file:
+                                type: file
+                                value: 0ce47b34-f86b-4f68-b3d6-2f84c59d6f62
+                              size:
+                                value: 269
+                                type: number
+                              title:
+                                type: text
+                                value: chevron-right.svg
+                              width:
+                                value: 24
+                                type: number
+                              height:
+                                value: 24
+                                type: number
+                              mediaType:
+                                value: image/svg+xml
+                                type: text
+                            _source: uniform-assets
+                      height:
+                        type: number
+                        value: '30'
+                      objectFit:
+                        type: dex-segmented-control-parameter
+                        value: fill
                     _overridability:
-                      parameters:
-                        link: 'yes'
                       hideLockedParameters: true
               parameters:
-                gap:
-                  type: dex-slider-control-parameter
-                  value: {}
-                spacing:
-                  type: dex-space-control-parameter
-                  value:
-                    mobile: {}
-                    tablet: {}
-                    desktop: {}
-                direction:
-                  type: dex-segmented-control-parameter
-                  value:
-                    mobile: col
-                    tablet: col
-                    desktop: col
-                fitHeight:
-                  type: checkbox
-                  value: true
-                alignItems:
-                  type: dex-segmented-control-parameter
-                  value: {}
                 displayName:
                   type: text
-                  value: Link Container
-                justifyContent:
-                  type: dex-segmented-control-parameter
-                  value:
-                    mobile: center
-                    tablet: center
-                    desktop: center
+                  value: Link
               _overridability:
+                parameters:
+                  link: 'yes'
                 hideLockedParameters: true
         parameters:
           rowSpan:
@@ -376,8 +348,8 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
-created: '2025-01-29T11:09:28.802301+00:00'
-modified: '2025-03-10T09:36:41.956252+00:00'
+created: '2025-03-25T04:28:14.078521+00:00'
+modified: '2025-03-28T17:31:57.802652+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/jd-template/spotlight-card.jpg

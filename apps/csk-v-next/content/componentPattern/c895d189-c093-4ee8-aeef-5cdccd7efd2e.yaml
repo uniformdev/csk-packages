@@ -26,7 +26,7 @@ composition:
                           value: 19be2e44-eeb0-4f3c-9d66-203466b7861c
                         url:
                           value: >-
-                            https://img.uniform.global/p/N0QOqjXvSFeXY7i3yzY8ZQ/L52FrjxeQYy0O66QswB-gg-beans-logo.svg
+                            https://img.uniform.global/p/ovl3f_RJSNmuo41YikmFlA/txlpXS1sQGem8wifbKj4SA-beans-logo.svg
                           type: text
                         file:
                           type: file
@@ -73,7 +73,12 @@ composition:
           spacing:
             type: dex-space-control-parameter
             value:
-              paddingBottom: container-small
+              mobile:
+                paddingBottom: container-small
+              tablet:
+                paddingBottom: container-small
+              desktop:
+                paddingBottom: container-small
           fitContent:
             type: checkbox
             value: true
@@ -154,13 +159,10 @@ composition:
             value:
               mobile:
                 paddingTop: container-small
-                paddingBottom: container-small
               tablet:
                 paddingTop: container-small
-                paddingBottom: container-small
               desktop:
                 paddingTop: container-small
-                paddingBottom: container-small
           direction:
             type: dex-segmented-control-parameter
             value:
@@ -185,12 +187,46 @@ composition:
         type: button
         variant: link
         parameters:
+          icon:
+            type: asset
+            locales:
+              en:
+                - _id: 8dd47897-de54-45bf-aaa4-f42f0ab19e36
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: 008412ca-e0e4-4898-8829-f05814d644c3
+                    url:
+                      value: >-
+                        https://img.uniform.global/p/LP10biebQ3mceUhiJEdfvg/LECv0hNiR92Vf3Qmf1RBvg-icon-chevron-blue.svg
+                      type: text
+                    file:
+                      type: file
+                      value: 3767517e-e3b4-4700-ae21-52d859d27799
+                    size:
+                      value: 217
+                      type: number
+                    title:
+                      type: text
+                      value: icon-chevron-blue.svg
+                    width:
+                      value: 150
+                      type: number
+                    height:
+                      value: 150
+                      type: number
+                    mediaType:
+                      value: image/svg+xml
+                      type: text
+                  _source: uniform-assets
+            value: []
           size:
             type: dex-token-selector-parameter
             value: ''
           text:
             type: text
-            value: 'READ » '
+            value: READ
           textSize:
             type: dex-segmented-control-parameter
             value:
@@ -203,6 +239,9 @@ composition:
           textWeight:
             type: dex-segmented-control-parameter
             value: bold
+          iconPosition:
+            type: dex-segmented-control-parameter
+            value: right
           textTransform:
             type: dex-segmented-control-parameter
             value: uppercase
@@ -216,8 +255,8 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
-created: '2025-01-29T11:09:29.733196+00:00'
-modified: '2025-01-29T11:09:29.733196+00:00'
+created: '2025-03-25T04:28:13.870075+00:00'
+modified: '2025-03-28T16:26:09.582582+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/jd-template/small-article-card_pyy7q2.jpg

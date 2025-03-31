@@ -117,7 +117,7 @@ composition:
       parameters:
         text:
           type: text
-          value: Discover the Best Coffee Beans for Every Brew
+          value: Discover the best coffee beans
     d9e2afce-4417-4f75-9345-701831f831aa|dc2e95be-21b5-4476-a309-f8a34922f528:
       slots:
         $slotSectionItems:
@@ -128,6 +128,89 @@ composition:
               parameters:
                 displayName: 'yes'
               hideLockedParameters: true
+          - _id: 448e61fe-a3a4-45bc-9340-1b6b70eb340c
+            type: container
+            slots:
+              containerContent:
+                - _id: 34035c91-7801-4d45-866c-428d06768525
+                  type: text
+                  parameters:
+                    tag:
+                      type: dex-segmented-control-parameter
+                      value: h1
+                    size:
+                      type: dex-segmented-control-parameter
+                      value:
+                        mobile: 2xl
+                        tablet: 3xl
+                        desktop: 3xl
+                    text:
+                      type: text
+                      value: Coffee Beans
+                    color:
+                      type: dex-color-palette-parameter
+                      value: text-primary
+                    weight:
+                      type: dex-segmented-control-parameter
+                      value: bold
+                  _overridability:
+                    parameters:
+                      text: 'yes'
+                    hideLockedParameters: true
+                - _id: 5fdfb0b1-49cb-46c6-a9c3-28bc4c7e60ca
+                  type: container
+                  slots:
+                    containerContent:
+                      - _id: de5a0b72-c1d4-4f74-a666-52b58e646d60
+                        type: divider
+                        parameters:
+                          color:
+                            type: dex-color-palette-parameter
+                            value: general-color-12
+                          width:
+                            type: dex-slider-control-parameter
+                            value: 100%
+                          alignment:
+                            type: dex-segmented-control-parameter
+                            value: center
+                          thickness:
+                            type: dex-slider-control-parameter
+                            value: 1px
+                  parameters:
+                    spacing:
+                      type: dex-space-control-parameter
+                      value:
+                        mobile:
+                          paddingTop: container-small
+                          paddingBottom: container-small
+                        tablet:
+                          paddingTop: container-small
+                          paddingBottom: container-small
+                        desktop:
+                          paddingTop: container-small
+                          paddingBottom: container-small
+                    displayName:
+                      type: text
+                      value: Divider
+                    fluidContent:
+                      type: checkbox
+                      value: true
+                  _overridability:
+                    hideLockedParameters: true
+            parameters:
+              spacing:
+                type: dex-space-control-parameter
+                value:
+                  mobile:
+                    marginTop: container-medium
+                  tablet:
+                    marginTop: container-medium
+                  desktop:
+                    marginTop: container-medium
+              displayName:
+                type: text
+                locales:
+                  en: Title
           - _id: 7e5a5c40-8f1c-4e1a-9e1a-9824092ab678
             type: grid
             _pattern: 0c4c3dd0-72d3-4d77-878a-e2d06d56017e
@@ -155,6 +238,6 @@ composition:
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-02-26T15:55:59.179277+00:00'
-modified: '2025-02-26T21:50:09.230604+00:00'
+created: '2025-03-25T04:27:49.538737+00:00'
+modified: '2025-03-28T16:54:31.227381+00:00'
 pattern: false

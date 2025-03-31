@@ -18,8 +18,15 @@ composition:
     spacing:
       type: dex-space-control-parameter
       value:
-        marginTop: container-large
-        marginBottom: container-large
+        mobile:
+          marginTop: container-small
+          marginBottom: container-large
+        tablet:
+          marginTop: container-small
+          marginBottom: container-large
+        desktop:
+          marginTop: container-small
+          marginBottom: container-large
     displayName:
       type: text
       value: Product with Categories
@@ -28,7 +35,7 @@ composition:
       value:
         mobile: '1'
         tablet: '6'
-        desktop: '6'
+        desktop: '8'
   slots:
     gridInner:
       - _id: 9dd30804-4dc9-4cc7-aa0c-6543641630e3
@@ -242,7 +249,7 @@ composition:
             type: dex-slider-control-parameter
             value:
               tablet: span-1
-              desktop: span-1
+              desktop: span-2
           columnStart:
             type: dex-slider-control-parameter
             value:
@@ -286,9 +293,9 @@ composition:
                 gapY:
                   type: dex-slider-control-parameter
                   value:
-                    mobile: '4'
-                    tablet: '4'
-                    desktop: '4'
+                    mobile: '8'
+                    tablet: '8'
+                    desktop: '16'
                 spacing:
                   type: dex-space-control-parameter
                   value: {}
@@ -317,13 +324,13 @@ composition:
             type: dex-slider-control-parameter
             value:
               tablet: span-5
-              desktop: span-5
+              desktop: span-6
           columnStart:
             type: dex-slider-control-parameter
             value:
               mobile: ''
               tablet: '2'
-              desktop: '2'
+              desktop: '3'
           displayName:
             type: text
             value: Products
@@ -357,16 +364,6 @@ composition:
       isPatternParameter: true
       ignorePatternParameterDefault: true
   _overrides:
-    8fc73c05-9552-49ee-b021-f2a98bc39958:
-      parameters:
-        displayName:
-          type: text
-          value: >-
-            ${#jptr:/Product List Content entries Loop
-            Item/entry/fields/name/value}
-        fluidContent:
-          type: checkbox
-          value: true
     e39f64b6-02ee-47b5-9b83-881b5ab05721:
       parameters:
         link:
@@ -397,8 +394,8 @@ composition:
           locales:
             en: >-
               ${#jptr:/Product List Content entries Loop
-              Item/entry/fields/variants/value/0/fields/currency/value}
-              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/currency/value}${#jptr:/Product
+              List Content entries Loop
               Item/entry/fields/variants/value/0/fields/price/value}
         title:
           type: text
@@ -406,50 +403,10 @@ composition:
             en: >-
               ${#jptr:/Product List Content entries Loop
               Item/entry/fields/title/value}
-    8fc73c05-9552-49ee-b021-f2a98bc39958|0952417a-061c-4634-91df-1341269e4054:
-      parameters:
-        image:
-          type: asset
-          value:
-            - _id: f91057c0-5086-43f2-b29c-e996fb7108ed
-              type: image
-              fields:
-                url:
-                  type: text
-                  value: >-
-                    ${#jptr:/Product List Content entries Loop
-                    Item/entry/fields/primaryImage/value/0/fields/url/value}
-                title:
-                  type: text
-                  value: >-
-                    ${#jptr:/Product List Content entries Loop
-                    Item/entry/fields/name/value}
-                description:
-                  type: text
-                  value: >-
-                    ${#jptr:/Product List Content entries Loop
-                    Item/entry/fields/name/value}
-              _source: custom-url
-    8fc73c05-9552-49ee-b021-f2a98bc39958|8bad3ddd-add0-43d3-a314-5836bf0c7a93:
-      parameters:
-        text:
-          type: text
-          value: >-
-            ${#jptr:/Product List Content entries Loop
-            Item/entry/fields/variants/value/0/fields/currency/value}
-            ${#jptr:/Product List Content entries Loop
-            Item/entry/fields/variants/value/0/fields/price/value}
-    8fc73c05-9552-49ee-b021-f2a98bc39958|988f7805-9e0e-4b30-acaf-f97d7dd5099f:
-      parameters:
-        text:
-          type: text
-          value: >-
-            ${#jptr:/Product List Content entries Loop
-            Item/entry/fields/name/value}
   _locales:
     - en
 created: '2025-03-25T04:28:10.893557+00:00'
-modified: '2025-03-28T09:39:30.669106+00:00'
+modified: '2025-03-28T17:11:09.10923+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1731065904/csk-v-next/jd-template/product-list-grid.jpg

@@ -177,6 +177,9 @@ composition:
                               value: normal
                           _overridability:
                             hideLockedParameters: true
+                        - _id: 3e88bc6a-0588-4b36-aa7d-ede679a7c3c6
+                          type: addToCardButton
+                          _pattern: 20161830-c75e-4695-8622-41032f5be75d
                         - _id: a94a3da2-9f36-40ae-9939-b1242a17994e
                           type: table
                           slots:
@@ -360,9 +363,6 @@ composition:
                               value: Data
                           _overridability:
                             hideLockedParameters: true
-                        - _id: 3e88bc6a-0588-4b36-aa7d-ede679a7c3c6
-                          type: addToCardButton
-                          _pattern: 20161830-c75e-4695-8622-41032f5be75d
                     parameters:
                       gap:
                         type: dex-slider-control-parameter
@@ -516,43 +516,18 @@ composition:
                   value: bold
               _overridability:
                 hideLockedParameters: true
-            - _id: e99d2675-544f-4e52-86e3-b5fd88f80955
-              type: readMore
-              slots:
-                content:
-                  - _id: a5bed2de-6aca-496d-b7d9-b76cfaa9363e
-                    type: richText
-                    parameters:
-                      font:
-                        type: dex-token-selector-parameter
-                        value: ''
-                      text:
-                        type: richText
-                        value: ${#jptr:/Product Content/entry/fields/body/value}
-                      color:
-                        type: dex-color-palette-parameter
-                        value: text-primary
-                    _overridability:
-                      hideLockedParameters: true
+            - _id: a5bed2de-6aca-496d-b7d9-b76cfaa9363e
+              type: richText
               parameters:
-                colorTo:
-                  type: dex-color-palette-parameter
-                  value: general-color-10
-                colorFrom:
-                  type: dex-color-palette-parameter
-                  value: general-color-1
-                maxHeight:
-                  type: number
-                  value: '150'
-                textColor:
+                font:
+                  type: dex-token-selector-parameter
+                  value: ''
+                text:
+                  type: richText
+                  value: ${#jptr:/Product Content/entry/fields/body/value}
+                color:
                   type: dex-color-palette-parameter
                   value: text-primary
-                readLessLabel:
-                  type: text
-                  value: Read Less
-                readMoreLabel:
-                  type: text
-                  value: Read More
               _overridability:
                 hideLockedParameters: true
         parameters:
@@ -595,8 +570,8 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
-created: '2025-03-07T10:44:58.763338+00:00'
-modified: '2025-03-10T11:04:08.424693+00:00'
+created: '2025-03-25T04:28:09.772586+00:00'
+modified: '2025-03-28T17:23:28.555123+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/jd-template/product-info.jpg

@@ -120,7 +120,7 @@ composition:
       parameters:
         text:
           type: text
-          value: Find the Perfect Coffee Maker for Every Brew Style
+          value: Find your perfect coffee maker
     5a6c8a7b-d7f9-4e8d-9549-10ea4d09106a|dc2e95be-21b5-4476-a309-f8a34922f528:
       slots:
         $slotSectionItems:
@@ -131,6 +131,89 @@ composition:
               parameters:
                 displayName: 'yes'
               hideLockedParameters: true
+          - _id: e5dbabc2-fb3a-4179-bc52-755e7a82a59e
+            type: container
+            slots:
+              containerContent:
+                - _id: 80341eb5-6303-4079-b41d-ab5c08307c6b
+                  type: text
+                  parameters:
+                    tag:
+                      type: dex-segmented-control-parameter
+                      value: h1
+                    size:
+                      type: dex-segmented-control-parameter
+                      value:
+                        mobile: 2xl
+                        tablet: 3xl
+                        desktop: 3xl
+                    text:
+                      type: text
+                      value: Coffee Makers
+                    color:
+                      type: dex-color-palette-parameter
+                      value: text-primary
+                    weight:
+                      type: dex-segmented-control-parameter
+                      value: bold
+                  _overridability:
+                    parameters:
+                      text: 'yes'
+                    hideLockedParameters: true
+                - _id: e54dd0df-cd55-4013-8816-f08f3ec350a5
+                  type: container
+                  slots:
+                    containerContent:
+                      - _id: 8f8ee0b2-cf1c-40fe-96b4-88518f92e30e
+                        type: divider
+                        parameters:
+                          color:
+                            type: dex-color-palette-parameter
+                            value: general-color-12
+                          width:
+                            type: dex-slider-control-parameter
+                            value: 100%
+                          alignment:
+                            type: dex-segmented-control-parameter
+                            value: center
+                          thickness:
+                            type: dex-slider-control-parameter
+                            value: 1px
+                  parameters:
+                    spacing:
+                      type: dex-space-control-parameter
+                      value:
+                        mobile:
+                          paddingTop: container-small
+                          paddingBottom: container-small
+                        tablet:
+                          paddingTop: container-small
+                          paddingBottom: container-small
+                        desktop:
+                          paddingTop: container-small
+                          paddingBottom: container-small
+                    displayName:
+                      type: text
+                      value: Divider
+                    fluidContent:
+                      type: checkbox
+                      value: true
+                  _overridability:
+                    hideLockedParameters: true
+            parameters:
+              spacing:
+                type: dex-space-control-parameter
+                value:
+                  mobile:
+                    marginTop: container-medium
+                  tablet:
+                    marginTop: container-medium
+                  desktop:
+                    marginTop: container-medium
+              displayName:
+                type: text
+                locales:
+                  en: Title
           - _id: 1287a919-c905-4d89-97b4-0f415a58c754
             type: grid
             _pattern: 0c4c3dd0-72d3-4d77-878a-e2d06d56017e
@@ -160,6 +243,6 @@ composition:
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-02-26T15:55:59.191431+00:00'
-modified: '2025-02-26T21:49:54.406477+00:00'
+created: '2025-03-25T04:27:49.839581+00:00'
+modified: '2025-03-28T16:53:22.116156+00:00'
 pattern: false

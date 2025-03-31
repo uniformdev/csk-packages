@@ -67,7 +67,7 @@ composition:
                     value: c64606e3-4d79-40d2-9a52-1dacb84bf31d
                   url:
                     value: >-
-                      https://img.uniform.global/p/N0QOqjXvSFeXY7i3yzY8ZQ/1GekaPwkS2O7CPJZeCPGhw-latte-art-pouring-coffee.jpeg
+                      https://img.uniform.global/p/ovl3f_RJSNmuo41YikmFlA/sKhNEj22RhetByr-IJ-zHg-latte-art-pouring-coffee.jpeg
                     type: text
                   file:
                     type: file
@@ -88,9 +88,15 @@ composition:
                     value: image/jpeg
                     type: text
                 _source: uniform-assets
+          priority:
+            type: checkbox
+            value: true
           objectFit:
             type: dex-segmented-control-parameter
             value: cover
+          unoptimized:
+            type: checkbox
+            value: true
         _overridability:
           parameters:
             image: 'yes'
@@ -134,6 +140,6 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
-created: '2025-03-07T10:45:01.475564+00:00'
-modified: '2025-03-10T14:55:24.988407+00:00'
+created: '2025-03-25T04:28:06.794905+00:00'
+modified: '2025-03-28T13:47:13.938799+00:00'
 pattern: true

@@ -44,13 +44,31 @@ composition:
             crit:
               - l: addedToCart
                 op: +
-            name: 'Featured Section: Welcome Hero'
+            name: Has active cart
         displayName:
           type: text
-          value: Ready to make it yours? Complete your purchase today
+          value: Has active cart
         contentBackgroundColor:
           type: dex-color-palette-parameter
           value: general-color-3
+    2cf1eec0-f4de-4580-b02f-08b702e11fd4:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: /${locale}/coffee-makers
+              type: projectMapNode
+              nodeId: c9869cee-a65c-4064-b296-78c4a5ba4ffc
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+        text:
+          type: text
+          value: Coffee Makers
+        buttonColor:
+          type: dex-color-palette-parameter
+          value: null
     34261571-3623-41e0-bda8-7f1a5fdef37e:
       parameters:
         $pzCrit:
@@ -59,10 +77,20 @@ composition:
             crit:
               - l: int_beans
                 op: +
-            name: 'Section: Exceptional Beans for the Perfect Cup!'
+            name: Coffee Beans interest
         displayName:
           type: text
-          value: Exceptional Beans for the Perfect Cup!
+          value: Coffee Beans interest
+    411aab8f-d562-4cae-ac2b-4470db036909:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            crit: []
+            name: Default Variant
+        displayName:
+          type: text
+          value: Default Variant
     4985d1ca-6d4a-4857-9313-eed9ecb9bc3c:
       parameters:
         link:
@@ -78,21 +106,6 @@ composition:
         text:
           type: text
           value: See all
-    4d87673d-a01e-48af-9a7c-49bcf45af494:
-      parameters:
-        link:
-          type: link
-          locales:
-            en:
-              path: /:locale/coffee-beans
-              type: projectMapNode
-              nodeId: 9db6eee2-5e3b-4e3e-9e26-836d3973217c
-              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-              dynamicInputValues:
-                locale: ${locale}
-        text:
-          type: text
-          value: Coffee Beans
     503b72ae-4a31-4051-b410-e9daa61b5905:
       parameters:
         $pzCrit:
@@ -101,7 +114,7 @@ composition:
             crit:
               - l: int_makers
                 op: +
-            name: 'Section: Heavy coffee drinkers save $3 / day with subscription.'
+            name: Coffee Makers interest
         spacing:
           type: dex-space-control-parameter
           value:
@@ -110,22 +123,22 @@ composition:
             desktop: {}
         displayName:
           type: text
-          value: Elevate Your Brew with the Perfect Machine!
+          value: Coffee Makers interest
     68e34c5d-5177-4094-9e64-eef21d58da91:
       parameters:
         link:
           type: link
           locales:
             en:
-              path: /:locale/coffee-makers
+              path: /${locale}/coffee-beans
               type: projectMapNode
-              nodeId: c9869cee-a65c-4064-b296-78c4a5ba4ffc
+              nodeId: 9db6eee2-5e3b-4e3e-9e26-836d3973217c
               projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
               dynamicInputValues:
                 locale: ${locale}
         text:
           type: text
-          value: Coffee Makers
+          value: Coffee Beans
     852664d7-7d35-4eb5-97ad-e1c23ce940ca:
       parameters:
         pageTitle:
@@ -282,6 +295,16 @@ composition:
                 hoverTextColor: 'no'
                 hoverButtonColor: 'no'
               hideLockedParameters: true
+    1fc9f4b5-b1ea-4e47-b430-d985b4ec2b41|a6535dd0-385d-4fe3-beb3-bc328cfd4f9e:
+      parameters:
+        price:
+          type: text
+          locales:
+            en: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/currency/value}${#jptr:/Product
+              List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value}
     22e9a49c-1d3e-4697-9a96-9a873d2f36d8|5d86f5e9-47d6-4e77-a139-83228ec0be41:
       slots:
         $slotSectionItems:
@@ -349,6 +372,16 @@ composition:
                 fullWidth: 'yes'
                 textColor: 'no'
               hideLockedParameters: true
+    3074410a-05a6-475d-a592-d12154625515|d06ab335-2ea8-4252-9ff4-73055f70e55e:
+      parameters:
+        price:
+          type: text
+          locales:
+            en: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/currency/value}${#jptr:/Product
+              List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value}
     34261571-3623-41e0-bda8-7f1a5fdef37e|215f54df-5063-4f0a-81c0-d8bda909b52c:
       parameters:
         image:
@@ -424,16 +457,21 @@ composition:
                 fullWidth: 'yes'
                 textColor: 'no'
               hideLockedParameters: true
-          - _id: 4d87673d-a01e-48af-9a7c-49bcf45af494
+          - _id: 2cf1eec0-f4de-4580-b02f-08b702e11fd4
             type: button
-            _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
+            _pattern: 53b59aed-e378-4fcb-9135-20247d92074e
             _overridability:
               variants: true
               parameters:
                 link: 'yes'
                 text: 'yes'
                 fullWidth: 'yes'
-                textColor: 'no'
+                textWeight: 'no'
+                buttonColor: 'yes'
+                iconPosition: 'yes'
+                textTransform: 'no'
+                hoverTextColor: 'no'
+                hoverButtonColor: 'no'
               hideLockedParameters: true
     503b72ae-4a31-4051-b410-e9daa61b5905|3cef9a4a-f0c8-4eeb-a855-a28fd1335351:
       parameters:
@@ -578,19 +616,17 @@ composition:
                       value: span
                     size:
                       type: dex-segmented-control-parameter
-                      value: {}
+                      value:
+                        tablet: lg
+                        desktop: xl
                     text:
                       type: text
                       value: >-
-                        At Jada Drip, coffee isn’t just a drink—it’s an
-                        experience, a ritual, and a connection. From the perfect
-                        grind to the rich aroma, we’re passionate about every
-                        step of the journey that brings the finest coffee to
-                        your cup. Our obsession drives us to source only the
-                        highest quality beans, create state-of-the-art brewing
-                        equipment, and offer accessories that elevate your daily
-                        coffee routine. Join us in celebrating the art of
-                        coffee, one sip at a time
+                        At Jada Drip, coffee is more than a drink—it’s a ritual
+                        and a connection. We’re passionate about every step,
+                        from sourcing top-quality beans to crafting premium
+                        brewing gear. Celebrate the art of coffee with us, one
+                        sip at a time.
                     color:
                       type: dex-color-palette-parameter
                       value: text-primary
@@ -649,6 +685,6 @@ composition:
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-02-27T10:45:03.714698+00:00'
-modified: '2025-03-10T15:33:10.236405+00:00'
+created: '2025-03-25T04:27:50.97015+00:00'
+modified: '2025-03-31T09:15:10.076003+00:00'
 pattern: false

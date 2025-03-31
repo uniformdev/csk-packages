@@ -6,7 +6,7 @@ composition:
     gapX:
       type: dex-slider-control-parameter
       value:
-        desktop: '8'
+        desktop: '16'
     gapY:
       type: dex-slider-control-parameter
       value:
@@ -25,7 +25,7 @@ composition:
       value:
         mobile: '1'
         tablet: '1'
-        desktop: '8'
+        desktop: '3'
   slots:
     gridInner:
       - _id: 42cf745d-fc16-46b4-953a-6c440e8eef3f
@@ -45,9 +45,9 @@ composition:
                       size:
                         type: dex-segmented-control-parameter
                         value:
-                          mobile: 3xl
-                          tablet: 5xl
-                          desktop: 5xl
+                          mobile: xl
+                          tablet: 2xl
+                          desktop: 3xl
                       text:
                         type: text
                         value: How to resources
@@ -70,7 +70,7 @@ composition:
                       size:
                         type: dex-segmented-control-parameter
                         value:
-                          mobile: base
+                          mobile: sm
                           tablet: base
                           desktop: base
                       text:
@@ -94,13 +94,22 @@ composition:
                       parameters:
                         text: 'yes'
                       hideLockedParameters: true
+                  - _id: 088f579b-a38b-4ec9-8474-99d67793284d
+                    type: button
+                    _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
               parameters:
                 gap:
                   type: dex-slider-control-parameter
                   value:
-                    mobile: '8'
-                    tablet: '8'
-                    desktop: '8'
+                    mobile: '4'
+                    tablet: '4'
+                    desktop: '4'
+                spacing:
+                  type: dex-space-control-parameter
+                  value:
+                    mobile: {}
+                    tablet: {}
+                    desktop: {}
                 direction:
                   type: dex-segmented-control-parameter
                   value:
@@ -113,6 +122,9 @@ composition:
                 displayName:
                   type: text
                   value: Content
+                fluidContent:
+                  type: checkbox
+                  value: true
                 justifyContent:
                   type: dex-segmented-control-parameter
                   value: {}
@@ -127,17 +139,19 @@ composition:
             value:
               mobile: ''
               tablet: ''
-              desktop: '1'
+              desktop: ''
           columnSpan:
             type: dex-slider-control-parameter
             value:
-              desktop: span-3
+              mobile: ''
+              tablet: ''
+              desktop: ''
           columnStart:
             type: dex-slider-control-parameter
             value:
               mobile: ''
-              tablet: '1'
-              desktop: '1'
+              tablet: ''
+              desktop: ''
           displayName:
             type: text
             value: Left Content
@@ -175,26 +189,42 @@ composition:
           columnSpan:
             type: dex-slider-control-parameter
             value:
-              desktop: span-5
+              desktop: span-2
           columnStart:
             type: dex-slider-control-parameter
             value:
-              mobile: '1'
-              tablet: '1'
-              desktop: '4'
+              mobile: ''
+              tablet: ''
+              desktop: '2'
           displayName:
             type: text
             value: Right Content
         _overridability:
           hideLockedParameters: true
+  _overrides:
+    088f579b-a38b-4ec9-8474-99d67793284d:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: /${locale}/articles
+              type: projectMapNode
+              nodeId: 078321b0-280e-409e-bd7e-bc6a6d0abeae
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+        text:
+          type: text
+          value: All articles
   _overridability:
     parameters:
       displayName: 'yes'
     hideLockedParameters: true
   _locales:
     - en
-created: '2025-01-29T11:09:26.534882+00:00'
-modified: '2025-01-29T11:09:26.534882+00:00'
+created: '2025-03-25T04:28:05.301166+00:00'
+modified: '2025-03-28T14:54:41.223939+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/jd-template/how-to-resources.jpg
