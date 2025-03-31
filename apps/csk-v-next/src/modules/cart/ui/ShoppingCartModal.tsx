@@ -4,6 +4,7 @@ import { usePathname } from 'next/navigation';
 import classNames from 'classnames';
 import { Button } from '@uniformdev/csk-components/components/ui';
 import ModalLayout from '@/components/custom-ui/ModalLayout';
+import { useLockScroll } from '@/hooks/useLockScroll';
 import { ShoppingCartItem } from './ShoppingCartItem';
 import { ShoppingMiniCartSkeleton } from './skeleton/ShoppingMiniCartSkeleton';
 import { useCard } from '../providers/CardProvider';
@@ -17,20 +18,14 @@ type CartContentProps = {
   styles?: Styles;
 };
 
-const togglePageScroll = (isHiddenManual?: boolean): void => {
-  const html = document.querySelector('html');
-  if (!html) return;
-  const isHidden = isHiddenManual ?? html.style.overflow === 'hidden';
-  html.style.overflow = isHidden ? 'auto' : 'hidden';
-};
-
 const CartContent: FC<CartContentProps> = ({ onCloseModal, styles }) => {
   const { cartProducts, isCartLoading, storedCart, total, updateCard, removeFromCard, isModalCartOpen } = useCard();
 
   const productsContainerRef = useRef<HTMLDivElement>(null);
 
+  useLockScroll(isModalCartOpen);
+
   useEffect(() => {
-    togglePageScroll(!isModalCartOpen);
     if (!isModalCartOpen) return;
     // scroll modal to the bottom
     productsContainerRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end' });

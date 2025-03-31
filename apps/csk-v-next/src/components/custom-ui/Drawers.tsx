@@ -1,6 +1,8 @@
 'use client';
 
 import { Dispatch, FC, PropsWithChildren, SetStateAction, useEffect, useRef, useState } from 'react';
+import { cn } from '@uniformdev/csk-components/utils/styling';
+import { useLockScroll } from '@/hooks/useLockScroll';
 
 const INITIAL_WIDTH = 1050;
 const MIN_WIDTH = 300;
@@ -15,16 +17,7 @@ export const Drawers: FC<PropsWithChildren<{ open: boolean; setOpen: Dispatch<Se
   const panelRef = useRef(null);
   const isResizing = useRef(false);
 
-  useEffect(() => {
-    if (open) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [open]);
+  useLockScroll(open);
 
   useEffect(() => {
     const handleResize = () => {
@@ -58,14 +51,16 @@ export const Drawers: FC<PropsWithChildren<{ open: boolean; setOpen: Dispatch<Se
   };
 
   return (
-    <div className={`fixed inset-0 z-10 ${open ? 'block' : 'hidden'}`}>
+    <div className={cn('fixed inset-0 z-10 hidden', { block: open })}>
       <div className="fixed inset-0 bg-gray-500/50 transition-opacity" onClick={() => setOpen(false)} />
 
       <div className="fixed inset-y-0 right-0 flex max-w-full">
         <div
           ref={panelRef}
           style={{ width: `${width}px` }}
-          className={`relative bg-white shadow-xl transition-transform duration-500 ease-in-out${open ? 'translate-x-0' : 'translate-x-full'}`}
+          className={cn('relative bg-white shadow-xl transition-transform duration-500 ease-in-out translate-x-full', {
+            'translate-x-0': open,
+          })}
         >
           <div
             className="absolute left-0 top-0 h-full w-0.5 cursor-ew-resize bg-transparent hover:bg-gray-200"
