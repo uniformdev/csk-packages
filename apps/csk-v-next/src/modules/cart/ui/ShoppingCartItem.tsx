@@ -2,6 +2,7 @@ import { FC, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import classNames from 'classnames';
+import CloseIcon from '@/components/custom-ui/CloseIcon';
 import { Product } from '@/modules/cart/types';
 import ProductQuantityItem from './ProductQuantityItem';
 
@@ -64,14 +65,7 @@ export const ShoppingCartItem: FC<ShoppingCartItemProps> = ({
               className={classNames('inline-flex items-center relative h-5 text-primary', { 'md:hidden': !isInModal })}
               onClick={handleRemoveProductButtonClick}
             >
-              <Image
-                width={16}
-                height={16}
-                unoptimized
-                src="https://res.cloudinary.com/uniform-demos/image/upload/v1692282918/csk-icons/icon-cross-black_c9f098_sqlipa.svg"
-                alt="icon-cross"
-                className="w-4 fill-blue-500 stroke-transparent duration-300 hover:stroke-blue-500"
-              />
+              <CloseIcon />
             </button>
           </div>
           <div
@@ -93,14 +87,7 @@ export const ShoppingCartItem: FC<ShoppingCartItemProps> = ({
                 className={classNames('items-center mt-8 relative group h-5 hidden', { 'md:inline-flex': !isInModal })}
                 onClick={handleRemoveProductButtonClick}
               >
-                <Image
-                  width={16}
-                  height={16}
-                  unoptimized
-                  src="https://res.cloudinary.com/uniform-demos/image/upload/v1692282950/csk-icons/icon-cross-blue_qyhkct_o7gzai.svg"
-                  alt="icon-cross"
-                  className="w-3  stroke-transparent duration-300 "
-                />
+                <CloseIcon className="fill-blue-500 stroke-blue-500" />
                 <span
                   className={classNames('pl-2 text-sm font-bold', {
                     [`text-${secondaryTextColor}`]: !!secondaryTextColor,
