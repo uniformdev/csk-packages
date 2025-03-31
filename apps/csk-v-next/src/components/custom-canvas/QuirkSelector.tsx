@@ -113,7 +113,12 @@ const QuirkSelector: FC<QuirkSelectorProps> = ({
         ))}
       </select>
 
-      <div onClick={onSave}>
+      <div
+        className={cn({
+          'pointer-events-none opacity-50': selectedQuirk === quirks?.[quirkId],
+        })}
+        onClick={onSave}
+      >
         <UniformSlot context={context} data={component} slot={slots.saveButton} />
       </div>
 
