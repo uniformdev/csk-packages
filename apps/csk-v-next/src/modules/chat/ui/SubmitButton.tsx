@@ -6,7 +6,11 @@ interface SubmitButtonProps {
 }
 
 export const SubmitButton: FC<SubmitButtonProps> = ({ disabled, onClick }) => (
-  <button onClick={onClick} className="h-fit rounded-full border p-1.5 disabled:opacity-50" disabled={disabled}>
+  <button
+    onClick={onClick}
+    className="h-fit border p-1.5 hover:bg-black hover:text-white disabled:opacity-50"
+    disabled={disabled}
+  >
     <svg height={16} strokeLinejoin="round" viewBox="0 0 16 16" width={16} style={{ color: 'currentcolor' }}>
       <path
         fillRule="evenodd"

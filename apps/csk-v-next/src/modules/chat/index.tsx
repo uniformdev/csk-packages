@@ -117,7 +117,7 @@ const Chat: FC = () => {
               placeholder="Send a message..."
               value={input}
               onChange={handleInputChange}
-              className={cn('overflow-hidden resize-none rounded-2xl !text-base bg-muted pb-10 pr-10')}
+              className={cn('overflow-hidden resize-none rounded-none !text-base bg-muted pb-10 pr-10')}
               onKeyDown={event => {
                 if (event.key === 'Enter' && !event.shiftKey && !event.nativeEvent.isComposing) {
                   event.preventDefault();
