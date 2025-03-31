@@ -1,5 +1,5 @@
 created: '2025-03-25T04:31:47.183131+00:00'
-modified: '2025-03-27T19:08:01.997571+00:00'
+modified: '2025-03-31T15:13:59.027216+00:00'
 pattern: false
 entry:
   _id: 636c462b-e507-4176-b366-cb8ac7cb78e0
@@ -1308,6 +1308,12 @@ entry:
                 type: text
             _source: uniform-assets
       value: []
+    enrichments:
+      type: $enr
+      value:
+        - cat: topic
+          key: ingredients-and-preparation
+          str: 5
     publishDate:
       type: date
       value: '2025-03-18'

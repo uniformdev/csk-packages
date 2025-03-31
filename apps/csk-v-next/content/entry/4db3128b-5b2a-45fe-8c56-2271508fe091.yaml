@@ -1,5 +1,5 @@
 created: '2025-03-25T04:32:14.935532+00:00'
-modified: '2025-03-27T09:34:02.964308+00:00'
+modified: '2025-03-31T16:04:14.091129+00:00'
 pattern: false
 entry:
   _id: 4db3128b-5b2a-45fe-8c56-2271508fe091
@@ -1148,6 +1148,12 @@ entry:
                 type: text
             _source: uniform-assets
       value: []
+    enrichments:
+      type: $enr
+      value:
+        - cat: topic
+          key: coffee
+          str: 5
     publishDate:
       type: date
       value: '2025-03-20'

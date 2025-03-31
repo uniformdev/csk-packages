@@ -1,7 +1,7 @@
 id: article
 name: Article
 created: '2025-03-25T04:28:35.680612+00:00'
-updated: '2025-03-27T09:32:54.864448+00:00'
+updated: '2025-03-31T15:12:58.630586+00:00'
 slugSettings:
   required: 'no'
 useTeamPermissions: true
@@ -70,6 +70,10 @@ fields:
       required: true
       allowedContentTypes:
         - articleCategory
+  - id: enrichments
+    name: Enrichments
+    type: $enr
+    typeConfig: null
 entryName: title
 thumbnailField: thumbnail
 description: ''

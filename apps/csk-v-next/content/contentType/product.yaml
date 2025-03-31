@@ -1,7 +1,7 @@
 id: product
 name: Product
-created: '2025-01-29T11:09:45.715146+00:00'
-updated: '2025-01-29T11:09:45.715146+00:00'
+created: '2025-03-25T04:28:36.53123+00:00'
+updated: '2025-03-31T14:57:03.102202+00:00'
 slugSettings:
   required: 'no'
 useTeamPermissions: true
@@ -88,6 +88,10 @@ fields:
       isMulti: true
       allowedContentTypes:
         - product
+  - id: enrichments
+    name: Enrichments
+    type: $enr
+    typeConfig: null
 entryName: title
 thumbnailField: primaryImage
 description: ''
