@@ -62,14 +62,17 @@ const CartContent: FC<CartContentProps> = ({ onCloseModal, styles }) => {
     <div className={classNames('flex relative h-full flex-col', styles?.container)}>
       <div className="fixed top-0 z-50 flex w-full items-center justify-between border-b bg-white px-4 py-2 sm:px-14 lg:py-0">
         <button className="group flex h-16 w-24 items-center" type="submit" onClick={onCloseModal}>
-          <Image
-            unoptimized
-            width={16}
-            height={16}
-            alt="icon-cross"
-            src="https://res.cloudinary.com/uniform-demos/image/upload/v1692282918/csk-icons/icon-cross-black_c9f098_sqlipa.svg"
-            className="w-3 fill-black stroke-transparent duration-300 group-hover:stroke-black"
-          />
+          <svg
+            width="12px"
+            height="12px"
+            viewBox="0 0 12 12"
+            fill="black"
+            strokeWidth="1px"
+            stroke="black"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M5.99243 4.51968L10.2426 0.269035L11.7163 1.7568L7.47971 5.99292L11.7163 10.2431L10.2426 11.7168L5.99243 7.4802L1.75631 11.7168L0.268555 10.2431L4.51919 5.99292L0.268555 1.7568L1.75631 0.269035L5.99243 4.51968Z" />
+          </svg>
           <p className="pl-2 text-sm font-bold uppercase duration-300  group-hover:underline">Close</p>
         </button>
 

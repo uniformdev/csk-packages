@@ -4,12 +4,17 @@ composition:
   _slug: profile
   type: page
   _overrides:
-    3527a0d3-1896-40c4-b1fa-4a00a5d3c163:
+    1d72bf11-3812-45c3-a4fd-927cfdbc00f1:
       parameters:
-        spacing:
-          type: dex-space-control-parameter
+        $pzCrit:
+          type: $pzCrit
           value:
-            marginTop: container-large
+            crit:
+              - l: segment
+                r: occasional
+                t: q
+                op: '='
+            name: Occasional
         fluidContent:
           type: checkbox
           value: true
@@ -20,6 +25,15 @@ composition:
           value: Profile
     5c23965e-e196-4403-861a-183024970d07:
       parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            crit:
+              - l: segment
+                r: aficionado
+                t: q
+                op: '='
+            name: Aficionado
         fluidContent:
           type: checkbox
           value: true
@@ -33,8 +47,17 @@ composition:
         fluidContent:
           type: checkbox
           value: true
-    7f4e65fe-d331-429d-ab30-44a94661f6fe:
+    d47f2d1c-c006-4606-8901-26a23f74150b:
       parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            crit:
+              - l: segment
+                r: newb
+                t: q
+                op: '='
+            name: Newb
         fluidContent:
           type: checkbox
           value: true
@@ -96,6 +119,46 @@ composition:
             Manage your personal profile at Java Drip. Update your contact
             information, view your order history, and discover personalized
             coffee recommendations to enhance your coffee experience.
+    1d72bf11-3812-45c3-a4fd-927cfdbc00f1|4e7f1617-1524-4771-bad7-e871c177ef53:
+      parameters:
+        text:
+          type: text
+          value: Occasional has been activated!
+    4873f22b-b646-4b66-9666-3ddffdc48447|dea621e2-bc14-423e-8e1b-58d41ae2b2a7:
+      slots:
+        $slotSectionItems:
+          - _id: 79e06d05-114d-4b60-a86a-7f9f6781ae39
+            type: $personalization
+            slots:
+              pz:
+                - _id: 5c23965e-e196-4403-861a-183024970d07
+                  type: grid
+                  _pattern: c2122c4c-1d68-44db-b880-19612776c3df
+                  _overridability:
+                    parameters:
+                      displayName: 'yes'
+                      fluidContent: 'yes'
+                    hideLockedParameters: true
+                - _id: 1d72bf11-3812-45c3-a4fd-927cfdbc00f1
+                  type: grid
+                  _pattern: c2122c4c-1d68-44db-b880-19612776c3df
+                  _overridability:
+                    parameters:
+                      displayName: 'yes'
+                      fluidContent: 'yes'
+                    hideLockedParameters: true
+                - _id: d47f2d1c-c006-4606-8901-26a23f74150b
+                  type: grid
+                  _pattern: c2122c4c-1d68-44db-b880-19612776c3df
+                  _overridability:
+                    parameters:
+                      displayName: 'yes'
+                      fluidContent: 'yes'
+                    hideLockedParameters: true
+            parameters:
+              trackingEventName:
+                type: text
+                value: Selected Segment
     4b531db1-0939-41fd-9991-aa08d210bbb6|2058ad6d-25b3-4eea-a276-cb996b4188cc:
       slots:
         $slotSectionItems:
@@ -118,6 +181,8 @@ composition:
                 - _id: 4873f22b-b646-4b66-9666-3ddffdc48447
                   type: quirkSelector
                   _pattern: 0bc0e924-445c-47de-9217-3dc6f889f1e7
+                  _overridability:
+                    hideLockedParameters: true
             parameters:
               gap:
                 type: dex-slider-control-parameter
@@ -156,88 +221,6 @@ composition:
               justifyContent:
                 type: dex-segmented-control-parameter
                 value: {}
-          - _id: 0f519e69-edc4-41b9-8727-be66e678e374
-            type: flex
-            slots:
-              flexItem:
-                - _id: 5c23965e-e196-4403-861a-183024970d07
-                  type: grid
-                  _pattern: c2122c4c-1d68-44db-b880-19612776c3df
-                  _overridability:
-                    parameters:
-                      displayName: 'yes'
-                      fluidContent: 'yes'
-                    hideLockedParameters: true
-                - _id: 7f2b2fbe-deb3-4179-b679-a8b4f67ae258
-                  type: grid
-                  _pattern: 27a48f0e-04a5-423e-95e4-d73bbed53e87
-                  _overridability:
-                    parameters:
-                      fluidContent: 'yes'
-                    hideLockedParameters: true
-            parameters:
-              gap:
-                type: dex-slider-control-parameter
-                value:
-                  mobile: '8'
-                  tablet: '8'
-                  desktop: '8'
-              spacing:
-                type: dex-space-control-parameter
-                value:
-                  mobile: {}
-                  tablet: {}
-                  desktop: {}
-              direction:
-                type: dex-segmented-control-parameter
-                value:
-                  mobile: col
-                  tablet: col
-                  desktop: col
-              alignItems:
-                type: dex-segmented-control-parameter
-                value: {}
-              displayName:
-                type: text
-                value: Profile Head
-              fluidContent:
-                type: checkbox
-                value: true
-              justifyContent:
-                type: dex-segmented-control-parameter
-                value: {}
-          - _id: 3527a0d3-1896-40c4-b1fa-4a00a5d3c163
-            type: container
-            _pattern: 67fd3820-7df7-4ace-aec8-bf57b5a2abd3
-            _dataResources:
-              Multiple Product Content:
-                type: multipleProduct
-                variables:
-                  locale: ${locale}
-                  entryIds: >-
-                    f478f705-edb5-4751-9445-18a37e48c183,367662c7-edef-47d6-93af-1262afc7a06b,734d3f04-7135-4c78-a86c-d87d3426ee9a
-            _overridability:
-              parameters:
-                spacing: 'yes'
-                fluidContent: 'yes'
-              hideLockedParameters: true
-          - _id: 7f4e65fe-d331-429d-ab30-44a94661f6fe
-            type: flex
-            _pattern: bc7c73d1-3a48-4290-b898-396eac1c398d
-            _overridability:
-              parameters:
-                fluidContent: 'yes'
-              hideLockedParameters: true
-          - _id: bbcd6230-f0a8-4353-8632-edefedcab74e
-            type: section
-            variant: columns
-            _pattern: efb7c9ed-2372-4069-b4d9-2ec45a8efbcb
-            _overridability:
-              parameters:
-                spacing: 'yes'
-                displayName: 'yes'
-                fluidContent: 'yes'
-              hideLockedParameters: true
     4b531db1-0939-41fd-9991-aa08d210bbb6|5feefc71-05dd-4004-bfe9-3dd6876628b4:
       parameters:
         text:
@@ -247,7 +230,7 @@ composition:
       parameters:
         text:
           type: text
-          value: Royale Boulder Camping French Press has been activated!
+          value: Aficionado has been activated!
     7e651a72-8e3d-4f03-bff3-01da8f0467c6|46da22a2-ba9a-4d15-b626-d893fe0fc748:
       parameters:
         text:
@@ -258,6 +241,11 @@ composition:
         text:
           type: text
           value: Learn how to maximize your investment
+    d47f2d1c-c006-4606-8901-26a23f74150b|4e7f1617-1524-4771-bad7-e871c177ef53:
+      parameters:
+        text:
+          type: text
+          value: Newb has been activated!
     fc327a1a-ef47-4793-b03b-adbb77a3ed27|dc2e95be-21b5-4476-a309-f8a34922f528:
       slots:
         $slotSectionItems:
@@ -268,159 +256,9 @@ composition:
               parameters:
                 displayName: 'yes'
               hideLockedParameters: true
-          - _id: 7e651a72-8e3d-4f03-bff3-01da8f0467c6
-            type: container
-            _pattern: 4d4c13c6-f486-42cf-aab8-afd10687a37a
-            _dataResources:
-              Product Content:
-                type: product
-                variables:
-                  slug: royale-boulder-camping-french-press-122
-                  locale: ${locale}
-            _overridability:
-              parameters:
-                displayName: 'yes'
-                backgroundColor: 'yes'
-              hideLockedParameters: true
-          - _id: 709ca836-f14b-4c48-a989-9a9a545817e6
-            type: section
-            slots:
-              sectionContent:
-                - _id: 48b47691-f2bf-4a6e-8a25-48801342c2f0
-                  type: text
-                  parameters:
-                    tag:
-                      type: dex-segmented-control-parameter
-                      value: span
-                    size:
-                      type: dex-segmented-control-parameter
-                      value:
-                        mobile: 2xl
-                        tablet: 2xl
-                        desktop: 2xl
-                    text:
-                      type: text
-                      value: >-
-                        You saved $6 today, with total savings on coffee of $78
-                        so far!
-                    weight:
-                      type: dex-segmented-control-parameter
-                      value: bold
-                - _id: 620f92df-5db3-441a-be2f-52297d1b2194
-                  type: text
-                  parameters:
-                    tag:
-                      type: dex-segmented-control-parameter
-                      value: span
-                    size:
-                      type: dex-segmented-control-parameter
-                      value:
-                        mobile: base
-                        tablet: base
-                        desktop: base
-                    text:
-                      type: text
-                      value: >-
-                        The savings are calculated based on the average cost of
-                        a cup of coffee in San Francisco Bay Area in 2022.
-                    color:
-                      type: dex-color-palette-parameter
-                      value: text-primary
-                    weight:
-                      type: dex-segmented-control-parameter
-                      value: normal
-                - _id: b11e779b-cd51-4211-acd3-0c4a8f7899c7
-                  type: flex
-                  slots:
-                    flexItem:
-                      - _id: f9ff894d-439a-4bc3-9999-f00490f5e09e
-                        type: text
-                        parameters:
-                          tag:
-                            type: dex-segmented-control-parameter
-                            value: span
-                          size:
-                            type: dex-segmented-control-parameter
-                            value:
-                              mobile: base
-                              tablet: base
-                              desktop: base
-                          text:
-                            type: text
-                            value: Wanna teach this skill to Alexa?
-                          color:
-                            type: dex-color-palette-parameter
-                            value: text-primary
-                          weight:
-                            type: dex-segmented-control-parameter
-                            value: bold
-                      - _id: 62b1d797-6b7f-4b2d-87ef-412cd35b5d51
-                        type: button
-                        _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
-                        _overridability:
-                          variants: true
-                          parameters:
-                            link: 'yes'
-                            text: 'yes'
-                            fullWidth: 'yes'
-                            textColor: 'no'
-                          hideLockedParameters: true
-                  parameters:
-                    gap:
-                      type: dex-slider-control-parameter
-                      value:
-                        mobile: '4'
-                        tablet: '8'
-                        desktop: '8'
-                    spacing:
-                      type: dex-space-control-parameter
-                      value:
-                        mobile: {}
-                        tablet: {}
-                        desktop:
-                          paddingTop: container-medium
-                          paddingBottom: container-medium
-                    direction:
-                      type: dex-segmented-control-parameter
-                      value:
-                        mobile: col
-                        tablet: col
-                        desktop: col
-                    alignItems:
-                      type: dex-segmented-control-parameter
-                      value:
-                        mobile: center
-                        tablet: center
-                        desktop: center
-                    displayName:
-                      type: text
-                      value: Add this skill
-                    justifyContent:
-                      type: dex-segmented-control-parameter
-                      value:
-                        mobile: center
-                        tablet: center
-                        desktop: center
-            parameters:
-              spacing:
-                type: dex-space-control-parameter
-                value:
-                  paddingTop: container-large
-                  paddingBottom: container-large
-              displayName:
-                type: text
-                value: >-
-                  You saved $6 today, with total savings on coffee of $78 so
-                  far!
-              fluidContent:
-                type: checkbox
-                value: true
-              contentAlignment:
-                type: dex-segmented-control-parameter
-                value: center
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-03-07T10:45:04.168402+00:00'
-modified: '2025-03-10T14:32:29.996302+00:00'
+created: '2025-03-25T04:27:52.553325+00:00'
+modified: '2025-03-31T11:36:34.395437+00:00'
 pattern: false

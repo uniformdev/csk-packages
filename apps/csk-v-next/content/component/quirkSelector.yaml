@@ -128,11 +128,24 @@ categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/button.jpg
 useTeamPermissions: true
-slots: []
+slots:
+  - id: saveButton
+    name: Save Button
+    allowedComponents:
+      - button
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: successMessage
+    name: Success Message
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
 thumbnailParameter: icon
 canBeComposition: false
-created: '2025-03-10T11:40:04.90033+00:00'
-updated: '2025-03-10T14:34:03.194063+00:00'
+created: '2025-03-25T04:27:41.585179+00:00'
+updated: '2025-03-31T11:06:06.974762+00:00'
 variants:
   - id: link
     name: Link

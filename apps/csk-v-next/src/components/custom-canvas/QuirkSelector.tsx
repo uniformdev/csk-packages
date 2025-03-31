@@ -1,8 +1,8 @@
 'use client';
 
-import { FC, useMemo } from 'react';
+import { FC, useEffect, useMemo, useState } from 'react';
 import { DefaultTheme } from 'tailwindcss/types/generated/default-theme';
-import { useUniformContext } from '@uniformdev/canvas-next-rsc/component';
+import { ComponentProps, UniformSlot, useUniformContext } from '@uniformdev/canvas-next-rsc/component';
 import { useQuirks } from '@uniformdev/canvas-next-rsc-client';
 import { ViewPort } from '@uniformdev/csk-components/types/cskTypes';
 import { cn } from '@uniformdev/csk-components/utils/styling';
@@ -10,7 +10,7 @@ import { resolveViewPort } from '@uniformdev/csk-components/utils/styling';
 
 type TextSize = keyof DefaultTheme['fontSize'];
 
-type QuirkSelectorProps = {
+type QuirkSelectorParameters = {
   quirkId: string;
   variants: string;
   fullWidth?: boolean;
@@ -24,6 +24,13 @@ type QuirkSelectorProps = {
   backgroundColor?: string;
 };
 
+enum QuirkSelectorSlots {
+  SaveButton = 'saveButton',
+  SuccessMessage = 'successMessage',
+}
+
+type QuirkSelectorProps = ComponentProps<QuirkSelectorParameters, QuirkSelectorSlots>;
+
 const QuirkSelector: FC<QuirkSelectorProps> = ({
   quirkId,
   fullWidth,
@@ -36,9 +43,15 @@ const QuirkSelector: FC<QuirkSelectorProps> = ({
   textFont,
   size,
   variants,
+  component,
+  context,
+  slots,
 }) => {
   const quirks = useQuirks();
-  const { context } = useUniformContext();
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [selectedQuirk, setSelectedQuirk] = useState(quirks?.[quirkId]);
+
+  const { context: uniformContext } = useUniformContext();
 
   const baseStyles = cn(
     'block w-max font-medium focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50',
@@ -56,12 +69,21 @@ const QuirkSelector: FC<QuirkSelectorProps> = ({
   );
 
   const onChange = async (e: React.ChangeEvent<HTMLSelectElement>) => {
-    await context?.update({
+    setSelectedQuirk(e.target.value);
+  };
+
+  const onSave = async () => {
+    setIsSuccess(true);
+    await uniformContext?.update({
       quirks: {
-        ...context?.quirks,
-        [quirkId]: e.target.value,
+        ...uniformContext?.quirks,
+        [quirkId]: selectedQuirk,
       },
     });
+
+    setTimeout(() => {
+      setIsSuccess(false);
+    }, 3000);
   };
 
   const variantsToRender = useMemo(
@@ -73,15 +95,37 @@ const QuirkSelector: FC<QuirkSelectorProps> = ({
     [variants]
   );
 
+  useEffect(() => {
+    const newQuirk = quirks?.[quirkId];
+
+    setSelectedQuirk(newQuirk);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [quirks]);
+
   return (
-    <select className={baseStyles} onChange={onChange} value={quirks?.[quirkId]}>
-      <option value="">Select your quirk</option>
-      {variantsToRender?.map(variant => (
-        <option key={variant.value} value={variant.value}>
-          {variant.label}
-        </option>
-      ))}
-    </select>
+    <div className="flex flex-col gap-y-8">
+      <select className={baseStyles} onChange={onChange} value={selectedQuirk}>
+        <option value="">Select your quirk</option>
+        {variantsToRender?.map(variant => (
+          <option key={variant.value} value={variant.value}>
+            {variant.label}
+          </option>
+        ))}
+      </select>
+
+      <div onClick={onSave}>
+        <UniformSlot context={context} data={component} slot={slots.saveButton} />
+      </div>
+
+      <div
+        className={cn('transition-opacity duration-300', {
+          'opacity-0 h-0': !isSuccess,
+          'opacity-100 h-auto': isSuccess,
+        })}
+      >
+        <UniformSlot context={context} data={component} slot={slots.successMessage} />
+      </div>
+    </div>
   );
 };
 
