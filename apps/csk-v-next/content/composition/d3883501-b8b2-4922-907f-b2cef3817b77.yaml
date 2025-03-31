@@ -125,17 +125,50 @@ composition:
                             fields:
                               cat:
                                 type: text
-                                value: subCategory
+                                value: int
                               key:
                                 type: text
                                 value: >-
-                                  ${#jptr:/Loop Product Category
+                                  ${#jptr:/Loop Product Interest
                                   Items/entry/_slug}
                               str:
                                 type: text
                                 value: '5'
                     _dataResources:
-                      Loop Product Category Items:
+                      Loop Product Interest Items:
+                        type: sys-reserved-loop
+                        variables:
+                          connectedData: >-
+                            #jptr:/Product
+                            Content/entry/fields/category/value:fa=c
+          - _id: 5dd0b240-de58-47b6-b669-237c9701f04d
+            type: enrichmentSetter
+            parameters:
+              enrichments:
+                type: $block
+                value:
+                  - _id: 7c095c6b-3aab-49a0-9ef5-95753668b891
+                    type: $loop
+                    fields:
+                      body:
+                        type: $block
+                        value:
+                          - _id: 30ef3a24-93e6-4607-a133-3d405fd28dc3
+                            type: enrichment
+                            fields:
+                              cat:
+                                type: text
+                                value: subCategory
+                              key:
+                                type: text
+                                value: >-
+                                  ${#jptr:/Loop Product Sub Category
+                                  Items/entry/_slug}
+                              str:
+                                type: text
+                                value: '5'
+                    _dataResources:
+                      Loop Product Sub Category Items:
                         type: sys-reserved-loop
                         variables:
                           connectedData: >-
@@ -145,5 +178,5 @@ composition:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-03-25T04:27:52.309699+00:00'
-modified: '2025-03-28T17:38:34.292008+00:00'
+modified: '2025-03-31T12:40:04.252426+00:00'
 pattern: false
