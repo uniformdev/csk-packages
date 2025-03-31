@@ -675,6 +675,55 @@ composition:
                 displayName: 'yes'
                 backgroundColor: 'yes'
               hideLockedParameters: true
+          - _id: dcee15ec-e95c-40b9-88bc-bacab9d4d141
+            type: dynamicRecommendations
+            slots:
+              dynamicRecommendationsTitle:
+                - _id: 86ee04d5-88fd-421c-8f22-6644ea83afd5
+                  type: text
+                  parameters:
+                    tag:
+                      type: dex-segmented-control-parameter
+                      value: span
+                    size:
+                      type: dex-segmented-control-parameter
+                      value:
+                        mobile: 2xl
+                        tablet: 4xl
+                        desktop: 4xl
+                    text:
+                      type: text
+                      locales:
+                        en: Your Recommendations
+                    color:
+                      type: dex-color-palette-parameter
+                      value: text-primary
+                    weight:
+                      type: dex-segmented-control-parameter
+                      value: bold
+                    alignment:
+                      type: dex-segmented-control-parameter
+                      value: center
+            parameters:
+              spacing:
+                type: dex-space-control-parameter
+                value:
+                  mobile:
+                    paddingTop: container-medium
+                    paddingBottom: container-medium
+                  tablet:
+                    paddingTop: container-medium
+                    paddingBottom: container-medium
+                  desktop:
+                    paddingTop: container-medium
+                    paddingBottom: container-medium
+              displayName:
+                type: text
+                locales:
+                  en: Recommendations
+              loadingIndicatorColor:
+                type: dex-color-palette-parameter
+                value: general-color-2
           - _id: 13a58c2b-eced-49bc-98fb-13c6ed96c9e7
             type: grid
             _pattern: 2fa494d2-d69a-49bc-b728-229a1684d77f
@@ -686,5 +735,5 @@ composition:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-03-25T04:27:50.97015+00:00'
-modified: '2025-03-31T09:15:10.076003+00:00'
+modified: '2025-03-31T13:50:20.61912+00:00'
 pattern: false

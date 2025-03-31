@@ -1,0 +1,88 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: dynamicRecommendations
+name: Dynamic Recommendations
+icon: rectangle-rounded
+parameters:
+  - id: displayName
+    name: Display name
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: 12bf2dab-85ef-426b-8d1d-b10029e01d69
+    name: Loading Indicator
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - loadingIndicatorColor
+  - id: loadingIndicatorColor
+    name: Color
+    type: dex-color-palette-parameter
+    typeConfig: null
+  - id: e991ff8c-dd30-4578-bba1-68ae0350e10b
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - spacing
+        - border
+        - backgroundColor
+        - fitContent
+        - relative
+        - fluidContent
+        - fullHeight
+  - id: spacing
+    name: Spacing
+    type: dex-space-control-parameter
+    typeConfig:
+      type: dimensions
+      defaultValue:
+        mobile: {}
+        tablet: {}
+        desktop: {}
+      withViewPort: true
+      selectedGroup: container
+  - id: border
+    name: Border
+    type: dex-token-selector-parameter
+    typeConfig:
+      selectedTokenType: border
+  - id: backgroundColor
+    name: Background Color
+    type: dex-color-palette-parameter
+    typeConfig: null
+  - id: fitContent
+    name: Fit Content
+    type: checkbox
+    typeConfig: null
+  - id: relative
+    name: Relative
+    type: checkbox
+    typeConfig: null
+  - id: fluidContent
+    name: Fluid Content
+    type: checkbox
+    typeConfig: null
+  - id: fullHeight
+    name: Full Height
+    type: checkbox
+    typeConfig: null
+categoryId: ae15b0f6-4953-4ccb-9984-ad0525e77b01
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/container-default.jpg
+useTeamPermissions: true
+slots:
+  - id: dynamicRecommendationsTitle
+    name: Dynamic Recommendations Title
+    maxComponents: 1
+    allowedComponents:
+      - text
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: displayName
+canBeComposition: false
+created: '2025-03-31T13:16:11.774508+00:00'
+updated: '2025-03-31T13:48:39.117569+00:00'

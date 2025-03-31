@@ -5,6 +5,7 @@ import Button from './Button';
 import CompleteCheckoutButton from './CompleteCheckoutButton';
 import Container from './Container';
 import CustomComponent from './CustomComponent';
+import DynamicRecommendations from './DynamicRecommendations';
 import EnrichmentSetter from './EnrichmentSetter';
 import EntriesSearchBox from './EntriesSearchBox';
 import EntriesSearchEngine from './EntriesSearchEngine';
@@ -65,4 +66,5 @@ export const customComponentsMapping: ComponentMapping = {
   entriesSearchFilters: { component: EntriesSearchFilters },
   entriesSearchList: { component: EntriesSearchList },
   entriesSearchPagination: { component: EntriesSearchPagination },
+  dynamicRecommendations: { component: DynamicRecommendations },
 };
