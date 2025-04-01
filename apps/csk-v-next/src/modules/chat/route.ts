@@ -63,6 +63,7 @@ const getProductRecommendations = async ({
     defaultConsent: true,
     transitionStore: new CookieTransitionDataStore({
       serverCookieValue: scoreCookie,
+      experimental_quirksEnabled: true,
     }),
   });
 

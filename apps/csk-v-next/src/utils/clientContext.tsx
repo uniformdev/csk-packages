@@ -29,6 +29,7 @@ export const UniformClientContext: ClientContextComponent = ({ manifest }) => {
       manifest,
       plugins,
       defaultConsent: true,
+      experimental_quirksEnabled: true,
     });
   });
 
