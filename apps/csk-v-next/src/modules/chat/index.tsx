@@ -2,6 +2,8 @@
 
 import { FC, useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
+import { IN_CONTEXT_EDITOR_QUERY_STRING_PARAM } from '@uniformdev/canvas';
 import { useScores, useUniformContext } from '@uniformdev/canvas-next-rsc-client';
 import { EnrichmentData } from '@uniformdev/context';
 import { cn } from '@uniformdev/csk-components/utils/styling';
@@ -21,10 +23,13 @@ const Chat: FC = () => {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(false);
   const pathname = usePathname();
+  const searchParams = useSearchParams();
   const [recommendationReceivedIndex, setRecommendationReceivedIndex] = useState<number>(-1);
 
   const scores = useScores();
   const { context } = useUniformContext();
+
+  const isPreviewMode = searchParams.get(IN_CONTEXT_EDITOR_QUERY_STRING_PARAM) === 'true';
 
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const prevScoresRef = useRef(scores);
@@ -74,7 +79,7 @@ const Chat: FC = () => {
   }, [messages]);
 
   useEffect(() => {
-    if (recommendationReceivedIndex !== -1) {
+    if (recommendationReceivedIndex !== -1 || isPreviewMode) {
       return;
     }
 
@@ -90,9 +95,11 @@ const Chat: FC = () => {
         });
       }
     }
-  }, [scores, recommendationReceivedIndex, append]);
+  }, [scores, recommendationReceivedIndex, append, isPreviewMode]);
 
   const showThinking = !['ready', 'error'].includes(status);
+
+  if (isPreviewMode) return null;
 
   return (
     <div>
