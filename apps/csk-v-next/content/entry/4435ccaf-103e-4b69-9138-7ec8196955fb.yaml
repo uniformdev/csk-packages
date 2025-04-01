@@ -1,5 +1,5 @@
 created: '2025-03-25T04:30:37.01414+00:00'
-modified: '2025-03-31T15:48:59.023172+00:00'
+modified: '2025-04-01T11:33:33.666378+00:00'
 pattern: false
 entry:
   _id: 4435ccaf-103e-4b69-9138-7ec8196955fb
@@ -1244,6 +1244,9 @@ entry:
     category:
       type: contentReference
       value: ${#jptr:/ref-4435ccaf-103e-4b69-9138-7ec8196955fb-category/entries}
+    interest:
+      type: select
+      value: beans
     variants:
       type: $block
       value:

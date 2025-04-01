@@ -1,5 +1,5 @@
 created: '2025-03-25T04:30:03.906205+00:00'
-modified: '2025-04-01T09:35:10.025556+00:00'
+modified: '2025-04-01T11:29:06.654256+00:00'
 pattern: false
 entry:
   _id: e79e0ce3-81ff-4431-803d-45c6ba75f077
@@ -1075,6 +1075,9 @@ entry:
     category:
       type: contentReference
       value: ${#jptr:/ref-e79e0ce3-81ff-4431-803d-45c6ba75f077-category/entries}
+    interest:
+      type: select
+      value: coffee-makers
     variants:
       type: $block
       value:

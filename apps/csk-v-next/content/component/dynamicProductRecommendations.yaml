@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
-id: dynamicRecommendations
-name: Dynamic Recommendations
+id: dynamicProductRecommendations
+name: Dynamic Product Recommendations
 icon: rectangle-rounded
 parameters:
   - id: displayName
@@ -9,6 +9,13 @@ parameters:
     type: text
     typeConfig: null
     localizable: true
+  - id: boostEnrichment
+    name: Boost Enrichment
+    type: select
+    typeConfig:
+      options:
+        - text: Interest
+          value: int
   - id: 12bf2dab-85ef-426b-8d1d-b10029e01d69
     name: Loading Indicator
     type: group
@@ -84,5 +91,5 @@ slots:
     patternsInAllowedComponents: false
 titleParameter: displayName
 canBeComposition: false
-created: '2025-03-31T13:16:11.774508+00:00'
-updated: '2025-03-31T13:48:39.117569+00:00'
+created: '2025-04-01T09:40:38.724788+00:00'
+updated: '2025-04-01T09:56:18.683685+00:00'

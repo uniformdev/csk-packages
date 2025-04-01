@@ -1,5 +1,5 @@
 created: '2025-03-25T04:29:51.268192+00:00'
-modified: '2025-03-31T15:58:17.393599+00:00'
+modified: '2025-04-01T11:33:03.576202+00:00'
 pattern: false
 entry:
   _id: 367662c7-edef-47d6-93af-1262afc7a06b
@@ -1236,6 +1236,9 @@ entry:
     category:
       type: contentReference
       value: ${#jptr:/ref-367662c7-edef-47d6-93af-1262afc7a06b-category/entries}
+    interest:
+      type: select
+      value: beans
     variants:
       type: $block
       value:

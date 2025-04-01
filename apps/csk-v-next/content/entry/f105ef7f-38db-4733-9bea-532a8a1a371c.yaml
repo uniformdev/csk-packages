@@ -1,12 +1,12 @@
-created: '2025-01-29T11:10:29.414294+00:00'
-modified: '2025-01-29T11:10:29.414294+00:00'
+created: '2025-03-25T04:31:32.86376+00:00'
+modified: '2025-04-01T11:42:54.120033+00:00'
 pattern: false
 entry:
   _id: f105ef7f-38db-4733-9bea-532a8a1a371c
   _name: Milk carafe
   _slug: milk-carafe-144
   _thumbnail: >-
-    https://img.uniform.global/p/N0QOqjXvSFeXY7i3yzY8ZQ/m8YvZZ-ATQOavd2bKc40bw-milk-carafe-1.png
+    https://img.uniform.global/p/9VlMgIbZQQKI2wzV-L0jow/k6dJQ3JQQGOstrC76KHP7g-milk-carafe-1.png
   type: product
   fields:
     body:
@@ -117,6 +117,9 @@ entry:
     category:
       type: contentReference
       value: ${#jptr:/ref-f105ef7f-38db-4733-9bea-532a8a1a371c-category/entries}
+    interest:
+      type: select
+      value: everyone
     variants:
       type: $block
       value:
@@ -149,7 +152,7 @@ entry:
                       value: b1e79a4b-f663-494c-abdc-025d7c047d2a
                     url:
                       value: >-
-                        https://img.uniform.global/p/N0QOqjXvSFeXY7i3yzY8ZQ/m8YvZZ-ATQOavd2bKc40bw-milk-carafe-1.png
+                        https://img.uniform.global/p/ovl3f_RJSNmuo41YikmFlA/7eKCzkrfRT6jzkQh_g2rNQ-milk-carafe-1.png
                       type: text
                     file:
                       type: file
@@ -181,7 +184,7 @@ entry:
               value: b1e79a4b-f663-494c-abdc-025d7c047d2a
             url:
               value: >-
-                https://img.uniform.global/p/N0QOqjXvSFeXY7i3yzY8ZQ/m8YvZZ-ATQOavd2bKc40bw-milk-carafe-1.png
+                https://img.uniform.global/p/ovl3f_RJSNmuo41YikmFlA/7eKCzkrfRT6jzkQh_g2rNQ-milk-carafe-1.png
               type: text
             file:
               type: file

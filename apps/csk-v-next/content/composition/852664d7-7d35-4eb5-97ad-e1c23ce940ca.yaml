@@ -675,8 +675,8 @@ composition:
                 displayName: 'yes'
                 backgroundColor: 'yes'
               hideLockedParameters: true
-          - _id: dcee15ec-e95c-40b9-88bc-bacab9d4d141
-            type: dynamicRecommendations
+          - _id: cf8dc5a9-71a7-4fac-bde1-f1185a62af80
+            type: dynamicProductRecommendations
             slots:
               dynamicRecommendationsTitle:
                 - _id: 86ee04d5-88fd-421c-8f22-6644ea83afd5
@@ -721,6 +721,9 @@ composition:
                 type: text
                 locales:
                   en: Recommendations
+              boostEnrichment:
+                type: select
+                value: int
               loadingIndicatorColor:
                 type: dex-color-palette-parameter
                 value: general-color-2
@@ -735,5 +738,5 @@ composition:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-03-25T04:27:50.97015+00:00'
-modified: '2025-03-31T13:50:20.61912+00:00'
+modified: '2025-04-01T09:56:40.051096+00:00'
 pattern: false
