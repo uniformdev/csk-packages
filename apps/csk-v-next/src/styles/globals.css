@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html {
-    scrollbar-gutter: stable;
-  }
-}
-
-
 @layer utilities {
   .thin-scrollbar::-webkit-scrollbar {
     width: 6px;
