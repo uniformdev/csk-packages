@@ -1,5 +1,5 @@
 created: '2025-03-25T04:29:48.560539+00:00'
-modified: '2025-04-01T11:44:19.53935+00:00'
+modified: '2025-04-01T16:33:22.398682+00:00'
 pattern: false
 entry:
   _id: 42e91a5d-1821-4127-a924-81c0f5c8a36a
@@ -78,10 +78,7 @@ entry:
       value: Coffee Removable Filter Holder for Specialty Coffee Maker
     category:
       type: contentReference
-      value: ${#jptr:/ref-42e91a5d-1821-4127-a924-81c0f5c8a36a-category/entries}
-    interest:
-      type: select
-      value: everyone
+      value: ${#jptr:/ref-42e91a5d-1821-4127-a924-81c0f5c8a36a-category/entries/0}
     variants:
       type: $block
       value:

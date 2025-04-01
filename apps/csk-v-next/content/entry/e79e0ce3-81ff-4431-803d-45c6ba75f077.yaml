@@ -1,5 +1,5 @@
 created: '2025-03-25T04:30:03.906205+00:00'
-modified: '2025-04-01T11:29:06.654256+00:00'
+modified: '2025-04-01T16:39:57.942279+00:00'
 pattern: false
 entry:
   _id: e79e0ce3-81ff-4431-803d-45c6ba75f077
@@ -1074,10 +1074,7 @@ entry:
       value: Ember Hammered Copper Pot
     category:
       type: contentReference
-      value: ${#jptr:/ref-e79e0ce3-81ff-4431-803d-45c6ba75f077-category/entries}
-    interest:
-      type: select
-      value: coffee-makers
+      value: ${#jptr:/ref-e79e0ce3-81ff-4431-803d-45c6ba75f077-category/entries/0}
     variants:
       type: $block
       value:
@@ -1169,6 +1166,9 @@ entry:
         - cat: subCategory
           key: turkish
           str: 5
+    subcategory:
+      type: contentReference
+      value: ${#jptr:/ref-e79e0ce3-81ff-4431-803d-45c6ba75f077-subcategory/entries/0}
     primaryImage:
       type: asset
       value:
@@ -1224,8 +1224,12 @@ entry:
       type: uniformContentInternalReference
       variables:
         locale: ${locale}
-        entryIds: >-
-          ba6763eb-aa88-4bec-bbcb-20613499cfad,2f6cc670-cdaa-4532-b70e-424206c8d0ba
+        entryIds: 2f6cc670-cdaa-4532-b70e-424206c8d0ba
+    ref-e79e0ce3-81ff-4431-803d-45c6ba75f077-subcategory:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: ba6763eb-aa88-4bec-bbcb-20613499cfad
     ref-e79e0ce3-81ff-4431-803d-45c6ba75f077-recommendations:
       type: uniformContentInternalReference
       variables:

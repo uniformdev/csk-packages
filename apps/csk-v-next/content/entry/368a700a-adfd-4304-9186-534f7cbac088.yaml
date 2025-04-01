@@ -1,5 +1,5 @@
 created: '2025-03-25T04:30:07.975867+00:00'
-modified: '2025-04-01T11:45:06.7942+00:00'
+modified: '2025-04-01T16:35:43.798688+00:00'
 pattern: false
 entry:
   _id: 368a700a-adfd-4304-9186-534f7cbac088
@@ -1017,10 +1017,7 @@ entry:
       value: Ember Luxury Ottoman Coffee & Espresso Set
     category:
       type: contentReference
-      value: ${#jptr:/ref-368a700a-adfd-4304-9186-534f7cbac088-category/entries}
-    interest:
-      type: select
-      value: coffee-makers
+      value: ${#jptr:/ref-368a700a-adfd-4304-9186-534f7cbac088-category/entries/0}
     variants:
       type: $block
       value:
@@ -1112,6 +1109,9 @@ entry:
         - cat: subCategory
           key: turkish
           str: 5
+    subcategory:
+      type: contentReference
+      value: ${#jptr:/ref-368a700a-adfd-4304-9186-534f7cbac088-subcategory/entries/0}
     primaryImage:
       type: asset
       value:
@@ -1173,8 +1173,12 @@ entry:
       type: uniformContentInternalReference
       variables:
         locale: ${locale}
-        entryIds: >-
-          ba6763eb-aa88-4bec-bbcb-20613499cfad,2f6cc670-cdaa-4532-b70e-424206c8d0ba
+        entryIds: 2f6cc670-cdaa-4532-b70e-424206c8d0ba
+    ref-368a700a-adfd-4304-9186-534f7cbac088-subcategory:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: ba6763eb-aa88-4bec-bbcb-20613499cfad
     ref-368a700a-adfd-4304-9186-534f7cbac088-recommendations:
       type: uniformContentInternalReference
       variables:

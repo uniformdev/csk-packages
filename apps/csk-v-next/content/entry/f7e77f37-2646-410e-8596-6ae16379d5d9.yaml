@@ -1,5 +1,5 @@
 created: '2025-03-25T04:31:26.20173+00:00'
-modified: '2025-04-01T11:42:18.597948+00:00'
+modified: '2025-04-01T16:36:20.174639+00:00'
 pattern: false
 entry:
   _id: f7e77f37-2646-410e-8596-6ae16379d5d9
@@ -1245,10 +1245,7 @@ entry:
       value: Light Roast Coffee
     category:
       type: contentReference
-      value: ${#jptr:/ref-f7e77f37-2646-410e-8596-6ae16379d5d9-category/entries}
-    interest:
-      type: select
-      value: beans
+      value: ${#jptr:/ref-f7e77f37-2646-410e-8596-6ae16379d5d9-category/entries/0}
     variants:
       type: $block
       value:
@@ -1311,6 +1308,9 @@ entry:
         - cat: subCategory
           key: arabica
           str: 5
+    subcategory:
+      type: contentReference
+      value: ${#jptr:/ref-f7e77f37-2646-410e-8596-6ae16379d5d9-subcategory/entries/0}
     primaryImage:
       type: asset
       value:
@@ -1367,8 +1367,12 @@ entry:
       type: uniformContentInternalReference
       variables:
         locale: ${locale}
-        entryIds: >-
-          ae8e04c4-f20b-46f5-9eb4-7d8f82bbee38,9853aed9-07d5-4d58-a45b-c23157e149fe
+        entryIds: ae8e04c4-f20b-46f5-9eb4-7d8f82bbee38
+    ref-f7e77f37-2646-410e-8596-6ae16379d5d9-subcategory:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: 9853aed9-07d5-4d58-a45b-c23157e149fe
     ref-f7e77f37-2646-410e-8596-6ae16379d5d9-recommendations:
       type: uniformContentInternalReference
       variables:

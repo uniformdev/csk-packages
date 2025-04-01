@@ -1,5 +1,5 @@
 created: '2025-03-25T04:29:10.334925+00:00'
-modified: '2025-04-01T11:27:31.059926+00:00'
+modified: '2025-04-01T16:38:23.670377+00:00'
 pattern: false
 entry:
   _id: 28bf4036-f588-4ee0-94bb-241d39270972
@@ -1058,10 +1058,7 @@ entry:
       value: Black Mountain French Press Coffee Maker
     category:
       type: contentReference
-      value: ${#jptr:/ref-28bf4036-f588-4ee0-94bb-241d39270972-category/entries}
-    interest:
-      type: select
-      value: coffee-makers
+      value: ${#jptr:/ref-28bf4036-f588-4ee0-94bb-241d39270972-category/entries/0}
     variants:
       type: $block
       value:
@@ -1153,6 +1150,9 @@ entry:
         - cat: subCategory
           key: french-press
           str: 5
+    subcategory:
+      type: contentReference
+      value: ${#jptr:/ref-28bf4036-f588-4ee0-94bb-241d39270972-subcategory/entries/0}
     primaryImage:
       type: asset
       value:
@@ -1214,8 +1214,12 @@ entry:
       type: uniformContentInternalReference
       variables:
         locale: ${locale}
-        entryIds: >-
-          0c97e1ea-e717-4942-adb4-88f7a1aa2021,2f6cc670-cdaa-4532-b70e-424206c8d0ba
+        entryIds: 2f6cc670-cdaa-4532-b70e-424206c8d0ba
+    ref-28bf4036-f588-4ee0-94bb-241d39270972-subcategory:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: 0c97e1ea-e717-4942-adb4-88f7a1aa2021
     ref-28bf4036-f588-4ee0-94bb-241d39270972-recommendations:
       type: uniformContentInternalReference
       variables:

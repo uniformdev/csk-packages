@@ -1,5 +1,5 @@
 created: '2025-03-25T04:31:35.964785+00:00'
-modified: '2025-04-01T11:42:36.314237+00:00'
+modified: '2025-04-01T16:35:58.298888+00:00'
 pattern: false
 entry:
   _id: ff365bbd-13c4-43ab-9747-e4cf5a85a4ce
@@ -1304,10 +1304,7 @@ entry:
       value: Organic Blend Coffee
     category:
       type: contentReference
-      value: ${#jptr:/ref-ff365bbd-13c4-43ab-9747-e4cf5a85a4ce-category/entries}
-    interest:
-      type: select
-      value: beans
+      value: ${#jptr:/ref-ff365bbd-13c4-43ab-9747-e4cf5a85a4ce-category/entries/0}
     variants:
       type: $block
       value:
@@ -1370,6 +1367,9 @@ entry:
         - cat: subCategory
           key: robusta
           str: 5
+    subcategory:
+      type: contentReference
+      value: ${#jptr:/ref-ff365bbd-13c4-43ab-9747-e4cf5a85a4ce-subcategory/entries/0}
     primaryImage:
       type: asset
       value:
@@ -1426,8 +1426,12 @@ entry:
       type: uniformContentInternalReference
       variables:
         locale: ${locale}
-        entryIds: >-
-          2b754075-62b2-49bd-aa8a-dd47435e9791,ae8e04c4-f20b-46f5-9eb4-7d8f82bbee38
+        entryIds: ae8e04c4-f20b-46f5-9eb4-7d8f82bbee38
+    ref-ff365bbd-13c4-43ab-9747-e4cf5a85a4ce-subcategory:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: 2b754075-62b2-49bd-aa8a-dd47435e9791
     ref-ff365bbd-13c4-43ab-9747-e4cf5a85a4ce-recommendations:
       type: uniformContentInternalReference
       variables:

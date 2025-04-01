@@ -1,5 +1,5 @@
 created: '2025-03-25T04:30:29.682238+00:00'
-modified: '2025-04-01T11:44:36.873993+00:00'
+modified: '2025-04-01T16:33:07.594525+00:00'
 pattern: false
 entry:
   _id: 34c9ed02-ac16-456b-a6c1-60c46f679603
@@ -78,10 +78,7 @@ entry:
       value: Glass Carafe & Brew-Through Lid
     category:
       type: contentReference
-      value: ${#jptr:/ref-34c9ed02-ac16-456b-a6c1-60c46f679603-category/entries}
-    interest:
-      type: select
-      value: everyone
+      value: ${#jptr:/ref-34c9ed02-ac16-456b-a6c1-60c46f679603-category/entries/0}
     variants:
       type: $block
       value:

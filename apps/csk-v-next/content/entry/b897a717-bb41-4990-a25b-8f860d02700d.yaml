@@ -1,5 +1,5 @@
 created: '2025-03-25T04:30:53.25326+00:00'
-modified: '2025-04-01T11:41:59.339194+00:00'
+modified: '2025-04-01T16:36:32.80335+00:00'
 pattern: false
 entry:
   _id: b897a717-bb41-4990-a25b-8f860d02700d
@@ -1242,10 +1242,7 @@ entry:
       value: Irish Blend Coffee
     category:
       type: contentReference
-      value: ${#jptr:/ref-b897a717-bb41-4990-a25b-8f860d02700d-category/entries}
-    interest:
-      type: select
-      value: beans
+      value: ${#jptr:/ref-b897a717-bb41-4990-a25b-8f860d02700d-category/entries/0}
     variants:
       type: $block
       value:
@@ -1308,6 +1305,9 @@ entry:
         - cat: subCategory
           key: liberica
           str: 5
+    subcategory:
+      type: contentReference
+      value: ${#jptr:/ref-b897a717-bb41-4990-a25b-8f860d02700d-subcategory/entries/0}
     primaryImage:
       type: asset
       value:
@@ -1362,8 +1362,12 @@ entry:
       type: uniformContentInternalReference
       variables:
         locale: ${locale}
-        entryIds: >-
-          4e8f00c8-a2da-4a73-8431-8888d88def25,ae8e04c4-f20b-46f5-9eb4-7d8f82bbee38
+        entryIds: ae8e04c4-f20b-46f5-9eb4-7d8f82bbee38
+    ref-b897a717-bb41-4990-a25b-8f860d02700d-subcategory:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: 4e8f00c8-a2da-4a73-8431-8888d88def25
     ref-b897a717-bb41-4990-a25b-8f860d02700d-recommendations:
       type: uniformContentInternalReference
       variables:

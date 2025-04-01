@@ -1,5 +1,5 @@
 created: '2025-03-25T04:30:21.379463+00:00'
-modified: '2025-04-01T11:33:19.59674+00:00'
+modified: '2025-04-01T16:54:23.046742+00:00'
 pattern: false
 entry:
   _id: 3e3af534-0999-4bcb-b479-3bd693173c83
@@ -1309,10 +1309,7 @@ entry:
       value: Ethiopian Blend Coffee
     category:
       type: contentReference
-      value: ${#jptr:/ref-3e3af534-0999-4bcb-b479-3bd693173c83-category/entries}
-    interest:
-      type: select
-      value: beans
+      value: ${#jptr:/ref-3e3af534-0999-4bcb-b479-3bd693173c83-category/entries/0}
     variants:
       type: $block
       value:
@@ -1372,6 +1369,9 @@ entry:
         - cat: int
           key: beans
           str: 5
+    subcategory:
+      type: contentReference
+      value: ${#jptr:/ref-3e3af534-0999-4bcb-b479-3bd693173c83-subcategory/entries/0}
     primaryImage:
       type: asset
       value:
@@ -1430,8 +1430,12 @@ entry:
       type: uniformContentInternalReference
       variables:
         locale: ${locale}
-        entryIds: >-
-          4e8f00c8-a2da-4a73-8431-8888d88def25,ae8e04c4-f20b-46f5-9eb4-7d8f82bbee38
+        entryIds: ae8e04c4-f20b-46f5-9eb4-7d8f82bbee38
+    ref-3e3af534-0999-4bcb-b479-3bd693173c83-subcategory:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: 4e8f00c8-a2da-4a73-8431-8888d88def25
     ref-3e3af534-0999-4bcb-b479-3bd693173c83-recommendations:
       type: uniformContentInternalReference
       variables:

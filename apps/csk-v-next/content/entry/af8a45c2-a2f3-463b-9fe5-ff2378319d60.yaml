@@ -1,5 +1,5 @@
 created: '2025-03-25T04:30:46.049575+00:00'
-modified: '2025-04-01T11:30:29.482177+00:00'
+modified: '2025-04-01T16:52:16.448783+00:00'
 pattern: false
 entry:
   _id: af8a45c2-a2f3-463b-9fe5-ff2378319d60
@@ -1021,10 +1021,7 @@ entry:
       value: Impresso Perk for simple perfection
     category:
       type: contentReference
-      value: ${#jptr:/ref-af8a45c2-a2f3-463b-9fe5-ff2378319d60-category/entries}
-    interest:
-      type: select
-      value: coffee-makers
+      value: ${#jptr:/ref-af8a45c2-a2f3-463b-9fe5-ff2378319d60-category/entries/0}
     variants:
       type: $block
       value:
@@ -1087,6 +1084,9 @@ entry:
         - cat: subCategory
           key: percolators
           str: 5
+    subcategory:
+      type: contentReference
+      value: ${#jptr:/ref-af8a45c2-a2f3-463b-9fe5-ff2378319d60-subcategory/entries/0}
     primaryImage:
       type: asset
       value:
@@ -1143,8 +1143,12 @@ entry:
       type: uniformContentInternalReference
       variables:
         locale: ${locale}
-        entryIds: >-
-          7c33133b-4267-4e85-8663-730f9a14d7e3,2f6cc670-cdaa-4532-b70e-424206c8d0ba
+        entryIds: 2f6cc670-cdaa-4532-b70e-424206c8d0ba
+    ref-af8a45c2-a2f3-463b-9fe5-ff2378319d60-subcategory:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: 7c33133b-4267-4e85-8663-730f9a14d7e3
     ref-af8a45c2-a2f3-463b-9fe5-ff2378319d60-recommendations:
       type: uniformContentInternalReference
       variables:

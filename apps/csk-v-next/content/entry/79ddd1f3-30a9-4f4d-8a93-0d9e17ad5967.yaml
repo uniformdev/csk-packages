@@ -1,5 +1,5 @@
 created: '2025-03-25T04:29:18.576002+00:00'
-modified: '2025-04-01T11:40:54.805082+00:00'
+modified: '2025-04-01T16:37:10.44058+00:00'
 pattern: false
 entry:
   _id: 79ddd1f3-30a9-4f4d-8a93-0d9e17ad5967
@@ -1243,10 +1243,7 @@ entry:
       value: Breakfast Blend Coffee
     category:
       type: contentReference
-      value: ${#jptr:/ref-79ddd1f3-30a9-4f4d-8a93-0d9e17ad5967-category/entries}
-    interest:
-      type: select
-      value: beans
+      value: ${#jptr:/ref-79ddd1f3-30a9-4f4d-8a93-0d9e17ad5967-category/entries/0}
     variants:
       type: $block
       value:
@@ -1309,6 +1306,9 @@ entry:
         - cat: subCategory
           key: arabica
           str: 5
+    subcategory:
+      type: contentReference
+      value: ${#jptr:/ref-79ddd1f3-30a9-4f4d-8a93-0d9e17ad5967-subcategory/entries/0}
     primaryImage:
       type: asset
       value:
@@ -1364,8 +1364,12 @@ entry:
       type: uniformContentInternalReference
       variables:
         locale: ${locale}
-        entryIds: >-
-          ae8e04c4-f20b-46f5-9eb4-7d8f82bbee38,9853aed9-07d5-4d58-a45b-c23157e149fe
+        entryIds: ae8e04c4-f20b-46f5-9eb4-7d8f82bbee38
+    ref-79ddd1f3-30a9-4f4d-8a93-0d9e17ad5967-subcategory:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: 9853aed9-07d5-4d58-a45b-c23157e149fe
     ref-79ddd1f3-30a9-4f4d-8a93-0d9e17ad5967-recommendations:
       type: uniformContentInternalReference
       variables:

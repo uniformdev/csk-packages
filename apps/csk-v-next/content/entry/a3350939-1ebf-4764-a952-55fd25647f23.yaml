@@ -1,5 +1,5 @@
 created: '2025-03-25T04:29:45.809628+00:00'
-modified: '2025-04-01T11:43:21.952855+00:00'
+modified: '2025-04-01T16:34:37.238228+00:00'
 pattern: false
 entry:
   _id: a3350939-1ebf-4764-a952-55fd25647f23
@@ -80,10 +80,7 @@ entry:
       value: Coffee Permanent Filter
     category:
       type: contentReference
-      value: ${#jptr:/ref-a3350939-1ebf-4764-a952-55fd25647f23-category/entries}
-    interest:
-      type: select
-      value: everyone
+      value: ${#jptr:/ref-a3350939-1ebf-4764-a952-55fd25647f23-category/entries/0}
     variants:
       type: $block
       value:

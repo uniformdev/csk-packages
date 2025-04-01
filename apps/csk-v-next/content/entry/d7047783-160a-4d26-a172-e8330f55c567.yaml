@@ -1,5 +1,5 @@
 created: '2025-03-25T04:29:16.198587+00:00'
-modified: '2025-04-01T11:27:47.34724+00:00'
+modified: '2025-04-01T16:38:39.635049+00:00'
 pattern: false
 entry:
   _id: d7047783-160a-4d26-a172-e8330f55c567
@@ -996,10 +996,7 @@ entry:
       value: Black Mountain Pour-Over Hario Glass
     category:
       type: contentReference
-      value: ${#jptr:/ref-d7047783-160a-4d26-a172-e8330f55c567-category/entries}
-    interest:
-      type: select
-      value: coffee-makers
+      value: ${#jptr:/ref-d7047783-160a-4d26-a172-e8330f55c567-category/entries/0}
     variants:
       type: $block
       value:
@@ -1062,6 +1059,9 @@ entry:
         - cat: subCategory
           key: pour-over
           str: 5
+    subcategory:
+      type: contentReference
+      value: ${#jptr:/ref-d7047783-160a-4d26-a172-e8330f55c567-subcategory/entries/0}
     primaryImage:
       type: asset
       value:
@@ -1118,8 +1118,12 @@ entry:
       type: uniformContentInternalReference
       variables:
         locale: ${locale}
-        entryIds: >-
-          60970e06-2563-452a-b344-f89d54d1e83b,2f6cc670-cdaa-4532-b70e-424206c8d0ba
+        entryIds: 2f6cc670-cdaa-4532-b70e-424206c8d0ba
+    ref-d7047783-160a-4d26-a172-e8330f55c567-subcategory:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: 60970e06-2563-452a-b344-f89d54d1e83b
     ref-d7047783-160a-4d26-a172-e8330f55c567-recommendations:
       type: uniformContentInternalReference
       variables:

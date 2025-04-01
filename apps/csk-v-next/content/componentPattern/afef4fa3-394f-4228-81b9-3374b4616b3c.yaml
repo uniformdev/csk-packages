@@ -1,0 +1,401 @@
+composition:
+  _name: Products Search Engine
+  _id: afef4fa3-394f-4228-81b9-3374b4616b3c
+  type: entriesSearchEngine
+  parameters:
+    orderBy:
+      type: $block
+      value:
+        - _id: 2a53ef92-66ce-4c25-96b0-33ddf6ade010
+          type: orderBy
+          fields:
+            field:
+              type: text
+              value: created_at
+            title:
+              type: text
+              value: Newest Arrivals
+            direction:
+              type: select
+              value: DESC
+        - _id: 452e6eab-9055-4bc5-b3bb-2885ed788653
+          type: orderBy
+          fields:
+            field:
+              type: text
+              value: fields.title
+            title:
+              type: text
+              value: 'Alphabetically: A-Z'
+            direction:
+              type: select
+              value: ASC
+        - _id: 1e2086c5-ee74-4edc-8e79-8856678d86d1
+          type: orderBy
+          fields:
+            field:
+              type: text
+              value: fields.title
+            title:
+              type: text
+              value: 'Alphabetically: Z-A'
+            direction:
+              type: select
+              value: DESC
+    filterBy:
+      type: $block
+      value:
+        - _id: 87dea12d-bc3b-4b7d-8b46-5b64f15d4654
+          type: filterBy
+          fields:
+            title:
+              type: text
+              locales:
+                en: Category
+            values:
+              type: $block
+              value:
+                - _id: 18213ddb-3069-427c-b8f3-93a0189f84b2
+                  type: $loop
+                  fields:
+                    body:
+                      type: $block
+                      value:
+                        - _id: 7e04ec3f-7366-417b-ac04-9fafbd9df852
+                          type: filterByItem
+                          fields:
+                            title:
+                              type: text
+                              value: >-
+                                ${#jptr:/All Product Categories entries Loop
+                                Item/entry/fields/title/value}
+                            value:
+                              type: text
+                              value: >-
+                                ${#jptr:/All Product Categories entries Loop
+                                Item/entry/_slug}
+                  _dataResources:
+                    All Product Categories entries Loop Item:
+                      type: sys-reserved-loop
+                      variables:
+                        connectedData: '#jptr:/All Product Categories/entries:fa=c'
+            fieldId:
+              type: text
+              value: category
+            fieldKey:
+              type: text
+              value: fields.subcategory.slug
+            multiSelect:
+              type: checkbox
+              value: true
+        - _id: c1e35169-72dc-494d-ba9a-03bc76aed46e
+          type: filterBy
+          fields:
+            title:
+              type: text
+              locales:
+                en: Brand
+            values:
+              type: $block
+              value:
+                - _id: 84f8bb98-1bb0-444a-9f86-530f5b6a408b
+                  type: $loop
+                  fields:
+                    body:
+                      type: $block
+                      value:
+                        - _id: 11363fe9-01cc-487c-9288-c3db3c3bea0c
+                          type: filterByItem
+                          fields:
+                            title:
+                              type: text
+                              value: >-
+                                ${#jptr:/All Product Categories entries Loop
+                                Item/entry/fields/title/value}
+                            value:
+                              type: text
+                              value: >-
+                                ${#jptr:/All Product Categories entries Loop
+                                Item/entry/_slug}
+                  _dataResources:
+                    All Product Categories entries Loop Item:
+                      type: sys-reserved-loop
+                      variables:
+                        connectedData: '#jptr:/All Product Brands/entries:fa=c'
+            fieldId:
+              type: text
+              value: brand
+            fieldKey:
+              type: text
+              value: fields.brand.slug
+            multiSelect:
+              type: checkbox
+              value: true
+    baseFilters:
+      type: $block
+      value:
+        - _id: 0e7faa98-bee9-40eb-ad47-4a8039cc6aeb
+          type: filterBy
+          fields:
+            title:
+              type: text
+              locales:
+                en: Coffee Makers
+            values:
+              type: $block
+              value:
+                - _id: 94c23487-86d7-4f26-9bb0-c6167d03df73
+                  type: filterByItem
+                  fields:
+                    title:
+                      type: text
+                      value: ${#jptr:/Base Product Category/entry/fields/title/value}
+                    value:
+                      type: text
+                      value: ${#jptr:/Base Product Category/entry/_slug}
+            fieldId:
+              type: text
+              value: category
+            fieldKey:
+              type: text
+              value: fields.category.slug
+    contentType:
+      type: select
+      value: product
+    itemsPerPage:
+      type: number
+      value: '6'
+  slots:
+    content:
+      - _id: d14122cc-646f-4ac0-b13e-9bae5cf4bec6
+        type: grid
+        slots:
+          gridInner:
+            - _id: d043d637-4bcd-4945-9c16-7c6c373d8694
+              type: gridItem
+              slots:
+                inner:
+                  - _id: c4e468fe-b6cf-4497-8c14-bde24a0e35b8
+                    type: entriesSearchBox
+                    parameters:
+                      size:
+                        type: dex-token-selector-parameter
+                        value: input-large
+                      border:
+                        type: dex-token-selector-parameter
+                        value: border-product-card
+                      placeholder:
+                        type: text
+                        value: Start searching for a coffee maker
+                    _overridability:
+                      parameters:
+                        placeholder: 'yes'
+              parameters:
+                rowSpan:
+                  type: dex-slider-control-parameter
+                  value: {}
+                rowStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: ''
+                    desktop: ''
+                columnSpan:
+                  type: dex-slider-control-parameter
+                  value:
+                    tablet: span-3
+                    desktop: span-3
+                columnStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: ''
+                    desktop: ''
+                displayName:
+                  type: text
+                  locales:
+                    en: Search Box
+            - _id: c512aff5-9eed-44cf-8756-a06480b64c6d
+              type: entriesSearchSorting
+        parameters:
+          gapX:
+            type: dex-slider-control-parameter
+            value:
+              tablet: '4'
+              desktop: '4'
+          gapY:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '4'
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              mobile: {}
+              tablet: {}
+              desktop: {}
+          alignItems:
+            type: dex-segmented-control-parameter
+            value: ''
+          displayName:
+            type: text
+            locales:
+              en: Search Box and Sorting
+          columnsCount:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '1'
+              tablet: '4'
+              desktop: '4'
+          fluidContent:
+            type: checkbox
+            value: true
+      - _id: b191f318-e75a-4155-925b-c0656f012b91
+        type: spacer
+        parameters:
+          size:
+            type: dex-token-selector-parameter
+            value: spacer-medium
+      - _id: 186c91b5-816c-4293-9542-7356653198e3
+        type: grid
+        slots:
+          gridInner:
+            - _id: a54fe116-4f8a-441b-81e5-acb47d2beb67
+              type: gridItem
+              slots:
+                inner:
+                  - _id: a5856bb3-2393-45b6-92cb-086bd265427a
+                    type: entriesSearchFilters
+              parameters:
+                rowSpan:
+                  type: dex-slider-control-parameter
+                  value: {}
+                rowStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: ''
+                    desktop: ''
+                columnSpan:
+                  type: dex-slider-control-parameter
+                  value: {}
+                columnStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: ''
+                    desktop: ''
+                displayName:
+                  type: text
+                  locales:
+                    en: Left Content
+            - _id: 73a254c3-eb9f-45d7-8227-7c50f8519c4a
+              type: gridItem
+              slots:
+                inner:
+                  - _id: 166b3e64-f887-4535-99c7-38829cfe7f1e
+                    type: entriesSearchList
+                    parameters:
+                      border:
+                        type: dex-token-selector-parameter
+                        value: border-product-card
+                      textColor:
+                        type: dex-color-palette-parameter
+                        value: text-primary
+                  - _id: 7eb15994-ff28-4f95-a4fa-ed305b686e0c
+                    type: spacer
+                    parameters:
+                      size:
+                        type: dex-token-selector-parameter
+                        value: spacer-small
+                  - _id: 8c0c2579-12f4-4e6c-8a8e-f24f6cbaa099
+                    type: entriesSearchPagination
+              parameters:
+                rowSpan:
+                  type: dex-slider-control-parameter
+                  value: {}
+                rowStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: ''
+                    desktop: ''
+                columnSpan:
+                  type: dex-slider-control-parameter
+                  value:
+                    tablet: auto
+                    desktop: span-3
+                columnStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: ''
+                    desktop: '2'
+                displayName:
+                  type: text
+                  locales:
+                    en: Right Content
+        parameters:
+          gapX:
+            type: dex-slider-control-parameter
+            value:
+              desktop: '8'
+          gapY:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '8'
+              tablet: '8'
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              mobile: {}
+              tablet: {}
+              desktop: {}
+          alignItems:
+            type: dex-segmented-control-parameter
+            value: start
+          displayName:
+            type: text
+            locales:
+              en: Search Content
+          columnsCount:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '1'
+              tablet: '1'
+              desktop: '4'
+          fluidContent:
+            type: checkbox
+            value: true
+  _dataResources:
+    All Product Brands:
+      type: brandList
+      variables:
+        locale: ${locale}
+        search: ''
+        filters: '{"type[eq]":"brand"}'
+        contentTypes: brand
+      isPatternParameter: false
+      ignorePatternParameterDefault: false
+    Base Product Category:
+      type: productCategory
+      variables:
+        locale: ${locale}
+        entryId: 2f6cc670-cdaa-4532-b70e-424206c8d0ba
+      isPatternParameter: true
+      ignorePatternParameterDefault: false
+    All Product Categories:
+      type: productCategoryList
+      variables:
+        locale: ${locale}
+        search: ''
+        filters: '{"type[eq]":"productCategory"}'
+        contentTypes: productCategory
+      isPatternParameter: false
+      ignorePatternParameterDefault: false
+  _overridability:
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2025-04-01T11:43:52.142476+00:00'
+modified: '2025-04-01T16:57:14.422564+00:00'
+pattern: true

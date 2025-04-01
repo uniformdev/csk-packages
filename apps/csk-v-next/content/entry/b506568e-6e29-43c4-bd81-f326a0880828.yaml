@@ -1,5 +1,5 @@
 created: '2025-03-25T04:31:19.300347+00:00'
-modified: '2025-04-01T11:26:37.488268+00:00'
+modified: '2025-04-01T16:38:00.584662+00:00'
 pattern: false
 entry:
   _id: b506568e-6e29-43c4-bd81-f326a0880828
@@ -1013,10 +1013,7 @@ entry:
       value: Kosmic Coffee Unbreakable Pour Over Replacement Pot
     category:
       type: contentReference
-      value: ${#jptr:/ref-b506568e-6e29-43c4-bd81-f326a0880828-category/entries}
-    interest:
-      type: select
-      value: coffee-makers
+      value: ${#jptr:/ref-b506568e-6e29-43c4-bd81-f326a0880828-category/entries/0}
     variants:
       type: $block
       value:
@@ -1080,6 +1077,9 @@ entry:
         - cat: subCategory
           key: pour-over
           str: 5
+    subcategory:
+      type: contentReference
+      value: ${#jptr:/ref-b506568e-6e29-43c4-bd81-f326a0880828-subcategory/entries/0}
     primaryImage:
       type: asset
       value:
@@ -1135,8 +1135,12 @@ entry:
       type: uniformContentInternalReference
       variables:
         locale: ${locale}
-        entryIds: >-
-          60970e06-2563-452a-b344-f89d54d1e83b,2f6cc670-cdaa-4532-b70e-424206c8d0ba
+        entryIds: 2f6cc670-cdaa-4532-b70e-424206c8d0ba
+    ref-b506568e-6e29-43c4-bd81-f326a0880828-subcategory:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: 60970e06-2563-452a-b344-f89d54d1e83b
     ref-b506568e-6e29-43c4-bd81-f326a0880828-recommendations:
       type: uniformContentInternalReference
       variables:

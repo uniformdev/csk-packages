@@ -96,18 +96,85 @@ composition:
             type: entriesSearchEngine
             slots:
               content:
-                - _id: bab79972-79db-4794-aa19-2a14bb8e17a6
-                  type: entriesSearchBox
+                - _id: 3aa897f9-c9e0-44d7-80b3-763e12af4127
+                  type: grid
+                  slots:
+                    gridInner:
+                      - _id: 1c006f17-5bf0-4c8e-bcb3-49f67b75ce4e
+                        type: gridItem
+                        slots:
+                          inner:
+                            - _id: bab79972-79db-4794-aa19-2a14bb8e17a6
+                              type: entriesSearchBox
+                              parameters:
+                                size:
+                                  type: dex-token-selector-parameter
+                                  value: input-large
+                                border:
+                                  type: dex-token-selector-parameter
+                                  value: border-product-card
+                                placeholder:
+                                  type: text
+                                  value: Start searching for an article
+                        parameters:
+                          rowSpan:
+                            type: dex-slider-control-parameter
+                            value: {}
+                          rowStart:
+                            type: dex-slider-control-parameter
+                            value:
+                              mobile: ''
+                              tablet: ''
+                              desktop: ''
+                          columnSpan:
+                            type: dex-slider-control-parameter
+                            value:
+                              tablet: span-3
+                              desktop: span-3
+                          columnStart:
+                            type: dex-slider-control-parameter
+                            value:
+                              mobile: ''
+                              tablet: ''
+                              desktop: ''
+                          displayName:
+                            type: text
+                            locales:
+                              en: Search Box
+                      - _id: b7e771d2-1634-4b03-91b2-709ecc7fdc02
+                        type: entriesSearchSorting
                   parameters:
-                    size:
-                      type: dex-token-selector-parameter
-                      value: input-large
-                    border:
-                      type: dex-token-selector-parameter
-                      value: border-product-card
-                    placeholder:
+                    gapX:
+                      type: dex-slider-control-parameter
+                      value:
+                        tablet: '4'
+                        desktop: '4'
+                    gapY:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '4'
+                    spacing:
+                      type: dex-space-control-parameter
+                      value:
+                        mobile: {}
+                        tablet: {}
+                        desktop: {}
+                    alignItems:
+                      type: dex-segmented-control-parameter
+                      value: ''
+                    displayName:
                       type: text
-                      value: Type to search...
+                      locales:
+                        en: Search Box and Sorting
+                    columnsCount:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '1'
+                        tablet: '4'
+                        desktop: '4'
+                    fluidContent:
+                      type: checkbox
+                      value: true
                 - _id: d51cf988-b2af-4af1-8061-ea4f00e29110
                   type: spacer
                   parameters:
@@ -226,6 +293,33 @@ composition:
                       type: checkbox
                       value: true
             parameters:
+              orderBy:
+                type: $block
+                value:
+                  - _id: 9a9702b3-df89-4321-ab69-09e78a2c71ee
+                    type: orderBy
+                    fields:
+                      field:
+                        type: text
+                        value: fields.publishDate
+                      title:
+                        type: text
+                        value: Newest First
+                      direction:
+                        type: select
+                        value: DESC
+                  - _id: 6c8bc44e-f303-4dbd-82a9-03045e59af2b
+                    type: orderBy
+                    fields:
+                      field:
+                        type: text
+                        value: fields.publishDate
+                      title:
+                        type: text
+                        value: Oldest first
+                      direction:
+                        type: select
+                        value: ASC
               filterBy:
                 type: $block
                 value:
@@ -235,7 +329,7 @@ composition:
                       title:
                         type: text
                         locales:
-                          en: Category
+                          en: Pick a category
                       values:
                         type: $block
                         value:
@@ -278,7 +372,7 @@ composition:
                       title:
                         type: text
                         locales:
-                          en: Author
+                          en: Refine by author
                       values:
                         type: $block
                         value:
@@ -320,10 +414,15 @@ composition:
                 value: article
               itemsPerPage:
                 type: number
-                value: '2'
+                value: '4'
+    9a8e179f-df98-4297-b6e8-74da7f904a12|5feefc71-05dd-4004-bfe9-3dd6876628b4:
+      parameters:
+        text:
+          type: text
+          value: Our curated content on all things brewing
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-03-25T04:27:48.427075+00:00'
-modified: '2025-03-27T21:20:00.279689+00:00'
+modified: '2025-04-01T08:01:11.981071+00:00'
 pattern: false

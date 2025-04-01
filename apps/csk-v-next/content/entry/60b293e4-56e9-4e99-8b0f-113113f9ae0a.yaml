@@ -1,0 +1,81 @@
+created: '2025-03-31T10:43:15.830378+00:00'
+modified: '2025-03-31T16:01:42.699525+00:00'
+pattern: false
+entry:
+  _id: 60b293e4-56e9-4e99-8b0f-113113f9ae0a
+  _name: Best Home Espresso Machines on the Market
+  _slug: best-home-espresso-machines-on-the-market
+  _thumbnail: >-
+    https://img.uniform.global/p/LP10biebQ3mceUhiJEdfvg/576hwHUJQuCKRgprI6b6uQ-image.png
+  type: article
+  fields:
+    title:
+      type: text
+      value: Best Home Espresso Machines on the Market
+    author:
+      type: contentReference
+      value: ${#jptr:/ref-60b293e4-56e9-4e99-8b0f-113113f9ae0a-author/entries/0}
+    category:
+      type: contentReference
+      value: ${#jptr:/ref-60b293e4-56e9-4e99-8b0f-113113f9ae0a-category/entries/0}
+    thumbnail:
+      type: asset
+      locales:
+        en:
+          - _id: e281f562-0eaa-463f-9f8c-33696b1eaf5b
+            type: image
+            fields:
+              id:
+                type: text
+                value: e65e6f2b-8650-4113-afa3-dc05d39f24d6
+              url:
+                value: >-
+                  https://img.uniform.global/p/LP10biebQ3mceUhiJEdfvg/576hwHUJQuCKRgprI6b6uQ-image.png
+                type: text
+              file:
+                type: file
+                value: b493f28c-ad22-443e-b354-5f6ddcaa1c31
+              size:
+                value: 236289
+                type: number
+              title:
+                type: text
+                value: image.png
+              width:
+                value: 686
+                type: number
+              height:
+                value: 338
+                type: number
+              mediaType:
+                value: image/png
+                type: text
+            _source: uniform-assets
+      value: []
+    enrichments:
+      type: $enr
+      value:
+        - cat: topic
+          key: guides
+          str: 5
+    publishDate:
+      type: date
+      value: '2025-03-17'
+    shortDescription:
+      type: text
+      value: >-
+        So, it's time to invest in an espresso machine. We have given it some
+        thought and have come up with the BEST MACHINES TO BUY
+  _dataResources:
+    ref-60b293e4-56e9-4e99-8b0f-113113f9ae0a-author:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: 19b68047-1128-45c9-9d70-ae314f813d11
+    ref-60b293e4-56e9-4e99-8b0f-113113f9ae0a-category:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: 57ef5f21-f90f-401d-a6b2-7a1e91bbae92
+  _locales:
+    - en

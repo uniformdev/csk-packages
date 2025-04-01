@@ -1,5 +1,5 @@
 created: '2025-03-25T04:29:07.530006+00:00'
-modified: '2025-04-01T11:30:51.041004+00:00'
+modified: '2025-04-01T16:52:28.597668+00:00'
 pattern: false
 entry:
   _id: 38622bea-be3c-477b-8756-1a188e84b882
@@ -1157,10 +1157,7 @@ entry:
       value: Black Mountain Bistro Burr Coffee Grinder
     category:
       type: contentReference
-      value: ${#jptr:/ref-38622bea-be3c-477b-8756-1a188e84b882-category/entries}
-    interest:
-      type: select
-      value: coffee-makers
+      value: ${#jptr:/ref-38622bea-be3c-477b-8756-1a188e84b882-category/entries/0}
     variants:
       type: $block
       value:
@@ -1223,6 +1220,9 @@ entry:
         - cat: subCategory
           key: percolators
           str: 5
+    subcategory:
+      type: contentReference
+      value: ${#jptr:/ref-38622bea-be3c-477b-8756-1a188e84b882-subcategory/entries/0}
     primaryImage:
       type: asset
       value:
@@ -1283,8 +1283,12 @@ entry:
       type: uniformContentInternalReference
       variables:
         locale: ${locale}
-        entryIds: >-
-          7c33133b-4267-4e85-8663-730f9a14d7e3,2f6cc670-cdaa-4532-b70e-424206c8d0ba
+        entryIds: 2f6cc670-cdaa-4532-b70e-424206c8d0ba
+    ref-38622bea-be3c-477b-8756-1a188e84b882-subcategory:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: 7c33133b-4267-4e85-8663-730f9a14d7e3
     ref-38622bea-be3c-477b-8756-1a188e84b882-recommendations:
       type: uniformContentInternalReference
       variables:

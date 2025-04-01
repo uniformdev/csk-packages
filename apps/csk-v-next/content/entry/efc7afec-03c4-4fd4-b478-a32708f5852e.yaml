@@ -1,5 +1,5 @@
 created: '2025-03-25T04:32:28.338565+00:00'
-modified: '2025-04-01T11:43:09.029969+00:00'
+modified: '2025-04-01T16:34:51.509015+00:00'
 pattern: false
 entry:
   _id: efc7afec-03c4-4fd4-b478-a32708f5852e
@@ -58,10 +58,7 @@ entry:
       value: Water Reservoir with Flip-Top Lid
     category:
       type: contentReference
-      value: ${#jptr:/ref-efc7afec-03c4-4fd4-b478-a32708f5852e-category/entries}
-    interest:
-      type: select
-      value: everyone
+      value: ${#jptr:/ref-efc7afec-03c4-4fd4-b478-a32708f5852e-category/entries/0}
     variants:
       type: $block
       value:

@@ -1,5 +1,5 @@
 created: '2025-03-25T04:31:12.972249+00:00'
-modified: '2025-04-01T11:28:04.934499+00:00'
+modified: '2025-04-01T16:38:51.669799+00:00'
 pattern: false
 entry:
   _id: be9715e9-e36d-4194-93bd-cec9696d6864
@@ -1013,10 +1013,7 @@ entry:
       value: Kosmic Coffee Pour-Over Glass Coffeemaker
     category:
       type: contentReference
-      value: ${#jptr:/ref-be9715e9-e36d-4194-93bd-cec9696d6864-category/entries}
-    interest:
-      type: select
-      value: coffee-makers
+      value: ${#jptr:/ref-be9715e9-e36d-4194-93bd-cec9696d6864-category/entries/0}
     variants:
       type: $block
       value:
@@ -1079,6 +1076,9 @@ entry:
         - cat: subCategory
           key: pour-over
           str: 5
+    subcategory:
+      type: contentReference
+      value: ${#jptr:/ref-be9715e9-e36d-4194-93bd-cec9696d6864-subcategory/entries/0}
     primaryImage:
       type: asset
       value:
@@ -1136,8 +1136,12 @@ entry:
       type: uniformContentInternalReference
       variables:
         locale: ${locale}
-        entryIds: >-
-          60970e06-2563-452a-b344-f89d54d1e83b,2f6cc670-cdaa-4532-b70e-424206c8d0ba
+        entryIds: 2f6cc670-cdaa-4532-b70e-424206c8d0ba
+    ref-be9715e9-e36d-4194-93bd-cec9696d6864-subcategory:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: 60970e06-2563-452a-b344-f89d54d1e83b
     ref-be9715e9-e36d-4194-93bd-cec9696d6864-recommendations:
       type: uniformContentInternalReference
       variables:

@@ -1,5 +1,5 @@
 created: '2025-03-25T04:31:42.896262+00:00'
-modified: '2025-04-01T11:33:51.490506+00:00'
+modified: '2025-04-01T16:55:13.54463+00:00'
 pattern: false
 entry:
   _id: 5a9bf3d7-74a8-42e4-ac78-239f84cbecca
@@ -1315,10 +1315,7 @@ entry:
       value: Peruvian Blend Coffee
     category:
       type: contentReference
-      value: ${#jptr:/ref-5a9bf3d7-74a8-42e4-ac78-239f84cbecca-category/entries}
-    interest:
-      type: select
-      value: beans
+      value: ${#jptr:/ref-5a9bf3d7-74a8-42e4-ac78-239f84cbecca-category/entries/0}
     variants:
       type: $block
       value:
@@ -1381,6 +1378,9 @@ entry:
         - cat: subCategory
           key: liberica
           str: 5
+    subcategory:
+      type: contentReference
+      value: ${#jptr:/ref-5a9bf3d7-74a8-42e4-ac78-239f84cbecca-subcategory/entries/0}
     primaryImage:
       type: asset
       value:
@@ -1437,8 +1437,12 @@ entry:
       type: uniformContentInternalReference
       variables:
         locale: ${locale}
-        entryIds: >-
-          4e8f00c8-a2da-4a73-8431-8888d88def25,ae8e04c4-f20b-46f5-9eb4-7d8f82bbee38
+        entryIds: ae8e04c4-f20b-46f5-9eb4-7d8f82bbee38
+    ref-5a9bf3d7-74a8-42e4-ac78-239f84cbecca-subcategory:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: 4e8f00c8-a2da-4a73-8431-8888d88def25
     ref-5a9bf3d7-74a8-42e4-ac78-239f84cbecca-recommendations:
       type: uniformContentInternalReference
       variables:

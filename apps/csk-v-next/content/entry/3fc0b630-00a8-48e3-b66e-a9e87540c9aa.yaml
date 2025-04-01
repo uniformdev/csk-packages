@@ -1,5 +1,5 @@
 created: '2025-03-25T04:32:24.974119+00:00'
-modified: '2025-04-01T11:43:34.346625+00:00'
+modified: '2025-04-01T16:34:24.608465+00:00'
 pattern: false
 entry:
   _id: 3fc0b630-00a8-48e3-b66e-a9e87540c9aa
@@ -60,10 +60,7 @@ entry:
       value: Water filter
     category:
       type: contentReference
-      value: ${#jptr:/ref-3fc0b630-00a8-48e3-b66e-a9e87540c9aa-category/entries}
-    interest:
-      type: select
-      value: everyone
+      value: ${#jptr:/ref-3fc0b630-00a8-48e3-b66e-a9e87540c9aa-category/entries/0}
     variants:
       type: $block
       value:

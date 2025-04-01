@@ -20,11 +20,27 @@ parameters:
     typeConfig:
       min: '1'
       required: true
+  - id: orderBy
+    name: Order By
+    type: $block
+    helpText: First item in the list is default
+    typeConfig:
+      required: false
+      allowedTypes:
+        - orderBy
   - id: filterBy
     name: Filter By
     type: $block
+    helpText: If Base Filters are defined, values list will be filtered as well
     typeConfig:
       required: true
+      allowedTypes:
+        - filterBy
+  - id: baseFilters
+    name: Base Filters
+    type: $block
+    helpText: Filters, that will be applied additionally for each request
+    typeConfig:
       allowedTypes:
         - filterBy
 categoryId: 624b55ca-4671-46e2-8fd5-4a9b34b4c121
@@ -38,4 +54,4 @@ slots:
     patternsInAllowedComponents: false
 canBeComposition: false
 created: '2025-03-26T19:00:03.642504+00:00'
-updated: '2025-03-27T20:37:24.067463+00:00'
+updated: '2025-03-31T20:09:49.256293+00:00'

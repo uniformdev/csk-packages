@@ -1,7 +1,7 @@
 id: product
 name: Product
 created: '2025-03-25T04:28:36.53123+00:00'
-updated: '2025-04-01T11:18:59.039892+00:00'
+updated: '2025-04-01T16:21:31.076018+00:00'
 slugSettings:
   required: 'no'
 useTeamPermissions: true
@@ -57,6 +57,7 @@ fields:
       collapsed: false
       childrenParams:
         - category
+        - subcategory
         - brand
         - variants
         - recommendations
@@ -64,7 +65,13 @@ fields:
     name: Category
     type: contentReference
     typeConfig:
-      isMulti: true
+      required: true
+      allowedContentTypes:
+        - productCategory
+  - id: subcategory
+    name: Subcategory
+    type: contentReference
+    typeConfig:
       allowedContentTypes:
         - productCategory
   - id: brand
@@ -92,24 +99,6 @@ fields:
     name: Enrichments
     type: $enr
     typeConfig: null
-  - id: 78dea93f-5370-41dd-8d47-3544961c22c5
-    name: Programatic Personalization
-    type: group
-    typeConfig:
-      collapsed: true
-      childrenParams:
-        - interest
-  - id: interest
-    name: Interest
-    type: select
-    typeConfig:
-      options:
-        - text: Coffee Makers
-          value: coffee-makers
-        - text: Coffee Beans
-          value: beans
-        - text: Everyone
-          value: everyone
 entryName: title
 thumbnailField: primaryImage
 description: ''

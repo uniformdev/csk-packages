@@ -1,5 +1,5 @@
 created: '2025-03-25T04:30:18.588111+00:00'
-modified: '2025-04-01T11:30:05.258636+00:00'
+modified: '2025-04-01T16:52:04.217391+00:00'
 pattern: false
 entry:
   _id: d4af2511-76c3-4c8c-b979-1c3da1c667fb
@@ -1234,10 +1234,7 @@ entry:
       value: EspressoGPT
     category:
       type: contentReference
-      value: ${#jptr:/ref-d4af2511-76c3-4c8c-b979-1c3da1c667fb-category/entries}
-    interest:
-      type: select
-      value: coffee-makers
+      value: ${#jptr:/ref-d4af2511-76c3-4c8c-b979-1c3da1c667fb-category/entries/0}
     variants:
       type: $block
       value:
@@ -1445,6 +1442,9 @@ entry:
         - cat: brand
           key: impresso
           str: 5
+    subcategory:
+      type: contentReference
+      value: ${#jptr:/ref-d4af2511-76c3-4c8c-b979-1c3da1c667fb-subcategory/entries/0}
     primaryImage:
       type: asset
       value:
@@ -1499,8 +1499,12 @@ entry:
       type: uniformContentInternalReference
       variables:
         locale: ${locale}
-        entryIds: >-
-          89ff9053-0c46-4c5d-be39-6d24907ba240,2f6cc670-cdaa-4532-b70e-424206c8d0ba
+        entryIds: 2f6cc670-cdaa-4532-b70e-424206c8d0ba
+    ref-d4af2511-76c3-4c8c-b979-1c3da1c667fb-subcategory:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: 89ff9053-0c46-4c5d-be39-6d24907ba240
     ref-d4af2511-76c3-4c8c-b979-1c3da1c667fb-recommendations:
       type: uniformContentInternalReference
       variables:

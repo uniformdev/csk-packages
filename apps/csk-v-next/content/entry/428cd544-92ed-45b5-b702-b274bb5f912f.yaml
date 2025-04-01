@@ -1,5 +1,5 @@
 created: '2025-03-25T04:29:56.54984+00:00'
-modified: '2025-04-01T11:44:03.873625+00:00'
+modified: '2025-04-01T16:33:40.176257+00:00'
 pattern: false
 entry:
   _id: 428cd544-92ed-45b5-b702-b274bb5f912f
@@ -78,10 +78,7 @@ entry:
       value: Descaling tablets
     category:
       type: contentReference
-      value: ${#jptr:/ref-428cd544-92ed-45b5-b702-b274bb5f912f-category/entries}
-    interest:
-      type: select
-      value: everyone
+      value: ${#jptr:/ref-428cd544-92ed-45b5-b702-b274bb5f912f-category/entries/0}
     variants:
       type: $block
       value:

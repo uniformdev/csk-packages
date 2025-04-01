@@ -1,5 +1,5 @@
 created: '2025-03-25T04:31:09.960916+00:00'
-modified: '2025-04-01T11:29:24.863772+00:00'
+modified: '2025-04-01T16:51:38.259884+00:00'
 pattern: false
 entry:
   _id: 2f042be4-1e8b-4fae-be0e-a5294b89d8dd
@@ -1164,10 +1164,7 @@ entry:
       value: Kosmic Coffee Barista Express Espresso Machine
     category:
       type: contentReference
-      value: ${#jptr:/ref-2f042be4-1e8b-4fae-be0e-a5294b89d8dd-category/entries}
-    interest:
-      type: select
-      value: coffee-makers
+      value: ${#jptr:/ref-2f042be4-1e8b-4fae-be0e-a5294b89d8dd-category/entries/0}
     variants:
       type: $block
       value:
@@ -1259,6 +1256,9 @@ entry:
         - cat: brand
           key: impresso
           str: 5
+    subcategory:
+      type: contentReference
+      value: ${#jptr:/ref-2f042be4-1e8b-4fae-be0e-a5294b89d8dd-subcategory/entries/0}
     primaryImage:
       type: asset
       value:
@@ -1316,8 +1316,12 @@ entry:
       type: uniformContentInternalReference
       variables:
         locale: ${locale}
-        entryIds: >-
-          2f6cc670-cdaa-4532-b70e-424206c8d0ba,89ff9053-0c46-4c5d-be39-6d24907ba240
+        entryIds: 2f6cc670-cdaa-4532-b70e-424206c8d0ba
+    ref-2f042be4-1e8b-4fae-be0e-a5294b89d8dd-subcategory:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: 89ff9053-0c46-4c5d-be39-6d24907ba240
     ref-2f042be4-1e8b-4fae-be0e-a5294b89d8dd-recommendations:
       type: uniformContentInternalReference
       variables:

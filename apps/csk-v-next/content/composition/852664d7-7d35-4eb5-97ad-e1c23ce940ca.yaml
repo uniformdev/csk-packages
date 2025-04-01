@@ -30,7 +30,7 @@ composition:
                 locale: ${locale}
         text:
           type: text
-          value: Complete your payment
+          value: "See our premium\_ products"
     1fc9f4b5-b1ea-4e47-b430-d985b4ec2b41:
       parameters:
         displayName:
@@ -42,15 +42,17 @@ composition:
           type: $pzCrit
           value:
             crit:
-              - l: addedToCart
-                op: +
-            name: Has active cart
+              - l: segment
+                r: aficionado
+                t: q
+                op: '='
+            name: Aficionado
         displayName:
           type: text
-          value: Has active cart
+          value: Aficionado
         contentBackgroundColor:
           type: dex-color-palette-parameter
-          value: general-color-3
+          value: general-color-4
     2cf1eec0-f4de-4580-b02f-08b702e11fd4:
       parameters:
         link:
@@ -69,6 +71,21 @@ composition:
         buttonColor:
           type: dex-color-palette-parameter
           value: null
+    33cbf07c-053b-4542-8b5b-18d1026d1d86:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            crit:
+              - l: addedToCart
+                op: +
+            name: featuredSection-33cb
+        displayName:
+          type: text
+          value: Has active cart
+        contentBackgroundColor:
+          type: dex-color-palette-parameter
+          value: general-color-3
     34261571-3623-41e0-bda8-7f1a5fdef37e:
       parameters:
         $pzCrit:
@@ -268,6 +285,21 @@ composition:
         text:
           type: text
           value: Taste the Difference
+    eb08b700-ced5-4e01-8f5b-a6170da94932:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: /${locale}/cart
+              type: projectMapNode
+              nodeId: 5c88cfb5-bf57-4dc4-b25c-be9510d01b81
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+        text:
+          type: text
+          value: Complete your payment
     13a58c2b-eced-49bc-98fb-13c6ed96c9e7|3090a8f6-e088-4d8f-a8f0-e6dff9ddb28a:
       slots:
         $slotSectionItems:
@@ -323,8 +355,85 @@ composition:
       parameters:
         text:
           type: text
-          value: Ready to make it yours? Complete your purchase today
+          value: Only for the most exclusive coffee enthusiasts.
     22e9a49c-1d3e-4697-9a96-9a873d2f36d8|fcac6346-1864-4284-8715-a0e4fb4854f4:
+      parameters:
+        image:
+          type: asset
+          value:
+            - _id: 021bcf35-5a93-4ee3-a042-c310f783f202
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: d3a8701d-e216-45a0-8def-381858fad958
+                url:
+                  type: text
+                  value: >-
+                    https://img.uniform.global/p/LP10biebQ3mceUhiJEdfvg/a4ucJwl5R8mgBMyPyr48JA-image.png
+                file:
+                  type: file
+                  value: bd1c84df-d205-4779-a145-d6d915f95282
+                size:
+                  type: number
+                  value: 1478877
+                title:
+                  type: text
+                  value: image.png
+                width:
+                  type: number
+                  value: 1440
+                height:
+                  type: number
+                  value: 960
+                mediaType:
+                  type: text
+                  value: image/png
+              _source: uniform-assets
+    3074410a-05a6-475d-a592-d12154625515|23ef179e-28e2-4551-83b4-80296f479519:
+      slots:
+        $slotSectionItems:
+          - _id: 4985d1ca-6d4a-4857-9313-eed9ecb9bc3c
+            type: button
+            _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
+            _overridability:
+              variants: true
+              parameters:
+                link: 'yes'
+                text: 'yes'
+                fullWidth: 'yes'
+                textColor: 'no'
+              hideLockedParameters: true
+    3074410a-05a6-475d-a592-d12154625515|d06ab335-2ea8-4252-9ff4-73055f70e55e:
+      parameters:
+        price:
+          type: text
+          locales:
+            en: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/currency/value}${#jptr:/Product
+              List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value}
+    33cbf07c-053b-4542-8b5b-18d1026d1d86|5d86f5e9-47d6-4e77-a139-83228ec0be41:
+      slots:
+        $slotSectionItems:
+          - _id: eb08b700-ced5-4e01-8f5b-a6170da94932
+            type: button
+            _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
+            _overridability:
+              variants: true
+              parameters:
+                link: 'yes'
+                text: 'yes'
+                fullWidth: 'yes'
+                textColor: 'no'
+              hideLockedParameters: true
+    33cbf07c-053b-4542-8b5b-18d1026d1d86|c50e99a6-1d91-4d6e-9a22-3154d4e4a8b7:
+      parameters:
+        text:
+          type: text
+          value: Ready to make it yours? Complete your purchase today
+    33cbf07c-053b-4542-8b5b-18d1026d1d86|fcac6346-1864-4284-8715-a0e4fb4854f4:
       parameters:
         image:
           type: asset
@@ -358,30 +467,6 @@ composition:
                   type: text
                   value: image/jpeg
               _source: uniform-assets
-    3074410a-05a6-475d-a592-d12154625515|23ef179e-28e2-4551-83b4-80296f479519:
-      slots:
-        $slotSectionItems:
-          - _id: 4985d1ca-6d4a-4857-9313-eed9ecb9bc3c
-            type: button
-            _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
-            _overridability:
-              variants: true
-              parameters:
-                link: 'yes'
-                text: 'yes'
-                fullWidth: 'yes'
-                textColor: 'no'
-              hideLockedParameters: true
-    3074410a-05a6-475d-a592-d12154625515|d06ab335-2ea8-4252-9ff4-73055f70e55e:
-      parameters:
-        price:
-          type: text
-          locales:
-            en: >-
-              ${#jptr:/Product List Content entries Loop
-              Item/entry/fields/variants/value/0/fields/currency/value}${#jptr:/Product
-              List Content entries Loop
-              Item/entry/fields/variants/value/0/fields/price/value}
     34261571-3623-41e0-bda8-7f1a5fdef37e|215f54df-5063-4f0a-81c0-d8bda909b52c:
       parameters:
         image:
@@ -473,6 +558,11 @@ composition:
                 hoverTextColor: 'no'
                 hoverButtonColor: 'no'
               hideLockedParameters: true
+    411aab8f-d562-4cae-ac2b-4470db036909|c50e99a6-1d91-4d6e-9a22-3154d4e4a8b7:
+      parameters:
+        text:
+          type: text
+          value: Find the perfect cup without leaving your home
     503b72ae-4a31-4051-b410-e9daa61b5905|3cef9a4a-f0c8-4eeb-a855-a28fd1335351:
       parameters:
         image:
@@ -544,6 +634,14 @@ composition:
             slots:
               pz:
                 - _id: 22e9a49c-1d3e-4697-9a96-9a873d2f36d8
+                  type: featuredSection
+                  _pattern: d7181e81-f3d1-4e21-af6f-1e73c8dfa6b5
+                  _overridability:
+                    parameters:
+                      displayName: 'yes'
+                      contentBackgroundColor: 'yes'
+                    hideLockedParameters: true
+                - _id: 33cbf07c-053b-4542-8b5b-18d1026d1d86
                   type: featuredSection
                   _pattern: d7181e81-f3d1-4e21-af6f-1e73c8dfa6b5
                   _overridability:
@@ -738,5 +836,5 @@ composition:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-03-25T04:27:50.97015+00:00'
-modified: '2025-04-01T09:56:40.051096+00:00'
+modified: '2025-04-01T15:05:18.914994+00:00'
 pattern: false
