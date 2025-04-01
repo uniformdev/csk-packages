@@ -11,6 +11,7 @@ import EntriesSearchEngine from './EntriesSearchEngine';
 import EntriesSearchFilters from './EntriesSearchFilters';
 import EntriesSearchList from './EntriesSearchList';
 import EntriesSearchPagination from './EntriesSearchPagination';
+import EntriesSearchSorting from './EntriesSearchSorting';
 import Favorites from './Favorites';
 import FavoritesIcon from './FavoritesIcon';
 import FeaturedSection from './FeaturedSection';
@@ -64,5 +65,6 @@ export const customComponentsMapping: ComponentMapping = {
   entriesSearchFilters: { component: EntriesSearchFilters },
   entriesSearchList: { component: EntriesSearchList },
   entriesSearchPagination: { component: EntriesSearchPagination },
+  entriesSearchSorting: { component: EntriesSearchSorting },
   dynamicRecommendations: { component: DynamicRecommendations },
 };

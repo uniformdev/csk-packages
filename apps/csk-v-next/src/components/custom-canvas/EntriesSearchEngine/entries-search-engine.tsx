@@ -1,6 +1,5 @@
 'use client';
 import { FC } from 'react';
-import { BlockValue, flattenValues } from '@uniformdev/canvas';
 import { ComponentProps, UniformSlot } from '@uniformdev/canvas-next-rsc/component';
 import { DEFAULT_PAGE_SIZE, FIRST_PAGE } from '@/modules/search/constants';
 import EntriesSearchContextProvider from '@/modules/search/EntriesSearchContextProvider';
@@ -12,17 +11,20 @@ import {
   Pagination,
   Product,
   WithUniformContentEntrySystemParams,
+  OrderBy,
 } from '@/modules/search/types';
 
 type EntriesSearchEngineParameters = {
   contentType: ContentType;
-  filterBy: BlockValue;
+  filterBy: FilterBy[];
   entries: Pagination<WithUniformContentEntrySystemParams<Article | Product>>;
   facets: Facets;
   selectedFilters?: Record<string, string[]>;
   search: string;
   page?: number;
   pageSize?: number;
+  orderBy: OrderBy[];
+  selectedOrderByQuery: string;
 };
 type EntriesSearchEngineSlots = 'content';
 type EntriesSearchEngineProps = ComponentProps<EntriesSearchEngineParameters, EntriesSearchEngineSlots>;
@@ -39,19 +41,21 @@ const EntriesSearchEngine: FC<EntriesSearchEngineProps> = ({
   search,
   page,
   pageSize,
+  orderBy,
+  selectedOrderByQuery,
 }) => {
-  const mappedFilterBy = flattenValues(filterBy) as FilterBy[];
-
   return (
     <EntriesSearchContextProvider
       contentType={contentType}
-      filterBy={mappedFilterBy}
+      filterBy={filterBy}
       entries={entries}
       facets={facets}
       selectedFilters={selectedFilters || {}}
       search={search || ''}
       page={page || FIRST_PAGE}
       pageSize={pageSize || DEFAULT_PAGE_SIZE}
+      orderBy={orderBy}
+      selectedOrderByQuery={selectedOrderByQuery}
     >
       <UniformSlot data={component} context={context} slot={slots.content} />
     </EntriesSearchContextProvider>

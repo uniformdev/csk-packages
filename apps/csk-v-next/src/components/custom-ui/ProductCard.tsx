@@ -26,11 +26,16 @@ export const ProductCard: FC<ProductCardProps> = ({
   removeFromFavoritesIcon,
 }) => {
   return (
-    <Link href={link}>
+    <Link href={link} className="group">
       <Container wrapperClassName="h-full" className="relative h-full overflow-hidden">
         <div className="relative border border-gray-300 bg-white p-4">
-          <div className="relative h-[392px] w-full ">
-            <Image className="object-cover" src={image} alt={slug} fill />
+          <div className="relative aspect-square w-full overflow-hidden">
+            <Image
+              className="object-cover transition-all duration-150 group-hover:scale-105"
+              src={image}
+              alt={slug}
+              fill
+            />
             {addToFavoritesIcon && removeFromFavoritesIcon && (
               <div className="absolute right-0 top-0 flex  items-center justify-center bg-white p-4">
                 <AddToFavorites productSlug={slug} addIcon={addToFavoritesIcon} removeIcon={removeFromFavoritesIcon} />

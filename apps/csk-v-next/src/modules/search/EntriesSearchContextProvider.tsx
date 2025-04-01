@@ -10,7 +10,13 @@ import {
   Dispatch,
 } from 'react';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { DEFAULT_PAGE_SIZE, ENTRIES_SEARCH_PAGE_KEY, ENTRIES_SEARCH_QUERY_KEY, FIRST_PAGE } from './constants';
+import {
+  DEFAULT_PAGE_SIZE,
+  ENTRIES_SEARCH_ORDER_BY_KEY,
+  ENTRIES_SEARCH_PAGE_KEY,
+  ENTRIES_SEARCH_QUERY_KEY,
+  FIRST_PAGE,
+} from './constants';
 import {
   ContentType,
   FilterBy,
@@ -19,6 +25,7 @@ import {
   Article,
   Product,
   Facets,
+  OrderBy,
 } from './types';
 
 interface EntriesSearchContextType {
@@ -37,6 +44,9 @@ interface EntriesSearchContextType {
   clearFilters: () => void;
   searchBoxValue: string;
   setSearchBoxValue: Dispatch<SetStateAction<string>>;
+  orderBy: OrderBy[];
+  selectedOrderByQuery: string;
+  setOrderBy: (orderByQuery: string) => void;
 }
 
 const EntriesSearchContext = createContext<EntriesSearchContextType>({
@@ -61,6 +71,9 @@ const EntriesSearchContext = createContext<EntriesSearchContextType>({
   clearFilters: () => {},
   searchBoxValue: '',
   setSearchBoxValue: () => {},
+  orderBy: [],
+  selectedOrderByQuery: '',
+  setOrderBy: () => {},
 });
 
 type EntriesSearchContextProviderProps = {
@@ -68,6 +81,8 @@ type EntriesSearchContextProviderProps = {
   filterBy: FilterBy[];
   contentType: ContentType;
   selectedFilters: Record<string, string[]>;
+  orderBy: OrderBy[];
+  selectedOrderByQuery: string;
   search: string;
   page: number;
   pageSize: number;
@@ -80,6 +95,8 @@ const EntriesSearchContextProvider: FC<EntriesSearchContextProviderProps> = ({
   filterBy,
   contentType,
   selectedFilters,
+  orderBy,
+  selectedOrderByQuery,
   search,
   page,
   pageSize,
@@ -116,6 +133,16 @@ const EntriesSearchContextProvider: FC<EntriesSearchContextProviderProps> = ({
       } else {
         params.set(ENTRIES_SEARCH_PAGE_KEY, page.toString());
       }
+      router.push(`?${params.toString()}`);
+    },
+    [router, searchParams]
+  );
+
+  const setOrderBy = useCallback(
+    (orderByQuery: string) => {
+      setIsLoading(true);
+      const params = new URLSearchParams(searchParams.toString());
+      params.set(ENTRIES_SEARCH_ORDER_BY_KEY, orderByQuery);
       router.push(`?${params.toString()}`);
     },
     [router, searchParams]
@@ -162,6 +189,9 @@ const EntriesSearchContextProvider: FC<EntriesSearchContextProviderProps> = ({
       contentType,
       selectedFilters,
       setSelectedFilters,
+      orderBy,
+      setOrderBy,
+      selectedOrderByQuery,
       entries,
       facets,
       isLoading,
@@ -179,6 +209,9 @@ const EntriesSearchContextProvider: FC<EntriesSearchContextProviderProps> = ({
     contentType,
     selectedFilters,
     setSelectedFilters,
+    orderBy,
+    setOrderBy,
+    selectedOrderByQuery,
     entries,
     facets,
     isLoading,

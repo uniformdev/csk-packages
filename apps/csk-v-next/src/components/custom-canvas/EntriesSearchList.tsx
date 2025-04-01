@@ -21,7 +21,7 @@ const EntriesSearchList: FC<EntriesSearchListProps> = ({ textColor, border }) =>
   return (
     <div className="relative">
       {isLoading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-white/75">
+        <div className="absolute inset-0 z-40 flex items-center justify-center bg-white/75">
           <svg
             className="-ml-1 mr-3 size-10 animate-spin text-black"
             xmlns="http://www.w3.org/2000/svg"

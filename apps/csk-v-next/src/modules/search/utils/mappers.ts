@@ -48,7 +48,7 @@ export const mapUniformContentEntryFields = <T extends Record<string, unknown>>(
   const entryFields = mapCanvasParameters<T>(entry.fields);
 
   return {
-    slug: entry?._slug || undefined,
+    slug: entry._slug as string,
     id: entry._id,
     contentType: entry.type,
     ...entryFields,

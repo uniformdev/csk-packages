@@ -31,7 +31,7 @@ const IconArrow: FC<SVGProps<SVGSVGElement>> = ({ className }) => (
   </svg>
 );
 
-const EntriesSearchPagination = ({ siblingCount }: EntriesSearchPaginationProps) => {
+const EntriesSearchPagination: FC<EntriesSearchPaginationProps> = ({ siblingCount }) => {
   const { entries, setPage } = useEntriesSearchContext();
   const { page, perPage, total: totalCount } = entries;
   const currentPage = page + 1;

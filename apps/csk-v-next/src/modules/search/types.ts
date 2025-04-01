@@ -5,7 +5,7 @@ export type UniformContentEntry = GetEntriesResponse['entries']['0']['entry'];
 
 type UniformContentEntrySystemParams = {
   id: string;
-  slug?: string;
+  slug: string;
   contentType: string;
 };
 
@@ -22,6 +22,12 @@ export type FilterBy = {
   fieldKey: string;
   multiSelect: boolean;
   values: FilterByItem[];
+};
+
+export type OrderBy = {
+  title: string;
+  field: string;
+  direction: 'ASC' | 'DESC';
 };
 
 export type Pagination<Item> = {
@@ -101,5 +107,12 @@ export type Product = {
 export type Facets = {
   [key: string]: {
     [key: string]: number;
+  };
+};
+
+export type FilterQuery = {
+  [K: string]: {
+    eq?: string[];
+    in?: string[];
   };
 };
