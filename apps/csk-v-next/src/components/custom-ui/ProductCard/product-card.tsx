@@ -3,6 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Container, Flex, Text } from '@uniformdev/csk-components/components/ui';
 import { AddToFavorites } from '@/modules/favorites/ui/AddToFavorites';
+import FavoriteIconFilled from './icons/favourite-icon-filled.svg';
+import FavoriteIcon from './icons/favourite-icon.svg';
 
 export type ProductCardProps = {
   image: string;
@@ -27,7 +29,7 @@ export const ProductCard: FC<ProductCardProps> = ({
 }) => {
   return (
     <Link href={link} className="group">
-      <Container wrapperClassName="h-full" className="relative h-full overflow-hidden">
+      <Container wrapperClassName="h-full" className="relative h-full overflow-hidden" fluidContent>
         <div className="relative border border-gray-300 bg-white p-4">
           <div className="relative aspect-square w-full overflow-hidden">
             <Image
@@ -36,11 +38,14 @@ export const ProductCard: FC<ProductCardProps> = ({
               alt={slug}
               fill
             />
-            {addToFavoritesIcon && removeFromFavoritesIcon && (
-              <div className="absolute right-0 top-0 flex  items-center justify-center bg-white p-4">
-                <AddToFavorites productSlug={slug} addIcon={addToFavoritesIcon} removeIcon={removeFromFavoritesIcon} />
-              </div>
-            )}
+
+            <div className="absolute right-0 top-0 flex  items-center justify-center bg-white p-4">
+              <AddToFavorites
+                productSlug={slug}
+                addIcon={addToFavoritesIcon ?? FavoriteIcon}
+                removeIcon={removeFromFavoritesIcon ?? FavoriteIconFilled}
+              />
+            </div>
           </div>
         </div>
 

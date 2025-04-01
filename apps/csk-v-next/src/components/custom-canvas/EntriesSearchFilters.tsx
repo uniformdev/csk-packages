@@ -3,6 +3,7 @@ import { ChangeEvent, FC, useCallback } from 'react';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { useEntriesSearchContext } from '@/modules/search/EntriesSearchContextProvider';
 import { FilterBy as FilterByType } from '@/modules/search/types';
+import Checkbox from '@/modules/search/ui/Checkbox';
 
 type FilterByProps = FilterByType & {
   selectedValues: string[];
@@ -40,22 +41,22 @@ const FilterBy: FC<FilterByProps> = ({
       <p className="text-lg font-bold">{title}</p>
       <div className="flex flex-col gap-y-2">
         {values.map(({ value, title }) => (
-          <p className="flex items-center gap-x-2" key={value}>
-            <input
-              id={value}
-              type="checkbox"
-              name={fieldKey}
-              value={value}
-              checked={selectedValues.includes(value)}
-              onChange={handleFilterChange}
-            />
-            <label className="flex cursor-pointer items-center gap-x-2" htmlFor={value}>
-              <span>{title}</span>
-              {facetValues[value] && (
-                <span className="rounded-full bg-gray-100 px-2 py-0.5 text-xs text-gray-500">{facetValues[value]}</span>
-              )}
-            </label>
-          </p>
+          <Checkbox
+            key={value}
+            label={
+              <span className="flex items-center gap-x-2">
+                <span>{title}</span>
+                {facetValues[value] && (
+                  <span className="rounded-full bg-gray-100 px-2 py-0.5 text-xs text-gray-500">
+                    {facetValues[value]}
+                  </span>
+                )}
+              </span>
+            }
+            value={value}
+            checked={selectedValues.includes(value)}
+            onChange={handleFilterChange}
+          />
         ))}
       </div>
     </div>

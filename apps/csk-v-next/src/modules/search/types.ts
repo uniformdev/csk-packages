@@ -111,8 +111,5 @@ export type Facets = {
 };
 
 export type FilterQuery = {
-  [K: string]: {
-    eq?: string[];
-    in?: string[];
-  };
+  [K: string]: string[];
 };

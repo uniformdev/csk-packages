@@ -12,7 +12,6 @@ import { FIRST_PAGE } from '@/modules/search/constants';
 import { ContentType, FilterBy, Article, Product, OrderBy, FilterQuery } from '@/modules/search/types';
 import getEntries from '@/modules/search/utils/getEntries';
 import getFacets from '@/modules/search/utils/getFacets';
-import { mergeFilterQueries } from '@/modules/search/utils/mergeFilterQueries';
 import EntriesSearchEngine from './entries-search-engine';
 type EntriesSearchEngineParameters = {
   contentType: ContentType;
@@ -37,7 +36,7 @@ const EntriesSearchEngineWrapper: FC<EntriesSearchEngineProps> = async props => 
     ? baseFilters.reduce<FilterQuery>((acc, filter) => {
         return {
           ...acc,
-          [filter.fieldKey]: { eq: filter.values.map(value => value.value) },
+          [`${filter.fieldKey}[eq]`]: filter.values.map(value => value.value),
         };
       }, {})
     : {};
@@ -60,7 +59,7 @@ const EntriesSearchEngineWrapper: FC<EntriesSearchEngineProps> = async props => 
   const filteredFilterBy = filterBy?.map(filter => {
     const baseFacet = baseFacets[filter.fieldKey];
     if (!baseFacet) return filter;
-    const baseFilterValues = baseFilterQuery[filter.fieldKey]?.eq || [];
+    const baseFilterValues = baseFilterQuery[`${filter.fieldKey}[eq]`] || [];
 
     const facetsWithValues = Object.keys(baseFacet);
     // filter all empty values and values that are present in baseFilters
@@ -85,11 +84,9 @@ const EntriesSearchEngineWrapper: FC<EntriesSearchEngineProps> = async props => 
     if (!values || values.length === 0) return acc;
     return {
       ...acc,
-      [fieldKey]: { in: values },
+      [`${fieldKey}[in]`]: values,
     };
   }, {});
-
-  const mergedFilterQuery = mergeFilterQueries(filterQuery, baseFilterQuery);
 
   const page = Number(searchParams?.[ENTRIES_SEARCH_PAGE_KEY]) - 1 || FIRST_PAGE;
   const perPage = props.itemsPerPage || DEFAULT_PAGE_SIZE;
@@ -101,7 +98,8 @@ const EntriesSearchEngineWrapper: FC<EntriesSearchEngineProps> = async props => 
     perPage,
     filters: {
       type: { eq: contentType },
-      ...mergedFilterQuery,
+      ...baseFilterQuery,
+      ...filterQuery,
     },
     facetBy,
     search,
