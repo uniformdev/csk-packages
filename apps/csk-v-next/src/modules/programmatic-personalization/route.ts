@@ -1,18 +1,25 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { ContentClient, flattenValues } from '@uniformdev/canvas';
-import { ORDER_BY_CLAUSES, ProductBoostEnrichment } from '@/constants/programmaticPersonalization';
 import { transformEntry } from '@/modules/cart/utils';
+import { BOOST_ENRICHMENT_VALUES, ORDER_BY_CLAUSES, PERSONALIZATION_SUPPORTED_ENTRY_TYPES } from './constants';
+
+import { PersonalizationSupportedEntryType, ProductBoostEnrichment } from './types';
 
 const requestSchema = z.object({
   userType: z.string(),
-  boostEnrichment: z.string(),
+  boostEnrichment: z.enum(BOOST_ENRICHMENT_VALUES),
   maxProducts: z.number().optional(),
+  entryType: z.enum(PERSONALIZATION_SUPPORTED_ENTRY_TYPES),
 });
 
-function getOrderByClause(userType: string, boostEnrichment: ProductBoostEnrichment): string {
-  return ORDER_BY_CLAUSES['product'][boostEnrichment][userType];
-}
+const getOrderByClause = (
+  userType: string,
+  boostEnrichment: ProductBoostEnrichment,
+  entryType: PersonalizationSupportedEntryType
+) => {
+  return ORDER_BY_CLAUSES[entryType][boostEnrichment][userType];
+};
 
 export async function POST(req: NextRequest) {
   try {
@@ -26,7 +33,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const { userType, boostEnrichment, maxProducts } = validationResult.data;
+    const { userType, boostEnrichment, maxProducts, entryType } = validationResult.data;
 
     if (!process.env.UNIFORM_PROJECT_ID || !process.env.UNIFORM_API_KEY) {
       console.error('Missing required environment variables');
@@ -38,10 +45,10 @@ export async function POST(req: NextRequest) {
       apiKey: process.env.UNIFORM_API_KEY,
     });
 
-    const orderBy = getOrderByClause(userType, boostEnrichment as ProductBoostEnrichment);
+    const orderBy = getOrderByClause(userType, boostEnrichment, entryType);
 
     const { entries } = await contentClient.getEntries({
-      filters: { type: { eq: 'product' } },
+      filters: { type: { eq: entryType } },
       limit: maxProducts ?? 30,
       orderBy: [orderBy],
       locale: 'en',
