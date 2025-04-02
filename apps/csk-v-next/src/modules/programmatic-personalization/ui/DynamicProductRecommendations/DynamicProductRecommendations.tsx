@@ -30,7 +30,7 @@ const DynamicProductRecommendations: FC<DynamicRecommendationsProps> = ({
   const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    if (!scores) return;
+    if (!scores || !boostEnrichments?.length) return;
 
     const boostInclusions = boostEnrichments.reduce<Record<string, string>>((acc, enrichment) => {
       const { enrichmentKey } = getEnrichmentAndFieldKey(enrichment);
