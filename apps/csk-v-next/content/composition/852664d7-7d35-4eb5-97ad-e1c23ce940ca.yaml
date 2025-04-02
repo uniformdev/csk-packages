@@ -822,9 +822,9 @@ composition:
               boostEnrichments:
                 type: multi-select
                 value:
-                  - category
-                  - subcategory
-                  - brand
+                  - int,category
+                  - subCategory,subcategory
+                  - brand,brand
               loadingIndicatorColor:
                 type: dex-color-palette-parameter
                 value: general-color-2
@@ -839,5 +839,5 @@ composition:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-04-02T07:55:36.694619+00:00'
-modified: '2025-04-02T08:09:12.461104+00:00'
+modified: '2025-04-02T12:19:54.984308+00:00'
 pattern: false

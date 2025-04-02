@@ -1,5 +1,5 @@
-# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
-$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+# yaml-language-server: $schema=<https://canary.uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://canary.uniform.app/schemas/json-schema/component-definition/v1.json
 id: dynamicProductRecommendations
 name: Dynamic Product Recommendations
 icon: rectangle-rounded
@@ -12,14 +12,17 @@ parameters:
   - id: boostEnrichments
     name: Boost Enrichments
     type: multi-select
+    helpText: >-
+      Value should be separated by a comma: the first item is the enrichment
+      key, and the second is the product field name.
     typeConfig:
       options:
-        - text: Category
-          value: category
-        - text: Subcategory
-          value: subcategory
+        - text: Сategory
+          value: int,category
+        - text: Sub Category
+          value: subCategory,subcategory
         - text: Brand
-          value: brand
+          value: brand,brand
   - id: 12bf2dab-85ef-426b-8d1d-b10029e01d69
     name: Loading Indicator
     type: group
@@ -96,4 +99,4 @@ slots:
 titleParameter: displayName
 canBeComposition: false
 created: '2025-04-02T07:55:19.946374+00:00'
-updated: '2025-04-02T08:06:00.931242+00:00'
+updated: '2025-04-02T12:19:34.97557+00:00'

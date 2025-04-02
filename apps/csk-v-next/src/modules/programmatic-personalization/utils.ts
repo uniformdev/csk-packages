@@ -13,8 +13,16 @@ export const getMaxEnrichmentKey = (boostEnrichment: string, scores: Record<stri
 
 export const getOrderByClause = (userType: Record<string, string>) => {
   const orderFields = Object.entries(userType).map(([category, value]) => {
-    return `fields.${category}.slug:${value}:3`;
+    const { fieldKey } = getEnrichmentAndFieldKey(category);
+
+    return `fields.${fieldKey}.slug:${value}:3`;
   });
 
   return `boost|${orderFields.join('|')}`;
+};
+
+export const getEnrichmentAndFieldKey = (enrichment: string) => {
+  const [enrichmentKey, fieldKey] = enrichment.split(',');
+
+  return { enrichmentKey, fieldKey };
 };

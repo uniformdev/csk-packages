@@ -6,7 +6,7 @@ import { Flex as CSKFlex, Grid } from '@uniformdev/csk-components/components/ui'
 import { cn } from '@uniformdev/csk-components/utils/styling';
 import { ProductCard } from '@/components/custom-ui/ProductCard';
 import { Product } from '@/modules/cart/types';
-import { ENRICHMENT_KEY, getMaxEnrichmentKey } from '@/modules/programmatic-personalization';
+import { getEnrichmentAndFieldKey, getMaxEnrichmentKey } from '@/modules/programmatic-personalization';
 import { DynamicRecommendationsProps } from '.';
 import { ProductBoostEnrichment } from '../../types';
 
@@ -33,12 +33,14 @@ const DynamicProductRecommendations: FC<DynamicRecommendationsProps> = ({
     if (!scores) return;
 
     const boostInclusions = boostEnrichments.reduce<Record<string, string>>((acc, enrichment) => {
-      const enrichmentKey = ENRICHMENT_KEY['product'][enrichment];
+      const { enrichmentKey } = getEnrichmentAndFieldKey(enrichment);
 
       const maxEnrichmentKey = getMaxEnrichmentKey(enrichmentKey, scores);
 
+      const [, boostValue] = maxEnrichmentKey?.split('_') ?? [];
+
       if (maxEnrichmentKey) {
-        return { ...acc, [enrichment]: maxEnrichmentKey };
+        return { ...acc, [enrichment]: boostValue };
       }
 
       return acc;

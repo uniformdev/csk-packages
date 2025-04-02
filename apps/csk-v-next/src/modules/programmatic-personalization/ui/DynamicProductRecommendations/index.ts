@@ -1,10 +1,11 @@
 import { ReactElement } from 'react';
 import { ContainerProps as CSKContainerProps } from '@uniformdev/csk-components/components/ui';
-import { ProductBoostEnrichment } from '../../types';
 
 export type DynamicRecommendationsProps = Omit<CSKContainerProps, 'title'> & {
   loadingIndicatorColor?: string;
-  boostEnrichments: ProductBoostEnrichment[];
+  // Each entry should be in the format: "enrichmentKey,fieldKey".
+  // This allows us to map an enrichment to its corresponding product field.
+  boostEnrichments: string[];
   title: ReactElement;
 };
 
