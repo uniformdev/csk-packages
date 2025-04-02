@@ -9,13 +9,17 @@ parameters:
     type: text
     typeConfig: null
     localizable: true
-  - id: boostEnrichment
-    name: Boost Enrichment
-    type: select
+  - id: boostEnrichments
+    name: Boost Enrichments
+    type: multi-select
     typeConfig:
       options:
-        - text: Interest
-          value: int
+        - text: Category
+          value: category
+        - text: Subcategory
+          value: subcategory
+        - text: Brand
+          value: brand
   - id: 12bf2dab-85ef-426b-8d1d-b10029e01d69
     name: Loading Indicator
     type: group
@@ -91,5 +95,5 @@ slots:
     patternsInAllowedComponents: false
 titleParameter: displayName
 canBeComposition: false
-created: '2025-04-01T09:40:38.724788+00:00'
-updated: '2025-04-01T09:56:18.683685+00:00'
+created: '2025-04-02T07:55:19.946374+00:00'
+updated: '2025-04-02T08:06:00.931242+00:00'

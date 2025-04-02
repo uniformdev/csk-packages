@@ -819,9 +819,12 @@ composition:
                 type: text
                 locales:
                   en: Recommendations
-              boostEnrichment:
-                type: select
-                value: int
+              boostEnrichments:
+                type: multi-select
+                value:
+                  - category
+                  - subcategory
+                  - brand
               loadingIndicatorColor:
                 type: dex-color-palette-parameter
                 value: general-color-2
@@ -835,6 +838,6 @@ composition:
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-03-25T04:27:50.97015+00:00'
-modified: '2025-04-01T15:05:18.914994+00:00'
+created: '2025-04-02T07:55:36.694619+00:00'
+modified: '2025-04-02T08:09:12.461104+00:00'
 pattern: false
