@@ -17,10 +17,11 @@ export type FilterByItem = {
 };
 
 export type FilterBy = {
+  type: 'select' | 'multiSelect' | 'range';
   title: string;
   fieldId: string;
   fieldKey: string;
-  multiSelect: boolean;
+  enableFaceting: boolean;
   values: FilterByItem[];
 };
 
@@ -28,6 +29,10 @@ export type OrderBy = {
   title: string;
   field: string;
   direction: 'ASC' | 'DESC';
+};
+
+export type PageSize = {
+  size: number;
 };
 
 export type Pagination<Item> = {
@@ -102,6 +107,7 @@ export type Product = {
   brand: Brand;
   variants: ProductVariant[];
   recommendations: Product[];
+  rating: number;
 };
 
 export type Facets = {

@@ -12,6 +12,7 @@ import {
   Product,
   WithUniformContentEntrySystemParams,
   OrderBy,
+  PageSize,
 } from '@/modules/search/types';
 
 type EntriesSearchEngineParameters = {
@@ -22,7 +23,8 @@ type EntriesSearchEngineParameters = {
   selectedFilters?: Record<string, string[]>;
   search: string;
   page?: number;
-  pageSize?: number;
+  pageSize: number;
+  pageSizes: PageSize[];
   orderBy: OrderBy[];
   selectedOrderByQuery: string;
 };
@@ -41,6 +43,7 @@ const EntriesSearchEngine: FC<EntriesSearchEngineProps> = ({
   search,
   page,
   pageSize,
+  pageSizes,
   orderBy,
   selectedOrderByQuery,
 }) => {
@@ -53,7 +56,8 @@ const EntriesSearchEngine: FC<EntriesSearchEngineProps> = ({
       selectedFilters={selectedFilters || {}}
       search={search || ''}
       page={page || FIRST_PAGE}
-      pageSize={pageSize || DEFAULT_PAGE_SIZE}
+      pageSize={pageSize}
+      pageSizes={pageSizes}
       orderBy={orderBy}
       selectedOrderByQuery={selectedOrderByQuery}
     >

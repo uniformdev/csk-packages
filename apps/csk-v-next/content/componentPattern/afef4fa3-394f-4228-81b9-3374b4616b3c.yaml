@@ -42,12 +42,39 @@ composition:
             direction:
               type: select
               value: DESC
+        - _id: d7339332-cbd4-4ac2-966a-3af951e08cea
+          type: orderBy
+          fields:
+            field:
+              type: text
+              value: fields.rating
+            title:
+              type: text
+              value: 'Rating: Highest first'
+            direction:
+              type: select
+              value: DESC
+        - _id: 7ef0e605-c3d1-4ac8-8793-63b7b409394d
+          type: orderBy
+          fields:
+            field:
+              type: text
+              value: fields.rating
+            title:
+              type: text
+              value: 'Rating: Lowest first'
+            direction:
+              type: select
+              value: ASC
     filterBy:
       type: $block
       value:
         - _id: 87dea12d-bc3b-4b7d-8b46-5b64f15d4654
           type: filterBy
           fields:
+            type:
+              type: select
+              value: multiSelect
             title:
               type: text
               locales:
@@ -85,12 +112,15 @@ composition:
             fieldKey:
               type: text
               value: fields.subcategory.slug
-            multiSelect:
+            enableFaceting:
               type: checkbox
               value: true
         - _id: c1e35169-72dc-494d-ba9a-03bc76aed46e
           type: filterBy
           fields:
+            type:
+              type: select
+              value: multiSelect
             title:
               type: text
               locales:
@@ -128,15 +158,112 @@ composition:
             fieldKey:
               type: text
               value: fields.brand.slug
-            multiSelect:
+            enableFaceting:
               type: checkbox
               value: true
+        - _id: 6bb609be-43c8-4b6f-b6fe-dbaf4e266db5
+          type: filterBy
+          fields:
+            type:
+              type: select
+              value: range
+            title:
+              type: text
+              locales:
+                en: Rating
+            values:
+              type: $block
+              value:
+                - _id: a9dbba2f-64ac-4ed4-b501-9c78d339b6f2
+                  type: filterByItem
+                  fields:
+                    title:
+                      type: text
+                      value: '0'
+                    value:
+                      type: text
+                      value: '0'
+                - _id: 69661140-7aec-49e3-a288-c0b69100ca83
+                  type: filterByItem
+                  fields:
+                    title:
+                      type: text
+                      value: '1'
+                    value:
+                      type: text
+                      value: '1'
+                - _id: d62707d6-f9e9-4b44-8ff0-537a1097841e
+                  type: filterByItem
+                  fields:
+                    title:
+                      type: text
+                      value: '2'
+                    value:
+                      type: text
+                      value: '2'
+                - _id: f63585fa-2454-4583-952a-c3ea759db8f3
+                  type: filterByItem
+                  fields:
+                    title:
+                      type: text
+                      value: '3'
+                    value:
+                      type: text
+                      value: '3'
+                - _id: d3658452-4518-4a2f-9cba-9f7aa5ab453a
+                  type: filterByItem
+                  fields:
+                    title:
+                      type: text
+                      value: '4'
+                    value:
+                      type: text
+                      value: '4'
+                - _id: 66bbfb57-4748-4234-a3f3-26db60120875
+                  type: filterByItem
+                  fields:
+                    title:
+                      type: text
+                      value: '5'
+                    value:
+                      type: text
+                      value: '5'
+            fieldId:
+              type: text
+              value: rating
+            fieldKey:
+              type: text
+              value: fields.rating
+    pageSizes:
+      type: $block
+      value:
+        - _id: 8dbd1da1-4b00-4fe3-8670-7d402adf8800
+          type: pageSize
+          fields:
+            size:
+              type: number
+              value: '6'
+        - _id: 0843f4b1-24fb-46db-9401-83c03f72d85e
+          type: pageSize
+          fields:
+            size:
+              type: number
+              value: '8'
+        - _id: 54840be6-ad8c-4c8d-a9e9-d2817796ec78
+          type: pageSize
+          fields:
+            size:
+              type: number
+              value: '10'
     baseFilters:
       type: $block
       value:
         - _id: 0e7faa98-bee9-40eb-ad47-4a8039cc6aeb
           type: filterBy
           fields:
+            type:
+              type: select
+              value: select
             title:
               type: text
               locales:
@@ -162,9 +289,6 @@ composition:
     contentType:
       type: select
       value: product
-    itemsPerPage:
-      type: number
-      value: '6'
   slots:
     content:
       - _id: d14122cc-646f-4ac0-b13e-9bae5cf4bec6
@@ -292,6 +416,159 @@ composition:
               type: gridItem
               slots:
                 inner:
+                  - _id: 5d9987c7-b142-4662-8082-23ce3a803767
+                    type: flex
+                    slots:
+                      flexItem:
+                        - _id: 16928c5e-1074-4fd2-981a-1694bb8d3b6c
+                          type: flexItem
+                          slots:
+                            inner:
+                              - _id: 43d353cc-a36a-4edd-8ef4-fa740a19a71b
+                                type: entriesSearchTotalAmount
+                                parameters:
+                                  textColor:
+                                    type: dex-color-palette-parameter
+                                    value: text-tertiary
+                                  textTemplate:
+                                    type: text
+                                    locales:
+                                      en: Found {totalItems} product(s)
+                                _overridability:
+                                  hideLockedParameters: true
+                          parameters:
+                            shrink:
+                              type: dex-segmented-control-parameter
+                              value: '0'
+                            alignSelf:
+                              type: dex-segmented-control-parameter
+                              value: {}
+                            displayName:
+                              type: text
+                              locales:
+                                en: Total Items Found
+                          _overridability:
+                            hideLockedParameters: true
+                        - _id: f5572abc-bf1b-48d2-b338-c81fccd00644
+                          type: flex
+                          slots:
+                            flexItem:
+                              - _id: 94c808ae-d49b-426e-a277-dfbf80069d35
+                                type: text
+                                parameters:
+                                  tag:
+                                    type: dex-segmented-control-parameter
+                                    value: span
+                                  size:
+                                    type: dex-segmented-control-parameter
+                                    value:
+                                      mobile: sm
+                                      tablet: sm
+                                      desktop: sm
+                                  text:
+                                    type: text
+                                    locales:
+                                      en: Products per page
+                                  color:
+                                    type: dex-color-palette-parameter
+                                    value: text-primary
+                                  weight:
+                                    type: dex-segmented-control-parameter
+                                    value: normal
+                                _overridability:
+                                  hideLockedParameters: true
+                              - _id: cbbd20eb-7da3-4272-8a9c-fe1b20fbb80d
+                                type: entriesSearchPageSize
+                                _overridability:
+                                  hideLockedParameters: true
+                          parameters:
+                            gap:
+                              type: dex-slider-control-parameter
+                              value:
+                                mobile: '4'
+                                tablet: '4'
+                                desktop: '4'
+                            spacing:
+                              type: dex-space-control-parameter
+                              value:
+                                mobile: {}
+                                tablet: {}
+                                desktop: {}
+                            direction:
+                              type: dex-segmented-control-parameter
+                              value:
+                                mobile: row
+                                tablet: row
+                                desktop: row
+                            alignItems:
+                              type: dex-segmented-control-parameter
+                              value:
+                                mobile: center
+                                tablet: center
+                                desktop: center
+                            displayName:
+                              type: text
+                              locales:
+                                en: Per page
+                            fluidContent:
+                              type: checkbox
+                              value: true
+                            justifyContent:
+                              type: dex-segmented-control-parameter
+                              value:
+                                mobile: between
+                                tablet: end
+                                desktop: end
+                          _overridability:
+                            hideLockedParameters: true
+                    parameters:
+                      gap:
+                        type: dex-slider-control-parameter
+                        value:
+                          mobile: '4'
+                          tablet: '4'
+                          desktop: '4'
+                      spacing:
+                        type: dex-space-control-parameter
+                        value:
+                          mobile: {}
+                          tablet: {}
+                          desktop: {}
+                      direction:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: row
+                          tablet: row
+                          desktop: row
+                      alignItems:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: center
+                          tablet: center
+                          desktop: center
+                      displayName:
+                        type: text
+                        locales:
+                          en: Top Content
+                      fluidContent:
+                        type: checkbox
+                        value: true
+                      justifyContent:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: between
+                          tablet: between
+                          desktop: between
+                    _overridability:
+                      hideLockedParameters: true
+                  - _id: c1ce3297-ca5f-49c8-9a55-91981baf01a9
+                    type: spacer
+                    parameters:
+                      size:
+                        type: dex-token-selector-parameter
+                        value: spacer-small
+                    _overridability:
+                      hideLockedParameters: true
                   - _id: 166b3e64-f887-4535-99c7-38829cfe7f1e
                     type: entriesSearchList
                     parameters:
@@ -397,5 +674,5 @@ composition:
   _locales:
     - en
 created: '2025-04-01T11:43:52.142476+00:00'
-modified: '2025-04-01T16:57:14.422564+00:00'
+modified: '2025-04-02T17:43:20.379023+00:00'
 pattern: true

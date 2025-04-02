@@ -21,7 +21,7 @@ const ArticleResultCard: FC<ArticleCardProps> = ({
   slug,
   border,
 }) => {
-  const asset = thumbnail[0];
+  const asset = thumbnail?.[0];
 
   if (!asset) return null;
 
@@ -44,7 +44,7 @@ const ArticleResultCard: FC<ArticleCardProps> = ({
         <p className="text-2xl font-bold">{title}</p>
         {shortDescription && <p className="text-base">{shortDescription}</p>}
         {author && <p className="text-base">by {author.name}</p>}
-        <Button className="hover:bg-button-primary border-button-secondary bg-button-secondary text-text-primary hover:text-text-secondary mt-auto border px-6 py-3 text-sm uppercase">
+        <Button className="mt-auto border border-button-secondary bg-button-secondary px-6 py-3 text-sm uppercase text-text-primary hover:bg-button-primary hover:text-text-secondary">
           Read Article
         </Button>
       </div>

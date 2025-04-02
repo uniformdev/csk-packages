@@ -14,6 +14,7 @@ import {
   DEFAULT_PAGE_SIZE,
   ENTRIES_SEARCH_ORDER_BY_KEY,
   ENTRIES_SEARCH_PAGE_KEY,
+  ENTRIES_SEARCH_PAGE_SIZE_KEY,
   ENTRIES_SEARCH_QUERY_KEY,
   FIRST_PAGE,
 } from './constants';
@@ -26,6 +27,7 @@ import {
   Product,
   Facets,
   OrderBy,
+  PageSize,
 } from './types';
 
 interface EntriesSearchContextType {
@@ -33,7 +35,9 @@ interface EntriesSearchContextType {
   search: string;
   setSearch: (search: string) => void;
   setPage: (page: number) => void;
+  setPageSize: (pageSize: number) => void;
   pageSize: number;
+  pageSizes: PageSize[];
   page: number;
   filterBy: FilterBy[];
   selectedFilters: Record<string, string[]>;
@@ -54,7 +58,9 @@ const EntriesSearchContext = createContext<EntriesSearchContextType>({
   search: '',
   setSearch: () => {},
   setPage: () => {},
+  setPageSize: () => {},
   pageSize: DEFAULT_PAGE_SIZE,
+  pageSizes: [],
   page: FIRST_PAGE,
   filterBy: [],
   selectedFilters: {},
@@ -79,6 +85,7 @@ const EntriesSearchContext = createContext<EntriesSearchContextType>({
 type EntriesSearchContextProviderProps = {
   children: React.ReactNode;
   filterBy: FilterBy[];
+  pageSizes: PageSize[];
   contentType: ContentType;
   selectedFilters: Record<string, string[]>;
   orderBy: OrderBy[];
@@ -100,6 +107,7 @@ const EntriesSearchContextProvider: FC<EntriesSearchContextProviderProps> = ({
   search,
   page,
   pageSize,
+  pageSizes,
   entries,
   facets,
 }) => {
@@ -119,7 +127,7 @@ const EntriesSearchContextProvider: FC<EntriesSearchContextProviderProps> = ({
       } else {
         params.set(ENTRIES_SEARCH_QUERY_KEY, search);
       }
-      router.push(`?${params.toString()}`);
+      router.push(`?${params.toString()}`, { scroll: false });
     },
     [router, searchParams]
   );
@@ -138,12 +146,24 @@ const EntriesSearchContextProvider: FC<EntriesSearchContextProviderProps> = ({
     [router, searchParams]
   );
 
+  const setPageSize = useCallback(
+    (pageSize: number) => {
+      setIsLoading(true);
+      const params = new URLSearchParams(searchParams.toString());
+      params.delete(ENTRIES_SEARCH_PAGE_KEY);
+      params.set(ENTRIES_SEARCH_PAGE_SIZE_KEY, pageSize.toString());
+      router.push(`?${params.toString()}`, { scroll: false });
+    },
+    [router, searchParams]
+  );
+
   const setOrderBy = useCallback(
     (orderByQuery: string) => {
       setIsLoading(true);
       const params = new URLSearchParams(searchParams.toString());
+      params.delete(ENTRIES_SEARCH_PAGE_KEY);
       params.set(ENTRIES_SEARCH_ORDER_BY_KEY, orderByQuery);
-      router.push(`?${params.toString()}`);
+      router.push(`?${params.toString()}`, { scroll: false });
     },
     [router, searchParams]
   );
@@ -163,7 +183,7 @@ const EntriesSearchContextProvider: FC<EntriesSearchContextProviderProps> = ({
           params.append(filter.fieldId, v);
         });
       });
-      router.push(`?${params.toString()}`);
+      router.push(`?${params.toString()}`, { scroll: false });
     },
     [search, router, filterBy]
   );
@@ -178,13 +198,15 @@ const EntriesSearchContextProvider: FC<EntriesSearchContextProviderProps> = ({
     setIsLoading(false);
   }, [searchParams]);
 
-  const value = useMemo(() => {
+  const value: EntriesSearchContextType = useMemo(() => {
     return {
       search,
       setSearch,
       pageSize,
       page,
       setPage,
+      setPageSize,
+      pageSizes,
       filterBy,
       contentType,
       selectedFilters,
@@ -205,6 +227,8 @@ const EntriesSearchContextProvider: FC<EntriesSearchContextProviderProps> = ({
     pageSize,
     page,
     setPage,
+    setPageSize,
+    pageSizes,
     filterBy,
     contentType,
     selectedFilters,

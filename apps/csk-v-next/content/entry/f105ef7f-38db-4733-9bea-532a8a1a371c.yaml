@@ -1,5 +1,5 @@
 created: '2025-03-25T04:31:32.86376+00:00'
-modified: '2025-04-01T16:35:04.173168+00:00'
+modified: '2025-04-02T16:35:32.468019+00:00'
 pattern: false
 entry:
   _id: f105ef7f-38db-4733-9bea-532a8a1a371c
@@ -114,6 +114,9 @@ entry:
     title:
       type: text
       value: Milk carafe
+    rating:
+      type: number
+      value: '4.6'
     category:
       type: contentReference
       value: ${#jptr:/ref-f105ef7f-38db-4733-9bea-532a8a1a371c-category/entries/0}

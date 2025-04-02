@@ -326,6 +326,9 @@ composition:
                   - _id: 0c2c5196-5cb8-46b4-98e4-7ae44fe2ea4c
                     type: filterBy
                     fields:
+                      type:
+                        type: select
+                        value: multiSelect
                       title:
                         type: text
                         locales:
@@ -363,12 +366,15 @@ composition:
                       fieldKey:
                         type: text
                         value: fields.category.slug
-                      multiSelect:
+                      enableFaceting:
                         type: checkbox
                         value: true
                   - _id: 3c48def4-6328-4efe-97c1-f33a6af5309d
                     type: filterBy
                     fields:
+                      type:
+                        type: select
+                        value: multiSelect
                       title:
                         type: text
                         locales:
@@ -406,15 +412,21 @@ composition:
                       fieldKey:
                         type: text
                         value: fields.author.slug
-                      multiSelect:
+                      enableFaceting:
                         type: checkbox
                         value: true
+              pageSizes:
+                type: $block
+                value:
+                  - _id: cf603565-4ba5-4657-9c13-67a588c4468d
+                    type: pageSize
+                    fields:
+                      size:
+                        type: number
+                        value: '6'
               contentType:
                 type: select
                 value: article
-              itemsPerPage:
-                type: number
-                value: '4'
     9a8e179f-df98-4297-b6e8-74da7f904a12|5feefc71-05dd-4004-bfe9-3dd6876628b4:
       parameters:
         text:
@@ -424,5 +436,5 @@ composition:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-03-25T04:27:48.427075+00:00'
-modified: '2025-04-01T08:01:11.981071+00:00'
+modified: '2025-04-02T20:27:10.96973+00:00'
 pattern: false

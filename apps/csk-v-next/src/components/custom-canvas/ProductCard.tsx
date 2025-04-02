@@ -15,6 +15,7 @@ type ProductCardProps = ComponentProps<{
   textColor: string;
   addToFavoritesIcon: Asset[];
   removeFromFavoritesIcon: Asset[];
+  rating: number;
 }>;
 
 const ProductCard: FC<ProductCardProps> = ({
@@ -26,6 +27,7 @@ const ProductCard: FC<ProductCardProps> = ({
   textColor,
   addToFavoritesIcon,
   removeFromFavoritesIcon,
+  rating,
 }) => {
   const [resolvedImage] = resolveAsset(image);
 
@@ -44,6 +46,7 @@ const ProductCard: FC<ProductCardProps> = ({
       textColor={textColor}
       addToFavoritesIcon={resolvedAddToFavoritesIcon?.url}
       removeFromFavoritesIcon={resolvedRemoveFromFavoritesIcon?.url}
+      rating={rating}
     />
   );
 };

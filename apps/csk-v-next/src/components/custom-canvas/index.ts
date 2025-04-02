@@ -10,8 +10,10 @@ import EntriesSearchBox from './EntriesSearchBox';
 import EntriesSearchEngine from './EntriesSearchEngine';
 import EntriesSearchFilters from './EntriesSearchFilters';
 import EntriesSearchList from './EntriesSearchList';
+import EntriesSearchPageSize from './EntriesSearchPageSize';
 import EntriesSearchPagination from './EntriesSearchPagination';
 import EntriesSearchSorting from './EntriesSearchSorting';
+import EntriesSearchTotalAmount from './EntriesSearchTotalAmount';
 import Favorites from './Favorites';
 import FavoritesIcon from './FavoritesIcon';
 import FeaturedSection from './FeaturedSection';
@@ -66,5 +68,7 @@ export const customComponentsMapping: ComponentMapping = {
   entriesSearchList: { component: EntriesSearchList },
   entriesSearchPagination: { component: EntriesSearchPagination },
   entriesSearchSorting: { component: EntriesSearchSorting },
+  entriesSearchTotalAmount: { component: EntriesSearchTotalAmount },
+  entriesSearchPageSize: { component: EntriesSearchPageSize },
   dynamicProductRecommendations: { component: DynamicProductRecommendations },
 };

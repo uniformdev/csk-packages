@@ -1,5 +1,5 @@
 created: '2025-03-25T04:31:26.20173+00:00'
-modified: '2025-04-01T16:36:20.174639+00:00'
+modified: '2025-04-02T16:35:58.293708+00:00'
 pattern: false
 entry:
   _id: f7e77f37-2646-410e-8596-6ae16379d5d9
@@ -1243,6 +1243,9 @@ entry:
     title:
       type: text
       value: Light Roast Coffee
+    rating:
+      type: number
+      value: '4.9'
     category:
       type: contentReference
       value: ${#jptr:/ref-f7e77f37-2646-410e-8596-6ae16379d5d9-category/entries/0}

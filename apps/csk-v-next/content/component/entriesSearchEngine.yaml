@@ -14,12 +14,6 @@ parameters:
         - text: Product
           value: product
       required: true
-  - id: itemsPerPage
-    name: Items Per Page
-    type: number
-    typeConfig:
-      min: '1'
-      required: true
   - id: orderBy
     name: Order By
     type: $block
@@ -43,6 +37,15 @@ parameters:
     typeConfig:
       allowedTypes:
         - filterBy
+  - id: pageSizes
+    name: Page Sizes
+    type: $block
+    helpText: First is default
+    typeConfig:
+      min: 1
+      required: true
+      allowedTypes:
+        - pageSize
 categoryId: 624b55ca-4671-46e2-8fd5-4a9b34b4c121
 useTeamPermissions: true
 slots:
@@ -54,4 +57,4 @@ slots:
     patternsInAllowedComponents: false
 canBeComposition: false
 created: '2025-03-26T19:00:03.642504+00:00'
-updated: '2025-03-31T20:09:49.256293+00:00'
+updated: '2025-04-02T12:26:49.292237+00:00'

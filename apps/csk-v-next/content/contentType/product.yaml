@@ -1,7 +1,7 @@
 id: product
 name: Product
 created: '2025-03-25T04:28:36.53123+00:00'
-updated: '2025-04-01T16:21:31.076018+00:00'
+updated: '2025-04-02T16:31:25.075336+00:00'
 slugSettings:
   required: 'no'
 useTeamPermissions: true
@@ -56,11 +56,21 @@ fields:
     typeConfig:
       collapsed: false
       childrenParams:
+        - rating
         - category
         - subcategory
         - brand
         - variants
         - recommendations
+  - id: rating
+    name: Rating
+    type: number
+    typeConfig:
+      max: '5'
+      min: '1'
+      decimal: true
+      required: true
+      decimalPlaces: '1'
   - id: category
     name: Category
     type: contentReference

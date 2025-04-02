@@ -1,5 +1,5 @@
 created: '2025-03-25T04:29:18.576002+00:00'
-modified: '2025-04-01T16:37:10.44058+00:00'
+modified: '2025-04-02T16:45:22.396973+00:00'
 pattern: false
 entry:
   _id: 79ddd1f3-30a9-4f4d-8a93-0d9e17ad5967
@@ -1241,6 +1241,9 @@ entry:
     title:
       type: text
       value: Breakfast Blend Coffee
+    rating:
+      type: number
+      value: '4.7'
     category:
       type: contentReference
       value: ${#jptr:/ref-79ddd1f3-30a9-4f4d-8a93-0d9e17ad5967-category/entries/0}
