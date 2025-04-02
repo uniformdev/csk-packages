@@ -6,7 +6,7 @@ import {
   createClientUniformContext,
   useInitUniformContext,
 } from '@uniformdev/canvas-next-rsc/component';
-import { ContextPlugin, enableContextDevTools } from '@uniformdev/context';
+import { ContextPlugin, enableContextDevTools, enableUniformInsights } from '@uniformdev/context';
 import { enableGoogleGtagAnalytics } from '@uniformdev/context-gtag';
 
 export const UniformClientContext: ClientContextComponent = ({ manifest }) => {
@@ -24,6 +24,15 @@ export const UniformClientContext: ClientContextComponent = ({ manifest }) => {
     );
 
     plugins.push(enableGoogleGtagAnalytics());
+
+    plugins.push(
+      enableUniformInsights({
+        endpoint: {
+          type: 'proxy',
+          path: '/api/analytics',
+        },
+      })
+    );
 
     return createClientUniformContext({
       manifest,
