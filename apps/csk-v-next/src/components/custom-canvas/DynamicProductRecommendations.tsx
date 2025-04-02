@@ -21,10 +21,10 @@ const DynamicProductRecommendations: FC<DynamicRecommendationsProps> = ({
   fullHeight,
   border,
   loadingIndicatorColor,
-  boostEnrichment,
+  boostEnrichments,
 }) => (
   <BaseDynamicProductRecommendations
-    {...{ backgroundColor, spacing, border, fluidContent, fullHeight, boostEnrichment, loadingIndicatorColor }}
+    {...{ backgroundColor, spacing, border, fluidContent, fullHeight, boostEnrichments, loadingIndicatorColor }}
     title={<UniformSlot data={component} context={context} slot={slots.dynamicRecommendationsTitle} />}
   />
 );

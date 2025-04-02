@@ -1,39 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { z } from 'zod';
 import { ContentClient, flattenValues } from '@uniformdev/canvas';
 import { transformEntry } from '@/modules/cart/utils';
-import { BOOST_ENRICHMENT_VALUES, ORDER_BY_CLAUSES, PERSONALIZATION_SUPPORTED_ENTRY_TYPES } from './constants';
-
-import { PersonalizationSupportedEntryType, ProductBoostEnrichment } from './types';
-
-const requestSchema = z.object({
-  userType: z.string(),
-  boostEnrichment: z.enum(BOOST_ENRICHMENT_VALUES),
-  maxProducts: z.number().optional(),
-  entryType: z.enum(PERSONALIZATION_SUPPORTED_ENTRY_TYPES),
-});
-
-const getOrderByClause = (
-  userType: string,
-  boostEnrichment: ProductBoostEnrichment,
-  entryType: PersonalizationSupportedEntryType
-) => {
-  return ORDER_BY_CLAUSES[entryType][boostEnrichment][userType];
-};
+import { getOrderByClause } from './utils';
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const validationResult = requestSchema.safeParse(body);
 
-    if (!validationResult.success) {
-      return NextResponse.json(
-        { error: 'Invalid request body', details: validationResult.error.issues },
-        { status: 400 }
-      );
-    }
-
-    const { userType, boostEnrichment, maxProducts, entryType } = validationResult.data;
+    const { boostInclusions, maxProducts, entryType } = body;
 
     if (!process.env.UNIFORM_PROJECT_ID || !process.env.UNIFORM_API_KEY) {
       console.error('Missing required environment variables');
@@ -43,9 +17,11 @@ export async function POST(req: NextRequest) {
     const contentClient = new ContentClient({
       projectId: process.env.UNIFORM_PROJECT_ID,
       apiKey: process.env.UNIFORM_API_KEY,
+      apiHost: process.env.UNIFORM_CLI_BASE_URL!,
+      edgeApiHost: process.env.UNIFORM_CLI_BASE_EDGE_URL!,
     });
 
-    const orderBy = getOrderByClause(userType, boostEnrichment, entryType);
+    const orderBy = getOrderByClause(boostInclusions);
 
     const { entries } = await contentClient.getEntries({
       filters: { type: { eq: entryType } },

@@ -4,7 +4,7 @@ import { ProductBoostEnrichment } from '../../types';
 
 export type DynamicRecommendationsProps = Omit<CSKContainerProps, 'title'> & {
   loadingIndicatorColor?: string;
-  boostEnrichment: ProductBoostEnrichment;
+  boostEnrichments: ProductBoostEnrichment[];
   title: ReactElement;
 };
 

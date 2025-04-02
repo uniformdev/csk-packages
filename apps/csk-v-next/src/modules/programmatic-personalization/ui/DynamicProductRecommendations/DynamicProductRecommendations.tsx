@@ -1,12 +1,16 @@
 'use client';
 
 import { FC, useEffect, useState } from 'react';
+import { useScores } from '@uniformdev/canvas-next-rsc-client';
 import { Flex as CSKFlex, Grid } from '@uniformdev/csk-components/components/ui';
 import { cn } from '@uniformdev/csk-components/utils/styling';
 import { ProductCard } from '@/components/custom-ui/ProductCard';
 import { Product } from '@/modules/cart/types';
-import { BOOST_ENRICHMENT_BY_TYPE, EVERYONE, getMaxEnrichmentKey } from '@/modules/programmatic-personalization';
+import { ENRICHMENT_KEY, getMaxEnrichmentKey } from '@/modules/programmatic-personalization';
 import { DynamicRecommendationsProps } from '.';
+import { ProductBoostEnrichment } from '../../types';
+
+type BoostInclusions = Partial<Record<ProductBoostEnrichment, string>>;
 
 const DynamicProductRecommendations: FC<DynamicRecommendationsProps> = ({
   title,
@@ -16,48 +20,47 @@ const DynamicProductRecommendations: FC<DynamicRecommendationsProps> = ({
   fullHeight,
   border,
   loadingIndicatorColor,
-  boostEnrichment,
+  boostEnrichments,
 }) => {
+  const scores = useScores();
+
   const [isLoading, setIsLoading] = useState(true);
-  const [userType, setUserType] = useState<string | undefined>(undefined);
+  const [boostInclusions, setBoostInclusions] = useState<BoostInclusions>({});
   const [products, setProducts] = useState<Product[]>([]);
+  const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    try {
-      const rawData = typeof window !== 'undefined' ? localStorage.getItem('ufvisitor') : null;
+    if (!scores) return;
 
-      if (rawData) {
-        const parsedData = JSON.parse(rawData);
-        const scores = parsedData?.visitorData?.scores || {};
+    const boostInclusions = boostEnrichments.reduce<Record<string, string>>((acc, enrichment) => {
+      const enrichmentKey = ENRICHMENT_KEY['product'][enrichment];
 
-        const enrichmentKeys = BOOST_ENRICHMENT_BY_TYPE['product'][boostEnrichment];
+      const maxEnrichmentKey = getMaxEnrichmentKey(enrichmentKey, scores);
 
-        const maxEnrichmentKey = getMaxEnrichmentKey(boostEnrichment, scores, enrichmentKeys);
-
-        setUserType(maxEnrichmentKey ?? EVERYONE);
-      } else {
-        setUserType(EVERYONE);
+      if (maxEnrichmentKey) {
+        return { ...acc, [enrichment]: maxEnrichmentKey };
       }
-    } catch (error) {
-      console.error('Error parsing ufvisitor data:', error);
-      setUserType(EVERYONE);
-    }
-  }, [boostEnrichment]);
+
+      return acc;
+    }, {});
+
+    setBoostInclusions(boostInclusions);
+  }, [boostEnrichments, scores]);
 
   useEffect(() => {
     const fetchData = async () => {
-      if (!userType) return;
-
+      setIsError(false);
       setIsLoading(true);
       try {
         const response = await fetch('/api/programmatic-personalization', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ userType, boostEnrichment, maxProducts: 3, entryType: 'product' }),
+          body: JSON.stringify({ boostInclusions, maxProducts: 3, entryType: 'product' }),
         });
 
         if (!response.ok) {
-          throw new Error(`Error ${response.status}: ${response.statusText}`);
+          setIsError(true);
+          return;
         }
 
         const result = await response.json();
@@ -65,13 +68,32 @@ const DynamicProductRecommendations: FC<DynamicRecommendationsProps> = ({
         setProducts(result);
       } catch (error) {
         console.error('Error fetching recommendations:', error);
+        setIsError(true);
       } finally {
         setIsLoading(false);
       }
     };
 
     fetchData();
-  }, [userType, boostEnrichment]);
+  }, [boostInclusions, boostEnrichments]);
+
+  if (isError) {
+    return (
+      <CSKFlex
+        justifyContent="center"
+        direction="col"
+        alignItems="center"
+        className="text-center"
+        gap="6"
+        {...{ backgroundColor, spacing, border, fluidContent, fullHeight }}
+      >
+        <h2 className="text-2xl font-semibold text-red-600">Something went wrong</h2>
+        <p className="text-base text-gray-500">
+          We couldn’t fetch your recommendations. Please reload the page or contact support if the issue persists.
+        </p>
+      </CSKFlex>
+    );
+  }
 
   return (
     <CSKFlex
@@ -115,8 +137,6 @@ const DynamicProductRecommendations: FC<DynamicRecommendationsProps> = ({
                 slug={product.slug}
                 link={`/products/${product.slug}`}
                 textColor={'primary'}
-                addToFavoritesIcon={''}
-                removeFromFavoritesIcon={''}
               />
             );
           })}
