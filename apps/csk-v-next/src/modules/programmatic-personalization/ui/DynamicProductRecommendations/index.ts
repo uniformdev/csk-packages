@@ -7,6 +7,7 @@ export type DynamicRecommendationsProps = Omit<CSKContainerProps, 'title'> & {
   // This allows us to map an enrichment to its corresponding product field.
   boostEnrichments: string[];
   title: ReactElement;
+  maxRecommendations?: string;
 };
 
 export { default as DynamicProductRecommendations } from './DynamicProductRecommendations';

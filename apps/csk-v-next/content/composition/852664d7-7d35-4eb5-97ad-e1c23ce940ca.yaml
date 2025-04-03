@@ -794,7 +794,7 @@ composition:
                     text:
                       type: text
                       locales:
-                        en: Your Recommendations
+                        en: You may also be interested in this...
                     color:
                       type: dex-color-palette-parameter
                       value: text-primary
@@ -805,6 +805,9 @@ composition:
                       type: dex-segmented-control-parameter
                       value: center
             parameters:
+              border:
+                type: dex-token-selector-parameter
+                value: ''
               spacing:
                 type: dex-space-control-parameter
                 value:
@@ -825,6 +828,9 @@ composition:
                 type: multi-select
                 value:
                   - int,category
+              maxRecommendations:
+                type: number
+                value: '4'
               loadingIndicatorColor:
                 type: dex-color-palette-parameter
                 value: general-color-2
@@ -839,5 +845,5 @@ composition:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-03-25T04:27:50.97015+00:00'
-modified: '2025-04-03T12:10:44.101238+00:00'
+modified: '2025-04-03T14:39:37.073413+00:00'
 pattern: false

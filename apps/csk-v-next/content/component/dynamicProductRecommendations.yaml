@@ -23,30 +23,49 @@ parameters:
           value: subCategory,subcategory
         - text: Brand
           value: brand,brand
-  - id: 12bf2dab-85ef-426b-8d1d-b10029e01d69
-    name: Loading Indicator
-    type: group
+  - id: maxRecommendations
+    name: Max Recommendations
+    type: number
     typeConfig:
-      collapsed: true
-      childrenParams:
-        - loadingIndicatorColor
-  - id: loadingIndicatorColor
-    name: Color
-    type: dex-color-palette-parameter
-    typeConfig: null
+      max: '50'
+      min: '0'
   - id: e991ff8c-dd30-4578-bba1-68ae0350e10b
     name: Presentation Settings
     type: group
     typeConfig:
       collapsed: true
       childrenParams:
+        - loadingIndicatorColor
+        - backgroundColor
         - spacing
         - border
-        - backgroundColor
         - fitContent
         - relative
         - fluidContent
         - fullHeight
+  - id: loadingIndicatorColor
+    name: Loading Indicator Color
+    type: dex-color-palette-parameter
+    typeConfig:
+      allowColors:
+        - general-color-1
+        - general-color-2
+        - general-color-3
+        - general-color-5
+        - general-color-6
+        - general-color-12
+  - id: backgroundColor
+    name: Background Color
+    type: dex-color-palette-parameter
+    typeConfig:
+      allowColors:
+        - general-color-1
+        - general-color-2
+        - general-color-3
+        - general-color-5
+        - general-color-6
+        - general-color-10
+        - general-color-12
   - id: spacing
     name: Spacing
     type: dex-space-control-parameter
@@ -63,10 +82,6 @@ parameters:
     type: dex-token-selector-parameter
     typeConfig:
       selectedTokenType: border
-  - id: backgroundColor
-    name: Background Color
-    type: dex-color-palette-parameter
-    typeConfig: null
   - id: fitContent
     name: Fit Content
     type: checkbox
@@ -99,4 +114,4 @@ slots:
 titleParameter: displayName
 canBeComposition: false
 created: '2025-04-01T09:40:38.724788+00:00'
-updated: '2025-04-02T12:50:44.535474+00:00'
+updated: '2025-04-03T14:34:14.664474+00:00'

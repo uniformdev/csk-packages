@@ -7,7 +7,7 @@ export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
 
-    const { boostInclusions, maxProducts, entryType } = body;
+    const { boostInclusions, maxRecommendations, entryType } = body;
 
     if (!process.env.UNIFORM_PROJECT_ID || !process.env.UNIFORM_API_KEY) {
       console.error('Missing required environment variables');
@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
 
     const { entries } = await contentClient.getEntries({
       filters: { type: { eq: entryType } },
-      limit: maxProducts ?? 30,
+      limit: maxRecommendations ?? 30,
       orderBy: [orderBy],
       locale: 'en',
     });

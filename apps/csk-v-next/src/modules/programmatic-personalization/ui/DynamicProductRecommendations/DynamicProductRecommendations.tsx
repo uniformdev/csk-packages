@@ -21,6 +21,7 @@ const DynamicProductRecommendations: FC<DynamicRecommendationsProps> = ({
   border,
   loadingIndicatorColor,
   boostEnrichments,
+  maxRecommendations = '3',
 }) => {
   const scores = useScores();
 
@@ -57,7 +58,11 @@ const DynamicProductRecommendations: FC<DynamicRecommendationsProps> = ({
         const response = await fetch('/api/programmatic-personalization', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ boostInclusions, maxProducts: 3, entryType: 'product' }),
+          body: JSON.stringify({
+            boostInclusions,
+            maxRecommendations: parseInt(maxRecommendations),
+            entryType: 'product',
+          }),
         });
 
         if (!response.ok) {
@@ -77,7 +82,7 @@ const DynamicProductRecommendations: FC<DynamicRecommendationsProps> = ({
     };
 
     fetchData();
-  }, [boostInclusions, boostEnrichments]);
+  }, [boostInclusions, boostEnrichments, maxRecommendations]);
 
   if (isError) {
     return (
