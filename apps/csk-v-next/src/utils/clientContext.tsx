@@ -9,7 +9,11 @@ import {
 import { ContextPlugin, enableContextDevTools, enableUniformInsights } from '@uniformdev/context';
 import { enableGoogleGtagAnalytics } from '@uniformdev/context-gtag';
 
-export const UniformClientContext: ClientContextComponent = ({ manifest }) => {
+export const UniformClientContext: ClientContextComponent = ({
+  manifest,
+  experimentalQuirkSerialization,
+  defaultConsent,
+}) => {
   const router = useRouter();
 
   useInitUniformContext(() => {
@@ -37,8 +41,8 @@ export const UniformClientContext: ClientContextComponent = ({ manifest }) => {
     return createClientUniformContext({
       manifest,
       plugins,
-      defaultConsent: true,
-      experimental_quirksEnabled: true,
+      defaultConsent,
+      experimental_quirksEnabled: experimentalQuirkSerialization,
     });
   });
 

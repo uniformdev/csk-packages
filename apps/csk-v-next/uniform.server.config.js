@@ -4,4 +4,7 @@ module.exports = {
   evaluation: {
     personalization: 'hybrid',
   },
+  experimental: {
+    quirkSerialization: true,
+  },
 };
