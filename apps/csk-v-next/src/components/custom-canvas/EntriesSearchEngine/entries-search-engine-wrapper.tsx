@@ -106,7 +106,8 @@ const EntriesSearchEngineWrapper: FC<EntriesSearchEngineProps> = async props => 
     };
   }, {});
 
-  const page = Number(searchParams?.[ENTRIES_SEARCH_PAGE_KEY]) - 1 || FIRST_PAGE;
+  const selectedPage = Number(searchParams?.[ENTRIES_SEARCH_PAGE_KEY]) - 1;
+  const page = selectedPage && selectedPage > 0 ? selectedPage : FIRST_PAGE;
   const perPage = Number(searchParams?.[ENTRIES_SEARCH_PAGE_SIZE_KEY]) || pageSizes?.[0]?.size || DEFAULT_PAGE_SIZE;
   const defaultOrderByQuery = orderBy?.[0] ? `${orderBy[0].field}_${orderBy[0].direction}` : 'created_at_DESC';
   const selectedOrderByQuery = searchParams?.[ENTRIES_SEARCH_ORDER_BY_KEY] || defaultOrderByQuery;

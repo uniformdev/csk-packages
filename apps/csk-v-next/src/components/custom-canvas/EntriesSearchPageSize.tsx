@@ -1,15 +1,22 @@
 'use client';
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { useEntriesSearchContext } from '@/modules/search/EntriesSearchContextProvider';
 import Select from '@/modules/search/ui/Select';
 type EntriesSearchPageSizeProps = ComponentProps;
 
 const EntriesSearchPageSize: FC<EntriesSearchPageSizeProps> = () => {
-  const { pageSize, setPageSize, pageSizes } = useEntriesSearchContext();
+  const { pageSize, setPageSize, pageSizes, isLoading } = useEntriesSearchContext();
   const [localPageSize, setLocalPageSize] = useState(pageSize);
 
+  useEffect(() => {
+    if (pageSize !== localPageSize && !isLoading) {
+      setLocalPageSize(pageSize);
+    }
+  }, [pageSize, localPageSize, isLoading]);
+
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    if (isLoading) return;
     const value = e.target.value;
     setLocalPageSize(Number(value));
     setPageSize(Number(value));

@@ -136,10 +136,10 @@ const EntriesSearchContextProvider: FC<EntriesSearchContextProviderProps> = ({
     (page: number) => {
       setIsLoading(true);
       const params = new URLSearchParams(searchParams.toString());
-      if (page === 1) {
+      if (page === 0) {
         params.delete(ENTRIES_SEARCH_PAGE_KEY);
       } else {
-        params.set(ENTRIES_SEARCH_PAGE_KEY, page.toString());
+        params.set(ENTRIES_SEARCH_PAGE_KEY, (page + 1).toString());
       }
       router.push(`?${params.toString()}`);
     },

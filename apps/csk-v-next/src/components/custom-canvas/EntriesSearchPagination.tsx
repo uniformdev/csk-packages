@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, SVGProps, useMemo, useState } from 'react';
+import { FC, SVGProps, useCallback, useEffect, useMemo, useState } from 'react';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { cn } from '@uniformdev/csk-components/utils/styling';
 import { useEntriesSearchContext } from '@/modules/search/EntriesSearchContextProvider';
@@ -32,83 +32,102 @@ const IconArrow: FC<SVGProps<SVGSVGElement>> = ({ className }) => (
 );
 
 const EntriesSearchPagination: FC<EntriesSearchPaginationProps> = ({ siblingCount }) => {
-  const { entries, setPage } = useEntriesSearchContext();
+  const { entries, setPage, isLoading } = useEntriesSearchContext();
   const { page, perPage, total: totalCount } = entries;
   const [localPage, setLocalPage] = useState(page);
-  const currentPage = useMemo(() => localPage + 1, [localPage]);
-  const pagination = usePagination({ currentPage, totalCount, perPage, siblingCount });
+  const pagination = usePagination({ currentPage: localPage, totalCount, perPage, siblingCount });
+  const lastPage = useMemo(() => Number(pagination?.[pagination.length - 1]) || 0, [pagination]);
 
-  const onPrevious = () => {
-    if (currentPage > 1) {
-      const newPage = localPage - 1;
+  useEffect(() => {
+    if (page !== localPage && !isLoading) {
+      setLocalPage(page);
+    }
+  }, [page, localPage, isLoading]);
+
+  const handlePageChange = useCallback(
+    (newPage: number) => {
+      if (isLoading) return;
       setLocalPage(newPage);
       setPage(newPage);
+    },
+    [isLoading, setPage]
+  );
+
+  const onPrevious = useCallback(() => {
+    if (localPage > 0) {
+      handlePageChange(localPage - 1);
     }
-  };
+  }, [localPage, handlePageChange]);
 
-  const lastPage = Number(pagination?.[pagination.length - 1]) || 0;
-
-  const onNext = () => {
-    if (currentPage < lastPage) {
-      const newPage = localPage + 1;
-      setLocalPage(newPage);
-      setPage(newPage);
+  const onNext = useCallback(() => {
+    if (localPage < lastPage) {
+      handlePageChange(localPage + 1);
     }
-  };
+  }, [localPage, lastPage, handlePageChange]);
 
-  const onPageChange = (pageNumber: number) => {
-    const zeroBasedPage = pageNumber - 1;
-    setLocalPage(zeroBasedPage);
-    setPage(zeroBasedPage);
-  };
+  const onPageChange = useCallback(
+    (pageNumber: number) => {
+      handlePageChange(pageNumber);
+    },
+    [handlePageChange]
+  );
 
-  if (!pagination || currentPage === 0 || pagination.length < 2) return null;
+  if (!pagination || pagination.length < 2) return null;
 
   return (
-    <div className="mx-auto flex w-full items-center justify-between gap-x-7 sm:my-10 sm:w-max sm:justify-center">
+    <nav
+      className="mx-auto flex w-full items-center justify-between gap-x-7 sm:my-10 sm:w-max sm:justify-center"
+      role="navigation"
+      aria-label="Pagination"
+    >
       <button
         className={cn(itemClasses, 'group')}
-        disabled={currentPage === 1}
+        disabled={localPage === 0 || isLoading}
         onKeyUp={onPrevious}
         onClick={onPrevious}
-        aria-label="Previous page"
+        aria-label="Go to previous page"
       >
-        <IconArrow className="rotate-180 opacity-70 group-hover:opacity-100 group-disabled:opacity-50" />
+        <IconArrow
+          className="rotate-180 opacity-70 group-hover:opacity-100 group-disabled:opacity-50"
+          aria-hidden="true"
+        />
       </button>
       {pagination.map(pageNumber =>
         pageNumber === DOTS ? (
-          <button key="dots" className={cn(itemClasses, 'pointer-events-none !hidden sm:!block')}>
+          <span key="dots" className={cn(itemClasses, 'pointer-events-none !hidden sm:!block')} aria-hidden="true">
             &#8230;
-          </button>
+          </span>
         ) : (
           <button
             key={`page-${pageNumber}`}
             className={cn('!hidden hover:text-grey-700 sm:!block', itemClasses, {
-              'pointer-events-none font-bold text-grey-700': pageNumber === currentPage,
+              'pointer-events-none font-bold text-grey-700': pageNumber === localPage + 1,
             })}
-            onKeyUp={() => onPageChange(Number(pageNumber))}
-            onClick={() => onPageChange(Number(pageNumber))}
-            aria-label={`Page ${pageNumber}`}
+            disabled={isLoading}
+            onKeyUp={() => onPageChange(Number(pageNumber) - 1)}
+            onClick={() => onPageChange(Number(pageNumber) - 1)}
+            aria-label={`Go to page ${pageNumber}`}
+            aria-current={pageNumber === localPage + 1 ? 'page' : undefined}
           >
             {pageNumber}
           </button>
         )
       )}
-      <span className="flex items-center gap-x-6 text-lg font-bold sm:hidden">
-        <span>{currentPage}</span>
+      <span className="flex items-center gap-x-6 text-lg font-bold sm:hidden" aria-hidden="true">
+        <span>{localPage}</span>
         <span className="font-normal">of</span>
         <span>{lastPage}</span>
       </span>
       <button
-        className={cn(itemClasses, 'group ')}
-        disabled={currentPage === lastPage}
+        className={cn(itemClasses, 'group')}
+        disabled={localPage === lastPage || isLoading}
         onKeyUp={onNext}
         onClick={onNext}
-        aria-label="Next page"
+        aria-label="Go to next page"
       >
-        <IconArrow className="opacity-70 group-hover:opacity-100 group-disabled:opacity-50" />
+        <IconArrow className="opacity-70 group-hover:opacity-100 group-disabled:opacity-50" aria-hidden="true" />
       </button>
-    </div>
+    </nav>
   );
 };
 
