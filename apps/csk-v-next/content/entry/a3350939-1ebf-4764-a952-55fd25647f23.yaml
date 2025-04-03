@@ -1,5 +1,5 @@
 created: '2025-03-25T04:29:45.809628+00:00'
-modified: '2025-04-02T16:34:53.74585+00:00'
+modified: '2025-04-03T09:22:31.718458+00:00'
 pattern: false
 entry:
   _id: a3350939-1ebf-4764-a952-55fd25647f23
@@ -137,6 +137,12 @@ entry:
                       value: image/png
                       type: text
                   _source: uniform-assets
+    enrichments:
+      type: $enr
+      value:
+        - cat: brand
+          key: javadrip
+          str: 5
     primaryImage:
       type: asset
       value:
