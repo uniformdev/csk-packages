@@ -308,18 +308,6 @@ composition:
                       direction:
                         type: select
                         value: DESC
-                  - _id: 6c8bc44e-f303-4dbd-82a9-03045e59af2b
-                    type: orderBy
-                    fields:
-                      field:
-                        type: text
-                        value: fields.publishDate
-                      title:
-                        type: text
-                        value: Oldest first
-                      direction:
-                        type: select
-                        value: ASC
               filterBy:
                 type: $block
                 value:
@@ -436,5 +424,5 @@ composition:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-03-25T04:27:48.427075+00:00'
-modified: '2025-04-02T20:27:10.96973+00:00'
+modified: '2025-04-03T13:15:29.541104+00:00'
 pattern: false

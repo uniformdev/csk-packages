@@ -635,6 +635,9 @@ composition:
                       displayName:
                         type: text
                         value: Top Picks
+                      fluidContent:
+                        type: checkbox
+                        value: true
                       justifyContent:
                         type: dex-segmented-control-parameter
                         value: {}
@@ -921,6 +924,12 @@ composition:
                   type: dex-slider-control-parameter
                   value:
                     mobile: '8'
+                spacing:
+                  type: dex-space-control-parameter
+                  value:
+                    mobile: {}
+                    tablet: {}
+                    desktop: {}
                 displayName:
                   type: text
                   value: Links Wrapper
@@ -1091,6 +1100,12 @@ composition:
                                           image: 'yes'
                                         hideLockedParameters: true
                                 parameters:
+                                  spacing:
+                                    type: dex-space-control-parameter
+                                    value:
+                                      mobile: {}
+                                      tablet: {}
+                                      desktop: {}
                                   relative:
                                     type: checkbox
                                     value: true
@@ -1112,16 +1127,30 @@ composition:
                             spacing:
                               type: dex-space-control-parameter
                               value:
-                                paddingTop: container-small
-                                paddingLeft: container-small
-                                paddingRight: container-small
-                                paddingBottom: container-small
+                                mobile:
+                                  paddingTop: container-small
+                                  paddingLeft: container-small
+                                  paddingRight: container-small
+                                  paddingBottom: container-small
+                                tablet:
+                                  paddingTop: container-small
+                                  paddingLeft: container-small
+                                  paddingRight: container-small
+                                  paddingBottom: container-small
+                                desktop:
+                                  paddingTop: container-small
+                                  paddingLeft: container-small
+                                  paddingRight: container-small
+                                  paddingBottom: container-small
                             fitContent:
                               type: checkbox
                               value: true
                             displayName:
                               type: text
                               value: Background Container
+                            fluidContent:
+                              type: checkbox
+                              value: true
                             backgroundColor:
                               type: dex-color-palette-parameter
                               value: general-color-1
@@ -1234,7 +1263,12 @@ composition:
                             spacing:
                               type: dex-space-control-parameter
                               value:
-                                marginTop: container-small
+                                mobile:
+                                  marginTop: container-small
+                                tablet:
+                                  marginTop: container-small
+                                desktop:
+                                  marginTop: container-small
                             direction:
                               type: dex-segmented-control-parameter
                               value:
@@ -1247,6 +1281,9 @@ composition:
                             displayName:
                               type: text
                               value: Content Container
+                            fluidContent:
+                              type: checkbox
+                              value: true
                             justifyContent:
                               type: dex-segmented-control-parameter
                               value: {}
@@ -1330,7 +1367,7 @@ composition:
   _locales:
     - en
 created: '2025-03-25T04:28:04.02755+00:00'
-modified: '2025-03-28T13:42:45.435509+00:00'
+modified: '2025-04-03T18:32:48.309513+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/jd-template/main-header_klwsr5.jpg

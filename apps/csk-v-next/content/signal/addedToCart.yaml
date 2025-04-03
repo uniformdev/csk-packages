@@ -5,11 +5,12 @@ crit:
   op: '|'
   type: G
   clauses:
-    - type: EVT
-      event:
+    - key: isCartEmpty
+      type: QK
+      match:
         cs: false
         op: '='
-        rhs: added-to-cart
+        rhs: 'false'
 dur: s
 description: ''
 str: 10

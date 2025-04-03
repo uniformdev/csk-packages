@@ -1,0 +1,42 @@
+created: '2025-04-02T13:24:33.551329+00:00'
+modified: '2025-04-02T13:26:46.937933+00:00'
+pattern: true
+entry:
+  _id: e2324847-7f75-4f9b-a42b-f47b8193b0ee
+  _name: SF Product
+  _slug: product-pattern
+  type: product
+  fields:
+    name:
+      type: text
+      value: ${#jptr:/Product Catalog Item Content/0/name}
+    title:
+      type: text
+      value: >-
+        ${#jptr:/Product Catalog Item Content/0/name} ${#jptr:/Product Catalog
+        Item Content/0/subCategories/0}
+    category:
+      type: contentReference
+      value: ${#jptr:/ref-e2324847-7f75-4f9b-a42b-f47b8193b0ee-category/entries/0}
+  _dataResources:
+    Product Catalog Item Content:
+      type: productCatalogItem
+      variables:
+        productIds: '86'
+      isPatternParameter: true
+      ignorePatternParameterDefault: true
+    ref-e2324847-7f75-4f9b-a42b-f47b8193b0ee-category:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: 2f6cc670-cdaa-4532-b70e-424206c8d0ba
+      isPatternParameter: true
+  _locales:
+    - en
+  _overridability:
+    parameters:
+      body: 'yes'
+      category: 'no'
+      primaryImage: 'yes'
+      shortDescription: 'yes'
+    hideLockedParameters: true

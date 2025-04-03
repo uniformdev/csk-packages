@@ -1,0 +1,70 @@
+composition:
+  _name: Which Espresso Maker to Buy
+  _id: 8164beb0-b313-4461-9559-a85de2e41050
+  _slug: which-espresso-maker-to-buy
+  type: page
+  _overrides:
+    8164beb0-b313-4461-9559-a85de2e41050|dc2e95be-21b5-4476-a309-f8a34922f528:
+      slots:
+        $slotSectionItems:
+          - _id: 332d685f-a513-4a1b-95ab-412551fc2ce8
+            type: fixedHero
+            variant: columnsReverse
+            parameters:
+              image:
+                type: asset
+                value:
+                  - _id: a052e874-3ef7-4ee0-999b-5697bf705c80
+                    type: image
+                    fields:
+                      id:
+                        type: text
+                        value: d3a8701d-e216-45a0-8def-381858fad958
+                      url:
+                        type: text
+                        value: >-
+                          https://img.uniform.global/p/LP10biebQ3mceUhiJEdfvg/a4ucJwl5R8mgBMyPyr48JA-image.png
+                      file:
+                        type: file
+                        value: bd1c84df-d205-4779-a145-d6d915f95282
+                      size:
+                        type: number
+                        value: 1478877
+                      title:
+                        type: text
+                        value: image.png
+                      width:
+                        type: number
+                        value: 1440
+                      height:
+                        type: number
+                        value: 960
+                      mediaType:
+                        type: text
+                        value: image/png
+                    _source: uniform-assets
+              titleTag:
+                type: dex-segmented-control-parameter
+                value: h2
+              titleText:
+                type: text
+                locales:
+                  en: Which espresso maker to buy?
+              displayName:
+                type: text
+                locales:
+                  en: Main Hero
+              descriptionText:
+                type: text
+                locales:
+                  en: From drip, french press to espresso machines, we got it all!
+              primaryButtonText:
+                type: text
+                locales:
+                  en: Explore our machines
+  _locales:
+    - en
+  _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
+created: '2025-04-02T15:16:16.999795+00:00'
+modified: '2025-04-03T16:28:23.046746+00:00'
+pattern: false

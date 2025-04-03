@@ -1,0 +1,46 @@
+composition:
+  _name: Product Hero
+  _id: 75d65dd3-32ce-40ac-aa3d-59b171811d6e
+  type: fixedHero
+  variant: columnsReverse
+  parameters:
+    image:
+      type: asset
+      value:
+        - _id: 09180742-31c2-4854-b06a-4b9466b48b9b
+          type: image
+          fields:
+            url:
+              type: text
+              value: ${#jptr:/Product/0/images/0/url}
+          _source: custom-url
+    titleTag:
+      type: dex-segmented-control-parameter
+      value: h2
+    titleText:
+      type: text
+      locales:
+        en: ${#jptr:/Product/0/name}
+    descriptionText:
+      type: text
+      locales:
+        en: ${#jptr:/Product/0/description}
+  _dataResources:
+    Product:
+      type: productCatalogItem
+      variables:
+        productIds: '94'
+      isPatternParameter: true
+      ignorePatternParameterDefault: true
+  _overridability:
+    parameters:
+      image: 'no'
+      eyebrowTitleText: 'yes'
+      primaryButtonLink: 'yes'
+      primaryButtonText: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2025-04-01T18:38:17.187861+00:00'
+modified: '2025-04-01T18:39:34.27405+00:00'
+pattern: true

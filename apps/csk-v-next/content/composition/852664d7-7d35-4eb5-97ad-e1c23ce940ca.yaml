@@ -683,71 +683,152 @@ composition:
               trackingEventName:
                 type: text
                 value: Main Hero
-          - _id: 1c7f01d0-639b-472d-8aae-c3f5d9a42bcd
-            type: section
+          - _id: 20e1dd5b-7776-40a2-840b-1974ab9e0f49
+            type: $test
             slots:
-              sectionContent:
-                - _id: aa48ac0f-90c3-4520-a230-c20f5e8857e0
-                  type: text
+              test:
+                - _id: 1c7f01d0-639b-472d-8aae-c3f5d9a42bcd
+                  type: section
+                  slots:
+                    sectionContent:
+                      - _id: aa48ac0f-90c3-4520-a230-c20f5e8857e0
+                        type: text
+                        parameters:
+                          tag:
+                            type: dex-segmented-control-parameter
+                            value: h2
+                          size:
+                            type: dex-segmented-control-parameter
+                            value:
+                              mobile: 2xl
+                              tablet: 4xl
+                              desktop: 4xl
+                          text:
+                            type: text
+                            value: Why we’re obsessed with coffee
+                          color:
+                            type: dex-color-palette-parameter
+                            value: text-primary
+                          weight:
+                            type: dex-segmented-control-parameter
+                            value: bold
+                      - _id: 6557bad8-7b2d-4aa7-b28b-5fe992eacd6f
+                        type: text
+                        parameters:
+                          tag:
+                            type: dex-segmented-control-parameter
+                            value: span
+                          size:
+                            type: dex-segmented-control-parameter
+                            value:
+                              tablet: lg
+                              desktop: xl
+                          text:
+                            type: text
+                            value: >-
+                              At Jada Drip, coffee is more than a drink—it’s a
+                              ritual and a connection. We’re passionate about
+                              every step, from sourcing top-quality beans to
+                              crafting premium brewing gear. Celebrate the art
+                              of coffee with us, one sip at a time.
+                          color:
+                            type: dex-color-palette-parameter
+                            value: text-primary
+                          weight:
+                            type: dex-segmented-control-parameter
+                            value: normal
+                          alignment:
+                            type: dex-segmented-control-parameter
+                            value: center
                   parameters:
-                    tag:
-                      type: dex-segmented-control-parameter
-                      value: h2
-                    size:
-                      type: dex-segmented-control-parameter
+                    spacing:
+                      type: dex-space-control-parameter
                       value:
-                        mobile: 2xl
-                        tablet: 4xl
-                        desktop: 4xl
-                    text:
+                        paddingTop: container-xlarge
+                        paddingBottom: container-medium
+                    $tstVrnt:
+                      type: testVariant
+                      value:
+                        id: section-1c7f
+                    displayName:
                       type: text
                       value: Why we’re obsessed with coffee
-                    color:
-                      type: dex-color-palette-parameter
-                      value: text-primary
-                    weight:
+                    contentAlignment:
                       type: dex-segmented-control-parameter
-                      value: bold
-                - _id: 6557bad8-7b2d-4aa7-b28b-5fe992eacd6f
-                  type: text
+                      value: center
+                - _id: 1e20c961-9ad7-4a74-b1e2-49a28e0fec44
+                  type: section
+                  slots:
+                    sectionContent:
+                      - _id: 3841e12f-4852-466e-9ea2-99f6ff845ec7
+                        type: text
+                        parameters:
+                          tag:
+                            type: dex-segmented-control-parameter
+                            value: h2
+                          size:
+                            type: dex-segmented-control-parameter
+                            value:
+                              mobile: 2xl
+                              tablet: 4xl
+                              desktop: 4xl
+                          text:
+                            type: text
+                            value: Why we’re obsessed with coffee 2
+                          color:
+                            type: dex-color-palette-parameter
+                            value: text-primary
+                          weight:
+                            type: dex-segmented-control-parameter
+                            value: bold
+                      - _id: d7c52d3f-4fa9-4791-9a92-f3625bd68f18
+                        type: text
+                        parameters:
+                          tag:
+                            type: dex-segmented-control-parameter
+                            value: span
+                          size:
+                            type: dex-segmented-control-parameter
+                            value:
+                              tablet: lg
+                              desktop: xl
+                          text:
+                            type: text
+                            value: >-
+                              At Jada Drip, coffee is more than a drink—it’s a
+                              ritual and a connection. We’re passionate about
+                              every step, from sourcing top-quality beans to
+                              crafting premium brewing gear. Celebrate the art
+                              of coffee with us, one sip at a time.
+                          color:
+                            type: dex-color-palette-parameter
+                            value: text-primary
+                          weight:
+                            type: dex-segmented-control-parameter
+                            value: normal
+                          alignment:
+                            type: dex-segmented-control-parameter
+                            value: center
                   parameters:
-                    tag:
-                      type: dex-segmented-control-parameter
-                      value: span
-                    size:
-                      type: dex-segmented-control-parameter
+                    spacing:
+                      type: dex-space-control-parameter
                       value:
-                        tablet: lg
-                        desktop: xl
-                    text:
+                        paddingTop: container-xlarge
+                        paddingBottom: container-medium
+                    $tstVrnt:
+                      type: testVariant
+                      value:
+                        id: section-1e20
+                    displayName:
                       type: text
-                      value: >-
-                        At Jada Drip, coffee is more than a drink—it’s a ritual
-                        and a connection. We’re passionate about every step,
-                        from sourcing top-quality beans to crafting premium
-                        brewing gear. Celebrate the art of coffee with us, one
-                        sip at a time.
-                    color:
-                      type: dex-color-palette-parameter
-                      value: text-primary
-                    weight:
-                      type: dex-segmented-control-parameter
-                      value: normal
-                    alignment:
+                      value: Why we’re obsessed with coffee
+                    contentAlignment:
                       type: dex-segmented-control-parameter
                       value: center
             parameters:
-              spacing:
-                type: dex-space-control-parameter
-                value:
-                  paddingTop: container-xlarge
-                  paddingBottom: container-medium
-              displayName:
-                type: text
-                value: Why we’re obsessed with coffee
-              contentAlignment:
-                type: dex-segmented-control-parameter
-                value: center
+              test:
+                type: testSelect
+                value: abTest
           - _id: 3074410a-05a6-475d-a592-d12154625515
             type: container
             _pattern: 4a0a5fb2-25d0-4563-955b-714233ddffe6
@@ -830,7 +911,7 @@ composition:
                   - int,category
               maxRecommendations:
                 type: number
-                value: '3'
+                value: '4'
               loadingIndicatorColor:
                 type: dex-color-palette-parameter
                 value: general-color-2

@@ -6,8 +6,15 @@ composition:
     spacing:
       type: dex-space-control-parameter
       value:
-        paddingTop: container-medium
-        paddingBottom: container-medium
+        mobile:
+          paddingTop: container-medium
+          paddingBottom: container-medium
+        tablet:
+          paddingTop: container-medium
+          paddingBottom: container-large
+        desktop:
+          paddingTop: container-medium
+          paddingBottom: container-xlarge
     displayName:
       type: text
       value: Articles
@@ -85,8 +92,8 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
-created: '2025-01-29T11:09:28.778505+00:00'
-modified: '2025-01-29T11:09:28.778505+00:00'
+created: '2025-03-25T04:28:07.482559+00:00'
+modified: '2025-04-03T12:27:45.980349+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/jd-template/page-title-section.jpg

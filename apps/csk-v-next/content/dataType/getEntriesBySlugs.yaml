@@ -1,0 +1,25 @@
+id: getEntriesBySlugs
+displayName: Get Entries by Slugs
+ttl: 30
+body: ''
+path: /api/v1/entries
+custom:
+  proposedName: api/v1/entries
+method: GET
+purgeKey: 03544529-9426-4540-8c87-ebf0d407d4a1
+archetype: default
+variables:
+  Slugs:
+    type: text
+    default: '[]'
+  Locale:
+    type: text
+    default: ''
+parameters:
+  - key: locale
+    value: ${Locale}
+    omitIfEmpty: true
+  - key: filters.slug[in]
+    value: ${Slugs}
+dataSourceId: uniformApp
+allowedOnComponents: []

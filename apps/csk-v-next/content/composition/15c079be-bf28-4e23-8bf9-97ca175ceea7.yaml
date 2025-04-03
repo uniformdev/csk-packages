@@ -1,0 +1,154 @@
+composition:
+  _name: Beans Bundle
+  _id: 15c079be-bf28-4e23-8bf9-97ca175ceea7
+  _slug: beans-bundle
+  type: page
+  _overrides:
+    a5be5ebf-cb70-4517-9a8c-c5137c5aed73:
+      parameters:
+        text:
+          type: text
+          value: Explore our bundles
+    15c079be-bf28-4e23-8bf9-97ca175ceea7|dc2e95be-21b5-4476-a309-f8a34922f528:
+      slots:
+        $slotSectionItems:
+          - _id: 15ff683a-6a45-4ff2-bd26-18332a65a432
+            type: section
+            slots:
+              sectionCTA:
+                - _id: a5be5ebf-cb70-4517-9a8c-c5137c5aed73
+                  type: button
+                  _pattern: 53b59aed-e378-4fcb-9135-20247d92074e
+                  _overridability:
+                    variants: true
+                    parameters:
+                      link: 'yes'
+                      text: 'yes'
+                      fullWidth: 'yes'
+                      textWeight: 'no'
+                      buttonColor: 'yes'
+                      iconPosition: 'yes'
+                      textTransform: 'no'
+                      hoverTextColor: 'no'
+                      hoverButtonColor: 'no'
+                    hideLockedParameters: true
+              sectionMedia:
+                - _id: 8f566ce1-f43d-4f98-844b-7e2c2da3a351
+                  type: video
+                  parameters:
+                    url:
+                      type: link
+                      value:
+                        path: >-
+                          https://res.cloudinary.com/uniform-demos/video/upload/v1693387616/videos/pexels-cristian-rojas.mp4
+                        type: url
+                    loop:
+                      type: checkbox
+                      value: true
+                    muted:
+                      type: checkbox
+                      value: true
+                    autoPlay:
+                      type: checkbox
+                      value: true
+                    displayName:
+                      type: text
+                      value: Video
+              sectionContent:
+                - _id: 65e7c50d-bafa-403c-acfb-85f8530c40ea
+                  type: text
+                  parameters:
+                    tag:
+                      type: dex-segmented-control-parameter
+                      value: span
+                    size:
+                      type: dex-segmented-control-parameter
+                      value:
+                        desktop: xl
+                    text:
+                      type: text
+                      value: we got the beanz
+                    color:
+                      type: dex-color-palette-parameter
+                      value: text-secondary
+                    weight:
+                      type: dex-segmented-control-parameter
+                      value: normal
+                - _id: 3335f21a-856f-4dc3-8816-30680787f54a
+                  type: text
+                  parameters:
+                    tag:
+                      type: dex-segmented-control-parameter
+                      value: h1
+                    size:
+                      type: dex-segmented-control-parameter
+                      value:
+                        mobile: 5xl
+                        tablet: 5xl
+                        desktop: 5xl
+                    text:
+                      type: text
+                      value: Beans like to be bundled
+                    color:
+                      type: dex-color-palette-parameter
+                      value: text-secondary
+                    weight:
+                      type: dex-segmented-control-parameter
+                      value: bold
+                - _id: 796b8594-a0d4-4d3b-a534-72a96492c2a3
+                  type: text
+                  parameters:
+                    tag:
+                      type: dex-segmented-control-parameter
+                      value: h2
+                    size:
+                      type: dex-segmented-control-parameter
+                      value:
+                        mobile: base
+                        tablet: base
+                        desktop: base
+                    text:
+                      type: text
+                      value: >-
+                        An essential set of components you need to start
+                        building personalized web experiences with Uniform.
+                    color:
+                      type: dex-color-palette-parameter
+                      value: text-light
+                    weight:
+                      type: dex-segmented-control-parameter
+                      value: normal
+            parameters:
+              spacing:
+                type: dex-space-control-parameter
+                value:
+                  mobile:
+                    paddingTop: container-small
+                    paddingLeft: container-small
+                    paddingRight: container-small
+                    paddingBottom: container-small
+                  tablet:
+                    paddingTop: container-small
+                    paddingLeft: container-small
+                    paddingRight: container-small
+                    paddingBottom: container-small
+                  desktop:
+                    paddingTop: container-large
+                    paddingLeft: container-small
+                    paddingRight: container-small
+                    paddingBottom: container-large
+              fullHeight:
+                type: checkbox
+                value: true
+              displayName:
+                type: text
+                value: Section Default variant with Video
+              contentAlignment:
+                type: dex-segmented-control-parameter
+                value: center
+  _locales:
+    - en
+  _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
+created: '2025-04-03T16:46:08.616175+00:00'
+modified: '2025-04-03T16:52:57.141556+00:00'
+pattern: false

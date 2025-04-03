@@ -1,0 +1,583 @@
+composition:
+  _name: AI Assistant configuration
+  _id: c7800fa4-a196-4560-b726-a4362918184e
+  _slug: ai-assistant-configuration
+  type: aiConfiguration
+  slots:
+    cartPattern:
+      - _id: 4045ba79-496a-410f-90c0-7b281aa84085
+        type: flex
+        slots:
+          flexItem:
+            - _id: ae174ea1-625a-4977-8e81-c82a0beef113
+              type: shoppingCart
+              slots:
+                checkoutButton:
+                  - _id: e27aba77-4f97-4664-8fef-0edcb0a12d0e
+                    type: button
+                    _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
+                emptyCartContent:
+                  - _id: 5cd4897b-5e6b-4cee-af5f-50c0d367e39f
+                    type: flex
+                    slots:
+                      flexItem:
+                        - _id: d7fe140b-d5ce-4483-b37b-06ab5c7e2dec
+                          type: text
+                          parameters:
+                            tag:
+                              type: dex-segmented-control-parameter
+                              value: span
+                            size:
+                              type: dex-segmented-control-parameter
+                              value:
+                                mobile: 3xl
+                                tablet: 3xl
+                                desktop: 3xl
+                            text:
+                              type: text
+                              locales:
+                                en: Your shopping cart is empty
+                            color:
+                              type: dex-color-palette-parameter
+                              value: text-primary
+                            weight:
+                              type: dex-segmented-control-parameter
+                              value: bold
+                        - _id: 2fbddb62-b802-4b42-905a-9e4844a21e1e
+                          type: image
+                          parameters:
+                            image:
+                              type: asset
+                              value:
+                                - _id: 9d34fc65-5359-4543-bdaa-f496a697133c
+                                  type: image
+                                  fields:
+                                    id:
+                                      type: text
+                                      value: b207e5e2-a19f-4bda-a9c2-e96a64e1d62c
+                                    url:
+                                      value: >-
+                                        https://img.uniform.global/p/ovl3f_RJSNmuo41YikmFlA/ZAwlBge0T4Wrs96Vgkq1IQ-icon-cart.svg
+                                      type: text
+                                    file:
+                                      type: file
+                                      value: d23b35bb-c04d-4bde-bf7d-15435850034e
+                                    size:
+                                      value: 872
+                                      type: number
+                                    title:
+                                      type: text
+                                      value: icon-cart.svg
+                                    width:
+                                      value: 24
+                                      type: number
+                                    height:
+                                      value: 24
+                                      type: number
+                                    mediaType:
+                                      value: image/svg+xml
+                                      type: text
+                                  _source: uniform-assets
+                            width:
+                              type: number
+                              value: '100'
+                            height:
+                              type: number
+                              value: '100'
+                            objectFit:
+                              type: dex-segmented-control-parameter
+                              value: cover
+                        - _id: cc736951-3fee-4157-9615-bf4d53c2f89d
+                          type: text
+                          parameters:
+                            tag:
+                              type: dex-segmented-control-parameter
+                              value: span
+                            size:
+                              type: dex-segmented-control-parameter
+                              value:
+                                mobile: lg
+                                tablet: lg
+                                desktop: xl
+                            text:
+                              type: text
+                              locales:
+                                en: Your shopping cart is empty
+                            color:
+                              type: dex-color-palette-parameter
+                              value: text-primary
+                            weight:
+                              type: dex-segmented-control-parameter
+                              value: normal
+                    parameters:
+                      gap:
+                        type: dex-slider-control-parameter
+                        value:
+                          mobile: '8'
+                          tablet: '8'
+                          desktop: '8'
+                      direction:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: col
+                          tablet: col
+                          desktop: col
+                      alignItems:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: center
+                          tablet: center
+                          desktop: center
+                      displayName:
+                        type: text
+                        locales:
+                          en: 'The shopping cart is empty '
+                      justifyContent:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: center
+                          tablet: center
+                          desktop: center
+              parameters:
+                primaryTextColor:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                secondaryTextColor:
+                  type: dex-color-palette-parameter
+                  value: text-link
+        parameters:
+          gap:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '4'
+              tablet: '4'
+              desktop: '4'
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              mobile:
+                paddingTop: container-medium
+                paddingBottom: container-medium
+              tablet:
+                paddingTop: container-medium
+                paddingBottom: container-medium
+              desktop:
+                paddingTop: container-medium
+                paddingBottom: container-medium
+          direction:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: col
+              tablet: col
+              desktop: col
+          alignItems:
+            type: dex-segmented-control-parameter
+            value: {}
+          displayName:
+            type: text
+            locales:
+              en: Cart Content
+          fluidContent:
+            type: checkbox
+            value: true
+          justifyContent:
+            type: dex-segmented-control-parameter
+            value: {}
+    cartRecommendations:
+      - _id: 1747e58c-1678-4b39-96a9-5f0629c8c9c3
+        type: $loop
+        slots:
+          body:
+            - _id: 1969928b-20ab-43fd-a529-751fbe4bebb9
+              type: flex
+              slots:
+                flexItem:
+                  - _id: >-
+                      1969928b-20ab-43fd-a529-751fbe4bebb9|b28c7eb6-01aa-4dc7-8738-dd31d949f6eb
+                    type: productCard
+                    _pattern: 52b2cfa0-9e8d-446e-bc8b-425d8f806a09
+                  - _id: >-
+                      1969928b-20ab-43fd-a529-751fbe4bebb9|0c35961b-b836-40e4-a0f5-e23594ea9462
+                    type: addToCardButton
+                    _pattern: 20161830-c75e-4695-8622-41032f5be75d
+              parameters:
+                gap:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: '4'
+                    tablet: '4'
+                    desktop: '4'
+                spacing:
+                  type: dex-space-control-parameter
+                  value:
+                    mobile: {}
+                    tablet: {}
+                    desktop: {}
+                direction:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: col
+                    tablet: col
+                    desktop: col
+                alignItems:
+                  type: dex-segmented-control-parameter
+                  value: {}
+                displayName:
+                  type: text
+                  locales:
+                    en: ${#jptr:/Content Loop Item/entry/_name}
+                fluidContent:
+                  type: checkbox
+                  value: true
+                justifyContent:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: between
+                    tablet: between
+                    desktop: between
+              _overridability:
+                hideLockedParameters: true
+        _dataResources:
+          Content Loop Item:
+            type: sys-reserved-loop
+            variables:
+              connectedData: '#jptr:/Get Entries by Slugs Content/entries:fa=c'
+    interestRecommendations:
+      - _id: 091c617f-a63e-45b5-a8e4-194d6727b6ed
+        type: $personalization
+        slots:
+          pz:
+            - _id: 4d0d6445-40aa-43e5-aac3-0fc6509b749c
+              type: flex
+              _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
+            - _id: 3697e3e4-bb2f-48d1-aa4d-35a877c8ca72
+              type: flex
+              _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
+            - _id: 72079d47-e419-46b5-ae3c-08b7f2fa0ac3
+              type: flex
+              _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
+            - _id: 2ba4edb9-8de4-4f96-a642-27c93bb59533
+              type: flex
+              _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
+            - _id: 19eb7235-e0e6-42db-94e9-5749f30e252c
+              type: flex
+              _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
+            - _id: 876d4a34-923d-4c20-abd6-ae0c35651c4a
+              type: flex
+              _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
+            - _id: 6a19d948-05ae-40cc-ba0f-c3dfa6aff568
+              type: flex
+              _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
+            - _id: c799f53f-9ad8-4d87-b4ee-eab2d84d9adc
+              type: flex
+              _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
+            - _id: 7ab368e9-7126-4a22-b618-709772134155
+              type: flex
+              _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
+            - _id: 882fda84-16e6-4c16-b5be-41f970aaf345
+              type: flex
+              _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
+            - _id: 8a4d1d8b-4cca-419f-ba38-e9416a475a32
+              type: flex
+              _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
+            - _id: d52aac35-c289-4775-bde4-903db3ef3750
+              type: flex
+              _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
+        parameters:
+          count:
+            type: number
+            value: '4'
+          trackingEventName:
+            type: text
+            value: Recommendations
+  _dataResources:
+    Get Entries by Slugs Content:
+      type: getEntriesBySlugs
+      variables:
+        Slugs: ${product-slugs}
+        Locale: ${locale}
+  _overrides:
+    19eb7235-e0e6-42db-94e9-5749f30e252c:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            crit:
+              - l: int_coffee-makers
+                r: '25'
+                op: '>='
+              - l: int_coffee-makers
+                r: '75'
+                op: <
+            name: Medium Coffee Makers interest
+      dataResources:
+        Single Product Content:
+          type: singleProduct
+          variables:
+            locale: ${locale}
+            entryId: 493503ea-3332-4bb9-b995-b311658b26c6
+    2ba4edb9-8de4-4f96-a642-27c93bb59533:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            crit:
+              - l: int_coffee-makers
+                r: '75'
+                op: '>='
+              - l: int_coffee-makers
+                r: '100'
+                op: <
+            name: High Coffee Makers interest
+      dataResources:
+        Single Product Content:
+          type: singleProduct
+          variables:
+            locale: ${locale}
+            entryId: d7047783-160a-4d26-a172-e8330f55c567
+    3697e3e4-bb2f-48d1-aa4d-35a877c8ca72:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            crit:
+              - l: int_coffee-makers
+                r: '100'
+                op: '>='
+            name: Highest Coffee Makers interest
+      dataResources:
+        Single Product Content:
+          type: singleProduct
+          variables:
+            locale: ${locale}
+            entryId: 8c949736-643c-49e0-b18c-b5784106d378
+    4d0d6445-40aa-43e5-aac3-0fc6509b749c:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            crit:
+              - l: int_coffee-makers
+                r: '100'
+                op: '>='
+            name: Highest Coffee Makers interest
+      dataResources:
+        Single Product Content:
+          type: singleProduct
+          variables:
+            locale: ${locale}
+            entryId: 2f042be4-1e8b-4fae-be0e-a5294b89d8dd
+    6a19d948-05ae-40cc-ba0f-c3dfa6aff568:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            crit:
+              - l: int_coffee-makers
+                r: '10'
+                op: '>='
+              - l: int_coffee-makers
+                r: '25'
+                op: <
+            name: Low Coffee Makers interest
+      dataResources:
+        Single Product Content:
+          type: singleProduct
+          variables:
+            locale: ${locale}
+            entryId: 28bf4036-f588-4ee0-94bb-241d39270972
+    72079d47-e419-46b5-ae3c-08b7f2fa0ac3:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            crit:
+              - l: int_coffee-makers
+                r: '75'
+                op: '>='
+              - l: int_coffee-makers
+                r: '100'
+                op: <
+            name: High Coffee Makers interest
+      dataResources:
+        Single Product Content:
+          type: singleProduct
+          variables:
+            locale: ${locale}
+            entryId: 38622bea-be3c-477b-8756-1a188e84b882
+    7ab368e9-7126-4a22-b618-709772134155:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            crit:
+              - l: int_beans
+                r: '50'
+                op: '>='
+              - l: int_beans
+                r: '100'
+                op: <=
+            name: High Coffee Beans interest
+      dataResources:
+        Single Product Content:
+          type: singleProduct
+          variables:
+            locale: ${locale}
+            entryId: 3e3af534-0999-4bcb-b479-3bd693173c83
+    876d4a34-923d-4c20-abd6-ae0c35651c4a:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            crit:
+              - l: int_coffee-makers
+                r: '25'
+                op: '>='
+              - l: int_coffee-makers
+                r: '75'
+                op: <
+            name: Medium Coffee Makers interest
+      dataResources:
+        Single Product Content:
+          type: singleProduct
+          variables:
+            locale: ${locale}
+            entryId: 368a700a-adfd-4304-9186-534f7cbac088
+    882fda84-16e6-4c16-b5be-41f970aaf345:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            crit:
+              - l: int_beans
+                r: '50'
+                op: '>='
+              - l: int_beans
+                r: '100'
+                op: <=
+            name: High Coffee Beans interest
+      dataResources:
+        Single Product Content:
+          type: singleProduct
+          variables:
+            locale: ${locale}
+            entryId: 4435ccaf-103e-4b69-9138-7ec8196955fb
+    8a4d1d8b-4cca-419f-ba38-e9416a475a32:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            crit:
+              - l: int_beans
+                r: '10'
+                op: '>='
+              - l: int_beans
+                r: '50'
+                op: <
+            name: Low Coffee Beans interest
+      dataResources:
+        Single Product Content:
+          type: singleProduct
+          variables:
+            locale: ${locale}
+            entryId: 79ddd1f3-30a9-4f4d-8a93-0d9e17ad5967
+    c799f53f-9ad8-4d87-b4ee-eab2d84d9adc:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            crit:
+              - l: int_coffee-makers
+                r: '10'
+                op: '>='
+              - l: int_coffee-makers
+                r: '25'
+                op: <
+            name: Low Coffee Makers interest
+      dataResources:
+        Single Product Content:
+          type: singleProduct
+          variables:
+            locale: ${locale}
+            entryId: b506568e-6e29-43c4-bd81-f326a0880828
+    d52aac35-c289-4775-bde4-903db3ef3750:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            crit:
+              - l: int_beans
+                r: '10'
+                op: '>='
+              - l: int_beans
+                r: '50'
+                op: <
+            name: Low Coffee Beans interest
+      dataResources:
+        Single Product Content:
+          type: singleProduct
+          variables:
+            locale: ${locale}
+            entryId: 5a9bf3d7-74a8-42e4-ac78-239f84cbecca
+    e27aba77-4f97-4664-8fef-0edcb0a12d0e:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: /${locale}/cart/checkout
+              type: projectMapNode
+              nodeId: 56d212ca-516a-42ee-86e6-2df10e284b60
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+        text:
+          type: text
+          value: Proceed to Checkout
+    1969928b-20ab-43fd-a529-751fbe4bebb9|0c35961b-b836-40e4-a0f5-e23594ea9462:
+      parameters:
+        productSlug:
+          type: text
+          locales:
+            en: ${#jptr:/Content Loop Item/entry/_slug}
+        openMiniCart:
+          type: checkbox
+          value: null
+    1969928b-20ab-43fd-a529-751fbe4bebb9|b28c7eb6-01aa-4dc7-8738-dd31d949f6eb:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: /${locale}/products/${#jptr:/Content Loop Item/entry/_slug}
+              type: projectMapNode
+              nodeId: 702b0e0b-3858-4b5d-99e4-bdb98097ca0f
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                product-slug: ${#jptr:/Content Loop Item/entry/_slug}
+        slug:
+          type: text
+          locales:
+            en: ${#jptr:/Content Loop Item/entry/_slug}
+        image:
+          type: asset
+          locales:
+            en: ${#jptr:/Content Loop Item/entry/fields/primaryImage/value}
+        price:
+          type: text
+          locales:
+            en: >-
+              ${#jptr:/Content Loop
+              Item/entry/fields/variants/value/0/fields/currency/value}
+              ${#jptr:/Content Loop
+              Item/entry/fields/variants/value/0/fields/price/value}
+        title:
+          type: text
+          locales:
+            en: ${#jptr:/Content Loop Item/entry/_name}
+  _locales:
+    - en
+created: '2025-04-02T18:38:54.586965+00:00'
+modified: '2025-04-03T12:28:09.877893+00:00'
+pattern: false

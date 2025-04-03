@@ -3,38 +3,14 @@ composition:
   _id: 0bc0e924-445c-47de-9217-3dc6f889f1e7
   type: quirkSelector
   parameters:
-    size:
-      type: dex-token-selector-parameter
-      value: button-small
-    border:
-      type: dex-token-selector-parameter
-      value: border-button-secondary
     quirkId:
       type: text
       locales:
         en: segment
-    textSize:
-      type: dex-segmented-control-parameter
-      value:
-        mobile: sm
-        tablet: sm
-        desktop: sm
     variants:
       type: text
       locales:
         en: aficionado,occasional,newb
-    textColor:
-      type: dex-color-palette-parameter
-      value: text-primary
-    textWeight:
-      type: dex-segmented-control-parameter
-      value: bold
-    textTransform:
-      type: dex-segmented-control-parameter
-      value: uppercase
-    backgroundColor:
-      type: dex-color-palette-parameter
-      value: general-color-1
   slots:
     saveButton:
       - _id: 60a6a4f4-b7b4-410c-8786-ea57743e8755
@@ -60,5 +36,5 @@ composition:
   _locales:
     - en
 created: '2025-03-25T04:28:13.432161+00:00'
-modified: '2025-03-31T11:08:16.915513+00:00'
+modified: '2025-04-03T19:12:34.696326+00:00'
 pattern: true
