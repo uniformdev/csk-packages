@@ -38,7 +38,7 @@ const EntriesSearchList: FC<EntriesSearchListProps> = ({ textColor, border }) =>
         </div>
       )}
       {isEmpty ? (
-        <div className="flex h-full flex-col items-center justify-center gap-y-4">
+        <div className="flex flex-col items-center justify-center gap-y-4 py-24">
           <div className="flex size-16 items-center justify-center rounded-full bg-gray-100">
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -54,7 +54,7 @@ const EntriesSearchBox: FC<EntriesSearchBoxProps> = ({
     setSearch('');
   };
 
-  const inputClassnames = cn('rounded-none w-full', {
+  const inputClassnames = cn('rounded-none focus:outline-current w-full', {
     [resolveViewPort(border, '{value}')]: border,
     [`text-${textSize}`]: textSize,
     [`p-${size}`]: size,

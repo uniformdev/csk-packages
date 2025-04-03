@@ -1,5 +1,5 @@
 'use client';
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { useEntriesSearchContext } from '@/modules/search/EntriesSearchContextProvider';
 import Select from '@/modules/search/ui/Select';
@@ -9,6 +9,13 @@ type EntriesSearchSortingProps = ComponentProps;
 
 const EntriesSearchSorting: FC<EntriesSearchSortingProps> = ({ context }) => {
   const { orderBy, selectedOrderByQuery, setOrderBy } = useEntriesSearchContext();
+  const [localOrderBy, setLocalOrderBy] = useState(selectedOrderByQuery);
+
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const value = e.target.value;
+    setLocalOrderBy(value);
+    setOrderBy(value);
+  };
 
   if (!orderBy) {
     if (context.isContextualEditing) {
@@ -18,7 +25,7 @@ const EntriesSearchSorting: FC<EntriesSearchSortingProps> = ({ context }) => {
   }
 
   return (
-    <Select value={selectedOrderByQuery} onChange={e => setOrderBy(e.target.value)}>
+    <Select value={localOrderBy} onChange={handleChange}>
       {orderBy.map(order => {
         const value = buildOrderByQuery(order);
         return (

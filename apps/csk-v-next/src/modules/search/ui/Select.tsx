@@ -1,4 +1,5 @@
 import { FC, SelectHTMLAttributes } from 'react';
+import { cn } from '@uniformdev/csk-components/utils/styling';
 
 interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   className?: string;
@@ -8,7 +9,7 @@ const Select: FC<SelectProps> = ({ className = '', children, ...props }) => {
   return (
     <div className="relative">
       <select
-        className={`relative w-full p-input-large border-product-card ${className}`}
+        className={cn('relative w-full p-input-large border-product-card focus:outline-current', className)}
         style={{ appearance: 'none' }}
         {...props}
       >

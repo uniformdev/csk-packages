@@ -1,22 +1,24 @@
-import { useCallback, ChangeEvent, FC } from 'react';
+import { useCallback, ChangeEvent, FC, useState } from 'react';
 import Checkbox from '@/modules/search/ui/Checkbox';
 import { FilterByProps } from './EntriesSearchFilters';
 
 const FilterBySelect: FC<FilterByProps> = ({ fieldKey, values, selectedValues, onFilterChange, facetValues, type }) => {
+  const [localSelectedValues, setLocalSelectedValues] = useState(selectedValues);
   const handleFilterChange = useCallback(
     (event: ChangeEvent<HTMLInputElement>) => {
       const value = event.target.value;
 
-      if (selectedValues.includes(value)) {
-        onFilterChange(
-          fieldKey,
-          selectedValues.filter(filter => filter !== value)
-        );
+      if (localSelectedValues.includes(value)) {
+        const newSelectedValues = localSelectedValues.filter(filter => filter !== value);
+        setLocalSelectedValues(newSelectedValues);
+        onFilterChange(fieldKey, newSelectedValues);
       } else {
-        onFilterChange(fieldKey, type === 'multiSelect' ? [...selectedValues, value] : [value]);
+        const newSelectedValues = type === 'multiSelect' ? [...localSelectedValues, value] : [value];
+        setLocalSelectedValues(newSelectedValues);
+        onFilterChange(fieldKey, newSelectedValues);
       }
     },
-    [selectedValues, onFilterChange, fieldKey, type]
+    [localSelectedValues, onFilterChange, fieldKey, type]
   );
 
   return (
@@ -33,7 +35,7 @@ const FilterBySelect: FC<FilterByProps> = ({ fieldKey, values, selectedValues, o
             </span>
           }
           value={value}
-          checked={selectedValues.includes(value)}
+          checked={localSelectedValues.includes(value)}
           onChange={handleFilterChange}
         />
       ))}

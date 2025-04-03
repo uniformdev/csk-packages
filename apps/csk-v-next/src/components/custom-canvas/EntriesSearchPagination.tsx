@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, SVGProps } from 'react';
+import { FC, SVGProps, useMemo, useState } from 'react';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { cn } from '@uniformdev/csk-components/utils/styling';
 import { useEntriesSearchContext } from '@/modules/search/EntriesSearchContextProvider';
@@ -34,12 +34,15 @@ const IconArrow: FC<SVGProps<SVGSVGElement>> = ({ className }) => (
 const EntriesSearchPagination: FC<EntriesSearchPaginationProps> = ({ siblingCount }) => {
   const { entries, setPage } = useEntriesSearchContext();
   const { page, perPage, total: totalCount } = entries;
-  const currentPage = page + 1;
+  const [localPage, setLocalPage] = useState(page);
+  const currentPage = useMemo(() => localPage + 1, [localPage]);
   const pagination = usePagination({ currentPage, totalCount, perPage, siblingCount });
 
   const onPrevious = () => {
     if (currentPage > 1) {
-      setPage(currentPage - 1);
+      const newPage = localPage - 1;
+      setLocalPage(newPage);
+      setPage(newPage);
     }
   };
 
@@ -47,12 +50,16 @@ const EntriesSearchPagination: FC<EntriesSearchPaginationProps> = ({ siblingCoun
 
   const onNext = () => {
     if (currentPage < lastPage) {
-      setPage(currentPage + 1);
+      const newPage = localPage + 1;
+      setLocalPage(newPage);
+      setPage(newPage);
     }
   };
 
   const onPageChange = (pageNumber: number) => {
-    setPage(pageNumber);
+    const zeroBasedPage = pageNumber - 1;
+    setLocalPage(zeroBasedPage);
+    setPage(zeroBasedPage);
   };
 
   if (!pagination || currentPage === 0 || pagination.length < 2) return null;

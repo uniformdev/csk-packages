@@ -29,7 +29,7 @@ const EntriesSearchFilters: FC<ComponentProps> = () => {
   };
 
   return (
-    <div className="flex flex-col gap-y-6">
+    <div className="flex flex-col gap-y-10">
       {filterBy.map(filter => {
         const Component = filterByComponents[filter.type];
         return (
