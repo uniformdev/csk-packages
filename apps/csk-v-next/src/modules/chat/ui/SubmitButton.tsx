@@ -1,4 +1,5 @@
 import { FC, MouseEventHandler } from 'react';
+import { cn } from '@uniformdev/csk-components/utils/styling';
 
 interface SubmitButtonProps {
   disabled?: boolean;
@@ -8,7 +9,9 @@ interface SubmitButtonProps {
 export const SubmitButton: FC<SubmitButtonProps> = ({ disabled, onClick }) => (
   <button
     onClick={onClick}
-    className="h-fit border p-1.5 hover:bg-black hover:text-white disabled:opacity-50"
+    className={cn('h-fit border p-1.5 hover:bg-black hover:text-white disabled:opacity-50', {
+      'pointer-events-none': disabled,
+    })}
     disabled={disabled}
   >
     <svg height={16} strokeLinejoin="round" viewBox="0 0 16 16" width={16} style={{ color: 'currentcolor' }}>

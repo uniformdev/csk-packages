@@ -21,6 +21,20 @@ import { CartResult, RelatedProducts } from './types';
 const MAX_STEPS = 5;
 const AUTO_PROMPT = "Based on my interests, recommend me some products. Don't call setUserInterests for now.";
 
+const PROMPTS = [
+  'Could you show me what’s in my shopping cart right now?',
+  'Based on what I like, do you have any recommendations for me?',
+  'Hey, could you take a look at my shopping cart and suggest a few products that might suit me?',
+];
+
+function chunkArray<T>(array: T[], size: number): T[][] {
+  const result: T[][] = [];
+  for (let i = 0; i < array.length; i += size) {
+    result.push(array.slice(i, i + size));
+  }
+  return result;
+}
+
 const Chat: FC = () => {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(false);
@@ -147,6 +161,51 @@ const Chat: FC = () => {
                 'animate-pulse bg-[#F7DF1E] rounded-full': showThinking,
               })}
             />
+            <div className="mb-2 flex flex-col gap-2">
+              {chunkArray(PROMPTS, 2).map((chunk: string[], index: number) => {
+                if (chunk.length === 1) {
+                  const [singlePrompt] = chunk;
+                  return (
+                    <button
+                      key={singlePrompt}
+                      disabled={showThinking}
+                      className={cn('w-full border px-4 py-2 text-black hover:bg-black hover:text-white', {
+                        'pointer-events-none opacity-50': showThinking,
+                      })}
+                      onClick={() => {
+                        append({
+                          content: singlePrompt,
+                          role: 'user',
+                        });
+                      }}
+                    >
+                      {singlePrompt}
+                    </button>
+                  );
+                }
+                return (
+                  <div key={index} className="grid grid-cols-2 gap-2">
+                    {chunk.map(prompt => (
+                      <button
+                        key={prompt}
+                        disabled={showThinking}
+                        className={cn('w-full border px-4 py-2 text-black hover:bg-black hover:text-white', {
+                          'pointer-events-none opacity-50': showThinking,
+                        })}
+                        onClick={() => {
+                          append({
+                            content: prompt,
+                            role: 'user',
+                          });
+                        }}
+                      >
+                        {prompt}
+                      </button>
+                    ))}
+                  </div>
+                );
+              })}
+            </div>
             <Textarea
               ref={textareaRef}
               placeholder="Send a message..."
