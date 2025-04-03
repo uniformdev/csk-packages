@@ -1,27 +1,14 @@
 'use client';
 
 import { FC, useEffect, useMemo, useState } from 'react';
-import { DefaultTheme } from 'tailwindcss/types/generated/default-theme';
 import { ComponentProps, UniformSlot, useUniformContext } from '@uniformdev/canvas-next-rsc/component';
 import { useQuirks } from '@uniformdev/canvas-next-rsc-client';
-import { ViewPort } from '@uniformdev/csk-components/types/cskTypes';
 import { cn } from '@uniformdev/csk-components/utils/styling';
-import { resolveViewPort } from '@uniformdev/csk-components/utils/styling';
-
-type TextSize = keyof DefaultTheme['fontSize'];
+import Select from '@/modules/search/ui/Select';
 
 type QuirkSelectorParameters = {
   quirkId: string;
   variants: string;
-  fullWidth?: boolean;
-  border?: string | ViewPort<string>;
-  size?: string;
-  textColor?: string;
-  textSize?: TextSize | ViewPort<TextSize>;
-  textWeight?: keyof DefaultTheme['fontWeight'];
-  textFont?: 'uppercase' | 'lowercase' | 'capitalize' | 'normal-case';
-  textTransform?: string;
-  backgroundColor?: string;
 };
 
 enum QuirkSelectorSlots {
@@ -31,42 +18,12 @@ enum QuirkSelectorSlots {
 
 type QuirkSelectorProps = ComponentProps<QuirkSelectorParameters, QuirkSelectorSlots>;
 
-const QuirkSelector: FC<QuirkSelectorProps> = ({
-  quirkId,
-  fullWidth,
-  textColor,
-  textSize,
-  backgroundColor,
-  border = '',
-  textTransform = '',
-  textWeight,
-  textFont,
-  size,
-  variants,
-  component,
-  context,
-  slots,
-}) => {
+const QuirkSelector: FC<QuirkSelectorProps> = ({ quirkId, variants, component, context, slots }) => {
   const quirks = useQuirks();
   const [isSuccess, setIsSuccess] = useState(false);
   const [selectedQuirk, setSelectedQuirk] = useState(quirks?.[quirkId]);
 
   const { context: uniformContext } = useUniformContext();
-
-  const baseStyles = cn(
-    'block w-max font-medium focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50',
-    {
-      [`text-${textColor}`]: textColor,
-      [`font-${textFont}`]: !!textFont,
-      [`font-${textWeight}`]: !!textWeight,
-      [`p-${size}`]: size,
-      [textTransform]: !!textTransform,
-      [resolveViewPort(border, '{value}')]: border,
-      [resolveViewPort(textSize, 'text-{value}')]: textSize,
-      [`bg-${backgroundColor}`]: backgroundColor,
-      'w-full': fullWidth,
-    }
-  );
 
   const onChange = async (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedQuirk(e.target.value);
@@ -103,15 +60,15 @@ const QuirkSelector: FC<QuirkSelectorProps> = ({
   }, [quirks]);
 
   return (
-    <div className="flex flex-col gap-y-8">
-      <select className={baseStyles} onChange={onChange} value={selectedQuirk}>
+    <div className="flex flex-col items-start gap-y-8">
+      <Select onChange={onChange} value={selectedQuirk} className="min-w-[200px]">
         <option value="">Select your quirk</option>
         {variantsToRender?.map(variant => (
           <option key={variant.value} value={variant.value}>
             {variant.label}
           </option>
         ))}
-      </select>
+      </Select>
 
       <div
         className={cn({
