@@ -18,18 +18,18 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={customFontVariables}>
-        <FavoritesProvider>
-          <CardProvider>
-            <NextIntlClientProvider>
-              <NextThemeProvider attribute="class" defaultTheme="light" enableSystem>
-                <UniformContext clientContextComponent={UniformClientContext}>
+        <UniformContext clientContextComponent={UniformClientContext}>
+          <FavoritesProvider>
+            <CardProvider>
+              <NextIntlClientProvider>
+                <NextThemeProvider attribute="class" defaultTheme="light" enableSystem>
                   {children}
                   <Chat />
-                </UniformContext>
-              </NextThemeProvider>
-            </NextIntlClientProvider>
-          </CardProvider>
-        </FavoritesProvider>
+                </NextThemeProvider>
+              </NextIntlClientProvider>
+            </CardProvider>
+          </FavoritesProvider>
+        </UniformContext>
       </body>
       {process.env.GOOGLE_ANALYTICS_ID && <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_ID} />}
     </html>

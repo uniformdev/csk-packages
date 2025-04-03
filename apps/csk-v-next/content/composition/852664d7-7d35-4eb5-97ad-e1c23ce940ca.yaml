@@ -77,8 +77,10 @@ composition:
           type: $pzCrit
           value:
             crit:
-              - l: addedToCart
-                op: +
+              - l: isCartEmpty
+                r: 'false'
+                t: q
+                op: '='
             name: featuredSection-33cb
         displayName:
           type: text
@@ -839,5 +841,5 @@ composition:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-03-25T04:27:50.97015+00:00'
-modified: '2025-04-02T12:51:01.217979+00:00'
+modified: '2025-04-03T10:01:16.549428+00:00'
 pattern: false

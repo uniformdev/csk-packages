@@ -1,6 +1,7 @@
 'use client';
 
 import { createContext, useContext, FC, PropsWithChildren, useMemo, useCallback, useEffect, useState } from 'react';
+import { useUniformContext } from '@uniformdev/canvas-next-rsc/component';
 import useStorage from '@/hooks/useStorage';
 import { CART_STORAGE_KEY } from '../constants';
 import { Product, StoredCart } from '../types';
@@ -22,6 +23,8 @@ type CardContextType = {
 const CardContext = createContext<CardContextType | undefined>(undefined);
 
 export const CardProvider: FC<PropsWithChildren> = ({ children }) => {
+  const { context } = useUniformContext();
+
   const [storedCart, setStoredCart] = useStorage<StoredCart>(CART_STORAGE_KEY, {});
   const [cartProducts, setCartProducts] = useState<Product[]>([]);
   const [isCartLoading, setIsCartLoading] = useState(false);
@@ -45,6 +48,16 @@ export const CardProvider: FC<PropsWithChildren> = ({ children }) => {
     },
     [storedCart, setStoredCart, isModalCartOpen, setIsModalCartOpen]
   );
+
+  useEffect(() => {
+    const isCartEmpty = Object.keys(storedCart).length === 0;
+
+    context?.update({
+      quirks: {
+        isCartEmpty: isCartEmpty ? 'true' : 'false',
+      },
+    });
+  }, [context, storedCart]);
 
   const updateCard = useCallback(
     (productSlug: string, quantity: number) => {
