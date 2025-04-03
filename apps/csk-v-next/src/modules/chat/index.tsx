@@ -14,7 +14,9 @@ import ChatButton from './ui/ChatButton';
 import { Messages } from './ui/Messages';
 import { SubmitButton } from './ui/SubmitButton';
 import { Textarea } from './ui/Textarea';
-import { getRecommendation } from './utils';
+import { getInterestRecommendationsFromMessage } from './utils';
+import { useCard } from '../cart';
+import { CartResult, RelatedProducts } from './types';
 
 const MAX_STEPS = 5;
 const AUTO_PROMPT = "Based on my interests, recommend me some products. Don't call setUserInterests for now.";
@@ -24,6 +26,7 @@ const Chat: FC = () => {
   const [active, setActive] = useState(false);
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const { cartProducts, total } = useCard();
   const [recommendationReceivedIndex, setRecommendationReceivedIndex] = useState<number>(-1);
 
   const scores = useScores();
@@ -60,14 +63,39 @@ const Chat: FC = () => {
         });
 
         return JSON.stringify({ success: true, updatedInterests: interests });
+      } else if (toolCall.toolName === ToolsName.CART) {
+        const result: CartResult = {
+          products: cartProducts.map(({ slug, title, shortDescription }) => ({
+            slug,
+            title,
+            shortDescription,
+          })),
+          total,
+        };
+        console.info(`${toolCall.toolName}: ${JSON.stringify(result, null, 2)}`);
+
+        return JSON.stringify(result);
+      } else if (toolCall.toolName === ToolsName.RELATED_PRODUCTS) {
+        const relatedProducts = cartProducts.map(({ recommendations }) => recommendations).flat();
+
+        const result: RelatedProducts = {
+          products: relatedProducts.map(({ slug, title, shortDescription }) => ({
+            slug,
+            title,
+            shortDescription,
+          })),
+        };
+        console.info(`${toolCall.toolName}: ${JSON.stringify(result, null, 2)}`);
+
+        return JSON.stringify(result);
       }
     },
   });
 
   useEffect(() => {
-    const indexWithRecommendation = messages.findIndex(m => {
-      const { suggestedProducts } = getRecommendation(m);
-      return suggestedProducts.length > 0;
+    const indexWithRecommendation = messages.findIndex(message => {
+      const { products } = getInterestRecommendationsFromMessage(message);
+      return products.length > 0;
     });
 
     if (indexWithRecommendation !== -1) {

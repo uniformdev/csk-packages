@@ -31,9 +31,23 @@ export async function GET(req: Request) {
 
     if (!flattened) return null;
 
-    return {
+    const resolvedProduct = {
       ...transformEntry(flattened),
       slug: entryResponse.entry?._slug,
+    };
+
+    return {
+      ...resolvedProduct,
+      ...('recommendations' in resolvedProduct && Array.isArray(resolvedProduct.recommendations)
+        ? {
+            recommendations: resolvedProduct.recommendations.map((recommendation, index) => ({
+              ...recommendation,
+              slug: (
+                entryResponse.entry?.fields?.['recommendations']?.value as Array<{ entry?: { _slug?: string } }>
+              )?.[index]?.entry?._slug,
+            })),
+          }
+        : undefined),
     };
   });
 

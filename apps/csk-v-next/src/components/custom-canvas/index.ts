@@ -1,6 +1,7 @@
 import { ComponentMapping } from '@uniformdev/csk-components/utils/createComponentResolver';
 import AccordionItem from './AccordionItem';
 import AddToCardButton from './AddToCardButton';
+import AiConfiguration from './AiConfiguration';
 import Button from './Button';
 import CompleteCheckoutButton from './CompleteCheckoutButton';
 import Container from './Container';
@@ -71,4 +72,5 @@ export const customComponentsMapping: ComponentMapping = {
   entriesSearchTotalAmount: { component: EntriesSearchTotalAmount },
   entriesSearchPageSize: { component: EntriesSearchPageSize },
   dynamicProductRecommendations: { component: DynamicProductRecommendations },
+  aiConfiguration: { component: AiConfiguration },
 };
