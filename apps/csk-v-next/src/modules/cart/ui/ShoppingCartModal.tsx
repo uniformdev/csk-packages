@@ -85,7 +85,7 @@ const CartContent: FC<CartContentProps> = ({ onCloseModal, styles }) => {
           {cartProducts.map(item => {
             const productFromCart = storedCart[item.slug];
 
-            if (!productFromCart) return null;
+            if (!productFromCart) return <ShoppingMiniCartItemSkeleton key={item.slug} />;
 
             return (
               <div key={item?.slug} className="border-b p-4 sm:px-14">

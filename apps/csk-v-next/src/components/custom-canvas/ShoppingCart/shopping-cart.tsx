@@ -5,6 +5,7 @@ import { ComponentProps, UniformSlot } from '@uniformdev/canvas-next-rsc/compone
 import { cn } from '@uniformdev/csk-components/utils/styling';
 import { ShoppingCartItem } from '@/modules/cart';
 import { useCard } from '@/modules/cart';
+import { ShoppingCartItemSkeleton } from '@/modules/cart/ui/skeleton/ShoppingCartItemSkeleton';
 import { ShoppingCartSkeleton } from '@/modules/cart/ui/skeleton/ShoppingCartSkeleton';
 
 enum ShoppingCartSlots {
@@ -37,6 +38,8 @@ const ShoppingCart: FC<ShoppingCartProps> = ({ component, context, slots, primar
 
   const hasItems = Boolean(cartProducts.length);
 
+  const isNewItemsAddedToCard = isCartLoading && Object.keys(storedCart).length > cartProducts.length;
+
   if (isCartLoading && !hasItems) {
     return <ShoppingCartSkeleton />;
   }
@@ -57,6 +60,11 @@ const ShoppingCart: FC<ShoppingCartProps> = ({ component, context, slots, primar
       {hasItems ? (
         cartProducts.map(cartItem => {
           const productFromCart = storedCart[cartItem.slug];
+
+          if (!productFromCart) {
+            return <ShoppingCartItemSkeleton key={cartItem.slug} />;
+          }
+
           return (
             <ShoppingCartItem
               key={cartItem.slug}
@@ -71,6 +79,7 @@ const ShoppingCart: FC<ShoppingCartProps> = ({ component, context, slots, primar
       ) : (
         <UniformSlot context={context} slot={slots.emptyCartContent} data={component} />
       )}
+      {isNewItemsAddedToCard && <ShoppingCartItemSkeleton />}
       {hasItems && (
         <div className="flex flex-col gap-4 pt-9">
           <div className="flex flex-row justify-end text-2xl font-bold">
