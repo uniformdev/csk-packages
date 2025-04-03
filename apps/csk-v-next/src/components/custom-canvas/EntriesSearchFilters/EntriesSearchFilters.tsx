@@ -32,6 +32,7 @@ const EntriesSearchFilters: FC<ComponentProps> = () => {
     <div className="flex flex-col gap-y-10">
       {filterBy.map(filter => {
         const Component = filterByComponents[filter.type];
+        if (!Component) return null;
         return (
           <div key={filter.fieldKey} className="flex flex-col gap-y-2">
             <p className="text-lg font-bold">{filter.title}</p>
