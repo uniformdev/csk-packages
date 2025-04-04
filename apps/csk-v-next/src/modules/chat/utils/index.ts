@@ -39,3 +39,11 @@ export const getUniformScoresFromCookie = (cookieValue: string): string | undefi
 
 export const replacePromptVariables = (template: string, values: Record<string, string>, fallback = ''): string =>
   template.replace(/{{(.*?)}}/g, (_, key) => (key in values ? values[key] : fallback));
+
+export const chunkArray = <T>(array: T[], size: number): T[][] => {
+  const result: T[][] = [];
+  for (let i = 0; i < array.length; i += size) {
+    result.push(array.slice(i, i + size));
+  }
+  return result;
+};

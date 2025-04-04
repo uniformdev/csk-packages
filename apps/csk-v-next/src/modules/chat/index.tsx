@@ -17,6 +17,7 @@ import { Textarea } from './ui/Textarea';
 import { getInterestRecommendationsFromMessage } from './utils';
 import { useCard } from '../cart';
 import { CartResult, RelatedProducts } from './types';
+import PresetsSection from './ui/PresetsSection';
 
 const MAX_STEPS = 5;
 const AUTO_PROMPT = "Based on my interests, recommend me some products. Don't call setUserInterests for now.";
@@ -27,21 +28,13 @@ const PROMPTS = [
   'Hey, could you take a look at my shopping cart and suggest a few products that might suit me?',
 ];
 
-function chunkArray<T>(array: T[], size: number): T[][] {
-  const result: T[][] = [];
-  for (let i = 0; i < array.length; i += size) {
-    result.push(array.slice(i, i + size));
-  }
-  return result;
-}
-
 const Chat: FC = () => {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(false);
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const { cartProducts, total } = useCard();
-  const [recommendationReceivedIndex, setRecommendationReceivedIndex] = useState<number>(-1);
+  const [startConversationIndex, setStartConversationIndex] = useState<number>(-1);
 
   const scores = useScores();
   const { context } = useUniformContext();
@@ -113,7 +106,7 @@ const Chat: FC = () => {
     });
 
     if (indexWithRecommendation !== -1) {
-      setRecommendationReceivedIndex(indexWithRecommendation);
+      setStartConversationIndex(indexWithRecommendation);
       setActive(true);
     } else {
       setActive(false);
@@ -121,7 +114,7 @@ const Chat: FC = () => {
   }, [messages]);
 
   useEffect(() => {
-    if (recommendationReceivedIndex !== -1 || isPreviewMode) {
+    if (startConversationIndex !== -1 || isPreviewMode) {
       return;
     }
 
@@ -137,15 +130,26 @@ const Chat: FC = () => {
         });
       }
     }
-  }, [scores, recommendationReceivedIndex, append, isPreviewMode]);
+  }, [scores, startConversationIndex, append, isPreviewMode]);
 
   const showThinking = !['ready', 'error'].includes(status);
+
+  const sendPresetPrompt = (prompt: string) => {
+    if (startConversationIndex === -1) {
+      setStartConversationIndex(messages.length);
+    }
+
+    append({
+      content: prompt,
+      role: 'user',
+    });
+  };
 
   if (isPreviewMode) return null;
 
   return (
     <div>
-      <div className="fixed bottom-0 right-0 p-16">
+      <div className="fixed bottom-0 right-0 p-20">
         <ChatButton disabled={!active} onClick={() => setOpen(true)} />
       </div>
 
@@ -153,7 +157,7 @@ const Chat: FC = () => {
         <div className="flex h-full flex-col px-4 py-6 sm:px-6">
           <h2 className="text-base font-semibold text-gray-900">Talk to your site</h2>
           <p className="text-sm leading-3 text-[#6b7280]">Powered by Uniform Context</p>
-          <Messages status={status} messages={messages} recommendationReceivedIndex={recommendationReceivedIndex} />
+          <Messages status={status} messages={messages} startConversationIndex={startConversationIndex} />
           <div className="relative w-full flex-col gap-4">
             <div
               title={status}
@@ -161,51 +165,7 @@ const Chat: FC = () => {
                 'animate-pulse bg-[#F7DF1E] rounded-full': showThinking,
               })}
             />
-            <div className="mb-2 flex flex-col gap-2">
-              {chunkArray(PROMPTS, 2).map((chunk: string[], index: number) => {
-                if (chunk.length === 1) {
-                  const [singlePrompt] = chunk;
-                  return (
-                    <button
-                      key={singlePrompt}
-                      disabled={showThinking}
-                      className={cn('w-full border px-4 py-2 text-black hover:bg-black hover:text-white', {
-                        'pointer-events-none opacity-50': showThinking,
-                      })}
-                      onClick={() => {
-                        append({
-                          content: singlePrompt,
-                          role: 'user',
-                        });
-                      }}
-                    >
-                      {singlePrompt}
-                    </button>
-                  );
-                }
-                return (
-                  <div key={index} className="grid grid-cols-2 gap-2">
-                    {chunk.map(prompt => (
-                      <button
-                        key={prompt}
-                        disabled={showThinking}
-                        className={cn('w-full border px-4 py-2 text-black hover:bg-black hover:text-white', {
-                          'pointer-events-none opacity-50': showThinking,
-                        })}
-                        onClick={() => {
-                          append({
-                            content: prompt,
-                            role: 'user',
-                          });
-                        }}
-                      >
-                        {prompt}
-                      </button>
-                    ))}
-                  </div>
-                );
-              })}
-            </div>
+            <PresetsSection prompts={PROMPTS} showThinking={showThinking} sendPresetPrompt={sendPresetPrompt} />
             <Textarea
               ref={textareaRef}
               placeholder="Send a message..."

@@ -8,15 +8,15 @@ interface ChatButtonProps {
 }
 
 const ChatButton: FC<ChatButtonProps> = ({ disabled, onClick }) => (
-  <Tooltip text={disabled ? 'Visit more pages to activate' : 'Open chat with AI assistant'}>
-    <button className="text-white" type="button" aria-haspopup="dialog" onClick={onClick} disabled={disabled}>
+  <Tooltip text={disabled ? 'Visit more pages to collect scores' : 'Open chat with AI assistant'}>
+    <button className="text-white" type="button" aria-haspopup="dialog" onClick={onClick}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="75"
         height="96"
         viewBox="0 0 75 96"
         fill="none"
-        className={cn('transition-all duration-1000 opacity-50 hover:[animation-play-state:paused]', {
+        className={cn('transition-all duration-1000 opacity-80 hover:[animation-play-state:paused] hover:opacity-100', {
           'animate-wobble-bounce opacity-100': !disabled,
         })}
       >
