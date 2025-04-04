@@ -14,17 +14,27 @@ import ChatButton from './ui/ChatButton';
 import { Messages } from './ui/Messages';
 import { SubmitButton } from './ui/SubmitButton';
 import { Textarea } from './ui/Textarea';
-import { getRecommendation } from './utils';
+import { getInterestRecommendationsFromMessage } from './utils';
+import { useCard } from '../cart';
+import { CartResult, RelatedProducts } from './types';
+import PresetsSection from './ui/PresetsSection';
 
 const MAX_STEPS = 5;
 const AUTO_PROMPT = "Based on my interests, recommend me some products. Don't call setUserInterests for now.";
+
+const PROMPTS = [
+  'Could you show me what’s in my shopping cart right now?',
+  'Based on what I like, do you have any recommendations for me?',
+  'Hey, could you take a look at my shopping cart and suggest a few products that might suit me?',
+];
 
 const Chat: FC = () => {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(false);
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const [recommendationReceivedIndex, setRecommendationReceivedIndex] = useState<number>(-1);
+  const { cartProducts, total } = useCard();
+  const [startConversationIndex, setStartConversationIndex] = useState<number>(-1);
 
   const scores = useScores();
   const { context } = useUniformContext();
@@ -60,18 +70,43 @@ const Chat: FC = () => {
         });
 
         return JSON.stringify({ success: true, updatedInterests: interests });
+      } else if (toolCall.toolName === ToolsName.CART) {
+        const result: CartResult = {
+          products: cartProducts.map(({ slug, title, shortDescription }) => ({
+            slug,
+            title,
+            shortDescription,
+          })),
+          total,
+        };
+        console.info(`${toolCall.toolName}: ${JSON.stringify(result, null, 2)}`);
+
+        return JSON.stringify(result);
+      } else if (toolCall.toolName === ToolsName.RELATED_PRODUCTS) {
+        const relatedProducts = cartProducts.map(({ recommendations }) => recommendations).flat();
+
+        const result: RelatedProducts = {
+          products: relatedProducts.map(({ slug, title, shortDescription }) => ({
+            slug,
+            title,
+            shortDescription,
+          })),
+        };
+        console.info(`${toolCall.toolName}: ${JSON.stringify(result, null, 2)}`);
+
+        return JSON.stringify(result);
       }
     },
   });
 
   useEffect(() => {
-    const indexWithRecommendation = messages.findIndex(m => {
-      const { suggestedProducts } = getRecommendation(m);
-      return suggestedProducts.length > 0;
+    const indexWithRecommendation = messages.findIndex(message => {
+      const { products } = getInterestRecommendationsFromMessage(message);
+      return products.length > 0;
     });
 
     if (indexWithRecommendation !== -1) {
-      setRecommendationReceivedIndex(indexWithRecommendation);
+      setStartConversationIndex(indexWithRecommendation);
       setActive(true);
     } else {
       setActive(false);
@@ -79,7 +114,7 @@ const Chat: FC = () => {
   }, [messages]);
 
   useEffect(() => {
-    if (recommendationReceivedIndex !== -1 || isPreviewMode) {
+    if (startConversationIndex !== -1 || isPreviewMode) {
       return;
     }
 
@@ -95,15 +130,26 @@ const Chat: FC = () => {
         });
       }
     }
-  }, [scores, recommendationReceivedIndex, append, isPreviewMode]);
+  }, [scores, startConversationIndex, append, isPreviewMode]);
 
   const showThinking = !['ready', 'error'].includes(status);
+
+  const sendPresetPrompt = (prompt: string) => {
+    if (startConversationIndex === -1) {
+      setStartConversationIndex(messages.length);
+    }
+
+    append({
+      content: prompt,
+      role: 'user',
+    });
+  };
 
   if (isPreviewMode) return null;
 
   return (
     <div>
-      <div className="fixed bottom-0 right-0 p-16">
+      <div className="fixed bottom-0 right-0 p-20">
         <ChatButton disabled={!active} onClick={() => setOpen(true)} />
       </div>
 
@@ -111,7 +157,7 @@ const Chat: FC = () => {
         <div className="flex h-full flex-col px-4 py-6 sm:px-6">
           <h2 className="text-base font-semibold text-gray-900">Talk to your site</h2>
           <p className="text-sm leading-3 text-[#6b7280]">Powered by Uniform Context</p>
-          <Messages status={status} messages={messages} recommendationReceivedIndex={recommendationReceivedIndex} />
+          <Messages status={status} messages={messages} startConversationIndex={startConversationIndex} />
           <div className="relative w-full flex-col gap-4">
             <div
               title={status}
@@ -119,6 +165,7 @@ const Chat: FC = () => {
                 'animate-pulse bg-[#F7DF1E] rounded-full': showThinking,
               })}
             />
+            <PresetsSection prompts={PROMPTS} showThinking={showThinking} sendPresetPrompt={sendPresetPrompt} />
             <Textarea
               ref={textareaRef}
               placeholder="Send a message..."
