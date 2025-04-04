@@ -11,8 +11,7 @@ export type ProductCardProps = WithUniformContentEntrySystemParams<Product> & {
 const ProductResultCard: FC<ProductCardProps> = ({ title, primaryImage, slug, variants, textColor, rating }) => {
   const asset = primaryImage?.[0];
 
-  const price = variants?.[0]?.price;
-  const currency = variants?.[0]?.currency;
+  const { price = 0, currency = '$' } = variants?.[0] ?? {};
 
   return (
     <ProductCard

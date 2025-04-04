@@ -134,13 +134,13 @@ const DynamicProductRecommendations: FC<DynamicRecommendationsProps> = ({
       ) : (
         <Grid columnsCount="3" gapY="8" gapX="8">
           {products.map(product => {
-            const { price, currency } = product?.variants[0];
+            const { price = 0, currency = '$' } = product?.variants?.[0] ?? {};
             return (
               <ProductCard
                 key={product.slug}
                 price={`${currency}${price}`}
                 title={product.title}
-                image={product.primaryImage[0].url}
+                image={product.primaryImage?.[0]?.url}
                 slug={product.slug}
                 link={`/products/${product.slug}`}
                 textColor={'primary'}
