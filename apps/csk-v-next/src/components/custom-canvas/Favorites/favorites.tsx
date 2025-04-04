@@ -56,11 +56,12 @@ const Favorites: FC<FavoritesProps> = ({
               return <ProductCardSkeleton key={product.slug} />;
             }
 
-            const { price = 0, currency = '$' } = product?.variants?.[0] ?? {};
+            const { price = 0, currency = 'USD' } = product?.variants?.[0] ?? {};
             return (
               <ProductCard
                 key={product.slug}
-                price={`${currency}${price}`}
+                price={price}
+                currency={currency}
                 title={product.title}
                 image={product.primaryImage?.[0]?.url}
                 slug={product.slug}

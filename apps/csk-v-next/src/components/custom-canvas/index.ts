@@ -20,6 +20,7 @@ import FavoritesIcon from './FavoritesIcon';
 import FeaturedSection from './FeaturedSection';
 import Flex from './Flex';
 import FlexCard from './FlexCard';
+import FormattedPrice from './FormattedPrice';
 import Grid from './Grid';
 import GridItem from './GridItem';
 import Input from './Input';
@@ -73,4 +74,5 @@ export const customComponentsMapping: ComponentMapping = {
   entriesSearchPageSize: { component: EntriesSearchPageSize },
   dynamicProductRecommendations: { component: DynamicProductRecommendations },
   aiConfiguration: { component: AiConfiguration },
+  formattedPrice: { component: FormattedPrice },
 };

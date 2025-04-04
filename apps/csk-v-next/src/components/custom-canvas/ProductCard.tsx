@@ -11,6 +11,7 @@ type ProductCardProps = ComponentProps<{
   link: LinkParamValue;
   title: string;
   price: number;
+  currency: string;
   slug: string;
   textColor: string;
   addToFavoritesIcon: Asset[];
@@ -28,6 +29,8 @@ const ProductCard: FC<ProductCardProps> = ({
   addToFavoritesIcon,
   removeFromFavoritesIcon,
   rating,
+  currency,
+  price,
 }) => {
   const [resolvedImage] = resolveAsset(image);
 
@@ -40,7 +43,8 @@ const ProductCard: FC<ProductCardProps> = ({
     <BaseProductCard
       image={resolvedImage?.url}
       title={<UniformText component={component} parameterId="title" context={context} />}
-      price={<UniformText component={component} parameterId="price" context={context} />}
+      price={price}
+      currency={currency}
       slug={slug}
       link={href}
       textColor={textColor}
