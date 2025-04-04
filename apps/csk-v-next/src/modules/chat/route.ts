@@ -54,13 +54,11 @@ export async function POST(req: Request) {
               },
             }),
             [ToolsName.CART]: tool({
-              description:
-                'Call this when user asks to show his cart. Analize cart products and total price. Return user friendly short message about products in cart and total price. Also ask user if he wants to see some recommendations based on products in cart.',
+              description: prompts[ToolsName.CART],
               parameters: z.object({}),
             }),
             [ToolsName.RELATED_PRODUCTS]: tool({
-              description:
-                'Call this when user asks to see recommendations based on products in cart. Return user friendly short message describing these product in general.',
+              description: prompts[ToolsName.RELATED_PRODUCTS],
               parameters: z.object({}),
             }),
           },

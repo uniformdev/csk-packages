@@ -11,5 +11,4 @@ export enum ToolsName {
   RECOMMEND_PRODUCTS = 'recommendProducts',
   RELATED_PRODUCTS = 'relatedProducts',
   CART = 'cart',
-  CART_TEMPLATE = 'cartTemplate',
 }
