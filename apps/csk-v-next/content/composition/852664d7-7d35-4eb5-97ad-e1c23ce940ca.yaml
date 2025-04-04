@@ -272,6 +272,42 @@ composition:
         text:
           type: text
           value: See all
+    aab1dc4d-ef5d-4284-978d-d7c9c2e3ca93:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: /${locale}/beans-bundle
+              type: projectMapNode
+              nodeId: 50a1163d-53a4-44c7-98b0-485e0baa983e
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+        text:
+          type: text
+          value: Sign up for membership
+    be29c33f-1ba2-4ea6-86b7-45da344bf9dd:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: /${locale}/beans-bundle
+              type: projectMapNode
+              nodeId: 50a1163d-53a4-44c7-98b0-485e0baa983e
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+        text:
+          type: text
+          value: Sign up for membership
+        buttonColor:
+          type: dex-color-palette-parameter
+          value: button-secondary-hover
+        hoverButtonColor:
+          type: dex-color-palette-parameter
+          value: button-secondary-hover
     c86fa3e5-5f35-4080-9d1e-57096b048013:
       parameters:
         link:
@@ -683,15 +719,31 @@ composition:
               trackingEventName:
                 type: text
                 value: Main Hero
-          - _id: 20e1dd5b-7776-40a2-840b-1974ab9e0f49
+          - _id: 98c6dc31-518c-4d5e-beb8-85472a607f2b
             type: $test
             slots:
               test:
-                - _id: 1c7f01d0-639b-472d-8aae-c3f5d9a42bcd
+                - _id: 6f41a578-4718-482a-9579-88337bed6983
                   type: section
                   slots:
+                    sectionCTA:
+                      - _id: aab1dc4d-ef5d-4284-978d-d7c9c2e3ca93
+                        type: button
+                        _pattern: 8060e691-b0b3-428c-92f1-278fc76baf47
+                        _overridability:
+                          variants: true
+                          parameters:
+                            link: 'yes'
+                            text: 'yes'
+                            textColor: 'no'
+                            textWeight: 'yes'
+                            buttonColor: 'yes'
+                            textTransform: 'yes'
+                            hoverTextColor: 'yes'
+                            hoverButtonColor: 'yes'
+                          hideLockedParameters: true
                     sectionContent:
-                      - _id: aa48ac0f-90c3-4520-a230-c20f5e8857e0
+                      - _id: 80973b81-8bb4-482c-9c6c-aa4ce48292b4
                         type: text
                         parameters:
                           tag:
@@ -712,7 +764,7 @@ composition:
                           weight:
                             type: dex-segmented-control-parameter
                             value: bold
-                      - _id: 6557bad8-7b2d-4aa7-b28b-5fe992eacd6f
+                      - _id: 7da6aa0b-7bf4-4864-917e-c4a431ba940b
                         type: text
                         parameters:
                           tag:
@@ -720,17 +772,20 @@ composition:
                             value: span
                           size:
                             type: dex-segmented-control-parameter
-                            value:
-                              tablet: lg
-                              desktop: xl
+                            value: {}
                           text:
                             type: text
                             value: >-
-                              At Jada Drip, coffee is more than a drink—it’s a
-                              ritual and a connection. We’re passionate about
-                              every step, from sourcing top-quality beans to
-                              crafting premium brewing gear. Celebrate the art
-                              of coffee with us, one sip at a time.
+                              At JavaDrip, coffee isn’t just a drink—it’s an
+                              experience, a ritual, and a connection. From the
+                              perfect grind to the rich aroma, we’re passionate
+                              about every step of the journey that brings the
+                              finest coffee to your cup. Our obsession drives us
+                              to source only the highest quality beans, create
+                              state-of-the-art brewing equipment, and offer
+                              accessories that elevate your daily coffee
+                              routine. Join us in celebrating the art of coffee,
+                              one sip at a time
                           color:
                             type: dex-color-palette-parameter
                             value: text-primary
@@ -749,18 +804,57 @@ composition:
                     $tstVrnt:
                       type: testVariant
                       value:
-                        id: section-1c7f
+                        id: text
                     displayName:
                       type: text
                       value: Why we’re obsessed with coffee
                     contentAlignment:
                       type: dex-segmented-control-parameter
                       value: center
-                - _id: 1e20c961-9ad7-4a74-b1e2-49a28e0fec44
+                - _id: bc3ceb50-698a-4662-b4a9-7a89844ba657
                   type: section
                   slots:
+                    sectionCTA:
+                      - _id: be29c33f-1ba2-4ea6-86b7-45da344bf9dd
+                        type: button
+                        _pattern: 8060e691-b0b3-428c-92f1-278fc76baf47
+                        _overridability:
+                          variants: true
+                          parameters:
+                            link: 'yes'
+                            text: 'yes'
+                            textColor: 'no'
+                            textWeight: 'yes'
+                            buttonColor: 'yes'
+                            textTransform: 'yes'
+                            hoverTextColor: 'yes'
+                            hoverButtonColor: 'yes'
+                          hideLockedParameters: true
+                    sectionMedia:
+                      - _id: c7ad6516-f656-4c05-9807-f2858c0121aa
+                        type: video
+                        parameters:
+                          url:
+                            type: link
+                            value:
+                              path: >-
+                                https://files.uniform.global/p/ovl3f_RJSNmuo41YikmFlA/_hghTn8SQSucNGkk6aw5Qg-3365440-uhd_3840_2160_30fps.mp4
+                              type: url
+                          loop:
+                            type: checkbox
+                            value: true
+                          muted:
+                            type: checkbox
+                            value: true
+                          autoPlay:
+                            type: checkbox
+                            value: true
+                          displayName:
+                            type: text
+                            locales:
+                              en: Video
                     sectionContent:
-                      - _id: 3841e12f-4852-466e-9ea2-99f6ff845ec7
+                      - _id: 6da60de3-1765-46c7-bae3-445fae1fe42b
                         type: text
                         parameters:
                           tag:
@@ -774,14 +868,14 @@ composition:
                               desktop: 4xl
                           text:
                             type: text
-                            value: Why we’re obsessed with coffee 2
+                            value: Why we’re obsessed with coffee
                           color:
                             type: dex-color-palette-parameter
                             value: text-primary
                           weight:
                             type: dex-segmented-control-parameter
                             value: bold
-                      - _id: d7c52d3f-4fa9-4791-9a92-f3625bd68f18
+                      - _id: a02606b4-5c2a-43cc-8c69-d0e9a671d256
                         type: text
                         parameters:
                           tag:
@@ -789,17 +883,20 @@ composition:
                             value: span
                           size:
                             type: dex-segmented-control-parameter
-                            value:
-                              tablet: lg
-                              desktop: xl
+                            value: {}
                           text:
                             type: text
                             value: >-
-                              At Jada Drip, coffee is more than a drink—it’s a
-                              ritual and a connection. We’re passionate about
-                              every step, from sourcing top-quality beans to
-                              crafting premium brewing gear. Celebrate the art
-                              of coffee with us, one sip at a time.
+                              At JavaDrip, coffee isn’t just a drink—it’s an
+                              experience, a ritual, and a connection. From the
+                              perfect grind to the rich aroma, we’re passionate
+                              about every step of the journey that brings the
+                              finest coffee to your cup. Our obsession drives us
+                              to source only the highest quality beans, create
+                              state-of-the-art brewing equipment, and offer
+                              accessories that elevate your daily coffee
+                              routine. Join us in celebrating the art of coffee,
+                              one sip at a time
                           color:
                             type: dex-color-palette-parameter
                             value: text-primary
@@ -809,26 +906,37 @@ composition:
                           alignment:
                             type: dex-segmented-control-parameter
                             value: center
+                  variant: columns
                   parameters:
                     spacing:
                       type: dex-space-control-parameter
                       value:
-                        paddingTop: container-xlarge
-                        paddingBottom: container-medium
+                        mobile:
+                          paddingTop: container-xlarge
+                          paddingBottom: container-medium
+                        tablet:
+                          paddingTop: container-xlarge
+                          paddingBottom: container-medium
+                        desktop:
+                          paddingTop: container-xlarge
+                          paddingBottom: container-medium
                     $tstVrnt:
                       type: testVariant
                       value:
-                        id: section-1e20
+                        id: video
                     displayName:
                       type: text
                       value: Why we’re obsessed with coffee
+                    backgroundColor:
+                      type: dex-color-palette-parameter
+                      value: general-color-1
                     contentAlignment:
                       type: dex-segmented-control-parameter
                       value: center
             parameters:
               test:
                 type: testSelect
-                value: abTest
+                value: membershipCta
           - _id: 3074410a-05a6-475d-a592-d12154625515
             type: container
             _pattern: 4a0a5fb2-25d0-4563-955b-714233ddffe6
@@ -926,5 +1034,5 @@ composition:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-03-25T04:27:50.97015+00:00'
-modified: '2025-04-03T14:39:37.073413+00:00'
+modified: '2025-04-03T21:26:35.408488+00:00'
 pattern: false
