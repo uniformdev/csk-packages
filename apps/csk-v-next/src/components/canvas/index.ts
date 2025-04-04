@@ -2,6 +2,7 @@ import baseCskComponentsMapping from '@uniformdev/csk-components/components/canv
 import DemoHero from './DemoHero';
 import Header from './Header';
 import NavigationFlyout from './NavigationFlyout';
+import Text from './Text';
 
 export const cskComponentsMapping = {
   ...baseCskComponentsMapping,
@@ -9,4 +10,5 @@ export const cskComponentsMapping = {
   header: { component: Header },
   flexibleHero: { component: DemoHero.FlexibleHero },
   fixedHero: { component: DemoHero.FixedHero },
+  text: { component: Text },
 };

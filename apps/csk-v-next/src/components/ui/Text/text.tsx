@@ -16,6 +16,7 @@ export const Text: FC<TextProps> = ({
   lineCountRestrictions,
 }) => {
   const baseStyles = cn(
+    'whitespace-break-spaces',
     {
       [`text-${color}`]: !!color,
       [`font-${font}`]: !!font,
