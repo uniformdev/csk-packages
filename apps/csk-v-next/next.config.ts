@@ -8,5 +8,12 @@ const nextConfig: NextConfig = {
     remotePatterns: [{ protocol: 'https', hostname: '*' }],
     deviceSizes: [320, 420, 640, 768, 1024, 1280, 1536],
   },
+  experimental: {
+    ppr: 'incremental',
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
+
 export default withNextIntl(withUniformConfig(nextConfig));

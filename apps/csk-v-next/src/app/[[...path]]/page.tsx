@@ -27,3 +27,5 @@ export default async function Home(props: PageParameters) {
 }
 
 export { generateMetadata } from '@/utils/metadata';
+
+export const experimental_ppr = true;
