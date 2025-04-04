@@ -22,7 +22,7 @@ export const FormattedPrice: FC<FormattedPriceProps> = ({
     return null;
   }
 
-  const formattedPrice = new Intl.NumberFormat('en-US', { style: 'currency', currency }).format(price);
+  const formattedPrice = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(price);
   return (
     <BaseText
       {...{ color, size, font, weight, transform, decoration, letterSpacing, alignment, lineCountRestrictions }}
