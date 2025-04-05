@@ -31,7 +31,9 @@ export const ProductCard: FC<ProductCardProps> = ({
   removeFromFavoritesIcon,
   rating,
 }) => {
-  const formattedPrice = new Intl.NumberFormat('en-US', { style: 'currency', currency }).format(price);
+  const formattedPrice = new Intl.NumberFormat('en-US', { style: 'currency', currency: currency || 'USD' }).format(
+    price
+  );
   return (
     <Link href={link} className="group">
       <Container wrapperClassName="h-full" className="relative h-full overflow-hidden" fluidContent>
