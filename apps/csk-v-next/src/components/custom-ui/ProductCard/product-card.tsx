@@ -11,6 +11,7 @@ export type ProductCardProps = {
   title: ReactElement | string;
   price: number;
   currency: string;
+  category?: string;
   slug: string;
   link: string;
   textColor: string;
@@ -24,6 +25,7 @@ export const ProductCard: FC<ProductCardProps> = ({
   title,
   price,
   currency,
+  category,
   slug,
   link,
   textColor,
@@ -78,6 +80,7 @@ export const ProductCard: FC<ProductCardProps> = ({
             <Text weight="bold" size="2xl" color={textColor}>
               {title}
             </Text>
+            {category ? <Text color={textColor}>{category}</Text> : null}
             <Text size="base" color={textColor}>
               {formattedPrice}
             </Text>

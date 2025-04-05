@@ -102,6 +102,8 @@ export type Brand = {
 export type Product = {
   title: string;
   name: string;
+  category: ProductCategory;
+  subcategory: ProductCategory;
   shortDescription: string;
   primaryImage: MappedAsset[];
   brand: Brand;
