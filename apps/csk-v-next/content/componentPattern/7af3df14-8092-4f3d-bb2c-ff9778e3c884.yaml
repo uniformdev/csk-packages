@@ -86,8 +86,6 @@ composition:
           locales:
             en: >-
               ${#jptr:/Product List Content entries Loop
-              Item/entry/fields/variants/value/0/fields/currency/value}
-              ${#jptr:/Product List Content entries Loop
               Item/entry/fields/variants/value/0/fields/price/value}
         title:
           type: text
@@ -95,56 +93,11 @@ composition:
             en: >-
               ${#jptr:/Product List Content entries Loop
               Item/entry/fields/title/value}
-    8fc73c05-9552-49ee-b021-f2a98bc39958:
-      parameters:
-        displayName:
-          type: text
-          value: >-
-            ${#jptr:/Product List Content entries Loop
-            Item/entry/fields/name/value}
-        fluidContent:
-          type: checkbox
-          value: true
-    8fc73c05-9552-49ee-b021-f2a98bc39958|0952417a-061c-4634-91df-1341269e4054:
-      parameters:
-        image:
-          type: asset
-          value:
-            - _id: f91057c0-5086-43f2-b29c-e996fb7108ed
-              type: image
-              fields:
-                url:
-                  type: text
-                  value: >-
-                    ${#jptr:/Product List Content entries Loop
-                    Item/entry/fields/primaryImage/value/0/fields/url/value}
-                title:
-                  type: text
-                  value: >-
-                    ${#jptr:/Product List Content entries Loop
-                    Item/entry/fields/name/value}
-                description:
-                  type: text
-                  value: >-
-                    ${#jptr:/Product List Content entries Loop
-                    Item/entry/fields/name/value}
-              _source: custom-url
-    8fc73c05-9552-49ee-b021-f2a98bc39958|8bad3ddd-add0-43d3-a314-5836bf0c7a93:
-      parameters:
-        text:
+        currency:
           type: text
           value: >-
             ${#jptr:/Product List Content entries Loop
             Item/entry/fields/variants/value/0/fields/currency/value}
-            ${#jptr:/Product List Content entries Loop
-            Item/entry/fields/variants/value/0/fields/price/value}
-    8fc73c05-9552-49ee-b021-f2a98bc39958|988f7805-9e0e-4b30-acaf-f97d7dd5099f:
-      parameters:
-        text:
-          type: text
-          value: >-
-            ${#jptr:/Product List Content entries Loop
-            Item/entry/fields/name/value}
   _overridability:
     parameters:
       spacing: 'yes'
@@ -153,7 +106,7 @@ composition:
   _locales:
     - en
 created: '2025-03-25T04:28:10.66904+00:00'
-modified: '2025-03-28T09:43:12.351669+00:00'
+modified: '2025-04-04T09:25:33.53632+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/jd-template/products-grid.jpg

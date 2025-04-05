@@ -394,8 +394,6 @@ composition:
           locales:
             en: >-
               ${#jptr:/Product List Content entries Loop
-              Item/entry/fields/variants/value/0/fields/currency/value}${#jptr:/Product
-              List Content entries Loop
               Item/entry/fields/variants/value/0/fields/price/value}
         title:
           type: text
@@ -403,10 +401,15 @@ composition:
             en: >-
               ${#jptr:/Product List Content entries Loop
               Item/entry/fields/title/value}
+        currency:
+          type: text
+          value: >-
+            ${#jptr:/Product List Content entries Loop
+            Item/entry/fields/variants/value/0/fields/currency/value}
   _locales:
     - en
 created: '2025-03-25T04:28:10.893557+00:00'
-modified: '2025-03-28T17:11:09.10923+00:00'
+modified: '2025-04-04T09:19:58.325488+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1731065904/csk-v-next/jd-template/product-list-grid.jpg

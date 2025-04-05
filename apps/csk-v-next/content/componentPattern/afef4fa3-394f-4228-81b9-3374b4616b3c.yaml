@@ -289,6 +289,10 @@ composition:
     contentType:
       type: select
       value: product
+    boostEnrichments:
+      type: multi-select
+      value:
+        - brand,brand
   slots:
     content:
       - _id: d14122cc-646f-4ac0-b13e-9bae5cf4bec6
@@ -670,9 +674,11 @@ composition:
       isPatternParameter: false
       ignorePatternParameterDefault: false
   _overridability:
+    parameters:
+      boostEnrichments: 'yes'
     hideLockedParameters: true
   _locales:
     - en
 created: '2025-04-01T11:43:52.142476+00:00'
-modified: '2025-04-03T12:15:24.297503+00:00'
+modified: '2025-04-04T14:56:39.687638+00:00'
 pattern: true

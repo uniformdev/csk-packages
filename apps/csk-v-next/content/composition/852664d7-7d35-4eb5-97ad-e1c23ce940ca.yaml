@@ -372,8 +372,6 @@ composition:
           locales:
             en: >-
               ${#jptr:/Product List Content entries Loop
-              Item/entry/fields/variants/value/0/fields/currency/value}${#jptr:/Product
-              List Content entries Loop
               Item/entry/fields/variants/value/0/fields/price/value}
     22e9a49c-1d3e-4697-9a96-9a873d2f36d8|5d86f5e9-47d6-4e77-a139-83228ec0be41:
       slots:
@@ -449,8 +447,6 @@ composition:
           locales:
             en: >-
               ${#jptr:/Product List Content entries Loop
-              Item/entry/fields/variants/value/0/fields/currency/value}${#jptr:/Product
-              List Content entries Loop
               Item/entry/fields/variants/value/0/fields/price/value}
     33cbf07c-053b-4542-8b5b-18d1026d1d86|5d86f5e9-47d6-4e77-a139-83228ec0be41:
       slots:
@@ -719,6 +715,64 @@ composition:
               trackingEventName:
                 type: text
                 value: Main Hero
+          - _id: cf8dc5a9-71a7-4fac-bde1-f1185a62af80
+            type: dynamicProductRecommendations
+            slots:
+              dynamicRecommendationsTitle:
+                - _id: 86ee04d5-88fd-421c-8f22-6644ea83afd5
+                  type: text
+                  parameters:
+                    tag:
+                      type: dex-segmented-control-parameter
+                      value: span
+                    size:
+                      type: dex-segmented-control-parameter
+                      value:
+                        mobile: 2xl
+                        tablet: 4xl
+                        desktop: 4xl
+                    text:
+                      type: text
+                      locales:
+                        en: You may also be interested in this...
+                    color:
+                      type: dex-color-palette-parameter
+                      value: text-primary
+                    weight:
+                      type: dex-segmented-control-parameter
+                      value: bold
+                    alignment:
+                      type: dex-segmented-control-parameter
+                      value: center
+            parameters:
+              border:
+                type: dex-token-selector-parameter
+                value: ''
+              spacing:
+                type: dex-space-control-parameter
+                value:
+                  mobile:
+                    paddingTop: container-medium
+                    paddingBottom: container-medium
+                  tablet:
+                    paddingTop: container-medium
+                    paddingBottom: container-medium
+                  desktop:
+                    marginTop: container-large
+                    paddingTop: container-medium
+                    paddingBottom: container-medium
+              displayName:
+                type: text
+                locales:
+                  en: Recommendations
+              boostEnrichments:
+                type: multi-select
+                value:
+                  - int,category
+                  - brand,brand
+              maxRecommendations:
+                type: number
+                value: '3'
           - _id: 98c6dc31-518c-4d5e-beb8-85472a607f2b
             type: $test
             slots:
@@ -964,62 +1018,6 @@ composition:
                 displayName: 'yes'
                 backgroundColor: 'yes'
               hideLockedParameters: true
-          - _id: cf8dc5a9-71a7-4fac-bde1-f1185a62af80
-            type: dynamicProductRecommendations
-            slots:
-              dynamicRecommendationsTitle:
-                - _id: 86ee04d5-88fd-421c-8f22-6644ea83afd5
-                  type: text
-                  parameters:
-                    tag:
-                      type: dex-segmented-control-parameter
-                      value: span
-                    size:
-                      type: dex-segmented-control-parameter
-                      value:
-                        mobile: 2xl
-                        tablet: 4xl
-                        desktop: 4xl
-                    text:
-                      type: text
-                      locales:
-                        en: You may also be interested in this...
-                    color:
-                      type: dex-color-palette-parameter
-                      value: text-primary
-                    weight:
-                      type: dex-segmented-control-parameter
-                      value: bold
-                    alignment:
-                      type: dex-segmented-control-parameter
-                      value: center
-            parameters:
-              border:
-                type: dex-token-selector-parameter
-                value: ''
-              spacing:
-                type: dex-space-control-parameter
-                value:
-                  mobile:
-                    paddingTop: container-medium
-                    paddingBottom: container-medium
-                  tablet:
-                    paddingTop: container-medium
-                    paddingBottom: container-medium
-                  desktop:
-                    paddingTop: container-medium
-                    paddingBottom: container-medium
-              displayName:
-                type: text
-                locales:
-                  en: Recommendations
-              boostEnrichments:
-                type: multi-select
-                value:
-                  - int,category
-              maxRecommendations:
-                type: number
-                value: '3'
           - _id: 13a58c2b-eced-49bc-98fb-13c6ed96c9e7
             type: grid
             _pattern: 2fa494d2-d69a-49bc-b728-229a1684d77f
@@ -1031,5 +1029,5 @@ composition:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-03-25T04:27:50.97015+00:00'
-modified: '2025-04-04T08:38:40.784703+00:00'
+modified: '2025-04-04T14:10:44.976941+00:00'
 pattern: false

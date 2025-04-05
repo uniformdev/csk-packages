@@ -64,8 +64,6 @@ composition:
           locales:
             en: >-
               ${#jptr:/Product List Content entries Loop
-              Item/entry/fields/variants/value/0/fields/currency/value}${#jptr:/Product
-              List Content entries Loop
               Item/entry/fields/variants/value/0/fields/price/value}
     54c60ba7-8974-4630-9f2c-5fd7e71ced12|3e88bc6a-0588-4b36-aa7d-ede679a7c3c6:
       parameters:
@@ -115,5 +113,5 @@ composition:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-03-25T04:27:52.309699+00:00'
-modified: '2025-03-31T15:12:32.607231+00:00'
+modified: '2025-04-04T10:21:24.445369+00:00'
 pattern: false

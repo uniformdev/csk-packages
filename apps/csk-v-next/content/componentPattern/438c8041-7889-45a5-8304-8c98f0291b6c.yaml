@@ -150,8 +150,8 @@ composition:
                               value: left
                           _overridability:
                             hideLockedParameters: true
-                        - _id: 9c7759c7-56cc-49ff-b188-68019ffbb353
-                          type: text
+                        - _id: ffc661be-98e2-4b3d-beaf-882c361411b9
+                          type: formattedPrice
                           parameters:
                             tag:
                               type: dex-segmented-control-parameter
@@ -162,19 +162,22 @@ composition:
                                 mobile: 2xl
                                 tablet: 2xl
                                 desktop: 2xl
-                            text:
+                            color:
+                              type: dex-color-palette-parameter
+                              value: text-primary
+                            price:
+                              type: number
+                              value: >-
+                                ${#jptr:/Product
+                                Content/entry/fields/variants/value/0/fields/price/value}
+                            weight:
+                              type: dex-segmented-control-parameter
+                              value: normal
+                            currency:
                               type: text
                               value: >-
                                 ${#jptr:/Product
                                 Content/entry/fields/variants/value/0/fields/currency/value}
-                                ${#jptr:/Product
-                                Content/entry/fields/variants/value/0/fields/price/value}
-                            color:
-                              type: dex-color-palette-parameter
-                              value: text-primary
-                            weight:
-                              type: dex-segmented-control-parameter
-                              value: normal
                           _overridability:
                             hideLockedParameters: true
                         - _id: 3e88bc6a-0588-4b36-aa7d-ede679a7c3c6
@@ -571,7 +574,7 @@ composition:
   _locales:
     - en
 created: '2025-03-25T04:28:09.772586+00:00'
-modified: '2025-03-28T17:23:28.555123+00:00'
+modified: '2025-04-04T10:12:15.540808+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/jd-template/product-info.jpg

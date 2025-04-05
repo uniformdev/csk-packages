@@ -107,6 +107,10 @@ composition:
           - _id: fa0c778a-5f16-4d2e-8855-0a6b4a616374
             type: entriesSearchEngine
             _pattern: afef4fa3-394f-4228-81b9-3374b4616b3c
+            _overridability:
+              parameters:
+                boostEnrichments: 'yes'
+              hideLockedParameters: true
     2a72aed3-7b0c-4f25-950c-0a03c1a8e14c|5feefc71-05dd-4004-bfe9-3dd6876628b4:
       parameters:
         text:
@@ -178,5 +182,5 @@ composition:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-03-25T04:27:49.839581+00:00'
-modified: '2025-04-01T11:44:02.981854+00:00'
+modified: '2025-04-04T14:38:17.680842+00:00'
 pattern: false
