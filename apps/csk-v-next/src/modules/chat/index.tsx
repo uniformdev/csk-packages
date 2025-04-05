@@ -155,8 +155,8 @@ const Chat: FC = () => {
 
       <Drawers open={open} setOpen={setOpen}>
         <div className="flex h-full flex-col px-4 py-6 sm:px-6">
-          <h2 className="text-base font-semibold text-gray-900">Talk to your site</h2>
-          <p className="text-sm leading-3 text-[#6b7280]">Powered by Uniform Context</p>
+          <h2 className="text-base font-semibold text-gray-900 pt-3">JavaDrip Shopping Assistant ✨</h2>
+          <p className="text-sm leading-3 text-[#6b7280] italic">Powered by Uniform Context</p>
           <Messages status={status} messages={messages} startConversationIndex={startConversationIndex} />
           <div className="relative w-full flex-col gap-4">
             <div
@@ -168,7 +168,7 @@ const Chat: FC = () => {
             <PresetsSection prompts={PROMPTS} showThinking={showThinking} sendPresetPrompt={sendPresetPrompt} />
             <Textarea
               ref={textareaRef}
-              placeholder="Send a message..."
+              placeholder="Ask me anything about coffee beans or coffee makers 😎"
               value={input}
               onChange={handleInputChange}
               className={cn('overflow-hidden resize-none rounded-none !text-base bg-muted pb-10 pr-10')}

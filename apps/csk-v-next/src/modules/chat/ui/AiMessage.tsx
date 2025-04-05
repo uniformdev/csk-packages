@@ -79,7 +79,7 @@ const AiMessageComponent: FC<AiMessageProps> = ({ status, message }) => {
       </span>
       <div>
         <p className="leading-relaxed">
-          <span className="block text-lg font-bold text-gray-700">AI</span>
+          <span className="block text-lg font-bold text-gray-700">Shopping Assistant</span>
         </p>
         <div className="text-base">
           <Markdown>{message.content}</Markdown>
