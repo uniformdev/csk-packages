@@ -62,7 +62,7 @@ export const Drawers: FC<
   };
 
   return (
-    <div style={pinned && open ? { width } : {}}>
+    <div className="transition-all duration-500 ease-in-out" style={pinned && open ? { width } : {}}>
       <div
         className="fixed inset-y-0 right-0 flex max-w-full"
         style={pinned && open ? { width } : { marginTop: headerHeight }}
