@@ -6,6 +6,7 @@ import { useSearchParams } from 'next/navigation';
 import { IN_CONTEXT_EDITOR_QUERY_STRING_PARAM } from '@uniformdev/canvas';
 import { useScores, useUniformContext } from '@uniformdev/canvas-next-rsc-client';
 import { EnrichmentData } from '@uniformdev/context';
+import { Flex } from '@uniformdev/csk-components/components/ui';
 import { cn } from '@uniformdev/csk-components/utils/styling';
 import { Drawers } from '@/components/custom-ui/Drawers';
 import { useChat } from '@ai-sdk/react';
@@ -150,10 +151,12 @@ const Chat: FC = () => {
   return (
     <div>
       <Drawers open={isAiDrawerOpen} setOpen={setIsAiDrawerOpen}>
-        <div className="flex h-full flex-col px-4 py-6 sm:px-6">
+        <Flex direction="col" wrapperClassName="h-full [&>div]:h-full" className="h-full px-4 py-6 sm:px-6">
           <h2 className="pt-3 text-base font-semibold text-gray-900">JavaDrip Shopping Assistant ✨</h2>
           <p className="text-sm italic leading-3 text-[#6b7280]">Powered by Uniform Context</p>
+
           <Messages status={status} messages={messages} startConversationIndex={startConversationIndex} />
+
           <div className="relative w-full flex-col gap-4">
             <div
               title={status}
@@ -181,7 +184,7 @@ const Chat: FC = () => {
               <SubmitButton disabled={!['ready', 'error'].includes(status) || !input.trim()} onClick={handleSubmit} />
             </div>
           </div>
-        </div>
+        </Flex>
       </Drawers>
     </div>
   );

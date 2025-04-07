@@ -21,7 +21,7 @@ export const Messages: FC<MessagesProps> = ({ status, messages, startConversatio
     );
 
   return (
-    <div ref={containerRef} className="thin-scrollbar my-6 flex flex-1 flex-col gap-2 overflow-y-auto pr-2">
+    <div ref={containerRef} className="thin-scrollbar my-6 flex flex-1 flex-col gap-2 overflow-y-auto pr-4">
       {messages.map((message, index) =>
         index < startConversationIndex || startConversationIndex === -1 ? null : (
           <div key={message.id}>{renderMessage(message, index)}</div>
