@@ -48,10 +48,7 @@ export const FixedHero: FC<DemoHeroProps> = props => (
     imageUnoptimized
     // Presentation Parameters
     spacing={{
-      // paddingTop: 'container-xlarge',
-      // paddingLeft: 'container-small',
-      // paddingRight: 'container-small',
-      paddingBottom: '',
+      paddingBottom: !props.component.variant ? 'container-xlarge' : '',
       marginBottom: '',
       paddingTop: !props.component.variant ? 'container-xlarge' : '',
     }}
