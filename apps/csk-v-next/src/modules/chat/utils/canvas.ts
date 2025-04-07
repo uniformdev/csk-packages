@@ -49,9 +49,10 @@ export const getInterestRecommendations = async ({
     return { products: [] };
   }
 
-  const { trackingEventName, count } = flattenValues(productSuggestions) as {
+  const { trackingEventName, count, algorithm } = flattenValues(productSuggestions) as {
     trackingEventName: string;
     count: string;
+    algorithm: string;
   };
 
   const variants = productSuggestions?.slots?.[CANVAS_PERSONALIZE_SLOT];
@@ -61,7 +62,6 @@ export const getInterestRecommendations = async ({
   }
 
   const manifest = await getManifest({ searchParams: {} });
-
   const context = new Context({
     manifest: manifest as ManifestV2,
     defaultConsent: true,
@@ -75,6 +75,7 @@ export const getInterestRecommendations = async ({
     name: trackingEventName,
     variations: mapSlotToPersonalizedVariations(variants),
     take: parseInt(count),
+    algorithm,
   });
 
   const suggestedProducts = variations
