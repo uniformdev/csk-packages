@@ -84,17 +84,16 @@ export const Drawers: FC<DrawersProps> = ({ children, open, pinned = true, setOp
   return (
     <div
       style={pinned && open ? { width } : undefined}
-      className={cn('w-0', { 'transition-all duration-500 ease-in-out': !isResizing.current })}
+      className={cn('w-0', { 'duration-500 ease-in-out': !isResizing.current })}
     >
       <div
-        className={cn('fixed inset-y-0 right-0 flex w-full max-w-full -z-10', { 'z-0': open })}
+        className={cn('fixed inset-y-0 right-0 flex w-full max-w-full translate-x-full opacity-0', {
+          'translate-x-0 opacity-100': open,
+          'duration-500 ease-in-out': !isResizing.current,
+        })}
         style={pinned ? { width } : { marginTop: headerHeight }}
       >
-        <div
-          className={cn('relative w-screen bg-white duration-500 ease-in-out translate-x-full opacity-0', {
-            'translate-x-0 opacity-100': open,
-          })}
-        >
+        <div className={cn('relative w-full bg-white')}>
           <div
             className="absolute left-0 top-0 h-full w-0.5 cursor-ew-resize border-l bg-transparent hover:bg-gray-200"
             onMouseDown={handleMouseDown}
