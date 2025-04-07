@@ -7,9 +7,10 @@ interface ChatButtonProps {
   onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
   width?: number;
   height?: number;
+  isAiDrawerOpen?: boolean;
 }
 
-const ChatButton: FC<ChatButtonProps> = ({ disabled, onClick, width = 75, height = 96 }) => (
+const ChatButton: FC<ChatButtonProps> = ({ disabled, onClick, width = 75, height = 96, isAiDrawerOpen }) => (
   <Tooltip
     wrapperClassName="flex pb-px"
     text={disabled ? 'Visit more pages for better results' : 'Chat with Shopping Assistant'}
@@ -24,7 +25,8 @@ const ChatButton: FC<ChatButtonProps> = ({ disabled, onClick, width = 75, height
         className={cn(
           'transition-all duration-1000 opacity-80 hover:[animation-play-state:paused] hover:opacity-100 grayscale',
           {
-            'animate-wobble-bounce opacity-100 grayscale-0': !disabled,
+            'opacity-100 grayscale-0': !disabled,
+            'animate-wobble-bounce': !disabled && !isAiDrawerOpen,
           }
         )}
       >
