@@ -10,7 +10,10 @@ interface ChatButtonProps {
 }
 
 const ChatButton: FC<ChatButtonProps> = ({ disabled, onClick, width = 75, height = 96 }) => (
-  <Tooltip text={disabled ? 'Visit more pages for better results' : 'Chat with Shopping Assistant'}>
+  <Tooltip
+    wrapperClassName="flex pb-px"
+    text={disabled ? 'Visit more pages for better results' : 'Chat with Shopping Assistant'}
+  >
     <button className="text-white" type="button" aria-haspopup="dialog" onClick={onClick}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
