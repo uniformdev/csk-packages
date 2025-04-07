@@ -1,7 +1,7 @@
 id: article
 name: Article
-created: '2025-03-25T04:28:35.680612+00:00'
-updated: '2025-03-31T15:12:58.630586+00:00'
+created: '2025-03-24T20:35:16.807001+00:00'
+updated: '2025-04-07T11:49:10.819895+00:00'
 slugSettings:
   required: 'no'
 useTeamPermissions: true
@@ -80,4 +80,16 @@ description: ''
 icon: loadbar-doc
 type: contentType
 permissions: []
-previewConfigurations: []
+previewConfigurations:
+  - type: project-map
+    id: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+    label: Article Detail Page
+    dynamicInputs:
+      locale: ${locale}
+      article-slug: ${#jptr:/entry/_slug}
+  - type: project-map
+    id: c4676b67-e635-44b3-83ba-c12ec2ee774f
+    label: Article Components
+    dynamicInputs:
+      locale: ${locale}
+      article-slug: ${#jptr:/entry/_slug}

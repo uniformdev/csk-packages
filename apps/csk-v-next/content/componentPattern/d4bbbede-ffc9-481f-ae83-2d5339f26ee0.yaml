@@ -15,7 +15,7 @@ composition:
         paddingBottom: container-xsmall
     displayName:
       type: text
-      value: Article
+      value: Article Card | ${#jptr:/Article/entry/_name}
   slots:
     cardMedia:
       - _id: 1a083f8a-3c62-4534-80b0-f4b0974b3879
@@ -32,7 +32,7 @@ composition:
                     value: 87342bb8-9859-4a25-a7cd-f625d9b195a3
                   url:
                     value: >-
-                      https://img.uniform.global/p/N0QOqjXvSFeXY7i3yzY8ZQ/3p_sUho7SzukTC6XUpJ8ew-espresso-machine-with-latte-and-cold-brew.jpeg
+                      https://img.uniform.global/p/ovl3f_RJSNmuo41YikmFlA/YZsgrgNbSUaBymzHiHrgHw-espresso-machine-with-latte-and-cold-brew.jpeg
                     type: text
                   file:
                     type: file
@@ -73,7 +73,7 @@ composition:
               parameters:
                 tag:
                   type: dex-segmented-control-parameter
-                  value: span
+                  value: h2
                 size:
                   type: dex-segmented-control-parameter
                   value:
@@ -82,7 +82,7 @@ composition:
                     desktop: 2xl
                 text:
                   type: text
-                  value: Is the slow drip coffee maker for you?
+                  value: ${#jptr:/Article/entry/fields/title/value}
                 color:
                   type: dex-color-palette-parameter
                   value: text-primary
@@ -98,15 +98,13 @@ composition:
               parameters:
                 tag:
                   type: dex-segmented-control-parameter
-                  value: span
+                  value: p
                 size:
                   type: dex-segmented-control-parameter
                   value: {}
                 text:
                   type: text
-                  value: >-
-                    Is the slow drip actually making better coffee? Or is it
-                    just some hipster thing that doesn’t really matter?
+                  value: ${#jptr:/Article/entry/fields/shortDescription/value}
                 weight:
                   type: dex-segmented-control-parameter
                   value: normal
@@ -119,7 +117,7 @@ composition:
               parameters:
                 tag:
                   type: dex-segmented-control-parameter
-                  value: span
+                  value: p
                 size:
                   type: dex-segmented-control-parameter
                   value:
@@ -128,7 +126,9 @@ composition:
                     desktop: base
                 text:
                   type: text
-                  value: by Cyndi Lang
+                  value: >-
+                    by
+                    ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}
                 color:
                   type: dex-color-palette-parameter
                   value: text-primary
@@ -177,6 +177,17 @@ composition:
       - _id: 91a39649-d9d5-4f11-9090-203b4fea8a13
         type: button
         parameters:
+          link:
+            type: link
+            locales:
+              en:
+                path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+                  article-slug: ${#jptr:/Article/entry/_slug}
           size:
             type: dex-token-selector-parameter
             value: button-small
@@ -215,14 +226,22 @@ composition:
             link: 'yes'
             text: 'no'
           hideLockedParameters: true
+  _dataResources:
+    Article:
+      type: article
+      variables:
+        slug: the-golden-ratio-of-coffee
+        locale: ${locale}
+      isPatternParameter: true
+      ignorePatternParameterDefault: true
   _overridability:
     parameters:
       displayName: 'yes'
     hideLockedParameters: true
   _locales:
     - en
-created: '2025-01-29T11:09:30.511493+00:00'
-modified: '2025-01-29T11:09:30.511493+00:00'
+created: '2025-03-24T20:34:48.65866+00:00'
+modified: '2025-04-07T11:47:41.257898+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/jd-template/article-card.jpg

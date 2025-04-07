@@ -1,0 +1,165 @@
+composition:
+  _name: Article Components
+  _id: aad9274a-bd28-45e6-99a2-132216105a6d
+  _slug: ':article-slug'
+  type: entryPreview
+  parameters:
+    pageTitle:
+      type: text
+      locales:
+        en: Article Components
+  slots:
+    pageContent:
+      - _id: fe485767-c888-4622-bf36-b705e66f74b4
+        type: spacer
+        parameters:
+          size:
+            type: dex-token-selector-parameter
+            value: spacer-large
+      - _id: 678bf97c-789d-4239-b34c-8816b902f0f2
+        type: container
+        slots:
+          containerContent:
+            - _id: 7daf10eb-2352-46d2-a24b-a87e2d1731dc
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: h2
+                font:
+                  type: dex-token-selector-parameter
+                  value: secondary
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: 4xl
+                text:
+                  type: text
+                  locales:
+                    en: 'Featured Article Card:'
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-link
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: bold
+                transform:
+                  type: dex-segmented-control-parameter
+                  value: uppercase
+            - _id: 650ee806-147c-4c58-ab9e-de0a9da783e8
+              type: spacer
+              parameters:
+                size:
+                  type: dex-token-selector-parameter
+                  value: spacer-large
+            - _id: b6fcc659-875e-4380-b0c8-af6777437bc1
+              type: flexCard
+              _pattern: d4bbbede-ffc9-481f-ae83-2d5339f26ee0
+        parameters:
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              mobile: {}
+              tablet: {}
+              desktop: {}
+          displayName:
+            type: text
+            locales:
+              en: Featured Article Card
+      - _id: 737df75a-b80f-4daf-b961-ecdeae7ce845
+        type: spacer
+        parameters:
+          size:
+            type: dex-token-selector-parameter
+            value: spacer-large
+      - _id: 13d491cc-a56a-45d0-9897-85b413c3dc03
+        type: divider
+        parameters:
+          color:
+            type: dex-color-palette-parameter
+            value: general-color-7
+          width:
+            type: dex-slider-control-parameter
+            value: 100%
+          alignment:
+            type: dex-segmented-control-parameter
+            value: center
+          thickness:
+            type: dex-slider-control-parameter
+            value: 1px
+      - _id: a0ef5662-6661-4c68-be45-3e8382d24f3f
+        type: spacer
+        parameters:
+          size:
+            type: dex-token-selector-parameter
+            value: spacer-large
+      - _id: 0e6f79e9-fa63-481c-a12b-68629376f9f5
+        type: container
+        slots:
+          containerContent:
+            - _id: 853d82ad-46f5-495b-af05-2e42bf55b6c1
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: h2
+                font:
+                  type: dex-token-selector-parameter
+                  value: secondary
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: 4xl
+                text:
+                  type: text
+                  locales:
+                    en: 'Small Article Card:'
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-link
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: bold
+                transform:
+                  type: dex-segmented-control-parameter
+                  value: uppercase
+            - _id: 5943a8d7-5358-4252-9ae8-b3598530c7fc
+              type: spacer
+              parameters:
+                size:
+                  type: dex-token-selector-parameter
+                  value: spacer-large
+            - _id: 63685530-b925-4ce9-a782-5cb6cefe17e3
+              type: flexCard
+              _pattern: c895d189-c093-4ee8-aeef-5cdccd7efd2e
+        parameters:
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              mobile: {}
+              tablet: {}
+              desktop:
+                marginTop: container-large
+                paddingTop: container-large
+          backgroundColor:
+            type: dex-color-palette-parameter
+            value: general-color-1
+  _dataResources:
+    Article:
+      type: articleBySlug
+      variables:
+        slug: ${article-slug}
+        locale: ${locale}
+  _overrides:
+    b6fcc659-875e-4380-b0c8-af6777437bc1:
+      dataResources:
+        Article:
+          type: article
+          variables:
+            slug: ${article-slug}
+            locale: ${locale}
+  _locales:
+    - en
+created: '2025-04-07T11:42:33.966364+00:00'
+modified: '2025-04-07T11:55:46.180541+00:00'
+pattern: false

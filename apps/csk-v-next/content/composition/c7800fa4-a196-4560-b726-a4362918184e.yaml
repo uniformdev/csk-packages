@@ -1,5 +1,5 @@
 composition:
-  _name: AI Assistant configuration
+  _name: Shopping Assistant recommendations
   _id: c7800fa4-a196-4560-b726-a4362918184e
   _slug: ai-assistant-configuration
   type: aiConfiguration
@@ -247,6 +247,15 @@ composition:
         type: $personalization
         slots:
           pz:
+            - _id: 7ab368e9-7126-4a22-b618-709772134155
+              type: flex
+              _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
+            - _id: 882fda84-16e6-4c16-b5be-41f970aaf345
+              type: flex
+              _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
+            - _id: 8a4d1d8b-4cca-419f-ba38-e9416a475a32
+              type: flex
+              _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
             - _id: 4d0d6445-40aa-43e5-aac3-0fc6509b749c
               type: flex
               _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
@@ -266,15 +275,6 @@ composition:
               type: flex
               _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
             - _id: 6a19d948-05ae-40cc-ba0f-c3dfa6aff568
-              type: flex
-              _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
-            - _id: 7ab368e9-7126-4a22-b618-709772134155
-              type: flex
-              _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
-            - _id: 882fda84-16e6-4c16-b5be-41f970aaf345
-              type: flex
-              _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
-            - _id: 8a4d1d8b-4cca-419f-ba38-e9416a475a32
               type: flex
               _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
         parameters:
@@ -487,5 +487,5 @@ composition:
   _locales:
     - en
 created: '2025-04-04T06:54:12.701229+00:00'
-modified: '2025-04-07T05:15:24.436112+00:00'
+modified: '2025-04-07T11:06:04.445402+00:00'
 pattern: false

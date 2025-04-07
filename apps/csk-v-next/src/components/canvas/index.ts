@@ -1,4 +1,4 @@
-import baseCskComponentsMapping from '@uniformdev/csk-components/components/canvas';
+import baseCskComponentsMapping, { Page } from '@uniformdev/csk-components/components/canvas';
 import DemoHero from './DemoHero';
 import Header from './Header';
 import NavigationFlyout from './NavigationFlyout';
@@ -13,4 +13,5 @@ export const cskComponentsMapping = {
   fixedHero: { component: DemoHero.FixedHero },
   text: { component: Text },
   video: { component: Video },
+  entryPreview: { component: Page },
 };

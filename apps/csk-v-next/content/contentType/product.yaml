@@ -1,7 +1,7 @@
 id: product
 name: Product
-created: '2025-03-25T04:28:36.53123+00:00'
-updated: '2025-04-02T16:31:25.075336+00:00'
+created: '2025-03-24T20:35:17.586056+00:00'
+updated: '2025-04-07T11:40:42.591956+00:00'
 slugSettings:
   required: 'no'
 useTeamPermissions: true
@@ -115,4 +115,10 @@ description: ''
 icon: shopping-cart
 type: contentType
 permissions: []
-previewConfigurations: []
+previewConfigurations:
+  - type: project-map
+    id: 702b0e0b-3858-4b5d-99e4-bdb98097ca0f
+    label: Product Detail Page
+    dynamicInputs:
+      locale: ${locale}
+      product-slug: ${#jptr:/entry/_slug}
