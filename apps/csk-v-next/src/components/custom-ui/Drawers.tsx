@@ -87,7 +87,7 @@ export const Drawers: FC<DrawersProps> = ({ children, open, pinned = true, setOp
       className={cn('w-0', { 'transition-all duration-500 ease-in-out': !isResizing.current })}
     >
       <div
-        className="fixed inset-y-0 right-0 flex w-full max-w-full"
+        className={cn('fixed inset-y-0 right-0 flex w-full max-w-full -z-10', { 'z-0': open })}
         style={pinned ? { width } : { marginTop: headerHeight }}
       >
         <div
