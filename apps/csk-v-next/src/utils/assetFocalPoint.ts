@@ -30,9 +30,9 @@ export type MediaType = string | { path?: string } | AssetParamValueItem | Asset
 
 type FocalPoint =
   | {
-      x: number;
-      y: number;
-    }
+    x: number;
+    y: number;
+  }
   | 'auto'
   | 'center';
 
@@ -63,27 +63,19 @@ export const isAssetLibraryAsset = (asset?: AssetParamValueItem): asset is Asset
  * @returns The resized asset URL or undefined
  */
 export const getResizedAssetUrl = (
-  url?: string,
-  width?: number,
-  height?: number,
+  url: string,
+  width: number,
+  height: number,
+  cropWidth: number,
+  cropHeight: number,
   fit?: FitOption,
   focalPoint?: FocalPoint
 ) => {
-  // Validate width and height are within acceptable range if provided
-  const validatedWidth = width !== undefined ? validateDimension(width) : undefined;
-  const validatedHeight = height !== undefined ? validateDimension(height) : undefined;
-
   // Create URLSearchParams object for building the query string
   const searchParams = new URLSearchParams();
 
-  // Only add parameters if they're valid
-  if (validatedWidth !== undefined) {
-    searchParams.append('width', validatedWidth.toString());
-  }
-
-  if (validatedHeight !== undefined) {
-    searchParams.append('height', validatedHeight.toString());
-  }
+  searchParams.append('width', cropWidth.toString());
+  searchParams.append('height', cropHeight.toString());
 
   // Add fit parameter if provided
   if (fit) {
@@ -93,7 +85,11 @@ export const getResizedAssetUrl = (
   // Add focal point if available
   const focalPointValue = getFocalPointValue(focalPoint);
   if (fit === FIT_OPTIONS.COVER && focalPointValue) {
-    searchParams.append('focal', focalPointValue);
+    // console.log("!!!", { width, height, validatedWidth, validatedHeight });
+    const focal = getCorrectFocalPoint(width, height, cropWidth, cropHeight, focalPoint?.x!, focalPoint?.y!);
+    // console.log('focal', { focal, focalPoint, width, height });
+    searchParams.append('focal', focal);
+    //console.log('focal', { focal, focalPoint, width, height });
   }
 
   // Convert params to string and check if we have any params
@@ -123,19 +119,6 @@ const getFocalPointValue = (focalPoint?: FocalPoint): string | undefined => {
   return undefined;
 };
 
-/**
- * Validates a dimension is within the acceptable range (1 < n < 4096)
- * @param dimension The dimension to validate
- * @returns The valid dimension or undefined if invalid
- */
-const validateDimension = (dimension: number): number | undefined => {
-  if (dimension <= 1 || dimension >= 4096) {
-    console.warn(`Dimension ${dimension} is outside the valid range (1 < n < 4096)`);
-    return undefined;
-  }
-  return dimension;
-};
-
 export const getAssetFocalPoint = (media?: MediaType): FocalPoint | undefined => {
   if (!isMediaAsset(media)) return undefined;
   const defaultFocalPoint: FocalPoint = 'center';
@@ -162,3 +145,48 @@ export const getFocalPointQueryParam = (focalPoint?: FocalPoint) => {
 
   return '';
 };
+
+function getCorrectFocalPoint(
+  imgWidth: number,
+  imgHeight: number,
+  croppedWidth: number,
+  croppedHeight: number,
+  focalX: number,
+  focalY: number
+) {
+  // Calculate the scale factor as used by object-fit: cover
+  const scale = Math.max(croppedWidth / imgWidth, croppedHeight / imgHeight);
+
+  // Calculate the scaled image dimensions
+  const scaledWidth = imgWidth * scale;
+  const scaledHeight = imgHeight * scale;
+
+  // Determine how much extra image is present (i.e. what gets cropped)
+  const extraX = scaledWidth - croppedWidth;
+  const extraY = scaledHeight - croppedHeight;
+
+  // Default to centering (50% 50%) in case no cropping occurs on an axis
+  let posX = 0.5;
+  let posY = 0.5;
+
+  // console.log({ extraX, extraY });
+
+  // If there is horizontal cropping, compute the CSS percentage
+  if (extraX > 0) {
+    // Calculate how far the focal point is from the center of the container in the scaled image
+    const offsetX = focalX * scaledWidth - croppedWidth / 2;
+    posX = offsetX / extraX;
+    // Clamp the value between 0.0 and 1.0
+    posX = Math.max(0, Math.min(1, posX));
+  }
+
+  // If there is vertical cropping, compute the CSS percentage
+  if (extraY > 0) {
+    const offsetY = focalY * scaledHeight - croppedHeight / 2;
+    posY = offsetY / extraY;
+    posY = Math.max(0, Math.min(1, posY));
+  }
+
+  // Return the CSS object-position value as a string
+  return `${posX}x${posY}`;
+}

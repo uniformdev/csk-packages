@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import BaseImage from '@/components/ui/Image';
-import { getResizedAssetUrl, FIT_OPTIONS } from '@/utils/assetFocalPoint';
+// import { getResizedAssetUrl, FIT_OPTIONS } from '@/utils/assetFocalPoint';
 import { resolveAsset } from '@/utils/assets';
 import { ImageProps } from '.';
 import { ImagePlaceholder } from './placeholder';
@@ -24,13 +24,13 @@ export const Image: FC<ImageProps> = ({
     return <ImagePlaceholder context={context} component={component} width={width} height={height} />;
   }
 
-  const { url, title = '', focalPoint } = resolvedImage;
-  const imageUrl = getResizedAssetUrl(url, width, height, FIT_OPTIONS.COVER, focalPoint) || url;
+  const { url, title = '' } = resolvedImage;
+  //const imageUrl = getResizedAssetUrl(url, width!, height!, width!, height!, FIT_OPTIONS.COVER, focalPoint) || url;
 
   return (
     <BaseImage
       containerStyle={{ ...(width ? { width: `${width}px` } : {}), ...(height ? { height: `${height}px` } : {}) }}
-      src={imageUrl}
+      src={url}
       alt={title}
       fill
       unoptimized={unoptimized}
