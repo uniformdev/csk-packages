@@ -30,7 +30,7 @@ const PROMPTS = [
 ];
 
 const Chat: FC = () => {
-  const { isAiDrawerOpen, setIsAiDrawerOpen, setIsChatActive } = useChatProvider();
+  const { isAiDrawerOpen, setIsAiDrawerOpen, setIsChatActive, isPinned, setIsPinned } = useChatProvider();
 
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -149,44 +149,42 @@ const Chat: FC = () => {
   if (isPreviewMode) return null;
 
   return (
-    <div>
-      <Drawers open={isAiDrawerOpen} setOpen={setIsAiDrawerOpen}>
-        <Flex direction="col" wrapperClassName="h-full [&>div]:h-full" className="h-full px-4 py-6 sm:px-6">
-          <h2 className="pt-3 text-base font-semibold text-gray-900">JavaDrip Shopping Assistant ✨</h2>
-          <p className="text-sm italic leading-3 text-[#6b7280]">Powered by Uniform Context</p>
+    <Drawers open={isAiDrawerOpen} setOpen={setIsAiDrawerOpen} pinned={isPinned} setPinned={setIsPinned}>
+      <Flex direction="col" wrapperClassName="h-full [&>div]:h-full" className="h-full px-4 py-6 sm:px-6">
+        <h2 className="pt-3 text-base font-semibold text-gray-900">JavaDrip Shopping Assistant ✨</h2>
+        <p className="text-sm italic leading-3 text-[#6b7280]">Powered by Uniform Context</p>
 
-          <Messages status={status} messages={messages} startConversationIndex={startConversationIndex} />
+        <Messages status={status} messages={messages} startConversationIndex={startConversationIndex} />
 
-          <div className="relative w-full flex-col gap-4">
-            <div
-              title={status}
-              className={cn('min-h-2 transition-all duration-1000 my-2', {
-                'animate-pulse bg-[#F7DF1E] rounded-full': showThinking,
-              })}
-            />
-            <PresetsSection prompts={PROMPTS} showThinking={showThinking} sendPresetPrompt={sendPresetPrompt} />
-            <Textarea
-              ref={textareaRef}
-              placeholder="Ask me anything about coffee beans or coffee makers 😎"
-              value={input}
-              onChange={handleInputChange}
-              className={cn('overflow-hidden resize-none rounded-none !text-base bg-muted pb-10 pr-10')}
-              onKeyDown={event => {
-                if (event.key === 'Enter' && !event.shiftKey && !event.nativeEvent.isComposing) {
-                  event.preventDefault();
-                  if (['ready', 'error'].includes(status) && !!input.trim()) {
-                    handleSubmit();
-                  }
+        <div className="relative w-full flex-col gap-4">
+          <div
+            title={status}
+            className={cn('min-h-2 transition-all duration-1000 my-2', {
+              'animate-pulse bg-[#F7DF1E] rounded-full': showThinking,
+            })}
+          />
+          <PresetsSection prompts={PROMPTS} showThinking={showThinking} sendPresetPrompt={sendPresetPrompt} />
+          <Textarea
+            ref={textareaRef}
+            placeholder="Ask me anything about coffee beans or coffee makers 😎"
+            value={input}
+            onChange={handleInputChange}
+            className={cn('overflow-hidden resize-none rounded-none !text-base bg-muted pb-10 pr-10')}
+            onKeyDown={event => {
+              if (event.key === 'Enter' && !event.shiftKey && !event.nativeEvent.isComposing) {
+                event.preventDefault();
+                if (['ready', 'error'].includes(status) && !!input.trim()) {
+                  handleSubmit();
                 }
-              }}
-            />
-            <div className="absolute bottom-0 right-0 flex w-fit flex-row justify-end p-2">
-              <SubmitButton disabled={!['ready', 'error'].includes(status) || !input.trim()} onClick={handleSubmit} />
-            </div>
+              }
+            }}
+          />
+          <div className="absolute bottom-0 right-0 flex w-fit flex-row justify-end p-2">
+            <SubmitButton disabled={!['ready', 'error'].includes(status) || !input.trim()} onClick={handleSubmit} />
           </div>
-        </Flex>
-      </Drawers>
-    </div>
+        </div>
+      </Flex>
+    </Drawers>
   );
 };
 

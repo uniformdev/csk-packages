@@ -25,8 +25,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               <CardProvider>
                 <NextIntlClientProvider>
                   <NextThemeProvider attribute="class" defaultTheme="light" enableSystem>
-                    {children}
-                    <Chat />
+                    <div className="flex">
+                      <div className="flex-1">{children}</div>
+                      <Chat />
+                    </div>
                   </NextThemeProvider>
                 </NextIntlClientProvider>
               </CardProvider>
