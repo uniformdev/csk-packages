@@ -19,9 +19,12 @@ const PromptButton: FC<PromptButtonProps> = ({ prompt, showThinking, sendPresetP
     <button
       key={prompt}
       disabled={showThinking}
-      className={cn('w-full border px-4 py-2 text-black hover:bg-black hover:text-white', {
-        'pointer-events-none opacity-50': showThinking,
-      })}
+      className={cn(
+        'w-full border px-4 py-2 text-black hover:bg-black hover:text-white transition-all duration-300 ease-in-out',
+        {
+          'pointer-events-none opacity-50': showThinking,
+        }
+      )}
       onClick={() => {
         sendPresetPrompt(prompt);
       }}

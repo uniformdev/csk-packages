@@ -5,20 +5,30 @@ import Tooltip from '@/components/custom-ui/Tooltip';
 interface ChatButtonProps {
   disabled?: boolean | undefined;
   onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
+  width?: number;
+  height?: number;
+  isAiDrawerOpen?: boolean;
 }
 
-const ChatButton: FC<ChatButtonProps> = ({ disabled, onClick }) => (
-  <Tooltip text={disabled ? 'Visit more pages for better results' : 'Chat with Shopping Assistant'}>
+const ChatButton: FC<ChatButtonProps> = ({ disabled, onClick, width = 75, height = 96, isAiDrawerOpen }) => (
+  <Tooltip
+    wrapperClassName="flex pb-px"
+    text={disabled ? 'Visit more pages for better results' : 'Chat with Shopping Assistant'}
+  >
     <button className="text-white" type="button" aria-haspopup="dialog" onClick={onClick}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="75"
-        height="96"
+        width={width}
+        height={height}
         viewBox="0 0 75 96"
         fill="none"
-        className={cn('transition-all duration-1000 opacity-80 hover:[animation-play-state:paused] hover:opacity-100', {
-          'animate-wobble-bounce opacity-100': !disabled,
-        })}
+        className={cn(
+          'transition-all duration-1000 opacity-80 hover:[animation-play-state:paused] hover:opacity-100 grayscale',
+          {
+            'opacity-100 grayscale-0': !disabled,
+            'animate-wobble-bounce': !disabled && !isAiDrawerOpen,
+          }
+        )}
       >
         <path d="M15.6546 92.6168L58.3549 93L61 76.3833L14 76L15.6546 92.6168Z" fill="white" />
         <path d="M11.9715 36.7295L62.8484 37L66 25.2705L10 25L11.9715 36.7295Z" fill="white" />
