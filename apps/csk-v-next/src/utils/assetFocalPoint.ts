@@ -30,9 +30,9 @@ export type MediaType = string | { path?: string } | AssetParamValueItem | Asset
 
 type FocalPoint =
   | {
-      x: number;
-      y: number;
-    }
+    x: number;
+    y: number;
+  }
   | 'auto'
   | 'center';
 
@@ -63,27 +63,19 @@ export const isAssetLibraryAsset = (asset?: AssetParamValueItem): asset is Asset
  * @returns The resized asset URL or undefined
  */
 export const getResizedAssetUrl = (
-  url?: string,
-  width?: number,
-  height?: number,
+  url: string,
+  width: number,
+  height: number,
+  cropWidth: number,
+  cropHeight: number,
   fit?: FitOption,
   focalPoint?: FocalPoint
 ) => {
-  // Validate width and height are within acceptable range if provided
-  const validatedWidth = width !== undefined ? validateDimension(width) : undefined;
-  const validatedHeight = height !== undefined ? validateDimension(height) : undefined;
-
   // Create URLSearchParams object for building the query string
   const searchParams = new URLSearchParams();
 
-  // Only add parameters if they're valid
-  if (validatedWidth !== undefined) {
-    searchParams.append('width', validatedWidth.toString());
-  }
-
-  if (validatedHeight !== undefined) {
-    searchParams.append('height', validatedHeight.toString());
-  }
+  searchParams.append('width', cropWidth.toString());
+  searchParams.append('height', cropHeight.toString());
 
   // Add fit parameter if provided
   if (fit) {
@@ -93,15 +85,11 @@ export const getResizedAssetUrl = (
   // Add focal point if available
   const focalPointValue = getFocalPointValue(focalPoint);
   if (fit === FIT_OPTIONS.COVER && focalPointValue) {
-    // Only try to access x and y if focalPoint is an object (not 'auto' or 'center')
-    if (typeof focalPoint === 'object' && focalPoint !== null) {
-      const focal = getCorrectFocalPoint(width!, height!, 1000, 1000, focalPoint.x, focalPoint.y);
-      // console.log('focal', { focal, focalPoint, width, height });
-      searchParams.append('focal', `${focal.x}x${focal.y}`);
-    } else {
-      // For 'auto' or 'center' focal points, use the focalPointValue directly
-      searchParams.append('focal', focalPointValue);
-    }
+    // console.log("!!!", { width, height, validatedWidth, validatedHeight });
+    const focal = getCorrectFocalPoint(width, height, cropWidth, cropHeight, focalPoint?.x!, focalPoint?.y!);
+    // console.log('focal', { focal, focalPoint, width, height });
+    searchParams.append('focal', focal);
+    //console.log('focal', { focal, focalPoint, width, height });
   }
 
   // Convert params to string and check if we have any params
@@ -129,19 +117,6 @@ const getFocalPointValue = (focalPoint?: FocalPoint): string | undefined => {
   }
 
   return undefined;
-};
-
-/**
- * Validates a dimension is within the acceptable range (1 < n < 4096)
- * @param dimension The dimension to validate
- * @returns The valid dimension or undefined if invalid
- */
-const validateDimension = (dimension: number): number | undefined => {
-  if (dimension <= 1 || dimension >= 4096) {
-    console.warn(`Dimension ${dimension} is outside the valid range (1 < n < 4096)`);
-    return undefined;
-  }
-  return dimension;
 };
 
 export const getAssetFocalPoint = (media?: MediaType): FocalPoint | undefined => {
@@ -213,8 +188,5 @@ function getCorrectFocalPoint(
   }
 
   // Return the CSS object-position value as a string
-  return {
-    x: posX,
-    y: posY,
-  };
+  return `${posX}x${posY}`;
 }
