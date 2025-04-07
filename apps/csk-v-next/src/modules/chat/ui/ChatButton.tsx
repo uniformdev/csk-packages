@@ -5,15 +5,17 @@ import Tooltip from '@/components/custom-ui/Tooltip';
 interface ChatButtonProps {
   disabled?: boolean | undefined;
   onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
+  width?: number;
+  height?: number;
 }
 
-const ChatButton: FC<ChatButtonProps> = ({ disabled, onClick }) => (
+const ChatButton: FC<ChatButtonProps> = ({ disabled, onClick, width = 75, height = 96 }) => (
   <Tooltip text={disabled ? 'Visit more pages for better results' : 'Chat with Shopping Assistant'}>
     <button className="text-white" type="button" aria-haspopup="dialog" onClick={onClick}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="75"
-        height="96"
+        width={width}
+        height={height}
         viewBox="0 0 75 96"
         fill="none"
         className={cn(

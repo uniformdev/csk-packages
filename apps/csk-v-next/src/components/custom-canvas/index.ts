@@ -2,6 +2,7 @@ import { ComponentMapping } from '@uniformdev/csk-components/utils/createCompone
 import AccordionItem from './AccordionItem';
 import AddToCardButton from './AddToCardButton';
 import AiConfiguration from './AiConfiguration';
+import AiShoppingAssistantButton from './AiShoppingAssistantButton';
 import Button from './Button';
 import CompleteCheckoutButton from './CompleteCheckoutButton';
 import Container from './Container';
@@ -75,4 +76,5 @@ export const customComponentsMapping: ComponentMapping = {
   dynamicProductRecommendations: { component: DynamicProductRecommendations },
   aiConfiguration: { component: AiConfiguration },
   formattedPrice: { component: FormattedPrice },
+  aiShoppingAssistantButton: { component: AiShoppingAssistantButton },
 };

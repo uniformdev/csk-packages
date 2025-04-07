@@ -10,7 +10,7 @@ import { cn } from '@uniformdev/csk-components/utils/styling';
 import { Drawers } from '@/components/custom-ui/Drawers';
 import { useChat } from '@ai-sdk/react';
 import { ToolsName } from './constants';
-import ChatButton from './ui/ChatButton';
+import { useChatProvider } from './providers/ChatProvider';
 import { Messages } from './ui/Messages';
 import { SubmitButton } from './ui/SubmitButton';
 import { Textarea } from './ui/Textarea';
@@ -29,8 +29,8 @@ const PROMPTS = [
 ];
 
 const Chat: FC = () => {
-  const [open, setOpen] = useState(false);
-  const [active, setActive] = useState(false);
+  const { isAiDrawerOpen, setIsAiDrawerOpen, setIsChatActive } = useChatProvider();
+
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const { cartProducts, total } = useCard();
@@ -45,14 +45,14 @@ const Chat: FC = () => {
   const prevScoresRef = useRef(scores);
 
   useEffect(() => {
-    if (open && textareaRef.current) {
+    if (isAiDrawerOpen && textareaRef.current) {
       textareaRef.current.focus();
     }
-  }, [open]);
+  }, [isAiDrawerOpen]);
 
   useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
+    setIsAiDrawerOpen(false);
+  }, [pathname, setIsAiDrawerOpen]);
 
   const { messages, input, handleInputChange, handleSubmit, append, status } = useChat({
     maxSteps: MAX_STEPS,
@@ -107,11 +107,11 @@ const Chat: FC = () => {
 
     if (indexWithRecommendation !== -1) {
       setStartConversationIndex(indexWithRecommendation);
-      setActive(true);
+      setIsChatActive(true);
     } else {
-      setActive(false);
+      setIsChatActive(false);
     }
-  }, [messages]);
+  }, [messages, setIsChatActive]);
 
   useEffect(() => {
     if (startConversationIndex !== -1 || isPreviewMode) {
@@ -149,14 +149,10 @@ const Chat: FC = () => {
 
   return (
     <div>
-      <div className="fixed bottom-0 right-0 p-20">
-        <ChatButton disabled={!active} onClick={() => setOpen(true)} />
-      </div>
-
-      <Drawers open={open} setOpen={setOpen}>
+      <Drawers open={isAiDrawerOpen} setOpen={setIsAiDrawerOpen}>
         <div className="flex h-full flex-col px-4 py-6 sm:px-6">
-          <h2 className="text-base font-semibold text-gray-900 pt-3">JavaDrip Shopping Assistant ✨</h2>
-          <p className="text-sm leading-3 text-[#6b7280] italic">Powered by Uniform Context</p>
+          <h2 className="pt-3 text-base font-semibold text-gray-900">JavaDrip Shopping Assistant ✨</h2>
+          <p className="text-sm italic leading-3 text-[#6b7280]">Powered by Uniform Context</p>
           <Messages status={status} messages={messages} startConversationIndex={startConversationIndex} />
           <div className="relative w-full flex-col gap-4">
             <div
