@@ -7,7 +7,7 @@ export const FixedHero: FC<DemoHeroProps> = props => (
     {...props}
     // Eyebrow Text Parameters
     eyebrowTitleTag="span"
-    eyebrowTitleColor="text-tertiary"
+    eyebrowTitleColor={!props.component.variant ? 'text-secondary' : 'text-primary'}
     eyebrowTitleSize={{
       mobile: 'xs',
       tablet: 'lg',
@@ -16,16 +16,16 @@ export const FixedHero: FC<DemoHeroProps> = props => (
     eyebrowTitleWeight="bold"
     eyebrowTitleTransform="uppercase"
     // Title Text Parameters
-    titleColor="text-primary"
+    titleColor={!props.component.variant ? 'text-secondary' : 'text-primary'}
     titleSize={{
       mobile: '3xl',
-      tablet: '5xl',
-      desktop: '7xl',
+      tablet: '4xl',
+      desktop: '5xl',
     }}
     titleWeight="bold"
     // Description Text Parameters
     descriptionTag="p"
-    descriptionColor="text-primary"
+    descriptionColor={!props.component.variant ? 'text-secondary' : 'text-primary'}
     descriptionSize={{
       mobile: 'sm',
       tablet: 'lg',
@@ -48,10 +48,12 @@ export const FixedHero: FC<DemoHeroProps> = props => (
     imageUnoptimized
     // Presentation Parameters
     spacing={{
-      paddingTop: 'container-xlarge',
-      paddingLeft: 'container-small',
-      paddingRight: 'container-small',
-      paddingBottom: 'container-xlarge',
+      // paddingTop: 'container-xlarge',
+      // paddingLeft: 'container-small',
+      // paddingRight: 'container-small',
+      paddingBottom: '',
+      marginBottom: '',
+      paddingTop: !props.component.variant ? 'container-xlarge' : '',
     }}
     fluidContent
     isFlexibleHero={false}
