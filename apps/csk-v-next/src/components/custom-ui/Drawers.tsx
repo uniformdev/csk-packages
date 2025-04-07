@@ -76,10 +76,12 @@ export const Drawers: FC<
         style={pinned && open ? { width } : { marginTop: headerHeight }}
       >
         <div
-          className={cn('relative w-screen bg-white transition-all duration-500 ease-in-out', {
-            'translate-x-0': open,
-            'translate-x-full': !open,
-          })}
+          className={cn(
+            'relative w-screen bg-white transition-transform duration-500 ease-in-out translate-x-full opacity-0',
+            {
+              'translate-x-0 opacity-100': open,
+            }
+          )}
         >
           <div
             className="absolute left-0 top-0 h-full w-0.5 cursor-ew-resize border-l bg-transparent hover:bg-gray-200"
