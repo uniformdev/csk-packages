@@ -1,0 +1,17 @@
+id: e9c45c00-36b4-4315-b1b0-0dc8311deda9
+integrationType: openai-0925a081-67a6-4415-b892-69f3223ceffc
+name: Generate content from a URL
+text: >-
+  Generate a JSON document with ${\$propertiesList} properties based on this
+  document: ${Page URL}. Respond only with the perfectly valid JSON text. Say
+  nothing else. Do not wrap JSON with backtick chars. If you need to escape
+  characters, use UTF-16 code unit.
+data:
+  arguments:
+    Page URL:
+      default: ''
+      helpText: The URL for the page you are creating content from
+enabled: true
+builtIn: null
+parameterTypes:
+  - json
