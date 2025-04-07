@@ -62,18 +62,16 @@ export const Drawers: FC<
   };
 
   return (
-    <div className="transition-all duration-500 ease-in-out" style={pinned && open ? { width } : {}}>
+    <div style={pinned && open ? { width } : {}}>
       <div
         className="fixed inset-y-0 right-0 flex max-w-full"
         style={pinned && open ? { width } : { marginTop: headerHeight }}
       >
         <div
-          className={cn(
-            'relative w-screen bg-white transition-transform duration-500 ease-in-out translate-x-full opacity-0',
-            {
-              'translate-x-0 opacity-100': open,
-            }
-          )}
+          className={cn('relative w-screen bg-white transition-all duration-500 ease-in-out', {
+            'translate-x-0': open,
+            'translate-x-full': !open,
+          })}
         >
           <div
             className="absolute left-0 top-0 h-full w-0.5 cursor-ew-resize border-l bg-transparent py-4 hover:bg-gray-200"
