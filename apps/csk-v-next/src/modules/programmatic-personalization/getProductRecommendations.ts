@@ -57,8 +57,6 @@ export async function getProductRecommendations({
     locale: 'en',
   });
 
-  console.log({ orderBy });
-
   return entries
     .map(entryResponse => {
       const flattened = flattenValues(entryResponse.entry);
