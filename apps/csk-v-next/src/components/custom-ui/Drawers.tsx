@@ -1,6 +1,15 @@
 'use client';
 
-import { Dispatch, FC, PropsWithChildren, SetStateAction, useEffect, useRef, useState } from 'react';
+import React, {
+  Dispatch,
+  FC,
+  PropsWithChildren,
+  SetStateAction,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import { cn } from '@uniformdev/csk-components/utils/styling';
 import { useLockScroll } from '@/hooks/useLockScroll';
 import CloseIcon from './CloseIcon';
@@ -10,16 +19,16 @@ const INITIAL_WIDTH = 1100;
 const MIN_WIDTH = 800;
 const MAX_WIDTH_OFFSET = 900;
 
-export const Drawers: FC<
-  PropsWithChildren<{
-    open: boolean;
-    setOpen: Dispatch<SetStateAction<boolean>>;
-    pinned: boolean;
-    setPinned: Dispatch<SetStateAction<boolean>>;
-  }>
-> = ({ children, open, pinned = true, setOpen, setPinned }) => {
+type DrawersProps = PropsWithChildren<{
+  open: boolean;
+  setOpen: Dispatch<SetStateAction<boolean>>;
+  pinned: boolean;
+  setPinned: Dispatch<SetStateAction<boolean>>;
+}>;
+
+export const Drawers: FC<DrawersProps> = ({ children, open, pinned = true, setOpen, setPinned }) => {
   const [headerHeight, setHeaderHeight] = useState(0);
-  const [isDisablePin, setIsDisablePin] = useState(false);
+  const [isPinDisabled, setPinDisabled] = useState(false);
   const [width, setWidth] = useState(INITIAL_WIDTH);
   const isResizing = useRef(false);
 
@@ -31,29 +40,25 @@ export const Drawers: FC<
   }, []);
 
   useEffect(() => {
-    const handleResize = () => {
+    const updateWidthAndPinState = () => {
       setWidth(prevWidth => Math.max(MIN_WIDTH, Math.min(window.innerWidth - MAX_WIDTH_OFFSET, prevWidth)));
-      setIsDisablePin(window.innerWidth < MIN_WIDTH + MAX_WIDTH_OFFSET);
+      setPinDisabled(window.innerWidth < MIN_WIDTH + MAX_WIDTH_OFFSET);
     };
 
-    window.addEventListener('resize', handleResize);
-    handleResize();
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener('resize', updateWidthAndPinState);
+    updateWidthAndPinState();
+
+    return () => window.removeEventListener('resize', updateWidthAndPinState);
   }, []);
 
   useEffect(() => {
-    if (isDisablePin) {
+    if (isPinDisabled) {
       setPinned(false);
     }
-  }, [isDisablePin, setPinned]);
+  }, [isPinDisabled, setPinned]);
 
-  const handleMouseDown = () => {
-    isResizing.current = true;
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseup', handleMouseUp);
-  };
-
-  const handleMouseMove = (e: MouseEvent) => {
+  const handleMouseMove = useCallback((e: MouseEvent) => {
+    document.body.style.userSelect = 'none';
     if (isResizing.current) {
       const newWidth = Math.max(
         MIN_WIDTH,
@@ -61,27 +66,34 @@ export const Drawers: FC<
       );
       setWidth(newWidth);
     }
-  };
+  }, []);
 
-  const handleMouseUp = () => {
+  const handleMouseUp = useCallback(() => {
     isResizing.current = false;
+    document.body.style.userSelect = '';
     document.removeEventListener('mousemove', handleMouseMove);
     document.removeEventListener('mouseup', handleMouseUp);
+  }, [handleMouseMove]);
+
+  const handleMouseDown = () => {
+    isResizing.current = true;
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', handleMouseUp);
   };
 
   return (
-    <div style={pinned && open ? { width } : {}}>
+    <div
+      style={pinned && open ? { width } : undefined}
+      className={cn('w-0', { 'transition-all duration-500 ease-in-out': !isResizing.current })}
+    >
       <div
-        className="fixed inset-y-0 right-0 flex max-w-full"
-        style={pinned && open ? { width } : { marginTop: headerHeight }}
+        className="fixed inset-y-0 right-0 flex w-full max-w-full"
+        style={pinned ? { width } : { marginTop: headerHeight }}
       >
         <div
-          className={cn(
-            'relative w-screen bg-white transition-transform duration-500 ease-in-out translate-x-full opacity-0',
-            {
-              'translate-x-0 opacity-100': open,
-            }
-          )}
+          className={cn('relative w-screen bg-white duration-500 ease-in-out translate-x-full opacity-0', {
+            'translate-x-0 opacity-100': open,
+          })}
         >
           <div
             className="absolute left-0 top-0 h-full w-0.5 cursor-ew-resize border-l bg-transparent hover:bg-gray-200"
@@ -92,12 +104,10 @@ export const Drawers: FC<
               <button
                 type="button"
                 onClick={() => setPinned(prev => !prev)}
-                disabled={isDisablePin}
+                disabled={isPinDisabled}
                 className={cn(
                   'rounded-md text-black hover:text-gray-900 focus:outline-none focus:ring-0 focus:ring-gray-300',
-                  {
-                    'opacity-50': isDisablePin,
-                  }
+                  { 'opacity-50': isPinDisabled }
                 )}
               >
                 <span className="sr-only">Pin panel</span>
@@ -127,3 +137,5 @@ export const Drawers: FC<
   );
 };
 Drawers.displayName = 'Drawers';
+
+export default Drawers;
