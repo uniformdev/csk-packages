@@ -1,6 +1,7 @@
 import baseCskComponentsMapping, { Page } from '@uniformdev/csk-components/components/canvas';
 import DemoHero from './DemoHero';
 import Header from './Header';
+import Image from './Image';
 import NavigationFlyout from './NavigationFlyout';
 import Text from './Text';
 import Video from './Video';
@@ -14,4 +15,5 @@ export const cskComponentsMapping = {
   text: { component: Text },
   video: { component: Video },
   entryPreview: { component: Page },
+  image: { component: Image },
 };

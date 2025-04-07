@@ -6,6 +6,7 @@ import BaseButton, { ButtonVariant } from '@/components/ui/Button';
 import BaseImage from '@/components/ui/Image';
 import MediaPlaceholder from '@/components/ui/MediaPlaceholder';
 import BaseText from '@/components/ui/Text';
+import { FIT_OPTIONS, getResizedAssetUrl } from '@/utils/assetFocalPoint';
 import { resolveAsset } from '@/utils/assets';
 import { formatUniformLink } from '@/utils/routing';
 import { BaseButtonParameters, BaseImageParameters } from '.';
@@ -112,12 +113,12 @@ export const BaseHeroImage: FC<BaseImageParameters & Omit<ComponentProps, 'param
     );
   }
 
-  const { url, title = '' } = resolvedImage;
-
+  const { url, title = '', focalPoint } = resolvedImage;
+  const imageUrl = getResizedAssetUrl(url, 1000, 1000, FIT_OPTIONS.COVER, focalPoint) || url;
   return (
     <BaseImage
       containerStyle={{ ...(width ? { width: `${width}px` } : {}), ...(height ? { height: `${height}px` } : {}) }}
-      src={url}
+      src={imageUrl}
       alt={title}
       fill
       unoptimized={unoptimized}
