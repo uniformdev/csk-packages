@@ -62,7 +62,7 @@ const QuirkSelector: FC<QuirkSelectorProps> = ({ quirkId, variants, component, c
   return (
     <div className="flex flex-col items-start gap-y-8">
       <Select onChange={onChange} value={selectedQuirk} className="min-w-[200px]">
-        <option value="">Select your quirk</option>
+        <option value="">Select a segment</option>
         {variantsToRender?.map(variant => (
           <option key={variant.value} value={variant.value}>
             {variant.label}
