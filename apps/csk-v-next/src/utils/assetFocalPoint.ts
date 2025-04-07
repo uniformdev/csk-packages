@@ -93,7 +93,15 @@ export const getResizedAssetUrl = (
   // Add focal point if available
   const focalPointValue = getFocalPointValue(focalPoint);
   if (fit === FIT_OPTIONS.COVER && focalPointValue) {
-    searchParams.append('focal', focalPointValue);
+    // Only try to access x and y if focalPoint is an object (not 'auto' or 'center')
+    if (typeof focalPoint === 'object' && focalPoint !== null) {
+      const focal = getCorrectFocalPoint(width!, height!, 1000, 1000, focalPoint.x, focalPoint.y);
+      // console.log('focal', { focal, focalPoint, width, height });
+      searchParams.append('focal', `${focal.x}x${focal.y}`);
+    } else {
+      // For 'auto' or 'center' focal points, use the focalPointValue directly
+      searchParams.append('focal', focalPointValue);
+    }
   }
 
   // Convert params to string and check if we have any params
@@ -162,3 +170,51 @@ export const getFocalPointQueryParam = (focalPoint?: FocalPoint) => {
 
   return '';
 };
+
+function getCorrectFocalPoint(
+  imgWidth: number,
+  imgHeight: number,
+  croppedWidth: number,
+  croppedHeight: number,
+  focalX: number,
+  focalY: number
+) {
+  // Calculate the scale factor as used by object-fit: cover
+  const scale = Math.max(croppedWidth / imgWidth, croppedHeight / imgHeight);
+
+  // Calculate the scaled image dimensions
+  const scaledWidth = imgWidth * scale;
+  const scaledHeight = imgHeight * scale;
+
+  // Determine how much extra image is present (i.e. what gets cropped)
+  const extraX = scaledWidth - croppedWidth;
+  const extraY = scaledHeight - croppedHeight;
+
+  // Default to centering (50% 50%) in case no cropping occurs on an axis
+  let posX = 0.5;
+  let posY = 0.5;
+
+  // console.log({ extraX, extraY });
+
+  // If there is horizontal cropping, compute the CSS percentage
+  if (extraX > 0) {
+    // Calculate how far the focal point is from the center of the container in the scaled image
+    const offsetX = focalX * scaledWidth - croppedWidth / 2;
+    posX = offsetX / extraX;
+    // Clamp the value between 0.0 and 1.0
+    posX = Math.max(0, Math.min(1, posX));
+  }
+
+  // If there is vertical cropping, compute the CSS percentage
+  if (extraY > 0) {
+    const offsetY = focalY * scaledHeight - croppedHeight / 2;
+    posY = offsetY / extraY;
+    posY = Math.max(0, Math.min(1, posY));
+  }
+
+  // Return the CSS object-position value as a string
+  return {
+    x: posX,
+    y: posY,
+  };
+}
