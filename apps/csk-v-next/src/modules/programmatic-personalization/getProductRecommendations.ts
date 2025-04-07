@@ -31,7 +31,7 @@ export async function getProductRecommendations({
 
   const scores = transitionStore.data?.scores;
 
-  const boostInclusions = boostEnrichments.reduce<Record<string, string>>((acc, enrichment) => {
+  const boostInclusions = boostEnrichments?.reduce<Record<string, string>>((acc, enrichment) => {
     const { enrichmentKey } = getEnrichmentAndFieldKey(enrichment);
     const maxEnrichmentKey = getMaxEnrichmentKey(enrichmentKey, scores ?? {});
     const [, boostValue] = maxEnrichmentKey?.split('_') ?? [];
@@ -50,13 +50,14 @@ export async function getProductRecommendations({
   });
 
   const orderBy = getOrderByClause(boostInclusions);
-
   const { entries } = await contentClient.getEntries({
     filters: { type: { eq: entryType } },
     limit: maxRecommendations ?? 30,
-    orderBy: [orderBy],
+    orderBy: orderBy ? [orderBy] : undefined,
     locale: 'en',
   });
+
+  console.log({ orderBy });
 
   return entries
     .map(entryResponse => {
