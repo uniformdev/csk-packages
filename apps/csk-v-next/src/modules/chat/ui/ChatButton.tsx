@@ -16,9 +16,12 @@ const ChatButton: FC<ChatButtonProps> = ({ disabled, onClick }) => (
         height="96"
         viewBox="0 0 75 96"
         fill="none"
-        className={cn('transition-all duration-1000 opacity-80 hover:[animation-play-state:paused] hover:opacity-100', {
-          'animate-wobble-bounce opacity-100': !disabled,
-        })}
+        className={cn(
+          'transition-all duration-1000 opacity-80 hover:[animation-play-state:paused] hover:opacity-100 grayscale',
+          {
+            'animate-wobble-bounce opacity-100': !disabled,
+          }
+        )}
       >
         <path d="M15.6546 92.6168L58.3549 93L61 76.3833L14 76L15.6546 92.6168Z" fill="white" />
         <path d="M11.9715 36.7295L62.8484 37L66 25.2705L10 25L11.9715 36.7295Z" fill="white" />
