@@ -6,9 +6,9 @@ import { useLockScroll } from '@/hooks/useLockScroll';
 import CloseIcon from './CloseIcon';
 import Container from '../ui/Container';
 
-const INITIAL_WIDTH = 900;
-const MIN_WIDTH = 300;
-const MAX_WIDTH_OFFSET = 50;
+const INITIAL_WIDTH = 1100;
+const MIN_WIDTH = 800;
+const MAX_WIDTH_OFFSET = 900;
 
 export const Drawers: FC<
   PropsWithChildren<{
@@ -16,10 +16,10 @@ export const Drawers: FC<
     setOpen: Dispatch<SetStateAction<boolean>>;
     pinned: boolean;
     setPinned: Dispatch<SetStateAction<boolean>>;
-    disablePin?: boolean;
   }>
-> = ({ children, open, pinned = true, setOpen, setPinned, disablePin = false }) => {
+> = ({ children, open, pinned = true, setOpen, setPinned }) => {
   const [headerHeight, setHeaderHeight] = useState(0);
+  const [isDisablePin, setIsDisablePin] = useState(false);
   const [width, setWidth] = useState(INITIAL_WIDTH);
   const isResizing = useRef(false);
 
@@ -33,11 +33,19 @@ export const Drawers: FC<
   useEffect(() => {
     const handleResize = () => {
       setWidth(prevWidth => Math.max(MIN_WIDTH, Math.min(window.innerWidth - MAX_WIDTH_OFFSET, prevWidth)));
+      setIsDisablePin(window.innerWidth < MIN_WIDTH + MAX_WIDTH_OFFSET);
     };
 
     window.addEventListener('resize', handleResize);
+    handleResize();
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  useEffect(() => {
+    if (isDisablePin) {
+      setPinned(false);
+    }
+  }, [isDisablePin, setPinned]);
 
   const handleMouseDown = () => {
     isResizing.current = true;
@@ -74,7 +82,7 @@ export const Drawers: FC<
           })}
         >
           <div
-            className="absolute left-0 top-0 h-full w-0.5 cursor-ew-resize border-l bg-transparent py-4 hover:bg-gray-200"
+            className="absolute left-0 top-0 h-full w-0.5 cursor-ew-resize border-l bg-transparent hover:bg-gray-200"
             onMouseDown={handleMouseDown}
           />
           <Container className="relative">
@@ -82,11 +90,11 @@ export const Drawers: FC<
               <button
                 type="button"
                 onClick={() => setPinned(prev => !prev)}
-                disabled={disablePin}
+                disabled={isDisablePin}
                 className={cn(
                   'rounded-md text-black hover:text-gray-900 focus:outline-none focus:ring-0 focus:ring-gray-300',
                   {
-                    'opacity-50': disablePin,
+                    'opacity-50': isDisablePin,
                   }
                 )}
               >
@@ -110,7 +118,6 @@ export const Drawers: FC<
               </button>
             </div>
           </Container>
-
           {children}
         </div>
       </div>

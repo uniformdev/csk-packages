@@ -52,7 +52,8 @@ const Chat: FC = () => {
   }, [isAiDrawerOpen]);
 
   useEffect(() => {
-    setIsAiDrawerOpen(false);
+    if (!isPinned && isAiDrawerOpen) setIsAiDrawerOpen(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname, setIsAiDrawerOpen]);
 
   const { messages, input, handleInputChange, handleSubmit, append, status } = useChat({
