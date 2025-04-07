@@ -24,11 +24,11 @@ composition:
         filters: '{"type[eq]":"productCategory"}'
         contentTypes: productCategory
   _overrides:
-    2a72aed3-7b0c-4f25-950c-0a03c1a8e14c:
+    3e33c756-b149-4393-881d-52f5740b9ada:
       parameters:
         displayName:
           type: text
-          value: Coffee Makers
+          value: Category Hero
     5a6c8a7b-d7f9-4e8d-9549-10ea4d09106a:
       parameters:
         $enr:
@@ -101,21 +101,12 @@ composition:
             espresso machines to drip coffee makers, we have high-quality
             options to elevate your coffee experience. Find your ideal coffee
             maker today and brew like a pro!
-    2a72aed3-7b0c-4f25-950c-0a03c1a8e14c|2058ad6d-25b3-4eea-a276-cb996b4188cc:
-      slots:
-        $slotSectionItems:
-          - _id: fa0c778a-5f16-4d2e-8855-0a6b4a616374
-            type: entriesSearchEngine
-            _pattern: afef4fa3-394f-4228-81b9-3374b4616b3c
-            _overridability:
-              parameters:
-                boostEnrichments: 'yes'
-              hideLockedParameters: true
-    2a72aed3-7b0c-4f25-950c-0a03c1a8e14c|5feefc71-05dd-4004-bfe9-3dd6876628b4:
+    fa0c778a-5f16-4d2e-8855-0a6b4a616374:
       parameters:
-        text:
-          type: text
-          value: Coffee Makers
+        boostEnrichments:
+          type: multi-select
+          value:
+            - subCategory,subcategory
     3e33c756-b149-4393-881d-52f5740b9ada|215f54df-5063-4f0a-81c0-d8bda909b52c:
       parameters:
         image:
@@ -171,16 +162,36 @@ composition:
               parameters:
                 displayName: 'yes'
               hideLockedParameters: true
-          - _id: 2a72aed3-7b0c-4f25-950c-0a03c1a8e14c
+          - _id: ab956a0f-b84f-4e7d-b1bd-f23cbe87cebf
             type: container
-            _pattern: d9dd4b0a-358f-4b10-be48-77c5088020cc
-            _overridability:
-              parameters:
-                displayName: 'yes'
-              hideLockedParameters: true
+            slots:
+              containerContent:
+                - _id: fa0c778a-5f16-4d2e-8855-0a6b4a616374
+                  type: entriesSearchEngine
+                  _pattern: afef4fa3-394f-4228-81b9-3374b4616b3c
+                  _overridability:
+                    parameters:
+                      boostEnrichments: 'yes'
+                    hideLockedParameters: true
+            parameters:
+              spacing:
+                type: dex-space-control-parameter
+                value:
+                  mobile:
+                    paddingTop: container-small
+                    paddingRight: container-xsmall
+                  tablet: {}
+                  desktop:
+                    paddingTop: container-medium
+                    paddingLeft: container-small
+                    paddingRight: container-small
+              displayName:
+                type: text
+                locales:
+                  en: Faceted Search
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-03-25T04:27:49.839581+00:00'
-modified: '2025-04-04T14:38:17.680842+00:00'
+created: '2025-03-24T20:34:39.547809+00:00'
+modified: '2025-04-05T15:07:27.231561+00:00'
 pattern: false

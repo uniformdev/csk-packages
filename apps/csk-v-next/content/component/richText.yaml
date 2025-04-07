@@ -47,7 +47,12 @@ parameters:
     name: Color
     type: dex-color-palette-parameter
     typeConfig:
-      allowColors: []
+      allowColors:
+        - text-primary
+        - text-secondary
+        - text-tertiary
+        - text-dark
+        - text-active
       selectedGroup: text
       allowThemeColors: []
   - id: font
@@ -61,5 +66,5 @@ previewImageUrl: >-
 useTeamPermissions: true
 slots: []
 canBeComposition: false
-created: '2025-02-17T15:34:15.709485+00:00'
-updated: '2025-02-17T15:34:15.709485+00:00'
+created: '2025-03-24T20:34:33.536346+00:00'
+updated: '2025-04-07T04:50:04.984942+00:00'

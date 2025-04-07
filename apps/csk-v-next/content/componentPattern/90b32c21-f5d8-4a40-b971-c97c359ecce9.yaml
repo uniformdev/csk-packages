@@ -6,14 +6,26 @@ composition:
     spacing:
       type: dex-space-control-parameter
       value:
-        paddingTop: container-xxlarge
-        paddingBottom: container-xxlarge
+        mobile:
+          paddingTop: container-medium
+          paddingLeft: container-small
+          paddingRight: container-small
+          paddingBottom: container-small
+        tablet:
+          paddingTop: container-xxlarge
+          paddingBottom: container-xxlarge
+        desktop:
+          paddingTop: container-xxlarge
+          paddingBottom: container-xxlarge
     displayName:
       type: text
-      value: Welcome Hero
+      value: Simple Hero
     fluidContent:
       type: checkbox
       value: true
+    backgroundColor:
+      type: dex-color-palette-parameter
+      value: general-color-1
     contentAlignment:
       type: dex-segmented-control-parameter
       value: center
@@ -42,7 +54,7 @@ composition:
                     value: c424e408-6515-49b8-9147-a2ef08c1c4ff
                   url:
                     value: >-
-                      https://img.uniform.global/p/N0QOqjXvSFeXY7i3yzY8ZQ/932R_UExSXqaVAFunQp8zw-vietnamese-coffee-filter-drip.jpeg
+                      https://img.uniform.global/p/ovl3f_RJSNmuo41YikmFlA/vVD6qdzFT8-FlgimfJUJ7Q-vietnamese-coffee-filter-drip.jpeg
                     type: text
                   file:
                     type: file
@@ -66,6 +78,12 @@ composition:
           objectFit:
             type: dex-segmented-control-parameter
             value: cover
+          overlayColor:
+            type: dex-color-palette-parameter
+            value: general-color-3
+          overlayOpacity:
+            type: dex-slider-control-parameter
+            value: '0.5'
         _overridability:
           parameters:
             image: 'yes'
@@ -78,16 +96,16 @@ composition:
         parameters:
           tag:
             type: dex-segmented-control-parameter
-            value: span
+            value: h2
           size:
             type: dex-segmented-control-parameter
             value:
-              mobile: 3xl
+              mobile: 2xl
               tablet: 5xl
               desktop: 5xl
           text:
             type: text
-            value: Coffee makers for all your brewing needs
+            value: Hero title
           color:
             type: dex-color-palette-parameter
             value: text-secondary
@@ -107,8 +125,8 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
-created: '2025-03-07T10:45:01.024626+00:00'
-modified: '2025-03-10T15:09:06.349488+00:00'
+created: '2025-03-24T20:34:59.056406+00:00'
+modified: '2025-04-05T14:59:23.099868+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1731067344/csk-v-next/jd-template/simple-hero.jpg

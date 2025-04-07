@@ -127,7 +127,7 @@ composition:
                           parameters:
                             tag:
                               type: dex-segmented-control-parameter
-                              value: span
+                              value: h1
                             size:
                               type: dex-segmented-control-parameter
                               value:
@@ -145,6 +145,34 @@ composition:
                             weight:
                               type: dex-segmented-control-parameter
                               value: bold
+                            alignment:
+                              type: dex-segmented-control-parameter
+                              value: left
+                          _overridability:
+                            hideLockedParameters: true
+                        - _id: 7cf4bd6e-987a-463f-83c6-57bed22b02ea
+                          type: text
+                          parameters:
+                            tag:
+                              type: dex-segmented-control-parameter
+                              value: p
+                            size:
+                              type: dex-segmented-control-parameter
+                              value:
+                                mobile: xl
+                                tablet: 3xl
+                                desktop: 3xl
+                            text:
+                              type: text
+                              value: >-
+                                ${#jptr:/Product
+                                Content/entry/fields/subcategory/value/entry/fields/title/value}
+                            color:
+                              type: dex-color-palette-parameter
+                              value: text-tertiary
+                            weight:
+                              type: dex-segmented-control-parameter
+                              value: medium
                             alignment:
                               type: dex-segmented-control-parameter
                               value: left
@@ -573,8 +601,8 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
-created: '2025-03-25T04:28:09.772586+00:00'
-modified: '2025-04-04T10:12:15.540808+00:00'
+created: '2025-03-24T20:34:55.869131+00:00'
+modified: '2025-04-05T16:13:15.836502+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/jd-template/product-info.jpg

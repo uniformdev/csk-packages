@@ -5,6 +5,11 @@ composition:
   type: page
   _overrides:
     3613f719-1b75-44c5-bac4-446a3ff33c05:
+      parameters:
+        boostEnrichments:
+          type: multi-select
+          value:
+            - subCategory,subcategory
       dataResources:
         Base Product Category:
           type: productCategory
@@ -80,11 +85,6 @@ composition:
             coffee-growing regions. Freshly roasted and available in various
             roasts, find the perfect beans for your coffee ritual. Order online
             for delivery!
-    db79d2b3-b3f7-447b-b1e7-590e03295288:
-      parameters:
-        displayName:
-          type: text
-          value: Coffee Beans
     3613f719-1b75-44c5-bac4-446a3ff33c05|c4e468fe-b6cf-4497-8c14-bde24a0e35b8:
       parameters:
         placeholder:
@@ -95,31 +95,31 @@ composition:
         image:
           type: asset
           value:
-            - _id: 9f6fc446-c712-4878-b1f4-f9498a708087
+            - _id: d8978dfb-6f09-452c-8a3a-6c2ab54ddfaf
               type: image
               fields:
                 id:
                   type: text
-                  value: c424e408-6515-49b8-9147-a2ef08c1c4ff
+                  value: e894771b-4d96-439b-b315-90a822d545a2
                 url:
                   type: text
                   value: >-
-                    https://img.uniform.global/p/N0QOqjXvSFeXY7i3yzY8ZQ/932R_UExSXqaVAFunQp8zw-vietnamese-coffee-filter-drip.jpeg
+                    https://img.uniform.global/p/AkRE_ExESnO-LQvImsGrxA/Mu8EEcqKQSy0jorNEQt7WQ-ideal-beans-for-slow-drip.jpg
                 file:
                   type: file
-                  value: 3d357e0d-0888-4acb-a023-471a4c5f2064
+                  value: 3f3bbe8e-a5f9-4b89-9f72-1f0a2db82f03
                 size:
                   type: number
-                  value: 243065
+                  value: 3885592
                 title:
                   type: text
-                  value: vietnamese-coffee-filter-drip.jpeg
+                  value: ideal-beans-for-slow-drip.jpg
                 width:
                   type: number
-                  value: 2600
+                  value: 4928
                 height:
                   type: number
-                  value: 1300
+                  value: 3264
                 mediaType:
                   type: text
                   value: image/jpeg
@@ -134,7 +134,7 @@ composition:
       parameters:
         text:
           type: text
-          value: Discover the best coffee beans
+          value: Discover curated coffee beans
     d9e2afce-4417-4f75-9345-701831f831aa|dc2e95be-21b5-4476-a309-f8a34922f528:
       slots:
         $slotSectionItems:
@@ -145,35 +145,42 @@ composition:
               parameters:
                 displayName: 'yes'
               hideLockedParameters: true
-          - _id: db79d2b3-b3f7-447b-b1e7-590e03295288
+          - _id: 403ac0e1-f7fa-49a7-808d-ce9dcfbdf004
             type: container
-            _pattern: d9dd4b0a-358f-4b10-be48-77c5088020cc
-            _overridability:
-              parameters:
-                displayName: 'yes'
-              hideLockedParameters: true
-    db79d2b3-b3f7-447b-b1e7-590e03295288|2058ad6d-25b3-4eea-a276-cb996b4188cc:
-      slots:
-        $slotSectionItems:
-          - _id: 3613f719-1b75-44c5-bac4-446a3ff33c05
-            type: entriesSearchEngine
-            _pattern: afef4fa3-394f-4228-81b9-3374b4616b3c
-            _dataResources:
-              Base Product Category:
-                type: productCategory
-                variables:
-                  locale: ${locale}
-                  entryId: ae8e04c4-f20b-46f5-9eb4-7d8f82bbee38
-            _overridability:
-              hideLockedParameters: true
-    db79d2b3-b3f7-447b-b1e7-590e03295288|5feefc71-05dd-4004-bfe9-3dd6876628b4:
-      parameters:
-        text:
-          type: text
-          value: Coffee Beans
+            slots:
+              containerContent:
+                - _id: 3613f719-1b75-44c5-bac4-446a3ff33c05
+                  type: entriesSearchEngine
+                  _pattern: afef4fa3-394f-4228-81b9-3374b4616b3c
+                  _dataResources:
+                    Base Product Category:
+                      type: productCategory
+                      variables:
+                        locale: ${locale}
+                        entryId: ae8e04c4-f20b-46f5-9eb4-7d8f82bbee38
+                  _overridability:
+                    parameters:
+                      boostEnrichments: 'yes'
+                    hideLockedParameters: true
+            parameters:
+              spacing:
+                type: dex-space-control-parameter
+                value:
+                  mobile:
+                    paddingTop: container-small
+                    paddingRight: container-xsmall
+                  tablet: {}
+                  desktop:
+                    paddingTop: container-medium
+                    paddingLeft: container-small
+                    paddingRight: container-small
+              displayName:
+                type: text
+                locales:
+                  en: Faceted Search
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-03-25T04:27:49.538737+00:00'
-modified: '2025-04-01T12:03:22.588548+00:00'
+created: '2025-03-24T20:34:39.193324+00:00'
+modified: '2025-04-05T15:14:24.542595+00:00'
 pattern: false

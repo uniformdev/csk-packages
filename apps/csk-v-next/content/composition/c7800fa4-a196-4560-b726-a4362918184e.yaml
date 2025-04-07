@@ -253,7 +253,7 @@ composition:
             - _id: 3697e3e4-bb2f-48d1-aa4d-35a877c8ca72
               type: flex
               _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
-            - _id: 72079d47-e419-46b5-ae3c-08b7f2fa0ac3
+            - _id: 50865ad2-c875-45b4-9772-cf3c623002f1
               type: flex
               _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
             - _id: 2ba4edb9-8de4-4f96-a642-27c93bb59533
@@ -268,9 +268,6 @@ composition:
             - _id: 6a19d948-05ae-40cc-ba0f-c3dfa6aff568
               type: flex
               _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
-            - _id: c799f53f-9ad8-4d87-b4ee-eab2d84d9adc
-              type: flex
-              _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
             - _id: 7ab368e9-7126-4a22-b618-709772134155
               type: flex
               _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
@@ -280,13 +277,13 @@ composition:
             - _id: 8a4d1d8b-4cca-419f-ba38-e9416a475a32
               type: flex
               _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
-            - _id: d52aac35-c289-4775-bde4-903db3ef3750
-              type: flex
-              _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
         parameters:
           count:
             type: number
-            value: '4'
+            value: '3'
+          algorithm:
+            type: pzAlgorithm
+            value: ssc
           trackingEventName:
             type: text
             value: Recommendations
@@ -302,13 +299,7 @@ composition:
         $pzCrit:
           type: $pzCrit
           value:
-            crit:
-              - l: int_coffee-makers
-                r: '25'
-                op: '>='
-              - l: int_coffee-makers
-                r: '75'
-                op: <
+            dim: subCategory_pour-over
             name: Medium Coffee Makers interest
       dataResources:
         Single Product Content:
@@ -321,13 +312,7 @@ composition:
         $pzCrit:
           type: $pzCrit
           value:
-            crit:
-              - l: int_coffee-makers
-                r: '75'
-                op: '>='
-              - l: int_coffee-makers
-                r: '100'
-                op: <
+            dim: subCategory_pour-over
             name: High Coffee Makers interest
       dataResources:
         Single Product Content:
@@ -340,103 +325,73 @@ composition:
         $pzCrit:
           type: $pzCrit
           value:
-            crit:
-              - l: int_coffee-makers
-                r: '100'
-                op: '>='
-            name: Highest Coffee Makers interest
+            dim: subCategory_espresso
+            name: espresso-2
       dataResources:
         Single Product Content:
           type: singleProduct
           variables:
             locale: ${locale}
-            entryId: 8c949736-643c-49e0-b18c-b5784106d378
+            entryId: d4af2511-76c3-4c8c-b979-1c3da1c667fb
     4d0d6445-40aa-43e5-aac3-0fc6509b749c:
       parameters:
         $pzCrit:
           type: $pzCrit
           value:
-            crit:
-              - l: int_coffee-makers
-                r: '100'
-                op: '>='
-            name: Highest Coffee Makers interest
+            dim: subCategory_espresso
+            name: espresso-1
       dataResources:
         Single Product Content:
           type: singleProduct
           variables:
             locale: ${locale}
             entryId: 2f042be4-1e8b-4fae-be0e-a5294b89d8dd
+    50865ad2-c875-45b4-9772-cf3c623002f1:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            dim: subCategory_espresso
+            name: espresso-3
+      dataResources:
+        Single Product Content:
+          type: singleProduct
+          variables:
+            locale: ${locale}
+            entryId: d2719c84-ddf5-4020-8d11-a75fbe3ef2f7
     6a19d948-05ae-40cc-ba0f-c3dfa6aff568:
       parameters:
         $pzCrit:
           type: $pzCrit
           value:
-            crit:
-              - l: int_coffee-makers
-                r: '10'
-                op: '>='
-              - l: int_coffee-makers
-                r: '25'
-                op: <
-            name: Low Coffee Makers interest
+            dim: subCategory_french-press
+            name: french press
       dataResources:
         Single Product Content:
           type: singleProduct
           variables:
             locale: ${locale}
             entryId: 28bf4036-f588-4ee0-94bb-241d39270972
-    72079d47-e419-46b5-ae3c-08b7f2fa0ac3:
-      parameters:
-        $pzCrit:
-          type: $pzCrit
-          value:
-            crit:
-              - l: int_coffee-makers
-                r: '75'
-                op: '>='
-              - l: int_coffee-makers
-                r: '100'
-                op: <
-            name: High Coffee Makers interest
-      dataResources:
-        Single Product Content:
-          type: singleProduct
-          variables:
-            locale: ${locale}
-            entryId: 38622bea-be3c-477b-8756-1a188e84b882
     7ab368e9-7126-4a22-b618-709772134155:
       parameters:
         $pzCrit:
           type: $pzCrit
           value:
-            crit:
-              - l: int_beans
-                r: '50'
-                op: '>='
-              - l: int_beans
-                r: '100'
-                op: <=
-            name: High Coffee Beans interest
+            dim: subCategory_arabica
+            name: arabica 1
       dataResources:
         Single Product Content:
           type: singleProduct
           variables:
             locale: ${locale}
-            entryId: 3e3af534-0999-4bcb-b479-3bd693173c83
+            entryId: f7e77f37-2646-410e-8596-6ae16379d5d9
     876d4a34-923d-4c20-abd6-ae0c35651c4a:
       parameters:
         $pzCrit:
           type: $pzCrit
           value:
-            crit:
-              - l: int_coffee-makers
-                r: '25'
-                op: '>='
-              - l: int_coffee-makers
-                r: '75'
-                op: <
-            name: Medium Coffee Makers interest
+            dim: subCategory_turkish
+            name: turkish
       dataResources:
         Single Product Content:
           type: singleProduct
@@ -448,77 +403,27 @@ composition:
         $pzCrit:
           type: $pzCrit
           value:
-            crit:
-              - l: int_beans
-                r: '50'
-                op: '>='
-              - l: int_beans
-                r: '100'
-                op: <=
-            name: High Coffee Beans interest
+            dim: subCategory_arabica
+            name: arabica 2
       dataResources:
         Single Product Content:
           type: singleProduct
           variables:
             locale: ${locale}
-            entryId: 4435ccaf-103e-4b69-9138-7ec8196955fb
+            entryId: ff365bbd-13c4-43ab-9747-e4cf5a85a4ce
     8a4d1d8b-4cca-419f-ba38-e9416a475a32:
       parameters:
         $pzCrit:
           type: $pzCrit
           value:
-            crit:
-              - l: int_beans
-                r: '10'
-                op: '>='
-              - l: int_beans
-                r: '50'
-                op: <
-            name: Low Coffee Beans interest
+            dim: subCategory_arabica
+            name: arabica 3
       dataResources:
         Single Product Content:
           type: singleProduct
           variables:
             locale: ${locale}
             entryId: 79ddd1f3-30a9-4f4d-8a93-0d9e17ad5967
-    c799f53f-9ad8-4d87-b4ee-eab2d84d9adc:
-      parameters:
-        $pzCrit:
-          type: $pzCrit
-          value:
-            crit:
-              - l: int_coffee-makers
-                r: '10'
-                op: '>='
-              - l: int_coffee-makers
-                r: '25'
-                op: <
-            name: Low Coffee Makers interest
-      dataResources:
-        Single Product Content:
-          type: singleProduct
-          variables:
-            locale: ${locale}
-            entryId: b506568e-6e29-43c4-bd81-f326a0880828
-    d52aac35-c289-4775-bde4-903db3ef3750:
-      parameters:
-        $pzCrit:
-          type: $pzCrit
-          value:
-            crit:
-              - l: int_beans
-                r: '10'
-                op: '>='
-              - l: int_beans
-                r: '50'
-                op: <
-            name: Low Coffee Beans interest
-      dataResources:
-        Single Product Content:
-          type: singleProduct
-          variables:
-            locale: ${locale}
-            entryId: 5a9bf3d7-74a8-42e4-ac78-239f84cbecca
     e27aba77-4f97-4664-8fef-0edcb0a12d0e:
       parameters:
         link:
@@ -581,6 +486,6 @@ composition:
             Item/entry/fields/variants/value/0/fields/currency/value}
   _locales:
     - en
-created: '2025-04-02T18:38:54.586965+00:00'
-modified: '2025-04-04T09:26:53.261296+00:00'
+created: '2025-04-04T06:54:12.701229+00:00'
+modified: '2025-04-07T05:15:24.436112+00:00'
 pattern: false

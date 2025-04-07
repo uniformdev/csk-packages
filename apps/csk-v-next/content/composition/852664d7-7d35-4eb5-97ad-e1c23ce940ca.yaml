@@ -16,6 +16,27 @@ composition:
       isPatternParameter: true
       ignorePatternParameterDefault: false
   _overrides:
+    076ec962-8c25-417f-9070-50d96979b484:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: /${locale}/beans-bundle
+              type: projectMapNode
+              nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+        text:
+          type: text
+          value: Sign up for membership
+        buttonColor:
+          type: dex-color-palette-parameter
+          value: button-tertiary
+        hoverButtonColor:
+          type: dex-color-palette-parameter
+          value: button-secondary-hover
     158bfee0-8bfb-4a95-8bc0-7665d7567295:
       parameters:
         link:
@@ -31,100 +52,34 @@ composition:
         text:
           type: text
           value: Learn more
-    1c0ab793-041c-4120-a82f-0da8d9c5fe56:
-      parameters:
-        link:
-          type: link
-          locales:
-            en:
-              path: /${locale}/cart
-              type: projectMapNode
-              nodeId: 5c88cfb5-bf57-4dc4-b25c-be9510d01b81
-              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-              dynamicInputValues:
-                locale: ${locale}
-        text:
-          type: text
-          value: "See our premium\_ products"
     1fc9f4b5-b1ea-4e47-b430-d985b4ec2b41:
       parameters:
+        $pzCrit:
+          type: $pzCrit
+          value: null
         displayName:
           type: text
           value: Find the perfect bean
-    22e9a49c-1d3e-4697-9a96-9a873d2f36d8:
-      parameters:
-        $pzCrit:
-          type: $pzCrit
-          value:
-            crit:
-              - l: segment
-                r: aficionado
-                t: q
-                op: '='
-            name: Aficionado
-        displayName:
-          type: text
-          value: Aficionado
-        contentBackgroundColor:
-          type: dex-color-palette-parameter
-          value: general-color-4
-    2cf1eec0-f4de-4580-b02f-08b702e11fd4:
+    2f992602-e0b0-44be-b932-00a6f5002583:
       parameters:
         link:
           type: link
           locales:
             en:
-              path: /${locale}/coffee-makers
+              path: /${locale}/beans-bundle
               type: projectMapNode
-              nodeId: c9869cee-a65c-4064-b296-78c4a5ba4ffc
+              nodeId: 50a1163d-53a4-44c7-98b0-485e0baa983e
               projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
               dynamicInputValues:
                 locale: ${locale}
         text:
           type: text
-          value: Coffee Makers
-        buttonColor:
-          type: dex-color-palette-parameter
+          value: Sign up for membership
+    3074410a-05a6-475d-a592-d12154625515:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
           value: null
-    33cbf07c-053b-4542-8b5b-18d1026d1d86:
-      parameters:
-        $pzCrit:
-          type: $pzCrit
-          value:
-            crit:
-              - l: isCartEmpty
-                r: 'false'
-                t: q
-                op: '='
-            name: featuredSection-33cb
-        displayName:
-          type: text
-          value: Has active cart
-        contentBackgroundColor:
-          type: dex-color-palette-parameter
-          value: general-color-3
-    34261571-3623-41e0-bda8-7f1a5fdef37e:
-      parameters:
-        $pzCrit:
-          type: $pzCrit
-          value:
-            crit:
-              - l: int_beans
-                op: +
-            name: Coffee Beans interest
-        displayName:
-          type: text
-          value: Coffee Beans interest
-    411aab8f-d562-4cae-ac2b-4470db036909:
-      parameters:
-        $pzCrit:
-          type: $pzCrit
-          value:
-            crit: []
-            name: Default Variant
-        displayName:
-          type: text
-          value: Default Variant
     4985d1ca-6d4a-4857-9313-eed9ecb9bc3c:
       parameters:
         link:
@@ -140,39 +95,6 @@ composition:
         text:
           type: text
           value: See all
-    503b72ae-4a31-4051-b410-e9daa61b5905:
-      parameters:
-        $pzCrit:
-          type: $pzCrit
-          value:
-            crit:
-              - l: int_coffee-makers
-                op: +
-            name: Coffee Makers interest
-        spacing:
-          type: dex-space-control-parameter
-          value:
-            mobile: {}
-            tablet: {}
-            desktop: {}
-        displayName:
-          type: text
-          value: Coffee Makers interest
-    68e34c5d-5177-4094-9e64-eef21d58da91:
-      parameters:
-        link:
-          type: link
-          locales:
-            en:
-              path: /${locale}/coffee-beans
-              type: projectMapNode
-              nodeId: 9db6eee2-5e3b-4e3e-9e26-836d3973217c
-              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-              dynamicInputValues:
-                locale: ${locale}
-        text:
-          type: text
-          value: Coffee Beans
     852664d7-7d35-4eb5-97ad-e1c23ce940ca:
       parameters:
         pageTitle:
@@ -287,57 +209,6 @@ composition:
         text:
           type: text
           value: See all
-    aab1dc4d-ef5d-4284-978d-d7c9c2e3ca93:
-      parameters:
-        link:
-          type: link
-          locales:
-            en:
-              path: /${locale}/beans-bundle
-              type: projectMapNode
-              nodeId: 50a1163d-53a4-44c7-98b0-485e0baa983e
-              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-              dynamicInputValues:
-                locale: ${locale}
-        text:
-          type: text
-          value: Sign up for membership
-    be29c33f-1ba2-4ea6-86b7-45da344bf9dd:
-      parameters:
-        link:
-          type: link
-          locales:
-            en:
-              path: /${locale}/beans-bundle
-              type: projectMapNode
-              nodeId: 50a1163d-53a4-44c7-98b0-485e0baa983e
-              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-              dynamicInputValues:
-                locale: ${locale}
-        text:
-          type: text
-          value: Sign up for membership
-        buttonColor:
-          type: dex-color-palette-parameter
-          value: button-secondary-hover
-        hoverButtonColor:
-          type: dex-color-palette-parameter
-          value: button-secondary-hover
-    c86fa3e5-5f35-4080-9d1e-57096b048013:
-      parameters:
-        link:
-          type: link
-          locales:
-            en:
-              path: /${locale}/coffee-beans
-              type: projectMapNode
-              nodeId: 9db6eee2-5e3b-4e3e-9e26-836d3973217c
-              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-              dynamicInputValues:
-                locale: ${locale}
-        text:
-          type: text
-          value: Taste the Difference
     e938d521-4394-41a2-8d3b-2f72181eb300:
       parameters:
         $pzCrit:
@@ -346,21 +217,6 @@ composition:
         displayName:
           type: text
           value: Beans Bundle promo
-    eb08b700-ced5-4e01-8f5b-a6170da94932:
-      parameters:
-        link:
-          type: link
-          locales:
-            en:
-              path: /${locale}/cart
-              type: projectMapNode
-              nodeId: 5c88cfb5-bf57-4dc4-b25c-be9510d01b81
-              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-              dynamicInputValues:
-                locale: ${locale}
-        text:
-          type: text
-          value: Complete your payment
     13a58c2b-eced-49bc-98fb-13c6ed96c9e7|3090a8f6-e088-4d8f-a8f0-e6dff9ddb28a:
       slots:
         $slotSectionItems:
@@ -395,62 +251,7 @@ composition:
           locales:
             en: >-
               ${#jptr:/Product List Content entries Loop
-              Item/entry/fields/variants/value/0/fields/currency/value}${#jptr:/Product
-              List Content entries Loop
               Item/entry/fields/variants/value/0/fields/price/value}
-    22e9a49c-1d3e-4697-9a96-9a873d2f36d8|5d86f5e9-47d6-4e77-a139-83228ec0be41:
-      slots:
-        $slotSectionItems:
-          - _id: 1c0ab793-041c-4120-a82f-0da8d9c5fe56
-            type: button
-            _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
-            _overridability:
-              variants: true
-              parameters:
-                link: 'yes'
-                text: 'yes'
-                fullWidth: 'yes'
-                textColor: 'no'
-              hideLockedParameters: true
-    22e9a49c-1d3e-4697-9a96-9a873d2f36d8|c50e99a6-1d91-4d6e-9a22-3154d4e4a8b7:
-      parameters:
-        text:
-          type: text
-          value: Only for the most exclusive coffee enthusiasts.
-    22e9a49c-1d3e-4697-9a96-9a873d2f36d8|fcac6346-1864-4284-8715-a0e4fb4854f4:
-      parameters:
-        image:
-          type: asset
-          value:
-            - _id: 021bcf35-5a93-4ee3-a042-c310f783f202
-              type: image
-              fields:
-                id:
-                  type: text
-                  value: d3a8701d-e216-45a0-8def-381858fad958
-                url:
-                  type: text
-                  value: >-
-                    https://img.uniform.global/p/LP10biebQ3mceUhiJEdfvg/a4ucJwl5R8mgBMyPyr48JA-image.png
-                file:
-                  type: file
-                  value: bd1c84df-d205-4779-a145-d6d915f95282
-                size:
-                  type: number
-                  value: 1478877
-                title:
-                  type: text
-                  value: image.png
-                width:
-                  type: number
-                  value: 1440
-                height:
-                  type: number
-                  value: 960
-                mediaType:
-                  type: text
-                  value: image/png
-              _source: uniform-assets
     3074410a-05a6-475d-a592-d12154625515|23ef179e-28e2-4551-83b4-80296f479519:
       slots:
         $slotSectionItems:
@@ -472,285 +273,543 @@ composition:
           locales:
             en: >-
               ${#jptr:/Product List Content entries Loop
-              Item/entry/fields/variants/value/0/fields/currency/value}${#jptr:/Product
-              List Content entries Loop
               Item/entry/fields/variants/value/0/fields/price/value}
-    33cbf07c-053b-4542-8b5b-18d1026d1d86|5d86f5e9-47d6-4e77-a139-83228ec0be41:
-      slots:
-        $slotSectionItems:
-          - _id: eb08b700-ced5-4e01-8f5b-a6170da94932
-            type: button
-            _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
-            _overridability:
-              variants: true
-              parameters:
-                link: 'yes'
-                text: 'yes'
-                fullWidth: 'yes'
-                textColor: 'no'
-              hideLockedParameters: true
-    33cbf07c-053b-4542-8b5b-18d1026d1d86|c50e99a6-1d91-4d6e-9a22-3154d4e4a8b7:
-      parameters:
-        text:
-          type: text
-          value: Ready to make it yours? Complete your purchase today
-    33cbf07c-053b-4542-8b5b-18d1026d1d86|fcac6346-1864-4284-8715-a0e4fb4854f4:
-      parameters:
-        image:
-          type: asset
-          value:
-            - _id: d9e993a3-0cba-4c9d-a9d6-2acc4f4acb8b
-              type: image
-              fields:
-                id:
-                  type: text
-                  value: c424e408-6515-49b8-9147-a2ef08c1c4ff
-                url:
-                  type: text
-                  value: >-
-                    https://img.uniform.global/p/AkRE_ExESnO-LQvImsGrxA/ZXyl8xenSQK788qGw0Us_Q-vietnamese-coffee-filter-drip.jpeg
-                file:
-                  type: file
-                  value: eb765e63-a646-4b81-9694-ee3cbea0c421
-                size:
-                  type: number
-                  value: 243065
-                title:
-                  type: text
-                  value: vietnamese-coffee-filter-drip.jpeg
-                width:
-                  type: number
-                  value: 2600
-                height:
-                  type: number
-                  value: 1300
-                mediaType:
-                  type: text
-                  value: image/jpeg
-              _source: uniform-assets
-    34261571-3623-41e0-bda8-7f1a5fdef37e|215f54df-5063-4f0a-81c0-d8bda909b52c:
-      parameters:
-        image:
-          type: asset
-          value:
-            - _id: 979da552-6cd2-46dc-be10-b553ac4a9ca4
-              type: image
-              fields:
-                id:
-                  type: text
-                  value: f7df46ef-3544-46e5-8105-7e926992988f
-                url:
-                  type: text
-                  value: >-
-                    https://img.uniform.global/p/AkRE_ExESnO-LQvImsGrxA/md-lnWD-R-WOmgEti22zwg-arabica-vs-robusta.jpg
-                file:
-                  type: file
-                  value: c4eb98ee-46b6-4a00-a2bf-0644c09c89a3
-                size:
-                  type: number
-                  value: 1166906
-                title:
-                  type: text
-                  value: arabica-vs-robusta.jpg
-                width:
-                  type: number
-                  value: 2400
-                height:
-                  type: number
-                  value: 1600
-                mediaType:
-                  type: text
-                  value: image/jpeg
-              _source: uniform-assets
-        overlayColor:
-          type: dex-color-palette-parameter
-          value: general-color-3
-        overlayOpacity:
-          type: dex-slider-control-parameter
-          value: '0.5'
-    34261571-3623-41e0-bda8-7f1a5fdef37e|bd7e5037-b737-441a-99f3-94450a442a6e:
-      slots:
-        $slotSectionItems:
-          - _id: c86fa3e5-5f35-4080-9d1e-57096b048013
-            type: button
-            _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
-            _overridability:
-              variants: true
-              parameters:
-                link: 'yes'
-                text: 'yes'
-                fullWidth: 'yes'
-                textColor: 'no'
-              hideLockedParameters: true
-    34261571-3623-41e0-bda8-7f1a5fdef37e|edea6a24-f36d-48c7-acdb-e0dbd8ed511e:
-      parameters:
-        text:
-          type: text
-          value: >-
-            If coffee is more than just a drink for you, you’re in the right
-            place
-    411aab8f-d562-4cae-ac2b-4470db036909|5d86f5e9-47d6-4e77-a139-83228ec0be41:
-      slots:
-        $slotSectionItems:
-          - _id: 68e34c5d-5177-4094-9e64-eef21d58da91
-            type: button
-            _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
-            _overridability:
-              variants: true
-              parameters:
-                link: 'yes'
-                text: 'yes'
-                fullWidth: 'yes'
-                textColor: 'no'
-              hideLockedParameters: true
-          - _id: 2cf1eec0-f4de-4580-b02f-08b702e11fd4
-            type: button
-            _pattern: 53b59aed-e378-4fcb-9135-20247d92074e
-            _overridability:
-              variants: true
-              parameters:
-                link: 'yes'
-                text: 'yes'
-                fullWidth: 'yes'
-                textWeight: 'no'
-                buttonColor: 'yes'
-                iconPosition: 'yes'
-                textTransform: 'no'
-                hoverTextColor: 'no'
-                hoverButtonColor: 'no'
-              hideLockedParameters: true
-    411aab8f-d562-4cae-ac2b-4470db036909|c50e99a6-1d91-4d6e-9a22-3154d4e4a8b7:
-      parameters:
-        text:
-          type: text
-          value: Find the perfect cup without leaving your home
-    503b72ae-4a31-4051-b410-e9daa61b5905|3cef9a4a-f0c8-4eeb-a855-a28fd1335351:
-      parameters:
-        image:
-          type: asset
-          value:
-            - _id: e1bfc2f7-86a9-414b-ac21-00c398c72641
-              type: image
-              fields:
-                id:
-                  type: text
-                  value: b458e3c4-cf73-4efe-a899-7b8100e14d6b
-                url:
-                  type: text
-                  value: >-
-                    https://img.uniform.global/p/AkRE_ExESnO-LQvImsGrxA/gNtPU_1uStytVGmkNznRlQ-expert-tips-for-french-press-success.jpg
-                file:
-                  type: file
-                  value: c2c41737-044f-4914-8e83-14902ff4dcd0
-                size:
-                  type: number
-                  value: 6384704
-                title:
-                  type: text
-                  value: expert-tips-for-french-press-success.jpg
-                width:
-                  type: number
-                  value: 6000
-                height:
-                  type: number
-                  value: 4000
-                mediaType:
-                  type: text
-                  value: image/jpeg
-              _source: uniform-assets
-    503b72ae-4a31-4051-b410-e9daa61b5905|5016ff87-24e4-4601-9352-ffc7bcacf197:
-      parameters:
-        text:
-          type: text
-          value: >-
-            The perfect cup starts with the right machine. Whether you’re after
-            precision espresso or effortless drip coffee, we’ve curated top-tier
-            coffee machines to match your passion. Discover the latest
-            innovations and make every sip exceptional!
-    503b72ae-4a31-4051-b410-e9daa61b5905|74170e2f-021f-4f8c-85dd-885af205a737:
-      parameters:
-        text:
-          type: text
-          value: Elevate Your Brew with the Perfect Machine!
-    503b72ae-4a31-4051-b410-e9daa61b5905|fa933a66-ceec-4443-bf4b-2ea8ddd1aba2:
-      parameters:
-        link:
-          type: link
-          locales:
-            en:
-              path: /${locale}/coffee-makers
-              type: projectMapNode
-              nodeId: c9869cee-a65c-4064-b296-78c4a5ba4ffc
-              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-              dynamicInputValues:
-                locale: ${locale}
-        text:
-          type: text
-          value: Discover the Best Machines
     852664d7-7d35-4eb5-97ad-e1c23ce940ca|dc2e95be-21b5-4476-a309-f8a34922f528:
       slots:
         $slotSectionItems:
-          - _id: 5293fceb-dbc8-4b64-ae40-e1d7bf7a3aa4
+          - _id: 12ca7d44-ca3a-4608-8426-5943321dcf13
             type: $personalization
             slots:
               pz:
-                - _id: 22e9a49c-1d3e-4697-9a96-9a873d2f36d8
+                - _id: d506caa7-156a-4a69-87ad-025ab82aa371
                   type: featuredSection
-                  _pattern: d7181e81-f3d1-4e21-af6f-1e73c8dfa6b5
+                  slots:
+                    sectionCTA:
+                      - _id: 453d1d85-c30f-4d7e-a29f-06990a060563
+                        type: button
+                        parameters:
+                          link:
+                            type: link
+                            locales:
+                              en:
+                                path: /${locale}/coffee-beans
+                                type: projectMapNode
+                                nodeId: 9db6eee2-5e3b-4e3e-9e26-836d3973217c
+                                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                                dynamicInputValues:
+                                  locale: ${locale}
+                          size:
+                            type: dex-token-selector-parameter
+                            value: button-medium
+                          text:
+                            type: text
+                            value: Coffee Beans
+                          border:
+                            type: dex-token-selector-parameter
+                            value: border-button-secondary
+                          textSize:
+                            type: dex-segmented-control-parameter
+                            value:
+                              mobile: sm
+                              tablet: sm
+                              desktop: sm
+                          textColor:
+                            type: dex-color-palette-parameter
+                            value: text-primary
+                          textWeight:
+                            type: dex-segmented-control-parameter
+                            value: bold
+                          buttonColor:
+                            type: dex-color-palette-parameter
+                            value: button-secondary
+                          iconPosition:
+                            type: dex-segmented-control-parameter
+                            value: right
+                          textTransform:
+                            type: dex-segmented-control-parameter
+                            value: uppercase
+                          hoverTextColor:
+                            type: dex-color-palette-parameter
+                            value: text-secondary
+                          hoverButtonColor:
+                            type: dex-color-palette-parameter
+                            value: button-primary
+                        _overridability:
+                          variants: true
+                          parameters:
+                            link: 'yes'
+                            text: 'yes'
+                            fullWidth: 'yes'
+                            textColor: 'no'
+                          hideLockedParameters: true
+                      - _id: 4ce96816-ae8e-46eb-921c-55ec53358979
+                        type: button
+                        parameters:
+                          link:
+                            type: link
+                            locales:
+                              en:
+                                path: /${locale}/coffee-makers
+                                type: projectMapNode
+                                nodeId: c9869cee-a65c-4064-b296-78c4a5ba4ffc
+                                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                                dynamicInputValues:
+                                  locale: ${locale}
+                          size:
+                            type: dex-token-selector-parameter
+                            value: button-medium
+                          text:
+                            type: text
+                            value: Coffee Makers
+                          border:
+                            type: dex-token-selector-parameter
+                            value: border-button-primary
+                          textSize:
+                            type: dex-segmented-control-parameter
+                            value:
+                              mobile: sm
+                              tablet: sm
+                              desktop: sm
+                          textColor:
+                            type: dex-color-palette-parameter
+                            value: text-light
+                          textWeight:
+                            type: dex-segmented-control-parameter
+                            value: bold
+                          iconPosition:
+                            type: dex-segmented-control-parameter
+                            value: left
+                          textTransform:
+                            type: dex-segmented-control-parameter
+                            value: uppercase
+                          hoverTextColor:
+                            type: dex-color-palette-parameter
+                            value: text-primary
+                          hoverButtonColor:
+                            type: dex-color-palette-parameter
+                            value: button-secondary
+                        _overridability:
+                          variants: true
+                          parameters:
+                            link: 'yes'
+                            text: 'yes'
+                            fullWidth: 'yes'
+                            textWeight: 'no'
+                            buttonColor: 'yes'
+                            iconPosition: 'yes'
+                            textTransform: 'no'
+                            hoverTextColor: 'no'
+                            hoverButtonColor: 'no'
+                          hideLockedParameters: true
+                    sectionMedia:
+                      - _id: 87b34315-a1c9-4df4-853f-7d1f99cc32f4
+                        type: image
+                        parameters:
+                          image:
+                            type: asset
+                            value:
+                              - _id: 85f59b04-50bb-48e2-a930-5bf28211c0f1
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 4a540191-b713-42b0-a2f6-e96ce1450aca
+                                  url:
+                                    type: text
+                                    value: >-
+                                      https://img.uniform.global/p/ovl3f_RJSNmuo41YikmFlA/ghES--v1Rbi-pl3NlfZq9A-beans-heart.jpg
+                                  file:
+                                    type: file
+                                    value: 0d81a7d7-f5b1-48a0-869f-dd23aff77741
+                                  size:
+                                    type: number
+                                    value: 1836620
+                                  title:
+                                    type: text
+                                    value: beans-heart.jpg
+                                  width:
+                                    type: number
+                                    value: 4608
+                                  height:
+                                    type: number
+                                    value: 3072
+                                  mediaType:
+                                    type: text
+                                    value: image/jpeg
+                                _source: uniform-assets
+                                _overrides:
+                                  fields:
+                                    focalPoint:
+                                      type: focalPoint
+                                      value:
+                                        x: 0.28
+                                        'y': 0.63
+                          priority:
+                            type: checkbox
+                            value: true
+                          objectFit:
+                            type: dex-segmented-control-parameter
+                            value: cover
+                          unoptimized:
+                            type: checkbox
+                            value: true
+                        _overridability:
+                          parameters:
+                            image: 'yes'
+                          hideLockedParameters: true
+                    sectionContent:
+                      - _id: 69d29edc-1892-40d9-8ad1-7bed80811c70
+                        type: text
+                        parameters:
+                          tag:
+                            type: dex-segmented-control-parameter
+                            value: span
+                          size:
+                            type: dex-segmented-control-parameter
+                            value:
+                              mobile: 2xl
+                              tablet: 5xl
+                              desktop: 5xl
+                          text:
+                            type: text
+                            locales:
+                              en: >-
+                                Elevate your coffee experience, designed for
+                                aficionados.
+                          color:
+                            type: dex-color-palette-parameter
+                            value: text-secondary
+                          weight:
+                            type: dex-segmented-control-parameter
+                            value: bold
+                          alignment:
+                            type: dex-segmented-control-parameter
+                            value: left
+                          letterSpacing:
+                            type: dex-segmented-control-parameter
+                            value: wide
+                        _overridability:
+                          parameters:
+                            text: 'yes'
+                          hideLockedParameters: true
+                  parameters:
+                    $pzCrit:
+                      type: $pzCrit
+                      value:
+                        crit:
+                          - l: coffeeAficionado
+                            r: '0'
+                            op: +
+                        name: Hero for Coffee Aficionados
+                    spacing:
+                      type: dex-space-control-parameter
+                      value:
+                        paddingTop: container-xxlarge
+                        paddingBottom: container-xxlarge
+                    displayName:
+                      type: text
+                      value: Welcome Hero
+                    fluidContent:
+                      type: checkbox
+                      value: true
+                    contentSpacing:
+                      type: dex-space-control-parameter
+                      value:
+                        mobile:
+                          paddingTop: container-medium
+                          paddingLeft: container-small
+                          paddingRight: container-small
+                          paddingBottom: container-medium
+                        tablet:
+                          paddingTop: container-medium
+                          paddingLeft: container-small
+                          paddingRight: container-small
+                          paddingBottom: container-medium
+                        desktop:
+                          marginTop: ''
+                          marginLeft: ''
+                          paddingTop: container-large
+                          marginRight: ''
+                          paddingLeft: container-large
+                          marginBottom: ''
+                          paddingRight: container-large
+                          paddingBottom: container-large
+                    contentAlignment:
+                      type: dex-segmented-control-parameter
+                      value: left
+                    contentBackgroundColor:
+                      type: dex-color-palette-parameter
+                      value: general-color-2
                   _overridability:
                     parameters:
                       displayName: 'yes'
                       contentBackgroundColor: 'yes'
                     hideLockedParameters: true
-                - _id: 33cbf07c-053b-4542-8b5b-18d1026d1d86
+                - _id: d9ef2afe-0070-458c-a635-3f97b5851b8c
                   type: featuredSection
-                  _pattern: d7181e81-f3d1-4e21-af6f-1e73c8dfa6b5
-                  _overridability:
-                    parameters:
-                      displayName: 'yes'
-                      contentBackgroundColor: 'yes'
-                    hideLockedParameters: true
-                - _id: 503b72ae-4a31-4051-b410-e9daa61b5905
-                  type: section
-                  variant: columns
-                  _pattern: efb7c9ed-2372-4069-b4d9-2ec45a8efbcb
-                  _overridability:
-                    parameters:
-                      spacing: 'yes'
-                      displayName: 'yes'
-                      fluidContent: 'yes'
-                    hideLockedParameters: true
-                - _id: 34261571-3623-41e0-bda8-7f1a5fdef37e
-                  type: section
-                  _pattern: 90b32c21-f5d8-4a40-b971-c97c359ecce9
-                  _overridability:
-                    parameters:
-                      displayName: 'yes'
-                    hideLockedParameters: true
-                - _id: 411aab8f-d562-4cae-ac2b-4470db036909
-                  type: featuredSection
-                  _pattern: d7181e81-f3d1-4e21-af6f-1e73c8dfa6b5
+                  slots:
+                    sectionCTA:
+                      - _id: 38f8dd40-64c2-4527-8424-605cab404a3b
+                        type: button
+                        parameters:
+                          link:
+                            type: link
+                            locales:
+                              en:
+                                path: /${locale}/coffee-beans
+                                type: projectMapNode
+                                nodeId: 9db6eee2-5e3b-4e3e-9e26-836d3973217c
+                                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                                dynamicInputValues:
+                                  locale: ${locale}
+                          size:
+                            type: dex-token-selector-parameter
+                            value: button-medium
+                          text:
+                            type: text
+                            value: Coffee Beans
+                          border:
+                            type: dex-token-selector-parameter
+                            value: border-button-secondary
+                          textSize:
+                            type: dex-segmented-control-parameter
+                            value:
+                              mobile: sm
+                              tablet: sm
+                              desktop: sm
+                          textColor:
+                            type: dex-color-palette-parameter
+                            value: text-primary
+                          textWeight:
+                            type: dex-segmented-control-parameter
+                            value: bold
+                          buttonColor:
+                            type: dex-color-palette-parameter
+                            value: button-secondary
+                          iconPosition:
+                            type: dex-segmented-control-parameter
+                            value: right
+                          textTransform:
+                            type: dex-segmented-control-parameter
+                            value: uppercase
+                          hoverTextColor:
+                            type: dex-color-palette-parameter
+                            value: text-secondary
+                          hoverButtonColor:
+                            type: dex-color-palette-parameter
+                            value: button-primary
+                        _overridability:
+                          variants: true
+                          parameters:
+                            link: 'yes'
+                            text: 'yes'
+                            fullWidth: 'yes'
+                            textColor: 'no'
+                          hideLockedParameters: true
+                      - _id: c69508ed-86d4-4dde-b1ac-23f1f0376ee9
+                        type: button
+                        parameters:
+                          link:
+                            type: link
+                            locales:
+                              en:
+                                path: /${locale}/coffee-makers
+                                type: projectMapNode
+                                nodeId: c9869cee-a65c-4064-b296-78c4a5ba4ffc
+                                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                                dynamicInputValues:
+                                  locale: ${locale}
+                          size:
+                            type: dex-token-selector-parameter
+                            value: button-medium
+                          text:
+                            type: text
+                            value: Coffee Makers
+                          border:
+                            type: dex-token-selector-parameter
+                            value: border-button-primary
+                          textSize:
+                            type: dex-segmented-control-parameter
+                            value:
+                              mobile: sm
+                              tablet: sm
+                              desktop: sm
+                          textColor:
+                            type: dex-color-palette-parameter
+                            value: text-light
+                          textWeight:
+                            type: dex-segmented-control-parameter
+                            value: bold
+                          iconPosition:
+                            type: dex-segmented-control-parameter
+                            value: left
+                          textTransform:
+                            type: dex-segmented-control-parameter
+                            value: uppercase
+                          hoverTextColor:
+                            type: dex-color-palette-parameter
+                            value: text-primary
+                          hoverButtonColor:
+                            type: dex-color-palette-parameter
+                            value: button-secondary
+                        _overridability:
+                          variants: true
+                          parameters:
+                            link: 'yes'
+                            text: 'yes'
+                            fullWidth: 'yes'
+                            textWeight: 'no'
+                            buttonColor: 'yes'
+                            iconPosition: 'yes'
+                            textTransform: 'no'
+                            hoverTextColor: 'no'
+                            hoverButtonColor: 'no'
+                          hideLockedParameters: true
+                    sectionMedia:
+                      - _id: 3866ae8d-08a2-48d0-b6e1-e4e2d9e5fcac
+                        type: image
+                        parameters:
+                          image:
+                            type: asset
+                            value:
+                              - _id: 0d62516b-be94-4273-9dbe-34c98b8b728d
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: c64606e3-4d79-40d2-9a52-1dacb84bf31d
+                                  url:
+                                    type: text
+                                    value: >-
+                                      https://img.uniform.global/p/9VlMgIbZQQKI2wzV-L0jow/fjrdlCBtQKqDwke6pkI--w-latte-art-pouring-coffee.jpeg
+                                  file:
+                                    type: file
+                                    value: 48b246f2-1f3d-410b-91d7-f0a2f0477e9f
+                                  size:
+                                    type: number
+                                    value: 237701
+                                  title:
+                                    type: text
+                                    value: latte-art-pouring-coffee.jpeg
+                                  width:
+                                    type: number
+                                    value: 2600
+                                  height:
+                                    type: number
+                                    value: 1300
+                                  mediaType:
+                                    type: text
+                                    value: image/jpeg
+                                _source: uniform-assets
+                          priority:
+                            type: checkbox
+                            value: true
+                          objectFit:
+                            type: dex-segmented-control-parameter
+                            value: cover
+                          unoptimized:
+                            type: checkbox
+                            value: true
+                        _overridability:
+                          parameters:
+                            image: 'yes'
+                          hideLockedParameters: true
+                    sectionContent:
+                      - _id: b2d4037a-f495-4143-be5b-f8a00f620fb5
+                        type: text
+                        parameters:
+                          tag:
+                            type: dex-segmented-control-parameter
+                            value: span
+                          size:
+                            type: dex-segmented-control-parameter
+                            value:
+                              mobile: 2xl
+                              tablet: 5xl
+                              desktop: 5xl
+                          text:
+                            type: text
+                            locales:
+                              en: A perfect cup meets comfort of your home
+                          color:
+                            type: dex-color-palette-parameter
+                            value: text-secondary
+                          weight:
+                            type: dex-segmented-control-parameter
+                            value: bold
+                          alignment:
+                            type: dex-segmented-control-parameter
+                            value: left
+                          letterSpacing:
+                            type: dex-segmented-control-parameter
+                            value: wide
+                        _overridability:
+                          parameters:
+                            text: 'yes'
+                          hideLockedParameters: true
+                  parameters:
+                    $pzCrit:
+                      type: $pzCrit
+                      value:
+                        crit: []
+                        name: Default Hero
+                    spacing:
+                      type: dex-space-control-parameter
+                      value:
+                        paddingTop: container-xxlarge
+                        paddingBottom: container-xxlarge
+                    displayName:
+                      type: text
+                      value: Welcome Hero
+                    fluidContent:
+                      type: checkbox
+                      value: true
+                    contentSpacing:
+                      type: dex-space-control-parameter
+                      value:
+                        mobile:
+                          paddingTop: container-medium
+                          paddingLeft: container-small
+                          paddingRight: container-small
+                          paddingBottom: container-medium
+                        tablet:
+                          paddingTop: container-medium
+                          paddingLeft: container-small
+                          paddingRight: container-small
+                          paddingBottom: container-medium
+                        desktop:
+                          marginTop: ''
+                          marginLeft: ''
+                          paddingTop: container-large
+                          marginRight: ''
+                          paddingLeft: container-large
+                          marginBottom: ''
+                          paddingRight: container-large
+                          paddingBottom: container-large
+                    contentAlignment:
+                      type: dex-segmented-control-parameter
+                      value: left
+                    contentBackgroundColor:
+                      type: dex-color-palette-parameter
+                      value: general-color-2
                   _overridability:
                     parameters:
                       displayName: 'yes'
                       contentBackgroundColor: 'yes'
                     hideLockedParameters: true
             parameters:
-              count:
-                type: number
-                value: '1'
               trackingEventName:
                 type: text
-                value: Main Hero
-          - _id: 98c6dc31-518c-4d5e-beb8-85472a607f2b
+                value: Hero Personalization
+          - _id: fada7724-57a6-4055-a75b-f7d9af44400a
             type: $test
             slots:
               test:
-                - _id: 6f41a578-4718-482a-9579-88337bed6983
+                - _id: 92ac3652-804d-4ecd-9d5c-af752e7b85a7
                   type: section
                   slots:
                     sectionCTA:
-                      - _id: aab1dc4d-ef5d-4284-978d-d7c9c2e3ca93
+                      - _id: 2f992602-e0b0-44be-b932-00a6f5002583
                         type: button
                         _pattern: 8060e691-b0b3-428c-92f1-278fc76baf47
                         _overridability:
@@ -758,7 +817,7 @@ composition:
                           parameters:
                             link: 'yes'
                             text: 'yes'
-                            textColor: 'no'
+                            textColor: 'yes'
                             textWeight: 'yes'
                             buttonColor: 'yes'
                             textTransform: 'yes'
@@ -766,7 +825,7 @@ composition:
                             hoverButtonColor: 'yes'
                           hideLockedParameters: true
                     sectionContent:
-                      - _id: 80973b81-8bb4-482c-9c6c-aa4ce48292b4
+                      - _id: 65f1426e-e522-4f5c-9834-ece9fea5a6f1
                         type: text
                         parameters:
                           tag:
@@ -787,7 +846,7 @@ composition:
                           weight:
                             type: dex-segmented-control-parameter
                             value: bold
-                      - _id: 7da6aa0b-7bf4-4864-917e-c4a431ba940b
+                      - _id: 5c6cbe45-7548-4158-ae1e-15b5fe67b0ff
                         type: text
                         parameters:
                           tag:
@@ -834,11 +893,11 @@ composition:
                     contentAlignment:
                       type: dex-segmented-control-parameter
                       value: center
-                - _id: bc3ceb50-698a-4662-b4a9-7a89844ba657
+                - _id: a3cbce1b-3ab3-4d7b-92d2-a5022e2445fc
                   type: section
                   slots:
                     sectionCTA:
-                      - _id: be29c33f-1ba2-4ea6-86b7-45da344bf9dd
+                      - _id: 076ec962-8c25-417f-9070-50d96979b484
                         type: button
                         _pattern: 8060e691-b0b3-428c-92f1-278fc76baf47
                         _overridability:
@@ -846,7 +905,7 @@ composition:
                           parameters:
                             link: 'yes'
                             text: 'yes'
-                            textColor: 'no'
+                            textColor: 'yes'
                             textWeight: 'yes'
                             buttonColor: 'yes'
                             textTransform: 'yes'
@@ -854,15 +913,9 @@ composition:
                             hoverButtonColor: 'yes'
                           hideLockedParameters: true
                     sectionMedia:
-                      - _id: c7ad6516-f656-4c05-9807-f2858c0121aa
+                      - _id: 414fe284-9c27-4c15-b4e6-000fb9b3e48f
                         type: video
                         parameters:
-                          url:
-                            type: link
-                            value:
-                              path: >-
-                                https://files.uniform.global/p/ovl3f_RJSNmuo41YikmFlA/_hghTn8SQSucNGkk6aw5Qg-3365440-uhd_3840_2160_30fps.mp4
-                              type: url
                           loop:
                             type: checkbox
                             value: true
@@ -872,12 +925,38 @@ composition:
                           autoPlay:
                             type: checkbox
                             value: true
+                          videoAsset:
+                            type: asset
+                            value:
+                              - _id: 66f94224-bfea-45d8-b8ea-c049aee0c06e
+                                type: video
+                                fields:
+                                  id:
+                                    type: text
+                                    value: ede2372e-b790-4da5-9d8b-09bf6365b537
+                                  url:
+                                    type: text
+                                    value: >-
+                                      https://files.uniform.global/p/ovl3f_RJSNmuo41YikmFlA/nOFB_qCoQ9isiRbhJa_Ykw-4820352-uhd_4096_2160_25fps.mp4
+                                  file:
+                                    type: file
+                                    value: 8bbfcbb1-4e17-4f0a-a101-33a2075b10b9
+                                  size:
+                                    type: number
+                                    value: 39836004
+                                  title:
+                                    type: text
+                                    value: 4820352-uhd_4096_2160_25fps.mp4
+                                  mediaType:
+                                    type: text
+                                    value: video/mp4
+                                _source: uniform-assets
                           displayName:
                             type: text
                             locales:
                               en: Video
                     sectionContent:
-                      - _id: 6da60de3-1765-46c7-bae3-445fae1fe42b
+                      - _id: 855dfdfe-14d0-4c5c-ad87-97cf3b3b4e7b
                         type: text
                         parameters:
                           tag:
@@ -898,7 +977,7 @@ composition:
                           weight:
                             type: dex-segmented-control-parameter
                             value: bold
-                      - _id: a02606b4-5c2a-43cc-8c69-d0e9a671d256
+                      - _id: a84e9c58-8557-4bad-b6ad-cf7258d0de09
                         type: text
                         parameters:
                           tag:
@@ -950,9 +1029,12 @@ composition:
                     displayName:
                       type: text
                       value: Why we’re obsessed with coffee
+                    fluidContent:
+                      type: checkbox
+                      value: true
                     backgroundColor:
                       type: dex-color-palette-parameter
-                      value: general-color-1
+                      value: general-color-6
                     contentAlignment:
                       type: dex-segmented-control-parameter
                       value: center
@@ -994,62 +1076,6 @@ composition:
                 displayName: 'yes'
                 backgroundColor: 'yes'
               hideLockedParameters: true
-          - _id: cf8dc5a9-71a7-4fac-bde1-f1185a62af80
-            type: dynamicProductRecommendations
-            slots:
-              dynamicRecommendationsTitle:
-                - _id: 86ee04d5-88fd-421c-8f22-6644ea83afd5
-                  type: text
-                  parameters:
-                    tag:
-                      type: dex-segmented-control-parameter
-                      value: span
-                    size:
-                      type: dex-segmented-control-parameter
-                      value:
-                        mobile: 2xl
-                        tablet: 4xl
-                        desktop: 4xl
-                    text:
-                      type: text
-                      locales:
-                        en: You may also be interested in this...
-                    color:
-                      type: dex-color-palette-parameter
-                      value: text-primary
-                    weight:
-                      type: dex-segmented-control-parameter
-                      value: bold
-                    alignment:
-                      type: dex-segmented-control-parameter
-                      value: center
-            parameters:
-              border:
-                type: dex-token-selector-parameter
-                value: ''
-              spacing:
-                type: dex-space-control-parameter
-                value:
-                  mobile:
-                    paddingTop: container-medium
-                    paddingBottom: container-medium
-                  tablet:
-                    paddingTop: container-medium
-                    paddingBottom: container-medium
-                  desktop:
-                    paddingTop: container-medium
-                    paddingBottom: container-medium
-              displayName:
-                type: text
-                locales:
-                  en: Recommendations
-              boostEnrichments:
-                type: multi-select
-                value:
-                  - int,category
-              maxRecommendations:
-                type: number
-                value: '3'
           - _id: 13a58c2b-eced-49bc-98fb-13c6ed96c9e7
             type: grid
             _pattern: 2fa494d2-d69a-49bc-b728-229a1684d77f
@@ -1120,5 +1146,5 @@ composition:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-03-24T20:34:40.378828+00:00'
-modified: '2025-04-05T08:31:52.152055+00:00'
+modified: '2025-04-07T06:49:03.828458+00:00'
 pattern: false

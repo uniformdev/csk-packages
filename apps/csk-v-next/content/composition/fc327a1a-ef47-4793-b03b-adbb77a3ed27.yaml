@@ -166,13 +166,20 @@ composition:
                   parameters:
                     tag:
                       type: dex-segmented-control-parameter
-                      value: span
+                      value: p
+                    size:
+                      type: dex-segmented-control-parameter
+                      value: {}
                     text:
                       type: text
                       locales:
                         en: >-
-                          Control the coffee enthusiast level using this CDP
-                          selector. 
+                          Select a visitor segment to associate with current
+                          visitor's profile and save to set it with Uniform
+                          Context.
+                    weight:
+                      type: dex-segmented-control-parameter
+                      value: normal
                 - _id: 4873f22b-b646-4b66-9666-3ddffdc48447
                   type: quirkSelector
                   _pattern: 0bc0e924-445c-47de-9217-3dc6f889f1e7
@@ -220,7 +227,7 @@ composition:
       parameters:
         text:
           type: text
-          value: Profile
+          value: 🛩️ Visitor Profile Simulator
     5c23965e-e196-4403-861a-183024970d07|4e7f1617-1524-4771-bad7-e871c177ef53:
       parameters:
         text:
@@ -256,6 +263,6 @@ composition:
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-03-25T04:27:52.553325+00:00'
-modified: '2025-04-03T19:23:29.926718+00:00'
+created: '2025-03-24T20:34:41.550317+00:00'
+modified: '2025-04-07T04:44:14.27805+00:00'
 pattern: false

@@ -24,6 +24,7 @@ composition:
           type: dex-color-palette-parameter
           value: button-tertiary
     d86530f1-8df9-4fa2-bc48-b30a751c1290:
+      variant: ''
       parameters:
         link:
           type: link
@@ -34,12 +35,24 @@ composition:
         text:
           type: text
           value: ORDER NOW
+        textColor:
+          type: dex-color-palette-parameter
+          value: text-primary
+        textWeight:
+          type: dex-segmented-control-parameter
+          value: extrabold
         buttonColor:
           type: dex-color-palette-parameter
-          value: button-primary
+          value: button-tertiary-hover
+        textTransform:
+          type: dex-segmented-control-parameter
+          value: capitalize
+        hoverTextColor:
+          type: dex-color-palette-parameter
+          value: text-primary
         hoverButtonColor:
           type: dex-color-palette-parameter
-          value: button-tertiary
+          value: button-secondary
     15c079be-bf28-4e23-8bf9-97ca175ceea7|dc2e95be-21b5-4476-a309-f8a34922f528:
       slots:
         $slotSectionItems:
@@ -60,13 +73,14 @@ composition:
                     sectionCTA:
                       - _id: d86530f1-8df9-4fa2-bc48-b30a751c1290
                         type: button
+                        variant: ''
                         _pattern: 8060e691-b0b3-428c-92f1-278fc76baf47
                         _overridability:
                           variants: true
                           parameters:
                             link: 'yes'
                             text: 'yes'
-                            textColor: 'no'
+                            textColor: 'yes'
                             textWeight: 'yes'
                             buttonColor: 'yes'
                             textTransform: 'yes'
@@ -137,7 +151,7 @@ composition:
                                   value: "Best Value for the Hobby Espresso\_Connoisseur"
                                 color:
                                   type: dex-color-palette-parameter
-                                  value: text-primary
+                                  value: text-secondary
                                 weight:
                                   type: dex-segmented-control-parameter
                                   value: bold
@@ -151,6 +165,9 @@ composition:
                             - _id: b3a84c50-9223-41ff-8cb0-5830301abf6c
                               type: richText
                               parameters:
+                                font:
+                                  type: dex-token-selector-parameter
+                                  value: secondary
                                 text:
                                   type: richText
                                   locales:
@@ -183,16 +200,24 @@ composition:
                                                 version: 1
                                             direction: ltr
                                         direction: ltr
+                                color:
+                                  type: dex-color-palette-parameter
+                                  value: text-secondary
                             - _id: 4450e9f5-273d-4622-be89-301a1bfed977
                               type: text
                               parameters:
                                 tag:
                                   type: dex-segmented-control-parameter
                                   value: span
+                                font:
+                                  type: dex-token-selector-parameter
+                                  value: secondary
                                 size:
                                   type: dex-segmented-control-parameter
                                   value:
-                                    desktop: base
+                                    mobile: lg
+                                    tablet: lg
+                                    desktop: lg
                                 text:
                                   type: text
                                   value: >-
@@ -200,13 +225,16 @@ composition:
                                     The Perfect Grind
                                 color:
                                   type: dex-color-palette-parameter
-                                  value: text-primary
+                                  value: text-secondary
                                 weight:
                                   type: dex-segmented-control-parameter
-                                  value: normal
+                                  value: bold
                                 alignment:
                                   type: dex-segmented-control-parameter
-                                  value: center
+                                  value: left
+                                letterSpacing:
+                                  type: dex-segmented-control-parameter
+                                  value: wide
                         parameters:
                           gap:
                             type: dex-slider-control-parameter
@@ -275,7 +303,7 @@ composition:
                 value: true
               backgroundColor:
                 type: dex-color-palette-parameter
-                value: general-color-12
+                value: general-color-3
           - _id: 6d33d82e-6ba3-432d-ad9a-a0da2f3c733f
             type: container
             slots:
@@ -285,22 +313,25 @@ composition:
                   parameters:
                     tag:
                       type: dex-segmented-control-parameter
-                      value: h1
+                      value: h2
                     size:
                       type: dex-segmented-control-parameter
                       value:
                         mobile: 4xl
                         tablet: 4xl
-                        desktop: 5xl
+                        desktop: 4xl
                     text:
                       type: text
-                      value: 'The Exclusive Beans Bundle contains:'
+                      value: What's inside the  Exclusive Beans Bundle
+                    color:
+                      type: dex-color-palette-parameter
+                      value: text-tertiary
                     weight:
                       type: dex-segmented-control-parameter
                       value: bold
                     alignment:
                       type: dex-segmented-control-parameter
-                      value: left
+                      value: center
             parameters:
               spacing:
                 type: dex-space-control-parameter
@@ -308,9 +339,8 @@ composition:
                   mobile: {}
                   tablet: {}
                   desktop:
-                    paddingTop: container-small
-                    paddingLeft: container-xxlarge
-                    paddingBottom: container-small
+                    paddingTop: container-medium
+                    paddingBottom: container-medium
               displayName:
                 type: text
                 locales:
@@ -1011,7 +1041,7 @@ composition:
                           parameters:
                             link: 'yes'
                             text: 'yes'
-                            textColor: 'no'
+                            textColor: 'yes'
                             textWeight: 'yes'
                             buttonColor: 'yes'
                             textTransform: 'yes'
@@ -1250,5 +1280,5 @@ composition:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-04-03T16:54:40.855179+00:00'
-modified: '2025-04-04T11:43:19.392621+00:00'
+modified: '2025-04-07T04:57:17.907351+00:00'
 pattern: false
