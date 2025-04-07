@@ -113,7 +113,7 @@ export const Drawers: FC<
             </div>
           </Container>
 
-          <div className="py-4">{children}</div>
+          {children}
         </div>
       </div>
     </div>
