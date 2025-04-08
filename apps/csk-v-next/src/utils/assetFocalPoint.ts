@@ -1,30 +1,5 @@
 import type { Asset } from '@uniformdev/assets';
 import type { AssetParamValueItem } from '@uniformdev/canvas';
-import { ASSETS_SOURCE_UNIFORM } from '@uniformdev/canvas';
-
-export const isMediaAssets = (media?: MediaType): media is AssetParamValueItem[] =>
-  Boolean(media && typeof media !== 'string' && Array.isArray(media) && media.length && 'fields' in media[0]);
-
-export const getMediaUrl = (media?: MediaType) => {
-  const mediaUrl: string | undefined = (() => {
-    // If it is string image url
-    if (typeof media === 'string') return media;
-    // If it is asset library image
-    if (isMediaAsset(media)) return media?.fields?.url?.value;
-    // If it is asset library images
-    if (isMediaAssets(media)) return media?.[0]?.fields?.url?.value;
-    return undefined;
-  })();
-
-  if (!mediaUrl || mediaUrl === 'unresolved') return '';
-
-  if (typeof mediaUrl === 'string' && mediaUrl.startsWith('//')) return mediaUrl.replace('//', 'https://');
-
-  return mediaUrl;
-};
-
-export const isMediaAsset = (media?: MediaType): media is AssetParamValueItem =>
-  Boolean(media && typeof media !== 'string' && 'fields' in media);
 
 export type MediaType = string | { path?: string } | AssetParamValueItem | AssetParamValueItem[] | Asset;
 
@@ -44,14 +19,8 @@ export const FIT_OPTIONS = {
   COVER: 'cover' as FitOption,
 } as const;
 
-/**
- * Checks if an asset is hosted by Uniform
- * @param asset The asset to check
- * @returns True if the asset is hosted by Uniform, false otherwise
- */
-export const isAssetLibraryAsset = (asset?: AssetParamValueItem): asset is AssetParamValueItem => {
-  return Boolean(asset && asset._source === ASSETS_SOURCE_UNIFORM);
-};
+export const isMediaAsset = (media?: MediaType): media is AssetParamValueItem =>
+  Boolean(media && typeof media !== 'string' && 'fields' in media);
 
 /**
  * Get a resized asset URL with optional parameters
@@ -116,33 +85,6 @@ const getFocalPointValue = (focalPoint?: FocalPoint): string | undefined => {
   }
 
   return undefined;
-};
-
-export const getAssetFocalPoint = (media?: MediaType): FocalPoint | undefined => {
-  if (!isMediaAsset(media)) return undefined;
-  const defaultFocalPoint: FocalPoint = 'center';
-  return media?.fields?.focalPoint?.value || defaultFocalPoint;
-};
-
-export const getFitQueryParam = (fit?: FitOption) => {
-  if (!fit) return '';
-  return `fit=${fit}`;
-};
-
-export const getFocalPointQueryParam = (focalPoint?: FocalPoint) => {
-  if (!focalPoint) return '';
-
-  // Handle string options
-  if (focalPoint === 'auto' || focalPoint === 'center') {
-    return `focal=${focalPoint}`;
-  }
-
-  // Handle coordinate object
-  if (typeof focalPoint === 'object' && 'x' in focalPoint && 'y' in focalPoint) {
-    return `focal=${focalPoint.x}x${focalPoint.y}`;
-  }
-
-  return '';
 };
 
 function getCorrectFocalPoint(
