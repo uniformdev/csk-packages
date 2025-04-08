@@ -20,25 +20,6 @@ parameters:
         - key: Right
           value: right
       defaultValue: center
-  - id: d61f4a8d-0edd-4c18-832e-68c100a0111f
-    name: Content Presentation Settings
-    type: group
-    typeConfig:
-      collapsed: true
-      childrenParams:
-        - contentBackgroundColor
-        - contentSpacing
-  - id: contentBackgroundColor
-    name: Content Background Color
-    type: dex-color-palette-parameter
-    typeConfig: null
-  - id: contentSpacing
-    name: Content Spacing
-    type: dex-space-control-parameter
-    typeConfig:
-      defaultValue: {}
-      withViewPort: true
-      selectedGroup: container
   - id: 9f8178c3-539f-4a1e-8a4e-71bfcedfe223
     name: Presentation Settings
     type: group
@@ -46,20 +27,53 @@ parameters:
       collapsed: true
       childrenParams:
         - backgroundColor
+        - contentBackgroundColor
         - spacing
+        - contentSpacing
         - border
         - fluidContent
         - fullHeight
   - id: backgroundColor
     name: Background Color
     type: dex-color-palette-parameter
-    typeConfig: null
+    typeConfig:
+      allowColors:
+        - general-color-1
+        - general-color-2
+        - general-color-3
+        - general-color-4
+        - general-color-5
+        - general-color-6
+        - general-color-7
+        - general-color-8
+        - general-color-12
+  - id: contentBackgroundColor
+    name: Content Background Color
+    type: dex-color-palette-parameter
+    typeConfig:
+      allowColors:
+        - general-color-1
+        - general-color-2
+        - general-color-3
+        - general-color-4
+        - general-color-5
+        - general-color-6
+        - general-color-7
+        - general-color-8
+        - general-color-9
   - id: spacing
     name: Spacing
     type: dex-space-control-parameter
     typeConfig:
       type: dimensions
       defaultValue: {}
+      selectedGroup: container
+  - id: contentSpacing
+    name: Content Spacing
+    type: dex-space-control-parameter
+    typeConfig:
+      defaultValue: {}
+      withViewPort: true
       selectedGroup: container
   - id: border
     name: Border
@@ -111,4 +125,4 @@ slots:
 titleParameter: displayName
 canBeComposition: false
 created: '2025-03-24T20:34:28.243874+00:00'
-updated: '2025-04-06T14:52:13.791922+00:00'
+updated: '2025-04-07T17:40:06.39392+00:00'

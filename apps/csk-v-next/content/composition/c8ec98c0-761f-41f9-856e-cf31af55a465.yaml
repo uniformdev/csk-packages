@@ -1,0 +1,96 @@
+composition:
+  _name: Ante
+  _id: c8ec98c0-761f-41f9-856e-cf31af55a465
+  _slug: ante
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      locales:
+        en: For Ante
+  slots:
+    pageHeader:
+      - _id: da781d17-5218-4052-8125-121119e2b144
+        type: header
+        _pattern: 021762f3-8a06-41b4-a4fb-08a837c74415
+    pageContent:
+      - _id: 57ea6d65-009f-4b27-aa43-e7dfc462e0ff
+        type: fixedHero
+        variant: columns
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 5a9d57e4-a552-4c28-a65f-f74b92a10f8c
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 4a540191-b713-42b0-a2f6-e96ce1450aca
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/ovl3f_RJSNmuo41YikmFlA/ghES--v1Rbi-pl3NlfZq9A-beans-heart.jpg
+                    type: text
+                  file:
+                    type: file
+                    value: 0d81a7d7-f5b1-48a0-869f-dd23aff77741
+                  size:
+                    value: 1836620
+                    type: number
+                  title:
+                    type: text
+                    value: beans-heart.jpg
+                  width:
+                    value: 4608
+                    type: number
+                  height:
+                    value: 3072
+                    type: number
+                  mediaType:
+                    value: image/jpeg
+                    type: text
+                _source: uniform-assets
+                _overrides:
+                  fields:
+                    focalPoint:
+                      type: focalPoint
+                      value:
+                        x: 0.29
+                        'y': 0.63
+          titleTag:
+            type: dex-segmented-control-parameter
+            value: h1
+          titleText:
+            type: text
+            locales:
+              en: For Ante
+          displayName:
+            type: text
+            locales:
+              en: Main Home Hero
+          contentAlignment:
+            type: dex-segmented-control-parameter
+            value: left
+          eyebrowTitleText:
+            type: text
+            locales:
+              en: For Coffee Lovers
+          primaryButtonLink:
+            type: link
+            locales:
+              en:
+                path: /${locale}/coffee-makers
+                type: projectMapNode
+                nodeId: c9869cee-a65c-4064-b296-78c4a5ba4ffc
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+          primaryButtonText:
+            type: text
+            locales:
+              en: Explore Exclusive Beans
+  _locales:
+    - en
+created: '2025-04-07T19:54:47.411541+00:00'
+modified: '2025-04-07T20:13:51.623339+00:00'
+pattern: false

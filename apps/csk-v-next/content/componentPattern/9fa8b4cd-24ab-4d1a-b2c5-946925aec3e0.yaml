@@ -19,6 +19,8 @@ composition:
       type: multi-select
       value:
         - subCategory,subcategory
+        - int,category
+        - brand,brand
     maxRecommendations:
       type: number
       value: '3'
@@ -55,5 +57,5 @@ composition:
   _locales:
     - en
 created: '2025-04-07T04:25:49.83756+00:00'
-modified: '2025-04-07T10:57:06.294082+00:00'
+modified: '2025-04-07T18:33:02.707097+00:00'
 pattern: true

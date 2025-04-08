@@ -86,7 +86,13 @@ composition:
             value: '0.5'
         _overridability:
           parameters:
+            $viz: 'yes'
             image: 'yes'
+            width: 'yes'
+            height: 'yes'
+            priority: 'yes'
+            objectFit: 'yes'
+            unoptimized: 'yes'
             overlayColor: 'yes'
             overlayOpacity: 'yes'
           hideLockedParameters: true
@@ -123,7 +129,7 @@ composition:
   _locales:
     - en
 created: '2025-03-24T20:34:59.056406+00:00'
-modified: '2025-04-07T10:50:00.199501+00:00'
+modified: '2025-04-07T19:13:22.400065+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1731067344/csk-v-next/jd-template/simple-hero.jpg
