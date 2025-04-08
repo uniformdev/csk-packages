@@ -114,7 +114,7 @@ export const BaseHeroImage: FC<BaseImageParameters & Omit<ComponentProps, 'param
   }
 
   const { url, title = '', width: assetWidth, height: assetHeight, focalPoint } = resolvedImage;
-  // console.log({ url, assetWidth, assetHeight, focalPoint });
+
   const imageUrl = getResizedAssetUrl(url, assetWidth!, assetHeight!, 1000, 1000, FIT_OPTIONS.COVER, focalPoint) || url;
   return (
     <BaseImage

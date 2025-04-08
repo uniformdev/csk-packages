@@ -30,9 +30,9 @@ export type MediaType = string | { path?: string } | AssetParamValueItem | Asset
 
 type FocalPoint =
   | {
-    x: number;
-    y: number;
-  }
+      x: number;
+      y: number;
+    }
   | 'auto'
   | 'center';
 
@@ -84,12 +84,11 @@ export const getResizedAssetUrl = (
 
   // Add focal point if available
   const focalPointValue = getFocalPointValue(focalPoint);
-  if (fit === FIT_OPTIONS.COVER && focalPointValue) {
-    // console.log("!!!", { width, height, validatedWidth, validatedHeight });
-    const focal = getCorrectFocalPoint(width, height, cropWidth, cropHeight, focalPoint?.x!, focalPoint?.y!);
-    // console.log('focal', { focal, focalPoint, width, height });
+
+  if (fit === FIT_OPTIONS.COVER && focalPointValue && typeof focalPoint === 'object') {
+    const focal = getCorrectFocalPoint(width, height, cropWidth, cropHeight, focalPoint?.x, focalPoint?.y);
+
     searchParams.append('focal', focal);
-    //console.log('focal', { focal, focalPoint, width, height });
   }
 
   // Convert params to string and check if we have any params
