@@ -2,9 +2,11 @@ import { FC } from 'react';
 import { Asset } from '@uniformdev/assets';
 import { LinkParamValue } from '@uniformdev/canvas';
 import { ComponentProps, UniformText } from '@uniformdev/canvas-next-rsc/component';
-import { resolveAsset } from '@uniformdev/csk-components/utils/assets';
 import { formatUniformLink } from '@uniformdev/csk-components/utils/routing';
 import { ProductCard as BaseProductCard } from '@/components/custom-ui/ProductCard';
+import { getResizedAssetUrl } from '@/utils/assetFocalPoint';
+import { FIT_OPTIONS } from '@/utils/assetFocalPoint';
+import { resolveAsset } from '@/utils/assets';
 
 type ProductCardProps = ComponentProps<{
   image: Asset[];
@@ -39,9 +41,13 @@ const ProductCard: FC<ProductCardProps> = ({
   const [resolvedAddToFavoritesIcon] = resolveAsset(addToFavoritesIcon);
   const [resolvedRemoveFromFavoritesIcon] = resolveAsset(removeFromFavoritesIcon);
 
+  const { url, width: assetWidth, height: assetHeight, focalPoint } = resolvedImage;
+
+  const imageUrl = getResizedAssetUrl(url, assetWidth!, assetHeight!, 1000, 1000, FIT_OPTIONS.COVER, focalPoint) || url;
+
   return (
     <BaseProductCard
-      image={resolvedImage?.url}
+      image={imageUrl}
       title={<UniformText component={component} parameterId="title" context={context} />}
       price={price}
       currency={currency}

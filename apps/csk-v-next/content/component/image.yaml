@@ -106,6 +106,22 @@ parameters:
     typeConfig:
       allowTokens: []
       selectedTokenType: border
+  - id: f3c34b2d-2f2f-4309-87dd-751ac36e18c3
+    name: Scale
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - scaleWidth
+        - scaleHeight
+  - id: scaleWidth
+    name: Scale Width
+    type: number
+    typeConfig: null
+  - id: scaleHeight
+    name: Scale Height
+    type: number
+    typeConfig: null
 categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/image.jpg
@@ -114,5 +130,5 @@ slots: []
 titleParameter: image
 thumbnailParameter: image
 canBeComposition: false
-created: '2025-02-17T15:34:14.681024+00:00'
-updated: '2025-02-17T15:34:14.681024+00:00'
+created: '2025-03-25T04:27:38.3854+00:00'
+updated: '2025-04-08T09:35:45.970717+00:00'

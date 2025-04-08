@@ -9,7 +9,7 @@ import BaseText from '@/components/ui/Text';
 import { FIT_OPTIONS, getResizedAssetUrl } from '@/utils/assetFocalPoint';
 import { resolveAsset } from '@/utils/assets';
 import { formatUniformLink } from '@/utils/routing';
-import { BaseButtonParameters, BaseImageParameters } from '.';
+import { BaseButtonParameters, BaseImageParameters, ScaleParameters } from '.';
 
 type ComponentProps = {
   component: ComponentInstance;
@@ -83,7 +83,7 @@ export const BaseHeroButton: FC<BaseButtonParameters & { variant?: ButtonVariant
   );
 };
 
-export const BaseHeroImage: FC<BaseImageParameters & Omit<ComponentProps, 'parameterId'>> = ({
+export const BaseHeroImage: FC<BaseImageParameters & ScaleParameters & Omit<ComponentProps, 'parameterId'>> = ({
   component,
   context,
   image,
@@ -95,6 +95,8 @@ export const BaseHeroImage: FC<BaseImageParameters & Omit<ComponentProps, 'param
   border,
   priority,
   unoptimized,
+  scaleWidth,
+  scaleHeight,
 }) => {
   const [resolvedImage] = resolveAsset(image);
 
@@ -115,7 +117,12 @@ export const BaseHeroImage: FC<BaseImageParameters & Omit<ComponentProps, 'param
 
   const { url, title = '', width: assetWidth, height: assetHeight, focalPoint } = resolvedImage;
 
-  const imageUrl = getResizedAssetUrl(url, assetWidth!, assetHeight!, 1000, 1000, FIT_OPTIONS.COVER, focalPoint) || url;
+  const imageUrl =
+    scaleWidth && scaleHeight
+      ? getResizedAssetUrl(url, assetWidth!, assetHeight!, scaleWidth, scaleHeight, FIT_OPTIONS.COVER, focalPoint) ||
+        url
+      : url;
+
   return (
     <BaseImage
       containerStyle={{ ...(width ? { width: `${width}px` } : {}), ...(height ? { height: `${height}px` } : {}) }}

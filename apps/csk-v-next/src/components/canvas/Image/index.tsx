@@ -6,6 +6,8 @@ export type ImageParameters = {
   image?: Asset[];
   width?: number;
   height?: number;
+  scaleWidth?: number;
+  scaleHeight?: number;
   objectFit?: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';
   overlayColor?: string;
   overlayOpacity?: string;

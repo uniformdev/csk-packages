@@ -154,6 +154,22 @@ parameters:
     name: Full Height
     type: checkbox
     typeConfig: null
+  - id: 87c96527-f4f5-49b4-a565-cceba2931704
+    name: Scale
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - scaleWidth
+        - scaleHeight
+  - id: scaleWidth
+    name: Scale Width
+    type: number
+    typeConfig: null
+  - id: scaleHeight
+    name: Scale Height
+    type: number
+    typeConfig: null
 categoryId: f22b05f0-c4bf-4158-8ebc-4856e4d453af
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/hero-flexible.jpg
@@ -176,8 +192,8 @@ slots:
     patternsInAllowedComponents: true
 titleParameter: displayName
 canBeComposition: false
-created: '2025-01-29T10:47:01.698204+00:00'
-updated: '2025-02-19T10:34:31.981636+00:00'
+created: '2025-03-25T04:27:36.037409+00:00'
+updated: '2025-04-08T11:02:03.791441+00:00'
 variants:
   - id: columns
     name: Columns

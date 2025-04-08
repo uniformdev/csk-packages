@@ -78,6 +78,10 @@ export const DemoHero: FC<DemoHeroProps & { isFlexibleHero?: boolean }> = ({
   fluidContent,
   fullHeight,
 
+  // Scale Parameters
+  scaleWidth,
+  scaleHeight,
+
   isFlexibleHero = false,
   component,
   context,
@@ -210,6 +214,8 @@ export const DemoHero: FC<DemoHeroProps & { isFlexibleHero?: boolean }> = ({
               imageBorder,
               imagePriority,
               imageUnoptimized,
+              scaleWidth,
+              scaleHeight,
             },
             'image'
           )}

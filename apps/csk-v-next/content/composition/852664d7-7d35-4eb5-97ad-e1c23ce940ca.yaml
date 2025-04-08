@@ -807,10 +807,16 @@ composition:
                 type: text
                 locales:
                   en: Our Exclusive Beans Bundle
+              scaleWidth:
+                type: number
+                value: '1000'
               displayName:
                 type: text
                 locales:
                   en: Main Home Hero
+              scaleHeight:
+                type: number
+                value: '1000'
               descriptionText:
                 type: text
                 locales:
@@ -924,6 +930,12 @@ composition:
                           objectFit:
                             type: dex-segmented-control-parameter
                             value: contain
+                          scaleWidth:
+                            type: number
+                            value: '1600'
+                          scaleHeight:
+                            type: number
+                            value: '900'
                         _overridability:
                           parameters:
                             image: 'yes'
@@ -1177,6 +1189,6 @@ composition:
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-03-24T20:34:40.378828+00:00'
-modified: '2025-04-08T05:32:26.995834+00:00'
+created: '2025-03-25T04:27:50.97015+00:00'
+modified: '2025-04-08T11:15:38.732946+00:00'
 pattern: false

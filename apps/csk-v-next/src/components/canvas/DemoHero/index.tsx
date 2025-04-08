@@ -59,6 +59,11 @@ export type SecondaryButtonParameters = PrefixedKeys<BaseButtonParameters, 'seco
 export type ImageParameters = PrefixedKeys<Omit<BaseImageParameters, 'image'>, 'image'> &
   Pick<BaseImageParameters, 'image'>;
 
+export type ScaleParameters = {
+  scaleWidth?: number;
+  scaleHeight?: number;
+};
+
 export type DemoHeroParameters = ContainerParameters & {
   contentAlignment?: ContentAlignment;
 } & EyebrowTitleTextParameters &
@@ -66,7 +71,8 @@ export type DemoHeroParameters = ContainerParameters & {
   DescriptionTextParameters &
   PrimaryButtonParameters &
   SecondaryButtonParameters &
-  ImageParameters;
+  ImageParameters &
+  ScaleParameters;
 
 export enum DemoHeroVariants {
   Columns = 'columns',

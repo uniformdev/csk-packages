@@ -83,6 +83,22 @@ parameters:
     name: Full Height
     type: checkbox
     typeConfig: null
+  - id: 3eee7e0b-b030-4822-bb36-14833e4302ff
+    name: Scale
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - scaleWidth
+        - scaleHeight
+  - id: scaleWidth
+    name: Scale Width
+    type: number
+    typeConfig: null
+  - id: scaleHeight
+    name: Scale Height
+    type: number
+    typeConfig: null
 categoryId: f22b05f0-c4bf-4158-8ebc-4856e4d453af
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/hero-fixed.jpg
@@ -90,8 +106,8 @@ useTeamPermissions: true
 slots: []
 titleParameter: displayName
 canBeComposition: false
-created: '2025-02-17T15:34:14.062996+00:00'
-updated: '2025-02-17T15:34:14.062996+00:00'
+created: '2025-03-25T04:27:35.041067+00:00'
+updated: '2025-04-08T11:00:35.45766+00:00'
 variants:
   - id: columns
     name: Columns
