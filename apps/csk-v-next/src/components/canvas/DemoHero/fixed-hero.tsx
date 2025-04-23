@@ -7,7 +7,7 @@ export const FixedHero: FC<DemoHeroProps> = props => (
     {...props}
     // Eyebrow Text Parameters
     eyebrowTitleTag="span"
-    eyebrowTitleColor={!props.component.variant ? 'text-secondary' : 'text-primary'}
+    eyebrowTitleColor="text-primary"
     eyebrowTitleSize={{
       mobile: 'xs',
       tablet: 'lg',
@@ -16,7 +16,7 @@ export const FixedHero: FC<DemoHeroProps> = props => (
     eyebrowTitleWeight="bold"
     eyebrowTitleTransform="uppercase"
     // Title Text Parameters
-    titleColor={!props.component.variant ? 'text-secondary' : 'text-primary'}
+    titleColor="text-primary"
     titleSize={{
       mobile: '3xl',
       tablet: '4xl',
@@ -25,7 +25,7 @@ export const FixedHero: FC<DemoHeroProps> = props => (
     titleWeight="bold"
     // Description Text Parameters
     descriptionTag="p"
-    descriptionColor={!props.component.variant ? 'text-secondary' : 'text-primary'}
+    descriptionColor="text-primary"
     descriptionSize={{
       mobile: 'sm',
       tablet: 'lg',
