@@ -1,4 +1,4 @@
-# Uniform Component Starter Kit (CSK6) Monorepo
+# Uniform Component Starter Kit (CSK6) demo for Qorvo
 
 Welcome to the **Uniform Component Starter Kit (CSK6)** monorepo! This repository contains multiple packages and applications designed to streamline the development workflow with **Next.js 15 App Router**, **TailwindCSS**, and **TypeScript**. It is powered by **Turborepo** to ensure efficient builds and optimized package management.
 
