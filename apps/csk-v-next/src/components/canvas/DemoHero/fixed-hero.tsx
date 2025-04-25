@@ -5,9 +5,10 @@ import { DemoHero } from './demo-hero';
 export const FixedHero: FC<DemoHeroProps> = props => (
   <DemoHero
     {...props}
+    backgroundColor="bg-primary"
     // Eyebrow Text Parameters
     eyebrowTitleTag="span"
-    eyebrowTitleColor="text-primary"
+    eyebrowTitleColor={!props.component.variant ? 'text-primary' : 'text-tertiary'}
     eyebrowTitleSize={{
       mobile: 'xs',
       tablet: 'lg',
@@ -16,7 +17,7 @@ export const FixedHero: FC<DemoHeroProps> = props => (
     eyebrowTitleWeight="bold"
     eyebrowTitleTransform="uppercase"
     // Title Text Parameters
-    titleColor="text-primary"
+    titleColor={!props.component.variant ? 'text-primary' : 'text-tertiary'}
     titleSize={{
       mobile: '3xl',
       tablet: '4xl',
@@ -25,7 +26,7 @@ export const FixedHero: FC<DemoHeroProps> = props => (
     titleWeight="bold"
     // Description Text Parameters
     descriptionTag="p"
-    descriptionColor="text-primary"
+    descriptionColor={!props.component.variant ? 'text-primary' : 'text-tertiary'}
     descriptionSize={{
       mobile: 'sm',
       tablet: 'lg',
@@ -35,11 +36,11 @@ export const FixedHero: FC<DemoHeroProps> = props => (
     // Primary Button Parameters
     primaryButtonSize="button-medium"
     primaryButtonTextSize="sm"
-    primaryButtonTextColor="text-primary"
-    primaryButtonTextWeight="normal"
-    primaryButtonButtonColor="button-secondary"
+    primaryButtonTextColor={!props.component.variant ? 'text-secondary' : 'text-primary'}
+    primaryButtonTextWeight="bold"
+    primaryButtonButtonColor={!props.component.variant ? 'button-primary' : 'button-secondary'}
     primaryButtonTextTransform="uppercase"
-    primaryButtonHoverButtonColor="button-secondary-hover"
+    primaryButtonHoverButtonColor={!props.component.variant ? 'button-secondary' : 'button-tertiary'}
     primaryButtonHoverTextColor="text-light"
     primaryButtonBorder="border-button-secondary"
     // Image Parameters
@@ -52,7 +53,7 @@ export const FixedHero: FC<DemoHeroProps> = props => (
       marginBottom: '',
       paddingTop: !props.component.variant ? 'container-xlarge' : '',
     }}
-    fluidContent
+    fluidContent={true}
     isFlexibleHero={false}
   />
 );

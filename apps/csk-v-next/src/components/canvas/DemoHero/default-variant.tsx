@@ -28,9 +28,9 @@ export const DefaultVariant: FC<DefaultVariantProps> = ({
   textAlignmentClass,
   buttonAlignmentClass,
 }) => (
-  <Container className="relative overflow-hidden" {...{ backgroundColor, spacing, border, fluidContent, fullHeight }}>
-    <div className="absolute left-0 top-0 size-full overflow-hidden">{demoHeroMedia}</div>
-    <Container className="relative flex flex-col gap-8">
+  <Container className="relative overflow-hidden before:absolute before:inset-0 before:bg-black before:opacity-50 before:z-[1]" {...{ backgroundColor, spacing, border, fluidContent, fullHeight }}>
+    <div className="absolute left-0 top-0 size-full overflow-hidden z-0">{demoHeroMedia}</div>
+    <Container className="relative flex flex-col gap-8 z-[2]">
       <div className={cn('flex flex-col gap-4', textAlignmentClass)}>{demoHeroContent}</div>
       <div className={cn('flex flex-wrap gap-2 items-center', buttonAlignmentClass)}>{demoHeroCTA}</div>
     </Container>
