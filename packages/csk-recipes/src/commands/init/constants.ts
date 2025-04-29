@@ -24,6 +24,10 @@ export const TEMPLATES_SPECIFIC_RECIPES: Partial<{
   ],
 };
 
+export const RECIPE_SPECIFIC_BRANCHES = {
+  'ai-assistant': 'coffee-shop-ai',
+};
+
 export const TEMPLATES_WHITE_LIST: Template[] = ['coffee-shop'];
 
 export const GIT_COMMANDS = {
