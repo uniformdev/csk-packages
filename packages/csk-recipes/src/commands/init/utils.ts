@@ -19,6 +19,8 @@ import {
   TEMPLATES_WHITE_LIST,
   PACKAGE_JSON_COPY_FILE,
   TEMPLATE_BRANCH_PREFIX_LOCAL,
+  TEMPLATES_SPECIFIC_RECIPES,
+  RECIPE_SPECIFIC_BRANCHES,
 } from './constants';
 import { EnvVariable, Recipe, Template } from './types';
 import { runCmdCommand, spawnCmdCommand } from '../../utils';
@@ -188,7 +190,9 @@ export const getValidRecipesFromArgs = async (recipes: Recipe[], spinner: ora.Or
  *
  * @returns {Promise<Recipe[]>} Array of selected recipes
  */
-export const selectRecipes = async (): Promise<Recipe[]> => {
+export const selectRecipes = async (template?: Template): Promise<Recipe[]> => {
+  const templateRecipes = template ? TEMPLATES_SPECIFIC_RECIPES[template] || [] : [];
+
   const recipes = await checkbox<Recipe>({
     message: 'Now, select the additional recipes you want to include in your project:',
     choices: [
@@ -196,6 +200,7 @@ export const selectRecipes = async (): Promise<Recipe[]> => {
       { name: 'Google Analytics', value: 'ga' },
       { name: 'Uniform Insights', value: 'uniform-insights' },
       { name: 'Shadcn', value: 'shadcn' },
+      ...templateRecipes,
     ],
   });
 
@@ -324,10 +329,23 @@ export const copyDirectory = (sourceDir: string, targetDir: string): void => {
  * Gets the external branch name based on the template.
  *
  * @param {string} template - The template name
+ * @param {Recipe[]} recipes - The recipes to check
  * @returns {string} The formatted branch name
  */
-export const getExternalBranchName = (template: string): string => {
-  return template === 'baseline' ? GIT_BRANCHES.BASELINE_RECIPES : `${TEMPLATE_BRANCH_PREFIX_LOCAL}${template}`;
+export const getExternalBranchName = (template: string, recipes: Recipe[]): string => {
+  if (template === 'baseline') {
+    return GIT_BRANCHES.BASELINE_RECIPES;
+  }
+
+  const recipeSpecifcBranch = recipes.find(
+    recipe => RECIPE_SPECIFIC_BRANCHES[recipe as keyof typeof RECIPE_SPECIFIC_BRANCHES]
+  );
+
+  if (recipeSpecifcBranch) {
+    return `${TEMPLATE_BRANCH_PREFIX_LOCAL}${RECIPE_SPECIFIC_BRANCHES[recipeSpecifcBranch as keyof typeof RECIPE_SPECIFIC_BRANCHES]}`;
+  }
+
+  return `${TEMPLATE_BRANCH_PREFIX_LOCAL}${template}`;
 };
 
 /**

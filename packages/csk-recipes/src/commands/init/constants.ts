@@ -1,4 +1,4 @@
-import { EnvVariable, Recipe } from './types';
+import { EnvVariable, Recipe, Template } from './types';
 
 export const TEMPLATE_BRANCH_PREFIX = 'refs/heads/templates/';
 export const TEMPLATE_BRANCH_PREFIX_LOCAL = 'templates/';
@@ -10,7 +10,25 @@ export const GIT_BRANCHES = {
 
 export const RECIPES = ['localization', 'ga', 'uniform-insights', 'shadcn'];
 
-export const TEMPLATES_WHITE_LIST = ['coffee-shop'];
+export const TEMPLATES_SPECIFIC_RECIPES: Partial<{
+  [key in Template]: {
+    name: string;
+    value: Recipe;
+  }[];
+}> = {
+  'coffee-shop': [
+    {
+      name: 'AI Assistant',
+      value: 'ai-assistant',
+    },
+  ],
+};
+
+export const RECIPE_SPECIFIC_BRANCHES = {
+  'ai-assistant': 'coffee-shop-ai',
+};
+
+export const TEMPLATES_WHITE_LIST: Template[] = ['coffee-shop'];
 
 export const GIT_COMMANDS = {
   CHECK_IF_GIT: 'git status >/dev/null 2>&1',
@@ -28,6 +46,7 @@ export const REQUIRED_ENV_VARIABLES: {
   [key in Recipe]: EnvVariable[];
 } = {
   'uniform-insights': ['UNIFORM_INSIGHTS_ENDPOINT', 'UNIFORM_INSIGHTS_KEY'],
+  'ai-assistant': ['OPENAI_API_KEY'],
   localization: [],
   ga: ['GOOGLE_ANALYTICS_ID'],
   shadcn: [],
@@ -57,7 +76,7 @@ export const RECIPE_ADDITIONAL_FILES: Partial<{
   shadcn: ['components.json'],
 };
 
-export const META_NOT_PROCESABLE_FILE_PATH_SEGMENTS = ['content/', '.json', '.yaml'];
+export const META_NOT_PROCESABLE_FILE_PATH_SEGMENTS = ['content/', '.json', '.yaml', '.env.example'];
 
 export const FILES_TO_IGNORE_OUTSIDE_OF_MONOREPO = ['.lintstagedrc'];
 

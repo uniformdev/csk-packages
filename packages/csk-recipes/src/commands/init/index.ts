@@ -57,7 +57,9 @@ const init = async ({
     const notInteractiveMode = Boolean(templateFromArgs && recipesFromArgs);
 
     const template = templateFromArgs ? await getValidTemplateFromArgs(templateFromArgs) : await selectTemplate();
-    const recipes = recipesFromArgs ? await getValidRecipesFromArgs(recipesFromArgs, spinner) : await selectRecipes();
+    const recipes = recipesFromArgs
+      ? await getValidRecipesFromArgs(recipesFromArgs, spinner)
+      : await selectRecipes(template);
 
     const envVariables = notInteractiveMode
       ? await fillEnvVariablesWithDefaults(recipes)
@@ -96,7 +98,7 @@ const setupProject = async ({
   spinner: ora.Ora;
 }) => {
   const { template, recipes, envVariables } = projectConfiguration;
-  const externalBranchName = getExternalBranchName(template);
+  const externalBranchName = getExternalBranchName(template, recipes);
 
   if (!externalBranchName) return;
 
