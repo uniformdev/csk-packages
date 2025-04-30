@@ -5,6 +5,7 @@ import {
   preProcessFile,
   proceedCodeChange,
 } from './code-changer';
+import { RECIPE_SPECIFIC_NOTES } from './constants';
 import { Recipe, ProjectConfiguration, Template } from './types';
 import {
   selectTemplate,
@@ -78,6 +79,16 @@ const init = async ({
 
     await setupProject({ projectConfiguration, isMonorepo, verbose, spinner });
     spinner.succeed('App created successfully!');
+
+    const notes = recipes
+      .map(recipe => RECIPE_SPECIFIC_NOTES[recipe as keyof typeof RECIPE_SPECIFIC_NOTES])
+      .flat()
+      .filter(Boolean);
+
+    if (notes.length) {
+      console.info('\n💡 Important Notes for your project: \n');
+      notes.forEach(note => console.info(`- ${note}`));
+    }
   } catch (e) {
     handleError(e);
   }
