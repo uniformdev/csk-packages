@@ -28,6 +28,15 @@ export const RECIPE_SPECIFIC_BRANCHES = {
   'ai-assistant': 'coffee-shop-ai',
 };
 
+export const RECIPE_SPECIFIC_NOTES = {
+  'ai-assistant': [
+    `Before running your application and working with the data, please make sure to create a Data Source with the following settings: \n
+     •	Type: HTTP Request \n
+     •	Query Parameter: projectId \n
+     •	Ensure this field is filled in \n`,
+  ],
+};
+
 export const TEMPLATES_WHITE_LIST: Template[] = ['coffee-shop'];
 
 export const GIT_COMMANDS = {
