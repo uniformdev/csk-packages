@@ -4,6 +4,7 @@ import { z } from 'zod';
 import { openai } from '@ai-sdk/openai';
 
 import { AI_TOOL, SYSTEM_PROMPT_NAME } from './constants';
+import { findRelevantContent } from './rag/ai/embedding';
 import { getUniformScoresFromCookie } from './utils';
 import { getRecommendProductsFromCanvas } from './utils/canvas';
 import { getPromptsFromUniform } from './utils/prompts';
@@ -20,17 +21,13 @@ export async function POST(req: Request) {
           messages,
           system: prompts[SYSTEM_PROMPT_NAME],
           experimental_activeTools: [
-            AI_TOOL.GET_USER_INTERESTS,
             AI_TOOL.SET_USER_INTERESTS,
             AI_TOOL.GET_RECOMMEND_PRODUCTS,
             AI_TOOL.GET_CART,
             AI_TOOL.GET_RELATED_PRODUCTS,
+            AI_TOOL.GET_CONTEXT,
           ],
           tools: {
-            [AI_TOOL.GET_USER_INTERESTS]: tool({
-              description: prompts[AI_TOOL.GET_USER_INTERESTS],
-              parameters: z.object({}),
-            }),
             [AI_TOOL.SET_USER_INTERESTS]: tool({
               description: prompts[AI_TOOL.SET_USER_INTERESTS],
               parameters: z.object({
@@ -64,6 +61,17 @@ export async function POST(req: Request) {
             [AI_TOOL.GET_RELATED_PRODUCTS]: tool({
               description: prompts[AI_TOOL.GET_RELATED_PRODUCTS],
               parameters: z.object({}),
+            }),
+            [AI_TOOL.GET_CONTEXT]: tool({
+              description: prompts[AI_TOOL.GET_CONTEXT],
+              parameters: z.object({
+                query: z.string().describe('the users question'),
+              }),
+              execute: async ({ query }) => {
+                console.info(`AI-Tool-${[AI_TOOL.GET_CONTEXT]} query:`, query);
+                const result = await findRelevantContent(query);
+                return JSON.stringify({ result });
+              },
             }),
           },
         });

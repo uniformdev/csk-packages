@@ -5,7 +5,12 @@ import type { RootComponentInstance } from '@uniformdev/canvas';
 import { UniformComposition } from '@uniformdev/canvas-next-rsc';
 
 import { componentResolver } from '@/components';
-import { getCartFromCanvas, getRecommendProductsFromCanvas, getRelatedProductsFromCanvas } from '../utils/canvas';
+import {
+  getCartFromCanvas,
+  getContextRecommendationsFromCanvas,
+  getRecommendProductsFromCanvas,
+  getRelatedProductsFromCanvas,
+} from '../utils/canvas';
 
 export const renderCartComposition = async () => {
   const { composition } = await getCartFromCanvas();
@@ -19,6 +24,11 @@ export const renderRelatedRecommendationsComposition = async (slugs: string[]) =
 
 export const renderUserRecommendationsComposition = async ({ scoreCookie }: { scoreCookie: string | undefined }) => {
   const { composition } = await getRecommendProductsFromCanvas({ scoreCookie });
+  return renderComposition(composition);
+};
+
+export const renderContextRecommendationsComposition = async (slugs: string[]) => {
+  const { composition } = await getContextRecommendationsFromCanvas(slugs);
   return renderComposition(composition);
 };
 

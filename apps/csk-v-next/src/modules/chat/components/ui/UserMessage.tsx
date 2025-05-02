@@ -1,8 +1,8 @@
 import { memo } from 'react';
-import Markdown from 'react-markdown';
-import { Message } from '@ai-sdk/react';
+import { UIMessage } from 'ai';
+import { Markdown } from './Markdown';
 
-const UserMessageComponent = ({ message }: { message: Message }) => (
+const UserMessageComponent = ({ message }: { message: UIMessage }) => (
   <div className="my-4 flex flex-1 gap-3 text-sm text-gray-600">
     <span className="relative flex size-8 shrink-0 overflow-hidden rounded-full">
       <div className="relative size-8 rounded-full border-none bg-gray-100">
@@ -21,10 +21,12 @@ const UserMessageComponent = ({ message }: { message: Message }) => (
       </div>
     </span>
     <div>
-      <p className="italic leading-relaxed">
-        <span className="block font-bold italic text-gray-700">You</span>
+      <p className="leading-relaxed">
+        <span className="block text-lg font-bold text-gray-700">You</span>
       </p>
-      <Markdown>{message.content}</Markdown>
+      <div className="pl-1 text-base">
+        <Markdown>{message.content}</Markdown>
+      </div>
     </div>
   </div>
 );

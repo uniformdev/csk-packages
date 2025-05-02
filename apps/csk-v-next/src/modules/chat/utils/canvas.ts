@@ -1,10 +1,5 @@
 import type { ResolvedRouteGetResponse, RootComponentInstance } from '@uniformdev/canvas';
-import {
-  CANVAS_PERSONALIZE_SLOT,
-  flattenValues,
-  mapSlotToPersonalizedVariations,
-  RouteClient,
-} from '@uniformdev/canvas';
+import { CANVAS_PERSONALIZE_SLOT, flattenValues, mapSlotToPersonalizedVariations } from '@uniformdev/canvas';
 import { getManifest } from '@uniformdev/canvas-next-rsc';
 import type { ManifestV2 } from '@uniformdev/context';
 import { Context, CookieTransitionDataStore } from '@uniformdev/context';
@@ -12,19 +7,22 @@ import locales from '@/i18n/locales.json';
 import {
   CART_COMPOSITION_PATH,
   CART_SLOT_NAME,
+  CONTEXT_RECOMMENDATIONS_COMPOSITION_PATH,
+  CONTEXT_RECOMMENDATIONS_DYNAMIC_VARIATION_NAME,
+  CONTEXT_RECOMMENDATIONS_SLOT_NAME,
   RELATED_RECOMMENDATIONS_COMPOSITION_PATH,
   RELATED_RECOMMENDATIONS_DYNAMIC_VARIATION_NAME,
   RELATED_RECOMMENDATIONS_SLOT_NAME,
   USER_RECOMMENDATIONS_COMPOSITION_PATH,
   USER_RECOMMENDATIONS_SLOT_NAME,
 } from '../constants';
-import { CartFromCanvas, RelatedProductsFromCanvas, UserRecommendationsFromCanvas } from '../types';
-
-const routeClient = new RouteClient({
-  apiKey: process.env.UNIFORM_API_KEY,
-  projectId: process.env.UNIFORM_PROJECT_ID,
-  edgeApiHost: process.env.UNIFORM_CLI_BASE_EDGE_URL!,
-});
+import {
+  CartFromCanvas,
+  ContextRecommendationsFromCanvas,
+  RelatedProductsFromCanvas,
+  UserRecommendationsFromCanvas,
+} from '../types';
+import { routeClient } from './uniformClients';
 
 const getCompositionFromRoute = (route: ResolvedRouteGetResponse): RootComponentInstance | undefined =>
   'compositionApiResponse' in route && route?.compositionApiResponse && 'composition' in route.compositionApiResponse
@@ -150,6 +148,34 @@ export const getRelatedProductsFromCanvas = async (slugs: string[]): Promise<Rel
       ...composition,
       slots: {
         [RELATED_RECOMMENDATIONS_SLOT_NAME]: composition?.slots?.[RELATED_RECOMMENDATIONS_SLOT_NAME] || [],
+      },
+    },
+  };
+};
+
+export const getContextRecommendationsFromCanvas = async (
+  slugs: string[]
+): Promise<ContextRecommendationsFromCanvas> => {
+  if (slugs.length === 0) {
+    return { composition: undefined };
+  }
+
+  const route = await routeClient.getRoute({
+    path: `${CONTEXT_RECOMMENDATIONS_COMPOSITION_PATH}?${CONTEXT_RECOMMENDATIONS_DYNAMIC_VARIATION_NAME}=${slugs.join(', ')}`,
+    locale: locales.defaultLocale,
+  });
+
+  const composition = getCompositionFromRoute(route);
+
+  if (!composition) {
+    return { composition: undefined };
+  }
+
+  return {
+    composition: {
+      ...composition,
+      slots: {
+        [CONTEXT_RECOMMENDATIONS_SLOT_NAME]: composition?.slots?.[CONTEXT_RECOMMENDATIONS_SLOT_NAME] || [],
       },
     },
   };

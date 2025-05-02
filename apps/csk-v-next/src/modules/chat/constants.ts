@@ -1,12 +1,13 @@
 export const AI_PROMPTS_ENTRY_SLUG = 'ai-coffee-assistant-prompts';
 export const SYSTEM_PROMPT_NAME = 'system';
+export const ENTRY_TYPES_TO_SYNC = ['article', 'product'];
 
 export enum AI_TOOL {
-  GET_USER_INTERESTS = 'getUserInterests', // To get user's interests From Uniform
   SET_USER_INTERESTS = 'setUserInterests', // To set user's interests to Uniform
   GET_RECOMMEND_PRODUCTS = 'getRecommendProducts', // To get recommend products from Uniform
   GET_CART = 'getCart', // To get user's cart
   GET_RELATED_PRODUCTS = 'getRelatedProducts', // To get related products based on the user's products in the cart
+  GET_CONTEXT = 'getContext', // To get context of the user's request
 }
 
 const AI_ASSISTANT_CONFIGURATION_PLACEHOLDER = '/:locale/ai-tools';
@@ -29,8 +30,15 @@ export const RELATED_RECOMMENDATIONS_COMPOSITION_PATH = `${AI_ASSISTANT_CONFIGUR
 export const RELATED_RECOMMENDATIONS_SLOT_NAME = SLOT_NAME;
 export const RELATED_RECOMMENDATIONS_DYNAMIC_VARIATION_NAME = DYNAMIC_VARIATION_NAME;
 
+// AI Assistant Configuration for Context Recommendations based on the user's query
+const CONTEXT_RECOMMENDATIONS_COMPOSITION_SLUG = 'context-recommendations';
+export const CONTEXT_RECOMMENDATIONS_COMPOSITION_PATH = `${AI_ASSISTANT_CONFIGURATION_PLACEHOLDER}/${CONTEXT_RECOMMENDATIONS_COMPOSITION_SLUG}`;
+export const CONTEXT_RECOMMENDATIONS_SLOT_NAME = SLOT_NAME;
+export const CONTEXT_RECOMMENDATIONS_DYNAMIC_VARIATION_NAME = DYNAMIC_VARIATION_NAME;
+
 export const ONLY_PREVIEW_PATHS = [
   USER_RECOMMENDATIONS_COMPOSITION_PATH,
   CART_COMPOSITION_PATH,
   RELATED_RECOMMENDATIONS_COMPOSITION_PATH,
+  CONTEXT_RECOMMENDATIONS_COMPOSITION_PATH,
 ];

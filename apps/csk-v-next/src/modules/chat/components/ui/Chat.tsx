@@ -3,7 +3,7 @@
 import { FC, useEffect, useRef, useState } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { IN_CONTEXT_EDITOR_QUERY_STRING_PARAM } from '@uniformdev/canvas';
-import { useScores, useUniformContext } from '@uniformdev/canvas-next-rsc-client';
+import { useQuirks, useScores, useUniformContext } from '@uniformdev/canvas-next-rsc-client';
 import { EnrichmentData } from '@uniformdev/context';
 import { Flex } from '@uniformdev/csk-components/components/ui';
 import { cn } from '@uniformdev/csk-components/utils/styling';
@@ -18,10 +18,10 @@ import { AI_TOOL } from '../../constants';
 import { useScrollToBottom } from '../../hooks/useScrollToBottom';
 import { useChatProvider } from '../../providers/ChatProvider';
 import { CartResult, RelatedProductsResult } from '../../types';
-import { getRecommendProductsFromMessage } from '../../utils';
+import { getRecommendProductsFromMessage, mergeEnrichments } from '../../utils';
 
 const MAX_STEPS = 5;
-const AUTO_PROMPT = "Based on my interests, recommend me some products. Don't call setUserInterests for now.";
+const AUTO_PROMPT = 'Based on my interests, recommend me some products';
 
 const Chat: FC = () => {
   const { isAiDrawerOpen, setIsAiDrawerOpen, setIsChatActive, isPinned, setIsPinned, prompts } = useChatProvider();
@@ -32,6 +32,7 @@ const Chat: FC = () => {
   const [startConversationIndex, setStartConversationIndex] = useState<number>(-1);
   const [containerRef, endRef, scrollToBottom, isAutoScrollEnabled] = useScrollToBottom<HTMLDivElement>();
   const scores = useScores();
+  const quirks = useQuirks();
   const { context } = useUniformContext();
 
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -42,19 +43,15 @@ const Chat: FC = () => {
   const { messages, input, handleInputChange, handleSubmit, append, status } = useChat({
     maxSteps: MAX_STEPS,
     async onToolCall({ toolCall }) {
-      if (toolCall.toolName === AI_TOOL.GET_USER_INTERESTS) {
-        console.info(`${toolCall.toolName}: ${JSON.stringify(scores, null, 2)}`);
-        return JSON.stringify(scores);
-      } else if (toolCall.toolName === AI_TOOL.SET_USER_INTERESTS) {
-        const { interests } = toolCall.args as { interests: EnrichmentData[] };
+      if (toolCall.toolName === AI_TOOL.SET_USER_INTERESTS) {
+        const { interests = [] } = toolCall.args as { interests: EnrichmentData[] };
 
-        console.info(`${toolCall.toolName}: ${JSON.stringify(interests, null, 2)}`);
+        console.info(`AI-Tool-${toolCall.toolName} - interests: ${JSON.stringify(interests, null, 2)}`);
+        const enrichments = mergeEnrichments(scores, interests);
         await context?.forget(true);
-        await context?.update({
-          enrichments: interests,
-        });
+        await context?.update({ quirks, enrichments });
 
-        return JSON.stringify({ success: true, updatedInterests: interests });
+        return JSON.stringify({ success: true, updatedInterests: enrichments });
       } else if (toolCall.toolName === AI_TOOL.GET_CART) {
         const result: CartResult = {
           products: cartProducts.map(({ slug, title, shortDescription }) => ({
@@ -107,6 +104,8 @@ const Chat: FC = () => {
   }, [isAiDrawerOpen, isAutoScrollEnabled, messages.length, scrollToBottom]);
 
   useEffect(() => {
+    if (startConversationIndex !== -1) return;
+
     const indexWithRecommendation = messages.findIndex(message => {
       const { products } = getRecommendProductsFromMessage(message);
       return products.length > 0;
@@ -118,7 +117,7 @@ const Chat: FC = () => {
     } else {
       setIsChatActive(false);
     }
-  }, [messages, setIsChatActive]);
+  }, [messages, setIsChatActive, startConversationIndex]);
 
   useEffect(() => {
     if (startConversationIndex !== -1 || isPreviewMode) {

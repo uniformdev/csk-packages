@@ -4,11 +4,13 @@ import { AiIcon } from './AiIcon';
 import { Markdown } from './Markdown';
 import {
   renderCartComposition,
+  renderContextRecommendationsComposition,
   renderRelatedRecommendationsComposition,
   renderUserRecommendationsComposition,
 } from '../../server-actions/renderComposition';
 import {
   getCartResultFromMessage,
+  getContextRecommendationsFromMessage,
   getRecommendProductsFromMessage,
   getRelatedProductsFromMessage,
   getUniformScoresFromCookie,
@@ -26,6 +28,7 @@ export function useAiMessageUiComponent(message: UIMessage): React.ReactNode | n
   const { products: recommendationProducts } = useMemo(() => getRecommendProductsFromMessage(message), [message]);
   const { total: cartTotal } = useMemo(() => getCartResultFromMessage(message), [message]);
   const { products: relatedProducts } = useMemo(() => getRelatedProductsFromMessage(message), [message]);
+  const { slugs: contextRecommendations } = useMemo(() => getContextRecommendationsFromMessage(message), [message]);
 
   useEffect(() => {
     const run = async () => {
@@ -62,6 +65,18 @@ export function useAiMessageUiComponent(message: UIMessage): React.ReactNode | n
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [uiComponent, relatedProducts?.length]);
+
+  useEffect(() => {
+    const run = async () => {
+      const component = await renderContextRecommendationsComposition(contextRecommendations);
+      setUiComponent(component);
+    };
+
+    if (contextRecommendations?.length > 0 && !uiComponent) {
+      run();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [uiComponent, contextRecommendations?.length]);
 
   return uiComponent;
 }

@@ -13,6 +13,8 @@ export type CartFromCanvas = { composition: RootComponentInstance | undefined };
 
 export type RelatedProductsFromCanvas = { composition: RootComponentInstance | undefined };
 
+export type ContextRecommendationsFromCanvas = { composition: RootComponentInstance | undefined };
+
 export type CartResult = {
   products: {
     slug: string;

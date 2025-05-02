@@ -1,22 +1,7 @@
-import { ContentClient, flattenValues } from '@uniformdev/canvas';
-import { UncachedEnrichmentClient } from '@uniformdev/context/api';
+import { flattenValues } from '@uniformdev/canvas';
 
 import { AI_PROMPTS_ENTRY_SLUG } from '../constants';
-
-// Get enrichments from Uniform
-const enrichmentClient = new UncachedEnrichmentClient({
-  apiKey: process.env.UNIFORM_API_KEY,
-  projectId: process.env.UNIFORM_PROJECT_ID,
-  apiHost: process.env.UNIFORM_CLI_BASE_URL!,
-});
-
-// Get content from Uniform
-const contentClient = new ContentClient({
-  apiKey: process.env.UNIFORM_API_KEY,
-  projectId: process.env.UNIFORM_PROJECT_ID,
-  apiHost: process.env.UNIFORM_CLI_BASE_URL!,
-  edgeApiHost: process.env.UNIFORM_CLI_BASE_EDGE_URL!,
-});
+import { contentClient, enrichmentClient } from './uniformClients';
 
 const { enrichments } = await enrichmentClient.get();
 const {
