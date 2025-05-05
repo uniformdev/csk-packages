@@ -9,8 +9,15 @@ parameters:
     type: text
     typeConfig: null
     localizable: true
+  - id: videoAsset
+    name: Video Asset
+    type: asset
+    typeConfig:
+      max: 1
+      allowedTypes:
+        - video
   - id: url
-    name: Video Url
+    name: External Video Url
     type: link
     typeConfig:
       linkTypes:
@@ -73,5 +80,5 @@ slots: []
 titleParameter: displayName
 thumbnailParameter: placeholderImage
 canBeComposition: false
-created: '2025-02-17T15:34:16.710829+00:00'
-updated: '2025-02-17T15:34:16.710829+00:00'
+created: '2025-04-24T11:34:37.500453+00:00'
+updated: '2025-04-24T11:34:37.500453+00:00'

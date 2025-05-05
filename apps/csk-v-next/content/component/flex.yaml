@@ -78,7 +78,7 @@ parameters:
         - key: Stretch
           value: stretch
       defaultValue: {}
-      withViewPort: false
+      withViewPort: true
   - id: 9f4a3823-8aad-4b30-a7bf-e5134643b0b3
     name: More Presentation Settings
     type: group
@@ -90,6 +90,7 @@ parameters:
         - border
         - fluidContent
         - fullHeight
+        - fitHeight
   - id: backgroundColor
     name: Background Color
     type: dex-color-palette-parameter
@@ -116,6 +117,10 @@ parameters:
     typeConfig: null
   - id: fullHeight
     name: Full Height
+    type: checkbox
+    typeConfig: null
+  - id: fitHeight
+    name: Fit Height
     type: checkbox
     typeConfig: null
 categoryId: ae15b0f6-4953-4ccb-9984-ad0525e77b01

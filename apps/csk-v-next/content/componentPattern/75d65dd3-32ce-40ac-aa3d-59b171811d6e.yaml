@@ -1,0 +1,70 @@
+composition:
+  _name: Product Hero
+  _id: 75d65dd3-32ce-40ac-aa3d-59b171811d6e
+  type: fixedHero
+  variant: columnsReverse
+  parameters:
+    image:
+      type: asset
+      value:
+        - _id: 09180742-31c2-4854-b06a-4b9466b48b9b
+          type: image
+          fields:
+            url:
+              type: text
+              value: ${#jptr:/Product/0/images/0/url}
+          _source: custom-url
+    titleTag:
+      type: dex-segmented-control-parameter
+      value: h2
+    titleText:
+      type: text
+      locales:
+        en: ${#jptr:/Product/0/name}
+    displayName:
+      type: text
+      locales:
+        en: ${#jptr:/Product/0/name}
+    descriptionText:
+      type: text
+      locales:
+        en: ${#jptr:/Product/0/description}
+    primaryButtonLink:
+      type: link
+      locales:
+        en:
+          path: /${locale}/products/${#jptr:/Product/0/slug}
+          type: projectMapNode
+          nodeId: 702b0e0b-3858-4b5d-99e4-bdb98097ca0f
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            product-slug: ${#jptr:/Product/0/slug}
+    primaryButtonText:
+      type: text
+      locales:
+        en: Learn more
+  _dataResources:
+    Product:
+      type: productCatalogItem
+      variables:
+        productIds: '94'
+      isPatternParameter: true
+      ignorePatternParameterDefault: true
+  _overridability:
+    variants: true
+    parameters:
+      image: 'no'
+      descriptionText: 'yes'
+      eyebrowTitleText: 'yes'
+      primaryButtonLink: 'no'
+      primaryButtonText: 'no'
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2025-04-24T11:35:19.798249+00:00'
+modified: '2025-04-24T11:35:19.798249+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1745426316/preview%20images%20%28Lars%29/ProductScrdump_t9gvg1.png
+categoryId: adaebea8-ba58-494b-9c3b-9f82906d9415

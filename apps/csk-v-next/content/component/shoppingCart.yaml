@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: shoppingCart
+name: Shopping Cart
+icon: shopping-cart
+parameters:
+  - id: 9997d65b-30fd-4887-9672-618110e9613d
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - primaryTextColor
+        - secondaryTextColor
+  - id: primaryTextColor
+    name: Primary Text Color
+    type: dex-color-palette-parameter
+    typeConfig:
+      allowColors: []
+      selectedGroup: text
+  - id: secondaryTextColor
+    name: Secondary Text Color
+    type: dex-color-palette-parameter
+    typeConfig:
+      allowColors: []
+      selectedGroup: text
+useTeamPermissions: true
+slots:
+  - id: emptyCartContent
+    name: Empty Cart Content
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: checkoutButton
+    name: Checkout Button
+    maxComponents: 1
+    minComponents: 0
+    allowedComponents:
+      - button
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+canBeComposition: false
+created: '2025-04-24T11:34:33.25939+00:00'
+updated: '2025-04-24T11:34:33.25939+00:00'
