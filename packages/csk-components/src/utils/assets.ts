@@ -1,4 +1,4 @@
-import { Asset } from '@uniformdev/assets';
+import { AssetParamValue } from '@uniformdev/assets';
 import { flattenValues } from '@uniformdev/canvas';
 
 type ResolvedAsset = {
@@ -16,8 +16,8 @@ type ResolvedAsset = {
 /**
  * Resolves a list of assets, filtering out any entries without a valid URL.
  *
- * @param {Asset[] | undefined} image - The list of assets to resolve.
+ * @param {AssetParamValue | undefined} image - The list of assets to resolve.
  * @returns {ResolvedAsset[]} - An array of resolved assets with valid URLs.
  */
-export const resolveAsset = (image?: Asset[]): ResolvedAsset[] =>
+export const resolveAsset = (image?: AssetParamValue): ResolvedAsset[] =>
   (flattenValues(image as never) || []).filter(({ url }) => Boolean(url));

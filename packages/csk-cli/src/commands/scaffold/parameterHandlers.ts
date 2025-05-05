@@ -51,7 +51,7 @@ const linkParameterHandler: ParameterHandler = {
 const assetParameterValue: ParameterHandler = {
   import: [IMPORTS.IMAGE, IMPORTS.ASSET_TYPE, IMPORTS.FLATTEN_VALUES],
   supports: UNIFORM_PARAMETERS_TYPES.ASSET,
-  type: `Asset[]`,
+  type: `AssetParamValue`,
   render: parameter =>
     // ToDo: have to fix it(never)
     `<div className="flex flex-row gap-2 overflow-x-auto">

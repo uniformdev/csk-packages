@@ -36,7 +36,7 @@ export enum IMPORTS {
   NEXT_LINK = "import NextLink from 'next/link';",
   IMAGE = "import NextImage from 'next/image';",
 
-  ASSET_TYPE = "import type { Asset } from '@uniformdev/assets';",
+  ASSET_TYPE = "import type { AssetParamValue } from '@uniformdev/assets';",
   LINK_PARAM_VALUE = "import { LinkParamValue } from '@uniformdev/canvas';",
   FLATTEN_VALUES = "import { flattenValues } from '@uniformdev/canvas';",
   COMPONENT_PROPS = "import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';",

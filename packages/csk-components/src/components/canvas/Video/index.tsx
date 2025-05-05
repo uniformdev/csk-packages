@@ -1,10 +1,10 @@
-import { Asset } from '@uniformdev/assets';
+import { AssetParamValue } from '@uniformdev/assets';
 import { LinkParamValue } from '@uniformdev/canvas';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 
 export type VideoParameters = {
   url?: LinkParamValue;
-  placeholderImage?: Asset[];
+  placeholderImage?: AssetParamValue;
   autoPlay?: boolean;
   lazyLoad?: boolean;
   loop?: boolean;
