@@ -32,8 +32,10 @@ export const RECIPE_SPECIFIC_NOTES = {
   'ai-assistant': [
     `Before running your application and pushing your content, please make sure to create a Data Source with the following settings: \n
      •	Type: HTTP Request \n
-     •	Query Parameter: projectId \n
-     •	Ensure this field is filled in \n`,
+     •	Base URL:'https://uniform.app' \n
+     •	Query Parameter: 'projectId', and fill the value with the projectId of your Uniform project \n
+     •	Headers: 'X-Api-Key', and fill the value with the API key of your Uniform project \n
+     •	Public ID: 'uniformApp' \n`,
   ],
 };
 
