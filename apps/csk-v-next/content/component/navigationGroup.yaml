@@ -32,6 +32,7 @@ parameters:
         - decoration
         - letterSpacing
         - alignment
+        - caretIcon
   - id: backgroundColor
     name: Background Color
     type: dex-color-palette-parameter
@@ -131,6 +132,15 @@ parameters:
           value: center
         - key: Right
           value: right
+  - id: caretIcon
+    name: Caret Icon
+    type: asset
+    typeConfig:
+      max: 1
+      required: false
+      allowedTypes:
+        - image
+    localizable: true
 categoryId: b1163ce2-5ac7-4347-bc38-a42198180718
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/navigation-group.jpg
@@ -146,5 +156,5 @@ slots:
 titleParameter: text
 thumbnailParameter: icon
 canBeComposition: false
-created: '2025-02-17T15:34:15.011988+00:00'
-updated: '2025-02-17T15:34:15.011988+00:00'
+created: '2025-03-20T12:55:44.671195+00:00'
+updated: '2025-05-06T13:28:18.640704+00:00'

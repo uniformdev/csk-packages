@@ -11,6 +11,7 @@ export type NavigationFlyoutParameters = TextParameters & {
   link?: LinkParamValue;
   backgroundColor?: string;
   border?: string | ViewPort<string>;
+  caretIcon?: AssetParamValue;
 };
 
 export enum NavigationFlyoutSlots {

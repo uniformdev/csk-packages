@@ -8,6 +8,7 @@ import { ViewPort } from '@/types/cskTypes';
 
 export type NavigationGroupParameters = TextParameters & {
   icon?: AssetParamValue;
+  caretIcon?: AssetParamValue;
   link?: LinkParamValue;
   backgroundColor?: string;
   border?: string | ViewPort<string>;

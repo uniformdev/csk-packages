@@ -2,17 +2,18 @@
 
 import { FC, useCallback, useMemo, useState } from 'react';
 import { UniformText } from '@uniformdev/canvas-next-rsc/component';
-import { ChevronDownIcon } from '@/components/ui/_icons';
 import BaseIconLabel from '@/components/ui/IconLabel';
 import BaseImage from '@/components/ui/Image';
 import { resolveAsset } from '@/utils/assets';
+import { cn } from '@/utils/styling';
 import { NavigationFlyoutProps } from '.';
 import { NavigationFlyoutPropsDesktopContent } from './desktop';
 import { NavigationFlyoutPropsMobileContent } from './mobile';
-import { getButtonClasses, getChevronClasses } from './style-utils';
+import { getButtonClasses, getCaretClasses } from './style-utils';
 
 export const NavigationFlyout: FC<NavigationFlyoutProps> = ({
   icon,
+  caretIcon,
   backgroundColor,
   border,
   size,
@@ -41,6 +42,9 @@ export const NavigationFlyout: FC<NavigationFlyoutProps> = ({
   const [resolvedImage] = resolveAsset(icon);
   const { url, title = '' } = resolvedImage || {};
 
+  const [resolvedCaretIcon] = resolveAsset(caretIcon);
+  const { url: caretUrl, title: caretTitle = '' } = resolvedCaretIcon || {};
+
   return (
     <div className="relative" onMouseLeave={closeFlyout}>
       <button onMouseEnter={openFlyout} className={getButtonClasses({ color })}>
@@ -50,9 +54,15 @@ export const NavigationFlyout: FC<NavigationFlyoutProps> = ({
         >
           <UniformText placeholder="Text goes here" parameterId="text" component={component} context={context} />
         </BaseIconLabel>
-        <div className={getChevronClasses({ isOpen })}>
-          <ChevronDownIcon />
-        </div>
+        {caretUrl && (
+          <div
+            className={cn('relative size-[1em]', getCaretClasses({ isOpen }), {
+              [`text-${size}`]: !!size,
+            })}
+          >
+            <BaseImage src={caretUrl} alt={caretTitle} fill />
+          </div>
+        )}
       </button>
 
       <div className="hidden md:block">
