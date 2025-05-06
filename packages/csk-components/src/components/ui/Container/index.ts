@@ -8,6 +8,7 @@ export type ContainerProps = HTMLAttributes<HTMLDivElement> & {
   fluidContent?: boolean;
   fullHeight?: boolean;
   wrapperClassName?: string;
+  maxWidth?: string;
 };
 
 export { Container as default } from './container';
