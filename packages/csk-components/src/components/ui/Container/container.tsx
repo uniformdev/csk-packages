@@ -12,6 +12,7 @@ export const Container: FC<ContainerProps> = ({
   border = '',
   fluidContent = false,
   fullHeight = false,
+  maxWidth,
   ...rest
 }) => {
   const [
@@ -23,7 +24,12 @@ export const Container: FC<ContainerProps> = ({
     <div
       className={cn(
         'px-4 xl:px-0',
-        { 'mx-auto w-full max-w-7xl': !fluidContent, '!px-0': fluidContent },
+        {
+          '!px-0': fluidContent,
+          'mx-auto w-full': !fluidContent,
+          'max-w-7xl max-w-container-width': !maxWidth && !fluidContent,
+          [`max-w-${maxWidth}`]: !!maxWidth && !fluidContent,
+        },
         wrapperClassName
       )}
     >

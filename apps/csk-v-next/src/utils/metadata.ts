@@ -70,7 +70,7 @@ export async function generateMetadata(props: PageParameters): Promise<Metadata>
     twitterImage,
     twitterCard,
     favicon,
-  } = parameters;
+  } = parameters || {};
 
   // Resolve assets for Open Graph, Twitter, and favicon
   const [resolvedOgImage] = resolveAsset(openGraphImage);
