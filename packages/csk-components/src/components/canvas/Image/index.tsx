@@ -1,9 +1,9 @@
-import { Asset } from '@uniformdev/assets';
+import { AssetParamValue } from '@uniformdev/assets';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { ViewPort } from '@/types/cskTypes';
 
 export type ImageParameters = {
-  image?: Asset[];
+  image?: AssetParamValue;
   width?: number;
   height?: number;
   objectFit?: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';

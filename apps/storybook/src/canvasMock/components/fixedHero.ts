@@ -1,4 +1,4 @@
-import { Asset } from '@uniformdev/assets';
+import { AssetParamValue } from '@uniformdev/assets';
 import {
   DemoHeroContentAlignment,
   TextParameters,
@@ -23,7 +23,7 @@ export const getFixedHeroContent = (variant?: string): FixedHeroParameters => ({
     path: '/',
   },
 
-  image: LIGHT_IMAGE_ASSET.value as Asset[],
+  image: LIGHT_IMAGE_ASSET.value as AssetParamValue,
 
   contentAlignment: DemoHeroContentAlignment.Center,
   fullHeight: false,

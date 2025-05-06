@@ -1,11 +1,11 @@
 import dynamic from 'next/dynamic';
-import { Asset } from '@uniformdev/assets';
+import { AssetParamValue } from '@uniformdev/assets';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { ContainerParameters } from '@/components/canvas/Container/parameters';
 
 export type ImageGalleryParameters = ContainerParameters & {
   aspectRatio?: 'square' | 'video';
-  items?: Asset[];
+  items?: AssetParamValue;
 };
 
 export enum ImageGallerySlots {

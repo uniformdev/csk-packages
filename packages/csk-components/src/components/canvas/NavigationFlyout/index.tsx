@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import { Asset } from '@uniformdev/assets';
+import { AssetParamValue } from '@uniformdev/assets';
 import { LinkParamValue } from '@uniformdev/canvas';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { TextParameters } from '@/components/canvas/Text/parameters';
@@ -7,7 +7,7 @@ import { withPlaygroundWrapper } from '@/hocs/withPlaygroundWrapper';
 import { ViewPort } from '@/types/cskTypes';
 
 export type NavigationFlyoutParameters = TextParameters & {
-  icon?: Asset[];
+  icon?: AssetParamValue;
   link?: LinkParamValue;
   backgroundColor?: string;
   border?: string | ViewPort<string>;

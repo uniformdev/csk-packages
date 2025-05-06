@@ -1,5 +1,5 @@
 import { DefaultTheme } from 'tailwindcss/types/generated/default-theme';
-import { Asset } from '@uniformdev/assets';
+import { AssetParamValue } from '@uniformdev/assets';
 import { LinkParamValue } from '@uniformdev/canvas';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { ContainerParameters } from '@/components/canvas/Container/parameters';
@@ -26,8 +26,8 @@ export type BaseButtonParameters = {
   buttonColor?: string;
   border?: string | ViewPort<string>;
   size?: string;
-  icon?: Asset[];
-  test?: Asset[];
+  icon?: AssetParamValue;
+  test?: AssetParamValue;
   textSize?: BaseButtonProps['textSize'];
   iconPosition?: BaseButtonProps['iconPosition'];
   hoverButtonColor?: string;
@@ -35,7 +35,7 @@ export type BaseButtonParameters = {
 };
 
 export type BaseImageParameters = {
-  image?: Asset[];
+  image?: AssetParamValue;
   width?: number;
   height?: number;
   objectFit?: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';
