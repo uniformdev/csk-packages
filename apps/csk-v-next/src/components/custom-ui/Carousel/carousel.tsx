@@ -1,8 +1,8 @@
 'use client';
 
 import { FC, useCallback, useEffect, useRef, useState } from 'react';
+import { cn } from '@uniformdev/csk-components/utils/styling';
 import BaseContainer from '@/components/ui/Container';
-import { cn } from '@/utils/styling';
 import { CarouselProps } from '.';
 
 export const Carousel: FC<CarouselProps> = ({
@@ -65,7 +65,7 @@ export const Carousel: FC<CarouselProps> = ({
         <div ref={container} className="flex flex-row items-stretch overflow-x-hidden scroll-smooth">
           {children}
         </div>
-        {variant === 'default' && (
+        {variant !== 'brochure' && (
           <div
             className={cn('absolute inset-x-5 top-1/2 flex -translate-y-1/2 justify-between', {
               [`text-${iconColor}`]: !!iconColor,

@@ -5,6 +5,7 @@ import { ContainerParameters } from '@/components/canvas/Container/parameters';
 export type CarouselParameters = ContainerParameters & {
   iconColor?: string;
   autoPlay?: boolean;
+  countOfItems?: number;
 };
 
 export enum CarouselSlots {

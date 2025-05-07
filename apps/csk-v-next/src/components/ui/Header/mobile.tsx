@@ -2,8 +2,8 @@
 
 import { FC, useState } from 'react';
 import { Flex as BaseFlex } from '@uniformdev/csk-components/components/ui';
+import { cn } from '@uniformdev/csk-components/utils/styling';
 import BaseContainer from '@/components/ui/Container';
-import { cn } from '@/utils/styling';
 import { HeaderProps } from './';
 
 const IconBurgerMenu: FC<{ isOpen: boolean; onClick: () => void; color?: string }> = ({ isOpen, onClick, color }) => (

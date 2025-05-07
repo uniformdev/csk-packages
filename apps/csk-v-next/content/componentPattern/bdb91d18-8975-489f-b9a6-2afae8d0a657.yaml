@@ -6,9 +6,9 @@ composition:
     gap:
       type: dex-slider-control-parameter
       value:
-        mobile: '4'
-        tablet: '4'
-        desktop: '4'
+        mobile: '8'
+        tablet: '8'
+        desktop: '8'
     direction:
       type: dex-segmented-control-parameter
       value:
@@ -36,17 +36,160 @@ composition:
       - _id: 6b94b779-5482-4c92-bedd-9e2eb5bd98d5
         type: text
         _pattern: 08b7d9c0-c9a7-4c47-a167-2acaf6c8746b
-      - _id: f7ff165d-56fa-4d75-bca8-c5a9c49fce70
-        type: flex
+      - _id: 7ec14bda-5bef-42d9-9473-9288a9ece15b
+        type: carousel
         slots:
-          flexItem:
+          carouselItems:
             - _id: a6030edf-87f7-4abe-96f6-0fabbd70628a
               type: $loop
               slots:
                 body:
                   - _id: 915b883a-9c23-4552-9cc3-c48c9853a937
                     type: card
-                    _pattern: 021820b5-70f5-4ec8-a98f-1b0d0e94beb3
+                    slots:
+                      cardMedia:
+                        - _id: >-
+                            915b883a-9c23-4552-9cc3-c48c9853a937|fbb7fcd0-5300-4ab2-90e4-492181d65867
+                          type: image
+                          parameters:
+                            image:
+                              type: asset
+                              value: >-
+                                ${#jptr:/Products entries Loop
+                                Item/entry/fields/primaryImage/value}
+                            width:
+                              type: number
+                              value: '150'
+                            border:
+                              type: dex-token-selector-parameter
+                              value: border-image-radius-small
+                            height:
+                              type: number
+                              value: '150'
+                            objectFit:
+                              type: dex-segmented-control-parameter
+                              value: contain
+                            overlayColor:
+                              type: dex-color-palette-parameter
+                              value: general-color-3
+                            overlayOpacity:
+                              type: dex-slider-control-parameter
+                              value: '0'
+                          _overridability:
+                            parameters:
+                              image: 'yes'
+                            hideLockedParameters: true
+                      cardContent:
+                        - _id: >-
+                            915b883a-9c23-4552-9cc3-c48c9853a937|f9bc2979-5917-46a0-aeb3-0e2bfbd683be
+                          type: button
+                          variant: link
+                          parameters:
+                            icon:
+                              type: asset
+                              value: []
+                            link:
+                              type: link
+                              locales:
+                                en:
+                                  path: >-
+                                    /${locale}/products/${#jptr:/Products
+                                    entries Loop Item/entry/_slug}
+                                  type: projectMapNode
+                                  nodeId: 702b0e0b-3858-4b5d-99e4-bdb98097ca0f
+                                  projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                                  dynamicInputValues:
+                                    locale: ${locale}
+                                    product-slug: >-
+                                      ${#jptr:/Products entries Loop
+                                      Item/entry/_slug}
+                            size:
+                              type: dex-token-selector-parameter
+                              value: ''
+                            text:
+                              type: text
+                              locales:
+                                en: >-
+                                  ${#jptr:/Products entries Loop
+                                  Item/entry/fields/title/value}
+                            textSize:
+                              type: dex-segmented-control-parameter
+                              value:
+                                mobile: lg
+                                tablet: lg
+                                desktop: lg
+                            textColor:
+                              type: dex-color-palette-parameter
+                              value: text-secondary
+                            textWeight:
+                              type: dex-segmented-control-parameter
+                              value: extrabold
+                            iconPosition:
+                              type: dex-segmented-control-parameter
+                              value: right
+                            textTransform:
+                              type: dex-segmented-control-parameter
+                              value: uppercase
+                          _overridability:
+                            variants: false
+                            parameters:
+                              link: 'yes'
+                              text: 'yes'
+                              textColor: 'yes'
+                            hideLockedParameters: true
+                        - _id: >-
+                            915b883a-9c23-4552-9cc3-c48c9853a937|06f3f1a7-27c7-4928-beee-233d720b84c0
+                          type: text
+                          parameters:
+                            tag:
+                              type: dex-segmented-control-parameter
+                              value: p
+                            size:
+                              type: dex-segmented-control-parameter
+                              value:
+                                mobile: 2xl
+                                tablet: 2xl
+                                desktop: xl
+                            text:
+                              type: text
+                              locales:
+                                en: >-
+                                  ${#jptr:/Products entries Loop
+                                  Item/entry/fields/name/value}
+                            color:
+                              type: dex-color-palette-parameter
+                              value: text-tertiary
+                            weight:
+                              type: dex-segmented-control-parameter
+                              value: medium
+                          _overridability:
+                            parameters:
+                              tag: 'no'
+                              text: 'yes'
+                            hideLockedParameters: true
+                    parameters:
+                      spacing:
+                        type: dex-space-control-parameter
+                        value:
+                          marginTop: ''
+                          marginLeft: ''
+                          paddingTop: ''
+                          marginRight: ''
+                          paddingLeft: ''
+                          marginBottom: ''
+                          paddingRight: ''
+                          paddingBottom: ''
+                      displayName:
+                        type: text
+                        value: ${#jptr:/Products entries Loop Item/entry/_name}
+                      fluidContent:
+                        type: checkbox
+                        value: true
+                    _overridability:
+                      variants: false
+                      parameters:
+                        displayName: 'yes'
+                      hideLockedParameters: true
               _dataResources:
                 Products entries Loop Item:
                   type: sys-reserved-loop
@@ -54,29 +197,12 @@ composition:
                     connectedData: '#jptr:/Products/entries:fa=c'
               _overridability:
                 hideLockedParameters: true
+        variant: infinite
         parameters:
-          gap:
-            type: dex-slider-control-parameter
-            value:
-              mobile: '2'
-              tablet: '2'
-              desktop: '2'
-          direction:
-            type: dex-segmented-control-parameter
-            value:
-              mobile: col
-              tablet: row
-              desktop: row
-          alignItems:
-            type: dex-segmented-control-parameter
-            value: {}
           displayName:
             type: text
             locales:
-              en: Product List
-          justifyContent:
-            type: dex-segmented-control-parameter
-            value: {}
+              en: Gallery
         _overridability:
           hideLockedParameters: true
       - _id: 3423d2d4-3534-4ce1-ad41-a45bfd064298
@@ -117,45 +243,10 @@ composition:
           type: text
           locales:
             en: Products
-    915b883a-9c23-4552-9cc3-c48c9853a937:
-      parameters:
-        displayName:
-          type: text
-          value: ${#jptr:/Products entries Loop Item/entry/_name}
-    915b883a-9c23-4552-9cc3-c48c9853a937|06f3f1a7-27c7-4928-beee-233d720b84c0:
-      parameters:
-        text:
-          type: text
-          locales:
-            en: ${#jptr:/Products entries Loop Item/entry/fields/name/value}
-    915b883a-9c23-4552-9cc3-c48c9853a937|f9bc2979-5917-46a0-aeb3-0e2bfbd683be:
-      parameters:
-        link:
-          type: link
-          locales:
-            en:
-              path: >-
-                /${locale}/products/${#jptr:/Products entries Loop
-                Item/entry/_slug}
-              type: projectMapNode
-              nodeId: 702b0e0b-3858-4b5d-99e4-bdb98097ca0f
-              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-              dynamicInputValues:
-                locale: ${locale}
-                product-slug: ${#jptr:/Products entries Loop Item/entry/_slug}
-        text:
-          type: text
-          locales:
-            en: ${#jptr:/Products entries Loop Item/entry/fields/title/value}
-    915b883a-9c23-4552-9cc3-c48c9853a937|fbb7fcd0-5300-4ab2-90e4-492181d65867:
-      parameters:
-        image:
-          type: asset
-          value: ${#jptr:/Products entries Loop Item/entry/fields/primaryImage/value}
   _overridability:
     hideLockedParameters: true
   _locales:
     - en
 created: '2025-04-25T00:59:48.700902+00:00'
-modified: '2025-04-25T12:57:07.360595+00:00'
+modified: '2025-05-07T12:21:23.697305+00:00'
 pattern: true

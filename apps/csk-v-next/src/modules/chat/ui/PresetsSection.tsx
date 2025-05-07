@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { cn } from '@/utils/styling';
+import { cn } from '@uniformdev/csk-components/utils/styling';
 import { chunkArray } from '../utils';
 
 type PresetProps = {

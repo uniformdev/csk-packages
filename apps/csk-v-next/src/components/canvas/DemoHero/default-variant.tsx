@@ -1,6 +1,6 @@
 import { FC } from 'react';
+import { cn } from '@uniformdev/csk-components/utils/styling';
 import Container from '@/components/ui/Container';
-import { cn } from '@/utils/styling';
 import { DemoHeroParameters } from '.';
 
 type DefaultVariantProps = {

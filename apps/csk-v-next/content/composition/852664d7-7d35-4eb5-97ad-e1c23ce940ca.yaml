@@ -127,6 +127,18 @@ composition:
           type: text
           locales:
             en: Sustainability Report
+    ce9ca67a-2afd-450c-9e4b-605dbaf913c4:
+      dataResources:
+        Products:
+          type: productList
+          variables:
+            limit: '5'
+            locale: ${locale}
+            search: ''
+            filters: '{"type[eq]":"product"}'
+            orderBy: updated_at_DESC
+            uiFilters: '[{"field":"type","operator":"eq","value":"product"}]'
+            contentTypes: product
     00db176e-7956-4ece-8801-e150c5b225c3|795d87f1-3b4c-448d-a9c5-54e3b6de379c:
       parameters:
         text:
@@ -277,16 +289,6 @@ composition:
         maxWidth:
           type: dex-slider-control-parameter
           value: 38%
-    637392f5-4e60-4131-a803-478f27fcab6a|e1e6595a-be0c-426c-91e4-c92d06882b31:
-      parameters:
-        link:
-          type: link
-          locales:
-            cn:
-              path: >-
-                ${#jptr:/Resources entries Loop
-                Item/entry/fields/targetLink/value/path}
-              type: url
     7accf3e5-20cd-485a-b0cd-225727efc177|51e8d21c-4ae0-4004-a8ce-9cc70e1ee198:
       parameters:
         image:
@@ -478,6 +480,17 @@ composition:
                 - _id: ce9ca67a-2afd-450c-9e4b-605dbaf913c4
                   type: flex
                   _pattern: bdb91d18-8975-489f-b9a6-2afae8d0a657
+                  _dataResources:
+                    Products:
+                      type: productList
+                      variables:
+                        limit: '5'
+                        locale: ${locale}
+                        search: ''
+                        filters: '{"type[eq]":"product"}'
+                        orderBy: updated_at_DESC
+                        uiFilters: '[{"field":"type","operator":"eq","value":"product"}]'
+                        contentTypes: product
                   _overridability:
                     hideLockedParameters: true
                 - _id: 1acc1cf4-83cd-473d-b9ba-6dd7edc7d3dd
@@ -692,5 +705,5 @@ composition:
     - cn
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-04-24T21:39:11.680214+00:00'
-modified: '2025-05-07T10:45:52.230602+00:00'
+modified: '2025-05-07T12:27:01.778491+00:00'
 pattern: false
