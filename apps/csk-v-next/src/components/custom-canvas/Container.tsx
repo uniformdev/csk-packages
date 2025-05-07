@@ -15,8 +15,7 @@ type ContainerProps = CSKContainerProps & {
 const Container: FC<ContainerProps> = ({ fitContent, relative, absolute, ...props }) => (
   <CSKContainer
     {...props}
-    wrapperClassName={cn({ 'absolute inset-0 size-full': absolute })}
-    className={cn({ 'w-fit h-fit': fitContent, relative: relative })}
+    className={cn({ 'absolute inset-0 size-full': absolute }, { 'w-fit h-fit': fitContent, relative: relative })}
   />
 );
 
