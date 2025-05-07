@@ -9,6 +9,7 @@ export type CarouselProps = Pick<
   countOfItems?: number;
   children: ReactElement | ReactElement[];
   iconColor?: string;
+  variant?: string;
   autoPlay?: boolean;
 };
 

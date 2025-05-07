@@ -6,9 +6,9 @@ composition:
     gap:
       type: dex-slider-control-parameter
       value:
-        mobile: '4'
-        tablet: '4'
-        desktop: '4'
+        mobile: '8'
+        tablet: '8'
+        desktop: '8'
     spacing:
       type: dex-space-control-parameter
       value:
@@ -36,132 +36,235 @@ composition:
       - _id: 795d87f1-3b4c-448d-a9c5-54e3b6de379c
         type: text
         _pattern: 08b7d9c0-c9a7-4c47-a167-2acaf6c8746b
-      - _id: 7d69c555-611e-45ee-9e4a-d943853dd683
-        type: $loop
+      - _id: 4ea27a82-4630-4a0d-ad99-419e6e99c070
+        type: flex
         slots:
-          body:
-            - _id: 8faae80c-a92d-4c2e-b898-702e0e4d21a3
-              type: flex
+          flexItem:
+            - _id: 7d69c555-611e-45ee-9e4a-d943853dd683
+              type: $loop
               slots:
-                flexItem:
-                  - _id: 67db8982-5535-46a3-b470-c77a75812a21
-                    type: link
+                body:
+                  - _id: 82c7f5a5-afdf-4371-a35a-cc415b09d081
+                    type: grid
                     slots:
-                      linkContent:
-                        - _id: 36eaaeca-f579-428a-be75-116c14a5f713
-                          type: text
+                      gridInner:
+                        - _id: b5df61d7-d433-4bab-98cf-8d9c284d9d9f
+                          type: gridItem
+                          slots:
+                            inner:
+                              - _id: 67db8982-5535-46a3-b470-c77a75812a21
+                                type: link
+                                slots:
+                                  linkContent:
+                                    - _id: 36eaaeca-f579-428a-be75-116c14a5f713
+                                      type: text
+                                      parameters:
+                                        tag:
+                                          type: dex-segmented-control-parameter
+                                          value: span
+                                        size:
+                                          type: dex-segmented-control-parameter
+                                          value: {}
+                                        text:
+                                          type: text
+                                          locales:
+                                            en: >-
+                                              ${#jptr:/List entries Loop
+                                              Item/entry/fields/publishDate/value}
+                                        color:
+                                          type: dex-color-palette-parameter
+                                          value: text-secondary
+                                        weight:
+                                          type: dex-segmented-control-parameter
+                                          value: normal
+                                      _overridability:
+                                        hideLockedParameters: true
+                                parameters:
+                                  link:
+                                    type: link
+                                    value:
+                                      path: >-
+                                        /${locale}/newsroom/news/${#jptr:/List
+                                        entries Loop Item/entry/_slug}
+                                      type: projectMapNode
+                                      nodeId: 055abaa8-edb1-464d-a26c-fc49a55f2eeb
+                                      projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                                      dynamicInputValues:
+                                        locale: ${locale}
+                                        news-slug: >-
+                                          ${#jptr:/List entries Loop
+                                          Item/entry/_slug}
+                                  displayName:
+                                    type: text
+                                    locales:
+                                      en: Link
+                                _overridability:
+                                  hideLockedParameters: true
                           parameters:
-                            tag:
-                              type: dex-segmented-control-parameter
-                              value: span
-                            size:
-                              type: dex-segmented-control-parameter
+                            rowSpan:
+                              type: dex-slider-control-parameter
                               value: {}
-                            text:
+                            rowStart:
+                              type: dex-slider-control-parameter
+                              value:
+                                mobile: '1'
+                                tablet: '1'
+                                desktop: '1'
+                            columnSpan:
+                              type: dex-slider-control-parameter
+                              value:
+                                desktop: span-2
+                            columnStart:
+                              type: dex-slider-control-parameter
+                              value:
+                                mobile: '1'
+                                tablet: '1'
+                                desktop: '1'
+                            displayName:
                               type: text
                               locales:
-                                en: >-
-                                  ${#jptr:/List entries Loop
-                                  Item/entry/fields/publishDate/value}
-                            color:
-                              type: dex-color-palette-parameter
-                              value: text-secondary
-                            weight:
-                              type: dex-segmented-control-parameter
-                              value: normal
+                                en: Date Column
+                          _overridability:
+                            hideLockedParameters: true
+                        - _id: 065eea82-b205-40bd-9649-175720d8af12
+                          type: gridItem
+                          slots:
+                            inner:
+                              - _id: 96afd695-b4c2-4b4d-a651-c1985f8e63b8
+                                type: text
+                                parameters:
+                                  tag:
+                                    type: dex-segmented-control-parameter
+                                    value: span
+                                  size:
+                                    type: dex-segmented-control-parameter
+                                    value: {}
+                                  text:
+                                    type: text
+                                    locales:
+                                      en: >-
+                                        ${#jptr:/List entries Loop
+                                        Item/entry/fields/title/value}
+                                  color:
+                                    type: dex-color-palette-parameter
+                                    value: text-tertiary
+                                  weight:
+                                    type: dex-segmented-control-parameter
+                                    value: normal
+                                  alignment:
+                                    type: dex-segmented-control-parameter
+                                    value: left
+                                _overridability:
+                                  hideLockedParameters: true
+                          parameters:
+                            rowSpan:
+                              type: dex-slider-control-parameter
+                              value: {}
+                            rowStart:
+                              type: dex-slider-control-parameter
+                              value:
+                                mobile: '1'
+                                tablet: '1'
+                                desktop: '1'
+                            columnSpan:
+                              type: dex-slider-control-parameter
+                              value:
+                                desktop: span-12
+                            columnStart:
+                              type: dex-slider-control-parameter
+                              value:
+                                mobile: '1'
+                                tablet: '1'
+                                desktop: '3'
+                            displayName:
+                              type: text
+                              locales:
+                                en: Description
                           _overridability:
                             hideLockedParameters: true
                     parameters:
-                      link:
-                        type: link
-                        value:
-                          path: >-
-                            /${locale}/newsroom/news/${#jptr:/List entries Loop
-                            Item/entry/_slug}
-                          type: projectMapNode
-                          nodeId: 055abaa8-edb1-464d-a26c-fc49a55f2eeb
-                          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-                          dynamicInputValues:
-                            locale: ${locale}
-                            news-slug: ${#jptr:/List entries Loop Item/entry/_slug}
+                      gapX:
+                        type: dex-slider-control-parameter
+                        value: {}
+                      gapY:
+                        type: dex-slider-control-parameter
+                        value: {}
                       displayName:
                         type: text
                         locales:
-                          en: Link
+                          en: News Item
+                      columnsCount:
+                        type: dex-slider-control-parameter
+                        value:
+                          mobile: '1'
+                          tablet: '1'
+                          desktop: '12'
                     _overridability:
                       hideLockedParameters: true
-                  - _id: 96afd695-b4c2-4b4d-a651-c1985f8e63b8
-                    type: text
-                    parameters:
-                      tag:
-                        type: dex-segmented-control-parameter
-                        value: span
-                      size:
-                        type: dex-segmented-control-parameter
-                        value: {}
-                      text:
-                        type: text
-                        locales:
-                          en: >-
-                            ${#jptr:/List entries Loop
-                            Item/entry/fields/title/value}
-                      color:
-                        type: dex-color-palette-parameter
-                        value: text-tertiary
-                      weight:
-                        type: dex-segmented-control-parameter
-                        value: normal
-                      alignment:
-                        type: dex-segmented-control-parameter
-                        value: left
-                    _overridability:
-                      hideLockedParameters: true
-              parameters:
-                gap:
-                  type: dex-slider-control-parameter
-                  value:
-                    mobile: '8'
-                    tablet: '8'
-                    desktop: '8'
-                spacing:
-                  type: dex-space-control-parameter
-                  value:
-                    mobile: {}
-                    tablet: {}
-                    desktop:
-                      marginTop: container-xxsmall
-                      paddingTop: container-xxsmall
-                      marginBottom: container-xxsmall
-                      paddingBottom: container-xxsmall
-                direction:
-                  type: dex-segmented-control-parameter
-                  value:
-                    mobile: col
-                    tablet: row
-                    desktop: row
-                alignItems:
-                  type: dex-segmented-control-parameter
-                  value: {}
-                displayName:
-                  type: text
-                  locales:
-                    en: Container
-                justifyContent:
-                  type: dex-segmented-control-parameter
-                  value:
-                    mobile: ''
+              _dataResources:
+                List entries Loop Item:
+                  type: sys-reserved-loop
+                  variables:
+                    connectedData: '#jptr:/List/entries:fa=c'
               _overridability:
                 hideLockedParameters: true
-        _dataResources:
-          List entries Loop Item:
-            type: sys-reserved-loop
-            variables:
-              connectedData: '#jptr:/List/entries:fa=c'
+        parameters:
+          gap:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '4'
+              tablet: '4'
+              desktop: '4'
+          direction:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: col
+              tablet: col
+              desktop: col
+          alignItems:
+            type: dex-segmented-control-parameter
+            value: {}
+          displayName:
+            type: text
+            locales:
+              en: News
+          justifyContent:
+            type: dex-segmented-control-parameter
+            value: {}
         _overridability:
           hideLockedParameters: true
-      - _id: 7ee4dd6d-4dbe-4dba-b5ac-8d74316bc1c5
-        type: button
-        _pattern: 31191bc7-7e6e-4748-89c2-8e73db05237d
+      - _id: 4f5518b2-267d-4077-acee-f936320560b0
+        type: flex
+        slots:
+          flexItem:
+            - _id: 7ee4dd6d-4dbe-4dba-b5ac-8d74316bc1c5
+              type: button
+              _pattern: 31191bc7-7e6e-4748-89c2-8e73db05237d
+        parameters:
+          gap:
+            type: dex-slider-control-parameter
+            value: {}
+          direction:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: row
+              tablet: row
+              desktop: row
+          alignItems:
+            type: dex-segmented-control-parameter
+            value: {}
+          displayName:
+            type: text
+            locales:
+              en: View All Button
+          justifyContent:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: end
+              tablet: end
+              desktop: end
+        _overridability:
+          hideLockedParameters: true
   _dataResources:
     List:
       type: articleList
@@ -206,5 +309,5 @@ composition:
   _locales:
     - en
 created: '2025-04-24T23:00:27.518707+00:00'
-modified: '2025-04-25T00:32:25.524783+00:00'
+modified: '2025-05-07T10:25:28.115343+00:00'
 pattern: true

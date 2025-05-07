@@ -25,6 +25,7 @@ export const Carousel: FC<CarouselProps> = ({
 }) => (
   <BaseCarousel
     {...{ backgroundColor, spacing, border, fluidContent, fullHeight, iconColor, autoPlay }}
+    variant={component.variant}
     countOfItems={slots.carouselItems?.items.length ?? 0}
   >
     <UniformSlot context={context} slot={slots.carouselItems} data={component}>
