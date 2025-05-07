@@ -1,0 +1,77 @@
+composition:
+  _name: Logo Mock
+  _id: c8db2a5f-572f-4cfc-b387-61742c03385b
+  type: container
+  parameters:
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        mobile: {}
+        tablet: {}
+        desktop:
+          paddingTop: container-small
+          paddingLeft: container-xlarge
+          paddingRight: container-xlarge
+          paddingBottom: container-small
+    relative:
+      type: checkbox
+      value: true
+    fitContent:
+      type: checkbox
+      value: true
+    displayName:
+      type: text
+      locales:
+        en: Logo Mock
+    fluidContent:
+      type: checkbox
+      value: true
+    backgroundColor:
+      type: dex-color-palette-parameter
+      value: general-color-2
+  slots:
+    containerContent:
+      - _id: f3b7a973-7fdf-461c-b235-c071a2ebdc1c
+        type: container
+        parameters:
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              mobile: {}
+              tablet: {}
+              desktop:
+                paddingTop: container-large
+          absolute:
+            type: checkbox
+            value: true
+          displayName:
+            type: text
+            locales:
+              en: Absolute container
+          backgroundColor:
+            type: dex-color-palette-parameter
+            value: general-color-2
+        _overridability:
+          hideLockedParameters: true
+      - _id: 4fb2a9bd-3af3-4951-9ece-9e98588f3bf5
+        type: link
+        parameters:
+          link:
+            type: link
+            value:
+              path: /
+              type: projectMapNode
+              nodeId: b90aa0bf-891d-4e40-9899-0d79eb1b26af
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          displayName:
+            type: text
+            value: Logo
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2025-05-07T13:51:33.66525+00:00'
+modified: '2025-05-07T13:51:33.66525+00:00'
+pattern: true

@@ -15,8 +15,21 @@ export const Container: FC<ContainerProps> = ({
   fluidContent,
   fullHeight,
   className,
+  wrapperClassName,
 }) => (
-  <BaseContainer {...{ title: displayName, id, backgroundColor, spacing, border, fluidContent, fullHeight, className }}>
+  <BaseContainer
+    {...{
+      title: displayName,
+      id,
+      backgroundColor,
+      spacing,
+      border,
+      fluidContent,
+      fullHeight,
+      className,
+      wrapperClassName,
+    }}
+  >
     <UniformSlot data={component} context={context} slot={slots.containerContent} />
   </BaseContainer>
 );

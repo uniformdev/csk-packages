@@ -8,11 +8,16 @@ import { cn } from '@uniformdev/csk-components/utils/styling';
 type ContainerProps = CSKContainerProps & {
   fitContent?: boolean;
   relative?: boolean;
+  absolute?: boolean;
 };
 
 // This is an example of how you can override an existing CSK component based on the Container component.
-const Container: FC<ContainerProps> = ({ fitContent, relative, ...props }) => (
-  <CSKContainer {...props} className={cn({ 'w-fit h-fit': fitContent, relative: relative })} />
+const Container: FC<ContainerProps> = ({ fitContent, relative, absolute, ...props }) => (
+  <CSKContainer
+    {...props}
+    wrapperClassName={cn({ 'absolute inset-0 size-full': absolute })}
+    className={cn({ 'w-fit h-fit': fitContent, relative: relative })}
+  />
 );
 
 export default Container;

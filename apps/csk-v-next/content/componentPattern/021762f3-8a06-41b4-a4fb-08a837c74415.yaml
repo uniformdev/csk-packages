@@ -7,6 +7,9 @@ composition:
     color:
       type: dex-color-palette-parameter
       value: general-color-3
+    border:
+      type: dex-token-selector-parameter
+      value: border-top-header
     spacing:
       type: dex-space-control-parameter
       value:
@@ -17,8 +20,8 @@ composition:
           paddingTop: container-small
           paddingBottom: container-small
         desktop:
-          paddingTop: container-small
-          paddingBottom: container-small
+          paddingTop: container-none
+          paddingBottom: container-none
     displayName:
       type: text
       value: Header
@@ -27,69 +30,9 @@ composition:
       value: general-color-1
   slots:
     headerLeftContent:
-      - _id: 4fb2a9bd-3af3-4951-9ece-9e98588f3bf5
-        type: link
-        slots:
-          linkContent:
-            - _id: 2a3315a0-cfeb-4794-8bb5-92bd602d9b9e
-              type: image
-              parameters:
-                image:
-                  type: asset
-                  value:
-                    - _id: 84da2069-6a95-471f-908f-3916ff51b0a0
-                      type: image
-                      fields:
-                        id:
-                          type: text
-                          value: f6ed6e9a-59e8-4f31-9c3d-e27824385b7a
-                        url:
-                          value: >-
-                            https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/Kq3HO2jFS4CIfk9ZLC64RA-image.png
-                          type: text
-                        file:
-                          type: file
-                          value: 7d7069e4-cfd1-4d28-8a56-b6e4e9194438
-                        size:
-                          value: 6950
-                          type: number
-                        title:
-                          type: text
-                          value: image.png
-                        width:
-                          value: 235
-                          type: number
-                        height:
-                          value: 78
-                          type: number
-                        mediaType:
-                          value: image/png
-                          type: text
-                      _source: uniform-assets
-                width:
-                  type: number
-                  value: '200'
-                height:
-                  type: number
-                  value: '75'
-                objectFit:
-                  type: dex-segmented-control-parameter
-                  value: contain
-              _overridability:
-                hideLockedParameters: true
-        parameters:
-          link:
-            type: link
-            value:
-              path: /
-              type: projectMapNode
-              nodeId: b90aa0bf-891d-4e40-9899-0d79eb1b26af
-              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-          displayName:
-            type: text
-            value: Logo
-        _overridability:
-          hideLockedParameters: true
+      - _id: a8300e31-ab41-4856-aeb2-b1a28b05645e
+        type: container
+        _pattern: c8db2a5f-572f-4cfc-b387-61742c03385b
     headerRightContent:
       - _id: a6bb5b6f-58fe-4c7a-a421-0daebd667492
         type: navigationLink
@@ -111,69 +54,6 @@ composition:
           weight:
             type: dex-segmented-control-parameter
             value: medium
-      - _id: 03f4eb07-7d1a-4297-bacf-96234c2a0d31
-        type: navigationLink
-        parameters:
-          icon:
-            type: asset
-            locales:
-              en:
-                - _id: 4cf524a1-dbc9-41c0-9ed0-be43cb72463b
-                  type: image
-                  fields:
-                    id:
-                      type: text
-                      value: f5888aec-46f9-46fe-9a5f-5e7820281e3a
-                    url:
-                      type: text
-                      value: >-
-                        https://img.uniform.global/p/ovl3f_RJSNmuo41YikmFlA/Mi1vlU-0TmWejIUAbtuujg-profile-icon.svg
-                    file:
-                      type: file
-                      value: 7e8a2365-3a3d-459b-b0be-9bb8de9d5c6b
-                    size:
-                      type: number
-                      value: 578
-                    title:
-                      type: text
-                      value: profile-icon.svg
-                    width:
-                      type: number
-                      value: 24
-                    height:
-                      type: number
-                      value: 24
-                    mediaType:
-                      type: text
-                      value: image/svg+xml
-                  _source: uniform-assets
-            value: []
-          link:
-            type: link
-            locales:
-              en:
-                path: /${locale}/profile
-                type: projectMapNode
-                nodeId: 2b51fe3c-56f4-425b-94f5-88c5e3b3af14
-                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-                dynamicInputValues:
-                  locale: ${locale}
-          size:
-            type: dex-segmented-control-parameter
-            value: 2xl
-          text:
-            type: text
-            locales:
-              en: Sign In
-          weight:
-            type: dex-segmented-control-parameter
-            value: normal
-        _overridability:
-          hideLockedParameters: true
-      - _id: 438d2d8c-d21d-4024-8f6b-acaf378c881a
-        type: aiShoppingAssistantButton
-        _overridability:
-          hideLockedParameters: true
     headerCenterContent:
       - _id: 5832d439-1459-4a01-b422-fd1e66a71cbb
         type: navigationLink
@@ -307,7 +187,7 @@ composition:
   _locales:
     - en
 created: '2025-04-24T21:39:06.127545+00:00'
-modified: '2025-04-24T21:56:03.029395+00:00'
+modified: '2025-05-07T13:51:39.980901+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/jd-template/main-header_klwsr5.jpg

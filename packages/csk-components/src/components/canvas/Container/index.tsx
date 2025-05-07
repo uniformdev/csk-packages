@@ -3,6 +3,7 @@ import { ContainerParameters } from './parameters';
 
 export type ContainerAdditionalProps = {
   className?: string;
+  wrapperClassName?: string;
 };
 
 export enum ContainerSlots {
