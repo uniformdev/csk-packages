@@ -1,0 +1,40 @@
+composition:
+  _name: News
+  _id: 71ac1c9d-73fb-4147-a7f5-da0f05421134
+  _slug: news
+  type: page
+  _overrides:
+    71ac1c9d-73fb-4147-a7f5-da0f05421134|dc2e95be-21b5-4476-a309-f8a34922f528:
+      slots:
+        $slotSectionItems:
+          - _id: 78a97664-b6d7-4000-9bce-dd0d44c951cf
+            type: fixedHero
+            variant: columnsReverse
+            parameters:
+              titleTag:
+                type: dex-segmented-control-parameter
+                value: h1
+              titleText:
+                type: text
+                locales:
+                  en: News
+              descriptionText:
+                type: text
+                locales:
+                  en: >-
+                    Here you'll find the latest news and information from Qorvo.
+                    Browse through our press releases and financial results, and
+                    learn details of our upcoming events and newest products.
+
+
+                    Want to see what’s on the minds of Qorvo experts? Visit our
+                    blog, or watch our latest videos.
+              contentAlignment:
+                type: dex-segmented-control-parameter
+                value: left
+  _locales:
+    - en
+  _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
+created: '2025-04-24T22:15:43.541469+00:00'
+modified: '2025-04-24T22:17:35.33192+00:00'
+pattern: false

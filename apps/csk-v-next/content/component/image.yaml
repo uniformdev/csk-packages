@@ -9,7 +9,9 @@ parameters:
     type: asset
     typeConfig:
       max: 1
-      min: 1
+      min: 0
+      allowedTypes:
+        - image
   - id: cca23341-d3d6-448d-9c5d-16b2324881bc
     name: Dimensions
     type: group
@@ -114,5 +116,5 @@ slots: []
 titleParameter: image
 thumbnailParameter: image
 canBeComposition: false
-created: '2025-02-17T15:34:14.681024+00:00'
-updated: '2025-02-17T15:34:14.681024+00:00'
+created: '2025-04-24T21:39:01.556285+00:00'
+updated: '2025-04-25T01:08:24.631585+00:00'

@@ -1,0 +1,177 @@
+composition:
+  _name: Grid pattern
+  _id: a285840b-a66a-4e3b-917c-5a133548d946
+  type: grid
+  parameters:
+    gapX:
+      type: dex-slider-control-parameter
+      value: {}
+    gapY:
+      type: dex-slider-control-parameter
+      value: {}
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        mobile: {}
+        tablet: {}
+        desktop: {}
+    columnsCount:
+      type: dex-slider-control-parameter
+      value:
+        mobile: '1'
+        tablet: '1'
+        desktop: '1'
+  slots:
+    gridInner:
+      - _id: 389cd77a-525c-43a3-8aad-670e9e31d2b0
+        type: $loop
+        slots:
+          body:
+            - _id: 0ad9f51c-3624-48f8-88c6-b8f36de43508
+              type: gridItem
+              slots:
+                inner:
+                  - _id: 349f5ae2-ddbf-4baf-9999-1f1402667b8e
+                    type: link
+                    slots:
+                      linkContent:
+                        - _id: f259e482-480e-41f1-aa80-b97a051fbe95
+                          type: text
+                          parameters:
+                            tag:
+                              type: dex-segmented-control-parameter
+                              value: span
+                            size:
+                              type: dex-segmented-control-parameter
+                              value: {}
+                            text:
+                              type: text
+                              locales:
+                                en: >-
+                                  ${#jptr:/List entries Loop
+                                  Item/entry/fields/publishDate/value}
+                            color:
+                              type: dex-color-palette-parameter
+                              value: text-secondary
+                            weight:
+                              type: dex-segmented-control-parameter
+                              value: normal
+                          _overridability:
+                            hideLockedParameters: true
+                    parameters:
+                      link:
+                        type: link
+                        value:
+                          path: >-
+                            /${locale}/newsroom/news/${#jptr:/List entries Loop
+                            Item/entry/_slug}
+                          type: projectMapNode
+                          nodeId: 055abaa8-edb1-464d-a26c-fc49a55f2eeb
+                          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                          dynamicInputValues:
+                            locale: ${locale}
+                            news-slug: ${#jptr:/List entries Loop Item/entry/_slug}
+                      displayName:
+                        type: text
+                        locales:
+                          en: Link
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                rowSpan:
+                  type: dex-slider-control-parameter
+                  value: {}
+                rowStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: '1'
+                    tablet: '1'
+                    desktop: '1'
+                columnSpan:
+                  type: dex-slider-control-parameter
+                  value:
+                    desktop: span-4
+                columnStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: '1'
+                    tablet: '1'
+                    desktop: '1'
+              _overridability:
+                hideLockedParameters: true
+            - _id: a0bd1540-3819-49e9-a739-a8e170dcb595
+              type: gridItem
+              slots:
+                inner:
+                  - _id: 56524ec9-c5e1-4520-847c-b0f059a7a708
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: span
+                      size:
+                        type: dex-segmented-control-parameter
+                        value: {}
+                      text:
+                        type: text
+                        locales:
+                          en: >-
+                            ${#jptr:/List entries Loop
+                            Item/entry/fields/title/value}
+                      color:
+                        type: dex-color-palette-parameter
+                        value: text-secondary
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: normal
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                rowSpan:
+                  type: dex-slider-control-parameter
+                  value: {}
+                rowStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: '1'
+                    tablet: '1'
+                    desktop: '1'
+                columnSpan:
+                  type: dex-slider-control-parameter
+                  value:
+                    desktop: span-8
+                columnStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: '1'
+                    tablet: '1'
+                    desktop: '4'
+              _overridability:
+                hideLockedParameters: true
+        _dataResources:
+          List entries Loop Item:
+            type: sys-reserved-loop
+            variables:
+              connectedData: '#jptr:/List/entries:fa=c'
+        _overridability:
+          hideLockedParameters: true
+  _dataResources:
+    List:
+      type: articleList
+      variables:
+        locale: ${locale}
+        search: ''
+        filters: >-
+          {"type[eq]":"article","fields.category[eq]":"1d51c4fb-4c0a-4ec0-8c48-dcb0270d89b2"}
+        uiFilters: >-
+          [{"field":"type","operator":"eq","value":"article"},{"field":"fields.category","operator":"eq","value":"1d51c4fb-4c0a-4ec0-8c48-dcb0270d89b2"}]
+        contentTypes: article
+      isPatternParameter: true
+      ignorePatternParameterDefault: true
+  _overridability:
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2025-04-24T22:56:10.888222+00:00'
+modified: '2025-04-24T23:00:10.107793+00:00'
+pattern: true

@@ -1,0 +1,40 @@
+composition:
+  _name: Section Title
+  _id: 08b7d9c0-c9a7-4c47-a167-2acaf6c8746b
+  type: text
+  parameters:
+    tag:
+      type: dex-segmented-control-parameter
+      value: h2
+    size:
+      type: dex-segmented-control-parameter
+      value:
+        mobile: 3xl
+    text:
+      type: text
+      locales:
+        en: some content goes here
+    weight:
+      type: dex-segmented-control-parameter
+      value: normal
+    alignment:
+      type: dex-segmented-control-parameter
+      value: left
+    transform:
+      type: dex-segmented-control-parameter
+      value: uppercase
+    decoration:
+      type: dex-segmented-control-parameter
+      value: underline
+    letterSpacing:
+      type: dex-segmented-control-parameter
+      value: wide
+  _overridability:
+    parameters:
+      text: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2025-04-25T00:19:38.680418+00:00'
+modified: '2025-04-25T15:31:32.774933+00:00'
+pattern: true

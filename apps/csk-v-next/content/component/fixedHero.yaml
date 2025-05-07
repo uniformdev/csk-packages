@@ -67,6 +67,7 @@ parameters:
       childrenParams:
         - contentAlignment
         - fullHeight
+        - fluidContent
   - id: contentAlignment
     name: Content Alignment
     type: dex-segmented-control-parameter
@@ -83,6 +84,10 @@ parameters:
     name: Full Height
     type: checkbox
     typeConfig: null
+  - id: fluidContent
+    name: Fluid Content
+    type: checkbox
+    typeConfig: null
 categoryId: f22b05f0-c4bf-4158-8ebc-4856e4d453af
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/hero-fixed.jpg
@@ -90,8 +95,8 @@ useTeamPermissions: true
 slots: []
 titleParameter: displayName
 canBeComposition: false
-created: '2025-02-17T15:34:14.062996+00:00'
-updated: '2025-02-17T15:34:14.062996+00:00'
+created: '2025-04-24T21:38:59.656897+00:00'
+updated: '2025-05-07T06:50:20.526235+00:00'
 variants:
   - id: columns
     name: Columns

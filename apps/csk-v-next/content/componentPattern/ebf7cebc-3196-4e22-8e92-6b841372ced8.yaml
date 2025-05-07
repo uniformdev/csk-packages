@@ -1,0 +1,225 @@
+composition:
+  _name: Featured Resources
+  _id: ebf7cebc-3196-4e22-8e92-6b841372ced8
+  type: container
+  parameters:
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        mobile: {}
+        tablet: {}
+        desktop: {}
+    displayName:
+      type: text
+      locales:
+        en: Featured Resources
+  slots:
+    containerContent:
+      - _id: f47da18c-a0fd-4136-92cd-4807939ffaea
+        type: text
+        _pattern: 08b7d9c0-c9a7-4c47-a167-2acaf6c8746b
+      - _id: a012c8d3-4f64-49fb-91cb-10a74bdef9f6
+        type: spacer
+        parameters:
+          size:
+            type: dex-token-selector-parameter
+            value: spacer-small
+        _overridability:
+          hideLockedParameters: true
+      - _id: 93eb3e08-7bb8-427a-9565-13e5ec10f16e
+        type: carousel
+        slots:
+          carouselItems:
+            - _id: 16dccba2-9810-4797-8c26-8b6852788937
+              type: $loop
+              slots:
+                body:
+                  - _id: 8a64b5bf-f74b-41b6-ba0f-6e1a066781a8
+                    type: flex
+                    slots:
+                      flexItem:
+                        - _id: 5ce3cdeb-9331-4948-af0a-0e9b59521860
+                          type: image
+                          parameters:
+                            image:
+                              type: asset
+                              value: >-
+                                ${#jptr:/Resources entries Loop
+                                Item/entry/fields/thumbnail/value}
+                            width:
+                              type: number
+                              value: '164'
+                            height:
+                              type: number
+                              value: '100'
+                            objectFit:
+                              type: dex-segmented-control-parameter
+                              value: cover
+                          _overridability:
+                            hideLockedParameters: true
+                        - _id: 15a355f5-e000-4ec0-aaf4-7d4620cb2d43
+                          type: flex
+                          slots:
+                            flexItem:
+                              - _id: 88bd2834-726c-45b6-8117-986ebee41836
+                                type: link
+                                slots:
+                                  linkContent:
+                                    - _id: 0be32baa-ea02-4bfd-b8f3-d65e0e91dcf3
+                                      type: text
+                                      parameters:
+                                        tag:
+                                          type: dex-segmented-control-parameter
+                                          value: p
+                                        size:
+                                          type: dex-segmented-control-parameter
+                                          value:
+                                            mobile: lg
+                                        text:
+                                          type: text
+                                          locales:
+                                            en: >-
+                                              ${#jptr:/Resources entries Loop
+                                              Item/entry/fields/title/value}
+                                        color:
+                                          type: dex-color-palette-parameter
+                                          value: text-secondary
+                                        weight:
+                                          type: dex-segmented-control-parameter
+                                          value: normal
+                                      _overridability:
+                                        hideLockedParameters: true
+                                parameters:
+                                  displayName:
+                                    type: text
+                                    locales:
+                                      en: Link
+                                _overridability:
+                                  hideLockedParameters: true
+                              - _id: 4b672710-786a-4b36-b7d6-cfa9cbf0f766
+                                type: text
+                                parameters:
+                                  tag:
+                                    type: dex-segmented-control-parameter
+                                    value: p
+                                  size:
+                                    type: dex-segmented-control-parameter
+                                    value:
+                                      mobile: lg
+                                  text:
+                                    type: text
+                                    locales:
+                                      en: >-
+                                        ${#jptr:/Resources entries Loop
+                                        Item/entry/fields/shortDescription/value}
+                                  color:
+                                    type: dex-color-palette-parameter
+                                    value: text-tertiary
+                                  weight:
+                                    type: dex-segmented-control-parameter
+                                    value: normal
+                                _overridability:
+                                  hideLockedParameters: true
+                              - _id: e1e6595a-be0c-426c-91e4-c92d06882b31
+                                type: button
+                                _pattern: 31191bc7-7e6e-4748-89c2-8e73db05237d
+                          parameters:
+                            gap:
+                              type: dex-slider-control-parameter
+                              value:
+                                mobile: '4'
+                                tablet: '4'
+                                desktop: '4'
+                            direction:
+                              type: dex-segmented-control-parameter
+                              value:
+                                mobile: col
+                                tablet: col
+                                desktop: col
+                            alignItems:
+                              type: dex-segmented-control-parameter
+                              value: {}
+                            displayName:
+                              type: text
+                              locales:
+                                en: Right Content
+                            justifyContent:
+                              type: dex-segmented-control-parameter
+                              value: {}
+                          _overridability:
+                            hideLockedParameters: true
+                    parameters:
+                      gap:
+                        type: dex-slider-control-parameter
+                        value:
+                          mobile: '4'
+                          tablet: '4'
+                          desktop: '4'
+                      direction:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: row
+                          tablet: row
+                          desktop: row
+                      alignItems:
+                        type: dex-segmented-control-parameter
+                        value: {}
+                      displayName:
+                        type: text
+                        locales:
+                          en: >-
+                            ${#jptr:/Resources entries Loop
+                            Item/entry/fields/title/value}
+                      justifyContent:
+                        type: dex-segmented-control-parameter
+                        value: {}
+                    _overridability:
+                      hideLockedParameters: true
+              _dataResources:
+                Resources entries Loop Item:
+                  type: sys-reserved-loop
+                  variables:
+                    connectedData: '#jptr:/Resources/entries:fa=c'
+              _overridability:
+                hideLockedParameters: true
+        _overridability:
+          hideLockedParameters: true
+  _dataResources:
+    Resources:
+      type: resources
+      variables:
+        locale: ${locale}
+        entryIds: >-
+          09212c4a-a031-45b2-909a-e7937f9a7b5b,b3ee8d98-7ce9-4c3a-b1a1-3da036cbe362,c4044cfe-1a50-45b1-af2c-ae0d19b50953,07358e6d-be04-4a4a-9959-579fd1bb5442
+      isPatternParameter: true
+      ignorePatternParameterDefault: true
+  _overrides:
+    e1e6595a-be0c-426c-91e4-c92d06882b31:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: >-
+                ${#jptr:/Resources entries Loop
+                Item/entry/fields/targetLink/value/path}
+              type: url
+        text:
+          type: text
+          value: Learn more
+        textColor:
+          type: dex-color-palette-parameter
+          value: text-secondary
+    f47da18c-a0fd-4136-92cd-4807939ffaea:
+      parameters:
+        text:
+          type: text
+          locales:
+            en: Featured Resources
+  _overridability:
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2025-04-25T00:07:44.190479+00:00'
+modified: '2025-04-25T00:32:59.509004+00:00'
+pattern: true

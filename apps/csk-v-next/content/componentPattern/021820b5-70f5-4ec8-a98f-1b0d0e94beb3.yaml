@@ -1,0 +1,124 @@
+composition:
+  _name: Product Card
+  _id: 021820b5-70f5-4ec8-a98f-1b0d0e94beb3
+  type: card
+  parameters:
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        marginTop: ''
+        marginLeft: ''
+        paddingTop: ''
+        marginRight: ''
+        paddingLeft: ''
+        marginBottom: ''
+        paddingRight: ''
+        paddingBottom: ''
+    displayName:
+      type: text
+      value: Product Card
+    fluidContent:
+      type: checkbox
+      value: true
+  slots:
+    cardMedia:
+      - _id: fbb7fcd0-5300-4ab2-90e4-492181d65867
+        type: image
+        parameters:
+          image:
+            type: asset
+            value: []
+          width:
+            type: number
+            value: '150'
+          border:
+            type: dex-token-selector-parameter
+            value: border-image-radius-small
+          height:
+            type: number
+            value: '150'
+          objectFit:
+            type: dex-segmented-control-parameter
+            value: contain
+          overlayColor:
+            type: dex-color-palette-parameter
+            value: general-color-3
+          overlayOpacity:
+            type: dex-slider-control-parameter
+            value: '0'
+        _overridability:
+          parameters:
+            image: 'yes'
+          hideLockedParameters: true
+    cardContent:
+      - _id: f9bc2979-5917-46a0-aeb3-0e2bfbd683be
+        type: button
+        variant: link
+        parameters:
+          icon:
+            type: asset
+            value: []
+          size:
+            type: dex-token-selector-parameter
+            value: ''
+          textSize:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: lg
+              tablet: lg
+              desktop: lg
+          textColor:
+            type: dex-color-palette-parameter
+            value: text-secondary
+          textWeight:
+            type: dex-segmented-control-parameter
+            value: extrabold
+          iconPosition:
+            type: dex-segmented-control-parameter
+            value: right
+          textTransform:
+            type: dex-segmented-control-parameter
+            value: uppercase
+        _overridability:
+          variants: false
+          parameters:
+            link: 'yes'
+            text: 'yes'
+            textColor: 'yes'
+          hideLockedParameters: true
+      - _id: 06f3f1a7-27c7-4928-beee-233d720b84c0
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: p
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: 2xl
+              tablet: 2xl
+              desktop: xl
+          color:
+            type: dex-color-palette-parameter
+            value: text-tertiary
+          weight:
+            type: dex-segmented-control-parameter
+            value: medium
+        _overridability:
+          parameters:
+            tag: 'no'
+            text: 'yes'
+          hideLockedParameters: true
+  _overridability:
+    variants: false
+    parameters:
+      displayName: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2025-04-25T01:07:38.522411+00:00'
+modified: '2025-04-25T01:13:39.067539+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/examples-card.jpg
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9

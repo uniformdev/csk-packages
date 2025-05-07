@@ -1,0 +1,161 @@
+composition:
+  _name: Product Gallery
+  _id: bdb91d18-8975-489f-b9a6-2afae8d0a657
+  type: flex
+  parameters:
+    gap:
+      type: dex-slider-control-parameter
+      value:
+        mobile: '4'
+        tablet: '4'
+        desktop: '4'
+    direction:
+      type: dex-segmented-control-parameter
+      value:
+        mobile: col
+        tablet: col
+        desktop: col
+    alignItems:
+      type: dex-segmented-control-parameter
+      value:
+        mobile: center
+        tablet: center
+        desktop: center
+    displayName:
+      type: text
+      locales:
+        en: Product Gallery
+    justifyContent:
+      type: dex-segmented-control-parameter
+      value:
+        mobile: center
+        tablet: center
+        desktop: center
+  slots:
+    flexItem:
+      - _id: 6b94b779-5482-4c92-bedd-9e2eb5bd98d5
+        type: text
+        _pattern: 08b7d9c0-c9a7-4c47-a167-2acaf6c8746b
+      - _id: f7ff165d-56fa-4d75-bca8-c5a9c49fce70
+        type: flex
+        slots:
+          flexItem:
+            - _id: a6030edf-87f7-4abe-96f6-0fabbd70628a
+              type: $loop
+              slots:
+                body:
+                  - _id: 915b883a-9c23-4552-9cc3-c48c9853a937
+                    type: card
+                    _pattern: 021820b5-70f5-4ec8-a98f-1b0d0e94beb3
+              _dataResources:
+                Products entries Loop Item:
+                  type: sys-reserved-loop
+                  variables:
+                    connectedData: '#jptr:/Products/entries:fa=c'
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          gap:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '2'
+              tablet: '2'
+              desktop: '2'
+          direction:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: col
+              tablet: row
+              desktop: row
+          alignItems:
+            type: dex-segmented-control-parameter
+            value: {}
+          displayName:
+            type: text
+            locales:
+              en: Product List
+          justifyContent:
+            type: dex-segmented-control-parameter
+            value: {}
+        _overridability:
+          hideLockedParameters: true
+      - _id: 3423d2d4-3534-4ce1-ad41-a45bfd064298
+        type: button
+        _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
+  _dataResources:
+    Products:
+      type: productList
+      variables:
+        limit: '4'
+        locale: ${locale}
+        search: ''
+        filters: '{"type[eq]":"product"}'
+        orderBy: updated_at_DESC
+        uiFilters: '[{"field":"type","operator":"eq","value":"product"}]'
+        contentTypes: product
+      isPatternParameter: true
+      ignorePatternParameterDefault: false
+  _overrides:
+    3423d2d4-3534-4ce1-ad41-a45bfd064298:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: /${locale}/products
+              type: projectMapNode
+              nodeId: 05c9dbfc-7fb7-40ce-b77c-850a6b4ebef4
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+        text:
+          type: text
+          value: View All New Products
+    6b94b779-5482-4c92-bedd-9e2eb5bd98d5:
+      parameters:
+        text:
+          type: text
+          locales:
+            en: Products
+    915b883a-9c23-4552-9cc3-c48c9853a937:
+      parameters:
+        displayName:
+          type: text
+          value: ${#jptr:/Products entries Loop Item/entry/_name}
+    915b883a-9c23-4552-9cc3-c48c9853a937|06f3f1a7-27c7-4928-beee-233d720b84c0:
+      parameters:
+        text:
+          type: text
+          locales:
+            en: ${#jptr:/Products entries Loop Item/entry/fields/name/value}
+    915b883a-9c23-4552-9cc3-c48c9853a937|f9bc2979-5917-46a0-aeb3-0e2bfbd683be:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: >-
+                /${locale}/products/${#jptr:/Products entries Loop
+                Item/entry/_slug}
+              type: projectMapNode
+              nodeId: 702b0e0b-3858-4b5d-99e4-bdb98097ca0f
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                product-slug: ${#jptr:/Products entries Loop Item/entry/_slug}
+        text:
+          type: text
+          locales:
+            en: ${#jptr:/Products entries Loop Item/entry/fields/title/value}
+    915b883a-9c23-4552-9cc3-c48c9853a937|fbb7fcd0-5300-4ab2-90e4-492181d65867:
+      parameters:
+        image:
+          type: asset
+          value: ${#jptr:/Products entries Loop Item/entry/fields/primaryImage/value}
+  _overridability:
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2025-04-25T00:59:48.700902+00:00'
+modified: '2025-04-25T12:57:07.360595+00:00'
+pattern: true

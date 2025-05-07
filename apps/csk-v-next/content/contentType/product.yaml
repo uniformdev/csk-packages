@@ -1,7 +1,7 @@
 id: product
 name: Product
-created: '2025-03-24T20:35:17.586056+00:00'
-updated: '2025-04-07T11:40:42.591956+00:00'
+created: '2025-04-24T21:39:19.576736+00:00'
+updated: '2025-04-25T01:27:15.102358+00:00'
 slugSettings:
   required: 'no'
 useTeamPermissions: true
@@ -15,6 +15,224 @@ fields:
     type: text
     typeConfig:
       required: true
+  - id: keyFeatures
+    name: Key Features
+    type: richText
+    typeConfig:
+      elements:
+        builtIn:
+          - h1
+          - h2
+          - h3
+          - h4
+          - h5
+          - h6
+          - unorderedList
+          - orderedList
+          - link
+          - quote
+          - code
+          - table
+          - asset
+          - variable
+      required: false
+      formatting:
+        builtIn:
+          - bold
+          - italic
+          - underline
+          - strikethrough
+          - code
+          - superscript
+          - subscript
+      elementsConfig:
+        asset:
+          allowedTypes:
+            - image
+    localizable: true
+  - id: typicalApplications
+    name: Typical Applications
+    type: richText
+    typeConfig:
+      elements:
+        builtIn:
+          - h1
+          - h2
+          - h3
+          - h4
+          - h5
+          - h6
+          - unorderedList
+          - orderedList
+          - link
+          - quote
+          - code
+          - table
+          - asset
+          - variable
+      required: false
+      formatting:
+        builtIn:
+          - bold
+          - italic
+          - underline
+          - strikethrough
+          - code
+          - superscript
+          - subscript
+      elementsConfig:
+        asset:
+          allowedTypes:
+            - image
+    localizable: true
+  - id: overview
+    name: Overview
+    type: richText
+    typeConfig:
+      elements:
+        builtIn:
+          - h1
+          - h2
+          - h3
+          - h4
+          - h5
+          - h6
+          - unorderedList
+          - orderedList
+          - link
+          - quote
+          - code
+          - table
+          - asset
+          - variable
+      required: false
+      formatting:
+        builtIn:
+          - bold
+          - italic
+          - underline
+          - strikethrough
+          - code
+          - superscript
+          - subscript
+      elementsConfig:
+        asset:
+          allowedTypes:
+            - image
+    localizable: true
+  - id: parameters
+    name: Parameters
+    type: richText
+    typeConfig:
+      elements:
+        builtIn:
+          - table
+      required: false
+      formatting:
+        builtIn:
+          - bold
+          - italic
+          - underline
+          - strikethrough
+      elementsConfig:
+        asset:
+          allowedTypes:
+            - image
+    localizable: true
+  - id: primaryImage
+    name: Primary Image
+    type: asset
+    typeConfig:
+      max: 1
+      min: 0
+  - id: 53c66f1e-0962-41e2-bc01-8892c265ae34
+    name: Taxonomy
+    type: group
+    typeConfig:
+      collapsed: false
+      childrenParams:
+        - category
+        - subcategory
+        - relatedProducts
+        - relatedResources
+        - enrichments
+  - id: category
+    name: Category
+    type: contentReference
+    typeConfig:
+      required: true
+      allowedContentTypes:
+        - productCategory
+  - id: subcategory
+    name: Subcategory
+    type: contentReference
+    typeConfig:
+      allowedContentTypes:
+        - productCategory
+  - id: relatedProducts
+    name: Related Products
+    type: contentReference
+    typeConfig:
+      isMulti: true
+      allowedContentTypes:
+        - product
+  - id: relatedResources
+    name: Related Resources
+    type: contentReference
+    typeConfig:
+      isMulti: true
+      allowedContentTypes:
+        - resource
+  - id: enrichments
+    name: Enrichments
+    type: $enr
+    typeConfig: null
+  - id: 83fd62af-d6b8-424a-9b10-35a8c4e62e46
+    name: Documents
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - dataSheets
+        - pcbLayoutFiles
+        - sParameters
+  - id: dataSheets
+    name: Data Sheets
+    type: asset
+    typeConfig:
+      allowedTypes:
+        - other
+  - id: pcbLayoutFiles
+    name: PCB Layout Files
+    type: asset
+    typeConfig:
+      allowedTypes:
+        - other
+  - id: sParameters
+    name: S-Parameters
+    type: asset
+    typeConfig:
+      allowedTypes:
+        - other
+  - id: b82cfc97-c422-4271-a8b3-3f01fba48ee9
+    name: Deprecated
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - variants
+        - shortDescription
+        - rating
+        - brand
+        - body
+  - id: variants
+    name: Variants
+    type: $block
+    typeConfig:
+      min: 1
+      allowedTypes:
+        - $loop
+        - variant
   - id: shortDescription
     name: Short Description
     type: text
@@ -22,6 +240,21 @@ fields:
       multiline: true
       linesCount: 4
     localizable: true
+  - id: rating
+    name: Rating
+    type: number
+    typeConfig:
+      max: '5'
+      min: '1'
+      decimal: true
+      required: false
+      decimalPlaces: '1'
+  - id: brand
+    name: Brand
+    type: contentReference
+    typeConfig:
+      allowedContentTypes:
+        - brand
   - id: body
     name: Body
     type: richText
@@ -44,71 +277,6 @@ fields:
           - italic
           - underline
     localizable: true
-  - id: primaryImage
-    name: Primary Image
-    type: asset
-    typeConfig:
-      max: 1
-      min: 0
-  - id: 53c66f1e-0962-41e2-bc01-8892c265ae34
-    name: Taxonomy
-    type: group
-    typeConfig:
-      collapsed: false
-      childrenParams:
-        - rating
-        - category
-        - subcategory
-        - brand
-        - variants
-        - recommendations
-  - id: rating
-    name: Rating
-    type: number
-    typeConfig:
-      max: '5'
-      min: '1'
-      decimal: true
-      required: true
-      decimalPlaces: '1'
-  - id: category
-    name: Category
-    type: contentReference
-    typeConfig:
-      required: true
-      allowedContentTypes:
-        - productCategory
-  - id: subcategory
-    name: Subcategory
-    type: contentReference
-    typeConfig:
-      allowedContentTypes:
-        - productCategory
-  - id: brand
-    name: Brand
-    type: contentReference
-    typeConfig:
-      allowedContentTypes:
-        - brand
-  - id: variants
-    name: Variants
-    type: $block
-    typeConfig:
-      min: 1
-      allowedTypes:
-        - $loop
-        - variant
-  - id: recommendations
-    name: Recommendations
-    type: contentReference
-    typeConfig:
-      isMulti: true
-      allowedContentTypes:
-        - product
-  - id: enrichments
-    name: Enrichments
-    type: $enr
-    typeConfig: null
 entryName: title
 thumbnailField: primaryImage
 description: ''

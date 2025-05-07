@@ -53,7 +53,6 @@ export const FixedHero: FC<DemoHeroProps> = props => (
       marginBottom: '',
       paddingTop: !props.component.variant ? 'container-xlarge' : '',
     }}
-    fluidContent={true}
     isFlexibleHero={false}
   />
 );

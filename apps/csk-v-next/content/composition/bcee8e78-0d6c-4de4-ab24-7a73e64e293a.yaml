@@ -1,0 +1,73 @@
+composition:
+  _name: '🗞️ Newsroom '
+  _id: bcee8e78-0d6c-4de4-ab24-7a73e64e293a
+  _slug: newsroom
+  type: page
+  _overrides:
+    bcee8e78-0d6c-4de4-ab24-7a73e64e293a|dc2e95be-21b5-4476-a309-f8a34922f528:
+      slots:
+        $slotSectionItems:
+          - _id: 0aa514d3-437f-4c80-927a-9a1163a6cb15
+            type: fixedHero
+            variant: ''
+            parameters:
+              image:
+                type: asset
+                value:
+                  - _id: 30b12d4e-c13b-414a-acf8-54131018b17e
+                    type: image
+                    fields:
+                      id:
+                        type: text
+                        value: c00a4c4a-f3cf-4294-bb5f-e0545b3ebca3
+                      url:
+                        type: text
+                        value: >-
+                          https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/FgTxahq2RFyTaEuFCdjaEQ-image.png
+                      file:
+                        type: file
+                        value: 87138d58-3fb7-4d0b-a36c-1c07ea03f0c0
+                      size:
+                        type: number
+                        value: 215777
+                      title:
+                        type: text
+                        value: image.png
+                      width:
+                        type: number
+                        value: 1400
+                      height:
+                        type: number
+                        value: 273
+                      mediaType:
+                        type: text
+                        value: image/png
+                    _source: uniform-assets
+              titleTag:
+                type: dex-segmented-control-parameter
+                value: h2
+              titleText:
+                type: text
+                locales:
+                  en: Newsroom
+              descriptionText:
+                type: text
+                locales:
+                  en: >-
+                    As a leading provider of core RF and power solutions that
+                    connect and protect the world, we recognize the importance
+                    of staying connected with reporters, industry analysts and
+                    our other key stakeholders. Our newsroom offers links to
+                    Qorvo news releases, media contacts, our upcoming event
+                    schedule and other media resources.
+
+
+                    If you're interested in being added to our media/industry
+                    analyst list, please forward your contact information to
+                    Brent Dietz, Director of Corporate Communications.
+  _locales:
+    - en
+  _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
+created: '2025-04-24T22:14:12.262967+00:00'
+modified: '2025-04-24T22:15:21.35826+00:00'
+pattern: false

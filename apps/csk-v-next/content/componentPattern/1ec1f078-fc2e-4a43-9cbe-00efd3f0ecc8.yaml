@@ -1,0 +1,99 @@
+composition:
+  _name: Subscribe
+  _id: 1ec1f078-fc2e-4a43-9cbe-00efd3f0ecc8
+  type: flex
+  parameters:
+    gap:
+      type: dex-slider-control-parameter
+      value:
+        mobile: '8'
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        mobile: {}
+        tablet: {}
+        desktop:
+          paddingTop: container-medium
+          paddingLeft: container-small
+          paddingRight: container-small
+          paddingBottom: container-medium
+    direction:
+      type: dex-segmented-control-parameter
+      value:
+        mobile: row
+        tablet: row
+        desktop: row
+    alignItems:
+      type: dex-segmented-control-parameter
+      value: {}
+    displayName:
+      type: text
+      locales:
+        en: Subscribe
+    fluidContent:
+      type: checkbox
+      value: true
+    justifyContent:
+      type: dex-segmented-control-parameter
+      value: {}
+    backgroundColor:
+      type: dex-color-palette-parameter
+      value: general-color-4
+  slots:
+    flexItem:
+      - _id: 726a723d-7aa4-4250-9bc1-91cb9d6361ef
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: h2
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: 3xl
+          text:
+            type: text
+            locales:
+              en: Stay Informed
+          weight:
+            type: dex-segmented-control-parameter
+            value: normal
+          transform:
+            type: dex-segmented-control-parameter
+            value: uppercase
+          letterSpacing:
+            type: dex-segmented-control-parameter
+            value: wide
+        _overridability:
+          hideLockedParameters: true
+      - _id: 3cc196ce-9e2c-4986-b8cd-6038347dafd1
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: p
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: lg
+          text:
+            type: text
+            locales:
+              en: >-
+                Subscribe to our mailing list to get updates on everything
+                Qorvo.
+          weight:
+            type: dex-segmented-control-parameter
+            value: normal
+        _overridability:
+          hideLockedParameters: true
+      - _id: 43642ccc-30e5-4872-8aa6-fa22a265a354
+        type: button
+        _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
+  _overridability:
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2025-04-25T13:05:16.446345+00:00'
+modified: '2025-04-25T13:07:22.844798+00:00'
+pattern: true

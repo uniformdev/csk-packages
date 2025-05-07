@@ -1,0 +1,215 @@
+composition:
+  _name: Main Hero
+  _id: 0e2d3a95-acb6-40e1-b752-3740535014f3
+  type: section
+  parameters:
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        mobile: {}
+        tablet: {}
+        desktop: {}
+    displayName:
+      type: text
+      locales:
+        en: QSPICE
+    contentAlignment:
+      type: dex-segmented-control-parameter
+      value: center
+  slots:
+    sectionMedia:
+      - _id: 51e8d21c-4ae0-4004-a8ce-9cc70e1ee198
+        type: image
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 35165718-7bbf-46e4-80e5-8bef782194b1
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 53edd189-b32d-4b08-8173-8624c0437637
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/Z6MZ04GkT5euWoTehBNzHA-image.png
+                    type: text
+                  file:
+                    type: file
+                    value: 6d3292ed-b5f6-4790-ba87-05388b0bf839
+                  size:
+                    value: 523151
+                    type: number
+                  title:
+                    type: text
+                    value: image.png
+                  width:
+                    value: 1440
+                    type: number
+                  height:
+                    value: 540
+                    type: number
+                  mediaType:
+                    value: image/png
+                    type: text
+                _source: uniform-assets
+        _overridability:
+          parameters:
+            image: 'yes'
+          hideLockedParameters: true
+    sectionContent:
+      - _id: 502f2bef-59cf-45c0-86f0-c611ef03aa62
+        type: flex
+        slots:
+          flexItem:
+            - _id: cec396a9-bac8-4214-ac3d-6f5428b3fed7
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: span
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    desktop: 3xl
+                text:
+                  type: text
+                  locales:
+                    en: SPICE models in minutes... for FREE
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+                maxWidth:
+                  type: dex-slider-control-parameter
+                  value: 39%
+                alignment:
+                  type: dex-segmented-control-parameter
+                  value: left
+              _overridability:
+                parameters:
+                  text: 'yes'
+                  maxWidth: 'yes'
+                hideLockedParameters: true
+            - _id: db666bf9-e183-482d-99a4-e0a6470f2791
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: span
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    desktop: lg
+                text:
+                  type: text
+                  locales:
+                    en: Streamline circuit simulation with the new model generator
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+                maxWidth:
+                  type: dex-slider-control-parameter
+                  value: 27%
+                alignment:
+                  type: dex-segmented-control-parameter
+                  value: left
+              _overridability:
+                parameters:
+                  text: 'yes'
+                  maxWidth: 'yes'
+                hideLockedParameters: true
+            - _id: d7f8e5dc-e20e-4c7e-979c-9452eb4f8d96
+              type: button
+              parameters:
+                size:
+                  type: dex-token-selector-parameter
+                  value: button-medium
+                text:
+                  type: text
+                  locales:
+                    en: Download QSPICE
+                border:
+                  type: dex-token-selector-parameter
+                  value: border-button-primary
+                textSize:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: sm
+                    tablet: sm
+                    desktop: sm
+                textColor:
+                  type: dex-color-palette-parameter
+                  value: text-secondary
+                textWeight:
+                  type: dex-segmented-control-parameter
+                  value: bold
+                buttonColor:
+                  type: dex-color-palette-parameter
+                  value: button-primary
+                iconPosition:
+                  type: dex-segmented-control-parameter
+                  value: left
+                textTransform:
+                  type: dex-segmented-control-parameter
+                  value: uppercase
+                hoverTextColor:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                hoverButtonColor:
+                  type: dex-color-palette-parameter
+                  value: button-secondary
+              _overridability:
+                parameters:
+                  link: 'yes'
+                  text: 'yes'
+                  border: 'yes'
+                  textColor: 'yes'
+                  buttonColor: 'yes'
+                  hoverTextColor: 'yes'
+                  hoverButtonColor: 'yes'
+                hideLockedParameters: true
+        parameters:
+          gap:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '4'
+              tablet: '4'
+              desktop: '4'
+          direction:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: col
+              tablet: col
+              desktop: col
+          alignItems:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: start
+              tablet: start
+              desktop: start
+          displayName:
+            type: text
+            locales:
+              en: Hero Content
+          justifyContent:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: start
+              tablet: start
+              desktop: start
+  _overridability:
+    parameters:
+      displayName: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en
+    - cn
+created: '2025-05-07T07:06:32.698116+00:00'
+modified: '2025-05-07T08:35:24.524139+00:00'
+pattern: true

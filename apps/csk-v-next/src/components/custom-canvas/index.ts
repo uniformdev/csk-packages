@@ -4,6 +4,7 @@ import AddToCardButton from './AddToCardButton';
 import AiConfiguration from './AiConfiguration';
 import AiShoppingAssistantButton from './AiShoppingAssistantButton';
 import Button from './Button';
+import Carousel from './Carousel';
 import CompleteCheckoutButton from './CompleteCheckoutButton';
 import Container from './Container';
 import CustomComponent from './CustomComponent';
@@ -35,6 +36,7 @@ import RemoveButton from './RemoveButton';
 import RichText from './RichText';
 import ShoppingCart from './ShoppingCart';
 import ShoppingCartIcon from './ShoppingCartIcon';
+import Text from './Text';
 // Here, you can add your own component or customize an existing CSK component with your logic or styles.
 export const customComponentsMapping: ComponentMapping = {
   // This is a simple example of how you can add your own components.
@@ -77,4 +79,6 @@ export const customComponentsMapping: ComponentMapping = {
   aiConfiguration: { component: AiConfiguration },
   formattedPrice: { component: FormattedPrice },
   aiShoppingAssistantButton: { component: AiShoppingAssistantButton },
+  text: { component: Text },
+  carousel: { component: Carousel },
 };

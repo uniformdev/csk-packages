@@ -1,0 +1,147 @@
+id: blogPost
+name: Blog Post
+created: '2025-04-24T23:55:21.961863+00:00'
+updated: '2025-04-24T23:55:21.961863+00:00'
+slugSettings:
+  required: 'no'
+useTeamPermissions: true
+fields:
+  - id: title
+    name: Title
+    type: text
+    typeConfig: null
+  - id: shortDescription
+    name: Short Description
+    type: text
+    helpText: optional
+    typeConfig:
+      multiline: true
+      linesCount: 2
+  - id: publishDate
+    name: Publish Date
+    type: date
+    typeConfig:
+      required: false
+  - id: content
+    name: Content
+    type: richText
+    typeConfig:
+      elements:
+        builtIn:
+          - h1
+          - h2
+          - h3
+          - h4
+          - h5
+          - h6
+          - unorderedList
+          - orderedList
+          - link
+          - quote
+          - code
+          - table
+          - asset
+          - variable
+      required: false
+      formatting:
+        builtIn:
+          - bold
+          - italic
+          - underline
+          - strikethrough
+          - code
+          - superscript
+          - subscript
+  - id: 3b6ce4b7-9f7b-49c3-a420-cca28a63e4e5
+    name: Taxonomy & Tagging
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - category
+        - author
+        - enrichments
+  - id: category
+    name: Category
+    type: contentReference
+    typeConfig:
+      required: true
+      allowedContentTypes:
+        - articleCategory
+  - id: author
+    name: Author
+    type: contentReference
+    typeConfig:
+      allowedContentTypes:
+        - author
+  - id: enrichments
+    name: Enrichments
+    type: $enr
+    typeConfig: null
+  - id: articleDisclaimer
+    name: Article Disclaimer
+    type: richText
+    typeConfig:
+      elements:
+        builtIn:
+          - h1
+          - h2
+          - h3
+          - h4
+          - h5
+          - h6
+          - unorderedList
+          - orderedList
+          - link
+          - quote
+          - code
+          - table
+          - asset
+          - variable
+      required: false
+      formatting:
+        builtIn:
+          - bold
+          - italic
+          - underline
+          - strikethrough
+          - code
+          - superscript
+          - subscript
+      elementsConfig:
+        asset:
+          allowedTypes: []
+    localizable: true
+  - id: ffc9bccc-7c73-4c68-adf0-459417ea3328
+    name: Media
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - thumbnail
+  - id: thumbnail
+    name: Thumbnail
+    type: asset
+    typeConfig:
+      max: 1
+    localizable: true
+entryName: title
+thumbnailField: thumbnail
+description: ''
+icon: pen
+type: contentType
+permissions: []
+previewConfigurations:
+  - type: project-map
+    id: 055abaa8-edb1-464d-a26c-fc49a55f2eeb
+    label: News Detail Page
+    dynamicInputs:
+      locale: ${locale}
+      news-slug: ${#jptr:/entry/_slug}
+      article-slug: ${#jptr:/entry/_slug}
+  - type: project-map
+    id: c4676b67-e635-44b3-83ba-c12ec2ee774f
+    label: Article Components
+    dynamicInputs:
+      locale: ${locale}
+      article-slug: ${#jptr:/entry/_slug}

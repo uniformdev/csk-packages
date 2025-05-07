@@ -1,5 +1,5 @@
-created: '2025-03-25T04:31:29.199327+00:00'
-modified: '2025-04-04T09:04:24.547458+00:00'
+created: '2025-04-24T21:39:36.598286+00:00'
+modified: '2025-04-24T21:39:36.598286+00:00'
 pattern: false
 entry:
   _id: 8b39f8cb-42bf-432b-9530-c26b5769362c
@@ -1280,27 +1280,27 @@ entry:
                       type: text
                       value: 9b0a2aef-ad4e-457e-9f98-5f15ea8ca400
                     url:
+                      type: text
                       value: >-
                         https://img.uniform.global/p/ovl3f_RJSNmuo41YikmFlA/cdMYwSZrSBeHbdHNx_EMzg-medium-roast-coffee-1.png
-                      type: text
                     file:
                       type: file
                       value: d5669d8a-ce1c-40e0-a373-630c850f6c62
                     size:
-                      value: 200970
                       type: number
+                      value: 200970
                     title:
                       type: text
                       value: medium-roast-coffee-1.png
                     width:
-                      value: 1280
                       type: number
+                      value: 1280
                     height:
-                      value: 1280
                       type: number
+                      value: 1280
                     mediaType:
-                      value: image/png
                       type: text
+                      value: image/png
                   _source: uniform-assets
     enrichments:
       type: $enr
@@ -1327,32 +1327,28 @@ entry:
               type: text
               value: 9b0a2aef-ad4e-457e-9f98-5f15ea8ca400
             url:
+              type: text
               value: >-
                 https://img.uniform.global/p/ovl3f_RJSNmuo41YikmFlA/cdMYwSZrSBeHbdHNx_EMzg-medium-roast-coffee-1.png
-              type: text
             file:
               type: file
               value: d5669d8a-ce1c-40e0-a373-630c850f6c62
             size:
-              value: 200970
               type: number
+              value: 200970
             title:
               type: text
               value: medium-roast-coffee-1.png
             width:
-              value: 1280
               type: number
+              value: 1280
             height:
-              value: 1280
               type: number
+              value: 1280
             mediaType:
-              value: image/png
               type: text
+              value: image/png
           _source: uniform-assets
-    recommendations:
-      type: contentReference
-      value: >-
-        ${#jptr:/ref-8b39f8cb-42bf-432b-9530-c26b5769362c-recommendations/entries}
     shortDescription:
       type: text
       locales:

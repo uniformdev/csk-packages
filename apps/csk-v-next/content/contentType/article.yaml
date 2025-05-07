@@ -1,7 +1,7 @@
 id: article
-name: Article
-created: '2025-03-24T20:35:16.807001+00:00'
-updated: '2025-04-07T11:49:10.819895+00:00'
+name: News Article
+created: '2025-04-24T21:39:20.731128+00:00'
+updated: '2025-04-24T22:43:50.056334+00:00'
 slugSettings:
   required: 'no'
 useTeamPermissions: true
@@ -10,11 +10,18 @@ fields:
     name: Title
     type: text
     typeConfig: null
+  - id: shortDescription
+    name: Short Description
+    type: text
+    helpText: optional
+    typeConfig:
+      multiline: true
+      linesCount: 2
   - id: publishDate
     name: Publish Date
     type: date
     typeConfig:
-      required: true
+      required: false
   - id: content
     name: Content
     type: richText
@@ -45,24 +52,22 @@ fields:
           - code
           - superscript
           - subscript
-  - id: shortDescription
-    name: Short Description
-    type: text
-    typeConfig:
-      multiline: true
-      linesCount: 5
-  - id: author
-    name: Author
+  - id: prContacts
+    name: PR Contacts
     type: contentReference
     typeConfig:
+      isMulti: true
       allowedContentTypes:
         - author
-  - id: thumbnail
-    name: Thumbnail
-    type: asset
+  - id: 3b6ce4b7-9f7b-49c3-a420-cca28a63e4e5
+    name: Taxonomy & Tagging
+    type: group
     typeConfig:
-      max: 1
-    localizable: true
+      collapsed: true
+      childrenParams:
+        - category
+        - author
+        - enrichments
   - id: category
     name: Category
     type: contentReference
@@ -70,10 +75,63 @@ fields:
       required: true
       allowedContentTypes:
         - articleCategory
+  - id: author
+    name: Author
+    type: contentReference
+    typeConfig:
+      allowedContentTypes:
+        - author
   - id: enrichments
     name: Enrichments
     type: $enr
     typeConfig: null
+  - id: articleDisclaimer
+    name: Article Disclaimer
+    type: richText
+    typeConfig:
+      elements:
+        builtIn:
+          - h1
+          - h2
+          - h3
+          - h4
+          - h5
+          - h6
+          - unorderedList
+          - orderedList
+          - link
+          - quote
+          - code
+          - table
+          - asset
+          - variable
+      required: false
+      formatting:
+        builtIn:
+          - bold
+          - italic
+          - underline
+          - strikethrough
+          - code
+          - superscript
+          - subscript
+      elementsConfig:
+        asset:
+          allowedTypes: []
+    localizable: true
+  - id: ffc9bccc-7c73-4c68-adf0-459417ea3328
+    name: Media
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - thumbnail
+  - id: thumbnail
+    name: Thumbnail
+    type: asset
+    typeConfig:
+      max: 1
+    localizable: true
 entryName: title
 thumbnailField: thumbnail
 description: ''
@@ -82,10 +140,11 @@ type: contentType
 permissions: []
 previewConfigurations:
   - type: project-map
-    id: 0b2a6284-3d74-4ef6-a3de-b2617058c861
-    label: Article Detail Page
+    id: 055abaa8-edb1-464d-a26c-fc49a55f2eeb
+    label: News Detail Page
     dynamicInputs:
       locale: ${locale}
+      news-slug: ${#jptr:/entry/_slug}
       article-slug: ${#jptr:/entry/_slug}
   - type: project-map
     id: c4676b67-e635-44b3-83ba-c12ec2ee774f

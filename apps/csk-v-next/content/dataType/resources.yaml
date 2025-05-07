@@ -1,0 +1,20 @@
+id: resources
+displayName: Resources
+ttl: 30
+path: /multiple
+custom:
+  maxDepth: 2
+  maxItems: 5
+  proposedName: Multiple Resource or Blog Post
+  allowedContentTypes:
+    - resource
+    - blogPost
+method: GET
+purgeKey: 143aaa94-38b9-4e7c-9257-0ef8db5804a3
+archetype: multipleEntries
+variables:
+  entryIds:
+    type: text
+    default: ''
+dataSourceId: uniformContent
+allowedOnComponents: []

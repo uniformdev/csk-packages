@@ -1,0 +1,63 @@
+created: '2025-04-24T22:28:51.615815+00:00'
+modified: '2025-04-24T22:44:02.55546+00:00'
+pattern: true
+entry:
+  _id: e1d9b530-dbbb-41fd-9604-dd298176b532
+  _name: Press Release
+  _slug: news-article-pattern
+  type: article
+  fields:
+    title:
+      type: text
+      value: Press Release
+    category:
+      type: contentReference
+      value: ${#jptr:/ref-e1d9b530-dbbb-41fd-9604-dd298176b532-category/entries/0}
+    articleDisclaimer:
+      type: richText
+      locales:
+        en:
+          root:
+            type: root
+            format: ''
+            indent: 0
+            version: 1
+            children:
+              - type: paragraph
+                format: ''
+                indent: 0
+                version: 1
+                children:
+                  - mode: normal
+                    text: "This press release includes \"forward-looking statements\" within the meaning of the safe harbor provisions of the Private Securities Litigation Reform Act of 1995.\_ These forward-looking statements include, but are not limited to, statements about our plans, objectives, representations and contentions, and are not historical facts and typically are identified by terms such as \"may,\" \"will,\" \"should,\" \"could,\" \"expect,\" \"plan,\" \"anticipate,\" \"believe,\" \"estimate,\" \"forecast,\" \"predict,\" \"potential,\" \"continue\" and similar words, although some forward-looking statements are expressed differently.\_ You should be aware that the forward-looking statements included herein represent management's current judgment and expectations as of the date the statement is first made, but our actual results, events and performance could differ materially from those expressed or implied by forward-looking statements.\_ We caution you not to place undue reliance upon any such forward-looking statements.\_ We do not intend to update any of these forward-looking statements or publicly announce the results of any revisions to these forward-looking statements, other than as is required under U.S. federal securities laws.\_ Our business is subject to numerous risks and uncertainties, including those relating to fluctuations in our operating results on a quarterly and annual basis; our substantial dependence on developing new products and achieving design wins; our dependence on several large customers for a substantial portion of our revenue; a loss of revenue if defense and aerospace contracts are canceled or delayed; our dependence on third parties; risks related to sales through distributors; risks associated with the operation of our manufacturing facilities; business disruptions; poor manufacturing yields; increased inventory risks and costs, due to timing of customers' forecasts; our inability to effectively manage or maintain relationships with chipset suppliers; our ability to continue to innovate in a very competitive industry; underutilization of manufacturing facilities; unfavorable changes in interest rates, pricing of certain precious metals, utility rates and foreign currency exchange rates; our acquisitions, divestitures and other strategic investments failing to achieve financial or strategic objectives; our ability to attract, retain and motivate key employees; warranty claims, product recalls and product liability; changes in our effective tax rate; enactment of international or domestic tax legislation, or changes in regulatory guidance; changes in the favorable tax status of certain of our subsidiaries; risks associated with social, environmental, health and safety regulations, and climate change; risks from international sales and operations; economic regulation in China; changes in government trade policies, including imposition of tariffs and export restrictions; we may not be able to generate sufficient cash to service all of our debt; restrictions imposed by the agreements governing our debt; our reliance on our intellectual property portfolio; claims of infringement of third-party intellectual property rights; security breaches, failed system upgrades or regular maintenance and other similar disruptions to our IT systems; theft, loss or misuse of personal data by or about our employees, customers or third parties; provisions in our governing documents and Delaware law may discourage takeovers and business combinations that our stockholders might consider to be in their best interests; and volatility in the price of our common stock.\_ These and other risks and uncertainties, which are described in more detail under “Risk Factors” in Part I, Item 1A of our Annual Report on Form 10-K for the fiscal year ended March 30, 2024, and Qorvo’s subsequent reports and statements that we file with the SEC, could cause actual results and developments to be materially different from those expressed or implied by any of these forward-looking statements."
+                    type: text
+                    style: ''
+                    detail: 0
+                    format: 0
+                    version: 1
+                direction: ltr
+                textStyle: ''
+                textFormat: 0
+            direction: ltr
+  _dataResources:
+    ref-e1d9b530-dbbb-41fd-9604-dd298176b532-category:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: 1d51c4fb-4c0a-4ec0-8c48-dcb0270d89b2
+      isPatternParameter: true
+  _locales:
+    - en
+  _overridability:
+    parameters:
+      title: 'yes'
+      author: 'yes'
+      content: 'yes'
+      category: 'yes'
+      thumbnail: 'yes'
+      prContacts: 'yes'
+      enrichments: 'yes'
+      publishDate: 'yes'
+      shortDescription: 'yes'
+      articleDisclaimer: 'no'
+    hideLockedParameters: false

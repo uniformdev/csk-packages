@@ -38,6 +38,7 @@ parameters:
         - decoration
         - letterSpacing
         - alignment
+        - maxWidth
   - id: size
     name: Size
     type: dex-segmented-control-parameter
@@ -144,6 +145,15 @@ parameters:
           value: center
         - key: Right
           value: right
+  - id: maxWidth
+    name: Max Width
+    type: dex-slider-control-parameter
+    typeConfig:
+      step: 1
+      type: steps
+      units: '%'
+      maxValue: 100
+      minValue: 0
 categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/text.jpg
@@ -151,5 +161,5 @@ useTeamPermissions: true
 slots: []
 titleParameter: text
 canBeComposition: false
-created: '2025-03-24T20:34:35.984369+00:00'
-updated: '2025-04-07T04:49:37.724154+00:00'
+created: '2025-04-24T21:39:03.536841+00:00'
+updated: '2025-05-07T07:42:26.468961+00:00'

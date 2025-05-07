@@ -1,0 +1,52 @@
+id: resource
+name: Resource
+created: '2025-04-24T23:52:42.734815+00:00'
+updated: '2025-04-24T23:52:42.734815+00:00'
+slugSettings:
+  required: 'no'
+useTeamPermissions: true
+fields:
+  - id: title
+    name: Title
+    type: text
+    typeConfig: null
+  - id: shortDescription
+    name: Short Description
+    type: text
+    helpText: optional
+    typeConfig:
+      multiline: true
+      linesCount: 2
+  - id: thumbnail
+    name: Thumbnail
+    type: asset
+    typeConfig:
+      max: 1
+    localizable: true
+  - id: targetLink
+    name: Target Link
+    type: link
+    typeConfig:
+      linkTypes:
+        tel: false
+        email: false
+entryName: title
+thumbnailField: thumbnail
+description: ''
+icon: bulb
+type: contentType
+permissions: []
+previewConfigurations:
+  - type: project-map
+    id: 055abaa8-edb1-464d-a26c-fc49a55f2eeb
+    label: News Detail Page
+    dynamicInputs:
+      locale: ${locale}
+      news-slug: ${#jptr:/entry/_slug}
+      article-slug: ${#jptr:/entry/_slug}
+  - type: project-map
+    id: c4676b67-e635-44b3-83ba-c12ec2ee774f
+    label: Article Components
+    dynamicInputs:
+      locale: ${locale}
+      article-slug: ${#jptr:/entry/_slug}

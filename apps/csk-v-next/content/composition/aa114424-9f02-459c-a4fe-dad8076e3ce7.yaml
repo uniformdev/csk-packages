@@ -1,0 +1,185 @@
+composition:
+  _name: News Detail Page
+  _id: aa114424-9f02-459c-a4fe-dad8076e3ce7
+  _slug: ':news-slug'
+  type: page
+  _dataResources:
+    Article:
+      type: articleBySlug
+      variables:
+        slug: ${news-slug}
+        locale: ${locale}
+  _overrides:
+    aa114424-9f02-459c-a4fe-dad8076e3ce7:
+      parameters:
+        pageTitle:
+          type: text
+          value: ${#jptr:/Article/entry/fields/title/value}
+        openGraphTitle:
+          type: text
+          locales:
+            en: ${#jptr:/Article/entry/fields/title/value}
+    aa114424-9f02-459c-a4fe-dad8076e3ce7|dc2e95be-21b5-4476-a309-f8a34922f528:
+      slots:
+        $slotSectionItems:
+          - _id: 82b9ee75-7c54-467b-a301-985705d1b0b2
+            type: container
+            slots:
+              containerContent:
+                - _id: c09ba273-c4fd-4c8f-baa1-5851069acd37
+                  type: text
+                  parameters:
+                    tag:
+                      type: dex-segmented-control-parameter
+                      value: h1
+                    size:
+                      type: dex-segmented-control-parameter
+                      value:
+                        mobile: 3xl
+                        tablet: 3xl
+                        desktop: 4xl
+                    text:
+                      type: text
+                      locales:
+                        en: ${#jptr:/Article/entry/fields/title/value}
+                    color:
+                      type: dex-color-palette-parameter
+                      value: text-tertiary
+                    weight:
+                      type: dex-segmented-control-parameter
+                      value: normal
+                - _id: d469d70f-c597-4e18-b9af-b2617d93df59
+                  type: spacer
+                  parameters:
+                    size:
+                      type: dex-token-selector-parameter
+                      value: spacer-medium
+                - _id: 03f2526a-a6a4-4666-8956-b57bb21db417
+                  type: image
+                  parameters:
+                    image:
+                      type: asset
+                      value: ${#jptr:/Article/entry/fields/thumbnail/value}
+                    width:
+                      type: number
+                      value: '500'
+                    height:
+                      type: number
+                      value: '500'
+                    objectFit:
+                      type: dex-segmented-control-parameter
+                      value: cover
+                - _id: 74fd30e6-4224-4973-9478-10dd157e42dc
+                  type: spacer
+                  parameters:
+                    size:
+                      type: dex-token-selector-parameter
+                      value: spacer-medium
+                - _id: 345183bd-3a39-4fa1-aae4-f9ed960a48ad
+                  type: richText
+                  parameters:
+                    text:
+                      type: richText
+                      locales:
+                        en: ${#jptr:/Article/entry/fields/content/value}
+                - _id: d30b4084-792e-47ab-88ce-ef27b5ec1e7c
+                  type: flex
+                  slots:
+                    flexItem:
+                      - _id: 931d5c8a-3b8f-44f7-866a-f1957a40b523
+                        type: text
+                        parameters:
+                          tag:
+                            type: dex-segmented-control-parameter
+                            value: p
+                          size:
+                            type: dex-segmented-control-parameter
+                            value: {}
+                          text:
+                            type: text
+                            locales:
+                              en: 'Contacts:'
+                          weight:
+                            type: dex-segmented-control-parameter
+                            value: bold
+                      - _id: a930d8e0-2055-4283-93db-6f2827609be9
+                        type: text
+                        parameters:
+                          tag:
+                            type: dex-segmented-control-parameter
+                            value: span
+                          text:
+                            type: text
+                            locales:
+                              en: >-
+                                ${#jptr:/Article/entry/fields/prContacts/value/0/entry/fields/name/value}
+                      - _id: 5c9303cf-346f-4c7e-97d1-af90d84da20a
+                        type: text
+                        parameters:
+                          tag:
+                            type: dex-segmented-control-parameter
+                            value: span
+                          text:
+                            type: text
+                            locales:
+                              en: >-
+                                ${#jptr:/Article/entry/fields/prContacts/value/0/entry/fields/about/value}
+                  parameters:
+                    gap:
+                      type: dex-slider-control-parameter
+                      value: {}
+                    direction:
+                      type: dex-segmented-control-parameter
+                      value:
+                        mobile: col
+                        tablet: col
+                        desktop: col
+                    alignItems:
+                      type: dex-segmented-control-parameter
+                      value: {}
+                    displayName:
+                      type: text
+                      locales:
+                        en: PR Contacts
+                    justifyContent:
+                      type: dex-segmented-control-parameter
+                      value: {}
+                - _id: 2482a8ec-8476-4c8e-847a-49f45285b6f5
+                  type: richText
+                  parameters:
+                    font:
+                      type: dex-token-selector-parameter
+                      value: secondary
+                    text:
+                      type: richText
+                      locales:
+                        en: ${#jptr:/Article/entry/fields/articleDisclaimer/value}
+                    color:
+                      type: dex-color-palette-parameter
+                      value: text-tertiary
+            parameters:
+              spacing:
+                type: dex-space-control-parameter
+                value:
+                  mobile: {}
+                  tablet: {}
+                  desktop:
+                    marginTop: container-small
+                    marginLeft: container-small
+                    marginRight: container-small
+                    paddingLeft: container-medium
+                    marginBottom: container-small
+                    paddingRight: container-medium
+              displayName:
+                type: text
+                locales:
+                  en: News Container
+              fluidContent:
+                type: checkbox
+                value: true
+  _locales:
+    - en
+  _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
+created: '2025-04-24T22:18:08.30587+00:00'
+modified: '2025-04-24T22:52:02.562469+00:00'
+pattern: false

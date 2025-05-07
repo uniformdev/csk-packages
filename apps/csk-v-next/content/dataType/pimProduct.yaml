@@ -1,0 +1,15 @@
+id: pimProduct
+displayName: PIM Product
+ttl: 30
+path: /product/${Product ID}
+custom:
+  proposedName: product/${Product ID}
+method: GET
+purgeKey: 32bbee5a-91ce-4c31-b817-bdd3adfb378e
+archetype: default
+variables:
+  Product ID:
+    type: text
+    default: '1'
+dataSourceId: fakePim
+allowedOnComponents: []

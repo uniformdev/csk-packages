@@ -1,0 +1,66 @@
+created: '2025-04-25T14:46:23.486966+00:00'
+modified: '2025-04-25T14:50:58.337594+00:00'
+pattern: true
+entry:
+  _id: 42806e84-5ab8-4950-8de6-04932dea8894
+  _name: Product from PIM
+  _slug: product-pattern
+  _thumbnail: >-
+    https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png
+  type: product
+  fields:
+    name:
+      type: text
+      value: ${#jptr:/PIM Product/title}
+    title:
+      type: text
+      value: ${#jptr:/PIM Product/sku}
+    category:
+      type: contentReference
+      value: ${#jptr:/ref-42806e84-5ab8-4950-8de6-04932dea8894-category/entries/0}
+    primaryImage:
+      type: asset
+      value:
+        - _id: 2a6f6e15-2894-43c2-86c8-1a7c6b496d4f
+          type: image
+          fields:
+            url:
+              type: text
+              value: ${#jptr:/PIM Product/thumbnail}
+          _source: custom-url
+  _dataResources:
+    PIM Product:
+      type: pimProduct
+      variables: {}
+      isPatternParameter: true
+      ignorePatternParameterDefault: true
+    ref-42806e84-5ab8-4950-8de6-04932dea8894-category:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: 37af876a-955d-4304-9a27-9989347c828d
+      isPatternParameter: true
+  _locales:
+    - en
+  _overridability:
+    parameters:
+      body: 'yes'
+      name: 'no'
+      brand: 'yes'
+      title: 'no'
+      rating: 'yes'
+      category: 'yes'
+      overview: 'yes'
+      dataSheets: 'yes'
+      parameters: 'yes'
+      enrichments: 'yes'
+      keyFeatures: 'yes'
+      sParameters: 'yes'
+      subcategory: 'yes'
+      primaryImage: 'no'
+      pcbLayoutFiles: 'yes'
+      relatedProducts: 'yes'
+      relatedResources: 'yes'
+      shortDescription: 'yes'
+      typicalApplications: 'yes'
+    hideLockedParameters: false
