@@ -20,6 +20,7 @@ parameters:
         - spacing
         - border
         - alignLinks
+        - hideOverflow
   - id: backgroundColor
     name: Background Color
     type: dex-color-palette-parameter
@@ -55,6 +56,10 @@ parameters:
           value: center
         - key: Right
           value: Right
+  - id: hideOverflow
+    name: Hide Overflow
+    type: checkbox
+    typeConfig: null
 categoryId: b1163ce2-5ac7-4347-bc38-a42198180718
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/header-default.jpg
@@ -95,7 +100,7 @@ slots:
 titleParameter: displayName
 canBeComposition: false
 created: '2025-04-24T21:39:00.361438+00:00'
-updated: '2025-05-08T07:47:59.650581+00:00'
+updated: '2025-05-08T08:36:30.397563+00:00'
 variants:
   - id: sticky
     name: Sticky

@@ -1,0 +1,50 @@
+id: megaMenuLink
+name: Mega Menu Link
+created: '2025-05-08T09:33:02.956169+00:00'
+updated: '2025-05-08T11:52:37.617813+00:00'
+slugSettings: {}
+useTeamPermissions: true
+fields:
+  - id: icon
+    name: Icon
+    type: asset
+    typeConfig:
+      max: 1
+      allowedTypes:
+        - image
+    localizable: true
+  - id: hoverIcon
+    name: Hover Icon
+    type: asset
+    typeConfig:
+      max: 1
+      allowedTypes:
+        - image
+    localizable: true
+  - id: title
+    name: Title
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: link
+    name: Link
+    type: link
+    typeConfig: null
+    localizable: true
+  - id: children
+    name: Children
+    type: $block
+    typeConfig:
+      allowedTypes:
+        - megaMenuLink
+  - id: sectionTitle
+    name: Section Title
+    type: text
+    typeConfig: null
+    localizable: true
+entryName: title
+thumbnailField: icon
+icon: file-document
+type: block
+permissions: []
+previewConfigurations: []

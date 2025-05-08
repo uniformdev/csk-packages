@@ -1,13 +1,10 @@
-'use client';
-
-import { FC, useCallback, useMemo, useState } from 'react';
+import { FC } from 'react';
 import { UniformText } from '@uniformdev/canvas-next-rsc/component';
 import BaseIconLabel from '@/components/ui/IconLabel';
 import BaseImage from '@/components/ui/Image';
 import { resolveAsset } from '@/utils/assets';
 import { NavigationFlyoutProps } from '.';
 import { NavigationFlyoutPropsDesktopContent } from './desktop';
-import { NavigationFlyoutPropsMobileContent } from './mobile';
 import { getButtonClasses } from './style-utils';
 
 export const NavigationFlyout: FC<NavigationFlyoutProps> = ({
@@ -27,22 +24,14 @@ export const NavigationFlyout: FC<NavigationFlyoutProps> = ({
   context,
   slots,
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const openFlyout = useCallback(() => setIsOpen(true), []);
-  const closeFlyout = useCallback(() => setIsOpen(false), []);
-
-  const hasRightContent = useMemo(
-    () => Boolean(component.slots?.navigationFlyoutRightContent?.length),
-    [component.slots]
-  );
+  const hasRightContent = !!component.slots?.navigationFlyoutRightContent?.length;
 
   const [resolvedImage] = resolveAsset(icon);
   const { url, title = '' } = resolvedImage || {};
 
   return (
-    <div className="relative" onMouseLeave={closeFlyout}>
-      <button onMouseEnter={openFlyout} className={getButtonClasses({ color })}>
+    <div className="group">
+      <button className={getButtonClasses({ color })}>
         <BaseIconLabel
           icon={url && <BaseImage src={url} alt={title} fill />}
           {...{ size, tag, color, weight, font, transform, decoration, letterSpacing, alignment }}
@@ -54,15 +43,6 @@ export const NavigationFlyout: FC<NavigationFlyoutProps> = ({
       <div className="hidden lg:block">
         <NavigationFlyoutPropsDesktopContent
           hasRightContent={hasRightContent}
-          isOpen={isOpen}
-          {...{ backgroundColor, context, slots, border, component }}
-        />
-      </div>
-
-      <div className="block lg:hidden">
-        <NavigationFlyoutPropsMobileContent
-          onClose={closeFlyout}
-          isOpen={isOpen}
           {...{ backgroundColor, context, slots, border, component }}
         />
       </div>

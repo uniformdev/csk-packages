@@ -8,7 +8,6 @@ type NavigationFlyoutPropsMobileContentProps = Pick<
   NavigationFlyoutProps,
   'backgroundColor' | 'context' | 'slots' | 'component'
 > & {
-  isOpen: boolean;
   onClose: () => void;
 };
 
@@ -26,11 +25,9 @@ const useHeaderHeight = () => {
 };
 
 export const NavigationFlyoutPropsMobileContent: FC<NavigationFlyoutPropsMobileContentProps> = ({
-  isOpen,
   backgroundColor,
   context,
   slots,
-  onClose,
   component,
 }) => {
   const headerHeight = useHeaderHeight();
@@ -38,13 +35,11 @@ export const NavigationFlyoutPropsMobileContent: FC<NavigationFlyoutPropsMobileC
   return (
     <div
       style={{ top: headerHeight, height: `calc(100vh - ${headerHeight}px)` }}
-      className={cn('fixed left-0 right-0 bottom-0 z-10 w-full pt-4 overflow-y-auto', {
+      className={cn('fixed left-0 right-0 bottom-0 z-10 w-full pt-4 overflow-y-auto hidden group-hover:block', {
         [`bg-${backgroundColor}`]: !!backgroundColor,
-        hidden: !isOpen,
-        block: isOpen,
       })}
     >
-      <button onClick={onClose} className="w-max rotate-180 px-4">
+      <button className="w-max rotate-180 px-4">
         <ArrowIcon />
       </button>
 

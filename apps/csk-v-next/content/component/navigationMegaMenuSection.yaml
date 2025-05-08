@@ -1,36 +1,15 @@
 # yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
-id: navigationLink
-name: Navigation Link
+id: navigationMegaMenuSection
+name: Navigation Mega Menu Section
 icon: link
 parameters:
-  - id: icon
-    name: Icon
-    type: asset
+  - id: items
+    name: Items
+    type: $block
     typeConfig:
-      max: 1
-      min: 0
-    localizable: true
-  - id: text
-    name: Text
-    type: text
-    typeConfig: null
-    localizable: true
-  - id: link
-    name: Link
-    type: link
-    typeConfig:
-      linkTypes:
-        tel: true
-        email: true
-    localizable: true
-  - id: activeState
-    name: Active state
-    type: checkbox
-    helpText: >-
-      If the current page is equal to the current link value, the active styles
-      are applied.
-    typeConfig: null
+      allowedTypes:
+        - megaMenuLink
   - id: 4fa3aa01-1d60-4c4d-ace3-c68c833126b3
     name: Presentation Settings
     type: group
@@ -71,6 +50,12 @@ parameters:
       allowColors: []
       selectedGroup: text
       allowThemeColors: []
+  - id: hoverColor
+    name: Hover Color
+    type: dex-color-palette-parameter
+    typeConfig:
+      allowColors: []
+      selectedGroup: text
   - id: weight
     name: Weight
     type: dex-segmented-control-parameter
@@ -140,9 +125,14 @@ categoryId: b1163ce2-5ac7-4347-bc38-a42198180718
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/navigation-link.jpg
 useTeamPermissions: true
-slots: []
-titleParameter: text
+slots:
+  - id: rightContent
+    name: Right Content
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
 thumbnailParameter: icon
 canBeComposition: false
-created: '2025-04-24T21:39:01.548388+00:00'
-updated: '2025-05-08T09:31:30.55476+00:00'
+created: '2025-05-08T09:30:51.068423+00:00'
+updated: '2025-05-08T11:29:28.043965+00:00'

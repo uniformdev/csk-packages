@@ -7,6 +7,7 @@ export type HeaderProps = PropsWithChildren &
     rightSection?: ReactNode;
     color?: string;
     sticky?: boolean;
+    hideOverflow?: boolean;
     alignLinks?: 'left' | 'center' | 'right';
   };
 

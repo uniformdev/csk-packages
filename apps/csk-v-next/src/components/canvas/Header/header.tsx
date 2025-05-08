@@ -12,12 +12,13 @@ export const Header: FC<HeaderProps> = ({
   component,
   slots,
   alignLinks,
+  hideOverflow,
 }) => (
   <BaseHeader
     sticky={component.variant === HeaderVariants.Sticky}
     leftSection={<UniformSlot context={context} slot={slots.headerLeftContent} data={component} />}
     rightSection={<UniformSlot context={context} slot={slots.headerRightContent} data={component} />}
-    {...{ backgroundColor, color, spacing, border, alignLinks }}
+    {...{ backgroundColor, color, spacing, border, alignLinks, hideOverflow }}
   >
     <UniformSlot context={context} slot={slots.headerCenterContent} data={component} />
   </BaseHeader>

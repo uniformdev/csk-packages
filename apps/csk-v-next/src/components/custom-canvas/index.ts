@@ -37,6 +37,7 @@ import RichText from './RichText';
 import ShoppingCart from './ShoppingCart';
 import ShoppingCartIcon from './ShoppingCartIcon';
 import Text from './Text';
+import NavigationMegaMenuSection from '../custom-ui/NavigationMegaMenuSection';
 // Here, you can add your own component or customize an existing CSK component with your logic or styles.
 export const customComponentsMapping: ComponentMapping = {
   // This is a simple example of how you can add your own components.
@@ -81,4 +82,5 @@ export const customComponentsMapping: ComponentMapping = {
   aiShoppingAssistantButton: { component: AiShoppingAssistantButton },
   text: { component: Text },
   carousel: { component: Carousel },
+  navigationMegaMenuSection: { component: NavigationMegaMenuSection },
 };

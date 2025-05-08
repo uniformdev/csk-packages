@@ -9,26 +9,18 @@ type NavigationFlyoutPropsDesktopContentProps = Pick<
   NavigationFlyoutProps,
   'backgroundColor' | 'border' | 'context' | 'slots' | 'component'
 > & {
-  isOpen: boolean;
   hasRightContent: boolean;
 };
 
 export const NavigationFlyoutPropsDesktopContent: FC<NavigationFlyoutPropsDesktopContentProps> = ({
-  isOpen,
   backgroundColor,
   context,
   slots,
   border,
   component,
-  hasRightContent,
 }) => (
   <div
-    className={cn('absolute lg:fixed xl:absolute z-10 w-max left-1/2 shadow-lg -translate-x-1/2 pt-4', {
-      hidden: !isOpen,
-      block: isOpen,
-      'w-full xl:w-[460px]': !hasRightContent,
-      'w-full xl:w-[768px]': hasRightContent,
-    })}
+    className={cn('absolute lg:fixed xl:absolute z-10 w-screen left-0 shadow-lg right-0 pt-1 hidden group-hover:block')}
   >
     <div
       className={cn('p-8', {
@@ -36,14 +28,11 @@ export const NavigationFlyoutPropsDesktopContent: FC<NavigationFlyoutPropsDeskto
         [resolveViewPort(border, '{value}')]: border,
       })}
     >
-      <Grid columnsCount="2" gapX="4" fluidContent>
+      <Grid columnsCount="1" gapX="4">
         <GridItem>
           <div className="flex flex-col gap-y-4">
             <UniformSlot context={context} data={component} slot={slots.navigationFlyoutLeftContent} />
           </div>
-        </GridItem>
-        <GridItem>
-          <UniformSlot context={context} data={component} slot={slots.navigationFlyoutRightContent} />
         </GridItem>
       </Grid>
     </div>
