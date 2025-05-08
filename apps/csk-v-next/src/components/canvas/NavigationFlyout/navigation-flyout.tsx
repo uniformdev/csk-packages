@@ -2,14 +2,13 @@
 
 import { FC, useCallback, useMemo, useState } from 'react';
 import { UniformText } from '@uniformdev/canvas-next-rsc/component';
-import { ChevronDownIcon } from '@/components/ui/_icons';
 import BaseIconLabel from '@/components/ui/IconLabel';
 import BaseImage from '@/components/ui/Image';
 import { resolveAsset } from '@/utils/assets';
 import { NavigationFlyoutProps } from '.';
 import { NavigationFlyoutPropsDesktopContent } from './desktop';
 import { NavigationFlyoutPropsMobileContent } from './mobile';
-import { getButtonClasses, getChevronClasses } from './style-utils';
+import { getButtonClasses } from './style-utils';
 
 export const NavigationFlyout: FC<NavigationFlyoutProps> = ({
   icon,
@@ -50,9 +49,6 @@ export const NavigationFlyout: FC<NavigationFlyoutProps> = ({
         >
           <UniformText placeholder="Text goes here" parameterId="text" component={component} context={context} />
         </BaseIconLabel>
-        <div className={getChevronClasses({ isOpen })}>
-          <ChevronDownIcon />
-        </div>
       </button>
 
       <div className="hidden lg:block">
