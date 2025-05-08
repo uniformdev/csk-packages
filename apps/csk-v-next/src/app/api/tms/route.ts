@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 import { CanvasClient, ContentClient } from '@uniformdev/canvas';
@@ -18,7 +19,7 @@ export async function POST(request: NextRequest) {
     const translationPayload = payload.translationPayload;
 
     if (!translationPayload) {
-      console.log('no translation payload');
+      console.info('no translation payload');
       return NextResponse.json({ updated: false }, { status: 500 });
     }
 
@@ -27,7 +28,7 @@ export async function POST(request: NextRequest) {
     const uniformEntityType = translationPayload.metadata.entityType;
     const uniformEntityId = translationPayload.metadata.entity.id;
 
-    console.log(
+    console.info(
       `process translation payload (project: ${uniformProjectId}, release: ${
         uniformReleaseId || 'n/a'
       }, entityType: ${uniformEntityType}, entity: ${uniformEntityId})`
@@ -52,29 +53,29 @@ export async function POST(request: NextRequest) {
       contentClient,
       translationPayload,
       updateComposition: async ({ canvasClient, composition }) => {
-        console.log('update composition: start');
+        console.info('update composition: start');
         const compositionWithWorkflow = ensureWorkflowStage(composition);
         await canvasClient.updateComposition(compositionWithWorkflow);
-        console.log('update composition: done');
+        console.info('update composition: done');
         return true;
       },
       updateEntry: async ({ contentClient, entry }) => {
-        console.log('update entry: start');
+        console.info('update entry: start');
         const entryWithWorkflow = ensureWorkflowStage(entry);
         await contentClient.upsertEntry(entryWithWorkflow);
-        console.log('update entry: done');
+        console.info('update entry: done');
         return true;
       },
       onNotFound: ({ translationPayload }) => {
         const entityType = translationPayload.metadata.entityType;
         const entityId = translationPayload.metadata.entity.id;
-        console.log(`skip: can not find ${entityType} (${entityId})`);
+        console.info(`skip: can not find ${entityType} (${entityId})`);
       },
       onNotTranslatedResult: ({ updated, errorKind, errorText }) => {
         if (errorKind !== undefined) {
           console.warn(errorText || 'Unknown error');
         } else if (!updated) {
-          console.log('Translation has no updates');
+          console.info('Translation has no updates');
         }
       },
     });
