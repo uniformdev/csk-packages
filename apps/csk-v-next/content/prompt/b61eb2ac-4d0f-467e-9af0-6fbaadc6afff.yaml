@@ -1,0 +1,12 @@
+id: b61eb2ac-4d0f-467e-9af0-6fbaadc6afff
+integrationType: openai-0925a081-67a6-4415-b892-69f3223ceffc
+name: Translate all content to current locale
+text: >-
+  Translate the given JSON document into ${\$locale}:
+  ${\$propertiesCurrentValues}. Respond only with the translated JSON object
+  with the same structure, exclude everything else in the response.
+data: null
+enabled: true
+builtIn: null
+parameterTypes:
+  - json

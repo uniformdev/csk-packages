@@ -77,7 +77,7 @@ export const Carousel: FC<CarouselProps> = ({
         )}
         {variant === 'brochure' && (
           <div
-            className={cn('absolute bottom-0 right-0 flex z-10', {
+            className={cn('absolute bottom-0 right-0 flex z-5', {
               [`text-${iconColor}`]: !!iconColor,
               [`bg-${backgroundColor}`]: !!backgroundColor,
             })}

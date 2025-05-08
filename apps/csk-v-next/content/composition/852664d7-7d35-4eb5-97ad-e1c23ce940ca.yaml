@@ -30,9 +30,9 @@ composition:
             locale: ${locale}
             search: ''
             filters: >-
-              {"type[eq]":"article","fields.category[eq]":"1d51c4fb-4c0a-4ec0-8c48-dcb0270d89b2"}
+              {"type[eq]":"article","fields.category[eq]":"1d51c4fb-4c0a-4ec0-8c48-dcb0270d89b2","locale[eq]":"${locale}"}
             uiFilters: >-
-              [{"field":"type","operator":"eq","value":"article"},{"field":"fields.category","operator":"eq","value":"1d51c4fb-4c0a-4ec0-8c48-dcb0270d89b2"}]
+              [{"field":"type","operator":"eq","value":"article"},{"field":"fields.category","operator":"eq","value":"1d51c4fb-4c0a-4ec0-8c48-dcb0270d89b2"},{"field":"locale","operator":"eq","value":"${locale}"}]
             contentTypes: article
     1ec475ab-9d1b-47eb-9971-7057cbc2a5dc:
       parameters:
@@ -158,6 +158,21 @@ composition:
               projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
               dynamicInputValues:
                 locale: ${locale}
+    1aeab508-1ef6-4206-b2aa-f2b77b547c72|cec396a9-bac8-4214-ac3d-6f5428b3fed7:
+      parameters:
+        text:
+          type: text
+          value: SPICE models in minutes... for FREE
+    1aeab508-1ef6-4206-b2aa-f2b77b547c72|d7f8e5dc-e20e-4c7e-979c-9452eb4f8d96:
+      parameters:
+        text:
+          type: text
+          value: Download QSPICE
+    1aeab508-1ef6-4206-b2aa-f2b77b547c72|db666bf9-e183-482d-99a4-e0a6470f2791:
+      parameters:
+        text:
+          type: text
+          value: Streamline circuit simulation with the new model generator
     1ec475ab-9d1b-47eb-9971-7057cbc2a5dc|51e8d21c-4ae0-4004-a8ce-9cc70e1ee198:
       parameters:
         image:
@@ -196,10 +211,9 @@ composition:
       parameters:
         text:
           type: text
-          locales:
-            en: |-
-              Innovation Amplified
-              with Anokiwave
+          value: |-
+            Innovation Amplified
+            with Anokiwave
         maxWidth:
           type: dex-slider-control-parameter
           value: 31%
@@ -207,8 +221,7 @@ composition:
       parameters:
         text:
           type: text
-          locales:
-            en: Learn More
+          value: Learn More
         border:
           type: dex-token-selector-parameter
           value: ''
@@ -222,10 +235,9 @@ composition:
       parameters:
         text:
           type: text
-          locales:
-            en: >-
-              A leading supplier of high performance silicon integrated circuits
-              for intelligent active array antennas.
+          value: >-
+            A leading supplier of high performance silicon integrated circuits
+            for intelligent active array antennas.
         maxWidth:
           type: dex-slider-control-parameter
           value: 45%
@@ -268,24 +280,19 @@ composition:
       parameters:
         text:
           type: text
-          locales:
-            en: |-
-              Trusted Solutions.
-              Connected Everywhere.
+          value: Trusted Solutions. Connected Everywhere.
     486cb94a-a930-42a0-8154-4b9ce0241bcc|d7f8e5dc-e20e-4c7e-979c-9452eb4f8d96:
       parameters:
         text:
           type: text
-          locales:
-            en: Lear More
+          value: Learn More
     486cb94a-a930-42a0-8154-4b9ce0241bcc|db666bf9-e183-482d-99a4-e0a6470f2791:
       parameters:
         text:
           type: text
-          locales:
-            en: |-
-              Shaping next-gen critical systems for
-              SATCOM, radar, defense and infrastructure.
+          value: |-
+            Shaping next-gen critical systems for
+            SATCOM, radar, defense and infrastructure.
         maxWidth:
           type: dex-slider-control-parameter
           value: 38%
@@ -327,8 +334,7 @@ composition:
       parameters:
         text:
           type: text
-          locales:
-            en: Qorvo Tech Forum
+          value: Qorvo Tech Forum
         maxWidth:
           type: dex-slider-control-parameter
           value: 23%
@@ -336,8 +342,7 @@ composition:
       parameters:
         text:
           type: text
-          locales:
-            en: Learn More
+          value: Learn More
         border:
           type: dex-token-selector-parameter
           value: border-button-secondary
@@ -351,8 +356,7 @@ composition:
       parameters:
         text:
           type: text
-          locales:
-            en: Advance your technical skills, connect with our experts.
+          value: Advance your technical skills, connect with our experts.
         maxWidth:
           type: dex-slider-control-parameter
           value: 26%
@@ -409,9 +413,6 @@ composition:
                         mobile: {}
                         tablet: {}
                         desktop: {}
-                    autoPlay:
-                      type: checkbox
-                      value: true
                     iconColor:
                       type: dex-color-palette-parameter
                       value: text-primary
@@ -440,9 +441,9 @@ composition:
                               locale: ${locale}
                               search: ''
                               filters: >-
-                                {"type[eq]":"article","fields.category[eq]":"1d51c4fb-4c0a-4ec0-8c48-dcb0270d89b2"}
+                                {"type[eq]":"article","fields.category[eq]":"1d51c4fb-4c0a-4ec0-8c48-dcb0270d89b2","locale[eq]":"${locale}"}
                               uiFilters: >-
-                                [{"field":"type","operator":"eq","value":"article"},{"field":"fields.category","operator":"eq","value":"1d51c4fb-4c0a-4ec0-8c48-dcb0270d89b2"}]
+                                [{"field":"type","operator":"eq","value":"article"},{"field":"fields.category","operator":"eq","value":"1d51c4fb-4c0a-4ec0-8c48-dcb0270d89b2"},{"field":"locale","operator":"eq","value":"${locale}"}]
                               contentTypes: article
                         _overridability:
                           hideLockedParameters: true
@@ -633,8 +634,7 @@ composition:
       parameters:
         text:
           type: text
-          locales:
-            en: 2024 Sustainability Report
+          value: 2024 Sustainability Report
         maxWidth:
           type: dex-slider-control-parameter
           value: 32%
@@ -642,8 +642,7 @@ composition:
       parameters:
         text:
           type: text
-          locales:
-            en: Lear More
+          value: Learn More
         textColor:
           type: dex-color-palette-parameter
           value: text-primary
@@ -654,8 +653,7 @@ composition:
       parameters:
         text:
           type: text
-          locales:
-            en: Our commitment to a greener and more responsible future.
+          value: Our commitment to a greener and more responsible future.
     ce9ca67a-2afd-450c-9e4b-605dbaf913c4|3423d2d4-3534-4ce1-ad41-a45bfd064298:
       parameters:
         link:
@@ -705,5 +703,5 @@ composition:
     - cn
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-04-24T21:39:11.680214+00:00'
-modified: '2025-05-07T12:27:01.778491+00:00'
+modified: '2025-05-07T22:06:41.84469+00:00'
 pattern: false

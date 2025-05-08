@@ -1,9 +1,11 @@
 created: '2025-04-24T22:48:02.580075+00:00'
-modified: '2025-04-24T22:49:13.382259+00:00'
+modified: '2025-05-07T22:52:44.708572+00:00'
 pattern: false
+workflowId: 676c4275-b710-4480-af4e-b3e52342d4a7
+workflowStageId: 0f1654aa-cac8-4b3e-ad0c-056ed040c6a9
 entry:
   _id: 30a5b145-f286-4d45-b705-fd7db9e20475
-  _name: Qorvo Recognized by Northrop Grumman with Supplier...
+  _name: Qorvo Recognized by Northrop Grumman
   _slug: qorvo-recognized-by-northrop-grumman-with-supplier
   _thumbnail: >-
     https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/nUSdBeCuSZCQW-rwQiGe8w-image.png
@@ -17,136 +19,306 @@ entry:
         entryIds: 1c7893cf-6fbe-47f3-9997-afb53d117298
   _locales:
     - en
+    - cn
   _overrides:
     30a5b145-f286-4d45-b705-fd7db9e20475:
       parameters:
         title:
           type: text
-          value: Qorvo Recognized by Northrop Grumman with Supplier Excellence Award
+          locales:
+            cn: Qorvo获得诺斯罗普·格鲁曼认可
+            en: Qorvo Recognized by Northrop Grumman
         content:
           type: richText
-          value:
-            root:
-              type: root
-              format: ''
-              indent: 0
-              version: 1
-              children:
-                - type: paragraph
-                  format: ''
-                  indent: 0
-                  version: 1
-                  children:
-                    - mode: normal
-                      text: Greensboro, NC, March 24, 2025 –
-                      type: text
-                      style: ''
-                      detail: 0
-                      format: 1
-                      version: 1
-                    - mode: normal
-                      text: "\_Qorvo® (Nasdaq: QRVO), a leading global provider of connectivity and power solutions, today announced that Northrop Grumman Corporation (NYSE: NOC) has recognized Qorvo as one of its top supplier partners during its Supplier Excellence Awards."
-                      type: text
-                      style: ''
-                      detail: 0
-                      format: 0
-                      version: 1
-                  direction: ltr
-                  textStyle: ''
-                  textFormat: 0
-                - type: paragraph
-                  format: ''
-                  indent: 0
-                  version: 1
-                  children:
-                    - mode: normal
-                      text: "“Qorvo has supported Northrop Grumman in delivering technologies that enhance national security for the U.S. and our allies,” said Ken Brown, vice president, enterprise global supply chain, Northrop Grumman. “The high-quality performance, dedication and partnership of our supplier teams drive operational excellence to ensure warfighters have next generation advantages in advanced weapons, aircraft, missile defense and space.”\_"
-                      type: text
-                      style: ''
-                      detail: 0
-                      format: 0
-                      version: 1
-                  direction: ltr
-                  textStyle: ''
-                  textFormat: 0
-                - type: paragraph
-                  format: ''
-                  indent: 0
-                  version: 1
-                  children:
-                    - mode: normal
-                      text: "Recognized for Performance Excellence, Qorvo is instrumental in supporting Northrop Grumman with delivering innovative and cost-effective defense radar and communication system solutions to give its customers the advantage in a complex world.\_ \_"
-                      type: text
-                      style: ''
-                      detail: 0
-                      format: 0
-                      version: 1
-                    - type: linebreak
-                      version: 1
-                    - type: linebreak
-                      version: 1
-                    - mode: normal
-                      text: "“Earning Northrop Grumman’s Supplier Excellence Award is a tremendous honor and a testament to Qorvo’s unwavering commitment to delivering high-performance, mission-critical RF solutions,” said Doug Bostrom, general manager of Qorvo’s Defense and Aerospace business. “This achievement underscores the trust Northrop Grumman places in us to provide the technology and quality needed to support next-generation defense and aerospace systems.”\_"
-                      type: text
-                      style: ''
-                      detail: 0
-                      format: 0
-                      version: 1
-                  direction: ltr
-                  textStyle: ''
-                  textFormat: 0
-                - type: paragraph
-                  format: ''
-                  indent: 0
-                  version: 1
-                  children:
-                    - mode: normal
-                      text: About Qorvo
-                      type: text
-                      style: ''
-                      detail: 0
-                      format: 1
-                      version: 1
-                    - type: linebreak
-                      version: 1
-                    - mode: normal
-                      text: "Qorvo (Nasdaq: QRVO) supplies innovative semiconductor solutions that make a better world possible. We combine product and technology leadership, systems-level expertise and global manufacturing scale to quickly solve our customers’ most complex technical challenges. Qorvo serves diverse high-growth segments of large global markets, including automotive, consumer, defense & aerospace, industrial & enterprise, infrastructure and mobile. Visit\_"
-                      type: text
-                      style: ''
-                      detail: 0
-                      format: 0
-                      version: 1
-                    - link:
-                        path: https://www.qorvo.com/
-                        type: url
-                      type: link
-                      format: ''
-                      indent: 0
-                      version: 1
-                      children:
-                        - mode: normal
-                          text: www.qorvo.com
-                          type: text
-                          style: ''
-                          detail: 0
-                          format: 0
-                          version: 1
-                      direction: ltr
-                    - mode: normal
-                      text: "\_to learn how our diverse and innovative team is helping connect, protect and power our planet."
-                      type: text
-                      style: ''
-                      detail: 0
-                      format: 0
-                      version: 1
-                  direction: ltr
-                  textStyle: ''
-                  textFormat: 0
-              direction: ltr
-              textFormat: 1
+          locales:
+            cn:
+              root:
+                type: root
+                format: ''
+                indent: 0
+                version: 1
+                children:
+                  - type: paragraph
+                    format: ''
+                    indent: 0
+                    version: 1
+                    children:
+                      - mode: normal
+                        text: 北卡罗来纳州格林斯博罗，2025年3月24日——
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 1
+                        version: 1
+                      - mode: normal
+                        text: ' Qorvo®（纳斯达克代码：QRVO），一家全球领先的连接和电源解决方案提供商，今天宣布诺斯罗普·格鲁曼公司（纽约证券交易所代码：NOC）在其供应商卓越奖中将Qorvo评为顶级供应商合作伙伴之一。'
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                    direction: null
+                    textStyle: ''
+                    textFormat: 0
+                  - type: paragraph
+                    format: ''
+                    indent: 0
+                    version: 1
+                    children:
+                      - mode: normal
+                        text: >-
+                          “Qorvo一直支持诺斯罗普·格鲁曼提供技术，以增强美国及其盟国的国家安全，”诺斯罗普·格鲁曼企业全球供应链副总裁Ken
+                          Brown说道。“供应商团队的高质量表现、奉献和合作推动了运营卓越，确保战士在先进武器、飞机、导弹防御和空间领域拥有下一代优势。”
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                    direction: null
+                    textStyle: ''
+                    textFormat: 0
+                  - type: paragraph
+                    format: ''
+                    indent: 0
+                    version: 1
+                    children:
+                      - mode: normal
+                        text: >-
+                          因卓越性能获得认可，Qorvo在支持诺斯罗普·格鲁曼提供创新且具有成本效益的防务雷达和通信系统解决方案方面扮演了重要角色，使其客户在复杂的世界中占据优势。
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                    direction: null
+                    textStyle: ''
+                    textFormat: 0
+                  - type: paragraph
+                    format: ''
+                    indent: 0
+                    version: 1
+                    children:
+                      - mode: normal
+                        text: >-
+                          “获得诺斯罗普·格鲁曼的供应商卓越奖是一个巨大的荣誉，也是Qorvo坚定承诺于交付高性能、关键任务RF解决方案的证明，”Qorvo国防与航天业务总经理Doug
+                          Bostrom说道。“这项成就强调了诺斯罗普·格鲁曼对我们的信任，即提供支持下一代国防和航天系统所需的技术和质量。”
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                    direction: null
+                    textStyle: ''
+                    textFormat: 0
+                  - type: paragraph
+                    format: ''
+                    indent: 0
+                    version: 1
+                    children:
+                      - mode: normal
+                        text: 关于Qorvo
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 1
+                        version: 1
+                      - mode: normal
+                        text: '  '
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                      - type: linebreak
+                        version: 1
+                      - mode: normal
+                        text: >-
+                          Qorvo（纳斯达克代码：QRVO）供应创新的半导体解决方案，使一个更加美好的世界成为可能。我们结合产品和技术领导力、系统级专业知识和全球制造规模以快速解决客户最复杂的技术挑战。Qorvo服务于大规模全球市场中的多样化高增长细分市场，包括汽车、消费、国防与航天、工业与企业、基础设施以及移动端。访问
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                      - rel: null
+                        url: https://www.qorvo.com/
+                        type: link
+                        title: null
+                        format: ''
+                        indent: 0
+                        target: null
+                        version: 1
+                        children:
+                          - mode: normal
+                            text: www.qorvo.com
+                            type: text
+                            style: ''
+                            detail: 0
+                            format: 0
+                            version: 1
+                        direction: null
+                      - mode: normal
+                        text: ，了解我们的多样化和创新团队如何帮助连接、保护和为我们的星球供电。
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                    direction: null
+                    textStyle: ''
+                    textFormat: 0
+                direction: null
+            en:
+              root:
+                type: root
+                format: ''
+                indent: 0
+                version: 1
+                children:
+                  - type: paragraph
+                    format: ''
+                    indent: 0
+                    version: 1
+                    children:
+                      - mode: normal
+                        text: Greensboro, NC, March 24, 2025 –
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 1
+                        version: 1
+                      - mode: normal
+                        text: "\_Qorvo® (Nasdaq: QRVO), a leading global provider of connectivity and power solutions, today announced that Northrop Grumman Corporation (NYSE: NOC) has recognized Qorvo as one of its top supplier partners during its Supplier Excellence Awards."
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                    direction: ltr
+                    textStyle: ''
+                    textFormat: 0
+                  - type: paragraph
+                    format: ''
+                    indent: 0
+                    version: 1
+                    children:
+                      - mode: normal
+                        text: "“Qorvo has supported Northrop Grumman in delivering technologies that enhance national security for the U.S. and our allies,” said Ken Brown, vice president, enterprise global supply chain, Northrop Grumman. “The high-quality performance, dedication and partnership of our supplier teams drive operational excellence to ensure warfighters have next generation advantages in advanced weapons, aircraft, missile defense and space.”\_"
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                    direction: ltr
+                    textStyle: ''
+                    textFormat: 0
+                  - type: paragraph
+                    format: ''
+                    indent: 0
+                    version: 1
+                    children:
+                      - mode: normal
+                        text: "Recognized for Performance Excellence, Qorvo is instrumental in supporting Northrop Grumman with delivering innovative and cost-effective defense radar and communication system solutions to give its customers the advantage in a complex world.\_ \_"
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                      - type: linebreak
+                        version: 1
+                      - type: linebreak
+                        version: 1
+                      - mode: normal
+                        text: "“Earning Northrop Grumman’s Supplier Excellence Award is a tremendous honor and a testament to Qorvo’s unwavering commitment to delivering high-performance, mission-critical RF solutions,” said Doug Bostrom, general manager of Qorvo’s Defense and Aerospace business. “This achievement underscores the trust Northrop Grumman places in us to provide the technology and quality needed to support next-generation defense and aerospace systems.”\_"
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                    direction: ltr
+                    textStyle: ''
+                    textFormat: 0
+                  - type: paragraph
+                    format: ''
+                    indent: 0
+                    version: 1
+                    children:
+                      - mode: normal
+                        text: About Qorvo
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 1
+                        version: 1
+                      - type: linebreak
+                        version: 1
+                      - mode: normal
+                        text: "Qorvo (Nasdaq: QRVO) supplies innovative semiconductor solutions that make a better world possible. We combine product and technology leadership, systems-level expertise and global manufacturing scale to quickly solve our customers’ most complex technical challenges. Qorvo serves diverse high-growth segments of large global markets, including automotive, consumer, defense & aerospace, industrial & enterprise, infrastructure and mobile. Visit\_"
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                      - link:
+                          path: https://www.qorvo.com/
+                          type: url
+                        type: link
+                        format: ''
+                        indent: 0
+                        version: 1
+                        children:
+                          - mode: normal
+                            text: www.qorvo.com
+                            type: text
+                            style: ''
+                            detail: 0
+                            format: 0
+                            version: 1
+                        direction: ltr
+                      - mode: normal
+                        text: "\_to learn how our diverse and innovative team is helping connect, protect and power our planet."
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                    direction: ltr
+                    textStyle: ''
+                    textFormat: 0
+                direction: ltr
+                textFormat: 1
         thumbnail:
           type: asset
           locales:
+            cn:
+              - _id: fc69cef2-6e15-480d-a94b-929babd23925
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 523a7dee-e411-4d6e-945b-6cb31e919a4e
+                  url:
+                    type: text
+                    value: >-
+                      https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/nUSdBeCuSZCQW-rwQiGe8w-image.png
+                  file:
+                    type: file
+                    value: 878e6b6f-d609-4a67-87bd-4307edc9f9ec
+                  size:
+                    type: number
+                    value: 1152551
+                  title:
+                    type: text
+                    value: image.png
+                  width:
+                    type: number
+                    value: 1200
+                  height:
+                    type: number
+                    value: 1200
+                  mediaType:
+                    type: text
+                    value: image/png
+                _source: uniform-assets
             en:
               - _id: fc69cef2-6e15-480d-a94b-929babd23925
                 type: image

@@ -1,6 +1,7 @@
-created: '2025-03-25T04:28:51.925862+00:00'
-modified: '2025-03-31T16:04:58.14649+00:00'
+created: '2025-04-24T21:39:32.648259+00:00'
+modified: '2025-05-07T22:34:07.824068+00:00'
 pattern: false
+workflowId: 676c4275-b710-4480-af4e-b3e52342d4a7
 entry:
   _id: 5a050b78-7beb-4792-ba16-ef873018e4f0
   _name: 'A Proper Cuppa: How to Brew Tea Right'
@@ -791,27 +792,27 @@ entry:
                     type: text
                     value: 68efee09-55b0-49ba-ba11-6386b556092d
                   url:
+                    type: text
                     value: >-
                       https://img.uniform.global/p/ovl3f_RJSNmuo41YikmFlA/XyDSaPAiQUKGrPI9NcFx9A-why-brewing-temperature-and-time-matter.jpg
-                    type: text
                   file:
                     type: file
                     value: 8db0a153-a953-4ca8-aa3e-c1408858ecd1
                   size:
-                    value: 1268619
                     type: number
+                    value: 1268619
                   title:
                     type: text
                     value: why-brewing-temperature-and-time-matter.jpg
                   width:
+                    type: number
                     value: 4017
-                    type: number
                   height:
-                    value: 2661
                     type: number
+                    value: 2661
                   mediaType:
-                    value: image/jpeg
                     type: text
+                    value: image/jpeg
                 _source: uniform-assets
               version: 1
             - tag: h4
@@ -1221,6 +1222,7 @@ entry:
       value: ${#jptr:/ref-5a050b78-7beb-4792-ba16-ef873018e4f0-category/entries/0}
     thumbnail:
       type: asset
+      value: []
       locales:
         en:
           - _id: c1ee2d09-4b75-4f43-96f4-f8132f5449c5
@@ -1230,29 +1232,28 @@ entry:
                 type: text
                 value: ed66c8bd-781a-4287-992c-4cc72b2dd05f
               url:
+                type: text
                 value: >-
                   https://img.uniform.global/p/ovl3f_RJSNmuo41YikmFlA/OlQm4ilQQTmGk1cUFSiEwQ-a-proper-cuppa-how-to-brew-tea-right.jpg
-                type: text
               file:
                 type: file
                 value: 718e598d-58b1-4f5f-a37d-d495b1a069f5
               size:
-                value: 3906323
                 type: number
+                value: 3906323
               title:
                 type: text
                 value: a-proper-cuppa-how-to-brew-tea-right.jpg
               width:
+                type: number
                 value: 7008
-                type: number
               height:
-                value: 4672
                 type: number
+                value: 4672
               mediaType:
-                value: image/jpeg
                 type: text
+                value: image/jpeg
             _source: uniform-assets
-      value: []
     enrichments:
       type: $enr
       value:

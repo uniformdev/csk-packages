@@ -27,6 +27,7 @@ composition:
     displayName:
       type: text
       locales:
+        cn: What's New Section
         en: What's New Section
     justifyContent:
       type: dex-segmented-control-parameter
@@ -68,6 +69,9 @@ composition:
                                         text:
                                           type: text
                                           locales:
+                                            cn: >-
+                                              ${#jptr:/List entries Loop
+                                              Item/entry/fields/publishDate/value}
                                             en: >-
                                               ${#jptr:/List entries Loop
                                               Item/entry/fields/publishDate/value}
@@ -97,6 +101,7 @@ composition:
                                   displayName:
                                     type: text
                                     locales:
+                                      cn: Link
                                       en: Link
                                 _overridability:
                                   hideLockedParameters: true
@@ -123,6 +128,7 @@ composition:
                             displayName:
                               type: text
                               locales:
+                                cn: Date Column
                                 en: Date Column
                           _overridability:
                             hideLockedParameters: true
@@ -142,6 +148,9 @@ composition:
                                   text:
                                     type: text
                                     locales:
+                                      cn: >-
+                                        ${#jptr:/List entries Loop
+                                        Item/entry/fields/title/value}
                                       en: >-
                                         ${#jptr:/List entries Loop
                                         Item/entry/fields/title/value}
@@ -179,6 +188,7 @@ composition:
                             displayName:
                               type: text
                               locales:
+                                cn: Description
                                 en: Description
                           _overridability:
                             hideLockedParameters: true
@@ -192,6 +202,7 @@ composition:
                       displayName:
                         type: text
                         locales:
+                          cn: News Item
                           en: News Item
                       columnsCount:
                         type: dex-slider-control-parameter
@@ -227,6 +238,7 @@ composition:
           displayName:
             type: text
             locales:
+              cn: News
               en: News
           justifyContent:
             type: dex-segmented-control-parameter
@@ -256,6 +268,7 @@ composition:
           displayName:
             type: text
             locales:
+              cn: View All Button
               en: View All Button
           justifyContent:
             type: dex-segmented-control-parameter
@@ -285,12 +298,20 @@ composition:
         text:
           type: text
           locales:
+            cn: What's New
             en: What's New
     7ee4dd6d-4dbe-4dba-b5ac-8d74316bc1c5:
       parameters:
         link:
           type: link
           locales:
+            cn:
+              path: /${locale}/newsroom/news
+              type: projectMapNode
+              nodeId: 7bbe9a0b-b7e9-41c7-9f19-4d08d51e17f0
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
             en:
               path: /${locale}/newsroom/news
               type: projectMapNode
@@ -308,6 +329,7 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
+    - cn
 created: '2025-04-24T23:00:27.518707+00:00'
-modified: '2025-05-07T10:25:28.115343+00:00'
+modified: '2025-05-07T22:54:23.492998+00:00'
 pattern: true

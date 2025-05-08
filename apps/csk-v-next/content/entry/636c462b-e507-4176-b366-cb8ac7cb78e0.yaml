@@ -1,6 +1,7 @@
-created: '2025-03-25T04:31:47.183131+00:00'
-modified: '2025-03-31T15:13:59.027216+00:00'
+created: '2025-04-24T21:39:34.601087+00:00'
+modified: '2025-05-07T22:34:07.824068+00:00'
 pattern: false
+workflowId: 676c4275-b710-4480-af4e-b3e52342d4a7
 entry:
   _id: 636c462b-e507-4176-b366-cb8ac7cb78e0
   _name: 'Picking the Right Bean: A Guide to Coffee Selection'
@@ -93,27 +94,27 @@ entry:
                     type: text
                     value: f7df46ef-3544-46e5-8105-7e926992988f
                   url:
+                    type: text
                     value: >-
                       https://img.uniform.global/p/ovl3f_RJSNmuo41YikmFlA/dEOM2vxlT42q4Pc3b25tTg-arabica-vs-robusta.jpg
-                    type: text
                   file:
                     type: file
                     value: f086fc6d-aeb2-4035-95fd-b45063d2a21b
                   size:
-                    value: 1166906
                     type: number
+                    value: 1166906
                   title:
                     type: text
                     value: arabica-vs-robusta.jpg
                   width:
+                    type: number
                     value: 2400
-                    type: number
                   height:
-                    value: 1600
                     type: number
+                    value: 1600
                   mediaType:
-                    value: image/jpeg
                     type: text
+                    value: image/jpeg
                 _source: uniform-assets
               version: 1
             - type: paragraph
@@ -1276,6 +1277,7 @@ entry:
       value: ${#jptr:/ref-636c462b-e507-4176-b366-cb8ac7cb78e0-category/entries/0}
     thumbnail:
       type: asset
+      value: []
       locales:
         en:
           - _id: db8fff66-ec0d-4c7d-9453-1c1428809ca8
@@ -1285,29 +1287,28 @@ entry:
                 type: text
                 value: 5bbc5b07-ed0c-4b99-b210-65d7010f94f5
               url:
+                type: text
                 value: >-
                   https://img.uniform.global/p/ovl3f_RJSNmuo41YikmFlA/e9Ll2Q6QRK2ZwEhxb3-XHg-picking-the-right-bean-a-guide-to-coffee-selection.jpg
-                type: text
               file:
                 type: file
                 value: 82a322c4-31fd-458a-96b6-665d6744acb6
               size:
-                value: 9269401
                 type: number
+                value: 9269401
               title:
                 type: text
                 value: picking-the-right-bean-a-guide-to-coffee-selection.jpg
               width:
+                type: number
                 value: 9453
-                type: number
               height:
-                value: 7090
                 type: number
+                value: 7090
               mediaType:
-                value: image/jpeg
                 type: text
+                value: image/jpeg
             _source: uniform-assets
-      value: []
     enrichments:
       type: $enr
       value:

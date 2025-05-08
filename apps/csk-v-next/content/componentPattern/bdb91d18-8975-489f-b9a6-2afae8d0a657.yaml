@@ -24,6 +24,7 @@ composition:
     displayName:
       type: text
       locales:
+        cn: Product Gallery
         en: Product Gallery
     justifyContent:
       type: dex-segmented-control-parameter
@@ -91,6 +92,18 @@ composition:
                             link:
                               type: link
                               locales:
+                                cn:
+                                  path: >-
+                                    /${locale}/products/${#jptr:/Products
+                                    entries Loop Item/entry/_slug}
+                                  type: projectMapNode
+                                  nodeId: 702b0e0b-3858-4b5d-99e4-bdb98097ca0f
+                                  projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                                  dynamicInputValues:
+                                    locale: ${locale}
+                                    product-slug: >-
+                                      ${#jptr:/Products entries Loop
+                                      Item/entry/_slug}
                                 en:
                                   path: >-
                                     /${locale}/products/${#jptr:/Products
@@ -109,6 +122,9 @@ composition:
                             text:
                               type: text
                               locales:
+                                cn: >-
+                                  ${#jptr:/Products entries Loop
+                                  Item/entry/fields/title/value}
                                 en: >-
                                   ${#jptr:/Products entries Loop
                                   Item/entry/fields/title/value}
@@ -153,6 +169,9 @@ composition:
                             text:
                               type: text
                               locales:
+                                cn: >-
+                                  ${#jptr:/Products entries Loop
+                                  Item/entry/fields/name/value}
                                 en: >-
                                   ${#jptr:/Products entries Loop
                                   Item/entry/fields/name/value}
@@ -202,6 +221,7 @@ composition:
           displayName:
             type: text
             locales:
+              cn: Gallery
               en: Gallery
         _overridability:
           hideLockedParameters: true
@@ -227,6 +247,13 @@ composition:
         link:
           type: link
           locales:
+            cn:
+              path: /${locale}/products
+              type: projectMapNode
+              nodeId: 05c9dbfc-7fb7-40ce-b77c-850a6b4ebef4
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
             en:
               path: /${locale}/products
               type: projectMapNode
@@ -236,17 +263,21 @@ composition:
                 locale: ${locale}
         text:
           type: text
-          value: View All New Products
+          locales:
+            cn: 查看所有新产品
+            en: View All New Products
     6b94b779-5482-4c92-bedd-9e2eb5bd98d5:
       parameters:
         text:
           type: text
           locales:
+            cn: Products
             en: Products
   _overridability:
     hideLockedParameters: true
   _locales:
     - en
+    - cn
 created: '2025-04-25T00:59:48.700902+00:00'
-modified: '2025-05-07T12:21:23.697305+00:00'
+modified: '2025-05-07T22:55:08.4306+00:00'
 pattern: true

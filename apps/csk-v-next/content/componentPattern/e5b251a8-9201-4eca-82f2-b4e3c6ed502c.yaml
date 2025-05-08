@@ -221,25 +221,19 @@ composition:
                 ${#jptr:/Resources entries Loop
                 Item/entry/fields/targetLink/value/path}
               type: url
-    b43aab39-e2bf-4bfb-9da1-09743699f707:
-      parameters:
-        link:
-          type: link
-          locales:
-            cn:
-              path: >-
-                ${#jptr:/Resources entries Loop
-                Item/entry/fields/targetLink/value/path}
-              type: url
     637392f5-4e60-4131-a803-478f27fcab6a|f47da18c-a0fd-4136-92cd-4807939ffaea:
       parameters:
         text:
           type: text
           locales:
             en: Featured Resources
+  _overridability:
+    parameters:
+      displayName: 'yes'
+    hideLockedParameters: true
   _locales:
     - en
     - cn
 created: '2025-05-07T10:39:43.081509+00:00'
-modified: '2025-05-07T10:45:10.64636+00:00'
+modified: '2025-05-07T22:10:13.696572+00:00'
 pattern: true

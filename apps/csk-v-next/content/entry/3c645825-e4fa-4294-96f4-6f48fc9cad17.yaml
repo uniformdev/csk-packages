@@ -1,6 +1,7 @@
-created: '2025-03-31T09:52:12.022576+00:00'
-modified: '2025-03-31T16:02:51.738683+00:00'
+created: '2025-04-24T21:39:28.592359+00:00'
+modified: '2025-05-07T22:34:07.824068+00:00'
 pattern: false
+workflowId: 676c4275-b710-4480-af4e-b3e52342d4a7
 entry:
   _id: 3c645825-e4fa-4294-96f4-6f48fc9cad17
   _name: Indulge in Luxury Espresso at Home
@@ -267,6 +268,7 @@ entry:
       value: ${#jptr:/ref-3c645825-e4fa-4294-96f4-6f48fc9cad17-category/entries/0}
     thumbnail:
       type: asset
+      value: []
       locales:
         en:
           - _id: ee289b00-f3af-4fa8-8b6d-1e9eff06ece9
@@ -276,29 +278,28 @@ entry:
                 type: text
                 value: d3a8701d-e216-45a0-8def-381858fad958
               url:
+                type: text
                 value: >-
                   https://img.uniform.global/p/LP10biebQ3mceUhiJEdfvg/a4ucJwl5R8mgBMyPyr48JA-image.png
-                type: text
               file:
                 type: file
                 value: bd1c84df-d205-4779-a145-d6d915f95282
               size:
-                value: 1478877
                 type: number
+                value: 1478877
               title:
                 type: text
                 value: image.png
               width:
+                type: number
                 value: 1440
-                type: number
               height:
-                value: 960
                 type: number
+                value: 960
               mediaType:
-                value: image/png
                 type: text
+                value: image/png
             _source: uniform-assets
-      value: []
     enrichments:
       type: $enr
       value:

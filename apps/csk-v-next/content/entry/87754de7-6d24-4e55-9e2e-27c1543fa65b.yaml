@@ -1,6 +1,7 @@
-created: '2025-03-25T04:32:18.583292+00:00'
-modified: '2025-03-31T16:03:56.437036+00:00'
+created: '2025-04-24T21:39:35.786704+00:00'
+modified: '2025-05-07T22:34:07.824068+00:00'
 pattern: false
+workflowId: 676c4275-b710-4480-af4e-b3e52342d4a7
 entry:
   _id: 87754de7-6d24-4e55-9e2e-27c1543fa65b
   _name: The Secret to a Great French Press
@@ -975,27 +976,27 @@ entry:
                     type: text
                     value: b458e3c4-cf73-4efe-a899-7b8100e14d6b
                   url:
+                    type: text
                     value: >-
                       https://img.uniform.global/p/ovl3f_RJSNmuo41YikmFlA/Cdb4g7sYRaCBMCXW8bZWKw-expert-tips-for-french-press-success.jpg
-                    type: text
                   file:
                     type: file
                     value: e5d26289-3f51-4b0a-8d74-46943ff7fa55
                   size:
-                    value: 6384704
                     type: number
+                    value: 6384704
                   title:
                     type: text
                     value: expert-tips-for-french-press-success.jpg
                   width:
+                    type: number
                     value: 6000
-                    type: number
                   height:
-                    value: 4000
                     type: number
+                    value: 4000
                   mediaType:
-                    value: image/jpeg
                     type: text
+                    value: image/jpeg
                 _source: uniform-assets
               version: 1
             - tag: h3
@@ -1087,6 +1088,7 @@ entry:
       value: ${#jptr:/ref-87754de7-6d24-4e55-9e2e-27c1543fa65b-category/entries/0}
     thumbnail:
       type: asset
+      value: []
       locales:
         en:
           - _id: 10a00992-ba91-41fd-9e0b-edb1d9d5d772
@@ -1096,29 +1098,28 @@ entry:
                 type: text
                 value: 4fdc25de-c62a-4e97-9162-9b199f622780
               url:
+                type: text
                 value: >-
                   https://img.uniform.global/p/ovl3f_RJSNmuo41YikmFlA/mxs3kqFsTrWT2DBMtwKjkw-the-secret-to-a-great-french-press.jpg
-                type: text
               file:
                 type: file
                 value: 8d3d5fbb-f65d-425c-adca-3dff46f40217
               size:
-                value: 1122173
                 type: number
+                value: 1122173
               title:
                 type: text
                 value: the-secret-to-a-great-french-press.jpg
               width:
+                type: number
                 value: 3000
-                type: number
               height:
-                value: 2000
                 type: number
+                value: 2000
               mediaType:
-                value: image/jpeg
                 type: text
+                value: image/jpeg
             _source: uniform-assets
-      value: []
     enrichments:
       type: $enr
       value:

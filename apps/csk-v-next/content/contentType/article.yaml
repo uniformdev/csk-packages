@@ -1,15 +1,17 @@
 id: article
 name: News Article
 created: '2025-04-24T21:39:20.731128+00:00'
-updated: '2025-04-24T22:43:50.056334+00:00'
+updated: '2025-05-07T22:43:21.452847+00:00'
 slugSettings:
   required: 'no'
 useTeamPermissions: true
+workflowId: 676c4275-b710-4480-af4e-b3e52342d4a7
 fields:
   - id: title
     name: Title
     type: text
     typeConfig: null
+    localizable: true
   - id: shortDescription
     name: Short Description
     type: text
@@ -17,6 +19,7 @@ fields:
     typeConfig:
       multiline: true
       linesCount: 2
+    localizable: true
   - id: publishDate
     name: Publish Date
     type: date
@@ -52,6 +55,7 @@ fields:
           - code
           - superscript
           - subscript
+    localizable: true
   - id: prContacts
     name: PR Contacts
     type: contentReference
