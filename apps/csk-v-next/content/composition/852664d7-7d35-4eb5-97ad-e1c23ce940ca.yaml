@@ -40,6 +40,20 @@ composition:
           type: text
           locales:
             en: Anokiwave
+    36c448fb-b79e-4363-aa05-3e68504363e1:
+      parameters:
+        spacing:
+          type: dex-space-control-parameter
+          value:
+            mobile: {}
+            tablet: {}
+            desktop:
+              paddingTop: container-xsmall
+              paddingBottom: container-xsmall
+        displayName:
+          type: text
+          locales:
+            en: A World of Problem Solvers
     486cb94a-a930-42a0-8154-4b9ce0241bcc:
       parameters:
         displayName:
@@ -241,6 +255,104 @@ composition:
         maxWidth:
           type: dex-slider-control-parameter
           value: 45%
+    36c448fb-b79e-4363-aa05-3e68504363e1|502f2bef-59cf-45c0-86f0-c611ef03aa62:
+      parameters:
+        spacing:
+          type: dex-space-control-parameter
+          value:
+            mobile: {}
+            tablet: {}
+            desktop: {}
+        fitHeight:
+          type: checkbox
+          value: null
+        alignItems:
+          type: dex-segmented-control-parameter
+          value:
+            mobile: start
+            tablet: start
+            desktop: ''
+        justifyContent:
+          type: dex-segmented-control-parameter
+          value:
+            mobile: start
+            tablet: start
+            desktop: center
+    36c448fb-b79e-4363-aa05-3e68504363e1|51e8d21c-4ae0-4004-a8ce-9cc70e1ee198:
+      parameters:
+        image:
+          type: asset
+          value:
+            - _id: 51c9dd2b-1f35-40da-94cc-a5f62657f569
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: 68c42526-e41a-4717-821c-846c1d7d3e70
+                url:
+                  type: text
+                  value: >-
+                    https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/2c-B1dV8QeO1BtTXNViMAA-home-career.jpg
+                file:
+                  type: file
+                  value: 06f1d99c-8bc1-4b20-b4ea-ee1916ea7ef2
+                size:
+                  type: number
+                  value: 198096
+                title:
+                  type: text
+                  value: home-career.jpg
+                width:
+                  type: number
+                  value: 1440
+                height:
+                  type: number
+                  value: 418
+                mediaType:
+                  type: text
+                  value: image/jpeg
+              _source: uniform-assets
+        objectFit:
+          type: dex-segmented-control-parameter
+          value: cover
+    36c448fb-b79e-4363-aa05-3e68504363e1|cec396a9-bac8-4214-ac3d-6f5428b3fed7:
+      parameters:
+        text:
+          type: text
+          value: A World of Problem Solvers
+        color:
+          type: dex-color-palette-parameter
+          value: text-dark
+    36c448fb-b79e-4363-aa05-3e68504363e1|d7f8e5dc-e20e-4c7e-979c-9452eb4f8d96:
+      parameters:
+        text:
+          type: text
+          value: Explore Careers
+        textColor:
+          type: dex-color-palette-parameter
+          value: text-primary
+        buttonColor:
+          type: dex-color-palette-parameter
+          value: button-secondary
+        hoverButtonColor:
+          type: dex-color-palette-parameter
+          value: button-tertiary
+    36c448fb-b79e-4363-aa05-3e68504363e1|db666bf9-e183-482d-99a4-e0a6470f2791:
+      parameters:
+        text:
+          type: text
+          value: >-
+            We are mobile and infrastructure innovators, defense experts and
+            passionate visionaries — but what best defines us is our knack for
+            solving the industry's most complex engineering problems. And it all
+            starts with our people. Join our team and take your career to new
+            heights.
+        color:
+          type: dex-color-palette-parameter
+          value: text-tertiary
+        maxWidth:
+          type: dex-slider-control-parameter
+          value: 38%
     486cb94a-a930-42a0-8154-4b9ce0241bcc|51e8d21c-4ae0-4004-a8ce-9cc70e1ee198:
       parameters:
         image:
@@ -376,6 +488,7 @@ composition:
                         _pattern: 0e2d3a95-acb6-40e1-b752-3740535014f3
                         _overridability:
                           parameters:
+                            spacing: 'yes'
                             displayName: 'yes'
                           hideLockedParameters: true
                       - _id: 1aeab508-1ef6-4206-b2aa-f2b77b547c72
@@ -383,6 +496,7 @@ composition:
                         _pattern: 0e2d3a95-acb6-40e1-b752-3740535014f3
                         _overridability:
                           parameters:
+                            spacing: 'yes'
                             displayName: 'yes'
                           hideLockedParameters: true
                       - _id: c8257735-e6c7-4539-b089-102c1d125b8b
@@ -390,6 +504,7 @@ composition:
                         _pattern: 0e2d3a95-acb6-40e1-b752-3740535014f3
                         _overridability:
                           parameters:
+                            spacing: 'yes'
                             displayName: 'yes'
                           hideLockedParameters: true
                       - _id: 7accf3e5-20cd-485a-b0cd-225727efc177
@@ -397,6 +512,7 @@ composition:
                         _pattern: 0e2d3a95-acb6-40e1-b752-3740535014f3
                         _overridability:
                           parameters:
+                            spacing: 'yes'
                             displayName: 'yes'
                           hideLockedParameters: true
                       - _id: 1ec475ab-9d1b-47eb-9971-7057cbc2a5dc
@@ -404,6 +520,7 @@ composition:
                         _pattern: 0e2d3a95-acb6-40e1-b752-3740535014f3
                         _overridability:
                           parameters:
+                            spacing: 'yes'
                             displayName: 'yes'
                           hideLockedParameters: true
                   parameters:
@@ -457,6 +574,10 @@ composition:
                               locale: ${locale}
                               entryIds: >-
                                 07358e6d-be04-4a4a-9959-579fd1bb5442,c4044cfe-1a50-45b1-af2c-ae0d19b50953,b3ee8d98-7ce9-4c3a-b1a1-3da036cbe362,09212c4a-a031-45b2-909a-e7937f9a7b5b
+                        _overridability:
+                          parameters:
+                            displayName: 'yes'
+                          hideLockedParameters: true
                   parameters:
                     gapX:
                       type: dex-slider-control-parameter
@@ -494,85 +615,14 @@ composition:
                         contentTypes: product
                   _overridability:
                     hideLockedParameters: true
-                - _id: 1acc1cf4-83cd-473d-b9ba-6dd7edc7d3dd
-                  type: fixedHero
-                  variant: columns
-                  parameters:
-                    $viz:
-                      type: $viz
-                      value:
-                        criteria:
-                          clauses:
-                            - op: is
-                              rule: $locale
-                              value: en
-                    image:
-                      type: asset
-                      value:
-                        - _id: dff9fa5a-37c4-47b3-928b-16ab5dee2a70
-                          type: image
-                          fields:
-                            id:
-                              type: text
-                              value: d9e5008d-8b9e-4176-8486-81ac36f3a1c7
-                            url:
-                              type: text
-                              value: >-
-                                https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/6kR0CQ4CQa2YJYV3GFIJvQ-image.png
-                            file:
-                              type: file
-                              value: a5bfc59d-fde6-4854-945f-257224177281
-                            size:
-                              type: number
-                              value: 710891
-                            title:
-                              type: text
-                              value: image.png
-                            width:
-                              type: number
-                              value: 1440
-                            height:
-                              type: number
-                              value: 418
-                            mediaType:
-                              type: text
-                              value: image/png
-                          _source: uniform-assets
-                    titleTag:
-                      type: dex-segmented-control-parameter
-                      value: h2
-                    titleText:
-                      type: text
-                      locales:
-                        cn: A World of Problem Solvers
-                        en: A World of Problem Solvers
-                    displayName:
-                      type: text
-                      locales:
-                        cn: Explore Careers
-                        en: Explore Careers
-                    descriptionText:
-                      type: text
-                      locales:
-                        cn: >-
-                          We are mobile and infrastructure innovators, defense
-                          experts and passionate visionaries — but what best
-                          defines us is our knack for solving the industry's
-                          most complex engineering problems. And it all starts
-                          with our people. Join our team and take your career to
-                          new heights.
-                        en: >-
-                          We are mobile and infrastructure innovators, defense
-                          experts and passionate visionaries — but what best
-                          defines us is our knack for solving the industry's
-                          most complex engineering problems. And it all starts
-                          with our people. Join our team and take your career to
-                          new heights.
-                    primaryButtonText:
-                      type: text
-                      locales:
-                        cn: Explore Our Careers
-                        en: Explore Our Careers
+                - _id: 36c448fb-b79e-4363-aa05-3e68504363e1
+                  type: section
+                  _pattern: 0e2d3a95-acb6-40e1-b752-3740535014f3
+                  _overridability:
+                    parameters:
+                      spacing: 'yes'
+                      displayName: 'yes'
+                    hideLockedParameters: true
             parameters:
               gap:
                 type: dex-slider-control-parameter
@@ -703,5 +753,5 @@ composition:
     - cn
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-04-24T21:39:11.680214+00:00'
-modified: '2025-05-07T22:06:41.84469+00:00'
+modified: '2025-05-08T13:31:01.491442+00:00'
 pattern: false

@@ -53,9 +53,13 @@ composition:
                     value: image/png
                     type: text
                 _source: uniform-assets
+          objectFit:
+            type: dex-segmented-control-parameter
+            value: cover
         _overridability:
           parameters:
             image: 'yes'
+            objectFit: 'yes'
           hideLockedParameters: true
     sectionContent:
       - _id: 502f2bef-59cf-45c0-86f0-c611ef03aa62
@@ -91,6 +95,7 @@ composition:
               _overridability:
                 parameters:
                   text: 'yes'
+                  color: 'yes'
                   maxWidth: 'yes'
                 hideLockedParameters: true
             - _id: db666bf9-e183-482d-99a4-e0a6470f2791
@@ -122,6 +127,7 @@ composition:
               _overridability:
                 parameters:
                   text: 'yes'
+                  color: 'yes'
                   maxWidth: 'yes'
                 hideLockedParameters: true
             - _id: d7f8e5dc-e20e-4c7e-979c-9452eb4f8d96
@@ -203,13 +209,21 @@ composition:
               mobile: start
               tablet: start
               desktop: start
+        _overridability:
+          parameters:
+            spacing: 'no'
+            fitHeight: 'no'
+            alignItems: 'no'
+            justifyContent: 'no'
+          hideLockedParameters: true
   _overridability:
     parameters:
+      spacing: 'yes'
       displayName: 'yes'
     hideLockedParameters: true
   _locales:
     - en
     - cn
 created: '2025-05-07T07:06:32.698116+00:00'
-modified: '2025-05-07T08:35:24.524139+00:00'
+modified: '2025-05-08T13:29:45.790298+00:00'
 pattern: true

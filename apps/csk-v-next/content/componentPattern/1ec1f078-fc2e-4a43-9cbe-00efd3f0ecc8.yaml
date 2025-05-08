@@ -42,57 +42,92 @@ composition:
       value: general-color-4
   slots:
     flexItem:
-      - _id: 726a723d-7aa4-4250-9bc1-91cb9d6361ef
-        type: text
+      - _id: 9afa3fd6-20f7-4ed0-add5-d0fcced8deae
+        type: flex
+        slots:
+          flexItem:
+            - _id: 726a723d-7aa4-4250-9bc1-91cb9d6361ef
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: h2
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: 3xl
+                text:
+                  type: text
+                  locales:
+                    cn: 保持知情
+                    en: Stay Informed
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+                transform:
+                  type: dex-segmented-control-parameter
+                  value: uppercase
+                letterSpacing:
+                  type: dex-segmented-control-parameter
+                  value: wide
+              _overridability:
+                hideLockedParameters: true
+            - _id: 3cc196ce-9e2c-4986-b8cd-6038347dafd1
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: p
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: lg
+                text:
+                  type: text
+                  locales:
+                    cn: 订阅我们的邮件列表，获取关于Qorvo的所有最新信息。
+                    en: >-
+                      Subscribe to our mailing list to get updates on everything
+                      Qorvo.
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+              _overridability:
+                hideLockedParameters: true
+            - _id: 43642ccc-30e5-4872-8aa6-fa22a265a354
+              type: button
+              _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
         parameters:
-          tag:
-            type: dex-segmented-control-parameter
-            value: h2
-          size:
+          gap:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '8'
+              tablet: '8'
+              desktop: '8'
+          direction:
             type: dex-segmented-control-parameter
             value:
-              mobile: 3xl
-          text:
-            type: text
-            locales:
-              cn: 保持知情
-              en: Stay Informed
-          weight:
-            type: dex-segmented-control-parameter
-            value: normal
-          transform:
-            type: dex-segmented-control-parameter
-            value: uppercase
-          letterSpacing:
-            type: dex-segmented-control-parameter
-            value: wide
-        _overridability:
-          hideLockedParameters: true
-      - _id: 3cc196ce-9e2c-4986-b8cd-6038347dafd1
-        type: text
-        parameters:
-          tag:
-            type: dex-segmented-control-parameter
-            value: p
-          size:
+              mobile: row
+              tablet: row
+              desktop: row
+          alignItems:
             type: dex-segmented-control-parameter
             value:
-              mobile: lg
-          text:
+              mobile: center
+              tablet: center
+              desktop: center
+          displayName:
             type: text
             locales:
-              cn: 订阅我们的邮件列表，获取关于Qorvo的所有最新信息。
-              en: >-
-                Subscribe to our mailing list to get updates on everything
-                Qorvo.
-          weight:
+              en: Container
+          justifyContent:
             type: dex-segmented-control-parameter
-            value: normal
+            value:
+              mobile: between
+              tablet: between
+              desktop: between
         _overridability:
           hideLockedParameters: true
-      - _id: 43642ccc-30e5-4872-8aa6-fa22a265a354
-        type: button
-        _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
   _overrides:
     43642ccc-30e5-4872-8aa6-fa22a265a354:
       parameters:
@@ -107,5 +142,5 @@ composition:
     - en
     - cn
 created: '2025-04-25T13:05:16.446345+00:00'
-modified: '2025-05-07T21:56:09.998712+00:00'
+modified: '2025-05-08T13:14:32.951242+00:00'
 pattern: true
