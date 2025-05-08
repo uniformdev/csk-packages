@@ -7,6 +7,7 @@ export type HeaderProps = PropsWithChildren &
     rightSection?: ReactNode;
     color?: string;
     sticky?: boolean;
+    alignLinks?: 'left' | 'center' | 'right';
   };
 
 export { Header as default } from './header';

@@ -1,0 +1,184 @@
+composition:
+  _name: Sub Header
+  _id: 03dd9d60-1ef4-400e-ad4c-9027fb1faa72
+  type: header
+  variant: sticky
+  parameters:
+    color:
+      type: dex-color-palette-parameter
+      value: general-color-3
+    border:
+      type: dex-token-selector-parameter
+      value: ''
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        mobile:
+          paddingTop: container-small
+          paddingBottom: container-small
+        tablet:
+          paddingTop: container-small
+          paddingBottom: container-small
+        desktop:
+          paddingTop: container-none
+          paddingBottom: container-none
+    displayName:
+      type: text
+      value: Header
+    backgroundColor:
+      type: dex-color-palette-parameter
+      value: general-color-1
+  slots:
+    headerLeftContent:
+      - _id: >-
+          6d923a08-0955-46d0-b4a7-ace3cf6c3f9a|a8300e31-ab41-4856-aeb2-b1a28b05645e
+        type: container
+        slots:
+          containerContent:
+            - _id: >-
+                6d923a08-0955-46d0-b4a7-ace3cf6c3f9a|4fb2a9bd-3af3-4951-9ece-9e98588f3bf5
+              type: link
+              slots:
+                linkContent:
+                  - _id: f791dfbc-24ca-4a51-9a2f-f1c04d0ea78d
+                    type: image
+                    parameters:
+                      image:
+                        type: asset
+                        value:
+                          - _id: 9e3cbbe9-5e2b-4f74-aaa2-4297a00fc26d
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: f6ed6e9a-59e8-4f31-9c3d-e27824385b7a
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/Kq3HO2jFS4CIfk9ZLC64RA-image.png
+                                type: text
+                              file:
+                                type: file
+                                value: 7d7069e4-cfd1-4d28-8a56-b6e4e9194438
+                              size:
+                                value: 6950
+                                type: number
+                              title:
+                                type: text
+                                value: image.png
+                              width:
+                                value: 235
+                                type: number
+                              height:
+                                value: 78
+                                type: number
+                              mediaType:
+                                value: image/png
+                                type: text
+                            _source: uniform-assets
+                      width:
+                        type: number
+                        value: '240'
+                      height:
+                        type: number
+                        value: '50'
+                      objectFit:
+                        type: dex-segmented-control-parameter
+                        value: contain
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /
+                    type: projectMapNode
+                    nodeId: b90aa0bf-891d-4e40-9899-0d79eb1b26af
+                    projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                displayName:
+                  type: text
+                  value: Logo
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              mobile: {}
+              tablet: {}
+              desktop: {}
+          fitContent:
+            type: checkbox
+            value: true
+          displayName:
+            type: text
+            locales:
+              en: Logo Mock
+          fluidContent:
+            type: checkbox
+            value: true
+          backgroundColor:
+            type: dex-color-palette-parameter
+            value: general-color-2
+        _overridability:
+          hideLockedParameters: true
+    headerCenterContent:
+      - _id: 1053bf22-8f1e-47e2-99fe-45fd3595fac2
+        type: navigationFlyout
+        parameters:
+          icon:
+            type: asset
+            locales:
+              en:
+                - _id: 5b18d1b6-0a4b-4704-b1ed-f5e2d1928277
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: 1a84548f-3c11-4d53-b6b3-ba8933778a15
+                    url:
+                      value: >-
+                        https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/YskIuF3VQiCkhPgxtHmTTg-menu-burger-horizontal-svgrepo-com.svg
+                      type: text
+                    file:
+                      type: file
+                      value: 3743fc43-c511-4d34-be13-006176ec5a69
+                    size:
+                      value: 557
+                      type: number
+                    title:
+                      type: text
+                      value: menu-burger-horizontal-svgrepo-com.svg
+                    width:
+                      value: 800
+                      type: number
+                    height:
+                      value: 800
+                      type: number
+                    mediaType:
+                      value: image/svg+xml
+                      type: text
+                  _source: uniform-assets
+            value: []
+          size:
+            type: dex-segmented-control-parameter
+            value: 4xl
+          text:
+            type: text
+            locales:
+              en: Menu
+          color:
+            type: dex-color-palette-parameter
+            value: text-primary
+          weight:
+            type: dex-segmented-control-parameter
+            value: normal
+          transform:
+            type: dex-segmented-control-parameter
+            value: uppercase
+        _overridability:
+          hideLockedParameters: true
+  _locales:
+    - en
+created: '2025-05-08T07:35:40.161493+00:00'
+modified: '2025-05-08T07:39:10.848962+00:00'
+pattern: true

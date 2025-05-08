@@ -2,7 +2,6 @@ composition:
   _name: Global Header
   _id: 021762f3-8a06-41b4-a4fb-08a837c74415
   type: header
-  variant: ''
   parameters:
     color:
       type: dex-color-palette-parameter
@@ -22,6 +21,9 @@ composition:
         desktop:
           paddingTop: container-none
           paddingBottom: container-none
+    alignLinks:
+      type: dex-segmented-control-parameter
+      value: center
     displayName:
       type: text
       value: Header
@@ -187,7 +189,7 @@ composition:
   _locales:
     - en
 created: '2025-04-24T21:39:06.127545+00:00'
-modified: '2025-05-08T07:22:15.305916+00:00'
+modified: '2025-05-08T07:49:01.716767+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/jd-template/main-header_klwsr5.jpg

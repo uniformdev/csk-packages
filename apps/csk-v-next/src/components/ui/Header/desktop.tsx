@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { cn } from '@uniformdev/csk-components/utils/styling';
 import BaseContainer from '@/components/ui/Container';
 import BaseGrid from '@/components/ui/Grid';
 import BaseGridItem from '@/components/ui/GridItem';
@@ -12,6 +13,7 @@ export const DesktopHeader: FC<HeaderProps> = ({
   spacing,
   border,
   className,
+  alignLinks = 'left',
 }) => (
   <nav>
     <BaseContainer fluidContent {...{ backgroundColor, spacing, border, className }}>
@@ -20,7 +22,14 @@ export const DesktopHeader: FC<HeaderProps> = ({
           {<div className="flex items-center justify-start">{leftSection}</div>}
         </BaseGridItem>
         <BaseGridItem columnSpan="span-6">
-          <div className="flex items-center justify-center gap-x-8">{children}</div>
+          <div
+            className={cn('flex items-center justify-start', {
+              'justify-between': alignLinks === 'center',
+              'justify-end': alignLinks === 'right',
+            })}
+          >
+            {children}
+          </div>
         </BaseGridItem>
         <BaseGridItem columnSpan="span-3">
           <div className="flex items-center justify-end gap-x-4">{rightSection}</div>
