@@ -7,6 +7,7 @@ import {
   ENTRIES_SEARCH_PAGE_KEY,
   ENTRIES_SEARCH_PAGE_SIZE_KEY,
   ENTRIES_SEARCH_QUERY_KEY,
+  ENTRIES_SEARCH_KEYWORD_QUERY_KEY,
 } from '@/modules/search/constants';
 import { DEFAULT_PAGE_SIZE } from '@/modules/search/constants';
 import { FIRST_PAGE } from '@/modules/search/constants';
@@ -31,6 +32,7 @@ const EntriesSearchEngineWrapper: FC<EntriesSearchEngineProps> = async props => 
   const { isEnabled } = await draftMode();
   const searchParams = props.context.searchParams;
   const search = searchParams?.[ENTRIES_SEARCH_QUERY_KEY] || '';
+  const keyword = searchParams?.[ENTRIES_SEARCH_KEYWORD_QUERY_KEY] || '';
   const filterBy = flattenValues(props.filterBy) as FilterBy[];
   const baseFilters = flattenValues(props.baseFilters) as FilterBy[];
   const orderBy = flattenValues(props.orderBy) as OrderBy[];
@@ -133,6 +135,7 @@ const EntriesSearchEngineWrapper: FC<EntriesSearchEngineProps> = async props => 
     },
     facetBy,
     search,
+    keyword,
     preview: isEnabled,
     orderBy: selectedOrderByQuery === 'relevance_DESC' ? enrichmentBoostedOrderBy : selectedOrderByQuery,
   });
@@ -145,6 +148,7 @@ const EntriesSearchEngineWrapper: FC<EntriesSearchEngineProps> = async props => 
       facets={facets}
       selectedFilters={selectedFilters}
       search={search}
+      keyword={keyword}
       page={page}
       pageSize={perPage}
       orderBy={orderByWithRelevance}

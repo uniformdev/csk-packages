@@ -12,6 +12,7 @@ interface GetEntriesProps {
   filters: EntryFilters;
   facetBy?: string;
   search?: string;
+  keyword?: string;
   orderBy?: string;
 }
 
@@ -24,6 +25,7 @@ const getEntries = async <T extends Record<string, unknown>>({
   filters,
   facetBy,
   search = '',
+  keyword = '',
   orderBy = 'created_at_DESC',
 }: GetEntriesProps): Promise<{
   data: Pagination<WithUniformContentEntrySystemParams<T>>;
@@ -37,7 +39,8 @@ const getEntries = async <T extends Record<string, unknown>>({
       state: preview ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
       withTotalCount: true,
       orderBy: [orderBy],
-      search,
+      search: search,
+      keyword: keyword,
       locale: 'en',
       facetBy,
     });

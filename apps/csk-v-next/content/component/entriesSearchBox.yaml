@@ -14,10 +14,16 @@ parameters:
     name: Label
     type: text
     typeConfig: null
-  - id: placeholder
-    name: Placeholder
+  - id: partNumberPlaceholder
+    name: Part Number Placeholder
     type: text
     typeConfig: null
+    localizable: true
+  - id: descriptionPlaceholder
+    name: Description Placeholder
+    type: text
+    typeConfig: null
+    localizable: true
   - id: 289e99b7-4843-48bf-990f-e24d746f4f3b
     name: Presentation Settings
     type: group
@@ -109,5 +115,5 @@ categoryId: 624b55ca-4671-46e2-8fd5-4a9b34b4c121
 useTeamPermissions: true
 slots: []
 canBeComposition: false
-created: '2025-03-26T21:37:53.021772+00:00'
-updated: '2025-03-26T21:43:30.394797+00:00'
+created: '2025-04-24T21:38:58.740042+00:00'
+updated: '2025-05-09T11:43:57.116266+00:00'

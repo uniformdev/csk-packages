@@ -1,16 +1,17 @@
 'use client';
 import { FC, HTMLInputTypeAttribute } from 'react';
-import { useDebouncedCallback } from 'use-debounce';
+
 import { ComponentProps, UniformText } from '@uniformdev/canvas-next-rsc/component';
 import { Text, TextProps } from '@uniformdev/csk-components/components/ui';
 import { ViewPort } from '@uniformdev/csk-components/types/cskTypes';
 import { cn, resolveViewPort } from '@uniformdev/csk-components/utils/styling';
 import { useEntriesSearchContext } from '@/modules/search/EntriesSearchContextProvider';
+
 type EntriesSearchBoxParameters = {
-  delay?: number;
   fullWidth?: boolean;
   border?: string | ViewPort<string>;
-  placeholder?: string;
+  partNumberPlaceholder?: string;
+  descriptionPlaceholder?: string;
   label?: string;
   labelSize?: TextProps['size'];
   labelColor?: TextProps['color'];
@@ -24,11 +25,9 @@ type EntriesSearchBoxParameters = {
 type EntriesSearchBoxProps = ComponentProps<EntriesSearchBoxParameters>;
 
 const EntriesSearchBox: FC<EntriesSearchBoxProps> = ({
-  delay = 300,
   fullWidth,
   border,
   label,
-  placeholder,
   labelSize,
   labelColor,
   font,
@@ -36,23 +35,11 @@ const EntriesSearchBox: FC<EntriesSearchBoxProps> = ({
   size,
   context,
   component,
+  partNumberPlaceholder,
+  descriptionPlaceholder,
 }) => {
-  const { setSearch, searchBoxValue, setSearchBoxValue } = useEntriesSearchContext();
-
-  const debouncedSetSearch = useDebouncedCallback((value: string) => {
-    setSearch(value);
-  }, delay);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newValue = e.target.value;
-    setSearchBoxValue(newValue);
-    debouncedSetSearch(newValue);
-  };
-
-  const handleClearInput = () => {
-    setSearchBoxValue('');
-    setSearch('');
-  };
+  const { setSearch, keywordBoxValue, setSearchBoxValue, searchBoxValue, setKeywordBoxValue } =
+    useEntriesSearchContext();
 
   const inputClassnames = cn('rounded-none focus:outline-current w-full', {
     [resolveViewPort(border, '{value}')]: border,
@@ -60,43 +47,93 @@ const EntriesSearchBox: FC<EntriesSearchBoxProps> = ({
     [`p-${size}`]: size,
   });
 
+  const onSearch = () => {
+    setSearch(searchBoxValue, keywordBoxValue);
+  };
+
   return (
-    <div className={cn('flex flex-col gap-y-2', { 'w-full': fullWidth })}>
+    <div className={cn('flex items-center gap-x-4 w-full', { 'w-full': fullWidth })}>
       {label && (
-        <Text size={labelSize} color={labelColor} font={font}>
+        <Text className="whitespace-nowrap font-bold" size={labelSize} color={labelColor} font={font}>
           <UniformText placeholder="Text goes here" parameterId="label" component={component} context={context} />
         </Text>
       )}
 
-      <div className="relative">
-        <input
-          type="text"
-          value={searchBoxValue}
-          onChange={handleInputChange}
-          className={inputClassnames}
-          placeholder={placeholder}
-        />
-        {searchBoxValue && (
-          <button
-            onClick={handleClearInput}
-            className="absolute right-2 top-0 flex h-full items-center justify-center opacity-50 hover:opacity-100"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+      <div className="relative grid w-full grid-cols-12 gap-x-2">
+        <div className="col-span-5 w-full">
+          <input
+            type="text"
+            value={searchBoxValue}
+            onChange={e => setSearchBoxValue(e.target.value)}
+            className={inputClassnames}
+            placeholder={partNumberPlaceholder}
+          />
+          {searchBoxValue && (
+            <button
+              onClick={() => setSearchBoxValue('')}
+              className="absolute right-2 top-0 flex h-full items-center justify-center opacity-50 hover:opacity-100"
             >
-              <path d="M18 6 6 18" />
-              <path d="m6 6 12 12" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+              </svg>
+            </button>
+          )}
+        </div>
+        <div className="col-span-6 w-full">
+          <input
+            type="text"
+            value={keywordBoxValue}
+            onChange={e => setKeywordBoxValue(e.target.value)}
+            className={inputClassnames}
+            placeholder={descriptionPlaceholder}
+          />
+          {keywordBoxValue && (
+            <button
+              onClick={() => setKeywordBoxValue('')}
+              className="absolute right-2 top-0 flex h-full items-center justify-center opacity-50 hover:opacity-100"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+              </svg>
+            </button>
+          )}
+        </div>
+        <div className="col-span-1 flex w-full justify-end">
+          <button className="bg-black px-4 py-2" onClick={onSearch}>
+            <svg fill="#fff" height="25px" width="25px" viewBox="0 0 200 200" version="1.1" id="Capa_1">
+              <path
+                d="M54.734,9.053C39.12,18.067,27.95,32.624,23.284,50.039c-4.667,17.415-2.271,35.606,6.743,51.22
+	c12.023,20.823,34.441,33.759,58.508,33.759c7.599,0,15.139-1.308,22.287-3.818l30.364,52.592l21.65-12.5l-30.359-52.583
+	c10.255-8.774,17.638-20.411,21.207-33.73c4.666-17.415,2.27-35.605-6.744-51.22C134.918,12.936,112.499,0,88.433,0
+	C76.645,0,64.992,3.13,54.734,9.053z M125.29,46.259c5.676,9.831,7.184,21.285,4.246,32.25c-2.938,10.965-9.971,20.13-19.802,25.806
+	c-6.462,3.731-13.793,5.703-21.199,5.703c-15.163,0-29.286-8.146-36.857-21.259c-5.676-9.831-7.184-21.284-4.245-32.25
+	c2.938-10.965,9.971-20.13,19.802-25.807C73.696,26.972,81.027,25,88.433,25C103.597,25,117.719,33.146,125.29,46.259z"
+              />
             </svg>
           </button>
-        )}
+        </div>
       </div>
     </div>
   );

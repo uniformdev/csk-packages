@@ -22,6 +22,7 @@ type EntriesSearchEngineParameters = {
   facets: Facets;
   selectedFilters?: Record<string, string[]>;
   search: string;
+  keyword: string;
   page?: number;
   pageSize: number;
   pageSizes: PageSize[];
@@ -41,6 +42,7 @@ const EntriesSearchEngine: FC<EntriesSearchEngineProps> = ({
   facets,
   selectedFilters,
   search,
+  keyword,
   page,
   pageSize,
   pageSizes,
@@ -60,6 +62,7 @@ const EntriesSearchEngine: FC<EntriesSearchEngineProps> = ({
       pageSizes={pageSizes}
       orderBy={orderBy}
       selectedOrderByQuery={selectedOrderByQuery}
+      keyword={keyword || ''}
     >
       <UniformSlot data={component} context={context} slot={slots.content} />
     </EntriesSearchContextProvider>

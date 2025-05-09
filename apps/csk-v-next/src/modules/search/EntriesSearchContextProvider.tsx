@@ -12,6 +12,7 @@ import {
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import {
   DEFAULT_PAGE_SIZE,
+  ENTRIES_SEARCH_KEYWORD_QUERY_KEY,
   ENTRIES_SEARCH_ORDER_BY_KEY,
   ENTRIES_SEARCH_PAGE_KEY,
   ENTRIES_SEARCH_PAGE_SIZE_KEY,
@@ -33,7 +34,7 @@ import {
 interface EntriesSearchContextType {
   contentType: ContentType;
   search: string;
-  setSearch: (search: string) => void;
+  setSearch: (search: string, keyword: string) => void;
   setPage: (page: number) => void;
   setPageSize: (pageSize: number) => void;
   pageSize: number;
@@ -48,6 +49,8 @@ interface EntriesSearchContextType {
   clearFilters: () => void;
   searchBoxValue: string;
   setSearchBoxValue: Dispatch<SetStateAction<string>>;
+  keywordBoxValue: string;
+  setKeywordBoxValue: Dispatch<SetStateAction<string>>;
   orderBy: OrderBy[];
   selectedOrderByQuery: string;
   setOrderBy: (orderByQuery: string) => void;
@@ -77,6 +80,8 @@ const EntriesSearchContext = createContext<EntriesSearchContextType>({
   clearFilters: () => {},
   searchBoxValue: '',
   setSearchBoxValue: () => {},
+  keywordBoxValue: '',
+  setKeywordBoxValue: () => {},
   orderBy: [],
   selectedOrderByQuery: '',
   setOrderBy: () => {},
@@ -91,6 +96,7 @@ type EntriesSearchContextProviderProps = {
   orderBy: OrderBy[];
   selectedOrderByQuery: string;
   search: string;
+  keyword: string;
   page: number;
   pageSize: number;
   entries: Pagination<WithUniformContentEntrySystemParams<Article | Product>>;
@@ -105,6 +111,7 @@ const EntriesSearchContextProvider: FC<EntriesSearchContextProviderProps> = ({
   orderBy,
   selectedOrderByQuery,
   search,
+  keyword,
   page,
   pageSize,
   pageSizes,
@@ -115,10 +122,11 @@ const EntriesSearchContextProvider: FC<EntriesSearchContextProviderProps> = ({
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const [searchBoxValue, setSearchBoxValue] = useState(search);
+  const [keywordBoxValue, setKeywordBoxValue] = useState(keyword);
   const [isLoading, setIsLoading] = useState(false);
 
   const setSearch = useCallback(
-    (search: string) => {
+    (search: string, keyword: string) => {
       setIsLoading(true);
       const params = new URLSearchParams(searchParams.toString());
       params.delete(ENTRIES_SEARCH_PAGE_KEY);
@@ -126,6 +134,11 @@ const EntriesSearchContextProvider: FC<EntriesSearchContextProviderProps> = ({
         params.delete(ENTRIES_SEARCH_QUERY_KEY);
       } else {
         params.set(ENTRIES_SEARCH_QUERY_KEY, search);
+      }
+      if (!keyword) {
+        params.delete(ENTRIES_SEARCH_KEYWORD_QUERY_KEY);
+      } else {
+        params.set(ENTRIES_SEARCH_KEYWORD_QUERY_KEY, keyword);
       }
       router.push(`?${params.toString()}`, { scroll: false });
     },
@@ -219,7 +232,9 @@ const EntriesSearchContextProvider: FC<EntriesSearchContextProviderProps> = ({
       isLoading,
       clearFilters,
       searchBoxValue,
+      keywordBoxValue,
       setSearchBoxValue,
+      setKeywordBoxValue,
     };
   }, [
     search,
@@ -242,6 +257,8 @@ const EntriesSearchContextProvider: FC<EntriesSearchContextProviderProps> = ({
     clearFilters,
     searchBoxValue,
     setSearchBoxValue,
+    keywordBoxValue,
+    setKeywordBoxValue,
   ]);
 
   return <EntriesSearchContext.Provider value={value}>{children}</EntriesSearchContext.Provider>;
