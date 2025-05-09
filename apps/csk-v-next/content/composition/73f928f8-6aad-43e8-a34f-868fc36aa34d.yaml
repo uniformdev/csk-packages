@@ -4,6 +4,13 @@ composition:
   _slug: search
   type: page
   _dataResources:
+    All Applications List:
+      type: productApplicationsList
+      variables:
+        locale: ${locale}
+        search: ''
+        filters: '{"type[eq]":"productApplications"}'
+        contentTypes: productApplications
     All Product Categories:
       type: productCategoryList
       variables:
@@ -495,6 +502,250 @@ composition:
                             enableFaceting:
                               type: checkbox
                               value: true
+                        - _id: 53a2ec62-150d-4576-9c23-4e83e7728092
+                          type: filterBy
+                          fields:
+                            type:
+                              type: select
+                              value: multiSelect
+                            title:
+                              type: text
+                              locales:
+                                en: Applications
+                            values:
+                              type: $block
+                              value:
+                                - _id: ba83e86c-cf58-4500-9a58-b686a76a3c91
+                                  type: $loop
+                                  fields:
+                                    body:
+                                      type: $block
+                                      value:
+                                        - _id: 415f315e-330a-46bb-8f8e-11c9ada865b1
+                                          type: filterByItem
+                                          fields:
+                                            title:
+                                              type: text
+                                              value: >-
+                                                ${#jptr:/All Product Categories entries
+                                                Loop Item/entry/fields/title/value}
+                                            value:
+                                              type: text
+                                              value: >-
+                                                ${#jptr:/All Product Categories entries
+                                                Loop Item/entry/_slug}
+                                  _dataResources:
+                                    All Product Categories entries Loop Item:
+                                      type: sys-reserved-loop
+                                      variables:
+                                        connectedData: >-
+                                          #jptr:/All Applications
+                                          List/entries:fa=c
+                            fieldId:
+                              type: text
+                              value: applications
+                            fieldKey:
+                              type: text
+                              value: fields.applications.slug
+                            enableFaceting:
+                              type: checkbox
+                              value: true
+                        - _id: 88a93760-03dd-4c01-a09b-8c3597342168
+                          type: filterBy
+                          fields:
+                            type:
+                              type: select
+                              value: multiSelect
+                            title:
+                              type: text
+                              locales:
+                                en: Product Status
+                            values:
+                              type: $block
+                              value:
+                                - _id: a034cb58-475d-44de-bd20-2c8e4c6ca523
+                                  type: filterByItem
+                                  fields:
+                                    title:
+                                      type: text
+                                      value: Preview
+                                    value:
+                                      type: text
+                                      value: preview
+                                - _id: 96c4e1cf-75fe-4297-ad4e-eedc2d624a70
+                                  type: filterByItem
+                                  fields:
+                                    title:
+                                      type: text
+                                      value: Production
+                                    value:
+                                      type: text
+                                      value: production
+                                - _id: 4aef8b5b-20b5-4914-acfa-5b3a9dd7ac07
+                                  type: filterByItem
+                                  fields:
+                                    title:
+                                      type: text
+                                      value: Not Recommended For New Designs
+                                    value:
+                                      type: text
+                                      value: not-recommended-for-new-designs
+                                - _id: 005ba270-2636-4926-bb0c-bf5ab1183f5b
+                                  type: filterByItem
+                                  fields:
+                                    title:
+                                      type: text
+                                      value: Last Time Buy
+                                    value:
+                                      type: text
+                                      value: last-time-buy
+                            fieldId:
+                              type: text
+                              value: status
+                            fieldKey:
+                              type: text
+                              value: fields.status
+                            enableFaceting:
+                              type: checkbox
+                              value: true
+                        - _id: 4bc69b08-e2be-44ed-a1d6-2607379cc23b
+                          type: filterBy
+                          fields:
+                            type:
+                              type: select
+                              value: multiSelect
+                            title:
+                              type: text
+                              locales:
+                                en: RoHs
+                            values:
+                              type: $block
+                              value:
+                                - _id: cf0d4af6-47b6-4986-9c32-6103826f5307
+                                  type: filterByItem
+                                  fields:
+                                    title:
+                                      type: text
+                                      value: 'Yes'
+                                    value:
+                                      type: text
+                                      value: 'yes'
+                                - _id: d6ebab4f-e313-466a-a28b-9485f2a9d568
+                                  type: filterByItem
+                                  fields:
+                                    title:
+                                      type: text
+                                      value: Unspecified
+                                    value:
+                                      type: text
+                                      value: unspecified
+                            fieldId:
+                              type: text
+                              value: rohs
+                            fieldKey:
+                              type: text
+                              value: fields.rohs
+                            enableFaceting:
+                              type: checkbox
+                              value: true
+                        - _id: d2eef10e-d2f3-46b9-880d-5dd21695274b
+                          type: filterBy
+                          fields:
+                            type:
+                              type: select
+                              value: multiSelect
+                            title:
+                              type: text
+                              locales:
+                                en: Lead Free
+                            values:
+                              type: $block
+                              value:
+                                - _id: e3d523aa-27b2-43b9-ad0c-99864e595244
+                                  type: filterByItem
+                                  fields:
+                                    title:
+                                      type: text
+                                      value: 'Yes'
+                                    value:
+                                      type: text
+                                      value: 'Yes'
+                                - _id: 9a45ab9b-06e2-42e7-bc39-2c04953b9e96
+                                  type: filterByItem
+                                  fields:
+                                    title:
+                                      type: text
+                                      value: 'No'
+                                    value:
+                                      type: text
+                                      value: 'No'
+                                - _id: 7efda3b9-2783-446e-9470-13adeb45a987
+                                  type: filterByItem
+                                  fields:
+                                    title:
+                                      type: text
+                                      value: Unspecified
+                                    value:
+                                      type: text
+                                      value: unspecified
+                            fieldId:
+                              type: text
+                              value: leadFree
+                            fieldKey:
+                              type: text
+                              value: fields.leadFree
+                            enableFaceting:
+                              type: checkbox
+                              value: true
+                        - _id: 543c1fab-30b9-433a-9f9d-ecdde1dfa0f2
+                          type: filterBy
+                          fields:
+                            type:
+                              type: select
+                              value: multiSelect
+                            title:
+                              type: text
+                              locales:
+                                en: Halogen Free
+                            values:
+                              type: $block
+                              value:
+                                - _id: 6bed1e2e-21a4-49c5-aa82-be5c23e7b903
+                                  type: filterByItem
+                                  fields:
+                                    title:
+                                      type: text
+                                      value: 'Yes'
+                                    value:
+                                      type: text
+                                      value: 'yes'
+                                - _id: 2895f1b2-417c-4702-9082-53eb86ddc915
+                                  type: filterByItem
+                                  fields:
+                                    title:
+                                      type: text
+                                      value: 'No'
+                                    value:
+                                      type: text
+                                      value: 'no'
+                                - _id: f1df582a-0c1d-43ed-b0fb-41edafc8765a
+                                  type: filterByItem
+                                  fields:
+                                    title:
+                                      type: text
+                                      value: Unspecified
+                                    value:
+                                      type: text
+                                      value: unspecified
+                            fieldId:
+                              type: text
+                              value: halogenFree
+                            fieldKey:
+                              type: text
+                              value: fields.halogenFree
+                            enableFaceting:
+                              type: checkbox
+                              value: true
                     pageSizes:
                       type: $block
                       value:
@@ -552,5 +803,5 @@ composition:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-05-09T06:33:49.800905+00:00'
-modified: '2025-05-09T08:54:57.092488+00:00'
+modified: '2025-05-09T09:05:05.578433+00:00'
 pattern: false
