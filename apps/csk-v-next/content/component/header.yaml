@@ -82,6 +82,7 @@ slots:
       - navigationLink
       - navigationFlyout
       - navigationGroup
+      - redirectSearchBox
     allowAllComponents: false
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
@@ -94,13 +95,14 @@ slots:
       - shoppingCartIcon
       - favoritesIcon
       - aiShoppingAssistantButton
+      - redirectSearchBox
     allowAllComponents: false
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
 titleParameter: displayName
 canBeComposition: false
 created: '2025-04-24T21:39:00.361438+00:00'
-updated: '2025-05-08T08:36:30.397563+00:00'
+updated: '2025-05-09T12:14:08.262604+00:00'
 variants:
   - id: sticky
     name: Sticky

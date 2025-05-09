@@ -21,7 +21,10 @@ const getFacets = ({ preview = false, filters, facetBy }: GetEntriesProps): Prom
       locale: 'en',
       facetBy,
     })
-    .then(response => response.facets as Facets);
+    .then(response => response.facets as Facets)
+    .catch(() => {
+      return {};
+    });
 };
 
 export default getFacets;

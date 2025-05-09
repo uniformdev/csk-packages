@@ -2,9 +2,9 @@
 import { FC } from 'react';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { useEntriesSearchContext } from '@/modules/search/EntriesSearchContextProvider';
-import { ContentType, Article, Product, WithUniformContentEntrySystemParams } from '@/modules/search/types';
+import { ContentType, Article, WithUniformContentEntrySystemParams } from '@/modules/search/types';
 import ArticleResultCard from '@/modules/search/ui/ArticleResultCard';
-import ProductResultCard from '@/modules/search/ui/ProductResultCard';
+import ProductResults from '@/modules/search/ui/ProductResults';
 
 type EntriesSearchListParameters = {
   textColor?: string;
@@ -40,38 +40,7 @@ const EntriesSearchList: FC<EntriesSearchListProps> = ({ textColor, border }) =>
         })}
       </div>;
     } else if (contentType === ContentType.Product) {
-      return (
-        <div className="flex flex-col">
-          <div className="grid grid-cols-7">
-            <div className="border-r border-gray-300 bg-gray-200 px-4 py-2 text-center text-gray-500">Part #</div>
-            <div className="border-r border-gray-300 bg-gray-200 px-4 py-2 text-center text-gray-500">Description</div>
-            <div className="border-r border-gray-300 bg-gray-200 px-4 py-2 text-center text-gray-500">Applications</div>
-            <div className="border-r border-gray-300 bg-gray-200 px-4 py-2 text-center text-gray-500">
-              Product Status
-            </div>
-            <div className="border-r border-gray-300 bg-gray-200 px-4 py-2 text-center text-gray-500">RoHS</div>
-            <div className="border-r border-gray-300 bg-gray-200 px-4 py-2 text-center text-gray-500">Lead Free</div>
-            <div className=" bg-gray-200 px-4 py-2 text-center text-gray-500">Helogen Free</div>
-          </div>
-          {entries?.items.map(entry => {
-            const entryContentType = entry.contentType as ContentType.Article | ContentType.Product;
-
-            if (entryContentType === ContentType.Product) {
-              const productEntry = entry as WithUniformContentEntrySystemParams<Product>;
-              return (
-                <ProductResultCard
-                  {...productEntry}
-                  textColor={textColor}
-                  border={border}
-                  contentType={ContentType.Product}
-                  key={entry.id}
-                />
-              );
-            }
-            return null;
-          })}
-        </div>
-      );
+      return <ProductResults textColor={textColor} border={border} entries={entries} />;
     }
   };
 
@@ -97,7 +66,7 @@ const EntriesSearchList: FC<EntriesSearchListProps> = ({ textColor, border }) =>
         </div>
       )}
       {isEmpty ? (
-        <div className="flex flex-col items-center justify-center gap-y-4 py-24">
+        <div className="flex flex-col items-center justify-center gap-y-4 py-56">
           <div className="flex size-16 items-center justify-center rounded-full bg-gray-100">
             <svg
               xmlns="http://www.w3.org/2000/svg"

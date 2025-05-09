@@ -80,7 +80,7 @@ composition:
                         value: '240'
                       height:
                         type: number
-                        value: '50'
+                        value: '85'
                       objectFit:
                         type: dex-segmented-control-parameter
                         value: contain
@@ -119,6 +119,30 @@ composition:
           backgroundColor:
             type: dex-color-palette-parameter
             value: general-color-2
+        _overridability:
+          hideLockedParameters: true
+    headerRightContent:
+      - _id: 8ffa8aab-f7aa-445e-a81b-0e965f9e4730
+        type: redirectSearchBox
+        variant: mini
+        parameters:
+          size:
+            type: dex-token-selector-parameter
+            value: input-large
+          baseLink:
+            type: link
+            locales:
+              en:
+                path: /${locale}/search
+                type: projectMapNode
+                nodeId: d80fa5bd-766c-4335-868a-65879765b52f
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+          partNumberPlaceholder:
+            type: text
+            locales:
+              en: Enter Keyword or Part Number
         _overridability:
           hideLockedParameters: true
     headerCenterContent:
@@ -1724,5 +1748,5 @@ composition:
   _locales:
     - en
 created: '2025-05-08T07:35:40.161493+00:00'
-modified: '2025-05-08T13:06:57.972098+00:00'
+modified: '2025-05-09T13:07:36.895728+00:00'
 pattern: true

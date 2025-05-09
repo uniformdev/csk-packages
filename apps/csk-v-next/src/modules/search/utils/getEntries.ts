@@ -32,36 +32,44 @@ const getEntries = async <T extends Record<string, unknown>>({
   facets: Facets;
 }> => {
   const fetchEntries = async (offset = 0, accumulatedEntries: WithUniformContentEntrySystemParams<T>[] = []) => {
-    const response = await contentClient.getEntries({
-      filters,
-      limit: Math.min(perPage - accumulatedEntries.length, CHUNK_SIZE),
-      offset: offset,
-      state: preview ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
-      withTotalCount: true,
-      orderBy: [orderBy],
-      search: search,
-      keyword: keyword,
-      locale: 'en',
-      facetBy,
-    });
+    try {
+      const response = await contentClient.getEntries({
+        filters,
+        limit: Math.min(perPage - accumulatedEntries.length, CHUNK_SIZE),
+        offset: offset,
+        state: preview ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
+        withTotalCount: true,
+        orderBy: [orderBy],
+        search: search,
+        keyword: keyword,
+        locale: 'en',
+        facetBy,
+      });
 
-    const entries = response.entries.map(item => mapUniformContentEntryFields<T>(item.entry));
-    const allEntries = [...accumulatedEntries, ...entries];
+      const entries = response.entries.map(item => mapUniformContentEntryFields<T>(item.entry));
+      const allEntries = [...accumulatedEntries, ...entries];
 
-    if (allEntries.length < perPage && response.totalCount && response.totalCount > offset + entries.length) {
-      return fetchEntries(offset + entries.length, allEntries);
+      if (allEntries.length < perPage && response.totalCount && response.totalCount > offset + entries.length) {
+        return fetchEntries(offset + entries.length, allEntries);
+      }
+
+      return {
+        data: {
+          items: allEntries,
+          total: response.totalCount ?? 0,
+          page,
+          perPage,
+          totalPages: Math.ceil((response.totalCount ?? 0) / perPage),
+        },
+        facets: response.facets ?? {},
+      };
+    } catch (error) {
+      console.error('121312312312312', error);
+      return {
+        data: { items: [], total: 0, page, perPage, totalPages: 0 },
+        facets: {},
+      };
     }
-
-    return {
-      data: {
-        items: allEntries,
-        total: response.totalCount ?? 0,
-        page,
-        perPage,
-        totalPages: Math.ceil((response.totalCount ?? 0) / perPage),
-      },
-      facets: response.facets ?? {},
-    };
   };
 
   return fetchEntries(page * perPage);

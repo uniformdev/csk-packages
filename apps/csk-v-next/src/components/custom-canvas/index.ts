@@ -32,6 +32,7 @@ import QuantitySelector from './QuantitySelector';
 import QuirkSelector from './QuirkSelector';
 import ReadMore from './ReadMore';
 import Recommendations from './Recommendations';
+import RedirectSearchBox from './RedirectSearchBox';
 import RemoveButton from './RemoveButton';
 import RichText from './RichText';
 import ShoppingCart from './ShoppingCart';
@@ -83,4 +84,5 @@ export const customComponentsMapping: ComponentMapping = {
   text: { component: Text },
   carousel: { component: Carousel },
   navigationMegaMenuSection: { component: NavigationMegaMenuSection },
+  redirectSearchBox: { component: RedirectSearchBox },
 };
