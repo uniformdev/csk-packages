@@ -1,0 +1,84 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: productCard
+name: Product Card
+icon: screen
+parameters:
+  - id: title
+    name: Title
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: price
+    name: Price
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: currency
+    name: Currency
+    type: text
+    helpText: ISO 4217 currency code
+    typeConfig:
+      required: false
+  - id: image
+    name: Image
+    type: asset
+    typeConfig:
+      max: 1
+      allowedTypes:
+        - image
+    localizable: true
+  - id: slug
+    name: Slug
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: link
+    name: Link
+    type: link
+    typeConfig: null
+    localizable: true
+  - id: a1aa6c8b-e195-43cb-80d6-ecd469617db2
+    name: Add To Favorites
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - addToFavoritesIcon
+        - removeFromFavoritesIcon
+  - id: addToFavoritesIcon
+    name: Add Icon
+    type: asset
+    typeConfig:
+      max: 1
+      allowedTypes:
+        - image
+    localizable: true
+  - id: removeFromFavoritesIcon
+    name: Remove Icon
+    type: asset
+    typeConfig:
+      max: 1
+      allowedTypes:
+        - image
+    localizable: true
+  - id: c16d6269-c367-4984-97c6-27193575d353
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - textColor
+  - id: textColor
+    name: Text Color
+    type: dex-color-palette-parameter
+    typeConfig:
+      allowColors: []
+      selectedGroup: text
+useTeamPermissions: true
+slots: []
+titleParameter: title
+thumbnailParameter: image
+canBeComposition: false
+created: '2025-04-24T11:34:30.783852+00:00'
+updated: '2025-04-24T11:34:30.783852+00:00'
