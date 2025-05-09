@@ -17,9 +17,14 @@ export type FilterByProps = FilterByType & {
   selectedValues: string[];
   onFilterChange: (fieldId: string, value: string[]) => void;
   facetValues: Record<string, number>;
+  title: string;
 };
 
-const EntriesSearchFilters: FC<ComponentProps> = () => {
+type EntriesSearchFiltersProps = ComponentProps<{
+  title: string;
+}>;
+
+const EntriesSearchFilters: FC<EntriesSearchFiltersProps> = ({ title }) => {
   const { filterBy, selectedFilters, setSelectedFilters, facets } = useEntriesSearchContext();
 
   const handleFilterChange = useDebouncedCallback((fieldId: string, value: string[]) => {
@@ -27,21 +32,24 @@ const EntriesSearchFilters: FC<ComponentProps> = () => {
   }, 600);
 
   return (
-    <div className="flex flex-col gap-y-10">
-      {filterBy.map(filter => {
-        const Component = filterByComponents[filter.type];
-        return (
-          <div key={filter.fieldKey} className="flex flex-col gap-y-2">
-            <p className="text-lg font-bold">{filter.title}</p>
-            <Component
-              {...filter}
-              selectedValues={selectedFilters[filter.fieldKey] || []}
-              onFilterChange={handleFilterChange}
-              facetValues={facets?.[filter.fieldKey] || {}}
-            />
-          </div>
-        );
-      })}
+    <div className="flex items-center gap-x-4">
+      {title && <p className="text-lg font-bold">{title}</p>}
+      <div className="flex flex-row gap-x-2">
+        {filterBy.map(filter => {
+          const Component = filterByComponents[filter.type];
+          return (
+            <div key={filter.fieldKey} className="flex flex-col gap-y-2">
+              <Component
+                {...filter}
+                title={filter.title}
+                selectedValues={selectedFilters[filter.fieldKey] || []}
+                onFilterChange={handleFilterChange}
+                facetValues={facets?.[filter.fieldKey] || {}}
+              />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

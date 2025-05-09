@@ -1,0 +1,682 @@
+composition:
+  _name: Search
+  _id: 73f928f8-6aad-43e8-a34f-868fc36aa34d
+  _slug: search
+  type: page
+  _dataResources:
+    All Product Brands:
+      type: brandList
+      variables:
+        locale: ${locale}
+        search: ''
+        filters: '{"type[eq]":"brand"}'
+        contentTypes: brand
+      isPatternParameter: false
+      ignorePatternParameterDefault: false
+    Base Product Category:
+      type: productCategory
+      variables:
+        locale: ${locale}
+        entryId: 2f6cc670-cdaa-4532-b70e-424206c8d0ba
+      isPatternParameter: true
+      ignorePatternParameterDefault: false
+    All Product Categories:
+      type: productCategoryList
+      variables:
+        locale: ${locale}
+        search: ''
+        filters: '{"type[eq]":"productCategory"}'
+        contentTypes: productCategory
+      isPatternParameter: false
+      ignorePatternParameterDefault: false
+  _overrides:
+    73f928f8-6aad-43e8-a34f-868fc36aa34d|dc2e95be-21b5-4476-a309-f8a34922f528:
+      slots:
+        $slotSectionItems:
+          - _id: c38b5887-c1a5-4016-adb2-2a181b630856
+            type: container
+            slots:
+              containerContent:
+                - _id: 32d45979-f7ec-420e-94f3-5ab8a08165d2
+                  type: entriesSearchEngine
+                  slots:
+                    content:
+                      - _id: cbed71d5-55d4-4c65-9406-5d8fc2c854d3
+                        type: flex
+                        slots:
+                          flexItem:
+                            - _id: >-
+                                32d45979-f7ec-420e-94f3-5ab8a08165d2|d14122cc-646f-4ac0-b13e-9bae5cf4bec6
+                              type: grid
+                              slots:
+                                gridInner:
+                                  - _id: >-
+                                      32d45979-f7ec-420e-94f3-5ab8a08165d2|d043d637-4bcd-4945-9c16-7c6c373d8694
+                                    type: gridItem
+                                    slots:
+                                      inner:
+                                        - _id: >-
+                                            32d45979-f7ec-420e-94f3-5ab8a08165d2|c4e468fe-b6cf-4497-8c14-bde24a0e35b8
+                                          type: entriesSearchBox
+                                          parameters:
+                                            size:
+                                              type: dex-token-selector-parameter
+                                              value: input-large
+                                            border:
+                                              type: dex-token-selector-parameter
+                                              value: border-product-card
+                                            placeholder:
+                                              type: text
+                                              value: Start searching for a coffee maker
+                                          _overridability:
+                                            parameters:
+                                              placeholder: 'yes'
+                                    parameters:
+                                      rowSpan:
+                                        type: dex-slider-control-parameter
+                                        value: {}
+                                      rowStart:
+                                        type: dex-slider-control-parameter
+                                        value:
+                                          mobile: ''
+                                          tablet: ''
+                                          desktop: ''
+                                      columnSpan:
+                                        type: dex-slider-control-parameter
+                                        value:
+                                          mobile: span-full
+                                          tablet: span-full
+                                          desktop: span-full
+                                      columnStart:
+                                        type: dex-slider-control-parameter
+                                        value:
+                                          mobile: ''
+                                          tablet: ''
+                                          desktop: ''
+                                      displayName:
+                                        type: text
+                                        locales:
+                                          en: Search Box
+                              parameters:
+                                gapX:
+                                  type: dex-slider-control-parameter
+                                  value:
+                                    tablet: '4'
+                                    desktop: '4'
+                                gapY:
+                                  type: dex-slider-control-parameter
+                                  value:
+                                    mobile: '4'
+                                spacing:
+                                  type: dex-space-control-parameter
+                                  value:
+                                    mobile: {}
+                                    tablet: {}
+                                    desktop: {}
+                                alignItems:
+                                  type: dex-segmented-control-parameter
+                                  value: center
+                                displayName:
+                                  type: text
+                                  locales:
+                                    en: Search Box and Sorting
+                                columnsCount:
+                                  type: dex-slider-control-parameter
+                                  value:
+                                    mobile: '1'
+                                    tablet: '4'
+                                    desktop: '4'
+                                fluidContent:
+                                  type: checkbox
+                                  value: true
+                            - _id: >-
+                                32d45979-f7ec-420e-94f3-5ab8a08165d2|a5856bb3-2393-45b6-92cb-086bd265427a
+                              type: entriesSearchFilters
+                              parameters:
+                                title:
+                                  type: text
+                                  locales:
+                                    en: Filter by
+                        parameters:
+                          gap:
+                            type: dex-slider-control-parameter
+                            value:
+                              mobile: '4'
+                              tablet: '4'
+                              desktop: '4'
+                          direction:
+                            type: dex-segmented-control-parameter
+                            value:
+                              mobile: col
+                              tablet: col
+                              desktop: col
+                          alignItems:
+                            type: dex-segmented-control-parameter
+                            value: {}
+                          displayName:
+                            type: text
+                            locales:
+                              en: Top Section
+                          justifyContent:
+                            type: dex-segmented-control-parameter
+                            value: {}
+                      - _id: >-
+                          32d45979-f7ec-420e-94f3-5ab8a08165d2|b191f318-e75a-4155-925b-c0656f012b91
+                        type: spacer
+                        parameters:
+                          size:
+                            type: dex-token-selector-parameter
+                            value: spacer-medium
+                      - _id: >-
+                          32d45979-f7ec-420e-94f3-5ab8a08165d2|186c91b5-816c-4293-9542-7356653198e3
+                        type: grid
+                        slots:
+                          gridInner:
+                            - _id: >-
+                                32d45979-f7ec-420e-94f3-5ab8a08165d2|73a254c3-eb9f-45d7-8227-7c50f8519c4a
+                              type: gridItem
+                              slots:
+                                inner:
+                                  - _id: >-
+                                      32d45979-f7ec-420e-94f3-5ab8a08165d2|5d9987c7-b142-4662-8082-23ce3a803767
+                                    type: flex
+                                    slots:
+                                      flexItem:
+                                        - _id: >-
+                                            32d45979-f7ec-420e-94f3-5ab8a08165d2|16928c5e-1074-4fd2-981a-1694bb8d3b6c
+                                          type: flexItem
+                                          slots:
+                                            inner:
+                                              - _id: >-
+                                                  32d45979-f7ec-420e-94f3-5ab8a08165d2|43d353cc-a36a-4edd-8ef4-fa740a19a71b
+                                                type: entriesSearchTotalAmount
+                                                parameters:
+                                                  textColor:
+                                                    type: dex-color-palette-parameter
+                                                    value: text-tertiary
+                                                  textTemplate:
+                                                    type: text
+                                                    locales:
+                                                      en: Found {totalItems} product(s)
+                                                _overridability:
+                                                  hideLockedParameters: true
+                                          parameters:
+                                            shrink:
+                                              type: dex-segmented-control-parameter
+                                              value: '0'
+                                            alignSelf:
+                                              type: dex-segmented-control-parameter
+                                              value: {}
+                                            displayName:
+                                              type: text
+                                              locales:
+                                                en: Total Items Found
+                                          _overridability:
+                                            hideLockedParameters: true
+                                        - _id: >-
+                                            32d45979-f7ec-420e-94f3-5ab8a08165d2|f5572abc-bf1b-48d2-b338-c81fccd00644
+                                          type: flex
+                                          slots:
+                                            flexItem:
+                                              - _id: >-
+                                                  32d45979-f7ec-420e-94f3-5ab8a08165d2|94c808ae-d49b-426e-a277-dfbf80069d35
+                                                type: text
+                                                parameters:
+                                                  tag:
+                                                    type: dex-segmented-control-parameter
+                                                    value: span
+                                                  size:
+                                                    type: dex-segmented-control-parameter
+                                                    value:
+                                                      mobile: sm
+                                                      tablet: sm
+                                                      desktop: sm
+                                                  text:
+                                                    type: text
+                                                    locales:
+                                                      en: Products per page
+                                                  color:
+                                                    type: dex-color-palette-parameter
+                                                    value: text-primary
+                                                  weight:
+                                                    type: dex-segmented-control-parameter
+                                                    value: normal
+                                                _overridability:
+                                                  hideLockedParameters: true
+                                              - _id: >-
+                                                  32d45979-f7ec-420e-94f3-5ab8a08165d2|cbbd20eb-7da3-4272-8a9c-fe1b20fbb80d
+                                                type: entriesSearchPageSize
+                                                _overridability:
+                                                  hideLockedParameters: true
+                                          parameters:
+                                            gap:
+                                              type: dex-slider-control-parameter
+                                              value:
+                                                mobile: '4'
+                                                tablet: '4'
+                                                desktop: '4'
+                                            spacing:
+                                              type: dex-space-control-parameter
+                                              value:
+                                                mobile: {}
+                                                tablet: {}
+                                                desktop: {}
+                                            direction:
+                                              type: dex-segmented-control-parameter
+                                              value:
+                                                mobile: row
+                                                tablet: row
+                                                desktop: row
+                                            alignItems:
+                                              type: dex-segmented-control-parameter
+                                              value:
+                                                mobile: center
+                                                tablet: center
+                                                desktop: center
+                                            displayName:
+                                              type: text
+                                              locales:
+                                                en: Per page
+                                            fluidContent:
+                                              type: checkbox
+                                              value: true
+                                            justifyContent:
+                                              type: dex-segmented-control-parameter
+                                              value:
+                                                mobile: between
+                                                tablet: end
+                                                desktop: end
+                                          _overridability:
+                                            hideLockedParameters: true
+                                    parameters:
+                                      gap:
+                                        type: dex-slider-control-parameter
+                                        value:
+                                          mobile: '4'
+                                          tablet: '4'
+                                          desktop: '4'
+                                      spacing:
+                                        type: dex-space-control-parameter
+                                        value:
+                                          mobile: {}
+                                          tablet: {}
+                                          desktop: {}
+                                      direction:
+                                        type: dex-segmented-control-parameter
+                                        value:
+                                          mobile: row
+                                          tablet: row
+                                          desktop: row
+                                      alignItems:
+                                        type: dex-segmented-control-parameter
+                                        value:
+                                          mobile: center
+                                          tablet: center
+                                          desktop: center
+                                      displayName:
+                                        type: text
+                                        locales:
+                                          en: Top Content
+                                      fluidContent:
+                                        type: checkbox
+                                        value: true
+                                      justifyContent:
+                                        type: dex-segmented-control-parameter
+                                        value:
+                                          mobile: between
+                                          tablet: between
+                                          desktop: between
+                                    _overridability:
+                                      hideLockedParameters: true
+                                  - _id: >-
+                                      32d45979-f7ec-420e-94f3-5ab8a08165d2|c1ce3297-ca5f-49c8-9a55-91981baf01a9
+                                    type: spacer
+                                    parameters:
+                                      size:
+                                        type: dex-token-selector-parameter
+                                        value: spacer-small
+                                    _overridability:
+                                      hideLockedParameters: true
+                                  - _id: >-
+                                      32d45979-f7ec-420e-94f3-5ab8a08165d2|166b3e64-f887-4535-99c7-38829cfe7f1e
+                                    type: entriesSearchList
+                                    parameters:
+                                      border:
+                                        type: dex-token-selector-parameter
+                                        value: border-product-card
+                                      textColor:
+                                        type: dex-color-palette-parameter
+                                        value: text-primary
+                                  - _id: >-
+                                      32d45979-f7ec-420e-94f3-5ab8a08165d2|7eb15994-ff28-4f95-a4fa-ed305b686e0c
+                                    type: spacer
+                                    parameters:
+                                      size:
+                                        type: dex-token-selector-parameter
+                                        value: spacer-small
+                                  - _id: >-
+                                      32d45979-f7ec-420e-94f3-5ab8a08165d2|8c0c2579-12f4-4e6c-8a8e-f24f6cbaa099
+                                    type: entriesSearchPagination
+                              parameters:
+                                rowSpan:
+                                  type: dex-slider-control-parameter
+                                  value: {}
+                                rowStart:
+                                  type: dex-slider-control-parameter
+                                  value:
+                                    mobile: ''
+                                    tablet: ''
+                                    desktop: ''
+                                columnSpan:
+                                  type: dex-slider-control-parameter
+                                  value:
+                                    tablet: auto
+                                    desktop: span-full
+                                columnStart:
+                                  type: dex-slider-control-parameter
+                                  value:
+                                    mobile: ''
+                                    tablet: ''
+                                    desktop: '1'
+                                displayName:
+                                  type: text
+                                  locales:
+                                    en: Right Content
+                        parameters:
+                          gapX:
+                            type: dex-slider-control-parameter
+                            value:
+                              desktop: '8'
+                          gapY:
+                            type: dex-slider-control-parameter
+                            value:
+                              mobile: '8'
+                              tablet: '8'
+                          spacing:
+                            type: dex-space-control-parameter
+                            value:
+                              mobile: {}
+                              tablet: {}
+                              desktop: {}
+                          alignItems:
+                            type: dex-segmented-control-parameter
+                            value: stretch
+                          displayName:
+                            type: text
+                            locales:
+                              en: Search Content
+                          columnsCount:
+                            type: dex-slider-control-parameter
+                            value:
+                              mobile: '1'
+                              tablet: '1'
+                              desktop: '4'
+                          fluidContent:
+                            type: checkbox
+                            value: true
+                  parameters:
+                    orderBy:
+                      type: $block
+                      value:
+                        - _id: >-
+                            32d45979-f7ec-420e-94f3-5ab8a08165d2|2a53ef92-66ce-4c25-96b0-33ddf6ade010
+                          type: orderBy
+                          fields:
+                            field:
+                              type: text
+                              value: created_at
+                            title:
+                              type: text
+                              value: Newest Arrivals
+                            direction:
+                              type: select
+                              value: DESC
+                        - _id: >-
+                            32d45979-f7ec-420e-94f3-5ab8a08165d2|452e6eab-9055-4bc5-b3bb-2885ed788653
+                          type: orderBy
+                          fields:
+                            field:
+                              type: text
+                              value: fields.title
+                            title:
+                              type: text
+                              value: 'Alphabetically: A-Z'
+                            direction:
+                              type: select
+                              value: ASC
+                        - _id: >-
+                            32d45979-f7ec-420e-94f3-5ab8a08165d2|1e2086c5-ee74-4edc-8e79-8856678d86d1
+                          type: orderBy
+                          fields:
+                            field:
+                              type: text
+                              value: fields.title
+                            title:
+                              type: text
+                              value: 'Alphabetically: Z-A'
+                            direction:
+                              type: select
+                              value: DESC
+                        - _id: >-
+                            32d45979-f7ec-420e-94f3-5ab8a08165d2|d7339332-cbd4-4ac2-966a-3af951e08cea
+                          type: orderBy
+                          fields:
+                            field:
+                              type: text
+                              value: fields.rating
+                            title:
+                              type: text
+                              value: 'Rating: Highest first'
+                            direction:
+                              type: select
+                              value: DESC
+                        - _id: >-
+                            32d45979-f7ec-420e-94f3-5ab8a08165d2|7ef0e605-c3d1-4ac8-8793-63b7b409394d
+                          type: orderBy
+                          fields:
+                            field:
+                              type: text
+                              value: fields.rating
+                            title:
+                              type: text
+                              value: 'Rating: Lowest first'
+                            direction:
+                              type: select
+                              value: ASC
+                    filterBy:
+                      type: $block
+                      value:
+                        - _id: >-
+                            32d45979-f7ec-420e-94f3-5ab8a08165d2|87dea12d-bc3b-4b7d-8b46-5b64f15d4654
+                          type: filterBy
+                          fields:
+                            type:
+                              type: select
+                              value: multiSelect
+                            title:
+                              type: text
+                              locales:
+                                en: Product
+                            values:
+                              type: $block
+                              value:
+                                - _id: >-
+                                    32d45979-f7ec-420e-94f3-5ab8a08165d2|18213ddb-3069-427c-b8f3-93a0189f84b2
+                                  type: $loop
+                                  fields:
+                                    body:
+                                      type: $block
+                                      value:
+                                        - _id: >-
+                                            32d45979-f7ec-420e-94f3-5ab8a08165d2|7e04ec3f-7366-417b-ac04-9fafbd9df852
+                                          type: filterByItem
+                                          fields:
+                                            title:
+                                              type: text
+                                              value: >-
+                                                ${#jptr:/All Product Categories entries
+                                                Loop Item/entry/fields/title/value}
+                                            value:
+                                              type: text
+                                              value: >-
+                                                ${#jptr:/All Product Categories entries
+                                                Loop Item/entry/_slug}
+                                  _dataResources:
+                                    All Product Categories entries Loop Item:
+                                      type: sys-reserved-loop
+                                      variables:
+                                        connectedData: >-
+                                          #jptr:/All Product
+                                          Categories/entries:fa=c
+                            fieldId:
+                              type: text
+                              value: category
+                            fieldKey:
+                              type: text
+                              value: fields.subcategory.slug
+                            enableFaceting:
+                              type: checkbox
+                              value: true
+                        - _id: >-
+                            32d45979-f7ec-420e-94f3-5ab8a08165d2|c1e35169-72dc-494d-ba9a-03bc76aed46e
+                          type: filterBy
+                          fields:
+                            type:
+                              type: select
+                              value: multiSelect
+                            title:
+                              type: text
+                              locales:
+                                en: Refine by brand
+                            values:
+                              type: $block
+                              value:
+                                - _id: >-
+                                    32d45979-f7ec-420e-94f3-5ab8a08165d2|84f8bb98-1bb0-444a-9f86-530f5b6a408b
+                                  type: $loop
+                                  fields:
+                                    body:
+                                      type: $block
+                                      value:
+                                        - _id: >-
+                                            32d45979-f7ec-420e-94f3-5ab8a08165d2|11363fe9-01cc-487c-9288-c3db3c3bea0c
+                                          type: filterByItem
+                                          fields:
+                                            title:
+                                              type: text
+                                              value: >-
+                                                ${#jptr:/All Product Categories entries
+                                                Loop Item/entry/fields/title/value}
+                                            value:
+                                              type: text
+                                              value: >-
+                                                ${#jptr:/All Product Categories entries
+                                                Loop Item/entry/_slug}
+                                  _dataResources:
+                                    All Product Categories entries Loop Item:
+                                      type: sys-reserved-loop
+                                      variables:
+                                        connectedData: '#jptr:/All Product Brands/entries:fa=c'
+                            fieldId:
+                              type: text
+                              value: brand
+                            fieldKey:
+                              type: text
+                              value: fields.brand.slug
+                            enableFaceting:
+                              type: checkbox
+                              value: true
+                    pageSizes:
+                      type: $block
+                      value:
+                        - _id: >-
+                            32d45979-f7ec-420e-94f3-5ab8a08165d2|8dbd1da1-4b00-4fe3-8670-7d402adf8800
+                          type: pageSize
+                          fields:
+                            size:
+                              type: number
+                              value: '6'
+                        - _id: >-
+                            32d45979-f7ec-420e-94f3-5ab8a08165d2|0843f4b1-24fb-46db-9401-83c03f72d85e
+                          type: pageSize
+                          fields:
+                            size:
+                              type: number
+                              value: '8'
+                        - _id: >-
+                            32d45979-f7ec-420e-94f3-5ab8a08165d2|54840be6-ad8c-4c8d-a9e9-d2817796ec78
+                          type: pageSize
+                          fields:
+                            size:
+                              type: number
+                              value: '10'
+                    baseFilters:
+                      type: $block
+                      value:
+                        - _id: >-
+                            32d45979-f7ec-420e-94f3-5ab8a08165d2|0e7faa98-bee9-40eb-ad47-4a8039cc6aeb
+                          type: filterBy
+                          fields:
+                            type:
+                              type: select
+                              value: select
+                            title:
+                              type: text
+                              locales:
+                                en: Coffee Makers
+                            values:
+                              type: $block
+                              value:
+                                - _id: >-
+                                    32d45979-f7ec-420e-94f3-5ab8a08165d2|94c23487-86d7-4f26-9bb0-c6167d03df73
+                                  type: filterByItem
+                                  fields:
+                                    title:
+                                      type: text
+                                      value: >-
+                                        ${#jptr:/Base Product
+                                        Category/entry/fields/title/value}
+                                    value:
+                                      type: text
+                                      value: >-
+                                        ${#jptr:/Base Product
+                                        Category/entry/_slug}
+                            fieldId:
+                              type: text
+                              value: category
+                            fieldKey:
+                              type: text
+                              value: fields.category.slug
+                    contentType:
+                      type: select
+                      value: product
+                    boostEnrichments:
+                      type: multi-select
+                      value:
+                        - subCategory,subcategory
+                  _overridability:
+                    parameters:
+                      boostEnrichments: 'yes'
+                    hideLockedParameters: true
+            parameters:
+              spacing:
+                type: dex-space-control-parameter
+                value:
+                  mobile:
+                    paddingTop: container-small
+                    paddingRight: container-xsmall
+                  tablet: {}
+                  desktop:
+                    paddingTop: container-medium
+                    paddingLeft: container-small
+                    paddingRight: container-small
+              displayName:
+                type: text
+                locales:
+                  en: Faceted Search
+  _locales:
+    - en
+  _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
+created: '2025-05-09T06:33:49.800905+00:00'
+modified: '2025-05-09T07:24:26.404987+00:00'
+pattern: false

@@ -3,10 +3,16 @@ $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: entriesSearchFilters
 name: Entries Search Filters
 icon: search-loading
-parameters: []
+parameters:
+  - id: title
+    name: Title
+    type: text
+    typeConfig: null
+    localizable: true
 categoryId: 624b55ca-4671-46e2-8fd5-4a9b34b4c121
 useTeamPermissions: true
 slots: []
+titleParameter: title
 canBeComposition: false
-created: '2025-03-26T19:06:37.660656+00:00'
-updated: '2025-03-26T20:00:22.228779+00:00'
+created: '2025-04-24T21:38:58.903317+00:00'
+updated: '2025-05-09T07:24:06.033405+00:00'

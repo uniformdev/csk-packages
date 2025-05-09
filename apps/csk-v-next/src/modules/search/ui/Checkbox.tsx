@@ -43,7 +43,7 @@ const Checkbox: FC<CheckboxProps> = ({ label, value, wrapperClassName = '', chec
         />
       </div>
 
-      <label className={classNames('cursor-pointer leading-5', { 'opacity-50': props.disabled })} htmlFor={id}>
+      <label className={classNames('cursor-pointer w-full leading-5', { 'opacity-50': props.disabled })} htmlFor={id}>
         {label}
       </label>
     </div>

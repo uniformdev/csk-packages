@@ -2,8 +2,17 @@ import { useCallback, ChangeEvent, FC, useState } from 'react';
 import Checkbox from '@/modules/search/ui/Checkbox';
 import { FilterByProps } from './EntriesSearchFilters';
 
-const FilterBySelect: FC<FilterByProps> = ({ fieldKey, values, selectedValues, onFilterChange, facetValues, type }) => {
+const FilterBySelect: FC<FilterByProps> = ({
+  fieldKey,
+  title,
+  values,
+  selectedValues,
+  onFilterChange,
+  facetValues,
+  type,
+}) => {
   const [localSelectedValues, setLocalSelectedValues] = useState(selectedValues);
+
   const handleFilterChange = useCallback(
     (event: ChangeEvent<HTMLInputElement>) => {
       const value = event.target.value;
@@ -21,24 +30,54 @@ const FilterBySelect: FC<FilterByProps> = ({ fieldKey, values, selectedValues, o
     [localSelectedValues, onFilterChange, fieldKey, type]
   );
 
+  const [open, setOpen] = useState(false);
+  const [selected, setSelected] = useState([]);
+
   return (
-    <div className="flex flex-col gap-y-2">
-      {values.map(({ value, title }) => (
-        <Checkbox
-          key={value}
-          label={
-            <span className="flex items-center gap-x-2">
-              <span>{title}</span>
-              {facetValues[value] && (
-                <span className="rounded-full bg-gray-100 px-2 py-0.5 text-xs text-gray-500">{facetValues[value]}</span>
-              )}
-            </span>
-          }
-          value={value}
-          checked={localSelectedValues.includes(value)}
-          onChange={handleFilterChange}
-        />
-      ))}
+    <div className="relative inline-block w-64 text-left">
+      <div>
+        <button
+          type="button"
+          className="inline-flex w-full justify-between bg-gray-200 px-4 py-2 text-sm text-gray-500"
+          onClick={() => setOpen(!open)}
+        >
+          {`${title} ${selected.length > 0 ? `(${selected.length})` : ''}`}
+          <svg className="ml-2 size-4" viewBox="0 0 20 20" fill="currentColor">
+            <path fillRule="evenodd" d="M5.293 7.293L10 12l4.707-4.707-1.414-1.414L10 9.172 6.707 5.879 5.293 7.293z" />
+          </svg>
+        </button>
+      </div>
+
+      {open && (
+        <div className="absolute z-10 mt-2 w-full border border-gray-200 bg-white shadow-lg">
+          <ul className="flex max-h-60 flex-col gap-y-2 overflow-y-auto p-2">
+            {values.map(({ value, title }) => (
+              <Checkbox
+                key={value}
+                label={
+                  <div className="flex w-full items-center justify-between gap-x-2">
+                    <span>{title}</span>
+                    {facetValues[value] && (
+                      <span className="px-2 py-0.5 text-xs text-gray-500">({facetValues[value]})</span>
+                    )}
+                  </div>
+                }
+                value={value}
+                checked={localSelectedValues.includes(value)}
+                onChange={handleFilterChange}
+              />
+            ))}
+          </ul>
+          <div className="p-2 text-right">
+            <button
+              className="text-xs font-bold uppercase text-gray-500 hover:underline"
+              onClick={() => setSelected([])}
+            >
+              Clear All
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
