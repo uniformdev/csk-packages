@@ -1,29 +1,29 @@
-created: '2025-05-09T08:28:43.174046+00:00'
-modified: '2025-05-09T13:37:50.612986+00:00'
+created: '2025-05-09T13:48:37.492328+00:00'
+modified: '2025-05-09T13:49:44.523308+00:00'
 pattern: false
 entry:
-  _id: d0099df8-17d9-4556-94ba-7ca5721a5409
-  _name: QPF4288A
-  _slug: qm42655-copy
+  _id: 84208549-f8b0-44fe-8152-d22852d021e8
+  _name: FT-7600
+  _slug: ft-7600
   _thumbnail: >-
-    https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/B_-AgR-MRl68d4nO7xyFGQ-QPF4288A_PDP.png
+    https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/CwzBywT5T72n1nMPAEY1Mw-FT-7600_PDP.png
   type: product
   fields:
     name:
       type: text
-      value: 2.4 GHz Wi-Fi 6 Front End Module
+      value: MEMS Force Sensor
     rohs:
       type: select
       value: 'yes'
     title:
       type: text
-      value: QPF4288A
+      value: FT-7600
     status:
       type: select
       value: production
     category:
       type: contentReference
-      value: ${#jptr:/ref-d0099df8-17d9-4556-94ba-7ca5721a5409-category/entries}
+      value: ${#jptr:/ref-8af768b6-94a9-4e03-bd3c-2622b7392564-category/entries}
     leadFree:
       type: select
       value: 'Yes'
@@ -43,21 +43,27 @@ entry:
                 version: 1
                 children:
                   - mode: normal
-                    text: The Qorvo
-                    type: text
-                    style: ''
-                    detail: 0
-                    format: 0
-                    version: 1
-                  - mode: normal
-                    text: ®
-                    type: text
-                    style: ''
-                    detail: 0
-                    format: 64
-                    version: 1
-                  - mode: normal
-                    text: "\_QPF4288A is an integrated front end module (FEM) designed for Wi-Fi 6 (802.11ax) systems. The compact form factor and integrated matching minimizes layout area in the application. Performance is focused on optimizing the PA for a 5 V supply voltage that conserves power consumption while maintaining the highest linear output power and leading edge throughput. Receive path matches the optimal technologies to maximize Rx sensitivity through noise figure performance that is consistent over a wider variety of conditions. Integrated die level filtering for 2nd and 3rd harmonics as well as 5 GHz rejection for DBDC operation are included. An RF power detector with an RF output from a directional coupler provides feedback. The QPF4288A integrates a 2.4 GHz power amplifier (PA), regulator, single pole two throw switch (SP2T), bypassable low noise amplifier (LNA) and coupler into a single device."
+                    text: >-
+                      The Qorvo FT-7600 MEMS Force sensor represents the World’s
+                      smallest force sensor and the easiest sensor to integrate,
+                      as it only requires attachment to the under-side of a
+                      sensing surface. At 0.8mm x 1.2mm, it is designed to fit
+                      into small form factor and to serve a broad range of
+                      applications including smart surfaces, screens, buttons,
+                      and sliders. The FT-760x series can be used with or
+                      without capacitive touch films to enable a robust 3D touch
+                      experience.The FT-760x series sensor further improves
+                      performance and accuracy of a sensing solution by
+                      rejecting off-axis forces and tuning variations over
+                      temperature using external resistors.The FT-7600 MEMS
+                      Force sensor does not require a preload stack-up, such as
+                      a metal spring or rubber, to absorb mechanical tolerances.
+                      The FT-7600 MEMS Force sensor enables sensing under OLED
+                      displays or any material such as glass, metal, plastic,
+                      ceramic, wood, leather, etc. It enables new industrial
+                      designs, provides 10x higher reliability compared to
+                      mechanical switches and is immune to radio frequencies
+                      (RF) and electro-magnetic interference (EMI).
                     type: text
                     style: ''
                     detail: 0
@@ -1726,21 +1732,7 @@ entry:
                     version: 1
                     children:
                       - mode: normal
-                        text: P
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
-                      - mode: normal
-                        text: OUT
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 32
-                        version: 1
-                      - mode: normal
-                        text: "\_= +22 dBm MCS11 HE40 -43 dB Dynamic EVM"
+                        text: Excellent Sensitivity, Linearity, and Reliability
                         type: text
                         style: ''
                         detail: 0
@@ -1754,21 +1746,7 @@ entry:
                     version: 1
                     children:
                       - mode: normal
-                        text: P
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
-                      - mode: normal
-                        text: OUT
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 32
-                        version: 1
-                      - mode: normal
-                        text: "\_= +24.5 dBm MCS8 VHT40 -35 dB Dynamic EVM"
+                        text: Easy to Install
                         type: text
                         style: ''
                         detail: 0
@@ -1782,21 +1760,7 @@ entry:
                     version: 1
                     children:
                       - mode: normal
-                        text: P
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
-                      - mode: normal
-                        text: OUT
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 32
-                        version: 1
-                      - mode: normal
-                        text: "\_= +27 dBm MCS0 HT20 Spectral Mask Compliance"
+                        text: Off-Axis Force Rejection
                         type: text
                         style: ''
                         detail: 0
@@ -1810,7 +1774,7 @@ entry:
                     version: 1
                     children:
                       - mode: normal
-                        text: Optimized for +5 V Operation
+                        text: Tunable Offset and TCO
                         type: text
                         style: ''
                         detail: 0
@@ -1824,7 +1788,7 @@ entry:
                     version: 1
                     children:
                       - mode: normal
-                        text: 33 dB Tx Gain
+                        text: Fast Response – Low Latency
                         type: text
                         style: ''
                         detail: 0
@@ -1838,7 +1802,7 @@ entry:
                     version: 1
                     children:
                       - mode: normal
-                        text: 1.9 dB Noise Figure
+                        text: 'Force Range: Grams to Kilograms'
                         type: text
                         style: ''
                         detail: 0
@@ -1852,7 +1816,7 @@ entry:
                     version: 1
                     children:
                       - mode: normal
-                        text: 14 dB Rx Gain & 5 dB Bypass Loss
+                        text: Excellent Electrical and Thermal Stability
                         type: text
                         style: ''
                         detail: 0
@@ -1866,7 +1830,49 @@ entry:
                     version: 1
                     children:
                       - mode: normal
-                        text: 8 dB 5 GHz Rejection on Rx Path
+                        text: Differential Analog Voltage Output
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                    direction: ltr
+                  - type: listitem
+                    value: 9
+                    format: start
+                    indent: 0
+                    version: 1
+                    children:
+                      - mode: normal
+                        text: Ultra-Low Power
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                    direction: ltr
+                  - type: listitem
+                    value: 10
+                    format: start
+                    indent: 0
+                    version: 1
+                    children:
+                      - mode: normal
+                        text: 'Supply Voltage: 1.8 V to 5 V'
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                    direction: ltr
+                  - type: listitem
+                    value: 11
+                    format: start
+                    indent: 0
+                    version: 1
+                    children:
+                      - mode: normal
+                        text: 6-pin CSP, 0.8 mm x 1.2 mm x 0.220 mm
                         type: text
                         style: ''
                         detail: 0
@@ -1876,36 +1882,33 @@ entry:
                 listType: bullet
                 direction: ltr
             direction: ltr
-    applications:
-      type: contentReference
-      value: ${#jptr:/ref-d0099df8-17d9-4556-94ba-7ca5721a5409-applications/entries}
     primaryImage:
       type: asset
       value:
-        - _id: e36d1b25-5635-4d72-beb0-1efc55da3394
+        - _id: 76223e6d-fa1a-4389-9937-73ee2476bb4c
           type: image
           fields:
             id:
               type: text
-              value: 61abd112-3b45-4d00-838d-ad1769c90cb3
+              value: 8967c36f-921a-4c24-bbb6-751e9914b8e8
             url:
               value: >-
-                https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/B_-AgR-MRl68d4nO7xyFGQ-QPF4288A_PDP.png
+                https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/CwzBywT5T72n1nMPAEY1Mw-FT-7600_PDP.png
               type: text
             file:
               type: file
-              value: 2b0a8bb0-f87a-4a6b-8c7f-839f0d48708f
+              value: b250c77e-aff3-4e6b-92ae-2e8683f93e60
             size:
-              value: 2825
+              value: 6520
               type: number
             title:
               type: text
-              value: QPF4288A_PDP.png
+              value: FT-7600_PDP.png
             width:
-              value: 140
+              value: 139
               type: number
             height:
-              value: 98
+              value: 162
               type: number
             mediaType:
               value: image/png
@@ -1928,84 +1931,147 @@ entry:
               - tag: ul
                 type: list
                 start: 1
-                format: ''
+                format: start
                 indent: 0
                 version: 1
                 children:
                   - type: listitem
                     value: 1
-                    format: start
+                    format: ''
                     indent: 0
                     version: 1
                     children:
-                      - mode: normal
-                        text: Access Points
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
+                      - tag: ul
+                        type: list
+                        start: 1
+                        format: ''
+                        indent: 0
                         version: 1
-                    direction: ltr
-                  - type: listitem
-                    value: 2
-                    format: start
-                    indent: 0
-                    version: 1
-                    children:
-                      - mode: normal
-                        text: Wireless Routers
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
-                    direction: ltr
-                  - type: listitem
-                    value: 3
-                    format: start
-                    indent: 0
-                    version: 1
-                    children:
-                      - mode: normal
-                        text: Residential Gateways
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
-                    direction: ltr
-                  - type: listitem
-                    value: 4
-                    format: start
-                    indent: 0
-                    version: 1
-                    children:
-                      - mode: normal
-                        text: Customer Premise Equipment
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
-                    direction: ltr
-                  - type: listitem
-                    value: 5
-                    format: start
-                    indent: 0
-                    version: 1
-                    children:
-                      - mode: normal
-                        text: Internet of Things
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
+                        children:
+                          - type: listitem
+                            value: 1
+                            format: start
+                            indent: 1
+                            version: 1
+                            children:
+                              - mode: normal
+                                text: General Purpose Solid-State Buttons
+                                type: text
+                                style: ''
+                                detail: 0
+                                format: 0
+                                version: 1
+                            direction: ltr
+                          - type: listitem
+                            value: 2
+                            format: start
+                            indent: 1
+                            version: 1
+                            children:
+                              - mode: normal
+                                text: Smart Phones and Tablets
+                                type: text
+                                style: ''
+                                detail: 0
+                                format: 0
+                                version: 1
+                            direction: ltr
+                          - type: listitem
+                            value: 3
+                            format: start
+                            indent: 1
+                            version: 1
+                            children:
+                              - mode: normal
+                                text: Automotive Smart Surfaces
+                                type: text
+                                style: ''
+                                detail: 0
+                                format: 0
+                                version: 1
+                            direction: ltr
+                          - type: listitem
+                            value: 4
+                            format: start
+                            indent: 1
+                            version: 1
+                            children:
+                              - mode: normal
+                                text: 3D Touch Displays
+                                type: text
+                                style: ''
+                                detail: 0
+                                format: 0
+                                version: 1
+                            direction: ltr
+                          - type: listitem
+                            value: 5
+                            format: start
+                            indent: 1
+                            version: 1
+                            children:
+                              - mode: normal
+                                text: Weight Scales, White Goods
+                                type: text
+                                style: ''
+                                detail: 0
+                                format: 0
+                                version: 1
+                            direction: ltr
+                          - type: listitem
+                            value: 6
+                            format: start
+                            indent: 1
+                            version: 1
+                            children:
+                              - mode: normal
+                                text: Wearables
+                                type: text
+                                style: ''
+                                detail: 0
+                                format: 0
+                                version: 1
+                            direction: ltr
+                          - type: listitem
+                            value: 7
+                            format: start
+                            indent: 1
+                            version: 1
+                            children:
+                              - mode: normal
+                                text: Gaming, Controllers
+                                type: text
+                                style: ''
+                                detail: 0
+                                format: 0
+                                version: 1
+                            direction: ltr
+                          - type: listitem
+                            value: 8
+                            format: start
+                            indent: 1
+                            version: 1
+                            children:
+                              - mode: normal
+                                text: Stylus, Touchpads, Smart Home, AR/VR
+                                type: text
+                                style: ''
+                                detail: 0
+                                format: 0
+                                version: 1
+                            direction: ltr
+                        listType: bullet
+                        direction: ltr
                     direction: ltr
                 listType: bullet
                 direction: ltr
             direction: ltr
   _dataResources:
+    ref-8af768b6-94a9-4e03-bd3c-2622b7392564-category:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: 1f5d4df2-1085-4e2e-a0c1-4ec97dc563c8
     ref-d0099df8-17d9-4556-94ba-7ca5721a5409-category:
       type: uniformContentInternalReference
       variables:

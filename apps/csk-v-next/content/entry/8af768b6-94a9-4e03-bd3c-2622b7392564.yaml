@@ -1,29 +1,29 @@
-created: '2025-05-09T08:28:43.174046+00:00'
-modified: '2025-05-09T13:37:50.612986+00:00'
+created: '2025-05-09T13:38:05.676113+00:00'
+modified: '2025-05-09T13:42:38.085099+00:00'
 pattern: false
 entry:
-  _id: d0099df8-17d9-4556-94ba-7ca5721a5409
-  _name: QPF4288A
-  _slug: qm42655-copy
+  _id: 8af768b6-94a9-4e03-bd3c-2622b7392564
+  _name: AF-3068
+  _slug: af-3068
   _thumbnail: >-
-    https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/B_-AgR-MRl68d4nO7xyFGQ-QPF4288A_PDP.png
+    https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/JFagh1bcRk6lunoJuPszRw-AF-3068_PDP.png
   type: product
   fields:
     name:
       type: text
-      value: 2.4 GHz Wi-Fi 6 Front End Module
+      value: Ultra-Low Power ASIC
     rohs:
       type: select
       value: 'yes'
     title:
       type: text
-      value: QPF4288A
+      value: AF-3068
     status:
       type: select
       value: production
     category:
       type: contentReference
-      value: ${#jptr:/ref-d0099df8-17d9-4556-94ba-7ca5721a5409-category/entries}
+      value: ${#jptr:/ref-8af768b6-94a9-4e03-bd3c-2622b7392564-category/entries}
     leadFree:
       type: select
       value: 'Yes'
@@ -43,21 +43,26 @@ entry:
                 version: 1
                 children:
                   - mode: normal
-                    text: The Qorvo
-                    type: text
-                    style: ''
-                    detail: 0
-                    format: 0
-                    version: 1
-                  - mode: normal
-                    text: ®
-                    type: text
-                    style: ''
-                    detail: 0
-                    format: 64
-                    version: 1
-                  - mode: normal
-                    text: "\_QPF4288A is an integrated front end module (FEM) designed for Wi-Fi 6 (802.11ax) systems. The compact form factor and integrated matching minimizes layout area in the application. Performance is focused on optimizing the PA for a 5 V supply voltage that conserves power consumption while maintaining the highest linear output power and leading edge throughput. Receive path matches the optimal technologies to maximize Rx sensitivity through noise figure performance that is consistent over a wider variety of conditions. Integrated die level filtering for 2nd and 3rd harmonics as well as 5 GHz rejection for DBDC operation are included. An RF power detector with an RF output from a directional coupler provides feedback. The QPF4288A integrates a 2.4 GHz power amplifier (PA), regulator, single pole two throw switch (SP2T), bypassable low noise amplifier (LNA) and coupler into a single device."
+                    text: >-
+                      The Qorvo AF-3068 represent ultra-low power and high SNR
+                      single-channel Analog Front-End devices (AFEs). They are
+                      designed to work with a broad range of industry sensors,
+                      including all Qorvo force sensors, to enable the best
+                      sensing solutions. The AFEs allow direct connection of
+                      these sensing solutions to a host processor via an
+                      industry standard I²C interface. Up to four AFEs can be
+                      connected to a host using a single I²C interface.The
+                      AF-3068 are designed for Always-On applications. They
+                      sample the sensing signals and off-load the host, allowing
+                      the host to remain asleep during tasks such as
+                      auto-calibration. In force applications, these AFEs can
+                      wake the system via an interrupt when a pre-defined force
+                      trigger level is achieved. In active mode, sampling at 100
+                      Hz, the entire solution consumes only 5 μA. Depending on
+                      the sampling frequency, the solution has a low latency of
+                      1 ms.The AF-3x68 is available in a 9-pin CSP package (1.16
+                      mm x 1.16 mm x 0.475 mm) and can be used with all Qorvo
+                      sensors or any other analog sensor.
                     type: text
                     style: ''
                     detail: 0
@@ -1726,21 +1731,7 @@ entry:
                     version: 1
                     children:
                       - mode: normal
-                        text: P
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
-                      - mode: normal
-                        text: OUT
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 32
-                        version: 1
-                      - mode: normal
-                        text: "\_= +22 dBm MCS11 HE40 -43 dB Dynamic EVM"
+                        text: Analog front end for MEMS Force sensors
                         type: text
                         style: ''
                         detail: 0
@@ -1754,21 +1745,9 @@ entry:
                     version: 1
                     children:
                       - mode: normal
-                        text: P
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
-                      - mode: normal
-                        text: OUT
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 32
-                        version: 1
-                      - mode: normal
-                        text: "\_= +24.5 dBm MCS8 VHT40 -35 dB Dynamic EVM"
+                        text: >-
+                          Integrated instrumentation amplifier with programmable
+                          gain (up to x416)
                         type: text
                         style: ''
                         detail: 0
@@ -1782,21 +1761,7 @@ entry:
                     version: 1
                     children:
                       - mode: normal
-                        text: P
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
-                      - mode: normal
-                        text: OUT
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 32
-                        version: 1
-                      - mode: normal
-                        text: "\_= +27 dBm MCS0 HT20 Spectral Mask Compliance"
+                        text: Sensor duty-cycle control
                         type: text
                         style: ''
                         detail: 0
@@ -1810,7 +1775,7 @@ entry:
                     version: 1
                     children:
                       - mode: normal
-                        text: Optimized for +5 V Operation
+                        text: 'Ultra-low power: 5 μA @ 100 Hz (sensor + AFE)'
                         type: text
                         style: ''
                         detail: 0
@@ -1824,7 +1789,7 @@ entry:
                     version: 1
                     children:
                       - mode: normal
-                        text: 33 dB Tx Gain
+                        text: Runtime auto-calibration
                         type: text
                         style: ''
                         detail: 0
@@ -1838,7 +1803,7 @@ entry:
                     version: 1
                     children:
                       - mode: normal
-                        text: 1.9 dB Noise Figure
+                        text: Auto-preload adjust on power-up
                         type: text
                         style: ''
                         detail: 0
@@ -1852,7 +1817,7 @@ entry:
                     version: 1
                     children:
                       - mode: normal
-                        text: 14 dB Rx Gain & 5 dB Bypass Loss
+                        text: 'Low latency: 1 ms'
                         type: text
                         style: ''
                         detail: 0
@@ -1866,7 +1831,63 @@ entry:
                     version: 1
                     children:
                       - mode: normal
-                        text: 8 dB 5 GHz Rejection on Rx Path
+                        text: Single channel differential input
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                    direction: ltr
+                  - type: listitem
+                    value: 9
+                    format: start
+                    indent: 0
+                    version: 1
+                    children:
+                      - mode: normal
+                        text: I
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                      - mode: normal
+                        text: '2'
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 64
+                        version: 1
+                      - mode: normal
+                        text: C slave interface
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                    direction: ltr
+                  - type: listitem
+                    value: 10
+                    format: start
+                    indent: 0
+                    version: 1
+                    children:
+                      - mode: normal
+                        text: Hardware and/or software programmable force trigger
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                    direction: ltr
+                  - type: listitem
+                    value: 11
+                    format: start
+                    indent: 0
+                    version: 1
+                    children:
+                      - mode: normal
+                        text: 9-Pin CSP, 1.16 mm x 1.16 mm x 0.475 mm
                         type: text
                         style: ''
                         detail: 0
@@ -1876,36 +1897,33 @@ entry:
                 listType: bullet
                 direction: ltr
             direction: ltr
-    applications:
-      type: contentReference
-      value: ${#jptr:/ref-d0099df8-17d9-4556-94ba-7ca5721a5409-applications/entries}
     primaryImage:
       type: asset
       value:
-        - _id: e36d1b25-5635-4d72-beb0-1efc55da3394
+        - _id: da41ea29-cf9e-4738-b3ac-593dd8d79a4e
           type: image
           fields:
             id:
               type: text
-              value: 61abd112-3b45-4d00-838d-ad1769c90cb3
+              value: 83bcf508-9d67-4c78-ad0c-ee1ae8bdf9c6
             url:
               value: >-
-                https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/B_-AgR-MRl68d4nO7xyFGQ-QPF4288A_PDP.png
+                https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/JFagh1bcRk6lunoJuPszRw-AF-3068_PDP.png
               type: text
             file:
               type: file
-              value: 2b0a8bb0-f87a-4a6b-8c7f-839f0d48708f
+              value: f7939b0b-9077-49a6-b785-d590e4574526
             size:
-              value: 2825
+              value: 6900
               type: number
             title:
               type: text
-              value: QPF4288A_PDP.png
+              value: AF-3068_PDP.png
             width:
-              value: 140
+              value: 139
               type: number
             height:
-              value: 98
+              value: 143
               type: number
             mediaType:
               value: image/png
@@ -1939,7 +1957,7 @@ entry:
                     version: 1
                     children:
                       - mode: normal
-                        text: Access Points
+                        text: Smart Phones and Tablets
                         type: text
                         style: ''
                         detail: 0
@@ -1953,7 +1971,7 @@ entry:
                     version: 1
                     children:
                       - mode: normal
-                        text: Wireless Routers
+                        text: Automotive
                         type: text
                         style: ''
                         detail: 0
@@ -1967,7 +1985,7 @@ entry:
                     version: 1
                     children:
                       - mode: normal
-                        text: Residential Gateways
+                        text: Industrial
                         type: text
                         style: ''
                         detail: 0
@@ -1981,7 +1999,7 @@ entry:
                     version: 1
                     children:
                       - mode: normal
-                        text: Customer Premise Equipment
+                        text: IoT, Weight Scales, White Goods
                         type: text
                         style: ''
                         detail: 0
@@ -1995,7 +2013,35 @@ entry:
                     version: 1
                     children:
                       - mode: normal
-                        text: Internet of Things
+                        text: Wearables
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                    direction: ltr
+                  - type: listitem
+                    value: 6
+                    format: start
+                    indent: 0
+                    version: 1
+                    children:
+                      - mode: normal
+                        text: Gaming
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                    direction: ltr
+                  - type: listitem
+                    value: 7
+                    format: start
+                    indent: 0
+                    version: 1
+                    children:
+                      - mode: normal
+                        text: Stylus, Touchpads, Smart Home, AR/VR
                         type: text
                         style: ''
                         detail: 0
@@ -2006,6 +2052,11 @@ entry:
                 direction: ltr
             direction: ltr
   _dataResources:
+    ref-8af768b6-94a9-4e03-bd3c-2622b7392564-category:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: 1f5d4df2-1085-4e2e-a0c1-4ec97dc563c8
     ref-d0099df8-17d9-4556-94ba-7ca5721a5409-category:
       type: uniformContentInternalReference
       variables:

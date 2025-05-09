@@ -1,29 +1,29 @@
-created: '2025-05-09T08:28:43.174046+00:00'
-modified: '2025-05-09T13:37:50.612986+00:00'
+created: '2025-05-09T13:43:14.126402+00:00'
+modified: '2025-05-09T13:48:22.927294+00:00'
 pattern: false
 entry:
-  _id: d0099df8-17d9-4556-94ba-7ca5721a5409
-  _name: QPF4288A
-  _slug: qm42655-copy
+  _id: 30e21286-b256-4ac1-8d95-5420f7fa6e43
+  _name: DF-8100
+  _slug: df-8100
   _thumbnail: >-
-    https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/B_-AgR-MRl68d4nO7xyFGQ-QPF4288A_PDP.png
+    https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/xlJF5q-iSxOvYUc25kMW6g-DF-8100_PDP.png
   type: product
   fields:
     name:
       type: text
-      value: 2.4 GHz Wi-Fi 6 Front End Module
+      value: Integrated MEMS Force Sensor
     rohs:
       type: select
       value: 'yes'
     title:
       type: text
-      value: QPF4288A
+      value: DF-8100
     status:
       type: select
       value: production
     category:
       type: contentReference
-      value: ${#jptr:/ref-d0099df8-17d9-4556-94ba-7ca5721a5409-category/entries}
+      value: ${#jptr:/ref-8af768b6-94a9-4e03-bd3c-2622b7392564-category/entries}
     leadFree:
       type: select
       value: 'Yes'
@@ -43,21 +43,24 @@ entry:
                 version: 1
                 children:
                   - mode: normal
-                    text: The Qorvo
-                    type: text
-                    style: ''
-                    detail: 0
-                    format: 0
-                    version: 1
-                  - mode: normal
-                    text: ®
-                    type: text
-                    style: ''
-                    detail: 0
-                    format: 64
-                    version: 1
-                  - mode: normal
-                    text: "\_QPF4288A is an integrated front end module (FEM) designed for Wi-Fi 6 (802.11ax) systems. The compact form factor and integrated matching minimizes layout area in the application. Performance is focused on optimizing the PA for a 5 V supply voltage that conserves power consumption while maintaining the highest linear output power and leading edge throughput. Receive path matches the optimal technologies to maximize Rx sensitivity through noise figure performance that is consistent over a wider variety of conditions. Integrated die level filtering for 2nd and 3rd harmonics as well as 5 GHz rejection for DBDC operation are included. An RF power detector with an RF output from a directional coupler provides feedback. The QPF4288A integrates a 2.4 GHz power amplifier (PA), regulator, single pole two throw switch (SP2T), bypassable low noise amplifier (LNA) and coupler into a single device."
+                    text: >-
+                      The Qorvo DF-8100 is an ultra-low power integrated force
+                      sensor with a built-in analog front-end. The DF-8100 is
+                      the world’s best single-chip force sensing solution. The
+                      digital output allows for a direct connection of the
+                      sensing solution output to a host processor via an
+                      industry standard I²C interface.The DF-8100 sensor is also
+                      designed for “host-free” applications requiring autonomous
+                      force sensing from power-up, without the need for any I2C
+                      writes to initialize the part. To achieve this, a dual
+                      function pin allows for a force trigger threshold to be
+                      set using an external resistor.The Integrated MEMS Force
+                      sensor is designed for Always-On applications. It offloads
+                      the host, allowing it to remain in a low-power state until
+                      woken up by the sensor through an interrupt when a
+                      pre-defined force threshold is achieved. The DF-8100 has
+                      two modes of operation, a 12-bit ultra-low power mode and
+                      a 16-bit high performance mode.
                     type: text
                     style: ''
                     detail: 0
@@ -1715,32 +1718,20 @@ entry:
               - tag: ul
                 type: list
                 start: 1
-                format: ''
+                format: start
                 indent: 0
                 version: 1
                 children:
                   - type: listitem
                     value: 1
-                    format: start
+                    format: ''
                     indent: 0
                     version: 1
                     children:
                       - mode: normal
-                        text: P
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
-                      - mode: normal
-                        text: OUT
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 32
-                        version: 1
-                      - mode: normal
-                        text: "\_= +22 dBm MCS11 HE40 -43 dB Dynamic EVM"
+                        text: >-
+                          Integrated MEMS Force Sensor with a built-in analog
+                          front-end
                         type: text
                         style: ''
                         detail: 0
@@ -1749,26 +1740,12 @@ entry:
                     direction: ltr
                   - type: listitem
                     value: 2
-                    format: start
+                    format: ''
                     indent: 0
                     version: 1
                     children:
                       - mode: normal
-                        text: P
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
-                      - mode: normal
-                        text: OUT
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 32
-                        version: 1
-                      - mode: normal
-                        text: "\_= +24.5 dBm MCS8 VHT40 -35 dB Dynamic EVM"
+                        text: Ultra-Low Power, 2 μA @ 10 Hz
                         type: text
                         style: ''
                         detail: 0
@@ -1777,26 +1754,14 @@ entry:
                     direction: ltr
                   - type: listitem
                     value: 3
-                    format: start
+                    format: ''
                     indent: 0
                     version: 1
                     children:
                       - mode: normal
-                        text: P
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
-                      - mode: normal
-                        text: OUT
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 32
-                        version: 1
-                      - mode: normal
-                        text: "\_= +27 dBm MCS0 HT20 Spectral Mask Compliance"
+                        text: >-
+                          Integrated Instrumentation Amplifier with Programmable
+                          Gain (up to x416)
                         type: text
                         style: ''
                         detail: 0
@@ -1805,12 +1770,12 @@ entry:
                     direction: ltr
                   - type: listitem
                     value: 4
-                    format: start
+                    format: ''
                     indent: 0
                     version: 1
                     children:
                       - mode: normal
-                        text: Optimized for +5 V Operation
+                        text: Automatic offset correction
                         type: text
                         style: ''
                         detail: 0
@@ -1819,12 +1784,12 @@ entry:
                     direction: ltr
                   - type: listitem
                     value: 5
-                    format: start
+                    format: ''
                     indent: 0
                     version: 1
                     children:
                       - mode: normal
-                        text: 33 dB Tx Gain
+                        text: Programmable temperature correction
                         type: text
                         style: ''
                         detail: 0
@@ -1833,12 +1798,12 @@ entry:
                     direction: ltr
                   - type: listitem
                     value: 6
-                    format: start
+                    format: ''
                     indent: 0
                     version: 1
                     children:
                       - mode: normal
-                        text: 1.9 dB Noise Figure
+                        text: “Host-free” operation
                         type: text
                         style: ''
                         detail: 0
@@ -1847,12 +1812,12 @@ entry:
                     direction: ltr
                   - type: listitem
                     value: 7
-                    format: start
+                    format: ''
                     indent: 0
                     version: 1
                     children:
                       - mode: normal
-                        text: 14 dB Rx Gain & 5 dB Bypass Loss
+                        text: Low Latency, 1 ms
                         type: text
                         style: ''
                         detail: 0
@@ -1861,12 +1826,54 @@ entry:
                     direction: ltr
                   - type: listitem
                     value: 8
-                    format: start
+                    format: ''
                     indent: 0
                     version: 1
                     children:
                       - mode: normal
-                        text: 8 dB 5 GHz Rejection on Rx Path
+                        text: I
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                      - mode: normal
+                        text: '2'
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 64
+                        version: 1
+                      - mode: normal
+                        text: C Slave Interface
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                    direction: ltr
+                  - type: listitem
+                    value: 9
+                    format: ''
+                    indent: 0
+                    version: 1
+                    children:
+                      - mode: normal
+                        text: Hardware and/or software Programmable Force Trigger
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                    direction: ltr
+                  - type: listitem
+                    value: 10
+                    format: ''
+                    indent: 0
+                    version: 1
+                    children:
+                      - mode: normal
+                        text: 6-pin CSP, 1.33 mm x 1.33 mm x 0.22 mm
                         type: text
                         style: ''
                         detail: 0
@@ -1876,36 +1883,33 @@ entry:
                 listType: bullet
                 direction: ltr
             direction: ltr
-    applications:
-      type: contentReference
-      value: ${#jptr:/ref-d0099df8-17d9-4556-94ba-7ca5721a5409-applications/entries}
     primaryImage:
       type: asset
       value:
-        - _id: e36d1b25-5635-4d72-beb0-1efc55da3394
+        - _id: c036c28d-0865-4a17-8d88-069ebfaccbe9
           type: image
           fields:
             id:
               type: text
-              value: 61abd112-3b45-4d00-838d-ad1769c90cb3
+              value: a7729943-ce0c-4f2c-b182-5931b3a54f01
             url:
               value: >-
-                https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/B_-AgR-MRl68d4nO7xyFGQ-QPF4288A_PDP.png
+                https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/xlJF5q-iSxOvYUc25kMW6g-DF-8100_PDP.png
               type: text
             file:
               type: file
-              value: 2b0a8bb0-f87a-4a6b-8c7f-839f0d48708f
+              value: ea9ba682-5862-413a-ae69-616838e0e496
             size:
-              value: 2825
+              value: 5320
               type: number
             title:
               type: text
-              value: QPF4288A_PDP.png
+              value: DF-8100_PDP.png
             width:
-              value: 140
+              value: 139
               type: number
             height:
-              value: 98
+              value: 134
               type: number
             mediaType:
               value: image/png
@@ -1928,84 +1932,119 @@ entry:
               - tag: ul
                 type: list
                 start: 1
-                format: ''
+                format: start
                 indent: 0
                 version: 1
                 children:
                   - type: listitem
                     value: 1
-                    format: start
+                    format: ''
                     indent: 0
                     version: 1
                     children:
-                      - mode: normal
-                        text: Access Points
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
+                      - tag: ul
+                        type: list
+                        start: 1
+                        format: ''
+                        indent: 0
                         version: 1
-                    direction: ltr
-                  - type: listitem
-                    value: 2
-                    format: start
-                    indent: 0
-                    version: 1
-                    children:
-                      - mode: normal
-                        text: Wireless Routers
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
-                    direction: ltr
-                  - type: listitem
-                    value: 3
-                    format: start
-                    indent: 0
-                    version: 1
-                    children:
-                      - mode: normal
-                        text: Residential Gateways
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
-                    direction: ltr
-                  - type: listitem
-                    value: 4
-                    format: start
-                    indent: 0
-                    version: 1
-                    children:
-                      - mode: normal
-                        text: Customer Premise Equipment
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
-                    direction: ltr
-                  - type: listitem
-                    value: 5
-                    format: start
-                    indent: 0
-                    version: 1
-                    children:
-                      - mode: normal
-                        text: Internet of Things
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
+                        children:
+                          - type: listitem
+                            value: 1
+                            format: ''
+                            indent: 1
+                            version: 1
+                            children:
+                              - mode: normal
+                                text: Earbuds
+                                type: text
+                                style: ''
+                                detail: 0
+                                format: 0
+                                version: 1
+                            direction: ltr
+                          - type: listitem
+                            value: 2
+                            format: ''
+                            indent: 1
+                            version: 1
+                            children:
+                              - mode: normal
+                                text: Wearables
+                                type: text
+                                style: ''
+                                detail: 0
+                                format: 0
+                                version: 1
+                            direction: ltr
+                          - type: listitem
+                            value: 3
+                            format: ''
+                            indent: 1
+                            version: 1
+                            children:
+                              - mode: normal
+                                text: Personal Care
+                                type: text
+                                style: ''
+                                detail: 0
+                                format: 0
+                                version: 1
+                            direction: ltr
+                          - type: listitem
+                            value: 4
+                            format: ''
+                            indent: 1
+                            version: 1
+                            children:
+                              - mode: normal
+                                text: Stylus, Touchpads, AR/VR
+                                type: text
+                                style: ''
+                                detail: 0
+                                format: 0
+                                version: 1
+                            direction: ltr
+                          - type: listitem
+                            value: 5
+                            format: ''
+                            indent: 1
+                            version: 1
+                            children:
+                              - mode: normal
+                                text: e-Bikes, e-Scooters
+                                type: text
+                                style: ''
+                                detail: 0
+                                format: 0
+                                version: 1
+                            direction: ltr
+                          - type: listitem
+                            value: 6
+                            format: ''
+                            indent: 1
+                            version: 1
+                            children:
+                              - mode: normal
+                                text: Industrial
+                                type: text
+                                style: ''
+                                detail: 0
+                                format: 0
+                                version: 1
+                            direction: ltr
+                        listType: bullet
+                        direction: ltr
                     direction: ltr
                 listType: bullet
                 direction: ltr
             direction: ltr
   _dataResources:
+    ref-8af768b6-94a9-4e03-bd3c-2622b7392564-category:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: 1f5d4df2-1085-4e2e-a0c1-4ec97dc563c8
     ref-d0099df8-17d9-4556-94ba-7ca5721a5409-category:
       type: uniformContentInternalReference
       variables:
