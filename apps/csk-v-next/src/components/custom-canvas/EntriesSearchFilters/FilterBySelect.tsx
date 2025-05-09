@@ -1,4 +1,4 @@
-import { useCallback, ChangeEvent, FC, useState } from 'react';
+import { useCallback, ChangeEvent, FC, useState, useRef, useEffect } from 'react';
 import Checkbox from '@/modules/search/ui/Checkbox';
 import { FilterByProps } from './EntriesSearchFilters';
 
@@ -12,6 +12,8 @@ const FilterBySelect: FC<FilterByProps> = ({
   type,
 }) => {
   const [localSelectedValues, setLocalSelectedValues] = useState(selectedValues);
+  const [open, setOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const handleFilterChange = useCallback(
     (event: ChangeEvent<HTMLInputElement>) => {
@@ -30,18 +32,33 @@ const FilterBySelect: FC<FilterByProps> = ({
     [localSelectedValues, onFilterChange, fieldKey, type]
   );
 
-  const [open, setOpen] = useState(false);
-  const [selected, setSelected] = useState([]);
+  const handleClickOutside = (event: MouseEvent) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      setOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (open) {
+      document.addEventListener('mousedown', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [open]);
 
   return (
-    <div className="relative inline-block w-64 text-left">
+    <div className="relative inline-block w-56 text-left" ref={dropdownRef}>
       <div>
         <button
           type="button"
           className="inline-flex w-full justify-between bg-gray-200 px-4 py-2 text-sm text-gray-500"
           onClick={() => setOpen(!open)}
         >
-          {`${title} ${selected.length > 0 ? `(${selected.length})` : ''}`}
+          {`${title} ${localSelectedValues.length > 0 ? `(${localSelectedValues.length})` : ''}`}
           <svg className="ml-2 size-4" viewBox="0 0 20 20" fill="currentColor">
             <path fillRule="evenodd" d="M5.293 7.293L10 12l4.707-4.707-1.414-1.414L10 9.172 6.707 5.879 5.293 7.293z" />
           </svg>
@@ -71,7 +88,10 @@ const FilterBySelect: FC<FilterByProps> = ({
           <div className="p-2 text-right">
             <button
               className="text-xs font-bold uppercase text-gray-500 hover:underline"
-              onClick={() => setSelected([])}
+              onClick={() => {
+                setLocalSelectedValues([]);
+                onFilterChange(fieldKey, []);
+              }}
             >
               Clear All
             </button>

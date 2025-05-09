@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { ProductCard } from '@/components/custom-ui/ProductCard';
+import Link from 'next/link';
 import { ContentType, WithUniformContentEntrySystemParams, Product } from '../types';
 
 export type ProductCardProps = WithUniformContentEntrySystemParams<Product> & {
@@ -10,30 +10,40 @@ export type ProductCardProps = WithUniformContentEntrySystemParams<Product> & {
 
 const ProductResultCard: FC<ProductCardProps> = ({
   title,
-  category,
-  subcategory,
-  primaryImage,
+  name,
   slug,
-  variants,
-  textColor,
-  rating,
+  status,
+  rohs,
+  leadFree,
+  halogenFree,
+  applications,
 }) => {
-  const asset = primaryImage?.[0];
-
-  const { price = 0, currency = 'USD' } = variants?.[0] ?? {};
-
   return (
-    <ProductCard
-      image={asset?.url}
-      title={title}
-      category={subcategory?.title ?? category?.title}
-      price={price}
-      currency={currency}
-      textColor={textColor ?? ''}
-      slug={slug}
-      link={`/products/${slug}`}
-      rating={rating}
-    />
+    <div className="grid grid-cols-7">
+      <div className="border-x border-b border-gray-300 bg-white px-4 py-2 text-center text-gray-500">
+        <Link className="font-bold capitalize text-general-color-1" href={`/products/${slug}`}>
+          {title}
+        </Link>
+      </div>
+      <div className="border-b border-r border-gray-300 bg-white px-4 py-2 text-center capitalize text-gray-500">
+        {name}
+      </div>
+      <div className="border-b border-r border-gray-300 bg-white px-4 py-2 text-center capitalize text-gray-500">
+        {applications?.[0]?.title}
+      </div>
+      <div className="border-b border-r border-gray-300 bg-white px-4 py-2 text-center capitalize text-gray-500">
+        {status}
+      </div>
+      <div className="border-b border-r border-gray-300 bg-white px-4 py-2 text-center capitalize text-gray-500">
+        {rohs}
+      </div>
+      <div className="border-b border-r border-gray-300 bg-white px-4 py-2 text-center capitalize text-gray-500">
+        {leadFree}
+      </div>
+      <div className="border-b border-r border-gray-300 bg-white px-4 py-2 text-center capitalize text-gray-500">
+        {halogenFree}
+      </div>
+    </div>
   );
 };
 

@@ -32,109 +32,215 @@ composition:
                   type: entriesSearchEngine
                   slots:
                     content:
-                      - _id: cbed71d5-55d4-4c65-9406-5d8fc2c854d3
+                      - _id: 6c919303-62f5-4807-8115-6ce50295eaca
                         type: flex
                         slots:
                           flexItem:
-                            - _id: >-
-                                32d45979-f7ec-420e-94f3-5ab8a08165d2|d14122cc-646f-4ac0-b13e-9bae5cf4bec6
-                              type: grid
+                            - _id: cbed71d5-55d4-4c65-9406-5d8fc2c854d3
+                              type: flex
                               slots:
-                                gridInner:
+                                flexItem:
                                   - _id: >-
-                                      32d45979-f7ec-420e-94f3-5ab8a08165d2|d043d637-4bcd-4945-9c16-7c6c373d8694
-                                    type: gridItem
+                                      32d45979-f7ec-420e-94f3-5ab8a08165d2|d14122cc-646f-4ac0-b13e-9bae5cf4bec6
+                                    type: grid
                                     slots:
-                                      inner:
+                                      gridInner:
                                         - _id: >-
-                                            32d45979-f7ec-420e-94f3-5ab8a08165d2|c4e468fe-b6cf-4497-8c14-bde24a0e35b8
-                                          type: entriesSearchBox
+                                            32d45979-f7ec-420e-94f3-5ab8a08165d2|d043d637-4bcd-4945-9c16-7c6c373d8694
+                                          type: gridItem
+                                          slots:
+                                            inner:
+                                              - _id: >-
+                                                  32d45979-f7ec-420e-94f3-5ab8a08165d2|c4e468fe-b6cf-4497-8c14-bde24a0e35b8
+                                                type: entriesSearchBox
+                                                parameters:
+                                                  size:
+                                                    type: dex-token-selector-parameter
+                                                    value: input-large
+                                                  border:
+                                                    type: dex-token-selector-parameter
+                                                    value: border-product-card
+                                                  placeholder:
+                                                    type: text
+                                                    value: Start searching for a coffee maker
+                                                _overridability:
+                                                  parameters:
+                                                    placeholder: 'yes'
                                           parameters:
-                                            size:
-                                              type: dex-token-selector-parameter
-                                              value: input-large
-                                            border:
-                                              type: dex-token-selector-parameter
-                                              value: border-product-card
-                                            placeholder:
+                                            rowSpan:
+                                              type: dex-slider-control-parameter
+                                              value: {}
+                                            rowStart:
+                                              type: dex-slider-control-parameter
+                                              value:
+                                                mobile: ''
+                                                tablet: ''
+                                                desktop: ''
+                                            columnSpan:
+                                              type: dex-slider-control-parameter
+                                              value:
+                                                mobile: span-full
+                                                tablet: span-full
+                                                desktop: span-full
+                                            columnStart:
+                                              type: dex-slider-control-parameter
+                                              value:
+                                                mobile: ''
+                                                tablet: ''
+                                                desktop: ''
+                                            displayName:
                                               type: text
-                                              value: Start searching for a coffee maker
-                                          _overridability:
-                                            parameters:
-                                              placeholder: 'yes'
+                                              locales:
+                                                en: Search Box
                                     parameters:
-                                      rowSpan:
-                                        type: dex-slider-control-parameter
-                                        value: {}
-                                      rowStart:
+                                      gapX:
                                         type: dex-slider-control-parameter
                                         value:
-                                          mobile: ''
-                                          tablet: ''
-                                          desktop: ''
-                                      columnSpan:
+                                          tablet: '4'
+                                          desktop: '4'
+                                      gapY:
                                         type: dex-slider-control-parameter
                                         value:
-                                          mobile: span-full
-                                          tablet: span-full
-                                          desktop: span-full
-                                      columnStart:
-                                        type: dex-slider-control-parameter
+                                          mobile: '4'
+                                      spacing:
+                                        type: dex-space-control-parameter
                                         value:
-                                          mobile: ''
-                                          tablet: ''
-                                          desktop: ''
+                                          mobile: {}
+                                          tablet: {}
+                                          desktop: {}
+                                      alignItems:
+                                        type: dex-segmented-control-parameter
+                                        value: center
                                       displayName:
                                         type: text
                                         locales:
-                                          en: Search Box
+                                          en: Search Box and Sorting
+                                      columnsCount:
+                                        type: dex-slider-control-parameter
+                                        value:
+                                          mobile: '1'
+                                          tablet: '4'
+                                          desktop: '4'
+                                      fluidContent:
+                                        type: checkbox
+                                        value: true
+                                  - _id: >-
+                                      32d45979-f7ec-420e-94f3-5ab8a08165d2|a5856bb3-2393-45b6-92cb-086bd265427a
+                                    type: entriesSearchFilters
+                                    parameters:
+                                      title:
+                                        type: text
+                                        locales:
+                                          en: Filter by
                               parameters:
-                                gapX:
-                                  type: dex-slider-control-parameter
-                                  value:
-                                    tablet: '4'
-                                    desktop: '4'
-                                gapY:
+                                gap:
                                   type: dex-slider-control-parameter
                                   value:
                                     mobile: '4'
-                                spacing:
-                                  type: dex-space-control-parameter
+                                    tablet: '4'
+                                    desktop: '4'
+                                direction:
+                                  type: dex-segmented-control-parameter
                                   value:
-                                    mobile: {}
-                                    tablet: {}
-                                    desktop: {}
+                                    mobile: col
+                                    tablet: col
+                                    desktop: col
                                 alignItems:
                                   type: dex-segmented-control-parameter
-                                  value: center
+                                  value: {}
                                 displayName:
                                   type: text
                                   locales:
-                                    en: Search Box and Sorting
-                                columnsCount:
+                                    en: Top Section
+                                justifyContent:
+                                  type: dex-segmented-control-parameter
+                                  value: {}
+                            - _id: 29f72a8c-7de0-42b2-97fe-681a3e755c72
+                              type: flex
+                              slots:
+                                flexItem:
+                                  - _id: 3e358a32-2ed8-46de-a856-f353b5ff706a
+                                    type: divider
+                                    parameters:
+                                      color:
+                                        type: dex-color-palette-parameter
+                                        value: general-color-4
+                                      width:
+                                        type: dex-slider-control-parameter
+                                        value: 100%
+                                      alignment:
+                                        type: dex-segmented-control-parameter
+                                        value: center
+                                      thickness:
+                                        type: dex-slider-control-parameter
+                                        value: 1px
+                                  - _id: 26f1cf9f-e132-465a-8f2e-9397689f0625
+                                    type: text
+                                    parameters:
+                                      tag:
+                                        type: dex-segmented-control-parameter
+                                        value: span
+                                      size:
+                                        type: dex-segmented-control-parameter
+                                        value:
+                                          desktop: xl
+                                      text:
+                                        type: text
+                                        locales:
+                                          en: Product Results
+                                      color:
+                                        type: dex-color-palette-parameter
+                                        value: text-tertiary
+                                      weight:
+                                        type: dex-segmented-control-parameter
+                                        value: bold
+                                  - _id: >-
+                                      32d45979-f7ec-420e-94f3-5ab8a08165d2|166b3e64-f887-4535-99c7-38829cfe7f1e
+                                    type: entriesSearchList
+                                    parameters:
+                                      border:
+                                        type: dex-token-selector-parameter
+                                        value: border-product-card
+                                      textColor:
+                                        type: dex-color-palette-parameter
+                                        value: text-primary
+                              parameters:
+                                gap:
                                   type: dex-slider-control-parameter
                                   value:
-                                    mobile: '1'
-                                    tablet: '4'
-                                    desktop: '4'
-                                fluidContent:
-                                  type: checkbox
-                                  value: true
-                            - _id: >-
-                                32d45979-f7ec-420e-94f3-5ab8a08165d2|a5856bb3-2393-45b6-92cb-086bd265427a
-                              type: entriesSearchFilters
-                              parameters:
-                                title:
+                                    mobile: '8'
+                                    tablet: '8'
+                                    desktop: '8'
+                                direction:
+                                  type: dex-segmented-control-parameter
+                                  value:
+                                    mobile: col
+                                    tablet: col
+                                    desktop: col
+                                alignItems:
+                                  type: dex-segmented-control-parameter
+                                  value: {}
+                                displayName:
                                   type: text
                                   locales:
-                                    en: Filter by
+                                    en: Main Section
+                                justifyContent:
+                                  type: dex-segmented-control-parameter
+                                  value: {}
                         parameters:
                           gap:
                             type: dex-slider-control-parameter
                             value:
-                              mobile: '4'
-                              tablet: '4'
-                              desktop: '4'
+                              mobile: '8'
+                              tablet: '8'
+                              desktop: '8'
+                          spacing:
+                            type: dex-space-control-parameter
+                            value:
+                              mobile: {}
+                              tablet: {}
+                              desktop:
+                                paddingBottom: container-medium
                           direction:
                             type: dex-segmented-control-parameter
                             value:
@@ -147,264 +253,10 @@ composition:
                           displayName:
                             type: text
                             locales:
-                              en: Top Section
+                              en: Content
                           justifyContent:
                             type: dex-segmented-control-parameter
                             value: {}
-                      - _id: >-
-                          32d45979-f7ec-420e-94f3-5ab8a08165d2|b191f318-e75a-4155-925b-c0656f012b91
-                        type: spacer
-                        parameters:
-                          size:
-                            type: dex-token-selector-parameter
-                            value: spacer-medium
-                      - _id: >-
-                          32d45979-f7ec-420e-94f3-5ab8a08165d2|186c91b5-816c-4293-9542-7356653198e3
-                        type: grid
-                        slots:
-                          gridInner:
-                            - _id: >-
-                                32d45979-f7ec-420e-94f3-5ab8a08165d2|73a254c3-eb9f-45d7-8227-7c50f8519c4a
-                              type: gridItem
-                              slots:
-                                inner:
-                                  - _id: >-
-                                      32d45979-f7ec-420e-94f3-5ab8a08165d2|5d9987c7-b142-4662-8082-23ce3a803767
-                                    type: flex
-                                    slots:
-                                      flexItem:
-                                        - _id: >-
-                                            32d45979-f7ec-420e-94f3-5ab8a08165d2|16928c5e-1074-4fd2-981a-1694bb8d3b6c
-                                          type: flexItem
-                                          slots:
-                                            inner:
-                                              - _id: >-
-                                                  32d45979-f7ec-420e-94f3-5ab8a08165d2|43d353cc-a36a-4edd-8ef4-fa740a19a71b
-                                                type: entriesSearchTotalAmount
-                                                parameters:
-                                                  textColor:
-                                                    type: dex-color-palette-parameter
-                                                    value: text-tertiary
-                                                  textTemplate:
-                                                    type: text
-                                                    locales:
-                                                      en: Found {totalItems} product(s)
-                                                _overridability:
-                                                  hideLockedParameters: true
-                                          parameters:
-                                            shrink:
-                                              type: dex-segmented-control-parameter
-                                              value: '0'
-                                            alignSelf:
-                                              type: dex-segmented-control-parameter
-                                              value: {}
-                                            displayName:
-                                              type: text
-                                              locales:
-                                                en: Total Items Found
-                                          _overridability:
-                                            hideLockedParameters: true
-                                        - _id: >-
-                                            32d45979-f7ec-420e-94f3-5ab8a08165d2|f5572abc-bf1b-48d2-b338-c81fccd00644
-                                          type: flex
-                                          slots:
-                                            flexItem:
-                                              - _id: >-
-                                                  32d45979-f7ec-420e-94f3-5ab8a08165d2|94c808ae-d49b-426e-a277-dfbf80069d35
-                                                type: text
-                                                parameters:
-                                                  tag:
-                                                    type: dex-segmented-control-parameter
-                                                    value: span
-                                                  size:
-                                                    type: dex-segmented-control-parameter
-                                                    value:
-                                                      mobile: sm
-                                                      tablet: sm
-                                                      desktop: sm
-                                                  text:
-                                                    type: text
-                                                    locales:
-                                                      en: Products per page
-                                                  color:
-                                                    type: dex-color-palette-parameter
-                                                    value: text-primary
-                                                  weight:
-                                                    type: dex-segmented-control-parameter
-                                                    value: normal
-                                                _overridability:
-                                                  hideLockedParameters: true
-                                              - _id: >-
-                                                  32d45979-f7ec-420e-94f3-5ab8a08165d2|cbbd20eb-7da3-4272-8a9c-fe1b20fbb80d
-                                                type: entriesSearchPageSize
-                                                _overridability:
-                                                  hideLockedParameters: true
-                                          parameters:
-                                            gap:
-                                              type: dex-slider-control-parameter
-                                              value:
-                                                mobile: '4'
-                                                tablet: '4'
-                                                desktop: '4'
-                                            spacing:
-                                              type: dex-space-control-parameter
-                                              value:
-                                                mobile: {}
-                                                tablet: {}
-                                                desktop: {}
-                                            direction:
-                                              type: dex-segmented-control-parameter
-                                              value:
-                                                mobile: row
-                                                tablet: row
-                                                desktop: row
-                                            alignItems:
-                                              type: dex-segmented-control-parameter
-                                              value:
-                                                mobile: center
-                                                tablet: center
-                                                desktop: center
-                                            displayName:
-                                              type: text
-                                              locales:
-                                                en: Per page
-                                            fluidContent:
-                                              type: checkbox
-                                              value: true
-                                            justifyContent:
-                                              type: dex-segmented-control-parameter
-                                              value:
-                                                mobile: between
-                                                tablet: end
-                                                desktop: end
-                                          _overridability:
-                                            hideLockedParameters: true
-                                    parameters:
-                                      gap:
-                                        type: dex-slider-control-parameter
-                                        value:
-                                          mobile: '4'
-                                          tablet: '4'
-                                          desktop: '4'
-                                      spacing:
-                                        type: dex-space-control-parameter
-                                        value:
-                                          mobile: {}
-                                          tablet: {}
-                                          desktop: {}
-                                      direction:
-                                        type: dex-segmented-control-parameter
-                                        value:
-                                          mobile: row
-                                          tablet: row
-                                          desktop: row
-                                      alignItems:
-                                        type: dex-segmented-control-parameter
-                                        value:
-                                          mobile: center
-                                          tablet: center
-                                          desktop: center
-                                      displayName:
-                                        type: text
-                                        locales:
-                                          en: Top Content
-                                      fluidContent:
-                                        type: checkbox
-                                        value: true
-                                      justifyContent:
-                                        type: dex-segmented-control-parameter
-                                        value:
-                                          mobile: between
-                                          tablet: between
-                                          desktop: between
-                                    _overridability:
-                                      hideLockedParameters: true
-                                  - _id: >-
-                                      32d45979-f7ec-420e-94f3-5ab8a08165d2|c1ce3297-ca5f-49c8-9a55-91981baf01a9
-                                    type: spacer
-                                    parameters:
-                                      size:
-                                        type: dex-token-selector-parameter
-                                        value: spacer-small
-                                    _overridability:
-                                      hideLockedParameters: true
-                                  - _id: >-
-                                      32d45979-f7ec-420e-94f3-5ab8a08165d2|166b3e64-f887-4535-99c7-38829cfe7f1e
-                                    type: entriesSearchList
-                                    parameters:
-                                      border:
-                                        type: dex-token-selector-parameter
-                                        value: border-product-card
-                                      textColor:
-                                        type: dex-color-palette-parameter
-                                        value: text-primary
-                                  - _id: >-
-                                      32d45979-f7ec-420e-94f3-5ab8a08165d2|7eb15994-ff28-4f95-a4fa-ed305b686e0c
-                                    type: spacer
-                                    parameters:
-                                      size:
-                                        type: dex-token-selector-parameter
-                                        value: spacer-small
-                                  - _id: >-
-                                      32d45979-f7ec-420e-94f3-5ab8a08165d2|8c0c2579-12f4-4e6c-8a8e-f24f6cbaa099
-                                    type: entriesSearchPagination
-                              parameters:
-                                rowSpan:
-                                  type: dex-slider-control-parameter
-                                  value: {}
-                                rowStart:
-                                  type: dex-slider-control-parameter
-                                  value:
-                                    mobile: ''
-                                    tablet: ''
-                                    desktop: ''
-                                columnSpan:
-                                  type: dex-slider-control-parameter
-                                  value:
-                                    tablet: auto
-                                    desktop: span-full
-                                columnStart:
-                                  type: dex-slider-control-parameter
-                                  value:
-                                    mobile: ''
-                                    tablet: ''
-                                    desktop: '1'
-                                displayName:
-                                  type: text
-                                  locales:
-                                    en: Right Content
-                        parameters:
-                          gapX:
-                            type: dex-slider-control-parameter
-                            value:
-                              desktop: '8'
-                          gapY:
-                            type: dex-slider-control-parameter
-                            value:
-                              mobile: '8'
-                              tablet: '8'
-                          spacing:
-                            type: dex-space-control-parameter
-                            value:
-                              mobile: {}
-                              tablet: {}
-                              desktop: {}
-                          alignItems:
-                            type: dex-segmented-control-parameter
-                            value: stretch
-                          displayName:
-                            type: text
-                            locales:
-                              en: Search Content
-                          columnsCount:
-                            type: dex-slider-control-parameter
-                            value:
-                              mobile: '1'
-                              tablet: '1'
-                              desktop: '4'
-                          fluidContent:
-                            type: checkbox
-                            value: true
                   parameters:
                     orderBy:
                       type: $block
@@ -750,26 +602,12 @@ composition:
                       type: $block
                       value:
                         - _id: >-
-                            32d45979-f7ec-420e-94f3-5ab8a08165d2|8dbd1da1-4b00-4fe3-8670-7d402adf8800
-                          type: pageSize
-                          fields:
-                            size:
-                              type: number
-                              value: '6'
-                        - _id: >-
-                            32d45979-f7ec-420e-94f3-5ab8a08165d2|0843f4b1-24fb-46db-9401-83c03f72d85e
-                          type: pageSize
-                          fields:
-                            size:
-                              type: number
-                              value: '8'
-                        - _id: >-
                             32d45979-f7ec-420e-94f3-5ab8a08165d2|54840be6-ad8c-4c8d-a9e9-d2817796ec78
                           type: pageSize
                           fields:
                             size:
                               type: number
-                              value: '10'
+                              value: '30'
                     baseFilters:
                       type: $block
                       value: []
@@ -803,5 +641,5 @@ composition:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-05-09T06:33:49.800905+00:00'
-modified: '2025-05-09T09:05:05.578433+00:00'
+modified: '2025-05-09T10:34:29.067507+00:00'
 pattern: false

@@ -14,9 +14,66 @@ type EntriesSearchListParameters = {
 type EntriesSearchListProps = ComponentProps<EntriesSearchListParameters>;
 
 const EntriesSearchList: FC<EntriesSearchListProps> = ({ textColor, border }) => {
-  const { entries, isLoading, clearFilters } = useEntriesSearchContext();
+  const { entries, isLoading, clearFilters, contentType } = useEntriesSearchContext();
 
   const isEmpty = entries?.items.length === 0;
+
+  const renderContnt = () => {
+    if (contentType === ContentType.Article) {
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+        {entries?.items.map(entry => {
+          const entryContentType = entry.contentType as ContentType.Article | ContentType.Product;
+
+          if (entryContentType === ContentType.Article) {
+            const articleEntry = entry as WithUniformContentEntrySystemParams<Article>;
+            return (
+              <ArticleResultCard
+                {...articleEntry}
+                textColor={textColor}
+                border={border}
+                contentType={ContentType.Article}
+                key={entry.id}
+              />
+            );
+          }
+          return null;
+        })}
+      </div>;
+    } else if (contentType === ContentType.Product) {
+      return (
+        <div className="flex flex-col">
+          <div className="grid grid-cols-7">
+            <div className="border-r border-gray-300 bg-gray-200 px-4 py-2 text-center text-gray-500">Part #</div>
+            <div className="border-r border-gray-300 bg-gray-200 px-4 py-2 text-center text-gray-500">Description</div>
+            <div className="border-r border-gray-300 bg-gray-200 px-4 py-2 text-center text-gray-500">Applications</div>
+            <div className="border-r border-gray-300 bg-gray-200 px-4 py-2 text-center text-gray-500">
+              Product Status
+            </div>
+            <div className="border-r border-gray-300 bg-gray-200 px-4 py-2 text-center text-gray-500">RoHS</div>
+            <div className="border-r border-gray-300 bg-gray-200 px-4 py-2 text-center text-gray-500">Lead Free</div>
+            <div className=" bg-gray-200 px-4 py-2 text-center text-gray-500">Helogen Free</div>
+          </div>
+          {entries?.items.map(entry => {
+            const entryContentType = entry.contentType as ContentType.Article | ContentType.Product;
+
+            if (entryContentType === ContentType.Product) {
+              const productEntry = entry as WithUniformContentEntrySystemParams<Product>;
+              return (
+                <ProductResultCard
+                  {...productEntry}
+                  textColor={textColor}
+                  border={border}
+                  contentType={ContentType.Product}
+                  key={entry.id}
+                />
+              );
+            }
+            return null;
+          })}
+        </div>
+      );
+    }
+  };
 
   return (
     <div className="relative">
@@ -66,37 +123,7 @@ const EntriesSearchList: FC<EntriesSearchListProps> = ({ textColor, border }) =>
           </p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          {entries?.items.map(entry => {
-            const entryContentType = entry.contentType as ContentType.Article | ContentType.Product;
-
-            if (entryContentType === ContentType.Article) {
-              const articleEntry = entry as WithUniformContentEntrySystemParams<Article>;
-              return (
-                <ArticleResultCard
-                  {...articleEntry}
-                  textColor={textColor}
-                  border={border}
-                  contentType={ContentType.Article}
-                  key={entry.id}
-                />
-              );
-            }
-            if (entryContentType === ContentType.Product) {
-              const productEntry = entry as WithUniformContentEntrySystemParams<Product>;
-              return (
-                <ProductResultCard
-                  {...productEntry}
-                  textColor={textColor}
-                  border={border}
-                  contentType={ContentType.Product}
-                  key={entry.id}
-                />
-              );
-            }
-            return null;
-          })}
-        </div>
+        renderContnt()
       )}
     </div>
   );

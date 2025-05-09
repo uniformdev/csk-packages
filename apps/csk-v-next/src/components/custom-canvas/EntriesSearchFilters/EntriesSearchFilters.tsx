@@ -1,7 +1,7 @@
 'use client';
-import { FC } from 'react';
-import { useDebouncedCallback } from 'use-debounce';
+import { FC, useState } from 'react';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
+import Button from '@/components/ui/Button';
 import { useEntriesSearchContext } from '@/modules/search/EntriesSearchContextProvider';
 import { FilterBy as FilterByType } from '@/modules/search/types';
 import FilterByRange from './FilterByRange';
@@ -26,15 +26,25 @@ type EntriesSearchFiltersProps = ComponentProps<{
 
 const EntriesSearchFilters: FC<EntriesSearchFiltersProps> = ({ title }) => {
   const { filterBy, selectedFilters, setSelectedFilters, facets } = useEntriesSearchContext();
+  const [filters, setFilters] = useState<Record<string, string[]>>(selectedFilters);
 
-  const handleFilterChange = useDebouncedCallback((fieldId: string, value: string[]) => {
-    setSelectedFilters({ ...selectedFilters, [fieldId]: value });
-  }, 600);
+  const handleFilterChange = (fieldId: string, value: string[]) => {
+    setFilters({ ...filters, [fieldId]: value });
+  };
+
+  const handleReset = () => {
+    setFilters({});
+    setSelectedFilters({});
+  };
+
+  const handleApply = () => {
+    setSelectedFilters(filters);
+  };
 
   return (
-    <div className="flex items-center gap-x-4">
-      {title && <p className="text-lg font-bold">{title}</p>}
-      <div className="flex flex-row gap-x-2">
+    <div className="flex gap-x-4">
+      {title && <div className="w-max whitespace-nowrap text-lg font-bold">{title}</div>}
+      <div className="flex flex-row flex-wrap gap-2">
         {filterBy.map(filter => {
           const Component = filterByComponents[filter.type];
           return (
@@ -42,13 +52,23 @@ const EntriesSearchFilters: FC<EntriesSearchFiltersProps> = ({ title }) => {
               <Component
                 {...filter}
                 title={filter.title}
-                selectedValues={selectedFilters[filter.fieldKey] || []}
+                selectedValues={filters[filter.fieldKey] || []}
                 onFilterChange={handleFilterChange}
                 facetValues={facets?.[filter.fieldKey] || {}}
               />
             </div>
           );
         })}
+      </div>
+
+      <div className="flex flex-col items-start justify-between gap-y-2">
+        <Button className="px-8 py-1.5" buttonColor="general-color-1" textColor="general-color-3" onClick={handleApply}>
+          Apply
+        </Button>
+
+        <button className="text-sm font-bold text-general-color-1 hover:underline" onClick={handleReset}>
+          Reset all
+        </button>
       </div>
     </div>
   );
