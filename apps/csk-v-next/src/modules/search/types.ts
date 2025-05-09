@@ -111,8 +111,8 @@ export type Product = {
   rohs: string;
   leadFree: string;
   halogenFree: string;
-  category: ProductCategory[];
-  applications: ProductCategory[];
+  category: ProductCategory[] | ProductCategory;
+  applications: ProductCategory[] | ProductCategory;
   shortDescription: string;
   primaryImage: MappedAsset[];
   brand: Brand;

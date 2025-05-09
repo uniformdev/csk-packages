@@ -13,13 +13,14 @@ const ProductResultCard: FC<ProductCardProps> = ({
   name,
   slug,
   status,
+  category,
   rohs,
   leadFree,
   halogenFree,
   applications,
 }) => {
   return (
-    <div className="grid grid-cols-7">
+    <div className="grid grid-cols-8">
       <div className="border-x border-b border-gray-300 bg-white px-4 py-2 text-center text-gray-500">
         <Link className="font-bold capitalize text-general-color-1" href={`/products/${slug}`}>
           {title}
@@ -29,7 +30,10 @@ const ProductResultCard: FC<ProductCardProps> = ({
         {name}
       </div>
       <div className="border-b border-r border-gray-300 bg-white px-4 py-2 text-center capitalize text-gray-500">
-        {applications?.[0]?.title}
+        {Array.isArray(category) ? category[0].title : category?.title}
+      </div>
+      <div className="border-b border-r border-gray-300 bg-white px-4 py-2 text-center capitalize text-gray-500">
+        {Array.isArray(applications) ? applications?.[0]?.title : applications?.title}
       </div>
       <div className="border-b border-r border-gray-300 bg-white px-4 py-2 text-center capitalize text-gray-500">
         {status}
