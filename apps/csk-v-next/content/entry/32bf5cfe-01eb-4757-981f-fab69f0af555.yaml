@@ -1,5 +1,5 @@
 created: '2025-04-25T00:41:38.947721+00:00'
-modified: '2025-04-25T00:44:59.234911+00:00'
+modified: '2025-05-09T08:15:17.779955+00:00'
 pattern: false
 entry:
   _id: 32bf5cfe-01eb-4757-981f-fab69f0af555
@@ -12,15 +12,21 @@ entry:
     name:
       type: text
       value: X-Band 60 Watt GaN Power Amplifier
+    rohs:
+      type: select
+      value: 'yes'
     title:
       type: text
       value: QPA2811
-    rating:
-      type: number
-      value: '1'
+    status:
+      type: select
+      value: production
     category:
       type: contentReference
       value: ${#jptr:/ref-32bf5cfe-01eb-4757-981f-fab69f0af555-category/entries/0}
+    leadFree:
+      type: select
+      value: 'Yes'
     overview:
       type: richText
       locales:
@@ -1061,6 +1067,9 @@ entry:
                 direction: ltr
             direction: ltr
             textFormat: 1
+    halogenFree:
+      type: select
+      value: 'yes'
     keyFeatures:
       type: richText
       locales:
@@ -1275,6 +1284,10 @@ entry:
               value: application/pdf
               type: text
           _source: uniform-assets
+    applications:
+      type: contentReference
+      value: >-
+        ${#jptr:/ref-32bf5cfe-01eb-4757-981f-fab69f0af555-applications/entries/0}
     primaryImage:
       type: asset
       value:
@@ -1339,5 +1352,10 @@ entry:
       variables:
         locale: ${locale}
         entryIds: c74a977a-8365-4793-ba0e-b2e8f5d1685c
+    ref-32bf5cfe-01eb-4757-981f-fab69f0af555-applications:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: 01ca85bf-b7e5-4460-a3fe-7a242cf4c864
   _locales:
     - en

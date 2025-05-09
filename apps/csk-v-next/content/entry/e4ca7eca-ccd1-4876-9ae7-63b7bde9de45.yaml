@@ -1,5 +1,5 @@
 created: '2025-04-25T01:24:49.015889+00:00'
-modified: '2025-04-25T01:26:47.211393+00:00'
+modified: '2025-05-09T08:20:13.079886+00:00'
 pattern: false
 entry:
   _id: e4ca7eca-ccd1-4876-9ae7-63b7bde9de45
@@ -12,12 +12,21 @@ entry:
     name:
       type: text
       value: 6 GHz Wi-Fi 7 High Power Front End Module
+    rohs:
+      type: select
+      value: 'yes'
     title:
       type: text
       value: QPF4609
+    status:
+      type: select
+      value: preview
     category:
       type: contentReference
       value: ${#jptr:/ref-e4ca7eca-ccd1-4876-9ae7-63b7bde9de45-category/entries/0}
+    leadFree:
+      type: select
+      value: 'Yes'
     overview:
       type: richText
       locales:
@@ -1708,6 +1717,9 @@ entry:
                 direction: ltr
             direction: ltr
             textFormat: 1
+    halogenFree:
+      type: select
+      value: 'yes'
     keyFeatures:
       type: richText
       locales:
@@ -1924,9 +1936,9 @@ entry:
                 listType: bullet
                 direction: ltr
             direction: ltr
-    subcategory:
+    applications:
       type: contentReference
-      value: ${#jptr:/ref-e4ca7eca-ccd1-4876-9ae7-63b7bde9de45-subcategory/entries/0}
+      value: ${#jptr:/ref-e4ca7eca-ccd1-4876-9ae7-63b7bde9de45-applications/entries}
     primaryImage:
       type: asset
       value:
@@ -2064,6 +2076,12 @@ entry:
       variables:
         locale: ${locale}
         entryIds: 37af876a-955d-4304-9a27-9989347c828d
+    ref-e4ca7eca-ccd1-4876-9ae7-63b7bde9de45-applications:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: >-
+          dc7d91b7-09cd-45ff-90cc-d70ff6316ea6,e299bc86-997e-45a4-9fb9-af0c009cc7c2
     ref-e4ca7eca-ccd1-4876-9ae7-63b7bde9de45-relatedProducts:
       type: uniformContentInternalReference
       variables:

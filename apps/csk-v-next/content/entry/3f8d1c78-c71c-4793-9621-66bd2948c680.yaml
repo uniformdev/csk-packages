@@ -1,29 +1,29 @@
-created: '2025-04-25T00:45:54.623856+00:00'
-modified: '2025-05-09T08:18:22.044404+00:00'
+created: '2025-05-09T08:30:35.42485+00:00'
+modified: '2025-05-09T08:32:20.353866+00:00'
 pattern: false
 entry:
-  _id: b41c8dfd-62f3-4aae-aed6-91f741370cb5
-  _name: QPF4509
-  _slug: qpf4509
+  _id: 3f8d1c78-c71c-4793-9621-66bd2948c680
+  _name: QPF4202
+  _slug: qpf4202
   _thumbnail: >-
-    https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/yu69VGttQCa89LmrCTMoJg-image.png
+    https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/Y6yfMeTmRsOxWPToEAhCnA-QPF4202_PDP.png
   type: product
   fields:
     name:
       type: text
-      value: 5 GHz Wi-Fi 7 High Power Front End Module
+      value: 2 GHz Wi-Fi 7 Medium Power Non-linear Front End Module
     rohs:
       type: select
       value: 'yes'
     title:
       type: text
-      value: QPF4509
+      value: QPF4202
     status:
       type: select
-      value: production
+      value: preview
     category:
       type: contentReference
-      value: ${#jptr:/ref-b41c8dfd-62f3-4aae-aed6-91f741370cb5-category/entries/0}
+      value: ${#jptr:/ref-3f8d1c78-c71c-4793-9621-66bd2948c680-category/entries}
     leadFree:
       type: select
       value: 'Yes'
@@ -44,16 +44,30 @@ entry:
                 children:
                   - mode: normal
                     text: >-
-                      The Qorvo QPF4509 is an integrated front end module (FEM)
+                      The Qorvo QPF4202 is an integrated front end module (FEM)
                       designed for Wi-Fi 7 (802.11be) systems. The small form
                       factor and integrated matching minimizes layout area in
-                      the application. Performance is focused on optimizing the
-                      PA for a 5V supply voltage that minimizes power
-                      consumption to allow for systems that use digital
-                      pre-distortion to achieve the highest linear output power
-                      and leading edge throughput for the RF chain. This is done
-                      across a wide bandwidth enabling operation in all channels
-                      from UNII1-4 (5.170 to 5.895 GHz).
+                      the application.
+                    type: text
+                    style: ''
+                    detail: 0
+                    format: 0
+                    version: 1
+                direction: ltr
+                textStyle: ''
+                textFormat: 0
+              - type: paragraph
+                format: ''
+                indent: 0
+                version: 1
+                children:
+                  - mode: normal
+                    text: >-
+                      Performance is focused on optimizing the PA for a 5 V
+                      supply voltage that minimizes power consumption to allow
+                      for systems that use digital pre-distortion to achieve the
+                      highest linear output power and leading edge throughput
+                      for the RF chain.
                     type: text
                     style: ''
                     detail: 0
@@ -70,12 +84,12 @@ entry:
                   - mode: normal
                     text: >-
                       A coupler with RF output is integrated for DPD feedback
-                      training. For power control a broadrange, constant slope
-                      voltage logarithmic power detector is provided for
-                      application feedback. The QPF4509 integrates a 6 GHz power
-                      amplifier (PA), single pole two throw switch (SP2T),
-                      coupler structure and bypassable low noise amplifier (LNA)
-                      into a single device.
+                      training. Options for alternate routing of the feedback
+                      are included with low loss. For power control a
+                      broadrange, constant slope voltage logarithmic power
+                      detector is provided for application feedback. The module
+                      includes a state to turn on and off, which could reduce
+                      bill of material or give an option to reduce current draw.
                     type: text
                     style: ''
                     detail: 0
@@ -84,6 +98,133 @@ entry:
                 direction: ltr
                 textStyle: ''
                 textFormat: 0
+              - type: paragraph
+                format: ''
+                indent: 0
+                version: 1
+                children:
+                  - mode: normal
+                    text: >-
+                      The QPF4202 integrates a 2.4 GHz power amplifier (PA),
+                      single pole two throw switch (SP2T) and bypassable low
+                      noise amplifier (LNA) into a single device.
+                    type: text
+                    style: ''
+                    detail: 0
+                    format: 0
+                    version: 1
+                direction: ltr
+                textStyle: ''
+                textFormat: 0
+              - tag: h4
+                type: heading
+                format: start
+                indent: 0
+                version: 1
+                children:
+                  - mode: normal
+                    text: Typical Applications
+                    type: text
+                    style: ''
+                    detail: 0
+                    format: 0
+                    version: 1
+                direction: ltr
+              - tag: ul
+                type: list
+                start: 1
+                format: start
+                indent: 0
+                version: 1
+                children:
+                  - type: listitem
+                    value: 1
+                    format: ''
+                    indent: 0
+                    version: 1
+                    children:
+                      - tag: ul
+                        type: list
+                        start: 1
+                        format: ''
+                        indent: 0
+                        version: 1
+                        children:
+                          - type: listitem
+                            value: 1
+                            format: ''
+                            indent: 1
+                            version: 1
+                            children:
+                              - mode: normal
+                                text: Access Points
+                                type: text
+                                style: ''
+                                detail: 0
+                                format: 0
+                                version: 1
+                            direction: ltr
+                          - type: listitem
+                            value: 2
+                            format: ''
+                            indent: 1
+                            version: 1
+                            children:
+                              - mode: normal
+                                text: Wireless Routers
+                                type: text
+                                style: ''
+                                detail: 0
+                                format: 0
+                                version: 1
+                            direction: ltr
+                          - type: listitem
+                            value: 3
+                            format: ''
+                            indent: 1
+                            version: 1
+                            children:
+                              - mode: normal
+                                text: Residential Gateways
+                                type: text
+                                style: ''
+                                detail: 0
+                                format: 0
+                                version: 1
+                            direction: ltr
+                          - type: listitem
+                            value: 4
+                            format: ''
+                            indent: 1
+                            version: 1
+                            children:
+                              - mode: normal
+                                text: Customer Premise Equipment
+                                type: text
+                                style: ''
+                                detail: 0
+                                format: 0
+                                version: 1
+                            direction: ltr
+                          - type: listitem
+                            value: 5
+                            format: ''
+                            indent: 1
+                            version: 1
+                            children:
+                              - mode: normal
+                                text: Internet of Things
+                                type: text
+                                style: ''
+                                detail: 0
+                                format: 0
+                                version: 1
+                            direction: ltr
+                        listType: bullet
+                        direction: ltr
+                    direction: ltr
+                listType: bullet
+                direction: ltr
             direction: ltr
     parameters:
       type: richText
@@ -159,7 +300,7 @@ entry:
                             version: 1
                             children:
                               - mode: normal
-                                text: '5.17'
+                                text: '5.925'
                                 type: text
                                 style: ''
                                 detail: 0
@@ -231,7 +372,7 @@ entry:
                             version: 1
                             children:
                               - mode: normal
-                                text: '5.895'
+                                text: '7.125'
                                 type: text
                                 style: ''
                                 detail: 0
@@ -489,7 +630,7 @@ entry:
                             version: 1
                             children:
                               - mode: normal
-                                text: '16'
+                                text: '21'
                                 type: text
                                 style: ''
                                 detail: 0
@@ -561,7 +702,7 @@ entry:
                             version: 1
                             children:
                               - mode: normal
-                                text: '-47'
+                                text: '-43'
                                 type: text
                                 style: ''
                                 detail: 0
@@ -633,7 +774,7 @@ entry:
                             version: 1
                             children:
                               - mode: normal
-                                text: '130'
+                                text: '212'
                                 type: text
                                 style: ''
                                 detail: 0
@@ -705,7 +846,7 @@ entry:
                             version: 1
                             children:
                               - mode: normal
-                                text: '23'
+                                text: '22'
                                 type: text
                                 style: ''
                                 detail: 0
@@ -777,7 +918,7 @@ entry:
                             version: 1
                             children:
                               - mode: normal
-                                text: '-35'
+                                text: '-38'
                                 type: text
                                 style: ''
                                 detail: 0
@@ -849,7 +990,7 @@ entry:
                             version: 1
                             children:
                               - mode: normal
-                                text: '190'
+                                text: '228'
                                 type: text
                                 style: ''
                                 detail: 0
@@ -921,7 +1062,7 @@ entry:
                             version: 1
                             children:
                               - mode: normal
-                                text: '29'
+                                text: '32'
                                 type: text
                                 style: ''
                                 detail: 0
@@ -1065,7 +1206,7 @@ entry:
                             version: 1
                             children:
                               - mode: normal
-                                text: '15'
+                                text: '16'
                                 type: text
                                 style: ''
                                 detail: 0
@@ -1733,13 +1874,13 @@ entry:
               - tag: ul
                 type: list
                 start: 1
-                format: ''
+                format: start
                 indent: 0
                 version: 1
                 children:
                   - type: listitem
                     value: 1
-                    format: start
+                    format: ''
                     indent: 0
                     version: 1
                     children:
@@ -1751,14 +1892,14 @@ entry:
                         format: 0
                         version: 1
                       - mode: normal
-                        text: OUT
+                        text: SAT
                         type: text
                         style: ''
                         detail: 0
                         format: 32
                         version: 1
                       - mode: normal
-                        text: "\_= +12 dBm MCS13 EHT160 -47 dB Dynamic EVM"
+                        text: "\_= +30 dBm"
                         type: text
                         style: ''
                         detail: 0
@@ -1767,26 +1908,12 @@ entry:
                     direction: ltr
                   - type: listitem
                     value: 2
-                    format: start
+                    format: ''
                     indent: 0
                     version: 1
                     children:
                       - mode: normal
-                        text: P
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
-                      - mode: normal
-                        text: OUT
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 32
-                        version: 1
-                      - mode: normal
-                        text: "\_= +20.5 dBm MCS11 EHT160 -43 dB Dynamic EVM"
+                        text: Corrected DEVM1
                         type: text
                         style: ''
                         detail: 0
@@ -1795,7 +1922,7 @@ entry:
                     direction: ltr
                   - type: listitem
                     value: 3
-                    format: start
+                    format: ''
                     indent: 0
                     version: 1
                     children:
@@ -1814,7 +1941,7 @@ entry:
                         format: 32
                         version: 1
                       - mode: normal
-                        text: "\_= +23 dBm MCS9 VHT80 -35 dB Dynamic EVM"
+                        text: "\_= +19 dBm MCS13 EHT20 -47 dB Dynamic EVM"
                         type: text
                         style: ''
                         detail: 0
@@ -1823,7 +1950,7 @@ entry:
                     direction: ltr
                   - type: listitem
                     value: 4
-                    format: start
+                    format: ''
                     indent: 0
                     version: 1
                     children:
@@ -1842,7 +1969,7 @@ entry:
                         format: 32
                         version: 1
                       - mode: normal
-                        text: "\_= +26 dBm MCS0 HT20 Spectral Mask Compliance"
+                        text: "\_= +20.5 dBm MCS11 HE20 -43 dB Dynamic EVM"
                         type: text
                         style: ''
                         detail: 0
@@ -1851,12 +1978,26 @@ entry:
                     direction: ltr
                   - type: listitem
                     value: 5
-                    format: start
+                    format: ''
                     indent: 0
                     version: 1
                     children:
                       - mode: normal
-                        text: Optimized for +5 V Operation
+                        text: P
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                      - mode: normal
+                        text: OUT
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 32
+                        version: 1
+                      - mode: normal
+                        text: "\_= +23 dBm MCS8 VHT20 -35 dB Dynamic EVM"
                         type: text
                         style: ''
                         detail: 0
@@ -1865,12 +2006,26 @@ entry:
                     direction: ltr
                   - type: listitem
                     value: 6
-                    format: start
+                    format: ''
                     indent: 0
                     version: 1
                     children:
                       - mode: normal
-                        text: 29 dB Tx Gain
+                        text: P
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                      - mode: normal
+                        text: OUT
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 32
+                        version: 1
+                      - mode: normal
+                        text: "\_= +24 dBm MCS7 HT20 -30 dB Dynamic EVM"
                         type: text
                         style: ''
                         detail: 0
@@ -1879,12 +2034,26 @@ entry:
                     direction: ltr
                   - type: listitem
                     value: 7
-                    format: start
+                    format: ''
                     indent: 0
                     version: 1
                     children:
                       - mode: normal
-                        text: 1.8 dB Noise Figure
+                        text: P
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                      - mode: normal
+                        text: OUT
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 32
+                        version: 1
+                      - mode: normal
+                        text: "\_= +24.5 dBm MCS0 HT20 Spectral Mask Compliance"
                         type: text
                         style: ''
                         detail: 0
@@ -1893,12 +2062,12 @@ entry:
                     direction: ltr
                   - type: listitem
                     value: 8
-                    format: start
+                    format: ''
                     indent: 0
                     version: 1
                     children:
                       - mode: normal
-                        text: 15 dB Rx Gain & 7 dB Bypass Loss
+                        text: DC Power = 1.1 W at +24.5 dBm
                         type: text
                         style: ''
                         detail: 0
@@ -1907,12 +2076,12 @@ entry:
                     direction: ltr
                   - type: listitem
                     value: 9
-                    format: start
+                    format: ''
                     indent: 0
                     version: 1
                     children:
                       - mode: normal
-                        text: Integrated RF Coupler
+                        text: 31 dB Tx Gain
                         type: text
                         style: ''
                         detail: 0
@@ -1921,12 +2090,40 @@ entry:
                     direction: ltr
                   - type: listitem
                     value: 10
-                    format: start
+                    format: ''
                     indent: 0
                     version: 1
                     children:
                       - mode: normal
-                        text: Integrated DC Logarithmic Power Detector
+                        text: 1.6 / 3.2 dB Noise Figure
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                    direction: ltr
+                  - type: listitem
+                    value: 11
+                    format: ''
+                    indent: 0
+                    version: 1
+                    children:
+                      - mode: normal
+                        text: '>15 dB 5 - 7 GHz Rejection on Rx Path'
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                    direction: ltr
+                  - type: listitem
+                    value: 12
+                    format: ''
+                    indent: 0
+                    version: 1
+                    children:
+                      - mode: normal
+                        text: Integrated RF Coupler & DC Logarithmic Power Detector
                         type: text
                         style: ''
                         detail: 0
@@ -1938,34 +2135,34 @@ entry:
             direction: ltr
     applications:
       type: contentReference
-      value: ${#jptr:/ref-b41c8dfd-62f3-4aae-aed6-91f741370cb5-applications/entries}
+      value: ${#jptr:/ref-3f8d1c78-c71c-4793-9621-66bd2948c680-applications/entries}
     primaryImage:
       type: asset
       value:
-        - _id: 070edce8-5d86-4dbf-96b0-36ac1355b03f
+        - _id: 5993ee25-82aa-4a06-b969-4465893fb0a2
           type: image
           fields:
             id:
               type: text
-              value: b4200198-203c-44cc-889b-cc7d2ed2b3f4
+              value: d55eebc4-f019-4c66-a874-04bf0691a8e8
             url:
               value: >-
-                https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/yu69VGttQCa89LmrCTMoJg-image.png
+                https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/Y6yfMeTmRsOxWPToEAhCnA-QPF4202_PDP.png
               type: text
             file:
               type: file
-              value: e5d63325-44fb-48d6-9c4b-30f938f854b9
+              value: 4d7015b5-d20c-4ea4-81e1-af1b900a17c7
             size:
-              value: 3867
+              value: 2729
               type: number
             title:
               type: text
-              value: image.png
+              value: QPF4202_PDP.png
             width:
               value: 140
               type: number
             height:
-              value: 142
+              value: 99
               type: number
             mediaType:
               value: image/png
@@ -1974,7 +2171,7 @@ entry:
     relatedProducts:
       type: contentReference
       value: >-
-        ${#jptr:/ref-b41c8dfd-62f3-4aae-aed6-91f741370cb5-relatedProducts/entries}
+        ${#jptr:/ref-e4ca7eca-ccd1-4876-9ae7-63b7bde9de45-relatedProducts/entries}
     typicalApplications:
       type: richText
       locales:
@@ -2027,7 +2224,7 @@ entry:
                     version: 1
                     children:
                       - mode: normal
-                        text: Set Top Boxes
+                        text: Residential Gateways
                         type: text
                         style: ''
                         detail: 0
@@ -2066,21 +2263,50 @@ entry:
                 direction: ltr
             direction: ltr
   _dataResources:
-    ref-b41c8dfd-62f3-4aae-aed6-91f741370cb5-category:
-      type: uniformContentInternalReference
-      variables:
-        locale: ${locale}
-        entryIds: 37af876a-955d-4304-9a27-9989347c828d
-    ref-b41c8dfd-62f3-4aae-aed6-91f741370cb5-applications:
+    ref-3f8d1c78-c71c-4793-9621-66bd2948c680-category:
       type: uniformContentInternalReference
       variables:
         locale: ${locale}
         entryIds: >-
-          e299bc86-997e-45a4-9fb9-af0c009cc7c2,dc7d91b7-09cd-45ff-90cc-d70ff6316ea6
-    ref-b41c8dfd-62f3-4aae-aed6-91f741370cb5-relatedProducts:
+          b96982ea-91b5-444b-8483-946823de7f5d,4e115e91-9186-4301-9932-1c4bb9d9fdbc
+    ref-e4ca7eca-ccd1-4876-9ae7-63b7bde9de45-category:
       type: uniformContentInternalReference
       variables:
         locale: ${locale}
-        entryIds: 32bf5cfe-01eb-4757-981f-fab69f0af555
+        entryIds: 37af876a-955d-4304-9a27-9989347c828d
+    ref-ed043e1a-7a1e-4103-809e-41cb91b1d2c6-category:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: >-
+          c74a977a-8365-4793-ba0e-b2e8f5d1685c,b96982ea-91b5-444b-8483-946823de7f5d
+    ref-e4ca7eca-ccd1-4876-9ae7-63b7bde9de45-subcategory:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: 37af876a-955d-4304-9a27-9989347c828d
+    ref-3f8d1c78-c71c-4793-9621-66bd2948c680-applications:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: >-
+          dc7d91b7-09cd-45ff-90cc-d70ff6316ea6,e299bc86-997e-45a4-9fb9-af0c009cc7c2
+    ref-e4ca7eca-ccd1-4876-9ae7-63b7bde9de45-applications:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: >-
+          dc7d91b7-09cd-45ff-90cc-d70ff6316ea6,e299bc86-997e-45a4-9fb9-af0c009cc7c2
+    ref-ed043e1a-7a1e-4103-809e-41cb91b1d2c6-applications:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: >-
+          dc7d91b7-09cd-45ff-90cc-d70ff6316ea6,e299bc86-997e-45a4-9fb9-af0c009cc7c2,e1cbdc09-a3cd-4a2b-9dcc-4ad3e9c23a18
+    ref-e4ca7eca-ccd1-4876-9ae7-63b7bde9de45-relatedProducts:
+      type: uniformContentInternalReference
+      variables:
+        locale: ${locale}
+        entryIds: b41c8dfd-62f3-4aae-aed6-91f741370cb5
   _locales:
     - en
