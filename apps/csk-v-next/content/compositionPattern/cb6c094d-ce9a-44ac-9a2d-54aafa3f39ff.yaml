@@ -6,30 +6,30 @@ composition:
     favicon:
       type: asset
       value:
-        - _id: 456db545-aeb4-4d97-b176-b05f5ef8a690
+        - _id: 5fdf000e-f563-4aee-aad3-f5bc8bcc7249
           type: image
           fields:
             id:
               type: text
-              value: b7f0d22c-986d-4f57-9176-bf61f13eefc8
+              value: cee1cd0b-4c1f-4afa-a9bb-b73c782d1c24
             url:
               value: >-
-                https://img.uniform.global/p/ovl3f_RJSNmuo41YikmFlA/BJZ0qUdpQLWdOHm45e3QhA-image.png
+                https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/HiqIehH-S7WmKaEPjajifA-favicon-196x196.png
               type: text
             file:
               type: file
-              value: b208cf41-8c7d-4096-b188-4352e8f775d5
+              value: d4c0f174-3856-4d2d-9bd0-e18399f08753
             size:
-              value: 1505
+              value: 15981
               type: number
             title:
               type: text
-              value: image.png
+              value: favicon-196x196.png
             width:
-              value: 48
+              value: 196
               type: number
             height:
-              value: 48
+              value: 196
               type: number
             mediaType:
               value: image/png
@@ -37,10 +37,16 @@ composition:
           _source: uniform-assets
     pageTitle:
       type: text
-      value: Java Drip
+      value: 'Qorvo: Innovative RF and Power Solutions - Qorvo '
     backgroundColor:
       type: dex-color-palette-parameter
       value: page-background-primary
+    pageDescription:
+      type: text
+      locales:
+        en: >-
+          Qorvo's advanced RF and power solutions solve complex technical
+          challenges for global customers.
   slots:
     pageFooter:
       - _id: bbf196c6-4821-414c-9b14-b08fb1c7fede
@@ -66,6 +72,12 @@ composition:
         type: dynamicProductRecommendations
         _pattern: 9fa8b4cd-24ab-4d1a-b2c5-946925aec3e0
   _overrides:
+    99a0409b-6cb9-47fd-b850-0434bc29ad6d:
+      parameters:
+        boostEnrichments:
+          type: multi-select
+          value:
+            - int,category
     be3fb453-fb93-41ab-88e0-6d23e3dfa15d|c50e99a6-1d91-4d6e-9a22-3154d4e4a8b7:
       parameters:
         text:
@@ -122,8 +134,8 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
-created: '2025-04-07T12:38:53.051893+00:00'
-modified: '2025-04-07T12:56:03.578262+00:00'
+created: '2025-04-24T21:39:11.088087+00:00'
+modified: '2025-05-09T13:56:16.976207+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/global-composition.png

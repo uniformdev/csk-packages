@@ -10,7 +10,7 @@ export type ProductCardProps = {
 
 const ProductResults: FC<ProductCardProps> = ({ textColor, border, entries }) => {
   return (
-    <div className="flex flex-col">
+    <div className="flex min-h-[460px] flex-col">
       <div className="grid grid-cols-7">
         <div className="border-r border-gray-300 bg-gray-200 px-4 py-2 text-center text-gray-500">Part #</div>
         <div className="border-r border-gray-300 bg-gray-200 px-4 py-2 text-center text-gray-500">Description</div>
