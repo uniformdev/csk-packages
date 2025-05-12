@@ -87,7 +87,7 @@ export const RECIPE_ADDITIONAL_FILES: Partial<{
   shadcn: ['components.json'],
 };
 
-export const META_NOT_PROCESABLE_FILE_PATH_SEGMENTS = ['content/', '.json', '.yaml', '.env.example', '.sql'];
+export const META_NOT_PROCESABLE_FILE_PATH_SEGMENTS = ['content/', '.json', '.yaml', '.env.example', '.sql', '.md'];
 
 export const FILES_TO_IGNORE_OUTSIDE_OF_MONOREPO = ['.lintstagedrc'];
 
