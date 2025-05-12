@@ -3,6 +3,7 @@ import {
   ButtonParameters,
   ImageParameters,
   TextParameters,
+  VideoParameters,
 } from '@uniformdev/csk-components/components/canvas';
 import { ArgTypes } from '@storybook/react';
 import theme from '../../tailwind.config.theme.json';
@@ -50,11 +51,26 @@ export const ButtonArgTypes: Partial<ArgTypes<ButtonParameters>> = {
   iconPosition: { control: 'select', options: ['left', 'right'] },
 };
 
+const presentationArgTypes: Partial<
+  ArgTypes<Pick<ImageParameters | VideoParameters, 'overlayColor' | 'overlayOpacity' | 'border'>>
+> = {
+  overlayColor: { control: 'select', options: colorKeys },
+  overlayOpacity: { control: { type: 'number', min: 0, max: 1, step: 0.1 } },
+  border: { control: 'select', options: borderKeys },
+};
+
 export const ImageArgTypes: Partial<ArgTypes<ImageParameters>> = {
   objectFit: { control: 'select', options: ['fill', 'contain', 'cover', 'none', 'scale-down'] },
   width: { control: { type: 'number', min: 0 } },
   height: { control: { type: 'number', min: 0 } },
-  overlayColor: { control: 'select', options: colorKeys },
-  overlayOpacity: { control: { type: 'number', min: 0, max: 1, step: 0.1 } },
-  border: { control: 'select', options: borderKeys },
+  ...presentationArgTypes,
+};
+
+export const VideoArgTypes: Partial<ArgTypes<VideoParameters>> = {
+  autoPlay: { control: 'boolean' },
+  lazyLoad: { control: 'boolean' },
+  loop: { control: 'boolean' },
+  controls: { control: 'boolean' },
+  muted: { control: 'boolean' },
+  ...presentationArgTypes,
 };

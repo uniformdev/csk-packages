@@ -1,9 +1,10 @@
 import { UniformComposition } from '@uniformdev/canvas-next-rsc';
-import { Video, VideoParameters } from '@uniformdev/csk-components/components/canvas';
+import { Video } from '@uniformdev/csk-components/components/canvas';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
+import { VideoArgTypes } from '@/argTypes';
 import { IMAGE_ASSET } from '@/assets';
 import { createFakeCompositionData, fakeContext } from '@/utils';
-import { ArgTypes, Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof Video> = {
   title: 'Component Starter Kit/Components/Video',
@@ -12,13 +13,6 @@ const meta: Meta<typeof Video> = {
 
 export default meta;
 type Story = StoryObj<typeof Video>;
-const argTypes: Partial<ArgTypes<VideoParameters>> = {
-  autoPlay: { control: 'boolean' },
-  lazyLoad: { control: 'boolean' },
-  loop: { control: 'boolean' },
-  controls: { control: 'boolean' },
-  muted: { control: 'boolean' },
-};
 
 export const Default: Story = {
   args: {
@@ -32,7 +26,7 @@ export const Default: Story = {
     controls: true,
     lazyLoad: true,
   },
-  argTypes,
+  argTypes: VideoArgTypes,
   render: args => {
     const route = createFakeCompositionData('video', undefined, {
       ...args,

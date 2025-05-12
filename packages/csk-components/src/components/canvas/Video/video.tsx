@@ -14,6 +14,9 @@ export const Video: FC<VideoProps> = ({
   loop,
   controls,
   muted,
+  overlayColor,
+  overlayOpacity,
+  border,
   component,
   context,
 }) => {
@@ -27,7 +30,7 @@ export const Video: FC<VideoProps> = ({
     <BaseVideo
       url={url.path}
       placeholderImageUrl={resolvedImage?.url}
-      {...{ autoPlay, lazyLoad, loop, controls, muted }}
+      {...{ autoPlay, lazyLoad, loop, controls, muted, overlayColor, overlayOpacity, border }}
     />
   );
 };
