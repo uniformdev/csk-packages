@@ -22,6 +22,19 @@ composition:
           type: text
           locales:
             en: Sign Up For Alerts >
+    a57360ad-74d5-40a7-98de-b279bb683834:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: >-
+                https://www.qorvo.com/support/how-to-buy/request-a-sample?partNumber=QM42500
+              type: url
+        text:
+          type: text
+          locales:
+            en: Request Sample >
     aba1cef4-6b2c-4e28-9d6c-1d4d4ef743c7:
       parameters:
         link:
@@ -35,6 +48,18 @@ composition:
           type: text
           locales:
             en: Request Sample >
+    ccd6c054-7e3e-4820-9953-fd07f5a49cfd:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: https://www.qorvo.com/support/subscription-center
+              type: url
+        text:
+          type: text
+          locales:
+            en: Sign Up For Alerts >
     d3883501-b8b2-4922-907f-b2cef3817b77:
       parameters:
         $enr:
@@ -79,11 +104,11 @@ composition:
     d3883501-b8b2-4922-907f-b2cef3817b77|dc2e95be-21b5-4476-a309-f8a34922f528:
       slots:
         $slotSectionItems:
-          - _id: d5ae58be-5fd5-4b98-8375-65e57a0fbabe
+          - _id: f5277cb6-f1ae-4e6d-bc24-f298e179744c
             type: flex
             slots:
               flexItem:
-                - _id: fc19c4b0-f82c-47ec-995a-933b61ba7928
+                - _id: 998999de-30be-4bd5-9270-cf263a799a7e
                   type: text
                   parameters:
                     tag:
@@ -108,7 +133,7 @@ composition:
                     weight:
                       type: dex-segmented-control-parameter
                       value: extrabold
-                - _id: 12805a0c-7bd2-4a27-bd37-d0e2b74dfa6c
+                - _id: 43b34ee8-3e1f-4ec9-a26a-29cf74508fca
                   type: text
                   parameters:
                     tag:
@@ -133,11 +158,11 @@ composition:
                     weight:
                       type: dex-segmented-control-parameter
                       value: bold
-                - _id: ba00bd0d-48b1-49ec-b47a-dfdfa0ee6881
+                - _id: 338cde2f-15a3-4777-b651-8b415387564b
                   type: link
                   slots:
                     linkContent:
-                      - _id: 63a10851-4aa7-4dea-a99c-ced797ad00a4
+                      - _id: 3f31b21a-5f62-4be1-8dfd-c6cfd60de32c
                         type: text
                         parameters:
                           tag:
@@ -173,7 +198,7 @@ composition:
                       type: text
                       locales:
                         en: ${#jptr:/Product Content/entry/fields/status/value}
-                - _id: ac674169-c7e0-498c-997c-1ad0aada8469
+                - _id: 4b21d3d0-39e1-4455-9d5d-7633e5243f87
                   type: richText
                   parameters:
                     text:
@@ -273,11 +298,11 @@ composition:
               justifyContent:
                 type: dex-segmented-control-parameter
                 value: {}
-          - _id: 30598235-0e19-4131-a2ef-6a7eaff1655e
+          - _id: cdc538ee-6405-47e9-8155-db65ceaf6e75
             type: grid
             slots:
               gridInner:
-                - _id: 5bef71d4-b3ac-45c3-bde1-d1b4af1e1524
+                - _id: 13a427b1-cc8a-4f4d-b10f-97b4f4d6393b
                   type: image
                   parameters:
                     image:
@@ -294,11 +319,11 @@ composition:
                     objectFit:
                       type: dex-segmented-control-parameter
                       value: contain
-                - _id: 473a38aa-bf2c-45e9-9331-67dc47b43e00
+                - _id: 42228e76-2071-444d-9d47-a18d25c5fe43
                   type: flex
                   slots:
                     flexItem:
-                      - _id: cb284a3e-b658-4de8-a9a3-60c844fee7ee
+                      - _id: cc839603-2f19-4dba-903b-50b66c6753f9
                         type: text
                         parameters:
                           tag:
@@ -323,7 +348,7 @@ composition:
                           weight:
                             type: dex-segmented-control-parameter
                             value: bold
-                      - _id: 9f2aa3d3-183f-4f81-8324-0ee1cea58c0b
+                      - _id: 8e9f565a-1298-475d-b80a-9295faf2b70f
                         type: richText
                         parameters:
                           text:
@@ -358,11 +383,11 @@ composition:
                     justifyContent:
                       type: dex-segmented-control-parameter
                       value: {}
-                - _id: faa3ecfb-c933-4913-af91-bfbb15df5ee7
+                - _id: a835fdb0-7a5e-4eb4-841b-afc0be4fcfd4
                   type: flex
                   slots:
                     flexItem:
-                      - _id: 05710e81-9c9a-4e01-bd68-8748e83708f7
+                      - _id: ccd6c054-7e3e-4820-9953-fd07f5a49cfd
                         type: button
                         _pattern: 699af8ec-fa5a-49a4-b568-539675ee0764
                         _overridability:
@@ -370,7 +395,7 @@ composition:
                             link: 'yes'
                             text: 'yes'
                           hideLockedParameters: true
-                      - _id: 83b33051-df3e-41cc-acfe-4657312f5784
+                      - _id: c1017789-ac78-40d5-9dd2-ccead0f181ec
                         type: button
                         _pattern: 699af8ec-fa5a-49a4-b568-539675ee0764
                         _overridability:
@@ -378,7 +403,7 @@ composition:
                             link: 'yes'
                             text: 'yes'
                           hideLockedParameters: true
-                      - _id: bceae90a-75d3-4fa4-876a-4d8302268f85
+                      - _id: 6eb2254b-8075-4eef-9151-68686124512a
                         type: button
                         parameters:
                           link:
@@ -430,7 +455,7 @@ composition:
                             link: 'yes'
                             text: 'yes'
                           hideLockedParameters: true
-                      - _id: aba1cef4-6b2c-4e28-9d6c-1d4d4ef743c7
+                      - _id: a57360ad-74d5-40a7-98de-b279bb683834
                         type: button
                         _pattern: 699af8ec-fa5a-49a4-b568-539675ee0764
                         _overridability:
@@ -438,7 +463,7 @@ composition:
                             link: 'yes'
                             text: 'yes'
                           hideLockedParameters: true
-                      - _id: 8e949a2e-7a2e-4c51-8e2f-51f3105dfdc8
+                      - _id: a9c9c440-cbdd-4ef6-a01a-2bdcb988b922
                         type: button
                         parameters:
                           link:
@@ -532,27 +557,27 @@ composition:
                   mobile: '3'
                   tablet: '3'
                   desktop: '3'
-          - _id: b9570fc5-2e16-4b71-a533-92d8618a7cca
+          - _id: 908bcfb2-da49-4c10-8719-6bc8e1723d5b
             type: tabs
             slots:
               tabItems:
-                - _id: df227d35-4a1d-497d-8f90-49b4cd93d5ff
+                - _id: 678a1d64-c354-4239-b562-4626ba55c8e2
                   type: tab
                   slots:
                     tabContent:
-                      - _id: 0805ed3a-7988-4a21-b685-d3bc3a1bc268
+                      - _id: 89297d8a-eb2f-403d-a0f0-3587935c3bcf
                         type: grid
                         slots:
                           gridInner:
-                            - _id: a03fda07-2766-47d3-90a7-a1661e845e82
+                            - _id: ca0843ea-b6d9-42ca-ba12-5cbb54b100f2
                               type: gridItem
                               slots:
                                 inner:
-                                  - _id: 2c7c5edf-9420-4144-8ad5-24f8d0ec6a85
+                                  - _id: 22b65f1e-f258-4997-b838-bd7d67d19404
                                     type: container
                                     slots:
                                       containerContent:
-                                        - _id: 43b276d4-4a7f-45a9-a089-cf7512d5897b
+                                        - _id: 251c8ed1-d566-454a-8b34-a4b8dd1d8a7f
                                           type: richText
                                           parameters:
                                             text:
@@ -601,15 +626,15 @@ composition:
                                   type: text
                                   locales:
                                     en: Description
-                            - _id: 4c64ea32-f864-49ca-9031-005b6f783e60
+                            - _id: 2740fd82-89b6-40b8-97f8-a5026782b211
                               type: gridItem
                               slots:
                                 inner:
-                                  - _id: b3e922a3-549d-4244-9f9e-f44bd2d73bf4
+                                  - _id: 0a6543f2-fcc1-4928-b692-0baa0869465c
                                     type: flex
                                     slots:
                                       flexItem:
-                                        - _id: bae21f4d-5410-4135-bd0f-4462a8cea97a
+                                        - _id: 9f36c27e-640b-452c-b85b-53984c13bcb3
                                           type: text
                                           parameters:
                                             tag:
@@ -634,7 +659,7 @@ composition:
                                             weight:
                                               type: dex-segmented-control-parameter
                                               value: bold
-                                        - _id: 8b06c001-57b3-4804-8554-54e1f6e053a7
+                                        - _id: 6654d2fb-38cc-4bac-a825-447038920425
                                           type: richText
                                           parameters:
                                             text:
@@ -711,19 +736,19 @@ composition:
                               mobile: '1'
                               tablet: '10'
                               desktop: '10'
-                      - _id: dc466659-dcd6-4dbc-8555-1abadec65a8a
+                      - _id: 3aa84314-f690-4136-85e0-dac2cecad5ce
                         type: grid
                         slots:
                           gridInner:
-                            - _id: 33c6a02f-54e4-47cf-850e-01963780c7b7
+                            - _id: c540cb90-43d1-4cfc-bc7b-0dce5e25c891
                               type: gridItem
                               slots:
                                 inner:
-                                  - _id: f0b6aa7d-c343-4727-82d9-85698a9e97dc
+                                  - _id: 74c4eda5-3781-4f15-903c-c0fb8bdfd1f8
                                     type: flex
                                     slots:
                                       flexItem:
-                                        - _id: 078f1a33-36c0-479b-af1c-e7cd8b92f507
+                                        - _id: dfe9fee7-e29b-4dc7-8c83-769db91f8823
                                           type: text
                                           parameters:
                                             tag:
@@ -748,15 +773,15 @@ composition:
                                             weight:
                                               type: dex-segmented-control-parameter
                                               value: bold
-                                        - _id: 18f8e419-ae72-4a74-a55c-aeb542c2c676
+                                        - _id: 2733a4bb-3ffe-4575-9534-6ad8295812c0
                                           type: $loop
                                           slots:
                                             body:
-                                              - _id: ae00cbdf-4b69-4ea6-9178-613f5024841f
+                                              - _id: 43930c2c-892c-4324-a7e1-e7d288beb58b
                                                 type: link
                                                 slots:
                                                   linkContent:
-                                                    - _id: ffe7e3ba-a366-4268-be22-8b4ba94d209d
+                                                    - _id: 1da9c257-284d-4ad9-ad75-3b8f3c062e05
                                                       type: text
                                                       parameters:
                                                         tag:
@@ -841,15 +866,15 @@ composition:
                                   type: text
                                   locales:
                                     en: Product Categories
-                            - _id: fcac95b6-6c75-4e22-92ba-7a02c4f5ded5
+                            - _id: 8d2b143e-7b50-4b3d-9159-5465d7fde456
                               type: gridItem
                               slots:
                                 inner:
-                                  - _id: 45d94a46-cc2b-4bbf-b9f1-7c91d0d3fbb9
+                                  - _id: d323d8a8-868b-48ca-9c7d-b698af5598d5
                                     type: flex
                                     slots:
                                       flexItem:
-                                        - _id: 8884113d-205e-4929-9158-bac54a56cf85
+                                        - _id: 95927a48-3c92-48ec-ac71-185eddec6b15
                                           type: text
                                           parameters:
                                             tag:
@@ -874,15 +899,15 @@ composition:
                                             weight:
                                               type: dex-segmented-control-parameter
                                               value: bold
-                                        - _id: 04de81cf-25e8-4232-83c6-a533b5599b61
+                                        - _id: 764f14f2-1b72-4c93-9a3b-a7410489c67e
                                           type: $loop
                                           slots:
                                             body:
-                                              - _id: ca936c38-5144-4c4c-9e9c-ee81b5d34531
+                                              - _id: 614571b6-92bb-4f17-960c-6091f1c6247a
                                                 type: link
                                                 slots:
                                                   linkContent:
-                                                    - _id: 33e6837a-69ec-4d1d-a5cc-2af6fcdf78fb
+                                                    - _id: da7ed1cb-ed58-4494-89e6-1652c0b971bb
                                                       type: text
                                                       parameters:
                                                         tag:
@@ -999,11 +1024,11 @@ composition:
                       type: text
                       locales:
                         en: Overview
-                - _id: c3b00e65-622f-483f-a64b-1ecdb653c8e7
+                - _id: 092ea073-235f-46f8-b955-b0e441c0c537
                   type: tab
                   slots:
                     tabContent:
-                      - _id: 26aa39df-e8d9-4a7f-8d9f-8c576dcc0686
+                      - _id: dcfd325b-b30f-4821-a603-61ce29b21820
                         type: richText
                         parameters:
                           text:
@@ -1017,15 +1042,15 @@ composition:
                       type: text
                       locales:
                         en: Parameters
-                - _id: d9247839-d71e-4a41-8d48-a12bcb226354
+                - _id: f97cc461-1ab4-48d3-ae8f-956f1ad656f0
                   type: tab
                   slots:
                     tabContent:
-                      - _id: e110792a-34b8-4a42-9980-b7987907a888
+                      - _id: 055e3de3-9d5c-4fa9-bb50-2fec49c971ca
                         type: flex
                         slots:
                           flexItem:
-                            - _id: 8a9b48b2-09f7-4dae-a641-09d49598cc39
+                            - _id: b0f5ca1a-62cc-4932-9add-fd33b34e5313
                               type: text
                               parameters:
                                 tag:
@@ -1045,11 +1070,11 @@ composition:
                                 weight:
                                   type: dex-segmented-control-parameter
                                   value: bold
-                            - _id: ab025029-2f74-4ae2-9560-f2adda27a5c4
+                            - _id: dffc242a-f9ab-4859-87d0-a1e93a686f41
                               type: flex
                               slots:
                                 flexItem:
-                                  - _id: f7d08de9-c646-4d85-9f7d-431b948b4fe5
+                                  - _id: 06b54a6f-e975-4037-ac97-98c7834b036e
                                     type: image
                                     parameters:
                                       image:
@@ -1093,11 +1118,11 @@ composition:
                                       objectFit:
                                         type: dex-segmented-control-parameter
                                         value: cover
-                                  - _id: 7f894177-7f10-45b3-80a1-b5535846e428
+                                  - _id: 58774c5b-23d6-430a-8cb2-8b7392ed710e
                                     type: flex
                                     slots:
                                       flexItem:
-                                        - _id: e4cc77e1-130b-498b-9f0d-3869e485fd7c
+                                        - _id: efee48f4-4377-4b9e-be0f-577043b7b051
                                           type: text
                                           parameters:
                                             tag:
@@ -1120,11 +1145,11 @@ composition:
                                             maxWidth:
                                               type: dex-slider-control-parameter
                                               value: 23%
-                                        - _id: ee667864-e848-45e2-81eb-f30b144f4878
+                                        - _id: 267b2dcd-b790-4fca-81cb-e57042deae1e
                                           type: link
                                           slots:
                                             linkContent:
-                                              - _id: 34481d24-9d82-4024-ae44-77048ec675eb
+                                              - _id: 49b38a46-c314-4fdc-8f47-3533a2ced663
                                                 type: text
                                                 parameters:
                                                   tag:
@@ -1160,7 +1185,7 @@ composition:
                                               type: text
                                               locales:
                                                 en: Link
-                                        - _id: c04768ba-3997-48df-a768-89feb7dd99b7
+                                        - _id: 737dbd11-3845-46e0-bee2-0125db8a92b5
                                           type: text
                                           parameters:
                                             tag:
@@ -1273,8 +1298,8 @@ composition:
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-05-12T08:15:27.104162+00:00'
-modified: '2025-05-12T14:51:07.533163+00:00'
+created: '2025-04-24T21:39:12.570695+00:00'
+modified: '2025-05-12T16:20:58.98461+00:00'
 pattern: false
 workflowId: 709029a9-419a-4f6b-891f-427729e3c4df
 workflowStageId: a3b17d73-0198-4734-8c5e-71f898d6d4fe

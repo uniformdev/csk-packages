@@ -39,24 +39,23 @@ composition:
     73f928f8-6aad-43e8-a34f-868fc36aa34d|dc2e95be-21b5-4476-a309-f8a34922f528:
       slots:
         $slotSectionItems:
-          - _id: c38b5887-c1a5-4016-adb2-2a181b630856
+          - _id: 5ac08a03-25d5-4ba3-888f-98da989e7d75
             type: container
             slots:
               containerContent:
-                - _id: 32d45979-f7ec-420e-94f3-5ab8a08165d2
+                - _id: de15b1c5-abbf-4597-9d6a-d6e3c8483424
                   type: entriesSearchEngine
                   slots:
                     content:
-                      - _id: 6c919303-62f5-4807-8115-6ce50295eaca
+                      - _id: 97f6121b-7487-4653-bfd8-bbab64f8987e
                         type: flex
                         slots:
                           flexItem:
-                            - _id: cbed71d5-55d4-4c65-9406-5d8fc2c854d3
+                            - _id: df42dfb0-738a-4b61-a378-0bec0f75ccc4
                               type: flex
                               slots:
                                 flexItem:
-                                  - _id: >-
-                                      32d45979-f7ec-420e-94f3-5ab8a08165d2|c4e468fe-b6cf-4497-8c14-bde24a0e35b8
+                                  - _id: 1569024c-4544-4a73-8099-e8c5ce62973f
                                     type: entriesSearchBox
                                     parameters:
                                       size:
@@ -85,8 +84,7 @@ composition:
                                     _overridability:
                                       parameters:
                                         placeholder: 'yes'
-                                  - _id: >-
-                                      32d45979-f7ec-420e-94f3-5ab8a08165d2|a5856bb3-2393-45b6-92cb-086bd265427a
+                                  - _id: 9efd4b07-75f1-4cec-bf16-56f4d38482c8
                                     type: entriesSearchFilters
                                     parameters:
                                       title:
@@ -122,11 +120,11 @@ composition:
                                 justifyContent:
                                   type: dex-segmented-control-parameter
                                   value: {}
-                            - _id: 29f72a8c-7de0-42b2-97fe-681a3e755c72
+                            - _id: 850a6b1e-e4a2-4e78-afc1-7fdcfe9e71db
                               type: flex
                               slots:
                                 flexItem:
-                                  - _id: 3e358a32-2ed8-46de-a856-f353b5ff706a
+                                  - _id: 594af3fc-273b-4967-a4a6-613b009c4414
                                     type: divider
                                     parameters:
                                       color:
@@ -141,7 +139,7 @@ composition:
                                       thickness:
                                         type: dex-slider-control-parameter
                                         value: 1px
-                                  - _id: 26f1cf9f-e132-465a-8f2e-9397689f0625
+                                  - _id: 709aa625-3ddb-488d-ab83-a419c62158f9
                                     type: text
                                     parameters:
                                       tag:
@@ -164,8 +162,7 @@ composition:
                                       weight:
                                         type: dex-segmented-control-parameter
                                         value: bold
-                                  - _id: >-
-                                      32d45979-f7ec-420e-94f3-5ab8a08165d2|166b3e64-f887-4535-99c7-38829cfe7f1e
+                                  - _id: 146136f8-3530-4b64-b4f5-8b314e8f354e
                                     type: entriesSearchList
                                     parameters:
                                       border:
@@ -234,8 +231,7 @@ composition:
                     orderBy:
                       type: $block
                       value:
-                        - _id: >-
-                            32d45979-f7ec-420e-94f3-5ab8a08165d2|2a53ef92-66ce-4c25-96b0-33ddf6ade010
+                        - _id: 4411eb50-6548-455a-b7ea-9a347de54009
                           type: orderBy
                           fields:
                             field:
@@ -247,8 +243,7 @@ composition:
                             direction:
                               type: select
                               value: DESC
-                        - _id: >-
-                            32d45979-f7ec-420e-94f3-5ab8a08165d2|452e6eab-9055-4bc5-b3bb-2885ed788653
+                        - _id: 37e05459-0e0c-4a65-bd4b-c222558436d3
                           type: orderBy
                           fields:
                             field:
@@ -260,8 +255,7 @@ composition:
                             direction:
                               type: select
                               value: ASC
-                        - _id: >-
-                            32d45979-f7ec-420e-94f3-5ab8a08165d2|1e2086c5-ee74-4edc-8e79-8856678d86d1
+                        - _id: 2475922e-6645-42a5-9434-7cc8f0d2d45d
                           type: orderBy
                           fields:
                             field:
@@ -276,8 +270,7 @@ composition:
                     filterBy:
                       type: $block
                       value:
-                        - _id: >-
-                            32d45979-f7ec-420e-94f3-5ab8a08165d2|87dea12d-bc3b-4b7d-8b46-5b64f15d4654
+                        - _id: 0595e50d-c492-47c7-960d-c3f6930d5550
                           type: filterBy
                           fields:
                             type:
@@ -290,15 +283,13 @@ composition:
                             values:
                               type: $block
                               value:
-                                - _id: >-
-                                    32d45979-f7ec-420e-94f3-5ab8a08165d2|18213ddb-3069-427c-b8f3-93a0189f84b2
+                                - _id: 7f5270e1-49e9-4e8d-8794-d77acafc56fc
                                   type: $loop
                                   fields:
                                     body:
                                       type: $block
                                       value:
-                                        - _id: >-
-                                            32d45979-f7ec-420e-94f3-5ab8a08165d2|7e04ec3f-7366-417b-ac04-9fafbd9df852
+                                        - _id: 5462ba45-714f-4e65-a759-875bc367f2af
                                           type: filterByItem
                                           fields:
                                             title:
@@ -327,7 +318,7 @@ composition:
                             enableFaceting:
                               type: checkbox
                               value: true
-                        - _id: 53a2ec62-150d-4576-9c23-4e83e7728092
+                        - _id: ef154589-c7bd-4856-8505-5fe1232bd0d9
                           type: filterBy
                           fields:
                             type:
@@ -340,13 +331,13 @@ composition:
                             values:
                               type: $block
                               value:
-                                - _id: ba83e86c-cf58-4500-9a58-b686a76a3c91
+                                - _id: 3defd17e-b1c3-44f6-8b02-2c912c8fa6d9
                                   type: $loop
                                   fields:
                                     body:
                                       type: $block
                                       value:
-                                        - _id: 415f315e-330a-46bb-8f8e-11c9ada865b1
+                                        - _id: e799e51e-f261-4b66-9e05-e3a8f8fb868a
                                           type: filterByItem
                                           fields:
                                             title:
@@ -375,7 +366,7 @@ composition:
                             enableFaceting:
                               type: checkbox
                               value: true
-                        - _id: 88a93760-03dd-4c01-a09b-8c3597342168
+                        - _id: af748d51-dc9e-4f28-bc1a-742f29339435
                           type: filterBy
                           fields:
                             type:
@@ -388,7 +379,7 @@ composition:
                             values:
                               type: $block
                               value:
-                                - _id: a034cb58-475d-44de-bd20-2c8e4c6ca523
+                                - _id: 8e49d07e-7781-48c6-89b9-5196ef89745e
                                   type: filterByItem
                                   fields:
                                     title:
@@ -397,7 +388,7 @@ composition:
                                     value:
                                       type: text
                                       value: preview
-                                - _id: 96c4e1cf-75fe-4297-ad4e-eedc2d624a70
+                                - _id: 64799ca6-24b4-4ca7-9ed1-dda8482da60e
                                   type: filterByItem
                                   fields:
                                     title:
@@ -406,7 +397,7 @@ composition:
                                     value:
                                       type: text
                                       value: production
-                                - _id: 4aef8b5b-20b5-4914-acfa-5b3a9dd7ac07
+                                - _id: a80bd39b-770c-4415-8861-55f9edd4056a
                                   type: filterByItem
                                   fields:
                                     title:
@@ -415,7 +406,7 @@ composition:
                                     value:
                                       type: text
                                       value: not-recommended-for-new-designs
-                                - _id: 005ba270-2636-4926-bb0c-bf5ab1183f5b
+                                - _id: 34a18f21-e20c-4f74-a7bd-8cc3ad01af47
                                   type: filterByItem
                                   fields:
                                     title:
@@ -433,7 +424,7 @@ composition:
                             enableFaceting:
                               type: checkbox
                               value: true
-                        - _id: 4bc69b08-e2be-44ed-a1d6-2607379cc23b
+                        - _id: 244ec9dc-dcd9-4b2e-a9d7-6d2190e9bbcf
                           type: filterBy
                           fields:
                             type:
@@ -446,7 +437,7 @@ composition:
                             values:
                               type: $block
                               value:
-                                - _id: cf0d4af6-47b6-4986-9c32-6103826f5307
+                                - _id: c9408c70-9286-4e7b-bbff-ef71bcedce4f
                                   type: filterByItem
                                   fields:
                                     title:
@@ -455,7 +446,7 @@ composition:
                                     value:
                                       type: text
                                       value: 'yes'
-                                - _id: d6ebab4f-e313-466a-a28b-9485f2a9d568
+                                - _id: 70446efa-0c10-4f0a-916f-ebdd32e4ee74
                                   type: filterByItem
                                   fields:
                                     title:
@@ -473,7 +464,7 @@ composition:
                             enableFaceting:
                               type: checkbox
                               value: true
-                        - _id: d2eef10e-d2f3-46b9-880d-5dd21695274b
+                        - _id: bb090cf2-f86c-43aa-86ff-f17ed2a3b125
                           type: filterBy
                           fields:
                             type:
@@ -486,7 +477,7 @@ composition:
                             values:
                               type: $block
                               value:
-                                - _id: e3d523aa-27b2-43b9-ad0c-99864e595244
+                                - _id: 56ca0c3a-6bbd-4272-be5d-5709a910cb61
                                   type: filterByItem
                                   fields:
                                     title:
@@ -495,7 +486,7 @@ composition:
                                     value:
                                       type: text
                                       value: 'Yes'
-                                - _id: 9a45ab9b-06e2-42e7-bc39-2c04953b9e96
+                                - _id: e9bf0cb5-ad47-4d68-a185-a594fb8cbba9
                                   type: filterByItem
                                   fields:
                                     title:
@@ -504,7 +495,7 @@ composition:
                                     value:
                                       type: text
                                       value: 'No'
-                                - _id: 7efda3b9-2783-446e-9470-13adeb45a987
+                                - _id: 34b73861-4332-410e-a185-63a8d7499a3b
                                   type: filterByItem
                                   fields:
                                     title:
@@ -522,7 +513,7 @@ composition:
                             enableFaceting:
                               type: checkbox
                               value: true
-                        - _id: 543c1fab-30b9-433a-9f9d-ecdde1dfa0f2
+                        - _id: 4d3b1984-adc1-4531-8aa6-cef7581cd6ef
                           type: filterBy
                           fields:
                             type:
@@ -535,7 +526,7 @@ composition:
                             values:
                               type: $block
                               value:
-                                - _id: 6bed1e2e-21a4-49c5-aa82-be5c23e7b903
+                                - _id: b58e04eb-ddad-4f07-8e90-baa502397a7e
                                   type: filterByItem
                                   fields:
                                     title:
@@ -544,7 +535,7 @@ composition:
                                     value:
                                       type: text
                                       value: 'yes'
-                                - _id: 2895f1b2-417c-4702-9082-53eb86ddc915
+                                - _id: d1d1d989-83b5-4fb3-9cbb-6ed68d243f8b
                                   type: filterByItem
                                   fields:
                                     title:
@@ -553,7 +544,7 @@ composition:
                                     value:
                                       type: text
                                       value: 'no'
-                                - _id: f1df582a-0c1d-43ed-b0fb-41edafc8765a
+                                - _id: a411109f-064c-4136-adb2-90c4a6c02fd8
                                   type: filterByItem
                                   fields:
                                     title:
@@ -574,8 +565,7 @@ composition:
                     pageSizes:
                       type: $block
                       value:
-                        - _id: >-
-                            32d45979-f7ec-420e-94f3-5ab8a08165d2|54840be6-ad8c-4c8d-a9e9-d2817796ec78
+                        - _id: df83bf40-11ba-4ea3-b463-607a8356b94d
                           type: pageSize
                           fields:
                             size:
@@ -613,8 +603,8 @@ composition:
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-05-12T08:15:26.330107+00:00'
-modified: '2025-05-12T14:45:13.257964+00:00'
+created: '2025-05-09T06:33:49.800905+00:00'
+modified: '2025-05-12T16:19:55.97539+00:00'
 pattern: false
 workflowId: 709029a9-419a-4f6b-891f-427729e3c4df
 workflowStageId: a3b17d73-0198-4734-8c5e-71f898d6d4fe
