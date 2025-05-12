@@ -54,7 +54,7 @@ composition:
                                 value: f6ed6e9a-59e8-4f31-9c3d-e27824385b7a
                               url:
                                 value: >-
-                                  https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/Kq3HO2jFS4CIfk9ZLC64RA-image.png
+                                  https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/nD1HpmtwTR69A-MspqkQag-image.png
                                 type: text
                               file:
                                 type: file
@@ -112,7 +112,9 @@ composition:
           displayName:
             type: text
             locales:
+              cn: Logo Mock
               en: Logo Mock
+              jp: Logo Mock
           fluidContent:
             type: checkbox
             value: true
@@ -132,7 +134,21 @@ composition:
           baseLink:
             type: link
             locales:
+              cn:
+                path: /${locale}/search
+                type: projectMapNode
+                nodeId: d80fa5bd-766c-4335-868a-65879765b52f
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
               en:
+                path: /${locale}/search
+                type: projectMapNode
+                nodeId: d80fa5bd-766c-4335-868a-65879765b52f
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              jp:
                 path: /${locale}/search
                 type: projectMapNode
                 nodeId: d80fa5bd-766c-4335-868a-65879765b52f
@@ -142,7 +158,9 @@ composition:
           partNumberPlaceholder:
             type: text
             locales:
+              cn: Enter Keyword or Part Number
               en: Enter Keyword or Part Number
+              jp: Enter Keyword or Part Number
         _overridability:
           hideLockedParameters: true
     headerCenterContent:
@@ -175,7 +193,7 @@ composition:
                                       value: b4200198-203c-44cc-889b-cc7d2ed2b3f4
                                     url:
                                       value: >-
-                                        https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/yu69VGttQCa89LmrCTMoJg-image.png
+                                        https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/KKsEPWpFSyWPurPbQCRjqA-image.png
                                       type: text
                                     file:
                                       type: file
@@ -216,7 +234,13 @@ composition:
                             text:
                               type: text
                               locales:
+                                cn: >-
+                                  Explore the latest additions to our product
+                                  portfolio.
                                 en: >-
+                                  Explore the latest additions to our product
+                                  portfolio.
+                                jp: >-
                                   Explore the latest additions to our product
                                   portfolio.
                           _overridability:
@@ -243,7 +267,9 @@ composition:
                       displayName:
                         type: text
                         locales:
+                          cn: 'New Products '
                           en: 'New Products '
+                          jp: 'New Products '
                       justifyContent:
                         type: dex-segmented-control-parameter
                         value: {}
@@ -262,6 +288,36 @@ composition:
                         icon:
                           type: asset
                           locales:
+                            cn:
+                              - _id: 030b48c3-2bbc-4851-b6f2-b47f13d456a5
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 6de4e2e3-15ae-4529-b75f-c1118f75f344
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/tOWaOF7yTHycb-NicTn_0Q-products.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: ea5237c8-3712-4893-b2b3-e775d8a095ec
+                                  size:
+                                    value: 615
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: products.svg
+                                  width:
+                                    value: 1024
+                                    type: number
+                                  height:
+                                    value: 1024
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
                             en:
                               - _id: 030b48c3-2bbc-4851-b6f2-b47f13d456a5
                                 type: image
@@ -271,7 +327,37 @@ composition:
                                     value: 6de4e2e3-15ae-4529-b75f-c1118f75f344
                                   url:
                                     value: >-
-                                      https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/jTdtJYJ6T3SRUWaEMRdXEA-products.svg
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/tOWaOF7yTHycb-NicTn_0Q-products.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: ea5237c8-3712-4893-b2b3-e775d8a095ec
+                                  size:
+                                    value: 615
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: products.svg
+                                  width:
+                                    value: 1024
+                                    type: number
+                                  height:
+                                    value: 1024
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
+                            jp:
+                              - _id: 030b48c3-2bbc-4851-b6f2-b47f13d456a5
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 6de4e2e3-15ae-4529-b75f-c1118f75f344
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/tOWaOF7yTHycb-NicTn_0Q-products.svg
                                     type: text
                                   file:
                                     type: file
@@ -296,7 +382,9 @@ composition:
                         title:
                           type: text
                           locales:
+                            cn: Products
                             en: Products
+                            jp: Products
                         children:
                           type: $block
                           value:
@@ -306,7 +394,9 @@ composition:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Active Antenna Systems
                                     en: Active Antenna Systems
+                                    jp: Active Antenna Systems
                                 children:
                                   type: $block
                                   value:
@@ -316,39 +406,63 @@ composition:
                                         link:
                                           type: link
                                           locales:
+                                            cn:
+                                              path: >-
+                                                https://www.qorvo.com/products/active-antenna-systems/beamformers
+                                              type: url
                                             en:
+                                              path: >-
+                                                https://www.qorvo.com/products/active-antenna-systems/beamformers
+                                              type: url
+                                            jp:
                                               path: >-
                                                 https://www.qorvo.com/products/active-antenna-systems/beamformers
                                               type: url
                                         title:
                                           type: text
                                           locales:
+                                            cn: Beamformers
                                             en: Beamformers
+                                            jp: Beamformers
                                     - _id: be693d1b-a36f-4372-b544-f117c5a83a03
                                       type: megaMenuLink
                                       fields:
                                         link:
                                           type: link
                                           locales:
+                                            cn:
+                                              path: >-
+                                                https://www.qorvo.com/products/active-antenna-systems/front-end-modules
+                                              type: url
                                             en:
+                                              path: >-
+                                                https://www.qorvo.com/products/active-antenna-systems/front-end-modules
+                                              type: url
+                                            jp:
                                               path: >-
                                                 https://www.qorvo.com/products/active-antenna-systems/front-end-modules
                                               type: url
                                         title:
                                           type: text
                                           locales:
+                                            cn: Front End Modules
                                             en: Front End Modules
+                                            jp: Front End Modules
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Active Antenna Systems
                                     en: Go to Active Antenna Systems
+                                    jp: Go to Active Antenna Systems
                             - _id: 5b7bb50d-e311-4291-af24-714101c0e72a
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Amplifiers
                                     en: Amplifiers
+                                    jp: Amplifiers
                                 children:
                                   type: $block
                                   value:
@@ -358,39 +472,51 @@ composition:
                                         title:
                                           type: text
                                           locales:
+                                            cn: CATV Amplifiers
                                             en: CATV Amplifiers
+                                            jp: CATV Amplifiers
                                     - _id: 2edfa054-6435-4ad9-a12a-84f9f87d2a01
                                       type: megaMenuLink
                                       fields:
                                         title:
                                           type: text
                                           locales:
+                                            cn: Distributed Amplifiers
                                             en: Distributed Amplifiers
+                                            jp: Distributed Amplifiers
                                     - _id: 3af546e4-e49e-4ae8-b2a2-e39b5ed81df8
                                       type: megaMenuLink
                                       fields:
                                         title:
                                           type: text
                                           locales:
+                                            cn: Driver Amplifiers (< 3 W)
                                             en: Driver Amplifiers (< 3 W)
+                                            jp: Driver Amplifiers (< 3 W)
                                     - _id: e87600cb-8811-4889-9bff-d388ca146890
                                       type: megaMenuLink
                                       fields:
                                         title:
                                           type: text
                                           locales:
+                                            cn: Gain Block Amplifiers
                                             en: Gain Block Amplifiers
+                                            jp: Gain Block Amplifiers
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Amplifiers
                                     en: Go to Amplifiers
+                                    jp: Go to Amplifiers
                             - _id: eec0ea88-f7ca-4f43-810d-1942629efe5e
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Control Products
                                     en: Control Products
+                                    jp: Control Products
                                 children:
                                   type: $block
                                   value:
@@ -400,101 +526,165 @@ composition:
                                         title:
                                           type: text
                                           locales:
+                                            cn: Attenuators
                                             en: Attenuators
+                                            jp: Attenuators
                                     - _id: aa3fc80d-beae-4c89-8301-04eacdd87be9
                                       type: megaMenuLink
                                       fields:
                                         title:
                                           type: text
                                           locales:
+                                            cn: Limiters
                                             en: Limiters
+                                            jp: Limiters
                                     - _id: 033228e7-183e-4770-add9-02d5d202b111
                                       type: megaMenuLink
                                       fields:
                                         title:
                                           type: text
                                           locales:
+                                            cn: Phase Shifters
                                             en: Phase Shifters
+                                            jp: Phase Shifters
                                     - _id: a77e6802-5b3f-4f6c-a749-d94b05508221
                                       type: megaMenuLink
                                       fields:
                                         title:
                                           type: text
                                           locales:
+                                            cn: Programmable Capacitor Arrays
                                             en: Programmable Capacitor Arrays
+                                            jp: Programmable Capacitor Arrays
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Control Products
                                     en: Go to Control Products
+                                    jp: Go to Control Products
                             - _id: 8cc1b89a-ed64-4c40-890a-7d4906ecd7a0
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Discrete Transistors
                                     en: Discrete Transistors
+                                    jp: Discrete Transistors
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Discrete Transistors
                                     en: Go to Discrete Transistors
+                                    jp: Go to Discrete Transistors
                             - _id: c64fa810-d181-4152-95a1-71ede987d6ce
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Discrete Transistors
                                     en: Discrete Transistors
+                                    jp: Discrete Transistors
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Discrete Transistors
                                     en: Go to Discrete Transistors
+                                    jp: Go to Discrete Transistors
                             - _id: b7b02ddd-43dd-46fb-888f-c8eb54a7c5b7
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Discrete Transistors
                                     en: Discrete Transistors
+                                    jp: Discrete Transistors
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Discrete Transistors
                                     en: Go to Discrete Transistors
+                                    jp: Go to Discrete Transistors
                             - _id: 45907657-ec58-4be9-bd03-86b5bf70b86a
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Filters & Duplexers
                                     en: Filters & Duplexers
+                                    jp: Filters & Duplexers
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Filters & Duplexers
                                     en: Go to Filters & Duplexers
+                                    jp: Go to Filters & Duplexers
                             - _id: e9431818-6039-4221-bfa8-dfceebb59a9b
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Frequency Converters & Sources
                                     en: Frequency Converters & Sources
+                                    jp: Frequency Converters & Sources
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Frequency Converters & Sources
                                     en: Go to Frequency Converters & Sources
+                                    jp: Go to Frequency Converters & Sources
                             - _id: 33032c5a-0772-4e4c-aca8-b756146c54ff
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Integrated Products
                                     en: Integrated Products
+                                    jp: Integrated Products
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Integrated Products
                                     en: Go to Integrated Products
+                                    jp: Go to Integrated Products
                         hoverIcon:
                           type: asset
                           locales:
+                            cn:
+                              - _id: 69e8373d-85d3-429b-b078-be127eb23ec2
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 991b6063-b6a9-4f44-b4dd-843fc3eb5587
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/NODdxohYSS6cknw0ju24KA-products-1.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: f4e28573-256b-40a6-8f0d-d45d949147b3
+                                  size:
+                                    value: 615
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: products-1.svg
+                                  width:
+                                    value: 1024
+                                    type: number
+                                  height:
+                                    value: 1024
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
                             en:
                               - _id: 69e8373d-85d3-429b-b078-be127eb23ec2
                                 type: image
@@ -504,7 +694,37 @@ composition:
                                     value: 991b6063-b6a9-4f44-b4dd-843fc3eb5587
                                   url:
                                     value: >-
-                                      https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/qtL47Le8T56iWvcscI_sRQ-products-1.svg
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/NODdxohYSS6cknw0ju24KA-products-1.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: f4e28573-256b-40a6-8f0d-d45d949147b3
+                                  size:
+                                    value: 615
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: products-1.svg
+                                  width:
+                                    value: 1024
+                                    type: number
+                                  height:
+                                    value: 1024
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
+                            jp:
+                              - _id: 69e8373d-85d3-429b-b078-be127eb23ec2
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 991b6063-b6a9-4f44-b4dd-843fc3eb5587
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/NODdxohYSS6cknw0ju24KA-products-1.svg
                                     type: text
                                   file:
                                     type: file
@@ -529,13 +749,45 @@ composition:
                         sectionTitle:
                           type: text
                           locales:
+                            cn: Go to Products
                             en: Go to Products
+                            jp: Go to Products
                     - _id: 4b096318-ad1c-4817-aa28-c26835924d89
                       type: megaMenuLink
                       fields:
                         icon:
                           type: asset
                           locales:
+                            cn:
+                              - _id: 8a1ed0f4-5821-439b-8fd9-5b51f9197b77
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 29a85709-8e88-4c42-beeb-6631b04b84f1
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/AVe8BmUOQ_2zEWSbC_wRhA-applications.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: 643232c0-d6bc-4555-9c24-29f6bfb30a82
+                                  size:
+                                    value: 1061
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: applications.svg
+                                  width:
+                                    value: 1022
+                                    type: number
+                                  height:
+                                    value: 863
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
                             en:
                               - _id: 8a1ed0f4-5821-439b-8fd9-5b51f9197b77
                                 type: image
@@ -545,7 +797,37 @@ composition:
                                     value: 29a85709-8e88-4c42-beeb-6631b04b84f1
                                   url:
                                     value: >-
-                                      https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/_bqnL4LzQaWKqkZFJB1S_Q-applications.svg
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/AVe8BmUOQ_2zEWSbC_wRhA-applications.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: 643232c0-d6bc-4555-9c24-29f6bfb30a82
+                                  size:
+                                    value: 1061
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: applications.svg
+                                  width:
+                                    value: 1022
+                                    type: number
+                                  height:
+                                    value: 863
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
+                            jp:
+                              - _id: 8a1ed0f4-5821-439b-8fd9-5b51f9197b77
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 29a85709-8e88-4c42-beeb-6631b04b84f1
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/AVe8BmUOQ_2zEWSbC_wRhA-applications.svg
                                     type: text
                                   file:
                                     type: file
@@ -570,7 +852,9 @@ composition:
                         title:
                           type: text
                           locales:
+                            cn: Applications
                             en: Applications
+                            jp: Applications
                         children:
                           type: $block
                           value:
@@ -580,7 +864,9 @@ composition:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Automotive
                                     en: Automotive
+                                    jp: Automotive
                                 children:
                                   type: $block
                                   value:
@@ -590,87 +876,153 @@ composition:
                                         link:
                                           type: link
                                           locales:
+                                            cn:
+                                              path: >-
+                                                https://www.qorvo.com/applications/automotive/antennas
+                                              type: url
                                             en:
+                                              path: >-
+                                                https://www.qorvo.com/applications/automotive/antennas
+                                              type: url
+                                            jp:
                                               path: >-
                                                 https://www.qorvo.com/applications/automotive/antennas
                                               type: url
                                         title:
                                           type: text
                                           locales:
+                                            cn: Automotive Antennas
                                             en: Automotive Antennas
+                                            jp: Automotive Antennas
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Automotive
                                     en: Go to Automotive
+                                    jp: Go to Automotive
                             - _id: 540f3c84-6929-45cc-944a-deed2c7f1cc2
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Consumer Goods & Electronics
                                     en: Consumer Goods & Electronics
+                                    jp: Consumer Goods & Electronics
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Consumer Goods & Electronics
                                     en: Go to Consumer Goods & Electronics
+                                    jp: Go to Consumer Goods & Electronics
                             - _id: 9d0de960-ea5a-4a11-a47b-d3d61ef4d831
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Customer Premises Equipment
                                     en: Customer Premises Equipment
+                                    jp: Customer Premises Equipment
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Customer Premises Equipment
                                     en: Go to Customer Premises Equipment
+                                    jp: Go to Customer Premises Equipment
                             - _id: dac92b6e-9011-49f6-8683-05a05dcc4e0e
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Defense and Aerospace
                                     en: Defense and Aerospace
+                                    jp: Defense and Aerospace
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Defense and Aerospace
                                     en: Go to Defense and Aerospace
+                                    jp: Go to Defense and Aerospace
                             - _id: 34f84719-3933-4005-9d5c-0bebc321595a
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Industrial
                                     en: Industrial
+                                    jp: Industrial
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Industrial
                                     en: Go to Industrial
+                                    jp: Go to Industrial
                             - _id: 5eb8a49c-0d96-4edc-8925-9fe0826e878b
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Information Technology
                                     en: Information Technology
+                                    jp: Information Technology
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Information Technology
                                     en: Go to Information Technology
+                                    jp: Go to Information Technology
                             - _id: 6500b3f5-7f76-4a45-865b-c49b20f80b69
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Internet of Things
                                     en: Internet of Things
+                                    jp: Internet of Things
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Internet of Things
                                     en: Go to Internet of Things
+                                    jp: Go to Internet of Things
                         hoverIcon:
                           type: asset
                           locales:
+                            cn:
+                              - _id: b604c3c9-261b-4f19-a8ef-1998f6eb6ede
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: eca13de7-0351-4959-a754-acb6e052fb1c
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/R_BcTGI6QkKjrjXagkkcAA-applications-1.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: 28ac1131-bf63-411c-bf50-56a55c064717
+                                  size:
+                                    value: 1061
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: applications-1.svg
+                                  width:
+                                    value: 1022
+                                    type: number
+                                  height:
+                                    value: 863
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
                             en:
                               - _id: b604c3c9-261b-4f19-a8ef-1998f6eb6ede
                                 type: image
@@ -680,7 +1032,37 @@ composition:
                                     value: eca13de7-0351-4959-a754-acb6e052fb1c
                                   url:
                                     value: >-
-                                      https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/CxtROVmOQ72FYfio5RHg_A-applications-1.svg
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/R_BcTGI6QkKjrjXagkkcAA-applications-1.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: 28ac1131-bf63-411c-bf50-56a55c064717
+                                  size:
+                                    value: 1061
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: applications-1.svg
+                                  width:
+                                    value: 1022
+                                    type: number
+                                  height:
+                                    value: 863
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
+                            jp:
+                              - _id: b604c3c9-261b-4f19-a8ef-1998f6eb6ede
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: eca13de7-0351-4959-a754-acb6e052fb1c
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/R_BcTGI6QkKjrjXagkkcAA-applications-1.svg
                                     type: text
                                   file:
                                     type: file
@@ -705,13 +1087,45 @@ composition:
                         sectionTitle:
                           type: text
                           locales:
+                            cn: Go to Applications
                             en: Go to Applications
+                            jp: Go to Applications
                     - _id: b5ce39da-2912-4e51-bc75-c5a9df1cd969
                       type: megaMenuLink
                       fields:
                         icon:
                           type: asset
                           locales:
+                            cn:
+                              - _id: aaea793f-bca4-4678-99ea-382f9562ad82
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: c7e81be8-eae4-489f-a0ce-32eb183e732c
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/aVZlEaZbR1S43-puCAhOwg-foundary.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: b72260fb-1b90-4c09-8901-95b829fb3584
+                                  size:
+                                    value: 2635
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: foundary.svg
+                                  width:
+                                    value: 1007
+                                    type: number
+                                  height:
+                                    value: 1008
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
                             en:
                               - _id: aaea793f-bca4-4678-99ea-382f9562ad82
                                 type: image
@@ -721,7 +1135,37 @@ composition:
                                     value: c7e81be8-eae4-489f-a0ce-32eb183e732c
                                   url:
                                     value: >-
-                                      https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/_ec1T84cTFudfadj0UmyjQ-foundary.svg
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/aVZlEaZbR1S43-puCAhOwg-foundary.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: b72260fb-1b90-4c09-8901-95b829fb3584
+                                  size:
+                                    value: 2635
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: foundary.svg
+                                  width:
+                                    value: 1007
+                                    type: number
+                                  height:
+                                    value: 1008
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
+                            jp:
+                              - _id: aaea793f-bca4-4678-99ea-382f9562ad82
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: c7e81be8-eae4-489f-a0ce-32eb183e732c
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/aVZlEaZbR1S43-puCAhOwg-foundary.svg
                                     type: text
                                   file:
                                     type: file
@@ -746,7 +1190,9 @@ composition:
                         title:
                           type: text
                           locales:
+                            cn: Foundry
                             en: Foundry
+                            jp: Foundry
                         children:
                           type: $block
                           value:
@@ -756,69 +1202,123 @@ composition:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Simulation Tools
                                     en: Simulation Tools
+                                    jp: Simulation Tools
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Simulation Tools
                                     en: Go to Simulation Tools
+                                    jp: Go to Simulation Tools
                             - _id: 415b8a22-ef4e-49d1-8130-96e6f0c9432f
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Process Technologies
                                     en: Process Technologies
+                                    jp: Process Technologies
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Process Technologies
                                     en: Go to Process Technologies
+                                    jp: Go to Process Technologies
                             - _id: 4f116a71-c5e9-49fe-bac0-932e1eef630b
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Packaging & Assembly
                                     en: Packaging & Assembly
+                                    jp: Packaging & Assembly
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Packaging & Assembly
                                     en: Go to Packaging & Assembly
+                                    jp: Go to Packaging & Assembly
                             - _id: a3c7f570-93fb-4801-a0ef-8ca1ea965fd8
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Design Kits & PDKs
                                     en: Design Kits & PDKs
+                                    jp: Design Kits & PDKs
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Design Kits & PDKs
                                     en: Go to Design Kits & PDKs
+                                    jp: Go to Design Kits & PDKs
                             - _id: cc6db6c8-8dbe-4b7f-8577-9ebb66fa267e
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Foundry Services Overview
                                     en: Foundry Services Overview
+                                    jp: Foundry Services Overview
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Foundry Services Overview
                                     en: Go to Foundry Services Overview
+                                    jp: Go to Foundry Services Overview
                             - _id: b8cf7644-b26f-48dc-9cd4-e17f1c1756b0
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Technical Documentation
                                     en: Technical Documentation
+                                    jp: Technical Documentation
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Technical Documentation
                                     en: Go to Technical Documentation
+                                    jp: Go to Technical Documentation
                         hoverIcon:
                           type: asset
                           locales:
+                            cn:
+                              - _id: 1f8cc925-129b-44da-9591-c72f104b212c
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: e5cf0386-b1b3-4b26-af6d-5eb5789ea748
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/CcU1zV9_SISqwWHUzcKsTQ-foundary-1.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: bf40e486-cfc2-4fae-901f-becb21c7e4ad
+                                  size:
+                                    value: 2635
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: foundary-1.svg
+                                  width:
+                                    value: 1007
+                                    type: number
+                                  height:
+                                    value: 1008
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
                             en:
                               - _id: 1f8cc925-129b-44da-9591-c72f104b212c
                                 type: image
@@ -828,7 +1328,37 @@ composition:
                                     value: e5cf0386-b1b3-4b26-af6d-5eb5789ea748
                                   url:
                                     value: >-
-                                      https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/RBmIXdENRgKFH0qn2FnugA-foundary-1.svg
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/CcU1zV9_SISqwWHUzcKsTQ-foundary-1.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: bf40e486-cfc2-4fae-901f-becb21c7e4ad
+                                  size:
+                                    value: 2635
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: foundary-1.svg
+                                  width:
+                                    value: 1007
+                                    type: number
+                                  height:
+                                    value: 1008
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
+                            jp:
+                              - _id: 1f8cc925-129b-44da-9591-c72f104b212c
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: e5cf0386-b1b3-4b26-af6d-5eb5789ea748
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/CcU1zV9_SISqwWHUzcKsTQ-foundary-1.svg
                                     type: text
                                   file:
                                     type: file
@@ -853,13 +1383,45 @@ composition:
                         sectionTitle:
                           type: text
                           locales:
+                            cn: Go to Foundry
                             en: Go to Foundry
+                            jp: Go to Foundry
                     - _id: 293fb6e3-15bd-4a2f-b40e-662ff4514f9a
                       type: megaMenuLink
                       fields:
                         icon:
                           type: asset
                           locales:
+                            cn:
+                              - _id: 97223e9f-9f78-497a-a688-badd4963bddc
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 128cb6f2-edf2-4af1-952b-08ec7529968e
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/OEVK2ZnYQ46p506XlqO0tQ-design-hub.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: 2790c7ba-6105-4478-90a3-76beddab4a00
+                                  size:
+                                    value: 275
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: design-hub.svg
+                                  width:
+                                    value: 1024
+                                    type: number
+                                  height:
+                                    value: 1024
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
                             en:
                               - _id: 97223e9f-9f78-497a-a688-badd4963bddc
                                 type: image
@@ -869,7 +1431,37 @@ composition:
                                     value: 128cb6f2-edf2-4af1-952b-08ec7529968e
                                   url:
                                     value: >-
-                                      https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/LOzvhBZ7Qsa7h-apqpOrSw-design-hub.svg
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/OEVK2ZnYQ46p506XlqO0tQ-design-hub.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: 2790c7ba-6105-4478-90a3-76beddab4a00
+                                  size:
+                                    value: 275
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: design-hub.svg
+                                  width:
+                                    value: 1024
+                                    type: number
+                                  height:
+                                    value: 1024
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
+                            jp:
+                              - _id: 97223e9f-9f78-497a-a688-badd4963bddc
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 128cb6f2-edf2-4af1-952b-08ec7529968e
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/OEVK2ZnYQ46p506XlqO0tQ-design-hub.svg
                                     type: text
                                   file:
                                     type: file
@@ -894,7 +1486,9 @@ composition:
                         title:
                           type: text
                           locales:
+                            cn: Design Hub
                             en: Design Hub
+                            jp: Design Hub
                         children:
                           type: $block
                           value:
@@ -904,69 +1498,123 @@ composition:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Block Diagrams
                                     en: Block Diagrams
+                                    jp: Block Diagrams
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Block Diagrams
                                     en: Go to Block Diagrams
+                                    jp: Go to Block Diagrams
                             - _id: 51753e1c-2c73-468a-af44-c5c578cd11ce
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Design Tools
                                     en: Design Tools
+                                    jp: Design Tools
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Design Tools
                                     en: Go to Design Tools
+                                    jp: Go to Design Tools
                             - _id: 71968237-fb9e-4312-adb5-3e0f9cd19f72
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Blog
                                     en: Blog
+                                    jp: Blog
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Blog
                                     en: Go to Blog
+                                    jp: Go to Blog
                             - _id: b16f7ca0-e0a1-471d-ba29-44a2aa4609e4
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Brochures
                                     en: Brochures
+                                    jp: Brochures
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Brochures
                                     en: Go to Brochures
+                                    jp: Go to Brochures
                             - _id: beb02ce8-b887-4983-959e-9a980ea14ac5
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Infographics
                                     en: Infographics
+                                    jp: Infographics
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Infographics
                                     en: Go to Infographics
+                                    jp: Go to Infographics
                             - _id: 9b270681-65e3-4f40-b677-b68df51df314
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: E-Books
                                     en: E-Books
+                                    jp: E-Books
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to E-Books
                                     en: Go to E-Books
+                                    jp: Go to E-Books
                         hoverIcon:
                           type: asset
                           locales:
+                            cn:
+                              - _id: dd3b0812-e682-4d94-8e0a-e4e4c9217afe
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 8f19e58c-81ab-4bc9-a4fc-2f99f1580e50
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/-8VjdycoRY62YzBmCH2-kg-design-hub-1.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: 5733d146-1c7e-481d-9d23-d4ed961b66e6
+                                  size:
+                                    value: 275
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: design-hub-1.svg
+                                  width:
+                                    value: 1024
+                                    type: number
+                                  height:
+                                    value: 1024
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
                             en:
                               - _id: dd3b0812-e682-4d94-8e0a-e4e4c9217afe
                                 type: image
@@ -976,7 +1624,37 @@ composition:
                                     value: 8f19e58c-81ab-4bc9-a4fc-2f99f1580e50
                                   url:
                                     value: >-
-                                      https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/DJlAAMo5Q-6eotY_lPEmrg-design-hub-1.svg
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/-8VjdycoRY62YzBmCH2-kg-design-hub-1.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: 5733d146-1c7e-481d-9d23-d4ed961b66e6
+                                  size:
+                                    value: 275
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: design-hub-1.svg
+                                  width:
+                                    value: 1024
+                                    type: number
+                                  height:
+                                    value: 1024
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
+                            jp:
+                              - _id: dd3b0812-e682-4d94-8e0a-e4e4c9217afe
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 8f19e58c-81ab-4bc9-a4fc-2f99f1580e50
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/-8VjdycoRY62YzBmCH2-kg-design-hub-1.svg
                                     type: text
                                   file:
                                     type: file
@@ -1001,13 +1679,45 @@ composition:
                         sectionTitle:
                           type: text
                           locales:
+                            cn: Go to Design Hub
                             en: Go to Design Hub
+                            jp: Go to Design Hub
                     - _id: a34535f8-f00b-4177-a0ba-70ee0d5b8f72
                       type: megaMenuLink
                       fields:
                         icon:
                           type: asset
                           locales:
+                            cn:
+                              - _id: 74d0a0b0-c474-421d-b906-8790e35cdc4f
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 9b531778-a91c-4447-b4d6-33b1ce2a9423
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/1vCSZBZ0QjuYPEXRUofo9g-innovation.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: 23bf7528-38b9-4ed0-9ecf-08466755d0f6
+                                  size:
+                                    value: 3205
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: innovation.svg
+                                  width:
+                                    value: 1023
+                                    type: number
+                                  height:
+                                    value: 1024
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
                             en:
                               - _id: 74d0a0b0-c474-421d-b906-8790e35cdc4f
                                 type: image
@@ -1017,7 +1727,37 @@ composition:
                                     value: 9b531778-a91c-4447-b4d6-33b1ce2a9423
                                   url:
                                     value: >-
-                                      https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/T-IJdgA9RuSx1B_FH6MnhA-innovation.svg
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/1vCSZBZ0QjuYPEXRUofo9g-innovation.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: 23bf7528-38b9-4ed0-9ecf-08466755d0f6
+                                  size:
+                                    value: 3205
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: innovation.svg
+                                  width:
+                                    value: 1023
+                                    type: number
+                                  height:
+                                    value: 1024
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
+                            jp:
+                              - _id: 74d0a0b0-c474-421d-b906-8790e35cdc4f
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 9b531778-a91c-4447-b4d6-33b1ce2a9423
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/1vCSZBZ0QjuYPEXRUofo9g-innovation.svg
                                     type: text
                                   file:
                                     type: file
@@ -1042,7 +1782,9 @@ composition:
                         title:
                           type: text
                           locales:
+                            cn: Innovation
                             en: Innovation
+                            jp: Innovation
                         children:
                           type: $block
                           value:
@@ -1052,58 +1794,108 @@ composition:
                                 title:
                                   type: text
                                   locales:
+                                    cn: 5G The Future of RF
                                     en: 5G The Future of RF
+                                    jp: 5G The Future of RF
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to 5G The Future of RF
                                     en: Go to 5G The Future of RF
+                                    jp: Go to 5G The Future of RF
                             - _id: d83fe9dc-0970-4fe9-8c96-236aa3bd5b24
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Customer Stories
                                     en: Customer Stories
+                                    jp: Customer Stories
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Customer Stories
                                     en: Go to Customer Stories
+                                    jp: Go to Customer Stories
                             - _id: 659b17e8-a73c-4612-b7f8-20c053c2a086
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Force Sensors
                                     en: Force Sensors
+                                    jp: Force Sensors
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Force Sensors
                                     en: Go to Force Sensors
+                                    jp: Go to Force Sensors
                             - _id: 61a10c8f-73b8-436e-9b37-bc391f704144
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: The Matter-Enabled IoT
                                     en: The Matter-Enabled IoT
+                                    jp: The Matter-Enabled IoT
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to The Matter-Enabled IoT
                                     en: Go to The Matter-Enabled IoT
+                                    jp: Go to The Matter-Enabled IoT
                             - _id: 535917a8-679d-4bf5-afe4-7ba9fc4ab6a5
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Power Solutions
                                     en: Power Solutions
+                                    jp: Power Solutions
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Power Solutions
                                     en: Go to Power Solutions
+                                    jp: Go to Power Solutions
                         hoverIcon:
                           type: asset
                           locales:
+                            cn:
+                              - _id: 5299d484-b185-47f6-bc3a-fd93734875cb
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 2dd3da08-8fe5-4e2d-a945-9ed20ccf1b2b
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/AchQ0TSWRGKm5KVUeywW6w-innovation-1.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: 850b9943-20b4-404e-bb2b-749fba16cc06
+                                  size:
+                                    value: 3205
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: innovation-1.svg
+                                  width:
+                                    value: 1023
+                                    type: number
+                                  height:
+                                    value: 1024
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
                             en:
                               - _id: 5299d484-b185-47f6-bc3a-fd93734875cb
                                 type: image
@@ -1113,7 +1905,37 @@ composition:
                                     value: 2dd3da08-8fe5-4e2d-a945-9ed20ccf1b2b
                                   url:
                                     value: >-
-                                      https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/crJWtbyySvK_vr41kLkwdQ-innovation-1.svg
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/AchQ0TSWRGKm5KVUeywW6w-innovation-1.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: 850b9943-20b4-404e-bb2b-749fba16cc06
+                                  size:
+                                    value: 3205
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: innovation-1.svg
+                                  width:
+                                    value: 1023
+                                    type: number
+                                  height:
+                                    value: 1024
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
+                            jp:
+                              - _id: 5299d484-b185-47f6-bc3a-fd93734875cb
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 2dd3da08-8fe5-4e2d-a945-9ed20ccf1b2b
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/AchQ0TSWRGKm5KVUeywW6w-innovation-1.svg
                                     type: text
                                   file:
                                     type: file
@@ -1138,13 +1960,45 @@ composition:
                         sectionTitle:
                           type: text
                           locales:
+                            cn: Go to Innovation
                             en: Go to Innovation
+                            jp: Go to Innovation
                     - _id: 6bed9eed-037d-46bb-b2e2-b14a89d834f9
                       type: megaMenuLink
                       fields:
                         icon:
                           type: asset
                           locales:
+                            cn:
+                              - _id: 17700405-c1f8-498c-99f9-5219dfa3b61f
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 68b5c95e-cf89-45ce-bba3-bff00a2b2c3d
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/X1aqE5oiTPWBtFr5AqOafw-support.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: aa9f4aa6-e4ed-4325-8a32-e58e8e4747e3
+                                  size:
+                                    value: 229
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: support.svg
+                                  width:
+                                    value: 1035
+                                    type: number
+                                  height:
+                                    value: 873
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
                             en:
                               - _id: 17700405-c1f8-498c-99f9-5219dfa3b61f
                                 type: image
@@ -1154,7 +2008,37 @@ composition:
                                     value: 68b5c95e-cf89-45ce-bba3-bff00a2b2c3d
                                   url:
                                     value: >-
-                                      https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/MBDc9n5iTtOHdwFvNH6Adg-support.svg
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/X1aqE5oiTPWBtFr5AqOafw-support.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: aa9f4aa6-e4ed-4325-8a32-e58e8e4747e3
+                                  size:
+                                    value: 229
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: support.svg
+                                  width:
+                                    value: 1035
+                                    type: number
+                                  height:
+                                    value: 873
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
+                            jp:
+                              - _id: 17700405-c1f8-498c-99f9-5219dfa3b61f
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 68b5c95e-cf89-45ce-bba3-bff00a2b2c3d
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/X1aqE5oiTPWBtFr5AqOafw-support.svg
                                     type: text
                                   file:
                                     type: file
@@ -1179,7 +2063,9 @@ composition:
                         title:
                           type: text
                           locales:
+                            cn: Support
                             en: Support
+                            jp: Support
                         children:
                           type: $block
                           value:
@@ -1189,32 +2075,72 @@ composition:
                                 title:
                                   type: text
                                   locales:
+                                    cn: How to Buy
                                     en: How to Buy
+                                    jp: How to Buy
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to How to Buy
                                     en: Go to How to Buy
+                                    jp: Go to How to Buy
                             - _id: d99b2a36-dc71-4c60-ba79-3d9e41fac2db
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Technical Support
                                     en: Technical Support
+                                    jp: Technical Support
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Technical Support
                                     en: Go to Technical Support
+                                    jp: Go to Technical Support
                             - _id: 84ff2705-1fb8-41b8-a31c-c9d4d26dbc85
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Go to Samples & Eval Boards
                                     en: Go to Samples & Eval Boards
+                                    jp: Go to Samples & Eval Boards
                         hoverIcon:
                           type: asset
                           locales:
+                            cn:
+                              - _id: abe9142e-5380-47f4-900e-cf7627dc3a6a
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 59956cd9-0651-43db-9c90-119101187c30
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/K_Pywn3wRh-p_8xzPcvwxw-support-1.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: d63af57e-82b8-4b9c-b375-725cfc8d1241
+                                  size:
+                                    value: 229
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: support-1.svg
+                                  width:
+                                    value: 1035
+                                    type: number
+                                  height:
+                                    value: 873
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
                             en:
                               - _id: abe9142e-5380-47f4-900e-cf7627dc3a6a
                                 type: image
@@ -1224,7 +2150,37 @@ composition:
                                     value: 59956cd9-0651-43db-9c90-119101187c30
                                   url:
                                     value: >-
-                                      https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/gHK1LPY3T9-kMcTdqv335g-support-1.svg
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/K_Pywn3wRh-p_8xzPcvwxw-support-1.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: d63af57e-82b8-4b9c-b375-725cfc8d1241
+                                  size:
+                                    value: 229
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: support-1.svg
+                                  width:
+                                    value: 1035
+                                    type: number
+                                  height:
+                                    value: 873
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
+                            jp:
+                              - _id: abe9142e-5380-47f4-900e-cf7627dc3a6a
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 59956cd9-0651-43db-9c90-119101187c30
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/K_Pywn3wRh-p_8xzPcvwxw-support-1.svg
                                     type: text
                                   file:
                                     type: file
@@ -1249,13 +2205,45 @@ composition:
                         sectionTitle:
                           type: text
                           locales:
+                            cn: Go to Support
                             en: Go to Support
+                            jp: Go to Support
                     - _id: 629ca961-6a57-4760-b772-a033f0a791c7
                       type: megaMenuLink
                       fields:
                         icon:
                           type: asset
                           locales:
+                            cn:
+                              - _id: b3616cc8-c4a9-4d18-b7fb-635aefdcbb0c
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 0c347a2a-1ed6-45e6-95ea-24b79202048a
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/7nsnTARATICYMR7HPwO7PQ-Vector.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: 18e7d9b9-7be1-4a56-8ea6-97434de6617a
+                                  size:
+                                    value: 762
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: Vector.svg
+                                  width:
+                                    value: 1013
+                                    type: number
+                                  height:
+                                    value: 1013
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
                             en:
                               - _id: b3616cc8-c4a9-4d18-b7fb-635aefdcbb0c
                                 type: image
@@ -1265,7 +2253,37 @@ composition:
                                     value: 0c347a2a-1ed6-45e6-95ea-24b79202048a
                                   url:
                                     value: >-
-                                      https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/t_1GbO-mRs2MtZ4DftnbJA-Vector.svg
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/7nsnTARATICYMR7HPwO7PQ-Vector.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: 18e7d9b9-7be1-4a56-8ea6-97434de6617a
+                                  size:
+                                    value: 762
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: Vector.svg
+                                  width:
+                                    value: 1013
+                                    type: number
+                                  height:
+                                    value: 1013
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
+                            jp:
+                              - _id: b3616cc8-c4a9-4d18-b7fb-635aefdcbb0c
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 0c347a2a-1ed6-45e6-95ea-24b79202048a
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/7nsnTARATICYMR7HPwO7PQ-Vector.svg
                                     type: text
                                   file:
                                     type: file
@@ -1290,7 +2308,9 @@ composition:
                         title:
                           type: text
                           locales:
+                            cn: About Us
                             en: About Us
+                            jp: About Us
                         children:
                           type: $block
                           value:
@@ -1300,69 +2320,123 @@ composition:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Executive Leadership
                                     en: Executive Leadership
+                                    jp: Executive Leadership
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Executive Leadership
                                     en: Go to Executive Leadership
+                                    jp: Go to Executive Leadership
                             - _id: 9e7c3015-5a6d-448b-9ace-6b3adefdac01
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Board of Directors
                                     en: Board of Directors
+                                    jp: Board of Directors
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Board of Directors
                                     en: Go to Board of Directors
+                                    jp: Go to Board of Directors
                             - _id: 497eabac-bbdd-463d-9a88-693d2773bd3d
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Our History
                                     en: Our History
+                                    jp: Our History
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Our History
                                     en: Go to Our History
+                                    jp: Go to Our History
                             - _id: 2d33bf8a-c190-4ee8-870a-51005500c972
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Our Communities
                                     en: Our Communities
+                                    jp: Our Communities
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Our Communities
                                     en: Go to Our Communities
+                                    jp: Go to Our Communities
                             - _id: 425ca6e1-9dee-49d9-bf80-44065bbae704
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Awards
                                     en: Awards
+                                    jp: Awards
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Awards
                                     en: Go to Awards
+                                    jp: Go to Awards
                             - _id: 8d4cb76f-4d65-42cd-a970-ce2cf4ef05bc
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Quality
                                     en: Quality
+                                    jp: Quality
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Quality
                                     en: Go to Quality
+                                    jp: Go to Quality
                         hoverIcon:
                           type: asset
                           locales:
+                            cn:
+                              - _id: 57a40311-ab0d-4faf-9b7b-3a12c93cf0d5
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 79f82cdc-ee20-40f5-83e4-c5c041610384
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/s4mCGxR_Rt6UmXiFUvIhgw-Vector-1.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: e25a94fb-43f8-42a1-aa60-207cf80f262b
+                                  size:
+                                    value: 762
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: Vector-1.svg
+                                  width:
+                                    value: 1013
+                                    type: number
+                                  height:
+                                    value: 1013
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
                             en:
                               - _id: 57a40311-ab0d-4faf-9b7b-3a12c93cf0d5
                                 type: image
@@ -1372,7 +2446,37 @@ composition:
                                     value: 79f82cdc-ee20-40f5-83e4-c5c041610384
                                   url:
                                     value: >-
-                                      https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/05dPQAo1RLqjINjWvyCVGw-Vector-1.svg
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/s4mCGxR_Rt6UmXiFUvIhgw-Vector-1.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: e25a94fb-43f8-42a1-aa60-207cf80f262b
+                                  size:
+                                    value: 762
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: Vector-1.svg
+                                  width:
+                                    value: 1013
+                                    type: number
+                                  height:
+                                    value: 1013
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
+                            jp:
+                              - _id: 57a40311-ab0d-4faf-9b7b-3a12c93cf0d5
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 79f82cdc-ee20-40f5-83e4-c5c041610384
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/s4mCGxR_Rt6UmXiFUvIhgw-Vector-1.svg
                                     type: text
                                   file:
                                     type: file
@@ -1397,13 +2501,45 @@ composition:
                         sectionTitle:
                           type: text
                           locales:
+                            cn: Go to About Us
                             en: Go to About Us
+                            jp: Go to About Us
                     - _id: 57718a86-812c-4ce4-b1ad-4a37aebefb4d
                       type: megaMenuLink
                       fields:
                         icon:
                           type: asset
                           locales:
+                            cn:
+                              - _id: 273cc761-1b7d-464c-a3af-dd077342e981
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 5e7b0fcf-f170-4a2b-a101-bdcbe0df04f7
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/_4-mn6vZTJWTf32nX0wLuA-news.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: e11d56be-98d0-40fa-8b24-e5ec77d08faf
+                                  size:
+                                    value: 406
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: news.svg
+                                  width:
+                                    value: 747
+                                    type: number
+                                  height:
+                                    value: 1029
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
                             en:
                               - _id: 273cc761-1b7d-464c-a3af-dd077342e981
                                 type: image
@@ -1413,7 +2549,37 @@ composition:
                                     value: 5e7b0fcf-f170-4a2b-a101-bdcbe0df04f7
                                   url:
                                     value: >-
-                                      https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/kgiCsge1QxK9dAR7QdpKtA-news.svg
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/_4-mn6vZTJWTf32nX0wLuA-news.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: e11d56be-98d0-40fa-8b24-e5ec77d08faf
+                                  size:
+                                    value: 406
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: news.svg
+                                  width:
+                                    value: 747
+                                    type: number
+                                  height:
+                                    value: 1029
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
+                            jp:
+                              - _id: 273cc761-1b7d-464c-a3af-dd077342e981
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 5e7b0fcf-f170-4a2b-a101-bdcbe0df04f7
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/_4-mn6vZTJWTf32nX0wLuA-news.svg
                                     type: text
                                   file:
                                     type: file
@@ -1438,7 +2604,9 @@ composition:
                         title:
                           type: text
                           locales:
+                            cn: Newsroom
                             en: Newsroom
+                            jp: Newsroom
                         children:
                           type: $block
                           value:
@@ -1448,47 +2616,93 @@ composition:
                                 title:
                                   type: text
                                   locales:
+                                    cn: News
                                     en: News
+                                    jp: News
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to News
                                     en: Go to News
+                                    jp: Go to News
                             - _id: 427f5b77-0520-4afc-a1ca-e7a5d2ed5430
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Media Contacts
                                     en: Media Contacts
+                                    jp: Media Contacts
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Media Contacts
                                     en: Go to Media Contacts
+                                    jp: Go to Media Contacts
                             - _id: 3ba22ddd-7eb2-42b1-a796-bd4fed7926ef
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Media Resources
                                     en: Media Resources
+                                    jp: Media Resources
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Media Resources
                                     en: Go to Media Resources
+                                    jp: Go to Media Resources
                             - _id: 160d5e2a-ed7a-4983-8410-7cd9a125a9c5
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Newsletters
                                     en: Newsletters
+                                    jp: Newsletters
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Newsletters
                                     en: Go to Newsletters
+                                    jp: Go to Newsletters
                         hoverIcon:
                           type: asset
                           locales:
+                            cn:
+                              - _id: b9ceca89-6366-40e7-aaa3-83cd5faf6784
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 85f26952-b52d-4dc5-85c1-9e3cbc11791d
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/3wz80eO0QIiEi9frIi2-Lg-news-1.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: 7f6dd2fa-02a7-406d-9043-86de50c3a2f1
+                                  size:
+                                    value: 406
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: news-1.svg
+                                  width:
+                                    value: 747
+                                    type: number
+                                  height:
+                                    value: 1029
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
                             en:
                               - _id: b9ceca89-6366-40e7-aaa3-83cd5faf6784
                                 type: image
@@ -1498,7 +2712,37 @@ composition:
                                     value: 85f26952-b52d-4dc5-85c1-9e3cbc11791d
                                   url:
                                     value: >-
-                                      https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/4v2wt4RXTsig3EyMdYGsUQ-news-1.svg
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/3wz80eO0QIiEi9frIi2-Lg-news-1.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: 7f6dd2fa-02a7-406d-9043-86de50c3a2f1
+                                  size:
+                                    value: 406
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: news-1.svg
+                                  width:
+                                    value: 747
+                                    type: number
+                                  height:
+                                    value: 1029
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
+                            jp:
+                              - _id: b9ceca89-6366-40e7-aaa3-83cd5faf6784
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 85f26952-b52d-4dc5-85c1-9e3cbc11791d
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/3wz80eO0QIiEi9frIi2-Lg-news-1.svg
                                     type: text
                                   file:
                                     type: file
@@ -1523,13 +2767,45 @@ composition:
                         sectionTitle:
                           type: text
                           locales:
+                            cn: Go to Newsroom
                             en: Go to Newsroom
+                            jp: Go to Newsroom
                     - _id: d736b5f7-1375-4516-967c-d67a1863eac6
                       type: megaMenuLink
                       fields:
                         icon:
                           type: asset
                           locales:
+                            cn:
+                              - _id: 87c327c0-43a3-4af2-bc54-9e415bdcccfe
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 5771b06f-4a60-495f-97ea-071d7b6442ee
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/SvS52YCyT7aNJV6BGcm-Ag-carers.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: a0caf99e-9532-46b6-9a52-86300fd770f9
+                                  size:
+                                    value: 972
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: carers.svg
+                                  width:
+                                    value: 1024
+                                    type: number
+                                  height:
+                                    value: 862
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
                             en:
                               - _id: 87c327c0-43a3-4af2-bc54-9e415bdcccfe
                                 type: image
@@ -1539,7 +2815,37 @@ composition:
                                     value: 5771b06f-4a60-495f-97ea-071d7b6442ee
                                   url:
                                     value: >-
-                                      https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/HGvvWU6yRjeYm5LHmYf3pQ-carers.svg
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/SvS52YCyT7aNJV6BGcm-Ag-carers.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: a0caf99e-9532-46b6-9a52-86300fd770f9
+                                  size:
+                                    value: 972
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: carers.svg
+                                  width:
+                                    value: 1024
+                                    type: number
+                                  height:
+                                    value: 862
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
+                            jp:
+                              - _id: 87c327c0-43a3-4af2-bc54-9e415bdcccfe
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 5771b06f-4a60-495f-97ea-071d7b6442ee
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/SvS52YCyT7aNJV6BGcm-Ag-carers.svg
                                     type: text
                                   file:
                                     type: file
@@ -1564,7 +2870,9 @@ composition:
                         title:
                           type: text
                           locales:
+                            cn: Careers
                             en: Careers
+                            jp: Careers
                         children:
                           type: $block
                           value:
@@ -1574,36 +2882,78 @@ composition:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Engineering Careers
                                     en: Engineering Careers
+                                    jp: Engineering Careers
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Engineering Careers
                                     en: Go to Engineering Careers
+                                    jp: Go to Engineering Careers
                             - _id: 85cdd836-0b95-4180-b764-894bcfc9351c
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Veterans
                                     en: Veterans
+                                    jp: Veterans
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Veterans
                                     en: Go to Veterans
+                                    jp: Go to Veterans
                             - _id: 397dee9c-55c7-4307-88f5-d0b47b0e1459
                               type: megaMenuLink
                               fields:
                                 title:
                                   type: text
                                   locales:
+                                    cn: Women in Tech
                                     en: Women in Tech
+                                    jp: Women in Tech
                                 sectionTitle:
                                   type: text
                                   locales:
+                                    cn: Go to Women in Tech
                                     en: Go to Women in Tech
+                                    jp: Go to Women in Tech
                         hoverIcon:
                           type: asset
                           locales:
+                            cn:
+                              - _id: 9c286936-b194-4f2c-9d62-973648ae00d3
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 0b3fb69c-5e97-4344-853d-d21b7dde29c8
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/xWed4_MHQ1u6R-Gvm-PmzA-carers-1.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: 9293ac93-c043-4e93-a517-7e980be0d96c
+                                  size:
+                                    value: 972
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: carers-1.svg
+                                  width:
+                                    value: 1024
+                                    type: number
+                                  height:
+                                    value: 862
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
                             en:
                               - _id: 9c286936-b194-4f2c-9d62-973648ae00d3
                                 type: image
@@ -1613,7 +2963,37 @@ composition:
                                     value: 0b3fb69c-5e97-4344-853d-d21b7dde29c8
                                   url:
                                     value: >-
-                                      https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/fNuFPBNWTySp0F-AXtLSAw-carers-1.svg
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/xWed4_MHQ1u6R-Gvm-PmzA-carers-1.svg
+                                    type: text
+                                  file:
+                                    type: file
+                                    value: 9293ac93-c043-4e93-a517-7e980be0d96c
+                                  size:
+                                    value: 972
+                                    type: number
+                                  title:
+                                    type: text
+                                    value: carers-1.svg
+                                  width:
+                                    value: 1024
+                                    type: number
+                                  height:
+                                    value: 862
+                                    type: number
+                                  mediaType:
+                                    value: image/svg+xml
+                                    type: text
+                                _source: uniform-assets
+                            jp:
+                              - _id: 9c286936-b194-4f2c-9d62-973648ae00d3
+                                type: image
+                                fields:
+                                  id:
+                                    type: text
+                                    value: 0b3fb69c-5e97-4344-853d-d21b7dde29c8
+                                  url:
+                                    value: >-
+                                      https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/xWed4_MHQ1u6R-Gvm-PmzA-carers-1.svg
                                     type: text
                                   file:
                                     type: file
@@ -1638,7 +3018,9 @@ composition:
                         sectionTitle:
                           type: text
                           locales:
+                            cn: Go to Careers
                             en: Go to Careers
+                            jp: Go to Careers
                 weight:
                   type: dex-segmented-control-parameter
                   value: normal
@@ -1674,6 +3056,36 @@ composition:
           icon:
             type: asset
             locales:
+              cn:
+                - _id: 5b18d1b6-0a4b-4704-b1ed-f5e2d1928277
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: 1a84548f-3c11-4d53-b6b3-ba8933778a15
+                    url:
+                      value: >-
+                        https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/mOLLMthQTnaqbb5k9IYAqQ-menu-burger-horizontal-svgrepo-com.svg
+                      type: text
+                    file:
+                      type: file
+                      value: 3743fc43-c511-4d34-be13-006176ec5a69
+                    size:
+                      value: 557
+                      type: number
+                    title:
+                      type: text
+                      value: menu-burger-horizontal-svgrepo-com.svg
+                    width:
+                      value: 800
+                      type: number
+                    height:
+                      value: 800
+                      type: number
+                    mediaType:
+                      value: image/svg+xml
+                      type: text
+                  _source: uniform-assets
               en:
                 - _id: 5b18d1b6-0a4b-4704-b1ed-f5e2d1928277
                   type: image
@@ -1683,7 +3095,37 @@ composition:
                       value: 1a84548f-3c11-4d53-b6b3-ba8933778a15
                     url:
                       value: >-
-                        https://img.uniform.global/p/ZAKU5DAeRNqRB7-k8gKCNw/YskIuF3VQiCkhPgxtHmTTg-menu-burger-horizontal-svgrepo-com.svg
+                        https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/mOLLMthQTnaqbb5k9IYAqQ-menu-burger-horizontal-svgrepo-com.svg
+                      type: text
+                    file:
+                      type: file
+                      value: 3743fc43-c511-4d34-be13-006176ec5a69
+                    size:
+                      value: 557
+                      type: number
+                    title:
+                      type: text
+                      value: menu-burger-horizontal-svgrepo-com.svg
+                    width:
+                      value: 800
+                      type: number
+                    height:
+                      value: 800
+                      type: number
+                    mediaType:
+                      value: image/svg+xml
+                      type: text
+                  _source: uniform-assets
+              jp:
+                - _id: 5b18d1b6-0a4b-4704-b1ed-f5e2d1928277
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: 1a84548f-3c11-4d53-b6b3-ba8933778a15
+                    url:
+                      value: >-
+                        https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/mOLLMthQTnaqbb5k9IYAqQ-menu-burger-horizontal-svgrepo-com.svg
                       type: text
                     file:
                       type: file
@@ -1711,7 +3153,9 @@ composition:
           text:
             type: text
             locales:
+              cn: Menu
               en: Menu
+              jp: Menu
           color:
             type: dex-color-palette-parameter
             value: text-primary
@@ -1733,13 +3177,17 @@ composition:
         text:
           type: text
           locales:
+            cn: New Products
             en: New Products
+            jp: New Products
     9c9f1e1e-6f71-4fd7-9e4b-af93e91d5f14:
       parameters:
         text:
           type: text
           locales:
+            cn: New Products
             en: New Products
+            jp: New Products
     ff53dca1-c4a1-4480-9374-9dc2c49d2949:
       parameters:
         text:
@@ -1747,6 +3195,8 @@ composition:
           value: Lear More
   _locales:
     - en
-created: '2025-05-08T07:35:40.161493+00:00'
-modified: '2025-05-09T13:07:36.895728+00:00'
+    - jp
+    - cn
+created: '2025-05-12T08:15:19.036894+00:00'
+modified: '2025-05-12T11:43:25.875462+00:00'
 pattern: true
