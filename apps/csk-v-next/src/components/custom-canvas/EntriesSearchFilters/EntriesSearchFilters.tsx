@@ -25,8 +25,7 @@ type EntriesSearchFiltersProps = ComponentProps<{
 }>;
 
 const EntriesSearchFilters: FC<EntriesSearchFiltersProps> = ({ title }) => {
-  const { filterBy, selectedFilters, setSelectedFilters, facets, setSearchBoxValue, setKeywordBoxValue } =
-    useEntriesSearchContext();
+  const { filterBy, selectedFilters, setSelectedFilters, facets, clearFilters } = useEntriesSearchContext();
   const [filters, setFilters] = useState<Record<string, string[]>>(selectedFilters);
 
   const handleFilterChange = (fieldId: string, value: string[]) => {
@@ -34,10 +33,7 @@ const EntriesSearchFilters: FC<EntriesSearchFiltersProps> = ({ title }) => {
   };
 
   const handleReset = () => {
-    setSearchBoxValue('');
-    setKeywordBoxValue('');
-
-    setSelectedFilters({});
+    clearFilters();
   };
 
   const handleApply = () => {

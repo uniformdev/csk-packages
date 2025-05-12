@@ -207,6 +207,7 @@ const EntriesSearchContextProvider: FC<EntriesSearchContextProviderProps> = ({
   const clearFilters = useCallback(() => {
     setIsLoading(true);
     setSearchBoxValue('');
+    setKeywordBoxValue('');
     router.push(pathname);
   }, [router, pathname]);
 
