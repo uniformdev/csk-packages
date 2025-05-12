@@ -1,0 +1,36 @@
+id: 709029a9-419a-4f6b-891f-427729e3c4df
+name: Main Publish Flow
+initialStage: a3b17d73-0198-4734-8c5e-71f898d6d4fe
+stages:
+  a3b17d73-0198-4734-8c5e-71f898d6d4fe:
+    name: Editing
+    permissions: {}
+    transitions:
+      - name: Submit for approval
+        to: fa8d50b0-9328-4b63-997c-4d8613f06e3a
+        permissions: {}
+    icon: pen
+    order: 0
+  fa8d50b0-9328-4b63-997c-4d8613f06e3a:
+    name: Approval
+    requireValidity: true
+    permissions: {}
+    transitions:
+      - name: Reject
+        to: a3b17d73-0198-4734-8c5e-71f898d6d4fe
+        permissions: {}
+      - name: Approve
+        to: 6bc03561-2b9f-46a0-b284-5675fbee3313
+        permissions: {}
+    icon: flag
+    order: 1
+  6bc03561-2b9f-46a0-b284-5675fbee3313:
+    name: Approved
+    autoPublish: true
+    permissions: {}
+    transitions:
+      - name: Edit
+        to: a3b17d73-0198-4734-8c5e-71f898d6d4fe
+        permissions: {}
+    icon: lock
+    order: 2
