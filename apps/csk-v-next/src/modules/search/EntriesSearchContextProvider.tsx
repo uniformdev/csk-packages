@@ -189,6 +189,9 @@ const EntriesSearchContextProvider: FC<EntriesSearchContextProviderProps> = ({
       if (search) {
         params.set(ENTRIES_SEARCH_QUERY_KEY, search);
       }
+      if (keyword) {
+        params.set(ENTRIES_SEARCH_KEYWORD_QUERY_KEY, keyword);
+      }
       Object.entries(selectedFilters).forEach(([key, value]) => {
         const filter = filterBy.find(f => f.fieldKey === key);
         if (!filter) return;
@@ -198,7 +201,7 @@ const EntriesSearchContextProvider: FC<EntriesSearchContextProviderProps> = ({
       });
       router.push(`?${params.toString()}`, { scroll: false });
     },
-    [search, router, filterBy]
+    [search, keyword, router, filterBy]
   );
 
   const clearFilters = useCallback(() => {

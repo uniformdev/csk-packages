@@ -125,6 +125,14 @@ const EntriesSearchEngineWrapper: FC<EntriesSearchEngineProps> = async props => 
     : 'created_at_DESC';
   const selectedOrderByQuery = searchParams?.[ENTRIES_SEARCH_ORDER_BY_KEY] || defaultOrderByQuery;
 
+  //This is a workaround to search for products by title, just for a demo
+  const aditionalProductFilters =
+    contentType === 'product' && search
+      ? {
+          'fields.title[eq]': search,
+        }
+      : {};
+
   const { data, facets } = await getEntries<Article | Product>({
     page,
     perPage,
@@ -132,9 +140,10 @@ const EntriesSearchEngineWrapper: FC<EntriesSearchEngineProps> = async props => 
       type: { eq: contentType },
       ...baseFilterQuery,
       ...filterQuery,
+      ...aditionalProductFilters,
     },
     facetBy,
-    search,
+    search: contentType === 'product' ? undefined : search,
     keyword,
     preview: isEnabled,
     orderBy: selectedOrderByQuery === 'relevance_DESC' ? enrichmentBoostedOrderBy : selectedOrderByQuery,
