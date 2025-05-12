@@ -10,7 +10,8 @@ export type EnvVariable =
   | 'UNIFORM_INSIGHTS_ENDPOINT'
   | 'UNIFORM_INSIGHTS_KEY'
   | 'GOOGLE_ANALYTICS_ID'
-  | 'OPENAI_API_KEY';
+  | 'OPENAI_API_KEY'
+  | 'DATABASE_URL';
 
 export type ProjectConfiguration = {
   template: Template;

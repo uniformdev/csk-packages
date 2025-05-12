@@ -57,7 +57,7 @@ export const REQUIRED_ENV_VARIABLES: {
   [key in Recipe]: EnvVariable[];
 } = {
   'uniform-insights': ['UNIFORM_INSIGHTS_ENDPOINT', 'UNIFORM_INSIGHTS_KEY'],
-  'ai-assistant': ['OPENAI_API_KEY'],
+  'ai-assistant': ['OPENAI_API_KEY', 'DATABASE_URL'],
   localization: [],
   ga: ['GOOGLE_ANALYTICS_ID'],
   shadcn: [],
@@ -87,7 +87,7 @@ export const RECIPE_ADDITIONAL_FILES: Partial<{
   shadcn: ['components.json'],
 };
 
-export const META_NOT_PROCESABLE_FILE_PATH_SEGMENTS = ['content/', '.json', '.yaml', '.env.example'];
+export const META_NOT_PROCESABLE_FILE_PATH_SEGMENTS = ['content/', '.json', '.yaml', '.env.example', '.sql'];
 
 export const FILES_TO_IGNORE_OUTSIDE_OF_MONOREPO = ['.lintstagedrc'];
 
