@@ -1,0 +1,56 @@
+composition:
+  _name: PDP Secondary Button
+  _id: 699af8ec-fa5a-49a4-b568-539675ee0764
+  type: button
+  parameters:
+    link:
+      type: link
+      locales:
+        en:
+          path: >-
+            https://www.qorvo.com/support/how-to-buy/contact-a-sales-rep?partNumber=QM42500
+          type: url
+    size:
+      type: dex-token-selector-parameter
+      value: button-medium
+    text:
+      type: text
+      locales:
+        en: Contact A Sales Rep >
+    textSize:
+      type: dex-segmented-control-parameter
+      value:
+        mobile: sm
+        tablet: sm
+        desktop: sm
+    fullWidth:
+      type: checkbox
+      value: true
+    textColor:
+      type: dex-color-palette-parameter
+      value: text-tertiary
+    textWeight:
+      type: dex-segmented-control-parameter
+      value: bold
+    buttonColor:
+      type: dex-color-palette-parameter
+      value: button-tertiary-hover
+    textTransform:
+      type: dex-segmented-control-parameter
+      value: uppercase
+    hoverTextColor:
+      type: dex-color-palette-parameter
+      value: text-primary
+    hoverButtonColor:
+      type: dex-color-palette-parameter
+      value: button-secondary
+  _overridability:
+    parameters:
+      link: 'yes'
+      text: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2025-05-12T09:03:31.899864+00:00'
+modified: '2025-05-12T09:07:45.803603+00:00'
+pattern: true

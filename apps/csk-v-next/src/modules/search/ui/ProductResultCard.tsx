@@ -22,7 +22,7 @@ const ProductResultCard: FC<ProductCardProps> = ({
   return (
     <div className="grid grid-cols-8">
       <div className="border-x border-b border-gray-300 bg-white px-4 py-2 text-center text-gray-500">
-        <Link className="font-bold capitalize text-general-color-1" href={`/products/${slug}`}>
+        <Link className="font-bold capitalize text-general-color-1" href={`/products/${slug.toLowerCase()}`}>
           {title}
         </Link>
       </div>

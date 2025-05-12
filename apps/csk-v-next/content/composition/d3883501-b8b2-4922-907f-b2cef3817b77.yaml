@@ -10,12 +10,31 @@ composition:
         slug: ${product-slug}
         locale: ${locale}
   _overrides:
-    54c60ba7-8974-4630-9f2c-5fd7e71ced12:
+    05710e81-9c9a-4e01-bd68-8748e83708f7:
       parameters:
-        $tstVrnt:
-          type: $tstVrnt
-          value:
-            id: Variant A
+        link:
+          type: link
+          locales:
+            en:
+              path: https://www.qorvo.com/support/subscription-center
+              type: url
+        text:
+          type: text
+          locales:
+            en: Sign Up For Alerts >
+    aba1cef4-6b2c-4e28-9d6c-1d4d4ef743c7:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: >-
+                https://www.qorvo.com/support/how-to-buy/request-a-sample?partNumber=QM42500
+              type: url
+        text:
+          type: text
+          locales:
+            en: Request Sample >
     d3883501-b8b2-4922-907f-b2cef3817b77:
       parameters:
         $enr:
@@ -57,61 +76,1163 @@ composition:
         openGraphDescription:
           type: text
           value: ${#jptr:/Product Content/entry/fields/shortDescription/value}
-    163d071a-6969-492b-9c39-bbf0f9e13c95|ee4358a5-05ce-4926-a12e-4d42dfa679e2:
-      parameters:
-        price:
-          type: text
-          locales:
-            en: >-
-              ${#jptr:/Product List Content entries Loop
-              Item/entry/fields/variants/value/0/fields/price/value}
-    54c60ba7-8974-4630-9f2c-5fd7e71ced12|3e88bc6a-0588-4b36-aa7d-ede679a7c3c6:
-      parameters:
-        product:
-          type: json
-          value: null
-        productSlug:
-          type: text
-          locales:
-            en: ${product-slug}
     d3883501-b8b2-4922-907f-b2cef3817b77|dc2e95be-21b5-4476-a309-f8a34922f528:
       slots:
         $slotSectionItems:
-          - _id: 54c60ba7-8974-4630-9f2c-5fd7e71ced12
-            type: container
-            _pattern: 438c8041-7889-45a5-8304-8c98f0291b6c
-            _dataResources:
-              Product Content:
-                type: product
-                variables:
-                  slug: ${product-slug}
-                  locale: ${locale}
-            _overridability:
-              hideLockedParameters: true
-          - _id: 163d071a-6969-492b-9c39-bbf0f9e13c95
-            type: container
-            _pattern: 4d4c13c6-f486-42cf-aab8-afd10687a37a
-            _dataResources:
-              Product Content:
-                type: product
-                variables:
-                  slug: ${product-slug}
-                  locale: ${locale}
-            _overridability:
-              parameters:
-                displayName: 'yes'
-                backgroundColor: 'yes'
-              hideLockedParameters: true
-          - _id: 1a36ad83-1407-42d2-a213-7c9583da886d
+          - _id: d5ae58be-5fd5-4b98-8375-65e57a0fbabe
             type: flex
-            _pattern: bc7c73d1-3a48-4290-b898-396eac1c398d
-            _overridability:
-              parameters:
-                fluidContent: 'yes'
-              hideLockedParameters: true
+            slots:
+              flexItem:
+                - _id: fc19c4b0-f82c-47ec-995a-933b61ba7928
+                  type: text
+                  parameters:
+                    tag:
+                      type: dex-segmented-control-parameter
+                      value: h1
+                    size:
+                      type: dex-segmented-control-parameter
+                      value:
+                        desktop: 4xl
+                    text:
+                      type: text
+                      locales:
+                        en: ${#jptr:/Product Content/entry/fields/title/value}
+                    color:
+                      type: dex-color-palette-parameter
+                      value: text-tertiary
+                    weight:
+                      type: dex-segmented-control-parameter
+                      value: extrabold
+                - _id: 12805a0c-7bd2-4a27-bd37-d0e2b74dfa6c
+                  type: text
+                  parameters:
+                    tag:
+                      type: dex-segmented-control-parameter
+                      value: span
+                    size:
+                      type: dex-segmented-control-parameter
+                      value:
+                        desktop: xl
+                    text:
+                      type: text
+                      locales:
+                        en: ${#jptr:/Product Content/entry/fields/name/value}
+                    color:
+                      type: dex-color-palette-parameter
+                      value: text-tertiary
+                    weight:
+                      type: dex-segmented-control-parameter
+                      value: bold
+                - _id: ba00bd0d-48b1-49ec-b47a-dfdfa0ee6881
+                  type: link
+                  slots:
+                    linkContent:
+                      - _id: 63a10851-4aa7-4dea-a99c-ced797ad00a4
+                        type: text
+                        parameters:
+                          tag:
+                            type: dex-segmented-control-parameter
+                            value: span
+                          size:
+                            type: dex-segmented-control-parameter
+                            value:
+                              desktop: base
+                          text:
+                            type: text
+                            locales:
+                              en: >-
+                                ${#jptr:/Product
+                                Content/entry/fields/status/value}
+                          color:
+                            type: dex-color-palette-parameter
+                            value: text-secondary
+                          weight:
+                            type: dex-segmented-control-parameter
+                            value: bold
+                          transform:
+                            type: dex-segmented-control-parameter
+                            value: capitalize
+                  parameters:
+                    link:
+                      type: link
+                      value:
+                        path: >-
+                          https://www.qorvo.com/support/product-lifecycle-information
+                        type: url
+                    displayName:
+                      type: text
+                      locales:
+                        en: ${#jptr:/Product Content/entry/fields/status/value}
+                - _id: ac674169-c7e0-498c-997c-1ad0aada8469
+                  type: richText
+                  parameters:
+                    text:
+                      type: richText
+                      locales:
+                        en:
+                          root:
+                            type: root
+                            format: ''
+                            indent: 0
+                            version: 1
+                            children:
+                              - type: paragraph
+                                format: ''
+                                indent: 0
+                                version: 1
+                                children:
+                                  - mode: normal
+                                    text: Data sheet available upon request.
+                                    type: text
+                                    style: ''
+                                    detail: 0
+                                    format: 0
+                                    version: 1
+                                  - type: linebreak
+                                    version: 1
+                                  - mode: normal
+                                    text: "Contact your local\_"
+                                    type: text
+                                    style: ''
+                                    detail: 0
+                                    format: 0
+                                    version: 1
+                                  - link:
+                                      path: >-
+                                        https://www.qorvo.com/support/how-to-buy/contact-a-sales-rep?partNumber=QPA3315
+                                      type: url
+                                    type: link
+                                    format: ''
+                                    indent: 0
+                                    version: 1
+                                    children:
+                                      - mode: normal
+                                        text: sales representative
+                                        type: text
+                                        style: ''
+                                        detail: 0
+                                        format: 0
+                                        version: 1
+                                    direction: ltr
+                                  - mode: normal
+                                    text: "\_for assistance."
+                                    type: text
+                                    style: ''
+                                    detail: 0
+                                    format: 0
+                                    version: 1
+                                direction: ltr
+                                textStyle: ''
+                                textFormat: 0
+                            direction: ltr
+                    color:
+                      type: dex-color-palette-parameter
+                      value: text-tertiary
+            parameters:
+              gap:
+                type: dex-slider-control-parameter
+                value:
+                  mobile: '4'
+                  tablet: '4'
+                  desktop: '4'
+              spacing:
+                type: dex-space-control-parameter
+                value:
+                  mobile: {}
+                  tablet: {}
+                  desktop:
+                    paddingTop: container-medium
+                    paddingBottom: container-medium
+              direction:
+                type: dex-segmented-control-parameter
+                value:
+                  mobile: col
+                  tablet: col
+                  desktop: col
+              alignItems:
+                type: dex-segmented-control-parameter
+                value: {}
+              displayName:
+                type: text
+                locales:
+                  en: Heading
+              justifyContent:
+                type: dex-segmented-control-parameter
+                value: {}
+          - _id: 30598235-0e19-4131-a2ef-6a7eaff1655e
+            type: grid
+            slots:
+              gridInner:
+                - _id: 5bef71d4-b3ac-45c3-bde1-d1b4af1e1524
+                  type: image
+                  parameters:
+                    image:
+                      type: asset
+                      value: >-
+                        ${#jptr:/Product
+                        Content/entry/fields/primaryImage/value}
+                    width:
+                      type: number
+                      value: '160'
+                    height:
+                      type: number
+                      value: '160'
+                    objectFit:
+                      type: dex-segmented-control-parameter
+                      value: contain
+                - _id: 473a38aa-bf2c-45e9-9331-67dc47b43e00
+                  type: flex
+                  slots:
+                    flexItem:
+                      - _id: cb284a3e-b658-4de8-a9a3-60c844fee7ee
+                        type: text
+                        parameters:
+                          tag:
+                            type: dex-segmented-control-parameter
+                            value: span
+                          size:
+                            type: dex-segmented-control-parameter
+                            value:
+                              desktop: xl
+                          text:
+                            type: text
+                            locales:
+                              en: Key Features
+                          color:
+                            type: dex-color-palette-parameter
+                            value: text-tertiary
+                          weight:
+                            type: dex-segmented-control-parameter
+                            value: bold
+                      - _id: 9f2aa3d3-183f-4f81-8324-0ee1cea58c0b
+                        type: richText
+                        parameters:
+                          text:
+                            type: richText
+                            locales:
+                              en: >-
+                                ${#jptr:/Product
+                                Content/entry/fields/keyFeatures/value}
+                          color:
+                            type: dex-color-palette-parameter
+                            value: text-tertiary
+                  parameters:
+                    gap:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '4'
+                        tablet: '4'
+                        desktop: '4'
+                    direction:
+                      type: dex-segmented-control-parameter
+                      value:
+                        mobile: col
+                        tablet: col
+                        desktop: col
+                    alignItems:
+                      type: dex-segmented-control-parameter
+                      value: {}
+                    displayName:
+                      type: text
+                      locales:
+                        en: Key Features
+                    justifyContent:
+                      type: dex-segmented-control-parameter
+                      value: {}
+                - _id: faa3ecfb-c933-4913-af91-bfbb15df5ee7
+                  type: flex
+                  slots:
+                    flexItem:
+                      - _id: 05710e81-9c9a-4e01-bd68-8748e83708f7
+                        type: button
+                        _pattern: 699af8ec-fa5a-49a4-b568-539675ee0764
+                        _overridability:
+                          parameters:
+                            link: 'yes'
+                            text: 'yes'
+                          hideLockedParameters: true
+                      - _id: 83b33051-df3e-41cc-acfe-4657312f5784
+                        type: button
+                        _pattern: 699af8ec-fa5a-49a4-b568-539675ee0764
+                        _overridability:
+                          parameters:
+                            link: 'yes'
+                            text: 'yes'
+                          hideLockedParameters: true
+                      - _id: bceae90a-75d3-4fa4-876a-4d8302268f85
+                        type: button
+                        parameters:
+                          link:
+                            type: link
+                            locales:
+                              en:
+                                path: >-
+                                  https://store.qorvo.com/ProductDetail/QM42500-Qorvo/627523/
+                                type: url
+                          size:
+                            type: dex-token-selector-parameter
+                            value: button-medium
+                          text:
+                            type: text
+                            locales:
+                              en: Buy Online >
+                          textSize:
+                            type: dex-segmented-control-parameter
+                            value:
+                              mobile: sm
+                              tablet: sm
+                              desktop: sm
+                          fullWidth:
+                            type: checkbox
+                            value: true
+                          textColor:
+                            type: dex-color-palette-parameter
+                            value: text-primary
+                          textWeight:
+                            type: dex-segmented-control-parameter
+                            value: bold
+                          buttonColor:
+                            type: dex-color-palette-parameter
+                            value: button-secondary
+                          iconPosition:
+                            type: dex-segmented-control-parameter
+                            value: left
+                          textTransform:
+                            type: dex-segmented-control-parameter
+                            value: uppercase
+                          hoverTextColor:
+                            type: dex-color-palette-parameter
+                            value: text-primary
+                          hoverButtonColor:
+                            type: dex-color-palette-parameter
+                            value: button-tertiary
+                        _overridability:
+                          parameters:
+                            link: 'yes'
+                            text: 'yes'
+                          hideLockedParameters: true
+                      - _id: aba1cef4-6b2c-4e28-9d6c-1d4d4ef743c7
+                        type: button
+                        _pattern: 699af8ec-fa5a-49a4-b568-539675ee0764
+                        _overridability:
+                          parameters:
+                            link: 'yes'
+                            text: 'yes'
+                          hideLockedParameters: true
+                      - _id: 8e949a2e-7a2e-4c51-8e2f-51f3105dfdc8
+                        type: button
+                        parameters:
+                          link:
+                            type: link
+                            locales:
+                              en:
+                                path: https://www.qorvo.com/products/p/QM42500#
+                                type: url
+                          size:
+                            type: dex-token-selector-parameter
+                            value: button-medium
+                          text:
+                            type: text
+                            locales:
+                              en: Distributor Inventory
+                          border:
+                            type: dex-token-selector-parameter
+                            value: border-product-card
+                          textSize:
+                            type: dex-segmented-control-parameter
+                            value:
+                              mobile: sm
+                              tablet: sm
+                              desktop: sm
+                          fullWidth:
+                            type: checkbox
+                            value: true
+                          textColor:
+                            type: dex-color-palette-parameter
+                            value: text-tertiary
+                          textWeight:
+                            type: dex-segmented-control-parameter
+                            value: bold
+                          buttonColor:
+                            type: dex-color-palette-parameter
+                            value: button-primary
+                          textTransform:
+                            type: dex-segmented-control-parameter
+                            value: uppercase
+                          hoverTextColor:
+                            type: dex-color-palette-parameter
+                            value: text-primary
+                          hoverButtonColor:
+                            type: dex-color-palette-parameter
+                            value: button-tertiary
+                        _overridability:
+                          parameters:
+                            link: 'yes'
+                            text: 'yes'
+                          hideLockedParameters: true
+                  parameters:
+                    gap:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '4'
+                        tablet: '4'
+                        desktop: '4'
+                    direction:
+                      type: dex-segmented-control-parameter
+                      value:
+                        mobile: col
+                        tablet: col
+                        desktop: col
+                    alignItems:
+                      type: dex-segmented-control-parameter
+                      value: {}
+                    displayName:
+                      type: text
+                      locales:
+                        en: Buttons
+                    justifyContent:
+                      type: dex-segmented-control-parameter
+                      value:
+                        mobile: center
+                        tablet: center
+                        desktop: center
+            parameters:
+              gapX:
+                type: dex-slider-control-parameter
+                value: {}
+              gapY:
+                type: dex-slider-control-parameter
+                value: {}
+              displayName:
+                type: text
+                locales:
+                  en: Main Information
+              columnsCount:
+                type: dex-slider-control-parameter
+                value:
+                  mobile: '3'
+                  tablet: '3'
+                  desktop: '3'
+          - _id: b9570fc5-2e16-4b71-a533-92d8618a7cca
+            type: tabs
+            slots:
+              tabItems:
+                - _id: df227d35-4a1d-497d-8f90-49b4cd93d5ff
+                  type: tab
+                  slots:
+                    tabContent:
+                      - _id: 0805ed3a-7988-4a21-b685-d3bc3a1bc268
+                        type: grid
+                        slots:
+                          gridInner:
+                            - _id: a03fda07-2766-47d3-90a7-a1661e845e82
+                              type: gridItem
+                              slots:
+                                inner:
+                                  - _id: 2c7c5edf-9420-4144-8ad5-24f8d0ec6a85
+                                    type: container
+                                    slots:
+                                      containerContent:
+                                        - _id: 43b276d4-4a7f-45a9-a089-cf7512d5897b
+                                          type: richText
+                                          parameters:
+                                            text:
+                                              type: richText
+                                              locales:
+                                                en: >-
+                                                  ${#jptr:/Product
+                                                  Content/entry/fields/overview/value}
+                                    parameters:
+                                      border:
+                                        type: dex-token-selector-parameter
+                                        value: border-right
+                                      spacing:
+                                        type: dex-space-control-parameter
+                                        value:
+                                          mobile: {}
+                                          tablet: {}
+                                          desktop: {}
+                                      displayName:
+                                        type: text
+                                        locales:
+                                          en: Container
+                              parameters:
+                                rowSpan:
+                                  type: dex-slider-control-parameter
+                                  value: {}
+                                rowStart:
+                                  type: dex-slider-control-parameter
+                                  value:
+                                    mobile: '1'
+                                    tablet: '1'
+                                    desktop: '1'
+                                columnSpan:
+                                  type: dex-slider-control-parameter
+                                  value:
+                                    mobile: auto
+                                    tablet: span-7
+                                    desktop: span-7
+                                columnStart:
+                                  type: dex-slider-control-parameter
+                                  value:
+                                    mobile: '1'
+                                    tablet: '1'
+                                    desktop: '1'
+                                displayName:
+                                  type: text
+                                  locales:
+                                    en: Description
+                            - _id: 4c64ea32-f864-49ca-9031-005b6f783e60
+                              type: gridItem
+                              slots:
+                                inner:
+                                  - _id: b3e922a3-549d-4244-9f9e-f44bd2d73bf4
+                                    type: flex
+                                    slots:
+                                      flexItem:
+                                        - _id: bae21f4d-5410-4135-bd0f-4462a8cea97a
+                                          type: text
+                                          parameters:
+                                            tag:
+                                              type: dex-segmented-control-parameter
+                                              value: span
+                                            size:
+                                              type: dex-segmented-control-parameter
+                                              value:
+                                                desktop: xl
+                                            text:
+                                              type: text
+                                              locales:
+                                                en: Typical Applications
+                                            color:
+                                              type: dex-color-palette-parameter
+                                              value: text-tertiary
+                                            weight:
+                                              type: dex-segmented-control-parameter
+                                              value: bold
+                                        - _id: 8b06c001-57b3-4804-8554-54e1f6e053a7
+                                          type: richText
+                                          parameters:
+                                            text:
+                                              type: richText
+                                              locales:
+                                                en: >-
+                                                  ${#jptr:/Product
+                                                  Content/entry/fields/typicalApplications/value}
+                                    parameters:
+                                      gap:
+                                        type: dex-slider-control-parameter
+                                        value:
+                                          mobile: '4'
+                                          tablet: '4'
+                                          desktop: '4'
+                                      direction:
+                                        type: dex-segmented-control-parameter
+                                        value:
+                                          mobile: col
+                                          tablet: col
+                                          desktop: col
+                                      alignItems:
+                                        type: dex-segmented-control-parameter
+                                        value: {}
+                                      displayName:
+                                        type: text
+                                        locales:
+                                          en: Typical Applications
+                                      justifyContent:
+                                        type: dex-segmented-control-parameter
+                                        value: {}
+                              parameters:
+                                rowSpan:
+                                  type: dex-slider-control-parameter
+                                  value: {}
+                                rowStart:
+                                  type: dex-slider-control-parameter
+                                  value:
+                                    mobile: '1'
+                                    tablet: '1'
+                                    desktop: '1'
+                                columnSpan:
+                                  type: dex-slider-control-parameter
+                                  value:
+                                    mobile: span-4
+                                    tablet: span-3
+                                    desktop: span-3
+                                columnStart:
+                                  type: dex-slider-control-parameter
+                                  value:
+                                    mobile: '8'
+                                    tablet: '8'
+                                    desktop: '8'
+                                displayName:
+                                  type: text
+                                  locales:
+                                    en: Typical Applications
+                        parameters:
+                          gapX:
+                            type: dex-slider-control-parameter
+                            value:
+                              tablet: '8'
+                              desktop: '8'
+                          gapY:
+                            type: dex-slider-control-parameter
+                            value: {}
+                          displayName:
+                            type: text
+                            locales:
+                              en: Overview
+                          columnsCount:
+                            type: dex-slider-control-parameter
+                            value:
+                              mobile: '1'
+                              tablet: '10'
+                              desktop: '10'
+                      - _id: dc466659-dcd6-4dbc-8555-1abadec65a8a
+                        type: grid
+                        slots:
+                          gridInner:
+                            - _id: 33c6a02f-54e4-47cf-850e-01963780c7b7
+                              type: gridItem
+                              slots:
+                                inner:
+                                  - _id: f0b6aa7d-c343-4727-82d9-85698a9e97dc
+                                    type: flex
+                                    slots:
+                                      flexItem:
+                                        - _id: 078f1a33-36c0-479b-af1c-e7cd8b92f507
+                                          type: text
+                                          parameters:
+                                            tag:
+                                              type: dex-segmented-control-parameter
+                                              value: span
+                                            size:
+                                              type: dex-segmented-control-parameter
+                                              value:
+                                                desktop: xl
+                                            text:
+                                              type: text
+                                              locales:
+                                                en: Product Categories
+                                            color:
+                                              type: dex-color-palette-parameter
+                                              value: text-tertiary
+                                            weight:
+                                              type: dex-segmented-control-parameter
+                                              value: bold
+                                        - _id: 18f8e419-ae72-4a74-a55c-aeb542c2c676
+                                          type: $loop
+                                          slots:
+                                            body:
+                                              - _id: ae00cbdf-4b69-4ea6-9178-613f5024841f
+                                                type: link
+                                                slots:
+                                                  linkContent:
+                                                    - _id: ffe7e3ba-a366-4268-be22-8b4ba94d209d
+                                                      type: text
+                                                      parameters:
+                                                        tag:
+                                                          type: dex-segmented-control-parameter
+                                                          value: span
+                                                        size:
+                                                          type: dex-segmented-control-parameter
+                                                          value: {}
+                                                        text:
+                                                          type: text
+                                                          locales:
+                                                            en: >-
+                                                              Products > ${#jptr:/Product Content
+                                                              category Loop
+                                                              Item/entry/fields/title/value}
+                                                        color:
+                                                          type: dex-color-palette-parameter
+                                                          value: text-secondary
+                                                        weight:
+                                                          type: dex-segmented-control-parameter
+                                                          value: bold
+                                                parameters:
+                                                  displayName:
+                                                    type: text
+                                                    locales:
+                                                      en: Link
+                                          _dataResources:
+                                            Product Content category Loop Item:
+                                              type: sys-reserved-loop
+                                              variables:
+                                                connectedData: >-
+                                                  #jptr:/Product
+                                                  Content/entry/fields/category/value:fa=c
+                                    parameters:
+                                      gap:
+                                        type: dex-slider-control-parameter
+                                        value:
+                                          mobile: '4'
+                                          tablet: '4'
+                                          desktop: '4'
+                                      direction:
+                                        type: dex-segmented-control-parameter
+                                        value:
+                                          mobile: col
+                                          tablet: col
+                                          desktop: col
+                                      alignItems:
+                                        type: dex-segmented-control-parameter
+                                        value: {}
+                                      displayName:
+                                        type: text
+                                        locales:
+                                          en: Product Categories
+                                      justifyContent:
+                                        type: dex-segmented-control-parameter
+                                        value: {}
+                              parameters:
+                                rowSpan:
+                                  type: dex-slider-control-parameter
+                                  value: {}
+                                rowStart:
+                                  type: dex-slider-control-parameter
+                                  value:
+                                    mobile: '1'
+                                    tablet: '1'
+                                    desktop: '1'
+                                columnSpan:
+                                  type: dex-slider-control-parameter
+                                  value:
+                                    tablet: span-5
+                                    desktop: span-5
+                                columnStart:
+                                  type: dex-slider-control-parameter
+                                  value:
+                                    mobile: '1'
+                                    tablet: '1'
+                                    desktop: '1'
+                                displayName:
+                                  type: text
+                                  locales:
+                                    en: Product Categories
+                            - _id: fcac95b6-6c75-4e22-92ba-7a02c4f5ded5
+                              type: gridItem
+                              slots:
+                                inner:
+                                  - _id: 45d94a46-cc2b-4bbf-b9f1-7c91d0d3fbb9
+                                    type: flex
+                                    slots:
+                                      flexItem:
+                                        - _id: 8884113d-205e-4929-9158-bac54a56cf85
+                                          type: text
+                                          parameters:
+                                            tag:
+                                              type: dex-segmented-control-parameter
+                                              value: span
+                                            size:
+                                              type: dex-segmented-control-parameter
+                                              value:
+                                                desktop: xl
+                                            text:
+                                              type: text
+                                              locales:
+                                                en: Application Categories
+                                            color:
+                                              type: dex-color-palette-parameter
+                                              value: text-tertiary
+                                            weight:
+                                              type: dex-segmented-control-parameter
+                                              value: bold
+                                        - _id: 04de81cf-25e8-4232-83c6-a533b5599b61
+                                          type: $loop
+                                          slots:
+                                            body:
+                                              - _id: ca936c38-5144-4c4c-9e9c-ee81b5d34531
+                                                type: link
+                                                slots:
+                                                  linkContent:
+                                                    - _id: 33e6837a-69ec-4d1d-a5cc-2af6fcdf78fb
+                                                      type: text
+                                                      parameters:
+                                                        tag:
+                                                          type: dex-segmented-control-parameter
+                                                          value: span
+                                                        size:
+                                                          type: dex-segmented-control-parameter
+                                                          value: {}
+                                                        text:
+                                                          type: text
+                                                          locales:
+                                                            en: >-
+                                                              Application Categories >
+                                                              ${#jptr:/Product Content category Loop
+                                                              Item/entry/fields/title/value}
+                                                        color:
+                                                          type: dex-color-palette-parameter
+                                                          value: text-secondary
+                                                        weight:
+                                                          type: dex-segmented-control-parameter
+                                                          value: bold
+                                                parameters:
+                                                  displayName:
+                                                    type: text
+                                                    locales:
+                                                      en: Link
+                                          _dataResources:
+                                            Product Content category Loop Item:
+                                              type: sys-reserved-loop
+                                              variables:
+                                                connectedData: >-
+                                                  #jptr:/Product
+                                                  Content/entry/fields/applications/value:fa=c
+                                    parameters:
+                                      gap:
+                                        type: dex-slider-control-parameter
+                                        value:
+                                          mobile: '4'
+                                          tablet: '4'
+                                          desktop: '4'
+                                      direction:
+                                        type: dex-segmented-control-parameter
+                                        value:
+                                          mobile: col
+                                          tablet: col
+                                          desktop: col
+                                      alignItems:
+                                        type: dex-segmented-control-parameter
+                                        value: {}
+                                      displayName:
+                                        type: text
+                                        locales:
+                                          en: Application Categories
+                                      justifyContent:
+                                        type: dex-segmented-control-parameter
+                                        value: {}
+                              parameters:
+                                rowSpan:
+                                  type: dex-slider-control-parameter
+                                  value: {}
+                                rowStart:
+                                  type: dex-slider-control-parameter
+                                  value:
+                                    mobile: '1'
+                                    tablet: '1'
+                                    desktop: '1'
+                                columnSpan:
+                                  type: dex-slider-control-parameter
+                                  value:
+                                    tablet: span-5
+                                    desktop: span-5
+                                columnStart:
+                                  type: dex-slider-control-parameter
+                                  value:
+                                    mobile: '1'
+                                    tablet: '1'
+                                    desktop: '5'
+                                displayName:
+                                  type: text
+                                  locales:
+                                    en: Application Categories
+                        parameters:
+                          gapX:
+                            type: dex-slider-control-parameter
+                            value: {}
+                          gapY:
+                            type: dex-slider-control-parameter
+                            value: {}
+                          spacing:
+                            type: dex-space-control-parameter
+                            value:
+                              mobile: {}
+                              tablet: {}
+                              desktop:
+                                paddingTop: container-medium
+                          displayName:
+                            type: text
+                            locales:
+                              en: Product and  Application Categories
+                          columnsCount:
+                            type: dex-slider-control-parameter
+                            value:
+                              mobile: '1'
+                              tablet: '2'
+                              desktop: '12'
+                          fluidContent:
+                            type: checkbox
+                            value: true
+                  parameters:
+                    text:
+                      type: text
+                      locales:
+                        en: Overview
+                - _id: c3b00e65-622f-483f-a64b-1ecdb653c8e7
+                  type: tab
+                  slots:
+                    tabContent:
+                      - _id: 26aa39df-e8d9-4a7f-8d9f-8c576dcc0686
+                        type: richText
+                        parameters:
+                          text:
+                            type: richText
+                            locales:
+                              en: >-
+                                ${#jptr:/Product
+                                Content/entry/fields/parameters/value}
+                  parameters:
+                    text:
+                      type: text
+                      locales:
+                        en: Parameters
+                - _id: d9247839-d71e-4a41-8d48-a12bcb226354
+                  type: tab
+                  slots:
+                    tabContent:
+                      - _id: e110792a-34b8-4a42-9980-b7987907a888
+                        type: flex
+                        slots:
+                          flexItem:
+                            - _id: 8a9b48b2-09f7-4dae-a641-09d49598cc39
+                              type: text
+                              parameters:
+                                tag:
+                                  type: dex-segmented-control-parameter
+                                  value: span
+                                size:
+                                  type: dex-segmented-control-parameter
+                                  value:
+                                    desktop: xl
+                                text:
+                                  type: text
+                                  locales:
+                                    en: Related Resources
+                                color:
+                                  type: dex-color-palette-parameter
+                                  value: text-tertiary
+                                weight:
+                                  type: dex-segmented-control-parameter
+                                  value: bold
+                            - _id: ab025029-2f74-4ae2-9560-f2adda27a5c4
+                              type: flex
+                              slots:
+                                flexItem:
+                                  - _id: f7d08de9-c646-4d85-9f7d-431b948b4fe5
+                                    type: image
+                                    parameters:
+                                      image:
+                                        type: asset
+                                        value:
+                                          - _id: cba8bef9-4dc4-45e4-801f-3d824de3cafe
+                                            type: image
+                                            fields:
+                                              id:
+                                                type: text
+                                                value: 7cbb85a0-a6e8-4090-841a-fbfd224bf64a
+                                              url:
+                                                type: text
+                                                value: >-
+                                                  https://img.uniform.global/p/sKOOLWs8SZW0bvoUXwsTDQ/GGMpGGgwTayZdPx57-T20Q-open-mail-svgrepo-com.svg
+                                              file:
+                                                type: file
+                                                value: 70224370-439d-45ee-824b-657646729c7b
+                                              size:
+                                                type: number
+                                                value: 4014
+                                              title:
+                                                type: text
+                                                value: open-mail-svgrepo-com.svg
+                                              width:
+                                                type: number
+                                                value: 800
+                                              height:
+                                                type: number
+                                                value: 800
+                                              mediaType:
+                                                type: text
+                                                value: image/svg+xml
+                                            _source: uniform-assets
+                                      width:
+                                        type: number
+                                        value: '40'
+                                      height:
+                                        type: number
+                                        value: '40'
+                                      objectFit:
+                                        type: dex-segmented-control-parameter
+                                        value: cover
+                                  - _id: 7f894177-7f10-45b3-80a1-b5535846e428
+                                    type: flex
+                                    slots:
+                                      flexItem:
+                                        - _id: e4cc77e1-130b-498b-9f0d-3869e485fd7c
+                                          type: text
+                                          parameters:
+                                            tag:
+                                              type: dex-segmented-control-parameter
+                                              value: span
+                                            size:
+                                              type: dex-segmented-control-parameter
+                                              value:
+                                                desktop: xl
+                                            text:
+                                              type: text
+                                              locales:
+                                                en: New Product Announcements
+                                            color:
+                                              type: dex-color-palette-parameter
+                                              value: text-tertiary
+                                            weight:
+                                              type: dex-segmented-control-parameter
+                                              value: bold
+                                            maxWidth:
+                                              type: dex-slider-control-parameter
+                                              value: 23%
+                                        - _id: ee667864-e848-45e2-81eb-f30b144f4878
+                                          type: link
+                                          slots:
+                                            linkContent:
+                                              - _id: 34481d24-9d82-4024-ae44-77048ec675eb
+                                                type: text
+                                                parameters:
+                                                  tag:
+                                                    type: dex-segmented-control-parameter
+                                                    value: span
+                                                  size:
+                                                    type: dex-segmented-control-parameter
+                                                    value: {}
+                                                  text:
+                                                    type: text
+                                                    locales:
+                                                      en: >-
+                                                        Wi-Fi 7, FEMs, GaN, PA,  and Battery
+                                                        Management for Wi-Fi, Defense, Radar,
+                                                        Consumer Goods, & Power Management
+                                                  color:
+                                                    type: dex-color-palette-parameter
+                                                    value: text-secondary
+                                                  weight:
+                                                    type: dex-segmented-control-parameter
+                                                    value: normal
+                                                  maxWidth:
+                                                    type: dex-slider-control-parameter
+                                                    value: 20%
+                                          parameters:
+                                            link:
+                                              type: link
+                                              value:
+                                                path: >-
+                                                  https://www.qorvo.com/resources/d/npa-2023-11-30-Wi-Fi-7-FEMs--GaN-PA-and-Battery-Management-for-Wi-Fi--Defense-Radar---Consumer-Goods-Power-Management
+                                                type: url
+                                            displayName:
+                                              type: text
+                                              locales:
+                                                en: Link
+                                        - _id: c04768ba-3997-48df-a768-89feb7dd99b7
+                                          type: text
+                                          parameters:
+                                            tag:
+                                              type: dex-segmented-control-parameter
+                                              value: span
+                                            size:
+                                              type: dex-segmented-control-parameter
+                                              value:
+                                                desktop: base
+                                            text:
+                                              type: text
+                                              locales:
+                                                en: November 30, 2023
+                                            color:
+                                              type: dex-color-palette-parameter
+                                              value: text-tertiary
+                                            weight:
+                                              type: dex-segmented-control-parameter
+                                              value: normal
+                                    parameters:
+                                      gap:
+                                        type: dex-slider-control-parameter
+                                        value:
+                                          mobile: '4'
+                                          tablet: '4'
+                                          desktop: '4'
+                                      direction:
+                                        type: dex-segmented-control-parameter
+                                        value:
+                                          mobile: col
+                                          tablet: col
+                                          desktop: col
+                                      alignItems:
+                                        type: dex-segmented-control-parameter
+                                        value: {}
+                                      displayName:
+                                        type: text
+                                        locales:
+                                          en: Content
+                                      justifyContent:
+                                        type: dex-segmented-control-parameter
+                                        value: {}
+                              parameters:
+                                gap:
+                                  type: dex-slider-control-parameter
+                                  value:
+                                    mobile: '8'
+                                    tablet: '8'
+                                    desktop: '8'
+                                direction:
+                                  type: dex-segmented-control-parameter
+                                  value:
+                                    mobile: row
+                                    tablet: row
+                                    desktop: row
+                                alignItems:
+                                  type: dex-segmented-control-parameter
+                                  value: {}
+                                displayName:
+                                  type: text
+                                  locales:
+                                    en: Related Card
+                                justifyContent:
+                                  type: dex-segmented-control-parameter
+                                  value: {}
+                        parameters:
+                          gap:
+                            type: dex-slider-control-parameter
+                            value:
+                              mobile: '4'
+                              tablet: '4'
+                              desktop: '4'
+                          direction:
+                            type: dex-segmented-control-parameter
+                            value:
+                              mobile: col
+                              tablet: col
+                              desktop: col
+                          alignItems:
+                            type: dex-segmented-control-parameter
+                            value: {}
+                          displayName:
+                            type: text
+                            locales:
+                              en: Related Resources
+                          justifyContent:
+                            type: dex-segmented-control-parameter
+                            value: {}
+                  parameters:
+                    text:
+                      type: text
+                      locales:
+                        en: Documents
+            variant: bordered
+            parameters:
+              color:
+                type: dex-color-palette-parameter
+                value: text-tertiary
+              spacing:
+                type: dex-space-control-parameter
+                value:
+                  mobile: {}
+                  tablet: {}
+                  desktop:
+                    paddingBottom: container-medium
+              displayName:
+                type: text
+                locales:
+                  en: Tabbed Content
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-03-25T04:27:52.309699+00:00'
-modified: '2025-04-04T10:21:24.445369+00:00'
+created: '2025-05-12T08:15:27.104162+00:00'
+modified: '2025-05-12T10:03:38.301662+00:00'
 pattern: false
