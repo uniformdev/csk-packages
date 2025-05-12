@@ -100,6 +100,12 @@ composition:
                                     mobile: '8'
                                     tablet: '8'
                                     desktop: '8'
+                                spacing:
+                                  type: dex-space-control-parameter
+                                  value:
+                                    mobile: {}
+                                    tablet: {}
+                                    desktop: {}
                                 direction:
                                   type: dex-segmented-control-parameter
                                   value:
@@ -141,6 +147,9 @@ composition:
                                       tag:
                                         type: dex-segmented-control-parameter
                                         value: span
+                                      font:
+                                        type: dex-token-selector-parameter
+                                        value: font-din-rounded
                                       size:
                                         type: dex-segmented-control-parameter
                                         value:
@@ -215,6 +224,9 @@ composition:
                             type: text
                             locales:
                               en: Content
+                          fluidContent:
+                            type: checkbox
+                            value: true
                           justifyContent:
                             type: dex-segmented-control-parameter
                             value: {}
@@ -592,8 +604,8 @@ composition:
                   tablet: {}
                   desktop:
                     paddingTop: container-medium
-                    paddingLeft: container-small
-                    paddingRight: container-small
+                    paddingLeft: container-none
+                    paddingRight: container-none
               displayName:
                 type: text
                 locales:
@@ -601,7 +613,8 @@ composition:
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-05-09T06:33:49.800905+00:00'
-modified: '2025-05-12T10:38:09.071212+00:00'
+created: '2025-05-12T08:15:26.330107+00:00'
+modified: '2025-05-12T14:45:13.257964+00:00'
 pattern: false
 workflowId: 709029a9-419a-4f6b-891f-427729e3c4df
+workflowStageId: a3b17d73-0198-4734-8c5e-71f898d6d4fe

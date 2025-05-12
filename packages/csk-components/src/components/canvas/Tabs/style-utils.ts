@@ -19,7 +19,7 @@ type ButtonClassesProps = {
   activeTabId: string;
 };
 export const getButtonClasses = ({ color, variant, tabItem, activeTabId }: ButtonClassesProps) =>
-  cn('text-lg shrink-0 font-medium px-5 py-3', {
+  cn('text-lg shrink-0 font-medium px-5 py-3 font-font-din-rounded', {
     [`text-${color}`]: color,
     [`border-${color}`]: tabItem.id === activeTabId && variant === TabsVariants.Bordered,
     'border-b-2': variant === TabsVariants.Bordered,

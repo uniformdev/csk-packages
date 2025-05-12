@@ -57,6 +57,7 @@ export const Tabs: FC<TabsProps> = ({
                 onFocus={() => handleContextualEditingTabClick(tabItem.id)}
                 context={context}
                 parameterId="text"
+                className="font-font-din-rounded"
                 component={component?.slots?.tabItems[index]}
                 placeholder="Tab title"
               />

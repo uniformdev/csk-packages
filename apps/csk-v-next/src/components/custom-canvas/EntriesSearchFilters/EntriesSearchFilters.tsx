@@ -42,7 +42,7 @@ const EntriesSearchFilters: FC<EntriesSearchFiltersProps> = ({ title }) => {
 
   return (
     <div className="flex gap-x-4">
-      {title && <div className="w-max whitespace-nowrap text-lg font-bold">{title}</div>}
+      {title && <div className="w-max font-font-din-rounded whitespace-nowrap text-lg font-bold">{title}</div>}
       <div className="flex flex-row flex-wrap gap-2">
         {filterBy.map(filter => {
           const Component = filterByComponents[filter.type];

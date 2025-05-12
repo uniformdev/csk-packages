@@ -54,7 +54,12 @@ const EntriesSearchBox: FC<EntriesSearchBoxProps> = ({
   return (
     <div className={cn('flex items-center gap-x-4 w-full', { 'w-full': fullWidth })}>
       {label && (
-        <Text className="whitespace-nowrap font-bold" size={labelSize} color={labelColor} font={font}>
+        <Text
+          className="whitespace-nowrap font-font-din-rounded font-bold"
+          size={labelSize}
+          color={labelColor}
+          font={font}
+        >
           <UniformText placeholder="Text goes here" parameterId="label" component={component} context={context} />
         </Text>
       )}

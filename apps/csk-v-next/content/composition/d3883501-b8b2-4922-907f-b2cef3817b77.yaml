@@ -89,9 +89,14 @@ composition:
                     tag:
                       type: dex-segmented-control-parameter
                       value: h1
+                    font:
+                      type: dex-token-selector-parameter
+                      value: font-din-rounded
                     size:
                       type: dex-segmented-control-parameter
                       value:
+                        mobile: 4xl
+                        tablet: 4xl
                         desktop: 4xl
                     text:
                       type: text
@@ -109,9 +114,14 @@ composition:
                     tag:
                       type: dex-segmented-control-parameter
                       value: span
+                    font:
+                      type: dex-token-selector-parameter
+                      value: font-din-rounded
                     size:
                       type: dex-segmented-control-parameter
                       value:
+                        mobile: xl
+                        tablet: xl
                         desktop: xl
                     text:
                       type: text
@@ -238,8 +248,12 @@ composition:
               spacing:
                 type: dex-space-control-parameter
                 value:
-                  mobile: {}
-                  tablet: {}
+                  mobile:
+                    paddingTop: container-medium
+                    paddingBottom: container-medium
+                  tablet:
+                    paddingTop: container-medium
+                    paddingBottom: container-medium
                   desktop:
                     paddingTop: container-medium
                     paddingBottom: container-medium
@@ -290,9 +304,14 @@ composition:
                           tag:
                             type: dex-segmented-control-parameter
                             value: span
+                          font:
+                            type: dex-token-selector-parameter
+                            value: font-din-rounded
                           size:
                             type: dex-segmented-control-parameter
                             value:
+                              mobile: xl
+                              tablet: xl
                               desktop: xl
                           text:
                             type: text
@@ -596,9 +615,14 @@ composition:
                                             tag:
                                               type: dex-segmented-control-parameter
                                               value: span
+                                            font:
+                                              type: dex-token-selector-parameter
+                                              value: font-din-rounded
                                             size:
                                               type: dex-segmented-control-parameter
                                               value:
+                                                mobile: xl
+                                                tablet: xl
                                                 desktop: xl
                                             text:
                                               type: text
@@ -705,9 +729,14 @@ composition:
                                             tag:
                                               type: dex-segmented-control-parameter
                                               value: span
+                                            font:
+                                              type: dex-token-selector-parameter
+                                              value: font-din-rounded
                                             size:
                                               type: dex-segmented-control-parameter
                                               value:
+                                                mobile: xl
+                                                tablet: xl
                                                 desktop: xl
                                             text:
                                               type: text
@@ -733,6 +762,9 @@ composition:
                                                         tag:
                                                           type: dex-segmented-control-parameter
                                                           value: span
+                                                        font:
+                                                          type: dex-token-selector-parameter
+                                                          value: font-din-rounded
                                                         size:
                                                           type: dex-segmented-control-parameter
                                                           value: {}
@@ -823,9 +855,14 @@ composition:
                                             tag:
                                               type: dex-segmented-control-parameter
                                               value: span
+                                            font:
+                                              type: dex-token-selector-parameter
+                                              value: font-din-rounded
                                             size:
                                               type: dex-segmented-control-parameter
                                               value:
+                                                mobile: xl
+                                                tablet: xl
                                                 desktop: xl
                                             text:
                                               type: text
@@ -851,6 +888,9 @@ composition:
                                                         tag:
                                                           type: dex-segmented-control-parameter
                                                           value: span
+                                                        font:
+                                                          type: dex-token-selector-parameter
+                                                          value: font-din-rounded
                                                         size:
                                                           type: dex-segmented-control-parameter
                                                           value: {}
@@ -921,7 +961,7 @@ composition:
                                   type: dex-slider-control-parameter
                                   value:
                                     mobile: '1'
-                                    tablet: '1'
+                                    tablet: '5'
                                     desktop: '5'
                                 displayName:
                                   type: text
@@ -949,7 +989,7 @@ composition:
                             type: dex-slider-control-parameter
                             value:
                               mobile: '1'
-                              tablet: '2'
+                              tablet: '12'
                               desktop: '12'
                           fluidContent:
                             type: checkbox
@@ -1233,7 +1273,8 @@ composition:
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-04-24T21:39:12.570695+00:00'
-modified: '2025-05-12T10:38:09.071212+00:00'
+created: '2025-05-12T08:15:27.104162+00:00'
+modified: '2025-05-12T14:51:07.533163+00:00'
 pattern: false
 workflowId: 709029a9-419a-4f6b-891f-427729e3c4df
+workflowStageId: a3b17d73-0198-4734-8c5e-71f898d6d4fe
