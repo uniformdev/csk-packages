@@ -28,7 +28,7 @@ export async function POST(request: Request) {
     const history = await canvasClient.getCompositionHistory({ compositionId });
 
     if (!history) {
-      console.info('No history found for composition');
+      console.info('Error: No history found for composition');
       return Response.json({ success: false, error: 'No history found for composition' });
     }
 
@@ -36,7 +36,7 @@ export async function POST(request: Request) {
     const latestPublishedVersion = history?.results?.find(result => result.state === CANVAS_PUBLISHED_STATE);
 
     if (!latestPublishedVersion || !latestVersion) {
-      console.info('No published version found for comparison');
+      console.info('Error: No published version found for comparison');
       return Response.json({ success: false, error: 'No published version found for comparison' });
     }
 
