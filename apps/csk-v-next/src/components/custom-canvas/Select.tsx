@@ -10,10 +10,12 @@ type SelectProps = {
 
 const Select: FC<SelectProps> = ({ options, title }) => {
   const optionsToShow = useMemo(() => {
-    return options.split(',').map(option => ({
-      label: option,
-      value: option,
-    }));
+    return (
+      options?.split(',').map(option => ({
+        label: option,
+        value: option,
+      })) || []
+    );
   }, [options]);
 
   return (

@@ -75,18 +75,6 @@ composition:
           type: text
           locales:
             en: IMS 2025
-    533cd9b0-8cbb-4747-ba35-db0dd1a5474f:
-      parameters:
-        size:
-          type: dex-segmented-control-parameter
-          value:
-            mobile: 2xl
-            tablet: 2xl
-            desktop: 2xl
-        text:
-          type: text
-          locales:
-            en: Explore Block Diagrams
     614669cf-2120-42fe-84d8-f9e1291e8cf7:
       parameters:
         text:
@@ -171,6 +159,18 @@ composition:
         openGraphDescription:
           type: text
           value: null
+    a4211c36-f12e-449a-aa43-bc6c2ce7fdb8:
+      parameters:
+        size:
+          type: dex-segmented-control-parameter
+          value:
+            mobile: 2xl
+            tablet: 2xl
+            desktop: 2xl
+        text:
+          type: text
+          locales:
+            en: Explore Block Diagrams
     c8257735-e6c7-4539-b089-102c1d125b8b:
       parameters:
         displayName:
@@ -735,15 +735,15 @@ composition:
                     backgroundColor:
                       type: dex-color-palette-parameter
                       value: general-color-4
-                - _id: 433bc432-07a3-4750-a4a2-f4e6a61bcb90
+                - _id: 6866f828-b385-4c38-a3f1-41c832f01dfe
                   type: grid
                   slots:
                     gridInner:
-                      - _id: b914461f-aefd-4524-993e-6ee3c014928f
+                      - _id: 2007300f-4c7c-4922-b876-add5fee686eb
                         type: flex
                         slots:
                           flexItem:
-                            - _id: 43ed343e-5cf0-4b63-b2e0-292be713bd26
+                            - _id: 40727ba7-ced2-4bec-bd6b-8b1b68d199c4
                               type: text
                               parameters:
                                 tag:
@@ -768,15 +768,15 @@ composition:
                                 weight:
                                   type: dex-segmented-control-parameter
                                   value: bold
-                            - _id: f42ebb02-4eca-427d-9350-51f3d6b2b6a6
+                            - _id: eeb3a64e-706b-46c0-8915-837ab68fbf6b
                               type: $loop
                               slots:
                                 body:
-                                  - _id: 8c590ec8-e92b-40b5-be42-ef13a8802d78
+                                  - _id: ba76cc8b-6708-4f6b-bf30-48d597ce4982
                                     type: link
                                     slots:
                                       linkContent:
-                                        - _id: a23d40ec-7b7e-4473-bd05-d6440216cafe
+                                        - _id: 4178aa71-d157-4c7f-aff8-cc0c869d9c17
                                           type: text
                                           parameters:
                                             tag:
@@ -840,11 +840,11 @@ composition:
                           justifyContent:
                             type: dex-segmented-control-parameter
                             value: {}
-                      - _id: 718541f8-ffd0-4de0-941e-0d11f2f1fa7c
+                      - _id: 8e5209e7-040d-43e3-baff-2a60b2ec6f85
                         type: flex
                         slots:
                           flexItem:
-                            - _id: 3bb50ba3-6683-48f6-83a0-f9a4784f3b8c
+                            - _id: bd46c4c1-2d14-45b7-bd91-2e7891f97cf3
                               type: text
                               parameters:
                                 tag:
@@ -869,15 +869,15 @@ composition:
                                 weight:
                                   type: dex-segmented-control-parameter
                                   value: bold
-                            - _id: e1839985-e646-4b2c-b36d-428a087f83d7
+                            - _id: 0193db6c-c620-4df9-8e87-830dd0c61f47
                               type: $loop
                               slots:
                                 body:
-                                  - _id: b6bad5e5-fbd9-49b1-a5bb-a3a224c12b97
+                                  - _id: 31c0cda8-1116-4740-9990-f90c39cdf705
                                     type: link
                                     slots:
                                       linkContent:
-                                        - _id: f329a5ce-7960-49c9-b59a-d1da181b4230
+                                        - _id: 7a2118fb-58ef-4c64-bc59-05cadc42b30a
                                           type: text
                                           parameters:
                                             tag:
@@ -940,15 +940,15 @@ composition:
                           justifyContent:
                             type: dex-segmented-control-parameter
                             value: {}
-                      - _id: b5bbb5ab-694d-4fa1-ba5d-49cf2672beba
+                      - _id: 5019181d-009a-4467-826d-5c6781e71d44
                         type: gridItem
                         slots:
                           inner:
-                            - _id: 0c7063d5-d7cb-4b96-b877-a5f77312a3a9
+                            - _id: ef1770c8-d0a5-4281-b922-27b482636784
                               type: flex
                               slots:
                                 flexItem:
-                                  - _id: 533cd9b0-8cbb-4747-ba35-db0dd1a5474f
+                                  - _id: a4211c36-f12e-449a-aa43-bc6c2ce7fdb8
                                     type: text
                                     _pattern: 08b7d9c0-c9a7-4c47-a167-2acaf6c8746b
                                     _overridability:
@@ -956,7 +956,7 @@ composition:
                                         size: 'yes'
                                         text: 'yes'
                                       hideLockedParameters: true
-                                  - _id: 6d55c9a7-6dbc-463f-b77e-3e7eaf146c90
+                                  - _id: c39a0246-b768-451f-b7f6-af9fdbfcd7ae
                                     type: select
                                     parameters:
                                       title:
@@ -970,7 +970,7 @@ composition:
                                             Automotive,Customer Premises
                                             Equipment,Defense and Aerospace,Network
                                             Infrastructure
-                                  - _id: 15e23b33-b4d2-4268-9922-2363870ac5f9
+                                  - _id: 85076af8-c445-4f57-9c88-53d79d4a0477
                                     type: select
                                     parameters:
                                       title:
@@ -981,7 +981,7 @@ composition:
                                         type: text
                                         locales:
                                           en: Infotainment,Telematics
-                                  - _id: b8b9cade-f70c-4d1f-9da4-ea58699e93fc
+                                  - _id: 3da8d5aa-6d02-4bfa-ba00-c5fffad8af8f
                                     type: select
                                     parameters:
                                       title:
@@ -995,7 +995,7 @@ composition:
                                             Infotainment Dual B Dual
                                             Antenna,Infotainment Dual B Single
                                             Antenna,Infotainment 2.4GHz FEM
-                                  - _id: c07cdc6f-2532-4244-a30e-a55f6e80d8af
+                                  - _id: bc5acb7b-b46b-47e1-86f3-1a1cbc385bba
                                     type: button
                                     parameters:
                                       link:
@@ -1297,8 +1297,8 @@ composition:
     - en
     - cn
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-05-12T08:15:26.668796+00:00'
-modified: '2025-05-13T09:36:16.52877+00:00'
+created: '2025-04-24T21:39:11.680214+00:00'
+modified: '2025-05-13T09:57:56.383397+00:00'
 pattern: false
 workflowId: 709029a9-419a-4f6b-891f-427729e3c4df
 workflowStageId: a3b17d73-0198-4734-8c5e-71f898d6d4fe
