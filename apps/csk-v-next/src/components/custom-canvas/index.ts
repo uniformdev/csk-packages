@@ -35,6 +35,7 @@ import Recommendations from './Recommendations';
 import RedirectSearchBox from './RedirectSearchBox';
 import RemoveButton from './RemoveButton';
 import RichText from './RichText';
+import Select from './Select';
 import ShoppingCart from './ShoppingCart';
 import ShoppingCartIcon from './ShoppingCartIcon';
 import Text from './Text';
@@ -85,4 +86,5 @@ export const customComponentsMapping: ComponentMapping = {
   carousel: { component: Carousel },
   navigationMegaMenuSection: { component: NavigationMegaMenuSection },
   redirectSearchBox: { component: RedirectSearchBox },
+  select: { component: Select },
 };

@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: select
+name: Select
+icon: screen
+parameters:
+  - id: title
+    name: Title
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: options
+    name: Options
+    type: text
+    helpText: Divided by ','
+    typeConfig: null
+    localizable: true
+useTeamPermissions: true
+slots: []
+titleParameter: title
+canBeComposition: false
+created: '2025-05-13T09:20:40.34617+00:00'
+updated: '2025-05-13T09:20:40.34617+00:00'
