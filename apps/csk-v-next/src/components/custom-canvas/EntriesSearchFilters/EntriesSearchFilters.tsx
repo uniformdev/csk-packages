@@ -1,5 +1,5 @@
 'use client';
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import Button from '@/components/ui/Button';
 import { useEntriesSearchContext } from '@/modules/search/EntriesSearchContextProvider';
@@ -35,6 +35,10 @@ const EntriesSearchFilters: FC<EntriesSearchFiltersProps> = ({ title }) => {
   const handleReset = () => {
     clearFilters();
   };
+
+  useEffect(() => {
+    setFilters(selectedFilters);
+  }, [selectedFilters]);
 
   const handleApply = () => {
     setSelectedFilters(filters);

@@ -63,9 +63,8 @@ export const NavigationMegaMenuSection: FC<NavigationMegaMenuSectionProps> = ({
           const finalTitle = isActive ? hoverTitle : title;
           return (
             <div
-              className={cn('cursor-pointer py-1', {
-                'border-b': isActive,
-                [`border-${hoverColor}`]: hoverColor,
+              className={cn('cursor-pointer py-1 border-b border-transparent', {
+                [`border-${hoverColor}`]: hoverColor && isActive,
               })}
               key={index}
               onClick={() => onSelectFirstLevel(index)}
@@ -104,9 +103,8 @@ export const NavigationMegaMenuSection: FC<NavigationMegaMenuSectionProps> = ({
           const finalTitle = isActive ? hoverTitle : title;
           return (
             <div
-              className={cn('cursor-pointer py-1', {
-                'border-b': isActive,
-                [`border-${hoverColor}`]: hoverColor,
+              className={cn('cursor-pointer py-1 border-b border-transparent', {
+                [`border-${hoverColor}`]: hoverColor && isActive,
               })}
               key={index}
               onClick={() => onSelectSecondLevel(index)}

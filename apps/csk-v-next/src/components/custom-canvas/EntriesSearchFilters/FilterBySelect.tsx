@@ -15,6 +15,10 @@ const FilterBySelect: FC<FilterByProps> = ({
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    setLocalSelectedValues(selectedValues);
+  }, [selectedValues]);
+
   const handleFilterChange = useCallback(
     (event: ChangeEvent<HTMLInputElement>) => {
       const value = event.target.value;
