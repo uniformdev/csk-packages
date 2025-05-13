@@ -20,7 +20,7 @@ export const NavigationFlyoutPropsDesktopContent: FC<NavigationFlyoutPropsDeskto
   component,
 }) => (
   <div
-    className={cn('absolute lg:fixed xl:absolute z-10 w-screen left-0 shadow-lg right-0 pt-1 hidden group-hover:block')}
+    className={cn('absolute lg:fixed xl:absolute z-10 w-screen left-0 shadow-lg pt-5 right-0 hidden group-hover:block')}
   >
     <div
       className={cn('p-8', {
