@@ -4,7 +4,8 @@ import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { ViewPort } from '@/types/cskTypes';
 
 export type VideoParameters = {
-  url?: LinkParamValue;
+  video?: AssetParamValue;
+  url?: LinkParamValue; // Deprecated. Please use video parameter instead of url
   placeholderImage?: AssetParamValue;
   autoPlay?: boolean;
   lazyLoad?: boolean;

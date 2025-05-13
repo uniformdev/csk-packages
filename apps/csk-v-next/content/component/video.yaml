@@ -9,23 +9,23 @@ parameters:
     type: text
     typeConfig: null
     localizable: true
+  - id: video
+    name: Video
+    type: asset
+    typeConfig:
+      max: 1
+      min: 1
+      allowedTypes:
+        - video
   - id: url
-    name: Video Url
+    name: Video Url (Deprecated)
     type: link
+    helpText: Please use video parameter instead of url.
     typeConfig:
       linkTypes:
         tel: false
         email: false
         projectMapNode: false
-  - id: placeholderImage
-    name: Placeholder Image
-    type: asset
-    helpText: >-
-      You can replace video preview image by using this parameter. Work only
-      when light is checked
-    typeConfig:
-      max: 1
-      min: 0
   - id: e83bb21e-978b-4d8a-b20a-d19a7f0571ec
     name: Playback settings
     type: group
@@ -113,6 +113,15 @@ parameters:
       allowTokens:
         - border-image-radius-small
       selectedTokenType: border
+  - id: placeholderImage
+    name: Placeholder Image
+    type: asset
+    helpText: >-
+      You can replace video preview image by using this parameter. Work only
+      when light is checked
+    typeConfig:
+      max: 1
+      min: 0
 categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/video.jpg
@@ -122,4 +131,4 @@ titleParameter: displayName
 thumbnailParameter: placeholderImage
 canBeComposition: false
 created: '2025-05-12T12:37:35.19628+00:00'
-updated: '2025-05-12T14:30:37.666704+00:00'
+updated: '2025-05-12T20:39:30.257503+00:00'

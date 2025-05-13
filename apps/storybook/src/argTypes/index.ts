@@ -72,5 +72,6 @@ export const VideoArgTypes: Partial<ArgTypes<VideoParameters>> = {
   loop: { control: 'boolean' },
   controls: { control: 'boolean' },
   muted: { control: 'boolean' },
+  url: { control: 'object', name: 'url (Deprecated)' },
   ...presentationArgTypes,
 };

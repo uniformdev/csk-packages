@@ -16,10 +16,20 @@ type Story = StoryObj<typeof Video>;
 
 export const Default: Story = {
   args: {
-    url: {
-      type: 'url',
-      path: 'https://res.cloudinary.com/uniform-demos/video/upload/v1693387616/videos/pexels-cristian-rojas.mp4',
-    },
+    url: undefined,
+    video: [
+      {
+        _id: '',
+        type: 'video',
+        fields: {
+          url: {
+            type: 'text',
+            value: 'https://res.cloudinary.com/uniform-demos/video/upload/v1693387616/videos/pexels-cristian-rojas.mp4',
+          },
+        },
+        _source: 'custom-url',
+      },
+    ],
     autoPlay: false,
     loop: true,
     muted: true,
