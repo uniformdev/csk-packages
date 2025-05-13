@@ -2,6 +2,7 @@
 
 import { FC, useCallback, useState } from 'react';
 import dynamic from 'next/dynamic';
+import { cn, resolveViewPort } from '@/utils/styling';
 import { VideoProps } from '.';
 import { PlayButton } from './play-button';
 
@@ -15,6 +16,9 @@ export const Video: FC<VideoProps> = ({
   lazyLoad = false,
   placeholderImageUrl,
   muted,
+  overlayColor,
+  overlayOpacity,
+  border,
 }) => {
   const [playing, setPlaying] = useState(autoPlay);
 
@@ -24,21 +28,33 @@ export const Video: FC<VideoProps> = ({
   return (
     <div className="relative aspect-video size-full [&_video]:!object-cover">
       {url && (
-        <ReactPlayer
-          className="absolute left-0 top-0"
-          url={url}
-          playing={playing}
-          onPause={onPause}
-          onPlay={onPlay}
-          width="100%"
-          height="100%"
-          controls={controls}
-          muted={muted}
-          loop={loop}
-          light={(lazyLoad && placeholderImageUrl) || lazyLoad}
-          playIcon={<PlayButton onClick={onPlay} />}
-        />
+        <div
+          className={cn('absolute left-0 top-0 size-full overflow-hidden', {
+            [resolveViewPort(border, '{value}')]: border,
+          })}
+        >
+          <ReactPlayer
+            url={url}
+            playing={playing}
+            onPause={onPause}
+            onPlay={onPlay}
+            width="100%"
+            height="100%"
+            controls={controls}
+            muted={muted}
+            loop={loop}
+            light={(lazyLoad && placeholderImageUrl) || lazyLoad}
+            playIcon={<PlayButton onClick={onPlay} />}
+          />
+        </div>
       )}
+      <div
+        className={cn('absolute inset-0 pointer-events-none', {
+          [`bg-${overlayColor}`]: overlayColor,
+          [resolveViewPort(border, '{value}')]: border,
+        })}
+        style={{ opacity: overlayOpacity || 0 }}
+      />
     </div>
   );
 };

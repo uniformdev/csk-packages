@@ -7,27 +7,35 @@ import { VideoProps } from '.';
 import { VideoPlaceholder } from './placeholder';
 
 export const Video: FC<VideoProps> = ({
-  url,
+  video,
+  url, // Deprecated. Please use video parameter instead of url
   placeholderImage,
   autoPlay,
   lazyLoad,
   loop,
   controls,
   muted,
+  overlayColor,
+  overlayOpacity,
+  border,
   component,
   context,
 }) => {
-  if (!url || url.type !== 'url' || !url.path) {
+  console.info('video', JSON.stringify(video, null, 2));
+  const [resolvedVideo] = resolveAsset(video);
+  const [resolvedImage] = resolveAsset(placeholderImage);
+
+  const resolvedVideoUrl = resolvedVideo?.url || (url?.type === 'url' ? url.path : undefined);
+
+  if (!resolvedVideoUrl) {
     return <VideoPlaceholder component={component} context={context} />;
   }
 
-  const [resolvedImage] = resolveAsset(placeholderImage);
-
   return (
     <BaseVideo
-      url={url.path}
+      url={resolvedVideoUrl}
       placeholderImageUrl={resolvedImage?.url}
-      {...{ autoPlay, lazyLoad, loop, controls, muted }}
+      {...{ autoPlay, lazyLoad, loop, controls, muted, overlayColor, overlayOpacity, border }}
     />
   );
 };
