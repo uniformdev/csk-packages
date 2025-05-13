@@ -29,11 +29,19 @@ composition:
         pageKeywords:
           type: text
           locales:
+            cn: Qorvo search landing page, Qorvo search
             en: Qorvo search landing page, Qorvo search
+            jp: Qorvo search landing page, Qorvo search
         pageDescription:
           type: text
           locales:
+            cn: >-
+              Qorvo search landing page. Welcome to the qorvo.com search page,
+              where you will find all Qorvo information you are searching for.
             en: >-
+              Qorvo search landing page. Welcome to the qorvo.com search page,
+              where you will find all Qorvo information you are searching for.
+            jp: >-
               Qorvo search landing page. Welcome to the qorvo.com search page,
               where you will find all Qorvo information you are searching for.
     73f928f8-6aad-43e8-a34f-868fc36aa34d|dc2e95be-21b5-4476-a309-f8a34922f528:
@@ -76,11 +84,15 @@ composition:
                                       partNumberPlaceholder:
                                         type: text
                                         locales:
+                                          cn: Part Number
                                           en: Part Number
+                                          jp: Part Number
                                       descriptionPlaceholder:
                                         type: text
                                         locales:
+                                          cn: Keyword or Description
                                           en: Keyword or Description
+                                          jp: Keyword or Description
                                     _overridability:
                                       parameters:
                                         placeholder: 'yes'
@@ -90,7 +102,9 @@ composition:
                                       title:
                                         type: text
                                         locales:
+                                          cn: Filter by
                                           en: Filter by
+                                          jp: Filter by
                               parameters:
                                 gap:
                                   type: dex-slider-control-parameter
@@ -116,7 +130,9 @@ composition:
                                 displayName:
                                   type: text
                                   locales:
+                                    cn: Top Section
                                     en: Top Section
+                                    jp: Top Section
                                 justifyContent:
                                   type: dex-segmented-control-parameter
                                   value: {}
@@ -155,7 +171,9 @@ composition:
                                       text:
                                         type: text
                                         locales:
+                                          cn: Product Results
                                           en: Product Results
+                                          jp: Product Results
                                       color:
                                         type: dex-color-palette-parameter
                                         value: text-tertiary
@@ -190,7 +208,9 @@ composition:
                                 displayName:
                                   type: text
                                   locales:
+                                    cn: Main Section
                                     en: Main Section
+                                    jp: Main Section
                                 justifyContent:
                                   type: dex-segmented-control-parameter
                                   value: {}
@@ -220,7 +240,9 @@ composition:
                           displayName:
                             type: text
                             locales:
+                              cn: Content
                               en: Content
+                              jp: Content
                           fluidContent:
                             type: checkbox
                             value: true
@@ -279,7 +301,9 @@ composition:
                             title:
                               type: text
                               locales:
+                                cn: Product
                                 en: Product
+                                jp: Product
                             values:
                               type: $block
                               value:
@@ -327,7 +351,9 @@ composition:
                             title:
                               type: text
                               locales:
+                                cn: Applications
                                 en: Applications
+                                jp: Applications
                             values:
                               type: $block
                               value:
@@ -375,7 +401,9 @@ composition:
                             title:
                               type: text
                               locales:
+                                cn: Product Status
                                 en: Product Status
+                                jp: Product Status
                             values:
                               type: $block
                               value:
@@ -433,7 +461,9 @@ composition:
                             title:
                               type: text
                               locales:
+                                cn: RoHs
                                 en: RoHs
+                                jp: RoHs
                             values:
                               type: $block
                               value:
@@ -473,7 +503,9 @@ composition:
                             title:
                               type: text
                               locales:
+                                cn: Lead Free
                                 en: Lead Free
+                                jp: Lead Free
                             values:
                               type: $block
                               value:
@@ -522,7 +554,9 @@ composition:
                             title:
                               type: text
                               locales:
+                                cn: Halogen Free
                                 en: Halogen Free
+                                jp: Halogen Free
                             values:
                               type: $block
                               value:
@@ -599,12 +633,23 @@ composition:
               displayName:
                 type: text
                 locales:
+                  cn: Faceted Search
                   en: Faceted Search
+                  jp: Faceted Search
+    73f928f8-6aad-43e8-a34f-868fc36aa34d|efffd91b-19f1-4184-91b1-c4c5cfa46a30|43642ccc-30e5-4872-8aa6-fa22a265a354:
+      parameters:
+        text:
+          type: text
+          locales:
+            cn: Learn more
+            jp: Learn more
   _locales:
     - en
+    - jp
+    - cn
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-05-09T06:33:49.800905+00:00'
-modified: '2025-05-12T16:19:55.97539+00:00'
+created: '2025-05-12T08:15:26.330107+00:00'
+modified: '2025-05-13T08:02:48.621388+00:00'
 pattern: false
 workflowId: 709029a9-419a-4f6b-891f-427729e3c4df
 workflowStageId: a3b17d73-0198-4734-8c5e-71f898d6d4fe

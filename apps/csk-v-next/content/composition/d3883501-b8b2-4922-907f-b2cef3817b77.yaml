@@ -10,56 +10,67 @@ composition:
         slug: ${product-slug}
         locale: ${locale}
   _overrides:
-    05710e81-9c9a-4e01-bd68-8748e83708f7:
-      parameters:
-        link:
-          type: link
-          locales:
-            en:
-              path: https://www.qorvo.com/support/subscription-center
-              type: url
-        text:
-          type: text
-          locales:
-            en: Sign Up For Alerts >
     a57360ad-74d5-40a7-98de-b279bb683834:
       parameters:
         link:
           type: link
           locales:
+            cn:
+              path: >-
+                https://www.qorvo.com/support/how-to-buy/request-a-sample?partNumber=QM42500
+              type: url
             en:
+              path: >-
+                https://www.qorvo.com/support/how-to-buy/request-a-sample?partNumber=QM42500
+              type: url
+            jp:
               path: >-
                 https://www.qorvo.com/support/how-to-buy/request-a-sample?partNumber=QM42500
               type: url
         text:
           type: text
           locales:
+            cn: Request Sample >
             en: Request Sample >
-    aba1cef4-6b2c-4e28-9d6c-1d4d4ef743c7:
+            jp: Request Sample >
+    c1017789-ac78-40d5-9dd2-ccead0f181ec:
       parameters:
         link:
           type: link
           locales:
-            en:
+            cn:
               path: >-
-                https://www.qorvo.com/support/how-to-buy/request-a-sample?partNumber=QM42500
+                https://www.qorvo.com/support/how-to-buy/contact-a-sales-rep?partNumber=QM42500
+              type: url
+            jp:
+              path: >-
+                https://www.qorvo.com/support/how-to-buy/contact-a-sales-rep?partNumber=QM42500
               type: url
         text:
           type: text
           locales:
-            en: Request Sample >
+            cn: Contact A Sales Rep >
+            jp: Contact A Sales Rep >
     ccd6c054-7e3e-4820-9953-fd07f5a49cfd:
       parameters:
         link:
           type: link
           locales:
+            cn:
+              path: https://www.qorvo.com/support/subscription-center
+              type: url
             en:
+              path: https://www.qorvo.com/support/subscription-center
+              type: url
+            jp:
               path: https://www.qorvo.com/support/subscription-center
               type: url
         text:
           type: text
           locales:
+            cn: Sign Up For Alerts >
             en: Sign Up For Alerts >
+            jp: Sign Up For Alerts >
     d3883501-b8b2-4922-907f-b2cef3817b77:
       parameters:
         $enr:
@@ -126,7 +137,9 @@ composition:
                     text:
                       type: text
                       locales:
+                        cn: ${#jptr:/Product Content/entry/fields/title/value}
                         en: ${#jptr:/Product Content/entry/fields/title/value}
+                        jp: ${#jptr:/Product Content/entry/fields/title/value}
                     color:
                       type: dex-color-palette-parameter
                       value: text-tertiary
@@ -151,7 +164,9 @@ composition:
                     text:
                       type: text
                       locales:
+                        cn: ${#jptr:/Product Content/entry/fields/name/value}
                         en: ${#jptr:/Product Content/entry/fields/name/value}
+                        jp: ${#jptr:/Product Content/entry/fields/name/value}
                     color:
                       type: dex-color-palette-parameter
                       value: text-tertiary
@@ -175,7 +190,13 @@ composition:
                           text:
                             type: text
                             locales:
+                              cn: >-
+                                ${#jptr:/Product
+                                Content/entry/fields/status/value}
                               en: >-
+                                ${#jptr:/Product
+                                Content/entry/fields/status/value}
+                              jp: >-
                                 ${#jptr:/Product
                                 Content/entry/fields/status/value}
                           color:
@@ -197,14 +218,128 @@ composition:
                     displayName:
                       type: text
                       locales:
+                        cn: ${#jptr:/Product Content/entry/fields/status/value}
                         en: ${#jptr:/Product Content/entry/fields/status/value}
+                        jp: ${#jptr:/Product Content/entry/fields/status/value}
                 - _id: 4b21d3d0-39e1-4455-9d5d-7633e5243f87
                   type: richText
                   parameters:
                     text:
                       type: richText
                       locales:
+                        cn:
+                          root:
+                            type: root
+                            format: ''
+                            indent: 0
+                            version: 1
+                            children:
+                              - type: paragraph
+                                format: ''
+                                indent: 0
+                                version: 1
+                                children:
+                                  - mode: normal
+                                    text: Data sheet available upon request.
+                                    type: text
+                                    style: ''
+                                    detail: 0
+                                    format: 0
+                                    version: 1
+                                  - type: linebreak
+                                    version: 1
+                                  - mode: normal
+                                    text: "Contact your local\_"
+                                    type: text
+                                    style: ''
+                                    detail: 0
+                                    format: 0
+                                    version: 1
+                                  - link:
+                                      path: >-
+                                        https://www.qorvo.com/support/how-to-buy/contact-a-sales-rep?partNumber=QPA3315
+                                      type: url
+                                    type: link
+                                    format: ''
+                                    indent: 0
+                                    version: 1
+                                    children:
+                                      - mode: normal
+                                        text: sales representative
+                                        type: text
+                                        style: ''
+                                        detail: 0
+                                        format: 0
+                                        version: 1
+                                    direction: ltr
+                                  - mode: normal
+                                    text: "\_for assistance."
+                                    type: text
+                                    style: ''
+                                    detail: 0
+                                    format: 0
+                                    version: 1
+                                direction: ltr
+                                textStyle: ''
+                                textFormat: 0
+                            direction: ltr
                         en:
+                          root:
+                            type: root
+                            format: ''
+                            indent: 0
+                            version: 1
+                            children:
+                              - type: paragraph
+                                format: ''
+                                indent: 0
+                                version: 1
+                                children:
+                                  - mode: normal
+                                    text: Data sheet available upon request.
+                                    type: text
+                                    style: ''
+                                    detail: 0
+                                    format: 0
+                                    version: 1
+                                  - type: linebreak
+                                    version: 1
+                                  - mode: normal
+                                    text: "Contact your local\_"
+                                    type: text
+                                    style: ''
+                                    detail: 0
+                                    format: 0
+                                    version: 1
+                                  - link:
+                                      path: >-
+                                        https://www.qorvo.com/support/how-to-buy/contact-a-sales-rep?partNumber=QPA3315
+                                      type: url
+                                    type: link
+                                    format: ''
+                                    indent: 0
+                                    version: 1
+                                    children:
+                                      - mode: normal
+                                        text: sales representative
+                                        type: text
+                                        style: ''
+                                        detail: 0
+                                        format: 0
+                                        version: 1
+                                    direction: ltr
+                                  - mode: normal
+                                    text: "\_for assistance."
+                                    type: text
+                                    style: ''
+                                    detail: 0
+                                    format: 0
+                                    version: 1
+                                direction: ltr
+                                textStyle: ''
+                                textFormat: 0
+                            direction: ltr
+                        jp:
                           root:
                             type: root
                             format: ''
@@ -294,7 +429,9 @@ composition:
               displayName:
                 type: text
                 locales:
+                  cn: Heading
                   en: Heading
+                  jp: Heading
               justifyContent:
                 type: dex-segmented-control-parameter
                 value: {}
@@ -341,7 +478,9 @@ composition:
                           text:
                             type: text
                             locales:
+                              cn: Key Features
                               en: Key Features
+                              jp: Key Features
                           color:
                             type: dex-color-palette-parameter
                             value: text-tertiary
@@ -354,7 +493,13 @@ composition:
                           text:
                             type: richText
                             locales:
+                              cn: >-
+                                ${#jptr:/Product
+                                Content/entry/fields/keyFeatures/value}
                               en: >-
+                                ${#jptr:/Product
+                                Content/entry/fields/keyFeatures/value}
+                              jp: >-
                                 ${#jptr:/Product
                                 Content/entry/fields/keyFeatures/value}
                           color:
@@ -379,7 +524,9 @@ composition:
                     displayName:
                       type: text
                       locales:
+                        cn: Key Features
                         en: Key Features
+                        jp: Key Features
                     justifyContent:
                       type: dex-segmented-control-parameter
                       value: {}
@@ -409,7 +556,15 @@ composition:
                           link:
                             type: link
                             locales:
+                              cn:
+                                path: >-
+                                  https://store.qorvo.com/ProductDetail/QM42500-Qorvo/627523/
+                                type: url
                               en:
+                                path: >-
+                                  https://store.qorvo.com/ProductDetail/QM42500-Qorvo/627523/
+                                type: url
+                              jp:
                                 path: >-
                                   https://store.qorvo.com/ProductDetail/QM42500-Qorvo/627523/
                                 type: url
@@ -419,7 +574,9 @@ composition:
                           text:
                             type: text
                             locales:
+                              cn: Buy Online >
                               en: Buy Online >
+                              jp: Buy Online >
                           textSize:
                             type: dex-segmented-control-parameter
                             value:
@@ -469,7 +626,13 @@ composition:
                           link:
                             type: link
                             locales:
+                              cn:
+                                path: https://www.qorvo.com/products/p/QM42500#
+                                type: url
                               en:
+                                path: https://www.qorvo.com/products/p/QM42500#
+                                type: url
+                              jp:
                                 path: https://www.qorvo.com/products/p/QM42500#
                                 type: url
                           size:
@@ -478,7 +641,9 @@ composition:
                           text:
                             type: text
                             locales:
+                              cn: Distributor Inventory
                               en: Distributor Inventory
+                              jp: Distributor Inventory
                           border:
                             type: dex-token-selector-parameter
                             value: border-product-card
@@ -533,7 +698,9 @@ composition:
                     displayName:
                       type: text
                       locales:
+                        cn: Buttons
                         en: Buttons
+                        jp: Buttons
                     justifyContent:
                       type: dex-segmented-control-parameter
                       value:
@@ -550,7 +717,9 @@ composition:
               displayName:
                 type: text
                 locales:
+                  cn: Main Information
                   en: Main Information
+                  jp: Main Information
               columnsCount:
                 type: dex-slider-control-parameter
                 value:
@@ -583,7 +752,13 @@ composition:
                                             text:
                                               type: richText
                                               locales:
+                                                cn: >-
+                                                  ${#jptr:/Product
+                                                  Content/entry/fields/overview/value}
                                                 en: >-
+                                                  ${#jptr:/Product
+                                                  Content/entry/fields/overview/value}
+                                                jp: >-
                                                   ${#jptr:/Product
                                                   Content/entry/fields/overview/value}
                                     parameters:
@@ -599,7 +774,9 @@ composition:
                                       displayName:
                                         type: text
                                         locales:
+                                          cn: Container
                                           en: Container
+                                          jp: Container
                               parameters:
                                 rowSpan:
                                   type: dex-slider-control-parameter
@@ -625,7 +802,9 @@ composition:
                                 displayName:
                                   type: text
                                   locales:
+                                    cn: Description
                                     en: Description
+                                    jp: Description
                             - _id: 2740fd82-89b6-40b8-97f8-a5026782b211
                               type: gridItem
                               slots:
@@ -652,7 +831,9 @@ composition:
                                             text:
                                               type: text
                                               locales:
+                                                cn: Typical Applications
                                                 en: Typical Applications
+                                                jp: Typical Applications
                                             color:
                                               type: dex-color-palette-parameter
                                               value: text-tertiary
@@ -665,7 +846,13 @@ composition:
                                             text:
                                               type: richText
                                               locales:
+                                                cn: >-
+                                                  ${#jptr:/Product
+                                                  Content/entry/fields/typicalApplications/value}
                                                 en: >-
+                                                  ${#jptr:/Product
+                                                  Content/entry/fields/typicalApplications/value}
+                                                jp: >-
                                                   ${#jptr:/Product
                                                   Content/entry/fields/typicalApplications/value}
                                     parameters:
@@ -687,7 +874,9 @@ composition:
                                       displayName:
                                         type: text
                                         locales:
+                                          cn: Typical Applications
                                           en: Typical Applications
+                                          jp: Typical Applications
                                       justifyContent:
                                         type: dex-segmented-control-parameter
                                         value: {}
@@ -716,7 +905,9 @@ composition:
                                 displayName:
                                   type: text
                                   locales:
+                                    cn: Typical Applications
                                     en: Typical Applications
+                                    jp: Typical Applications
                         parameters:
                           gapX:
                             type: dex-slider-control-parameter
@@ -729,7 +920,9 @@ composition:
                           displayName:
                             type: text
                             locales:
+                              cn: Overview
                               en: Overview
+                              jp: Overview
                           columnsCount:
                             type: dex-slider-control-parameter
                             value:
@@ -766,7 +959,9 @@ composition:
                                             text:
                                               type: text
                                               locales:
+                                                cn: Product Categories
                                                 en: Product Categories
+                                                jp: Product Categories
                                             color:
                                               type: dex-color-palette-parameter
                                               value: text-tertiary
@@ -796,7 +991,15 @@ composition:
                                                         text:
                                                           type: text
                                                           locales:
+                                                            cn: >-
+                                                              Products > ${#jptr:/Product Content
+                                                              category Loop
+                                                              Item/entry/fields/title/value}
                                                             en: >-
+                                                              Products > ${#jptr:/Product Content
+                                                              category Loop
+                                                              Item/entry/fields/title/value}
+                                                            jp: >-
                                                               Products > ${#jptr:/Product Content
                                                               category Loop
                                                               Item/entry/fields/title/value}
@@ -810,7 +1013,9 @@ composition:
                                                   displayName:
                                                     type: text
                                                     locales:
+                                                      cn: Link
                                                       en: Link
+                                                      jp: Link
                                           _dataResources:
                                             Product Content category Loop Item:
                                               type: sys-reserved-loop
@@ -837,7 +1042,9 @@ composition:
                                       displayName:
                                         type: text
                                         locales:
+                                          cn: Product Categories
                                           en: Product Categories
+                                          jp: Product Categories
                                       justifyContent:
                                         type: dex-segmented-control-parameter
                                         value: {}
@@ -865,7 +1072,9 @@ composition:
                                 displayName:
                                   type: text
                                   locales:
+                                    cn: Product Categories
                                     en: Product Categories
+                                    jp: Product Categories
                             - _id: 8d2b143e-7b50-4b3d-9159-5465d7fde456
                               type: gridItem
                               slots:
@@ -892,7 +1101,9 @@ composition:
                                             text:
                                               type: text
                                               locales:
+                                                cn: Application Categories
                                                 en: Application Categories
+                                                jp: Application Categories
                                             color:
                                               type: dex-color-palette-parameter
                                               value: text-tertiary
@@ -922,7 +1133,15 @@ composition:
                                                         text:
                                                           type: text
                                                           locales:
+                                                            cn: >-
+                                                              Application Categories >
+                                                              ${#jptr:/Product Content category Loop
+                                                              Item/entry/fields/title/value}
                                                             en: >-
+                                                              Application Categories >
+                                                              ${#jptr:/Product Content category Loop
+                                                              Item/entry/fields/title/value}
+                                                            jp: >-
                                                               Application Categories >
                                                               ${#jptr:/Product Content category Loop
                                                               Item/entry/fields/title/value}
@@ -936,7 +1155,9 @@ composition:
                                                   displayName:
                                                     type: text
                                                     locales:
+                                                      cn: Link
                                                       en: Link
+                                                      jp: Link
                                           _dataResources:
                                             Product Content category Loop Item:
                                               type: sys-reserved-loop
@@ -963,7 +1184,9 @@ composition:
                                       displayName:
                                         type: text
                                         locales:
+                                          cn: Application Categories
                                           en: Application Categories
+                                          jp: Application Categories
                                       justifyContent:
                                         type: dex-segmented-control-parameter
                                         value: {}
@@ -991,7 +1214,9 @@ composition:
                                 displayName:
                                   type: text
                                   locales:
+                                    cn: Application Categories
                                     en: Application Categories
+                                    jp: Application Categories
                         parameters:
                           gapX:
                             type: dex-slider-control-parameter
@@ -1009,7 +1234,9 @@ composition:
                           displayName:
                             type: text
                             locales:
+                              cn: Product and  Application Categories
                               en: Product and  Application Categories
+                              jp: Product and  Application Categories
                           columnsCount:
                             type: dex-slider-control-parameter
                             value:
@@ -1023,7 +1250,9 @@ composition:
                     text:
                       type: text
                       locales:
+                        cn: Overview
                         en: Overview
+                        jp: Overview
                 - _id: 092ea073-235f-46f8-b955-b0e441c0c537
                   type: tab
                   slots:
@@ -1034,14 +1263,22 @@ composition:
                           text:
                             type: richText
                             locales:
+                              cn: >-
+                                ${#jptr:/Product
+                                Content/entry/fields/parameters/value}
                               en: >-
+                                ${#jptr:/Product
+                                Content/entry/fields/parameters/value}
+                              jp: >-
                                 ${#jptr:/Product
                                 Content/entry/fields/parameters/value}
                   parameters:
                     text:
                       type: text
                       locales:
+                        cn: Parameters
                         en: Parameters
+                        jp: Parameters
                 - _id: f97cc461-1ab4-48d3-ae8f-956f1ad656f0
                   type: tab
                   slots:
@@ -1063,7 +1300,9 @@ composition:
                                 text:
                                   type: text
                                   locales:
+                                    cn: Related Resources
                                     en: Related Resources
+                                    jp: Related Resources
                                 color:
                                   type: dex-color-palette-parameter
                                   value: text-tertiary
@@ -1135,7 +1374,9 @@ composition:
                                             text:
                                               type: text
                                               locales:
+                                                cn: New Product Announcements
                                                 en: New Product Announcements
+                                                jp: New Product Announcements
                                             color:
                                               type: dex-color-palette-parameter
                                               value: text-tertiary
@@ -1161,7 +1402,15 @@ composition:
                                                   text:
                                                     type: text
                                                     locales:
+                                                      cn: >-
+                                                        Wi-Fi 7, FEMs, GaN, PA,  and Battery
+                                                        Management for Wi-Fi, Defense, Radar,
+                                                        Consumer Goods, & Power Management
                                                       en: >-
+                                                        Wi-Fi 7, FEMs, GaN, PA,  and Battery
+                                                        Management for Wi-Fi, Defense, Radar,
+                                                        Consumer Goods, & Power Management
+                                                      jp: >-
                                                         Wi-Fi 7, FEMs, GaN, PA,  and Battery
                                                         Management for Wi-Fi, Defense, Radar,
                                                         Consumer Goods, & Power Management
@@ -1184,7 +1433,9 @@ composition:
                                             displayName:
                                               type: text
                                               locales:
+                                                cn: Link
                                                 en: Link
+                                                jp: Link
                                         - _id: 737dbd11-3845-46e0-bee2-0125db8a92b5
                                           type: text
                                           parameters:
@@ -1198,7 +1449,9 @@ composition:
                                             text:
                                               type: text
                                               locales:
+                                                cn: November 30, 2023
                                                 en: November 30, 2023
+                                                jp: November 30, 2023
                                             color:
                                               type: dex-color-palette-parameter
                                               value: text-tertiary
@@ -1224,7 +1477,9 @@ composition:
                                       displayName:
                                         type: text
                                         locales:
+                                          cn: Content
                                           en: Content
+                                          jp: Content
                                       justifyContent:
                                         type: dex-segmented-control-parameter
                                         value: {}
@@ -1247,7 +1502,9 @@ composition:
                                 displayName:
                                   type: text
                                   locales:
+                                    cn: Related Card
                                     en: Related Card
+                                    jp: Related Card
                                 justifyContent:
                                   type: dex-segmented-control-parameter
                                   value: {}
@@ -1270,7 +1527,9 @@ composition:
                           displayName:
                             type: text
                             locales:
+                              cn: Related Resources
                               en: Related Resources
+                              jp: Related Resources
                           justifyContent:
                             type: dex-segmented-control-parameter
                             value: {}
@@ -1278,7 +1537,9 @@ composition:
                     text:
                       type: text
                       locales:
+                        cn: Documents
                         en: Documents
+                        jp: Documents
             variant: bordered
             parameters:
               color:
@@ -1294,12 +1555,23 @@ composition:
               displayName:
                 type: text
                 locales:
+                  cn: Tabbed Content
                   en: Tabbed Content
+                  jp: Tabbed Content
+    d3883501-b8b2-4922-907f-b2cef3817b77|efffd91b-19f1-4184-91b1-c4c5cfa46a30|43642ccc-30e5-4872-8aa6-fa22a265a354:
+      parameters:
+        text:
+          type: text
+          locales:
+            cn: Learn more
+            jp: Learn more
   _locales:
     - en
+    - jp
+    - cn
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-04-24T21:39:12.570695+00:00'
-modified: '2025-05-12T16:20:58.98461+00:00'
+created: '2025-05-12T08:15:27.104162+00:00'
+modified: '2025-05-13T08:03:12.72066+00:00'
 pattern: false
 workflowId: 709029a9-419a-4f6b-891f-427729e3c4df
 workflowStageId: a3b17d73-0198-4734-8c5e-71f898d6d4fe
