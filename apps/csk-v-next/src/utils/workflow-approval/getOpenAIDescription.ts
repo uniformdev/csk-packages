@@ -70,11 +70,13 @@ const getOpenAIDescription = async ({
       compositionId,
       versionId: latestVersionId,
       state: CANVAS_DRAFT_STATE,
+      locale: 'en',
     }),
     getCompositionByVersionId({
       compositionId,
       versionId: latestPublishedVersionId,
       state: CANVAS_PUBLISHED_STATE,
+      locale: 'en',
     }),
   ]);
 

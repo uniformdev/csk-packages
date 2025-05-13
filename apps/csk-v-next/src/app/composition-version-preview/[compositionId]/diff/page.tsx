@@ -38,11 +38,13 @@ const Page = async (props: PageParameters) => {
       compositionId,
       versionId: draftVersionId,
       state: CANVAS_DRAFT_STATE,
+      locale: 'en',
     }),
     getCompositionByVersionId({
       compositionId,
       versionId: publishedVersionId,
       state: CANVAS_PUBLISHED_STATE,
+      locale: 'en',
     }),
   ]);
 
