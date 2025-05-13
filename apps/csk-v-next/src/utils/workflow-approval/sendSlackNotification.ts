@@ -36,7 +36,6 @@ const sendSlackNotification = async ({
   previousStage,
   timestamp,
   latestVersionScreenshotUrl,
-  latestPublishedVersionScreenshotUrl,
   latestVersionPreviewUrl,
   latestPublishedVersionPreviewUrl,
   diffUrl,
@@ -75,11 +74,11 @@ const sendSlackNotification = async ({
       {
         type: 'section',
         fields: [
-          { type: 'mrkdwn', text: `*From:*\n${previousStage.stageName}` },
-          { type: 'mrkdwn', text: `*To:*\n${newStage.stageName}` },
-          { type: 'mrkdwn', text: `*Workflow:*\n${newStage.workflowName}` },
-          { type: 'mrkdwn', text: `*By:*\n${initiator.name || initiator.email}` },
-          { type: 'mrkdwn', text: `*When:*\n${formattedDate}` },
+          { type: 'mrkdwn', text: `*From:* ${previousStage.stageName}` },
+          { type: 'mrkdwn', text: `*To:* ${newStage.stageName}` },
+          { type: 'mrkdwn', text: `*Workflow:* ${newStage.workflowName}` },
+          { type: 'mrkdwn', text: `*By:* ${initiator.name || initiator.email}` },
+          { type: 'mrkdwn', text: `*When:* ${formattedDate}` },
         ],
       },
       {
@@ -125,16 +124,9 @@ const sendSlackNotification = async ({
         ],
       },
       { type: 'divider' },
-      { type: 'section', text: { type: 'mrkdwn', text: '*🖼️ Visual Comparison*' } },
+      { type: 'section', text: { type: 'mrkdwn', text: '*🖼️ Page Preview*' } },
       {
         type: 'image',
-        title: { type: 'plain_text', text: '📘 Published Version', emoji: true },
-        image_url: latestPublishedVersionScreenshotUrl,
-        alt_text: 'Published Version',
-      },
-      {
-        type: 'image',
-        title: { type: 'plain_text', text: '🆕 Latest Version', emoji: true },
         image_url: latestVersionScreenshotUrl,
         alt_text: 'Latest Version',
       },
