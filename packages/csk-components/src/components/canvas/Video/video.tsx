@@ -21,7 +21,6 @@ export const Video: FC<VideoProps> = ({
   component,
   context,
 }) => {
-  console.info('video', JSON.stringify(video, null, 2));
   const [resolvedVideo] = resolveAsset(video);
   const [resolvedImage] = resolveAsset(placeholderImage);
 
