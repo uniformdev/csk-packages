@@ -1,25 +1,8 @@
 'use server';
 
-type SendSlackNotificationProps = {
-  entityType: string;
-  entity: {
-    id: string;
-    name: string;
-    type: string;
-    url: string;
-  };
-  initiator: {
-    name: string;
-    email: string;
-  };
-  newStage: {
-    stageName: string;
-    workflowName: string;
-  };
-  previousStage: {
-    stageName: string;
-  };
-  timestamp: string;
+import { WorkflowApprovalData } from '@/types/workflowApproval';
+
+type SendSlackNotificationProps = WorkflowApprovalData & {
   latestVersionScreenshotUrl: string;
   latestPublishedVersionScreenshotUrl: string;
   latestVersionPreviewUrl: string;
@@ -29,15 +12,11 @@ type SendSlackNotificationProps = {
 };
 
 const sendSlackNotification = async ({
-  entityType,
   entity,
   initiator,
-  newStage,
-  previousStage,
   timestamp,
   latestVersionScreenshotUrl,
   latestVersionPreviewUrl,
-  latestPublishedVersionPreviewUrl,
   diffUrl,
   changesDescription = 'No description provided',
 }: SendSlackNotificationProps) => {
@@ -60,83 +39,55 @@ const sendSlackNotification = async ({
         type: 'header',
         text: {
           type: 'plain_text',
-          text: `🔄 Workflow Update - ${initiator.name} requested review`,
+          text: `${initiator.name} requested review on the ${entity.name} composition on ${formattedDate}`,
           emoji: true,
         },
       },
-      {
-        type: 'section',
-        text: {
-          type: 'mrkdwn',
-          text: `A new change was made to the workflow:\n\n*<${entity.url}|${entity.name}>*  •  _${entityType}_`,
-        },
-      },
-      {
-        type: 'section',
-        fields: [
-          { type: 'mrkdwn', text: `*From:* ${previousStage.stageName}` },
-          { type: 'mrkdwn', text: `*To:* ${newStage.stageName}` },
-          { type: 'mrkdwn', text: `*Workflow:* ${newStage.workflowName}` },
-          { type: 'mrkdwn', text: `*By:* ${initiator.name || initiator.email}` },
-          { type: 'mrkdwn', text: `*When:* ${formattedDate}` },
-        ],
-      },
-      {
-        type: 'actions',
-        elements: [
-          {
-            type: 'button',
-            text: { type: 'plain_text', emoji: true, text: '🔍 Open in Canvas' },
-            url: entity.url,
-            style: 'primary',
-          },
-          {
-            type: 'button',
-            text: { type: 'plain_text', emoji: true, text: '📄 Versions Comparison' },
-            url: diffUrl,
-            style: 'primary',
-          },
-        ],
-      },
       { type: 'divider' },
       {
         type: 'section',
         text: {
           type: 'mrkdwn',
-          text: '*📝 Preview links *',
+          text: `*📝 What changed*\n${changesDescription}`,
         },
       },
-      {
-        type: 'actions',
-        elements: [
-          {
-            type: 'button',
-            text: { type: 'plain_text', emoji: true, text: '✅ Published Version' },
-            url: latestPublishedVersionPreviewUrl,
-            style: 'primary',
-          },
-          {
-            type: 'button',
-            text: { type: 'plain_text', emoji: true, text: '🆕 Latest Version' },
-            url: latestVersionPreviewUrl,
-            style: 'primary',
-          },
-        ],
-      },
       { type: 'divider' },
-      { type: 'section', text: { type: 'mrkdwn', text: '*🖼️ Page Preview*' } },
+      { type: 'section', text: { type: 'mrkdwn', text: '*🖼️ Screenshot*' } },
       {
         type: 'image',
         image_url: latestVersionScreenshotUrl,
-        alt_text: 'Latest Version',
+        alt_text: 'Published Version',
       },
       { type: 'divider' },
       {
         type: 'section',
         text: {
           type: 'mrkdwn',
-          text: `*📝 Changes Description*\n${changesDescription}`,
+          text: '*👀 Direct preview links*',
         },
+      },
+      {
+        type: 'actions',
+        elements: [
+          {
+            type: 'button',
+            text: { type: 'plain_text', emoji: true, text: '🔺 Visual changes' },
+            url: diffUrl,
+            style: 'primary',
+          },
+          {
+            type: 'button',
+            text: { type: 'plain_text', emoji: true, text: '👁️ Preview' },
+            url: latestVersionPreviewUrl,
+            style: 'primary',
+          },
+          {
+            type: 'button',
+            text: { type: 'plain_text', emoji: true, text: '✏️ Open Editor' },
+            url: entity.url,
+            style: 'primary',
+          },
+        ],
       },
       { type: 'divider' },
     ],

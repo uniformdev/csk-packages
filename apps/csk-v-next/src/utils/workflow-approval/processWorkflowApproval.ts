@@ -1,5 +1,6 @@
 import { CANVAS_PUBLISHED_STATE } from '@uniformdev/canvas';
 import { getCanvasClient } from '@uniformdev/canvas-next-rsc';
+import { WorkflowApprovalData } from '@/types/workflowApproval';
 import getOpenAIDescription from '@/utils/workflow-approval/getOpenAIDescription';
 import sendSlackNotification from '@/utils/workflow-approval/sendSlackNotification';
 import takeScreenshots from '@/utils/workflow-approval/takeScreenshots';
@@ -7,14 +8,20 @@ import { put } from '@vercel/blob';
 
 const VERCEL_FOLDER = 'workflow-approval';
 
-export async function POST(request: Request) {
+export async function processWorkflowApproval({
+  entity,
+  initiator,
+  newStage,
+  previousStage,
+  timestamp,
+  project,
+}: WorkflowApprovalData) {
   try {
     console.info('Workflow approval process started');
-    const { entity, initiator, newStage, previousStage, timestamp } = await request.json();
 
     if (entity.type !== 'component') {
       console.info(`Skipping non-component entity type: ${entity.type}`);
-      return Response.json({ success: true });
+      return { success: true };
     }
 
     console.info(`Processing composition: ${entity.id}`);
@@ -29,7 +36,7 @@ export async function POST(request: Request) {
 
     if (!history) {
       console.info('Error: No history found for composition');
-      return Response.json({ success: false, error: 'No history found for composition' });
+      return { success: false, error: 'No history found for composition' };
     }
 
     const latestVersion = history?.results?.[0];
@@ -37,11 +44,11 @@ export async function POST(request: Request) {
 
     if (!latestPublishedVersion || !latestVersion) {
       console.info('Error: No published version found for comparison');
-      return Response.json({ success: false, error: 'No published version found for comparison' });
+      return { success: false, error: 'No published version found for comparison' };
     }
 
-    const host = process.env.NEXT_PUBLIC_VERCEL_URL
-      ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
+    const host = process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL}`
       : 'http://localhost:3000';
 
     const latestVersionPreviewUrl = `${host}/composition-version-preview/${compositionId}?versionId=${latestVersion?.versionId}&isDraft=${latestVersion?.state === CANVAS_PUBLISHED_STATE}&secret=${process.env.UNIFORM_PREVIEW_SECRET}`;
@@ -84,12 +91,12 @@ export async function POST(request: Request) {
 
     console.info('Sending Slack notification...');
     await sendSlackNotification({
-      entityType: 'composition',
       entity,
       initiator,
       newStage,
       previousStage,
       timestamp,
+      project,
       latestVersionScreenshotUrl,
       latestPublishedVersionScreenshotUrl,
       latestVersionPreviewUrl,
@@ -99,9 +106,9 @@ export async function POST(request: Request) {
     });
 
     console.info('Workflow approval process completed successfully');
-    return Response.json({ success: true });
+    return { success: true };
   } catch (error) {
     console.error('Error in workflow-approval process:', error);
-    return Response.json({ success: false, error: error instanceof Error ? error.message : 'Unknown error' });
+    return { success: false, error: error instanceof Error ? error.message : 'Unknown error' };
   }
 }

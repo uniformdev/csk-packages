@@ -1,20 +1,12 @@
 import { after } from 'next/server';
+import { WorkflowApprovalData } from '@/types/workflowApproval';
+import { processWorkflowApproval } from '@/utils/workflow-approval/processWorkflowApproval';
 export async function POST(request: Request) {
   try {
-    const body = await request.json();
-    const host = process.env.NEXT_PUBLIC_VERCEL_URL
-      ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
-      : 'http://localhost:3000';
-
-    const processUrl = `${host}/api/workflow-approval/process`;
-    console.info('Sending request to process endpoint:', processUrl);
+    const body = (await request.json()) as WorkflowApprovalData;
 
     after(async () => {
-      await fetch(processUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body),
-      });
+      await processWorkflowApproval(body);
     });
 
     return Response.json({ success: 'Request sent to process endpoint' });
