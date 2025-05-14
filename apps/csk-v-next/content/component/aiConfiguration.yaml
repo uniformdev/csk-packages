@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: aiConfiguration
+name: AI Configuration
+icon: asterisk
+parameters: []
+categoryId: c7a1d1d9-cc3f-431c-b55e-6c4af1285108
+useTeamPermissions: true
+slots:
+  - id: content
+    name: Content
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+canBeComposition: true
+created: '2025-04-24T11:28:17.821117+00:00'
+updated: '2025-04-24T11:28:55.575968+00:00'

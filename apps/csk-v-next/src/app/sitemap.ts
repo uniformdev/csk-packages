@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { ProjectMapClient, getNodeActiveCompositionEdition } from '@uniformdev/project-map';
 import localesConfig from '@/i18n/locales.json';
+import { AI_ASSISTANT_CONFIGURATION_PLACEHOLDER } from '@/modules/chat/constants';
 
 const projectMap = new ProjectMapClient({
   apiHost: process.env.UNIFORM_CLI_BASE_URL! || 'https://uniform.app',
@@ -24,7 +25,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const isLocalized = localesConfig?.locales?.length > 0;
 
   return nodes.flatMap(node => {
-    if (!isLocalized || !node.path?.includes(':locale')) {
+    const path = node.path;
+    if (!path || path.startsWith(AI_ASSISTANT_CONFIGURATION_PLACEHOLDER)) {
+      return [];
+    }
+
+    if (!isLocalized || !path.includes(':locale')) {
       const edition = getNodeActiveCompositionEdition({
         node,
         targetLocale: undefined,
@@ -32,7 +38,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
       return [
         {
-          url: `${domain}${node.path}`,
+          url: `${domain}${path}`,
           lastModified: edition?.modified,
           changeFrequency: 'daily',
           priority: 1,
@@ -47,7 +53,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       });
 
       return {
-        url: `${domain}${node.path?.replace(':locale', locale)}`,
+        url: `${domain}${path.replace(':locale', locale)}`,
         lastModified: edition?.modified,
         changeFrequency: 'daily',
         priority: 1,
