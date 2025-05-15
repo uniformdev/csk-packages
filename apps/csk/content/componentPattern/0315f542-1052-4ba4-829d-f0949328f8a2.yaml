@@ -23,7 +23,25 @@ composition:
       value: {}
     displayName:
       type: text
-      value: Feature item
+      locales:
+        da-dk: Fremhævet vare
+        de-at: Artikel hervorheben
+        de-de: Hauptartikel
+        en-ca: Featured item
+        en-de: Artikel hervorheben
+        en-fr: Article vedette
+        en-gb: Feature item
+        en-nl: Kenmerkend item
+        en-us: Feature item
+        es-us: Artículo destacado
+        fr-ca: Article vedette
+        fr-fr: Article vedette
+        ja-jp: 特集アイテム
+        nb-no: Funksjonsvare
+        nl-nl: Kenmerkend item
+        sv-se: Funktionsartikel
+        ar-ksa: عنصر مميز
+        ar-uae: عنصر مميز
     fluidContent:
       type: checkbox
       value: true
@@ -42,33 +60,33 @@ composition:
                 image:
                   type: asset
                   value:
-                    - _id: d6dceca8-0c80-49d0-b2f9-fe540c6a8d77
+                    - _id: 4c64b826-6c14-4653-a200-c3371f04491e
                       type: image
                       fields:
                         id:
                           type: text
-                          value: f9da45f7-168b-4d00-b43b-f2cc28365985
+                          value: 96036875-082e-4497-b43c-663bb1682bb9
                         url:
                           value: >-
-                            https://img.uniform.global/p/YBXmRPPzQZ-45Yo5jJzHAw/tAODz-eSSfuSrg-b8abbEQ-Uniform-Icon-Library_Composability-1.png
+                            https://img.uniform.global/p/gUU_Q79PTn-Qq52vB7L2Jg/DcTO8-tOSxqX3i80ehzrjw-clay-banks-pNEmlb1CMZM-unsplash.jpg
                           type: text
                         file:
                           type: file
-                          value: a76b1ea4-ff39-4652-8cac-8ef72ef8454e
+                          value: 5f68ab0d-0cb5-4da3-904a-fba00dd8135a
                         size:
-                          value: 6420
+                          value: 2383415
                           type: number
                         title:
                           type: text
-                          value: composability
+                          value: clay-banks-pNEmlb1CMZM-unsplash.jpg
                         width:
-                          value: 114
+                          value: 4500
                           type: number
                         height:
-                          value: 114
+                          value: 3000
                           type: number
                         mediaType:
-                          value: image/png
+                          value: image/jpeg
                           type: text
                       _source: uniform-assets
                 width:
@@ -91,7 +109,25 @@ composition:
               desktop: ''
           displayName:
             type: text
-            value: Image
+            locales:
+              da-dk: Billede
+              de-at: Bild
+              de-de: Bild
+              en-ca: Image
+              en-de: Bild
+              en-fr: Image
+              en-gb: Picture
+              en-nl: Afbeelding
+              en-us: Image
+              es-us: Imagen
+              fr-ca: Image
+              fr-fr: Image
+              ja-jp: 画像
+              nb-no: Bilde
+              nl-nl: Afbeelding
+              sv-se: Bild
+              ar-ksa: صورة
+              ar-uae: صورة
       - _id: 40d28ca1-3727-486a-b5bb-d7f8084581a1
         type: flexItem
         slots:
@@ -159,17 +195,52 @@ composition:
             value: {}
           displayName:
             type: text
-            value: Right Content
+            locales:
+              da-dk: Højre Indhold
+              de-at: Rechter Inhalt
+              de-de: Rechter Inhalt
+              en-ca: Right Content
+              en-de: Richtiger Inhalt
+              en-fr: Contenu Correct
+              en-gb: Right Content
+              en-nl: Juist Inhoud
+              en-us: Right Content
+              es-us: Contenido Correcto
+              fr-ca: Contenu Correct
+              fr-fr: Contenu approprié
+              ja-jp: 右コンテンツ
+              nb-no: Riktig innhold
+              nl-nl: Juiste Inhoud
+              sv-se: Rätt innehåll
+              ar-ksa: المحتوى الصحيح
+              ar-uae: المحتوى الصحيح
   _overridability:
     parameters:
       title: 'yes'
       displayName: 'yes'
     hideLockedParameters: true
   _locales:
-    - en
-created: '2025-02-17T15:34:18.070844+00:00'
-modified: '2025-02-17T15:34:18.070844+00:00'
+    - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa
+created: '2025-03-25T09:38:01.041301+00:00'
+modified: '2025-07-16T05:53:58.892378+00:00'
 pattern: true
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/feature-item.jpg
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/feature-item.jpg
 categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

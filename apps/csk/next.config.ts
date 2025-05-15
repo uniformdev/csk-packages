@@ -1,11 +1,8 @@
 import { NextConfig } from 'next';
-//? if (localization) {
 import createNextIntlPlugin from 'next-intl/plugin';
-//? }
 import { withUniformConfig } from '@uniformdev/canvas-next-rsc/config';
-//? if (localization) {
+import locales from './src/i18n/locales.json';
 const withNextIntl = createNextIntlPlugin();
-//? }
 
 /** @type {NextConfig} */
 const nextConfig: NextConfig = {
@@ -13,11 +10,15 @@ const nextConfig: NextConfig = {
     remotePatterns: [{ protocol: 'https', hostname: '*' }],
     deviceSizes: [320, 420, 640, 768, 1024, 1280, 1536],
   },
+  redirects: async () => {
+    return [
+      {
+        source: '/playground',
+        destination: `/${locales.defaultLocale}/playground`,
+        permanent: true,
+      },
+    ];
+  },
 };
 
-//? if (localization) {
 export default withNextIntl(withUniformConfig(nextConfig));
-//? }
-//? if (!localization) {
-//? write('export default withUniformConfig(nextConfig);\n');
-//? }

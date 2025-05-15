@@ -1,0 +1,1352 @@
+composition:
+  _name: Product Info
+  _id: 438c8041-7889-45a5-8304-8c98f0291b6c
+  type: container
+  parameters:
+    height:
+      type: dex-segmented-control-parameter
+      value: {}
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        mobile:
+          paddingTop: container-medium
+          paddingBottom: container-medium
+        tablet:
+          paddingTop: container-medium
+          paddingBottom: container-medium
+        desktop:
+          paddingTop: container-medium
+          paddingBottom: container-medium
+    displayName:
+      type: text
+      locales:
+        da-dk: ${#jptr:/Product Content/entry/fields/name/value}
+        de-at: ${#jptr:/Product Content/entry/fields/name/value}
+        de-de: ${#jptr:/Product Content/entry/fields/name/value}
+        en-ca: ${#jptr:/Product Content/entry/fields/name/value}
+        en-de: ${#jptr:/Product Content/entry/fields/name/value}
+        en-fr: ${#jptr:/Product Content/entry/fields/name/value}
+        en-gb: ${#jptr:/Product Content/entry/fields/name/value}
+        en-nl: ${#jptr:/Product Content/entry/fields/name/value}
+        en-us: ${#jptr:/Product Content/entry/fields/name/value}
+        es-us: ${#jptr:/Product Content/entry/fields/name/value}
+        fr-ca: ${#jptr:/Product Content/entry/fields/name/value}
+        fr-fr: ${#jptr:/Product Content/entry/fields/name/value}
+        ja-jp: ${#jptr:/Product Content/entry/fields/name/value}
+        nb-no: ${#jptr:/Product Content/entry/fields/name/value}
+        nl-nl: ${#jptr:/Product Content/entry/fields/name/value}
+        sv-se: ${#jptr:/Product Content/entry/fields/name/value}
+        ar-ksa: ${#jptr:/Product Content/entry/fields/name/value}
+        ar-uae: ${#jptr:/Product Content/entry/fields/name/value}
+  slots:
+    containerContent:
+      - _id: 46ce375e-ba9b-4831-b09d-15fd372a0665
+        type: grid
+        slots:
+          gridInner:
+            - _id: 4fcf68c0-6794-47a4-b8aa-1be4a4d966a2
+              type: gridItem
+              slots:
+                inner:
+                  - _id: 8f267d7f-b730-469a-8fc8-d105e3a21e03
+                    type: container
+                    slots:
+                      containerContent:
+                        - _id: 52133760-45ff-446e-a8cc-32baace300b3
+                          type: image
+                          parameters:
+                            image:
+                              type: asset
+                              value:
+                                - _id: 0396d4a2-4a0c-461b-9ff0-6a826f2d117d
+                                  type: image
+                                  fields:
+                                    url:
+                                      type: text
+                                      value: >-
+                                        ${#jptr:/Product
+                                        Content/entry/fields/primaryImage/value/0/fields/url/value}
+                                    title:
+                                      type: text
+                                      value: >-
+                                        ${#jptr:/Product
+                                        Content/entry/fields/name/value}
+                                    description:
+                                      type: text
+                                      value: >-
+                                        ${#jptr:/Product
+                                        Content/entry/fields/name/value}
+                                  _source: custom-url
+                            height:
+                              type: number
+                              value: '520'
+                            objectFit:
+                              type: dex-segmented-control-parameter
+                              value: cover
+                          _overridability:
+                            hideLockedParameters: true
+                    parameters:
+                      border:
+                        type: dex-token-selector-parameter
+                        value: border-product-card
+                      spacing:
+                        type: dex-space-control-parameter
+                        value:
+                          mobile:
+                            marginTop: ''
+                            marginLeft: ''
+                            paddingTop: container-small
+                            marginRight: ''
+                            paddingLeft: container-small
+                            paddingRight: container-small
+                            paddingBottom: container-small
+                          tablet:
+                            marginTop: ''
+                            marginLeft: ''
+                            paddingTop: container-small
+                            marginRight: ''
+                            paddingLeft: container-small
+                            paddingRight: container-small
+                            paddingBottom: container-small
+                          desktop:
+                            marginTop: ''
+                            marginLeft: ''
+                            paddingTop: container-small
+                            marginRight: ''
+                            paddingLeft: container-small
+                            paddingRight: container-small
+                            paddingBottom: container-small
+                      displayName:
+                        type: text
+                        locales:
+                          da-dk: Billede
+                          de-at: Bild
+                          de-de: Bild
+                          en-ca: Image
+                          en-de: Bild
+                          en-fr: Image
+                          en-gb: Image
+                          en-nl: Afbeelding
+                          en-us: Image
+                          es-us: Imagen
+                          fr-ca: Image
+                          fr-fr: Image
+                          ja-jp: 画像
+                          nb-no: Bilde
+                          nl-nl: Afbeelding
+                          sv-se: Bild
+                          ar-ksa: صورة
+                          ar-uae: صورة
+                      fluidContent:
+                        type: checkbox
+                        value: true
+                      backgroundColor:
+                        type: dex-color-palette-parameter
+                        value: general-color-1
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                rowSpan:
+                  type: dex-slider-control-parameter
+                  value: {}
+                rowStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: ''
+                    desktop: ''
+                columnSpan:
+                  type: dex-slider-control-parameter
+                  value: {}
+                columnStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: ''
+                    desktop: '1'
+                displayName:
+                  type: text
+                  locales:
+                    da-dk: Produktbilledsektion
+                    de-at: Produktbildbereich
+                    de-de: Produktbildabschnitt
+                    en-ca: Product Image Section
+                    en-de: Produktbildabschnitt
+                    en-fr: Section Image du Produit
+                    en-gb: Product Image Section
+                    en-nl: Productafbeelding Sectie
+                    en-us: Product Image Section
+                    es-us: Sección de Imagen del Producto
+                    fr-ca: Section de l'image du produit
+                    fr-fr: Section Image du Produit
+                    ja-jp: 製品画像セクション
+                    nb-no: Produktbildeseksjon
+                    nl-nl: Productafbeelding Sectie
+                    sv-se: Produktbildsektion
+                    ar-ksa: قسم صورة المنتج
+                    ar-uae: قسم صورة المنتج
+              _overridability:
+                hideLockedParameters: true
+            - _id: 9f9d9f33-c663-4c68-8c27-fc22f14dc108
+              type: gridItem
+              slots:
+                inner:
+                  - _id: b1488ec3-f5cc-451e-8847-2c766ab341a8
+                    type: flex
+                    slots:
+                      flexItem:
+                        - _id: e22193db-b075-4f95-82f3-7098d3e4be0d
+                          type: text
+                          parameters:
+                            tag:
+                              type: dex-segmented-control-parameter
+                              value: h1
+                            size:
+                              type: dex-segmented-control-parameter
+                              value:
+                                mobile: 3xl
+                                tablet: 4xl
+                                desktop: 4xl
+                            text:
+                              type: text
+                              locales:
+                                da-dk: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/name/value}
+                                de-at: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/name/value}
+                                de-de: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/name/value}
+                                en-ca: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/name/value}
+                                en-de: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/name/value}
+                                en-fr: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/name/value}
+                                en-gb: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/name/value}
+                                en-nl: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/name/value}
+                                en-us: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/name/value}
+                                es-us: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/name/value}
+                                fr-ca: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/name/value}
+                                fr-fr: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/name/value}
+                                ja-jp: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/name/value}
+                                nb-no: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/name/value}
+                                nl-nl: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/name/value}
+                                sv-se: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/name/value}
+                                ar-ksa: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/name/value}
+                                ar-uae: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/name/value}
+                            color:
+                              type: dex-color-palette-parameter
+                              value: text-primary
+                            weight:
+                              type: dex-segmented-control-parameter
+                              value: bold
+                            alignment:
+                              type: dex-segmented-control-parameter
+                              value: left
+                          _overridability:
+                            hideLockedParameters: true
+                        - _id: 7cf4bd6e-987a-463f-83c6-57bed22b02ea
+                          type: text
+                          parameters:
+                            tag:
+                              type: dex-segmented-control-parameter
+                              value: p
+                            size:
+                              type: dex-segmented-control-parameter
+                              value:
+                                mobile: xl
+                                tablet: 3xl
+                                desktop: 3xl
+                            text:
+                              type: text
+                              locales:
+                                da-dk: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                de-at: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                de-de: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                en-ca: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                en-de: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                en-fr: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                en-gb: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                en-nl: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                en-us: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                es-us: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                fr-ca: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                fr-fr: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                ja-jp: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                nb-no: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                nl-nl: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                sv-se: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                ar-ksa: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                ar-uae: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/subcategory/value/entry/fields/title/value}
+                            color:
+                              type: dex-color-palette-parameter
+                              value: text-tertiary
+                            weight:
+                              type: dex-segmented-control-parameter
+                              value: medium
+                            alignment:
+                              type: dex-segmented-control-parameter
+                              value: left
+                          _overridability:
+                            hideLockedParameters: true
+                        - _id: ffc661be-98e2-4b3d-beaf-882c361411b9
+                          type: formattedPrice
+                          parameters:
+                            tag:
+                              type: dex-segmented-control-parameter
+                              value: span
+                            size:
+                              type: dex-segmented-control-parameter
+                              value:
+                                mobile: 2xl
+                                tablet: 2xl
+                                desktop: 2xl
+                            color:
+                              type: dex-color-palette-parameter
+                              value: text-primary
+                            price:
+                              type: number
+                              value: >-
+                                ${#jptr:/Product
+                                Content/entry/fields/variants/value/0/fields/price/value}
+                            weight:
+                              type: dex-segmented-control-parameter
+                              value: normal
+                            currency:
+                              type: text
+                              locales:
+                                da-dk: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/variants/value/0/fields/currency/value}
+                                de-at: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/variants/value/0/fields/currency/value}
+                                de-de: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/variants/value/0/fields/currency/value}
+                                en-ca: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/variants/value/0/fields/currency/value}
+                                en-de: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/variants/value/0/fields/currency/value}
+                                en-fr: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/variants/value/0/fields/currency/value}
+                                en-gb: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/variants/value/0/fields/currency/value}
+                                en-nl: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/variants/value/0/fields/currency/value}
+                                en-us: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/variants/value/0/fields/currency/value}
+                                es-us: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/variants/value/0/fields/currency/value}
+                                fr-ca: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/variants/value/0/fields/currency/value}
+                                fr-fr: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/variants/value/0/fields/currency/value}
+                                ja-jp: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/variants/value/0/fields/currency/value}
+                                nb-no: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/variants/value/0/fields/currency/value}
+                                nl-nl: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/variants/value/0/fields/currency/value}
+                                sv-se: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/variants/value/0/fields/currency/value}
+                                ar-ksa: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/variants/value/0/fields/currency/value}
+                                ar-uae: >-
+                                  ${#jptr:/Product
+                                  Content/entry/fields/variants/value/0/fields/currency/value}
+                          _overridability:
+                            hideLockedParameters: true
+                        - _id: 3e88bc6a-0588-4b36-aa7d-ede679a7c3c6
+                          type: addToCardButton
+                          _pattern: 20161830-c75e-4695-8622-41032f5be75d
+                        - _id: a94a3da2-9f36-40ae-9939-b1242a17994e
+                          type: table
+                          slots:
+                            tableBody:
+                              - _id: 5d797884-35fa-4ea2-9b09-de9c4468eec8
+                                type: tableRow
+                                slots:
+                                  tableRowCells:
+                                    - _id: 1b250bc3-bb54-46a9-a188-7b8cd1a9cd17
+                                      type: tableCustomCell
+                                      slots:
+                                        tableCustomCellContent:
+                                          - _id: 22de15c1-6a0b-4de6-9706-235e76aa98c1
+                                            type: text
+                                            parameters:
+                                              tag:
+                                                type: dex-segmented-control-parameter
+                                                value: span
+                                              size:
+                                                type: dex-segmented-control-parameter
+                                                value:
+                                                  mobile: base
+                                                  tablet: base
+                                                  desktop: base
+                                              text:
+                                                type: text
+                                                locales:
+                                                  da-dk: Varenummer
+                                                  de-at: SKU
+                                                  de-de: SKU
+                                                  en-ca: SKU
+                                                  en-de: SKU
+                                                  en-fr: UGS
+                                                  en-gb: SKU
+                                                  en-nl: SKU
+                                                  en-us: SKU
+                                                  es-us: SKU
+                                                  fr-ca: UGS
+                                                  fr-fr: UGS
+                                                  ja-jp: SKU(在庫管理単位)
+                                                  nb-no: SKU
+                                                  nl-nl: SKU
+                                                  sv-se: SKU
+                                                  ar-ksa: رمز التخزين الموحد
+                                                  ar-uae: رمز التخزين
+                                              color:
+                                                type: dex-color-palette-parameter
+                                                value: text-primary
+                                              weight:
+                                                type: dex-segmented-control-parameter
+                                                value: bold
+                                            _overridability:
+                                              hideLockedParameters: true
+                                      parameters:
+                                        displayName:
+                                          type: text
+                                          locales:
+                                            da-dk: Varenummer
+                                            de-at: SKU
+                                            de-de: SKU
+                                            en-ca: SKU
+                                            en-de: SKU
+                                            en-fr: UGS
+                                            en-gb: SKU
+                                            en-nl: SKU
+                                            en-us: SKU
+                                            es-us: SKU
+                                            fr-ca: UGS
+                                            fr-fr: UGS
+                                            ja-jp: SKU(在庫管理単位)
+                                            nb-no: Varenummer
+                                            nl-nl: SKU
+                                            sv-se: SKU
+                                            ar-ksa: رمز التخزين الموحد
+                                            ar-uae: رمز التخزين الموحد
+                                      _overridability:
+                                        hideLockedParameters: true
+                                    - _id: d5672590-ed33-4a5e-8150-3dc4ebca79f8
+                                      type: tableDataCell
+                                      parameters:
+                                        value:
+                                          type: text
+                                          locales:
+                                            da-dk: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/variants/value/0/fields/code/value}
+                                            de-at: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/variants/value/0/fields/code/value}
+                                            de-de: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/variants/value/0/fields/code/value}
+                                            en-ca: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/variants/value/0/fields/code/value}
+                                            en-de: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/variants/value/0/fields/code/value}
+                                            en-fr: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/variants/value/0/fields/code/value}
+                                            en-gb: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/variants/value/0/fields/code/value}
+                                            en-nl: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/variants/value/0/fields/code/value}
+                                            en-us: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/variants/value/0/fields/code/value}
+                                            es-us: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/variants/value/0/fields/code/value}
+                                            fr-ca: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/variants/value/0/fields/code/value}
+                                            fr-fr: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/variants/value/0/fields/code/value}
+                                            ja-jp: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/variants/value/0/fields/code/value}
+                                            nb-no: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/variants/value/0/fields/code/value}
+                                            nl-nl: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/variants/value/0/fields/code/value}
+                                            sv-se: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/variants/value/0/fields/code/value}
+                                            ar-ksa: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/variants/value/0/fields/code/value}
+                                            ar-uae: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/variants/value/0/fields/code/value}
+                                      _overridability:
+                                        hideLockedParameters: true
+                                parameters:
+                                  displayName:
+                                    type: text
+                                    locales:
+                                      da-dk: Varenummer
+                                      de-at: SKU
+                                      de-de: SKU
+                                      en-ca: SKU
+                                      en-de: SKU
+                                      en-fr: UGS
+                                      en-gb: SKU
+                                      en-nl: SKU
+                                      en-us: SKU
+                                      es-us: SKU
+                                      fr-ca: UGS
+                                      fr-fr: UGS
+                                      ja-jp: SKU(在庫管理単位)
+                                      nb-no: Varenummer
+                                      nl-nl: SKU
+                                      sv-se: SKU
+                                      ar-ksa: رمز التخزين الموحد
+                                      ar-uae: SKU
+                                _overridability:
+                                  hideLockedParameters: true
+                              - _id: c05ee302-21ec-4da9-8cea-5379af2eae53
+                                type: tableRow
+                                slots:
+                                  tableRowCells:
+                                    - _id: 4fe5f3c7-2ee2-42b8-9943-dd1b0222bfc2
+                                      type: tableCustomCell
+                                      slots:
+                                        tableCustomCellContent:
+                                          - _id: 7ec14759-444c-4c00-bf9f-53de581da730
+                                            type: text
+                                            parameters:
+                                              tag:
+                                                type: dex-segmented-control-parameter
+                                                value: span
+                                              size:
+                                                type: dex-segmented-control-parameter
+                                                value:
+                                                  mobile: base
+                                                  tablet: base
+                                                  desktop: base
+                                              text:
+                                                type: text
+                                                locales:
+                                                  da-dk: Mærke
+                                                  de-at: Marke
+                                                  de-de: Marke
+                                                  en-ca: Brand
+                                                  en-de: Marke
+                                                  en-fr: Marque
+                                                  en-gb: Brand
+                                                  en-nl: Merk
+                                                  en-us: Brand
+                                                  es-us: Marca
+                                                  fr-ca: Marque
+                                                  fr-fr: Marque
+                                                  ja-jp: ブランド
+                                                  nb-no: Merkevare
+                                                  nl-nl: Merk
+                                                  sv-se: Märke
+                                                  ar-ksa: علامة تجارية
+                                                  ar-uae: علامة تجارية
+                                              color:
+                                                type: dex-color-palette-parameter
+                                                value: text-primary
+                                              weight:
+                                                type: dex-segmented-control-parameter
+                                                value: bold
+                                            _overridability:
+                                              hideLockedParameters: true
+                                      parameters:
+                                        displayName:
+                                          type: text
+                                          locales:
+                                            da-dk: Mærke
+                                            de-at: Marke
+                                            de-de: Marke
+                                            en-ca: Brand
+                                            en-de: Marke
+                                            en-fr: Marque
+                                            en-gb: Brand
+                                            en-nl: Merk
+                                            en-us: Brand
+                                            es-us: Marca
+                                            fr-ca: Marque
+                                            fr-fr: Marque
+                                            ja-jp: ブランド
+                                            nb-no: Merkevare
+                                            nl-nl: Merk
+                                            sv-se: Märke
+                                            ar-ksa: علامة تجارية
+                                            ar-uae: علامة تجارية
+                                      _overridability:
+                                        hideLockedParameters: true
+                                    - _id: c6d02946-7c54-492b-aa1b-fcf131e2268f
+                                      type: tableDataCell
+                                      parameters:
+                                        value:
+                                          type: text
+                                          locales:
+                                            da-dk: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/brand/value/entry/fields/title/value}
+                                            de-at: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/brand/value/entry/fields/title/value}
+                                            de-de: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/brand/value/entry/fields/title/value}
+                                            en-ca: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/brand/value/entry/fields/title/value}
+                                            en-de: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/brand/value/entry/fields/title/value}
+                                            en-fr: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/brand/value/entry/fields/title/value}
+                                            en-gb: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/brand/value/entry/fields/title/value}
+                                            en-nl: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/brand/value/entry/fields/title/value}
+                                            en-us: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/brand/value/entry/fields/title/value}
+                                            es-us: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/brand/value/entry/fields/title/value}
+                                            fr-ca: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/brand/value/entry/fields/title/value}
+                                            fr-fr: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/brand/value/entry/fields/title/value}
+                                            ja-jp: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/brand/value/entry/fields/title/value}
+                                            nb-no: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/brand/value/entry/fields/title/value}
+                                            nl-nl: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/brand/value/entry/fields/title/value}
+                                            sv-se: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/brand/value/entry/fields/title/value}
+                                            ar-ksa: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/brand/value/entry/fields/title/value}
+                                            ar-uae: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/brand/value/entry/fields/title/value}
+                                      _overridability:
+                                        hideLockedParameters: true
+                                parameters:
+                                  displayName:
+                                    type: text
+                                    locales:
+                                      da-dk: Mærke
+                                      de-at: Marke
+                                      de-de: Marke
+                                      en-ca: Brand
+                                      en-de: Marke
+                                      en-fr: Marque
+                                      en-gb: Brand
+                                      en-nl: Merk
+                                      en-us: Brand
+                                      es-us: Marca
+                                      fr-ca: Marque
+                                      fr-fr: Marque
+                                      ja-jp: ブランド
+                                      nb-no: Merkevare
+                                      nl-nl: Merk
+                                      sv-se: Märke
+                                      ar-ksa: علامة تجارية
+                                      ar-uae: علامة تجارية
+                                _overridability:
+                                  hideLockedParameters: true
+                              - _id: 9260bee8-c5c6-495b-a4e0-5e5e91b74b00
+                                type: tableRow
+                                slots:
+                                  tableRowCells:
+                                    - _id: 8f25babf-2ccd-45e3-8acc-7633bed30d1e
+                                      type: tableCustomCell
+                                      slots:
+                                        tableCustomCellContent:
+                                          - _id: 751d44ca-6140-44bd-82a7-a53d423a8709
+                                            type: text
+                                            parameters:
+                                              tag:
+                                                type: dex-segmented-control-parameter
+                                                value: span
+                                              size:
+                                                type: dex-segmented-control-parameter
+                                                value:
+                                                  mobile: base
+                                                  tablet: base
+                                                  desktop: base
+                                              text:
+                                                type: text
+                                                locales:
+                                                  da-dk: Type
+                                                  de-at: Typ
+                                                  de-de: Typ
+                                                  en-ca: Type
+                                                  en-de: Typ
+                                                  en-fr: Type
+                                                  en-gb: Type
+                                                  en-nl: Type
+                                                  en-us: Type
+                                                  es-us: Tipo
+                                                  fr-ca: Tape
+                                                  fr-fr: Type
+                                                  ja-jp: タイプ
+                                                  nb-no: Type
+                                                  nl-nl: Type
+                                                  sv-se: Typ
+                                                  ar-ksa: نوع
+                                                  ar-uae: نوع
+                                              color:
+                                                type: dex-color-palette-parameter
+                                                value: text-primary
+                                              weight:
+                                                type: dex-segmented-control-parameter
+                                                value: bold
+                                            _overridability:
+                                              hideLockedParameters: true
+                                      parameters:
+                                        displayName:
+                                          type: text
+                                          locales:
+                                            da-dk: Type
+                                            de-at: Typ
+                                            de-de: Typ
+                                            en-ca: Type
+                                            en-de: Typ
+                                            en-fr: Type
+                                            en-gb: Type
+                                            en-nl: Type
+                                            en-us: Type
+                                            es-us: Tipo
+                                            fr-ca: Tapez
+                                            fr-fr: Tape
+                                            ja-jp: タイプ
+                                            nb-no: Skriv inn
+                                            nl-nl: Type
+                                            sv-se: Typ
+                                            ar-ksa: نوع
+                                            ar-uae: نوع
+                                      _overridability:
+                                        hideLockedParameters: true
+                                    - _id: d56fbf03-f06e-4939-81e4-c41f655e1405
+                                      type: tableDataCell
+                                      parameters:
+                                        value:
+                                          type: text
+                                          locales:
+                                            da-dk: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                            de-at: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                            de-de: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                            en-ca: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                            en-de: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                            en-fr: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                            en-gb: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                            en-nl: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                            en-us: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                            es-us: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                            fr-ca: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                            fr-fr: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                            ja-jp: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                            nb-no: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                            nl-nl: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                            sv-se: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                            ar-ksa: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                            ar-uae: >-
+                                              ${#jptr:/Product
+                                              Content/entry/fields/subcategory/value/entry/fields/title/value}
+                                      _overridability:
+                                        hideLockedParameters: true
+                                parameters:
+                                  displayName:
+                                    type: text
+                                    locales:
+                                      da-dk: Type
+                                      de-at: Typ
+                                      de-de: Typ
+                                      en-ca: Type
+                                      en-de: Typ
+                                      en-fr: Type
+                                      en-gb: Type
+                                      en-nl: Type
+                                      en-us: Type
+                                      es-us: Tipo
+                                      fr-ca: Tape
+                                      fr-fr: Tape
+                                      ja-jp: タイプ
+                                      nb-no: Type
+                                      nl-nl: Type
+                                      sv-se: Typ
+                                      ar-ksa: نوع
+                                      ar-uae: نوع
+                                _overridability:
+                                  hideLockedParameters: true
+                          parameters:
+                            size:
+                              type: dex-token-selector-parameter
+                              value: table-medium
+                            spacing:
+                              type: dex-space-control-parameter
+                              value:
+                                mobile:
+                                  paddingTop: ''
+                                  paddingBottom: ''
+                                tablet:
+                                  paddingTop: ''
+                                  paddingBottom: ''
+                                desktop:
+                                  paddingTop: ''
+                                  paddingBottom: ''
+                            textColor:
+                              type: dex-color-palette-parameter
+                              value: text-primary
+                            displayName:
+                              type: text
+                              locales:
+                                da-dk: Data
+                                de-at: Daten
+                                de-de: Daten
+                                en-ca: Data
+                                en-de: Daten
+                                en-fr: Données
+                                en-gb: Data
+                                en-nl: Gegevens
+                                en-us: Data
+                                es-us: Datos
+                                fr-ca: Données
+                                fr-fr: Données
+                                ja-jp: データ
+                                nb-no: Data
+                                nl-nl: Gegevens
+                                sv-se: Data
+                                ar-ksa: بيانات
+                                ar-uae: بيانات
+                          _overridability:
+                            hideLockedParameters: true
+                    parameters:
+                      gap:
+                        type: dex-slider-control-parameter
+                        value:
+                          mobile: '8'
+                          tablet: '8'
+                          desktop: '8'
+                      spacing:
+                        type: dex-space-control-parameter
+                        value:
+                          mobile:
+                            paddingTop: container-medium
+                            paddingBottom: container-medium
+                          tablet:
+                            paddingTop: container-medium
+                            paddingBottom: container-medium
+                          desktop:
+                            paddingTop: container-medium
+                            paddingLeft: container-medium
+                            paddingRight: container-medium
+                            paddingBottom: container-medium
+                      direction:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: col
+                          tablet: col
+                          desktop: col
+                      alignItems:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: start
+                          tablet: start
+                          desktop: start
+                      displayName:
+                        type: text
+                        locales:
+                          da-dk: Primære oplysninger
+                          de-at: Primäre Informationen
+                          de-de: Primärinformationen
+                          en-ca: Primary Info
+                          en-de: Primäre Informationen
+                          en-fr: Informations principales
+                          en-gb: Primary Information
+                          en-nl: Primaire Info
+                          en-us: Primary Info
+                          es-us: Información Principal
+                          fr-ca: Informations principales
+                          fr-fr: Informations principales
+                          ja-jp: 主要情報
+                          nb-no: Primærinfo
+                          nl-nl: Primaire Info
+                          sv-se: Primär information
+                          ar-ksa: المعلومات الأساسية
+                          ar-uae: المعلومات الأساسية
+                      fluidContent:
+                        type: checkbox
+                        value: true
+                      justifyContent:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: center
+                          tablet: center
+                          desktop: center
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                rowSpan:
+                  type: dex-slider-control-parameter
+                  value: {}
+                rowStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: ''
+                    desktop: ''
+                columnSpan:
+                  type: dex-slider-control-parameter
+                  value: {}
+                columnStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: ''
+                    desktop: '2'
+                displayName:
+                  type: text
+                  locales:
+                    da-dk: Produktinformationsafsnit
+                    de-at: Produktinformationsabschnitt
+                    de-de: Produktinformationsabschnitt
+                    en-ca: Product Information Section
+                    en-de: Produktinformationsabschnitt
+                    en-fr: Section d'Information sur le Produit
+                    en-gb: Product Information Section
+                    en-nl: Productinformatie Sectie
+                    en-us: Product Information Section
+                    es-us: Sección de Información del Producto
+                    fr-ca: Section des informations sur le produit
+                    fr-fr: Section d'informations sur le produit
+                    ja-jp: 製品情報セクション
+                    nb-no: Produktinformasjonseksjon
+                    nl-nl: Productinformatie Sectie
+                    sv-se: Produktinformationsavsnitt
+                    ar-ksa: قسم معلومات المنتج
+                    ar-uae: قسم معلومات المنتج
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          gapX:
+            type: dex-slider-control-parameter
+            value:
+              tablet: '8'
+              desktop: '8'
+          gapY:
+            type: dex-slider-control-parameter
+            value: {}
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              mobile: {}
+              tablet: {}
+              desktop: {}
+          displayName:
+            type: text
+            locales:
+              da-dk: Produktinformation
+              de-at: Produktinformationen
+              de-de: Produktinformationen
+              en-ca: Product Information
+              en-de: Produktinformationen
+              en-fr: Informations sur le produit
+              en-gb: Product Information
+              en-nl: Productinformatie
+              en-us: Product Info
+              es-us: Información del Producto
+              fr-ca: Informations sur le produit
+              fr-fr: Informations sur le produit
+              ja-jp: 製品情報
+              nb-no: Produktinformasjon
+              nl-nl: Productinformatie
+              sv-se: Produktinformation
+              ar-ksa: معلومات المنتج
+              ar-uae: معلومات المنتج
+          columnsCount:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '1'
+              tablet: '1'
+              desktop: '2'
+          fluidContent:
+            type: checkbox
+            value: true
+        _overridability:
+          hideLockedParameters: true
+      - _id: bda74aa4-e9c6-48f9-ab84-b0ce01c3a983
+        type: container
+        slots:
+          containerContent:
+            - _id: 0f1430e6-268b-480e-953e-23c9bbb9013f
+              type: divider
+              parameters:
+                color:
+                  type: dex-color-palette-parameter
+                  value: general-color-12
+                width:
+                  type: dex-slider-control-parameter
+                  value: 100%
+                alignment:
+                  type: dex-segmented-control-parameter
+                  value: center
+                thickness:
+                  type: dex-slider-control-parameter
+                  value: 1px
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              mobile:
+                paddingTop: container-medium
+                paddingBottom: container-medium
+              tablet:
+                paddingTop: container-medium
+                paddingBottom: container-medium
+              desktop:
+                paddingTop: container-medium
+                paddingBottom: container-medium
+          displayName:
+            type: text
+            locales:
+              da-dk: Skillevæg
+              de-at: Trennwand
+              de-de: Teiler
+              en-ca: Divider
+              en-de: Teiler
+              en-fr: Séparateur
+              en-gb: Divider
+              en-nl: Verdeler
+              en-us: Divider
+              es-us: Divisor
+              fr-ca: Séparateur
+              fr-fr: Séparateur
+              ja-jp: 仕切り
+              nb-no: Skillelinje
+              nl-nl: Verdeler
+              sv-se: Avdelare
+              ar-ksa: فاصل
+              ar-uae: فاصل
+          fluidContent:
+            type: checkbox
+            value: true
+        _overridability:
+          hideLockedParameters: true
+      - _id: 4d90b7bd-af13-450d-b199-a1b1d15af803
+        type: flex
+        slots:
+          flexItem:
+            - _id: 7b36906c-ece0-4943-822f-144a77eb093b
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: span
+                font:
+                  type: dex-token-selector-parameter
+                  value: ''
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: 2xl
+                    tablet: 2xl
+                    desktop: 2xl
+                text:
+                  type: text
+                  locales:
+                    da-dk: |-
+                      Om dette produkt
+
+                      Instruktioner:
+                    de-at: Über dieses Produkt
+                    de-de: Über dieses Produkt
+                    en-ca: About this product
+                    en-de: Über dieses Produkt
+                    en-fr: À propos de ce produit
+                    en-gb: About this product
+                    en-nl: Over dit product
+                    en-us: About this product
+                    es-us: Acerca de este producto
+                    fr-ca: À propos de ce produit
+                    fr-fr: À propos de ce produit
+                    ja-jp: この製品について
+                    nb-no: Om dette produktet
+                    nl-nl: Over dit product
+                    sv-se: Om denna produkt
+                    ar-ksa: حول هذا المنتج
+                    ar-uae: حول هذا المنتج
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: bold
+              _overridability:
+                hideLockedParameters: true
+            - _id: a5bed2de-6aca-496d-b7d9-b76cfaa9363e
+              type: richText
+              parameters:
+                font:
+                  type: dex-token-selector-parameter
+                  value: ''
+                text:
+                  type: richText
+                  locales:
+                    da-dk: ${#jptr:/Product Content/entry/fields/body/value}
+                    de-at: ${#jptr:/Product Content/entry/fields/body/value}
+                    de-de: ${#jptr:/Product Content/entry/fields/body/value}
+                    en-ca: ${#jptr:/Product Content/entry/fields/body/value}
+                    en-de: ${#jptr:/Product Content/entry/fields/body/value}
+                    en-fr: ${#jptr:/Product Content/entry/fields/body/value}
+                    en-gb: ${#jptr:/Product Content/entry/fields/body/value}
+                    en-nl: ${#jptr:/Product Content/entry/fields/body/value}
+                    en-us: ${#jptr:/Product Content/entry/fields/body/value}
+                    es-us: ${#jptr:/Product Content/entry/fields/body/value}
+                    fr-ca: ${#jptr:/Product Content/entry/fields/body/value}
+                    fr-fr: ${#jptr:/Product Content/entry/fields/body/value}
+                    ja-jp: ${#jptr:/Product Content/entry/fields/body/value}
+                    nb-no: ${#jptr:/Product Content/entry/fields/body/value}
+                    nl-nl: ${#jptr:/Product Content/entry/fields/body/value}
+                    sv-se: ${#jptr:/Product Content/entry/fields/body/value}
+                    ar-ksa: ${#jptr:/Product Content/entry/fields/body/value}
+                    ar-uae: ${#jptr:/Product Content/entry/fields/body/value}
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          gap:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '4'
+              tablet: '4'
+              desktop: '4'
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              mobile:
+                paddingRight: ''
+              tablet:
+                paddingRight: ''
+              desktop:
+                paddingRight: ''
+          direction:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: col
+              tablet: col
+              desktop: col
+          alignItems:
+            type: dex-segmented-control-parameter
+            value: {}
+          displayName:
+            type: text
+            locales:
+              da-dk: Beskrivelse
+              de-at: Beschreibung
+              de-de: Beschreibung
+              en-ca: Description
+              en-de: Beschreibung
+              en-fr: Description
+              en-gb: Description
+              en-nl: Beschrijving
+              en-us: Description
+              es-us: Descripción
+              fr-ca: Description
+              fr-fr: Description
+              ja-jp: 説明
+              nb-no: Beskrivelse
+              nl-nl: Beschrijving
+              sv-se: Beskrivning
+              ar-ksa: الوصف
+              ar-uae: الوصف
+          fluidContent:
+            type: checkbox
+            value: true
+          justifyContent:
+            type: dex-segmented-control-parameter
+            value: {}
+        _overridability:
+          hideLockedParameters: true
+  _dataResources:
+    Product Content:
+      type: product
+      variables:
+        slug: kosmic-coffee-stainless-steel-precision-brewer
+        locale: ${locale}
+      isPatternParameter: true
+      ignorePatternParameterDefault: true
+  _overridability:
+    hideLockedParameters: true
+  _locales:
+    - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa
+created: '2025-03-18T13:02:28.292665+00:00'
+modified: '2025-07-16T05:53:58.92617+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/product-info.jpg
+categoryId: adaebea8-ba58-494b-9c3b-9f82906d9415

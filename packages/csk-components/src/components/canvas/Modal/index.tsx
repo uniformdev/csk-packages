@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic';
+import { LinkParamValue } from '@uniformdev/canvas';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 
 export const MaxWidthMap = {
@@ -12,6 +13,7 @@ export type ModalParameters = {
   backgroundColor?: string;
   closeIconColor?: string;
   disableCloseModalOnClickOutside?: boolean;
+  compositionNode: LinkParamValue;
 };
 
 export enum ModalSlots {

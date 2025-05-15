@@ -1,0 +1,101 @@
+composition:
+  _name: Segment Quirk Selector
+  _id: 0bc0e924-445c-47de-9217-3dc6f889f1e7
+  type: quirkSelector
+  parameters:
+    quirkId:
+      type: text
+      locales:
+        da-dk: segment
+        de-at: Segment
+        de-de: Segment
+        en-ca: segment
+        en-de: Segment
+        en-fr: segment
+        en-gb: segment
+        en-nl: segment
+        en-us: segment
+        es-us: segmento
+        fr-ca: segment
+        fr-fr: segment
+        ja-jp: セグメント
+        nb-no: segment
+        nl-nl: segment
+        sv-se: segment
+        ar-ksa: قطعة
+        ar-uae: قطعة
+    variants:
+      type: text
+      locales:
+        da-dk: entusiast, lejlighedsvis, nybegynder
+        de-at: Liebhaber, gelegentlich, Neuling
+        de-de: Liebhaber, gelegentlich, Neuling
+        en-ca: aficionado, occasional, newbie
+        en-de: Liebhaber, gelegentlich, Neuling
+        en-fr: aficionado, occasionnel, novice
+        en-gb: aficionado, occasional, newbie
+        en-nl: liefhebber, incidenteel, beginner
+        en-us: aficionado,occasional,newb
+        es-us: aficionado, ocasional, novato
+        fr-ca: aficionado, occasionnel, débutant
+        fr-fr: aficionado, occasionnel, novice
+        ja-jp: 愛好家、時折、新参者
+        nb-no: entusiast, sporadisk, nybegynner
+        nl-nl: liefhebber, incidenteel, beginner
+        sv-se: entusiast, tillfällig, nybörjare
+        ar-ksa: هاوٍ، عرضي، مبتدئ
+        ar-uae: هاوي، عرضي، مبتدئ
+  slots:
+    quirkSelectorSaveButton:
+      - _id: f57a3162-0c07-4318-be4b-69050daa2629
+        type: button
+        _pattern: 53b59aed-e378-4fcb-9135-20247d92074e
+  _overrides:
+    f57a3162-0c07-4318-be4b-69050daa2629:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: Gem
+            de-at: Speichern
+            de-de: Speichern
+            en-ca: Save
+            en-de: Speichern
+            en-fr: Enregistrer
+            en-gb: Save
+            en-nl: Opslaan
+            en-us: Save
+            es-us: Guardar
+            fr-ca: Enregistrer
+            fr-fr: Enregistrer
+            ja-jp: 保存
+            nb-no: Lagre
+            nl-nl: Opslaan
+            sv-se: Spara
+            ar-ksa: حفظ
+            ar-uae: حفظ
+  _overridability:
+    hideLockedParameters: true
+  _locales:
+    - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa
+created: '2025-03-18T13:02:27.524141+00:00'
+modified: '2025-07-16T05:53:56.365502+00:00'
+pattern: true
+categoryId: 3bab40a0-d52d-49b3-8780-b26f737b84a3

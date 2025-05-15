@@ -17,7 +17,25 @@ composition:
           marginBottom: container-small
     displayName:
       type: text
-      value: Frequently Asked Questions
+      locales:
+        da-dk: 'Bønne Der, Spurgte Det:'
+        de-at: 'Bohne Da, Gefragt Das:'
+        de-de: 'Bohne da, gefragt das:'
+        en-ca: 'Bean There, Asked That:'
+        en-de: 'Bohne Da, Gefragt Das:'
+        en-fr: 'Haricot Là, Demandé Cela :'
+        en-gb: 'Bean There, Asked That:'
+        en-nl: 'Bonen Daar, Gevraagd Dat:'
+        en-us: 'Bean There, Asked That:'
+        es-us: 'Frijol Allí, Preguntó Eso:'
+        fr-ca: 'Fève Là, Demandé Ça :'
+        fr-fr: 'Bean There, Asked That :'
+        ja-jp: ビーンズ・ゼア、アスクド・ザット
+        nb-no: 'Bønne Der, Spurt Om Det:'
+        nl-nl: 'Bonen Daar, Gevraagd Dat:'
+        sv-se: 'Bönan där, frågade det:'
+        ar-ksa: 'بين هناك، سأل ذلك:'
+        ar-uae: 'بين هناك، سأل ذلك:'
   slots:
     accordionItems:
       - _id: fc0685d7-4cc2-4157-aab6-34d82d451b21
@@ -25,14 +43,50 @@ composition:
         parameters:
           name:
             type: text
-            value: Accordion Items
+            locales:
+              da-dk: Harmonikaelementer
+              de-at: Akkordeon-Elemente
+              de-de: Akkordeon-Elemente
+              en-ca: Accordion Items
+              en-de: Akkordeon-Elemente
+              en-fr: Éléments d'accordéon
+              en-gb: Accordion Items
+              en-nl: Accordeonitems
+              en-us: Accordion Items
+              es-us: Elementos del Acordeón
+              fr-ca: Éléments d'accordéon
+              fr-fr: Éléments d'accordéon
+              ja-jp: アコーディオン項目
+              nb-no: Trekkspill-elementer
+              nl-nl: Accordeonitems
+              sv-se: Dragspelsobjekt
+              ar-ksa: عناصر الأكورديون
+              ar-uae: عناصر الأكورديون
           specific:
             type: array
             value:
               - $p:aa9019a0-1baa-44bc-966f-5cb18278f350
           groupType:
             type: text
-            value: specific
+            locales:
+              da-dk: specifik
+              de-at: spezifisch
+              de-de: spezifisch
+              en-ca: specific
+              en-de: spezifisch
+              en-fr: spécifique
+              en-gb: specific
+              en-nl: specifiek
+              en-us: specific
+              es-us: específico
+              fr-ca: spécifique
+              fr-fr: spécifique
+              ja-jp: 具体的
+              nb-no: spesifikk
+              nl-nl: specifiek
+              sv-se: specifik
+              ar-ksa: محدد
+              ar-uae: محدد
         _overridability:
           hideLockedParameters: true
     accordionContent:
@@ -46,46 +100,41 @@ composition:
             type: dex-segmented-control-parameter
             value:
               mobile: 2xl
-              tablet: 3xl
-              desktop: 4xl
+              tablet: ''
+              desktop: ''
           text:
             type: text
-            value: Frequently Asked Questions
+            locales:
+              da-dk: 'Bønne Der, Spurgte Det:'
+              de-at: 'Bohne Da, Gefragt Das:'
+              de-de: 'Bohne Da, Gefragt Danach:'
+              en-ca: 'Bean There, Asked That:'
+              en-de: 'Bohne Da, Das Gefragt:'
+              en-fr: 'Bean There, Asked That:'
+              en-gb: 'Bean There, Asked That:'
+              en-nl: 'Bonen Daar, Vroeg Dat:'
+              en-us: 'Bean There, Asked That:'
+              es-us: 'Frijol Allí, Preguntó Eso:'
+              fr-ca: 'Grain de Café, Question Posée :'
+              fr-fr: 'Bean There, Asked That:'
+              ja-jp: ビーンズ・ゼア、アスクト・ザット：
+              nb-no: 'Bønne Der, Spurt Om Det:'
+              nl-nl: 'Bean Daar, Vroeg Dat:'
+              sv-se: 'Bönan där, frågade det:'
+              ar-ksa: 'كان هناك، سأل ذلك:'
+              ar-uae: 'بين هناك، سأل ذلك:'
           color:
             type: dex-color-palette-parameter
-            value: text-primary
-          weight:
-            type: dex-segmented-control-parameter
-            value: bold
-        _overridability:
-          parameters:
-            size: 'yes'
-            text: 'yes'
-            color: 'yes'
-          hideLockedParameters: true
-      - _id: c9fc04b4-854a-4ee2-885e-02d3f0f62ded
-        type: text
-        parameters:
-          tag:
-            type: dex-segmented-control-parameter
-            value: span
-          size:
-            type: dex-segmented-control-parameter
-            value:
-              mobile: ''
-              tablet: base
-              desktop: xl
-          text:
-            type: text
-            value: >-
-              Answer your customers possible questions here, it will increase
-              the conversion rate as well as support or chat requests.
-          color:
-            type: dex-color-palette-parameter
-            value: text-primary
+            value: text-secondary
           weight:
             type: dex-segmented-control-parameter
             value: normal
+          transform:
+            type: dex-segmented-control-parameter
+            value: uppercase
+          letterSpacing:
+            type: dex-segmented-control-parameter
+            value: wider
         _overridability:
           parameters:
             size: 'yes'
@@ -97,8 +146,25 @@ composition:
       displayName: 'yes'
     hideLockedParameters: true
   _locales:
-    - en
-created: '2025-03-20T13:08:16.441907+00:00'
-modified: '2025-05-22T11:54:55.335138+00:00'
+    - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa
+created: '2025-03-25T09:38:01.152319+00:00'
+modified: '2025-07-16T05:54:00.880863+00:00'
 pattern: true
 categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

@@ -6,6 +6,27 @@ composition:
     size:
       type: dex-token-selector-parameter
       value: button-medium
+    text:
+      type: text
+      locales:
+        da-dk: Lær mere
+        de-at: Erfahren Sie mehr
+        de-de: Erfahren Sie mehr
+        en-ca: Learn more
+        en-de: Mehr erfahren
+        en-fr: En savoir plus
+        en-gb: Learn more
+        en-nl: Meer informatie
+        en-us: Learn more
+        es-us: Aprende más
+        fr-ca: En savoir plus
+        fr-fr: En savoir plus
+        ja-jp: 詳細を確認する
+        nb-no: Lær mer
+        nl-nl: Meer informatie
+        sv-se: Läs mer
+        ar-ksa: تعرف على المزيد
+        ar-uae: تعرف على المزيد
     textSize:
       type: dex-segmented-control-parameter
       value:
@@ -14,7 +35,7 @@ composition:
         desktop: sm
     textColor:
       type: dex-color-palette-parameter
-      value: text-primary
+      value: text-secondary
     textWeight:
       type: dex-segmented-control-parameter
       value: normal
@@ -26,7 +47,7 @@ composition:
       value: right
     hoverTextColor:
       type: dex-color-palette-parameter
-      value: text-primary
+      value: text-secondary
     hoverButtonColor:
       type: dex-color-palette-parameter
       value: button-tertiary-hover
@@ -35,12 +56,35 @@ composition:
     parameters:
       link: 'yes'
       text: 'yes'
+      textColor: 'yes'
+      textWeight: 'yes'
+      buttonColor: 'yes'
+      textTransform: 'yes'
+      hoverTextColor: 'yes'
+      hoverButtonColor: 'yes'
     hideLockedParameters: true
   _locales:
-    - en
-created: '2025-02-17T15:34:18.960294+00:00'
-modified: '2025-02-17T15:34:18.960294+00:00'
+    - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa
+created: '2025-02-27T10:45:00.112242+00:00'
+modified: '2025-07-16T05:54:00.821582+00:00'
 pattern: true
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/button-tertiary.jpg
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/jd-template/tertiary-button.jpg
 categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

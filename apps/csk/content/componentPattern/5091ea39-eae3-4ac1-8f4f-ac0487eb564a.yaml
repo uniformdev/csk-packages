@@ -17,13 +17,34 @@ composition:
       value: general-color-6
     displayName:
       type: text
-      value: Hector Gibbons review
+      locales:
+        da-dk: Hector Gibbons anmeldelse
+        de-at: Hector Gibbons Rezension
+        de-de: Hector Gibbons Bewertung
+        en-ca: Hector Gibbons review
+        en-de: Hector Gibbons Bewertung
+        en-fr: Critique de Hector Gibbons
+        en-gb: Hector Gibbons review
+        en-nl: Hector Gibbons recensie
+        en-us: Hector Gibbons review
+        es-us: Reseña de Hector Gibbons
+        fr-ca: Critique de Hector Gibbons
+        fr-fr: Critique de Hector Gibbons
+        ja-jp: ヘクター・ギボンズのレビュー
+        nb-no: Hector Gibbons anmeldelse
+        nl-nl: Hector Gibbons recensie
+        sv-se: Hector Gibbons recension
+        ar-ksa: مراجعة هيكتور جيبونز
+        ar-uae: مراجعة هيكتور جيبونز
     showRatingLabel:
       type: checkbox
       value: true
     activeStarsColor:
       type: dex-color-palette-parameter
       value: button-primary-hover
+    lineCountRestrictions:
+      type: dex-slider-control-parameter
+      value: {}
   slots:
     reviewImage:
       - _id: bb51df40-cf4d-4dd3-85e2-b7a185e1552f
@@ -40,7 +61,7 @@ composition:
                     value: 0aafe2e9-468c-43e1-81f3-fda6c02388e7
                   url:
                     value: >-
-                      https://img.uniform.global/p/h7VVOiFOSWyx2snFx06-Sw/xBYy0MwzRHqiYe2NXV3tgg-man.png
+                      https://img.uniform.global/p/4DvqtylHQMOCu7DIwD3nVA/8bKHd8vKTLWpoTQlAWThdA-man.png
                     type: text
                   file:
                     type: file
@@ -83,9 +104,59 @@ composition:
             value: {}
           text:
             type: text
-            value: >-
-              The Component Starter Kit is great. It cut time to market in half.
-              A big win!
+            locales:
+              da-dk: >-
+                Komponent Starter Kit er fantastisk. Det halverede tiden til
+                markedet. En stor sejr!
+              de-at: >-
+                Das Component Starter Kit ist großartig. Es hat die
+                Markteinführungszeit halbiert. Ein großer Erfolg!
+              de-de: >-
+                Das Component Starter Kit ist großartig. Es hat die
+                Markteinführungszeit halbiert. Ein großer Gewinn!
+              en-ca: >-
+                The Component Starter Kit is great. It cut time to market in
+                half. A big win!
+              en-de: >-
+                Das Component Starter Kit ist großartig. Es hat die
+                Markteinführungszeit halbiert. Ein großer Erfolg!
+              en-fr: >-
+                Le kit de démarrage de composants est excellent. Il a réduit de
+                moitié le temps de mise sur le marché. Une grande victoire !
+              en-gb: >-
+                The Component Starter Kit is great. It halved the time to
+                market. A big win!
+              en-nl: >-
+                De Component Starter Kit is geweldig. Het halveerde de tijd naar
+                de markt. Een grote overwinning!
+              en-us: >-
+                The Component Starter Kit is great. It cut time to market in
+                half. A big win!
+              es-us: >-
+                El Kit de Inicio de Componentes es excelente. Redujo el tiempo
+                de lanzamiento al mercado a la mitad. ¡Un gran triunfo!
+              fr-ca: >-
+                Le kit de démarrage de composants est génial. Il a réduit de
+                moitié le temps de mise sur le marché. Une grande victoire !
+              fr-fr: >-
+                Le kit de démarrage de composants est excellent. Il a réduit de
+                moitié le temps de mise sur le marché. Un grand succès !
+              ja-jp: コンポーネントスターターキットは素晴らしいです。市場投入までの時間を半分に短縮しました。大きな勝利です！
+              nb-no: >-
+                Komponentens startpakke er flott. Det halverte tiden til
+                markedet. En stor seier!
+              nl-nl: >-
+                De Component Starter Kit is geweldig. Het heeft de
+                time-to-market gehalveerd. Een grote overwinning!
+              sv-se: >-
+                Komponentstartpaketet är fantastiskt. Det halverade tiden till
+                marknaden. En stor framgång!
+              ar-ksa: >-
+                مجموعة أدوات المكونات رائعة. لقد قللت الوقت للوصول إلى السوق إلى
+                النصف. فوز كبير!
+              ar-uae: >-
+                مجموعة أدوات المكونات رائعة. لقد قللت الوقت للوصول إلى السوق إلى
+                النصف. فوز كبير!
           weight:
             type: dex-segmented-control-parameter
             value: bold
@@ -102,11 +173,103 @@ composition:
             value: span
           text:
             type: text
-            value: >-
-              With a solid foundation of pre-built components and best
-              practices, the Component Starter Kit eliminated repetitive setup
-              work and boosted our velocity. Time to market was slashed, and
-              developer experience noticeably improved.
+            locales:
+              da-dk: >-
+                Med et solidt fundament af forudbyggede komponenter og bedste
+                praksis eliminerede Component Starter Kit det repetitive
+                opsætningsarbejde og øgede vores hastighed. Tiden til markedet
+                blev reduceret, og udvikleroplevelsen blev mærkbart forbedret.
+              de-at: >-
+                Mit einer soliden Grundlage aus vorgefertigten Komponenten und
+                Best Practices eliminierte das Component Starter Kit wiederholte
+                Einrichtungsarbeiten und steigerte unsere Geschwindigkeit. Die
+                Markteinführungszeit wurde drastisch verkürzt und das
+                Entwicklererlebnis spürbar verbessert.
+              de-de: >-
+                Mit einer soliden Grundlage aus vorgefertigten Komponenten und
+                Best Practices eliminierte das Component Starter Kit wiederholte
+                Einrichtungsarbeiten und steigerte unsere Geschwindigkeit. Die
+                Markteinführungszeit wurde drastisch verkürzt und das
+                Entwicklererlebnis spürbar verbessert.
+              en-ca: >-
+                With a solid foundation of pre-built components and best
+                practices, the Component Starter Kit eliminated repetitive setup
+                work and boosted our velocity. Time to market was slashed, and
+                developer experience noticeably improved.
+              en-de: >-
+                Mit einer soliden Grundlage aus vorgefertigten Komponenten und
+                bewährten Verfahren eliminierte das Component Starter Kit
+                wiederholte Einrichtungsarbeiten und steigerte unsere
+                Geschwindigkeit. Die Markteinführungszeit wurde drastisch
+                verkürzt, und die Entwicklererfahrung verbesserte sich spürbar.
+              en-fr: >-
+                Avec une base solide de composants préconstruits et de
+                meilleures pratiques, le Kit de démarrage de composants a
+                éliminé le travail d'installation répétitif et a augmenté notre
+                vitesse. Le délai de mise sur le marché a été réduit, et
+                l'expérience des développeurs s'est nettement améliorée.
+              en-gb: >-
+                With a solid foundation of pre-built components and best
+                practices, the Component Starter Kit eliminated repetitive setup
+                work and boosted our velocity. Time to market was slashed, and
+                developer experience noticeably improved.
+              en-nl: >-
+                Met een solide basis van vooraf gebouwde componenten en best
+                practices, elimineerde de Component Starter Kit repetitief
+                opzetwerk en verhoogde onze snelheid. De tijd tot
+                marktintroductie werd drastisch verkort en de
+                ontwikkelaarservaring verbeterde merkbaar.
+              en-us: >-
+                With a solid foundation of pre-built components and best
+                practices, the Component Starter Kit eliminated repetitive setup
+                work and boosted our velocity. Time to market was slashed, and
+                developer experience noticeably improved.
+              es-us: >-
+                Con una base sólida de componentes preconstruidos y mejores
+                prácticas, el Kit de Inicio de Componentes eliminó el trabajo
+                repetitivo de configuración y aumentó nuestra velocidad. El
+                tiempo de lanzamiento al mercado se redujo drásticamente y la
+                experiencia del desarrollador mejoró notablemente.
+              fr-ca: >-
+                Avec une base solide de composants préconstruits et de
+                meilleures pratiques, le Kit de démarrage de composants a
+                éliminé le travail d'installation répétitif et a augmenté notre
+                vitesse. Le temps de mise sur le marché a été réduit, et
+                l'expérience des développeurs s'est nettement améliorée.
+              fr-fr: >-
+                Avec une base solide de composants préconstruits et de
+                meilleures pratiques, le Kit de démarrage de composants a
+                éliminé le travail de configuration répétitif et a augmenté
+                notre vitesse. Le temps de mise sur le marché a été réduit, et
+                l'expérience des développeurs s'est nettement améliorée.
+              ja-jp: >-
+                事前に構築されたコンポーネントとベストプラクティスのしっかりとした基盤により、コンポーネントスターターキットは繰り返しのセットアップ作業を排除し、私たちの速度を向上させました。市場投入までの時間が大幅に短縮され、開発者の体験が明らかに改善されました。
+              nb-no: >-
+                Med et solid fundament av forhåndsbygde komponenter og beste
+                praksiser, eliminerte Komponent Startpakken repetitivt
+                oppsettarbeid og økte vår hastighet. Tiden til markedet ble
+                redusert, og utvikleropplevelsen ble merkbart forbedret.
+              nl-nl: >-
+                Met een solide basis van vooraf gebouwde componenten en best
+                practices, elimineerde de Component Starter Kit repetitief
+                opzetwerk en verhoogde onze snelheid. De time-to-market werd
+                drastisch verkort en de ontwikkelaarservaring merkbaar
+                verbeterd.
+              sv-se: >-
+                Med en solid grund av förbyggda komponenter och bästa praxis
+                eliminerade Component Starter Kit repetitivt installationsarbete
+                och ökade vår hastighet. Tiden till marknaden minskades avsevärt
+                och utvecklarupplevelsen förbättrades märkbart.
+              ar-ksa: >-
+                مع وجود أساس قوي من المكونات الجاهزة وأفضل الممارسات، ألغت
+                مجموعة بدء المكونات العمل التكراري في الإعداد وزادت من سرعتنا.
+                تم تقليص الوقت للوصول إلى السوق بشكل كبير، وتحسنت تجربة المطورين
+                بشكل ملحوظ.
+              ar-uae: >-
+                مع وجود أساس قوي من المكونات الجاهزة وأفضل الممارسات، ألغت
+                مجموعة أدوات المكونات العمل المتكرر في الإعداد وزادت من سرعتنا.
+                تم تقليص الوقت للوصول إلى السوق بشكل كبير، وتحسنت تجربة المطور
+                بشكل ملحوظ.
         _overridability:
           parameters:
             text: 'yes'
@@ -124,7 +287,25 @@ composition:
             value: {}
           text:
             type: text
-            value: John Doe
+            locales:
+              da-dk: John Doe
+              de-at: John Doe
+              de-de: John Doe
+              en-ca: John Doe
+              en-de: John Doe
+              en-fr: John Doe
+              en-gb: John Doe
+              en-nl: John Doe
+              en-us: John Doe
+              es-us: John Doe
+              fr-ca: John Doe
+              fr-fr: John Doe
+              ja-jp: ジョン・ドウ
+              nb-no: John Doe
+              nl-nl: John Doe
+              sv-se: John Doe
+              ar-ksa: جون دو
+              ar-uae: جون دو
           weight:
             type: dex-segmented-control-parameter
             value: bold
@@ -144,7 +325,25 @@ composition:
             value: {}
           text:
             type: text
-            value: July 12, 2021
+            locales:
+              da-dk: 12. juli 2021
+              de-at: 12. Juli 2021
+              de-de: 12. Juli 2021
+              en-ca: July 12, 2021
+              en-de: 12. Juli 2021
+              en-fr: 12 juillet 2021
+              en-gb: 12 July 2021
+              en-nl: 12 juli 2021
+              en-us: July 12, 2021
+              es-us: 12 de julio de 2021
+              fr-ca: 12 juillet 2021
+              fr-fr: 12 juillet 2021
+              ja-jp: 2021年7月12日
+              nb-no: 12. juli 2021
+              nl-nl: 12 juli 2021
+              sv-se: 12 juli 2021
+              ar-ksa: ١٢ يوليو ٢٠٢١
+              ar-uae: ١٢ يوليو ٢٠٢١
           color:
             type: dex-color-palette-parameter
             value: text-tertiary
@@ -164,10 +363,27 @@ composition:
       activeStarsColor: 'yes'
     hideLockedParameters: true
   _locales:
-    - en
-created: '2025-05-16T11:28:41.298534+00:00'
-modified: '2025-05-22T11:56:01.013512+00:00'
+    - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa
+created: '2025-05-20T11:53:42.863712+00:00'
+modified: '2025-07-16T05:53:59.776903+00:00'
 pattern: true
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1747395403/csk-v-next/baseline/preview-images/review-default.jpg
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/review-default-variant.jpg
 categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9

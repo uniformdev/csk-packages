@@ -1,0 +1,971 @@
+composition:
+  _name: Coffee Makers
+  _id: 5a6c8a7b-d7f9-4e8d-9549-10ea4d09106a
+  _slug: coffee-makers
+  type: page
+  _dataResources:
+    Brand List Content:
+      type: brandList
+      variables:
+        locale: ${locale}
+        search: ''
+        filters: '{"type[eq]":"brand"}'
+        contentTypes: brand
+    Base Product Category:
+      type: productCategory
+      variables:
+        locale: ${locale}
+        entryId: 2f6cc670-cdaa-4532-b70e-424206c8d0ba
+    Product Category List Content:
+      type: productCategoryList
+      variables:
+        locale: ${locale}
+        search: ''
+        filters: '{"type[eq]":"productCategory"}'
+        contentTypes: productCategory
+  _overrides:
+    3e33c756-b149-4393-881d-52f5740b9ada:
+      parameters:
+        displayName:
+          type: text
+          locales:
+            da-dk: Kategorihelt
+            de-at: Kategorie Held
+            de-de: Kategorie Held
+            en-ca: Category Hero
+            en-de: Kategorie Held
+            en-fr: Héros de catégorie
+            en-gb: Category Hero
+            en-nl: Categorieheld
+            en-us: Category Hero
+            es-us: Héroe de Categoría
+            fr-ca: Héros de catégorie
+            fr-fr: Héros de catégorie
+            ja-jp: カテゴリーヒーロー
+            nb-no: Kategorihelt
+            nl-nl: Categorieheld
+            sv-se: Kategori Hjälte
+            ar-ksa: بطل الفئة
+            ar-uae: بطل الفئة
+    5a6c8a7b-d7f9-4e8d-9549-10ea4d09106a:
+      parameters:
+        $enr:
+          type: $enr
+          value:
+            - cat: int
+              key: coffee-makers
+              str: 5
+        pageTitle:
+          type: text
+          locales:
+            da-dk: >-
+              Kaffemaskiner til enhver bryggestil | Find din perfekte
+              kaffemaskine i dag
+            de-at: >-
+              Kaffeemaschinen für jeden Brühstil | Finden Sie noch heute Ihre
+              perfekte Kaffeemaschine
+            de-de: >-
+              Kaffeemaschinen für jeden Brühstil | Finden Sie noch heute Ihre
+              perfekte Kaffeemaschine
+            en-ca: >-
+              Coffee Makers for Every Brew Style | Find Your Perfect Coffee
+              Maker Today
+            en-de: >-
+              Kaffeemaschinen für jeden Brühstil | Finden Sie noch heute Ihre
+              perfekte Kaffeemaschine
+            en-fr: >-
+              Cafetière pour chaque style d'infusion | Trouvez votre cafetière
+              parfaite aujourd'hui
+            en-gb: >-
+              Coffee Machines for Every Brew Style | Find Your Perfect Coffee
+              Machine Today
+            en-nl: >-
+              Koffiezetapparaten voor elke zetstijl | Vind vandaag nog uw
+              perfecte koffiezetapparaat
+            en-us: >-
+              Coffee Makers for Every Brew Style | Find Your Perfect Coffee
+              Maker Today
+            es-us: >-
+              Cafeteras para Cada Estilo de Preparación | Encuentra Tu Cafetera
+              Perfecta Hoy
+            fr-ca: >-
+              Cafetière pour chaque style d'infusion | Trouvez votre cafetière
+              idéale aujourd'hui
+            fr-fr: >-
+              Cafetière pour chaque style de préparation | Trouvez votre
+              cafetière parfaite aujourd'hui
+            ja-jp: あらゆる抽出スタイルに対応するコーヒーメーカー | あなたにぴったりのコーヒーメーカーを見つけよう
+            nb-no: >-
+              Kaffetraktere for enhver bryggestil | Finn din perfekte
+              kaffetrakter i dag
+            nl-nl: >-
+              Koffiezetapparaten voor elke zetstijl | Vind vandaag nog uw
+              perfecte koffiezetapparaat
+            sv-se: >-
+              Kaffebryggare för varje bryggstil | Hitta din perfekta
+              kaffebryggare idag
+            ar-ksa: >-
+              آلات صنع القهوة لكل أسلوب تحضير | اعثر على آلة صنع القهوة المثالية
+              لك اليوم
+            ar-uae: >-
+              ماكينات قهوة لكل أسلوب تحضير | اعثر على ماكينة القهوة المثالية لك
+              اليوم
+        pageKeywords:
+          type: text
+          locales:
+            da-dk: >-
+              kaffemaskiner, bedste kaffemaskiner, kaffemaskiner, kaffemaskine,
+              kaffemaskine
+            de-at: >-
+              Kaffeemaschinen, beste Kaffeemaschinen, Kaffeeautomaten,
+              Kaffeemaschine, Kaffeeautomat
+            de-de: >-
+              Kaffeemaschinen, beste Kaffeemaschinen, Kaffeeautomaten,
+              Kaffeemaschine, Kaffeeautomat
+            en-ca: >-
+              coffee makers, best coffee makers, coffee machines, coffee maker,
+              coffee machine
+            en-de: >-
+              Kaffeemaschinen, beste Kaffeemaschinen, Kaffeeautomaten,
+              Kaffeemaschine, Kaffeeautomat
+            en-fr: >-
+              cafetières, meilleures cafetières, machines à café, cafetière,
+              machine à café
+            en-gb: >-
+              coffee makers, best coffee makers, coffee machines, coffee maker,
+              coffee machine
+            en-nl: >-
+              koffiezetapparaten, beste koffiezetapparaten, koffiemachines,
+              koffiezetapparaat, koffiemachine
+            en-us: >-
+              coffee makers, best coffee makers, coffee machines, coffee maker,
+              coffee machine
+            es-us: >-
+              cafeteras, mejores cafeteras, máquinas de café, cafetera, máquina
+              de café
+            fr-ca: >-
+              cafetières, meilleures cafetières, machines à café, cafetière,
+              machine à café
+            fr-fr: >-
+              cafetières, meilleures cafetières, machines à café, cafetière,
+              machine à café
+            ja-jp: コーヒーメーカー、ベストコーヒーメーカー、コーヒーマシン、コーヒーメーカー、コーヒーマシン
+            nb-no: >-
+              kaffetraktere, beste kaffetraktere, kaffemaskiner, kaffetrakter,
+              kaffemaskin
+            nl-nl: >-
+              koffiezetapparaten, beste koffiezetapparaten, koffiemachines,
+              koffiezetapparaat, koffiemachine
+            sv-se: >-
+              kaffebryggare, bästa kaffebryggare, kaffemaskiner, kaffebryggare,
+              kaffemaskin
+            ar-ksa: >-
+              صانعات القهوة، أفضل صانعات القهوة، آلات القهوة، صانعة القهوة، آلة
+              القهوة
+            ar-uae: >-
+              صانعات القهوة، أفضل صانعات القهوة، آلات القهوة، صانعة القهوة، آلة
+              القهوة
+        openGraphType:
+          type: select
+          value: website
+        openGraphImage:
+          type: asset
+          value:
+            - _id: 626cc5c7-71fb-4bab-96f5-9fc67db0722a
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: 0ae43122-7c7d-417c-8036-e0df2013f3a8
+                url:
+                  value: >-
+                    https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/84tdPvdeTlSfNm27iqBerg-coffee-makers-og-image.png
+                  type: text
+                file:
+                  type: file
+                  value: 56de50bd-6dc2-45ab-b47c-cf871bb49c3c
+                size:
+                  value: 853064
+                  type: number
+                title:
+                  type: text
+                  value: coffee-makers-og-image.png
+                width:
+                  value: 1600
+                  type: number
+                height:
+                  value: 900
+                  type: number
+                mediaType:
+                  value: image/png
+                  type: text
+              _source: uniform-assets
+        openGraphTitle:
+          type: text
+          locales:
+            da-dk: >-
+              Kaffemaskiner til enhver bryggestil | Find din perfekte
+              kaffemaskine i dag
+            de-at: >-
+              Kaffeemaschinen für jeden Brühstil | Finden Sie noch heute Ihre
+              perfekte Kaffeemaschine
+            de-de: >-
+              Kaffeemaschinen für jeden Brühstil | Finden Sie noch heute Ihre
+              perfekte Kaffeemaschine
+            en-ca: >-
+              Coffee Makers for Every Brew Style | Find Your Perfect Coffee
+              Maker Today
+            en-de: >-
+              Kaffeemaschinen für jeden Brühstil | Finden Sie noch heute Ihre
+              perfekte Kaffeemaschine
+            en-fr: >-
+              Cafetière pour chaque style de préparation | Trouvez votre
+              cafetière parfaite aujourd'hui
+            en-gb: >-
+              Coffee Makers for Every Brew Style | Find Your Perfect Coffee
+              Maker Today
+            en-nl: >-
+              Koffiezetapparaten voor elke zetstijl | Vind vandaag nog jouw
+              perfecte koffiezetapparaat
+            en-us: >-
+              Coffee Makers for Every Brew Style | Find Your Perfect Coffee
+              Maker Today
+            es-us: >-
+              Cafeteras para Cada Estilo de Preparación | Encuentra tu Cafetera
+              Perfecta Hoy
+            fr-ca: >-
+              Cafetière pour chaque style d'infusion | Trouvez votre cafetière
+              idéale aujourd'hui
+            fr-fr: >-
+              Cafetière pour chaque style de préparation | Trouvez votre
+              cafetière parfaite aujourd'hui
+            ja-jp: あらゆる抽出スタイルに対応するコーヒーメーカー | あなたにぴったりのコーヒーメーカーを見つけましょう
+            nb-no: >-
+              Kaffetraktere for enhver bryggestil | Finn din perfekte
+              kaffetrakter i dag
+            nl-nl: >-
+              Koffiezetapparaten voor elke zetstijl | Vind vandaag nog jouw
+              perfecte koffiezetapparaat
+            sv-se: >-
+              Kaffebryggare för varje bryggstil | Hitta din perfekta
+              kaffebryggare idag
+            ar-ksa: >-
+              صانعات القهوة لكل أسلوب تحضير | اعثر على صانعة القهوة المثالية لك
+              اليوم
+            ar-uae: >-
+              صانعات القهوة لكل أسلوب تحضير | اعثر على صانعة القهوة المثالية لك
+              اليوم
+        pageDescription:
+          type: text
+          locales:
+            da-dk: >-
+              Opdag de bedste kaffemaskiner til enhver smag og stil. Fra
+              espressomaskiner til filterkaffemaskiner har vi
+              kvalitetsmuligheder, der kan løfte din kaffeoplevelse. Find din
+              ideelle kaffemaskine i dag og bryg som en professionel!
+            de-at: >-
+              Entdecken Sie die besten Kaffeemaschinen für jeden Geschmack und
+              Stil. Von Espressomaschinen bis zu Filterkaffeemaschinen bieten
+              wir hochwertige Optionen, um Ihr Kaffeeerlebnis zu verbessern.
+              Finden Sie noch heute Ihre ideale Kaffeemaschine und brühen Sie
+              wie ein Profi!
+            de-de: >-
+              Entdecken Sie die besten Kaffeemaschinen für jeden Geschmack und
+              Stil. Von Espressomaschinen bis zu Filterkaffeemaschinen bieten
+              wir hochwertige Optionen, um Ihr Kaffeeerlebnis zu verbessern.
+              Finden Sie noch heute Ihre ideale Kaffeemaschine und brühen Sie
+              wie ein Profi!
+            en-ca: >-
+              Discover the best coffee makers for every taste and style. From
+              espresso machines to drip coffee makers, we have high-quality
+              options to elevate your coffee experience. Find your ideal coffee
+              maker today and brew like a pro!
+            en-de: >-
+              Entdecken Sie die besten Kaffeemaschinen für jeden Geschmack und
+              Stil. Von Espressomaschinen bis hin zu Filterkaffeemaschinen
+              bieten wir hochwertige Optionen, um Ihr Kaffeeerlebnis zu
+              verbessern. Finden Sie noch heute Ihre ideale Kaffeemaschine und
+              brühen Sie wie ein Profi!
+            en-fr: >-
+              Découvrez les meilleures cafetières pour tous les goûts et styles.
+              Des machines à espresso aux cafetières à filtre, nous avons des
+              options de haute qualité pour améliorer votre expérience café.
+              Trouvez votre cafetière idéale aujourd'hui et préparez du café
+              comme un pro !
+            en-gb: >-
+              Discover the best coffee makers for every taste and style. From
+              espresso machines to filter coffee makers, we have high-quality
+              options to elevate your coffee experience. Find your ideal coffee
+              maker today and brew like a pro!
+            en-nl: >-
+              Ontdek de beste koffiemachines voor elke smaak en stijl. Van
+              espressomachines tot filterkoffiemachines, wij hebben hoogwaardige
+              opties om uw koffie-ervaring te verbeteren. Vind vandaag nog uw
+              ideale koffiemachine en zet koffie als een professional!
+            en-us: >-
+              Discover the best coffee makers for every taste and style. From
+              espresso machines to drip coffee makers, we have high-quality
+              options to elevate your coffee experience. Find your ideal coffee
+              maker today and brew like a pro!
+            es-us: >-
+              Descubre las mejores cafeteras para cada gusto y estilo. Desde
+              máquinas de espresso hasta cafeteras de goteo, tenemos opciones de
+              alta calidad para elevar tu experiencia cafetera. ¡Encuentra tu
+              cafetera ideal hoy y prepara café como un profesional!
+            fr-ca: >-
+              Découvrez les meilleures cafetières pour tous les goûts et tous
+              les styles. Des machines à espresso aux cafetières à filtre, nous
+              avons des options de haute qualité pour améliorer votre expérience
+              café. Trouvez votre cafetière idéale aujourd'hui et préparez du
+              café comme un pro !
+            fr-fr: >-
+              Découvrez les meilleures cafetières pour chaque goût et style. Des
+              machines à expresso aux cafetières à filtre, nous avons des
+              options de haute qualité pour améliorer votre expérience café.
+              Trouvez votre cafetière idéale aujourd'hui et préparez votre café
+              comme un pro !
+            ja-jp: >-
+              あらゆる好みやスタイルに合った最高のコーヒーメーカーを見つけましょう。エスプレッソマシンからドリップコーヒーメーカーまで、コーヒー体験を向上させる高品質なオプションをご用意しています。理想のコーヒーメーカーを見つけて、プロのように淹れましょう！
+            nb-no: >-
+              Oppdag de beste kaffemaskinene for enhver smak og stil. Fra
+              espressomaskiner til dryppkaffemaskiner, vi har
+              høykvalitetsalternativer for å heve din kaffeopplevelse. Finn din
+              ideelle kaffemaskin i dag og brygg som en proff!
+            nl-nl: >-
+              Ontdek de beste koffiemachines voor elke smaak en stijl. Van
+              espressomachines tot filterkoffiezetapparaten, wij hebben
+              hoogwaardige opties om uw koffie-ervaring te verbeteren. Vind
+              vandaag nog uw ideale koffiemachine en zet koffie als een
+              professional!
+            sv-se: >-
+              Upptäck de bästa kaffebryggarna för varje smak och stil. Från
+              espressomaskiner till droppkaffebryggare, vi har högkvalitativa
+              alternativ för att höja din kaffeupplevelse. Hitta din perfekta
+              kaffebryggare idag och brygg som ett proffs!
+            ar-ksa: >-
+              اكتشف أفضل ماكينات القهوة لكل ذوق وأسلوب. من ماكينات الإسبريسو إلى
+              ماكينات القهوة بالتنقيط، لدينا خيارات عالية الجودة لرفع مستوى
+              تجربة القهوة الخاصة بك. اعثر على ماكينة القهوة المثالية لك اليوم
+              واصنع القهوة كمحترف!
+            ar-uae: >-
+              اكتشف أفضل ماكينات القهوة لكل ذوق وأسلوب. من ماكينات الإسبريسو إلى
+              ماكينات القهوة بالتنقيط، لدينا خيارات عالية الجودة لتحسين تجربة
+              قهوتك. اعثر على ماكينة القهوة المثالية لك اليوم واصنع القهوة
+              كمحترف!
+        openGraphDescription:
+          type: text
+          locales:
+            da-dk: >-
+              Opdag de bedste kaffemaskiner til enhver smag og stil. Fra
+              espressomaskiner til filterkaffemaskiner, vi har
+              kvalitetsmuligheder til at forbedre din kaffeoplevelse. Find din
+              ideelle kaffemaskine i dag og bryg som en professionel!
+            de-at: >-
+              Entdecken Sie die besten Kaffeemaschinen für jeden Geschmack und
+              Stil. Von Espressomaschinen bis hin zu Filterkaffeemaschinen
+              bieten wir hochwertige Optionen, um Ihr Kaffeeerlebnis zu
+              verbessern. Finden Sie noch heute Ihre ideale Kaffeemaschine und
+              brühen Sie wie ein Profi!
+            de-de: >-
+              Entdecken Sie die besten Kaffeemaschinen für jeden Geschmack und
+              Stil. Von Espressomaschinen bis hin zu Filterkaffeemaschinen
+              bieten wir hochwertige Optionen, um Ihr Kaffeeerlebnis zu
+              verbessern. Finden Sie noch heute Ihre ideale Kaffeemaschine und
+              brühen Sie wie ein Profi!
+            en-ca: >-
+              Discover the best coffee makers for every taste and style. From
+              espresso machines to drip coffee makers, we have high-quality
+              options to elevate your coffee experience. Find your ideal coffee
+              maker today and brew like a pro!
+            en-de: >-
+              Entdecken Sie die besten Kaffeemaschinen für jeden Geschmack und
+              Stil. Von Espressomaschinen bis zu Filterkaffeemaschinen haben wir
+              hochwertige Optionen, um Ihr Kaffeeerlebnis zu verbessern. Finden
+              Sie noch heute Ihre ideale Kaffeemaschine und brühen Sie wie ein
+              Profi!
+            en-fr: >-
+              Découvrez les meilleures cafetières pour tous les goûts et tous
+              les styles. Des machines à expresso aux cafetières à filtre, nous
+              avons des options de haute qualité pour améliorer votre expérience
+              café. Trouvez votre cafetière idéale aujourd'hui et préparez du
+              café comme un pro !
+            en-gb: >-
+              Discover the best coffee makers for every taste and style. From
+              espresso machines to filter coffee makers, we have high-quality
+              options to elevate your coffee experience. Find your ideal coffee
+              maker today and brew like a pro!
+            en-nl: >-
+              Ontdek de beste koffiemachines voor elke smaak en stijl. Van
+              espressomachines tot filterkoffiezetapparaten, wij hebben
+              hoogwaardige opties om uw koffie-ervaring te verbeteren. Vind
+              vandaag nog uw ideale koffiemachine en zet koffie als een
+              professional!
+            en-us: >-
+              Discover the best coffee makers for every taste and style. From
+              espresso machines to drip coffee makers, we have high-quality
+              options to elevate your coffee experience. Find your ideal coffee
+              maker today and brew like a pro!
+            es-us: >-
+              Descubre las mejores cafeteras para cada gusto y estilo. Desde
+              máquinas de espresso hasta cafeteras de goteo, tenemos opciones de
+              alta calidad para elevar tu experiencia con el café. ¡Encuentra tu
+              cafetera ideal hoy y prepara café como un profesional!
+            fr-ca: >-
+              Découvrez les meilleures cafetières pour tous les goûts et styles.
+              Des machines à espresso aux cafetières à filtre, nous avons des
+              options de haute qualité pour rehausser votre expérience café.
+              Trouvez votre cafetière idéale aujourd'hui et préparez votre café
+              comme un pro!
+            fr-fr: >-
+              Découvrez les meilleures cafetières pour tous les goûts et tous
+              les styles. Des machines à expresso aux cafetières à filtre, nous
+              avons des options de haute qualité pour améliorer votre expérience
+              café. Trouvez votre cafetière idéale aujourd'hui et préparez votre
+              café comme un pro !
+            ja-jp: >-
+              あらゆる好みやスタイルに合った最高のコーヒーメーカーを見つけましょう。エスプレッソマシンからドリップコーヒーメーカーまで、コーヒー体験を向上させる高品質な選択肢をご用意しています。理想のコーヒーメーカーを見つけて、プロのように淹れましょう！
+            nb-no: >-
+              Oppdag de beste kaffetrakterne for enhver smak og stil. Fra
+              espressomaskiner til dryppkaffetraktere, vi har
+              høykvalitetsalternativer for å heve din kaffeopplevelse. Finn din
+              ideelle kaffetrakter i dag og brygg som en proff!
+            nl-nl: >-
+              Ontdek de beste koffiezetapparaten voor elke smaak en stijl. Van
+              espressomachines tot filterkoffiezetapparaten, wij hebben
+              hoogwaardige opties om uw koffie-ervaring te verbeteren. Vind
+              vandaag nog uw ideale koffiezetapparaat en zet koffie als een
+              professional!
+            sv-se: >-
+              Upptäck de bästa kaffebryggarna för varje smak och stil. Från
+              espressomaskiner till droppkaffebryggare, vi har högkvalitativa
+              alternativ för att höja din kaffeupplevelse. Hitta din idealiska
+              kaffebryggare idag och brygg som ett proffs!
+            ar-ksa: >-
+              اكتشف أفضل ماكينات القهوة لكل ذوق وأسلوب. من ماكينات الإسبريسو إلى
+              ماكينات القهوة بالتنقيط، لدينا خيارات عالية الجودة لرفع تجربتك مع
+              القهوة. اعثر على ماكينة القهوة المثالية لك اليوم واصنع القهوة
+              كمحترف!
+            ar-uae: >-
+              اكتشف أفضل ماكينات القهوة لكل ذوق وأسلوب. من آلات الإسبريسو إلى
+              ماكينات القهوة بالتنقيط، لدينا خيارات عالية الجودة لتحسين تجربتك
+              مع القهوة. اعثر على ماكينة القهوة المثالية لك اليوم واصنع القهوة
+              كمحترف!
+    fa0c778a-5f16-4d2e-8855-0a6b4a616374:
+      parameters:
+        boostEnrichments:
+          type: multi-select
+          value:
+            - subCategory,subcategory
+    3e33c756-b149-4393-881d-52f5740b9ada|215f54df-5063-4f0a-81c0-d8bda909b52c:
+      parameters:
+        image:
+          type: asset
+          value:
+            - _id: 20bca8d0-edfa-4c55-87a1-f9dc5be33b99
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: 87342bb8-9859-4a25-a7cd-f625d9b195a3
+                url:
+                  value: >-
+                    https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/ycw_1zcQTCW7mXTPxEdtng-espresso-machine-with-latte-and-cold-brew.jpeg
+                  type: text
+                file:
+                  type: file
+                  value: 80fb8d74-222f-425c-8e02-a8ee792965ae
+                size:
+                  value: 368912
+                  type: number
+                title:
+                  type: text
+                  value: espresso-machine-with-latte-and-cold-brew.jpeg
+                width:
+                  value: 3000
+                  type: number
+                height:
+                  value: 1999
+                  type: number
+                mediaType:
+                  value: image/jpeg
+                  type: text
+              _source: uniform-assets
+        overlayColor:
+          type: dex-color-palette-parameter
+          value: general-color-3
+        overlayOpacity:
+          type: dex-slider-control-parameter
+          value: '0.5'
+    3e33c756-b149-4393-881d-52f5740b9ada|edea6a24-f36d-48c7-acdb-e0dbd8ed511e:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: Find din perfekte kaffemaskine
+            de-at: Finden Sie Ihre perfekte Kaffeemaschine
+            de-de: Finden Sie Ihre perfekte Kaffeemaschine
+            en-ca: Find your perfect coffee maker
+            en-de: Finden Sie Ihre perfekte Kaffeemaschine
+            en-fr: Trouvez votre cafetière parfaite
+            en-gb: Find your perfect coffee machine
+            en-nl: Vind uw perfecte koffiezetapparaat
+            en-us: Find your perfect coffee maker
+            es-us: Encuentra tu cafetera perfecta
+            fr-ca: Trouvez votre cafetière idéale
+            fr-fr: Trouvez votre cafetière parfaite
+            ja-jp: あなたにぴったりのコーヒーメーカーを見つけましょう
+            nb-no: Finn din perfekte kaffetrakter
+            nl-nl: Vind uw perfecte koffiezetapparaat
+            sv-se: Hitta din perfekta kaffebryggare
+            ar-ksa: اعثر على ماكينة القهوة المثالية لك
+            ar-uae: ابحث عن ماكينة القهوة المثالية لك
+    5a6c8a7b-d7f9-4e8d-9549-10ea4d09106a|dc2e95be-21b5-4476-a309-f8a34922f528:
+      slots:
+        $slotSectionItems:
+          - _id: 3e33c756-b149-4393-881d-52f5740b9ada
+            type: section
+            _pattern: 90b32c21-f5d8-4a40-b971-c97c359ecce9
+            _overridability:
+              parameters:
+                displayName: 'yes'
+              hideLockedParameters: true
+          - _id: ab956a0f-b84f-4e7d-b1bd-f23cbe87cebf
+            type: container
+            slots:
+              containerContent:
+                - _id: fa0c778a-5f16-4d2e-8855-0a6b4a616374
+                  type: entriesSearchEngine
+                  _pattern: afef4fa3-394f-4228-81b9-3374b4616b3c
+                  _overridability:
+                    parameters:
+                      boostEnrichments: 'yes'
+                    hideLockedParameters: true
+            parameters:
+              height:
+                type: dex-segmented-control-parameter
+                value: {}
+              spacing:
+                type: dex-space-control-parameter
+                value:
+                  mobile:
+                    paddingTop: container-small
+                    paddingRight: container-xsmall
+                  tablet: {}
+                  desktop:
+                    paddingTop: container-medium
+                    paddingLeft: container-small
+                    paddingRight: container-small
+              displayName:
+                type: text
+                locales:
+                  da-dk: Facetteret søgning
+                  de-at: Facettierte Suche
+                  de-de: Facettensuche
+                  en-ca: Faceted Search
+                  en-de: Facettensuche
+                  en-fr: Recherche à facettes
+                  en-gb: Faceted Search
+                  en-nl: Gefacetteerd Zoeken
+                  en-us: Faceted Search
+                  es-us: Búsqueda Facetada
+                  fr-ca: Recherche à facettes
+                  fr-fr: Recherche à facettes
+                  ja-jp: ファセット検索
+                  nb-no: Fasettert søk
+                  nl-nl: Gefacetteerd Zoeken
+                  sv-se: Fasetterad sökning
+                  ar-ksa: البحث المصفى
+                  ar-uae: البحث المتعدد الأوجه
+    5a6c8a7b-d7f9-4e8d-9549-10ea4d09106a|38f88562-6b70-411b-a550-ada8514eef22|f82aa025-12eb-4c87-b18b-ccc33b20fe02:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            de-at:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            de-de:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-ca:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-de:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-fr:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-gb:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-nl:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            es-us:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            fr-ca:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            fr-fr:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ja-jp:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            nb-no:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            nl-nl:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            sv-se:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ar-ksa:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ar-uae:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+    5a6c8a7b-d7f9-4e8d-9549-10ea4d09106a|7607f998-992d-4b35-9fa5-4e560f8c179a|36ef82db-8556-4006-be7a-957216a76758:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: Anbefalet til dig
+            de-at: Empfohlen für Sie
+            de-de: Empfohlen für Sie
+            en-ca: Recommended for you
+            en-de: Recommended for you
+            en-fr: Recommended for you
+            en-gb: Recommended for you
+            en-nl: Recommended for you
+            es-us: Recomendado para ti
+            fr-ca: Recommandé pour vous
+            fr-fr: Recommandé pour vous
+            ja-jp: あなたへのおすすめ
+            nb-no: Anbefalt for deg
+            nl-nl: Aanbevolen voor jou
+            sv-se: Rekommenderat för dig
+            ar-ksa: موصى به لك
+            ar-uae: موصى به لك
+    5a6c8a7b-d7f9-4e8d-9549-10ea4d09106a|bbf196c6-4821-414c-9b14-b08fb1c7fede|44623ac6-5327-44e3-ab3e-b7455ff829e8:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-demo
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-demo
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-de:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-fr:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-demo
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-demo
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-demo
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-demo
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-demo
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-demo
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-demo
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-demo
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-demo
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-demo
+              type: url
+    5a6c8a7b-d7f9-4e8d-9549-10ea4d09106a|bbf196c6-4821-414c-9b14-b08fb1c7fede|44d64138-618e-4c6a-b4cc-6ea9b9a22cba:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-de:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-fr:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+    5a6c8a7b-d7f9-4e8d-9549-10ea4d09106a|bbf196c6-4821-414c-9b14-b08fb1c7fede|6db01010-cff2-458e-85d6-358dc75ca48c:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-sb
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-sb
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-de:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-fr:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-sb
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-sb
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-sb
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-sb
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-sb
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-sb
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-sb
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-sb
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-sb
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-sb
+              type: url
+    5a6c8a7b-d7f9-4e8d-9549-10ea4d09106a|bbf196c6-4821-414c-9b14-b08fb1c7fede|ea891105-3b48-41b4-8fa0-6c2ecca00a75:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-docs
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-docs
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-de:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-fr:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-docs
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-docs
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-docs
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-docs
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-docs
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-docs
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-docs
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-docs
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-docs
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-docs
+              type: url
+  _locales:
+    - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa
+  _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
+created: '2025-03-18T13:02:32.661565+00:00'
+modified: '2025-07-16T05:54:08.273334+00:00'
+pattern: false
