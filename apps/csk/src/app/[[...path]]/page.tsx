@@ -1,12 +1,24 @@
-import { PageParameters, UniformComposition } from '@uniformdev/canvas-next-rsc';
+import {
+  PageParameters,
+  UniformComposition,
+  //? if (localization) {
+  retrieveRoute,
+  //? }
+} from '@uniformdev/canvas-next-rsc';
 import { emptyPlaceholderResolver } from '@uniformdev/csk-components/components/canvas/emptyPlaceholders';
 import { DesignExtensionsProvider } from '@uniformdev/design-extensions-tools/components/providers/server';
+//? if (!localization) {
+//? write('import locales from "@/i18n/locales.json";\n');
+//? write('import retrieveRoute from "@/utils/retrieveRoute";\n');
+//? }
 import { componentResolver } from '@/components';
-import locales from '@/i18n/locales.json';
-import retrieveRoute from '@/utils/retrieveRoute';
 
 export default async function Home(props: PageParameters) {
-  const route = await retrieveRoute(props, locales.defaultLocale);
+  //? if (localization) {
+  const route = await retrieveRoute(props);
+  //? } else {
+  //? write('const route = await retrieveRoute(props, locales.defaultLocale);\n');
+  //? }
   const searchParams = await props.searchParams;
   const isPreviewMode = searchParams?.is_incontext_editing_mode === 'true';
   return (
