@@ -1,10 +1,10 @@
 import { cn } from '@/utils/styling';
 import { NavigationGroupParameters } from '.';
 
-type ChevronClassesProps = {
+type CaretClassesProps = {
   isOpen?: boolean;
 };
-export const getChevronClasses = ({ isOpen }: ChevronClassesProps) =>
+export const getCaretClasses = ({ isOpen }: CaretClassesProps) =>
   cn('transition transform hidden md:block', {
     'rotate-180': isOpen,
     'rotate-0': !isOpen,

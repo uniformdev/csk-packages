@@ -135,6 +135,52 @@ export const ICON_ASSET = {
   ],
 };
 
+export const CARET_ASSET = {
+  type: 'asset',
+  value: [
+    {
+      _id: 'b4e44549-3686-45b6-a5c2-4a042c87996d',
+      type: 'image',
+      fields: {
+        id: {
+          type: 'text',
+          value: '494c2895-1aa0-47a1-972b-e473a2ba32d5',
+        },
+        url: {
+          value:
+            'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMyIgaGVpZ2h0PSIyMyIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJ3aGl0ZSI+CiAgPHBhdGggZD0iTTE2LjI5MyA5LjI5MyAxMiAxMy41ODYgNy43MDcgOS4yOTNsLTEuNDE0IDEuNDE0TDEyIDE2LjQxNGw1LjcwNy01LjcwN3oiIC8+Cjwvc3ZnPg==',
+          type: 'text',
+        },
+        file: {
+          type: 'file',
+          value: 'c8694855-296a-4743-bd52-426d178297fd',
+        },
+        size: {
+          value: 60,
+          type: 'number',
+        },
+        title: {
+          type: 'text',
+          value: 'check.svg',
+        },
+        width: {
+          value: 60,
+          type: 'number',
+        },
+        height: {
+          value: 60,
+          type: 'number',
+        },
+        mediaType: {
+          value: 'image/svg',
+          type: 'text',
+        },
+      },
+      _source: 'uniform-assets',
+    },
+  ],
+};
+
 export const SMILE_ASSET = {
   type: 'asset',
   value: [

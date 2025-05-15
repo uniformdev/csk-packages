@@ -1,4 +1,4 @@
-export { ArrowIcon, ChevronDownIcon, ImageIcon, VideoIcon } from './_icons';
+export { ArrowIcon, ImageIcon, VideoIcon } from './_icons';
 export { default as Button, type ButtonProps, ButtonVariant } from './Button';
 export { default as Carousel, type CarouselProps } from './Carousel';
 export { default as Container, type ContainerProps } from './Container';

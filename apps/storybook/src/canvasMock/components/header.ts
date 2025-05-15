@@ -1,5 +1,5 @@
 import { ComponentInstance } from '@uniformdev/canvas';
-import { IMAGE_ASSET } from '@/assets';
+import { CARET_ASSET, IMAGE_ASSET } from '@/assets';
 import { createUniformParameter } from '@/utils';
 
 // Reusable content for different stories
@@ -87,6 +87,7 @@ export const headerWithGroups = createCommonContent([
       text: 'Containers',
       color: 'text-secondary',
       backgroundColor: 'general-color-2',
+      caretIcon: CARET_ASSET,
     }),
     slots: {
       links: [
@@ -127,6 +128,7 @@ export const headerWithGroups = createCommonContent([
       text: 'Marketing',
       color: 'text-secondary',
       backgroundColor: 'general-color-2',
+      caretIcon: CARET_ASSET,
     }),
     slots: {
       links: [
@@ -170,6 +172,7 @@ export const headerWithFlyout = createCommonContent([
       text: 'Containers',
       color: 'text-secondary',
       backgroundColor: 'general-color-2',
+      caretIcon: CARET_ASSET,
     }),
     slots: {
       navigationFlyoutLeftContent: [
