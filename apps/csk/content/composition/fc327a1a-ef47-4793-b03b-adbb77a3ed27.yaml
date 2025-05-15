@@ -1,0 +1,914 @@
+composition:
+  _name: Profile
+  _id: fc327a1a-ef47-4793-b03b-adbb77a3ed27
+  _slug: profile
+  type: page
+  _overrides:
+    4b531db1-0939-41fd-9991-aa08d210bbb6:
+      parameters:
+        displayName:
+          type: text
+          locales:
+            da-dk: Profil
+            de-at: Profil
+            de-de: Profil
+            en-ca: Profile
+            en-de: Profil
+            en-fr: Profil
+            en-gb: Profile
+            en-nl: Profiel
+            en-us: Profile
+            es-us: Perfil
+            fr-ca: Profil
+            fr-fr: Profil
+            ja-jp: プロフィール
+            nb-no: Profil
+            nl-nl: Profiel
+            sv-se: Profil
+            ar-ksa: الملف الشخصي
+            ar-uae: الملف الشخصي
+    fc327a1a-ef47-4793-b03b-adbb77a3ed27:
+      parameters:
+        pageTitle:
+          type: text
+          locales:
+            da-dk: Din Profil - Java Drip
+            de-at: Ihr Profil - Java Drip
+            de-de: Ihr Profil - Java Drip
+            en-ca: Your Profile - Java Drip
+            en-de: Ihr Profil - Java Drip
+            en-fr: Votre Profil - Java Drip
+            en-gb: Your Profile - Java Drip
+            en-nl: Je Profiel - Java Drip
+            en-us: Your Profile - Java Drip
+            es-us: Tu Perfil - Java Drip
+            fr-ca: Votre Profil - Java Drip
+            fr-fr: Votre Profil - Java Drip
+            ja-jp: あなたのプロフィール - ジャバドリップ
+            nb-no: Din profil - Java Drip
+            nl-nl: Je Profiel - Java Drip
+            sv-se: Din profil - Java Drip
+            ar-ksa: ملفك الشخصي - جافا دريب
+            ar-uae: ملفك الشخصي - جافا دريب
+        pageKeywords:
+          type: text
+          locales:
+            da-dk: >-
+              kaffebarprofil, personlig kaffeprofil, kaffebarkonto,
+              ordrehistorik, personlige kaffeanbefalinger, administrer profil,
+              kaffepræferencer
+            de-at: >-
+              Café-Profil, persönliches Kaffeeprofil, Café-Konto,
+              Bestellverlauf, personalisierte Kaffeeempfehlungen, Profil
+              verwalten, Kaffeevorlieben
+            de-de: >-
+              Caféprofil, persönliches Kaffeeprofil, Café-Konto, Bestellverlauf,
+              personalisierte Kaffeeempfehlungen, Profil verwalten,
+              Kaffeevorlieben
+            en-ca: >-
+              coffee shop profile, personal coffee profile, coffee shop account,
+              order history, personalized coffee recommendations, manage
+              profile, coffee preferences
+            en-de: >-
+              Caféprofil, persönliches Kaffeeprofil, Café-Konto, Bestellverlauf,
+              personalisierte Kaffeeempfehlungen, Profil verwalten,
+              Kaffeepreferenzen
+            en-fr: >-
+              profil de café, profil personnel de café, compte de café,
+              historique des commandes, recommandations de café personnalisées,
+              gérer le profil, préférences de café
+            en-gb: >-
+              coffee shop profile, personal coffee profile, coffee shop account,
+              order history, personalised coffee recommendations, manage
+              profile, coffee preferences
+            en-nl: >-
+              koffiehuisprofiel, persoonlijk koffieprofiel, koffiehuisaccount,
+              bestelgeschiedenis, gepersonaliseerde koffierecommendaties,
+              profiel beheren, koffievoorkeuren
+            en-us: >-
+              coffee shop profile, personal coffee profile, coffee shop account,
+              order history, personalized coffee recommendations, manage
+              profile, coffee preferences
+            es-us: >-
+              perfil de cafetería, perfil personal de café, cuenta de cafetería,
+              historial de pedidos, recomendaciones personalizadas de café,
+              gestionar perfil, preferencias de café
+            fr-ca: >-
+              profil de café, profil de café personnel, compte de café,
+              historique des commandes, recommandations de café personnalisées,
+              gérer le profil, préférences de café
+            fr-fr: >-
+              profil de café, profil personnel de café, compte de café,
+              historique des commandes, recommandations de café personnalisées,
+              gérer le profil, préférences de café
+            ja-jp: >-
+              コーヒーショッププロフィール、個人コーヒープロフィール、コーヒーショップアカウント、注文履歴、個別のコーヒー推奨、プロフィール管理、コーヒーの好み
+            nb-no: >-
+              kaffebarprofil, personlig kaffeprofil, kaffebarkonto,
+              bestillingshistorikk, personlige kaffeanbefalinger, administrer
+              profil, kaffepreferanser
+            nl-nl: >-
+              koffiehuisprofiel, persoonlijk koffieprofiel, koffiehuisaccount,
+              bestelgeschiedenis, gepersonaliseerde koffierecommendaties,
+              profiel beheren, koffievoorkeuren
+            sv-se: >-
+              kaffebarprofil, personlig kaffprofil, kaffebarkonto,
+              orderhistorik, personliga kafferekommendationer, hantera profil,
+              kaffepreferenser
+            ar-ksa: >-
+              ملف مقهى، ملف قهوة شخصي، حساب مقهى، تاريخ الطلبات، توصيات قهوة
+              مخصصة، إدارة الملف الشخصي، تفضيلات القهوة
+            ar-uae: >-
+              ملف مقهى، ملف قهوة شخصي، حساب مقهى، تاريخ الطلبات، توصيات قهوة
+              مخصصة، إدارة الملف الشخصي، تفضيلات القهوة
+        openGraphImage:
+          type: asset
+          value:
+            - _id: 8b833a88-bb87-44c8-b41c-59d686fc13be
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: 93f8e9cb-3deb-4d8f-8d46-24ab5fc96ccd
+                url:
+                  value: >-
+                    https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/LwtPc8i6TbqbwuEnyUdahg-my-profile-og-image.png
+                  type: text
+                file:
+                  type: file
+                  value: b9635052-c89b-4d7a-a858-961ceb160b16
+                size:
+                  value: 1596632
+                  type: number
+                title:
+                  type: text
+                  value: my-profile-og-image.png
+                width:
+                  value: 1808
+                  type: number
+                height:
+                  value: 908
+                  type: number
+                mediaType:
+                  value: image/png
+                  type: text
+              _source: uniform-assets
+        openGraphTitle:
+          type: text
+          locales:
+            da-dk: Din Profil - Java Drip
+            de-at: Ihr Profil - Java Drip
+            de-de: Ihr Profil - Java Drip
+            en-ca: Your Profile - Java Drip
+            en-de: Ihr Profil - Java Drip
+            en-fr: Votre Profil - Java Drip
+            en-gb: Your Profile - Java Drip
+            en-nl: Uw Profiel - Java Drip
+            en-us: Your Profile - Java Drip
+            es-us: Tu Perfil - Java Drip
+            fr-ca: Votre Profil - Java Drip
+            fr-fr: Votre Profil - Java Drip
+            ja-jp: あなたのプロフィール - ジャバドリップ
+            nb-no: Din Profil - Java Drip
+            nl-nl: Je Profiel - Java Drip
+            sv-se: Din profil - Java Drip
+            ar-ksa: ملفك الشخصي - جافا دريب
+            ar-uae: ملفك الشخصي - جافا دريب
+        pageDescription:
+          type: text
+          locales:
+            da-dk: >-
+              Administrer din personlige profil hos Java Drip. Opdater dine
+              kontaktoplysninger, se din ordrehistorik, og opdag personlige
+              kaffeanbefalinger for at forbedre din kaffeoplevelse.
+            de-at: >-
+              Verwalten Sie Ihr persönliches Profil bei Java Drip. Aktualisieren
+              Sie Ihre Kontaktdaten, sehen Sie sich Ihre Bestellhistorie an und
+              entdecken Sie personalisierte Kaffeeempfehlungen, um Ihr
+              Kaffeeerlebnis zu verbessern.
+            de-de: >-
+              Verwalten Sie Ihr persönliches Profil bei Java Drip. Aktualisieren
+              Sie Ihre Kontaktdaten, sehen Sie sich Ihre Bestellhistorie an und
+              entdecken Sie personalisierte Kaffeeempfehlungen, um Ihr
+              Kaffeeerlebnis zu verbessern.
+            en-ca: >-
+              Manage your personal profile at Java Drip. Update your contact
+              information, view your order history, and discover personalized
+              coffee recommendations to enhance your coffee experience.
+            en-de: >-
+              Verwalten Sie Ihr persönliches Profil bei Java Drip. Aktualisieren
+              Sie Ihre Kontaktdaten, sehen Sie sich Ihre Bestellhistorie an und
+              entdecken Sie personalisierte Kaffeeempfehlungen, um Ihr
+              Kaffeeerlebnis zu verbessern.
+            en-fr: >-
+              Gérez votre profil personnel chez Java Drip. Mettez à jour vos
+              informations de contact, consultez votre historique de commandes
+              et découvrez des recommandations de café personnalisées pour
+              améliorer votre expérience café.
+            en-gb: >-
+              Manage your personal profile at Java Drip. Update your contact
+              information, view your order history, and discover personalised
+              coffee recommendations to enhance your coffee experience.
+            en-nl: >-
+              Beheer je persoonlijke profiel bij Java Drip. Werk je
+              contactgegevens bij, bekijk je bestelgeschiedenis en ontdek
+              gepersonaliseerde koffierecommendaties om je koffie-ervaring te
+              verbeteren.
+            en-us: >-
+              Manage your personal profile at Java Drip. Update your contact
+              information, view your order history, and discover personalized
+              coffee recommendations to enhance your coffee experience.
+            es-us: >-
+              Administra tu perfil personal en Java Drip. Actualiza tu
+              información de contacto, revisa tu historial de pedidos y descubre
+              recomendaciones de café personalizadas para mejorar tu experiencia
+              cafetera.
+            fr-ca: >-
+              Gérez votre profil personnel chez Java Drip. Mettez à jour vos
+              informations de contact, consultez votre historique de commandes
+              et découvrez des recommandations de café personnalisées pour
+              améliorer votre expérience café.
+            fr-fr: >-
+              Gérez votre profil personnel chez Java Drip. Mettez à jour vos
+              informations de contact, consultez votre historique de commandes
+              et découvrez des recommandations de café personnalisées pour
+              améliorer votre expérience café.
+            ja-jp: >-
+              Java
+              Dripで個人プロフィールを管理しましょう。連絡先情報を更新し、注文履歴を確認し、コーヒー体験を向上させるためのパーソナライズされたコーヒーのおすすめを見つけましょう。
+            nb-no: >-
+              Administrer din personlige profil på Java Drip. Oppdater
+              kontaktinformasjonen din, se bestillingshistorikken din, og oppdag
+              personlige kaffeanbefalinger for å forbedre kaffeopplevelsen din.
+            nl-nl: >-
+              Beheer uw persoonlijke profiel bij Java Drip. Werk uw
+              contactgegevens bij, bekijk uw bestelgeschiedenis en ontdek
+              gepersonaliseerde koffieaanbevelingen om uw koffie-ervaring te
+              verbeteren.
+            sv-se: >-
+              Hantera din personliga profil på Java Drip. Uppdatera din
+              kontaktinformation, se din orderhistorik och upptäck personliga
+              kafferekommendationer för att förbättra din kaffeupplevelse.
+            ar-ksa: >-
+              قم بإدارة ملفك الشخصي في جافا دريب. حدّث معلومات الاتصال الخاصة
+              بك، واطلع على سجل طلباتك، واكتشف توصيات القهوة المخصصة لتحسين
+              تجربتك مع القهوة.
+            ar-uae: >-
+              قم بإدارة ملفك الشخصي في جافا دريب. حدّث معلومات الاتصال الخاصة
+              بك، واطلع على تاريخ طلباتك، واكتشف توصيات القهوة المخصصة لتعزيز
+              تجربتك مع القهوة.
+        openGraphDescription:
+          type: text
+          locales:
+            da-dk: >-
+              Administrer din personlige profil hos Java Drip. Opdater dine
+              kontaktoplysninger, se din ordrehistorik, og opdag personlige
+              kaffeanbefalinger for at forbedre din kaffeoplevelse.
+            de-at: >-
+              Verwalten Sie Ihr persönliches Profil bei Java Drip. Aktualisieren
+              Sie Ihre Kontaktdaten, sehen Sie sich Ihre Bestellhistorie an und
+              entdecken Sie personalisierte Kaffeeempfehlungen, um Ihr
+              Kaffeeerlebnis zu verbessern.
+            de-de: >-
+              Verwalten Sie Ihr persönliches Profil bei Java Drip. Aktualisieren
+              Sie Ihre Kontaktdaten, sehen Sie sich Ihre Bestellhistorie an und
+              entdecken Sie personalisierte Kaffeeempfehlungen, um Ihr
+              Kaffeeerlebnis zu verbessern.
+            en-ca: >-
+              Manage your personal profile at Java Drip. Update your contact
+              information, view your order history, and discover personalized
+              coffee recommendations to enhance your coffee experience.
+            en-de: >-
+              Verwalten Sie Ihr persönliches Profil bei Java Drip. Aktualisieren
+              Sie Ihre Kontaktdaten, sehen Sie sich Ihre Bestellhistorie an und
+              entdecken Sie personalisierte Kaffeeempfehlungen, um Ihr
+              Kaffeeerlebnis zu verbessern.
+            en-fr: >-
+              Gérez votre profil personnel chez Java Drip. Mettez à jour vos
+              informations de contact, consultez votre historique de commandes
+              et découvrez des recommandations de café personnalisées pour
+              améliorer votre expérience café.
+            en-gb: >-
+              Manage your personal profile at Java Drip. Update your contact
+              information, view your order history, and discover personalised
+              coffee recommendations to enhance your coffee experience.
+            en-nl: >-
+              Beheer je persoonlijke profiel bij Java Drip. Werk je
+              contactgegevens bij, bekijk je bestelgeschiedenis en ontdek
+              gepersonaliseerde koffierecommendaties om je koffie-ervaring te
+              verbeteren.
+            en-us: >-
+              Manage your personal profile at Java Drip. Update your contact
+              information, view your order history, and discover personalized
+              coffee recommendations to enhance your coffee experience.
+            es-us: >-
+              Administre su perfil personal en Java Drip. Actualice su
+              información de contacto, vea su historial de pedidos y descubra
+              recomendaciones de café personalizadas para mejorar su experiencia
+              cafetera.
+            fr-ca: >-
+              Gérez votre profil personnel chez Java Drip. Mettez à jour vos
+              informations de contact, consultez votre historique de commandes
+              et découvrez des recommandations de café personnalisées pour
+              améliorer votre expérience café.
+            fr-fr: >-
+              Gérez votre profil personnel chez Java Drip. Mettez à jour vos
+              informations de contact, consultez votre historique de commandes
+              et découvrez des recommandations de café personnalisées pour
+              améliorer votre expérience café.
+            ja-jp: >-
+              Java
+              Dripで個人プロフィールを管理しましょう。連絡先情報を更新し、注文履歴を確認し、コーヒー体験を向上させるためのパーソナライズされたコーヒーのおすすめを見つけましょう。
+            nb-no: >-
+              Administrer din personlige profil hos Java Drip. Oppdater
+              kontaktinformasjonen din, se bestillingshistorikken din, og oppdag
+              personlige kaffeanbefalinger for å forbedre kaffeopplevelsen din.
+            nl-nl: >-
+              Beheer je persoonlijke profiel bij Java Drip. Werk je
+              contactgegevens bij, bekijk je bestelgeschiedenis en ontdek
+              gepersonaliseerde koffieaanbevelingen om je koffie-ervaring te
+              verbeteren.
+            sv-se: >-
+              Hantera din personliga profil på Java Drip. Uppdatera din
+              kontaktinformation, se din orderhistorik och upptäck personliga
+              kafferekommendationer för att förbättra din kaffeupplevelse.
+            ar-ksa: >-
+              قم بإدارة ملفك الشخصي في Java Drip. حدّث معلومات الاتصال الخاصة
+              بك، واطلع على سجل طلباتك، واكتشف توصيات قهوة مخصصة لتحسين تجربتك
+              مع القهوة.
+            ar-uae: >-
+              قم بإدارة ملفك الشخصي في Java Drip. حدّث معلومات الاتصال الخاصة
+              بك، واطلع على سجل طلباتك، واكتشف توصيات القهوة المخصصة لتعزيز
+              تجربتك مع القهوة.
+    4b531db1-0939-41fd-9991-aa08d210bbb6|2058ad6d-25b3-4eea-a276-cb996b4188cc:
+      slots:
+        $slotSectionItems:
+          - _id: c6cefff6-e465-43c7-a2a6-51c5d11e46b4
+            type: flex
+            slots:
+              flexItem:
+                - _id: 3c9be116-a1c0-4782-9788-f8e40259399c
+                  type: text
+                  parameters:
+                    tag:
+                      type: dex-segmented-control-parameter
+                      value: p
+                    size:
+                      type: dex-segmented-control-parameter
+                      value: {}
+                    text:
+                      type: text
+                      locales:
+                        da-dk: >-
+                          Vælg målgruppe, der skal tilknyttes den nuværende
+                          besøgende:
+                        de-at: >-
+                          Wählen Sie das Publikum aus, das mit dem aktuellen
+                          Besucher verknüpft werden soll:
+                        de-de: >-
+                          Wählen Sie die Zielgruppe aus, die mit dem aktuellen
+                          Besucher verknüpft werden soll:
+                        en-ca: 'Select audience to associate with current visitor:'
+                        en-de: >-
+                          Wählen Sie das Publikum aus, das mit dem aktuellen
+                          Besucher verknüpft werden soll:
+                        en-fr: 'Sélectionnez le public à associer au visiteur actuel :'
+                        en-gb: 'Select audience to associate with current visitor:'
+                        en-nl: >-
+                          Selecteer het publiek om te koppelen aan de huidige
+                          bezoeker:
+                        en-us: 'Select audience to associate with current visitor:'
+                        es-us: >-
+                          Seleccionar audiencia para asociar con el visitante
+                          actual:
+                        fr-ca: 'Sélectionner le public à associer au visiteur actuel :'
+                        fr-fr: 'Sélectionner le public à associer au visiteur actuel :'
+                        ja-jp: 現在の訪問者に関連付けるオーディエンスを選択してください。
+                        nb-no: >-
+                          Velg publikum som skal knyttes til nåværende
+                          besøkende:
+                        nl-nl: >-
+                          Selecteer publiek om te associëren met huidige
+                          bezoeker:
+                        sv-se: 'Välj målgrupp att associera med nuvarande besökare:'
+                        ar-ksa: 'اختر الجمهور لربطه بالزائر الحالي:'
+                        ar-uae: 'حدد الجمهور لربطه بالزائر الحالي:'
+                    weight:
+                      type: dex-segmented-control-parameter
+                      value: normal
+                - _id: 4873f22b-b646-4b66-9666-3ddffdc48447
+                  type: quirkSelector
+                  _pattern: 0bc0e924-445c-47de-9217-3dc6f889f1e7
+                  _overridability:
+                    hideLockedParameters: true
+            parameters:
+              gap:
+                type: dex-slider-control-parameter
+                value:
+                  mobile: '4'
+                  tablet: '4'
+                  desktop: '4'
+              spacing:
+                type: dex-space-control-parameter
+                value:
+                  mobile:
+                    paddingTop: container-small
+                    paddingBottom: container-small
+                  tablet:
+                    paddingTop: container-small
+                    paddingBottom: container-small
+                  desktop:
+                    paddingTop: container-small
+                    paddingBottom: container-small
+              direction:
+                type: dex-segmented-control-parameter
+                value:
+                  mobile: col
+                  tablet: col
+                  desktop: col
+              alignItems:
+                type: dex-segmented-control-parameter
+                value: {}
+              displayName:
+                type: text
+                locales:
+                  da-dk: Personalisering Vælger
+                  de-at: Personalisierungswähler
+                  de-de: Personalisierungswähler
+                  en-ca: Personalization Selector
+                  en-de: Personalisierungsauswahl
+                  en-fr: Sélecteur de personnalisation
+                  en-gb: Personalisation Selector
+                  en-nl: Personalisatie Selector
+                  en-us: Personalization Selector
+                  es-us: Selector de Personalización
+                  fr-ca: Sélecteur de personnalisation
+                  fr-fr: Sélecteur de personnalisation
+                  ja-jp: パーソナライゼーションセレクター
+                  nb-no: Personlig tilpasning Velger
+                  nl-nl: Personalisatie Selector
+                  sv-se: Personalisering Väljare
+                  ar-ksa: محدد التخصيص
+                  ar-uae: محدد التخصيص
+              fluidContent:
+                type: checkbox
+                value: true
+              justifyContent:
+                type: dex-segmented-control-parameter
+                value: {}
+    4b531db1-0939-41fd-9991-aa08d210bbb6|5feefc71-05dd-4004-bfe9-3dd6876628b4:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: 🛩️ Publikumssimulator
+            de-at: |-
+              🛩️ Publikumssimulator
+
+              Anweisungen:
+            de-de: |-
+              🛩️ Publikumssimulator
+
+              Anweisungen:
+            en-ca: ✈️ Audience Simulator
+            en-de: |-
+              🛩️ Publikumssimulator
+
+              Anweisungen:
+            en-fr: 🛩️ Simulateur d'Audience
+            en-gb: 🛩️ Audience Simulator
+            en-nl: |-
+              🛩️ Publieksimulator
+
+              Instructies:
+            en-us: 🛩️ Audience Simulator
+            es-us: 🛩️ Simulador de Audiencia
+            fr-ca: 🛩️ Simulateur d'Audience
+            fr-fr: 🛩️ Simulateur d'Audience
+            ja-jp: |-
+              🛩️ オーディエンスシミュレーター
+
+              指示:
+            nb-no: 🛩️ Publikumssimulator
+            nl-nl: |-
+              🛩️ Publiek Simulator
+
+              Instructies:
+            sv-se: |-
+              🛩️ Publik Simulator
+
+              Instruktioner:
+              - Returnera endast den översatta texten.
+              - Inkludera inga extra kommentarer.
+              - Var trogen mot den ursprungliga betydelsen.
+            ar-ksa: |-
+              🛩️ محاكي الجمهور
+
+              التعليمات:
+            ar-uae: |-
+              🛩️ محاكاة الجمهور
+
+              التعليمات:
+    fc327a1a-ef47-4793-b03b-adbb77a3ed27|dc2e95be-21b5-4476-a309-f8a34922f528:
+      slots:
+        $slotSectionItems:
+          - _id: 4b531db1-0939-41fd-9991-aa08d210bbb6
+            type: container
+            _pattern: d9dd4b0a-358f-4b10-be48-77c5088020cc
+            _overridability:
+              parameters:
+                displayName: 'yes'
+              hideLockedParameters: true
+    fc327a1a-ef47-4793-b03b-adbb77a3ed27|38f88562-6b70-411b-a550-ada8514eef22|f82aa025-12eb-4c87-b18b-ccc33b20fe02:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            de-at:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            de-de:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-ca:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-de:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-fr:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-gb:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-nl:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            es-us:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            fr-ca:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            fr-fr:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ja-jp:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            nb-no:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            nl-nl:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            sv-se:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ar-ksa:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ar-uae:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+    fc327a1a-ef47-4793-b03b-adbb77a3ed27|7607f998-992d-4b35-9fa5-4e560f8c179a|36ef82db-8556-4006-be7a-957216a76758:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: Anbefalet til dig
+            de-at: Empfohlen für Sie
+            de-de: Empfohlen für Sie
+            en-ca: Recommended for you
+            en-de: Recommended for you
+            en-fr: Recommended for you
+            en-gb: Recommended for you
+            en-nl: Recommended for you
+            es-us: Recomendado para ti
+            fr-ca: Recommandé pour vous
+            fr-fr: Recommandé pour vous
+            ja-jp: あなたへのおすすめ
+            nb-no: Anbefalt for deg
+            nl-nl: Aanbevolen voor jou
+            sv-se: Rekommenderat för dig
+            ar-ksa: موصى به لك
+            ar-uae: موصى به لك
+    fc327a1a-ef47-4793-b03b-adbb77a3ed27|bbf196c6-4821-414c-9b14-b08fb1c7fede|44623ac6-5327-44e3-ab3e-b7455ff829e8:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-demo
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-demo
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-de:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-fr:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-demo
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-demo
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-demo
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-demo
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-demo
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-demo
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-demo
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-demo
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-demo
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-demo
+              type: url
+    fc327a1a-ef47-4793-b03b-adbb77a3ed27|bbf196c6-4821-414c-9b14-b08fb1c7fede|44d64138-618e-4c6a-b4cc-6ea9b9a22cba:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-de:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-fr:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+    fc327a1a-ef47-4793-b03b-adbb77a3ed27|bbf196c6-4821-414c-9b14-b08fb1c7fede|6db01010-cff2-458e-85d6-358dc75ca48c:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-sb
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-sb
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-de:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-fr:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-sb
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-sb
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-sb
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-sb
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-sb
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-sb
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-sb
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-sb
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-sb
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-sb
+              type: url
+    fc327a1a-ef47-4793-b03b-adbb77a3ed27|bbf196c6-4821-414c-9b14-b08fb1c7fede|ea891105-3b48-41b4-8fa0-6c2ecca00a75:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-docs
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-docs
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-de:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-fr:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-docs
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-docs
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-docs
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-docs
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-docs
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-docs
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-docs
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-docs
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-docs
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-docs
+              type: url
+  _locales:
+    - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa
+  _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
+created: '2025-03-18T13:02:33.273105+00:00'
+modified: '2025-07-16T05:54:10.250515+00:00'
+pattern: false

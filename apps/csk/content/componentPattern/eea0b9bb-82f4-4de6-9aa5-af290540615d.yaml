@@ -12,7 +12,25 @@ composition:
         paddingBottom: container-large
     displayName:
       type: text
-      value: Hero Section
+      locales:
+        da-dk: Hero Sektion
+        de-at: Hero-Bereich
+        de-de: Heldenbereich
+        en-ca: Hero Section
+        en-de: Heldenbereich
+        en-fr: Section Héros
+        en-gb: Hero Section
+        en-nl: Heldensectie
+        en-us: Hero Section
+        es-us: Sección de Héroe
+        fr-ca: Section Héros
+        fr-fr: Section Héros
+        ja-jp: ヒーローセクション
+        nb-no: Heltedelen
+        nl-nl: Hero Sectie
+        sv-se: Hjältedel
+        ar-ksa: قسم الأبطال
+        ar-uae: قسم البطل
     fluidContent:
       type: checkbox
       value: true
@@ -26,10 +44,29 @@ composition:
         parameters:
           max:
             type: text
-            value: 2
+            locales:
+              en-us: 2
           name:
             type: text
-            value: CTAs
+            locales:
+              da-dk: CTA'er
+              de-at: CTAs
+              de-de: CTAs
+              en-ca: CTAs
+              en-de: CTAs
+              en-fr: CTA
+              en-gb: CTAs
+              en-nl: CTA's
+              en-us: CTAs
+              es-us: CTAs
+              fr-ca: CTA
+              fr-fr: CTA
+              ja-jp: CTA（コール・トゥ・アクション）
+              nb-no: CTA-er
+              nl-nl: CTA's
+              sv-se: Uppmaningar
+              ar-ksa: عبارات الحث على اتخاذ إجراء
+              ar-uae: عبارات الحث على اتخاذ إجراء
           specific:
             type: array
             value:
@@ -38,7 +75,25 @@ composition:
               - $p:53b59aed-e378-4fcb-9135-20247d92074e
           groupType:
             type: text
-            value: specific
+            locales:
+              da-dk: specifik
+              de-at: spezifisch
+              de-de: spezifisch
+              en-ca: specific
+              en-de: spezifisch
+              en-fr: spécifique
+              en-gb: specific
+              en-nl: specifiek
+              en-us: specific
+              es-us: específico
+              fr-ca: spécifique
+              fr-fr: spécifique
+              ja-jp: 特定の
+              nb-no: spesifikk
+              nl-nl: specifiek
+              sv-se: specifik
+              ar-ksa: محدد
+              ar-uae: محدد
         _overridability:
           hideLockedParameters: true
     sectionMedia:
@@ -60,33 +115,33 @@ composition:
           image:
             type: asset
             value:
-              - _id: e73613cf-e2f1-47ef-a5aa-a015bee46436
+              - _id: 732bdde7-8400-4a58-81c4-eda52f8b4d5b
                 type: image
                 fields:
                   id:
                     type: text
-                    value: 246a9113-763f-4330-b55e-dfa654743828
+                    value: e48a76d6-773f-4e3a-9b4e-409d77e8648a
                   url:
                     value: >-
-                      https://img.uniform.global/p/YZNQDArvRHK3ZDdZ2FKIJQ/d4HCDAS0R5-zxzj7U9oqCg-Rectangle-1-(2).svg
+                      https://img.uniform.global/p/4DvqtylHQMOCu7DIwD3nVA/oY_-jA82QvKSfAKoE-0VHQ-coffee.png
                     type: text
                   file:
                     type: file
-                    value: 5285bd5f-77fe-4950-b389-4a7a4da7f4a4
+                    value: 3ff76bc4-89d0-4b69-8c22-9312b68cf66f
                   size:
-                    value: 423
+                    value: 1206370
                     type: number
                   title:
                     type: text
-                    value: hero-bg-gradient-light.svg
+                    value: coffee.png
                   width:
-                    value: 1016
+                    value: 1920
                     type: number
                   height:
-                    value: 330
+                    value: 1280
                     type: number
                   mediaType:
-                    value: image/svg+xml
+                    value: image/png
                     type: text
                 _source: uniform-assets
           priority:
@@ -162,9 +217,9 @@ composition:
           size:
             type: dex-segmented-control-parameter
             value:
-              mobile: 5xl
-              tablet: 5xl
-              desktop: 7xl
+              mobile: 3xl
+              tablet: 4xl
+              desktop: 4xl
           color:
             type: dex-color-palette-parameter
             value: text-primary
@@ -226,9 +281,26 @@ composition:
       backgroundColor: 'yes'
     hideLockedParameters: true
   _locales:
-    - en
-created: '2025-06-26T12:10:54.211656+00:00'
-modified: '2025-07-04T13:55:30.3796+00:00'
+    - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa
+created: '2025-06-24T07:31:32.77608+00:00'
+modified: '2025-07-16T05:54:03.581523+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/main-hero.jpg

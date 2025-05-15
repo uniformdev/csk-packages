@@ -1,0 +1,116 @@
+composition:
+  _name: Product Recommendations
+  _id: 9fa8b4cd-24ab-4d1a-b2c5-946925aec3e0
+  type: dynamicProductRecommendations
+  parameters:
+    height:
+      type: dex-segmented-control-parameter
+      value: {}
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        mobile:
+          paddingTop: container-medium
+          paddingBottom: container-medium
+        tablet: {}
+        desktop: {}
+    displayName:
+      type: text
+      locales:
+        da-dk: Anbefalinger
+        de-at: Empfehlungen
+        de-de: Empfehlungen
+        en-ca: Recommendations
+        en-de: Empfehlungen
+        en-fr: Recommandations
+        en-gb: Recommendations
+        en-nl: Aanbevelingen
+        en-us: Recommendations
+        es-us: Recomendaciones
+        fr-ca: Recommandations
+        fr-fr: Recommandations
+        ja-jp: 推奨事項
+        nb-no: Anbefalinger
+        nl-nl: Aanbevelingen
+        sv-se: Rekommendationer
+        ar-ksa: توصيات
+        ar-uae: التوصيات
+    boostEnrichments:
+      type: multi-select
+      value:
+        - subCategory,subcategory
+        - int,category
+        - brand,brand
+    maxRecommendations:
+      type: number
+      value: '3'
+  slots:
+    dynamicRecommendationsTitle:
+      - _id: 36ef82db-8556-4006-be7a-957216a76758
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: h2
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: 3xl
+              tablet: 4xl
+              desktop: 4xl
+          text:
+            type: text
+            locales:
+              da-dk: Anbefalet til dig
+              de-at: Empfohlen für Sie
+              de-de: Empfohlen für Sie
+              en-ca: Recommended for you
+              en-de: Empfohlen für Sie
+              en-fr: Recommandé pour vous
+              en-gb: Recommended for you
+              en-nl: Aanbevolen voor jou
+              en-us: Recommended for you
+              es-us: Recomendado para ti
+              fr-ca: Recommandé pour vous
+              fr-fr: Recommandé pour vous
+              ja-jp: あなたへのおすすめ
+              nb-no: Anbefalt for deg
+              nl-nl: Aanbevolen voor jou
+              sv-se: Rekommenderat för dig
+              ar-ksa: موصى به لك
+              ar-uae: موصى به لك
+          weight:
+            type: dex-segmented-control-parameter
+            value: bold
+        _overridability:
+          parameters:
+            text: 'yes'
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      boostEnrichments: 'yes'
+      maxRecommendations: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa
+created: '2025-05-20T11:53:44.157201+00:00'
+modified: '2025-07-16T05:54:01.827436+00:00'
+pattern: true
+categoryId: adaebea8-ba58-494b-9c3b-9f82906d9415

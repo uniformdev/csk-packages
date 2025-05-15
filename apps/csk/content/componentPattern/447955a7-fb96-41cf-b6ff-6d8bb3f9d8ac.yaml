@@ -14,7 +14,25 @@ composition:
         desktop: {}
     displayName:
       type: text
-      value: Table Default
+      locales:
+        da-dk: Standardtabel
+        de-at: Tabellenvorgabe
+        de-de: Tabellenstandard
+        en-ca: Table Default
+        en-de: Tabellenvorgabe
+        en-fr: Table par défaut
+        en-gb: Table Default
+        en-nl: Tabel Standaard
+        en-us: Table Default
+        es-us: Tabla Predeterminada
+        fr-ca: Table par défaut
+        fr-fr: Table par défaut
+        ja-jp: テーブルデフォルト
+        nb-no: Tabell standardinnstilling
+        nl-nl: Tabel Standaard
+        sv-se: Tabell Standard
+        ar-ksa: الجدول الافتراضي
+        ar-uae: جدول افتراضي
   slots:
     tableBody:
       - _id: cc4f76dd-2a21-477f-a245-4388016f9502
@@ -26,7 +44,25 @@ composition:
               parameters:
                 value:
                   type: text
-                  value: 🚀 Rapid Time-to-Market
+                  locales:
+                    da-dk: 🚀 Hurtig tid til markedet
+                    de-at: 🚀 Schnelle Markteinführung
+                    de-de: 🚀 Schnelle Markteinführung
+                    en-ca: 🚀 Rapid Time-to-Market
+                    en-de: 🚀 Schnelle Markteinführung
+                    en-fr: 🚀 Temps de mise sur le marché rapide
+                    en-gb: 🚀 Rapid Time-to-Market
+                    en-nl: 🚀 Snelle Time-to-Market
+                    en-us: 🚀 Rapid Time-to-Market
+                    es-us: 🚀 Rápido Tiempo de Comercialización
+                    fr-ca: 🚀 Temps de mise sur le marché rapide
+                    fr-fr: 🚀 Temps de mise sur le marché rapide
+                    ja-jp: 🚀 迅速な市場投入
+                    nb-no: 🚀 Rask tid til markedet
+                    nl-nl: 🚀 Snelle Time-to-Market
+                    sv-se: 🚀 Snabb tid till marknaden
+                    ar-ksa: 🚀 سرعة الوصول إلى السوق
+                    ar-uae: 🚀 سرعة الوصول إلى السوق
               _overridability:
                 parameters:
                   $viz: 'yes'
@@ -36,7 +72,49 @@ composition:
               parameters:
                 value:
                   type: text
-                  value: Prebuilt components reduce setup and dev time
+                  locales:
+                    da-dk: >-
+                      Forudbyggede komponenter reducerer opsætnings- og
+                      udviklingstid
+                    de-at: >-
+                      Vorgefertigte Komponenten reduzieren Einrichtungs- und
+                      Entwicklungszeit
+                    de-de: >-
+                      Vorgefertigte Komponenten reduzieren Einrichtungs- und
+                      Entwicklungszeit
+                    en-ca: Pre-built components reduce setup and dev time
+                    en-de: >-
+                      Vorgefertigte Komponenten reduzieren Einrichtungs- und
+                      Entwicklungszeit
+                    en-fr: >-
+                      Les composants préfabriqués réduisent le temps
+                      d'installation et de développement.
+                    en-gb: Pre-built components reduce setup and development time
+                    en-nl: >-
+                      Voorgebouwde componenten verminderen de installatie- en
+                      ontwikkeltijd.
+                    en-us: Prebuilt components reduce setup and dev time
+                    es-us: >-
+                      Los componentes preconstruidos reducen el tiempo de
+                      configuración y desarrollo.
+                    fr-ca: >-
+                      Les composants préfabriqués réduisent le temps
+                      d'installation et de développement.
+                    fr-fr: >-
+                      Les composants préfabriqués réduisent le temps de
+                      configuration et de développement.
+                    ja-jp: 組み込みコンポーネントはセットアップと開発時間を短縮します。
+                    nb-no: >-
+                      Ferdigbygde komponenter reduserer oppsett- og
+                      utviklingstid
+                    nl-nl: >-
+                      Voorgebouwde componenten verminderen de installatie- en
+                      ontwikkeltijd.
+                    sv-se: >-
+                      Förbyggda komponenter minskar installation och
+                      utvecklingstid
+                    ar-ksa: المكونات المسبقة البناء تقلل من وقت الإعداد والتطوير
+                    ar-uae: المكونات الجاهزة تقلل من وقت الإعداد والتطوير
               _overridability:
                 parameters:
                   $viz: 'yes'
@@ -46,7 +124,25 @@ composition:
               parameters:
                 value:
                   type: text
-                  value: Cuts delivery time by up to 50%
+                  locales:
+                    da-dk: Reducerer leveringstiden med op til 50%
+                    de-at: Verkürzt die Lieferzeit um bis zu 50 %
+                    de-de: Verkürzt die Lieferzeit um bis zu 50 %
+                    en-ca: Reduces delivery time by up to 50%
+                    en-de: Verkürzt die Lieferzeit um bis zu 50 %
+                    en-fr: Réduit le temps de livraison jusqu'à 50 %
+                    en-gb: Reduces delivery time by up to 50%
+                    en-nl: Verkort de levertijd met maximaal 50%
+                    en-us: Cuts delivery time by up to 50%
+                    es-us: Reduce el tiempo de entrega hasta un 50%
+                    fr-ca: Réduit le temps de livraison jusqu'à 50 %
+                    fr-fr: Réduit le temps de livraison jusqu'à 50 %
+                    ja-jp: 配達時間を最大50%短縮します。
+                    nb-no: Reduserer leveringstiden med opptil 50 %
+                    nl-nl: Verkort de levertijd met maximaal 50%
+                    sv-se: Minskar leveranstiden med upp till 50%
+                    ar-ksa: يقلل وقت التسليم بنسبة تصل إلى 50%
+                    ar-uae: يقلل وقت التسليم بنسبة تصل إلى 50%
               _overridability:
                 parameters:
                   $viz: 'yes'
@@ -54,7 +150,25 @@ composition:
         parameters:
           displayName:
             type: text
-            value: 🚀 Rapid Time-to-Market
+            locales:
+              da-dk: 🚀 Hurtig tid til markedet
+              de-at: 🚀 Schnelle Markteinführung
+              de-de: 🚀 Schnelle Markteinführung
+              en-ca: 🚀 Rapid Time-to-Market
+              en-de: 🚀 Schnelle Markteinführung
+              en-fr: 🚀 Temps de mise sur le marché rapide
+              en-gb: 🚀 Rapid Time-to-Market
+              en-nl: 🚀 Snelle Time-to-Market
+              en-us: 🚀 Rapid Time-to-Market
+              es-us: 🚀 Tiempo Rápido de Comercialización
+              fr-ca: 🚀 Temps de mise sur le marché rapide
+              fr-fr: 🚀 Temps de mise sur le marché rapide
+              ja-jp: 🚀 迅速な市場投入
+              nb-no: 🚀 Rask tid til markedet
+              nl-nl: 🚀 Snelle time-to-market
+              sv-se: 🚀 Snabb tid till marknaden
+              ar-ksa: 🚀 سرعة الوصول إلى السوق
+              ar-uae: 🚀 سرعة الوصول إلى السوق
         _overridability:
           parameters:
             $viz: 'yes'
@@ -68,8 +182,26 @@ composition:
               parameters:
                 value:
                   type: text
-                  value: |
-                    🧱 Ready-to-Use Components
+                  locales:
+                    da-dk: 🧱 Klar-til-brug komponenter
+                    de-at: 🧱 Einsatzbereite Komponenten
+                    de-de: 🧱 Einsatzbereite Komponenten
+                    en-ca: 🧱 Ready-to-Use Components
+                    en-de: 🧱 Einsatzbereite Komponenten
+                    en-fr: 🧱 Composants Prêts à l'Emploi
+                    en-gb: 🧱 Ready-to-Use Components
+                    en-nl: 🧱 Klaar-voor-gebruik Componenten
+                    en-us: |
+                      🧱 Ready-to-Use Components
+                    es-us: 🧱 Componentes Listos para Usar
+                    fr-ca: 🧱 Composants Prêts à l'Emploi
+                    fr-fr: 🧱 Composants Prêts à l'Emploi
+                    ja-jp: 🧱 すぐに使えるコンポーネント
+                    nb-no: 🧱 Klar-til-bruk Komponenter
+                    nl-nl: 🧱 Klaar-voor-gebruik Componenten
+                    sv-se: 🧱 Färdiga komponenter
+                    ar-ksa: 🧱 مكونات جاهزة للاستخدام
+                    ar-uae: 🧱 مكونات جاهزة للاستخدام
               _overridability:
                 parameters:
                   $viz: 'yes'
@@ -79,8 +211,44 @@ composition:
               parameters:
                 value:
                   type: text
-                  value: |
-                    Well-designed UI blocks for consistent, scalable design
+                  locales:
+                    da-dk: Veludformede UI-blokke til konsistent, skalerbart design
+                    de-at: >-
+                      Gut gestaltete UI-Blöcke für ein konsistentes,
+                      skalierbares Design
+                    de-de: >-
+                      Gut gestaltete UI-Blöcke für ein konsistentes,
+                      skalierbares Design
+                    en-ca: Well-designed UI blocks for consistent, scalable design
+                    en-de: >-
+                      Gut gestaltete UI-Blöcke für ein konsistentes,
+                      skalierbares Design
+                    en-fr: >-
+                      Blocs d'interface utilisateur bien conçus pour un design
+                      cohérent et évolutif
+                    en-gb: Well-designed UI blocks for consistent, scalable design
+                    en-nl: >-
+                      Goed ontworpen UI-blokken voor consistent, schaalbaar
+                      ontwerp
+                    en-us: |
+                      Well-designed UI blocks for consistent, scalable design
+                    es-us: >-
+                      Bloques de UI bien diseñados para un diseño consistente y
+                      escalable
+                    fr-ca: >-
+                      Blocs d'interface utilisateur bien conçus pour un design
+                      cohérent et évolutif
+                    fr-fr: >-
+                      Blocs d'interface utilisateur bien conçus pour un design
+                      cohérent et évolutif
+                    ja-jp: 一貫性があり、拡張可能なデザインのための優れたUIブロック
+                    nb-no: Velutformede UI-blokker for konsekvent, skalerbar design
+                    nl-nl: >-
+                      Goed ontworpen UI-blokken voor consistent, schaalbaar
+                      ontwerp
+                    sv-se: Välutformade UI-block för konsekvent, skalbar design
+                    ar-ksa: عناصر واجهة مستخدم مصممة بشكل جيد لتصميم متسق وقابل للتوسع
+                    ar-uae: عناصر واجهة مستخدم مصممة بشكل جيد لتصميم متسق وقابل للتوسع
               _overridability:
                 parameters:
                   $viz: 'yes'
@@ -90,8 +258,26 @@ composition:
               parameters:
                 value:
                   type: text
-                  value: |
-                    Faster prototyping & production
+                  locales:
+                    da-dk: Hurtigere prototyping og produktion
+                    de-at: Schnellere Prototypenerstellung und Produktion
+                    de-de: Schnellere Prototypenerstellung und Produktion
+                    en-ca: Faster prototyping and production
+                    en-de: Schnellere Prototypenerstellung und Produktion
+                    en-fr: Prototypage et production plus rapides
+                    en-gb: Faster prototyping & production
+                    en-nl: Snellere prototyping en productie
+                    en-us: |
+                      Faster prototyping & production
+                    es-us: Prototipado y producción más rápidos
+                    fr-ca: Prototypage et production plus rapides
+                    fr-fr: Prototypage et production plus rapides
+                    ja-jp: より迅速な試作と生産
+                    nb-no: Raskere prototyping og produksjon
+                    nl-nl: Snellere prototyping en productie
+                    sv-se: Snabbare prototypframställning och produktion
+                    ar-ksa: نماذج أولية وإنتاج أسرع
+                    ar-uae: النماذج الأولية والإنتاج الأسرع
               _overridability:
                 parameters:
                   $viz: 'yes'
@@ -99,7 +285,25 @@ composition:
         parameters:
           displayName:
             type: text
-            value: 🧱 Ready-to-Use Components
+            locales:
+              da-dk: 🧱 Klar-til-brug komponenter
+              de-at: 🧱 Einsatzbereite Komponenten
+              de-de: 🧱 Einsatzbereite Komponenten
+              en-ca: 🧱 Ready-to-Use Components
+              en-de: 🧱 Einsatzbereite Komponenten
+              en-fr: 🧱 Composants Prêts à l'Emploi
+              en-gb: 🧱 Ready-to-Use Components
+              en-nl: 🧱 Klaar-voor-gebruik Componenten
+              en-us: 🧱 Ready-to-Use Components
+              es-us: 🧱 Componentes Listos para Usar
+              fr-ca: 🧱 Composants Prêts à l'Emploi
+              fr-fr: 🧱 Composants Prêts à l'Emploi
+              ja-jp: 🧱 すぐに使えるコンポーネント
+              nb-no: 🧱 Ferdige komponenter klare til bruk
+              nl-nl: 🧱 Klaar-voor-gebruik Componenten
+              sv-se: 🧱 Färdiga komponenter
+              ar-ksa: 🧱 مكونات جاهزة للاستخدام
+              ar-uae: 🧱 مكونات جاهزة للاستخدام
         _overridability:
           parameters:
             $viz: 'yes'
@@ -113,9 +317,27 @@ composition:
               parameters:
                 value:
                   type: text
-                  value: |+
-                    🛠 Built-in Best Practices
+                  locales:
+                    da-dk: 🛠 Indbyggede bedste praksisser
+                    de-at: 🛠 Eingebaute Best Practices
+                    de-de: 🛠 Eingebaute Best Practices
+                    en-ca: 🛠 Pratiques exemplaires intégrées
+                    en-de: 🛠 Eingebaute Best Practices
+                    en-fr: 🛠 Pratiques exemplaires intégrées
+                    en-gb: 🛠 Built-in Best Practices
+                    en-nl: 🛠 Ingebouwde Beste Praktijken
+                    en-us: |+
+                      🛠 Built-in Best Practices
 
+                    es-us: 🛠 Mejores Prácticas Integradas
+                    fr-ca: 🛠 Pratiques exemplaires intégrées
+                    fr-fr: 🛠 Meilleures Pratiques Intégrées
+                    ja-jp: 🛠 組み込みのベストプラクティス
+                    nb-no: 🛠 Innebygde beste praksiser
+                    nl-nl: 🛠 Ingebouwde Best Practices
+                    sv-se: 🛠 Inbyggda bästa praxis
+                    ar-ksa: 🛠 أفضل الممارسات المدمجة
+                    ar-uae: 🛠 أفضل الممارسات المدمجة
               _overridability:
                 parameters:
                   $viz: 'yes'
@@ -125,9 +347,37 @@ composition:
               parameters:
                 value:
                   type: text
-                  value: |+
-                    Includes performance, accessibility, and layout standards
+                  locales:
+                    da-dk: >-
+                      Indeholder standarder for ydeevne, tilgængelighed og
+                      layout
+                    de-at: Enthält Leistungs-, Zugänglichkeits- und Layoutstandards
+                    de-de: Enthält Leistungs-, Zugänglichkeits- und Layoutstandards
+                    en-ca: Includes performance, accessibility, and layout standards
+                    en-de: Enthält Leistungs-, Zugänglichkeits- und Layoutstandards
+                    en-fr: >-
+                      Comprend des normes de performance, d'accessibilité et de
+                      mise en page
+                    en-gb: Includes performance, accessibility, and layout standards
+                    en-nl: Omvat prestatie-, toegankelijkheids- en lay-outnormen
+                    en-us: |+
+                      Includes performance, accessibility, and layout standards
 
+                    es-us: Incluye estándares de rendimiento, accesibilidad y diseño
+                    fr-ca: >-
+                      Comprend des normes de performance, d'accessibilité et de
+                      mise en page
+                    fr-fr: >-
+                      Comprend des normes de performance, d'accessibilité et de
+                      mise en page
+                    ja-jp: パフォーマンス、アクセシビリティ、およびレイアウトの基準を含みます。
+                    nb-no: Inkluderer ytelse, tilgjengelighet og layoutstandarder
+                    nl-nl: Omvat prestatie-, toegankelijkheids- en lay-outnormen
+                    sv-se: >-
+                      Inkluderar prestanda-, tillgänglighets- och
+                      layoutstandarder
+                    ar-ksa: يشمل معايير الأداء وسهولة الوصول والتخطيط
+                    ar-uae: يتضمن معايير الأداء وسهولة الوصول والتخطيط
               _overridability:
                 parameters:
                   $viz: 'yes'
@@ -137,9 +387,27 @@ composition:
               parameters:
                 value:
                   type: text
-                  value: |+
-                    Fewer bugs, better user UX
+                  locales:
+                    da-dk: Færre fejl, bedre brugeroplevelse
+                    de-at: Weniger Bugs, bessere Benutzererfahrung
+                    de-de: Weniger Bugs, bessere Benutzererfahrung
+                    en-ca: Fewer bugs, better user UX
+                    en-de: Weniger Bugs, bessere Benutzererfahrung
+                    en-fr: Moins de bugs, meilleure expérience utilisateur
+                    en-gb: Fewer bugs, better user experience
+                    en-nl: Minder bugs, betere gebruikerservaring
+                    en-us: |+
+                      Fewer bugs, better user UX
 
+                    es-us: Menos errores, mejor experiencia de usuario.
+                    fr-ca: Moins de bogues, meilleure expérience utilisateur
+                    fr-fr: Moins de bugs, meilleure expérience utilisateur.
+                    ja-jp: バグを減らし、より良いユーザー体験を提供
+                    nb-no: Færre feil, bedre brukeropplevelse
+                    nl-nl: Minder bugs, betere gebruikerservaring
+                    sv-se: Färre buggar, bättre användarupplevelse
+                    ar-ksa: أخطاء أقل، تجربة مستخدم أفضل
+                    ar-uae: أخطاء أقل، تجربة مستخدم أفضل
               _overridability:
                 parameters:
                   $viz: 'yes'
@@ -147,7 +415,25 @@ composition:
         parameters:
           displayName:
             type: text
-            value: 🛠 Built-in Best Practices
+            locales:
+              da-dk: 🛠 Indbyggede bedste praksis
+              de-at: 🛠 Eingebaute Best Practices
+              de-de: 🛠 Eingebaute Best Practices
+              en-ca: 🛠 Pratiques exemplaires intégrées
+              en-de: 🛠 Eingebaute Best Practices
+              en-fr: 🛠 Pratiques exemplaires intégrées
+              en-gb: 🛠 Built-in Best Practices
+              en-nl: 🛠 Ingebouwde Best Practices
+              en-us: 🛠 Built-in Best Practices
+              es-us: 🛠 Prácticas recomendadas integradas
+              fr-ca: 🛠 Pratiques exemplaires intégrées
+              fr-fr: 🛠 Meilleures Pratiques Intégrées
+              ja-jp: 🛠 組み込みのベストプラクティス
+              nb-no: 🛠 Innebygde beste praksiser
+              nl-nl: 🛠 Ingebouwde Best Practices
+              sv-se: 🛠 Inbyggda bästa praxis
+              ar-ksa: 🛠 ممارسات مثلى مدمجة
+              ar-uae: 🛠 أفضل الممارسات المدمجة
         _overridability:
           parameters:
             $viz: 'yes'
@@ -161,10 +447,28 @@ composition:
               parameters:
                 value:
                   type: text
-                  value: |+
-                    🎨 Theme Support
+                  locales:
+                    da-dk: 🎨 Tema Support
+                    de-at: 🎨 Themenunterstützung
+                    de-de: 🎨 Themenunterstützung
+                    en-ca: 🎨 Theme Support
+                    en-de: 🎨 Themenunterstützung
+                    en-fr: 🎨 Support du thème
+                    en-gb: 🎨 Theme Support
+                    en-nl: 🎨 Thema Ondersteuning
+                    en-us: |+
+                      🎨 Theme Support
 
 
+                    es-us: 🎨 Soporte de Temas
+                    fr-ca: 🎨 Support de thème
+                    fr-fr: 🎨 Support du Thème
+                    ja-jp: 🎨 テーマサポート
+                    nb-no: 🎨 Temastøtte
+                    nl-nl: 🎨 Thema Ondersteuning
+                    sv-se: 🎨 Temastöd
+                    ar-ksa: 🎨 دعم السمة
+                    ar-uae: 🎨 دعم الثيمات
               _overridability:
                 parameters:
                   $viz: 'yes'
@@ -174,10 +478,48 @@ composition:
               parameters:
                 value:
                   type: text
-                  value: |+
-                    Easy theming and brand alignment out of the box
+                  locales:
+                    da-dk: Nem tematisering og brandtilpasning lige ud af boksen
+                    de-at: >-
+                      Einfache Themenanpassung und Markenabstimmung direkt
+                      einsatzbereit
+                    de-de: >-
+                      Einfache Themenanpassung und Markenabstimmung direkt nach
+                      dem Auspacken
+                    en-ca: Easy theming and brand alignment right out of the box
+                    en-de: >-
+                      Einfache Themen- und Markenanpassung direkt nach dem
+                      Auspacken
+                    en-fr: >-
+                      Thématisation facile et alignement de la marque dès le
+                      départ
+                    en-gb: Easy theming and brand alignment straight out of the box
+                    en-nl: >-
+                      Eenvoudige thematisering en merkaansluiting direct uit de
+                      doos
+                    en-us: |+
+                      Easy theming and brand alignment out of the box
 
 
+                    es-us: >-
+                      Facilita la tematización y alineación de la marca desde el
+                      principio.
+                    fr-ca: >-
+                      Thématisation facile et alignement de la marque dès le
+                      départ
+                    fr-fr: >-
+                      Thématisation facile et alignement de la marque prêts à
+                      l'emploi
+                    ja-jp: 簡単なテーマ設定とブランド整合性がすぐに可能
+                    nb-no: Enkel tematisering og merkevarejustering rett ut av boksen
+                    nl-nl: >-
+                      Eenvoudige thematisering en merkuitlijning direct uit de
+                      doos
+                    sv-se: >-
+                      Enkel tematisering och varumärkesanpassning direkt ur
+                      lådan
+                    ar-ksa: سهولة التخصيص والمواءمة مع العلامة التجارية مباشرة.
+                    ar-uae: سهولة التخصيص والمواءمة مع العلامة التجارية مباشرة.
               _overridability:
                 parameters:
                   $viz: 'yes'
@@ -187,10 +529,28 @@ composition:
               parameters:
                 value:
                   type: text
-                  value: |+
-                    Consistent look & feel
+                  locales:
+                    da-dk: Konsistent udseende og fornemmelse
+                    de-at: Einheitliches Erscheinungsbild
+                    de-de: Konsistentes Erscheinungsbild
+                    en-ca: Consistent look and feel
+                    en-de: Einheitliches Erscheinungsbild
+                    en-fr: Apparence et sensation cohérentes
+                    en-gb: Consistent look and feel
+                    en-nl: Consistente uitstraling & gevoel
+                    en-us: |+
+                      Consistent look & feel
 
 
+                    es-us: Apariencia y sensación consistentes
+                    fr-ca: Apparence et convivialité cohérentes
+                    fr-fr: Apparence et sensation cohérentes
+                    ja-jp: 一貫した外観と感触
+                    nb-no: Konsekvent utseende og følelse
+                    nl-nl: Consistente uitstraling & gevoel
+                    sv-se: Konsekvent utseende och känsla
+                    ar-ksa: مظهر وإحساس متسق
+                    ar-uae: مظهر وشعور متسق
               _overridability:
                 parameters:
                   $viz: 'yes'
@@ -198,7 +558,25 @@ composition:
         parameters:
           displayName:
             type: text
-            value: 🎨 Theme Support
+            locales:
+              da-dk: 🎨 Tema Support
+              de-at: 🎨 Themenunterstützung
+              de-de: 🎨 Themenunterstützung
+              en-ca: 🎨 Theme Support
+              en-de: 🎨 Themenunterstützung
+              en-fr: 🎨 Support du Thème
+              en-gb: 🎨 Theme Support
+              en-nl: 🎨 Thema-ondersteuning
+              en-us: 🎨 Theme Support
+              es-us: 🎨 Soporte de Tema
+              fr-ca: 🎨 Support du thème
+              fr-fr: 🎨 Support du thème
+              ja-jp: 🎨 テーマサポート
+              nb-no: 🎨 Temastøtte
+              nl-nl: 🎨 Thema-ondersteuning
+              sv-se: 🎨 Temastöd
+              ar-ksa: 🎨 دعم الثيمات
+              ar-uae: 🎨 دعم الثيمات
         _overridability:
           parameters:
             $viz: 'yes'
@@ -212,11 +590,29 @@ composition:
               parameters:
                 value:
                   type: text
-                  value: |+
-                    🧪 Tested & Maintained
+                  locales:
+                    da-dk: 🧪 Testet & Vedligeholdt
+                    de-at: 🧪 Getestet & Gewartet
+                    de-de: 🧪 Getestet & Gewartet
+                    en-ca: 🧪 Tested & Maintained
+                    en-de: 🧪 Getestet & Gewartet
+                    en-fr: 🧪 Testé et Maintenu
+                    en-gb: 🧪 Tested & Maintained
+                    en-nl: 🧪 Getest & Onderhouden
+                    en-us: |+
+                      🧪 Tested & Maintained
 
 
 
+                    es-us: 🧪 Probado y Mantenido
+                    fr-ca: 🧪 Testé et entretenu
+                    fr-fr: 🧪 Testé et Maintenu
+                    ja-jp: 🧪 テスト済み & 保持済み
+                    nb-no: 🧪 Testet og vedlikeholdt
+                    nl-nl: 🧪 Getest & Onderhouden
+                    sv-se: 🧪 Testad & Underhållen
+                    ar-ksa: 🧪 تم اختباره وصيانته
+                    ar-uae: 🧪 مُختَبَر ومُحافَظ عليه
               _overridability:
                 parameters:
                   $viz: 'yes'
@@ -226,11 +622,49 @@ composition:
               parameters:
                 value:
                   type: text
-                  value: |+
-                    Components are battle-tested and updated regularly
+                  locales:
+                    da-dk: Komponenter er kampafprøvede og opdateres regelmæssigt
+                    de-at: >-
+                      Komponenten sind kampferprobt und werden regelmäßig
+                      aktualisiert.
+                    de-de: >-
+                      Komponenten sind kampferprobt und werden regelmäßig
+                      aktualisiert.
+                    en-ca: Components are battle-tested and updated regularly
+                    en-de: >-
+                      Komponenten sind kampferprobt und werden regelmäßig
+                      aktualisiert.
+                    en-fr: >-
+                      Les composants sont éprouvés au combat et mis à jour
+                      régulièrement.
+                    en-gb: Components are battle-tested and updated regularly
+                    en-nl: >-
+                      Componenten zijn beproefd in de praktijk en worden
+                      regelmatig bijgewerkt
+                    en-us: |+
+                      Components are battle-tested and updated regularly
 
 
 
+                    es-us: >-
+                      Los componentes están probados en batalla y se actualizan
+                      regularmente.
+                    fr-ca: >-
+                      Les composants sont éprouvés au combat et mis à jour
+                      régulièrement.
+                    fr-fr: >-
+                      Les composants sont éprouvés au combat et mis à jour
+                      régulièrement.
+                    ja-jp: コンポーネントは実戦で試され、定期的に更新されています。
+                    nb-no: >-
+                      Komponentene er utprøvd i praksis og oppdateres
+                      regelmessig
+                    nl-nl: >-
+                      Componenten zijn beproefd in de praktijk en worden
+                      regelmatig bijgewerkt
+                    sv-se: Komponenterna är stridstestade och uppdateras regelbundet
+                    ar-ksa: المكونات مجربة في المعركة ويتم تحديثها بانتظام
+                    ar-uae: المكونات مُختبرة في المعارك ويتم تحديثها بانتظام
               _overridability:
                 parameters:
                   $viz: 'yes'
@@ -240,11 +674,29 @@ composition:
               parameters:
                 value:
                   type: text
-                  value: |+
-                    Less tech debt over time
+                  locales:
+                    da-dk: Mindre teknisk gæld over tid
+                    de-at: Weniger technische Schulden im Laufe der Zeit
+                    de-de: Weniger technische Schulden im Laufe der Zeit
+                    en-ca: Less tech debt over time
+                    en-de: Weniger technische Schulden im Laufe der Zeit
+                    en-fr: Moins de dette technique au fil du temps
+                    en-gb: Less tech debt over time
+                    en-nl: Minder technische schuld na verloop van tijd
+                    en-us: |+
+                      Less tech debt over time
 
 
 
+                    es-us: Menos deuda técnica con el tiempo
+                    fr-ca: Moins de dette technique au fil du temps
+                    fr-fr: Moins de dette technique au fil du temps
+                    ja-jp: 時間が経つにつれて技術的負債が減少する
+                    nb-no: Mindre teknisk gjeld over tid
+                    nl-nl: Minder technische schuld na verloop van tijd
+                    sv-se: Mindre teknisk skuld över tid
+                    ar-ksa: ديون تقنية أقل بمرور الوقت
+                    ar-uae: ديون تقنية أقل مع مرور الوقت
               _overridability:
                 parameters:
                   $viz: 'yes'
@@ -252,7 +704,25 @@ composition:
         parameters:
           displayName:
             type: text
-            value: 🧪 Tested & Maintained
+            locales:
+              da-dk: 🧪 Testet & Vedligeholdt
+              de-at: 🧪 Getestet & Gewartet
+              de-de: 🧪 Getestet & Gewartet
+              en-ca: 🧪 Tested & Maintained
+              en-de: 🧪 Getestet & Gewartet
+              en-fr: 🧪 Testé et Maintenu
+              en-gb: 🧪 Tested & Maintained
+              en-nl: 🧪 Getest & Onderhouden
+              en-us: 🧪 Tested & Maintained
+              es-us: 🧪 Probado y Mantenido
+              fr-ca: 🧪 Testé et entretenu
+              fr-fr: 🧪 Testé et Maintenu
+              ja-jp: 🧪 テスト済み & 維持管理済み
+              nb-no: 🧪 Testet og vedlikeholdt
+              nl-nl: 🧪 Getest & Onderhouden
+              sv-se: 🧪 Testad & Underhållen
+              ar-ksa: 🧪 تم الاختبار والصيانة
+              ar-uae: 🧪 تم اختباره وصيانته
         _overridability:
           parameters:
             $viz: 'yes'
@@ -266,12 +736,30 @@ composition:
               parameters:
                 value:
                   type: text
-                  value: |+
-                    🧭 Opinionated but Flexible
+                  locales:
+                    da-dk: 🧭 Meningsfuld men Fleksibel
+                    de-at: 🧭 Meinungsstark, aber flexibel
+                    de-de: 🧭 Meinungsstark, aber flexibel
+                    en-ca: 🧭 Opinionated but Flexible
+                    en-de: 🧭 Meinungsstark, aber Flexibel
+                    en-fr: 🧭 Opinionné mais Flexible
+                    en-gb: 🧭 Opinionated but Flexible
+                    en-nl: 🧭 Eigenzinnig maar Flexibel
+                    en-us: |+
+                      🧭 Opinionated but Flexible
 
 
 
 
+                    es-us: 🧭 Opinativo pero Flexible
+                    fr-ca: 🧭 Opinioné mais flexible
+                    fr-fr: 🧭 Avisé mais Flexible
+                    ja-jp: 🧭 意見はあるが柔軟性がある
+                    nb-no: 🧭 Meningsfull, men fleksibel
+                    nl-nl: 🧭 Eigenzinnig maar Flexibel
+                    sv-se: 🧭 Åsiktsfull men Flexibel
+                    ar-ksa: 🧭 متحيز ولكن مرن
+                    ar-uae: 🧭 ذو رأي ولكن مرن
               _overridability:
                 parameters:
                   $viz: 'yes'
@@ -281,12 +769,58 @@ composition:
               parameters:
                 value:
                   type: text
-                  value: |+
-                    Defaults that work well, but allow overrides when needed
+                  locales:
+                    da-dk: >-
+                      Standardindstillinger, der fungerer godt, men tillader
+                      tilsidesættelser, når det er nødvendigt
+                    de-at: >-
+                      Standardeinstellungen, die gut funktionieren, aber bei
+                      Bedarf Anpassungen zulassen.
+                    de-de: >-
+                      Standardeinstellungen, die gut funktionieren, aber bei
+                      Bedarf Anpassungen zulassen
+                    en-ca: Defaults that work well, but allow overrides when needed
+                    en-de: >-
+                      Standardeinstellungen, die gut funktionieren, aber bei
+                      Bedarf Anpassungen zulassen
+                    en-fr: >-
+                      Paramètres par défaut qui fonctionnent bien, mais
+                      permettent des dérogations si nécessaire
+                    en-gb: Defaults that work well, but allow overrides when needed
+                    en-nl: >-
+                      Standaardinstellingen die goed werken, maar aanpassingen
+                      toestaan wanneer nodig
+                    en-us: |+
+                      Defaults that work well, but allow overrides when needed
 
 
 
 
+                    es-us: >-
+                      Valores predeterminados que funcionan bien, pero permiten
+                      excepciones cuando sea necesario
+                    fr-ca: >-
+                      Paramètres par défaut qui fonctionnent bien, mais
+                      permettent des dérogations si nécessaire
+                    fr-fr: >-
+                      Paramètres par défaut qui fonctionnent bien, mais
+                      permettent des dérogations si nécessaire
+                    ja-jp: デフォルトはうまく機能しますが、必要に応じて上書きが可能です。
+                    nb-no: >-
+                      Standardinnstillinger som fungerer godt, men tillater
+                      overstyringer når det er nødvendig
+                    nl-nl: >-
+                      Standaardinstellingen die goed werken, maar aanpassingen
+                      toestaan wanneer nodig
+                    sv-se: >-
+                      Standardinställningar som fungerar bra, men tillåter
+                      åsidosättningar vid behov
+                    ar-ksa: >-
+                      الإعدادات الافتراضية التي تعمل بشكل جيد، ولكن تسمح
+                      بالتعديلات عند الحاجة
+                    ar-uae: >-
+                      إعدادات افتراضية تعمل بشكل جيد، ولكن تسمح بالتعديلات عند
+                      الحاجة
               _overridability:
                 parameters:
                   $viz: 'yes'
@@ -296,12 +830,30 @@ composition:
               parameters:
                 value:
                   type: text
-                  value: |+
-                    Balances speed and flexibility
+                  locales:
+                    da-dk: Balancerer hastighed og fleksibilitet
+                    de-at: Balanciert Geschwindigkeit und Flexibilität
+                    de-de: Gleicht Geschwindigkeit und Flexibilität aus
+                    en-ca: Balances speed and flexibility
+                    en-de: Gleicht Geschwindigkeit und Flexibilität aus
+                    en-fr: Équilibre vitesse et flexibilité
+                    en-gb: Balances speed and flexibility
+                    en-nl: Balanceert snelheid en flexibiliteit
+                    en-us: |+
+                      Balances speed and flexibility
 
 
 
 
+                    es-us: Equilibra velocidad y flexibilidad
+                    fr-ca: Équilibre vitesse et flexibilité
+                    fr-fr: Équilibre vitesse et flexibilité
+                    ja-jp: スピードと柔軟性のバランスを取る
+                    nb-no: Balanserer hastighet og fleksibilitet
+                    nl-nl: Balanceert snelheid en flexibiliteit
+                    sv-se: Balanserar hastighet och flexibilitet
+                    ar-ksa: يوازن بين السرعة والمرونة
+                    ar-uae: يوازن بين السرعة والمرونة
               _overridability:
                 parameters:
                   $viz: 'yes'
@@ -309,7 +861,25 @@ composition:
         parameters:
           displayName:
             type: text
-            value: 🧭 Opinionated but Flexible
+            locales:
+              da-dk: 🧭 Meningsfuld men Fleksibel
+              de-at: 🧭 Meinungsstark, aber flexibel
+              de-de: 🧭 Meinungsstark, aber flexibel
+              en-ca: 🧭 Opinionated but Flexible
+              en-de: 🧭 Meinungsstark, aber flexibel
+              en-fr: 🧭 Opinionné mais Flexible
+              en-gb: 🧭 Opinionated but Flexible
+              en-nl: 🧭 Eigenzinnig maar Flexibel
+              en-us: 🧭 Opinionated but Flexible
+              es-us: 🧭 Opinión firme pero flexible
+              fr-ca: 🧭 Opiniâtre mais Flexible
+              fr-fr: 🧭 Avisé mais Flexible
+              ja-jp: 🧭 意見はあるが柔軟性がある
+              nb-no: 🧭 Meningsfull, men fleksibel
+              nl-nl: 🧭 Eigenzinnig maar Flexibel
+              sv-se: 🧭 Åsiktsfull men Flexibel
+              ar-ksa: 🧭 ذو رأي ولكن مرن
+              ar-uae: 🧭 ذو رأي ولكن مرن
         _overridability:
           parameters:
             $viz: 'yes'
@@ -323,13 +893,31 @@ composition:
               parameters:
                 value:
                   type: text
-                  value: |+
-                    🧩 Seamless Integration
+                  locales:
+                    da-dk: 🧩 Problemfri integration
+                    de-at: 🧩 Nahtlose Integration
+                    de-de: 🧩 Nahtlose Integration
+                    en-ca: 🧩 Seamless Integration
+                    en-de: 🧩 Nahtlose Integration
+                    en-fr: 🧩 Intégration transparente
+                    en-gb: 🧩 Seamless Integration
+                    en-nl: 🧩 Naadloze Integratie
+                    en-us: |+
+                      🧩 Seamless Integration
 
 
 
 
 
+                    es-us: 🧩 Integración Perfecta
+                    fr-ca: 🧩 Intégration transparente
+                    fr-fr: 🧩 Intégration transparente
+                    ja-jp: 🧩 シームレスな統合
+                    nb-no: 🧩 Sømløs integrasjon
+                    nl-nl: 🧩 Naadloze integratie
+                    sv-se: 🧩 Sömlös integration
+                    ar-ksa: 🧩 تكامل سلس
+                    ar-uae: 🧩 تكامل سلس
               _overridability:
                 parameters:
                   $viz: 'yes'
@@ -339,13 +927,31 @@ composition:
               parameters:
                 value:
                   type: text
-                  value: |+
-                    Works with Next.js, Tailwind, and modern tooling
+                  locales:
+                    da-dk: Fungerer med Next.js, Tailwind og moderne værktøjer
+                    de-at: Funktioniert mit Next.js, Tailwind und modernen Werkzeugen
+                    de-de: Funktioniert mit Next.js, Tailwind und modernen Werkzeugen
+                    en-ca: Works with Next.js, Tailwind, and modern tooling
+                    en-de: Funktioniert mit Next.js, Tailwind und modernen Werkzeugen
+                    en-fr: Fonctionne avec Next.js, Tailwind et des outils modernes
+                    en-gb: Works with Next.js, Tailwind, and modern tooling
+                    en-nl: Werkt met Next.js, Tailwind en moderne tooling
+                    en-us: |+
+                      Works with Next.js, Tailwind, and modern tooling
 
 
 
 
 
+                    es-us: Funciona con Next.js, Tailwind y herramientas modernas
+                    fr-ca: Fonctionne avec Next.js, Tailwind et des outils modernes
+                    fr-fr: Fonctionne avec Next.js, Tailwind et des outils modernes
+                    ja-jp: Next.js、Tailwind、および最新のツールと連携します。
+                    nb-no: Fungerer med Next.js, Tailwind og moderne verktøy
+                    nl-nl: Werkt met Next.js, Tailwind en moderne hulpmiddelen
+                    sv-se: Fungerar med Next.js, Tailwind och modern verktygslåda
+                    ar-ksa: يعمل مع Next.js وTailwind والأدوات الحديثة
+                    ar-uae: يعمل مع Next.js وTailwind والأدوات الحديثة
               _overridability:
                 parameters:
                   $viz: 'yes'
@@ -355,13 +961,33 @@ composition:
               parameters:
                 value:
                   type: text
-                  value: |+
-                    Smooth onboarding into any stack
+                  locales:
+                    da-dk: Problemfri onboarding i enhver stack
+                    de-at: Reibungsloses Onboarding in jeden Stack
+                    de-de: Reibungsloses Onboarding in jeden Stack
+                    en-ca: Seamless onboarding into any stack
+                    en-de: Reibungsloses Onboarding in jeden Stack
+                    en-fr: Intégration fluide dans n'importe quelle pile
+                    en-gb: Seamless onboarding into any stack
+                    en-nl: Soepel onboarden in elke stack
+                    en-us: |+
+                      Smooth onboarding into any stack
 
 
 
 
 
+                    es-us: Incorporación fluida en cualquier stack
+                    fr-ca: >-
+                      Intégration fluide dans n'importe quelle pile
+                      technologique
+                    fr-fr: Intégration fluide dans n'importe quelle pile
+                    ja-jp: どのスタックにもスムーズにオンボーディング
+                    nb-no: Sømløs onboarding i enhver stack
+                    nl-nl: Soepel onboarden in elke stack
+                    sv-se: Smidig onboarding i vilken stack som helst
+                    ar-ksa: سهولة الانضمام إلى أي مجموعة تقنيات
+                    ar-uae: سهولة الانضمام إلى أي مجموعة تقنيات
               _overridability:
                 parameters:
                   $viz: 'yes'
@@ -369,7 +995,25 @@ composition:
         parameters:
           displayName:
             type: text
-            value: 🧩 Seamless Integration
+            locales:
+              da-dk: 🧩 Problemfri integration
+              de-at: 🧩 Nahtlose Integration
+              de-de: 🧩 Nahtlose Integration
+              en-ca: 🧩 Seamless Integration
+              en-de: 🧩 Nahtlose Integration
+              en-fr: 🧩 Intégration transparente
+              en-gb: 🧩 Seamless Integration
+              en-nl: 🧩 Naadloze Integratie
+              en-us: 🧩 Seamless Integration
+              es-us: 🧩 Integración Perfecta
+              fr-ca: 🧩 Intégration transparente
+              fr-fr: 🧩 Intégration transparente
+              ja-jp: 🧩 シームレスな統合
+              nb-no: 🧩 Sømløs integrasjon
+              nl-nl: 🧩 Naadloze Integratie
+              sv-se: 🧩 Sömlös integration
+              ar-ksa: 🧩 تكامل سلس
+              ar-uae: 🧩 تكامل سلس
         _overridability:
           parameters:
             $viz: 'yes'
@@ -383,8 +1027,17 @@ composition:
               parameters:
                 value:
                   type: text
-                  value: |+
-                    📦 Storybook & Previews
+                  locales:
+                    da-dk: 📦 Historiebog & Forhåndsvisninger
+                    de-at: 📦 Märchenbuch & Vorschauen
+                    de-de: 📦 Storybook & Vorschauen
+                    en-ca: 📦 Storybook & Previews
+                    en-de: 📦 Storybook & Vorschauen
+                    en-fr: 📦 Livre d'histoires & Aperçus
+                    en-gb: 📦 Storybook & Previews
+                    en-nl: 📦 Storybook & Voorbeelden
+                    en-us: |+
+                      📦 Storybook & Previews
 
 
 
@@ -393,6 +1046,15 @@ composition:
 
 
 
+                    es-us: 📦 Libro de cuentos y vistas previas
+                    fr-ca: 📦 Livre d'histoires et Aperçus
+                    fr-fr: 📦 Livre d'histoires & Aperçus
+                    ja-jp: 📦 ストーリーブックとプレビュー
+                    nb-no: 📦 Historiebok & Forhåndsvisninger
+                    nl-nl: 📦 Storybook & Voorbeelden
+                    sv-se: 📦 Sagobok & Förhandsvisningar
+                    ar-ksa: 📦 كتاب القصص والمعاينات
+                    ar-uae: 📦 كتاب القصص والمعاينات
               _overridability:
                 parameters:
                   $viz: 'yes'
@@ -402,15 +1064,61 @@ composition:
               parameters:
                 value:
                   type: text
-                  value: >+
-                    Includes documentation and visual previews for each
-                    component
+                  locales:
+                    da-dk: >-
+                      Inkluderer dokumentation og visuelle forhåndsvisninger for
+                      hver komponent
+                    de-at: >-
+                      Enthält Dokumentation und visuelle Vorschauen für jede
+                      Komponente
+                    de-de: >-
+                      Enthält Dokumentation und visuelle Vorschauen für jede
+                      Komponente
+                    en-ca: >-
+                      Includes documentation and visual previews for each
+                      component
+                    en-de: >-
+                      Enthält Dokumentation und visuelle Vorschauen für jede
+                      Komponente
+                    en-fr: >-
+                      Comprend la documentation et les aperçus visuels pour
+                      chaque composant
+                    en-gb: >-
+                      Includes documentation and visual previews for each
+                      component
+                    en-nl: >-
+                      Inclusief documentatie en visuele previews voor elk
+                      onderdeel
+                    en-us: >+
+                      Includes documentation and visual previews for each
+                      component
 
 
 
 
 
 
+                    es-us: >-
+                      Incluye documentación y vistas previas visuales para cada
+                      componente
+                    fr-ca: >-
+                      Comprend la documentation et les aperçus visuels pour
+                      chaque composant
+                    fr-fr: >-
+                      Comprend la documentation et les aperçus visuels pour
+                      chaque composant
+                    ja-jp: 各コンポーネントのドキュメントとビジュアルプレビューを含みます。
+                    nb-no: >-
+                      Inkluderer dokumentasjon og visuelle forhåndsvisninger for
+                      hver komponent
+                    nl-nl: >-
+                      Inclusief documentatie en visuele previews voor elk
+                      onderdeel
+                    sv-se: >-
+                      Inkluderar dokumentation och visuella förhandsvisningar
+                      för varje komponent
+                    ar-ksa: يتضمن التوثيق والمعاينات المرئية لكل مكون
+                    ar-uae: يتضمن التوثيق والمعاينات المرئية لكل مكون
               _overridability:
                 parameters:
                   $viz: 'yes'
@@ -420,14 +1128,32 @@ composition:
               parameters:
                 value:
                   type: text
-                  value: |+
-                    Faster adoption across teams
+                  locales:
+                    da-dk: Hurtigere adoption på tværs af teams
+                    de-at: Schnellere Einführung in allen Teams
+                    de-de: Schnellere Einführung in allen Teams
+                    en-ca: Faster adoption across teams
+                    en-de: Schnellere Einführung in allen Teams
+                    en-fr: Adoption plus rapide au sein des équipes
+                    en-gb: Quicker adoption across teams
+                    en-nl: Snellere adoptie binnen teams
+                    en-us: |+
+                      Faster adoption across teams
 
 
 
 
 
 
+                    es-us: Adopción más rápida entre equipos
+                    fr-ca: Adoption plus rapide au sein des équipes
+                    fr-fr: Adoption plus rapide au sein des équipes
+                    ja-jp: チーム全体での迅速な導入
+                    nb-no: Raskere adopsjon på tvers av team
+                    nl-nl: Snellere adoptie binnen teams
+                    sv-se: Snabbare anpassning över teamen
+                    ar-ksa: اعتماد أسرع عبر الفرق
+                    ar-uae: اعتماد أسرع عبر الفرق
               _overridability:
                 parameters:
                   $viz: 'yes'
@@ -435,7 +1161,25 @@ composition:
         parameters:
           displayName:
             type: text
-            value: 📦 Storybook & Previews
+            locales:
+              da-dk: 📦 Storybook & Forhåndsvisninger
+              de-at: 📦 Storybook & Vorschauen
+              de-de: 📦 Storybook & Vorschauen
+              en-ca: 📦 Storybook & Previews
+              en-de: 📦 Storybook & Vorschauen
+              en-fr: 📦 Livre d'histoires & Aperçus
+              en-gb: 📦 Storybook & Previews
+              en-nl: 📦 Storybook & Voorbeelden
+              en-us: 📦 Storybook & Previews
+              es-us: 📦 Libro de cuentos y vistas previas
+              fr-ca: 📦 Livre d'histoires et Aperçus
+              fr-fr: 📦 Livre d'histoires & Aperçus
+              ja-jp: 📦 ストーリーブックとプレビュー
+              nb-no: 📦 Storybok & Forhåndsvisninger
+              nl-nl: 📦 Storybook & Voorbeelden
+              sv-se: 📦 Storybook & Förhandsvisningar
+              ar-ksa: 📦 كتاب القصص والمعاينات
+              ar-uae: 📦 كتاب القصص والمعاينات
         _overridability:
           parameters:
             $viz: 'yes'
@@ -450,7 +1194,25 @@ composition:
               parameters:
                 value:
                   type: text
-                  value: Feature / Benefit
+                  locales:
+                    da-dk: Funktion / Fordel
+                    de-at: Merkmal / Vorteil
+                    de-de: Merkmal / Vorteil
+                    en-ca: Feature / Benefit
+                    en-de: Merkmal / Vorteil
+                    en-fr: Caractéristique / Avantage
+                    en-gb: Feature / Benefit
+                    en-nl: Kenmerk / Voordeel
+                    en-us: Feature / Benefit
+                    es-us: Característica / Beneficio
+                    fr-ca: Caractéristique / Avantage
+                    fr-fr: Caractéristique / Avantage
+                    ja-jp: 特徴 / 利点
+                    nb-no: Funksjon / Fordel
+                    nl-nl: Kenmerk / Voordeel
+                    sv-se: Funktion / Fördel
+                    ar-ksa: ميزة / فائدة
+                    ar-uae: ميزة / فائدة
               _overridability:
                 parameters:
                   $viz: 'yes'
@@ -461,7 +1223,31 @@ composition:
               parameters:
                 value:
                   type: text
-                  value: Description
+                  locales:
+                    da-dk: Beskrivelse
+                    de-at: Beschreibung
+                    de-de: Beschreibung
+                    en-ca: Description
+                    en-de: Beschreibung
+                    en-fr: |-
+                      Description
+
+                      Instructions:
+                      - Retournez uniquement le texte traduit.
+                      - N'incluez aucun commentaire supplémentaire.
+                      - Soyez fidèle au sens original.
+                    en-gb: Description
+                    en-nl: Beschrijving
+                    en-us: Description
+                    es-us: Descripción
+                    fr-ca: Description
+                    fr-fr: Description
+                    ja-jp: 説明
+                    nb-no: Beskrivelse
+                    nl-nl: Beschrijving
+                    sv-se: Beskrivning
+                    ar-ksa: الوصف
+                    ar-uae: الوصف
               _overridability:
                 parameters:
                   $viz: 'yes'
@@ -471,7 +1257,25 @@ composition:
               parameters:
                 value:
                   type: text
-                  value: Impact
+                  locales:
+                    da-dk: Indvirkning
+                    de-at: Auswirkung
+                    de-de: Auswirkung
+                    en-ca: Impact
+                    en-de: Auswirkung
+                    en-fr: Impact
+                    en-gb: Impact
+                    en-nl: Impact
+                    en-us: Impact
+                    es-us: Impacto
+                    fr-ca: Impact
+                    fr-fr: Impact
+                    ja-jp: 影響
+                    nb-no: Innvirkning
+                    nl-nl: Impact
+                    sv-se: Påverkan
+                    ar-ksa: تأثير
+                    ar-uae: تأثير
               _overridability:
                 parameters:
                   $viz: 'yes'
@@ -479,7 +1283,25 @@ composition:
         parameters:
           displayName:
             type: text
-            value: Header
+            locales:
+              da-dk: Overskrift
+              de-at: Überschrift
+              de-de: Überschrift
+              en-ca: Header
+              en-de: Überschrift
+              en-fr: En-tête
+              en-gb: Header
+              en-nl: Koptekst
+              en-us: Header
+              es-us: Encabezado
+              fr-ca: En-tête
+              fr-fr: En-tête
+              ja-jp: ヘッダー
+              nb-no: Overskrift
+              nl-nl: Koptekst
+              sv-se: Rubrik
+              ar-ksa: رأس الصفحة
+              ar-uae: رأس الصفحة
         _overridability:
           parameters:
             $viz: 'yes'
@@ -490,10 +1312,27 @@ composition:
       displayName: 'yes'
     hideLockedParameters: true
   _locales:
-    - en
-created: '2025-05-16T11:46:43.352257+00:00'
-modified: '2025-05-22T11:56:18.616781+00:00'
+    - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa
+created: '2025-05-20T11:53:42.810285+00:00'
+modified: '2025-07-16T05:53:59.054071+00:00'
 pattern: true
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1747396671/csk-v-next/baseline/preview-images/table-default.jpg
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/table-default-variant.jpg
 categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9

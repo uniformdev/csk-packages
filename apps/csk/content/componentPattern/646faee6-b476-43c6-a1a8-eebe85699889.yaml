@@ -6,6 +6,30 @@ composition:
     size:
       type: dex-token-selector-parameter
       value: button-medium
+    text:
+      type: text
+      locales:
+        da-dk: Lær mere
+        de-at: Mehr erfahren
+        de-de: Erfahren Sie mehr
+        en-ca: Learn more
+        en-de: Mehr erfahren
+        en-fr: En savoir plus
+        en-gb: Learn more
+        en-nl: Meer informatie
+        en-us: Learn more
+        es-us: Aprende más
+        fr-ca: En savoir plus
+        fr-fr: En savoir plus
+        ja-jp: もっと詳しく知る
+        nb-no: Lær mer
+        nl-nl: Meer informatie
+        sv-se: Läs mer
+        ar-ksa: تعرف على المزيد
+        ar-uae: تعرف على المزيد
+    border:
+      type: dex-token-selector-parameter
+      value: border-button-secondary
     textSize:
       type: dex-segmented-control-parameter
       value:
@@ -14,19 +38,22 @@ composition:
         desktop: sm
     textColor:
       type: dex-color-palette-parameter
-      value: text-secondary
+      value: text-primary
     textWeight:
       type: dex-segmented-control-parameter
-      value: normal
+      value: bold
     buttonColor:
       type: dex-color-palette-parameter
       value: button-secondary
     iconPosition:
       type: dex-segmented-control-parameter
       value: right
+    textTransform:
+      type: dex-segmented-control-parameter
+      value: uppercase
     hoverTextColor:
       type: dex-color-palette-parameter
-      value: text-secondary
+      value: text-primary
     hoverButtonColor:
       type: dex-color-palette-parameter
       value: button-secondary-hover
@@ -35,12 +62,31 @@ composition:
     parameters:
       link: 'yes'
       text: 'yes'
+      fullWidth: 'yes'
+      textColor: 'no'
     hideLockedParameters: true
   _locales:
-    - en
-created: '2025-02-17T15:34:20.528264+00:00'
-modified: '2025-02-17T15:34:20.528264+00:00'
+    - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa
+created: '2025-02-27T10:44:59.993774+00:00'
+modified: '2025-07-16T05:53:59.97839+00:00'
 pattern: true
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/button-secondary.jpg
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/jd-template/secondary-button_jakvxw.jpg
 categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

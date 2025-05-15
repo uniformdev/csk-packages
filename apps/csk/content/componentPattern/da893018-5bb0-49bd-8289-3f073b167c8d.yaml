@@ -1,0 +1,272 @@
+composition:
+  _name: Feature Card
+  _id: da893018-5bb0-49bd-8289-3f073b167c8d
+  type: flex
+  parameters:
+    gap:
+      type: dex-slider-control-parameter
+      value:
+        mobile: '8'
+        tablet: '8'
+        desktop: '8'
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        mobile: {}
+        tablet: {}
+        desktop: {}
+    direction:
+      type: dex-segmented-control-parameter
+      value:
+        mobile: col
+        tablet: col
+        desktop: col
+    alignItems:
+      type: dex-segmented-control-parameter
+      value: {}
+    displayName:
+      type: text
+      locales:
+        da-dk: Kvanteopvarmningsteknologi
+        de-at: Quantenheiztechnologie
+        de-de: Quantenheiztechnologie
+        en-ca: Quantum heating technology
+        en-de: Quantenheizungstechnologie
+        en-fr: Technologie de chauffage quantique
+        en-gb: "Quantum heating \Ltechnology"
+        en-nl: Kwanteverwarmingstechnologie
+        en-us: "Quantum heating \Ltechnology"
+        es-us: Tecnología de calentamiento cuántico
+        fr-ca: Technologie de chauffage quantique
+        fr-fr: Technologie de chauffage quantique
+        ja-jp: 量子加熱技術
+        nb-no: Kvanteoppvarmingsteknologi
+        nl-nl: "Quantum verwarmings\Ltechnologie"
+        sv-se: Kvanteuppvärmningsteknik
+        ar-ksa: تقنية التسخين الكمّي
+        ar-uae: تقنية التسخين الكمي
+    fluidContent:
+      type: checkbox
+      value: true
+    justifyContent:
+      type: dex-segmented-control-parameter
+      value: {}
+  slots:
+    flexItem:
+      - _id: df99286b-2378-4646-a0a3-fc0921dd8940
+        type: image
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 77c10bf4-af55-4c93-9195-96ec9d960894
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 9a4c21ad-d697-4656-a529-ac9e5b87be60
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/4aYOFh2eS-SQvWArUqviZA-quantum-heating-technology.png
+                    type: text
+                  file:
+                    type: file
+                    value: a874af90-6277-49c0-b1e6-397a6d21dab9
+                  size:
+                    value: 773
+                    type: number
+                  title:
+                    type: text
+                    value: quantum-heating-technology.png
+                  width:
+                    value: 60
+                    type: number
+                  height:
+                    value: 47
+                    type: number
+                  mediaType:
+                    value: image/png
+                    type: text
+                _source: uniform-assets
+          width:
+            type: number
+            value: '60'
+          height:
+            type: number
+            value: '50'
+          objectFit:
+            type: dex-segmented-control-parameter
+            value: contain
+        _overridability:
+          parameters:
+            image: 'yes'
+          hideLockedParameters: true
+      - _id: 93a8a0a2-d5df-4e82-97ed-2c1f2f29e907
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: span
+          font:
+            type: dex-token-selector-parameter
+            value: secondary
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: xl
+          text:
+            type: text
+            locales:
+              da-dk: Kvanteopvarmningsteknologi
+              de-at: Quantenheizungstechnologie
+              de-de: Quantenerwärmungstechnologie
+              en-ca: Quantum heating technology
+              en-de: Quantenheizungstechnologie
+              en-fr: Technologie de chauffage quantique
+              en-gb: "Quantum heating \Ltechnology"
+              en-nl: Kwanteverwarmingstechnologie
+              en-us: "Quantum heating \Ltechnology"
+              es-us: Tecnología de calentamiento cuántico
+              fr-ca: Technologie de chauffage quantique
+              fr-fr: Technologie de chauffage quantique
+              ja-jp: 量子加熱技術
+              nb-no: Kvanteoppvarmingsteknologi
+              nl-nl: Kwanteverwarmingstechnologie
+              sv-se: Kvanteuppvärmningsteknik
+              ar-ksa: تقنية التسخين الكمي
+              ar-uae: تقنية التسخين الكمّي
+          color:
+            type: dex-color-palette-parameter
+            value: text-featured
+          weight:
+            type: dex-segmented-control-parameter
+            value: bold
+        _overridability:
+          parameters:
+            text: 'yes'
+          hideLockedParameters: true
+      - _id: 67e790c1-6421-4f15-acd2-40b91f832494
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: span
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: lg
+          text:
+            type: text
+            locales:
+              da-dk: >-
+                Sig farvel til ventetid. EspressoGPT udnytter kvantemekanik til
+                at opvarme dit vand på et brøkdel af et sekund, hvilket sikrer
+                den perfekte temperatur til din espresso hver gang.
+              de-at: >-
+                Verabschieden Sie sich vom Warten. Der EspressoGPT nutzt
+                Quantenmechanik, um Ihr Wasser in einem Bruchteil einer Sekunde
+                zu erhitzen und so jedes Mal die perfekte Temperatur für Ihren
+                Espresso zu gewährleisten.
+              de-de: >-
+                Verabschieden Sie sich vom Warten. Der EspressoGPT nutzt
+                Quantenmechanik, um Ihr Wasser in einem Bruchteil einer Sekunde
+                zu erhitzen und so jedes Mal die perfekte Temperatur für Ihren
+                Espresso zu gewährleisten.
+              en-ca: >-
+                Say goodbye to waiting. The EspressoGPT harnesses quantum
+                mechanics to heat your water in a fraction of a second, ensuring
+                the perfect temperature for your espresso every time.
+              en-de: >-
+                Verabschieden Sie sich vom Warten. Der EspressoGPT nutzt die
+                Quantenmechanik, um Ihr Wasser in einem Bruchteil einer Sekunde
+                zu erhitzen und so jedes Mal die perfekte Temperatur für Ihren
+                Espresso zu gewährleisten.
+              en-fr: >-
+                Dites adieu à l'attente. L'EspressoGPT exploite la mécanique
+                quantique pour chauffer votre eau en une fraction de seconde,
+                garantissant la température parfaite pour votre espresso à
+                chaque fois.
+              en-gb: >-
+                Say goodbye to waiting. The EspressoGPT harnesses quantum
+                mechanics to heat your water in a fraction of a second, ensuring
+                the perfect temperature for your espresso every time.
+              en-nl: >-
+                Zeg vaarwel tegen wachten. De EspressoGPT benut quantummechanica
+                om je water in een fractie van een seconde te verwarmen, wat
+                elke keer de perfecte temperatuur voor je espresso garandeert.
+              en-us: >-
+                Say goodbye to waiting. The EspressoGPT harnesses quantum
+                mechanics to heat your water in a fraction of a second, ensuring
+                the perfect temperature for your espresso every time.
+              es-us: >-
+                Despídete de la espera. El EspressoGPT aprovecha la mecánica
+                cuántica para calentar tu agua en una fracción de segundo,
+                asegurando la temperatura perfecta para tu espresso cada vez.
+              fr-ca: >-
+                Dites adieu à l'attente. L'EspressoGPT utilise la mécanique
+                quantique pour chauffer votre eau en une fraction de seconde,
+                garantissant la température parfaite pour votre espresso à
+                chaque fois.
+              fr-fr: >-
+                Dites adieu à l'attente. L'EspressoGPT utilise la mécanique
+                quantique pour chauffer votre eau en une fraction de seconde,
+                garantissant la température parfaite pour votre espresso à
+                chaque fois.
+              ja-jp: 待ち時間にさよならを。EspressoGPTは量子力学を利用して、瞬時にお湯を加熱し、毎回完璧な温度でエスプレッソを提供します。
+              nb-no: >-
+                Si farvel til venting. EspressoGPT utnytter kvantemekanikk for å
+                varme opp vannet ditt på brøkdelen av et sekund, og sikrer
+                perfekt temperatur for espressoen din hver gang.
+              nl-nl: >-
+                Zeg vaarwel tegen wachten. De EspressoGPT benut quantummechanica
+                om je water in een fractie van een seconde te verwarmen, wat
+                elke keer de perfecte temperatuur voor je espresso garandeert.
+              sv-se: >-
+                Säg adjö till väntan. EspressoGPT utnyttjar kvantmekanik för att
+                värma ditt vatten på bråkdelen av en sekund, vilket säkerställer
+                den perfekta temperaturen för din espresso varje gång.
+              ar-ksa: >-
+                وداعًا للانتظار. يستخدم EspressoGPT ميكانيكا الكم لتسخين الماء
+                في جزء من الثانية، مما يضمن درجة الحرارة المثالية للإسبريسو
+                الخاص بك في كل مرة.
+              ar-uae: >-
+                قل وداعاً للانتظار. يستفيد EspressoGPT من ميكانيكا الكم لتسخين
+                الماء في جزء من الثانية، مما يضمن درجة الحرارة المثالية
+                للإسبريسو الخاص بك في كل مرة.
+          color:
+            type: dex-color-palette-parameter
+            value: text-secondary
+          weight:
+            type: dex-segmented-control-parameter
+            value: normal
+        _overridability:
+          parameters:
+            text: 'yes'
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      displayName: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa
+created: '2025-05-22T08:57:05.289074+00:00'
+modified: '2025-07-16T05:54:03.332299+00:00'
+pattern: true
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9

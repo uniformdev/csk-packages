@@ -1,0 +1,704 @@
+composition:
+  _name: Policy Card
+  _id: 27a48f0e-04a5-423e-95e4-d73bbed53e87
+  type: grid
+  parameters:
+    gapX:
+      type: dex-slider-control-parameter
+      value:
+        mobile: '4'
+        tablet: '16'
+        desktop: '16'
+    gapY:
+      type: dex-slider-control-parameter
+      value:
+        mobile: '4'
+        tablet: '4'
+        desktop: '4'
+    displayName:
+      type: text
+      locales:
+        da-dk: Politikkort
+        de-at: Richtlinienkarte
+        de-de: Policenkarte
+        en-ca: Policy Card
+        en-de: Richtlinienkarte
+        en-fr: Carte de politique
+        en-gb: Policy Card
+        en-nl: Beleidskaart
+        en-us: Policy Card
+        es-us: Tarjeta de Póliza
+        fr-ca: Carte de politique
+        fr-fr: Carte de politique
+        ja-jp: ポリシーカード
+        nb-no: Policy-kort
+        nl-nl: Beleidskaart
+        sv-se: Policykort
+        ar-ksa: بطاقة السياسة
+        ar-uae: بطاقة السياسة
+    columnsCount:
+      type: dex-slider-control-parameter
+      value:
+        mobile: '1'
+        tablet: '1'
+        desktop: '12'
+  slots:
+    gridInner:
+      - _id: 276b242b-8928-4294-a2bc-10effc160ff6
+        type: gridItem
+        slots:
+          inner:
+            - _id: 2e915f91-28e7-4fe1-9ee9-ee27ec76fdf4
+              type: flex
+              slots:
+                flexItem:
+                  - _id: a0e4a12e-0854-4bf8-903b-4bff1e9aa79a
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: span
+                      size:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: 2xl
+                          tablet: 2xl
+                          desktop: 2xl
+                      text:
+                        type: text
+                        locales:
+                          da-dk: Hjælp din maskine med at blive bedre hver dag
+                          de-at: >-
+                            Helfen Sie Ihrer Maschine, jeden Tag besser zu
+                            werden.
+                          de-de: >-
+                            Helfen Sie Ihrer Maschine, jeden Tag besser zu
+                            werden.
+                          en-ca: Help your machine to be better, every day
+                          en-de: >-
+                            Helfen Sie Ihrer Maschine, jeden Tag besser zu
+                            werden.
+                          en-fr: Aidez votre machine à s'améliorer chaque jour
+                          en-gb: Help your machine to be better every day
+                          en-nl: Help uw machine elke dag beter te worden
+                          en-us: Help your machine to be better, every day
+                          es-us: Ayuda a tu máquina a ser mejor, cada día
+                          fr-ca: Aidez votre machine à s'améliorer chaque jour
+                          fr-fr: Aidez votre machine à s'améliorer, chaque jour
+                          ja-jp: 毎日、あなたの機械をより良くする手助けをしましょう。
+                          nb-no: Hjelp maskinen din til å bli bedre, hver dag
+                          nl-nl: Help uw machine elke dag beter te worden
+                          sv-se: Hjälp din maskin att bli bättre, varje dag
+                          ar-ksa: ساعد جهازك ليكون أفضل، كل يوم
+                          ar-uae: ساعد جهازك ليكون أفضل، كل يوم
+                      color:
+                        type: dex-color-palette-parameter
+                        value: text-primary
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: bold
+                    _overridability:
+                      hideLockedParameters: true
+                  - _id: a3dc79a1-11d8-4236-877c-f65d716f6d0a
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: span
+                      size:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: base
+                          tablet: base
+                          desktop: base
+                      text:
+                        type: text
+                        locales:
+                          da-dk: >-
+                            Ved at acceptere vilkårene og betingelserne giver du
+                            din kaffemaskine mulighed for at oprette forbindelse
+                            til JavaDrip Optimization Cloud, hvilket giver os
+                            mulighed for at give dig den mest relevante
+                            information her baseret på din maskinbrug, vil
+                            hjælpe vores kundeservice med at hjælpe dig
+                            hurtigere, og du får kontinuerlig værdi fra dette
+                            køb.
+                          de-at: >-
+                            Indem Sie die Allgemeinen Geschäftsbedingungen
+                            akzeptieren, ermöglichen Sie Ihrer Kaffeemaschine
+                            die Verbindung mit der JavaDrip Optimization Cloud,
+                            was es uns ermöglicht, Ihnen hier die relevantesten
+                            Informationen basierend auf der Nutzung Ihrer
+                            Maschine bereitzustellen, unserem Kundenservice zu
+                            helfen, Ihnen schneller zu helfen, und Ihnen
+                            kontinuierlichen Nutzen aus diesem Kauf zu bieten.
+                          de-de: >-
+                            Indem Sie die Allgemeinen Geschäftsbedingungen
+                            akzeptieren, ermöglichen Sie Ihrer Kaffeemaschine
+                            die Verbindung mit der JavaDrip Optimization Cloud.
+                            Dadurch können wir Ihnen basierend auf der Nutzung
+                            Ihrer Maschine die relevantesten Informationen
+                            bereitstellen, unserem Kundenservice helfen, Ihnen
+                            schneller zu helfen, und Ihnen kontinuierlichen
+                            Nutzen aus diesem Kauf bieten.
+                          en-ca: >-
+                            By accepting the terms and conditions, you enable
+                            your coffee machine to connect with JavaDrip
+                            Optimization Cloud, which allows us to provide you
+                            with the most relevant information here based on
+                            your machine use, will help our customer service to
+                            help you faster, and you getting continuous value
+                            from this purchase.
+                          en-de: >-
+                            Indem Sie die Allgemeinen Geschäftsbedingungen
+                            akzeptieren, ermöglichen Sie Ihrer Kaffeemaschine,
+                            eine Verbindung mit der JavaDrip Optimization Cloud
+                            herzustellen, die es uns ermöglicht, Ihnen basierend
+                            auf der Nutzung Ihrer Maschine die relevantesten
+                            Informationen bereitzustellen, unserem Kundenservice
+                            zu helfen, Ihnen schneller zu helfen, und Ihnen
+                            kontinuierlichen Nutzen aus diesem Kauf zu bieten.
+                          en-fr: >-
+                            En acceptant les termes et conditions, vous
+                            permettez à votre machine à café de se connecter au
+                            JavaDrip Optimization Cloud, ce qui nous permet de
+                            vous fournir les informations les plus pertinentes
+                            ici en fonction de l'utilisation de votre machine,
+                            aidera notre service client à vous aider plus
+                            rapidement, et vous permettra de tirer une valeur
+                            continue de cet achat.
+                          en-gb: >-
+                            By accepting the terms and conditions, you enable
+                            your coffee machine to connect with JavaDrip
+                            Optimisation Cloud, which allows us to provide you
+                            with the most relevant information here based on
+                            your machine use, will help our customer service to
+                            assist you faster, and you getting continuous value
+                            from this purchase.
+                          en-nl: >-
+                            Door de voorwaarden te accepteren, stelt u uw
+                            koffiemachine in staat om verbinding te maken met
+                            JavaDrip Optimization Cloud, waardoor we u de meest
+                            relevante informatie kunnen bieden op basis van uw
+                            machinegebruik, onze klantenservice u sneller kan
+                            helpen, en u continu waarde haalt uit deze aankoop.
+                          en-us: >-
+                            By accepting the terms and conditions, you enable
+                            your coffee machine to connect with JavaDrip
+                            Optimization Cloud, which allows us to provide you
+                            with the most relevant information here based on
+                            your machine use, will help our customer service to
+                            help you faster, and you getting continuous value
+                            from this purchase.
+                          es-us: >-
+                            Al aceptar los términos y condiciones, permite que
+                            su máquina de café se conecte con JavaDrip
+                            Optimization Cloud, lo que nos permite
+                            proporcionarle la información más relevante aquí
+                            basada en el uso de su máquina, ayudará a nuestro
+                            servicio al cliente a ayudarle más rápido, y usted
+                            obtendrá un valor continuo de esta compra.
+                          fr-ca: >-
+                            En acceptant les termes et conditions, vous
+                            permettez à votre machine à café de se connecter au
+                            JavaDrip Optimization Cloud, ce qui nous permet de
+                            vous fournir les informations les plus pertinentes
+                            ici en fonction de l'utilisation de votre machine,
+                            aidera notre service client à vous aider plus
+                            rapidement, et vous permettra de tirer une valeur
+                            continue de cet achat.
+                          fr-fr: >-
+                            En acceptant les termes et conditions, vous
+                            permettez à votre machine à café de se connecter au
+                            JavaDrip Optimization Cloud, ce qui nous permet de
+                            vous fournir les informations les plus pertinentes
+                            ici en fonction de l'utilisation de votre machine,
+                            aidera notre service client à vous aider plus
+                            rapidement, et vous permettra de tirer une valeur
+                            continue de cet achat.
+                          ja-jp: >-
+                            利用規約に同意することにより、コーヒーマシンがJavaDrip Optimization
+                            Cloudに接続され、マシンの使用状況に基づいて最も関連性の高い情報を提供できるようになり、カスタマーサービスが迅速に対応できるようになり、この購入から継続的な価値を得ることができます。
+                          nb-no: >-
+                            Ved å akseptere vilkårene og betingelsene, aktiverer
+                            du kaffemaskinen din til å koble seg til JavaDrip
+                            Optimization Cloud, som gjør det mulig for oss å gi
+                            deg den mest relevante informasjonen her basert på
+                            din maskinbruk, vil hjelpe vår kundeservice til å
+                            hjelpe deg raskere, og du får kontinuerlig verdi fra
+                            dette kjøpet.
+                          nl-nl: >-
+                            Door de voorwaarden te accepteren, stelt u uw
+                            koffiemachine in staat om verbinding te maken met
+                            JavaDrip Optimization Cloud, waardoor we u de meest
+                            relevante informatie kunnen bieden op basis van uw
+                            machinegebruik, onze klantenservice u sneller kan
+                            helpen, en u continu waarde haalt uit deze aankoop.
+                          sv-se: >-
+                            Genom att acceptera villkoren möjliggör du för din
+                            kaffemaskin att ansluta till JavaDrip Optimization
+                            Cloud, vilket gör att vi kan ge dig den mest
+                            relevanta informationen baserat på din
+                            maskinanvändning, hjälper vår kundservice att hjälpa
+                            dig snabbare, och du får kontinuerligt värde från
+                            detta köp.
+                          ar-ksa: >-
+                            بقبولك للشروط والأحكام، فإنك تُمكّن ماكينة القهوة
+                            الخاصة بك من الاتصال بسحابة تحسين JavaDrip، مما يتيح
+                            لنا تزويدك بالمعلومات الأكثر صلة هنا بناءً على
+                            استخدامك للماكينة، ويساعد خدمة العملاء لدينا على
+                            مساعدتك بشكل أسرع، ويضمن لك الحصول على قيمة مستمرة
+                            من هذا الشراء.
+                          ar-uae: >-
+                            بقبولك للشروط والأحكام، تقوم بتمكين ماكينة القهوة
+                            الخاصة بك من الاتصال بسحابة تحسين JavaDrip، مما يسمح
+                            لنا بتزويدك بالمعلومات الأكثر صلة هنا بناءً على
+                            استخدامك للماكينة، سيساعد خدمة العملاء لدينا على
+                            مساعدتك بشكل أسرع، وستحصل على قيمة مستمرة من هذا
+                            الشراء.
+                      color:
+                        type: dex-color-palette-parameter
+                        value: text-primary
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: normal
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                gap:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: '4'
+                    tablet: '4'
+                    desktop: '4'
+                spacing:
+                  type: dex-space-control-parameter
+                  value:
+                    mobile: {}
+                    tablet: {}
+                    desktop: {}
+                direction:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: col
+                    tablet: col
+                    desktop: col
+                alignItems:
+                  type: dex-segmented-control-parameter
+                  value: {}
+                displayName:
+                  type: text
+                  locales:
+                    da-dk: Indhold
+                    de-at: Inhalt
+                    de-de: Inhalt
+                    en-ca: Content
+                    en-de: Inhalt
+                    en-fr: Contenu
+                    en-gb: Content
+                    en-nl: Inhoud
+                    en-us: Content
+                    es-us: Contenido
+                    fr-ca: Contenu
+                    fr-fr: Contenu
+                    ja-jp: コンテンツ
+                    nb-no: Innhold
+                    nl-nl: Inhoud
+                    sv-se: Innehåll
+                    ar-ksa: المحتوى
+                    ar-uae: المحتوى
+                fluidContent:
+                  type: checkbox
+                  value: true
+                justifyContent:
+                  type: dex-segmented-control-parameter
+                  value: {}
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          rowSpan:
+            type: dex-slider-control-parameter
+            value: {}
+          rowStart:
+            type: dex-slider-control-parameter
+            value:
+              mobile: ''
+              tablet: ''
+              desktop: ''
+          columnSpan:
+            type: dex-slider-control-parameter
+            value:
+              desktop: span-8
+          columnStart:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '1'
+              tablet: '1'
+              desktop: '1'
+          displayName:
+            type: text
+            locales:
+              da-dk: Venstre indhold
+              de-at: Linker Inhalt
+              de-de: Linker Inhalt
+              en-ca: Left Content
+              en-de: Linker Inhalt
+              en-fr: Contenu de gauche
+              en-gb: Left Content
+              en-nl: Linker Inhoud
+              en-us: Left Content
+              es-us: Contenido Izquierdo
+              fr-ca: Contenu de gauche
+              fr-fr: Contenu de gauche
+              ja-jp: 左のコンテンツ
+              nb-no: Venstre innhold
+              nl-nl: Linker inhoud
+              sv-se: Vänsterinnehåll
+              ar-ksa: المحتوى الأيسر
+              ar-uae: المحتوى الأيسر
+        _overridability:
+          hideLockedParameters: true
+      - _id: 7d5e1978-8098-49fb-a9f5-cb8b0ee428fd
+        type: gridItem
+        slots:
+          inner:
+            - _id: a24c0836-2c83-43c7-8535-82e1ea2132ba
+              type: flex
+              slots:
+                flexItem:
+                  - _id: 107c63e3-db3d-48db-9cce-6ec7021ee372
+                    type: flex
+                    slots:
+                      flexItem:
+                        - _id: 0c3ca61d-740f-4f99-a1d1-8aed09e57a41
+                          type: button
+                          _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
+                        - _id: abe5ce93-d5ca-4881-a9fd-d5c9e8a3edfc
+                          type: button
+                          _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
+                    parameters:
+                      gap:
+                        type: dex-slider-control-parameter
+                        value:
+                          mobile: '8'
+                          tablet: '8'
+                          desktop: '8'
+                      spacing:
+                        type: dex-space-control-parameter
+                        value:
+                          mobile: {}
+                          tablet: {}
+                          desktop: {}
+                      direction:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: row
+                          tablet: row
+                          desktop: row
+                      alignItems:
+                        type: dex-segmented-control-parameter
+                        value: {}
+                      displayName:
+                        type: text
+                        locales:
+                          da-dk: Knapper
+                          de-at: Tasten
+                          de-de: Knöpfe
+                          en-ca: Buttons
+                          en-de: Tasten
+                          en-fr: Boutons
+                          en-gb: Buttons
+                          en-nl: Knoppen
+                          en-us: Buttons
+                          es-us: Botones
+                          fr-ca: Boutons
+                          fr-fr: Boutons
+                          ja-jp: ボタン
+                          nb-no: Knapper
+                          nl-nl: Knoppen
+                          sv-se: Knappar
+                          ar-ksa: أزرار
+                          ar-uae: أزرار
+                      fluidContent:
+                        type: checkbox
+                        value: true
+                      justifyContent:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: center
+                          tablet: end
+                          desktop: end
+                    _overridability:
+                      hideLockedParameters: true
+                  - _id: f6d2e0a5-f038-473c-a9b1-f861a8cbdf87
+                    type: flex
+                    slots:
+                      flexItem:
+                        - _id: efcc3bd5-6d2f-41a0-a152-65d748d775be
+                          type: button
+                          variant: link
+                          parameters:
+                            text:
+                              type: text
+                              locales:
+                                da-dk: Privatliv og vilkår og betingelser
+                                de-at: >-
+                                  Datenschutz und Allgemeine
+                                  Geschäftsbedingungen
+                                de-de: >-
+                                  Datenschutz und Allgemeine
+                                  Geschäftsbedingungen
+                                en-ca: Privacy and Terms and Conditions
+                                en-de: >-
+                                  Datenschutz und Allgemeine
+                                  Geschäftsbedingungen
+                                en-fr: Confidentialité et Conditions Générales
+                                en-gb: Privacy and Terms and Conditions
+                                en-nl: Privacy en Algemene Voorwaarden
+                                en-us: Privacy and Terms and Conditions
+                                es-us: Privacidad y Términos y Condiciones
+                                fr-ca: Confidentialité et Conditions générales
+                                fr-fr: Confidentialité et Conditions Générales
+                                ja-jp: プライバシーおよび利用規約
+                                nb-no: Personvern og vilkår og betingelser
+                                nl-nl: Privacy en Algemene Voorwaarden
+                                sv-se: Sekretess och Villkor och Bestämmelser
+                                ar-ksa: الخصوصية والشروط والأحكام
+                                ar-uae: الخصوصية والشروط والأحكام
+                            textSize:
+                              type: dex-segmented-control-parameter
+                              value:
+                                mobile: sm
+                                tablet: sm
+                                desktop: base
+                            textColor:
+                              type: dex-color-palette-parameter
+                              value: text-primary
+                            textWeight:
+                              type: dex-segmented-control-parameter
+                              value: normal
+                          _overridability:
+                            hideLockedParameters: true
+                    parameters:
+                      gap:
+                        type: dex-slider-control-parameter
+                        value: {}
+                      spacing:
+                        type: dex-space-control-parameter
+                        value:
+                          mobile: {}
+                          tablet: {}
+                          desktop: {}
+                      direction:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: row
+                          tablet: row
+                          desktop: row
+                      alignItems:
+                        type: dex-segmented-control-parameter
+                        value: {}
+                      displayName:
+                        type: text
+                        locales:
+                          da-dk: Privatlivs- og vilkårslink
+                          de-at: Datenschutz- und Nutzungsbedingungen-Link
+                          de-de: Datenschutz- und Nutzungsbedingungen-Link
+                          en-ca: Privacy and Terms Link
+                          en-de: Datenschutz- und Nutzungsbedingungen-Link
+                          en-fr: Lien de confidentialité et conditions
+                          en-gb: Privacy and Terms Link
+                          en-nl: Privacy- en Voorwaardenlink
+                          en-us: Privacy and Terms Link
+                          es-us: Enlace de Privacidad y Términos
+                          fr-ca: >-
+                            Lien vers la confidentialité et les conditions
+                            d'utilisation
+                          fr-fr: Lien vers la confidentialité et les conditions
+                          ja-jp: プライバシーと利用規約リンク
+                          nb-no: Personvern og vilkår lenke
+                          nl-nl: Privacy- en Voorwaardenlink
+                          sv-se: Länk till sekretess och villkor
+                          ar-ksa: رابط الخصوصية والشروط
+                          ar-uae: رابط الخصوصية والشروط
+                      fluidContent:
+                        type: checkbox
+                        value: true
+                      justifyContent:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: end
+                          tablet: end
+                          desktop: end
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                gap:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: '8'
+                    tablet: '8'
+                    desktop: '8'
+                spacing:
+                  type: dex-space-control-parameter
+                  value:
+                    mobile: {}
+                    tablet: {}
+                    desktop: {}
+                direction:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: col
+                    tablet: col
+                    desktop: col
+                alignItems:
+                  type: dex-segmented-control-parameter
+                  value: {}
+                displayName:
+                  type: text
+                  locales:
+                    da-dk: Indhold
+                    de-at: Inhalt
+                    de-de: Inhalt
+                    en-ca: Content
+                    en-de: Inhalt
+                    en-fr: Contenu
+                    en-gb: Content
+                    en-nl: Inhoud
+                    en-us: Content
+                    es-us: Contenido
+                    fr-ca: Contenu
+                    fr-fr: Contenu
+                    ja-jp: コンテンツ
+                    nb-no: Innhold
+                    nl-nl: Inhoud
+                    sv-se: Innehåll
+                    ar-ksa: المحتوى
+                    ar-uae: المحتوى
+                fluidContent:
+                  type: checkbox
+                  value: true
+                justifyContent:
+                  type: dex-segmented-control-parameter
+                  value: {}
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          rowSpan:
+            type: dex-slider-control-parameter
+            value: {}
+          rowStart:
+            type: dex-slider-control-parameter
+            value:
+              mobile: ''
+              tablet: ''
+              desktop: ''
+          columnSpan:
+            type: dex-slider-control-parameter
+            value:
+              desktop: span-4
+          columnStart:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '1'
+              tablet: '1'
+              desktop: '9'
+          displayName:
+            type: text
+            locales:
+              da-dk: Højre indhold
+              de-at: Richtiger Inhalt
+              de-de: Rechter Inhalt
+              en-ca: Right Content
+              en-de: Rechter Inhalt
+              en-fr: Contenu correct
+              en-gb: Right Content
+              en-nl: Juist Inhoud
+              en-us: Right Content
+              es-us: Contenido Correcto
+              fr-ca: Contenu Correct
+              fr-fr: Contenu Correct
+              ja-jp: 右のコンテンツ
+              nb-no: Riktig innhold
+              nl-nl: Juiste Inhoud
+              sv-se: Rätt innehåll
+              ar-ksa: المحتوى الصحيح
+              ar-uae: المحتوى الصحيح
+        _overridability:
+          hideLockedParameters: true
+  _overrides:
+    0c3ca61d-740f-4f99-a1d1-8aed09e57a41:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: JEG ACCEPTERER
+            de-at: ICH AKZEPTIERE
+            de-de: ICH AKZEPTIERE
+            en-ca: I ACCEPT
+            en-de: ICH AKZEPTIERE
+            en-fr: J'ACCEPTE
+            en-gb: I ACCEPT
+            en-nl: IK ACCEPTEER
+            en-us: I ACCEPT
+            es-us: ACEPTO
+            fr-ca: J'ACCEPTE
+            fr-fr: J'ACCEPTE
+            ja-jp: 承諾します
+            nb-no: JEG AKSEPTERER
+            nl-nl: IK ACCEPTEER
+            sv-se: JAG ACCEPTERAR
+            ar-ksa: أقبل
+            ar-uae: أقبل
+    abe5ce93-d5ca-4881-a9fd-d5c9e8a3edfc:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: ACCEPTER IKKE
+            de-at: NICHT AKZEPTIEREN
+            de-de: NICHT AKZEPTIEREN
+            en-ca: DO NOT ACCEPT
+            en-de: NICHT AKZEPTIEREN
+            en-fr: N'ACCEPTEZ PAS
+            en-gb: DO NOT ACCEPT
+            en-nl: NIET ACCEPTEREN
+            en-us: DO NOT ACCEPT
+            es-us: NO ACEPTAR
+            fr-ca: NE PAS ACCEPTER
+            fr-fr: N'ACCEPTEZ PAS
+            ja-jp: 受け入れないでください
+            nb-no: IKKE AKSEPTER
+            nl-nl: NIET ACCEPTEREN
+            sv-se: ACCEPTERA INTE
+            ar-ksa: لا تقبل
+            ar-uae: لا تقبل
+  _overridability:
+    parameters:
+      fluidContent: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa
+created: '2025-03-18T13:02:27.203236+00:00'
+modified: '2025-07-16T05:53:57.234851+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/policy-card.jpg
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9

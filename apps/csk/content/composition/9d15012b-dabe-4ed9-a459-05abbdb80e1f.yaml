@@ -1,0 +1,1444 @@
+composition:
+  _name: Summer Campaign
+  _id: 9d15012b-dabe-4ed9-a459-05abbdb80e1f
+  _slug: summer-campaign
+  type: page
+  _overrides:
+    4edbd4b0-a384-47be-9aa2-5bfaa7f77fce:
+      parameters:
+        backgroundColor:
+          type: dex-color-palette-parameter
+          value: general-color-6
+      dataResources:
+        Product multiple manual select Content:
+          type: productMultipleManualSelect
+          variables:
+            locale: ${locale}
+            entryIds: >-
+              2f042be4-1e8b-4fae-be0e-a5294b89d8dd,f7e77f37-2646-410e-8596-6ae16379d5d9,ee97ebf7-c55c-49a6-9aa4-752116ee23ff
+    9d15012b-dabe-4ed9-a459-05abbdb80e1f:
+      parameters:
+        pageTitle:
+          type: text
+          locales:
+            da-dk: 'Java Drip: Sommer 2025 Kaffeglæder & Tips'
+            de-at: 'Java Drip: Sommer 2025 Kaffee-Genüsse & Tipps'
+            de-de: 'Java Drip: Sommer 2025 Kaffee-Genüsse & Tipps'
+            en-ca: 'Java Drip: Summer 2025 Coffee Delights & Tips'
+            en-de: 'Java Drip: Sommer 2025 Kaffee-Genüsse & Tipps'
+            en-fr: 'Java Drip : Délices et conseils café de l''été 2025'
+            en-gb: 'Java Drip: Summer 2025 Coffee Delights & Tips'
+            en-nl: 'Java Drip: Zomerse Koffiegenieten & Tips 2025'
+            en-us: 'Java Drip: Summer 2025 Coffee Delights & Tips'
+            es-us: 'Java Drip: Delicias y Consejos de Café para el Verano 2025'
+            fr-ca: 'Java Drip : Délices et conseils café pour l''été 2025'
+            fr-fr: 'Java Drip : Délices et conseils café pour l''été 2025'
+            ja-jp: ジャバドリップ：2025年夏のコーヒーディライト＆ヒント
+            nb-no: 'Java Drip: Sommeren 2025 Kaffegleder & Tips'
+            nl-nl: 'Java Drip: Zomer 2025 Koffiegenot & Tips'
+            sv-se: 'Java Drip: Sommar 2025 Kaffeglädje & Tips'
+            ar-ksa: 'قطرات جافا: متع القهوة ونصائح صيف 2025'
+            ar-uae: 'جافا دريب: متع القهوة ونصائح صيف 2025'
+        twitterImage:
+          type: asset
+          value:
+            - _id: b13023ca-4f17-4b8d-b96a-5058a5bd791b
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: 75ebf11f-2f1d-4a4e-9062-cca926fe65c1
+                url:
+                  value: >-
+                    https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/sOAxssUvS-Onko8YWWGp8Q-Beans_BG.png
+                  type: text
+                file:
+                  type: file
+                  value: b76064f7-04ff-4299-bdc1-65cc1d9f67b9
+                size:
+                  value: 3551148
+                  type: number
+                title:
+                  type: text
+                  value: Beans_BG.png
+                width:
+                  value: 1536
+                  type: number
+                height:
+                  value: 1024
+                  type: number
+                mediaType:
+                  value: image/png
+                  type: text
+              _source: uniform-assets
+        openGraphImage:
+          type: asset
+          value:
+            - _id: 853be2ab-0714-4949-84b9-b7be7ee5d396
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: 75ebf11f-2f1d-4a4e-9062-cca926fe65c1
+                url:
+                  value: >-
+                    https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/sOAxssUvS-Onko8YWWGp8Q-Beans_BG.png
+                  type: text
+                file:
+                  type: file
+                  value: b76064f7-04ff-4299-bdc1-65cc1d9f67b9
+                size:
+                  value: 3551148
+                  type: number
+                title:
+                  type: text
+                  value: Beans_BG.png
+                width:
+                  value: 1536
+                  type: number
+                height:
+                  value: 1024
+                  type: number
+                mediaType:
+                  value: image/png
+                  type: text
+              _source: uniform-assets
+        openGraphTitle:
+          type: text
+          locales:
+            da-dk: Udforsk Sommer 2025 Kaffeglæder
+            de-at: Entdecken Sie die Kaffee-Genüsse des Sommers 2025
+            de-de: Entdecken Sie die Kaffee-Genüsse des Sommers 2025
+            en-ca: Explore Summer 2025 Coffee Delights
+            en-de: Entdecken Sie die Kaffee-Genüsse des Sommers 2025
+            en-fr: Découvrez les Délices de Café de l'Été 2025
+            en-gb: Explore Summer 2025 Coffee Delights
+            en-nl: Ontdek de Koffiegenieten van Zomer 2025
+            en-us: Explore Summer 2025 Coffee Delights
+            es-us: Explora las Delicias del Café del Verano 2025
+            fr-ca: Découvrez les Délices de Café de l'Été 2025
+            fr-fr: Découvrez les Délices du Café de l'Été 2025
+            ja-jp: 2025年夏のコーヒーデライトを探求する
+            nb-no: Utforsk sommerens kaffegleder 2025
+            nl-nl: Ontdek de Koffiegenieten van Zomer 2025
+            sv-se: Utforska Sommaren 2025 Kaffe Delikatesser
+            ar-ksa: استكشف متع القهوة لصيف 2025
+            ar-uae: اكتشف متع القهوة لصيف 2025
+        pageDescription:
+          type: text
+          locales:
+            da-dk: >-
+              Opdag vores kuraterede sommerprodukter og ekspertguider til
+              kaffebrygning. Perfekt til kaffeentusiaster og sommeroplevelser!
+            de-at: >-
+              Entdecken Sie unsere kuratierten Sommerprodukte und
+              Expertenanleitungen zur Kaffeezubereitung. Perfekt für
+              Kaffeeliebhaber und Sommerabenteuer!
+            de-de: >-
+              Entdecken Sie unsere kuratierten Sommerprodukte und
+              Expertenanleitungen zur Kaffeezubereitung. Perfekt für
+              Kaffeeliebhaber und Sommerabenteuer!
+            en-ca: >-
+              Discover our curated summer products and expert coffee-making
+              guides. Perfect for coffee enthusiasts and summer adventures!
+            en-de: >-
+              Entdecken Sie unsere kuratierten Sommerprodukte und
+              Expertenanleitungen zur Kaffeezubereitung. Perfekt für
+              Kaffeeliebhaber und Sommerabenteuer!
+            en-fr: >-
+              Découvrez nos produits d'été sélectionnés avec soin et nos guides
+              d'experts pour préparer le café. Parfait pour les amateurs de café
+              et les aventures estivales !
+            en-gb: >-
+              Discover our curated summer products and expert coffee-making
+              guides. Perfect for coffee enthusiasts and summer adventures!
+            en-nl: >-
+              Ontdek onze zorgvuldig geselecteerde zomerproducten en deskundige
+              gidsen voor het maken van koffie. Perfect voor koffieliefhebbers
+              en zomerse avonturen!
+            en-us: >-
+              Discover our curated summer products and expert coffee-making
+              guides. Perfect for coffee enthusiasts and summer adventures!
+            es-us: >-
+              Descubre nuestros productos de verano seleccionados y guías
+              expertas para hacer café. ¡Perfecto para los entusiastas del café
+              y las aventuras de verano!
+            fr-ca: >-
+              Découvrez nos produits estivaux sélectionnés et nos guides
+              d'experts pour préparer le café. Parfait pour les amateurs de café
+              et les aventures estivales !
+            fr-fr: >-
+              Découvrez nos produits d'été sélectionnés avec soin et nos guides
+              d'experts pour préparer le café. Parfait pour les amateurs de café
+              et les aventures estivales !
+            ja-jp: 厳選された夏の製品と専門的なコーヒー作りのガイドを発見してください。コーヒー愛好家や夏の冒険に最適です！
+            nb-no: >-
+              Oppdag våre nøye utvalgte sommerprodukter og ekspertguider for
+              kaffebrygging. Perfekt for kaffeentusiaster og sommeropplevelser!
+            nl-nl: >-
+              Ontdek onze zorgvuldig samengestelde zomerproducten en deskundige
+              koffiebereidingsgidsen. Perfect voor koffieliefhebbers en zomerse
+              avonturen!
+            sv-se: >-
+              Upptäck våra noggrant utvalda sommarprodukter och
+              experthandledningar för kaffetillverkning. Perfekt för
+              kaffeentusiaster och sommaräventyr!
+            ar-ksa: >-
+              اكتشف منتجاتنا الصيفية المختارة وأدلة إعداد القهوة من الخبراء.
+              مثالية لعشاق القهوة ومغامرات الصيف!
+            ar-uae: >-
+              اكتشف منتجاتنا الصيفية المختارة وأدلة تحضير القهوة من الخبراء.
+              مثالية لعشاق القهوة ومغامرات الصيف!
+        openGraphDescription:
+          type: text
+          locales:
+            da-dk: >-
+              Fejr sommeren 2025 med vores eksklusive kaffekollektion og tips
+              til at lave den perfekte espresso.
+            de-at: >-
+              Feiern Sie den Sommer 2025 mit unserer exklusiven Kaffeekollektion
+              und Tipps für die Zubereitung des perfekten Espressos.
+            de-de: >-
+              Feiern Sie den Sommer 2025 mit unserer exklusiven Kaffeekollektion
+              und Tipps zur Zubereitung des perfekten Espressos.
+            en-ca: >-
+              Celebrate Summer 2025 with our exclusive coffee collection and
+              tips for crafting the perfect espresso.
+            en-de: >-
+              Feiern Sie den Sommer 2025 mit unserer exklusiven Kaffeekollektion
+              und Tipps zur Zubereitung des perfekten Espressos.
+            en-fr: >-
+              Célébrez l'été 2025 avec notre collection exclusive de cafés et
+              nos conseils pour préparer l'espresso parfait.
+            en-gb: >-
+              Celebrate Summer 2025 with our exclusive coffee collection and
+              tips for crafting the perfect espresso.
+            en-nl: >-
+              Vier de zomer van 2025 met onze exclusieve koffieverzameling en
+              tips voor het maken van de perfecte espresso.
+            en-us: >-
+              Celebrate Summer 2025 with our exclusive coffee collection and
+              tips for crafting the perfect espresso.
+            es-us: >-
+              Celebra el verano de 2025 con nuestra exclusiva colección de café
+              y consejos para preparar el espresso perfecto.
+            fr-ca: >-
+              Célébrez l'été 2025 avec notre collection exclusive de cafés et
+              nos conseils pour préparer l'espresso parfait.
+            fr-fr: >-
+              Célébrez l'été 2025 avec notre collection exclusive de cafés et
+              nos conseils pour préparer l'espresso parfait.
+            ja-jp: 2025年夏を祝うために、私たちの限定コーヒーコレクションと完璧なエスプレッソを作るためのヒントをご紹介します。
+            nb-no: >-
+              Feire sommeren 2025 med vår eksklusive kaffekolleksjon og tips for
+              å lage den perfekte espressoen.
+            nl-nl: >-
+              Vier de zomer van 2025 met onze exclusieve koffieverzameling en
+              tips voor het maken van de perfecte espresso.
+            sv-se: >-
+              Fira sommaren 2025 med vår exklusiva kaffekollektion och tips för
+              att skapa den perfekta espresson.
+            ar-ksa: >-
+              احتفل بصيف 2025 مع مجموعتنا الحصرية من القهوة ونصائح لتحضير
+              الإسبريسو المثالي.
+            ar-uae: >-
+              احتفل بصيف 2025 مع مجموعتنا الحصرية من القهوة ونصائح لتحضير
+              الإسبريسو المثالي.
+    ff73f10a-2842-41d4-81c3-31ebb55d8b05:
+      variant: columnsReverse
+      dataResources:
+        Article single Content:
+          type: articleSingle
+          variables:
+            locale: ${locale}
+            entryId: f6663a55-c9e0-46e8-8e06-5abcf3f33d7d
+    4edbd4b0-a384-47be-9aa2-5bfaa7f77fce|46da22a2-ba9a-4d15-b626-d893fe0fc748:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: Se vores sommerprodukter
+            de-at: Entdecken Sie unsere Sommerprodukte
+            de-de: Entdecken Sie unsere Sommerprodukte
+            en-ca: Check out our summer products
+            en-de: Entdecken Sie unsere Sommerprodukte
+            en-fr: Découvrez nos produits d'été
+            en-gb: Check out our summer products
+            en-nl: Bekijk onze zomerproducten
+            en-us: Check out our summer products
+            es-us: Descubre nuestros productos de verano
+            fr-ca: Découvrez nos produits d'été
+            fr-fr: Découvrez nos produits d'été
+            ja-jp: 夏の製品をご覧ください
+            nb-no: Sjekk ut våre sommerprodukter
+            nl-nl: Bekijk onze zomerproducten
+            sv-se: Kolla in våra sommarprodukter
+            ar-ksa: تحقق من منتجاتنا الصيفية
+            ar-uae: اكتشف منتجاتنا الصيفية
+    4edbd4b0-a384-47be-9aa2-5bfaa7f77fce|56df55a3-a0d4-41b2-b5cd-08a63509a03f:
+      parameters:
+        displayName:
+          type: text
+          locales:
+            da-dk: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            de-at: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            de-de: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            en-ca: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            en-de: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            en-fr: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            en-gb: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            en-nl: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            es-us: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            fr-ca: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            fr-fr: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            ja-jp: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            nb-no: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            nl-nl: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            sv-se: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            ar-ksa: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            ar-uae: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+    9d15012b-dabe-4ed9-a459-05abbdb80e1f|dc2e95be-21b5-4476-a309-f8a34922f528:
+      slots:
+        $slotSectionItems:
+          - _id: 4edbd4b0-a384-47be-9aa2-5bfaa7f77fce
+            type: container
+            _pattern: 9de9d5d6-88b3-4ec9-9d6f-79a33f1af368
+            _dataResources:
+              Product multiple manual select Content:
+                type: productMultipleManualSelect
+                variables:
+                  locale: ${locale}
+                  entryIds: >-
+                    2f042be4-1e8b-4fae-be0e-a5294b89d8dd,f7e77f37-2646-410e-8596-6ae16379d5d9,ee97ebf7-c55c-49a6-9aa4-752116ee23ff
+            _overridability:
+              parameters:
+                displayName: 'yes'
+                backgroundColor: 'yes'
+              hideLockedParameters: true
+          - _id: ff73f10a-2842-41d4-81c3-31ebb55d8b05
+            type: section
+            variant: columnsReverse
+            _pattern: f184bdb0-45ce-4b52-9984-8130e23f9dc5
+            _dataResources:
+              Article single Content:
+                type: articleSingle
+                variables:
+                  locale: ${locale}
+                  entryId: f6663a55-c9e0-46e8-8e06-5abcf3f33d7d
+            _overridability:
+              variants: true
+              parameters:
+                spacing: 'no'
+                displayName: 'no'
+                fluidContent: 'no'
+              hideLockedParameters: true
+          - _id: e64d3ce7-f8aa-4d59-97fd-ba1a5760d626
+            type: fixedHero
+            variant: columns
+            parameters:
+              image:
+                type: asset
+                value:
+                  - _id: 14258649-e887-41a3-976e-71353db34161
+                    type: image
+                    fields:
+                      id:
+                        type: text
+                        value: 6a6011fb-0029-42f6-af50-480a372d748a
+                      url:
+                        value: >-
+                          https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/yVYfvtXcS82iD2lRZg8ndQ-Summer-2025-Outdoor-Italy.png
+                        type: text
+                      file:
+                        type: file
+                        value: a8281e76-10e8-4f83-9e9e-5e9051ecd085
+                      size:
+                        value: 2891571
+                        type: number
+                      title:
+                        type: text
+                        value: Summer-2025-Outdoor-Italy.png
+                      width:
+                        value: 1571
+                        type: number
+                      height:
+                        value: 1044
+                        type: number
+                      mediaType:
+                        value: image/png
+                        type: text
+                    _source: uniform-assets
+              titleTag:
+                type: dex-segmented-control-parameter
+                value: h2
+              titleText:
+                type: text
+                value: Uniform’s Component Starter Kit
+                locales:
+                  da-dk: Hvilken espressomaskine skal du købe?
+                  de-at: Welchen Espressomaschine sollten Sie kaufen?
+                  de-de: Welchen Espressomaschine sollten Sie kaufen?
+                  en-ca: Which Espresso Maker Should You Buy?
+                  en-de: Welchen Espressomaschine sollten Sie kaufen?
+                  en-fr: Quelle machine à expresso devriez-vous acheter ?
+                  en-gb: Which Espresso Maker Should You Buy?
+                  en-nl: Welke Espressomachine Moet Je Kopen?
+                  en-us: Which Espresso Maker Should You Buy?
+                  es-us: ¿Qué cafetera espresso deberías comprar?
+                  fr-ca: Quel machine à expresso devriez-vous acheter ?
+                  fr-fr: Quelle machine à expresso devriez-vous acheter ?
+                  ja-jp: どのエスプレッソメーカーを購入すべきですか？
+                  nb-no: Hvilken espressomaskin bør du kjøpe?
+                  nl-nl: Welke espressomachine moet je kopen?
+                  sv-se: Vilken espressomaskin ska du köpa?
+                  ar-ksa: أي ماكينة إسبرسو يجب أن تشتري؟
+                  ar-uae: أي ماكينة إسبرسو يجب أن تشتري؟
+              displayName:
+                type: text
+                value: Fixed Hero
+                locales:
+                  da-dk: Valg af den rigtige espressomaskine
+                  de-at: Die richtige Espressomaschine auswählen
+                  de-de: Die richtige Espressomaschine auswählen
+                  en-ca: Choosing the Right Espresso Maker
+                  en-de: Die richtige Espressomaschine auswählen
+                  en-fr: Choisir la bonne machine à expresso
+                  en-gb: Choosing the Right Espresso Machine
+                  en-nl: De Juiste Espressomachine Kiezen
+                  en-us: Choosing the Right Espresso Maker
+                  es-us: Elegir la Cafetera Espresso Adecuada
+                  fr-ca: Choisir la bonne machine à espresso
+                  fr-fr: Choisir la bonne machine à expresso
+                  ja-jp: エスプレッソメーカーの選び方
+                  nb-no: Velge riktig espressomaskin
+                  nl-nl: De Juiste Espressomachine Kiezen
+                  sv-se: Välja rätt espressomaskin
+                  ar-ksa: اختيار ماكينة الإسبريسو المناسبة
+                  ar-uae: اختيار ماكينة الإسبريسو المناسبة
+              descriptionText:
+                type: text
+                value: >-
+                  An essential set of components you need to start building
+                  personalized web experiences with Uniform.
+                locales:
+                  da-dk: >-
+                    At navigere i verdenen af espressomaskiner kan være
+                    overvældende. Fra manuelle til automatiske, lær om de
+                    vigtigste funktioner og overvejelser, der kan hjælpe dig med
+                    at vælge den perfekte espressomaskine til dine behov.
+                  de-at: >-
+                    Sich in der Welt der Espressomaschinen zurechtzufinden, kann
+                    überwältigend sein. Von manuell bis automatisch, lernen Sie
+                    die wichtigsten Merkmale und Überlegungen kennen, die Ihnen
+                    helfen, die perfekte Espressomaschine für Ihre Bedürfnisse
+                    auszuwählen.
+                  de-de: >-
+                    Sich in der Welt der Espressomaschinen zurechtzufinden, kann
+                    überwältigend sein. Von manuell bis automatisch, lernen Sie
+                    die wichtigsten Merkmale und Überlegungen kennen, die Ihnen
+                    helfen, die perfekte Espressomaschine für Ihre Bedürfnisse
+                    auszuwählen.
+                  en-ca: >-
+                    Navigating the world of espresso machines can be
+                    overwhelming. From manual to automatic, learn the key
+                    features and considerations to help you choose the perfect
+                    espresso maker for your needs.
+                  en-de: >-
+                    Sich in der Welt der Espressomaschinen zurechtzufinden, kann
+                    überwältigend sein. Von manuell bis automatisch, lernen Sie
+                    die wichtigsten Merkmale und Überlegungen kennen, die Ihnen
+                    helfen, die perfekte Espressomaschine für Ihre Bedürfnisse
+                    auszuwählen.
+                  en-fr: >-
+                    Naviguer dans le monde des machines à expresso peut être
+                    accablant. Des manuelles aux automatiques, découvrez les
+                    caractéristiques clés et les considérations pour vous aider
+                    à choisir la machine à expresso parfaite pour vos besoins.
+                  en-gb: >-
+                    Navigating the world of espresso machines can be
+                    overwhelming. From manual to automatic, learn the key
+                    features and considerations to help you choose the perfect
+                    espresso maker for your needs.
+                  en-nl: >-
+                    Het navigeren in de wereld van espressomachines kan
+                    overweldigend zijn. Van handmatig tot automatisch, leer de
+                    belangrijkste kenmerken en overwegingen om u te helpen de
+                    perfecte espressomachine voor uw behoeften te kiezen.
+                  en-us: >-
+                    Navigating the world of espresso machines can be
+                    overwhelming. From manual to automatic, learn the key
+                    features and considerations to help you choose the perfect
+                    espresso maker for your needs.
+                  es-us: >-
+                    Navegar por el mundo de las máquinas de espresso puede ser
+                    abrumador. Desde las manuales hasta las automáticas, aprende
+                    las características clave y consideraciones para ayudarte a
+                    elegir la máquina de espresso perfecta para tus necesidades.
+                  fr-ca: >-
+                    Naviguer dans le monde des machines à espresso peut être
+                    accablant. Des machines manuelles aux automatiques,
+                    découvrez les caractéristiques clés et les considérations
+                    pour vous aider à choisir la machine à espresso parfaite
+                    pour vos besoins.
+                  fr-fr: >-
+                    Naviguer dans le monde des machines à expresso peut être
+                    accablant. Des manuelles aux automatiques, découvrez les
+                    caractéristiques clés et les considérations pour vous aider
+                    à choisir la machine à expresso parfaite pour vos besoins.
+                  ja-jp: >-
+                    エスプレッソマシンの世界をナビゲートするのは圧倒されることがあります。手動から自動まで、あなたのニーズに合った完璧なエスプレッソメーカーを選ぶための重要な機能と考慮事項を学びましょう。
+                  nb-no: >-
+                    Å navigere i verdenen av espressomaskiner kan være
+                    overveldende. Fra manuelle til automatiske, lær om de
+                    viktigste funksjonene og hensynene som kan hjelpe deg med å
+                    velge den perfekte espressomaskinen for dine behov.
+                  nl-nl: >-
+                    Het navigeren door de wereld van espressomachines kan
+                    overweldigend zijn. Van handmatig tot automatisch, leer de
+                    belangrijkste kenmerken en overwegingen om u te helpen de
+                    perfecte espressomachine voor uw behoeften te kiezen.
+                  sv-se: >-
+                    Att navigera i espressomaskinernas värld kan vara
+                    överväldigande. Från manuella till automatiska, lär dig de
+                    viktigaste funktionerna och övervägandena för att hjälpa dig
+                    välja den perfekta espressomaskinen för dina behov.
+                  ar-ksa: >-
+                    التنقل في عالم ماكينات الإسبريسو يمكن أن يكون مرهقًا. من
+                    اليدوية إلى الأوتوماتيكية، تعرّف على الميزات الرئيسية
+                    والاعتبارات التي تساعدك في اختيار ماكينة الإسبريسو المثالية
+                    لاحتياجاتك.
+                  ar-uae: >-
+                    التنقل في عالم ماكينات الإسبريسو يمكن أن يكون مرهقًا. من
+                    اليدوي إلى الأوتوماتيكي، تعرّف على الميزات الرئيسية
+                    والاعتبارات التي تساعدك في اختيار ماكينة الإسبريسو المثالية
+                    لاحتياجاتك.
+              contentAlignment:
+                type: dex-segmented-control-parameter
+                value: center
+              eyebrowTitleText:
+                type: text
+                value: HELLO AND WELCOME! THIS IS
+                locales:
+                  da-dk: Væsentlig Guide
+                  de-at: Essentieller Leitfaden
+                  de-de: Essentieller Leitfaden
+                  en-ca: Essential Guide
+                  en-de: Essentieller Leitfaden
+                  en-fr: Guide Essentiel
+                  en-gb: Essential Guide
+                  en-nl: Essentiële Gids
+                  en-us: Essential Guide
+                  es-us: Guía Esencial
+                  fr-ca: Guide Essentiel
+                  fr-fr: Guide Essentiel
+                  ja-jp: 必須ガイド
+                  nb-no: Essensiell guide
+                  nl-nl: Essentiële Gids
+                  sv-se: Väsentlig guide
+                  ar-ksa: الدليل الأساسي
+                  ar-uae: الدليل الأساسي
+              primaryButtonText:
+                type: text
+                value: Primary Button
+                locales:
+                  da-dk: Udforsk Espresso Muligheder
+                  de-at: Entdecken Sie Espresso-Optionen
+                  de-de: Erkunden Sie Espresso-Optionen
+                  en-ca: Explore Espresso Options
+                  en-de: Entdecken Sie Espresso-Optionen
+                  en-fr: Explorer les options d'espresso
+                  en-gb: Explore Espresso Options
+                  en-nl: Verken Espresso-opties
+                  en-us: Explore Espresso Options
+                  es-us: Explora Opciones de Espresso
+                  fr-ca: Explorez les options d'espresso
+                  fr-fr: Explorer les options d'espresso
+                  ja-jp: エスプレッソのオプションを探る
+                  nb-no: Utforsk espressomuligheter
+                  nl-nl: Ontdek Espresso-opties
+                  sv-se: Utforska Espressoalternativ
+                  ar-ksa: استكشاف خيارات الإسبريسو
+                  ar-uae: استكشاف خيارات الإسبريسو
+          - _id: 2aea7468-7bb4-4006-8b62-4575fe7b087d
+            type: fixedHero
+            parameters:
+              image:
+                type: asset
+                value:
+                  - _id: 8a16d7fe-2e22-4c95-ba9f-c393ec692b99
+                    type: image
+                    fields:
+                      id:
+                        type: text
+                        value: 343e6e3f-f884-4d64-b0b1-002adacbea91
+                      url:
+                        value: >-
+                          https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/rrF3KAvWTimcW-VpQK4KFw-Summer-2025-Fields-of-Beans.png
+                        type: text
+                      file:
+                        type: file
+                        value: 76703096-5e35-429f-a2ea-e7879ae274cb
+                      size:
+                        value: 2676410
+                        type: number
+                      title:
+                        type: text
+                        value: Summer-2025-Fields-of-Beans.png
+                      width:
+                        value: 1536
+                        type: number
+                      height:
+                        value: 1024
+                        type: number
+                      mediaType:
+                        value: image/png
+                        type: text
+                    _source: uniform-assets
+              titleTag:
+                type: dex-segmented-control-parameter
+                value: h1
+              titleText:
+                type: text
+                locales:
+                  da-dk: En perfekt kop møder komforten i dit hjem
+                  de-at: Eine perfekte Tasse trifft auf den Komfort Ihres Zuhauses.
+                  de-de: Eine perfekte Tasse trifft auf den Komfort Ihres Zuhauses.
+                  en-ca: A perfect cup meets comfort of your home
+                  en-de: Eine perfekte Tasse trifft auf den Komfort Ihres Zuhauses.
+                  en-fr: Une tasse parfaite rencontre le confort de votre maison
+                  en-gb: A perfect cup meets comfort of your home
+                  en-nl: Een perfect kopje ontmoet het comfort van uw huis
+                  en-us: A perfect cup meets comfort of your home
+                  es-us: Una taza perfecta se encuentra con la comodidad de tu hogar.
+                  fr-ca: Une tasse parfaite rencontre le confort de votre maison.
+                  fr-fr: Une tasse parfaite rencontre le confort de votre maison.
+                  ja-jp: 完璧な一杯があなたの家の快適さに出会う
+                  nb-no: En perfekt kopp møter komforten i ditt hjem
+                  nl-nl: Een perfect kopje ontmoet het comfort van uw huis
+                  sv-se: En perfekt kopp möter bekvämligheten i ditt hem
+                  ar-ksa: فنجان مثالي يلتقي براحة منزلك
+                  ar-uae: كوب مثالي يلتقي مع راحة منزلك
+              displayName:
+                type: text
+                locales:
+                  da-dk: Hovedhjemmehelt
+                  de-at: Hauptseite Held
+                  de-de: Hauptstartseite Held
+                  en-ca: Main Home Hero
+                  en-de: Hauptheim-Held
+                  en-fr: Héros Principal de la Maison
+                  en-gb: Main Home Hero
+                  en-nl: Hoofd Thuis Held
+                  en-us: Main Home Hero
+                  es-us: Héroe Principal del Hogar
+                  fr-ca: Héros Principal de la Maison
+                  fr-fr: Héros Principal de la Maison
+                  ja-jp: メインホームヒーロー
+                  nb-no: Hovedhjem Helt
+                  nl-nl: Hoofd Home Held
+                  sv-se: Huvudsida Hjälte
+                  ar-ksa: الرئيسية الرئيسية البطل
+                  ar-uae: الرئيسية الرئيسية البطل
+              contentAlignment:
+                type: dex-segmented-control-parameter
+                value: right
+              primaryButtonLink:
+                type: link
+                locales:
+                  da-dk:
+                    path: /${locale}/coffee-makers
+                    type: projectMapNode
+                    nodeId: c9869cee-a65c-4064-b296-78c4a5ba4ffc
+                    projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                    dynamicInputValues:
+                      locale: ${locale}
+                  de-at:
+                    path: /${locale}/coffee-makers
+                    type: projectMapNode
+                    nodeId: c9869cee-a65c-4064-b296-78c4a5ba4ffc
+                    projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                    dynamicInputValues:
+                      locale: ${locale}
+                  de-de:
+                    path: /${locale}/coffee-makers
+                    type: projectMapNode
+                    nodeId: c9869cee-a65c-4064-b296-78c4a5ba4ffc
+                    projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                    dynamicInputValues:
+                      locale: ${locale}
+                  en-ca:
+                    path: /${locale}/coffee-makers
+                    type: projectMapNode
+                    nodeId: c9869cee-a65c-4064-b296-78c4a5ba4ffc
+                    projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                    dynamicInputValues:
+                      locale: ${locale}
+                  en-de:
+                    path: /${locale}/coffee-makers
+                    type: projectMapNode
+                    nodeId: c9869cee-a65c-4064-b296-78c4a5ba4ffc
+                    projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                    dynamicInputValues:
+                      locale: ${locale}
+                  en-fr:
+                    path: /${locale}/coffee-makers
+                    type: projectMapNode
+                    nodeId: c9869cee-a65c-4064-b296-78c4a5ba4ffc
+                    projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                    dynamicInputValues:
+                      locale: ${locale}
+                  en-gb:
+                    path: /${locale}/coffee-makers
+                    type: projectMapNode
+                    nodeId: c9869cee-a65c-4064-b296-78c4a5ba4ffc
+                    projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                    dynamicInputValues:
+                      locale: ${locale}
+                  en-nl:
+                    path: /${locale}/coffee-makers
+                    type: projectMapNode
+                    nodeId: c9869cee-a65c-4064-b296-78c4a5ba4ffc
+                    projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                    dynamicInputValues:
+                      locale: ${locale}
+                  en-us:
+                    path: /${locale}/coffee-makers
+                    type: projectMapNode
+                    nodeId: c9869cee-a65c-4064-b296-78c4a5ba4ffc
+                    projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                    dynamicInputValues:
+                      locale: ${locale}
+                  es-us:
+                    path: /${locale}/coffee-makers
+                    type: projectMapNode
+                    nodeId: c9869cee-a65c-4064-b296-78c4a5ba4ffc
+                    projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                    dynamicInputValues:
+                      locale: ${locale}
+                  fr-ca:
+                    path: /${locale}/coffee-makers
+                    type: projectMapNode
+                    nodeId: c9869cee-a65c-4064-b296-78c4a5ba4ffc
+                    projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                    dynamicInputValues:
+                      locale: ${locale}
+                  fr-fr:
+                    path: /${locale}/coffee-makers
+                    type: projectMapNode
+                    nodeId: c9869cee-a65c-4064-b296-78c4a5ba4ffc
+                    projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                    dynamicInputValues:
+                      locale: ${locale}
+                  ja-jp:
+                    path: /${locale}/coffee-makers
+                    type: projectMapNode
+                    nodeId: c9869cee-a65c-4064-b296-78c4a5ba4ffc
+                    projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                    dynamicInputValues:
+                      locale: ${locale}
+                  nb-no:
+                    path: /${locale}/coffee-makers
+                    type: projectMapNode
+                    nodeId: c9869cee-a65c-4064-b296-78c4a5ba4ffc
+                    projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                    dynamicInputValues:
+                      locale: ${locale}
+                  nl-nl:
+                    path: /${locale}/coffee-makers
+                    type: projectMapNode
+                    nodeId: c9869cee-a65c-4064-b296-78c4a5ba4ffc
+                    projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                    dynamicInputValues:
+                      locale: ${locale}
+                  sv-se:
+                    path: /${locale}/coffee-makers
+                    type: projectMapNode
+                    nodeId: c9869cee-a65c-4064-b296-78c4a5ba4ffc
+                    projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                    dynamicInputValues:
+                      locale: ${locale}
+                  ar-ksa:
+                    path: /${locale}/coffee-makers
+                    type: projectMapNode
+                    nodeId: c9869cee-a65c-4064-b296-78c4a5ba4ffc
+                    projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                    dynamicInputValues:
+                      locale: ${locale}
+                  ar-uae:
+                    path: /${locale}/coffee-makers
+                    type: projectMapNode
+                    nodeId: c9869cee-a65c-4064-b296-78c4a5ba4ffc
+                    projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                    dynamicInputValues:
+                      locale: ${locale}
+              primaryButtonText:
+                type: text
+                locales:
+                  da-dk: Udforsk vores produkter
+                  de-at: Entdecken Sie unsere Produkte
+                  de-de: Entdecken Sie unsere Produkte
+                  en-ca: Explore our products
+                  en-de: Entdecken Sie unsere Produkte
+                  en-fr: Découvrez nos produits
+                  en-gb: Explore our products
+                  en-nl: Ontdek onze producten
+                  en-us: Explore our products
+                  es-us: Explora nuestros productos
+                  fr-ca: Découvrez nos produits
+                  fr-fr: Découvrez nos produits
+                  ja-jp: 私たちの製品を探検する
+                  nb-no: Utforsk produktene våre
+                  nl-nl: Ontdek onze producten
+                  sv-se: Utforska våra produkter
+                  ar-ksa: استكشف منتجاتنا
+                  ar-uae: استكشف منتجاتنا
+    ff73f10a-2842-41d4-81c3-31ebb55d8b05|95686385-e59c-43ff-b0f4-13d73550ca5b:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article single Content/entry/_slug}
+            de-at:
+              path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article single Content/entry/_slug}
+            de-de:
+              path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article single Content/entry/_slug}
+            en-ca:
+              path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article single Content/entry/_slug}
+            en-de:
+              path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article single Content/entry/_slug}
+            en-fr:
+              path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article single Content/entry/_slug}
+            en-gb:
+              path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article single Content/entry/_slug}
+            en-nl:
+              path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article single Content/entry/_slug}
+            es-us:
+              path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article single Content/entry/_slug}
+            fr-ca:
+              path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article single Content/entry/_slug}
+            fr-fr:
+              path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article single Content/entry/_slug}
+            ja-jp:
+              path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article single Content/entry/_slug}
+            nb-no:
+              path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article single Content/entry/_slug}
+            nl-nl:
+              path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article single Content/entry/_slug}
+            sv-se:
+              path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article single Content/entry/_slug}
+            ar-ksa:
+              path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article single Content/entry/_slug}
+            ar-uae:
+              path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article single Content/entry/_slug}
+    9d15012b-dabe-4ed9-a459-05abbdb80e1f|38f88562-6b70-411b-a550-ada8514eef22|f82aa025-12eb-4c87-b18b-ccc33b20fe02:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            de-at:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            de-de:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-ca:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-de:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-fr:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-gb:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-nl:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            es-us:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            fr-ca:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            fr-fr:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ja-jp:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            nb-no:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            nl-nl:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            sv-se:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ar-ksa:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ar-uae:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+    9d15012b-dabe-4ed9-a459-05abbdb80e1f|bbf196c6-4821-414c-9b14-b08fb1c7fede|44623ac6-5327-44e3-ab3e-b7455ff829e8:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-demo
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-demo
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-de:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-fr:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-demo
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-demo
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-demo
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-demo
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-demo
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-demo
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-demo
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-demo
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-demo
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-demo
+              type: url
+    9d15012b-dabe-4ed9-a459-05abbdb80e1f|bbf196c6-4821-414c-9b14-b08fb1c7fede|44d64138-618e-4c6a-b4cc-6ea9b9a22cba:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-de:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-fr:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+    9d15012b-dabe-4ed9-a459-05abbdb80e1f|bbf196c6-4821-414c-9b14-b08fb1c7fede|6db01010-cff2-458e-85d6-358dc75ca48c:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-sb
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-sb
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-de:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-fr:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-sb
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-sb
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-sb
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-sb
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-sb
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-sb
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-sb
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-sb
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-sb
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-sb
+              type: url
+    9d15012b-dabe-4ed9-a459-05abbdb80e1f|bbf196c6-4821-414c-9b14-b08fb1c7fede|ea891105-3b48-41b4-8fa0-6c2ecca00a75:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-docs
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-docs
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-de:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-fr:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-docs
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-docs
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-docs
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-docs
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-docs
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-docs
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-docs
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-docs
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-docs
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-docs
+              type: url
+    9d15012b-dabe-4ed9-a459-05abbdb80e1f|be3fb453-fb93-41ab-88e0-6d23e3dfa15d|c50e99a6-1d91-4d6e-9a22-3154d4e4a8b7:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: Sommeren er her!
+            de-at: Der Sommer ist da!
+            de-de: Der Sommer ist da!
+            en-ca: Summer is here!
+            en-de: Der Sommer ist da!
+            en-fr: L'été est là !
+            en-gb: Summer is here!
+            en-nl: De zomer is hier!
+            en-us: Summer is here!
+            es-us: ¡El verano está aquí!
+            fr-ca: L'été est arrivé !
+            fr-fr: L'été est là !
+            ja-jp: 夏が来た！
+            nb-no: Sommeren er her!
+            nl-nl: De zomer is hier!
+            sv-se: Sommaren är här!
+            ar-ksa: الصيف هنا!
+            ar-uae: الصيف هنا!
+    4edbd4b0-a384-47be-9aa2-5bfaa7f77fce|56df55a3-a0d4-41b2-b5cd-08a63509a03f|1af937fb-40ae-4938-b1a8-110b8ff73fc4|41f41812-74a8-48f1-9e2a-920dfff8ea04:
+      parameters:
+        productSlug:
+          type: text
+          locales:
+            da-dk: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            de-at: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            de-de: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            en-ca: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            en-de: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            en-fr: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            en-gb: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            en-nl: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            es-us: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            fr-ca: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            fr-fr: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            ja-jp: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            nb-no: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            nl-nl: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            sv-se: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            ar-ksa: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            ar-uae: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+    4edbd4b0-a384-47be-9aa2-5bfaa7f77fce|56df55a3-a0d4-41b2-b5cd-08a63509a03f|1af937fb-40ae-4938-b1a8-110b8ff73fc4|8bad3ddd-add0-43d3-a314-5836bf0c7a93:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: >-
+              kr.${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value}
+            de-at: >-
+              €${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value}
+            de-de: >-
+              €${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value}
+            en-ca: >-
+              $${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value}
+            en-de: >-
+              €${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value}
+            en-fr: >-
+              €${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value}
+            en-gb: >-
+              £${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value}
+            en-nl: >-
+              €${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value}
+            en-us: >-
+              $${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value}
+            es-us: >-
+              $${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value}
+            fr-ca: >-
+              $${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value}
+            fr-fr: >-
+              €${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value}
+            ja-jp: >-
+              ¥${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value}
+            nb-no: >-
+              kr${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value}
+            nl-nl: >-
+              €${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value}
+            sv-se: >-
+              kr${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value}
+            ar-ksa: >-
+              ر.س${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value}
+            ar-uae: >-
+              د.إ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value}
+  _locales:
+    - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa
+  _pattern: cb6c094d-ce9a-44ac-9a2d-54aafa3f39ff
+created: '2025-05-20T11:53:47.459469+00:00'
+modified: '2025-07-16T08:11:21.438414+00:00'
+pattern: false

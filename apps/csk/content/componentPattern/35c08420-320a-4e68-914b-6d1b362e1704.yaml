@@ -1,0 +1,449 @@
+composition:
+  _name: Global P13n CTA
+  _id: 35c08420-320a-4e68-914b-6d1b362e1704
+  type: container
+  parameters:
+    height:
+      type: dex-segmented-control-parameter
+      value: {}
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        mobile: {}
+        tablet: {}
+        desktop: {}
+    displayName:
+      type: text
+      locales:
+        da-dk: Global P13n CtA
+        de-at: Globale P13n CtA
+        de-de: Globale P13n CtA
+        en-ca: Global P13n CtA
+        en-de: Globale P13n CtA
+        en-fr: CtA P13n Global
+        en-gb: Global P13n CtA
+        en-nl: Globale P13n CtA
+        en-us: Global P13n CtA
+        es-us: CtA Global P13n
+        fr-ca: Appel à l'action P13n mondial
+        fr-fr: CtA P13n Global
+        ja-jp: グローバルP13n CtA
+        nb-no: Global P13n CtA
+        nl-nl: Globale P13n CtA
+        sv-se: Global P13n CtA
+        ar-ksa: العرض العالمي P13n CtA
+        ar-uae: العالمية P13n CtA
+  slots:
+    containerContent:
+      - _id: f60f174a-198a-427c-9e49-d847f0cf76cc
+        type: $personalization
+        slots:
+          pz:
+            - _id: 9e675a07-c9c2-4c79-a601-1654cbd4522d
+              type: fixedHero
+              variant: columns
+              parameters:
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: int_beans
+                        r: 0
+                        op: ^
+                    name: fixedHero-9e67
+                titleTag:
+                  type: dex-segmented-control-parameter
+                  value: h2
+                titleText:
+                  type: text
+                  locales:
+                    da-dk: Personlig tilpasset
+                    de-at: Personalisierte
+                    de-de: Personalisierte
+                    en-ca: Personalized
+                    en-de: Personalisierte
+                    en-fr: Personnalisé
+                    en-gb: Personalised
+                    en-nl: Gepersonaliseerd
+                    en-us: Personalized
+                    es-us: Personalizado
+                    fr-ca: Personnalisé
+                    fr-fr: Personnalisé
+                    ja-jp: パーソナライズされた
+                    nb-no: Personlig tilpasset
+                    nl-nl: Gepersonaliseerd
+                    sv-se: Personlig anpassad
+                    ar-ksa: مخصص
+                    ar-uae: مخصص
+                displayName:
+                  type: text
+                  locales:
+                    da-dk: Bønner interesse
+                    de-at: Bohneninteresse
+                    de-de: Bohneninteresse
+                    en-ca: Beans interest
+                    en-de: Bohneninteresse
+                    en-fr: Intérêt pour les haricots
+                    en-gb: Beans interest
+                    en-nl: Bonen interesse
+                    en-us: Beans interest
+                    es-us: Interés por los frijoles
+                    fr-ca: Intérêt pour les haricots
+                    fr-fr: Intérêt pour les haricots
+                    ja-jp: 豆の興味
+                    nb-no: Bønner interesse
+                    nl-nl: Boneninteresse
+                    sv-se: Bönors intresse
+                    ar-ksa: اهتمام الفاصوليا
+                    ar-uae: اهتمام بالفاصوليا
+                descriptionText:
+                  type: text
+                  locales:
+                    da-dk: Renter er bønner
+                    de-at: Zinsen sind Bohnen
+                    de-de: Zinsen sind Bohnen
+                    en-ca: Interest is Beans
+                    en-de: Zinsen sind Bohnen
+                    en-fr: L'intérêt est les haricots
+                    en-gb: Interest is Beans
+                    en-nl: Rente is Bonen
+                    en-us: Interest is Beans
+                    es-us: El interés es Frijoles
+                    fr-ca: L'intérêt, c'est les haricots
+                    fr-fr: L'intérêt est des haricots
+                    ja-jp: 興味は豆です。
+                    nb-no: Renter er bønner
+                    nl-nl: Rente is Bonen
+                    sv-se: Ränta är bönor
+                    ar-ksa: الفائدة هي الفاصوليا
+                    ar-uae: الفائدة هي الفاصوليا
+            - _id: 24528a36-5c58-413d-80ee-ae8d1ea44569
+              type: fixedHero
+              variant: columns
+              parameters:
+                image:
+                  type: asset
+                  value:
+                    - _id: aeb6daf4-57fd-478d-ad98-131dd1d9892b
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: 75ebf11f-2f1d-4a4e-9062-cca926fe65c1
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/sOAxssUvS-Onko8YWWGp8Q-Beans_BG.png
+                          type: text
+                        file:
+                          type: file
+                          value: b76064f7-04ff-4299-bdc1-65cc1d9f67b9
+                        size:
+                          value: 3551148
+                          type: number
+                        title:
+                          type: text
+                          value: Beans_BG.png
+                        width:
+                          value: 1536
+                          type: number
+                        height:
+                          value: 1024
+                          type: number
+                        mediaType:
+                          value: image/png
+                          type: text
+                      _source: uniform-assets
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit: []
+                    name: fixedHero-2452
+                titleTag:
+                  type: dex-segmented-control-parameter
+                  value: h1
+                titleText:
+                  type: text
+                  locales:
+                    da-dk: Standardindhold
+                    de-at: Standardinhalt
+                    de-de: Standardinhalt
+                    en-ca: Default Content
+                    en-de: Standardinhalt
+                    en-fr: Contenu par défaut
+                    en-gb: Default Content
+                    en-nl: Standaardinhoud
+                    en-us: Default Content
+                    es-us: Contenido predeterminado
+                    fr-ca: Contenu par défaut
+                    fr-fr: Contenu par défaut
+                    ja-jp: デフォルトコンテンツ
+                    nb-no: Standardinnhold
+                    nl-nl: Standaardinhoud
+                    sv-se: Standardinnehåll
+                    ar-ksa: المحتوى الافتراضي
+                    ar-uae: المحتوى الافتراضي
+                displayName:
+                  type: text
+                  locales:
+                    da-dk: Hovedhjem Hero
+                    de-at: Hauptstartseite Hero
+                    de-de: Hauptstartseite Held
+                    en-ca: Main Home Hero
+                    en-de: Hauptheim-Held
+                    en-fr: Héros Principal de la Maison
+                    en-gb: Main Home Hero
+                    en-nl: Hoofd Thuis Held
+                    en-us: Main Home Hero
+                    es-us: Héroe Principal del Hogar
+                    fr-ca: Héros Principal de la Maison
+                    fr-fr: Héros Principal de la Maison
+                    ja-jp: メインホームヒーロー
+                    nb-no: Hovedhjem Helt
+                    nl-nl: Hoofd Home Held
+                    sv-se: Huvudhem Hjälte
+                    ar-ksa: الرئيسية الرئيسية البطل
+                    ar-uae: الرئيسية الرئيسية البطل
+                descriptionText:
+                  type: text
+                  locales:
+                    da-dk: Håndplukket af Hans Anderson
+                    de-at: Handverlesen von Hans Anderson
+                    de-de: Ausgewählt von Hans Anderson
+                    en-ca: Selected by Hans Anderson
+                    en-de: Handverlesen von Hans Anderson
+                    en-fr: Sélectionné par Hans Anderson
+                    en-gb: Hand-picked by Hans Anderson
+                    en-nl: Met zorg uitgekozen door Hans Anderson
+                    en-us: Handpicked by Hans Anderson
+                    es-us: Seleccionado por Hans Anderson
+                    fr-ca: Choisi par Hans Anderson
+                    fr-fr: Sélectionné par Hans Anderson
+                    ja-jp: ハンス・アンダーソンによって厳選された
+                    nb-no: Håndplukket av Hans Anderson
+                    nl-nl: Met zorg geselecteerd door Hans Anderson
+                    sv-se: Handplockad av Hans Anderson
+                    ar-ksa: مختار بعناية بواسطة هانس أندرسون
+                    ar-uae: مختار بعناية من قبل هانز أندرسون
+                contentAlignment:
+                  type: dex-segmented-control-parameter
+                  value: left
+                eyebrowTitleText:
+                  type: text
+                  locales:
+                    da-dk: Særtilbud
+                    de-at: Sonderangebot
+                    de-de: Sonderangebot
+                    en-ca: Special offer
+                    en-de: Sonderangebot
+                    en-fr: Offre spéciale
+                    en-gb: Special offer
+                    en-nl: Speciale aanbieding
+                    en-us: Special offer
+                    es-us: Oferta especial
+                    fr-ca: Offre spéciale
+                    fr-fr: Offre spéciale
+                    ja-jp: 特別オファー
+                    nb-no: Spesialtilbud
+                    nl-nl: Speciale aanbieding
+                    sv-se: Specialerbjudande
+                    ar-ksa: عرض خاص
+                    ar-uae: عرض خاص
+                primaryButtonLink:
+                  type: link
+                  locales:
+                    da-dk:
+                      path: /${locale}/beans-bundle
+                      type: projectMapNode
+                      nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+                      projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                      dynamicInputValues:
+                        locale: ${locale}
+                    de-at:
+                      path: /${locale}/beans-bundle
+                      type: projectMapNode
+                      nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+                      projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                      dynamicInputValues:
+                        locale: ${locale}
+                    de-de:
+                      path: /${locale}/beans-bundle
+                      type: projectMapNode
+                      nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+                      projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                      dynamicInputValues:
+                        locale: ${locale}
+                    en-ca:
+                      path: /${locale}/beans-bundle
+                      type: projectMapNode
+                      nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+                      projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                      dynamicInputValues:
+                        locale: ${locale}
+                    en-de:
+                      path: /${locale}/beans-bundle
+                      type: projectMapNode
+                      nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+                      projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                      dynamicInputValues:
+                        locale: ${locale}
+                    en-fr:
+                      path: /${locale}/beans-bundle
+                      type: projectMapNode
+                      nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+                      projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                      dynamicInputValues:
+                        locale: ${locale}
+                    en-gb:
+                      path: /${locale}/beans-bundle
+                      type: projectMapNode
+                      nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+                      projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                      dynamicInputValues:
+                        locale: ${locale}
+                    en-nl:
+                      path: /${locale}/beans-bundle
+                      type: projectMapNode
+                      nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+                      projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                      dynamicInputValues:
+                        locale: ${locale}
+                    en-us:
+                      path: /${locale}/beans-bundle
+                      type: projectMapNode
+                      nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+                      projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                      dynamicInputValues:
+                        locale: ${locale}
+                    es-us:
+                      path: /${locale}/beans-bundle
+                      type: projectMapNode
+                      nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+                      projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                      dynamicInputValues:
+                        locale: ${locale}
+                    fr-ca:
+                      path: /${locale}/beans-bundle
+                      type: projectMapNode
+                      nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+                      projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                      dynamicInputValues:
+                        locale: ${locale}
+                    fr-fr:
+                      path: /${locale}/beans-bundle
+                      type: projectMapNode
+                      nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+                      projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                      dynamicInputValues:
+                        locale: ${locale}
+                    ja-jp:
+                      path: /${locale}/beans-bundle
+                      type: projectMapNode
+                      nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+                      projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                      dynamicInputValues:
+                        locale: ${locale}
+                    nb-no:
+                      path: /${locale}/beans-bundle
+                      type: projectMapNode
+                      nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+                      projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                      dynamicInputValues:
+                        locale: ${locale}
+                    nl-nl:
+                      path: /${locale}/beans-bundle
+                      type: projectMapNode
+                      nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+                      projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                      dynamicInputValues:
+                        locale: ${locale}
+                    sv-se:
+                      path: /${locale}/beans-bundle
+                      type: projectMapNode
+                      nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+                      projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                      dynamicInputValues:
+                        locale: ${locale}
+                    ar-ksa:
+                      path: /${locale}/beans-bundle
+                      type: projectMapNode
+                      nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+                      projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                      dynamicInputValues:
+                        locale: ${locale}
+                    ar-uae:
+                      path: /${locale}/beans-bundle
+                      type: projectMapNode
+                      nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+                      projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                      dynamicInputValues:
+                        locale: ${locale}
+                primaryButtonText:
+                  type: text
+                  locales:
+                    da-dk: Udforsk pakken
+                    de-at: Entdecken Sie das Paket
+                    de-de: Entdecken Sie das Paket
+                    en-ca: Explore the bundle
+                    en-de: Entdecken Sie das Paket
+                    en-fr: Explorez le lot
+                    en-gb: Explore the bundle
+                    en-nl: Verken het pakket
+                    en-us: Explore the bundle
+                    es-us: Explora el paquete
+                    fr-ca: Explorez le forfait
+                    fr-fr: Explorez le lot
+                    ja-jp: バンドルを探索する
+                    nb-no: Utforsk pakken
+                    nl-nl: Verken het pakket
+                    sv-se: Utforska paketet
+                    ar-ksa: استكشف الحزمة
+                    ar-uae: استكشف الحزمة
+        parameters:
+          trackingEventName:
+            type: text
+            locales:
+              da-dk: Container mønster-Fast Hero
+              de-at: Container-Muster-Fixierter Held
+              de-de: Container-Muster-Fixed Hero
+              en-ca: Container pattern-Fixed Hero
+              en-de: Container-Muster-Fixed Hero
+              en-fr: Modèle de conteneur-Héros fixe
+              en-gb: Container pattern-Fixed Hero
+              en-nl: Containerpatroon-Vaste Held
+              en-us: Container pattern-Fixed Hero
+              es-us: Patrón de contenedor-Héroe fijo
+              fr-ca: Modèle de conteneur-Héros fixe
+              fr-fr: Modèle de conteneur-Héros fixe
+              ja-jp: コンテナパターン-固定ヒーロー
+              nb-no: Container-mønster-Fast Helt
+              nl-nl: Containerpatroon-Vaste Held
+              sv-se: Container-mönster-Fast hjälte
+              ar-ksa: نمط الحاوية - بطل ثابت
+              ar-uae: نمط الحاوية - بطل ثابت
+  _overridability:
+    hideLockedParameters: true
+  _locales:
+    - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa
+created: '2025-05-20T11:53:42.779662+00:00'
+modified: '2025-07-16T05:53:58.147621+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/global_P13n_CTA.png
+categoryId: 3bab40a0-d52d-49b3-8780-b26f737b84a3

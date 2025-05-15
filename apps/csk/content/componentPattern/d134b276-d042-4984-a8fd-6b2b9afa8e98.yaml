@@ -1,0 +1,658 @@
+composition:
+  _name: Spotlight Card
+  _id: d134b276-d042-4984-a8fd-6b2b9afa8e98
+  type: link
+  parameters:
+    displayName:
+      type: text
+      locales:
+        da-dk: Spotlight-kort
+        de-at: Spotlight-Karte
+        de-de: Spotlight-Karte
+        en-ca: Spotlight Card
+        en-de: Spotlight-Karte
+        en-fr: Carte Vedette
+        en-gb: Spotlight Card
+        en-nl: Spotlightkaart
+        en-us: Spotlight Card
+        es-us: Tarjeta Destacada
+        fr-ca: Carte en vedette
+        fr-fr: Carte en vedette
+        ja-jp: スポットライトカード
+        nb-no: Spotlight-kort
+        nl-nl: Spotlightkaart
+        sv-se: Spotlight-kort
+        ar-ksa: بطاقة تسليط الضوء
+        ar-uae: بطاقة تسليط الضوء
+  slots:
+    linkContent:
+      - _id: 807f2939-e3cd-476d-9e3e-a2a9df6b0f63
+        type: grid
+        slots:
+          gridInner:
+            - _id: >-
+                807f2939-e3cd-476d-9e3e-a2a9df6b0f63|b18af6ae-5b94-434b-a836-6b279173eedf|4b21f7fe-72d6-4234-a77d-10b762f1040e
+              type: gridItem
+              slots:
+                inner:
+                  - _id: >-
+                      807f2939-e3cd-476d-9e3e-a2a9df6b0f63|b18af6ae-5b94-434b-a836-6b279173eedf|9b4d01d3-e0f4-4f43-84b3-0f33dd7eeb5c
+                    type: image
+                    parameters:
+                      image:
+                        type: asset
+                        value:
+                          - _id: 178ee533-d615-46b0-a183-9c04235f722c
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: 5990be9d-277f-4298-ad75-4065e54c82b1
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/vjFq8RSBSEOqZt6gJN1bKg-ember-luxury-ottoman-coffee-espresso-set-2.png
+                                type: text
+                              file:
+                                type: file
+                                value: 11b06f2c-02c4-4478-8d04-fdbbe4a64c31
+                              size:
+                                value: 189023
+                                type: number
+                              title:
+                                type: text
+                                value: ember-luxury-ottoman-coffee-espresso-set-2.png
+                              width:
+                                value: 1280
+                                type: number
+                              height:
+                                value: 1280
+                                type: number
+                              mediaType:
+                                value: image/png
+                                type: text
+                            _source: uniform-assets
+                      height:
+                        type: number
+                        value: '150'
+                      objectFit:
+                        type: dex-segmented-control-parameter
+                        value: cover
+                    _overridability:
+                      parameters:
+                        image: 'yes'
+                      hideLockedParameters: true
+              parameters:
+                rowSpan:
+                  type: dex-slider-control-parameter
+                  value: {}
+                rowStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: '1'
+                    desktop: '1'
+                columnSpan:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: span-3
+                    desktop: span-2
+                columnStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: '1'
+                    desktop: '1'
+                displayName:
+                  type: text
+                  locales:
+                    da-dk: Billede
+                    de-at: Bild
+                    de-de: Bild
+                    en-ca: Image
+                    en-de: Bild
+                    en-fr: Image
+                    en-gb: Picture
+                    en-nl: Afbeelding
+                    en-us: Image
+                    es-us: Imagen
+                    fr-ca: Image
+                    fr-fr: Image
+                    ja-jp: 画像
+                    nb-no: Bilde
+                    nl-nl: Afbeelding
+                    sv-se: Bild
+                    ar-ksa: صورة
+                    ar-uae: صورة
+              _overridability:
+                hideLockedParameters: true
+            - _id: >-
+                807f2939-e3cd-476d-9e3e-a2a9df6b0f63|b18af6ae-5b94-434b-a836-6b279173eedf|e8ccb0ad-a597-464f-baf4-80d6f268967b
+              type: gridItem
+              slots:
+                inner:
+                  - _id: >-
+                      807f2939-e3cd-476d-9e3e-a2a9df6b0f63|b18af6ae-5b94-434b-a836-6b279173eedf|80995427-6b73-4e98-8587-2cdec9a5854d
+                    type: flex
+                    slots:
+                      flexItem:
+                        - _id: >-
+                            807f2939-e3cd-476d-9e3e-a2a9df6b0f63|b18af6ae-5b94-434b-a836-6b279173eedf|4e7f1617-1524-4771-bad7-e871c177ef53
+                          type: text
+                          parameters:
+                            tag:
+                              type: dex-segmented-control-parameter
+                              value: span
+                            size:
+                              type: dex-segmented-control-parameter
+                              value:
+                                mobile: 2xl
+                                tablet: 2xl
+                                desktop: 2xl
+                            text:
+                              type: text
+                              locales:
+                                da-dk: Er en langsom dryp kaffemaskine noget for dig?
+                                de-at: >-
+                                  Ist eine langsame Tropfkaffeemaschine etwas
+                                  für Sie?
+                                de-de: >-
+                                  Ist eine langsame Tropfkaffeemaschine etwas
+                                  für Sie?
+                                en-ca: Is a slow drip coffee maker for you?
+                                en-de: >-
+                                  Ist eine langsame Tropfkaffeemaschine etwas
+                                  für Sie?
+                                en-fr: >-
+                                  Une cafetière à goutte lente est-elle faite
+                                  pour vous ?
+                                en-gb: Is a slow drip coffee maker for you?
+                                en-nl: >-
+                                  Is een slow drip koffiezetapparaat iets voor
+                                  jou?
+                                en-us: Is a slow drip coffee maker for you?
+                                es-us: ¿Es una cafetera de goteo lento para ti?
+                                fr-ca: >-
+                                  Une cafetière à goutte lente est-elle faite
+                                  pour vous ?
+                                fr-fr: >-
+                                  Une cafetière à goutte lente est-elle faite
+                                  pour vous ?
+                                ja-jp: スロードリップコーヒーメーカーはあなたに向いていますか？
+                                nb-no: Er en langsom drypp kaffetrakter noe for deg?
+                                nl-nl: >-
+                                  Is een slow drip koffiezetapparaat iets voor
+                                  jou?
+                                sv-se: >-
+                                  Är en långsam droppkaffebryggare något för
+                                  dig?
+                                ar-ksa: هل صانعة القهوة بالتقطير البطيء تناسبك؟
+                                ar-uae: >-
+                                  هل ماكينة تحضير القهوة بالتقطير البطيء مناسبة
+                                  لك؟
+                            color:
+                              type: dex-color-palette-parameter
+                              value: text-primary
+                            weight:
+                              type: dex-segmented-control-parameter
+                              value: bold
+                          _overridability:
+                            parameters:
+                              text: 'yes'
+                            hideLockedParameters: true
+                        - _id: >-
+                            807f2939-e3cd-476d-9e3e-a2a9df6b0f63|b18af6ae-5b94-434b-a836-6b279173eedf|84b8ca9c-90a0-4c34-bd96-a2391bf97f62
+                          type: text
+                          parameters:
+                            tag:
+                              type: dex-segmented-control-parameter
+                              value: span
+                            size:
+                              type: dex-segmented-control-parameter
+                              value:
+                                desktop: base
+                            text:
+                              type: text
+                              locales:
+                                da-dk: >-
+                                  Er den langsomme drypning faktisk med til at
+                                  lave bedre kaffe? Eller er det bare en
+                                  hipster-ting, der egentlig ikke betyder noget?
+                                de-at: >-
+                                  Macht das langsame Tropfen tatsächlich
+                                  besseren Kaffee? Oder ist es nur so ein
+                                  Hipster-Ding, das eigentlich keine Rolle
+                                  spielt?
+                                de-de: >-
+                                  Macht das langsame Tropfen tatsächlich
+                                  besseren Kaffee? Oder ist es nur so ein
+                                  Hipster-Ding, das eigentlich keine Rolle
+                                  spielt?
+                                en-ca: >-
+                                  Is the slow drip actually making better
+                                  coffee? Or is it just some hipster thing that
+                                  doesn’t really matter?
+                                en-de: >-
+                                  Macht das langsame Tropfen tatsächlich
+                                  besseren Kaffee? Oder ist es nur so ein
+                                  Hipster-Ding, das eigentlich keine Rolle
+                                  spielt?
+                                en-fr: >-
+                                  Le goutte-à-goutte lent fait-il réellement un
+                                  meilleur café ? Ou est-ce juste un truc de
+                                  hipster qui n'a pas vraiment d'importance ?
+                                en-gb: >-
+                                  Is the slow drip actually making better
+                                  coffee? Or is it just some hipster thing that
+                                  doesn’t really matter?
+                                en-nl: >-
+                                  Maakt het trage druppelen eigenlijk betere
+                                  koffie? Of is het gewoon iets hips dat niet
+                                  echt uitmaakt?
+                                en-us: >-
+                                  Is the slow drip actually making better
+                                  coffee? Or is it just some hipster thing that
+                                  doesn’t really matter?
+                                es-us: >-
+                                  ¿El goteo lento realmente está haciendo un
+                                  mejor café? ¿O es solo una cosa hipster que
+                                  realmente no importa?
+                                fr-ca: >-
+                                  Le goutte-à-goutte lent permet-il vraiment de
+                                  faire un meilleur café ? Ou est-ce juste un
+                                  truc de hipster qui n'a pas vraiment
+                                  d'importance ?
+                                fr-fr: >-
+                                  Le goutte-à-goutte lent permet-il réellement
+                                  de faire un meilleur café ? Ou est-ce juste
+                                  une tendance hipster qui n'a pas vraiment
+                                  d'importance ?
+                                ja-jp: >-
+                                  スロードリップは実際により良いコーヒーを作っているのでしょうか？それとも、実際には重要ではないヒップスター的なものなのでしょうか？
+                                nb-no: >-
+                                  Er den langsomme dryppingen faktisk med på å
+                                  lage bedre kaffe? Eller er det bare en
+                                  hipstergreie som egentlig ikke betyr noe?
+                                nl-nl: >-
+                                  Maakt het langzame druppelen daadwerkelijk
+                                  betere koffie? Of is het gewoon een
+                                  hipsterding dat eigenlijk niet uitmaakt?
+                                sv-se: >-
+                                  Gör den långsamma droppen faktiskt bättre
+                                  kaffe? Eller är det bara en hipstergrej som
+                                  egentligen inte spelar någon roll?
+                                ar-ksa: >-
+                                  هل التنقيط البطيء يجعل القهوة أفضل بالفعل؟ أم
+                                  أنها مجرد موضة عابرة لا تهم حقًا؟
+                                ar-uae: >-
+                                  هل التنقيط البطيء يجعل القهوة أفضل بالفعل؟ أم
+                                  أنها مجرد موضة عابرة لا تهم حقًا؟
+                            color:
+                              type: dex-color-palette-parameter
+                              value: text-primary
+                            weight:
+                              type: dex-segmented-control-parameter
+                              value: normal
+                          _overridability:
+                            parameters:
+                              text: 'yes'
+                            hideLockedParameters: true
+                    parameters:
+                      gap:
+                        type: dex-slider-control-parameter
+                        value:
+                          mobile: '4'
+                          tablet: '4'
+                          desktop: '4'
+                      height:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: full
+                          tablet: full
+                          desktop: full
+                      spacing:
+                        type: dex-space-control-parameter
+                        value:
+                          mobile:
+                            paddingTop: ''
+                            paddingBottom: ''
+                          tablet:
+                            paddingTop: ''
+                            paddingBottom: ''
+                          desktop:
+                            paddingTop: ''
+                            paddingBottom: ''
+                      direction:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: col
+                          tablet: col
+                          desktop: col
+                      alignItems:
+                        type: dex-segmented-control-parameter
+                        value:
+                          desktop: start
+                      displayName:
+                        type: text
+                        locales:
+                          da-dk: Indholdsbeholder
+                          de-at: Inhaltscontainer
+                          de-de: Inhaltscontainer
+                          en-ca: Content Container
+                          en-de: Inhaltscontainer
+                          en-fr: Conteneur de contenu
+                          en-gb: Content Container
+                          en-nl: Inhoud Container
+                          en-us: Content Container
+                          es-us: Contenedor de Contenido
+                          fr-ca: Conteneur de contenu
+                          fr-fr: Conteneur de contenu
+                          ja-jp: コンテントコンテナ
+                          nb-no: Innholdsbeholder
+                          nl-nl: Inhoud Container
+                          sv-se: Innehållsbehållare
+                          ar-ksa: حاوية المحتوى
+                          ar-uae: حاوية المحتوى
+                      fluidContent:
+                        type: checkbox
+                        value: true
+                      justifyContent:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: start
+                          tablet: start
+                          desktop: start
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                rowSpan:
+                  type: dex-slider-control-parameter
+                  value: {}
+                rowStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: '1'
+                    desktop: '1'
+                columnSpan:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: span-8
+                    desktop: span-9
+                columnStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: '4'
+                    desktop: '3'
+                displayName:
+                  type: text
+                  locales:
+                    da-dk: Indhold
+                    de-at: Inhalt
+                    de-de: Inhalt
+                    en-ca: Content
+                    en-de: Inhalt
+                    en-fr: Contenu
+                    en-gb: Content
+                    en-nl: Inhoud
+                    en-us: Content
+                    es-us: Contenido
+                    fr-ca: Contenu
+                    fr-fr: Contenu
+                    ja-jp: コンテンツ
+                    nb-no: Innhold
+                    nl-nl: Inhoud
+                    sv-se: Innehåll
+                    ar-ksa: المحتوى
+                    ar-uae: المحتوى
+              _overridability:
+                hideLockedParameters: true
+            - _id: >-
+                807f2939-e3cd-476d-9e3e-a2a9df6b0f63|b18af6ae-5b94-434b-a836-6b279173eedf|2cbeebf4-b95e-4243-be9d-19fd3baf34a9
+              type: gridItem
+              slots:
+                inner:
+                  - _id: 7833359c-39b2-485e-a0b7-aea59c472000
+                    type: flex
+                    slots:
+                      flexItem:
+                        - _id: >-
+                            807f2939-e3cd-476d-9e3e-a2a9df6b0f63|b18af6ae-5b94-434b-a836-6b279173eedf|656265eb-730d-499b-b280-fbb3fab6df7a
+                          type: image
+                          parameters:
+                            image:
+                              type: asset
+                              value:
+                                - _id: c69e40fa-7298-447b-8e6e-67e9550d0e76
+                                  type: image
+                                  fields:
+                                    id:
+                                      type: text
+                                      value: 253e6ca5-a8d0-4084-a7ad-ad4481f9c587
+                                    url:
+                                      value: >-
+                                        https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/gTxJDkz3SeaLfVSVE941Ww-chevron-right.svg
+                                      type: text
+                                    file:
+                                      type: file
+                                      value: 0ce47b34-f86b-4f68-b3d6-2f84c59d6f62
+                                    size:
+                                      value: 269
+                                      type: number
+                                    title:
+                                      type: text
+                                      value: chevron-right.svg
+                                    width:
+                                      value: 24
+                                      type: number
+                                    height:
+                                      value: 24
+                                      type: number
+                                    mediaType:
+                                      value: image/svg+xml
+                                      type: text
+                                  _source: uniform-assets
+                            objectFit:
+                              type: dex-segmented-control-parameter
+                              value: cover
+                          _overridability:
+                            hideLockedParameters: true
+                    parameters:
+                      gap:
+                        type: dex-slider-control-parameter
+                        value: {}
+                      height:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: full
+                          tablet: full
+                          desktop: full
+                      spacing:
+                        type: dex-space-control-parameter
+                        value:
+                          mobile: {}
+                          tablet: {}
+                          desktop: {}
+                      direction:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: row
+                          tablet: row
+                          desktop: row
+                      alignItems:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: center
+                          desktop: center
+                      displayName:
+                        type: text
+                        locales:
+                          da-dk: Chevron Container
+                          de-at: Chevron-Behälter
+                          de-de: Chevron-Behälter
+                          en-ca: Chevron Container
+                          en-de: Chevron-Behälter
+                          en-fr: Conteneur Chevron
+                          en-gb: Chevron Container
+                          en-nl: Chevroncontainer
+                          en-us: Chevron Container
+                          es-us: Contenedor Chevron
+                          fr-ca: Conteneur Chevron
+                          fr-fr: Conteneur Chevron
+                          ja-jp: シェブロンコンテナ
+                          nb-no: Chevronbeholder
+                          nl-nl: Chevron Container
+                          sv-se: Chevronbehållare
+                          ar-ksa: حاوية شيفرون
+                          ar-uae: حاوية شيفرون
+                      justifyContent:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: center
+                          desktop: end
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                rowSpan:
+                  type: dex-slider-control-parameter
+                  value: {}
+                rowStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: '1'
+                    desktop: '1'
+                columnSpan:
+                  type: dex-slider-control-parameter
+                  value:
+                    desktop: auto
+                columnStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: '12'
+                    desktop: '12'
+                displayName:
+                  type: text
+                  locales:
+                    da-dk: Linkknap
+                    de-at: Linktaste
+                    de-de: Link-Schaltfläche
+                    en-ca: Link Button
+                    en-de: Linktaste
+                    en-fr: Bouton de lien
+                    en-gb: Link Button
+                    en-nl: Koppelknop
+                    en-us: Link Button
+                    es-us: Botón de enlace
+                    fr-ca: Bouton de lien
+                    fr-fr: Bouton de lien
+                    ja-jp: リンクボタン
+                    nb-no: Lenkeknapp
+                    nl-nl: Koppelknop
+                    sv-se: Länkkknapp
+                    ar-ksa: زر الرابط
+                    ar-uae: زر الرابط
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          gapX:
+            type: dex-slider-control-parameter
+            value:
+              tablet: '4'
+              desktop: '8'
+          gapY:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '8'
+          border:
+            type: dex-token-selector-parameter
+            value: border-product-card
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              mobile:
+                paddingTop: container-xsmall
+                paddingLeft: container-xsmall
+                paddingRight: container-xsmall
+                paddingBottom: container-xsmall
+              tablet:
+                paddingTop: container-xsmall
+                paddingLeft: container-xsmall
+                paddingRight: container-xsmall
+                paddingBottom: container-xsmall
+              desktop:
+                paddingTop: container-xsmall
+                paddingLeft: container-xsmall
+                paddingRight: container-xsmall
+                paddingBottom: container-xsmall
+          alignItems:
+            type: dex-segmented-control-parameter
+            value: center
+          displayName:
+            type: text
+            locales:
+              da-dk: Hovedindhold
+              de-at: Hauptinhalt
+              de-de: Hauptinhalt
+              en-ca: Main Content
+              en-de: Hauptinhalt
+              en-fr: Contenu Principal
+              en-gb: Main Content
+              en-nl: Hoofdinhoud
+              en-us: Main Content
+              es-us: Contenido Principal
+              fr-ca: Contenu principal
+              fr-fr: Contenu principal
+              ja-jp: メインコンテンツ
+              nb-no: Hovedinnhold
+              nl-nl: Hoofdinhoud
+              sv-se: Huvudinnehåll
+              ar-ksa: المحتوى الرئيسي
+              ar-uae: المحتوى الرئيسي
+          columnsCount:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '1'
+              tablet: '12'
+              desktop: '12'
+          backgroundColor:
+            type: dex-color-palette-parameter
+            value: general-color-6
+        _overridability:
+          parameters:
+            displayName: 'no'
+            fluidContent: 'yes'
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      link: 'yes'
+      displayName: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa
+created: '2025-05-20T12:08:54.944041+00:00'
+modified: '2025-07-16T05:54:02.93535+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/spotlight-card.jpg
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9

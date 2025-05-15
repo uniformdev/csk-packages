@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: modal
 name: Modal
@@ -44,13 +44,14 @@ parameters:
     typeConfig: null
 categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/modal-default.jpg
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/modal-default.jpg
 useTeamPermissions: true
 slots:
   - id: trigger
     name: Trigger
     allowedComponents:
       - button
+      - locale
     allowAllComponents: false
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
@@ -68,5 +69,5 @@ slots:
     patternsInAllowedComponents: false
 titleParameter: displayName
 canBeComposition: false
-created: '2025-02-17T15:34:14.933607+00:00'
-updated: '2025-02-17T15:34:14.933607+00:00'
+created: '2025-02-27T10:44:57.777797+00:00'
+updated: '2025-07-04T11:25:45.156573+00:00'

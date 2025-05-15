@@ -6,6 +6,30 @@ composition:
     size:
       type: dex-token-selector-parameter
       value: button-medium
+    text:
+      type: text
+      locales:
+        da-dk: Dokumenter
+        de-at: Dokumente
+        de-de: Dokumente
+        en-ca: Docs
+        en-de: Dokumente
+        en-fr: Docs
+        en-gb: Docs
+        en-nl: Documenten
+        en-us: Docs
+        es-us: Documentos
+        fr-ca: Documents
+        fr-fr: Documents
+        ja-jp: ドキュメント
+        nb-no: Dokumenter
+        nl-nl: Documenten
+        sv-se: Dokument
+        ar-ksa: مستندات
+        ar-uae: مستندات
+    border:
+      type: dex-token-selector-parameter
+      value: border-button-primary
     textSize:
       type: dex-segmented-control-parameter
       value:
@@ -17,7 +41,7 @@ composition:
       value: text-secondary
     textWeight:
       type: dex-segmented-control-parameter
-      value: normal
+      value: bold
     buttonColor:
       type: dex-color-palette-parameter
       value: button-primary
@@ -38,12 +62,36 @@ composition:
     parameters:
       link: 'yes'
       text: 'yes'
+      fullWidth: 'yes'
+      textWeight: 'no'
+      buttonColor: 'yes'
+      iconPosition: 'yes'
+      textTransform: 'no'
+      hoverTextColor: 'no'
+      hoverButtonColor: 'no'
     hideLockedParameters: true
   _locales:
-    - en
-created: '2025-02-17T15:34:18.084298+00:00'
-modified: '2025-02-17T15:34:18.084298+00:00'
+    - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa
+created: '2025-02-27T10:45:00.697985+00:00'
+modified: '2025-07-16T05:53:59.886127+00:00'
 pattern: true
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/button.jpg
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/jd-template/primary-button.jpg
 categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

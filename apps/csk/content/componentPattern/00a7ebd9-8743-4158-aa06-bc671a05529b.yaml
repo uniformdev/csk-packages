@@ -1,0 +1,708 @@
+composition:
+  _name: Curated Product List
+  _id: 00a7ebd9-8743-4158-aa06-bc671a05529b
+  type: container
+  parameters:
+    height:
+      type: dex-segmented-control-parameter
+      value: {}
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        mobile:
+          paddingTop: container-medium
+          paddingBottom: container-medium
+        tablet: {}
+        desktop: {}
+    displayName:
+      type: text
+      locales:
+        da-dk: Lave kaffe
+        de-at: Kaffee zubereiten
+        de-de: Kaffee zubereiten
+        en-ca: Making coffee
+        en-de: Kaffee zubereiten
+        en-fr: Préparation du café
+        en-gb: Making coffee
+        en-nl: Koffie zetten
+        en-us: Making coffee
+        es-us: Haciendo café
+        fr-ca: Préparation du café
+        fr-fr: Préparer du café
+        ja-jp: コーヒーを作る
+        nb-no: Lage kaffe
+        nl-nl: Koffiezetten
+        sv-se: Göra kaffe
+        ar-ksa: صنع القهوة
+        ar-uae: صنع القهوة
+    fluidContent:
+      type: checkbox
+      value: true
+    backgroundColor:
+      type: dex-color-palette-parameter
+      value: general-color-6
+  slots:
+    containerContent:
+      - _id: bb18931f-9ae0-4561-86ab-a9a1cc6ccab3
+        type: flex
+        slots:
+          flexItem:
+            - _id: c05c6494-0291-41e1-95b0-9a0b7b27162a
+              type: flex
+              slots:
+                flexItem:
+                  - _id: 46da22a2-ba9a-4d15-b626-d893fe0fc748
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: h2
+                      size:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: 3xl
+                          tablet: 4xl
+                          desktop: 4xl
+                      text:
+                        type: text
+                        locales:
+                          da-dk: Find den perfekte bønne
+                          de-at: Finden Sie die perfekte Bohne
+                          de-de: Finde die perfekte Bohne
+                          en-ca: Find the perfect bean
+                          en-de: Finden Sie die perfekte Bohne
+                          en-fr: Trouvez le haricot parfait
+                          en-gb: Find the perfect bean
+                          en-nl: Vind de perfecte boon
+                          en-us: Find the perfect bean
+                          es-us: Encuentra el grano perfecto
+                          fr-ca: Trouvez le grain parfait
+                          fr-fr: Trouvez le haricot parfait
+                          ja-jp: 完璧な豆を見つける
+                          nb-no: Finn den perfekte bønnen
+                          nl-nl: Vind de perfecte boon
+                          sv-se: Hitta den perfekta bönan
+                          ar-ksa: ابحث عن الحبة المثالية
+                          ar-uae: ابحث عن الحبة المثالية
+                      color:
+                        type: dex-color-palette-parameter
+                        value: text-tertiary
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: bold
+                    _overridability:
+                      parameters:
+                        font: 'no'
+                        size: 'no'
+                        text: 'yes'
+                        color: 'yes'
+                        weight: 'no'
+                        transform: 'no'
+                      hideLockedParameters: true
+                  - _id: fc644242-f84a-4d35-a66c-225eb7000322
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: span
+                      size:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: sm
+                          tablet: lg
+                          desktop: xl
+                      text:
+                        type: text
+                        locales:
+                          da-dk: Vælg mellem forskellige bønner for den perfekte kop.
+                          de-at: >-
+                            Wählen Sie aus einer Vielzahl von Bohnen für die
+                            perfekte Tasse.
+                          de-de: >-
+                            Wählen Sie aus einer Vielzahl von Bohnen für die
+                            perfekte Tasse.
+                          en-ca: Choose from a variety of beans for the perfect cup.
+                          en-de: >-
+                            Wählen Sie aus einer Vielzahl von Bohnen für die
+                            perfekte Tasse.
+                          en-fr: >-
+                            Choisissez parmi une variété de grains pour une
+                            tasse parfaite.
+                          en-gb: Choose from a variety of beans for the perfect cup.
+                          en-nl: >-
+                            Kies uit een verscheidenheid aan bonen voor de
+                            perfecte kop.
+                          en-us: Choose from a variety of beans for the perfect cup.
+                          es-us: >-
+                            Elija entre una variedad de granos para la taza
+                            perfecta.
+                          fr-ca: >-
+                            Choisissez parmi une variété de grains pour une
+                            tasse parfaite.
+                          fr-fr: >-
+                            Choisissez parmi une variété de grains pour une
+                            tasse parfaite.
+                          ja-jp: さまざまな豆から選んで、完璧な一杯を。
+                          nb-no: >-
+                            Velg blant et utvalg av bønner for den perfekte
+                            koppen.
+                          nl-nl: >-
+                            Kies uit een verscheidenheid aan bonen voor de
+                            perfecte kop.
+                          sv-se: >-
+                            Välj bland en mängd olika bönor för den perfekta
+                            koppen.
+                          ar-ksa: >-
+                            اختر من مجموعة متنوعة من الحبوب للحصول على الكوب
+                            المثالي.
+                          ar-uae: >-
+                            اختر من مجموعة متنوعة من الحبوب للحصول على الكوب
+                            المثالي.
+                      color:
+                        type: dex-color-palette-parameter
+                        value: text-tertiary
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: normal
+                    _overridability:
+                      parameters:
+                        text: 'yes'
+                      hideLockedParameters: true
+              parameters:
+                gap:
+                  type: dex-slider-control-parameter
+                  value: {}
+                spacing:
+                  type: dex-space-control-parameter
+                  value: {}
+                direction:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: col
+                    tablet: col
+                    desktop: col
+                alignItems:
+                  type: dex-segmented-control-parameter
+                  value: {}
+                displayName:
+                  type: text
+                  locales:
+                    da-dk: Titelbeholder
+                    de-at: Titelbehälter
+                    de-de: Titelbehälter
+                    en-ca: Title Container
+                    en-de: Titelbehälter
+                    en-fr: Conteneur de titre
+                    en-gb: Title Container
+                    en-nl: Titelcontainer
+                    en-us: Title Container
+                    es-us: Contenedor de Título
+                    fr-ca: Conteneur de titre
+                    fr-fr: Conteneur de titre
+                    ja-jp: タイトルコンテナ
+                    nb-no: Tittelbeholder
+                    nl-nl: Titelcontainer
+                    sv-se: Titelbehållare
+                    ar-ksa: حاوية العنوان
+                    ar-uae: حاوية العنوان
+                fluidContent:
+                  type: checkbox
+                  value: true
+                justifyContent:
+                  type: dex-segmented-control-parameter
+                  value: {}
+              _overridability:
+                hideLockedParameters: true
+            - _id: 23ef179e-28e2-4551-83b4-80296f479519
+              type: $slotSection
+              parameters:
+                max:
+                  type: text
+                  locales:
+                    en-us: 1
+                name:
+                  type: text
+                  locales:
+                    da-dk: Knap
+                    de-at: Taste
+                    de-de: Taste
+                    en-ca: Button
+                    en-de: Schaltfläche
+                    en-fr: Bouton
+                    en-gb: Button
+                    en-nl: Knop
+                    en-us: Button
+                    es-us: Botón
+                    fr-ca: Bouton
+                    fr-fr: Bouton
+                    ja-jp: ボタン
+                    nb-no: Knapp
+                    nl-nl: Knop
+                    sv-se: Knapp
+                    ar-ksa: زر
+                    ar-uae: زر
+                specific:
+                  type: array
+                  value:
+                    - button
+                    - $p:53b59aed-e378-4fcb-9135-20247d92074e
+                    - $p:8060e691-b0b3-428c-92f1-278fc76baf47
+                    - $p:646faee6-b476-43c6-a1a8-eebe85699889
+                groupType:
+                  type: text
+                  locales:
+                    da-dk: specifik
+                    de-at: spezifisch
+                    de-de: spezifisch
+                    en-ca: specific
+                    en-de: spezifisch
+                    en-fr: spécifique
+                    en-gb: specific
+                    en-nl: specifiek
+                    en-us: specific
+                    es-us: específico
+                    fr-ca: spécifique
+                    fr-fr: spécifique
+                    ja-jp: 特定の
+                    nb-no: spesifikk
+                    nl-nl: specifiek
+                    sv-se: specifik
+                    ar-ksa: محدد
+                    ar-uae: محدد
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          gap:
+            type: dex-slider-control-parameter
+            value: {}
+          spacing:
+            type: dex-space-control-parameter
+            value: {}
+          direction:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: row
+              tablet: row
+              desktop: row
+          alignItems:
+            type: dex-segmented-control-parameter
+            value: {}
+          displayName:
+            type: text
+            locales:
+              da-dk: Overskrift Indhold
+              de-at: Header-Inhalt
+              de-de: Kopfzeileninhalt
+              en-ca: Header Content
+              en-de: Header-Inhalt
+              en-fr: Contenu de l'en-tête
+              en-gb: Header Content
+              en-nl: Koptekst Inhoud
+              en-us: Header Content
+              es-us: Contenido del Encabezado
+              fr-ca: Contenu de l'en-tête
+              fr-fr: Contenu de l'en-tête
+              ja-jp: ヘッダーコンテンツ
+              nb-no: Overskriftsinnhold
+              nl-nl: Koptekst Inhoud
+              sv-se: Rubrikinnehåll
+              ar-ksa: محتوى العنوان
+              ar-uae: محتوى العنوان
+          justifyContent:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: between
+              tablet: between
+              desktop: between
+      - _id: d7d75af3-b9ba-401d-a556-534cb606d397
+        type: grid
+        slots:
+          gridInner:
+            - _id: >-
+                d7d75af3-b9ba-401d-a556-534cb606d397|ad381040-9f02-4ccb-bd83-bf8ea6081f16
+              type: $loop
+              slots:
+                body:
+                  - _id: 5c78437e-dd37-42dc-a025-f332aa49f0b8
+                    type: link
+                    _pattern: 1b9cb318-a532-4c1a-af19-c0ee1a66855f
+              _dataResources:
+                Product List Content entries Loop Item:
+                  type: sys-reserved-loop
+                  variables:
+                    connectedData: '#jptr:/Product List Content/entries:fa=c'
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          gapX:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '4'
+              tablet: '4'
+              desktop: '4'
+          gapY:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '4'
+              tablet: '4'
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              marginTop: container-small
+              marginBottom: container-small
+          displayName:
+            type: text
+            locales:
+              da-dk: Produkter Beholder
+              de-at: Produktcontainer
+              de-de: Produkte Behälter
+              en-ca: Products Container
+              en-de: Produktcontainer
+              en-fr: Conteneur de Produits
+              en-gb: Products Container
+              en-nl: Productencontainer
+              en-us: Products Container
+              es-us: Contenedor de Productos
+              fr-ca: Conteneur de Produits
+              fr-fr: Conteneur de Produits
+              ja-jp: 製品コンテナ
+              nb-no: Produktbeholder
+              nl-nl: Productencontainer
+              sv-se: Produktbehållare
+              ar-ksa: حاوية المنتجات
+              ar-uae: حاوية المنتجات
+          columnsCount:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '1'
+              tablet: '2'
+              desktop: '3'
+  _dataResources:
+    Product List Content:
+      type: multipleProduct
+      variables:
+        limit: '3'
+        locale: ${locale}
+        search: ''
+        filters: >-
+          {"type[eq]":"product","fields.category[eq]":"ae8e04c4-f20b-46f5-9eb4-7d8f82bbee38"}
+        entryIds: >-
+          b897a717-bb41-4990-a25b-8f860d02700d,5a9bf3d7-74a8-42e4-ac78-239f84cbecca,8b39f8cb-42bf-432b-9530-c26b5769362c
+        contentTypes: product
+      isPatternParameter: true
+      ignorePatternParameterDefault: false
+  _overrides:
+    5c78437e-dd37-42dc-a025-f332aa49f0b8:
+      parameters:
+        link:
+          type: link
+          value:
+            path: >-
+              /${locale}/products/${#jptr:/Product List Content entries Loop
+              Item/entry/_slug}
+            type: projectMapNode
+            nodeId: 702b0e0b-3858-4b5d-99e4-bdb98097ca0f
+            projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+            dynamicInputValues:
+              locale: ${locale}
+              product-slug: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+        displayName:
+          type: text
+          locales:
+            da-dk: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            de-at: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            de-de: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            en-ca: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            en-de: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            en-fr: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            en-gb: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            en-nl: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            en-us: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            es-us: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            fr-ca: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            fr-fr: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            ja-jp: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            nb-no: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            nl-nl: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            sv-se: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            ar-ksa: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            ar-uae: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+    5c78437e-dd37-42dc-a025-f332aa49f0b8|1af937fb-40ae-4938-b1a8-110b8ff73fc4:
+      parameters:
+        displayName:
+          type: text
+          locales:
+            da-dk: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            de-at: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            de-de: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            en-ca: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            en-de: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            en-fr: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            en-gb: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            en-nl: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            en-us: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            es-us: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            fr-ca: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            fr-fr: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            ja-jp: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            nb-no: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            nl-nl: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            sv-se: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            ar-ksa: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            ar-uae: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+    5c78437e-dd37-42dc-a025-f332aa49f0b8|1af937fb-40ae-4938-b1a8-110b8ff73fc4|0952417a-061c-4634-91df-1341269e4054:
+      parameters:
+        image:
+          type: asset
+          value: >-
+            ${#jptr:/Product List Content entries Loop
+            Item/entry/fields/primaryImage/value}
+    5c78437e-dd37-42dc-a025-f332aa49f0b8|1af937fb-40ae-4938-b1a8-110b8ff73fc4|41f41812-74a8-48f1-9e2a-920dfff8ea04:
+      parameters:
+        productSlug:
+          type: text
+          locales:
+            da-dk: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            de-at: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            de-de: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            en-ca: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            en-de: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            en-fr: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            en-gb: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            en-nl: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            en-us: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            es-us: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            fr-ca: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            fr-fr: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            ja-jp: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            nb-no: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            nl-nl: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            sv-se: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            ar-ksa: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            ar-uae: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+    5c78437e-dd37-42dc-a025-f332aa49f0b8|1af937fb-40ae-4938-b1a8-110b8ff73fc4|8bad3ddd-add0-43d3-a314-5836bf0c7a93:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: >-
+              kr.${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value} 
+            de-at: >-
+              €${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value} 
+            de-de: >-
+              €${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value} 
+            en-ca: >-
+              $${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value} 
+            en-de: >-
+              €${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value} 
+            en-fr: >-
+              €${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value} 
+            en-gb: >-
+              £${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value} 
+            en-nl: >-
+              €${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value} 
+            en-us: >-
+              $${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value} 
+            es-us: >-
+              $${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value} 
+            fr-ca: >-
+              $${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value} 
+            fr-fr: >-
+              €${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value} 
+            ja-jp: >-
+              ¥${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value} 
+            nb-no: >-
+              kr${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value} 
+            nl-nl: >-
+              €${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value} 
+            sv-se: >-
+              kr${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value} 
+            ar-ksa: >-
+              ر.س${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value} 
+            ar-uae: >-
+              د.إ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/variants/value/0/fields/price/value} 
+        color:
+          type: dex-color-palette-parameter
+          value: text-tertiary
+    5c78437e-dd37-42dc-a025-f332aa49f0b8|1af937fb-40ae-4938-b1a8-110b8ff73fc4|988f7805-9e0e-4b30-acaf-f97d7dd5099f:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            de-at: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            de-de: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            en-ca: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            en-de: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            en-fr: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            en-gb: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            en-nl: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            en-us: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            es-us: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            fr-ca: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            fr-fr: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            ja-jp: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            nb-no: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            nl-nl: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            sv-se: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            ar-ksa: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            ar-uae: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+        color:
+          type: dex-color-palette-parameter
+          value: text-tertiary
+  _overridability:
+    parameters:
+      displayName: 'yes'
+      backgroundColor: 'no'
+    hideLockedParameters: true
+  _locales:
+    - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa
+created: '2025-03-18T13:02:27.310877+00:00'
+modified: '2025-07-16T05:53:56.172783+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/primary-product-list.jpg
+categoryId: adaebea8-ba58-494b-9c3b-9f82906d9415

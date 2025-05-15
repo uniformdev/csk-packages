@@ -1,5 +1,5 @@
 composition:
-  _name: Title+Text Container
+  _name: Titled Container
   _id: 6fc97589-a549-4105-8b4f-387f64ea2780
   type: flex
   parameters:
@@ -17,10 +17,31 @@ composition:
         desktop: col
     alignItems:
       type: dex-segmented-control-parameter
-      value: ''
+      value:
+        mobile: ''
+        tablet: ''
+        desktop: ''
     displayName:
       type: text
-      value: Title
+      locales:
+        da-dk: Titel
+        de-at: Titel
+        de-de: Titel
+        en-ca: Title
+        en-de: Titel
+        en-fr: Titre
+        en-gb: Title
+        en-nl: Titel
+        en-us: Title
+        es-us: Título
+        fr-ca: Titre
+        fr-fr: Titre
+        ja-jp: タイトル
+        nb-no: Tittel
+        nl-nl: Titel
+        sv-se: Titel
+        ar-ksa: العنوان
+        ar-uae: العنوان
     justifyContent:
       type: dex-segmented-control-parameter
       value:
@@ -32,19 +53,43 @@ composition:
         parameters:
           tag:
             type: dex-segmented-control-parameter
-            value: h2
+            value: span
           size:
             type: dex-segmented-control-parameter
             value:
               mobile: 3xl
               tablet: 3xl
               desktop: 3xl
-          color:
-            type: dex-color-palette-parameter
-            value: text-tertiary
+          text:
+            type: text
+            locales:
+              da-dk: Titel
+              de-at: Titel
+              de-de: Titel
+              en-ca: Title
+              en-de: Tilte
+              en-fr: Titre
+              en-gb: Title
+              en-nl: Titel
+              en-us: Tilte
+              es-us: |-
+                Tilte
+
+                Instrucciones:
+                - Devuelve solo el texto traducido.
+                - No incluyas comentarios adicionales.
+                - Sé fiel al significado original.
+              fr-ca: Titre
+              fr-fr: Titre
+              ja-jp: タイトル
+              nb-no: Tittel
+              nl-nl: Titel
+              sv-se: Titel
+              ar-ksa: عنوان
+              ar-uae: عنوان
           weight:
             type: dex-segmented-control-parameter
-            value: bold
+            value: normal
         _overridability:
           parameters:
             tag: 'yes'
@@ -57,13 +102,34 @@ composition:
         parameters:
           tag:
             type: dex-segmented-control-parameter
-            value: p
+            value: span
           size:
             type: dex-segmented-control-parameter
             value:
               mobile: 3xl
               tablet: 3xl
-              desktop: base
+              desktop: xl
+          text:
+            type: text
+            locales:
+              da-dk: Beskrivelse
+              de-at: Beschreibung
+              de-de: Beschreibung
+              en-ca: Description
+              en-de: Beschreibung
+              en-fr: Description
+              en-gb: Description
+              en-nl: Beschrijving
+              en-us: 'Description '
+              es-us: Descripción
+              fr-ca: Description
+              fr-fr: Description
+              ja-jp: 説明
+              nb-no: Beskrivelse
+              nl-nl: Beschrijving
+              sv-se: Beskrivning
+              ar-ksa: الوصف
+              ar-uae: الوصف
           weight:
             type: dex-segmented-control-parameter
             value: normal
@@ -78,7 +144,25 @@ composition:
         parameters:
           name:
             type: text
-            value: Container Content
+            locales:
+              da-dk: Beholderindhold
+              de-at: Containerinhalt
+              de-de: Behälterinhalt
+              en-ca: Container Content
+              en-de: Behälterinhalt
+              en-fr: Contenu du conteneur
+              en-gb: Container Contents
+              en-nl: Containerinhoud
+              en-us: Container Content
+              es-us: Contenido del Contenedor
+              fr-ca: Contenu du conteneur
+              fr-fr: Contenu du conteneur
+              ja-jp: コンテナ内容
+              nb-no: Beholderinnhold
+              nl-nl: Containerinhoud
+              sv-se: Behållarinnehåll
+              ar-ksa: محتوى الحاوية
+              ar-uae: محتوى الحاوية
         _overridability:
           hideLockedParameters: true
   _overridability:
@@ -89,10 +173,27 @@ composition:
       backgroundColor: 'yes'
     hideLockedParameters: true
   _locales:
-    - en
-created: '2025-02-17T15:34:18.713733+00:00'
-modified: '2025-02-17T15:34:18.713733+00:00'
+    - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa
+created: '2025-02-27T10:45:00.033982+00:00'
+modified: '2025-07-16T05:54:00.525858+00:00'
 pattern: true
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/titled-container.jpg
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/titled-container
 categoryId: ae15b0f6-4953-4ccb-9984-ad0525e77b01
