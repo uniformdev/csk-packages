@@ -1,0 +1,306 @@
+composition:
+  _name: Blog highlight
+  _id: 3fde766b-b504-48fa-9402-16e202d0e0b2
+  type: fixedHero
+  variant: columns
+  parameters:
+    image:
+      type: asset
+      value: ${#jptr:/Article single Content/entry/fields/thumbnail/value}
+    titleTag:
+      type: dex-segmented-control-parameter
+      value: h2
+    titleText:
+      type: text
+      locales:
+        da-dk: ${#jptr:/Article single Content/entry/fields/title/value}
+        de-at: ${#jptr:/Article single Content/entry/fields/title/value}
+        de-de: ${#jptr:/Article single Content/entry/fields/title/value}
+        en-ca: ${#jptr:/Article single Content/entry/fields/title/value}
+        en-de: ${#jptr:/Article single Content/entry/fields/title/value}
+        en-fr: ${#jptr:/Article single Content/entry/fields/title/value}
+        en-gb: ${#jptr:/Article single Content/entry/fields/title/value}
+        en-nl: ${#jptr:/Article single Content/entry/fields/title/value}
+        en-us: ${#jptr:/Article single Content/entry/fields/title/value}
+        es-us: ${#jptr:/Article single Content/entry/fields/title/value}
+        fr-ca: ${#jptr:/Article single Content/entry/fields/title/value}
+        fr-fr: ${#jptr:/Article single Content/entry/fields/title/value}
+        ja-jp: ${#jptr:/Article single Content/entry/fields/title/value}
+        nb-no: ${#jptr:/Article single Content/entry/fields/title/value}
+        nl-nl: ${#jptr:/Article single Content/entry/fields/title/value}
+        sv-se: ${#jptr:/Article single Content/entry/fields/title/value}
+        ar-ksa: ${#jptr:/Article single Content/entry/fields/title/value}
+        ar-uae: ${#jptr:/Article single Content/entry/fields/title/value}
+    displayName:
+      type: text
+      locales:
+        da-dk: ${#jptr:/Article single Content/entry/fields/title/value}
+        de-at: ${#jptr:/Article single Content/entry/fields/title/value}
+        de-de: ${#jptr:/Article single Content/entry/fields/title/value}
+        en-ca: ${#jptr:/Article single Content/entry/fields/title/value}
+        en-de: ${#jptr:/Article single Content/entry/fields/title/value}
+        en-fr: ${#jptr:/Article single Content/entry/fields/title/value}
+        en-gb: ${#jptr:/Article single Content/entry/fields/title/value}
+        en-nl: ${#jptr:/Article single Content/entry/fields/title/value}
+        en-us: ${#jptr:/Article single Content/entry/fields/title/value}
+        es-us: ${#jptr:/Article single Content/entry/fields/title/value}
+        fr-ca: ${#jptr:/Article single Content/entry/fields/title/value}
+        fr-fr: ${#jptr:/Article single Content/entry/fields/title/value}
+        ja-jp: ${#jptr:/Article single Content/entry/fields/title/value}
+        nb-no: ${#jptr:/Article single Content/entry/fields/title/value}
+        nl-nl: ${#jptr:/Article single Content/entry/fields/title/value}
+        sv-se: ${#jptr:/Article single Content/entry/fields/title/value}
+        ar-ksa: ${#jptr:/Article single Content/entry/fields/title/value}
+        ar-uae: ${#jptr:/Article single Content/entry/fields/title/value}
+    descriptionText:
+      type: text
+      locales:
+        da-dk: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        de-at: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        de-de: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        en-ca: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        en-de: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        en-fr: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        en-gb: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        en-nl: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        en-us: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        es-us: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        fr-ca: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        fr-fr: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        ja-jp: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        nb-no: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        nl-nl: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        sv-se: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        ar-ksa: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        ar-uae: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+    contentAlignment:
+      type: dex-segmented-control-parameter
+      value: center
+    eyebrowTitleText:
+      type: text
+      locales:
+        da-dk: Featured blog
+        de-at: Featured blog
+        de-de: Featured blog
+        en-ca: Featured blog
+        en-de: Featured blog
+        en-fr: Featured blog
+        en-gb: Featured blog
+        en-nl: Featured blog
+        en-us: Featured blog
+        es-us: Featured blog
+        fr-ca: Featured blog
+        fr-fr: Featured blog
+        ja-jp: Featured blog
+        nb-no: Featured blog
+        nl-nl: Featured blog
+        sv-se: Featured blog
+        ar-ksa: Featured blog
+        ar-uae: Featured blog
+    primaryButtonLink:
+      type: link
+      locales:
+        da-dk:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        de-at:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        de-de:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        en-ca:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        en-de:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        en-fr:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        en-gb:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        en-nl:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        en-us:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        es-us:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        fr-ca:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        fr-fr:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        ja-jp:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        nb-no:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        nl-nl:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        sv-se:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        ar-ksa:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        ar-uae:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+    primaryButtonText:
+      type: text
+      locales:
+        da-dk: Read more
+        de-at: Read more
+        de-de: Read more
+        en-ca: Read more
+        en-de: Read more
+        en-fr: Read more
+        en-gb: Read more
+        en-nl: Read more
+        en-us: Read more
+        es-us: Read more
+        fr-ca: Read more
+        fr-fr: Read more
+        ja-jp: Read more
+        nb-no: Read more
+        nl-nl: Read more
+        sv-se: Read more
+        ar-ksa: Read more
+        ar-uae: Read more
+  _dataResources:
+    Article single Content:
+      type: articleSingle
+      variables:
+        locale: ${locale}
+        entryId: f6663a55-c9e0-46e8-8e06-5abcf3f33d7d
+      isPatternParameter: true
+      ignorePatternParameterDefault: true
+  _overridability:
+    variants: true
+    parameters:
+      $viz: 'yes'
+      eyebrowTitleText: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa
+created: '2025-05-20T11:53:43.00626+00:00'
+modified: '2025-07-07T12:36:15.171989+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/blog_highlight.png
+categoryId: 3bab40a0-d52d-49b3-8780-b26f737b84a3

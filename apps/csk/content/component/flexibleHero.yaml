@@ -31,7 +31,6 @@ parameters:
         - imageObjectFit
         - imageWidth
         - imageHeight
-        - fill
         - imageUnoptimized
         - imagePriority
         - imageOverlayColor
@@ -49,10 +48,16 @@ parameters:
     type: dex-segmented-control-parameter
     typeConfig:
       options:
+        - key: Fill
+          value: fill
         - key: Contain
           value: contain
         - key: Cover
           value: cover
+        - key: None
+          value: none
+        - key: Scale Down
+          value: scale-down
       defaultValue: cover
   - id: imageWidth
     name: Width
@@ -61,11 +66,6 @@ parameters:
   - id: imageHeight
     name: Height
     type: number
-    typeConfig: null
-  - id: fill
-    name: Fill
-    type: checkbox
-    helpText: Fills the parent container
     typeConfig: null
   - id: imageUnoptimized
     name: Unoptimized
@@ -163,7 +163,7 @@ parameters:
       withViewPort: true
 categoryId: f22b05f0-c4bf-4158-8ebc-4856e4d453af
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/hero-flexible.jpg
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/hero-flexible.jpg
 useTeamPermissions: true
 slots:
   - id: flexibleHeroContent

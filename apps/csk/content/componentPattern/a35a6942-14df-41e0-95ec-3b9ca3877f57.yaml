@@ -1,0 +1,314 @@
+composition:
+  _name: Special Offer Hero
+  _id: a35a6942-14df-41e0-95ec-3b9ca3877f57
+  type: fixedHero
+  variant: columnsReverse
+  parameters:
+    image:
+      type: asset
+      value:
+        - _id: 4c76f302-f7c8-4e51-b7a1-90ad7fad3420
+          type: image
+          fields:
+            id:
+              type: text
+              value: e7805216-a37b-46b7-b032-cae1df18ae00
+            url:
+              value: >-
+                https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/SRB5XSgdS4CTNrxzEu36bQ-BB_WebCTA_NoCopy.png
+              type: text
+            file:
+              type: file
+              value: 29d63318-5291-437a-99c7-b800e63892e3
+            size:
+              value: 2472166
+              type: number
+            title:
+              type: text
+              value: BB_WebCTA_NoCopy.png
+            width:
+              value: 1536
+              type: number
+            height:
+              value: 1024
+              type: number
+            mediaType:
+              value: image/png
+              type: text
+            focalPoint:
+              type: focalPoint
+              value:
+                x: 0.7
+                'y': 0.3
+          _source: uniform-assets
+          _overrides:
+            fields:
+              focalPoint:
+                type: focalPoint
+                value:
+                  x: 0.04
+                  'y': 0.67
+    titleTag:
+      type: dex-segmented-control-parameter
+      value: h1
+    titleText:
+      type: text
+      locales:
+        da-dk: Our Exclusive Beans Bundle
+        de-at: Our Exclusive Beans Bundle
+        de-de: Our Exclusive Beans Bundle
+        en-ca: Our Exclusive Beans Bundle
+        en-de: Our Exclusive Beans Bundle
+        en-fr: Our Exclusive Beans Bundle
+        en-gb: Our Exclusive Beans Bundle
+        en-nl: Our Exclusive Beans Bundle
+        en-us: Our Exclusive Beans Bundle
+        es-us: Our Exclusive Beans Bundle
+        fr-ca: Our Exclusive Beans Bundle
+        fr-fr: Our Exclusive Beans Bundle
+        ja-jp: Our Exclusive Beans Bundle
+        nb-no: Our Exclusive Beans Bundle
+        nl-nl: Our Exclusive Beans Bundle
+        sv-se: Our Exclusive Beans Bundle
+        ar-ksa: Our Exclusive Beans Bundle
+        ar-uae: Our Exclusive Beans Bundle
+    displayName:
+      type: text
+      locales:
+        da-dk: Main Home Hero
+        de-at: Main Home Hero
+        de-de: Main Home Hero
+        en-ca: Main Home Hero
+        en-de: Main Home Hero
+        en-fr: Main Home Hero
+        en-gb: Main Home Hero
+        en-nl: Main Home Hero
+        en-us: Main Home Hero
+        es-us: Main Home Hero
+        fr-ca: Main Home Hero
+        fr-fr: Main Home Hero
+        ja-jp: Main Home Hero
+        nb-no: Main Home Hero
+        nl-nl: Main Home Hero
+        sv-se: Main Home Hero
+        ar-ksa: Main Home Hero
+        ar-uae: Main Home Hero
+    descriptionText:
+      type: text
+      locales:
+        da-dk: Handpicked by Hans Anderson
+        de-at: Handpicked by Hans Anderson
+        de-de: Handpicked by Hans Anderson
+        en-ca: Handpicked by Hans Anderson
+        en-de: Handpicked by Hans Anderson
+        en-fr: Handpicked by Hans Anderson
+        en-gb: Handpicked by Hans Anderson
+        en-nl: Handpicked by Hans Anderson
+        en-us: Handpicked by Hans Anderson
+        es-us: Handpicked by Hans Anderson
+        fr-ca: Handpicked by Hans Anderson
+        fr-fr: Handpicked by Hans Anderson
+        ja-jp: Handpicked by Hans Anderson
+        nb-no: Handpicked by Hans Anderson
+        nl-nl: Handpicked by Hans Anderson
+        sv-se: Handpicked by Hans Anderson
+        ar-ksa: Handpicked by Hans Anderson
+        ar-uae: Handpicked by Hans Anderson
+    contentAlignment:
+      type: dex-segmented-control-parameter
+      value: left
+    eyebrowTitleText:
+      type: text
+      locales:
+        da-dk: Special offer
+        de-at: Special offer
+        de-de: Special offer
+        en-ca: Special offer
+        en-de: Special offer
+        en-fr: Special offer
+        en-gb: Special offer
+        en-nl: Special offer
+        en-us: Special offer
+        es-us: Special offer
+        fr-ca: Special offer
+        fr-fr: Special offer
+        ja-jp: Special offer
+        nb-no: Special offer
+        nl-nl: Special offer
+        sv-se: Special offer
+        ar-ksa: Special offer
+        ar-uae: Special offer
+    primaryButtonLink:
+      type: link
+      locales:
+        da-dk:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        de-at:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        de-de:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        en-ca:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        en-de:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        en-fr:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        en-gb:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        en-nl:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        en-us:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        es-us:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        fr-ca:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        fr-fr:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        ja-jp:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        nb-no:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        nl-nl:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        sv-se:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        ar-ksa:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        ar-uae:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+    primaryButtonText:
+      type: text
+      locales:
+        da-dk: Explore the bundle
+        de-at: Explore the bundle
+        de-de: Explore the bundle
+        en-ca: Explore the bundle
+        en-de: Explore the bundle
+        en-fr: Explore the bundle
+        en-gb: Explore the bundle
+        en-nl: Explore the bundle
+        en-us: Explore the bundle
+        es-us: Explore the bundle
+        fr-ca: Explore the bundle
+        fr-fr: Explore the bundle
+        ja-jp: Explore the bundle
+        nb-no: Explore the bundle
+        nl-nl: Explore the bundle
+        sv-se: Explore the bundle
+        ar-ksa: Explore the bundle
+        ar-uae: Explore the bundle
+  _locales:
+    - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa
+created: '2025-06-18T12:12:05.559732+00:00'
+modified: '2025-07-07T12:20:40.588998+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/special_offer_hero.png

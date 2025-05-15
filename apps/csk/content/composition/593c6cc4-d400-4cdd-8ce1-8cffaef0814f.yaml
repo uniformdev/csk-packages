@@ -1,0 +1,2909 @@
+composition:
+  _name: EspressoGPT
+  _id: 593c6cc4-d400-4cdd-8ce1-8cffaef0814f
+  _slug: espresso-gpt
+  type: page
+  _dataResources:
+    Product Content:
+      type: product
+      variables:
+        slug: espresso-gpt
+        locale: ${locale}
+  _overrides:
+    0bae693c-41bf-4f2f-a1bb-8bb4e142d59c:
+      parameters:
+        text:
+          type: text
+          value: Can I change my AI powered taste preferences?
+    11276476-67bf-43cd-ae32-191273bf0f9d:
+      parameters:
+        text:
+          type: text
+          value: Does the EspressoGPT come with a warranty?
+    21ccb9b4-0130-4b91-ae7b-565401d4b6ff:
+      parameters:
+        displayName:
+          type: text
+          locales:
+            da-dk: "Quantum heating \Ltechnology"
+            de-at: "Quantum heating \Ltechnology"
+            de-de: "Quantum heating \Ltechnology"
+            en-ca: "Quantum heating \Ltechnology"
+            en-de: "Quantum heating \Ltechnology"
+            en-fr: "Quantum heating \Ltechnology"
+            en-gb: "Quantum heating \Ltechnology"
+            en-nl: "Quantum heating \Ltechnology"
+            es-us: "Quantum heating \Ltechnology"
+            fr-ca: "Quantum heating \Ltechnology"
+            fr-fr: "Quantum heating \Ltechnology"
+            ja-jp: "Quantum heating \Ltechnology"
+            nb-no: "Quantum heating \Ltechnology"
+            nl-nl: "Quantum heating \Ltechnology"
+            sv-se: "Quantum heating \Ltechnology"
+            ar-ksa: "Quantum heating \Ltechnology"
+            ar-uae: "Quantum heating \Ltechnology"
+    23b8c55c-5b1c-4ff0-a9db-6632891f261f:
+      parameters:
+        displayName:
+          type: text
+          locales:
+            da-dk: AI-powered taste customization
+            de-at: AI-powered taste customization
+            de-de: AI-powered taste customization
+            en-ca: AI-powered taste customization
+            en-de: AI-powered taste customization
+            en-fr: AI-powered taste customization
+            en-gb: AI-powered taste customization
+            en-nl: AI-powered taste customization
+            en-us: AI-powered taste customization
+            es-us: AI-powered taste customization
+            fr-ca: AI-powered taste customization
+            fr-fr: AI-powered taste customization
+            ja-jp: AI-powered taste customization
+            nb-no: AI-powered taste customization
+            nl-nl: AI-powered taste customization
+            sv-se: AI-powered taste customization
+            ar-ksa: AI-powered taste customization
+            ar-uae: AI-powered taste customization
+    27e6bc47-1806-483b-915e-71235813e0d2:
+      parameters:
+        displayName:
+          type: text
+          locales:
+            da-dk: Holographic interface
+            de-at: Holographic interface
+            de-de: Holographic interface
+            en-ca: Holographic interface
+            en-de: Holographic interface
+            en-fr: Holographic interface
+            en-gb: Holographic interface
+            en-nl: Holographic interface
+            en-us: Holographic interface
+            es-us: Holographic interface
+            fr-ca: Holographic interface
+            fr-fr: Holographic interface
+            ja-jp: Holographic interface
+            nb-no: Holographic interface
+            nl-nl: Holographic interface
+            sv-se: Holographic interface
+            ar-ksa: Holographic interface
+            ar-uae: Holographic interface
+    4026814e-9121-47fe-a2b6-258d9e7729f1:
+      variant: columnsReverse
+      parameters:
+        displayName:
+          type: text
+          locales:
+            da-dk: The drip on display
+            de-at: The drip on display
+            de-de: The drip on display
+            en-ca: The drip on display
+            en-de: The drip on display
+            en-fr: The drip on display
+            en-gb: The drip on display
+            en-nl: The drip on display
+            es-us: The drip on display
+            fr-ca: The drip on display
+            fr-fr: The drip on display
+            ja-jp: The drip on display
+            nb-no: The drip on display
+            nl-nl: The drip on display
+            sv-se: The drip on display
+            ar-ksa: The drip on display
+            ar-uae: The drip on display
+    459341b0-5ebb-4b3b-a19e-cc893a627378:
+      parameters:
+        displayName:
+          type: text
+          locales:
+            da-dk: The drip on display
+            de-at: The drip on display
+            de-de: The drip on display
+            en-ca: The drip on display
+            en-de: The drip on display
+            en-fr: The drip on display
+            en-gb: The drip on display
+            en-nl: The drip on display
+            es-us: The drip on display
+            fr-ca: The drip on display
+            fr-fr: The drip on display
+            ja-jp: The drip on display
+            nb-no: The drip on display
+            nl-nl: The drip on display
+            sv-se: The drip on display
+            ar-ksa: The drip on display
+            ar-uae: The drip on display
+    593c6cc4-d400-4cdd-8ce1-8cffaef0814f:
+      parameters:
+        pageTitle:
+          type: text
+          value: ${#jptr:/Product Content/entry/fields/title/value}
+        pageDescription:
+          type: text
+          locales:
+            da-dk: ${#jptr:/Product Content/entry/fields/shortDescription/value}
+            de-at: ${#jptr:/Product Content/entry/fields/shortDescription/value}
+            de-de: ${#jptr:/Product Content/entry/fields/shortDescription/value}
+            en-ca: ${#jptr:/Product Content/entry/fields/shortDescription/value}
+            en-de: ${#jptr:/Product Content/entry/fields/shortDescription/value}
+            en-fr: ${#jptr:/Product Content/entry/fields/shortDescription/value}
+            en-gb: ${#jptr:/Product Content/entry/fields/shortDescription/value}
+            en-nl: ${#jptr:/Product Content/entry/fields/shortDescription/value}
+            en-us: ${#jptr:/Product Content/entry/fields/shortDescription/value}
+            es-us: ${#jptr:/Product Content/entry/fields/shortDescription/value}
+            fr-ca: ${#jptr:/Product Content/entry/fields/shortDescription/value}
+            fr-fr: ${#jptr:/Product Content/entry/fields/shortDescription/value}
+            ja-jp: ${#jptr:/Product Content/entry/fields/shortDescription/value}
+            nb-no: ${#jptr:/Product Content/entry/fields/shortDescription/value}
+            nl-nl: ${#jptr:/Product Content/entry/fields/shortDescription/value}
+            sv-se: ${#jptr:/Product Content/entry/fields/shortDescription/value}
+            ar-ksa: ${#jptr:/Product Content/entry/fields/shortDescription/value}
+            ar-uae: ${#jptr:/Product Content/entry/fields/shortDescription/value}
+    c5220bc2-b515-4469-bfbb-0899b26320e3:
+      parameters:
+        link:
+          type: link
+          value:
+            path: >-
+              /${locale}/products/${#jptr:/Product List Content entries Loop
+              Item/entry/_slug}
+            type: projectMapNode
+            nodeId: 702b0e0b-3858-4b5d-99e4-bdb98097ca0f
+            projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+            dynamicInputValues:
+              locale: ${locale}
+              product-slug: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+        displayName:
+          type: text
+          locales:
+            da-dk: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            de-at: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            de-de: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            en-ca: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            en-de: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            en-fr: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            en-gb: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            en-nl: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            en-us: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            es-us: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            fr-ca: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            fr-fr: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            ja-jp: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            nb-no: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            nl-nl: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            sv-se: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            ar-ksa: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            ar-uae: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+    d7b56486-65b3-48e3-bbdf-e5562b949049:
+      parameters:
+        displayName:
+          type: text
+          value: 'Bean There, Asked That:'
+    ed9ccac2-f23c-4c4b-be99-eb59477f1240:
+      parameters:
+        displayName:
+          type: text
+          locales:
+            da-dk: "Quantum heating \Ltechnology"
+            de-at: "Quantum heating \Ltechnology"
+            de-de: "Quantum heating \Ltechnology"
+            en-ca: "Quantum heating \Ltechnology"
+            en-de: "Quantum heating \Ltechnology"
+            en-fr: "Quantum heating \Ltechnology"
+            en-gb: "Quantum heating \Ltechnology"
+            en-nl: "Quantum heating \Ltechnology"
+            es-us: "Quantum heating \Ltechnology"
+            fr-ca: "Quantum heating \Ltechnology"
+            fr-fr: "Quantum heating \Ltechnology"
+            ja-jp: "Quantum heating \Ltechnology"
+            nb-no: "Quantum heating \Ltechnology"
+            nl-nl: "Quantum heating \Ltechnology"
+            sv-se: "Quantum heating \Ltechnology"
+            ar-ksa: "Quantum heating \Ltechnology"
+            ar-uae: "Quantum heating \Ltechnology"
+    f5e82fbd-1b75-444d-addd-5e16c3e73239:
+      parameters:
+        text:
+          type: text
+          value: What if the holographic display isn’t working?
+    0bae693c-41bf-4f2f-a1bb-8bb4e142d59c|d2b3e054-bc98-42b7-86fa-35758fae9075:
+      parameters:
+        text:
+          type: text
+          value: >-
+            Absolutely. Your taste evolves, and so does EspressoGPT. Head into
+            the settings panel, adjust your flavor profile, and let the AI
+            re-calibrate your ideal cup — from bold mornings to mellow evenings.
+    11276476-67bf-43cd-ae32-191273bf0f9d|d2b3e054-bc98-42b7-86fa-35758fae9075:
+      parameters:
+        text:
+          type: text
+          value: >-
+            Yes — EspressoGPT comes with a 2-year limited warranty, covering all
+            core features, hardware, and AI components. If your brew buddy
+            misbehaves, we’ve got your back with repair or replacement options.
+    21ccb9b4-0130-4b91-ae7b-565401d4b6ff|67e790c1-6421-4f15-acd2-40b91f832494:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: >-
+              Say goodbye to waiting. The EspressoGPT harnesses quantum
+              mechanics to heat your water in a fraction of a second, ensuring
+              the perfect temperature for your espresso every time.
+            de-at: >-
+              Say goodbye to waiting. The EspressoGPT harnesses quantum
+              mechanics to heat your water in a fraction of a second, ensuring
+              the perfect temperature for your espresso every time.
+            de-de: >-
+              Say goodbye to waiting. The EspressoGPT harnesses quantum
+              mechanics to heat your water in a fraction of a second, ensuring
+              the perfect temperature for your espresso every time.
+            en-ca: >-
+              Say goodbye to waiting. The EspressoGPT harnesses quantum
+              mechanics to heat your water in a fraction of a second, ensuring
+              the perfect temperature for your espresso every time.
+            en-de: >-
+              Say goodbye to waiting. The EspressoGPT harnesses quantum
+              mechanics to heat your water in a fraction of a second, ensuring
+              the perfect temperature for your espresso every time.
+            en-fr: >-
+              Say goodbye to waiting. The EspressoGPT harnesses quantum
+              mechanics to heat your water in a fraction of a second, ensuring
+              the perfect temperature for your espresso every time.
+            en-gb: >-
+              Say goodbye to waiting. The EspressoGPT harnesses quantum
+              mechanics to heat your water in a fraction of a second, ensuring
+              the perfect temperature for your espresso every time.
+            en-nl: >-
+              Say goodbye to waiting. The EspressoGPT harnesses quantum
+              mechanics to heat your water in a fraction of a second, ensuring
+              the perfect temperature for your espresso every time.
+            es-us: >-
+              Say goodbye to waiting. The EspressoGPT harnesses quantum
+              mechanics to heat your water in a fraction of a second, ensuring
+              the perfect temperature for your espresso every time.
+            fr-ca: >-
+              Say goodbye to waiting. The EspressoGPT harnesses quantum
+              mechanics to heat your water in a fraction of a second, ensuring
+              the perfect temperature for your espresso every time.
+            fr-fr: >-
+              Say goodbye to waiting. The EspressoGPT harnesses quantum
+              mechanics to heat your water in a fraction of a second, ensuring
+              the perfect temperature for your espresso every time.
+            ja-jp: >-
+              Say goodbye to waiting. The EspressoGPT harnesses quantum
+              mechanics to heat your water in a fraction of a second, ensuring
+              the perfect temperature for your espresso every time.
+            nb-no: >-
+              Say goodbye to waiting. The EspressoGPT harnesses quantum
+              mechanics to heat your water in a fraction of a second, ensuring
+              the perfect temperature for your espresso every time.
+            nl-nl: >-
+              Say goodbye to waiting. The EspressoGPT harnesses quantum
+              mechanics to heat your water in a fraction of a second, ensuring
+              the perfect temperature for your espresso every time.
+            sv-se: >-
+              Say goodbye to waiting. The EspressoGPT harnesses quantum
+              mechanics to heat your water in a fraction of a second, ensuring
+              the perfect temperature for your espresso every time.
+            ar-ksa: >-
+              Say goodbye to waiting. The EspressoGPT harnesses quantum
+              mechanics to heat your water in a fraction of a second, ensuring
+              the perfect temperature for your espresso every time.
+            ar-uae: >-
+              Say goodbye to waiting. The EspressoGPT harnesses quantum
+              mechanics to heat your water in a fraction of a second, ensuring
+              the perfect temperature for your espresso every time.
+    21ccb9b4-0130-4b91-ae7b-565401d4b6ff|93a8a0a2-d5df-4e82-97ed-2c1f2f29e907:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: "Quantum heating \Ltechnology"
+            de-at: "Quantum heating \Ltechnology"
+            de-de: "Quantum heating \Ltechnology"
+            en-ca: "Quantum heating \Ltechnology"
+            en-de: "Quantum heating \Ltechnology"
+            en-fr: "Quantum heating \Ltechnology"
+            en-gb: "Quantum heating \Ltechnology"
+            en-nl: "Quantum heating \Ltechnology"
+            es-us: "Quantum heating \Ltechnology"
+            fr-ca: "Quantum heating \Ltechnology"
+            fr-fr: "Quantum heating \Ltechnology"
+            ja-jp: "Quantum heating \Ltechnology"
+            nb-no: "Quantum heating \Ltechnology"
+            nl-nl: "Quantum heating \Ltechnology"
+            sv-se: "Quantum heating \Ltechnology"
+            ar-ksa: "Quantum heating \Ltechnology"
+            ar-uae: "Quantum heating \Ltechnology"
+    23b8c55c-5b1c-4ff0-a9db-6632891f261f|67e790c1-6421-4f15-acd2-40b91f832494:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: >-
+              We understands your palette After just a few uses, EspressoGPT 
+              learns to brew your espresso to your exact liking, adjusting grind
+              size, water temperature, and brewing time.
+            de-at: >-
+              We understands your palette After just a few uses, EspressoGPT 
+              learns to brew your espresso to your exact liking, adjusting grind
+              size, water temperature, and brewing time.
+            de-de: >-
+              We understands your palette After just a few uses, EspressoGPT 
+              learns to brew your espresso to your exact liking, adjusting grind
+              size, water temperature, and brewing time.
+            en-ca: >-
+              We understands your palette After just a few uses, EspressoGPT 
+              learns to brew your espresso to your exact liking, adjusting grind
+              size, water temperature, and brewing time.
+            en-de: >-
+              We understands your palette After just a few uses, EspressoGPT 
+              learns to brew your espresso to your exact liking, adjusting grind
+              size, water temperature, and brewing time.
+            en-fr: >-
+              We understands your palette After just a few uses, EspressoGPT 
+              learns to brew your espresso to your exact liking, adjusting grind
+              size, water temperature, and brewing time.
+            en-gb: >-
+              We understands your palette After just a few uses, EspressoGPT 
+              learns to brew your espresso to your exact liking, adjusting grind
+              size, water temperature, and brewing time.
+            en-nl: >-
+              We understands your palette After just a few uses, EspressoGPT 
+              learns to brew your espresso to your exact liking, adjusting grind
+              size, water temperature, and brewing time.
+            en-us: >-
+              We understands your palette After just a few uses, EspressoGPT 
+              learns to brew your espresso to your exact liking, adjusting grind
+              size, water temperature, and brewing time.
+            es-us: >-
+              We understands your palette After just a few uses, EspressoGPT 
+              learns to brew your espresso to your exact liking, adjusting grind
+              size, water temperature, and brewing time.
+            fr-ca: >-
+              We understands your palette After just a few uses, EspressoGPT 
+              learns to brew your espresso to your exact liking, adjusting grind
+              size, water temperature, and brewing time.
+            fr-fr: >-
+              We understands your palette After just a few uses, EspressoGPT 
+              learns to brew your espresso to your exact liking, adjusting grind
+              size, water temperature, and brewing time.
+            ja-jp: >-
+              We understands your palette After just a few uses, EspressoGPT 
+              learns to brew your espresso to your exact liking, adjusting grind
+              size, water temperature, and brewing time.
+            nb-no: >-
+              We understands your palette After just a few uses, EspressoGPT 
+              learns to brew your espresso to your exact liking, adjusting grind
+              size, water temperature, and brewing time.
+            nl-nl: >-
+              We understands your palette After just a few uses, EspressoGPT 
+              learns to brew your espresso to your exact liking, adjusting grind
+              size, water temperature, and brewing time.
+            sv-se: >-
+              We understands your palette After just a few uses, EspressoGPT 
+              learns to brew your espresso to your exact liking, adjusting grind
+              size, water temperature, and brewing time.
+            ar-ksa: >-
+              We understands your palette After just a few uses, EspressoGPT 
+              learns to brew your espresso to your exact liking, adjusting grind
+              size, water temperature, and brewing time.
+            ar-uae: >-
+              We understands your palette After just a few uses, EspressoGPT 
+              learns to brew your espresso to your exact liking, adjusting grind
+              size, water temperature, and brewing time.
+    23b8c55c-5b1c-4ff0-a9db-6632891f261f|93a8a0a2-d5df-4e82-97ed-2c1f2f29e907:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: AI-powered taste customization
+            de-at: AI-powered taste customization
+            de-de: AI-powered taste customization
+            en-ca: AI-powered taste customization
+            en-de: AI-powered taste customization
+            en-fr: AI-powered taste customization
+            en-gb: AI-powered taste customization
+            en-nl: AI-powered taste customization
+            en-us: AI-powered taste customization
+            es-us: AI-powered taste customization
+            fr-ca: AI-powered taste customization
+            fr-fr: AI-powered taste customization
+            ja-jp: AI-powered taste customization
+            nb-no: AI-powered taste customization
+            nl-nl: AI-powered taste customization
+            sv-se: AI-powered taste customization
+            ar-ksa: AI-powered taste customization
+            ar-uae: AI-powered taste customization
+    23b8c55c-5b1c-4ff0-a9db-6632891f261f|df99286b-2378-4646-a0a3-fc0921dd8940:
+      parameters:
+        image:
+          type: asset
+          value:
+            - _id: 9db72629-9323-4afa-9998-8706a32b83cf
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: 99596b4c-7827-4651-9d67-5cea454161b1
+                url:
+                  value: >-
+                    https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/BSQfDaHaTEqtVXJeFw7UTQ-ai-powered-taste-customization.png
+                  type: text
+                file:
+                  type: file
+                  value: 446af331-2b0e-47a2-a941-a78300ea84c0
+                size:
+                  value: 728
+                  type: number
+                title:
+                  type: text
+                  value: ai-powered-taste-customization.png
+                width:
+                  value: 60
+                  type: number
+                height:
+                  value: 60
+                  type: number
+                mediaType:
+                  value: image/png
+                  type: text
+              _source: uniform-assets
+    27e6bc47-1806-483b-915e-71235813e0d2|67e790c1-6421-4f15-acd2-40b91f832494:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: >-
+              Touchscreens are a thing of the past. EspressoGPT 's floating
+              holographic interface offers an intuitive user experience. Adjust
+              settings, browse recipes, or get a virtual barista tutorial with a
+              simple hand gesture.
+            de-at: >-
+              Touchscreens are a thing of the past. EspressoGPT 's floating
+              holographic interface offers an intuitive user experience. Adjust
+              settings, browse recipes, or get a virtual barista tutorial with a
+              simple hand gesture.
+            de-de: >-
+              Touchscreens are a thing of the past. EspressoGPT 's floating
+              holographic interface offers an intuitive user experience. Adjust
+              settings, browse recipes, or get a virtual barista tutorial with a
+              simple hand gesture.
+            en-ca: >-
+              Touchscreens are a thing of the past. EspressoGPT 's floating
+              holographic interface offers an intuitive user experience. Adjust
+              settings, browse recipes, or get a virtual barista tutorial with a
+              simple hand gesture.
+            en-de: >-
+              Touchscreens are a thing of the past. EspressoGPT 's floating
+              holographic interface offers an intuitive user experience. Adjust
+              settings, browse recipes, or get a virtual barista tutorial with a
+              simple hand gesture.
+            en-fr: >-
+              Touchscreens are a thing of the past. EspressoGPT 's floating
+              holographic interface offers an intuitive user experience. Adjust
+              settings, browse recipes, or get a virtual barista tutorial with a
+              simple hand gesture.
+            en-gb: >-
+              Touchscreens are a thing of the past. EspressoGPT 's floating
+              holographic interface offers an intuitive user experience. Adjust
+              settings, browse recipes, or get a virtual barista tutorial with a
+              simple hand gesture.
+            en-nl: >-
+              Touchscreens are a thing of the past. EspressoGPT 's floating
+              holographic interface offers an intuitive user experience. Adjust
+              settings, browse recipes, or get a virtual barista tutorial with a
+              simple hand gesture.
+            en-us: >-
+              Touchscreens are a thing of the past. EspressoGPT 's floating
+              holographic interface offers an intuitive user experience. Adjust
+              settings, browse recipes, or get a virtual barista tutorial with a
+              simple hand gesture.
+            es-us: >-
+              Touchscreens are a thing of the past. EspressoGPT 's floating
+              holographic interface offers an intuitive user experience. Adjust
+              settings, browse recipes, or get a virtual barista tutorial with a
+              simple hand gesture.
+            fr-ca: >-
+              Touchscreens are a thing of the past. EspressoGPT 's floating
+              holographic interface offers an intuitive user experience. Adjust
+              settings, browse recipes, or get a virtual barista tutorial with a
+              simple hand gesture.
+            fr-fr: >-
+              Touchscreens are a thing of the past. EspressoGPT 's floating
+              holographic interface offers an intuitive user experience. Adjust
+              settings, browse recipes, or get a virtual barista tutorial with a
+              simple hand gesture.
+            ja-jp: >-
+              Touchscreens are a thing of the past. EspressoGPT 's floating
+              holographic interface offers an intuitive user experience. Adjust
+              settings, browse recipes, or get a virtual barista tutorial with a
+              simple hand gesture.
+            nb-no: >-
+              Touchscreens are a thing of the past. EspressoGPT 's floating
+              holographic interface offers an intuitive user experience. Adjust
+              settings, browse recipes, or get a virtual barista tutorial with a
+              simple hand gesture.
+            nl-nl: >-
+              Touchscreens are a thing of the past. EspressoGPT 's floating
+              holographic interface offers an intuitive user experience. Adjust
+              settings, browse recipes, or get a virtual barista tutorial with a
+              simple hand gesture.
+            sv-se: >-
+              Touchscreens are a thing of the past. EspressoGPT 's floating
+              holographic interface offers an intuitive user experience. Adjust
+              settings, browse recipes, or get a virtual barista tutorial with a
+              simple hand gesture.
+            ar-ksa: >-
+              Touchscreens are a thing of the past. EspressoGPT 's floating
+              holographic interface offers an intuitive user experience. Adjust
+              settings, browse recipes, or get a virtual barista tutorial with a
+              simple hand gesture.
+            ar-uae: >-
+              Touchscreens are a thing of the past. EspressoGPT 's floating
+              holographic interface offers an intuitive user experience. Adjust
+              settings, browse recipes, or get a virtual barista tutorial with a
+              simple hand gesture.
+    27e6bc47-1806-483b-915e-71235813e0d2|93a8a0a2-d5df-4e82-97ed-2c1f2f29e907:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: "Holographic interface\_ \_ \_"
+            de-at: "Holographic interface\_ \_ \_"
+            de-de: "Holographic interface\_ \_ \_"
+            en-ca: "Holographic interface\_ \_ \_"
+            en-de: "Holographic interface\_ \_ \_"
+            en-fr: "Holographic interface\_ \_ \_"
+            en-gb: "Holographic interface\_ \_ \_"
+            en-nl: "Holographic interface\_ \_ \_"
+            en-us: "Holographic interface\_ \_ \_"
+            es-us: "Holographic interface\_ \_ \_"
+            fr-ca: "Holographic interface\_ \_ \_"
+            fr-fr: "Holographic interface\_ \_ \_"
+            ja-jp: "Holographic interface\_ \_ \_"
+            nb-no: "Holographic interface\_ \_ \_"
+            nl-nl: "Holographic interface\_ \_ \_"
+            sv-se: "Holographic interface\_ \_ \_"
+            ar-ksa: "Holographic interface\_ \_ \_"
+            ar-uae: "Holographic interface\_ \_ \_"
+    27e6bc47-1806-483b-915e-71235813e0d2|df99286b-2378-4646-a0a3-fc0921dd8940:
+      parameters:
+        image:
+          type: asset
+          value:
+            - _id: 5b3d16fc-2574-4eeb-b386-97e419cc99bd
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: 98f8929f-ca4c-488b-acb6-df878847dacf
+                url:
+                  value: >-
+                    https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/uNr-cIydTkycCQuND0rsuw-holographic-interface.png
+                  type: text
+                file:
+                  type: file
+                  value: 7b3293c5-e6cd-4d0b-a95d-07f364e0e8d4
+                size:
+                  value: 1520
+                  type: number
+                title:
+                  type: text
+                  value: holographic-interface.png
+                width:
+                  value: 60
+                  type: number
+                height:
+                  value: 54
+                  type: number
+                mediaType:
+                  value: image/png
+                  type: text
+              _source: uniform-assets
+    4026814e-9121-47fe-a2b6-258d9e7729f1|02f24106-b9ba-4234-8882-ea6b75655106:
+      parameters:
+        spacing:
+          type: dex-space-control-parameter
+          value:
+            mobile: {}
+            tablet: {}
+            desktop:
+              paddingRight: container-small
+    4026814e-9121-47fe-a2b6-258d9e7729f1|450f9239-3309-4f7c-b42d-c80df9f575e4:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: Perfect specs
+            de-at: Perfect specs
+            de-de: Perfect specs
+            en-ca: Perfect specs
+            en-de: Perfect specs
+            en-fr: Perfect specs
+            en-gb: Perfect specs
+            en-nl: Perfect specs
+            en-us: Perfect specs
+            es-us: Perfect specs
+            fr-ca: Perfect specs
+            fr-fr: Perfect specs
+            ja-jp: Perfect specs
+            nb-no: Perfect specs
+            nl-nl: Perfect specs
+            sv-se: Perfect specs
+            ar-ksa: Perfect specs
+            ar-uae: Perfect specs
+        alignment:
+          type: dex-segmented-control-parameter
+          value: ''
+    4026814e-9121-47fe-a2b6-258d9e7729f1|49bcd121-6f8b-458f-8e5e-2d260046d99b:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: >-
+              Modern design seamlessly blends minimalistic elegance with
+              cutting-edge functionality, making it a statement piece in any
+              contemporary kitchen.
+            de-at: >-
+              Modern design seamlessly blends minimalistic elegance with
+              cutting-edge functionality, making it a statement piece in any
+              contemporary kitchen.
+            de-de: >-
+              Modern design seamlessly blends minimalistic elegance with
+              cutting-edge functionality, making it a statement piece in any
+              contemporary kitchen.
+            en-ca: >-
+              Modern design seamlessly blends minimalistic elegance with
+              cutting-edge functionality, making it a statement piece in any
+              contemporary kitchen.
+            en-de: >-
+              Modern design seamlessly blends minimalistic elegance with
+              cutting-edge functionality, making it a statement piece in any
+              contemporary kitchen.
+            en-fr: >-
+              Modern design seamlessly blends minimalistic elegance with
+              cutting-edge functionality, making it a statement piece in any
+              contemporary kitchen.
+            en-gb: >-
+              Modern design seamlessly blends minimalistic elegance with
+              cutting-edge functionality, making it a statement piece in any
+              contemporary kitchen.
+            en-nl: >-
+              Modern design seamlessly blends minimalistic elegance with
+              cutting-edge functionality, making it a statement piece in any
+              contemporary kitchen.
+            en-us: >-
+              Modern design seamlessly blends minimalistic elegance with
+              cutting-edge functionality, making it a statement piece in any
+              contemporary kitchen.
+            es-us: >-
+              Modern design seamlessly blends minimalistic elegance with
+              cutting-edge functionality, making it a statement piece in any
+              contemporary kitchen.
+            fr-ca: >-
+              Modern design seamlessly blends minimalistic elegance with
+              cutting-edge functionality, making it a statement piece in any
+              contemporary kitchen.
+            fr-fr: >-
+              Modern design seamlessly blends minimalistic elegance with
+              cutting-edge functionality, making it a statement piece in any
+              contemporary kitchen.
+            ja-jp: >-
+              Modern design seamlessly blends minimalistic elegance with
+              cutting-edge functionality, making it a statement piece in any
+              contemporary kitchen.
+            nb-no: >-
+              Modern design seamlessly blends minimalistic elegance with
+              cutting-edge functionality, making it a statement piece in any
+              contemporary kitchen.
+            nl-nl: >-
+              Modern design seamlessly blends minimalistic elegance with
+              cutting-edge functionality, making it a statement piece in any
+              contemporary kitchen.
+            sv-se: >-
+              Modern design seamlessly blends minimalistic elegance with
+              cutting-edge functionality, making it a statement piece in any
+              contemporary kitchen.
+            ar-ksa: >-
+              Modern design seamlessly blends minimalistic elegance with
+              cutting-edge functionality, making it a statement piece in any
+              contemporary kitchen.
+            ar-uae: >-
+              Modern design seamlessly blends minimalistic elegance with
+              cutting-edge functionality, making it a statement piece in any
+              contemporary kitchen.
+        alignment:
+          type: dex-segmented-control-parameter
+          value: right
+    4026814e-9121-47fe-a2b6-258d9e7729f1|56869950-c2f4-4cd6-85c8-966b3762e7a6:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: Learn more
+            de-at: Learn more
+            de-de: Learn more
+            en-ca: Learn more
+            en-de: Learn more
+            en-fr: Learn more
+            en-gb: Learn more
+            en-nl: Learn more
+            es-us: Learn more
+            fr-ca: Learn more
+            fr-fr: Learn more
+            ja-jp: Learn more
+            nb-no: Learn more
+            nl-nl: Learn more
+            sv-se: Learn more
+            ar-ksa: Learn more
+            ar-uae: Learn more
+    4026814e-9121-47fe-a2b6-258d9e7729f1|75aa7b89-c0cd-46b2-b676-7421d6963869:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: 'Celebrate the art of coffee making '
+            de-at: 'Celebrate the art of coffee making '
+            de-de: 'Celebrate the art of coffee making '
+            en-ca: 'Celebrate the art of coffee making '
+            en-de: 'Celebrate the art of coffee making '
+            en-fr: 'Celebrate the art of coffee making '
+            en-gb: 'Celebrate the art of coffee making '
+            en-nl: 'Celebrate the art of coffee making '
+            en-us: 'Celebrate the art of coffee making '
+            es-us: 'Celebrate the art of coffee making '
+            fr-ca: 'Celebrate the art of coffee making '
+            fr-fr: 'Celebrate the art of coffee making '
+            ja-jp: 'Celebrate the art of coffee making '
+            nb-no: 'Celebrate the art of coffee making '
+            nl-nl: 'Celebrate the art of coffee making '
+            sv-se: 'Celebrate the art of coffee making '
+            ar-ksa: 'Celebrate the art of coffee making '
+            ar-uae: 'Celebrate the art of coffee making '
+        alignment:
+          type: dex-segmented-control-parameter
+          value: ''
+    4026814e-9121-47fe-a2b6-258d9e7729f1|76787ced-2bbf-498b-8446-dc81bcadd0c7:
+      parameters:
+        image:
+          type: asset
+          value:
+            - _id: 52b3021c-98dc-4454-a7c7-764221694036
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: 64fbadc2-d216-454c-a4ae-10994b8487db
+                url:
+                  value: >-
+                    https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/CBARG1GHSxq6WBeZ_tjdxA-perfect-specs.png
+                  type: text
+                file:
+                  type: file
+                  value: 4ac3f388-6863-4319-ab01-ca47df2a6ed3
+                size:
+                  value: 57463
+                  type: number
+                title:
+                  type: text
+                  value: perfect-specs.png
+                width:
+                  value: 1074
+                  type: number
+                height:
+                  value: 748
+                  type: number
+                mediaType:
+                  value: image/png
+                  type: text
+              _source: uniform-assets
+    4026814e-9121-47fe-a2b6-258d9e7729f1|b8fb01ca-a9f4-41e4-89fa-418a2b8ba48c:
+      parameters:
+        alignItems:
+          type: dex-segmented-control-parameter
+          value:
+            mobile: end
+    4026814e-9121-47fe-a2b6-258d9e7729f1|fabef422-1ba6-46f9-bb3b-e0bd14099f08:
+      parameters:
+        alignItems:
+          type: dex-segmented-control-parameter
+          value:
+            mobile: end
+    459341b0-5ebb-4b3b-a19e-cc893a627378|450f9239-3309-4f7c-b42d-c80df9f575e4:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: The drip on display
+            de-at: The drip on display
+            de-de: The drip on display
+            en-ca: The drip on display
+            en-de: The drip on display
+            en-fr: The drip on display
+            en-gb: The drip on display
+            en-nl: The drip on display
+            es-us: The drip on display
+            fr-ca: The drip on display
+            fr-fr: The drip on display
+            ja-jp: The drip on display
+            nb-no: The drip on display
+            nl-nl: The drip on display
+            sv-se: The drip on display
+            ar-ksa: The drip on display
+            ar-uae: The drip on display
+    459341b0-5ebb-4b3b-a19e-cc893a627378|49bcd121-6f8b-458f-8e5e-2d260046d99b:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: >-
+              Crystal-clear clarity, ensuring users can easily select their
+              desired settings and monitor the brewing process in real-time. Its
+              intuitive interface and vibrant visuals elevate the user
+              experience
+            de-at: >-
+              Crystal-clear clarity, ensuring users can easily select their
+              desired settings and monitor the brewing process in real-time. Its
+              intuitive interface and vibrant visuals elevate the user
+              experience
+            de-de: >-
+              Crystal-clear clarity, ensuring users can easily select their
+              desired settings and monitor the brewing process in real-time. Its
+              intuitive interface and vibrant visuals elevate the user
+              experience
+            en-ca: >-
+              Crystal-clear clarity, ensuring users can easily select their
+              desired settings and monitor the brewing process in real-time. Its
+              intuitive interface and vibrant visuals elevate the user
+              experience
+            en-de: >-
+              Crystal-clear clarity, ensuring users can easily select their
+              desired settings and monitor the brewing process in real-time. Its
+              intuitive interface and vibrant visuals elevate the user
+              experience
+            en-fr: >-
+              Crystal-clear clarity, ensuring users can easily select their
+              desired settings and monitor the brewing process in real-time. Its
+              intuitive interface and vibrant visuals elevate the user
+              experience
+            en-gb: >-
+              Crystal-clear clarity, ensuring users can easily select their
+              desired settings and monitor the brewing process in real-time. Its
+              intuitive interface and vibrant visuals elevate the user
+              experience
+            en-nl: >-
+              Crystal-clear clarity, ensuring users can easily select their
+              desired settings and monitor the brewing process in real-time. Its
+              intuitive interface and vibrant visuals elevate the user
+              experience
+            es-us: >-
+              Crystal-clear clarity, ensuring users can easily select their
+              desired settings and monitor the brewing process in real-time. Its
+              intuitive interface and vibrant visuals elevate the user
+              experience
+            fr-ca: >-
+              Crystal-clear clarity, ensuring users can easily select their
+              desired settings and monitor the brewing process in real-time. Its
+              intuitive interface and vibrant visuals elevate the user
+              experience
+            fr-fr: >-
+              Crystal-clear clarity, ensuring users can easily select their
+              desired settings and monitor the brewing process in real-time. Its
+              intuitive interface and vibrant visuals elevate the user
+              experience
+            ja-jp: >-
+              Crystal-clear clarity, ensuring users can easily select their
+              desired settings and monitor the brewing process in real-time. Its
+              intuitive interface and vibrant visuals elevate the user
+              experience
+            nb-no: >-
+              Crystal-clear clarity, ensuring users can easily select their
+              desired settings and monitor the brewing process in real-time. Its
+              intuitive interface and vibrant visuals elevate the user
+              experience
+            nl-nl: >-
+              Crystal-clear clarity, ensuring users can easily select their
+              desired settings and monitor the brewing process in real-time. Its
+              intuitive interface and vibrant visuals elevate the user
+              experience
+            sv-se: >-
+              Crystal-clear clarity, ensuring users can easily select their
+              desired settings and monitor the brewing process in real-time. Its
+              intuitive interface and vibrant visuals elevate the user
+              experience
+            ar-ksa: >-
+              Crystal-clear clarity, ensuring users can easily select their
+              desired settings and monitor the brewing process in real-time. Its
+              intuitive interface and vibrant visuals elevate the user
+              experience
+            ar-uae: >-
+              Crystal-clear clarity, ensuring users can easily select their
+              desired settings and monitor the brewing process in real-time. Its
+              intuitive interface and vibrant visuals elevate the user
+              experience
+    459341b0-5ebb-4b3b-a19e-cc893a627378|56869950-c2f4-4cd6-85c8-966b3762e7a6:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: Learn more
+            de-at: Learn more
+            de-de: Learn more
+            en-ca: Learn more
+            en-de: Learn more
+            en-fr: Learn more
+            en-gb: Learn more
+            en-nl: Learn more
+            es-us: Learn more
+            fr-ca: Learn more
+            fr-fr: Learn more
+            ja-jp: Learn more
+            nb-no: Learn more
+            nl-nl: Learn more
+            sv-se: Learn more
+            ar-ksa: Learn more
+            ar-uae: Learn more
+    459341b0-5ebb-4b3b-a19e-cc893a627378|75aa7b89-c0cd-46b2-b676-7421d6963869:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: 'Monitor the perfect brew '
+            de-at: 'Monitor the perfect brew '
+            de-de: 'Monitor the perfect brew '
+            en-ca: 'Monitor the perfect brew '
+            en-de: 'Monitor the perfect brew '
+            en-fr: 'Monitor the perfect brew '
+            en-gb: 'Monitor the perfect brew '
+            en-nl: 'Monitor the perfect brew '
+            es-us: 'Monitor the perfect brew '
+            fr-ca: 'Monitor the perfect brew '
+            fr-fr: 'Monitor the perfect brew '
+            ja-jp: 'Monitor the perfect brew '
+            nb-no: 'Monitor the perfect brew '
+            nl-nl: 'Monitor the perfect brew '
+            sv-se: 'Monitor the perfect brew '
+            ar-ksa: 'Monitor the perfect brew '
+            ar-uae: 'Monitor the perfect brew '
+    593c6cc4-d400-4cdd-8ce1-8cffaef0814f|dc2e95be-21b5-4476-a309-f8a34922f528:
+      slots:
+        $slotSectionItems:
+          - _id: 03ff6778-0053-49a4-8c11-366e593a48e9
+            type: section
+            slots:
+              sectionMedia:
+                - _id: 8c1b7cc6-83f0-4ee2-a2ae-f157fc494120
+                  type: image
+                  parameters:
+                    fill:
+                      type: checkbox
+                      value: true
+                    image:
+                      type: asset
+                      value:
+                        - _id: 7e8005e5-593b-4668-aa2c-db4d73f12830
+                          type: image
+                          fields:
+                            id:
+                              type: text
+                              value: 99b30f64-71a3-4e63-8b44-a7bdd3e48ed5
+                            url:
+                              value: >-
+                                https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/jhhCyG8NTKeE30Qq_Nyl-A-espresso-gpt-6.png
+                              type: text
+                            file:
+                              type: file
+                              value: fd1e3278-3042-4752-90ad-941c982a283e
+                            size:
+                              value: 157961
+                              type: number
+                            title:
+                              type: text
+                              value: espresso-gpt-6.png
+                            width:
+                              value: 1400
+                              type: number
+                            height:
+                              value: 681
+                              type: number
+                            mediaType:
+                              value: image/png
+                              type: text
+                          _source: uniform-assets
+                    objectFit:
+                      type: dex-segmented-control-parameter
+                      value: cover
+              sectionContent:
+                - _id: 405ca9fe-dcf1-40ef-9c43-e5138d04ac6f
+                  type: grid
+                  slots:
+                    gridInner:
+                      - _id: 54ce2f20-2e86-4c2f-bb18-2f790a9da027
+                        type: gridItem
+                        slots:
+                          inner:
+                            - _id: 0637083f-5d56-4f8d-bac2-2dee2f3bda4e
+                              type: flex
+                              slots:
+                                flexItem:
+                                  - _id: bbd96e37-118f-401a-9da4-7a0b04bd8008
+                                    type: text
+                                    parameters:
+                                      tag:
+                                        type: dex-segmented-control-parameter
+                                        value: span
+                                      size:
+                                        type: dex-segmented-control-parameter
+                                        value:
+                                          mobile: xs
+                                          tablet: lg
+                                          desktop: xl
+                                      text:
+                                        type: text
+                                        locales:
+                                          da-dk: EXPERIENCE A REVOLUTION
+                                          de-at: EXPERIENCE A REVOLUTION
+                                          de-de: EXPERIENCE A REVOLUTION
+                                          en-ca: EXPERIENCE A REVOLUTION
+                                          en-de: EXPERIENCE A REVOLUTION
+                                          en-fr: EXPERIENCE A REVOLUTION
+                                          en-gb: EXPERIENCE A REVOLUTION
+                                          en-nl: EXPERIENCE A REVOLUTION
+                                          en-us: EXPERIENCE A REVOLUTION
+                                          es-us: EXPERIENCE A REVOLUTION
+                                          fr-ca: EXPERIENCE A REVOLUTION
+                                          fr-fr: EXPERIENCE A REVOLUTION
+                                          ja-jp: EXPERIENCE A REVOLUTION
+                                          nb-no: EXPERIENCE A REVOLUTION
+                                          nl-nl: EXPERIENCE A REVOLUTION
+                                          sv-se: EXPERIENCE A REVOLUTION
+                                          ar-ksa: EXPERIENCE A REVOLUTION
+                                          ar-uae: EXPERIENCE A REVOLUTION
+                                      color:
+                                        type: dex-color-palette-parameter
+                                        value: text-secondary
+                                      weight:
+                                        type: dex-segmented-control-parameter
+                                        value: normal
+                                      transform:
+                                        type: dex-segmented-control-parameter
+                                        value: uppercase
+                                      letterSpacing:
+                                        type: dex-segmented-control-parameter
+                                        value: wider
+                                  - _id: 29d3283d-ac61-4140-be32-079a3b37897e
+                                    type: text
+                                    parameters:
+                                      tag:
+                                        type: dex-segmented-control-parameter
+                                        value: span
+                                      font:
+                                        type: dex-token-selector-parameter
+                                        value: secondary
+                                      size:
+                                        type: dex-segmented-control-parameter
+                                        value:
+                                          mobile: 3xl
+                                          tablet: 4xl
+                                          desktop: 4xl
+                                      text:
+                                        type: text
+                                        locales:
+                                          da-dk: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/title/value}
+                                          de-at: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/title/value}
+                                          de-de: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/title/value}
+                                          en-ca: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/title/value}
+                                          en-de: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/title/value}
+                                          en-fr: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/title/value}
+                                          en-gb: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/title/value}
+                                          en-nl: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/title/value}
+                                          en-us: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/title/value}
+                                          es-us: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/title/value}
+                                          fr-ca: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/title/value}
+                                          fr-fr: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/title/value}
+                                          ja-jp: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/title/value}
+                                          nb-no: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/title/value}
+                                          nl-nl: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/title/value}
+                                          sv-se: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/title/value}
+                                          ar-ksa: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/title/value}
+                                          ar-uae: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/title/value}
+                                      color:
+                                        type: dex-color-palette-parameter
+                                        value: text-featured
+                                      weight:
+                                        type: dex-segmented-control-parameter
+                                        value: bold
+                                  - _id: a7ecac99-2fdb-4492-b267-aa36169c3be6
+                                    type: text
+                                    parameters:
+                                      tag:
+                                        type: dex-segmented-control-parameter
+                                        value: span
+                                      size:
+                                        type: dex-segmented-control-parameter
+                                        value:
+                                          mobile: sm
+                                          tablet: lg
+                                          desktop: xl
+                                      text:
+                                        type: text
+                                        locales:
+                                          da-dk: >-
+                                            Where modern technology meets timeless
+                                            taste
+                                          de-at: >-
+                                            Where modern technology meets timeless
+                                            taste
+                                          de-de: >-
+                                            Where modern technology meets timeless
+                                            taste
+                                          en-ca: >-
+                                            Where modern technology meets timeless
+                                            taste
+                                          en-de: >-
+                                            Where modern technology meets timeless
+                                            taste
+                                          en-fr: >-
+                                            Where modern technology meets timeless
+                                            taste
+                                          en-gb: >-
+                                            Where modern technology meets timeless
+                                            taste
+                                          en-nl: >-
+                                            Where modern technology meets timeless
+                                            taste
+                                          en-us: >-
+                                            Where modern technology meets timeless
+                                            taste
+                                          es-us: >-
+                                            Where modern technology meets timeless
+                                            taste
+                                          fr-ca: >-
+                                            Where modern technology meets timeless
+                                            taste
+                                          fr-fr: >-
+                                            Where modern technology meets timeless
+                                            taste
+                                          ja-jp: >-
+                                            Where modern technology meets timeless
+                                            taste
+                                          nb-no: >-
+                                            Where modern technology meets timeless
+                                            taste
+                                          nl-nl: >-
+                                            Where modern technology meets timeless
+                                            taste
+                                          sv-se: >-
+                                            Where modern technology meets timeless
+                                            taste
+                                          ar-ksa: >-
+                                            Where modern technology meets timeless
+                                            taste
+                                          ar-uae: >-
+                                            Where modern technology meets timeless
+                                            taste
+                                      color:
+                                        type: dex-color-palette-parameter
+                                        value: text-secondary
+                                      weight:
+                                        type: dex-segmented-control-parameter
+                                        value: normal
+                                  - _id: 516e57cd-8feb-4007-b8de-3ad990af9d84
+                                    type: text
+                                    parameters:
+                                      tag:
+                                        type: dex-segmented-control-parameter
+                                        value: span
+                                      size:
+                                        type: dex-segmented-control-parameter
+                                        value:
+                                          mobile: sm
+                                          tablet: lg
+                                          desktop: xl
+                                      text:
+                                        type: text
+                                        locales:
+                                          da-dk: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/shortDescription/value}
+                                          de-at: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/shortDescription/value}
+                                          de-de: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/shortDescription/value}
+                                          en-ca: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/shortDescription/value}
+                                          en-de: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/shortDescription/value}
+                                          en-fr: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/shortDescription/value}
+                                          en-gb: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/shortDescription/value}
+                                          en-nl: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/shortDescription/value}
+                                          en-us: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/shortDescription/value}
+                                          es-us: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/shortDescription/value}
+                                          fr-ca: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/shortDescription/value}
+                                          fr-fr: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/shortDescription/value}
+                                          ja-jp: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/shortDescription/value}
+                                          nb-no: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/shortDescription/value}
+                                          nl-nl: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/shortDescription/value}
+                                          sv-se: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/shortDescription/value}
+                                          ar-ksa: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/shortDescription/value}
+                                          ar-uae: >-
+                                            ${#jptr:/Product
+                                            Content/entry/fields/shortDescription/value}
+                                      color:
+                                        type: dex-color-palette-parameter
+                                        value: text-secondary
+                                      weight:
+                                        type: dex-segmented-control-parameter
+                                        value: normal
+                                      alignment:
+                                        type: dex-segmented-control-parameter
+                                        value: left
+                                  - _id: 84c49e46-53a2-47ef-b4e6-4d434b9044e4
+                                    type: container
+                                    slots:
+                                      containerContent:
+                                        - _id: d9e7c5b7-bb11-45e9-98ec-234c2ee01731
+                                          type: text
+                                          parameters:
+                                            tag:
+                                              type: dex-segmented-control-parameter
+                                              value: span
+                                            size:
+                                              type: dex-segmented-control-parameter
+                                              value:
+                                                mobile: 2xl
+                                            text:
+                                              type: text
+                                              locales:
+                                                da-dk: >-
+                                                  $${#jptr:/Product
+                                                  Content/entry/fields/variants/value/0/fields/price/value}
+                                                de-at: >-
+                                                  $${#jptr:/Product
+                                                  Content/entry/fields/variants/value/0/fields/price/value}
+                                                de-de: >-
+                                                  $${#jptr:/Product
+                                                  Content/entry/fields/variants/value/0/fields/price/value}
+                                                en-ca: >-
+                                                  $${#jptr:/Product
+                                                  Content/entry/fields/variants/value/0/fields/price/value}
+                                                en-de: >-
+                                                  $${#jptr:/Product
+                                                  Content/entry/fields/variants/value/0/fields/price/value}
+                                                en-fr: >-
+                                                  $${#jptr:/Product
+                                                  Content/entry/fields/variants/value/0/fields/price/value}
+                                                en-gb: >-
+                                                  $${#jptr:/Product
+                                                  Content/entry/fields/variants/value/0/fields/price/value}
+                                                en-nl: >-
+                                                  $${#jptr:/Product
+                                                  Content/entry/fields/variants/value/0/fields/price/value}
+                                                en-us: >-
+                                                  $${#jptr:/Product
+                                                  Content/entry/fields/variants/value/0/fields/price/value}
+                                                es-us: >-
+                                                  $${#jptr:/Product
+                                                  Content/entry/fields/variants/value/0/fields/price/value}
+                                                fr-ca: >-
+                                                  $${#jptr:/Product
+                                                  Content/entry/fields/variants/value/0/fields/price/value}
+                                                fr-fr: >-
+                                                  $${#jptr:/Product
+                                                  Content/entry/fields/variants/value/0/fields/price/value}
+                                                ja-jp: >-
+                                                  $${#jptr:/Product
+                                                  Content/entry/fields/variants/value/0/fields/price/value}
+                                                nb-no: >-
+                                                  $${#jptr:/Product
+                                                  Content/entry/fields/variants/value/0/fields/price/value}
+                                                nl-nl: >-
+                                                  $${#jptr:/Product
+                                                  Content/entry/fields/variants/value/0/fields/price/value}
+                                                sv-se: >-
+                                                  $${#jptr:/Product
+                                                  Content/entry/fields/variants/value/0/fields/price/value}
+                                                ar-ksa: >-
+                                                  $${#jptr:/Product
+                                                  Content/entry/fields/variants/value/0/fields/price/value}
+                                                ar-uae: >-
+                                                  $${#jptr:/Product
+                                                  Content/entry/fields/variants/value/0/fields/price/value}
+                                            color:
+                                              type: dex-color-palette-parameter
+                                              value: text-secondary
+                                            weight:
+                                              type: dex-segmented-control-parameter
+                                              value: bold
+                                    parameters:
+                                      spacing:
+                                        type: dex-space-control-parameter
+                                        value:
+                                          mobile:
+                                            paddingTop: container-small
+                                            paddingBottom: container-small
+                                          tablet: {}
+                                          desktop: {}
+                                      displayName:
+                                        type: text
+                                        locales:
+                                          da-dk: Price Wrapper
+                                          de-at: Price Wrapper
+                                          de-de: Price Wrapper
+                                          en-ca: Price Wrapper
+                                          en-de: Price Wrapper
+                                          en-fr: Price Wrapper
+                                          en-gb: Price Wrapper
+                                          en-nl: Price Wrapper
+                                          en-us: Price Wrapper
+                                          es-us: Price Wrapper
+                                          fr-ca: Price Wrapper
+                                          fr-fr: Price Wrapper
+                                          ja-jp: Price Wrapper
+                                          nb-no: Price Wrapper
+                                          nl-nl: Price Wrapper
+                                          sv-se: Price Wrapper
+                                          ar-ksa: Price Wrapper
+                                          ar-uae: Price Wrapper
+                                      fluidContent:
+                                        type: checkbox
+                                        value: true
+                              parameters:
+                                gap:
+                                  type: dex-slider-control-parameter
+                                  value:
+                                    mobile: '4'
+                                direction:
+                                  type: dex-segmented-control-parameter
+                                  value:
+                                    mobile: col
+                                    tablet: col
+                                    desktop: col
+                                alignItems:
+                                  type: dex-segmented-control-parameter
+                                  value:
+                                    mobile: start
+                                displayName:
+                                  type: text
+                                  locales:
+                                    da-dk: Content
+                                    de-at: Content
+                                    de-de: Content
+                                    en-ca: Content
+                                    en-de: Content
+                                    en-fr: Content
+                                    en-gb: Content
+                                    en-nl: Content
+                                    en-us: Content
+                                    es-us: Content
+                                    fr-ca: Content
+                                    fr-fr: Content
+                                    ja-jp: Content
+                                    nb-no: Content
+                                    nl-nl: Content
+                                    sv-se: Content
+                                    ar-ksa: Content
+                                    ar-uae: Content
+                                justifyContent:
+                                  type: dex-segmented-control-parameter
+                                  value:
+                                    mobile: ''
+                                    tablet: ''
+                                    desktop: ''
+                            - _id: 65bfeb5a-0b25-4c13-b8eb-aa84f8ce2318
+                              type: addToCardButton
+                              parameters:
+                                size:
+                                  type: dex-token-selector-parameter
+                                  value: button-medium
+                                text:
+                                  type: text
+                                  locales:
+                                    da-dk: Buy now
+                                    de-at: Buy now
+                                    de-de: Buy now
+                                    en-ca: Buy now
+                                    en-de: Buy now
+                                    en-fr: Buy now
+                                    en-gb: Buy now
+                                    en-nl: Buy now
+                                    en-us: Buy now
+                                    es-us: Buy now
+                                    fr-ca: Buy now
+                                    fr-fr: Buy now
+                                    ja-jp: Buy now
+                                    nb-no: Buy now
+                                    nl-nl: Buy now
+                                    sv-se: Buy now
+                                    ar-ksa: Buy now
+                                    ar-uae: Buy now
+                                textSize:
+                                  type: dex-segmented-control-parameter
+                                  value:
+                                    mobile: base
+                                    tablet: sm
+                                    desktop: sm
+                                textColor:
+                                  type: dex-color-palette-parameter
+                                  value: text-primary
+                                textWeight:
+                                  type: dex-segmented-control-parameter
+                                  value: bold
+                                buttonColor:
+                                  type: dex-color-palette-parameter
+                                  value: button-featured
+                                productSlug:
+                                  type: text
+                                  locales:
+                                    da-dk: espresso-gpt
+                                    de-at: espresso-gpt
+                                    de-de: espresso-gpt
+                                    en-ca: espresso-gpt
+                                    en-de: espresso-gpt
+                                    en-fr: espresso-gpt
+                                    en-gb: espresso-gpt
+                                    en-nl: espresso-gpt
+                                    en-us: espresso-gpt
+                                    es-us: espresso-gpt
+                                    fr-ca: espresso-gpt
+                                    fr-fr: espresso-gpt
+                                    ja-jp: espresso-gpt
+                                    nb-no: espresso-gpt
+                                    nl-nl: espresso-gpt
+                                    sv-se: espresso-gpt
+                                    ar-ksa: espresso-gpt
+                                    ar-uae: espresso-gpt
+                                openMiniCart:
+                                  type: checkbox
+                                  value: true
+                        parameters:
+                          rowSpan:
+                            type: dex-slider-control-parameter
+                            value: {}
+                          rowStart:
+                            type: dex-slider-control-parameter
+                            value:
+                              mobile: '1'
+                              tablet: '1'
+                              desktop: '1'
+                          columnSpan:
+                            type: dex-slider-control-parameter
+                            value: {}
+                          columnStart:
+                            type: dex-slider-control-parameter
+                            value:
+                              mobile: '1'
+                              tablet: '1'
+                              desktop: '2'
+                          displayName:
+                            type: text
+                            locales:
+                              da-dk: Second Column
+                              de-at: Second Column
+                              de-de: Second Column
+                              en-ca: Second Column
+                              en-de: Second Column
+                              en-fr: Second Column
+                              en-gb: Second Column
+                              en-nl: Second Column
+                              en-us: Second Column
+                              es-us: Second Column
+                              fr-ca: Second Column
+                              fr-fr: Second Column
+                              ja-jp: Second Column
+                              nb-no: Second Column
+                              nl-nl: Second Column
+                              sv-se: Second Column
+                              ar-ksa: Second Column
+                              ar-uae: Second Column
+                  parameters:
+                    gapX:
+                      type: dex-slider-control-parameter
+                      value: {}
+                    gapY:
+                      type: dex-slider-control-parameter
+                      value: {}
+                    spacing:
+                      type: dex-space-control-parameter
+                      value:
+                        mobile: {}
+                        tablet: {}
+                        desktop: {}
+                    displayName:
+                      type: text
+                      locales:
+                        da-dk: Columns Content
+                        de-at: Columns Content
+                        de-de: Columns Content
+                        en-ca: Columns Content
+                        en-de: Columns Content
+                        en-fr: Columns Content
+                        en-gb: Columns Content
+                        en-nl: Columns Content
+                        en-us: Columns Content
+                        es-us: Columns Content
+                        fr-ca: Columns Content
+                        fr-fr: Columns Content
+                        ja-jp: Columns Content
+                        nb-no: Columns Content
+                        nl-nl: Columns Content
+                        sv-se: Columns Content
+                        ar-ksa: Columns Content
+                        ar-uae: Columns Content
+                    columnsCount:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '1'
+                        tablet: '1'
+                        desktop: '2'
+                    fluidContent:
+                      type: checkbox
+                      value: true
+            parameters:
+              spacing:
+                type: dex-space-control-parameter
+                value:
+                  mobile: {}
+                  tablet: {}
+                  desktop: {}
+              displayName:
+                type: text
+                locales:
+                  da-dk: Main Section
+                  de-at: Main Section
+                  de-de: Main Section
+                  en-ca: Main Section
+                  en-de: Main Section
+                  en-fr: Main Section
+                  en-gb: Main Section
+                  en-nl: Main Section
+                  en-us: Main Section
+                  es-us: Main Section
+                  fr-ca: Main Section
+                  fr-fr: Main Section
+                  ja-jp: Main Section
+                  nb-no: Main Section
+                  nl-nl: Main Section
+                  sv-se: Main Section
+                  ar-ksa: Main Section
+                  ar-uae: Main Section
+              fluidContent:
+                type: checkbox
+                value: true
+              contentAlignment:
+                type: dex-segmented-control-parameter
+                value: center
+          - _id: cac66d91-fb38-4211-b46e-158ddca02047
+            type: grid
+            slots:
+              gridInner:
+                - _id: 21ccb9b4-0130-4b91-ae7b-565401d4b6ff
+                  type: flex
+                  _pattern: da893018-5bb0-49bd-8289-3f073b167c8d
+                  _overridability:
+                    parameters:
+                      displayName: 'yes'
+                    hideLockedParameters: true
+                - _id: 23b8c55c-5b1c-4ff0-a9db-6632891f261f
+                  type: flex
+                  _pattern: da893018-5bb0-49bd-8289-3f073b167c8d
+                  _overridability:
+                    parameters:
+                      displayName: 'yes'
+                    hideLockedParameters: true
+                - _id: 27e6bc47-1806-483b-915e-71235813e0d2
+                  type: flex
+                  _pattern: da893018-5bb0-49bd-8289-3f073b167c8d
+                  _overridability:
+                    parameters:
+                      displayName: 'yes'
+                    hideLockedParameters: true
+                - _id: ed9ccac2-f23c-4c4b-be99-eb59477f1240
+                  type: flex
+                  _pattern: da893018-5bb0-49bd-8289-3f073b167c8d
+                  _overridability:
+                    parameters:
+                      displayName: 'yes'
+                    hideLockedParameters: true
+            parameters:
+              gapX:
+                type: dex-slider-control-parameter
+                value:
+                  mobile: '4'
+              gapY:
+                type: dex-slider-control-parameter
+                value:
+                  mobile: '8'
+              spacing:
+                type: dex-space-control-parameter
+                value:
+                  mobile:
+                    paddingTop: container-medium
+                    paddingBottom: container-medium
+                  tablet: {}
+                  desktop: {}
+              displayName:
+                type: text
+                locales:
+                  da-dk: Features Section
+                  de-at: Features Section
+                  de-de: Features Section
+                  en-ca: Features Section
+                  en-de: Features Section
+                  en-fr: Features Section
+                  en-gb: Features Section
+                  en-nl: Features Section
+                  en-us: Features Section
+                  es-us: Features Section
+                  fr-ca: Features Section
+                  fr-fr: Features Section
+                  ja-jp: Features Section
+                  nb-no: Features Section
+                  nl-nl: Features Section
+                  sv-se: Features Section
+                  ar-ksa: Features Section
+                  ar-uae: Features Section
+              columnsCount:
+                type: dex-slider-control-parameter
+                value:
+                  mobile: '1'
+                  tablet: '2'
+                  desktop: '4'
+          - _id: 4ce43eba-4019-4b85-8582-963fcc22c180
+            type: flex
+            slots:
+              flexItem:
+                - _id: 095f0401-027f-4616-b0fb-aa92827a13ba
+                  type: text
+                  parameters:
+                    tag:
+                      type: dex-segmented-control-parameter
+                      value: span
+                    font:
+                      type: dex-token-selector-parameter
+                      value: secondary
+                    size:
+                      type: dex-segmented-control-parameter
+                      value:
+                        mobile: 2xl
+                    text:
+                      type: text
+                      locales:
+                        da-dk: Tech Information
+                        de-at: Tech Information
+                        de-de: Tech Information
+                        en-ca: Tech Information
+                        en-de: Tech Information
+                        en-fr: Tech Information
+                        en-gb: Tech Information
+                        en-nl: Tech Information
+                        en-us: Tech Information
+                        es-us: Tech Information
+                        fr-ca: Tech Information
+                        fr-fr: Tech Information
+                        ja-jp: Tech Information
+                        nb-no: Tech Information
+                        nl-nl: Tech Information
+                        sv-se: Tech Information
+                        ar-ksa: Tech Information
+                        ar-uae: Tech Information
+                    color:
+                      type: dex-color-palette-parameter
+                      value: text-featured
+                    weight:
+                      type: dex-segmented-control-parameter
+                      value: normal
+                    transform:
+                      type: dex-segmented-control-parameter
+                      value: uppercase
+                - _id: 3341aa3d-c0af-4bfe-afaa-ff6c9f27c297
+                  type: readMore
+                  slots:
+                    content:
+                      - _id: 654ab748-9e8c-43a6-a00a-bab1ee770eb0
+                        type: richText
+                        parameters:
+                          text:
+                            type: richText
+                            locales:
+                              da-dk: >-
+                                ${#jptr:/Product
+                                Content/entry/fields/body/value}
+                              de-at: >-
+                                ${#jptr:/Product
+                                Content/entry/fields/body/value}
+                              de-de: >-
+                                ${#jptr:/Product
+                                Content/entry/fields/body/value}
+                              en-ca: >-
+                                ${#jptr:/Product
+                                Content/entry/fields/body/value}
+                              en-de: >-
+                                ${#jptr:/Product
+                                Content/entry/fields/body/value}
+                              en-fr: >-
+                                ${#jptr:/Product
+                                Content/entry/fields/body/value}
+                              en-gb: >-
+                                ${#jptr:/Product
+                                Content/entry/fields/body/value}
+                              en-nl: >-
+                                ${#jptr:/Product
+                                Content/entry/fields/body/value}
+                              en-us: >-
+                                ${#jptr:/Product
+                                Content/entry/fields/body/value}
+                              es-us: >-
+                                ${#jptr:/Product
+                                Content/entry/fields/body/value}
+                              fr-ca: >-
+                                ${#jptr:/Product
+                                Content/entry/fields/body/value}
+                              fr-fr: >-
+                                ${#jptr:/Product
+                                Content/entry/fields/body/value}
+                              ja-jp: >-
+                                ${#jptr:/Product
+                                Content/entry/fields/body/value}
+                              nb-no: >-
+                                ${#jptr:/Product
+                                Content/entry/fields/body/value}
+                              nl-nl: >-
+                                ${#jptr:/Product
+                                Content/entry/fields/body/value}
+                              sv-se: >-
+                                ${#jptr:/Product
+                                Content/entry/fields/body/value}
+                              ar-ksa: >-
+                                ${#jptr:/Product
+                                Content/entry/fields/body/value}
+                              ar-uae: >-
+                                ${#jptr:/Product
+                                Content/entry/fields/body/value}
+                          color:
+                            type: dex-color-palette-parameter
+                            value: text-secondary
+                  parameters:
+                    maxHeight:
+                      type: number
+                      value: '500'
+                    textColor:
+                      type: dex-color-palette-parameter
+                      value: text-secondary
+                    readLessLabel:
+                      type: text
+                      value: Read Less
+                    readMoreLabel:
+                      type: text
+                      value: Read More
+            parameters:
+              gap:
+                type: dex-slider-control-parameter
+                value:
+                  mobile: '4'
+              spacing:
+                type: dex-space-control-parameter
+                value:
+                  mobile:
+                    paddingTop: container-medium
+                    paddingBottom: container-medium
+                  tablet: {}
+                  desktop: {}
+              direction:
+                type: dex-segmented-control-parameter
+                value:
+                  mobile: col
+                  tablet: col
+                  desktop: col
+              alignItems:
+                type: dex-segmented-control-parameter
+                value: {}
+              displayName:
+                type: text
+                locales:
+                  da-dk: Main Information
+                  de-at: Main Information
+                  de-de: Main Information
+                  en-ca: Main Information
+                  en-de: Main Information
+                  en-fr: Main Information
+                  en-gb: Main Information
+                  en-nl: Main Information
+                  en-us: Main Information
+                  es-us: Main Information
+                  fr-ca: Main Information
+                  fr-fr: Main Information
+                  ja-jp: Main Information
+                  nb-no: Main Information
+                  nl-nl: Main Information
+                  sv-se: Main Information
+                  ar-ksa: Main Information
+                  ar-uae: Main Information
+              justifyContent:
+                type: dex-segmented-control-parameter
+                value: {}
+          - _id: b094c9e8-e491-4f3a-aa01-960e5bd6ba1e
+            type: flex
+            slots:
+              flexItem:
+                - _id: 61ee5400-8bb8-425c-b5be-7235b25e9e93
+                  type: text
+                  parameters:
+                    tag:
+                      type: dex-segmented-control-parameter
+                      value: span
+                    font:
+                      type: dex-token-selector-parameter
+                      value: secondary
+                    size:
+                      type: dex-segmented-control-parameter
+                      value:
+                        mobile: 3xl
+                        tablet: 4xl
+                        desktop: 4xl
+                    text:
+                      type: text
+                      locales:
+                        da-dk: PRODUCT GALLERY
+                        de-at: PRODUCT GALLERY
+                        de-de: PRODUCT GALLERY
+                        en-ca: PRODUCT GALLERY
+                        en-de: PRODUCT GALLERY
+                        en-fr: PRODUCT GALLERY
+                        en-gb: PRODUCT GALLERY
+                        en-nl: PRODUCT GALLERY
+                        en-us: PRODUCT GALLERY
+                        es-us: PRODUCT GALLERY
+                        fr-ca: PRODUCT GALLERY
+                        fr-fr: PRODUCT GALLERY
+                        ja-jp: PRODUCT GALLERY
+                        nb-no: PRODUCT GALLERY
+                        nl-nl: PRODUCT GALLERY
+                        sv-se: PRODUCT GALLERY
+                        ar-ksa: PRODUCT GALLERY
+                        ar-uae: PRODUCT GALLERY
+                    color:
+                      type: dex-color-palette-parameter
+                      value: text-featured
+                    weight:
+                      type: dex-segmented-control-parameter
+                      value: normal
+                    transform:
+                      type: dex-segmented-control-parameter
+                      value: uppercase
+                - _id: 8ae797e6-eb2f-4168-b712-3db60c040b23
+                  type: imageGallery
+                  parameters:
+                    items:
+                      type: asset
+                      locales:
+                        da-dk: >-
+                          ${#jptr:/Product
+                          Content/entry/fields/variants/value/0/fields/imageGallery/value}
+                        de-at: >-
+                          ${#jptr:/Product
+                          Content/entry/fields/variants/value/0/fields/imageGallery/value}
+                        de-de: >-
+                          ${#jptr:/Product
+                          Content/entry/fields/variants/value/0/fields/imageGallery/value}
+                        en-ca: >-
+                          ${#jptr:/Product
+                          Content/entry/fields/variants/value/0/fields/imageGallery/value}
+                        en-de: >-
+                          ${#jptr:/Product
+                          Content/entry/fields/variants/value/0/fields/imageGallery/value}
+                        en-fr: >-
+                          ${#jptr:/Product
+                          Content/entry/fields/variants/value/0/fields/imageGallery/value}
+                        en-gb: >-
+                          ${#jptr:/Product
+                          Content/entry/fields/variants/value/0/fields/imageGallery/value}
+                        en-nl: >-
+                          ${#jptr:/Product
+                          Content/entry/fields/variants/value/0/fields/imageGallery/value}
+                        en-us: >-
+                          ${#jptr:/Product
+                          Content/entry/fields/variants/value/0/fields/imageGallery/value}
+                        es-us: >-
+                          ${#jptr:/Product
+                          Content/entry/fields/variants/value/0/fields/imageGallery/value}
+                        fr-ca: >-
+                          ${#jptr:/Product
+                          Content/entry/fields/variants/value/0/fields/imageGallery/value}
+                        fr-fr: >-
+                          ${#jptr:/Product
+                          Content/entry/fields/variants/value/0/fields/imageGallery/value}
+                        ja-jp: >-
+                          ${#jptr:/Product
+                          Content/entry/fields/variants/value/0/fields/imageGallery/value}
+                        nb-no: >-
+                          ${#jptr:/Product
+                          Content/entry/fields/variants/value/0/fields/imageGallery/value}
+                        nl-nl: >-
+                          ${#jptr:/Product
+                          Content/entry/fields/variants/value/0/fields/imageGallery/value}
+                        sv-se: >-
+                          ${#jptr:/Product
+                          Content/entry/fields/variants/value/0/fields/imageGallery/value}
+                        ar-ksa: >-
+                          ${#jptr:/Product
+                          Content/entry/fields/variants/value/0/fields/imageGallery/value}
+                        ar-uae: >-
+                          ${#jptr:/Product
+                          Content/entry/fields/variants/value/0/fields/imageGallery/value}
+                    aspectRatio:
+                      type: dex-segmented-control-parameter
+                      value: video
+                    displayName:
+                      type: text
+                      locales:
+                        da-dk: Image Callery
+                        de-at: Image Callery
+                        de-de: Image Callery
+                        en-ca: Image Callery
+                        en-de: Image Callery
+                        en-fr: Image Callery
+                        en-gb: Image Callery
+                        en-nl: Image Callery
+                        en-us: Image Callery
+                        es-us: Image Callery
+                        fr-ca: Image Callery
+                        fr-fr: Image Callery
+                        ja-jp: Image Callery
+                        nb-no: Image Callery
+                        nl-nl: Image Callery
+                        sv-se: Image Callery
+                        ar-ksa: Image Callery
+                        ar-uae: Image Callery
+            parameters:
+              gap:
+                type: dex-slider-control-parameter
+                value:
+                  mobile: '4'
+                  tablet: '4'
+                  desktop: '4'
+              spacing:
+                type: dex-space-control-parameter
+                value:
+                  mobile:
+                    paddingTop: container-medium
+                    paddingBottom: container-medium
+                  tablet: {}
+                  desktop: {}
+              direction:
+                type: dex-segmented-control-parameter
+                value:
+                  mobile: col
+                  tablet: col
+                  desktop: col
+              alignItems:
+                type: dex-segmented-control-parameter
+                value: {}
+              displayName:
+                type: text
+                locales:
+                  da-dk: Image Callery
+                  de-at: Image Callery
+                  de-de: Image Callery
+                  en-ca: Image Callery
+                  en-de: Image Callery
+                  en-fr: Image Callery
+                  en-gb: Image Callery
+                  en-nl: Image Callery
+                  en-us: Image Callery
+                  es-us: Image Callery
+                  fr-ca: Image Callery
+                  fr-fr: Image Callery
+                  ja-jp: Image Callery
+                  nb-no: Image Callery
+                  nl-nl: Image Callery
+                  sv-se: Image Callery
+                  ar-ksa: Image Callery
+                  ar-uae: Image Callery
+              justifyContent:
+                type: dex-segmented-control-parameter
+                value: {}
+          - _id: 459341b0-5ebb-4b3b-a19e-cc893a627378
+            type: section
+            variant: columns
+            _pattern: 942ac251-df3f-473d-b28b-a7a75d90d3ce
+            _overridability:
+              variants: true
+              parameters:
+                displayName: 'yes'
+              hideLockedParameters: true
+          - _id: 4026814e-9121-47fe-a2b6-258d9e7729f1
+            type: section
+            variant: columnsReverse
+            _pattern: 942ac251-df3f-473d-b28b-a7a75d90d3ce
+            _overridability:
+              variants: true
+              parameters:
+                displayName: 'yes'
+              hideLockedParameters: true
+          - _id: d7b56486-65b3-48e3-bbdf-e5562b949049
+            type: accordion
+            _pattern: 8887d174-2083-4745-abd1-988e53910884
+            _overridability:
+              parameters:
+                displayName: 'yes'
+              hideLockedParameters: true
+          - _id: 7b586c36-20cf-40af-a65d-eb47a1345ba6
+            type: flex
+            slots:
+              flexItem:
+                - _id: 4a6996a0-cf99-4e35-bfec-121b40e8fffe
+                  type: text
+                  parameters:
+                    tag:
+                      type: dex-segmented-control-parameter
+                      value: span
+                    font:
+                      type: dex-token-selector-parameter
+                      value: secondary
+                    size:
+                      type: dex-segmented-control-parameter
+                      value:
+                        mobile: 3xl
+                        tablet: 4xl
+                        desktop: 4xl
+                    text:
+                      type: text
+                      locales:
+                        da-dk: Recommended Beans
+                        de-at: Recommended Beans
+                        de-de: Recommended Beans
+                        en-ca: Recommended Beans
+                        en-de: Recommended Beans
+                        en-fr: Recommended Beans
+                        en-gb: Recommended Beans
+                        en-nl: Recommended Beans
+                        en-us: Recommended Beans
+                        es-us: Recommended Beans
+                        fr-ca: Recommended Beans
+                        fr-fr: Recommended Beans
+                        ja-jp: Recommended Beans
+                        nb-no: Recommended Beans
+                        nl-nl: Recommended Beans
+                        sv-se: Recommended Beans
+                        ar-ksa: Recommended Beans
+                        ar-uae: Recommended Beans
+                    color:
+                      type: dex-color-palette-parameter
+                      value: text-featured
+                    weight:
+                      type: dex-segmented-control-parameter
+                      value: normal
+                    transform:
+                      type: dex-segmented-control-parameter
+                      value: uppercase
+                - _id: c784fb0a-c12e-4189-92e2-6f00a4f3a85f
+                  type: grid
+                  slots:
+                    gridInner:
+                      - _id: dfafd5a5-5694-40cf-98b0-81e46575477c
+                        type: $loop
+                        slots:
+                          body:
+                            - _id: c5220bc2-b515-4469-bfbb-0899b26320e3
+                              type: link
+                              _pattern: 1b9cb318-a532-4c1a-af19-c0ee1a66855f
+                              _overridability:
+                                parameters:
+                                  link: 'yes'
+                                  displayName: 'yes'
+                                hideLockedParameters: true
+                        _dataResources:
+                          Product List Content entries Loop Item:
+                            type: sys-reserved-loop
+                            variables:
+                              connectedData: >-
+                                #jptr:/Product
+                                Content/entry/fields/recommendations/value:fa=c
+                        _overridability:
+                          hideLockedParameters: true
+                  parameters:
+                    gapX:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '4'
+                        tablet: '4'
+                        desktop: '4'
+                    gapY:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '4'
+                        tablet: '4'
+                    spacing:
+                      type: dex-space-control-parameter
+                      value:
+                        mobile: {}
+                        tablet: {}
+                        desktop: {}
+                    displayName:
+                      type: text
+                      value: Products Container
+                    columnsCount:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '1'
+                        tablet: '2'
+                        desktop: '3'
+                    fluidContent:
+                      type: checkbox
+                      value: true
+            parameters:
+              gap:
+                type: dex-slider-control-parameter
+                value:
+                  mobile: '4'
+                  tablet: '4'
+                  desktop: '4'
+              spacing:
+                type: dex-space-control-parameter
+                value:
+                  mobile:
+                    paddingTop: container-medium
+                    paddingBottom: container-medium
+                  tablet: {}
+                  desktop: {}
+              direction:
+                type: dex-segmented-control-parameter
+                value:
+                  mobile: col
+                  tablet: col
+                  desktop: col
+              alignItems:
+                type: dex-segmented-control-parameter
+                value: {}
+              displayName:
+                type: text
+                locales:
+                  da-dk: Beans For you
+                  de-at: Beans For you
+                  de-de: Beans For you
+                  en-ca: Beans For you
+                  en-de: Beans For you
+                  en-fr: Beans For you
+                  en-gb: Beans For you
+                  en-nl: Beans For you
+                  en-us: Beans For you
+                  es-us: Beans For you
+                  fr-ca: Beans For you
+                  fr-fr: Beans For you
+                  ja-jp: Beans For you
+                  nb-no: Beans For you
+                  nl-nl: Beans For you
+                  sv-se: Beans For you
+                  ar-ksa: Beans For you
+                  ar-uae: Beans For you
+              justifyContent:
+                type: dex-segmented-control-parameter
+                value: {}
+    c5220bc2-b515-4469-bfbb-0899b26320e3|1af937fb-40ae-4938-b1a8-110b8ff73fc4:
+      parameters:
+        displayName:
+          type: text
+          value: >-
+            ${#jptr:/Product List Content entries Loop
+            Item/entry/fields/name/value}
+    d7b56486-65b3-48e3-bbdf-e5562b949049|fc0685d7-4cc2-4157-aab6-34d82d451b21:
+      slots:
+        $slotSectionItems:
+          - _id: 11276476-67bf-43cd-ae32-191273bf0f9d
+            type: accordionItem
+            _pattern: aa9019a0-1baa-44bc-966f-5cb18278f350
+            _overridability:
+              parameters:
+                size: 'yes'
+                text: 'yes'
+                color: 'yes'
+                backgroundColor: 'yes'
+              hideLockedParameters: true
+          - _id: 0bae693c-41bf-4f2f-a1bb-8bb4e142d59c
+            type: accordionItem
+            _pattern: aa9019a0-1baa-44bc-966f-5cb18278f350
+            _overridability:
+              parameters:
+                size: 'yes'
+                text: 'yes'
+                color: 'yes'
+                backgroundColor: 'yes'
+              hideLockedParameters: true
+          - _id: f5e82fbd-1b75-444d-addd-5e16c3e73239
+            type: accordionItem
+            _pattern: aa9019a0-1baa-44bc-966f-5cb18278f350
+            _overridability:
+              parameters:
+                size: 'yes'
+                text: 'yes'
+                color: 'yes'
+                backgroundColor: 'yes'
+              hideLockedParameters: true
+    ed9ccac2-f23c-4c4b-be99-eb59477f1240|67e790c1-6421-4f15-acd2-40b91f832494:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: >-
+              We care for the planet as much as you do. Our espresso machine is
+              powered by a sustainable and recyclable energy cell that has zero
+              carbon footprint.
+            de-at: >-
+              We care for the planet as much as you do. Our espresso machine is
+              powered by a sustainable and recyclable energy cell that has zero
+              carbon footprint.
+            de-de: >-
+              We care for the planet as much as you do. Our espresso machine is
+              powered by a sustainable and recyclable energy cell that has zero
+              carbon footprint.
+            en-ca: >-
+              We care for the planet as much as you do. Our espresso machine is
+              powered by a sustainable and recyclable energy cell that has zero
+              carbon footprint.
+            en-de: >-
+              We care for the planet as much as you do. Our espresso machine is
+              powered by a sustainable and recyclable energy cell that has zero
+              carbon footprint.
+            en-fr: >-
+              We care for the planet as much as you do. Our espresso machine is
+              powered by a sustainable and recyclable energy cell that has zero
+              carbon footprint.
+            en-gb: >-
+              We care for the planet as much as you do. Our espresso machine is
+              powered by a sustainable and recyclable energy cell that has zero
+              carbon footprint.
+            en-nl: >-
+              We care for the planet as much as you do. Our espresso machine is
+              powered by a sustainable and recyclable energy cell that has zero
+              carbon footprint.
+            en-us: >-
+              We care for the planet as much as you do. Our espresso machine is
+              powered by a sustainable and recyclable energy cell that has zero
+              carbon footprint.
+            es-us: >-
+              We care for the planet as much as you do. Our espresso machine is
+              powered by a sustainable and recyclable energy cell that has zero
+              carbon footprint.
+            fr-ca: >-
+              We care for the planet as much as you do. Our espresso machine is
+              powered by a sustainable and recyclable energy cell that has zero
+              carbon footprint.
+            fr-fr: >-
+              We care for the planet as much as you do. Our espresso machine is
+              powered by a sustainable and recyclable energy cell that has zero
+              carbon footprint.
+            ja-jp: >-
+              We care for the planet as much as you do. Our espresso machine is
+              powered by a sustainable and recyclable energy cell that has zero
+              carbon footprint.
+            nb-no: >-
+              We care for the planet as much as you do. Our espresso machine is
+              powered by a sustainable and recyclable energy cell that has zero
+              carbon footprint.
+            nl-nl: >-
+              We care for the planet as much as you do. Our espresso machine is
+              powered by a sustainable and recyclable energy cell that has zero
+              carbon footprint.
+            sv-se: >-
+              We care for the planet as much as you do. Our espresso machine is
+              powered by a sustainable and recyclable energy cell that has zero
+              carbon footprint.
+            ar-ksa: >-
+              We care for the planet as much as you do. Our espresso machine is
+              powered by a sustainable and recyclable energy cell that has zero
+              carbon footprint.
+            ar-uae: >-
+              We care for the planet as much as you do. Our espresso machine is
+              powered by a sustainable and recyclable energy cell that has zero
+              carbon footprint.
+    ed9ccac2-f23c-4c4b-be99-eb59477f1240|93a8a0a2-d5df-4e82-97ed-2c1f2f29e907:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: Carbon-neutral energy source
+            de-at: Carbon-neutral energy source
+            de-de: Carbon-neutral energy source
+            en-ca: Carbon-neutral energy source
+            en-de: Carbon-neutral energy source
+            en-fr: Carbon-neutral energy source
+            en-gb: Carbon-neutral energy source
+            en-nl: Carbon-neutral energy source
+            en-us: Carbon-neutral energy source
+            es-us: Carbon-neutral energy source
+            fr-ca: Carbon-neutral energy source
+            fr-fr: Carbon-neutral energy source
+            ja-jp: Carbon-neutral energy source
+            nb-no: Carbon-neutral energy source
+            nl-nl: Carbon-neutral energy source
+            sv-se: Carbon-neutral energy source
+            ar-ksa: Carbon-neutral energy source
+            ar-uae: Carbon-neutral energy source
+    ed9ccac2-f23c-4c4b-be99-eb59477f1240|df99286b-2378-4646-a0a3-fc0921dd8940:
+      parameters:
+        image:
+          type: asset
+          value:
+            - _id: 62678d7f-f533-40df-a304-160b95a318ff
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: d79b41a7-364a-408d-926e-a690ca776d73
+                url:
+                  value: >-
+                    https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/TE_ZD4pHSN6sXQplIZQThQ-carbon-neutral-energy-source.png
+                  type: text
+                file:
+                  type: file
+                  value: 41f50f2b-d677-4106-9d94-d9b544d45cb1
+                size:
+                  value: 1976
+                  type: number
+                title:
+                  type: text
+                  value: carbon-neutral-energy-source.png
+                width:
+                  value: 60
+                  type: number
+                height:
+                  value: 57
+                  type: number
+                mediaType:
+                  value: image/png
+                  type: text
+              _source: uniform-assets
+    f5e82fbd-1b75-444d-addd-5e16c3e73239|d2b3e054-bc98-42b7-86fa-35758fae9075:
+      parameters:
+        text:
+          type: text
+          value: >-
+            No worries. If your display isn’t beaming with futuristic joy, try a
+            quick reboot. Still dim? Our support team is ready to help with
+            troubleshooting or replacement. And don’t worry — even without the
+            display, EspressoGPT keeps brewing like a pro.
+    593c6cc4-d400-4cdd-8ce1-8cffaef0814f|acbee98e-a514-423c-aab1-ca58ba439cf0|44623ac6-5327-44e3-ab3e-b7455ff829e8:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-demo
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-demo
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-de:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-fr:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-demo
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-demo
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-demo
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-demo
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-demo
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-demo
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-demo
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-demo
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-demo
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-demo
+              type: url
+    593c6cc4-d400-4cdd-8ce1-8cffaef0814f|acbee98e-a514-423c-aab1-ca58ba439cf0|44d64138-618e-4c6a-b4cc-6ea9b9a22cba:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-de:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-fr:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+    593c6cc4-d400-4cdd-8ce1-8cffaef0814f|acbee98e-a514-423c-aab1-ca58ba439cf0|6db01010-cff2-458e-85d6-358dc75ca48c:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-sb
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-sb
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-de:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-fr:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-sb
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-sb
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-sb
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-sb
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-sb
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-sb
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-sb
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-sb
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-sb
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-sb
+              type: url
+    593c6cc4-d400-4cdd-8ce1-8cffaef0814f|acbee98e-a514-423c-aab1-ca58ba439cf0|ea891105-3b48-41b4-8fa0-6c2ecca00a75:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-docs
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-docs
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-de:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-fr:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-docs
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-docs
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-docs
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-docs
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-docs
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-docs
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-docs
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-docs
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-docs
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-docs
+              type: url
+    593c6cc4-d400-4cdd-8ce1-8cffaef0814f|c10319e0-59f3-4ead-ada6-8e2c2b49144b|12ee6d6a-ea4f-456e-900e-df080b092b5c:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            de-at:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            de-de:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-ca:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-de:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-fr:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-gb:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-nl:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            es-us:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            fr-ca:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            fr-fr:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ja-jp:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            nb-no:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            nl-nl:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            sv-se:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ar-ksa:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ar-uae:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+    c5220bc2-b515-4469-bfbb-0899b26320e3|1af937fb-40ae-4938-b1a8-110b8ff73fc4|0952417a-061c-4634-91df-1341269e4054:
+      parameters:
+        image:
+          type: asset
+          value: >-
+            ${#jptr:/Product List Content entries Loop
+            Item/entry/fields/primaryImage/value}
+    c5220bc2-b515-4469-bfbb-0899b26320e3|1af937fb-40ae-4938-b1a8-110b8ff73fc4|41f41812-74a8-48f1-9e2a-920dfff8ea04:
+      parameters:
+        productSlug:
+          type: text
+          locales:
+            da-dk: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            de-at: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            de-de: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            en-ca: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            en-de: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            en-fr: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            en-gb: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            en-nl: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            en-us: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            es-us: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            fr-ca: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            fr-fr: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            ja-jp: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            nb-no: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            nl-nl: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            sv-se: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            ar-ksa: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            ar-uae: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+    c5220bc2-b515-4469-bfbb-0899b26320e3|1af937fb-40ae-4938-b1a8-110b8ff73fc4|8bad3ddd-add0-43d3-a314-5836bf0c7a93:
+      parameters:
+        text:
+          type: text
+          value: >-
+            $${#jptr:/Product List Content entries Loop
+            Item/entry/fields/variants/value/0/fields/price/value}
+        color:
+          type: dex-color-palette-parameter
+          value: text-secondary
+    c5220bc2-b515-4469-bfbb-0899b26320e3|1af937fb-40ae-4938-b1a8-110b8ff73fc4|988f7805-9e0e-4b30-acaf-f97d7dd5099f:
+      parameters:
+        text:
+          type: text
+          value: >-
+            ${#jptr:/Product List Content entries Loop
+            Item/entry/fields/name/value}
+        color:
+          type: dex-color-palette-parameter
+          value: text-secondary
+  _locales:
+    - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa
+  _pattern: eb2c6df3-5cff-486a-814b-64b6ce9421ab
+created: '2025-05-21T12:14:16.372374+00:00'
+modified: '2025-07-03T13:10:12.236468+00:00'
+pattern: false

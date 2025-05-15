@@ -1,0 +1,845 @@
+composition:
+  _name: Cart
+  _id: 561b0ea9-866d-4925-b9fa-aeff9a3d777c
+  _slug: cart
+  type: page
+  _overrides:
+    561b0ea9-866d-4925-b9fa-aeff9a3d777c:
+      parameters:
+        pageTitle:
+          type: text
+          value: Your Cart - Java Drip
+        pageKeywords:
+          type: text
+          value: >-
+            Java Drip cart, coffee shop cart, coffee checkout, shopping cart,
+            coffee accessories, coffee makers, Java Drip order
+        openGraphType:
+          type: select
+          value: website
+        openGraphImage:
+          type: asset
+          value:
+            - _id: 360a67d7-bf87-404a-8c15-a957c512d42a
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: e1cc78ae-ab27-4706-8ccd-644ca62bd2db
+                url:
+                  value: >-
+                    https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/W_CvSNuyQ66ArEgOEtto6w-cart-page-og-image.png
+                  type: text
+                file:
+                  type: file
+                  value: 83191658-b398-4582-8672-19571dd78767
+                size:
+                  value: 1909238
+                  type: number
+                title:
+                  type: text
+                  value: cart-page-og-image.png
+                width:
+                  value: 1808
+                  type: number
+                height:
+                  value: 908
+                  type: number
+                mediaType:
+                  value: image/png
+                  type: text
+              _source: uniform-assets
+        openGraphTitle:
+          type: text
+          value: Your Cart - Java Drip
+        pageDescription:
+          type: text
+          value: >-
+            Review your coffee selections and prepare for checkout on the Java
+            Drip Cart Page. Your favorite brews and accessories await!
+        openGraphDescription:
+          type: text
+          value: >-
+            Review your coffee selections and prepare for checkout on the Java
+            Drip Cart Page. Your favorite brews and accessories await!
+    d4d3e6e2-f611-4f99-9fd4-cd0a1e2b77fa:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: /${locale}/cart/checkout
+              type: projectMapNode
+              nodeId: 56d212ca-516a-42ee-86e6-2df10e284b60
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            de-at:
+              path: /${locale}/cart/checkout
+              type: projectMapNode
+              nodeId: 56d212ca-516a-42ee-86e6-2df10e284b60
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            de-de:
+              path: /${locale}/cart/checkout
+              type: projectMapNode
+              nodeId: 56d212ca-516a-42ee-86e6-2df10e284b60
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-ca:
+              path: /${locale}/cart/checkout
+              type: projectMapNode
+              nodeId: 56d212ca-516a-42ee-86e6-2df10e284b60
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-de:
+              path: /${locale}/cart/checkout
+              type: projectMapNode
+              nodeId: 56d212ca-516a-42ee-86e6-2df10e284b60
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-fr:
+              path: /${locale}/cart/checkout
+              type: projectMapNode
+              nodeId: 56d212ca-516a-42ee-86e6-2df10e284b60
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-gb:
+              path: /${locale}/cart/checkout
+              type: projectMapNode
+              nodeId: 56d212ca-516a-42ee-86e6-2df10e284b60
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-nl:
+              path: /${locale}/cart/checkout
+              type: projectMapNode
+              nodeId: 56d212ca-516a-42ee-86e6-2df10e284b60
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-us:
+              path: /${locale}/cart/checkout
+              type: projectMapNode
+              nodeId: 56d212ca-516a-42ee-86e6-2df10e284b60
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            es-us:
+              path: /${locale}/cart/checkout
+              type: projectMapNode
+              nodeId: 56d212ca-516a-42ee-86e6-2df10e284b60
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            fr-ca:
+              path: /${locale}/cart/checkout
+              type: projectMapNode
+              nodeId: 56d212ca-516a-42ee-86e6-2df10e284b60
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            fr-fr:
+              path: /${locale}/cart/checkout
+              type: projectMapNode
+              nodeId: 56d212ca-516a-42ee-86e6-2df10e284b60
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ja-jp:
+              path: /${locale}/cart/checkout
+              type: projectMapNode
+              nodeId: 56d212ca-516a-42ee-86e6-2df10e284b60
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            nb-no:
+              path: /${locale}/cart/checkout
+              type: projectMapNode
+              nodeId: 56d212ca-516a-42ee-86e6-2df10e284b60
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            nl-nl:
+              path: /${locale}/cart/checkout
+              type: projectMapNode
+              nodeId: 56d212ca-516a-42ee-86e6-2df10e284b60
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            sv-se:
+              path: /${locale}/cart/checkout
+              type: projectMapNode
+              nodeId: 56d212ca-516a-42ee-86e6-2df10e284b60
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ar-ksa:
+              path: /${locale}/cart/checkout
+              type: projectMapNode
+              nodeId: 56d212ca-516a-42ee-86e6-2df10e284b60
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ar-uae:
+              path: /${locale}/cart/checkout
+              type: projectMapNode
+              nodeId: 56d212ca-516a-42ee-86e6-2df10e284b60
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+        text:
+          type: text
+          value: Proceed to Checkout
+    561b0ea9-866d-4925-b9fa-aeff9a3d777c|dc2e95be-21b5-4476-a309-f8a34922f528:
+      slots:
+        $slotSectionItems:
+          - _id: 75036136-9299-41af-93e7-8c4eef15b1ee
+            type: flex
+            slots:
+              flexItem:
+                - _id: a4be99cc-5d3e-4f6a-8f58-10378b0d5186
+                  type: shoppingCart
+                  slots:
+                    checkoutButton:
+                      - _id: d4d3e6e2-f611-4f99-9fd4-cd0a1e2b77fa
+                        type: button
+                        _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
+                        _overridability:
+                          variants: true
+                          parameters:
+                            link: 'yes'
+                            text: 'yes'
+                            fullWidth: 'yes'
+                            textColor: 'no'
+                          hideLockedParameters: true
+                    emptyCartContent:
+                      - _id: eee68ffb-8877-4a0d-914f-23507f06cb0f
+                        type: flex
+                        slots:
+                          flexItem:
+                            - _id: f7e47db0-8c90-4aed-895f-03c25c3b4d1e
+                              type: text
+                              parameters:
+                                tag:
+                                  type: dex-segmented-control-parameter
+                                  value: span
+                                size:
+                                  type: dex-segmented-control-parameter
+                                  value:
+                                    mobile: 3xl
+                                    tablet: 4xl
+                                    desktop: 4xl
+                                text:
+                                  type: text
+                                  locales:
+                                    da-dk: Your shopping cart is empty
+                                    de-at: Your shopping cart is empty
+                                    de-de: Your shopping cart is empty
+                                    en-ca: Your shopping cart is empty
+                                    en-de: Your shopping cart is empty
+                                    en-fr: Your shopping cart is empty
+                                    en-gb: Your shopping cart is empty
+                                    en-nl: Your shopping cart is empty
+                                    en-us: Your shopping cart is empty
+                                    es-us: Your shopping cart is empty
+                                    fr-ca: Your shopping cart is empty
+                                    fr-fr: Your shopping cart is empty
+                                    ja-jp: Your shopping cart is empty
+                                    nb-no: Your shopping cart is empty
+                                    nl-nl: Your shopping cart is empty
+                                    sv-se: Your shopping cart is empty
+                                    ar-ksa: Your shopping cart is empty
+                                    ar-uae: Your shopping cart is empty
+                                color:
+                                  type: dex-color-palette-parameter
+                                  value: text-primary
+                                weight:
+                                  type: dex-segmented-control-parameter
+                                  value: bold
+                            - _id: 3ff5c08e-a565-417d-b0e2-3268904074eb
+                              type: image
+                              parameters:
+                                image:
+                                  type: asset
+                                  value:
+                                    - _id: 9d34fc65-5359-4543-bdaa-f496a697133c
+                                      type: image
+                                      fields:
+                                        id:
+                                          type: text
+                                          value: b207e5e2-a19f-4bda-a9c2-e96a64e1d62c
+                                        url:
+                                          value: >-
+                                            https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/pLJKsoQASJaaqe21_4doow-icon-cart.svg
+                                          type: text
+                                        file:
+                                          type: file
+                                          value: d23b35bb-c04d-4bde-bf7d-15435850034e
+                                        size:
+                                          value: 872
+                                          type: number
+                                        title:
+                                          type: text
+                                          value: icon-cart.svg
+                                        width:
+                                          value: 24
+                                          type: number
+                                        height:
+                                          value: 24
+                                          type: number
+                                        mediaType:
+                                          value: image/svg+xml
+                                          type: text
+                                      _source: uniform-assets
+                                width:
+                                  type: number
+                                  value: '100'
+                                height:
+                                  type: number
+                                  value: '100'
+                                objectFit:
+                                  type: dex-segmented-control-parameter
+                                  value: cover
+                            - _id: 80e192fa-7bd5-4006-8e48-1a7e0d28effd
+                              type: text
+                              parameters:
+                                tag:
+                                  type: dex-segmented-control-parameter
+                                  value: span
+                                size:
+                                  type: dex-segmented-control-parameter
+                                  value:
+                                    mobile: sm
+                                    tablet: lg
+                                    desktop: xl
+                                text:
+                                  type: text
+                                  locales:
+                                    da-dk: Your shopping cart is empty
+                                    de-at: Your shopping cart is empty
+                                    de-de: Your shopping cart is empty
+                                    en-ca: Your shopping cart is empty
+                                    en-de: Your shopping cart is empty
+                                    en-fr: Your shopping cart is empty
+                                    en-gb: Your shopping cart is empty
+                                    en-nl: Your shopping cart is empty
+                                    en-us: Your shopping cart is empty
+                                    es-us: Your shopping cart is empty
+                                    fr-ca: Your shopping cart is empty
+                                    fr-fr: Your shopping cart is empty
+                                    ja-jp: Your shopping cart is empty
+                                    nb-no: Your shopping cart is empty
+                                    nl-nl: Your shopping cart is empty
+                                    sv-se: Your shopping cart is empty
+                                    ar-ksa: Your shopping cart is empty
+                                    ar-uae: Your shopping cart is empty
+                                color:
+                                  type: dex-color-palette-parameter
+                                  value: text-primary
+                                weight:
+                                  type: dex-segmented-control-parameter
+                                  value: normal
+                        parameters:
+                          gap:
+                            type: dex-slider-control-parameter
+                            value:
+                              mobile: '8'
+                              tablet: '8'
+                              desktop: '8'
+                          direction:
+                            type: dex-segmented-control-parameter
+                            value:
+                              mobile: col
+                              tablet: col
+                              desktop: col
+                          alignItems:
+                            type: dex-segmented-control-parameter
+                            value:
+                              mobile: center
+                              tablet: center
+                              desktop: center
+                          displayName:
+                            type: text
+                            locales:
+                              da-dk: 'The shopping cart is empty '
+                              de-at: 'The shopping cart is empty '
+                              de-de: 'The shopping cart is empty '
+                              en-ca: 'The shopping cart is empty '
+                              en-de: 'The shopping cart is empty '
+                              en-fr: 'The shopping cart is empty '
+                              en-gb: 'The shopping cart is empty '
+                              en-nl: 'The shopping cart is empty '
+                              en-us: 'The shopping cart is empty '
+                              es-us: 'The shopping cart is empty '
+                              fr-ca: 'The shopping cart is empty '
+                              fr-fr: 'The shopping cart is empty '
+                              ja-jp: 'The shopping cart is empty '
+                              nb-no: 'The shopping cart is empty '
+                              nl-nl: 'The shopping cart is empty '
+                              sv-se: 'The shopping cart is empty '
+                              ar-ksa: 'The shopping cart is empty '
+                              ar-uae: 'The shopping cart is empty '
+                          justifyContent:
+                            type: dex-segmented-control-parameter
+                            value:
+                              mobile: center
+                              tablet: center
+                              desktop: center
+                  parameters:
+                    primaryTextColor:
+                      type: dex-color-palette-parameter
+                      value: text-primary
+                    secondaryTextColor:
+                      type: dex-color-palette-parameter
+                      value: text-link
+            parameters:
+              gap:
+                type: dex-slider-control-parameter
+                value:
+                  mobile: '4'
+                  tablet: '4'
+                  desktop: '4'
+              spacing:
+                type: dex-space-control-parameter
+                value:
+                  mobile:
+                    paddingTop: container-medium
+                    paddingBottom: container-medium
+                  tablet:
+                    paddingTop: container-medium
+                    paddingBottom: container-medium
+                  desktop:
+                    paddingTop: container-medium
+                    paddingBottom: container-medium
+              direction:
+                type: dex-segmented-control-parameter
+                value:
+                  mobile: col
+                  tablet: col
+                  desktop: col
+              alignItems:
+                type: dex-segmented-control-parameter
+                value: {}
+              displayName:
+                type: text
+                locales:
+                  da-dk: Cart Content
+                  de-at: Cart Content
+                  de-de: Cart Content
+                  en-ca: Cart Content
+                  en-de: Cart Content
+                  en-fr: Cart Content
+                  en-gb: Cart Content
+                  en-nl: Cart Content
+                  en-us: Cart Content
+                  es-us: Cart Content
+                  fr-ca: Cart Content
+                  fr-fr: Cart Content
+                  ja-jp: Cart Content
+                  nb-no: Cart Content
+                  nl-nl: Cart Content
+                  sv-se: Cart Content
+                  ar-ksa: Cart Content
+                  ar-uae: Cart Content
+              justifyContent:
+                type: dex-segmented-control-parameter
+                value: {}
+    561b0ea9-866d-4925-b9fa-aeff9a3d777c|38f88562-6b70-411b-a550-ada8514eef22|f82aa025-12eb-4c87-b18b-ccc33b20fe02:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            de-at:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            de-de:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-ca:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-de:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-fr:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-gb:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-nl:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            es-us:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            fr-ca:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            fr-fr:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ja-jp:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            nb-no:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            nl-nl:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            sv-se:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ar-ksa:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ar-uae:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+    561b0ea9-866d-4925-b9fa-aeff9a3d777c|7607f998-992d-4b35-9fa5-4e560f8c179a|36ef82db-8556-4006-be7a-957216a76758:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: Recommended for you
+            de-at: Recommended for you
+            de-de: Recommended for you
+            en-ca: Recommended for you
+            en-de: Recommended for you
+            en-fr: Recommended for you
+            en-gb: Recommended for you
+            en-nl: Recommended for you
+            es-us: Recommended for you
+            fr-ca: Recommended for you
+            fr-fr: Recommended for you
+            ja-jp: Recommended for you
+            nb-no: Recommended for you
+            nl-nl: Recommended for you
+            sv-se: Recommended for you
+            ar-ksa: Recommended for you
+            ar-uae: Recommended for you
+    561b0ea9-866d-4925-b9fa-aeff9a3d777c|bbf196c6-4821-414c-9b14-b08fb1c7fede|44623ac6-5327-44e3-ab3e-b7455ff829e8:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-demo
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-demo
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-de:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-fr:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-demo
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-demo
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-demo
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-demo
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-demo
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-demo
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-demo
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-demo
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-demo
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-demo
+              type: url
+    561b0ea9-866d-4925-b9fa-aeff9a3d777c|bbf196c6-4821-414c-9b14-b08fb1c7fede|44d64138-618e-4c6a-b4cc-6ea9b9a22cba:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-de:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-fr:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+    561b0ea9-866d-4925-b9fa-aeff9a3d777c|bbf196c6-4821-414c-9b14-b08fb1c7fede|6db01010-cff2-458e-85d6-358dc75ca48c:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-sb
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-sb
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-de:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-fr:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-sb
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-sb
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-sb
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-sb
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-sb
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-sb
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-sb
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-sb
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-sb
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-sb
+              type: url
+    561b0ea9-866d-4925-b9fa-aeff9a3d777c|bbf196c6-4821-414c-9b14-b08fb1c7fede|ea891105-3b48-41b4-8fa0-6c2ecca00a75:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-docs
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-docs
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-de:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-fr:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-docs
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-docs
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-docs
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-docs
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-docs
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-docs
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-docs
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-docs
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-docs
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-docs
+              type: url
+  _locales:
+    - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa
+  _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
+created: '2025-03-18T13:02:32.712193+00:00'
+modified: '2025-07-03T13:12:46.170429+00:00'
+pattern: false
