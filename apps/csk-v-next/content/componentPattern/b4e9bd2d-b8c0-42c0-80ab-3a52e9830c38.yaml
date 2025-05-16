@@ -1,0 +1,203 @@
+composition:
+  _name: Testimonial - Overlapping Image
+  _id: b4e9bd2d-b8c0-42c0-80ab-3a52e9830c38
+  type: testimonial
+  variant: withOverlappingImage
+  parameters:
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        mobile:
+          marginTop: container-medium
+          paddingLeft: container-small
+          paddingRight: container-small
+        tablet:
+          marginTop: container-medium
+          paddingLeft: container-small
+          marginBottom: container-medium
+          paddingRight: container-small
+        desktop:
+          marginTop: container-medium
+          paddingLeft: container-small
+          marginBottom: container-medium
+          paddingRight: container-small
+    displayName:
+      type: text
+      value: Testimonial - Overlapping Image
+    fluidContent:
+      type: checkbox
+      value: true
+    backgroundColor:
+      type: dex-color-palette-parameter
+      value: general-color-5
+  slots:
+    testimonialAuthor:
+      - _id: d8913562-6e54-4702-928c-e87aae67f5d2
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: p
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              desktop: base
+          text:
+            type: text
+            value: Roger Willis
+          color:
+            type: dex-color-palette-parameter
+            value: text-light
+          weight:
+            type: dex-segmented-control-parameter
+            value: bold
+        _overridability:
+          parameters:
+            text: 'yes'
+            color: 'yes'
+          hideLockedParameters: true
+      - _id: e965ecb1-e5bb-4cce-be0e-63e411619e38
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: p
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: xs
+              tablet: sm
+              desktop: base
+          text:
+            type: text
+            value: Sr. Solutions Architect / Universal Technical Institute
+          color:
+            type: dex-color-palette-parameter
+            value: text-light
+          weight:
+            type: dex-segmented-control-parameter
+            value: normal
+        _overridability:
+          parameters:
+            text: 'yes'
+            color: 'yes'
+          hideLockedParameters: true
+    testimonialContent:
+      - _id: b8835289-33f9-4155-826a-485d0e9fb2de
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: p
+          font:
+            type: dex-token-selector-parameter
+            value: dm-sans
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              desktop: 2xl
+          text:
+            type: text
+            value: >-
+              "The Component Starter Kit is great. It cut time to market in
+              half. A big win!"
+          color:
+            type: dex-color-palette-parameter
+            value: text-light
+          weight:
+            type: dex-segmented-control-parameter
+            value: bold
+          alignment:
+            type: dex-segmented-control-parameter
+            value: center
+        _overridability:
+          parameters:
+            text: 'yes'
+            color: 'yes'
+          hideLockedParameters: true
+    testimonialPrimaryImage:
+      - _id: 73be9760-853d-4aeb-af28-5fb6a0c0e4ff
+        type: image
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 1eae48e5-875a-4c0a-8973-9d690f605c18
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: cd44bf5e-bc21-4be5-b032-1cda94b4a6e1
+                  url:
+                    type: text
+                    value: >-
+                      https://img.uniform.global/p/ZfA3kJm3TDeKyWey802IkQ/6DzWsi7nTOaP9naaIe62uw-roger_willis.png
+                  file:
+                    type: file
+                    value: 16d24fd8-e2ce-4526-9f57-96d3a288b30c
+                  size:
+                    type: number
+                    value: 1600044
+                  title:
+                    type: text
+                    value: roger_willis.png
+                  width:
+                    type: number
+                    value: 1086
+                  height:
+                    type: number
+                    value: 1538
+                  mediaType:
+                    type: text
+                    value: image/png
+                _source: custom-url
+          border:
+            type: dex-token-selector-parameter
+            value: border-image-radius-medium
+          objectFit:
+            type: dex-segmented-control-parameter
+            value: cover
+        _overridability:
+          parameters:
+            image: 'yes'
+          hideLockedParameters: true
+    testimonialSecondaryImage:
+      - _id: 14180e09-3c2d-4283-bdd5-2543561b3cc8
+        type: image
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 4e05dae1-7ef9-430d-a4cf-307200e377f2
+                type: image
+                fields:
+                  url:
+                    type: text
+                    value: >-
+                      https://res.cloudinary.com/utidinary/image/upload/f_auto,q_auto,h_200,t_Auto-Quality-and-Format/UTI-Logo-Full-Color-White.svg
+                _source: custom-url
+          width:
+            type: number
+            value: '160'
+          height:
+            type: number
+            value: '64'
+          objectFit:
+            type: dex-segmented-control-parameter
+            value: contain
+        _overridability:
+          parameters:
+            image: 'yes'
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      displayName: 'yes'
+      backgroundColor: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2025-05-16T10:03:31.208458+00:00'
+modified: '2025-05-16T11:05:06.612454+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1747393468/csk-v-next/baseline/preview-images/testimonial-overlapping-image.jpg

@@ -1,0 +1,154 @@
+composition:
+  _name: Review - Default
+  _id: 5091ea39-eae3-4ac1-8f4f-ac0487eb564a
+  type: review
+  parameters:
+    stars:
+      type: number
+      value: '5'
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        mobile: {}
+        tablet: {}
+        desktop: {}
+    starsColor:
+      type: dex-color-palette-parameter
+      value: general-color-6
+    displayName:
+      type: text
+      value: Hector Gibbons review
+    showRatingLabel:
+      type: checkbox
+      value: true
+    activeStarsColor:
+      type: dex-color-palette-parameter
+      value: button-primary-hover
+  slots:
+    reviewImage:
+      - _id: bb51df40-cf4d-4dd3-85e2-b7a185e1552f
+        type: image
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: de055a55-b704-42af-88f6-10402e415e64
+                type: image
+                fields:
+                  url:
+                    type: text
+                    value: >-
+                      https://img.uniform.global/p/ZfA3kJm3TDeKyWey802IkQ/6DzWsi7nTOaP9naaIe62uw-roger_willis.png
+                  title:
+                    type: text
+                    value: roger_willis.png
+                _source: custom-url
+          border:
+            type: dex-token-selector-parameter
+            value: border-image-radius-small
+          objectFit:
+            type: dex-segmented-control-parameter
+            value: cover
+        _overridability:
+          parameters:
+            image: 'yes'
+          hideLockedParameters: true
+    reviewContent:
+      - _id: 576a2fd1-1a47-4521-b0fe-ec6b4a49b310
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: p
+          size:
+            type: dex-segmented-control-parameter
+            value: {}
+          text:
+            type: text
+            value: >-
+              The Component Starter Kit is great. It cut time to market in half.
+              A big win!
+          weight:
+            type: dex-segmented-control-parameter
+            value: bold
+        _overridability:
+          parameters:
+            text: 'yes'
+            color: 'yes'
+          hideLockedParameters: true
+      - _id: d8693525-cf0b-4f36-957d-cb710ab71e5a
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: span
+          text:
+            type: text
+            value: >-
+              With a solid foundation of pre-built components and best
+              practices, the Component Starter Kit eliminated repetitive setup
+              work and boosted our velocity. Time to market was slashed, and
+              developer experience noticeably improved.
+        _overridability:
+          parameters:
+            text: 'yes'
+            color: 'yes'
+          hideLockedParameters: true
+    reviewPersonInfo:
+      - _id: ab488771-c052-4a37-b8e5-cacfc5a2f002
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: p
+          size:
+            type: dex-segmented-control-parameter
+            value: {}
+          text:
+            type: text
+            value: Roger Willis
+          weight:
+            type: dex-segmented-control-parameter
+            value: bold
+        _overridability:
+          parameters:
+            text: 'yes'
+            color: 'yes'
+          hideLockedParameters: true
+      - _id: 663f0e08-a1d2-44eb-b815-d334767a1931
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: p
+          size:
+            type: dex-segmented-control-parameter
+            value: {}
+          text:
+            type: text
+            value: July 12, 2021
+          color:
+            type: dex-color-palette-parameter
+            value: text-tertiary
+          weight:
+            type: dex-segmented-control-parameter
+            value: normal
+        _overridability:
+          parameters:
+            text: 'yes'
+            color: 'yes'
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      stars: 'yes'
+      starsColor: 'yes'
+      displayName: 'yes'
+      activeStarsColor: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2025-05-16T11:28:41.298534+00:00'
+modified: '2025-05-16T11:37:15.537458+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1747395403/csk-v-next/baseline/preview-images/review-default.jpg
