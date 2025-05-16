@@ -77,7 +77,7 @@ const init = async ({
       return;
     }
 
-    await setupProject({ projectConfiguration, isMonorepo, verbose, spinner });
+    await setupProject({ projectConfiguration, isMonorepo, verbose, spinner, dev });
     spinner.succeed('App created successfully!');
 
     const notes = recipes
@@ -102,14 +102,16 @@ const setupProject = async ({
   isMonorepo,
   verbose,
   spinner,
+  dev,
 }: {
   projectConfiguration: ProjectConfiguration;
   isMonorepo: boolean;
   verbose: boolean;
   spinner: ora.Ora;
+  dev: boolean;
 }) => {
   const { template, recipes, envVariables } = projectConfiguration;
-  const externalBranchName = getExternalBranchName(template, recipes);
+  const externalBranchName = getExternalBranchName(template, recipes, dev);
 
   if (!externalBranchName) return;
 
