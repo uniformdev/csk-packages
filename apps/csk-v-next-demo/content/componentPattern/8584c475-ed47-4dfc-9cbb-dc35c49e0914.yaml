@@ -1,0 +1,43 @@
+composition:
+  _name: Stat Item With Background
+  _id: 8584c475-ed47-4dfc-9cbb-dc35c49e0914
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Stat Item With Background
+    anchor:
+      type: text
+      value: stat-item-with-background
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    patternId:
+      type: text
+      value: 8584c475-ed47-4dfc-9cbb-dc35c49e0914
+    fluidContent:
+      type: checkbox
+      value: true
+    enableComponentPreview:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: 60335401-3739-46dc-b1df-a5a21369fb33
+        type: flex
+        _pattern: 0628b755-8e3d-4a92-a576-aa3cf354a921
+  _overridability:
+    parameters:
+      link: 'yes'
+      enableComponentPreview: 'yes'
+    hideLockedParameters: true
+created: '2025-02-17T16:01:13.400666+00:00'
+modified: '2025-02-17T16:01:13.400666+00:00'
+pattern: true

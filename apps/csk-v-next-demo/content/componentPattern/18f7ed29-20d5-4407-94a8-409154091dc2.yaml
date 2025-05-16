@@ -1,0 +1,170 @@
+composition:
+  _name: Flexible Hero
+  _id: 18f7ed29-20d5-4407-94a8-409154091dc2
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Flexible Hero
+    anchor:
+      type: text
+      value: flexible-hero
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        marginTop: ''
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    patternId:
+      type: text
+      value: 18f7ed29-20d5-4407-94a8-409154091dc2
+    fluidContent:
+      type: checkbox
+      value: true
+    previewImage:
+      type: asset
+      value: []
+    enableComponentPreview:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: 7f4693ed-eaad-4575-89bc-6acd02452a6e
+        type: flexibleHero
+        slots:
+          flexibleHeroCta:
+            - _id: f1f19d2b-718f-40ce-b5a9-2ccda1f0599c
+              type: button
+              _pattern: 53b59aed-e378-4fcb-9135-20247d92074e
+            - _id: a748b490-a592-4b92-bbd6-091ac8a5336c
+              type: button
+              _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
+          flexibleHeroContent:
+            - _id: 3b52b830-80a4-4c2b-be5b-13f69a8fdc7e
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: span
+                size:
+                  type: dex-segmented-control-parameter
+                  value: {}
+                text:
+                  type: text
+                  value: HELLO AND WELCOME! THIS IS
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-secondary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+            - _id: 0437bf10-fa38-491e-98d0-eb087f7654fe
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: h1
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: 5xl
+                    tablet: 5xl
+                    desktop: 5xl
+                text:
+                  type: text
+                  value: Uniform’s Component Starter Kit
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-secondary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+            - _id: fcf1b8c2-30cc-4557-87f4-0e2870840a91
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: h2
+                size:
+                  type: dex-segmented-control-parameter
+                  value: base
+                text:
+                  type: text
+                  value: >-
+                    An essential set of components you need to start building
+                    personalized web experiences with Uniform.
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-secondary
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: c6b794d5-7de1-4b81-82f9-0edd9cb6d01c
+                type: image
+                fields:
+                  url:
+                    type: text
+                    value: >-
+                      https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/shared-images/beans-heart.jpg
+                  title:
+                    type: text
+                    value: beans-heart
+                  description:
+                    type: text
+                    value: beans-heart
+                _source: custom-url
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              paddingTop: container-small
+              paddingLeft: container-small
+              paddingRight: container-small
+              paddingBottom: container-small
+          displayName:
+            type: text
+            value: Flexible Hero
+          fluidContent:
+            type: checkbox
+            value: true
+          imageObjectFit:
+            type: dex-segmented-control-parameter
+            value: cover
+          contentAlignment:
+            type: dex-segmented-control-parameter
+            value: center
+          imageOverlayColor:
+            type: dex-color-palette-parameter
+            value: general-color-2
+          imageOverlayOpacity:
+            type: dex-slider-control-parameter
+            value: '0.4'
+        _overridability:
+          hideLockedParameters: true
+  _overrides:
+    a748b490-a592-4b92-bbd6-091ac8a5336c:
+      parameters:
+        size:
+          type: dex-token-selector-parameter
+          value: button-medium
+        text:
+          type: text
+          value: Secondary Button
+    f1f19d2b-718f-40ce-b5a9-2ccda1f0599c:
+      parameters:
+        text:
+          type: text
+          value: Primary Button
+  _overridability:
+    parameters:
+      link: 'yes'
+    hideLockedParameters: true
+created: '2025-03-03T09:52:28.068199+00:00'
+modified: '2025-03-03T09:52:28.068199+00:00'
+pattern: true
+categoryId: f22b05f0-c4bf-4158-8ebc-4856e4d453af

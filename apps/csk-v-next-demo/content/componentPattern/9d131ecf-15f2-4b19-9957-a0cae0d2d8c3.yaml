@@ -1,0 +1,210 @@
+composition:
+  _name: Grid
+  _id: 9d131ecf-15f2-4b19-9957-a0cae0d2d8c3
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Grid
+    anchor:
+      type: text
+      value: grid
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    patternId:
+      type: text
+      value: 9d131ecf-15f2-4b19-9957-a0cae0d2d8c3
+    fluidContent:
+      type: checkbox
+      value: true
+    enableComponentPreview:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: cf0adcca-769c-43e3-a448-42e5cbdc428a
+        type: grid
+        slots:
+          gridInner:
+            - _id: 51fe9ad3-4c61-49fe-838e-bf0ad647b6c1
+              type: gridItem
+              slots:
+                inner:
+                  - _id: a03dd9e6-3f66-4911-8ed0-dc937305a408
+                    type: container
+                    parameters:
+                      spacing:
+                        type: dex-space-control-parameter
+                        value:
+                          paddingTop: container-small
+                          paddingBottom: container-small
+                      displayName:
+                        type: text
+                        value: Container
+                      fluidContent:
+                        type: checkbox
+                        value: true
+                      backgroundColor:
+                        type: dex-color-palette-parameter
+                        value: general-color-2
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                rowSpan:
+                  type: dex-slider-control-parameter
+                  value: {}
+                rowStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: '1'
+                    tablet: '1'
+                    desktop: '1'
+                columnSpan:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: span-2
+                    tablet: span-2
+                    desktop: span-2
+                columnStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: '1'
+                    tablet: '1'
+                    desktop: '1'
+                displayName:
+                  type: text
+                  value: 'First row '
+              _overridability:
+                hideLockedParameters: true
+            - _id: 298b7d0d-9aa1-4f46-9c33-edcf66e47a63
+              type: container
+              parameters:
+                spacing:
+                  type: dex-space-control-parameter
+                  value:
+                    paddingTop: container-small
+                    paddingBottom: container-small
+                displayName:
+                  type: text
+                  value: First column
+                fluidContent:
+                  type: checkbox
+                  value: true
+                backgroundColor:
+                  type: dex-color-palette-parameter
+                  value: general-color-2
+              _overridability:
+                hideLockedParameters: true
+            - _id: 84a10282-556e-4aed-a488-5af63716f4ee
+              type: container
+              parameters:
+                spacing:
+                  type: dex-space-control-parameter
+                  value:
+                    paddingTop: container-small
+                    paddingBottom: container-small
+                displayName:
+                  type: text
+                  value: Second column
+                fluidContent:
+                  type: checkbox
+                  value: true
+                backgroundColor:
+                  type: dex-color-palette-parameter
+                  value: general-color-2
+              _overridability:
+                hideLockedParameters: true
+            - _id: e8a0167d-70c3-4cd6-8f38-06ba61715f93
+              type: gridItem
+              slots:
+                inner:
+                  - _id: b5d3a522-3225-4135-a63b-227a05c55012
+                    type: container
+                    parameters:
+                      spacing:
+                        type: dex-space-control-parameter
+                        value:
+                          paddingTop: container-small
+                          paddingBottom: container-small
+                      displayName:
+                        type: text
+                        value: Container
+                      fluidContent:
+                        type: checkbox
+                        value: true
+                      backgroundColor:
+                        type: dex-color-palette-parameter
+                        value: general-color-2
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                rowSpan:
+                  type: dex-slider-control-parameter
+                  value: {}
+                rowStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: '3'
+                    tablet: '3'
+                    desktop: '3'
+                columnSpan:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: span-2
+                    tablet: span-2
+                    desktop: span-2
+                columnStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: '1'
+                    tablet: '1'
+                    desktop: '1'
+                displayName:
+                  type: text
+                  value: Last row
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          gapX:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '2'
+              tablet: '2'
+              desktop: '2'
+          gapY:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '2'
+              tablet: '2'
+              desktop: '2'
+          spacing:
+            type: dex-space-control-parameter
+            value: {}
+          displayName:
+            type: text
+            value: Grid with 2 columns
+          columnsCount:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '2'
+              tablet: '2'
+              desktop: '2'
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      link: 'yes'
+      enableComponentPreview: 'yes'
+    hideLockedParameters: true
+created: '2025-03-03T09:52:30.132578+00:00'
+modified: '2025-03-03T09:52:30.132578+00:00'
+pattern: true
+categoryId: ae15b0f6-4953-4ccb-9984-ad0525e77b01

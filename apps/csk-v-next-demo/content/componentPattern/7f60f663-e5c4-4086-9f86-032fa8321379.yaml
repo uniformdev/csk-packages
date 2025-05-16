@@ -1,0 +1,66 @@
+composition:
+  _name: Badge Small
+  _id: 7f60f663-e5c4-4086-9f86-032fa8321379
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Badge Small
+    anchor:
+      type: text
+      value: badge-small
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    patternId:
+      type: text
+      value: 7f60f663-e5c4-4086-9f86-032fa8321379
+    fluidContent:
+      type: checkbox
+      value: true
+    enableComponentPreview:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: bfa6663e-3f3f-4820-bb23-862df6db97cb
+        type: badge
+        parameters:
+          pill:
+            type: checkbox
+            value: true
+          size:
+            type: dex-token-selector-parameter
+            value: badge-small
+          text:
+            type: text
+            value: Badge Small
+          textColor:
+            type: dex-color-palette-parameter
+            value: text-secondary
+          backgroundColor:
+            type: dex-color-palette-parameter
+            value: general-color-2
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      link: 'yes'
+      enableComponentPreview: 'yes'
+    hideLockedParameters: true
+created: '2025-03-03T09:52:29.261799+00:00'
+modified: '2025-03-03T09:52:29.261799+00:00'
+pattern: true
+description: >-
+  This example is constructed utilizing the Hero component, which incorporates a
+  video as the media content. It encompasses text components for the eyebrow,
+  title, and description, as well as button component designated as primary
+  buttons.
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

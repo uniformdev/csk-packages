@@ -1,0 +1,220 @@
+composition:
+  _name: Demo Call To Action
+  _id: 6d0cf521-5c04-48f5-8ee8-8eab2c50835e
+  type: grid
+  parameters:
+    gapX:
+      type: dex-slider-control-parameter
+      value: {}
+    gapY:
+      type: dex-slider-control-parameter
+      value: {}
+    border:
+      type: dex-token-selector-parameter
+      value: ''
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        marginTop: ''
+        paddingTop: ''
+        marginBottom: container-small
+        paddingBottom: ''
+    displayName:
+      type: text
+      value: Now this is empowering section
+    columnsCount:
+      type: dex-slider-control-parameter
+      value:
+        mobile: '1'
+        tablet: '2'
+        desktop: '2'
+  slots:
+    gridInner:
+      - _id: c8fede2c-47da-4434-a91b-69f1c2d0d00d
+        type: container
+        slots:
+          containerContent:
+            - _id: 4db20682-6a4b-4940-8948-94a3c00c4a24
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: span
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: lg
+                    tablet: lg
+                    desktop: lg
+                text:
+                  type: text
+                  value: Now this is empowering!
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-tertiary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: bold
+                transform:
+                  type: dex-segmented-control-parameter
+                  value: uppercase
+            - _id: 0a2101f3-6314-43bb-a965-d02851cdd970
+              type: spacer
+              parameters:
+                size:
+                  type: dex-token-selector-parameter
+                  value: spacer-small
+            - _id: 47095013-3eb9-487e-b675-76978eed3a3d
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: h2
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: 3xl
+                    tablet: 3xl
+                    desktop: 5xl
+                text:
+                  type: text
+                  value: >-
+                    Now it's time to see how Uniform can help you accelerate
+                    building modern digital experiences.
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: extrabold
+            - _id: af7d28d5-e18d-4ef4-a45e-0a5de3e6ec45
+              type: spacer
+              parameters:
+                size:
+                  type: dex-token-selector-parameter
+                  value: spacer-small
+            - _id: a6874dcf-e98f-4de4-83ed-e9f75eca0d39
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: p
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: lg
+                    tablet: lg
+                    desktop: lg
+                text:
+                  type: text
+                  value: We’d love to show you.
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+            - _id: de7bc61b-a478-4268-890a-d1ca76033c42
+              type: spacer
+              parameters:
+                size:
+                  type: dex-token-selector-parameter
+                  value: spacer-small
+            - _id: 34ca509f-09cf-426c-b3d2-ff34d30f6c04
+              type: flex
+              slots:
+                flexItem:
+                  - _id: 442b0e73-1477-4739-9862-665fb686857f
+                    type: button
+                    _pattern: 53b59aed-e378-4fcb-9135-20247d92074e
+                  - _id: 0b63323e-2a96-4a89-aacb-c2d275751dc9
+                    type: button
+                    _pattern: 31191bc7-7e6e-4748-89c2-8e73db05237d
+              parameters:
+                gap:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: '4'
+                    tablet: '4'
+                    desktop: '8'
+                spacing:
+                  type: dex-space-control-parameter
+                  value: {}
+                direction:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: col
+                    tablet: col
+                    desktop: row
+                alignItems:
+                  type: dex-segmented-control-parameter
+                  value: center
+                displayName:
+                  type: text
+                  value: Buttons
+                fluidContent:
+                  type: checkbox
+                  value: true
+                justifyContent:
+                  type: dex-segmented-control-parameter
+                  value:
+                    desktop: ''
+        parameters:
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              paddingTop: container-medium
+              paddingBottom: container-medium
+          displayName:
+            type: text
+            value: Left content
+          fluidContent:
+            type: checkbox
+            value: true
+      - _id: 0b146a50-8d3c-489f-9274-6048e43089d4
+        type: image
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 279da0e0-49bf-441d-8b7f-43af67670725
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 0e5575b8-ef94-46c9-8567-d8ce3f4bf206
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/ZfA3kJm3TDeKyWey802IkQ/hvhbQwotSOaMT3ue0zwRtA-Group-670.png
+                    type: text
+                  file:
+                    type: file
+                    value: 9c41d864-9058-42f3-bc65-fbd2160fbf68
+                  size:
+                    value: 190498
+                    type: number
+                  title:
+                    type: text
+                    value: demo-bg
+                  width:
+                    value: 1528
+                    type: number
+                  height:
+                    value: 988
+                    type: number
+                  mediaType:
+                    value: image/png
+                    type: text
+                _source: uniform-assets
+          objectFit:
+            type: dex-segmented-control-parameter
+            value: contain
+  _overrides:
+    442b0e73-1477-4739-9862-665fb686857f:
+      parameters:
+        text:
+          type: text
+          value: Book a free demo now
+created: '2025-02-17T16:01:11.919188+00:00'
+modified: '2025-02-17T16:01:11.919188+00:00'
+pattern: true

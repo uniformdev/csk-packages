@@ -1,0 +1,59 @@
+composition:
+  _name: Countdown Default
+  _id: a0eb6eff-2df1-4054-bd44-f50bd4a8745d
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Countdown Default
+    anchor:
+      type: text
+      value: countdown-default
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    patternId:
+      type: text
+      value: a0eb6eff-2df1-4054-bd44-f50bd4a8745d
+    fluidContent:
+      type: checkbox
+      value: true
+    enableComponentPreview:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: dab832df-972d-4123-a6e6-47a2c79d64db
+        type: countdown
+        parameters:
+          targetDate:
+            type: datetime
+            value:
+              datetime: '2024-12-30T22:00:00.000Z'
+              timeZone: Europe/Kyiv
+          displayName:
+            type: text
+            value: Countdown Default
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      link: 'yes'
+      enableComponentPreview: 'yes'
+    hideLockedParameters: true
+created: '2025-03-03T09:52:30.145675+00:00'
+modified: '2025-03-03T10:48:55.321839+00:00'
+pattern: true
+description: >-
+  This example is constructed utilizing the Hero component, which incorporates a
+  video as the media content. It encompasses text components for the eyebrow,
+  title, and description, as well as button component designated as primary
+  buttons.
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9

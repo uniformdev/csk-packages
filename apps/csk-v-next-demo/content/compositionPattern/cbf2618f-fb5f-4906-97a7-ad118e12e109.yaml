@@ -1,0 +1,34 @@
+composition:
+  _name: Components Search Page Pattern
+  _id: cbf2618f-fb5f-4906-97a7-ad118e12e109
+  type: componentsSearchPage
+  parameters:
+    pageTitle:
+      type: text
+      value: Components Search Page
+    backgroundColor:
+      type: dex-color-palette-parameter
+      value: page-background-primary
+  slots:
+    pageFooter:
+      - _id: 5ddf4fbe-1442-4f44-9b23-1e8f36de3220
+        type: footer
+        _pattern: 68136a90-0d34-4dbb-a34e-6e324179998a
+    pageHeader:
+      - _id: 735b45a6-363e-4d1d-b38e-ad1b78984fe1
+        type: header
+        _pattern: 021762f3-8a06-41b4-a4fb-08a837c74415
+    pageContent:
+      - _id: f2ffff28-05fc-44fe-934b-6c0ddf8aa70f
+        type: $slotSection
+        parameters:
+          name:
+            type: text
+            value: Page Content
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    hideLockedParameters: true
+created: '2025-05-16T06:33:01.208245+00:00'
+modified: '2025-05-16T06:33:01.208245+00:00'
+pattern: true

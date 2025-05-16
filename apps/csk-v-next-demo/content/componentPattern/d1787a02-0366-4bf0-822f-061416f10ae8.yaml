@@ -1,0 +1,60 @@
+composition:
+  _name: Tab
+  _id: d1787a02-0366-4bf0-822f-061416f10ae8
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Tab
+    anchor:
+      type: text
+      value: tab
+    spacing:
+      type: dex-space-control-parameter
+      value: {}
+    patternId:
+      type: text
+      value: d1787a02-0366-4bf0-822f-061416f10ae8
+    fluidContent:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: dbf96516-f46d-4c40-af87-db2141de5261
+        type: tab
+        slots:
+          tabContent:
+            - _id: 6a713316-a448-4606-a7d6-a304455355d5
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: h2
+                size:
+                  type: dex-segmented-control-parameter
+                  value: 5xl
+                text:
+                  type: text
+                  value: Tab 1 content
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-secondary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          text:
+            type: text
+            value: Tab
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      link: 'yes'
+    hideLockedParameters: true
+created: '2025-03-03T09:52:33.152444+00:00'
+modified: '2025-03-03T09:52:33.152444+00:00'
+pattern: true
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

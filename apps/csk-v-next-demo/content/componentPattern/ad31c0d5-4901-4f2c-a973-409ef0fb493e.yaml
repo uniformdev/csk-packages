@@ -1,0 +1,177 @@
+composition:
+  _name: Section Columns Reverse variant with Image
+  _id: ad31c0d5-4901-4f2c-a973-409ef0fb493e
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Section Columns Reverse variant with Image
+    anchor:
+      type: text
+      value: section-columns-reverse
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    patternId:
+      type: text
+      value: ad31c0d5-4901-4f2c-a973-409ef0fb493e
+    fluidContent:
+      type: checkbox
+      value: true
+    enableComponentPreview:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: 15004ae0-d40e-4927-b766-c7603c1138fd
+        type: section
+        slots:
+          sectionCTA:
+            - _id: a6aa7c85-a0df-4205-a1fe-6eaf06b8a5f1
+              type: button
+              _pattern: 53b59aed-e378-4fcb-9135-20247d92074e
+            - _id: 0f049ca1-1756-47c4-a56e-4b780d336a41
+              type: button
+              _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
+          sectionMedia:
+            - _id: f3f8c957-3d15-4c89-a15d-6b0dc1c6cad7
+              type: image
+              parameters:
+                image:
+                  type: asset
+                  value:
+                    - _id: 218cf912-0c1f-4124-a716-5adc995c6531
+                      type: image
+                      fields:
+                        url:
+                          type: text
+                          value: >-
+                            https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/shared-images/beans-heart.jpg
+                        title:
+                          type: text
+                          value: beans-heart
+                        description:
+                          type: text
+                          value: beans-heart
+                      _source: custom-url
+                objectFit:
+                  type: dex-segmented-control-parameter
+                  value: cover
+                overlayColor:
+                  type: dex-color-palette-parameter
+                  value: general-color-2
+                overlayOpacity:
+                  type: dex-slider-control-parameter
+                  value: '0.4'
+          sectionContent:
+            - _id: 0de3d4e1-ef11-4b72-84a6-386b745870e0
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: span
+                size:
+                  type: dex-segmented-control-parameter
+                  value: {}
+                text:
+                  type: text
+                  value: HELLO AND WELCOME! THIS IS
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+            - _id: 94614812-9c5d-45b2-84a9-f34f27a4350b
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: h1
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: 5xl
+                    tablet: 5xl
+                    desktop: 5xl
+                text:
+                  type: text
+                  value: Uniform’s Component Starter Kit
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+            - _id: da6c30d3-8914-4dbc-a79d-22fba4b70a50
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: h2
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: base
+                    tablet: base
+                    desktop: base
+                text:
+                  type: text
+                  value: >-
+                    An essential set of components you need to start building
+                    personalized web experiences with Uniform.
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+        variant: columnsReverse
+        parameters:
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              paddingTop: container-small
+              paddingLeft: container-small
+              paddingRight: container-small
+              paddingBottom: container-small
+          displayName:
+            type: text
+            value: Section Columns Reverse variant with Image
+          contentAlignment:
+            type: dex-segmented-control-parameter
+            value: center
+        _overridability:
+          hideLockedParameters: true
+  _overrides:
+    0f049ca1-1756-47c4-a56e-4b780d336a41:
+      parameters:
+        text:
+          type: text
+          value: Secondary Button
+    a6aa7c85-a0df-4205-a1fe-6eaf06b8a5f1:
+      parameters:
+        text:
+          type: text
+          value: Primary Button
+  _overridability:
+    parameters:
+      link: 'yes'
+      enableComponentPreview: 'yes'
+    hideLockedParameters: true
+created: '2025-03-03T09:52:31.072393+00:00'
+modified: '2025-03-03T09:52:31.072393+00:00'
+pattern: true
+description: >-
+  This example is constructed utilizing the Hero component, which incorporates
+  an image as the media content. It encompasses text components for the eyebrow,
+  title, and description, as well as button components designated as primary and
+  secondary buttons.
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9

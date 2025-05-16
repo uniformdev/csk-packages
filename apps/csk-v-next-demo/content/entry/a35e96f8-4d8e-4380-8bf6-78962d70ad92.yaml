@@ -1,0 +1,1229 @@
+created: '2025-02-17T16:01:30.278132+00:00'
+modified: '2025-02-17T16:01:30.278132+00:00'
+pattern: false
+entry:
+  _id: a35e96f8-4d8e-4380-8bf6-78962d70ad92
+  _name: Adding New Components and Customizing Existing Ones
+  _slug: adding-new-components-and-customizing-existing-ones
+  _thumbnail: >-
+    https://img.uniform.global/p/ZfA3kJm3TDeKyWey802IkQ/JwZapcajQUuUA0h2HrYdoQ-adding-new-components-and-customizing-existing-ones.png
+  type: recipe
+  fields:
+    image:
+      type: asset
+      value:
+        - _id: b6bdd4ce-c95b-425e-abfd-3f77f55f7d12
+          type: image
+          fields:
+            id:
+              type: text
+              value: 4472c263-ea90-4c93-bbb0-7f90cc9c6193
+            url:
+              value: >-
+                https://img.uniform.global/p/ZfA3kJm3TDeKyWey802IkQ/JwZapcajQUuUA0h2HrYdoQ-adding-new-components-and-customizing-existing-ones.png
+              type: text
+            file:
+              type: file
+              value: ff56bc3b-b803-4fb8-a26a-f96625313fa5
+            size:
+              value: 111793
+              type: number
+            title:
+              type: text
+              value: adding-new-components-and-customizing-existing-ones.png
+            width:
+              value: 1200
+              type: number
+            height:
+              value: 630
+              type: number
+            mediaType:
+              value: image/png
+              type: text
+          _source: uniform-assets
+    steps:
+      type: $block
+      value:
+        - _id: 52ac4f12-eefa-400b-a22c-3397ea5f75e4
+          type: recipeStep
+          fields:
+            title:
+              type: text
+              value: Introduction
+            content:
+              type: richText
+              value:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            At some point, every project faces the need to add
+                            new, highly customized components that must
+                            seamlessly integrate into the core structure,
+                            preserving its benefits and update capability. It’s
+                            also crucial to be able to override certain logic
+                            within existing core components, enabling you to
+                            reuse them while adding tailored functionality.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            In this guide, we’ll show you how to connect your
+                            custom components in code and on the canvas, as well
+                            as how to wrap core components in custom wrappers to
+                            extend or override their default behavior.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                  direction: ltr
+            anchorlink:
+              type: text
+              value: introduction
+        - _id: 0f5d83a8-6324-461d-b346-795d23ab5a06
+          type: recipeStep
+          fields:
+            title:
+              type: text
+              value: 'Components Registration and Resolver Structure '
+            content:
+              type: richText
+              value:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Each component used on the canvas must be registered
+                            and passed to the main 
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: resolveComponent
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 16
+                          version: 1
+                        - mode: normal
+                          text: ' function for display.'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            We recommend structuring the component resolver with
+                            two separate mappers: one for core CSK components
+                            and another for custom components.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            This setup keeps core and custom components
+                            organized independently, allowing for safe updates
+                            and the flexibility to easily add or remove
+                            components as needed in the application.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            We’ve taken care of this for you, so you’ll already
+                            see this separation in the main components file: 
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: src/components/index.ts
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 16
+                          version: 1
+                        - mode: normal
+                          text: .
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: code
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: 'import { '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: 'cskComponentsMapping '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 2
+                          version: 1
+                        - mode: normal
+                          text: '} from ''@/components/canvas'';'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: 'import { '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: 'customComponentsMapping '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 2
+                          version: 1
+                        - mode: normal
+                          text: '} from ''@/components/custom-canvas'';'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            import createComponentResolver, { ComponentMapping }
+                            from '@/utils/createComponentResolver';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: 'const componentsMapping: ComponentMapping = {'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  ...'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: cskComponentsMapping
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 2
+                          version: 1
+                        - mode: normal
+                          text: ','
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  ...'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: customComponentsMapping
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 2
+                          version: 1
+                        - mode: normal
+                          text: ','
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '};'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: 'const '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: 'componentResolver '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 2
+                          version: 1
+                        - mode: normal
+                          text: '= createComponentResolver(componentsMapping);'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: 'export default '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: componentResolver
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 2
+                          version: 1
+                        - mode: normal
+                          text: ;
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      language: null
+                      direction: ltr
+                  direction: ltr
+            anchorlink:
+              type: text
+              value: quick-development-with-theme-pack-2-google-font
+        - _id: 0af93ae9-34b8-46cb-9b8e-c3ca42d21bf6
+          type: recipeStep
+          fields:
+            title:
+              type: text
+              value: Adding New Client's Components
+            content:
+              type: richText
+              value:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            To add your own component and custom logic, start by
+                            adding it to the canvas side, defining all
+                            parameters, slots, and additional settings. Then,
+                            add it in code to capture, process, and display the
+                            necessary information from the canvas. Finally, be
+                            sure to register the component for proper
+                            integration.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            For your convenience, we’ve included a simple
+                            example demonstrating how to add and register a
+                            component in the CSK base setup. This example
+                            provides everything you need, with added comments to
+                            highlight key areas such as the parameter list,
+                            slots, and a designated space for custom logic. 
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: src/components/custom-canvas/CustomComponent.tsx
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 16
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: code
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: import { FC } from 'react';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            import { ComponentProps, UniformSlot, UniformText }
+                            from '@uniformdev/canvas-next-rsc/component';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            // Here, you can add parameters to be used on the
+                            canvas side.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: export type CustomComponentParameters = {
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  displayName?: string;'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '};'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            // Here, you can add slots names to be used on the
+                            canvas side.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: enum CustomComponentSlots {
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: 'CustomComponentContent '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 2
+                          version: 1
+                        - mode: normal
+                          text: '= ''customComponentContent'','
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '}'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            type CustomComponentProps =
+                            ComponentProps<CustomComponentParameters,
+                            CustomComponentSlots>;
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            const CustomComponent: FC<CustomComponentProps> = ({
+                            component, context, slots }) => (
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  // Your implementation of the component logic'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  <div>'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    <UniformText'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      placeholder="Text goes here"'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      parameterId="displayName"'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      as="h1"'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      component={component}'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      context={context}'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    />'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    <UniformSlot data={component} context={context} slot={slots.customComponentContent} />'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  </div>'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: );
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: export default CustomComponent;
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      language: null
+                      direction: ltr
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: 'Registration:'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: src/components/custom-canvas/index.ts
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 16
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: code
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            import { ComponentMapping } from
+                            '@/utils/createComponentResolver';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: import Container from './Container';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: import CustomComponent from './CustomComponent';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            // Here, you can add your own component or customize
+                            an existing CSK component with your logic or styles.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: 'export const '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: customComponentsMapping
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 2
+                          version: 1
+                        - mode: normal
+                          text: ': ComponentMapping = {'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  // This is a simple example of how you can add your own components.'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  customComponent: CustomComponent,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  // This is an overridden CSK Container component.'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  container: Container,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '};'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                      language: null
+                      direction: ltr
+                  direction: ltr
+            anchorlink:
+              type: text
+              value: preparing-for-production-why-use-next-font
+        - _id: 8830ab9c-738c-49fe-b7dc-5438e2ca9339
+          type: recipeStep
+          fields:
+            title:
+              type: text
+              value: Customizing Existing Core Components
+            content:
+              type: richText
+              value:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            To customize a core component, you first need to
+                            import the existing component that you wish to
+                            override. Next, modify its properties or add any
+                            additional ones as needed. You have the freedom to
+                            customize further, allowing you to implement the
+                            necessary functionality on top of the existing
+                            component.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            To help you get started, we’ve also included an
+                            example of how this can be done.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: src/components/custom-canvas/Container.tsx
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 16
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: code
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: import { FC } from 'react';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            import CSKContainer, { ContainerProps as
+                            CSKContainerProps } from
+                            '@/components/canvas/Container';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            // This is an example of how you can override an
+                            existing CSK component based on the Container
+                            component.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            const Container: FC<CSKContainerProps> = props =>
+                            <CSKContainer {...props} />;
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: export default Container;
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      language: null
+                      direction: ltr
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            When registering your component, it's important to
+                            use the same name as the existing component. Below,
+                            you can see an example of how to override the 
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: Container
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 16
+                          version: 1
+                        - mode: normal
+                          text: ' component.'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: src/components/custom-canvas/index.ts
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 16
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: code
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            import { ComponentMapping } from
+                            '@/utils/createComponentResolver';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: import Container from './Container';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: import CustomComponent from './CustomComponent';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            // Here, you can add your own component or customize
+                            an existing CSK component with your logic or styles.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: 'export const '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: customComponentsMapping
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 2
+                          version: 1
+                        - mode: normal
+                          text: ': ComponentMapping = {'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  // This is a simple example of how you can add your own components.'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  customComponent: CustomComponent,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  // This is an overridden CSK Container component.'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  container: Container,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '};'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      language: null
+                      direction: ltr
+                  direction: ltr
+            anchorlink:
+              type: text
+              value: step-by-step-implementation-of-next-font-custom-fonts
+        - _id: 3d87c558-3b93-4fe0-ba79-311ebba7d373
+          type: recipeStep
+          fields:
+            title:
+              type: text
+              value: Conclusion
+            content:
+              type: richText
+              value:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            We explored how to add new components or customize
+                            existing ones using simple examples available in the
+                            core CSK. We also reviewed and clarified the key
+                            decisions involved in structuring component
+                            registration.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                  direction: ltr
+            anchorlink:
+              type: text
+              value: conclusion
+    title:
+      type: text
+      value: Adding New Components and Customizing Existing Ones
+    categories:
+      type: contentReference
+      value: ${#jptr:/ref-a35e96f8-4d8e-4380-8bf6-78962d70ad92-categories/entries}
+    description:
+      type: text
+      value: >-
+        Create custom components with your own logic, or modify existing ones to
+        better fit your needs. This guide explains how to customize components
+        while maintaining compatibility with updates. You'll also find
+        instructions on adding and registering your own components.
+  _dataResources:
+    ref-8ae86863-3b46-4948-a584-3c08e0483e03-categories:
+      type: uniformContentInternalReference
+      variables:
+        entryIds: e4855e97-e5ba-4ab2-b6b4-3724fb81f14f
+    ref-a35e96f8-4d8e-4380-8bf6-78962d70ad92-categories:
+      type: uniformContentInternalReference
+      variables:
+        entryIds: 92301d90-9308-4d2f-a580-9c9859a9c28a
+    ref-c3dcd8ef-d1b3-4add-8d0b-ff4235f0e033-categories:
+      type: uniformContentInternalReference
+      variables:
+        entryIds: 94e36d5b-3d9d-49dd-8ea0-9ccc8bede6f2

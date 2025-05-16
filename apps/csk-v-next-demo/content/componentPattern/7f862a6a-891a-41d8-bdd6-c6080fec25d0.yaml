@@ -1,0 +1,90 @@
+composition:
+  _name: Accordion Item
+  _id: 7f862a6a-891a-41d8-bdd6-c6080fec25d0
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Accordion Item
+    anchor:
+      type: text
+      value: accordion-item
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    patternId:
+      type: text
+      value: 7f862a6a-891a-41d8-bdd6-c6080fec25d0
+    fluidContent:
+      type: checkbox
+      value: true
+    enableComponentPreview:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: 1d782a74-15ba-41c0-b7d6-ebd26d5084ab
+        type: accordionItem
+        slots:
+          accordionItemContent:
+            - _id: 9c2db841-94f9-4a6c-b07b-4879839535de
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: span
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: xl
+                    tablet: xl
+                    desktop: base
+                text:
+                  type: text
+                  value: Some accordion item text
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: span
+          text:
+            type: text
+            value: 'Accordion item #1 title'
+          color:
+            type: dex-color-palette-parameter
+            value: text-secondary
+          weight:
+            type: dex-segmented-control-parameter
+            value: normal
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              paddingTop: container-small
+              paddingLeft: container-small
+              marginBottom: container-small
+              paddingRight: container-small
+              paddingBottom: container-small
+          backgroundColor:
+            type: dex-color-palette-parameter
+            value: general-color-2
+  _overridability:
+    parameters:
+      link: 'yes'
+      enableComponentPreview: 'yes'
+    hideLockedParameters: true
+created: '2025-03-03T09:52:29.131997+00:00'
+modified: '2025-03-03T09:52:29.131997+00:00'
+pattern: true
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

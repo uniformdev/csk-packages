@@ -1,0 +1,218 @@
+composition:
+  _name: Testimonial With Overlapping Image variant
+  _id: b6b1a64a-063d-4e60-974d-f1c083ddd8dd
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Testimonial With Overlapping Image variant
+    anchor:
+      type: text
+      value: testimonial-with-overlapping-image
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    patternId:
+      type: text
+      value: b6b1a64a-063d-4e60-974d-f1c083ddd8dd
+    fluidContent:
+      type: checkbox
+      value: true
+    enableComponentPreview:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: 63716793-e900-43b2-aea6-c289bb24c37e
+        type: testimonial
+        slots:
+          testimonialAuthor:
+            - _id: fd199e0b-d844-4259-ac0e-7c9856de7bc4
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: p
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    desktop: base
+                text:
+                  type: text
+                  value: Hector Gibbons
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-light
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: bold
+              _overridability:
+                hideLockedParameters: true
+            - _id: c2affae9-9f0f-4f05-b024-31fd6a7cdd25
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: p
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    desktop: base
+                text:
+                  type: text
+                  value: CEO of Uniform
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-light
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+              _overridability:
+                hideLockedParameters: true
+          testimonialContent:
+            - _id: 6f4dbcfb-a64f-42af-a680-e6024beaa1f5
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: p
+                font:
+                  type: dex-token-selector-parameter
+                  value: dm-sans
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    desktop: 2xl
+                text:
+                  type: text
+                  value: >-
+                    Amet amet eget scelerisque tellus sit neque faucibus non
+                    eleifend. Integer eu praesent at a. Ornare arcu gravida
+                    natoque erat et cursus tortor consequat at.
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-light
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: bold
+                alignment:
+                  type: dex-segmented-control-parameter
+                  value: center
+              _overridability:
+                hideLockedParameters: true
+          testimonialPrimaryImage:
+            - _id: 5ac91a20-9ec5-4b0e-80f9-860e6fc00887
+              type: image
+              parameters:
+                image:
+                  type: asset
+                  value:
+                    - _id: b7de226e-a7b1-41ef-9907-c6e29a5dc500
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: ff044480-8310-44f4-9991-82176767a172
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/4Ac1zi8UQeOXsvDsKwotZQ/FjBsimm9TZOn3dMX6sp1hg-featured-bg.png
+                          type: text
+                        file:
+                          type: file
+                          value: e0564ea3-d23a-4e39-80a0-c13685f5252c
+                        size:
+                          value: 63589
+                          type: number
+                        title:
+                          type: text
+                          value: featured-bg.png
+                        width:
+                          value: 806
+                          type: number
+                        height:
+                          value: 432
+                          type: number
+                        mediaType:
+                          value: image/png
+                          type: text
+                      _source: uniform-assets
+                border:
+                  type: dex-token-selector-parameter
+                  value: border-image-radius-medium
+                objectFit:
+                  type: dex-segmented-control-parameter
+                  value: cover
+              _overridability:
+                hideLockedParameters: true
+          testimonialSecondaryImage:
+            - _id: 76b7803a-2786-4d5c-a1e3-0d80b542108e
+              type: image
+              parameters:
+                image:
+                  type: asset
+                  value:
+                    - _id: 2e70b47a-c6bc-4aae-a4d4-c9bdf582b0cd
+                      type: image
+                      fields:
+                        url:
+                          type: text
+                          value: >-
+                            https://res.cloudinary.com/uniform-demos/image/upload/v1729250388/csk-v-next/marketing-site/uniform-logo_ynixaw.png
+                        title:
+                          type: text
+                          value: logo
+                      _source: custom-url
+                width:
+                  type: number
+                  value: '160'
+                height:
+                  type: number
+                  value: '64'
+                objectFit:
+                  type: dex-segmented-control-parameter
+                  value: contain
+              _overridability:
+                hideLockedParameters: true
+        variant: withOverlappingImage
+        parameters:
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              marginTop: container-small
+              paddingTop: ''
+              paddingLeft: container-small
+              marginBottom: container-small
+              paddingRight: container-small
+              paddingBottom: ''
+          displayName:
+            type: text
+            value: Testimonial With Overlapping Image variant
+          fluidContent:
+            type: checkbox
+            value: true
+          backgroundColor:
+            type: dex-color-palette-parameter
+            value: general-color-5
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      link: 'yes'
+      enableComponentPreview: 'yes'
+    hideLockedParameters: true
+created: '2025-03-03T09:52:31.199025+00:00'
+modified: '2025-03-03T09:52:31.199025+00:00'
+pattern: true
+description: >-
+  This example is constructed utilizing the Hero component, which incorporates a
+  video as the media content. It encompasses text components for the eyebrow,
+  title, and description, as well as button component designated as primary
+  buttons.
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9

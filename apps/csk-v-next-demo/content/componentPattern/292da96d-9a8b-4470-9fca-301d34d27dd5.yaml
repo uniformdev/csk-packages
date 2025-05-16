@@ -1,0 +1,71 @@
+composition:
+  _name: Primary Button with Icon
+  _id: 292da96d-9a8b-4470-9fca-301d34d27dd5
+  type: button
+  parameters:
+    icon:
+      type: asset
+      value:
+        - _id: 15e6b1e6-916c-4bc3-aece-32e8b68923d4
+          type: image
+          fields:
+            id:
+              type: text
+              value: 804fa820-df03-40ec-8efa-ddf36b976c70
+            url:
+              value: >-
+                https://img.uniform.global/p/ZfA3kJm3TDeKyWey802IkQ/Km26CDdfQgWQ1kEP0LhIvQ-storybook-icon.svg
+              type: text
+            file:
+              type: file
+              value: a3ef0048-f844-458e-8520-388341944d83
+            size:
+              value: 5499
+              type: number
+            title:
+              type: text
+              value: storybook-icon.svg
+            width:
+              value: 29
+              type: number
+            height:
+              value: 29
+              type: number
+            mediaType:
+              value: image/svg+xml
+              type: text
+          _source: uniform-assets
+    size:
+      type: dex-token-selector-parameter
+      value: button-medium
+    text:
+      type: text
+      value: Button
+    textColor:
+      type: dex-color-palette-parameter
+      value: text-light
+    textWeight:
+      type: dex-segmented-control-parameter
+      value: normal
+    buttonColor:
+      type: dex-color-palette-parameter
+      value: button-primary
+    iconPosition:
+      type: dex-segmented-control-parameter
+      value: left
+    textTransform:
+      type: dex-segmented-control-parameter
+      value: uppercase
+    hoverButtonColor:
+      type: dex-color-palette-parameter
+      value: button-primary-hover
+  _overridability:
+    variants: true
+    parameters:
+      link: 'yes'
+      text: 'yes'
+    hideLockedParameters: true
+created: '2025-02-17T16:01:10.70413+00:00'
+modified: '2025-02-17T16:01:10.70413+00:00'
+pattern: true
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

@@ -1,0 +1,44 @@
+composition:
+  _name: Button Secondary
+  _id: 0c5ba054-c2d2-4c2b-adbf-1c99be2aec4c
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Secondary Button
+    anchor:
+      type: text
+      value: secondary-button
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        marginTop: ''
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    patternId:
+      type: text
+      value: 0c5ba054-c2d2-4c2b-adbf-1c99be2aec4c
+    fluidContent:
+      type: checkbox
+      value: true
+    enableComponentPreview:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: cac9c838-25aa-41d2-a4e0-ea44379ab369
+        type: button
+        _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
+  _overridability:
+    parameters:
+      link: 'yes'
+    hideLockedParameters: true
+created: '2025-03-03T09:52:27.866038+00:00'
+modified: '2025-03-03T09:52:27.866038+00:00'
+pattern: true
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

@@ -1,0 +1,165 @@
+composition:
+  _name: Section Default variant with Video
+  _id: ad0db3d1-667d-455c-acd9-9bad773b2dfc
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Section Default variant with Video
+    anchor:
+      type: text
+      value: section-video
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    patternId:
+      type: text
+      value: ad0db3d1-667d-455c-acd9-9bad773b2dfc
+    fluidContent:
+      type: checkbox
+      value: true
+    enableComponentPreview:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: edfefd91-4e1f-4ddf-a015-bdb9948ff3bd
+        type: section
+        slots:
+          sectionCTA:
+            - _id: 64412267-0bac-4ee6-84db-7a01b88ef034
+              type: button
+              _pattern: 53b59aed-e378-4fcb-9135-20247d92074e
+          sectionMedia:
+            - _id: 99898283-4723-4cc6-bd95-eed6b07d61df
+              type: video
+              parameters:
+                loop:
+                  type: checkbox
+                  value: true
+                muted:
+                  type: checkbox
+                  value: true
+                video:
+                  type: asset
+                  value:
+                    - _id: 290b8cab-8d57-4b43-9d59-1acd6106617a
+                      type: video
+                      fields:
+                        url:
+                          type: text
+                          value: >-
+                            https://res.cloudinary.com/uniform-demos/video/upload/v1693387616/videos/pexels-cristian-rojas.mp4
+                      _source: custom-url
+                autoPlay:
+                  type: checkbox
+                  value: true
+                displayName:
+                  type: text
+                  value: Video
+          sectionContent:
+            - _id: a19fda9a-ebf7-4c23-8151-c0f59f7aa502
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: span
+                size:
+                  type: dex-segmented-control-parameter
+                  value: {}
+                text:
+                  type: text
+                  value: HELLO AND WELCOME! THIS IS
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-tertiary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+            - _id: 88c701a6-0e9c-43e4-851c-92636a4a4434
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: h1
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: 5xl
+                    tablet: 5xl
+                    desktop: 5xl
+                text:
+                  type: text
+                  value: Uniform’s Component Starter Kit
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-light
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+            - _id: dcb14144-1e60-4371-bdb3-1b793d87b5d4
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: h2
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: base
+                    tablet: base
+                    desktop: base
+                text:
+                  type: text
+                  value: >-
+                    An essential set of components you need to start building
+                    personalized web experiences with Uniform.
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-light
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+        parameters:
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              paddingTop: container-small
+              paddingLeft: container-small
+              paddingRight: container-small
+              paddingBottom: container-small
+          displayName:
+            type: text
+            value: Section Default variant with Video
+          contentAlignment:
+            type: dex-segmented-control-parameter
+            value: center
+        _overridability:
+          hideLockedParameters: true
+  _overrides:
+    64412267-0bac-4ee6-84db-7a01b88ef034:
+      parameters:
+        text:
+          type: text
+          value: Primary Button
+  _overridability:
+    parameters:
+      link: 'yes'
+      enableComponentPreview: 'yes'
+    hideLockedParameters: true
+created: '2025-05-13T15:58:42.253748+00:00'
+modified: '2025-05-13T16:02:00.09549+00:00'
+pattern: true
+description: >-
+  This example is constructed utilizing the Hero component, which incorporates a
+  video as the media content. It encompasses text components for the eyebrow,
+  title, and description, as well as button component designated as primary
+  buttons.
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9

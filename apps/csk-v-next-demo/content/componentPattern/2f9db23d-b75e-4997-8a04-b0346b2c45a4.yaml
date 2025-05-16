@@ -1,0 +1,105 @@
+composition:
+  _name: Component Details Section
+  _id: 2f9db23d-b75e-4997-8a04-b0346b2c45a4
+  type: container
+  parameters:
+    anchor:
+      type: text
+      value: '#section'
+    border:
+      type: dex-token-selector-parameter
+      value: border-details-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        marginTop: ''
+        marginBottom: container-medium
+        paddingBottom: container-medium
+    displayName:
+      type: text
+      value: Section
+    fluidContent:
+      type: checkbox
+      value: true
+  slots:
+    containerContent:
+      - _id: 351a9c87-d2a1-4623-b595-9e50ed814502
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: h2
+          font:
+            type: dex-token-selector-parameter
+            value: outfit
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: 2xl
+              tablet: 2xl
+              desktop: 4xl
+          text:
+            type: text
+            value: Section
+          color:
+            type: dex-color-palette-parameter
+            value: text-primary
+          weight:
+            type: dex-segmented-control-parameter
+            value: bold
+        _overridability:
+          parameters:
+            text: 'yes'
+          hideLockedParameters: true
+      - _id: cc040a5e-c19d-44b2-95e1-7a0809394eac
+        type: spacer
+        parameters:
+          size:
+            type: dex-token-selector-parameter
+            value: spacer-small
+        _overridability:
+          hideLockedParameters: true
+      - _id: 43f2df31-8949-419c-9162-7695bd137f20
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: p
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              desktop: base
+          text:
+            type: text
+            value: Some text
+          color:
+            type: dex-color-palette-parameter
+            value: text-primary
+          weight:
+            type: dex-segmented-control-parameter
+            value: normal
+          alignment:
+            type: dex-segmented-control-parameter
+            value: left
+        _overridability:
+          parameters:
+            text: 'yes'
+          hideLockedParameters: true
+      - _id: b271ce4a-b8af-40cd-b332-def31028662b
+        type: $slotSection
+        parameters:
+          name:
+            type: text
+            value: Component
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      title: 'yes'
+      anchor: 'yes'
+      border: 'yes'
+      spacing: 'yes'
+      displayName: 'yes'
+created: '2025-02-17T16:01:11.176607+00:00'
+modified: '2025-02-17T16:01:11.176607+00:00'
+pattern: true

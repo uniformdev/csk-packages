@@ -19,14 +19,14 @@ Ensure you have the following installed on your system:
 
 ### Installation
 
-1. Install dependencies::
+1. Install dependencies:
    ```bash
    npm install
    ```
 
 2. Run Storybook:
    ```bash
-   npm run storybook
+   npm run dev
    ```
    This will launch Storybook in your default browser, typically at http://localhost:6006.
 

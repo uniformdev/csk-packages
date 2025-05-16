@@ -1,0 +1,80 @@
+composition:
+  _name: Component Details Page pattern
+  _id: 01dccc61-850f-4ebb-8224-7bae0aa2b902
+  type: componentDetailsPage
+  parameters:
+    favicon:
+      type: asset
+      value:
+        - _id: ca0ca099-6ce8-43eb-babe-61972a938991
+          type: image
+          fields:
+            id:
+              type: text
+              value: 7c8e9629-cd34-4def-b2f9-f7aa4279792c
+            url:
+              value: >-
+                https://img.uniform.global/p/ZfA3kJm3TDeKyWey802IkQ/G5vuI3o7Tbe5DQCnKhXTJQ-favicon.png
+              type: text
+            file:
+              type: file
+              value: 87312a8b-b326-44e2-99a6-bb9d614e0d23
+            size:
+              value: 1139
+              type: number
+            title:
+              type: text
+              value: favicon.png
+            width:
+              value: 69
+              type: number
+            height:
+              value: 79
+              type: number
+            mediaType:
+              value: image/png
+              type: text
+          _source: uniform-assets
+    pageTitle:
+      type: text
+      value: Component Detail Page
+    backgroundColor:
+      type: dex-color-palette-parameter
+      value: page-background-primary
+  slots:
+    pageFooter:
+      - _id: e39393be-472f-4d0d-ad6e-d0792c4670f2
+        type: footer
+        _pattern: 68136a90-0d34-4dbb-a34e-6e324179998a
+    pageHeader:
+      - _id: 04c9e507-5576-43ed-9e3e-963f179596be
+        type: header
+        _pattern: 021762f3-8a06-41b4-a4fb-08a837c74415
+    pageContent:
+      - _id: 1b752b4d-7641-4da2-988b-96c3d2b2bdc4
+        type: $slotSection
+        parameters:
+          name:
+            type: text
+            value: Page Content
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      title: 'yes'
+      pageTitle: 'yes'
+      twitterCard: 'yes'
+      pageKeywords: 'yes'
+      twitterImage: 'yes'
+      twitterTitle: 'yes'
+      openGraphType: 'yes'
+      openGraphImage: 'yes'
+      openGraphTitle: 'yes'
+      backgroundColor: 'no'
+      pageDescription: 'yes'
+      twitterDescription: 'yes'
+      openGraphDescription: 'yes'
+    hideLockedParameters: true
+created: '2025-02-17T16:01:18.585215+00:00'
+modified: '2025-02-17T16:01:18.585215+00:00'
+pattern: true

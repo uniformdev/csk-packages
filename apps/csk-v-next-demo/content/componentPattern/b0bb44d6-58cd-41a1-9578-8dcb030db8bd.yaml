@@ -1,0 +1,177 @@
+composition:
+  _name: Link With Image
+  _id: b0bb44d6-58cd-41a1-9578-8dcb030db8bd
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Link With Image
+    anchor:
+      type: text
+      value: link-with-image
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    patternId:
+      type: text
+      value: b0bb44d6-58cd-41a1-9578-8dcb030db8bd
+    fluidContent:
+      type: checkbox
+      value: true
+    enableComponentPreview:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: ec839f80-683b-457f-92e8-3acbc8b61f8e
+        type: container
+        slots:
+          containerContent:
+            - _id: 980f63e4-2007-45e3-a122-db2e514bdfba
+              type: link
+              slots:
+                linkContent:
+                  - _id: 3354a0af-8d02-4512-924b-9626ba9ef3b6
+                    type: image
+                    parameters:
+                      $viz:
+                        type: $viz
+                        value:
+                          criteria:
+                            clauses:
+                              - op: is
+                                rule: $qk
+                                value: dark
+                                source: theme
+                      image:
+                        type: asset
+                        value:
+                          - _id: 9f6efdbf-cfd7-4521-8cc3-6a7948e47385
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: 0ecfb786-6b93-4023-9af6-7693a309a484
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/ZfA3kJm3TDeKyWey802IkQ/VodivpxwSGuBGIo6bRvGrw-uniform-light-logo.svg
+                                type: text
+                              file:
+                                type: file
+                                value: 71b3b26c-4b14-44bb-a1d3-dc564e59a6d1
+                              size:
+                                value: 1681
+                                type: number
+                              title:
+                                type: text
+                                value: uniform-light-logo.svg
+                              width:
+                                value: 204
+                                type: number
+                              height:
+                                value: 52
+                                type: number
+                              mediaType:
+                                value: image/svg+xml
+                                type: text
+                            _source: uniform-assets
+                      width:
+                        type: number
+                        value: '174'
+                      height:
+                        type: number
+                        value: '50'
+                      objectFit:
+                        type: dex-segmented-control-parameter
+                        value: contain
+                    _overridability:
+                      hideLockedParameters: true
+                  - _id: a4729109-e0f0-495c-a999-2f5fabe62c27
+                    type: image
+                    parameters:
+                      $viz:
+                        type: $viz
+                        value:
+                          criteria:
+                            clauses:
+                              - op: '!is'
+                                rule: $qk
+                                value: dark
+                                source: theme
+                      image:
+                        type: asset
+                        value:
+                          - _id: a4c3dc29-ee30-4d95-8e64-11b2a963a10c
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: 0efbc807-7b4a-4f7d-847b-62fe616b0815
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/ZfA3kJm3TDeKyWey802IkQ/b5nNNWBgSySUgUCcd3VJCA-uniform-dark-logo.svg
+                                type: text
+                              file:
+                                type: file
+                                value: 802dd4ed-28a8-47d1-8bb7-2024a19b12d5
+                              size:
+                                value: 1697
+                                type: number
+                              title:
+                                type: text
+                                value: uniform-dark-logo.svg
+                              width:
+                                value: 204
+                                type: number
+                              height:
+                                value: 52
+                                type: number
+                              mediaType:
+                                value: image/svg+xml
+                                type: text
+                            _source: uniform-assets
+                      width:
+                        type: number
+                        value: '174'
+                      height:
+                        type: number
+                        value: '50'
+                      objectFit:
+                        type: dex-segmented-control-parameter
+                        value: contain
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                displayName:
+                  type: text
+                  value: Link
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          spacing:
+            type: dex-space-control-parameter
+            value: {}
+          displayName:
+            type: text
+            value: Link With Image
+          fluidContent:
+            type: checkbox
+            value: true
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      link: 'yes'
+      enableComponentPreview: 'yes'
+    hideLockedParameters: true
+created: '2025-03-03T09:52:31.348439+00:00'
+modified: '2025-03-03T09:52:31.348439+00:00'
+pattern: true
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

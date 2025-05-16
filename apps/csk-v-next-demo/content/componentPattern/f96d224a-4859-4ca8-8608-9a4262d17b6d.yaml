@@ -1,0 +1,49 @@
+composition:
+  _name: Navigation Link
+  _id: f96d224a-4859-4ca8-8608-9a4262d17b6d
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Navigation Link
+    anchor:
+      type: text
+      value: navigation-link
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        marginTop: ''
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    patternId:
+      type: text
+      value: f96d224a-4859-4ca8-8608-9a4262d17b6d
+    fluidContent:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: 2e19abb6-f6a5-4261-ae26-3065c19f4389
+        type: navigationLink
+        parameters:
+          text:
+            type: text
+            value: Navigation Link
+          weight:
+            type: dex-segmented-control-parameter
+            value: normal
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      link: 'yes'
+    hideLockedParameters: true
+created: '2025-02-17T16:01:17.426872+00:00'
+modified: '2025-02-17T16:01:17.426872+00:00'
+pattern: true
+categoryId: b1163ce2-5ac7-4347-bc38-a42198180718

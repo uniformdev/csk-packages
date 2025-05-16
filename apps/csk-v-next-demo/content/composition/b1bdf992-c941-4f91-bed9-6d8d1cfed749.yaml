@@ -1,0 +1,666 @@
+composition:
+  _name: Coffee Shop
+  _id: b1bdf992-c941-4f91-bed9-6d8d1cfed749
+  _slug: radiant-copy
+  type: componentDetailsPage
+  _overrides:
+    2ac978b2-9a8e-4096-a8aa-3b8325592a8b:
+      parameters:
+        anchor:
+          type: text
+          value: '#how-to-setup-template'
+        spacing:
+          type: dex-space-control-parameter
+          value:
+            mobile:
+              marginBottom: container-small
+              paddingBottom: container-small
+            tablet:
+              marginTop: ''
+              marginBottom: container-medium
+              paddingBottom: container-medium
+            desktop:
+              marginTop: ''
+              marginBottom: container-medium
+              paddingBottom: container-medium
+        displayName:
+          type: text
+          value: How to setup the template
+    6e903d0a-a41b-486d-801b-5625a31926dc:
+      parameters:
+        anchor:
+          type: text
+          value: '#preview-template'
+        border:
+          type: dex-token-selector-parameter
+          value: border-details-card
+        spacing:
+          type: dex-space-control-parameter
+          value:
+            mobile: {}
+            tablet:
+              marginTop: ''
+              marginBottom: container-medium
+              paddingBottom: container-medium
+            desktop:
+              marginTop: ''
+              marginBottom: container-medium
+              paddingBottom: container-medium
+        displayName:
+          type: text
+          value: Preview the Template
+    8fddab2b-cd66-45fb-a1f6-e38eecd7386a:
+      parameters:
+        anchor:
+          type: text
+          value: '#introduction'
+        spacing:
+          type: dex-space-control-parameter
+          value:
+            mobile:
+              marginBottom: container-small
+              paddingBottom: container-small
+            tablet:
+              marginTop: ''
+              marginBottom: container-medium
+              paddingBottom: container-medium
+            desktop:
+              marginTop: ''
+              marginBottom: container-medium
+              paddingBottom: container-medium
+        displayName:
+          type: text
+          value: Introduction
+    b1bdf992-c941-4f91-bed9-6d8d1cfed749:
+      parameters:
+        pageTitle:
+          type: text
+          value: Coffee Shop Website Template - Build Your Café’s Online Presence
+        pageKeywords:
+          type: text
+          value: >-
+            coffee shop website template, cafe website template, coffee shop
+            template, coffee shop website design, coffee shop online presence,
+            restaurant website template, coffee house template, best coffee shop
+            website template, customizable cafe template, coffee template, how
+            to create a coffee shop website
+        openGraphImage:
+          type: asset
+          value:
+            - _id: 63c7f49e-1d67-4a06-87da-f1aa5aa3c4a6
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: 0a6fe62a-38b4-4c1c-824e-e48c3c2efcc3
+                url:
+                  value: >-
+                    https://img.uniform.global/p/4Ac1zi8UQeOXsvDsKwotZQ/Ju1OqxxwQ4m9TMU7k7ZiYw-coffee-shop-template.png
+                  type: text
+                file:
+                  type: file
+                  value: 713d031a-7163-4996-88e0-5f0bd4c6a60f
+                size:
+                  value: 90522
+                  type: number
+                title:
+                  type: text
+                  value: coffee-shop-template.png
+                width:
+                  value: 1200
+                  type: number
+                height:
+                  value: 630
+                  type: number
+                mediaType:
+                  value: image/png
+                  type: text
+              _source: uniform-assets
+        openGraphTitle:
+          type: text
+          value: Coffee Shop Website Template - Build Your Café’s Online Presence
+        pageDescription:
+          type: text
+          value: >-
+            Create an inviting online presence for your coffee shop with our
+            customizable website template. Showcase your coffee menu, ambiance,
+            and unique story with a stylish, user-friendly design. Perfect for
+            cafes, coffee houses, and small eateries.
+        openGraphDescription:
+          type: text
+          value: >-
+            Create an inviting online presence for your coffee shop with our
+            customizable website template. Showcase your coffee menu, ambiance,
+            and unique story with a stylish, user-friendly design. Perfect for
+            cafes, coffee houses, and small eateries.
+    ef3aa350-ac17-4ed6-8eb5-99589860de1a:
+      parameters:
+        anchor:
+          type: text
+          value: '#conclusion'
+        border:
+          type: dex-token-selector-parameter
+          value: ''
+        spacing:
+          type: dex-space-control-parameter
+          value:
+            mobile: {}
+            tablet:
+              marginBottom: container-small
+              paddingBottom: container-small
+            desktop:
+              marginTop: ''
+              marginBottom: container-medium
+              paddingBottom: container-medium
+        displayName:
+          type: text
+          value: Conclusion
+    2ac978b2-9a8e-4096-a8aa-3b8325592a8b|351a9c87-d2a1-4623-b595-9e50ed814502:
+      parameters:
+        text:
+          type: text
+          value: How to setup the template
+    2ac978b2-9a8e-4096-a8aa-3b8325592a8b|b689f11f-a5e9-49f1-b41b-27c7a53c0d94:
+      parameters:
+        text:
+          type: richText
+          value:
+            root:
+              type: root
+              format: ''
+              indent: 0
+              version: 1
+              children:
+                - tag: ol
+                  type: list
+                  start: 1
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: listitem
+                      value: 1
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Unzip the archive you downloaded;
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                    - type: listitem
+                      value: 2
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Add environment variables for your canvas project;
+                            (more
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - link:
+                            path: /get-started
+                            type: projectMapNode
+                            nodeId: 9ea9ca30-b381-4386-9cac-bbc230d8f535
+                            projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                          type: link
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: here
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - mode: normal
+                          text: )
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                    - type: listitem
+                      value: 3
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: 'Run '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            npm i && npm run init && npm run build && npm run
+                            start
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 16
+                          version: 1
+                        - mode: normal
+                          text: '; '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                    - type: listitem
+                      value: 4
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: 'Also you can run it in dev mode using this command: '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: npm i && npm run init && npm run dev
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 16
+                          version: 1
+                        - mode: normal
+                          text: .
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                  listType: number
+                  direction: ltr
+              direction: ltr
+    6e903d0a-a41b-486d-801b-5625a31926dc|351a9c87-d2a1-4623-b595-9e50ed814502:
+      parameters:
+        text:
+          type: text
+          value: Preview the Template
+    6e903d0a-a41b-486d-801b-5625a31926dc|43f2df31-8949-419c-9162-7695bd137f20:
+      parameters:
+        text:
+          type: text
+          value: >-
+            Here’s a preview of the Java Drip coffee shop template! Take a look
+            around to see how it can bring your coffee shop’s personality to
+            life online. To make setup a breeze, we’ve provided a ready-to-use
+            archive that you can download. Just follow the simple instructions
+            below, and you’ll have your website brewing in no time. Enjoy
+            showcasing your coffee shop’s unique vibe!
+    6e903d0a-a41b-486d-801b-5625a31926dc|b271ce4a-b8af-40cd-b332-def31028662b:
+      slots:
+        $slotSectionItems:
+          - _id: 60dd400c-a73d-4fef-a15a-b0049f492b50
+            type: spacer
+            parameters:
+              size:
+                type: dex-token-selector-parameter
+                value: spacer-medium
+          - _id: 4699c03b-5a95-4085-91de-609e18c9587c
+            type: templatePreview
+            parameters:
+              previewLink:
+                type: link
+                value:
+                  path: https://csk-template-coffee-shop.vercel.app/
+                  type: url
+              downloadLink:
+                type: link
+                value:
+                  path: >-
+                    https://github.com/uniformdev/csk-v-next/archive/refs/heads/templates/coffee-shop.zip
+                  type: url
+              templateLink:
+                type: link
+                value:
+                  path: https://csk-template-coffee-shop.vercel.app/
+                  type: url
+    8fddab2b-cd66-45fb-a1f6-e38eecd7386a|351a9c87-d2a1-4623-b595-9e50ed814502:
+      parameters:
+        text:
+          type: text
+          value: Introduction
+    8fddab2b-cd66-45fb-a1f6-e38eecd7386a|b689f11f-a5e9-49f1-b41b-27c7a53c0d94:
+      parameters:
+        text:
+          type: richText
+          value:
+            root:
+              type: root
+              format: ''
+              indent: 0
+              version: 1
+              children:
+                - type: paragraph
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - mode: normal
+                      text: 'Welcome to the '
+                      type: text
+                      style: ''
+                      detail: 0
+                      format: 0
+                      version: 1
+                    - mode: normal
+                      text: Java Drip
+                      type: text
+                      style: ''
+                      detail: 0
+                      format: 1
+                      version: 1
+                    - mode: normal
+                      text: ' template, a beautifully crafted coffee shop website design that’s perfect for showcasing your cafe, coffee menu, and unique atmosphere with warmth and charm. Java Brew combines inviting typography, rich imagery, and thoughtfully arranged sections to provide an engaging experience that makes visitors feel at home.'
+                      type: text
+                      style: ''
+                      detail: 0
+                      format: 0
+                      version: 1
+                  direction: ltr
+                  textStyle: ''
+                  textFormat: 0
+                - type: paragraph
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - mode: normal
+                      text: >-
+                        With its clean, cozy layout, Java Brew makes it easy to
+                        feature signature drinks, customer testimonials, and
+                        mouth-watering descriptions of your offerings, all while
+                        creating a welcoming and aesthetically pleasing
+                        presentation. Whether you’re an artisan coffee shop, a
+                        bustling cafe, or a neighborhood hangout, this template
+                        offers the flexibility to share your story and attract
+                        coffee lovers in a way that’s memorable and inviting.
+                      type: text
+                      style: ''
+                      detail: 0
+                      format: 0
+                      version: 1
+                  direction: ltr
+                  textStyle: ''
+                  textFormat: 0
+                - type: paragraph
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - mode: normal
+                      text: >-
+                        Ready to create an unforgettable online presence? Let’s
+                        launch your coffee shop’s website with Java Brew and
+                        captivate your customers from the very first sip!
+                      type: text
+                      style: ''
+                      detail: 0
+                      format: 0
+                      version: 1
+                  direction: ltr
+                  textStyle: ''
+                  textFormat: 0
+              direction: ltr
+    b1bdf992-c941-4f91-bed9-6d8d1cfed749|1b752b4d-7641-4da2-988b-96c3d2b2bdc4:
+      slots:
+        $slotSectionItems:
+          - _id: f75c436f-d7a4-4536-a405-1a9b0b0046fb
+            type: heroGradient
+            _pattern: d6a6571d-cc64-409c-96ea-37bee64050f3
+            _overridability:
+              parameters:
+                title: 'yes'
+              hideLockedParameters: true
+          - _id: be3502e5-4e43-480a-b4c5-a0db82a7b6b5
+            type: grid
+            slots:
+              gridInner:
+                - _id: 47075d77-c296-47b9-9b66-13732b9e1631
+                  type: gridItem
+                  slots:
+                    inner:
+                      - _id: 3f67cd7c-4648-458d-8706-c46b932e72cc
+                        type: anchorLinks
+                        parameters:
+                          font:
+                            type: dex-font-selector-parameter
+                            value: dm-sans
+                          size:
+                            type: dex-segmented-control-parameter
+                            value: base
+                          color:
+                            type: dex-color-palette-parameter
+                            value: text-primary
+                          weight:
+                            type: dex-segmented-control-parameter
+                            value: medium
+                  parameters:
+                    rowSpan:
+                      type: dex-slider-control-parameter
+                      value: {}
+                    rowStart:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '1'
+                        tablet: '1'
+                        desktop: '1'
+                    columnSpan:
+                      type: dex-slider-control-parameter
+                      value:
+                        desktop: span-3
+                    columnStart:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '1'
+                        tablet: '1'
+                        desktop: '1'
+                    displayName:
+                      type: text
+                      value: Anchor Links
+                - _id: 483f321d-71e6-4867-8810-aedd42277db9
+                  type: gridItem
+                  slots:
+                    inner:
+                      - _id: 8fddab2b-cd66-45fb-a1f6-e38eecd7386a
+                        type: container
+                        _pattern: e3bdeee0-a6c7-4a08-97d3-4a0468d69207
+                        _overridability:
+                          parameters:
+                            title: 'yes'
+                            anchor: 'yes'
+                            border: 'yes'
+                            spacing: 'yes'
+                            displayName: 'yes'
+                      - _id: 6e903d0a-a41b-486d-801b-5625a31926dc
+                        type: container
+                        _pattern: 2f9db23d-b75e-4997-8a04-b0346b2c45a4
+                        _overridability:
+                          parameters:
+                            title: 'yes'
+                            anchor: 'yes'
+                            border: 'yes'
+                            spacing: 'yes'
+                            displayName: 'yes'
+                      - _id: 2ac978b2-9a8e-4096-a8aa-3b8325592a8b
+                        type: container
+                        _pattern: e3bdeee0-a6c7-4a08-97d3-4a0468d69207
+                        _overridability:
+                          parameters:
+                            title: 'yes'
+                            anchor: 'yes'
+                            border: 'yes'
+                            spacing: 'yes'
+                            displayName: 'yes'
+                      - _id: ef3aa350-ac17-4ed6-8eb5-99589860de1a
+                        type: container
+                        _pattern: e3bdeee0-a6c7-4a08-97d3-4a0468d69207
+                        _overridability:
+                          parameters:
+                            title: 'yes'
+                            anchor: 'yes'
+                            border: 'yes'
+                            spacing: 'yes'
+                            displayName: 'yes'
+                  parameters:
+                    rowSpan:
+                      type: dex-slider-control-parameter
+                      value: {}
+                    rowStart:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '2'
+                        tablet: '2'
+                        desktop: '1'
+                    columnSpan:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: ''
+                        tablet: ''
+                        desktop: span-full
+                    columnStart:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '1'
+                        tablet: '1'
+                        desktop: '4'
+                    displayName:
+                      type: text
+                      value: Info
+            parameters:
+              gapX:
+                type: dex-slider-control-parameter
+                value:
+                  tablet: ''
+                  desktop: '16'
+              gapY:
+                type: dex-slider-control-parameter
+                value:
+                  mobile: '4'
+                  tablet: '8'
+                  desktop: ''
+              spacing:
+                type: dex-space-control-parameter
+                value: {}
+              displayName:
+                type: text
+                value: Content
+              columnsCount:
+                type: dex-slider-control-parameter
+                value:
+                  mobile: '1'
+                  tablet: '1'
+                  desktop: '12'
+          - _id: 2fafd7eb-8dc3-43f7-a407-fe3d09bdc334
+            type: grid
+            _pattern: 6d0cf521-5c04-48f5-8ee8-8eab2c50835e
+    ef3aa350-ac17-4ed6-8eb5-99589860de1a|351a9c87-d2a1-4623-b595-9e50ed814502:
+      parameters:
+        text:
+          type: text
+          value: Conclusion
+    ef3aa350-ac17-4ed6-8eb5-99589860de1a|b689f11f-a5e9-49f1-b41b-27c7a53c0d94:
+      parameters:
+        text:
+          type: richText
+          value:
+            root:
+              type: root
+              format: ''
+              indent: 0
+              version: 1
+              children:
+                - type: paragraph
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - mode: normal
+                      text: 'The '
+                      type: text
+                      style: ''
+                      detail: 0
+                      format: 0
+                      version: 1
+                    - mode: normal
+                      text: Java Drip
+                      type: text
+                      style: ''
+                      detail: 0
+                      format: 1
+                      version: 1
+                    - mode: normal
+                      text: ' coffee shop template is designed to help your cafe make a warm, memorable impression online. With its inviting layout, rich visuals, and sections dedicated to showcasing your coffee offerings, ambiance, and story, Java Brew has everything you need to engage and welcome your audience.'
+                      type: text
+                      style: ''
+                      detail: 0
+                      format: 0
+                      version: 1
+                  direction: ltr
+                  textStyle: ''
+                  textFormat: 0
+                - type: paragraph
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - mode: normal
+                      text: >-
+                        Whether you’re highlighting your signature drinks,
+                        building trust with customer reviews, or sharing the
+                        story behind your cafe, every detail is crafted to
+                        create a cozy, user-friendly experience that draws
+                        visitors in and keeps them coming back. Start building a
+                        charming digital presence that reflects the heart of
+                        your coffee shop with the Java Brew template today!
+                      type: text
+                      style: ''
+                      detail: 0
+                      format: 0
+                      version: 1
+                  direction: ltr
+                  textStyle: ''
+                  textFormat: 0
+              direction: ltr
+    f75c436f-d7a4-4536-a405-1a9b0b0046fb|0ec4bccd-be9b-4c0d-8300-e92395c33b44:
+      parameters:
+        text:
+          type: text
+          value: Coffee Shop Template
+    f75c436f-d7a4-4536-a405-1a9b0b0046fb|39783ae2-23db-4be0-bb76-82814cc3c2b4:
+      parameters:
+        text:
+          type: text
+          value: Component Starter Kit
+    f75c436f-d7a4-4536-a405-1a9b0b0046fb|be38080a-5799-4942-a6c0-d9097fc3dc1c:
+      parameters:
+        text:
+          type: text
+          value: A beautiful commerce site template
+  _pattern: 01dccc61-850f-4ebb-8224-7bae0aa2b902
+created: '2025-05-16T10:19:16.317122+00:00'
+modified: '2025-05-16T10:19:16.317122+00:00'
+pattern: false

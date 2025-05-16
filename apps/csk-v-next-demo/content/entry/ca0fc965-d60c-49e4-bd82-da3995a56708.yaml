@@ -1,0 +1,1626 @@
+created: '2025-02-17T16:01:30.276878+00:00'
+modified: '2025-02-17T16:01:30.276878+00:00'
+pattern: false
+entry:
+  _id: ca0fc965-d60c-49e4-bd82-da3995a56708
+  _name: 'Integrating Advanced Localization in Next.js: From Built-In...'
+  _slug: integrating-advanced-localization-in-nextjs-from-built-in
+  _thumbnail: >-
+    https://img.uniform.global/p/ZfA3kJm3TDeKyWey802IkQ/UhrF-2wPR6i6hcBmHweFNw-integrating-advanced-localization-in-nextjs.png
+  type: recipe
+  fields:
+    image:
+      type: asset
+      value:
+        - _id: 212db391-3c5f-482c-938c-396c6751bc52
+          type: image
+          fields:
+            id:
+              type: text
+              value: 5154359a-502c-4745-9dbd-9fda7c347ad6
+            url:
+              value: >-
+                https://img.uniform.global/p/ZfA3kJm3TDeKyWey802IkQ/UhrF-2wPR6i6hcBmHweFNw-integrating-advanced-localization-in-nextjs.png
+              type: text
+            file:
+              type: file
+              value: 3f2e6b2d-2a92-4731-80ff-33215803b8c2
+            size:
+              value: 106498
+              type: number
+            title:
+              type: text
+              value: integrating-advanced-localization-in-nextjs.png
+            width:
+              value: 1200
+              type: number
+            height:
+              value: 630
+              type: number
+            mediaType:
+              value: image/png
+              type: text
+          _source: uniform-assets
+    steps:
+      type: $block
+      value:
+        - _id: 1be51da0-0a04-46ed-a7d1-4afed8ebda93
+          type: recipeStep
+          fields:
+            title:
+              type: text
+              value: Introduction
+            content:
+              type: richText
+              value:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            As businesses and applications increasingly reach
+                            global audiences, effective localization becomes
+                            essential for ensuring a seamless, user-friendly
+                            experience in multiple languages. Our Component
+                            Starter Kit (CSK) is designed with basic
+                            localization support, offering an out-of-the-box
+                            solution for uniform localization that avoids
+                            additional dependencies. This simplified approach
+                            enables quick setup and testing, ideal for early
+                            development stages when localization needs are
+                            minimal.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            However, as projects progress and require more
+                            advanced features—such as URL-based routing for
+                            locale selection—this built-in localization can
+                            benefit from the added power and flexibility of
+                            next-intl. Officially recommended by Next.js,
+                            next-intl offers a robust approach to handling
+                            multilingual content. By adopting next-intl, you
+                            gain access to advanced localization features like
+                            language-based routing, centralized locale
+                            configurations, and support for custom middleware to
+                            handle requests based on locale.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            In this guide, we’ll walk through a step-by-step
+                            process for integrating next-intl into your Next.js
+                            app, building on the basic localization in CSK.
+                            We’ll cover the necessary configurations, routing,
+                            middleware setup, and some final adjustments to
+                            seamlessly transition your app to next-intl. By
+                            following these steps, you’ll have a fully localized
+                            app that can scale easily as you add more languages
+                            or region-specific content.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            The end result? A Next.js application that is
+                            optimized for global reach, with a flexible
+                            foundation for managing multiple locales and
+                            region-specific variations. This migration
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                  direction: ltr
+            anchorlink:
+              type: text
+              value: introduction
+        - _id: f8369c4a-4732-416a-a708-586f28bb3257
+          type: recipeStep
+          fields:
+            title:
+              type: text
+              value: Step-by-Step Implementation of next-intl
+            content:
+              type: richText
+              value:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: h6
+                      type: heading
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: 'Step 1: Installing next-intl package'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Start by installing the next-intl package, which
+                            supports locale-based routing and other advanced
+                            localization needs. Run the following command in
+                            your terminal:
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: code
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: npm install next-intl
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 16
+                          version: 1
+                      direction: ltr
+                    - tag: h6
+                      type: heading
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: 'Step 2: Configuring next-intl in next.config.js'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            To integrate next-intl with your existing
+                            configuration, we’ll wrap it with the next-intl
+                            plugin while retaining uniform configuration
+                            support. Add add additional instance of
+                            remotePatterns. Modify your next.config.js as
+                            follows:
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: code
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            // eslint-disable-next-line
+                            @typescript-eslint/no-require-imports
+
+                            const createNextIntlPlugin =
+                            require('next-intl/plugin');
+
+                            // eslint-disable-next-line
+                            @typescript-eslint/no-require-imports
+
+                            const { withUniformConfig } =
+                            require('@uniformdev/canvas-next-rsc/config');
+
+
+
+                            const withNextIntl = createNextIntlPlugin();
+
+
+
+                            /** @type {import('next').NextConfig} */
+
+                            const nextConfig = {
+                              images: {
+                                remotePatterns: [
+                                  { protocol: 'https', hostname: '*' },
+                                  {
+                                    protocol: 'https',
+                                    hostname: 'uniform.global',
+                                  },
+                                ],
+                                deviceSizes: [320, 420, 640, 768, 1024, 1280, 1536],
+                              },
+                            };
+
+
+
+                            module.exports =
+                            withUniformConfig(withNextIntl(nextConfig));
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            By wrapping the configuration with withUniformConfig
+                            and withNextIntl, we enable both uniform and
+                            next-intl support, making it possible to use
+                            locale-based routing in combination with uniform
+                            localization.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: "\_Step3: Wrapping the App in NextIntlClientProvider"
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 1
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            To activate next-intl across the application, wrap
+                            it in NextIntlClientProvider. Open app/layout.tsx
+                            and add NextIntlClientProvider to the layout
+                            structure. Your updated layout should look like
+                            this:
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: code
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: import { ReactNode } from 'react';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: import { NextIntlClientProvider } from 'next-intl';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            import { ThemeProvider as NextThemeProvider } from
+                            'next-themes';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            import { UniformContext } from
+                            '@uniformdev/canvas-next-rsc';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: import '@/styles/globals.css';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            export default function Layout({ children }: {
+                            children: ReactNode }) {
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  return ('
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    <html lang="en" suppressHydrationWarning>'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      <body>'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '        <NextIntlClientProvider>'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '          <NextThemeProvider attribute="class" defaultTheme="light" enableSystem>'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '            <UniformContext>{children}</UniformContext>'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '          </NextThemeProvider>'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '        </NextIntlClientProvider>'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      </body>'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    </html>'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  );'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '}'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            This change enables localization across all
+                            components, giving you access to next-intl’s
+                            advanced localization features within a uniform
+                            context.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - tag: h6
+                      type: heading
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Step 4: Creating the Request Configuration
+                            (request.ts)
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            The request.ts file in src/i18n lets you set up
+                            request configurations for locales. This ensures
+                            that the locale is selected based on the URL or
+                            defaults to a supported locale if necessary:
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: code
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: import { getRequestConfig } from 'next-intl/server';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: import { routing } from './routing';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            export default getRequestConfig(async ({
+                            requestLocale }) => {
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  let locale = (await requestLocale) as (typeof routing)[''defaultLocale''];'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  if (!locale || !routing.locales.includes(locale)) {'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    locale = routing.defaultLocale;'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  }'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  return {'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    locale,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  };'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '});'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Why This File is Necessary
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 1
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            This setup validates the locale against the
+                            supported list, ensuring that only valid locales are
+                            processed and setting a default where needed. This
+                            enhances stability for users across different
+                            locales.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - tag: h6
+                      type: heading
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: 'Step 5: Defining Routing in routing.ts'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Next, create a routing.ts file in src/i18n to manage
+                            locale-specific routes based on a configuration file
+                            (locales.json). Here’s the code:
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: code
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: import { defineRouting } from 'next-intl/routing';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: import config from './locales.json';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: export const routing = defineRouting(config);
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Why This is Needed
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            This file enables URL-based locale routing based on
+                            locales.json. It dynamically updates the language
+                            setting based on the URL structure, improving SEO
+                            and user experience for multilingual setups.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - tag: h6
+                      type: heading
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: 'Step 6: Adding Middleware for Locale Routing'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            To ensure consistent locale routing across all
+                            routes, add middleware for next-intl in
+                            src/middleware.ts. This middleware intercepts
+                            requests, managing locale-based routing and ensuring
+                            compatibility with next-intl. Here’s the middleware
+                            configuration:
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: code
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: import createMiddleware from 'next-intl/middleware';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: import { routing } from './i18n/routing';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: export default createMiddleware(routing);
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: export const config = {
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  // Match all routes but exclude _next, static, and API routes'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  matcher: [''/((?!_next|static|api|favicon.ico|robots.txt|sitemap.xml).*)''],'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '};'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            The matcher excludes internal and static routes,
+                            ensuring that middleware only applies to relevant
+                            pages.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - tag: h6
+                      type: heading
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Step 7: Removing Custom retrieveRoute Function in
+                            page.tsx
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            With next-intl managing localization, we no longer
+                            need a custom retrieveRoute function. We can import
+                            retrieveRoute directly from
+                            @uniformdev/canvas-next-rsc, as shown below:
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: code
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: import { cookies } from 'next/headers';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: import { notFound } from 'next/navigation';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: import {
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  createServerUniformContext,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  ContextUpdateTransfer,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  retrieveRoute,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  PageParameters,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  UniformComposition,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '} from ''@uniformdev/canvas-next-rsc'';'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            import { ThemePackProvider } from
+                            '@uniformdev/theme-pack/components';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: import componentResolver from '@/components';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: import { isRouteWithoutErrors } from '@/utils';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            export default async function Home(props:
+                            PageParameters) {
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  const route = await retrieveRoute(props);'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  const serverContext = await createServerUniformContext({'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    searchParams: props.searchParams,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  });'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  const theme = cookies().get(''theme'')?.value || ''light'';'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  if (!isRouteWithoutErrors(route)) return notFound();'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  return ('
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    <ThemePackProvider>'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      <ContextUpdateTransfer'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '        serverContext={serverContext}'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '        update={{'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '          quirks: {'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '            theme,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '          },'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '        }}'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      />'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      <UniformComposition'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '        {...props}'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '        route={route}'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '        resolveComponent={componentResolver}'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '        serverContext={serverContext}'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '        mode="server"'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      />'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    </ThemePackProvider>'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  );'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '}'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            export { generateMetadata } from
+                            '@/utils/generateMetadata';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Removing the custom retrieveRoute function reduces
+                            redundancy, leveraging next-intl and uniform
+                            functionality together for a simplified setup.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children: []
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children: []
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                  direction: ltr
+            anchorlink:
+              type: text
+              value: step-by-step-implementation-of-next-intl
+        - _id: a35e2da9-bfd8-45f7-abfa-13e10c2ac9dd
+          type: recipeStep
+          fields:
+            title:
+              type: text
+              value: Conclusion
+            content:
+              type: richText
+              value:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            In today’s global digital landscape, localization is
+                            not just a feature; it’s a crucial element for
+                            reaching and engaging users worldwide. By
+                            transitioning from the built-in CSK localization to
+                            next-intl, you’re equipping your Next.js application
+                            with a sophisticated, flexible localization system
+                            that meets the demands of a production-ready,
+                            multilingual app. This migration empowers your
+                            application with several key benefits:
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - tag: ol
+                      type: list
+                      start: 1
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - type: listitem
+                          value: 1
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Advanced Locale Management
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 1
+                              version: 1
+                            - mode: normal
+                              text: >-
+                                : With next-intl, your app can seamlessly manage
+                                multiple languages through URL-based routing.
+                                This approach improves user experience, enabling
+                                visitors to easily navigate in their preferred
+                                language while adhering to best practices for
+                                SEO, as search engines can now index
+                                language-specific routes.
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 2
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Enhanced Configuration and Control
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 1
+                              version: 1
+                            - mode: normal
+                              text: >-
+                                : The integration of next-intl brings increased
+                                customization options, allowing you to define
+                                and manage routes, request configurations, and
+                                middleware. This flexibility lets you create a
+                                finely-tuned localization setup that caters to
+                                specific business requirements, such as
+                                region-based content variations or locale-based
+                                UI adjustments.
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 3
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Improved Performance and Scalability
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 1
+                              version: 1
+                            - mode: normal
+                              text: >-
+                                : The architecture of next-intl aligns well with
+                                Next.js, ensuring that as your application
+                                scales and your localization needs evolve, you
+                                won’t encounter performance bottlenecks. By
+                                centralizing localization in one powerful
+                                package, future updates, new language additions,
+                                and content adjustments become more efficient
+                                and manageable.
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 4
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Simplified Maintenance and Uniform Compatibility
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 1
+                              version: 1
+                            - mode: normal
+                              text: >-
+                                : With next-intl and uniform’s uniform context
+                                support, your localization infrastructure is
+                                both efficient and maintainable. Leveraging
+                                retrieveRoute from @uniformdev/canvas-next-rsc
+                                eliminates redundant code, simplifying the
+                                codebase and reducing the likelihood of future
+                                compatibility issues.
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                      listType: number
+                      direction: ltr
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Integrating next-intl not only future-proofs your
+                            application but also establishes a foundation for
+                            agile growth in multilingual environments. As your
+                            project continues to expand, this setup ensures that
+                            adding more languages, tailoring region-specific
+                            content, or adjusting routes for new locales can be
+                            accomplished without major refactoring.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                  direction: ltr
+            anchorlink:
+              type: text
+              value: conclusion
+    title:
+      type: text
+      value: >-
+        Integrating Advanced Localization in Next.js: From Built-In CSK
+        Localization to next-intl
+    categories:
+      type: contentReference
+      value: ${#jptr:/ref-ca0fc965-d60c-49e4-bd82-da3995a56708-categories/entries}
+    description:
+      type: text
+      value: >-
+        Learn how to enhance localization in your Next.js component starter kit
+        by transitioning from built-in CSK localization to next-intl. This guide
+        covers setup, routing localization, middleware, and updates to
+        streamline integration with uniform support and keep configurations
+        simple.
+  _dataResources:
+    ref-ca0fc965-d60c-49e4-bd82-da3995a56708-categories:
+      type: uniformContentInternalReference
+      variables:
+        entryIds: 4b28eff6-7e00-489b-b216-f231c516216b

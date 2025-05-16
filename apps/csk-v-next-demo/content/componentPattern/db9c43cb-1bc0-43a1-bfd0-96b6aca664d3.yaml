@@ -1,0 +1,165 @@
+composition:
+  _name: Review Default variant
+  _id: db9c43cb-1bc0-43a1-bfd0-96b6aca664d3
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Review Default variant
+    anchor:
+      type: text
+      value: review-default
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    patternId:
+      type: text
+      value: db9c43cb-1bc0-43a1-bfd0-96b6aca664d3
+    fluidContent:
+      type: checkbox
+      value: true
+    enableComponentPreview:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: 93b7c040-7861-4136-9a8e-db885f304926
+        type: review
+        slots:
+          reviewImage:
+            - _id: 24da591f-710f-4796-9a05-b032b6cd8243
+              type: image
+              parameters:
+                image:
+                  type: asset
+                  value:
+                    - _id: 92ade882-2185-46b9-a8c2-5e7abaabbe5a
+                      type: image
+                      fields:
+                        url:
+                          type: text
+                          value: >-
+                            https://res.cloudinary.com/uniform-demos/image/upload/v1729250289/csk-v-next/marketing-site/testimonial-avatar_aowebl.jpg
+                        title:
+                          type: text
+                          value: avatar
+                      _source: custom-url
+                border:
+                  type: dex-token-selector-parameter
+                  value: border-image-radius-medium
+                objectFit:
+                  type: dex-segmented-control-parameter
+                  value: cover
+              _overridability:
+                hideLockedParameters: true
+          reviewContent:
+            - _id: 0d22826d-ce34-4aa0-b014-10e491a23423
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: p
+                size:
+                  type: dex-segmented-control-parameter
+                  value: {}
+                text:
+                  type: text
+                  value: Can't say enough good things
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: bold
+              _overridability:
+                hideLockedParameters: true
+            - _id: 27b35334-ddf3-4aaf-b5e3-585c8443dc2f
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: span
+                text:
+                  type: text
+                  value: >-
+                    Blown away by how polished this icon pack is. Everything
+                    looks so consistent and each SVG is optimized out of the box
+                    so I can use it directly with confidence. It would take me
+                    several hours to create a single icon this good, so it's a
+                    steal at this price.
+              _overridability:
+                hideLockedParameters: true
+          reviewPersonInfo:
+            - _id: 30be6597-5a8f-496d-ada2-a1ed78997f2a
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: p
+                size:
+                  type: dex-segmented-control-parameter
+                  value: {}
+                text:
+                  type: text
+                  value: Hector Gibbons
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: bold
+              _overridability:
+                hideLockedParameters: true
+            - _id: 20800bfd-4463-418d-b26b-5fa05b8b5b68
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: p
+                size:
+                  type: dex-segmented-control-parameter
+                  value: {}
+                text:
+                  type: text
+                  value: July 12, 2021
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-tertiary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          stars:
+            type: number
+            value: '3'
+          starsColor:
+            type: dex-color-palette-parameter
+            value: general-color-6
+          displayName:
+            type: text
+            value: Hector Gibbons review
+          showRatingLabel:
+            type: checkbox
+            value: true
+          activeStarsColor:
+            type: dex-color-palette-parameter
+            value: button-primary
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      link: 'yes'
+      enableComponentPreview: 'yes'
+    hideLockedParameters: true
+created: '2025-03-03T09:52:33.375009+00:00'
+modified: '2025-03-03T09:52:33.375009+00:00'
+pattern: true
+description: >-
+  This example is constructed utilizing the Hero component, which incorporates a
+  video as the media content. It encompasses text components for the eyebrow,
+  title, and description, as well as button component designated as primary
+  buttons.
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9
