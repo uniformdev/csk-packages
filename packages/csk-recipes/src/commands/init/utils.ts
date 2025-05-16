@@ -14,13 +14,12 @@ import {
   REQUIRED_ENV_VARIABLES,
   ENV_VARIABLES_VARIANTS,
   ENV_VARIABLES_DEFAULT_VALUES,
-  TEMPLATE_BRANCH_PREFIX,
   RECIPES,
-  TEMPLATES_WHITE_LIST,
   PACKAGE_JSON_COPY_FILE,
   TEMPLATE_BRANCH_PREFIX_LOCAL,
   TEMPLATES_SPECIFIC_RECIPES,
   RECIPE_SPECIFIC_BRANCHES,
+  TEMPLATES,
 } from './constants';
 import { EnvVariable, Recipe, Template } from './types';
 import { runCmdCommand, spawnCmdCommand } from '../../utils';
@@ -109,30 +108,9 @@ export const selectTemplate = async (): Promise<Template> => {
     return 'baseline';
   }
 
-  const remoteBranches = await runCmdCommand(GIT_COMMANDS.GIT_REMOTE_BRANCHES);
-
-  const templatesBranches = remoteBranches
-    ?.split('\n')
-    .filter(branch => branch.includes(TEMPLATE_BRANCH_PREFIX))
-    .map(branch => {
-      const match = branch.match(/refs\/heads\/.+/);
-
-      const templateValue = match?.[0]?.replace(TEMPLATE_BRANCH_PREFIX, '');
-
-      const templateName = templateValue
-        ?.split('-')
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(' ');
-      return {
-        name: templateName,
-        value: templateValue || '',
-      };
-    })
-    .filter(template => TEMPLATES_WHITE_LIST.includes(template.value));
-
   return select<Template>({
     message: "Let's start by choosing a template for your project:",
-    choices: [...templatesBranches],
+    choices: TEMPLATES,
   });
 };
 
@@ -148,18 +126,9 @@ export const getValidTemplateFromArgs = async (template: Template): Promise<stri
     return template;
   }
 
-  const remoteBranches = await runCmdCommand(GIT_COMMANDS.GIT_REMOTE_BRANCHES);
+  const isValidTemplate = TEMPLATES.find(t => t.value === template);
 
-  const templatesBranches = remoteBranches
-    ?.split('\n')
-    .filter(branch => branch.includes(TEMPLATE_BRANCH_PREFIX))
-    .map(branch => {
-      const match = branch.match(/refs\/heads\/.+/);
-
-      return match?.[0]?.replace(TEMPLATE_BRANCH_PREFIX, '');
-    });
-
-  if (!templatesBranches.includes(template)) {
+  if (!isValidTemplate) {
     throw new Error(`Template "${template}" not found`);
   }
 
@@ -332,20 +301,24 @@ export const copyDirectory = (sourceDir: string, targetDir: string): void => {
  * @param {Recipe[]} recipes - The recipes to check
  * @returns {string} The formatted branch name
  */
-export const getExternalBranchName = (template: string, recipes: Recipe[]): string => {
-  if (template === 'baseline') {
-    return GIT_BRANCHES.BASELINE_RECIPES;
-  }
+export const getExternalBranchName = (template: string, recipes: Recipe[], dev: boolean): string => {
+  const getBranchName = () => {
+    if (template === 'baseline') {
+      return GIT_BRANCHES.BASELINE_RECIPES;
+    }
 
-  const recipeSpecifcBranch = recipes.find(
-    recipe => RECIPE_SPECIFIC_BRANCHES[recipe as keyof typeof RECIPE_SPECIFIC_BRANCHES]
-  );
+    const recipeSpecifcBranch = recipes.find(
+      recipe => RECIPE_SPECIFIC_BRANCHES[recipe as keyof typeof RECIPE_SPECIFIC_BRANCHES]
+    );
 
-  if (recipeSpecifcBranch) {
-    return `${TEMPLATE_BRANCH_PREFIX_LOCAL}${RECIPE_SPECIFIC_BRANCHES[recipeSpecifcBranch as keyof typeof RECIPE_SPECIFIC_BRANCHES]}`;
-  }
+    if (recipeSpecifcBranch) {
+      return `${TEMPLATE_BRANCH_PREFIX_LOCAL}${RECIPE_SPECIFIC_BRANCHES[recipeSpecifcBranch as keyof typeof RECIPE_SPECIFIC_BRANCHES]}`;
+    }
 
-  return `${TEMPLATE_BRANCH_PREFIX_LOCAL}${template}`;
+    return `${TEMPLATE_BRANCH_PREFIX_LOCAL}${template}`;
+  };
+
+  return dev ? `${getBranchName()}-dev` : getBranchName();
 };
 
 /**

@@ -24,6 +24,13 @@ export const TEMPLATES_SPECIFIC_RECIPES: Partial<{
   ],
 };
 
+export const TEMPLATES = [
+  {
+    name: 'Coffee Shop',
+    value: 'coffee-shop',
+  },
+];
+
 export const RECIPE_SPECIFIC_BRANCHES = {
   'ai-assistant': 'coffee-shop-ai',
 };
@@ -39,15 +46,12 @@ export const RECIPE_SPECIFIC_NOTES = {
   ],
 };
 
-export const TEMPLATES_WHITE_LIST: Template[] = ['coffee-shop'];
-
 export const GIT_COMMANDS = {
   CHECK_IF_GIT: 'git status >/dev/null 2>&1',
   DIFF_QUIET: `[[ $(git rev-parse --abbrev-ref HEAD) == "${GIT_BRANCHES.GOLD}" ]] && [ -z "$(git status --porcelain)" ] && git diff --quiet origin/${GIT_BRANCHES.GOLD} && echo true || exit 1`,
   RESET_HARD: `git reset --hard origin/${GIT_BRANCHES.GOLD} && git clean -fd`,
   ALIGN_WITH_EXTERNAL_BRANCH: (branchName: string) =>
     `git clone https://github.com/uniformdev/csk-packages.git --branch ${branchName}`,
-  GIT_REMOTE_BRANCHES: 'git ls-remote --heads https://github.com/uniformdev/csk-packages.git',
   GET_CHANGED_FILES: 'git ls-files --modified --others --exclude-standard',
 };
 
