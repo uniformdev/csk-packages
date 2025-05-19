@@ -32,17 +32,35 @@ composition:
           image:
             type: asset
             value:
-              - _id: de055a55-b704-42af-88f6-10402e415e64
+              - _id: 3f6fa97d-9fb9-436e-a03b-27df23b8f03d
                 type: image
                 fields:
-                  url:
+                  id:
                     type: text
+                    value: 0aafe2e9-468c-43e1-81f3-fda6c02388e7
+                  url:
                     value: >-
-                      https://img.uniform.global/p/ZfA3kJm3TDeKyWey802IkQ/6DzWsi7nTOaP9naaIe62uw-roger_willis.png
+                      https://img.uniform.global/p/h7VVOiFOSWyx2snFx06-Sw/xBYy0MwzRHqiYe2NXV3tgg-man.png
+                    type: text
+                  file:
+                    type: file
+                    value: 5bb4fe79-4e64-4b7c-9c5b-350cd801296b
+                  size:
+                    value: 1251800
+                    type: number
                   title:
                     type: text
-                    value: roger_willis.png
-                _source: custom-url
+                    value: man.png
+                  width:
+                    value: 1059
+                    type: number
+                  height:
+                    value: 1059
+                    type: number
+                  mediaType:
+                    value: image/png
+                    type: text
+                _source: uniform-assets
           border:
             type: dex-token-selector-parameter
             value: border-image-radius-small
@@ -106,7 +124,7 @@ composition:
             value: {}
           text:
             type: text
-            value: Roger Willis
+            value: John Doe
           weight:
             type: dex-segmented-control-parameter
             value: bold
@@ -148,7 +166,7 @@ composition:
   _locales:
     - en
 created: '2025-05-16T11:28:41.298534+00:00'
-modified: '2025-05-16T11:37:15.537458+00:00'
+modified: '2025-05-19T08:12:48.438156+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1747395403/csk-v-next/baseline/preview-images/review-default.jpg

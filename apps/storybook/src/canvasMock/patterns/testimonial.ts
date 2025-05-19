@@ -46,7 +46,7 @@ export const testimonialContentCSK = {
         parameters: createUniformParameter({
           tag: 'p',
           size: { desktop: 'base' },
-          text: 'Roger Willis',
+          text: 'John Doe',
           color: 'text-light',
           weight: 'bold',
         }),
@@ -56,7 +56,7 @@ export const testimonialContentCSK = {
         parameters: createUniformParameter({
           tag: 'p',
           size: { mobile: 'xs', tablet: 'sm', desktop: 'base' },
-          text: 'Sr. Solutions Architect / Universal Technical Institute',
+          text: 'Sr. Solutions Architect / Global Tech Firm',
           color: 'text-light',
           weight: 'normal',
         }),
@@ -84,21 +84,18 @@ export const testimonialContentCSK = {
             type: 'asset',
             value: [
               {
-                _id: '1eae48e5-875a-4c0a-8973-9d690f605c18',
+                _id: 'de055a55-b704-42af-88f6-10402e415e64',
                 type: 'image',
                 fields: {
-                  id: { type: 'text', value: 'cd44bf5e-bc21-4be5-b032-1cda94b4a6e1' },
                   url: {
                     type: 'text',
                     value:
-                      'https://img.uniform.global/p/ZfA3kJm3TDeKyWey802IkQ/6DzWsi7nTOaP9naaIe62uw-roger_willis.png',
+                      'https://res.cloudinary.com/uniform-demos/image/upload/v1747643929/csk-v-next/storybook/man_rains9.png',
                   },
-                  file: { type: 'file', value: '16d24fd8-e2ce-4526-9f57-96d3a288b30c' },
-                  size: { type: 'number', value: 1600044 },
-                  title: { type: 'text', value: 'roger_willis.png' },
-                  width: { type: 'number', value: 1086 },
-                  height: { type: 'number', value: 1538 },
-                  mediaType: { type: 'text', value: 'image/png' },
+                  title: {
+                    type: 'text',
+                    value: 'john-doe.png',
+                  },
                 },
                 _source: 'custom-url',
               },

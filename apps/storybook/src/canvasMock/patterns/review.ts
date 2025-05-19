@@ -47,11 +47,11 @@ export const reviewContentCSK = {
                   url: {
                     type: 'text',
                     value:
-                      'https://img.uniform.global/p/ZfA3kJm3TDeKyWey802IkQ/6DzWsi7nTOaP9naaIe62uw-roger_willis.png',
+                      'https://res.cloudinary.com/uniform-demos/image/upload/v1747643929/csk-v-next/storybook/man_rains9.png',
                   },
                   title: {
                     type: 'text',
-                    value: 'roger_willis.png',
+                    value: 'john-doe.png',
                   },
                 },
                 _source: 'custom-url',
@@ -93,7 +93,7 @@ export const reviewContentCSK = {
         parameters: createUniformParameter({
           tag: 'p',
           size: {},
-          text: 'Roger Willis',
+          text: 'John Doe',
           weight: 'bold',
         }),
       },
