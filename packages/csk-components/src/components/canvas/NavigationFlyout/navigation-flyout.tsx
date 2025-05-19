@@ -5,11 +5,11 @@ import { UniformText } from '@uniformdev/canvas-next-rsc/component';
 import BaseIconLabel from '@/components/ui/IconLabel';
 import BaseImage from '@/components/ui/Image';
 import { resolveAsset } from '@/utils/assets';
-import { cn } from '@/utils/styling';
+import { cn, resolveViewPort } from '@/utils/styling';
 import { NavigationFlyoutProps } from '.';
 import { NavigationFlyoutPropsDesktopContent } from './desktop';
 import { NavigationFlyoutPropsMobileContent } from './mobile';
-import { getBaseTextClasses, getButtonClasses, getCaretClasses } from './style-utils';
+import { getButtonClasses, getCaretClasses } from './style-utils';
 
 export const NavigationFlyout: FC<NavigationFlyoutProps> = ({
   icon,
@@ -28,7 +28,7 @@ export const NavigationFlyout: FC<NavigationFlyoutProps> = ({
   component,
   context,
   slots,
-  hoverEffect = 'none',
+  hoverEffect = '',
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -51,7 +51,9 @@ export const NavigationFlyout: FC<NavigationFlyoutProps> = ({
       <button onMouseEnter={openFlyout} className={getButtonClasses({ color })}>
         <BaseIconLabel
           icon={url && <BaseImage src={url} alt={title} fill />}
-          textClassName={cn('transition-all duration-150', getBaseTextClasses({ hoverEffect }))}
+          textClassName={cn('transition-all duration-150', {
+            [resolveViewPort(hoverEffect, 'hover:{value}')]: !!hoverEffect,
+          })}
           {...{ size, tag, color, weight, font, transform, decoration, letterSpacing, alignment }}
         >
           <UniformText placeholder="Text goes here" parameterId="text" component={component} context={context} />

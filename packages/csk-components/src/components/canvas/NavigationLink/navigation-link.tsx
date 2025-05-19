@@ -3,10 +3,9 @@ import { UniformText } from '@uniformdev/canvas-next-rsc/component';
 import BaseIconLabel from '@/components/ui/IconLabel';
 import BaseImage from '@/components/ui/Image';
 import { resolveAsset } from '@/utils/assets';
-import { formatUniformLink, isExternalLink } from '@/utils/routing';
-import { cn } from '@/utils/styling';
+import { formatUniformLink, isExternalLink, resolveRouteToPath } from '@/utils/routing';
+import { cn, resolveViewPort } from '@/utils/styling';
 import { NavigationLinkProps } from '.';
-import { getBaseIconLabelClasses } from './style-utils';
 import { Wrapper } from './wrapper';
 
 export const NavigationLink: FC<NavigationLinkProps> = ({
@@ -24,9 +23,10 @@ export const NavigationLink: FC<NavigationLinkProps> = ({
   alignment,
   component,
   context,
-  hoverEffect = 'none',
+  hoverEffect = '',
 }) => {
   const href = formatUniformLink(link);
+  const isActive = activeState && resolveRouteToPath(context.matchedRoute, context.dynamicInputs) === href;
 
   const [resolvedImage] = resolveAsset(icon);
   const { url, title = '' } = resolvedImage || {};
@@ -35,10 +35,10 @@ export const NavigationLink: FC<NavigationLinkProps> = ({
     <Wrapper href={href} isExternalLink={isExternalLink(href)}>
       <BaseIconLabel
         icon={url && <BaseImage src={url} alt={title} fill />}
-        textClassName={cn(
-          'transition-all duration-150',
-          getBaseIconLabelClasses({ activeState, context, href, hoverEffect })
-        )}
+        textClassName={cn('transition-all duration-150', {
+          [resolveViewPort(hoverEffect, 'hover:{value}')]: !!hoverEffect,
+          [resolveViewPort(hoverEffect, '{value}')]: !!hoverEffect && isActive,
+        })}
         {...{ size, tag, color, weight, font, transform, decoration, letterSpacing, alignment }}
       >
         <UniformText

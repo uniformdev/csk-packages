@@ -12,7 +12,7 @@ export type NavigationFlyoutParameters = TextParameters & {
   backgroundColor?: string;
   border?: string | ViewPort<string>;
   caretIcon?: AssetParamValue;
-  hoverEffect?: 'none' | 'underline' | 'brightness' | 'scale';
+  hoverEffect?: string | ViewPort<string>;
 };
 
 export enum NavigationFlyoutSlots {

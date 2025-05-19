@@ -39,6 +39,7 @@ export const headerWithLinks = createCommonContent([
       link: { type: 'url', path: '/' },
       text: 'All Components',
       color: 'text-secondary',
+      hoverEffect: 'underline',
     }),
   },
   {
@@ -48,6 +49,7 @@ export const headerWithLinks = createCommonContent([
       link: { type: 'url', path: '/' },
       text: 'Containers',
       color: 'text-secondary',
+      hoverEffect: 'opacity-75',
     }),
   },
   {
@@ -57,6 +59,7 @@ export const headerWithLinks = createCommonContent([
       link: { type: 'url', path: '/' },
       text: 'Marketing',
       color: 'text-secondary',
+      hoverEffect: 'scale-105',
     }),
   },
   {
@@ -66,6 +69,7 @@ export const headerWithLinks = createCommonContent([
       link: { type: 'url', path: '/' },
       text: 'Atoms',
       color: 'text-secondary',
+      hoverEffect: 'opacity-75',
     }),
   },
 ]);
@@ -78,6 +82,7 @@ export const headerWithGroups = createCommonContent([
       link: { type: 'url', path: '/' },
       text: 'All Components',
       color: 'text-secondary',
+      hoverEffect: 'none',
     }),
   },
   {
@@ -88,6 +93,7 @@ export const headerWithGroups = createCommonContent([
       color: 'text-secondary',
       backgroundColor: 'general-color-2',
       caretIcon: CARET_ASSET,
+      hoverEffect: 'underline',
     }),
     slots: {
       links: [
@@ -98,6 +104,7 @@ export const headerWithGroups = createCommonContent([
             link: { type: 'url', path: '/' },
             text: 'Link 1',
             color: 'text-secondary',
+            hoverEffect: 'opacity-75',
           }),
         },
         {
@@ -107,6 +114,7 @@ export const headerWithGroups = createCommonContent([
             link: { type: 'url', path: '/' },
             text: 'Link 2',
             color: 'text-secondary',
+            hoverEffect: 'scale-105',
           }),
         },
         {
@@ -116,6 +124,7 @@ export const headerWithGroups = createCommonContent([
             link: { type: 'url', path: '/' },
             text: 'Link 3',
             color: 'text-secondary',
+            hoverEffect: 'opacity-75',
           }),
         },
       ],
@@ -129,6 +138,7 @@ export const headerWithGroups = createCommonContent([
       color: 'text-secondary',
       backgroundColor: 'general-color-2',
       caretIcon: CARET_ASSET,
+      hoverEffect: 'underline',
     }),
     slots: {
       links: [
@@ -139,6 +149,7 @@ export const headerWithGroups = createCommonContent([
             link: { type: 'url', path: '/' },
             text: 'Link 1',
             color: 'text-secondary',
+            hoverEffect: 'opacity-75',
           }),
         },
         {
@@ -148,6 +159,7 @@ export const headerWithGroups = createCommonContent([
             link: { type: 'url', path: '/' },
             text: 'Link 2',
             color: 'text-secondary',
+            hoverEffect: 'scale-105',
           }),
         },
       ],
@@ -163,6 +175,7 @@ export const headerWithFlyout = createCommonContent([
       link: { type: 'url', path: '/' },
       text: 'All Components',
       color: 'text-secondary',
+      hoverEffect: 'underline',
     }),
   },
   {
@@ -173,6 +186,7 @@ export const headerWithFlyout = createCommonContent([
       color: 'text-secondary',
       backgroundColor: 'general-color-2',
       caretIcon: CARET_ASSET,
+      hoverEffect: 'underline',
     }),
     slots: {
       navigationFlyoutLeftContent: [
@@ -183,6 +197,7 @@ export const headerWithFlyout = createCommonContent([
             link: { type: 'url', path: '/' },
             text: 'Link 1',
             color: 'text-secondary',
+            hoverEffect: 'opacity-75',
           }),
         },
         {
@@ -192,6 +207,7 @@ export const headerWithFlyout = createCommonContent([
             link: { type: 'url', path: '/' },
             text: 'Link 2',
             color: 'text-secondary',
+            hoverEffect: 'scale-105',
           }),
         },
       ],

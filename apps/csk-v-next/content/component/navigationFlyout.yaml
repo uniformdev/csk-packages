@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: navigationFlyout
 name: Navigation Flyout
@@ -147,13 +147,13 @@ parameters:
     typeConfig:
       options:
         - key: None
-          value: none
+          value: ''
         - key: Underline
           value: underline
         - key: Brightness
-          value: brightness
+          value: opacity-75
         - key: Scale
-          value: scale
+          value: scale-105
       defaultValue: none
 categoryId: b1163ce2-5ac7-4347-bc38-a42198180718
 useTeamPermissions: true
@@ -174,4 +174,4 @@ slots:
 titleParameter: text
 canBeComposition: false
 created: '2025-03-20T12:55:44.645212+00:00'
-updated: '2025-05-06T13:53:03.744983+00:00'
+updated: '2025-05-20T07:47:02.726724+00:00'
