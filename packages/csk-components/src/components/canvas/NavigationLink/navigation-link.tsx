@@ -4,6 +4,7 @@ import BaseIconLabel from '@/components/ui/IconLabel';
 import BaseImage from '@/components/ui/Image';
 import { resolveAsset } from '@/utils/assets';
 import { formatUniformLink, isExternalLink } from '@/utils/routing';
+import { cn } from '@/utils/styling';
 import { NavigationLinkProps } from '.';
 import { getBaseIconLabelClasses } from './style-utils';
 import { Wrapper } from './wrapper';
@@ -23,6 +24,7 @@ export const NavigationLink: FC<NavigationLinkProps> = ({
   alignment,
   component,
   context,
+  hoverEffect = 'none',
 }) => {
   const href = formatUniformLink(link);
 
@@ -32,8 +34,11 @@ export const NavigationLink: FC<NavigationLinkProps> = ({
   return (
     <Wrapper href={href} isExternalLink={isExternalLink(href)}>
       <BaseIconLabel
-        textClassName={getBaseIconLabelClasses({ activeState, context, href })}
         icon={url && <BaseImage src={url} alt={title} fill />}
+        textClassName={cn(
+          'transition-all duration-150',
+          getBaseIconLabelClasses({ activeState, context, href, hoverEffect })
+        )}
         {...{ size, tag, color, weight, font, transform, decoration, letterSpacing, alignment }}
       >
         <UniformText

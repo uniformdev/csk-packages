@@ -9,7 +9,7 @@ import { cn } from '@/utils/styling';
 import { NavigationGroupProps } from '.';
 import { NavigationGroupDesktopContent } from './desktop';
 import { NavigationGroupMobileContent } from './mobile';
-import { getButtonClasses, getCaretClasses } from './style-utils';
+import { getBaseTextClasses, getButtonClasses, getCaretClasses } from './style-utils';
 
 export const NavigationGroup: FC<NavigationGroupProps> = ({
   icon,
@@ -28,6 +28,7 @@ export const NavigationGroup: FC<NavigationGroupProps> = ({
   component,
   context,
   slots,
+  hoverEffect = 'none',
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -45,6 +46,7 @@ export const NavigationGroup: FC<NavigationGroupProps> = ({
       <button onMouseEnter={openFlyout} onClick={openFlyout} className={getButtonClasses({ color })}>
         <BaseIconLabel
           icon={url && <BaseImage src={url} alt={title} fill />}
+          textClassName={cn('transition-all duration-150', getBaseTextClasses({ hoverEffect }))}
           {...{ size, tag, color, weight, font, transform, decoration, letterSpacing, alignment }}
         >
           <UniformText placeholder="Text goes here" parameterId="text" component={component} context={context} />

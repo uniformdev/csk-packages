@@ -9,7 +9,7 @@ import { cn } from '@/utils/styling';
 import { NavigationFlyoutProps } from '.';
 import { NavigationFlyoutPropsDesktopContent } from './desktop';
 import { NavigationFlyoutPropsMobileContent } from './mobile';
-import { getButtonClasses, getCaretClasses } from './style-utils';
+import { getBaseTextClasses, getButtonClasses, getCaretClasses } from './style-utils';
 
 export const NavigationFlyout: FC<NavigationFlyoutProps> = ({
   icon,
@@ -28,6 +28,7 @@ export const NavigationFlyout: FC<NavigationFlyoutProps> = ({
   component,
   context,
   slots,
+  hoverEffect = 'none',
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -50,6 +51,7 @@ export const NavigationFlyout: FC<NavigationFlyoutProps> = ({
       <button onMouseEnter={openFlyout} className={getButtonClasses({ color })}>
         <BaseIconLabel
           icon={url && <BaseImage src={url} alt={title} fill />}
+          textClassName={cn('transition-all duration-150', getBaseTextClasses({ hoverEffect }))}
           {...{ size, tag, color, weight, font, transform, decoration, letterSpacing, alignment }}
         >
           <UniformText placeholder="Text goes here" parameterId="text" component={component} context={context} />

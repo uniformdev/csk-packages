@@ -33,6 +33,7 @@ parameters:
         - letterSpacing
         - alignment
         - caretIcon
+        - hoverEffect
   - id: backgroundColor
     name: Background Color
     type: dex-color-palette-parameter
@@ -140,6 +141,20 @@ parameters:
       allowedTypes:
         - image
     localizable: true
+  - id: hoverEffect
+    name: Hover Effect
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: None
+          value: none
+        - key: Underline
+          value: underline
+        - key: Brightness
+          value: brightness
+        - key: Scale
+          value: scale
+      defaultValue: none
 categoryId: b1163ce2-5ac7-4347-bc38-a42198180718
 useTeamPermissions: true
 slots:

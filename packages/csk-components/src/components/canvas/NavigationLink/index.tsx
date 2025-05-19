@@ -9,6 +9,7 @@ export type NavigationLinkParameters = TextParameters & {
   icon?: AssetParamValue;
   link?: LinkParamValue;
   activeState?: boolean;
+  hoverEffect?: 'none' | 'underline' | 'brightness' | 'scale';
 };
 
 export type NavigationLinkProps = ComponentProps<NavigationLinkParameters>;

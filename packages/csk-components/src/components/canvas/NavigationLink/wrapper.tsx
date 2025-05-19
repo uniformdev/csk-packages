@@ -12,7 +12,12 @@ export const Wrapper: FC<WrapperProps> = ({ href, isExternalLink, children }) =>
   }
 
   return (
-    <BaseLink link={href} openInNewTab={isExternalLink} rel={isExternalLink ? 'noopener noreferrer' : ''}>
+    <BaseLink
+      className="hover:no-underline"
+      link={href}
+      openInNewTab={isExternalLink}
+      rel={isExternalLink ? 'noopener noreferrer' : ''}
+    >
       {children}
     </BaseLink>
   );

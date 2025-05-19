@@ -17,3 +17,16 @@ export const getButtonClasses = ({ color }: ButtonClassesProps) =>
   cn('flex items-center gap-x-2', {
     [`text-${color}`]: !!color,
   });
+
+type TextClassesProps = {
+  hoverEffect: 'none' | 'underline' | 'brightness' | 'scale';
+};
+export const getBaseTextClasses = ({ hoverEffect }: TextClassesProps) => {
+  const effectsMap: Record<string, string> = {
+    brightness: 'opacity-75',
+    underline: 'underline',
+    scale: 'scale-105',
+  };
+
+  return hoverEffect && effectsMap[hoverEffect] && `hover:${effectsMap[hoverEffect]}`;
+};

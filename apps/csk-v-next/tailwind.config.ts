@@ -29,6 +29,8 @@ const safelist = [
   { pattern: /tracking-(tighter|tight|normal|wide|wider|widest)/, variants: ['lg', 'md'] },
   { pattern: /aspect-(auto|square|video)/ },
   { pattern: /shrink-(0|1)/ },
+  { pattern: /opacity-(75|100)/, variants: ['hover'] },
+  { pattern: /scale-(100|105)/, variants: ['hover'] },
 ];
 
 const colorKeys = Object.keys(theme.extend.colors || {});
