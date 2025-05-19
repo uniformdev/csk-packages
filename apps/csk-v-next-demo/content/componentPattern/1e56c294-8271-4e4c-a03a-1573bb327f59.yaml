@@ -1,0 +1,31 @@
+composition:
+  _name: Demo Card Button
+  _id: 1e56c294-8271-4e4c-a03a-1573bb327f59
+  type: button
+  parameters:
+    size:
+      type: dex-token-selector-parameter
+      value: button-small
+    text:
+      type: text
+      value: Primary Button
+    border:
+      type: dex-token-selector-parameter
+      value: border-demo-cart
+    textColor:
+      type: dex-color-palette-parameter
+      value: text-light
+    textWeight:
+      type: dex-segmented-control-parameter
+      value: normal
+    buttonColor:
+      type: dex-color-palette-parameter
+      value: button-primary
+  _overridability:
+    parameters:
+      link: 'yes'
+      text: 'yes'
+    hideLockedParameters: true
+created: '2025-02-17T16:01:10.463051+00:00'
+modified: '2025-02-17T16:01:10.463051+00:00'
+pattern: true

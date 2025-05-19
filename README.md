@@ -9,14 +9,16 @@ Welcome to the **Uniform Component Starter Kit (CSK6)** monorepo! This repositor
  └── workflows/       # Automated workflows for package publishing
 .husky/               # Pre-commit hooks to enforce linting rules
 apps/
- └── csk-v-next/      # Main Next.js 15 App Router application
+ ├── csk-v-next/      # Main Next.js 15 App Router application
+ ├── csk-v-next-demo/ # Marketing site project with component catalog
+ └── storybook/       # Interactive environment for visually testing UI components
 packages/
  ├── csk-cli/         # CLI tool for project setup and automation
  ├── csk-components/  # Component library for building UI
  ├── csk-recipes/     # Predefined recipes for integrating features
  ├── design-extensions-tools/ # Utilities for design extension integration
  ├── eslint-config/   # Shared ESLint configuration
- ├── typescript-config/ # Shared TypeScript configuration
+ └── typescript-config/ # Shared TypeScript configuration
 .gitignore            # Ignoring unnecessary files
 .npmrc                # NPM registry settings
 .prettierrc.js        # Prettier formatting rules

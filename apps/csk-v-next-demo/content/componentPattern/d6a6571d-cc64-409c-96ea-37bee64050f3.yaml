@@ -1,0 +1,136 @@
+composition:
+  _name: Hero Gradient Pattern
+  _id: d6a6571d-cc64-409c-96ea-37bee64050f3
+  type: heroGradient
+  parameters:
+    title:
+      type: text
+      value: Hero
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        mobile:
+          paddingTop: container-small
+          paddingLeft: container-small
+          paddingRight: container-small
+          paddingBottom: container-small
+        tablet:
+          paddingTop: container-medium
+          paddingLeft: container-small
+          paddingRight: container-small
+          paddingBottom: container-medium
+        desktop:
+          paddingTop: container-large
+          paddingLeft: container-small
+          paddingRight: container-small
+          paddingBottom: container-large
+    fluidContent:
+      type: checkbox
+      value: true
+    gradientColor:
+      type: dex-color-palette-parameter
+      value: general-color-6
+  slots:
+    content:
+      - _id: 39783ae2-23db-4be0-bb76-82814cc3c2b4
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: p
+          font:
+            type: dex-token-selector-parameter
+            value: dm-sans
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: base
+              tablet: lg
+              desktop: xl
+          text:
+            type: text
+            value: Text
+          color:
+            type: dex-color-palette-parameter
+            value: text-tertiary
+          weight:
+            type: dex-segmented-control-parameter
+            value: bold
+          alignment:
+            type: dex-segmented-control-parameter
+            value: center
+          transform:
+            type: dex-segmented-control-parameter
+            value: uppercase
+        _overridability:
+          parameters:
+            text: 'yes'
+      - _id: 0ec4bccd-be9b-4c0d-8300-e92395c33b44
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: h2
+          font:
+            type: dex-token-selector-parameter
+            value: dm-sans
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: 3xl
+              tablet: 5xl
+              desktop: 7xl
+          text:
+            type: text
+            value: Title
+          color:
+            type: dex-color-palette-parameter
+            value: text-primary
+          weight:
+            type: dex-segmented-control-parameter
+            value: bold
+          alignment:
+            type: dex-segmented-control-parameter
+            value: center
+        _overridability:
+          parameters:
+            text: 'yes'
+          hideLockedParameters: true
+      - _id: be38080a-5799-4942-a6c0-d9097fc3dc1c
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: p
+          font:
+            type: dex-token-selector-parameter
+            value: dm-sans
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: base
+              tablet: lg
+              desktop: xl
+          text:
+            type: text
+            value: Subtitle
+          color:
+            type: dex-color-palette-parameter
+            value: text-primary
+          weight:
+            type: dex-segmented-control-parameter
+            value: normal
+          alignment:
+            type: dex-segmented-control-parameter
+            value: center
+        _overridability:
+          parameters:
+            text: 'yes'
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      title: 'yes'
+    hideLockedParameters: true
+created: '2025-02-20T20:46:52.530788+00:00'
+modified: '2025-02-24T19:01:44.900652+00:00'
+pattern: true

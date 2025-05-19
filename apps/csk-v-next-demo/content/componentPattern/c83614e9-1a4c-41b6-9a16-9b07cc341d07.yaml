@@ -1,0 +1,169 @@
+composition:
+  _name: Section Default variant with Image
+  _id: c83614e9-1a4c-41b6-9a16-9b07cc341d07
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Section Default variant with Image
+    anchor:
+      type: text
+      value: section-default-with-image
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    patternId:
+      type: text
+      value: c83614e9-1a4c-41b6-9a16-9b07cc341d07
+    fluidContent:
+      type: checkbox
+      value: true
+    enableComponentPreview:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: f69e639d-d041-4781-a006-d88df1d4d237
+        type: section
+        slots:
+          sectionCTA:
+            - _id: e579a363-de3c-4c16-bb23-11d74c365492
+              type: button
+              _pattern: 53b59aed-e378-4fcb-9135-20247d92074e
+            - _id: 6644728d-feb7-40a5-942a-6e128e990ea4
+              type: button
+              _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
+          sectionMedia:
+            - _id: 64fa10f0-d43c-408e-b09a-1783f2e77398
+              type: image
+              parameters:
+                image:
+                  type: asset
+                  value:
+                    - _id: 218cf912-0c1f-4124-a716-5adc995c6531
+                      type: image
+                      fields:
+                        url:
+                          type: text
+                          value: >-
+                            https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/shared-images/beans-heart.jpg
+                        title:
+                          type: text
+                          value: beans-heart
+                        description:
+                          type: text
+                          value: beans-heart
+                      _source: custom-url
+                objectFit:
+                  type: dex-segmented-control-parameter
+                  value: cover
+                overlayColor:
+                  type: dex-color-palette-parameter
+                  value: general-color-2
+                overlayOpacity:
+                  type: dex-slider-control-parameter
+                  value: '0.4'
+          sectionContent:
+            - _id: 717ae6d6-5b2c-4a8e-a225-4495e0250e98
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: span
+                text:
+                  type: text
+                  value: HELLO AND WELCOME! THIS IS
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-secondary
+            - _id: db7be0a0-6842-46b2-b10e-2294c9e5be8b
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: h1
+                size:
+                  type: dex-segmented-control-parameter
+                  value: 5xl
+                text:
+                  type: text
+                  value: Uniform’s Component Starter Kit
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-secondary
+            - _id: 8c216eee-bf4b-496c-b938-98d062ee570b
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: h2
+                size:
+                  type: dex-segmented-control-parameter
+                  value: base
+                text:
+                  type: text
+                  value: >-
+                    An essential set of components you need to start building
+                    personalized web experiences with Uniform.
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-secondary
+        parameters:
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              paddingTop: container-small
+              paddingLeft: container-small
+              paddingRight: container-small
+              paddingBottom: container-small
+          displayName:
+            type: text
+            value: Section Default variant with Image
+          fluidContent:
+            type: checkbox
+            value: true
+          contentAlignment:
+            type: dex-segmented-control-parameter
+            value: center
+        _overridability:
+          hideLockedParameters: true
+  _overrides:
+    6644728d-feb7-40a5-942a-6e128e990ea4:
+      parameters:
+        size:
+          type: dex-token-selector-parameter
+          value: button-medium
+        text:
+          type: text
+          value: Secondary Button
+    e579a363-de3c-4c16-bb23-11d74c365492:
+      parameters:
+        text:
+          type: text
+          value: Primary Button
+  _overridability:
+    parameters:
+      link: 'yes'
+      title: 'no'
+      border: 'no'
+      spacing: 'no'
+      category: 'no'
+      backgroundColor: 'no'
+      enableComponentPreview: 'yes'
+    hideLockedParameters: true
+created: '2025-03-03T09:52:32.091248+00:00'
+modified: '2025-03-03T10:39:40.126656+00:00'
+pattern: true
+description: >-
+  This example is constructed utilizing the Hero component, which incorporates
+  an image as the media content. It encompasses text components for the eyebrow,
+  title, and description, as well as button components designated as primary and
+  secondary buttons.
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9

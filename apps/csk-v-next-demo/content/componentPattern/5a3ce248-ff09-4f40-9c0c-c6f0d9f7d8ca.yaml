@@ -1,0 +1,65 @@
+composition:
+  _name: Page
+  _id: 5a3ce248-ff09-4f40-9c0c-c6f0d9f7d8ca
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Page
+    anchor:
+      type: text
+      value: page
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        marginTop: ''
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    patternId:
+      type: text
+      value: 5a3ce248-ff09-4f40-9c0c-c6f0d9f7d8ca
+    fluidContent:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: 4a77bf32-051b-4bde-b16d-b531b488a107
+        type: page
+        slots:
+          pageFooter:
+            - _id: b40c8db9-4aac-4a92-b6f6-3982454b465b
+              type: footer
+              parameters:
+                displayName:
+                  type: text
+                  value: Footer
+              _overridability:
+                hideLockedParameters: true
+          pageHeader:
+            - _id: 4d8b3098-3d8d-416a-8371-3c93fecb24e5
+              type: header
+              parameters:
+                displayName:
+                  type: text
+                  value: Header
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          pageTitle:
+            type: text
+            value: Home Page
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      link: 'yes'
+    hideLockedParameters: true
+created: '2025-02-17T16:01:11.676027+00:00'
+modified: '2025-02-17T16:01:11.676027+00:00'
+pattern: true
+categoryId: c7a1d1d9-cc3f-431c-b55e-6c4af1285108

@@ -1,0 +1,2996 @@
+created: '2025-02-17T16:01:29.986557+00:00'
+modified: '2025-02-17T16:01:29.986557+00:00'
+pattern: false
+entry:
+  _id: ccf48a3d-46f1-4166-877b-26b41c4fcc75
+  _name: Connecting Uniform Plugins
+  _slug: connecting-uniform-plugins
+  _thumbnail: >-
+    https://img.uniform.global/p/ZfA3kJm3TDeKyWey802IkQ/UGOmlSJTQ_CMValO7ch02Q-connecting-uniform-plugins.png
+  type: recipe
+  fields:
+    image:
+      type: asset
+      value:
+        - _id: 98119161-e598-41c5-a987-3d2f68666ceb
+          type: image
+          fields:
+            id:
+              type: text
+              value: a9b060cd-0beb-46d2-aee8-7f3884baf1a1
+            url:
+              value: >-
+                https://img.uniform.global/p/ZfA3kJm3TDeKyWey802IkQ/UGOmlSJTQ_CMValO7ch02Q-connecting-uniform-plugins.png
+              type: text
+            file:
+              type: file
+              value: d87c1680-e616-4968-a461-e4898ccd4b1d
+            size:
+              value: 94413
+              type: number
+            title:
+              type: text
+              value: connecting-uniform-plugins.png
+            width:
+              value: 1200
+              type: number
+            height:
+              value: 630
+              type: number
+            mediaType:
+              value: image/png
+              type: text
+          _source: uniform-assets
+    steps:
+      type: $block
+      value:
+        - _id: 58cd64a1-7cd6-4651-b9b3-c66318b8a14c
+          type: recipeStep
+          fields:
+            title:
+              type: text
+              value: Introduction
+            content:
+              type: richText
+              value:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            This guide demonstrates how to connect some of the
+                            most popular plugins using the CSK v6 app router as
+                            an example.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - tag: ul
+                      type: list
+                      start: 1
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - type: listitem
+                          value: 1
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: 'The '
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                            - mode: normal
+                              text: Context DevTools plugin
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 1
+                              version: 1
+                            - mode: normal
+                              text: ' prompts the Uniform tracker to expose visitor classification data, which can then be displayed in Context DevTools. '
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 2
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: 'The '
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                            - mode: normal
+                              text: GA plugin
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 1
+                              version: 1
+                            - mode: normal
+                              text: ' enables the transfer of personalization and testing data to Google Analytics, enhancing the reach and depth of your analytics. '
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 3
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: 'The '
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                            - mode: normal
+                              text: Uniform Insights
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 1
+                              version: 1
+                            - mode: normal
+                              text: ' empowers marketers and growth specialists to better understand how their personalization and A/B tests perform within the context of content and experience management. It also helps identify new optimization opportunities and analyze visitor behavior in real-time.'
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                      listType: bullet
+                      direction: ltr
+                  direction: ltr
+            anchorlink:
+              type: text
+              value: introduction
+        - _id: e8746149-dcef-49f2-a371-ac575fee89f5
+          type: recipeStep
+          fields:
+            title:
+              type: text
+              value: 'Create Uniform Client Context component '
+            content:
+              type: richText
+              value:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            As the first step, you need to create a simple
+                            component where you can later define the required
+                            plugins and connect it to the 
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: UniformContext
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                        - mode: normal
+                          text: .
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: 'To do this, create a '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: clientContext.tsx
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 16
+                          version: 1
+                        - mode: normal
+                          text: ' file in the '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: src/utils
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 16
+                          version: 1
+                        - mode: normal
+                          text: ' directory with the following content:'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: code
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: '''use client'';'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: import {
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  ClientContextComponent,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  createClientUniformContext,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  useInitUniformContext,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '} from ''@uniformdev/canvas-next-rsc/component'';'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: import { ContextPlugin } from '@uniformdev/context';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: 'export const '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: UniformClientContext
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                        - mode: normal
+                          text: ': ClientContextComponent = ({ '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: manifest
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 2
+                          version: 1
+                        - mode: normal
+                          text: ' }) => {'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  useInitUniformContext(() => {'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    const plugins: ContextPlugin[] = [];'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    return createClientUniformContext({'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      manifest,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      plugins,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      defaultConsent: true,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    });'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  });'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  return null;'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '};'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: 'Then, connect it to the '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: UniformContext
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                        - mode: normal
+                          text: ' as the '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: clientContextComponent
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 16
+                          version: 1
+                        - mode: normal
+                          text: ' in the '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: src/app/layout.tsx
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 16
+                          version: 1
+                        - mode: normal
+                          text: ' file:'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: code
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: import { ReactNode } from 'react';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            import { ThemeProvider as NextThemeProvider } from
+                            'next-themes';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            import { UniformContext } from
+                            '@uniformdev/canvas-next-rsc';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: import '@/styles/globals.css';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: import '@/styles/colors.css';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: import '@/styles/dimensions.css';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: import '@/styles/fonts.css';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: import '@/styles/borders.css';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            import { UniformClientContext } from
+                            '@/components/clientContext';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: import { customFontVariables } from '@/fonts';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: 'export default function '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: RootLayout
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                        - mode: normal
+                          text: '({ '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: children
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 2
+                          version: 1
+                        - mode: normal
+                          text: ' }: { children: ReactNode }) {'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  return ('
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    <html '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: lang
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 2
+                          version: 1
+                        - mode: normal
+                          text: '="en" '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: suppressHydrationWarning
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 2
+                          version: 1
+                        - mode: normal
+                          text: '>'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      <body '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: className
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 2
+                          version: 1
+                        - mode: normal
+                          text: '={customFontVariables}>'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '        <NextThemeProvider '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: attribute
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 2
+                          version: 1
+                        - mode: normal
+                          text: '="class" '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: defaultTheme
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 2
+                          version: 1
+                        - mode: normal
+                          text: '="light" '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: enableSystem
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 2
+                          version: 1
+                        - mode: normal
+                          text: '>'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '          <UniformContext '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: clientContextComponent
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 2
+                          version: 1
+                        - mode: normal
+                          text: '={UniformClientContext}>{'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: children
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 2
+                          version: 1
+                        - mode: normal
+                          text: '}</UniformContext>'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '        </NextThemeProvider>'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      </body>'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    </html>'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  );'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '}'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children: []
+                      direction: null
+                      textStyle: ''
+                      textFormat: 0
+                  direction: ltr
+            anchorlink:
+              type: text
+              value: 'create-uniform-client-context-component '
+        - _id: cc4c5eb2-e89f-4af3-85f4-9e3c2fd4e23c
+          type: recipeStep
+          fields:
+            title:
+              type: text
+              value: 'Connecting Context DevTools '
+            content:
+              type: richText
+              value:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: 'The '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: Context DevTools plugin
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                        - mode: normal
+                          text: ' enables the Uniform tracker to expose visitor classification data, which can then be displayed in '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: Context DevTools
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            . For detailed instructions on setup and usage,
+                            refer to the 
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - link:
+                            path: >-
+                              https://docs.uniform.app/docs/guides/classification/context-devtools
+                            type: url
+                          type: link
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Context DevTools
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 1
+                              version: 1
+                          direction: ltr
+                        - link:
+                            path: >-
+                              https://docs.uniform.app/docs/guides/classification/context-devtools
+                            type: url
+                          type: link
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: ' guide'
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - mode: normal
+                          text: .
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            To achieve this, you need to import the plugin in
+                            the relevant section, as well as the 
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: useRouter
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 16
+                          version: 1
+                        - mode: normal
+                          text: ' hook to ensure it functions correctly:'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: code
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: import { useRouter } from 'next/navigation';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            import { enableContextDevTools } from
+                            '@uniformdev/context';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Next, integrate the plugin by initializing it and
+                            passing it to the plugin variable:
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: code
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: plugins.push(
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      enableContextDevTools({'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '        '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: onAfterMessageReceived
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                        - mode: normal
+                          text: ': () => {'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '          router.refresh();'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '        },'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      })'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    );'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: 'The complete '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: clientContext.ts
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 16
+                          version: 1
+                        - mode: normal
+                          text: ' file is provided below:'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: code
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: '''use client'';'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: import { useRouter } from 'next/navigation';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: import {
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  ClientContextComponent,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  createClientUniformContext,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  useInitUniformContext,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '} from ''@uniformdev/canvas-next-rsc/component'';'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            import { ContextPlugin, enableContextDevTools } from
+                            '@uniformdev/context';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: 'export const '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: UniformClientContext
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                        - mode: normal
+                          text: ': ClientContextComponent = ({ '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: manifest
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 2
+                          version: 1
+                        - mode: normal
+                          text: ' }) => {'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  const router = useRouter();'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  useInitUniformContext(() => {'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    const plugins: ContextPlugin[] = [];'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    plugins.push('
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      enableContextDevTools({'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '        '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: onAfterMessageReceived
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                        - mode: normal
+                          text: ': () => {'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '          router.refresh();'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '        },'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      })'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    );'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    return createClientUniformContext({'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      manifest,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      plugins,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      defaultConsent: true,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    });'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  });'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  return null;'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '};'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                  direction: ltr
+            anchorlink:
+              type: text
+              value: 'connecting-context-dev-tools '
+        - _id: c2185aee-c4a8-4bb5-acac-aba45af90251
+          type: recipeStep
+          fields:
+            title:
+              type: text
+              value: Connecting GA plugin
+            content:
+              type: richText
+              value:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Uniform enables you to add personalization and
+                            testing capabilities to your applications. Google
+                            Analytics is a popular tool for collecting and
+                            reporting activity within your application. Uniform
+                            can transmit personalization and testing data to
+                            Google Analytics, enhancing the scope and depth of
+                            your analytics. For more information, refer to the
+                            resources available 
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - link:
+                            path: >-
+                              https://docs.uniform.app/docs/integrations/data/google-analytics
+                            type: url
+                          type: link
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: here
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - mode: normal
+                          text: .
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            If your application doesn’t already use the Google
+                            Analytics Global Site Tag (gtag.js), 
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - link:
+                            path: >-
+                              https://support.google.com/analytics/answer/12002338?hl=en&ref_topic=14598735&sjid=11461823332647661239-NC
+                            type: url
+                          type: link
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: you need to add the script
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - mode: normal
+                          text: .
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: quote
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: About This Step
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            In a web application, the Global Site Tag should be
+                            added immediately after the closing <head> tag. It
+                            must be the first script following </Head>.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Add the following npm packages to your frontend
+                            application:
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: npm install @uniformdev/context-gtag
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 16
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 16
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Then you need to add the plugin import in the import
+                            section:
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: code
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            import { enableGoogleGtagAnalytics } from
+                            '@uniformdev/context-gtag';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Next, integrate the plugin by initializing it and
+                            passing it to the plugin configuration:
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: plugins.push(enableGoogleGtagAnalytics());
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 16
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 16
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: 'The complete '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: clientContext.ts
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 16
+                          version: 1
+                        - mode: normal
+                          text: ' file is provided below:'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: code
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: '''use client'';'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: import {
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  ClientContextComponent,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  createClientUniformContext,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  useInitUniformContext,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '} from ''@uniformdev/canvas-next-rsc/component'';'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: import { ContextPlugin } from '@uniformdev/context';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            import { enableGoogleGtagAnalytics } from
+                            '@uniformdev/context-gtag';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: 'export const '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: UniformClientContext
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                        - mode: normal
+                          text: ': ClientContextComponent = ({ '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: manifest
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 2
+                          version: 1
+                        - mode: normal
+                          text: ' }) => {'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  useInitUniformContext(() => {'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    const plugins: ContextPlugin[] = [];'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    plugins.push(enableGoogleGtagAnalytics());'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    return createClientUniformContext({'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      manifest,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      plugins,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      defaultConsent: true,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    });'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  });'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  return null;'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '};'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children: []
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                  direction: ltr
+            anchorlink:
+              type: text
+              value: connecting-g-a-plugin
+        - _id: 96c97e54-77cd-4a5e-8368-0ed1c4ad3e55
+          type: recipeStep
+          fields:
+            title:
+              type: text
+              value: Connecting Uniform Insights
+            content:
+              type: richText
+              value:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Uniform Insights
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                        - mode: normal
+                          text: ' empowers marketers and growth specialists to understand the performance of their personalization and A/B tests within the context of content and experience management. It helps identify new optimization opportunities and provides real-time insights into visitor behavior. Learn more about it '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - link:
+                            path: >-
+                              https://docs.uniform.app/docs/integrations/data/insights
+                            type: url
+                          type: link
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: here
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - mode: normal
+                          text: .
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 1
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Add the following environment variables to your
+                            project:
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: code
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            # insert the endpoint URL you just copied into your
+                            clipboard from the settings page
+
+                            UNIFORM_INSIGHTS_ENDPOINT = 'your endpoint url'
+
+
+                            # insert the API key provided by your Uniform
+                            account manager
+
+                            UNIFORM_INSIGHTS_KEY = 'your api key'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: "Import\_"
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: enableUniformInsights
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 16
+                          version: 1
+                        - mode: normal
+                          text: "\_from the\_"
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: '@uniformdev/context'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 16
+                          version: 1
+                        - mode: normal
+                          text: "\_package and add it to the list of plugins (ensure that this is activated client-side):"
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: code
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: '''use client'';'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: import {
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  ClientContextComponent,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  createClientUniformContext,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  useInitUniformContext,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '} from ''@uniformdev/canvas-next-rsc/component'';'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            import { ContextPlugin, enableUniformInsights } from
+                            '@uniformdev/context';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: 'export const '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: UniformClientContext
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                        - mode: normal
+                          text: ': ClientContextComponent = ({ '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: manifest
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 2
+                          version: 1
+                        - mode: normal
+                          text: ' }) => {'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  useInitUniformContext(() => {'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    const plugins: ContextPlugin[] = [];'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    plugins.push('
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      enableUniformInsights({'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '        endpoint: {'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '          type: ''proxy'','
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '          path: ''/api/analytics'','
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '        },'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      })'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    );'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    return createClientUniformContext({'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      manifest,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      plugins,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      defaultConsent: true,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    });'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  });'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  return null;'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '};'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Add a proxy route (
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: src/app/api/analytics/route.ts
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 16
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            ) to your Next.js application to rewrite the path to
+                            the Insights ingestion endpoint:
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: code
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            import { NextRequest, NextResponse } from
+                            'next/server';
+
+
+
+                            export async function POST(req: NextRequest) {
+                              if (!process.env.UNIFORM_INSIGHTS_ENDPOINT || !process.env.UNIFORM_INSIGHTS_KEY) {
+                                throw Error('Check Uniform Insights connection settings');
+                              }
+                              const destination = new URL(process.env.UNIFORM_INSIGHTS_ENDPOINT);
+                              destination.pathname = '/v0/events';
+                              destination.searchParams.set('name', 'analytics_events');
+
+
+                              const data = await req.json();
+                              const response = await fetch(destination.toString(), {
+                                method: 'POST',
+                                headers: {
+                                  Authorization: 'Bearer ' + process.env.UNIFORM_INSIGHTS_KEY,
+                                },
+                                body: JSON.stringify(data),
+                              });
+
+
+                              const ingestionResponse = await response.json();
+                              return NextResponse.json(ingestionResponse, { status: response.status });
+                            }
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children: []
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                  direction: ltr
+            anchorlink:
+              type: text
+              value: connecting-uniform-insights
+        - _id: d019dbac-4443-41c0-b113-0b1a1b4efc37
+          type: recipeStep
+          fields:
+            title:
+              type: text
+              value: Conclusion
+            content:
+              type: richText
+              value:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Plugins significantly enhance functionality,
+                            simplify debugging and personalization optimization,
+                            enable the integration of personalization and
+                            testing data into Google Analytics, and provide
+                            real-time analytics. Additionally, you can combine
+                            these plugins and activate only those that meet your
+                            specific needs. 
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Below is an example of how to connect all the
+                            plugins discussed in this guide:
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: code
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: '''use client'';'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: import { useRouter } from 'next/navigation';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: import {
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  ClientContextComponent,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  createClientUniformContext,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  useInitUniformContext,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '} from ''@uniformdev/canvas-next-rsc/component'';'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            import { ContextPlugin, enableContextDevTools,
+                            enableUniformInsights } from '@uniformdev/context';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: >-
+                            import { enableGoogleGtagAnalytics } from
+                            '@uniformdev/context-gtag';
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: 'export const '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: UniformClientContext
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                        - mode: normal
+                          text: ': ClientContextComponent = ({ '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: manifest
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 2
+                          version: 1
+                        - mode: normal
+                          text: ' }) => {'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  const router = useRouter();'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  useInitUniformContext(() => {'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    const plugins: ContextPlugin[] = [];'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    plugins.push('
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      enableContextDevTools({'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '        '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - mode: normal
+                          text: onAfterMessageReceived
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                        - mode: normal
+                          text: ': () => {'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '          router.refresh();'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '        },'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      })'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    );'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    plugins.push(enableGoogleGtagAnalytics());'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    plugins.push('
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      enableUniformInsights({'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '        endpoint: {'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '          type: ''proxy'','
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '          path: ''/api/analytics'','
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '        },'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      })'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    );'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    return createClientUniformContext({'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      manifest,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      plugins,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '      defaultConsent: true,'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '    });'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  });'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '  return null;'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - type: linebreak
+                          version: 1
+                        - mode: normal
+                          text: '};'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                  direction: ltr
+            anchorlink:
+              type: text
+              value: conclusion
+    title:
+      type: text
+      value: Connecting Uniform Plugins
+    categories:
+      type: contentReference
+      value: ${#jptr:/ref-ccf48a3d-46f1-4166-877b-26b41c4fcc75-categories/entries}
+    description:
+      type: text
+      value: >-
+        Plugins can extend tracking capabilities and are integrated into the
+        Uniform context object. Uniform offers several plugins, but they are not
+        enabled by default. This guide explains how to connect the most popular
+        plugins, such as the Context DevTools plugin, GA plugin, and Uniform
+        Insights.
+  _dataResources:
+    ref-8ae86863-3b46-4948-a584-3c08e0483e03-categories:
+      type: uniformContentInternalReference
+      variables:
+        entryIds: e4855e97-e5ba-4ab2-b6b4-3724fb81f14f
+    ref-c3dcd8ef-d1b3-4add-8d0b-ff4235f0e033-categories:
+      type: uniformContentInternalReference
+      variables:
+        entryIds: 94e36d5b-3d9d-49dd-8ea0-9ccc8bede6f2
+    ref-ccf48a3d-46f1-4166-877b-26b41c4fcc75-categories:
+      type: uniformContentInternalReference
+      variables:
+        entryIds: e65566e2-0f54-44e8-ad5f-e29d3d68da86

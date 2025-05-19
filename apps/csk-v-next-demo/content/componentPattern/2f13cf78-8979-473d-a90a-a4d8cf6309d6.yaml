@@ -1,0 +1,273 @@
+composition:
+  _name: Table Default variant
+  _id: 2f13cf78-8979-473d-a90a-a4d8cf6309d6
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Table Default variant
+    anchor:
+      type: text
+      value: hero-video-background
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    patternId:
+      type: text
+      value: 2f13cf78-8979-473d-a90a-a4d8cf6309d6
+    fluidContent:
+      type: checkbox
+      value: true
+    enableComponentPreview:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: 60c985eb-7619-42f4-892b-5d75179bd1c7
+        type: table
+        slots:
+          tableBody:
+            - _id: 724c342b-2eb3-41a9-b5dd-107aac49a6c5
+              type: tableRow
+              slots:
+                tableRowCells:
+                  - _id: 35f66567-0eea-43d0-af0e-ea88d34b108b
+                    type: tableDataCell
+                    parameters:
+                      value:
+                        type: text
+                        value: John Smith
+                    _overridability:
+                      hideLockedParameters: true
+                  - _id: 7bc66fa7-992f-4cf3-9429-5643f531d319
+                    type: tableDataCell
+                    parameters:
+                      value:
+                        type: text
+                        value: '32'
+                    _overridability:
+                      hideLockedParameters: true
+                  - _id: 545f9b95-ad3a-44b1-8e6d-d9d2d6715fe9
+                    type: tableDataCell
+                    parameters:
+                      value:
+                        type: text
+                        value: New York
+                    _overridability:
+                      hideLockedParameters: true
+                  - _id: 8d1d5fe5-1ffe-4598-bb13-a086dcfb1289
+                    type: tableDataCell
+                    parameters:
+                      value:
+                        type: text
+                        value: Software Engineer
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                displayName:
+                  type: text
+                  value: John Smith
+              _overridability:
+                hideLockedParameters: true
+            - _id: e3a5aed3-5bc0-4a50-9343-a7085b5e5060
+              type: tableRow
+              slots:
+                tableRowCells:
+                  - _id: bf4b1b97-26ac-401c-9da2-1529ab71493b
+                    type: tableDataCell
+                    parameters:
+                      value:
+                        type: text
+                        value: Jane Doe
+                    _overridability:
+                      hideLockedParameters: true
+                  - _id: b6df078c-5e93-4d26-8345-6a4c17de64b0
+                    type: tableDataCell
+                    parameters:
+                      value:
+                        type: text
+                        value: '28'
+                    _overridability:
+                      hideLockedParameters: true
+                  - _id: fd065727-13b1-4d2a-99ae-6aafaec0897c
+                    type: tableDataCell
+                    parameters:
+                      value:
+                        type: text
+                        value: Los Angeles
+                    _overridability:
+                      hideLockedParameters: true
+                  - _id: 95e042db-28ea-4dde-a30f-4d1d25d358b3
+                    type: tableDataCell
+                    parameters:
+                      value:
+                        type: text
+                        value: Graphic Designer
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                displayName:
+                  type: text
+                  value: Jane Doe
+              _overridability:
+                hideLockedParameters: true
+            - _id: 317c94fe-1d3d-4bc2-a489-4c3634576904
+              type: tableRow
+              slots:
+                tableRowCells:
+                  - _id: 4426c951-d1eb-4e02-a10e-d52b4690379a
+                    type: tableDataCell
+                    parameters:
+                      value:
+                        type: text
+                        value: Robert Lee
+                    _overridability:
+                      hideLockedParameters: true
+                  - _id: da073a1d-65cf-43af-9029-48c6d4c59062
+                    type: tableDataCell
+                    parameters:
+                      value:
+                        type: text
+                        value: '45'
+                    _overridability:
+                      hideLockedParameters: true
+                  - _id: 2c38990c-2534-44fb-ad75-fd3ee7686162
+                    type: tableDataCell
+                    parameters:
+                      value:
+                        type: text
+                        value: Chicago
+                    _overridability:
+                      hideLockedParameters: true
+                  - _id: 28a923e6-1d27-418f-8602-2604cd8ca65b
+                    type: tableDataCell
+                    parameters:
+                      value:
+                        type: text
+                        value: Accountant
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                displayName:
+                  type: text
+                  value: Robert Lee
+              _overridability:
+                hideLockedParameters: true
+            - _id: b5d814d9-3144-4580-9dda-adb586c8e4b7
+              type: tableRow
+              slots:
+                tableRowCells:
+                  - _id: 5eae9c0e-52ab-464d-bc9a-ec284feba326
+                    type: tableDataCell
+                    parameters:
+                      value:
+                        type: text
+                        value: Sarah Brown
+                    _overridability:
+                      hideLockedParameters: true
+                  - _id: e29c31cd-9890-425e-84c2-02f3c9e1614a
+                    type: tableDataCell
+                    parameters:
+                      value:
+                        type: text
+                        value: '36'
+                    _overridability:
+                      hideLockedParameters: true
+                  - _id: 5bd32246-ad78-4ebe-8114-e7225a88c56c
+                    type: tableDataCell
+                    parameters:
+                      value:
+                        type: text
+                        value: San Francisco
+                    _overridability:
+                      hideLockedParameters: true
+                  - _id: c0cd0c43-90d6-47d1-8112-9f885e69696d
+                    type: tableDataCell
+                    parameters:
+                      value:
+                        type: text
+                        value: Marketing Manager
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                displayName:
+                  type: text
+                  value: Sarah Brown
+              _overridability:
+                hideLockedParameters: true
+          tableHead:
+            - _id: 6de60cb5-5a2f-4ec8-8b52-a5ac47682935
+              type: tableRow
+              slots:
+                tableRowCells:
+                  - _id: b9bc07b8-7a67-4d94-a7b7-761e4e3fa0a4
+                    type: tableHeaderCell
+                    parameters:
+                      value:
+                        type: text
+                        value: Name
+                    _overridability:
+                      hideLockedParameters: true
+                  - _id: 3f309adc-a0fd-4975-a408-814891e8f111
+                    type: tableHeaderCell
+                    parameters:
+                      value:
+                        type: text
+                        value: Age
+                    _overridability:
+                      hideLockedParameters: true
+                  - _id: 4de01a7d-5440-4744-b7c9-dccd654d38a9
+                    type: tableHeaderCell
+                    parameters:
+                      value:
+                        type: text
+                        value: Location
+                    _overridability:
+                      hideLockedParameters: true
+                  - _id: 57d43562-4243-4408-8d41-b164f6b7f254
+                    type: tableHeaderCell
+                    parameters:
+                      value:
+                        type: text
+                        value: Occupation
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                displayName:
+                  type: text
+                  value: Header
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          size:
+            type: dex-token-selector-parameter
+            value: table-small
+          spacing:
+            type: dex-space-control-parameter
+            value: {}
+          displayName:
+            type: text
+            value: Table Default
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      link: 'yes'
+      enableComponentPreview: 'yes'
+    hideLockedParameters: true
+created: '2025-03-03T09:52:28.077422+00:00'
+modified: '2025-03-03T09:52:28.077422+00:00'
+pattern: true
+description: >-
+  This example is constructed utilizing the Hero component, which incorporates a
+  video as the media content. It encompasses text components for the eyebrow,
+  title, and description, as well as button component designated as primary
+  buttons.
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

@@ -1,0 +1,84 @@
+composition:
+  _name: Icon Label
+  _id: 1a00124f-dcd4-4bb4-be1c-719fe05473a4
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Icon Label
+    anchor:
+      type: text
+      value: icon-label
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    patternId:
+      type: text
+      value: 1a00124f-dcd4-4bb4-be1c-719fe05473a4
+    fluidContent:
+      type: checkbox
+      value: true
+    enableComponentPreview:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: b9030c1d-2969-4dbd-8d9e-c14a6d0f135a
+        type: iconLabel
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: span
+          icon:
+            type: asset
+            value:
+              - _id: b3a75871-2176-4f8d-a75e-a64fca48af44
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: bf9daf10-949d-4589-8726-0168d567e0d5
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/4Ac1zi8UQeOXsvDsKwotZQ/C_rMbDxPQhmYpXLy0gzsrA-arrow-right.svg
+                    type: text
+                  file:
+                    type: file
+                    value: 67169bfa-1ce4-4d17-a2c9-2dca1e2e1ba2
+                  size:
+                    value: 300
+                    type: number
+                  title:
+                    type: text
+                    value: arrow-right.svg
+                  width:
+                    value: 29
+                    type: number
+                  height:
+                    value: 29
+                    type: number
+                  mediaType:
+                    value: image/svg+xml
+                    type: text
+                _source: uniform-assets
+          text:
+            type: text
+            value: Private forum access
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      link: 'yes'
+      enableComponentPreview: 'yes'
+    hideLockedParameters: true
+created: '2025-03-03T09:52:28.083414+00:00'
+modified: '2025-03-03T09:52:28.083414+00:00'
+pattern: true
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

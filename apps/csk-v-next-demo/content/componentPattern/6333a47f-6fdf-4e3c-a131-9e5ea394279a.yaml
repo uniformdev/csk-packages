@@ -1,0 +1,151 @@
+composition:
+  _name: Tabs Bordered
+  _id: 6333a47f-6fdf-4e3c-a131-9e5ea394279a
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Tabs Bordered
+    anchor:
+      type: text
+      value: tabs-bordered
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    patternId:
+      type: text
+      value: 6333a47f-6fdf-4e3c-a131-9e5ea394279a
+    fluidContent:
+      type: checkbox
+      value: true
+    enableComponentPreview:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: d6f9ae6f-1e50-46da-b1a9-ccaa22ca9c88
+        type: tabs
+        slots:
+          tabItems:
+            - _id: dbe7a378-f6ed-4988-83e0-57639520e183
+              type: tab
+              slots:
+                tabContent:
+                  - _id: 8db87273-4ae5-473c-9d6f-45c0bd1d9501
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: p
+                      size:
+                        type: dex-segmented-control-parameter
+                        value:
+                          desktop: 2xl
+                      text:
+                        type: text
+                        value: Tab 1 Content
+                      color:
+                        type: dex-color-palette-parameter
+                        value: text-tertiary
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: medium
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                text:
+                  type: text
+                  value: Tab 1
+              _overridability:
+                hideLockedParameters: true
+            - _id: 5b95a6cb-47cc-4e70-897d-5930af100343
+              type: tab
+              slots:
+                tabContent:
+                  - _id: eb37279e-056a-4003-9c3c-6c4a70705d52
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: p
+                      size:
+                        type: dex-segmented-control-parameter
+                        value:
+                          desktop: 2xl
+                      text:
+                        type: text
+                        value: Tab 2 Content
+                      color:
+                        type: dex-color-palette-parameter
+                        value: text-tertiary
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: medium
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                text:
+                  type: text
+                  value: Tab 2
+              _overridability:
+                hideLockedParameters: true
+            - _id: a0cbc177-2272-45f5-a66c-390ee497ba02
+              type: tab
+              slots:
+                tabContent:
+                  - _id: 9fd50983-440d-45b0-bb7d-c5d19d9b3039
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: p
+                      size:
+                        type: dex-segmented-control-parameter
+                        value:
+                          desktop: 2xl
+                      text:
+                        type: text
+                        value: Tab 3 Content
+                      color:
+                        type: dex-color-palette-parameter
+                        value: text-tertiary
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: medium
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                text:
+                  type: text
+                  value: Tab 3
+              _overridability:
+                hideLockedParameters: true
+        variant: bordered
+        parameters:
+          color:
+            type: dex-color-palette-parameter
+            value: text-tertiary
+          spacing:
+            type: dex-space-control-parameter
+            value: {}
+          displayName:
+            type: text
+            value: Tabs Bordered
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      link: 'yes'
+      enableComponentPreview: 'yes'
+    hideLockedParameters: true
+created: '2025-03-03T09:52:29.360553+00:00'
+modified: '2025-03-03T10:49:58.944479+00:00'
+pattern: true
+categoryId: ae15b0f6-4953-4ccb-9984-ad0525e77b01

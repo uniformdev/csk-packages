@@ -1,0 +1,79 @@
+composition:
+  _name: Grid Item
+  _id: 996082b8-10d2-486a-ab27-c5b8bf3cd9b5
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Grid Item
+    anchor:
+      type: text
+      value: grid-item
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    patternId:
+      type: text
+      value: 996082b8-10d2-486a-ab27-c5b8bf3cd9b5
+    fluidContent:
+      type: checkbox
+      value: true
+    enableComponentPreview:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: 51fe9ad3-4c61-49fe-838e-bf0ad647b6c1
+        type: gridItem
+        slots:
+          inner:
+            - _id: a03dd9e6-3f66-4911-8ed0-dc937305a408
+              type: container
+              parameters:
+                spacing:
+                  type: dex-space-control-parameter
+                  value:
+                    paddingTop: container-small
+                    paddingBottom: container-small
+                displayName:
+                  type: text
+                  value: Container
+                fluidContent:
+                  type: checkbox
+                  value: true
+                backgroundColor:
+                  type: dex-color-palette-parameter
+                  value: general-color-2
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          rowStart:
+            type: dex-slider-control-parameter
+            value: '1'
+          columnSpan:
+            type: dex-slider-control-parameter
+            value: span-2
+          columnStart:
+            type: dex-slider-control-parameter
+            value: '1'
+          displayName:
+            type: text
+            value: First row with 2 columns
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      link: 'yes'
+      enableComponentPreview: 'yes'
+    hideLockedParameters: true
+created: '2025-03-03T09:52:30.130151+00:00'
+modified: '2025-03-03T09:52:30.130151+00:00'
+pattern: true
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

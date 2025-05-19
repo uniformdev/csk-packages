@@ -1,0 +1,75 @@
+composition:
+  _name: Video
+  _id: 8a4cee22-10f6-42ce-a75f-ea41d37e8ef1
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Video
+    anchor:
+      type: text
+      value: video
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    patternId:
+      type: text
+      value: 8a4cee22-10f6-42ce-a75f-ea41d37e8ef1
+    fluidContent:
+      type: checkbox
+      value: true
+    enableComponentPreview:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: 5199530e-6b47-46a9-862d-08ed2987250d
+        type: video
+        parameters:
+          muted:
+            type: checkbox
+            value: true
+          video:
+            type: asset
+            value:
+              - _id: cb472eda-fb0e-4529-9220-163dd7170b20
+                type: video
+                fields:
+                  url:
+                    type: text
+                    value: >-
+                      https://res.cloudinary.com/uniform-demos/video/upload/v1693387616/videos/pexels-cristian-rojas.mp4
+                _source: custom-url
+          controls:
+            type: checkbox
+            value: true
+          lazyLoad:
+            type: checkbox
+            value: true
+          placeholderImage:
+            type: asset
+            value:
+              - _id: de4638e3-68e2-43a8-87c2-15d651aae482
+                type: image
+                fields:
+                  url:
+                    type: text
+                    value: >-
+                      https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/shared-images/beans-heart.jpg
+                _source: custom-url
+  _overridability:
+    parameters:
+      link: 'yes'
+      enableComponentPreview: 'yes'
+    hideLockedParameters: true
+created: '2025-05-13T15:58:41.238692+00:00'
+modified: '2025-05-13T16:01:28.680025+00:00'
+pattern: true
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

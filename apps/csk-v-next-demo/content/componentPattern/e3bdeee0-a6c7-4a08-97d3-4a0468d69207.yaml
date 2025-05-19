@@ -1,0 +1,125 @@
+composition:
+  _name: Component Details Section Rich Text
+  _id: e3bdeee0-a6c7-4a08-97d3-4a0468d69207
+  type: container
+  parameters:
+    anchor:
+      type: text
+      value: '#section'
+    border:
+      type: dex-token-selector-parameter
+      value: border-details-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        mobile:
+          marginBottom: container-small
+          paddingBottom: container-small
+        tablet:
+          marginTop: ''
+          marginBottom: container-medium
+          paddingBottom: container-medium
+        desktop:
+          marginTop: ''
+          marginBottom: container-medium
+          paddingBottom: container-medium
+    displayName:
+      type: text
+      value: Section
+    fluidContent:
+      type: checkbox
+      value: true
+  slots:
+    containerContent:
+      - _id: 351a9c87-d2a1-4623-b595-9e50ed814502
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: h2
+          font:
+            type: dex-token-selector-parameter
+            value: outfit
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: 2xl
+              tablet: 2xl
+              desktop: 4xl
+          text:
+            type: text
+            value: Section
+          color:
+            type: dex-color-palette-parameter
+            value: text-primary
+          weight:
+            type: dex-segmented-control-parameter
+            value: bold
+        _overridability:
+          parameters:
+            text: 'yes'
+          hideLockedParameters: true
+      - _id: cc040a5e-c19d-44b2-95e1-7a0809394eac
+        type: spacer
+        parameters:
+          size:
+            type: dex-token-selector-parameter
+            value: spacer-small
+        _overridability:
+          hideLockedParameters: true
+      - _id: b689f11f-a5e9-49f1-b41b-27c7a53c0d94
+        type: richText
+        parameters:
+          font:
+            type: dex-token-selector-parameter
+            value: dm-sans
+          text:
+            type: richText
+            value:
+              root:
+                type: root
+                format: ''
+                indent: 0
+                version: 1
+                children:
+                  - type: paragraph
+                    format: ''
+                    indent: 0
+                    version: 1
+                    children:
+                      - mode: normal
+                        text: Some text
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                    direction: ltr
+                    textStyle: ''
+                    textFormat: 0
+                direction: ltr
+          color:
+            type: dex-color-palette-parameter
+            value: text-primary
+        _overridability:
+          parameters:
+            text: 'yes'
+          hideLockedParameters: true
+      - _id: b271ce4a-b8af-40cd-b332-def31028662b
+        type: $slotSection
+        parameters:
+          name:
+            type: text
+            value: Component
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      title: 'yes'
+      anchor: 'yes'
+      border: 'yes'
+      spacing: 'yes'
+      displayName: 'yes'
+created: '2025-01-29T11:28:33.57421+00:00'
+modified: '2025-02-24T19:32:21.066303+00:00'
+pattern: true

@@ -1,0 +1,92 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: demoCard
+name: Demo Card
+icon: rectangle-rounded
+parameters:
+  - id: title
+    name: Title
+    type: text
+    typeConfig: null
+  - id: previewImage
+    name: Preview Image
+    type: asset
+    typeConfig:
+      max: 1
+    localizable: true
+    allowConditionalValues: true
+  - id: anchor
+    name: Anchor
+    type: text
+    typeConfig: null
+  - id: link
+    name: Link
+    type: link
+    typeConfig:
+      linkTypes:
+        tel: false
+        url: false
+        email: false
+  - id: enableComponentPreview
+    name: Enable Component Preview
+    type: checkbox
+    helpText: >-
+      If enabled, this will display the Component Preview instead of the Image
+      Preview
+    typeConfig: null
+  - id: patternId
+    name: Pattern Id
+    type: text
+    typeConfig:
+      required: true
+  - id: 6a662907-6d4d-4928-877b-d1682e6c34cc
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - backgroundColor
+        - spacing
+        - border
+        - fluidContent
+        - fullHeight
+  - id: backgroundColor
+    name: Background Color
+    type: dex-color-palette-parameter
+    typeConfig: null
+  - id: spacing
+    name: Spacing
+    type: dex-space-control-parameter
+    typeConfig:
+      type: dimensions
+      defaultValue: {}
+      selectedGroup: container
+  - id: border
+    name: Border
+    type: dex-token-selector-parameter
+    typeConfig:
+      selectedTokenType: border
+  - id: fluidContent
+    name: Fluid Content
+    type: checkbox
+    typeConfig: null
+  - id: fullHeight
+    name: Full Height
+    type: checkbox
+    typeConfig: null
+categoryId: ed1006e3-2f3d-4a53-99a7-61ffdc0bc9c8
+useTeamPermissions: true
+slots:
+  - id: demoItem
+    name: Demo Item
+    maxComponents: 1
+    minComponents: 1
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: title
+thumbnailParameter: previewimage
+canBeComposition: false
+created: '2025-02-17T16:01:08.68522+00:00'
+updated: '2025-02-17T16:01:08.68522+00:00'

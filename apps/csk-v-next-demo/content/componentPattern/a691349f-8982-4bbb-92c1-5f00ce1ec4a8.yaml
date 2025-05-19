@@ -1,0 +1,277 @@
+composition:
+  _name: Accordion
+  _id: a691349f-8982-4bbb-92c1-5f00ce1ec4a8
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Accordion
+    anchor:
+      type: text
+      value: accordion
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    patternId:
+      type: text
+      value: a691349f-8982-4bbb-92c1-5f00ce1ec4a8
+    fluidContent:
+      type: checkbox
+      value: true
+    enableComponentPreview:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: 49e01d4e-f0a1-43d4-b907-5da9aca6dff0
+        type: accordion
+        slots:
+          accordionItems:
+            - _id: 1d782a74-15ba-41c0-b7d6-ebd26d5084ab
+              type: accordionItem
+              slots:
+                accordionItemContent:
+                  - _id: 30e48808-8801-4235-b531-687cfd7b378d
+                    type: container
+                    slots:
+                      containerContent:
+                        - _id: 9c2db841-94f9-4a6c-b07b-4879839535de
+                          type: text
+                          parameters:
+                            tag:
+                              type: dex-segmented-control-parameter
+                              value: span
+                            size:
+                              type: dex-segmented-control-parameter
+                              value:
+                                mobile: xl
+                                tablet: xl
+                                desktop: base
+                            text:
+                              type: text
+                              value: Some accordion item text
+                            color:
+                              type: dex-color-palette-parameter
+                              value: text-primary
+                            weight:
+                              type: dex-segmented-control-parameter
+                              value: normal
+                    parameters:
+                      spacing:
+                        type: dex-space-control-parameter
+                        value:
+                          marginTop: container-small
+                      fluidContent:
+                        type: checkbox
+                        value: true
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: span
+                text:
+                  type: text
+                  value: 'Accordion item #1 title'
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-secondary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+                spacing:
+                  type: dex-space-control-parameter
+                  value:
+                    paddingTop: container-small
+                    paddingLeft: container-small
+                    marginBottom: ''
+                    paddingRight: container-small
+                    paddingBottom: container-small
+                backgroundColor:
+                  type: dex-color-palette-parameter
+                  value: general-color-2
+            - _id: 839b74d0-10b3-4e76-9884-3cebc8bc45f0
+              type: accordionItem
+              slots:
+                accordionItemContent:
+                  - _id: 36878726-00b4-4827-a9b0-1cfff0456645
+                    type: container
+                    slots:
+                      containerContent:
+                        - _id: e9da1ba5-b861-4855-84e1-ffd162653e5f
+                          type: text
+                          parameters:
+                            tag:
+                              type: dex-segmented-control-parameter
+                              value: span
+                            size:
+                              type: dex-segmented-control-parameter
+                              value:
+                                mobile: xl
+                                tablet: xl
+                                desktop: base
+                            text:
+                              type: text
+                              value: Some accordion item text
+                            color:
+                              type: dex-color-palette-parameter
+                              value: text-primary
+                            weight:
+                              type: dex-segmented-control-parameter
+                              value: normal
+                    parameters:
+                      spacing:
+                        type: dex-space-control-parameter
+                        value:
+                          marginTop: container-small
+                      fluidContent:
+                        type: checkbox
+                        value: true
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: span
+                text:
+                  type: text
+                  value: 'Accordion item #2 title'
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-secondary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+                spacing:
+                  type: dex-space-control-parameter
+                  value:
+                    paddingTop: container-small
+                    paddingLeft: container-small
+                    marginBottom: ''
+                    paddingRight: container-small
+                    paddingBottom: container-small
+                backgroundColor:
+                  type: dex-color-palette-parameter
+                  value: general-color-2
+            - _id: 1c26c0c6-1980-4092-9621-8cdba512f7ea
+              type: accordionItem
+              slots:
+                accordionItemContent:
+                  - _id: f8122eea-d2a9-443b-92d2-96a902420f49
+                    type: container
+                    slots:
+                      containerContent:
+                        - _id: 3ae3a1f1-75f0-44e9-ad5a-e37a11471edd
+                          type: text
+                          parameters:
+                            tag:
+                              type: dex-segmented-control-parameter
+                              value: span
+                            size:
+                              type: dex-segmented-control-parameter
+                              value:
+                                mobile: xl
+                                tablet: xl
+                                desktop: base
+                            text:
+                              type: text
+                              value: Some accordion item text
+                            color:
+                              type: dex-color-palette-parameter
+                              value: text-primary
+                            weight:
+                              type: dex-segmented-control-parameter
+                              value: normal
+                    parameters:
+                      spacing:
+                        type: dex-space-control-parameter
+                        value:
+                          marginTop: container-small
+                      fluidContent:
+                        type: checkbox
+                        value: true
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: span
+                text:
+                  type: text
+                  value: 'Accordion item #3 title'
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-secondary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+                spacing:
+                  type: dex-space-control-parameter
+                  value:
+                    paddingTop: container-small
+                    paddingLeft: container-small
+                    marginBottom: ''
+                    paddingRight: container-small
+                    paddingBottom: container-small
+                backgroundColor:
+                  type: dex-color-palette-parameter
+                  value: general-color-2
+          accordionContent:
+            - _id: c2daaa71-6073-4640-8e2d-af5a2a0bb781
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: h2
+                size:
+                  type: dex-segmented-control-parameter
+                  value: 5xl
+                text:
+                  type: text
+                  value: Accordion title
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+            - _id: d7db3b05-6a98-4f44-9620-5ff7987349ef
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: span
+                size:
+                  type: dex-segmented-control-parameter
+                  value: base
+                text:
+                  type: text
+                  value: Some compelling text
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+        parameters:
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              marginTop: ''
+              marginBottom: ''
+          displayName:
+            type: text
+            value: Accordion
+          fluidContent:
+            type: checkbox
+            value: true
+  _overridability:
+    parameters:
+      link: 'yes'
+      enableComponentPreview: 'yes'
+    hideLockedParameters: true
+created: '2025-03-03T09:52:33.332655+00:00'
+modified: '2025-03-03T10:52:53.260591+00:00'
+pattern: true
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

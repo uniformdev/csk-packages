@@ -1,0 +1,155 @@
+composition:
+  _name: Header With Links
+  _id: 88a1aaac-18b3-46a3-bb04-ae0e40679f5f
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Header With Links
+    anchor:
+      type: text
+      value: header-with-links
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    patternId:
+      type: text
+      value: 88a1aaac-18b3-46a3-bb04-ae0e40679f5f
+    fluidContent:
+      type: checkbox
+      value: true
+    enableComponentPreview:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: 73449dcc-d266-4d51-9ffb-22efe3c5919c
+        type: header
+        slots:
+          headerLeftContent:
+            - _id: aa0ad524-3118-43be-8add-cb977996062b
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: span
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    desktop: lg
+                text:
+                  type: text
+                  value: Component Starter Kit
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: bold
+              _overridability:
+                hideLockedParameters: true
+          headerRightContent:
+            - _id: 5e0722ea-c280-44e6-92e8-b3765b39e1f8
+              type: button
+              parameters:
+                size:
+                  type: dex-token-selector-parameter
+                  value: button-small
+                text:
+                  type: text
+                  value: Join Us
+                textColor:
+                  type: dex-color-palette-parameter
+                  value: text-light
+                textWeight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+                buttonColor:
+                  type: dex-color-palette-parameter
+                  value: button-primary
+              _overridability:
+                hideLockedParameters: true
+          headerCenterContent:
+            - _id: fbba6fe1-f765-49cf-bc8a-92e609bb969a
+              type: navigationLink
+              parameters:
+                size:
+                  type: dex-segmented-control-parameter
+                  value: base
+                text:
+                  type: text
+                  value: All Components
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+              _overridability:
+                hideLockedParameters: true
+            - _id: 52126b8d-9c63-40ec-ab5f-71a18bf33f43
+              type: navigationLink
+              parameters:
+                size:
+                  type: dex-segmented-control-parameter
+                  value: base
+                text:
+                  type: text
+                  value: Containers
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+              _overridability:
+                hideLockedParameters: true
+            - _id: 8d390ac3-4a7e-4324-8fc4-08112ba38c47
+              type: navigationLink
+              parameters:
+                size:
+                  type: dex-segmented-control-parameter
+                  value: base
+                text:
+                  type: text
+                  value: Marketing
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              paddingTop: container-small
+              paddingLeft: container-small
+              paddingRight: container-small
+              paddingBottom: container-small
+          displayName:
+            type: text
+            value: Header With Links
+          backgroundColor:
+            type: dex-color-palette-parameter
+            value: general-color-1
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      link: 'yes'
+      enableComponentPreview: 'yes'
+    hideLockedParameters: true
+created: '2025-03-03T09:52:30.282215+00:00'
+modified: '2025-03-03T09:57:24.374067+00:00'
+pattern: true
+categoryId: b1163ce2-5ac7-4347-bc38-a42198180718

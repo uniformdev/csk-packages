@@ -1,0 +1,115 @@
+composition:
+  _name: Image Gallery
+  _id: babf6b52-44eb-4d3f-8838-0d4e1b21d4f4
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Image Gallery
+    anchor:
+      type: text
+      value: image-gallery
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    patternId:
+      type: text
+      value: babf6b52-44eb-4d3f-8838-0d4e1b21d4f4
+    fluidContent:
+      type: checkbox
+      value: true
+    enableComponentPreview:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: 82e2c5c0-cbf3-4048-8968-8359ce1c1178
+        type: imageGallery
+        parameters:
+          items:
+            type: asset
+            value:
+              - _id: ecca42a8-9b67-4068-b47d-12c3079d833c
+                type: image
+                fields:
+                  url:
+                    type: text
+                    value: >-
+                      https://res.cloudinary.com/uniform-demos/image/upload/v1729250713/csk-v-next/marketing-site/Image%20Gallery%20Asset.jpg
+                  title:
+                    type: text
+                    value: image gallery asset
+                _source: custom-url
+              - _id: be9b2f77-769e-4a6f-84fe-a724a3789100
+                type: image
+                fields:
+                  url:
+                    type: text
+                    value: >-
+                      https://res.cloudinary.com/uniform-demos/image/upload/v1729250713/csk-v-next/marketing-site/Image%20Gallery%20Asset.jpg
+                  title:
+                    type: text
+                    value: image gallery asset
+                _source: custom-url
+              - _id: af21ab14-1f4c-4100-a8f3-8b74867bfbbc
+                type: image
+                fields:
+                  url:
+                    type: text
+                    value: >-
+                      https://res.cloudinary.com/uniform-demos/image/upload/v1729250713/csk-v-next/marketing-site/Image%20Gallery%20Asset.jpg
+                  title:
+                    type: text
+                    value: image gallery asset
+                _source: custom-url
+              - _id: a8eecd52-0bef-4378-9229-0bc2f9cad64c
+                type: image
+                fields:
+                  url:
+                    type: text
+                    value: >-
+                      https://res.cloudinary.com/uniform-demos/image/upload/v1729250713/csk-v-next/marketing-site/Image%20Gallery%20Asset.jpg
+                  title:
+                    type: text
+                    value: image gallery asset
+                _source: custom-url
+              - _id: a91070af-b31e-4888-ac76-db8c0a03f4d5
+                type: image
+                fields:
+                  url:
+                    type: text
+                    value: >-
+                      https://res.cloudinary.com/uniform-demos/image/upload/v1729250713/csk-v-next/marketing-site/Image%20Gallery%20Asset.jpg
+                  title:
+                    type: text
+                    value: image gallery asset
+                _source: custom-url
+          aspectRatio:
+            type: dex-segmented-control-parameter
+            value: square
+          displayName:
+            type: text
+            value: Image Gallery
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      link: 'yes'
+      enableComponentPreview: 'yes'
+    hideLockedParameters: true
+created: '2025-03-03T09:52:32.135989+00:00'
+modified: '2025-03-03T10:46:32.145246+00:00'
+pattern: true
+description: >-
+  This example is constructed utilizing the Hero component, which incorporates a
+  video as the media content. It encompasses text components for the eyebrow,
+  title, and description, as well as button component designated as primary
+  buttons.
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9

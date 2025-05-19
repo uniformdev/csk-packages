@@ -1,0 +1,70 @@
+composition:
+  _name: Text
+  _id: d1ff4df1-0ada-4137-841d-353e5c7bb7cc
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Text
+    anchor:
+      type: text
+      value: text
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        marginTop: ''
+        paddingTop: container-small
+        paddingLeft: container-small
+        marginBottom: ''
+        paddingRight: container-small
+        paddingBottom: container-small
+    patternId:
+      type: text
+      value: d1ff4df1-0ada-4137-841d-353e5c7bb7cc
+    fluidContent:
+      type: checkbox
+      value: true
+    enableComponentPreview:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: 876970c1-f78b-48f3-ae53-5d77cb3248da
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: h1
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: 5xl
+              tablet: 5xl
+              desktop: 5xl
+          text:
+            type: text
+            value: Uniform’s Text Example
+          weight:
+            type: dex-segmented-control-parameter
+            value: normal
+        _overridability:
+          parameters:
+            tag: 'no'
+            $viz: 'no'
+            font: 'no'
+            size: 'no'
+            text: 'yes'
+            color: 'no'
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      link: 'yes'
+      enableComponentPreview: 'yes'
+    hideLockedParameters: true
+created: '2025-03-03T09:52:33.108771+00:00'
+modified: '2025-03-03T09:52:33.108771+00:00'
+pattern: true
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

@@ -1,0 +1,31 @@
+id: queryRecipeCategory
+displayName: Query Recipe Category
+ttl: 30
+path: /query
+custom:
+  proposedName: Query Recipe Category
+  allowedOrderBy:
+    - name_ASC
+  allowedContentTypes:
+    - recipeCategory
+method: GET
+purgeKey: 1babaaee-39e1-4145-9e69-38e1658a9654
+archetype: queryEntries
+variables:
+  limit:
+    type: text
+    default: '20'
+  offset:
+    type: text
+    default: '0'
+  filters:
+    type: text
+    default: '{}'
+  orderBy:
+    type: text
+    default: ''
+  contentTypes:
+    type: text
+    default: ''
+dataSourceId: uniformContent
+allowedOnComponents: []

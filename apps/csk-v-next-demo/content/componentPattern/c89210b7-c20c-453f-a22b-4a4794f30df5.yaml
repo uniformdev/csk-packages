@@ -1,0 +1,43 @@
+composition:
+  _name: Feature item
+  _id: c89210b7-c20c-453f-a22b-4a4794f30df5
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Feature item
+    anchor:
+      type: text
+      value: feature-item
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    patternId:
+      type: text
+      value: c89210b7-c20c-453f-a22b-4a4794f30df5
+    fluidContent:
+      type: checkbox
+      value: true
+    enableComponentPreview:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: 6c5f8752-6983-4555-a7e6-e60c6dc8ed3a
+        type: flex
+        _pattern: 0315f542-1052-4ba4-829d-f0949328f8a2
+  _overridability:
+    parameters:
+      link: 'yes'
+      enableComponentPreview: 'yes'
+    hideLockedParameters: true
+created: '2025-02-17T16:01:16.44641+00:00'
+modified: '2025-02-17T16:01:16.44641+00:00'
+pattern: true

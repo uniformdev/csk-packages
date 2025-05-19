@@ -1,0 +1,91 @@
+composition:
+  _name: Banner Floating bottom
+  _id: 38b61ec8-f582-42c7-a212-fda3ed6cef5d
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Banner Floating bottom
+    anchor:
+      type: text
+      value: banner-floating-bottom
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        marginTop: ''
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    patternId:
+      type: text
+      value: 38b61ec8-f582-42c7-a212-fda3ed6cef5d
+    fluidContent:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: 28ef2bdb-9df6-4884-b291-9f741b96b64d
+        type: banner
+        slots:
+          bannerContent:
+            - _id: 6553d810-4889-4a28-9ac4-4cd97e7c654b
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: span
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    desktop: lg
+                text:
+                  type: text
+                  value: Welcome to our website!
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: medium
+              _overridability:
+                hideLockedParameters: true
+        variant: bottom
+        parameters:
+          border:
+            type: dex-token-selector-parameter
+            value: ''
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              paddingTop: container-small
+              paddingBottom: container-small
+          floating:
+            type: checkbox
+            value: true
+          iconColor:
+            type: dex-color-palette-parameter
+            value: general-color-2
+          displayName:
+            type: text
+            value: Banner Floating bottom
+          backgroundColor:
+            type: dex-color-palette-parameter
+            value: general-color-6
+          contentAlignment:
+            type: dex-segmented-control-parameter
+            value: center
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      link: 'yes'
+      enableComponentPreview: 'yes'
+    hideLockedParameters: true
+created: '2025-03-03T09:52:28.175566+00:00'
+modified: '2025-03-03T09:52:28.175566+00:00'
+pattern: true
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9

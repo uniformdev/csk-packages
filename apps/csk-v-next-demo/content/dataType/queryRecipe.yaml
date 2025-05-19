@@ -1,0 +1,31 @@
+id: queryRecipe
+displayName: Query Recipe
+ttl: 30
+path: /query
+custom:
+  proposedName: Query Recipe
+  allowedOrderBy:
+    - created_at_DESC
+  allowedContentTypes:
+    - recipe
+method: GET
+purgeKey: 43b0b2e0-dddb-4fed-9dd9-39461eea3177
+archetype: queryEntries
+variables:
+  limit:
+    type: text
+    default: '20'
+  offset:
+    type: text
+    default: '0'
+  filters:
+    type: text
+    default: '{}'
+  orderBy:
+    type: text
+    default: ''
+  contentTypes:
+    type: text
+    default: ''
+dataSourceId: uniformContent
+allowedOnComponents: []
