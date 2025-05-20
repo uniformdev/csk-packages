@@ -1,11 +1,11 @@
 /** @type {import('ts-jest').JestConfigWithTsJest} **/
 module.exports = {
-  testEnvironment: "node",
+  testEnvironment: 'node',
   transform: {
-    "^.+.tsx?$": ["ts-jest",{}],
+    '^.+.tsx?$': ['ts-jest', {}],
   },
   testMatch: [
-    "**/*.test.ts",  // Match .test.ts files
-    "**/*.test.tsx", // Match .test.tsx files
+    '**/*.test.ts', // Match .test.ts files
+    '**/*.test.tsx', // Match .test.tsx files
   ],
 };

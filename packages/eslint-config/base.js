@@ -1,16 +1,12 @@
 import js from '@eslint/js';
 import eslintConfigPrettier from 'eslint-config-prettier';
-import tailwind from "eslint-plugin-tailwindcss";
+import tailwind from 'eslint-plugin-tailwindcss';
 import prettierPlugin from 'eslint-plugin-prettier';
 import turboPlugin from 'eslint-plugin-turbo';
 import tseslint from 'typescript-eslint';
 import importPlugin from 'eslint-plugin-import';
 import path from 'path';
-/**
- * A shared ESLint configuration for the repository.
- *
- * @type {import("eslint").Linter.Config}
- * */
+
 const project = path.resolve(process.cwd(), 'tsconfig.json');
 
 export const config = [
@@ -20,17 +16,13 @@ export const config = [
   ...tailwind.configs['flat/recommended'],
   importPlugin.flatConfigs.recommended,
   {
-    plugins: {
-      turbo: turboPlugin,
-    },
+    plugins: { turbo: turboPlugin },
     rules: {
       'turbo/no-undeclared-env-vars': 'off',
     },
   },
   {
-    plugins: {
-      prettier: prettierPlugin,
-    },
+    plugins: { prettier: prettierPlugin },
     rules: {
       'prettier/prettier': 'error',
     },
@@ -38,9 +30,7 @@ export const config = [
   {
     settings: {
       'import/resolver': {
-        typescript: {
-          project,
-        },
+        typescript: { project },
       },
     },
     rules: {
@@ -51,42 +41,55 @@ export const config = [
         {
           groups: [['builtin', 'external'], 'internal', ['parent', 'sibling', 'index']],
           pathGroups: [
-            {
-              pattern: '@uniformdev/**',
-              group: 'internal',
-              position: 'before',
-            },
-            {
-              pattern: '@**/**',
-              group: 'internal',
-              position: 'before',
-            },
-            {
-              pattern: 'react',
-              group: 'builtin',
-              position: 'before',
-            },
-            {
-              pattern: 'next',
-              group: 'builtin',
-              position: 'before',
-            },
-            {
-              pattern: 'next**/**',
-              group: 'builtin',
-              position: 'before',
-            },
+            { pattern: '@uniformdev/**', group: 'internal', position: 'before' },
+            { pattern: '@**/**', group: 'internal', position: 'before' },
+            { pattern: 'react', group: 'builtin', position: 'before' },
+            { pattern: 'next', group: 'builtin', position: 'before' },
+            { pattern: 'next**/**', group: 'builtin', position: 'before' },
           ],
           pathGroupsExcludedImportTypes: ['builtin'],
-          alphabetize: {
-            order: 'asc',
-            caseInsensitive: true,
-          },
+          alphabetize: { order: 'asc', caseInsensitive: true },
         },
       ],
     },
   },
   {
-    ignores: ['dist/**'],
+    ignores: ['dist/**', 'node_modules/**', 'next/**', 'storybook-static/**'],
+  },
+  {
+    files: ['**/*.{ts,tsx,js,jsx}'],
+    languageOptions: {
+      parser: tseslint.parser,
+      parserOptions: {
+        project,
+      },
+    },
+  },
+  {
+    files: ['**/*.{js,cjs,mjs}'],
+    languageOptions: {
+      globals: {
+        module: 'writable',
+        require: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        process: 'readonly',
+      },
+    },
+  },
+  {
+    files: [
+      '**/tsup.config.ts',
+      '**/jest.config.js',
+      '**/cli.js',
+      '**/.storybook/**/*.{js,ts}',
+      '**/uniform.server.config.js',
+    ],
+    languageOptions: {
+      parser: tseslint.parser,
+      parserOptions: {
+        project: false,
+      },
+    },
   },
 ];

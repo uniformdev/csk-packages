@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "storybook dev -p 6006",
     "build": "storybook build",
-    "lint": "eslint \"src/**/*.{js,ts,tsx}\"",
-    "lint:fix": "eslint \"src/**/*.{js,ts,tsx}\" --fix",
-    "format": "prettier --write \"src/**/*.{js,ts,tsx}\""
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "eslint . --fix --rule \"prettier/prettier: error\""
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.3",

@@ -17,7 +17,7 @@
     "next:build": "next build",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "format": "prettier --write .",
     "init": "run-s uniform:push uniform:publish",
     "component:extract": "csk-components extract",
     "component:scaffold": "csk-cli scaffold",

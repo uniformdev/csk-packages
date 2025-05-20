@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* eslint-disable no-undef */
+
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 require('dotenv').config();
 

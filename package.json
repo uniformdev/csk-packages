@@ -8,7 +8,7 @@
     "build:apps": "turbo run build --filter=./apps/*",
     "lint": "turbo lint",
     "lint:fix": "turbo lint:fix",
-    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,md}\"",
+    "format": "turbo format",
     "workspace:check": "manypkg check",
     "workspace:fix": "manypkg fix",
     "prepare": "husky",

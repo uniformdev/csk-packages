@@ -31,6 +31,12 @@
       "dependsOn": [
         "^check-types"
       ]
+    },
+    "format": {
+      "cache": false,
+      "dependsOn": [
+        "^format"
+      ]
     }
   },
   "globalEnv": [
