@@ -5,7 +5,7 @@ import { UniformText } from '@uniformdev/canvas-next-rsc/component';
 import BaseIconLabel from '@/components/ui/IconLabel';
 import BaseImage from '@/components/ui/Image';
 import { resolveAsset } from '@/utils/assets';
-import { cn } from '@/utils/styling';
+import { cn, resolveViewPort } from '@/utils/styling';
 import { NavigationGroupProps } from '.';
 import { NavigationGroupDesktopContent } from './desktop';
 import { NavigationGroupMobileContent } from './mobile';
@@ -28,6 +28,7 @@ export const NavigationGroup: FC<NavigationGroupProps> = ({
   component,
   context,
   slots,
+  hoverEffect = '',
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -45,6 +46,9 @@ export const NavigationGroup: FC<NavigationGroupProps> = ({
       <button onMouseEnter={openFlyout} onClick={openFlyout} className={getButtonClasses({ color })}>
         <BaseIconLabel
           icon={url && <BaseImage src={url} alt={title} fill />}
+          textClassName={cn('transition-all duration-150', {
+            [resolveViewPort(hoverEffect, 'hover:{value}')]: !!hoverEffect,
+          })}
           {...{ size, tag, color, weight, font, transform, decoration, letterSpacing, alignment }}
         >
           <UniformText placeholder="Text goes here" parameterId="text" component={component} context={context} />
