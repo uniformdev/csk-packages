@@ -12,7 +12,7 @@ const Flex: FC<FlexProps> = ({ fitHeight, ...props }) => (
       'h-full': fitHeight,
     })}
     wrapperClassName={cn({
-      'h-full': fitHeight,
+      'h-full [&>div]:h-full': fitHeight,
     })}
     {...props}
   />
