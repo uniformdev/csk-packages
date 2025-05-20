@@ -20,7 +20,7 @@ const syncPattern = syncPatterns[process.argv[4]] || generalPattern;
   }
   console.info(`Synchronizing ${itemsName} with basic ${itemsName} from the Component Starter Kit\n`);
   const currentDir = path.resolve();
-  const pathToBaseItems = path.join(currentDir, '..', 'csk-v-next', 'content', itemsName);
+  const pathToBaseItems = path.join(currentDir, '..', 'csk', 'content', itemsName);
   const pathToAdditionalItems = path.join(currentDir, ...additionalItemsPath.split('/').slice(1));
   const additionalItemsNames = (await fs.promises.readdir(pathToAdditionalItems, { withFileTypes: true }))
     .filter(node => node.isFile())

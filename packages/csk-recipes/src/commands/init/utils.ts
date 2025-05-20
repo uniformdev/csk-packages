@@ -330,7 +330,7 @@ export const getExternalBranchName = (template: string, recipes: Recipe[], dev: 
  */
 export const alignWithExternalBranch = async (branchName: string): Promise<void> => {
   const pathToClonedRepo = path.join(process.cwd(), 'csk-packages');
-  const appPath = path.join(pathToClonedRepo, 'apps', 'csk-v-next');
+  const appPath = path.join(pathToClonedRepo, 'apps', 'csk');
 
   if (fsSync.existsSync(pathToClonedRepo)) {
     fsSync.rmSync(pathToClonedRepo, { recursive: true, force: true });
