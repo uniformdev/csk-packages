@@ -32,9 +32,11 @@
         "^check-types"
       ]
     },
-    "dev": {
+    "format": {
       "cache": false,
-      "persistent": true
+      "dependsOn": [
+        "^format"
+      ]
     }
   },
   "globalEnv": [

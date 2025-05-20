@@ -6,7 +6,7 @@ const config: CLIConfiguration = {
       category: {},
       component: {},
     },
-    directory: './../csk-v-next/content',
+    directory: './../csk/content',
     format: 'yaml',
   },
 };

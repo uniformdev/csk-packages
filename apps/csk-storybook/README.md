@@ -14,24 +14,27 @@
 ### Prerequisites
 
 Ensure you have the following installed on your system:
+
 - [Node.js](https://nodejs.org/) (version 14 or later)
 - [npm](https://www.npmjs.com/)
 
 ### Installation
 
 1. Install dependencies:
+
    ```bash
    npm install
    ```
 
 2. Run Storybook:
+
    ```bash
    npm run dev
    ```
+
    This will launch Storybook in your default browser, typically at http://localhost:6006.
 
 3. Explore Components:
    - Navigate through the various components in the sidebar.
    - Click on a component to view its documentation, props, and usage examples.
    - Interact with the component in the interactive playground to see real-time changes.
-

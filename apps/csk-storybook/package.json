@@ -1,14 +1,14 @@
 {
-  "name": "csk-v-next-storybook",
-  "version": "6.0.53",
+  "name": "@uniformdev/csk-storybook",
+  "version": "6.0.54",
   "description": "CSK vNext Storybook is an interactive Storybook build showcasing components from the CSK vNext component starter kit. It provides detailed documentation, live previews, and testing capabilities for easy integration into your projects.",
   "main": "index.js",
   "scripts": {
     "dev": "storybook dev -p 6006",
     "build": "storybook build",
-    "lint": "eslint \"src/**/*.{js,ts,tsx}\"",
-    "lint:fix": "eslint \"src/**/*.{js,ts,tsx}\" --fix",
-    "format": "prettier --write \"src/**/*.{js,ts,tsx}\""
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "eslint . --fix --rule \"prettier/prettier: error\""
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.3",
