@@ -1,0 +1,139 @@
+name: Full CI – Validate, Lint, Build, Extract
+
+on:
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  validate-repo:
+    name: 🔎 Validate Repository
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🛎 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🧰 Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: 💾 Cache node_modules
+        uses: actions/cache@v3
+        with:
+          path: |
+            node_modules
+            apps/*/node_modules
+            packages/*/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: 📦 Install dependencies
+        run: npm install
+
+      - name: 🔍 Check workspace integrity
+        run: |
+          echo "Checking workspace structure with manypkg..."
+          npm run workspace:check
+
+  build-and-lint:
+    name: 🛠️ Build Packages & Lint All
+    runs-on: ubuntu-latest
+    needs: validate-repo
+
+    steps:
+      - name: 🛎 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🧰 Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: 💾 Cache node_modules
+        uses: actions/cache@v3
+        with:
+          path: |
+            node_modules
+            apps/*/node_modules
+            packages/*/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: 📦 Install dependencies
+        run: npm install
+
+      - name: 🏗️ Build all packages
+        run: |
+          echo "Building all packages..."
+          npm run build:packages
+
+      - name: 🧹 Lint all packages and apps
+        run: |
+          echo "Running full monorepo lint..."
+          npm run lint
+
+      - name: 📤 Archive dist folders
+        if: success()
+        run: |
+          echo "Archiving all dist folders from packages/*..."
+          tar -czf build-packages.tar.gz packages/*/dist
+
+      - name: 🚚 Upload dist archive as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-packages
+          path: build-packages.tar.gz
+
+  extract-and-lint:
+    name: 🧪 Extract Components & Lint
+    runs-on: ubuntu-latest
+    needs: build-and-lint
+
+    steps:
+      - name: 🛎 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🧰 Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: 💾 Cache node_modules
+        uses: actions/cache@v3
+        with:
+          path: |
+            node_modules
+            apps/*/node_modules
+            packages/*/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: 📦 Install dependencies
+        run: npm install
+
+      - name: 📥 Download dist archive
+        uses: actions/download-artifact@v4
+        with:
+          name: build-packages
+          path: .
+
+      - name: ♻️ Extract dist folders into packages/*
+        run: |
+          echo "Extracting dist folders into packages..."
+          tar -xzf build-packages.tar.gz
+
+      - name: 🧪 Run component:extract in apps/csk
+        working-directory: apps/csk
+        run: |
+          echo "Running extract with simulated input..."
+          echo "a" | npm run component:extract
+
+      - name: 🧹 Lint apps/csk after extract
+        working-directory: apps/csk
+        run: |
+          echo "Linting apps/csk after component extraction..."
+          npm run lint
