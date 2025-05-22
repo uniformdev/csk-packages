@@ -31,36 +31,7 @@ composition:
         parameters:
           image:
             type: asset
-            value:
-              - _id: 3f6fa97d-9fb9-436e-a03b-27df23b8f03d
-                type: image
-                fields:
-                  id:
-                    type: text
-                    value: 0aafe2e9-468c-43e1-81f3-fda6c02388e7
-                  url:
-                    value: >-
-                      https://img.uniform.global/p/h7VVOiFOSWyx2snFx06-Sw/xBYy0MwzRHqiYe2NXV3tgg-man.png
-                    type: text
-                  file:
-                    type: file
-                    value: 5bb4fe79-4e64-4b7c-9c5b-350cd801296b
-                  size:
-                    value: 1251800
-                    type: number
-                  title:
-                    type: text
-                    value: man.png
-                  width:
-                    value: 1059
-                    type: number
-                  height:
-                    value: 1059
-                    type: number
-                  mediaType:
-                    value: image/png
-                    type: text
-                _source: uniform-assets
+            value: []
           border:
             type: dex-token-selector-parameter
             value: border-image-radius-small
