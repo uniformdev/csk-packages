@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: entryPreview
 name: Entry Preview
@@ -129,6 +129,7 @@ parameters:
     type: asset
     typeConfig:
       max: 1
+categoryId: c7a1d1d9-cc3f-431c-b55e-6c4af1285108
 useTeamPermissions: true
 slots:
   - id: pageContent
@@ -140,5 +141,5 @@ slots:
 titleParameter: pageTitle
 thumbnailParameter: openGraphImage
 canBeComposition: true
-created: '2025-04-25T12:20:37.805805+00:00'
-updated: '2025-04-28T07:48:41.461637+00:00'
+created: '2025-05-20T11:53:37.265058+00:00'
+updated: '2025-05-22T10:52:39.124678+00:00'

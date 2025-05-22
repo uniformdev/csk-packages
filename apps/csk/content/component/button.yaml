@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: button
 name: Button
@@ -38,6 +38,7 @@ parameters:
         - button-tertiary
         - button-secondary-hover
         - button-tertiary-hover
+        - button-featured
       selectedGroup: button
   - id: textColor
     name: Text Color
@@ -202,8 +203,8 @@ slots: []
 titleParameter: text
 thumbnailParameter: icon
 canBeComposition: false
-created: '2025-04-24T11:34:15.335409+00:00'
-updated: '2025-04-24T11:34:15.335409+00:00'
+created: '2025-02-27T10:44:57.143358+00:00'
+updated: '2025-05-22T09:09:57.045135+00:00'
 variants:
   - id: link
     name: Link

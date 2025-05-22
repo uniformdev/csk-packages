@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: favorites
 name: Favorites
@@ -33,6 +33,7 @@ parameters:
     typeConfig:
       allowColors: []
       selectedGroup: text
+categoryId: adaebea8-ba58-494b-9c3b-9f82906d9415
 useTeamPermissions: true
 slots:
   - id: emptyFavoritesContent
@@ -43,5 +44,5 @@ slots:
     patternsInAllowedComponents: false
 thumbnailParameter: addToFavoritesIcon
 canBeComposition: false
-created: '2025-04-24T11:34:21.60051+00:00'
-updated: '2025-04-24T11:34:21.60051+00:00'
+created: '2025-05-20T11:53:37.301048+00:00'
+updated: '2025-05-22T11:36:05.54271+00:00'

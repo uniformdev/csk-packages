@@ -53,8 +53,12 @@ composition:
                         value: bold
                     _overridability:
                       parameters:
+                        font: 'no'
+                        size: 'no'
                         text: 'yes'
                         color: 'yes'
+                        weight: 'no'
+                        transform: 'no'
                       hideLockedParameters: true
                   - _id: fc644242-f84a-4d35-a66c-225eb7000322
                     type: text
@@ -78,6 +82,8 @@ composition:
                         type: dex-segmented-control-parameter
                         value: normal
                     _overridability:
+                      parameters:
+                        text: 'yes'
                       hideLockedParameters: true
               parameters:
                 gap:
@@ -230,16 +236,6 @@ composition:
             en: >-
               ${#jptr:/Product List Content entries Loop
               Item/entry/fields/name/value}
-    de29e5e9-943f-4d09-9c37-537f97594d72:
-      parameters:
-        displayName:
-          type: text
-          value: >-
-            ${#jptr:/Product List Content entries Loop
-            Item/entry/fields/name/value}
-        fluidContent:
-          type: checkbox
-          value: true
     5c78437e-dd37-42dc-a025-f332aa49f0b8|1af937fb-40ae-4938-b1a8-110b8ff73fc4:
       parameters:
         displayName:
@@ -247,33 +243,6 @@ composition:
           value: >-
             ${#jptr:/Product List Content entries Loop
             Item/entry/fields/name/value}
-    de29e5e9-943f-4d09-9c37-537f97594d72|0952417a-061c-4634-91df-1341269e4054:
-      parameters:
-        image:
-          type: asset
-          value: >-
-            ${#jptr:/Product List Content entries Loop
-            Item/entry/fields/primaryImage/value}
-    de29e5e9-943f-4d09-9c37-537f97594d72|8bad3ddd-add0-43d3-a314-5836bf0c7a93:
-      parameters:
-        text:
-          type: text
-          value: >-
-            ${#jptr:/Product List Content entries Loop
-            Item/entry/fields/variants/value/0/fields/price/value} $
-        color:
-          type: dex-color-palette-parameter
-          value: text-secondary
-    de29e5e9-943f-4d09-9c37-537f97594d72|988f7805-9e0e-4b30-acaf-f97d7dd5099f:
-      parameters:
-        text:
-          type: text
-          value: >-
-            ${#jptr:/Product List Content entries Loop
-            Item/entry/fields/title/value}
-        color:
-          type: dex-color-palette-parameter
-          value: text-secondary
     5c78437e-dd37-42dc-a025-f332aa49f0b8|1af937fb-40ae-4938-b1a8-110b8ff73fc4|0952417a-061c-4634-91df-1341269e4054:
       parameters:
         image:
@@ -314,8 +283,9 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
-created: '2025-01-29T11:09:26.536711+00:00'
-modified: '2025-04-29T09:40:32.948735+00:00'
+created: '2025-03-18T13:02:27.310877+00:00'
+modified: '2025-05-22T11:04:26.443351+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/jd-template/primary-product-list.jpg
+categoryId: adaebea8-ba58-494b-9c3b-9f82906d9415

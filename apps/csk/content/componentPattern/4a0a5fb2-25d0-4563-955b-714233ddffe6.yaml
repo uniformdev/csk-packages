@@ -230,16 +230,6 @@ composition:
             en: >-
               ${#jptr:/Product List Content entries Loop
               Item/entry/fields/name/value}
-    494415ec-60ab-4fd1-bcaf-9c50ba938f66:
-      parameters:
-        displayName:
-          type: text
-          value: >-
-            ${#jptr:/Product List Content entries Loop
-            Item/entry/fields/name/value}
-        fluidContent:
-          type: checkbox
-          value: true
     448086b7-a7de-47c1-a1bc-f11bf5581647|1af937fb-40ae-4938-b1a8-110b8ff73fc4:
       parameters:
         displayName:
@@ -247,33 +237,6 @@ composition:
           value: >-
             ${#jptr:/Product List Content entries Loop
             Item/entry/fields/name/value}
-    494415ec-60ab-4fd1-bcaf-9c50ba938f66|0952417a-061c-4634-91df-1341269e4054:
-      parameters:
-        image:
-          type: asset
-          value: >-
-            ${#jptr:/Product List Content entries Loop
-            Item/entry/fields/primaryImage/value}
-    494415ec-60ab-4fd1-bcaf-9c50ba938f66|41f41812-74a8-48f1-9e2a-920dfff8ea04:
-      parameters:
-        productSlug:
-          type: text
-          locales:
-            en: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
-    494415ec-60ab-4fd1-bcaf-9c50ba938f66|8bad3ddd-add0-43d3-a314-5836bf0c7a93:
-      parameters:
-        text:
-          type: text
-          value: >-
-            ${#jptr:/Product List Content entries Loop
-            Item/entry/fields/variants/value/0/fields/price/value} $
-    494415ec-60ab-4fd1-bcaf-9c50ba938f66|988f7805-9e0e-4b30-acaf-f97d7dd5099f:
-      parameters:
-        text:
-          type: text
-          value: >-
-            ${#jptr:/Product List Content entries Loop
-            Item/entry/fields/title/value}
     448086b7-a7de-47c1-a1bc-f11bf5581647|1af937fb-40ae-4938-b1a8-110b8ff73fc4|0952417a-061c-4634-91df-1341269e4054:
       parameters:
         image:
@@ -308,8 +271,9 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
-created: '2025-01-29T11:09:26.563695+00:00'
-modified: '2025-04-29T09:39:09.565968+00:00'
+created: '2025-03-18T13:02:28.476827+00:00'
+modified: '2025-05-22T11:24:01.92878+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1731065902/csk-v-next/jd-template/secondary-product-list.jpg
+categoryId: adaebea8-ba58-494b-9c3b-9f82906d9415

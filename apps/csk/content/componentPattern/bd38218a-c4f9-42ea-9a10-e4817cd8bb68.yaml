@@ -1,8 +1,11 @@
 composition:
-  _name: Global Footer
-  _id: 68136a90-0d34-4dbb-a34e-6e324179998a
+  _name: Featured Footer
+  _id: bd38218a-c4f9-42ea-9a10-e4817cd8bb68
   type: footer
   parameters:
+    border:
+      type: dex-token-selector-parameter
+      value: border-footer
     spacing:
       type: dex-space-control-parameter
       value:
@@ -417,7 +420,7 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
-created: '2025-02-27T10:45:02.190483+00:00'
-modified: '2025-05-22T08:18:52.010743+00:00'
+created: '2025-05-22T08:19:31.913565+00:00'
+modified: '2025-05-22T08:20:59.518259+00:00'
 pattern: true
 categoryId: b1163ce2-5ac7-4347-bc38-a42198180718

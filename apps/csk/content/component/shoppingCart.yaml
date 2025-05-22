@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: shoppingCart
 name: Shopping Cart
@@ -24,6 +24,7 @@ parameters:
     typeConfig:
       allowColors: []
       selectedGroup: text
+categoryId: adaebea8-ba58-494b-9c3b-9f82906d9415
 useTeamPermissions: true
 slots:
   - id: emptyCartContent
@@ -42,5 +43,5 @@ slots:
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
 canBeComposition: false
-created: '2025-04-24T11:34:33.25939+00:00'
-updated: '2025-04-24T11:34:33.25939+00:00'
+created: '2025-05-20T11:53:39.012298+00:00'
+updated: '2025-05-22T11:27:03.48709+00:00'

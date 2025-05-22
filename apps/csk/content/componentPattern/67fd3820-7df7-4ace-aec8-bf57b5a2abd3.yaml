@@ -3,6 +3,12 @@ composition:
   _id: 67fd3820-7df7-4ace-aec8-bf57b5a2abd3
   type: container
   parameters:
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        mobile: {}
+        tablet: {}
+        desktop: {}
     displayName:
       type: text
       value: 'Purchase History '
@@ -196,8 +202,9 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
-created: '2025-01-29T11:09:29.780275+00:00'
-modified: '2025-05-16T07:12:15.880549+00:00'
+created: '2025-03-18T13:02:29.47449+00:00'
+modified: '2025-05-22T11:20:06.463899+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/jd-template/purchase-history-container.jpg
+categoryId: adaebea8-ba58-494b-9c3b-9f82906d9415

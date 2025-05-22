@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: readMore
 name: Read More
@@ -46,6 +46,7 @@ parameters:
     name: Color To
     type: dex-color-palette-parameter
     typeConfig: null
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
 useTeamPermissions: true
 slots:
   - id: content
@@ -56,5 +57,5 @@ slots:
     patternsInAllowedComponents: false
 titleParameter: readMoreLabel
 canBeComposition: false
-created: '2025-01-29T11:09:18.419548+00:00'
-updated: '2025-01-29T11:09:18.419548+00:00'
+created: '2025-03-18T13:02:24.224432+00:00'
+updated: '2025-05-22T11:22:55.829448+00:00'
