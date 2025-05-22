@@ -1,0 +1,270 @@
+composition:
+  _name: Articles Quick Picks
+  _id: 90cf0a21-78be-4cc6-b460-acb78b5c1f31
+  type: grid
+  parameters:
+    gapX:
+      type: dex-slider-control-parameter
+      value:
+        mobile: '4'
+        tablet: '8'
+        desktop: '16'
+    gapY:
+      type: dex-slider-control-parameter
+      value:
+        mobile: '8'
+        tablet: '8'
+        desktop: '16'
+    displayName:
+      type: text
+      value: Quick View Articles
+    columnsCount:
+      type: dex-slider-control-parameter
+      value:
+        mobile: '1'
+        tablet: '2'
+        desktop: '2'
+    fluidContent:
+      type: checkbox
+      value: true
+  slots:
+    gridInner:
+      - _id: 5ef7100b-a07b-4fa3-aa0f-9434cca6d96a
+        type: $loop
+        slots:
+          body:
+            - _id: cde73dfb-c7ea-43fe-8683-b6b4960d53ae
+              type: flexCard
+              _pattern: c895d189-c093-4ee8-aeef-5cdccd7efd2e
+        _dataResources:
+          Multiple Article Content entries Loop Item:
+            type: sys-reserved-loop
+            variables:
+              connectedData: '#jptr:/Multiple Article Content/entries:fa=c'
+        _overridability:
+          hideLockedParameters: true
+  _dataResources:
+    Multiple Article Content:
+      type: multipleArticle
+      variables:
+        locale: ${locale}
+        entryIds: >-
+          636c462b-e507-4176-b366-cb8ac7cb78e0,efacf921-a799-41af-92d3-ebf92833565c,20617d81-0fa4-4223-91d6-0249a29f584d,5a050b78-7beb-4792-ba16-ef873018e4f0
+      isPatternParameter: true
+      ignorePatternParameterDefault: false
+  _overrides:
+    cde73dfb-c7ea-43fe-8683-b6b4960d53ae:
+      parameters:
+        displayName:
+          type: text
+          value: >-
+            ${#jptr:/Multiple Article Content entries Loop
+            Item/entry/fields/title/value}
+    cde73dfb-c7ea-43fe-8683-b6b4960d53ae|4a7ce726-321d-4e77-ac0e-a11e42946127:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: >-
+                /${locale}/articles/${#jptr:/Multiple Article Content entries
+                Loop Item/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: >-
+                  ${#jptr:/Multiple Article Content entries Loop
+                  Item/entry/_slug}
+    cde73dfb-c7ea-43fe-8683-b6b4960d53ae|78f51974-be44-4ed8-b379-47237f91d7e3:
+      parameters:
+        text:
+          type: text
+          value: >-
+            ${#jptr:/Multiple Article Content entries Loop
+            Item/entry/fields/title/value}
+    cde73dfb-c7ea-43fe-8683-b6b4960d53ae|e0aba200-251a-45f1-a1c2-ac94bbb9ca3f:
+      parameters:
+        text:
+          type: text
+          value: >-
+            ${#jptr:/Multiple Article Content entries Loop
+            Item/entry/fields/shortDescription/value}
+    cde73dfb-c7ea-43fe-8683-b6b4960d53ae|f02a551f-116f-48d2-99b3-21ebe2ca74e5:
+      parameters:
+        image:
+          type: asset
+          value: >-
+            ${#jptr:/Multiple Article Content entries Loop
+            Item/entry/fields/thumbnail/value}
+          conditions:
+            - when:
+                clauses:
+                  - op: is
+                    rule: $dt
+                    value: picking-the-right-bean-a-guide-to-coffee-selection
+                    source: >-
+                      ${#jptr:/Multiple Article Content entries Loop
+                      Item/entry/_slug}
+              value:
+                - _id: 528c4046-bdf4-470a-918b-4717f316bab8
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: 19be2e44-eeb0-4f3c-9d66-203466b7861c
+                    url:
+                      value: >-
+                        https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/8hzqntW9Q7CXITzSENY_Xw-beans-logo.svg
+                      type: text
+                    file:
+                      type: file
+                      value: 616306bf-7cda-41c5-aef5-212e5ee26ff1
+                    size:
+                      value: 2725
+                      type: number
+                    title:
+                      type: text
+                      value: beans-logo.svg
+                    width:
+                      value: 84
+                      type: number
+                    height:
+                      value: 73
+                      type: number
+                    mediaType:
+                      value: image/svg+xml
+                      type: text
+                  _source: uniform-assets
+              id: 0
+            - when:
+                clauses:
+                  - op: is
+                    rule: $dt
+                    value: whats-up-with-the-slow-drip
+                    source: >-
+                      ${#jptr:/Multiple Article Content entries Loop
+                      Item/entry/_slug}
+              value:
+                - _id: b25694e2-008e-47ba-9fe4-a65aba83c98f
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: 6babea2d-9a72-4a21-b1ff-c5dcbcf01669
+                    url:
+                      value: >-
+                        https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/99lQZWxLSvCd8nCBglVbwQ-slow-drip.svg
+                      type: text
+                    file:
+                      type: file
+                      value: 09e1c97b-28a1-495e-ba57-eeb3534e0522
+                    size:
+                      value: 2458
+                      type: number
+                    title:
+                      type: text
+                      value: slow-drip.svg
+                    width:
+                      value: 79
+                      type: number
+                    height:
+                      value: 94
+                      type: number
+                    mediaType:
+                      value: image/svg+xml
+                      type: text
+                  _source: uniform-assets
+              id: 1
+            - when:
+                clauses:
+                  - op: is
+                    rule: $dt
+                    value: grinding-beans-the-key-to-perfect-coffee
+                    source: >-
+                      ${#jptr:/Multiple Article Content entries Loop
+                      Item/entry/_slug}
+              value:
+                - _id: 3bfba9e0-8613-4fd8-a41e-99f8082201a7
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: c37d4bed-a237-4eba-b7f4-c03fbb1e5025
+                    url:
+                      value: >-
+                        https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/8im-wDvoQ8y1eItLOAmTTg-grinding-beans.svg
+                      type: text
+                    file:
+                      type: file
+                      value: 6022ca87-3e13-4121-8096-9e2582f6dba5
+                    size:
+                      value: 5220
+                      type: number
+                    title:
+                      type: text
+                      value: grinding-beans.svg
+                    width:
+                      value: 60
+                      type: number
+                    height:
+                      value: 84
+                      type: number
+                    mediaType:
+                      value: image/svg+xml
+                      type: text
+                  _source: uniform-assets
+              id: 2
+            - when:
+                clauses:
+                  - op: is
+                    rule: $dt
+                    value: a-proper-cuppa-how-to-brew-tea-right
+                    source: >-
+                      ${#jptr:/Multiple Article Content entries Loop
+                      Item/entry/_slug}
+              value:
+                - _id: 760c8b9c-cb7d-454c-8d75-8e1e50a7066f
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: 0973bc45-3d32-4621-92e6-c5dbb685d1a0
+                    url:
+                      value: >-
+                        https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/cl1SqrAuSLCvniOFr3E2RA-a-propper-cuppa.svg
+                      type: text
+                    file:
+                      type: file
+                      value: ac42001a-9c10-45dc-b21a-0257141fa9e4
+                    size:
+                      value: 3682
+                      type: number
+                    title:
+                      type: text
+                      value: a-propper-cuppa.svg
+                    width:
+                      value: 82
+                      type: number
+                    height:
+                      value: 88
+                      type: number
+                    mediaType:
+                      value: image/svg+xml
+                      type: text
+                  _source: uniform-assets
+              id: 3
+        objectFit:
+          type: dex-segmented-control-parameter
+          value: fill
+  _overridability:
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2025-03-18T13:02:30.207109+00:00'
+modified: '2025-06-05T08:51:41.385335+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1731429570/csk-v-next/jd-template/articles-quick-picks.jpg
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9
