@@ -541,8 +541,8 @@ composition:
                           columnStart:
                             type: dex-slider-control-parameter
                             value:
-                              mobile: '2'
-                              tablet: '2'
+                              mobile: '1'
+                              tablet: '1'
                               desktop: '2'
                           displayName:
                             type: text
@@ -555,6 +555,12 @@ composition:
                     gapY:
                       type: dex-slider-control-parameter
                       value: {}
+                    spacing:
+                      type: dex-space-control-parameter
+                      value:
+                        mobile: {}
+                        tablet: {}
+                        desktop: {}
                     displayName:
                       type: text
                       locales:
@@ -565,6 +571,9 @@ composition:
                         mobile: '1'
                         tablet: '1'
                         desktop: '2'
+                    fluidContent:
+                      type: checkbox
+                      value: true
             parameters:
               spacing:
                 type: dex-space-control-parameter
@@ -621,7 +630,8 @@ composition:
                   mobile: '4'
               gapY:
                 type: dex-slider-control-parameter
-                value: {}
+                value:
+                  mobile: '8'
               spacing:
                 type: dex-space-control-parameter
                 value:
@@ -1078,5 +1088,5 @@ composition:
     - en
   _pattern: eb2c6df3-5cff-486a-814b-64b6ce9421ab
 created: '2025-05-21T12:14:16.372374+00:00'
-modified: '2025-05-22T10:15:56.234271+00:00'
+modified: '2025-05-22T13:25:54.421322+00:00'
 pattern: false

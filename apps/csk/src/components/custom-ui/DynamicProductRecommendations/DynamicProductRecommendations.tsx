@@ -30,7 +30,15 @@ const DynamicProductRecommendations: FC<DynamicRecommendationsProps> = async ({
     >
       {title}
 
-      <Grid columnsCount="3" gapY="8" gapX="8">
+      <Grid
+        columnsCount={{
+          desktop: '3',
+          tablet: '2',
+          mobile: '1',
+        }}
+        gapY="8"
+        gapX="8"
+      >
         {!products.length
           ? Array.from({ length: parseInt(maxRecommendations) }, () => 0).map((_, index) => (
               <ProductCardSkeleton key={index} />
