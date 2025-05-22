@@ -22,6 +22,14 @@
     "turbo": "^2.3.4",
     "typescript": "^5.7.3"
   },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "4.41.0"
+  },
+  "overrides": {
+    "vite": {
+      "rollup": "npm:@rollup/wasm-node"
+    }
+  },
   "engines": {
     "node": "^18.18.0 || ^19.8.0 || >= 20.0.0"
   },
