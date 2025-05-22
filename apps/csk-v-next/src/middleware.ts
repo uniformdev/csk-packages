@@ -5,5 +5,5 @@ export default createMiddleware(routing);
 
 export const config = {
   // Match all routes but exclude _next, static, and API routes
-  matcher: ['/((?!_next|static|api|playground|favicon.ico|robots.txt|sitemap.xml).*)'],
+  matcher: ['/((?!_next|static|api|playground|favicon.ico|robots.txt|sitemap.xml|composition-version-preview).*)'],
 };
