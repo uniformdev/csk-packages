@@ -3,6 +3,10 @@ name: Full CI – Validate, Lint, Build, Extract
 on:
   pull_request:
     branches: [main, develop]
+  push:
+    branches:
+      - baseline-recipes-dev
+      - templates/**
 
 jobs:
   validate-repo:
