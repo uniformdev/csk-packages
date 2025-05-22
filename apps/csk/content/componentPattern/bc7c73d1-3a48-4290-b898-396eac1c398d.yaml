@@ -60,9 +60,9 @@ composition:
         type: $loop
         slots:
           body:
-            - _id: b18af6ae-5b94-434b-a836-6b279173eedf
-              type: grid
-              _pattern: 3d2b341b-aa4a-4692-8354-a60aa94ff76c
+            - _id: 1e087f1b-771f-4143-a3d8-f4c235224ffc
+              type: link
+              _pattern: d134b276-d042-4984-a8fd-6b2b9afa8e98
         _dataResources:
           Article List Content entries Loop Item:
             type: sys-reserved-loop
@@ -81,55 +81,7 @@ composition:
       isPatternParameter: true
       ignorePatternParameterDefault: false
   _overrides:
-    b18af6ae-5b94-434b-a836-6b279173eedf:
-      parameters:
-        displayName:
-          type: text
-          value: >-
-            ${#jptr:/Article List Content entries Loop
-            Item/entry/fields/title/value}
-        fluidContent:
-          type: checkbox
-          value: true
-    b18af6ae-5b94-434b-a836-6b279173eedf|4e7f1617-1524-4771-bad7-e871c177ef53:
-      parameters:
-        text:
-          type: text
-          value: >-
-            ${#jptr:/Article List Content entries Loop
-            Item/entry/fields/title/value}
-    b18af6ae-5b94-434b-a836-6b279173eedf|84b8ca9c-90a0-4c34-bd96-a2391bf97f62:
-      parameters:
-        text:
-          type: text
-          value: >-
-            ${#jptr:/Article List Content entries Loop
-            Item/entry/fields/shortDescription/value}
-    b18af6ae-5b94-434b-a836-6b279173eedf|9b4d01d3-e0f4-4f43-84b3-0f33dd7eeb5c:
-      parameters:
-        image:
-          type: asset
-          value:
-            - _id: 3101c158-3e1c-4003-bfda-4d6f69f97b99
-              type: image
-              fields:
-                url:
-                  type: text
-                  value: >-
-                    ${#jptr:/Article List Content entries Loop
-                    Item/entry/fields/thumbnail/value/0/fields/url/value}
-                title:
-                  type: text
-                  value: >-
-                    ${#jptr:/Article List Content entries Loop
-                    Item/entry/fields/title/value}
-                description:
-                  type: text
-                  value: >-
-                    ${#jptr:/Article List Content entries Loop
-                    Item/entry/fields/title/value}
-              _source: custom-url
-    b18af6ae-5b94-434b-a836-6b279173eedf|fa64b7b0-d009-4811-9d23-510515103d7b:
+    1e087f1b-771f-4143-a3d8-f4c235224ffc:
       parameters:
         link:
           type: link
@@ -143,14 +95,46 @@ composition:
             dynamicInputValues:
               locale: ${locale}
               article-slug: ${#jptr:/Article List Content entries Loop Item/entry/_slug}
+        displayName:
+          type: text
+          locales:
+            en: >-
+              ${#jptr:/Article List Content entries Loop
+              Item/entry/fields/title/value}
+    1e087f1b-771f-4143-a3d8-f4c235224ffc|807f2939-e3cd-476d-9e3e-a2a9df6b0f63:
+      parameters:
+        displayName:
+          type: text
+          value: null
+    1e087f1b-771f-4143-a3d8-f4c235224ffc|807f2939-e3cd-476d-9e3e-a2a9df6b0f63|b18af6ae-5b94-434b-a836-6b279173eedf|4e7f1617-1524-4771-bad7-e871c177ef53:
+      parameters:
+        text:
+          type: text
+          value: >-
+            ${#jptr:/Article List Content entries Loop
+            Item/entry/fields/title/value}
+    1e087f1b-771f-4143-a3d8-f4c235224ffc|807f2939-e3cd-476d-9e3e-a2a9df6b0f63|b18af6ae-5b94-434b-a836-6b279173eedf|84b8ca9c-90a0-4c34-bd96-a2391bf97f62:
+      parameters:
+        text:
+          type: text
+          value: >-
+            ${#jptr:/Article List Content entries Loop
+            Item/entry/fields/shortDescription/value}
+    1e087f1b-771f-4143-a3d8-f4c235224ffc|807f2939-e3cd-476d-9e3e-a2a9df6b0f63|b18af6ae-5b94-434b-a836-6b279173eedf|9b4d01d3-e0f4-4f43-84b3-0f33dd7eeb5c:
+      parameters:
+        image:
+          type: asset
+          value: >-
+            ${#jptr:/Article List Content entries Loop
+            Item/entry/fields/thumbnail/value}
   _overridability:
     parameters:
       fluidContent: 'yes'
     hideLockedParameters: true
   _locales:
     - en
-created: '2025-01-29T11:09:28.483938+00:00'
-modified: '2025-05-16T07:12:15.908906+00:00'
+created: '2025-03-18T13:02:30.253296+00:00'
+modified: '2025-05-20T12:34:55.20431+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1731430599/csk-v-next/jd-template/content-spotlight.jpg

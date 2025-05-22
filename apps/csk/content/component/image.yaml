@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: image
 name: Image
@@ -10,6 +10,7 @@ parameters:
     typeConfig:
       max: 1
       min: 1
+    allowConditionalValues: true
   - id: cca23341-d3d6-448d-9c5d-16b2324881bc
     name: Dimensions
     type: group
@@ -114,5 +115,5 @@ slots: []
 titleParameter: image
 thumbnailParameter: image
 canBeComposition: false
-created: '2025-02-17T15:34:14.681024+00:00'
-updated: '2025-02-17T15:34:14.681024+00:00'
+created: '2025-02-27T10:44:57.300333+00:00'
+updated: '2025-05-21T09:16:38.134464+00:00'
