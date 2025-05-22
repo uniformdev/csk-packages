@@ -68,6 +68,19 @@ parameters:
       minValue: 0
       defaultValue: {}
       withViewPort: true
+  - id: alignItems
+    name: Align Items
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Start
+          value: start
+        - key: Center
+          value: center
+        - key: End
+          value: end
+        - key: Stretch
+          value: stretch
   - id: 9f4a3823-8aad-4b30-a7bf-e5134643b0b3
     name: More Presentation Settings
     type: group
@@ -120,5 +133,5 @@ slots:
     patternsInAllowedComponents: false
 titleParameter: displayName
 canBeComposition: false
-created: '2025-01-29T10:47:01.756246+00:00'
-updated: '2025-02-19T10:34:31.991076+00:00'
+created: '2025-04-24T11:34:25.137017+00:00'
+updated: '2025-04-24T11:34:25.137017+00:00'
