@@ -17,7 +17,6 @@ export const Section: FC<SectionProps> = ({
   fullHeight,
 }) => {
   const variant = component.variant as SectionVariants;
-  const { previewMode } = context || {};
 
   const variantProps = {
     variant,
@@ -38,6 +37,6 @@ export const Section: FC<SectionProps> = ({
     case SectionVariants.ColumnsReverse:
       return <ColumnsVariant {...variantProps} />;
     default:
-      return <DefaultVariant {...variantProps} previewMode={previewMode} />;
+      return <DefaultVariant {...variantProps} />;
   }
 };
