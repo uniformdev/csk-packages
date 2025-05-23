@@ -9,6 +9,12 @@ composition:
         mobile: '8'
         tablet: '8'
         desktop: '8'
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        mobile: {}
+        tablet: {}
+        desktop: {}
     direction:
       type: dex-segmented-control-parameter
       value:
@@ -22,6 +28,9 @@ composition:
       type: text
       locales:
         en: "Quantum heating \Ltechnology"
+    fluidContent:
+      type: checkbox
+      value: true
     justifyContent:
       type: dex-segmented-control-parameter
       value: {}
@@ -136,6 +145,6 @@ composition:
   _locales:
     - en
 created: '2025-05-22T08:57:05.289074+00:00'
-modified: '2025-05-22T11:36:29.950844+00:00'
+modified: '2025-05-23T09:44:10.368363+00:00'
 pattern: true
 categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9

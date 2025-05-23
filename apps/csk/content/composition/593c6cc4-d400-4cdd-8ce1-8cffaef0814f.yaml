@@ -193,10 +193,10 @@ composition:
         spacing:
           type: dex-space-control-parameter
           value:
-            mobile:
-              paddingRight: container-small
+            mobile: {}
             tablet: {}
-            desktop: {}
+            desktop:
+              paddingRight: container-small
     4026814e-9121-47fe-a2b6-258d9e7729f1|450f9239-3309-4f7c-b42d-c80df9f575e4:
       parameters:
         text:
@@ -860,7 +860,7 @@ composition:
                     text:
                       type: text
                       locales:
-                        en: RECoMMENDED BEANS
+                        en: Recommended Beans
                     color:
                       type: dex-color-palette-parameter
                       value: text-featured
@@ -922,6 +922,9 @@ composition:
                         mobile: '1'
                         tablet: '2'
                         desktop: '3'
+                    fluidContent:
+                      type: checkbox
+                      value: true
             parameters:
               gap:
                 type: dex-slider-control-parameter
@@ -1088,5 +1091,5 @@ composition:
     - en
   _pattern: eb2c6df3-5cff-486a-814b-64b6ce9421ab
 created: '2025-05-21T12:14:16.372374+00:00'
-modified: '2025-05-22T13:25:54.421322+00:00'
+modified: '2025-05-23T09:45:55.217277+00:00'
 pattern: false

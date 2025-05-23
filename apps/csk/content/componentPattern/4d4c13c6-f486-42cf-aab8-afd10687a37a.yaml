@@ -116,7 +116,10 @@ composition:
             value: {}
           spacing:
             type: dex-space-control-parameter
-            value: {}
+            value:
+              mobile: {}
+              tablet: {}
+              desktop: {}
           direction:
             type: dex-segmented-control-parameter
             value:
@@ -172,8 +175,15 @@ composition:
           spacing:
             type: dex-space-control-parameter
             value:
-              marginTop: container-small
-              marginBottom: container-small
+              mobile:
+                marginTop: container-small
+                marginBottom: container-small
+              tablet:
+                marginTop: container-small
+                marginBottom: container-small
+              desktop:
+                marginTop: container-small
+                marginBottom: container-small
           displayName:
             type: text
             value: Products Container
@@ -187,7 +197,7 @@ composition:
     Product Content:
       type: product
       variables:
-        slug: impresso-pump-espresso-118
+        slug: impresso-pump-espresso
         locale: ${locale}
       isPatternParameter: true
       ignorePatternParameterDefault: true
@@ -254,7 +264,7 @@ composition:
   _locales:
     - en
 created: '2025-03-18T13:02:28.250658+00:00'
-modified: '2025-05-22T11:25:00.60709+00:00'
+modified: '2025-05-23T10:02:19.372496+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/jd-template/secondary-product-recommendations.jpg

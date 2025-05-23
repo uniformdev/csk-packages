@@ -72,13 +72,30 @@ composition:
                       spacing:
                         type: dex-space-control-parameter
                         value:
-                          marginTop: ''
-                          marginLeft: ''
-                          paddingTop: container-small
-                          marginRight: ''
-                          paddingLeft: container-small
-                          paddingRight: container-small
-                          paddingBottom: container-small
+                          mobile:
+                            marginTop: ''
+                            marginLeft: ''
+                            paddingTop: container-small
+                            marginRight: ''
+                            paddingLeft: container-small
+                            paddingRight: container-small
+                            paddingBottom: container-small
+                          tablet:
+                            marginTop: ''
+                            marginLeft: ''
+                            paddingTop: container-small
+                            marginRight: ''
+                            paddingLeft: container-small
+                            paddingRight: container-small
+                            paddingBottom: container-small
+                          desktop:
+                            marginTop: ''
+                            marginLeft: ''
+                            paddingTop: container-small
+                            marginRight: ''
+                            paddingLeft: container-small
+                            paddingRight: container-small
+                            paddingBottom: container-small
                       displayName:
                         type: text
                         value: Image
@@ -384,8 +401,15 @@ composition:
                             spacing:
                               type: dex-space-control-parameter
                               value:
-                                paddingTop: ''
-                                paddingBottom: ''
+                                mobile:
+                                  paddingTop: ''
+                                  paddingBottom: ''
+                                tablet:
+                                  paddingTop: ''
+                                  paddingBottom: ''
+                                desktop:
+                                  paddingTop: ''
+                                  paddingBottom: ''
                             textColor:
                               type: dex-color-palette-parameter
                               value: text-primary
@@ -430,6 +454,9 @@ composition:
                       displayName:
                         type: text
                         value: Primary Info
+                      fluidContent:
+                        type: checkbox
+                        value: true
                       justifyContent:
                         type: dex-segmented-control-parameter
                         value:
@@ -473,7 +500,10 @@ composition:
             value: {}
           spacing:
             type: dex-space-control-parameter
-            value: {}
+            value:
+              mobile: {}
+              tablet: {}
+              desktop: {}
           displayName:
             type: text
             value: Product Info
@@ -483,6 +513,9 @@ composition:
               mobile: '1'
               tablet: '1'
               desktop: '2'
+          fluidContent:
+            type: checkbox
+            value: true
         _overridability:
           hideLockedParameters: true
       - _id: bda74aa4-e9c6-48f9-ab84-b0ce01c3a983
@@ -510,11 +543,21 @@ composition:
           spacing:
             type: dex-space-control-parameter
             value:
-              paddingTop: container-medium
-              paddingBottom: container-medium
+              mobile:
+                paddingTop: container-medium
+                paddingBottom: container-medium
+              tablet:
+                paddingTop: container-medium
+                paddingBottom: container-medium
+              desktop:
+                paddingTop: container-medium
+                paddingBottom: container-medium
           displayName:
             type: text
             value: Divider
+          fluidContent:
+            type: checkbox
+            value: true
         _overridability:
           hideLockedParameters: true
       - _id: 4d90b7bd-af13-450d-b199-a1b1d15af803
@@ -571,7 +614,12 @@ composition:
           spacing:
             type: dex-space-control-parameter
             value:
-              paddingRight: ''
+              mobile:
+                paddingRight: ''
+              tablet:
+                paddingRight: ''
+              desktop:
+                paddingRight: ''
           direction:
             type: dex-segmented-control-parameter
             value:
@@ -584,6 +632,9 @@ composition:
           displayName:
             type: text
             value: Description
+          fluidContent:
+            type: checkbox
+            value: true
           justifyContent:
             type: dex-segmented-control-parameter
             value: {}
@@ -593,7 +644,7 @@ composition:
     Product Content:
       type: product
       variables:
-        slug: kosmic-coffee-stainless-steel-precision-brewer-116
+        slug: kosmic-coffee-stainless-steel-precision-brewer
         locale: ${locale}
       isPatternParameter: true
       ignorePatternParameterDefault: true
@@ -602,7 +653,7 @@ composition:
   _locales:
     - en
 created: '2025-03-18T13:02:28.292665+00:00'
-modified: '2025-05-22T11:08:33.422525+00:00'
+modified: '2025-05-23T09:54:35.848704+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/jd-template/product-info.jpg

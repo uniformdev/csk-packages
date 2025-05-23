@@ -316,7 +316,7 @@ composition:
                                 _source: uniform-assets
                           objectFit:
                             type: dex-segmented-control-parameter
-                            value: contain
+                            value: cover
                         _overridability:
                           parameters:
                             image: 'yes'
@@ -449,6 +449,9 @@ composition:
                           displayName:
                             type: text
                             value: Content
+                          fluidContent:
+                            type: checkbox
+                            value: true
                           justifyContent:
                             type: dex-segmented-control-parameter
                             value: {}
@@ -459,8 +462,15 @@ composition:
                     spacing:
                       type: dex-space-control-parameter
                       value:
-                        paddingTop: container-medium
-                        paddingBottom: container-medium
+                        mobile:
+                          paddingTop: container-medium
+                          paddingBottom: container-medium
+                        tablet:
+                          paddingTop: container-medium
+                          paddingBottom: container-medium
+                        desktop:
+                          paddingTop: container-medium
+                          paddingBottom: container-medium
                     displayName:
                       type: text
                       value: |
@@ -761,6 +771,9 @@ composition:
                     displayName:
                       type: text
                       value: Content
+                    fluidContent:
+                      type: checkbox
+                      value: true
                     justifyContent:
                       type: dex-segmented-control-parameter
                       value: {}
@@ -1024,6 +1037,12 @@ composition:
                           stars:
                             type: number
                             value: '3'
+                          spacing:
+                            type: dex-space-control-parameter
+                            value:
+                              mobile: {}
+                              tablet: {}
+                              desktop: {}
                           starsColor:
                             type: dex-color-palette-parameter
                             value: general-color-12
@@ -1031,6 +1050,9 @@ composition:
                             type: text
                             locales:
                               en: Joanne Review
+                          fluidContent:
+                            type: checkbox
+                            value: true
                           activeStarsColor:
                             type: dex-color-palette-parameter
                             value: button-tertiary
@@ -1064,6 +1086,9 @@ composition:
                     displayName:
                       type: text
                       value: Content
+                    fluidContent:
+                      type: checkbox
+                      value: true
                     justifyContent:
                       type: dex-segmented-control-parameter
                       value: {}
@@ -1704,6 +1729,6 @@ composition:
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-04-25T12:20:48.559008+00:00'
-modified: '2025-05-20T15:45:19.860663+00:00'
+created: '2025-05-20T11:53:47.561403+00:00'
+modified: '2025-05-23T10:10:33.965703+00:00'
 pattern: false

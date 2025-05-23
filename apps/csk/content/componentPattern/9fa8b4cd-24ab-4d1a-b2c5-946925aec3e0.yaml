@@ -6,11 +6,11 @@ composition:
     spacing:
       type: dex-space-control-parameter
       value:
-        mobile: {}
+        mobile:
+          paddingTop: container-medium
+          paddingBottom: container-medium
         tablet: {}
-        desktop:
-          marginTop: container-medium
-          marginBottom: container-medium
+        desktop: {}
     displayName:
       type: text
       locales:
@@ -57,6 +57,6 @@ composition:
   _locales:
     - en
 created: '2025-05-20T11:53:44.157201+00:00'
-modified: '2025-05-22T11:09:58.824907+00:00'
+modified: '2025-05-23T09:49:55.518243+00:00'
 pattern: true
 categoryId: adaebea8-ba58-494b-9c3b-9f82906d9415

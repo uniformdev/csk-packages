@@ -113,6 +113,7 @@ composition:
             _overridability:
               parameters:
                 displayName: 'yes'
+                contentBackgroundColor: 'yes'
               hideLockedParameters: true
           - _id: 85e3b1e8-69c0-484c-9336-8406e14a2c3c
             type: section
@@ -125,9 +126,9 @@ composition:
                   _overridability:
                     variants: true
                     parameters:
-                      icon: 'yes'
                       link: 'yes'
                       text: 'yes'
+                      fullWidth: 'yes'
                       textColor: 'no'
                     hideLockedParameters: true
               sectionMedia:
@@ -287,53 +288,98 @@ composition:
             type: section
             slots:
               sectionContent:
-                - _id: e719a3bd-8540-45dc-a4df-0b98c8a6d70b
-                  type: text
+                - _id: 108425d0-b5c7-4fd4-91c8-722f609f01a2
+                  type: flex
+                  slots:
+                    flexItem:
+                      - _id: e719a3bd-8540-45dc-a4df-0b98c8a6d70b
+                        type: text
+                        parameters:
+                          tag:
+                            type: dex-segmented-control-parameter
+                            value: span
+                          size:
+                            type: dex-segmented-control-parameter
+                            value:
+                              mobile: 4xl
+                              tablet: 4xl
+                              desktop: 4xl
+                          text:
+                            type: text
+                            value: Taste the future
+                          weight:
+                            type: dex-segmented-control-parameter
+                            value: bold
+                      - _id: c6d0a9cc-1830-45bb-93db-78503dfe742f
+                        type: text
+                        parameters:
+                          tag:
+                            type: dex-segmented-control-parameter
+                            value: span
+                          size:
+                            type: dex-segmented-control-parameter
+                            value:
+                              mobile: 4xl
+                              tablet: 4xl
+                              desktop: base
+                          text:
+                            type: text
+                            value: "Combining the greatest traditions with cutting edge technology, the Cervello di Caffè\rputs decades of coffee experience at your fingertips. By learning your tastes and assessing the beans, the smart barista adjusts the grind, pressure and length of each\respresso shot to make sure it’s perfect every time."
+                          weight:
+                            type: dex-segmented-control-parameter
+                            value: normal
+                          alignment:
+                            type: dex-segmented-control-parameter
+                            value: center
                   parameters:
-                    tag:
-                      type: dex-segmented-control-parameter
-                      value: span
-                    size:
+                    gap:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '4'
+                    spacing:
+                      type: dex-space-control-parameter
+                      value:
+                        mobile: {}
+                        tablet: {}
+                        desktop: {}
+                    direction:
                       type: dex-segmented-control-parameter
                       value:
-                        mobile: 4xl
-                        tablet: 4xl
-                        desktop: 4xl
-                    text:
-                      type: text
-                      value: Taste the future
-                    weight:
-                      type: dex-segmented-control-parameter
-                      value: bold
-                - _id: c6d0a9cc-1830-45bb-93db-78503dfe742f
-                  type: text
-                  parameters:
-                    tag:
-                      type: dex-segmented-control-parameter
-                      value: span
-                    size:
+                        mobile: col
+                        tablet: col
+                        desktop: col
+                    alignItems:
                       type: dex-segmented-control-parameter
                       value:
-                        mobile: 4xl
-                        tablet: 4xl
-                        desktop: base
-                    text:
+                        mobile: center
+                    displayName:
                       type: text
-                      value: "Combining the greatest traditions with cutting edge technology, the Cervello di Caffè\rputs decades of coffee experience at your fingertips. By learning your tastes and assessing the beans, the smart barista adjusts the grind, pressure and length of each\respresso shot to make sure it’s perfect every time."
-                    weight:
+                      locales:
+                        en: Container
+                    fluidContent:
+                      type: checkbox
+                      value: true
+                    justifyContent:
                       type: dex-segmented-control-parameter
-                      value: normal
-                    alignment:
-                      type: dex-segmented-control-parameter
-                      value: center
+                      value:
+                        mobile: center
             parameters:
               spacing:
                 type: dex-space-control-parameter
                 value:
-                  paddingTop: container-medium
-                  paddingLeft: container-large
-                  paddingRight: container-large
-                  paddingBottom: container-small
+                  mobile:
+                    paddingTop: container-small
+                    paddingBottom: container-small
+                  tablet:
+                    paddingTop: container-medium
+                    paddingLeft: container-large
+                    paddingRight: container-large
+                    paddingBottom: container-small
+                  desktop:
+                    paddingTop: container-medium
+                    paddingLeft: container-large
+                    paddingRight: container-large
+                    paddingBottom: container-small
               displayName:
                 type: text
                 value: Taste the future
@@ -1355,9 +1401,9 @@ composition:
             _overridability:
               variants: true
               parameters:
-                icon: 'yes'
                 link: 'yes'
                 text: 'yes'
+                fullWidth: 'yes'
                 textColor: 'no'
               hideLockedParameters: true
     c93c8f9f-4ff0-4ed9-85b1-dfd37f01fbc0|c50e99a6-1d91-4d6e-9a22-3154d4e4a8b7:
@@ -1402,6 +1448,6 @@ composition:
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-01-29T11:09:38.43112+00:00'
-modified: '2025-05-20T15:45:20.173935+00:00'
+created: '2025-03-18T13:02:32.913699+00:00'
+modified: '2025-05-23T10:14:38.434646+00:00'
 pattern: false

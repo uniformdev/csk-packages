@@ -38,6 +38,7 @@ const DynamicProductRecommendations: FC<DynamicRecommendationsProps> = async ({
         }}
         gapY="8"
         gapX="8"
+        fluidContent
       >
         {!products.length
           ? Array.from({ length: parseInt(maxRecommendations) }, () => 0).map((_, index) => (

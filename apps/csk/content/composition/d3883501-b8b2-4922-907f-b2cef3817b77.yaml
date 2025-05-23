@@ -57,14 +57,6 @@ composition:
         openGraphDescription:
           type: text
           value: ${#jptr:/Product Content/entry/fields/shortDescription/value}
-    163d071a-6969-492b-9c39-bbf0f9e13c95|ee4358a5-05ce-4926-a12e-4d42dfa679e2:
-      parameters:
-        price:
-          type: text
-          locales:
-            en: >-
-              ${#jptr:/Product List Content entries Loop
-              Item/entry/fields/variants/value/0/fields/price/value}
     54c60ba7-8974-4630-9f2c-5fd7e71ced12|3e88bc6a-0588-4b36-aa7d-ede679a7c3c6:
       parameters:
         product:
@@ -109,9 +101,14 @@ composition:
               parameters:
                 fluidContent: 'yes'
               hideLockedParameters: true
+    1a36ad83-1407-42d2-a213-7c9583da886d|1e087f1b-771f-4143-a3d8-f4c235224ffc|807f2939-e3cd-476d-9e3e-a2a9df6b0f63:
+      parameters:
+        fluidContent:
+          type: checkbox
+          value: true
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-04-24T11:34:48.022683+00:00'
-modified: '2025-04-24T11:34:48.022683+00:00'
+created: '2025-03-18T13:02:33.178546+00:00'
+modified: '2025-05-23T10:00:03.969827+00:00'
 pattern: false

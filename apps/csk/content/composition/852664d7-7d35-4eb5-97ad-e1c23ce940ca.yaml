@@ -240,101 +240,86 @@ composition:
             type: $personalization
             slots:
               pz:
-                - _id: f49f6f1f-4c3e-4fe0-9315-0447a8f7886d
-                  type: container
-                  slots:
-                    containerContent:
-                      - _id: edebb9bf-7b86-4c6b-9972-687084cbff7b
-                        type: fixedHero
-                        variant: columns
-                        parameters:
-                          image:
-                            type: asset
-                            value:
-                              - _id: 0f1ac269-7f8d-4f3d-a8bf-447fb57de7aa
-                                type: image
-                                fields:
-                                  id:
-                                    type: text
-                                    value: 4a540191-b713-42b0-a2f6-e96ce1450aca
-                                  url:
-                                    value: >-
-                                      https://img.uniform.global/p/6MJ1ELg6RE6-E2mQbcKLjg/E_BQI1S4Tcq-yqoA_5odyA-beans-heart.jpg
-                                    type: text
-                                  file:
-                                    type: file
-                                    value: 0d81a7d7-f5b1-48a0-869f-dd23aff77741
-                                  size:
-                                    value: 1836620
-                                    type: number
-                                  title:
-                                    type: text
-                                    value: beans-heart.jpg
-                                  width:
-                                    value: 4608
-                                    type: number
-                                  height:
-                                    value: 3072
-                                    type: number
-                                  mediaType:
-                                    value: image/jpeg
-                                    type: text
-                                _source: uniform-assets
-                                _overrides:
-                                  fields:
-                                    focalPoint:
-                                      type: focalPoint
-                                      value:
-                                        x: 0.28
-                                        'y': 0.64
-                          titleTag:
-                            type: dex-segmented-control-parameter
-                            value: h1
-                          titleText:
-                            type: text
-                            locales:
-                              en: Exclusive Brews for Coffee Connoisseurs
-                          displayName:
-                            type: text
-                            locales:
-                              en: Main Home Hero
-                          contentAlignment:
-                            type: dex-segmented-control-parameter
-                            value: right
-                          eyebrowTitleText:
-                            type: text
-                            locales:
-                              en: For the True Coffee Lover
-                          primaryButtonLink:
-                            type: link
-                            locales:
-                              en:
-                                path: /${locale}/coffee-makers
-                                type: projectMapNode
-                                nodeId: c9869cee-a65c-4064-b296-78c4a5ba4ffc
-                                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-                                dynamicInputValues:
-                                  locale: ${locale}
-                          primaryButtonText:
-                            type: text
-                            locales:
-                              en: Discover Premium Brews
+                - _id: edebb9bf-7b86-4c6b-9972-687084cbff7b
+                  type: fixedHero
+                  variant: columns
                   parameters:
+                    image:
+                      type: asset
+                      value:
+                        - _id: 0f1ac269-7f8d-4f3d-a8bf-447fb57de7aa
+                          type: image
+                          fields:
+                            id:
+                              type: text
+                              value: 4a540191-b713-42b0-a2f6-e96ce1450aca
+                            url:
+                              value: >-
+                                https://img.uniform.global/p/6MJ1ELg6RE6-E2mQbcKLjg/E_BQI1S4Tcq-yqoA_5odyA-beans-heart.jpg
+                              type: text
+                            file:
+                              type: file
+                              value: 0d81a7d7-f5b1-48a0-869f-dd23aff77741
+                            size:
+                              value: 1836620
+                              type: number
+                            title:
+                              type: text
+                              value: beans-heart.jpg
+                            width:
+                              value: 4608
+                              type: number
+                            height:
+                              value: 3072
+                              type: number
+                            mediaType:
+                              value: image/jpeg
+                              type: text
+                          _source: uniform-assets
+                          _overrides:
+                            fields:
+                              focalPoint:
+                                type: focalPoint
+                                value:
+                                  x: 0.28
+                                  'y': 0.64
                     $pzCrit:
                       type: $pzCrit
                       value:
                         crit: []
-                        name: container-f49f
-                    spacing:
-                      type: dex-space-control-parameter
-                      value:
-                        mobile: {}
-                        tablet: {}
-                        desktop: {}
+                        name: fixedHero-edeb
+                    titleTag:
+                      type: dex-segmented-control-parameter
+                      value: h1
+                    titleText:
+                      type: text
+                      locales:
+                        en: Exclusive Brews for Coffee Connoisseurs
                     displayName:
                       type: text
                       locales:
-                        en: Main
+                        en: Main Home Hero
+                    contentAlignment:
+                      type: dex-segmented-control-parameter
+                      value: right
+                    eyebrowTitleText:
+                      type: text
+                      locales:
+                        en: For the True Coffee Lover
+                    primaryButtonLink:
+                      type: link
+                      locales:
+                        en:
+                          path: /${locale}/coffee-makers
+                          type: projectMapNode
+                          nodeId: c9869cee-a65c-4064-b296-78c4a5ba4ffc
+                          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                          dynamicInputValues:
+                            locale: ${locale}
+                    primaryButtonText:
+                      type: text
+                      locales:
+                        en: Discover Premium Brews
                 - _id: 8ba9ce06-1328-4f5f-8c2c-fa9586f66644
                   type: fixedHero
                   parameters:
@@ -1087,6 +1072,6 @@ composition:
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-01-29T11:09:36.86484+00:00'
-modified: '2025-05-20T15:45:20.023854+00:00'
+created: '2025-02-27T10:45:03.714698+00:00'
+modified: '2025-05-23T10:57:24.866622+00:00'
 pattern: false
