@@ -20,7 +20,7 @@ composition:
         desktop: sm
     textColor:
       type: dex-color-palette-parameter
-      value: text-light
+      value: text-secondary
     textWeight:
       type: dex-segmented-control-parameter
       value: bold
@@ -35,10 +35,10 @@ composition:
       value: uppercase
     hoverTextColor:
       type: dex-color-palette-parameter
-      value: text-primary
+      value: text-secondary
     hoverButtonColor:
       type: dex-color-palette-parameter
-      value: button-secondary
+      value: button-primary-hover
   _overridability:
     variants: true
     parameters:
@@ -54,8 +54,8 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
-created: '2025-02-17T15:34:18.084298+00:00'
-modified: '2025-02-17T15:34:18.084298+00:00'
+created: '2025-02-27T10:45:00.697985+00:00'
+modified: '2025-05-23T12:11:27.181671+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/button.jpg
