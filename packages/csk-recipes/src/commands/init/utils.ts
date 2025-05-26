@@ -209,11 +209,17 @@ export const fillEnvVariables = async (recipes: Recipe[]): Promise<Partial<Recor
     } else {
       // Prompt the user to input a value for the environment variable
       const value = await input({
-        message: `Enter the value for ${envVariable}:`,
+        message: `Enter the value for ${envVariable} (leave empty if you don't have it yet):`,
         default: defaultEnvVariables[envVariable] || ENV_VARIABLES_DEFAULT_VALUES[envVariable],
       });
       envVariables[envVariable] = value;
     }
+  }
+
+  if (Object.values(envVariables).some(value => !value)) {
+    console.info(
+      '\nℹ️ All necessary setup instructions, including how to configure environment variables, are available in the README file.\n'
+    );
   }
 
   return envVariables;
