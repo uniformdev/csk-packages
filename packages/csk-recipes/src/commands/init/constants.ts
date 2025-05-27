@@ -99,7 +99,7 @@ export const RECIPE_ADDITIONAL_FILES: Partial<{
 
 export const META_NOT_PROCESABLE_FILE_PATH_SEGMENTS = ['content/', '.json', '.yaml', '.env.example', '.sql', '.md'];
 
-export const FILES_TO_IGNORE_OUTSIDE_OF_MONOREPO = ['.lintstagedrc'];
+export const FILES_TO_IGNORE_OUTSIDE_OF_MONOREPO = ['.lintstagedrc', '.prettierignore'];
 
 export const PACKAGE_JSON_COPY_FILE = 'package-copy.json';
 
