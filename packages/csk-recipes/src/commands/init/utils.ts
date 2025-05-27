@@ -177,14 +177,22 @@ export const selectRecipes = async (template?: Template): Promise<Recipe[]> => {
 };
 
 /**
- * Fills environment variables by prompting the user to select or input values.
- * Handles both development and production environments differently.
+ * Prompts the user to fill in required environment variables based on the selected recipes.
+ * If variants are available for a variable, the user is asked to select one from a list;
+ * otherwise, the user is prompted to enter a value manually.
  *
- * @param {Recipe[]} recipes - Array of recipes for which environment variables are needed
- * @param {boolean} isDev - Whether the environment is development
- * @returns {Promise<Partial<Record<EnvVariable, string>>>} Object containing filled environment variables
+ * Default values are prefilled from existing `.env` variables or predefined fallback defaults.
+ * If any value is left empty, a notice is shown directing the user to consult the README.
+ *
+ * @param {Recipe[]} recipes - Array of selected recipes used to determine required environment variables.
+ * @param {ora.Ora} spinner - Ora spinner instance used to display status/info messages during prompts.
+ * @returns {Promise<Partial<Record<EnvVariable, string>>>}
+ * An object mapping environment variable names to their user-provided or default values.
  */
-export const fillEnvVariables = async (recipes: Recipe[]): Promise<Partial<Record<EnvVariable, string>>> => {
+export const fillEnvVariables = async (
+  recipes: Recipe[],
+  spinner: ora.Ora
+): Promise<Partial<Record<EnvVariable, string>>> => {
   // Parse the default environment variables from the .env file
   const defaultEnvVariables = await parseEnvVariables();
 
@@ -193,6 +201,12 @@ export const fillEnvVariables = async (recipes: Recipe[]): Promise<Partial<Recor
 
   // Object to store the resulting environment variables
   const envVariables: Partial<Record<EnvVariable, string>> = defaultEnvVariables;
+
+  if (requiredModuleEnvVariables.length) {
+    spinner.info(
+      'You can skip filling some environment variables for now. You can fill them later in the .env file based on the instructions in the README file.'
+    );
+  }
 
   for (const envVariable of requiredModuleEnvVariables) {
     const possibleVariants = ENV_VARIABLES_VARIANTS[envVariable];
@@ -209,17 +223,11 @@ export const fillEnvVariables = async (recipes: Recipe[]): Promise<Partial<Recor
     } else {
       // Prompt the user to input a value for the environment variable
       const value = await input({
-        message: `Enter the value for ${envVariable} (leave empty if you don't have it yet):`,
+        message: `Enter the value for ${envVariable}:`,
         default: defaultEnvVariables[envVariable] || ENV_VARIABLES_DEFAULT_VALUES[envVariable],
       });
       envVariables[envVariable] = value;
     }
-  }
-
-  if (Object.values(envVariables).some(value => !value)) {
-    console.info(
-      '\nℹ️ All necessary setup instructions, including how to configure environment variables, are available in the README file.\n'
-    );
   }
 
   return envVariables;
@@ -475,16 +483,87 @@ export const failLog = (spinner: ora.Ora, message: string, verbose: boolean): vo
 };
 
 /**
- * Executes a function with logs and error handling.
+ * Executes an asynchronous function with structured logging and optional progress tracking.
+ *
+ * Displays a start message, then runs the provided async function. After successful execution,
+ * a success message is logged. If not in verbose mode, the progress update callback is also invoked.
+ *
+ * @param {() => Promise<unknown>} fn - The asynchronous function to execute.
+ * @param {ora.Ora} spinner - The ora spinner instance used for displaying progress messages.
+ * @param {string} startMsg - Message to display when execution starts.
+ * @param {string} successMsg - Message to display upon successful completion.
+ * @param {() => void} setProgress - Callback to update progress (only called if not in verbose mode).
+ * @param {boolean} verbose - Whether verbose output is enabled; suppresses spinner/progress if true.
+ * @returns {Promise<void>} A promise that resolves when the function has completed and logging is done.
  */
 export const executeWithLogs = async (
   fn: () => Promise<unknown>,
   spinner: ora.Ora,
   startMsg: string,
   successMsg: string,
+  setProgress: () => void,
   verbose: boolean
 ) => {
   startLog(spinner, startMsg, verbose);
-  await fn();
-  successLog(spinner, successMsg, verbose);
+  await fn()
+    .then(() => {
+      if (!verbose) setProgress();
+      successLog(spinner, successMsg, verbose);
+    })
+    .catch(error => {
+      failLog(spinner, error?.message || 'An unknown error occurred', verbose);
+      throw error;
+    });
+};
+
+/**
+ * Creates a progress printer function that draws a dynamic CLI progress bar using ora.
+ *
+ * The returned function takes a percentage value (0–100), clamps it, and renders
+ * a progress bar with two decimal precision. On the first call, it starts the spinner
+ * with a prefixed label and on subsequent calls it updates the text.
+ *
+ * Example usage:
+ *
+ * ```ts
+ * const spinner = ora();
+ * const printProgress = createProgressPrinter(spinner, '🔧 Setting up project');
+ *
+ * printProgress(0);     // shows "[---] 0.00%" with prefix
+ * printProgress(45.23); // updates to "[██████----] 45.23%"
+ * printProgress(100);   // completes
+ * spinner.succeed('✅ Done!');
+ * ```
+ *
+ * @param {ora.Ora} spinner - The ora spinner instance used to display status in terminal.
+ * @param {string} prefix - The static text shown above the progress bar (e.g., step description).
+ * @returns {(percent: number) => void} Function that prints the progress bar based on percentage.
+ */
+export const createProgressPrinter = (spinner: ora.Ora, prefix: string) => {
+  return (() => {
+    return ((initialized: boolean) => {
+      return (percent: number) => {
+        const clamped = Math.max(0, Math.min(100, percent));
+        const formatted = clamped.toFixed(2);
+
+        const totalWidth = process.stdout.columns || 80;
+        const label = ` ${formatted}%`;
+        const barSize = Math.max(10, totalWidth - label.length - 10);
+
+        const filled = Math.round((clamped / 100) * barSize);
+        const bar = '█'.repeat(filled) + '-'.repeat(barSize - filled);
+
+        const output = `${prefix}\n[${bar}]${label}`;
+
+        if (spinner.isSpinning && initialized) {
+          spinner.text = output;
+        } else {
+          spinner.start(output);
+          initialized = true;
+        }
+
+        return createProgressPrinter(spinner, prefix);
+      };
+    })(false);
+  })();
 };

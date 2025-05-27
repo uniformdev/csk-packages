@@ -37,12 +37,12 @@ export const RECIPE_SPECIFIC_BRANCHES = {
 
 export const RECIPE_SPECIFIC_NOTES = {
   'ai-assistant': [
-    `Before running your application and pushing your content, please make sure to create a Data Source with the following settings: \n
-     •	Type: HTTP Request \n
-     •	Base URL:'https://uniform.app' \n
-     •	Query Parameter: 'projectId', and fill the value with the projectId of your Uniform project \n
-     •	Headers: 'X-Api-Key', and fill the value with the API key of your Uniform project \n
-     •	Public ID: 'uniformApp' \n`,
+    `Before running your application and pushing your content, please make sure to create a Data Source with the following settings: 
+     \t• Type: HTTP Request
+     \t• Base URL:'https://uniform.app'
+     \t• Query Parameter: 'projectId', and fill the value with the projectId of your Uniform project
+     \t• Headers: 'X-Api-Key', and fill the value with the API key of your Uniform project
+     \t• Public ID: 'uniformApp'`,
   ],
 };
 
@@ -96,3 +96,19 @@ export const META_NOT_PROCESABLE_FILE_PATH_SEGMENTS = ['content/', '.json', '.ya
 export const FILES_TO_IGNORE_OUTSIDE_OF_MONOREPO = ['.lintstagedrc'];
 
 export const PACKAGE_JSON_COPY_FILE = 'package-copy.json';
+
+// Calculated based on the total number of steps and the percentage of each step depends on step complexity
+export enum SETUP_PROJECT_STEP_PERCENTAGE {
+  INITIAL_STEP = 0, // Start Set Up Project
+
+  STEP_1 = 2.03, // Align with external branch
+  STEP_2 = 10.01, // Install dependencies
+  STEP_3 = 10.05, // Pre-process files
+  STEP_4 = 95.31, // Process files
+  STEP_5 = 96.34, // Post-process files
+  STEP_6 = 97, // Install dependencies after processing the files
+  STEP_7 = 98, // Add environment variables
+  STEP_8 = 99, // Cleanup project
+
+  FINAL_STEP = 100, // Final step
+}
