@@ -82,6 +82,12 @@ export const ENV_VARIABLES_DEFAULT_VALUES: Partial<{
   UNIFORM_CLI_BASE_EDGE_URL: 'https://uniform.global',
 };
 
+export const REQUIRED_UNIFORM_ENV_VARIABLES: EnvVariable[] = [
+  'UNIFORM_PROJECT_ID',
+  'UNIFORM_API_KEY',
+  'UNIFORM_PREVIEW_SECRET',
+];
+
 export const RECIPE_ADDITIONAL_FILES: Partial<{
   [key in Recipe]: string[];
 }> = {

@@ -20,6 +20,7 @@ import {
   TEMPLATES_SPECIFIC_RECIPES,
   RECIPE_SPECIFIC_BRANCHES,
   TEMPLATES,
+  REQUIRED_UNIFORM_ENV_VARIABLES,
 } from './constants';
 import { EnvVariable, Recipe, Template } from './types';
 import { runCmdCommand, spawnCmdCommand } from '../../utils';
@@ -196,19 +197,24 @@ export const fillEnvVariables = async (
   // Parse the default environment variables from the .env file
   const defaultEnvVariables = await parseEnvVariables();
 
+  // Filter out uniform environment variables that are already set in the .env file
+  const uniformEnvVariables = REQUIRED_UNIFORM_ENV_VARIABLES.filter(envVariable => !defaultEnvVariables[envVariable]);
+
   // Determine required environment variables based on provided recipes
   const requiredModuleEnvVariables = recipes.map(appRecipes => REQUIRED_ENV_VARIABLES[appRecipes]).flat();
+
+  const requiredEnvVariables = [...uniformEnvVariables, ...requiredModuleEnvVariables];
 
   // Object to store the resulting environment variables
   const envVariables: Partial<Record<EnvVariable, string>> = defaultEnvVariables;
 
-  if (requiredModuleEnvVariables.length) {
+  if (requiredEnvVariables.length) {
     spinner.info(
       'You can skip filling some environment variables for now. You can fill them later in the .env file based on the instructions in the README file.'
     );
   }
 
-  for (const envVariable of requiredModuleEnvVariables) {
+  for (const envVariable of requiredEnvVariables) {
     const possibleVariants = ENV_VARIABLES_VARIANTS[envVariable];
 
     if (possibleVariants?.length) {
@@ -245,14 +251,19 @@ export const fillEnvVariablesWithDefaults = async (
   // Parse the default environment variables from the .env file
   const defaultEnvVariables = await parseEnvVariables();
 
+  // Uniform environment variables that are not set in the .env file
+  const uniformEnvVariables = REQUIRED_UNIFORM_ENV_VARIABLES.filter(envVariable => !defaultEnvVariables[envVariable]);
+
   // Determine required environment variables based on provided recipes
   const requiredModuleEnvVariables = recipes.map(appRecipes => REQUIRED_ENV_VARIABLES[appRecipes]).flat();
 
-  // Object to store the resulting environment variables
-  const envVariables: Partial<Record<EnvVariable, string>> = {};
+  const requiredEnvVariables = [...uniformEnvVariables, ...requiredModuleEnvVariables];
 
-  for (const envVariable of requiredModuleEnvVariables) {
-    envVariables[envVariable] = defaultEnvVariables[envVariable] || ENV_VARIABLES_DEFAULT_VALUES[envVariable];
+  // Object to store the resulting environment variables
+  const envVariables: Partial<Record<EnvVariable, string>> = defaultEnvVariables;
+
+  for (const envVariable of requiredEnvVariables) {
+    envVariables[envVariable] = defaultEnvVariables[envVariable] || ENV_VARIABLES_DEFAULT_VALUES[envVariable] || '';
   }
 
   return envVariables;

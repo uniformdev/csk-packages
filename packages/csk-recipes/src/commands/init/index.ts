@@ -86,10 +86,6 @@ const init = async ({
       ? await fillEnvVariablesWithDefaults(recipes)
       : await fillEnvVariables(recipes, spinner);
 
-    if (notInteractiveMode) {
-      spinner.info('You are running in non-interactive mode. Please fill .env file manually.');
-    }
-
     const projectConfiguration: ProjectConfiguration = { template, recipes, envVariables };
 
     if (projectConfiguration.recipes.length || projectConfiguration.template !== 'baseline') {
