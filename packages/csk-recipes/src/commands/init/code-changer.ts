@@ -35,6 +35,21 @@ const cleanOutput = async (source: string, fileExtension: string): Promise<strin
 };
 
 /**
+ * Determines whether a file is eligible for meta-processing.
+ * A file is considered processable if it exists on disk and its path
+ * does not contain any of the excluded segments defined in
+ * `META_NOT_PROCESABLE_FILE_PATH_SEGMENTS`.
+ *
+ * @param {string} filePath - The full path to the file to check.
+ * @returns {boolean} True if the file exists and is processable; otherwise, false.
+ */
+export const isMetaProcessable = (filePath: string) => {
+  return (
+    fsSync.existsSync(filePath) && !META_NOT_PROCESABLE_FILE_PATH_SEGMENTS.some(segment => filePath.includes(segment))
+  );
+};
+
+/**
  * Processes a file by transforming its content based on the provided recipes,
  * cleaning the output, and optionally running a linter for non-JSON files.
  *
@@ -44,15 +59,7 @@ const cleanOutput = async (source: string, fileExtension: string): Promise<strin
  * @returns {Promise<void>} A promise that resolves when the operation is complete
  */
 export const proceedCodeChange = async (filePath: string, recipes: Recipe[], isMonorepo: boolean): Promise<void> => {
-  if (!fsSync.existsSync(filePath)) {
-    return;
-  }
-
-  const isMetaProcessablepathSegment = !META_NOT_PROCESABLE_FILE_PATH_SEGMENTS.some(segment =>
-    filePath.includes(segment)
-  );
-
-  if (!isMetaProcessablepathSegment) {
+  if (!isMetaProcessable(filePath)) {
     return;
   }
 
