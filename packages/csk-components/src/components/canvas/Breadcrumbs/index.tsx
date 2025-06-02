@@ -13,6 +13,7 @@ export type BreadcrumbsParameters = {
   title?: string;
   separator?: 'slash' | 'chevron';
   links?: DataWithProperties[];
+  autoGenerate?: boolean;
 };
 
 export type BreadcrumbsProps = ComponentProps<
