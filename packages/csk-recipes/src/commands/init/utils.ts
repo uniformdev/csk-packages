@@ -8,6 +8,7 @@ import fs from 'fs/promises';
 import * as ora from 'ora';
 import path from 'path';
 import { select, checkbox, confirm, input } from '@inquirer/prompts';
+import { EnvVariable, Recipe, Template } from './types';
 import {
   GIT_COMMANDS,
   GIT_BRANCHES,
@@ -21,8 +22,7 @@ import {
   RECIPE_SPECIFIC_BRANCHES,
   TEMPLATES,
   REQUIRED_UNIFORM_ENV_VARIABLES,
-} from './constants';
-import { EnvVariable, Recipe, Template } from './types';
+} from '../../constants';
 import { runCmdCommand, spawnCmdCommand } from '../../utils';
 
 /**

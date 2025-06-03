@@ -1,4 +1,5 @@
 import * as ora from 'ora';
+import { confirm } from '@inquirer/prompts';
 import {
   addEnvVariablesToProjectConfiguration,
   isMetaProcessable,
@@ -6,7 +7,6 @@ import {
   preProcessFile,
   proceedCodeChange,
 } from './code-changer';
-import { RECIPE_SPECIFIC_NOTES, SETUP_PROJECT_STEP_PERCENTAGE } from './constants';
 import { Recipe, ProjectConfiguration, Template } from './types';
 import {
   selectTemplate,
@@ -26,7 +26,19 @@ import {
   verifyGitProject,
   createProgressPrinter,
 } from './utils';
-import { spawnCmdCommand } from '../../utils';
+import {
+  RECIPE_SPECIFIC_NOTES,
+  REQUEST_ENV_VARIABLES_TO_PUSH,
+  REQUIRED_DATA_SOURCES,
+  SETUP_PROJECT_STEP_PERCENTAGE,
+} from '../../constants';
+import {
+  installDataSources,
+  promptForAccessToken,
+  runCommandWithSpinner,
+  runStartInteractive,
+  spawnCmdCommand,
+} from '../../utils';
 
 type InitArgs = {
   dev: boolean;
@@ -67,29 +79,98 @@ const init = async ({
 
   try {
     const { hasGit, wantsContinue } = await verifyGitProject(spinner);
-
     if (!hasGit && !wantsContinue) return;
 
-    if (hasGit) {
-      if (!dev && (await verifyProjectAlignment(spinner))) return;
+    if (hasGit && !dev) {
+      const misaligned = await verifyProjectAlignment(spinner);
+      if (misaligned) return;
     }
 
     const isMonorepo = checkIsMonorepo();
-    const notInteractiveMode = Boolean(templateFromArgs && recipesFromArgs);
+    const nonInteractive = Boolean(templateFromArgs && recipesFromArgs);
 
     const template = templateFromArgs ? await getValidTemplateFromArgs(templateFromArgs) : await selectTemplate();
+
     const recipes = recipesFromArgs
       ? await getValidRecipesFromArgs(recipesFromArgs, spinner)
       : await selectRecipes(template);
 
-    const envVariables = notInteractiveMode
+    const envVariables = nonInteractive
       ? await fillEnvVariablesWithDefaults(recipes)
       : await fillEnvVariables(recipes, spinner);
 
-    const projectConfiguration: ProjectConfiguration = { template, recipes, envVariables };
+    const missingEnvKeys = Object.entries(envVariables)
+      .filter(([, value]) => !value)
+      .map(([key]) => key);
 
-    if (projectConfiguration.recipes.length || projectConfiguration.template !== 'baseline') {
-      await setupApplication({ projectConfiguration, isMonorepo, verbose, spinner, dev });
+    const canPushCanvasData = REQUEST_ENV_VARIABLES_TO_PUSH.every(key => !missingEnvKeys.includes(key));
+    const isNeedToPushCanvasData = template !== 'baseline';
+
+    if (recipes.length > 0 || isNeedToPushCanvasData) {
+      await setupApplication({
+        projectConfiguration: {
+          template,
+          recipes,
+          envVariables,
+        },
+        isMonorepo,
+        verbose,
+        spinner,
+        dev,
+      });
+    }
+
+    const dataSourceToInstall = Array.from(
+      new Map(
+        recipes
+          .flatMap(recipe => REQUIRED_DATA_SOURCES[recipe as keyof typeof RECIPE_SPECIFIC_NOTES])
+          .filter(Boolean)
+          .map(obj => [obj.data.id, obj])
+      ).values()
+    );
+
+    const hasDataSources = dataSourceToInstall.length > 0;
+
+    let isPushedToUniform = false;
+    if (isNeedToPushCanvasData && canPushCanvasData) {
+      const confirmPush = await confirm({
+        message: `Do you want to push the canvas data${hasDataSources ? ' and install the data sources' : ''} to Uniform automatically?`,
+      });
+
+      if (confirmPush) {
+        if (hasDataSources) {
+          const token = await promptForAccessToken();
+          await installDataSources(dataSourceToInstall, token, spinner);
+        }
+        await runCommandWithSpinner('npm run init', spinner, 'Pushing canvas data to Uniform:');
+        spinner.succeed('🚀 Canvas data pushed to Uniform successfully!');
+        isPushedToUniform = true;
+      }
+    }
+
+    const allEnvSet = missingEnvKeys.length === 0;
+    if (allEnvSet && (!isNeedToPushCanvasData || isPushedToUniform)) {
+      const startPrompt = 'Do you want to build and start the application now?';
+      const buildAndStart = await confirm({ message: startPrompt });
+
+      if (buildAndStart) {
+        spinner.start('Building the project...');
+        await spawnCmdCommand('npm run build');
+        spinner.succeed('🚀 Application built successfully!');
+
+        runStartInteractive();
+        return;
+      }
+    }
+
+    if (!allEnvSet || (dataSourceToInstall && !isPushedToUniform)) {
+      spinner.warn('⚠️  IMPORTANT NOTES BEFORE STARTING THE APPLICATION ⚠️');
+
+      if (!allEnvSet) {
+        console.info(
+          `\n⚠️  Some environment variables are missing!\nPlease set the following variables in your .env file:\n${missingEnvKeys.map(key => `    • ${key}`).join('\n')}\nRefer to the README for more details.\n`
+        );
+      }
 
       const notes = recipes
         .map(recipe => RECIPE_SPECIFIC_NOTES[recipe as keyof typeof RECIPE_SPECIFIC_NOTES])
@@ -97,27 +178,17 @@ const init = async ({
         .filter(Boolean);
 
       if (notes.length) {
-        spinner.warn(`Important Notes for your project:\n\t${notes.join('\n\t')}`);
-      }
-
-      const missingKeys = Object.entries(envVariables)
-        .filter(([_, value]) => !value)
-        .map(([key]) => key);
-
-      if (missingKeys.length > 0) {
-        spinner.warn(
-          `Some environment variables are not set. Please fill them in manually based on the instructions in the README file:\n\t• ${missingKeys.join(
-            '\n\t• '
-          )}`
-        );
+        console.info(`📘  Additional Setup Required:\n${notes.join('\n')}\n`);
       }
     }
 
     spinner.succeed(
-      '🚀 Application initialized successfully! Run `npm run init` to set up your Uniform project then run `npm run dev` or `npm run build && npm run start` to start the server.'
+      `🚀 Application initialized successfully! Run ${
+        isNeedToPushCanvasData && !isPushedToUniform ? '`npm run init` to set up your Uniform project then run ' : ''
+      } \`npm run dev\` or \`npm run build && npm run start\` to start the server.`
     );
-  } catch (e) {
-    handleError(e);
+  } catch (error) {
+    handleError(error);
   }
 };
 

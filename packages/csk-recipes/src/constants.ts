@@ -1,4 +1,4 @@
-import { EnvVariable, Recipe, Template } from './types';
+import { EnvVariable, Recipe, Template } from './commands/init/types';
 
 export const TEMPLATE_BRANCH_PREFIX = 'refs/heads/templates/';
 export const TEMPLATE_BRANCH_PREFIX_LOCAL = 'templates/';
@@ -35,17 +35,6 @@ export const RECIPE_SPECIFIC_BRANCHES = {
   'ai-assistant': 'coffee-shop-ai',
 };
 
-export const RECIPE_SPECIFIC_NOTES = {
-  'ai-assistant': [
-    `Before running your application and pushing your content, please make sure to create a Data Source with the following settings: 
-     \t• Type: HTTP Request
-     \t• Base URL:'https://uniform.app'
-     \t• Query Parameter: 'projectId', and fill the value with the projectId of your Uniform project
-     \t• Headers: 'X-Api-Key', and fill the value with the API key of your Uniform project
-     \t• Public ID: 'uniformApp'`,
-  ],
-};
-
 export const GIT_COMMANDS = {
   CHECK_IF_GIT: 'git status >/dev/null 2>&1',
   DIFF_QUIET: `[[ $(git rev-parse --abbrev-ref HEAD) == "${GIT_BRANCHES.GOLD}" ]] && [ -z "$(git status --porcelain)" ] && git diff --quiet origin/${GIT_BRANCHES.GOLD} && echo true || exit 1`,
@@ -56,6 +45,8 @@ export const GIT_COMMANDS = {
 };
 
 export const JSX_COMMENT_REGEX = /{\s*\/\*\s*\/\/\?\s*(.*?)\s*\*\/\s*}/g;
+
+export const REQUEST_ENV_VARIABLES_TO_PUSH = ['UNIFORM_PROJECT_ID', 'UNIFORM_API_KEY'];
 
 export const REQUIRED_ENV_VARIABLES: {
   [key in Recipe]: EnvVariable[];
@@ -88,6 +79,17 @@ export const REQUIRED_UNIFORM_ENV_VARIABLES: EnvVariable[] = [
   'UNIFORM_PREVIEW_SECRET',
 ];
 
+export const RECIPE_SPECIFIC_NOTES = {
+  'ai-assistant': [
+    `🔧 Please create a Data Source with the following settings:
+    • Type:          HTTP Request
+    • Base URL:      ${process.env.UNIFORM_CLI_BASE_URL || ENV_VARIABLES_DEFAULT_VALUES.UNIFORM_CLI_BASE_URL || 'https://uniform.app'}
+    • Query Param:   'projectId' — set this to your Uniform project's ID
+    • Header:        'X-Api-Key' — set this to your Uniform API key
+    • Public ID:     'uniformApp'`,
+  ],
+};
+
 export const RECIPE_ADDITIONAL_FILES: Partial<{
   [key in Recipe]: string[];
 }> = {
@@ -102,6 +104,27 @@ export const META_NOT_PROCESABLE_FILE_PATH_SEGMENTS = ['content/', '.json', '.ya
 export const FILES_TO_IGNORE_OUTSIDE_OF_MONOREPO = ['.lintstagedrc', '.prettierignore'];
 
 export const PACKAGE_JSON_COPY_FILE = 'package-copy.json';
+
+const DataSource = {
+  UniformApp: {
+    data: {
+      connectorType: 'genericrestapi',
+      displayName: 'Uniform App',
+      id: 'uniformApp',
+      parameters: [{ key: 'projectId', value: process.env.UNIFORM_PROJECT_ID }],
+      custom: { proposedName: 'uniform.app' },
+      variants: {},
+      headers: [{ key: 'X-Api-Key', value: process.env.UNIFORM_API_KEY }],
+      baseUrl:
+        process.env.UNIFORM_CLI_BASE_URL || ENV_VARIABLES_DEFAULT_VALUES.UNIFORM_CLI_BASE_URL || 'https://uniform.app',
+    },
+    integrationType: 'canvas',
+  },
+};
+
+export const REQUIRED_DATA_SOURCES = {
+  'ai-assistant': [DataSource.UniformApp],
+};
 
 // Calculated based on the total number of steps and the percentage of each step depends on step complexity
 export enum SETUP_PROJECT_STEP_PERCENTAGE {
