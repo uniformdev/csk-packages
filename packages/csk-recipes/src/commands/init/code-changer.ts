@@ -2,14 +2,14 @@ import fsSync from 'fs';
 import fs from 'fs/promises';
 import path from 'path';
 import MetaScript from '@uniformdev/metascript';
+import { EnvVariable, Recipe } from './types';
 import {
   FILES_TO_IGNORE_OUTSIDE_OF_MONOREPO,
   JSX_COMMENT_REGEX,
   META_NOT_PROCESABLE_FILE_PATH_SEGMENTS,
   PACKAGE_JSON_COPY_FILE,
   RECIPE_ADDITIONAL_FILES,
-} from './constants';
-import { EnvVariable, Recipe } from './types';
+} from '../../constants';
 import { formatWithPrettier, runCmdCommand } from '../../utils';
 
 /**
