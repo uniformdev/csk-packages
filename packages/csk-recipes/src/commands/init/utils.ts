@@ -187,12 +187,14 @@ export const selectRecipes = async (template?: Template): Promise<Recipe[]> => {
  *
  * @param {Recipe[]} recipes - Array of selected recipes used to determine required environment variables.
  * @param {ora.Ora} spinner - Ora spinner instance used to display status/info messages during prompts.
+ * @param {string} readmePath - Path to the README file.
  * @returns {Promise<Partial<Record<EnvVariable, string>>>}
  * An object mapping environment variable names to their user-provided or default values.
  */
 export const fillEnvVariables = async (
   recipes: Recipe[],
-  spinner: ora.Ora
+  spinner: ora.Ora,
+  readmePath: string
 ): Promise<Partial<Record<EnvVariable, string>>> => {
   // Parse the default environment variables from the .env file
   const defaultEnvVariables = await parseEnvVariables();
@@ -210,7 +212,7 @@ export const fillEnvVariables = async (
 
   if (requiredEnvVariables.length) {
     spinner.info(
-      'You can skip filling some environment variables for now. You can fill them later in the .env file based on the instructions in the README file.'
+      `Environment configuration\nYou can skip some variables for now and set them later in the .env file (see ${readmePath}).`
     );
   }
 

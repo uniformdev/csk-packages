@@ -1,4 +1,5 @@
 import * as ora from 'ora';
+import path from 'path';
 import { confirm } from '@inquirer/prompts';
 import {
   addEnvVariablesToProjectConfiguration,
@@ -75,7 +76,8 @@ const init = async ({
   verbose,
 }: InitArgs): Promise<void> => {
   const spinner = ora.default();
-  spinner.info('🚀 Welcome to the CSK CLI! 🧡\n');
+  const readmePath = path.resolve(process.cwd(), 'README.md');
+  spinner.info("🚀 Welcome to the Component Starter Kit CLI!\nLet's get your project up and running. 🧡\n");
 
   try {
     const { hasGit, wantsContinue } = await verifyGitProject(spinner);
@@ -97,7 +99,7 @@ const init = async ({
 
     const envVariables = nonInteractive
       ? await fillEnvVariablesWithDefaults(recipes)
-      : await fillEnvVariables(recipes, spinner);
+      : await fillEnvVariables(recipes, spinner, readmePath);
 
     const missingEnvKeys = Object.entries(envVariables)
       .filter(([, value]) => !value)
@@ -143,7 +145,7 @@ const init = async ({
           await installDataSources(dataSourceToInstall, token, spinner);
         }
         await runCommandWithSpinner('npm run init', spinner, 'Pushing canvas data to Uniform:');
-        spinner.succeed('🚀 Canvas data pushed to Uniform successfully!');
+        spinner.succeed('Done! Canvas data successfully pushed to Uniform.');
         isPushedToUniform = true;
       }
     }
@@ -156,7 +158,7 @@ const init = async ({
       if (buildAndStart) {
         spinner.start('Building the project...');
         await spawnCmdCommand('npm run build');
-        spinner.succeed('🚀 Application built successfully!');
+        spinner.succeed('Done! Your app has been built successfully and is ready to run.');
 
         runStartInteractive();
         return;
@@ -168,7 +170,7 @@ const init = async ({
 
       if (!allEnvSet) {
         console.info(
-          `\n⚠️  Some environment variables are missing!\nPlease set the following variables in your .env file:\n${missingEnvKeys.map(key => `    • ${key}`).join('\n')}\nRefer to the README for more details.\n`
+          `\n⚠️  Some environment variables are missing!\nPlease set the following variables in your .env file:\n${missingEnvKeys.map(key => `    • ${key}`).join('\n')}\n📘 For details, see: ${readmePath}\n`
         );
       }
 
@@ -178,14 +180,14 @@ const init = async ({
         .filter(Boolean);
 
       if (notes.length) {
-        console.info(`📘  Additional Setup Required:\n${notes.join('\n')}\n`);
+        console.info(`⚠️  Additional Setup Required:\n${notes.join('\n')}\n`);
       }
     }
 
     spinner.succeed(
       `🚀 Application initialized successfully! Run ${
         isNeedToPushCanvasData && !isPushedToUniform ? '`npm run init` to set up your Uniform project then run ' : ''
-      } \`npm run dev\` or \`npm run build && npm run start\` to start the server.`
+      }\`npm run dev\` or \`npm run build && npm run start\` to start the server.`
     );
   } catch (error) {
     handleError(error);
