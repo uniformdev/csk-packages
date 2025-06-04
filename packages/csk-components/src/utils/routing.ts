@@ -1,6 +1,6 @@
 import { ResolvedRouteGetResponse, RouteGetResponseEdgehancedComposition, LinkParamValue } from '@uniformdev/canvas';
 
-const DYNAMIC_KEY_REGEX = /:[a-zA-Z_]+/;
+const DYNAMIC_KEY_REGEX = /:([a-zA-Z0-9-_]+)/g;
 
 /**
  * Resolves a dynamic route to a concrete path by replacing placeholders with values from the provided inputs.
