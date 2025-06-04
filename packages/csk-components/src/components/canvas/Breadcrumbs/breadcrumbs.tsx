@@ -3,7 +3,7 @@ import { flattenValues, LinkParamValue, CanvasClient } from '@uniformdev/canvas'
 import { ProjectMapClient } from '@uniformdev/project-map';
 import BaseButton, { ButtonVariant } from '@/components/ui/Button';
 import BaseText from '@/components/ui/Text';
-import { formatUniformLink } from '@/utils/routing';
+import { formatUniformLink, resolveRouteToPath } from '@/utils/routing';
 import { cn } from '@/utils/styling';
 import { BreadcrumbLink, BreadcrumbsProps } from '.';
 import { getSeparator } from './helpers';
@@ -62,10 +62,7 @@ export const Breadcrumbs: FC<BreadcrumbsProps> = async ({
                 .catch(() => node.name)
             : node.name;
 
-        const link =
-          node.type === 'placeholder'
-            ? undefined
-            : node.path.replace(/:([a-zA-Z0-9-_]+)/g, (_, key) => context?.dynamicInputs?.[key] ?? `:${key}`);
+        const link = node.type === 'placeholder' ? undefined : resolveRouteToPath(node.path, context.dynamicInputs);
 
         return { title, link };
       })
