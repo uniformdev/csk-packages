@@ -24,6 +24,7 @@ export const IconLabel: FC<IconLabelProps> = ({
       'flex w-fit items-center gap-x-3',
       {
         [`text-${size}`]: !!size,
+        [`text-${color}`]: !!color,
       },
       className
     )}
