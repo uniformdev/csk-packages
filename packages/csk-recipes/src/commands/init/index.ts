@@ -150,8 +150,8 @@ const init = async ({
       }
     }
 
-    const allEnvSet = missingEnvKeys.length === 0;
-    if (allEnvSet && (!isNeedToPushCanvasData || isPushedToUniform)) {
+    const hasMissingEnv = missingEnvKeys.length > 0;
+    if (!hasMissingEnv && (!isNeedToPushCanvasData || isPushedToUniform)) {
       const startPrompt = 'Do you want to build and start the application now?';
       const buildAndStart = await confirm({ message: startPrompt });
 
@@ -165,21 +165,22 @@ const init = async ({
       }
     }
 
-    if (!allEnvSet || (dataSourceToInstall && !isPushedToUniform)) {
+    const notes = recipes
+      .flatMap(recipe => RECIPE_SPECIFIC_NOTES[recipe as keyof typeof RECIPE_SPECIFIC_NOTES] || [])
+      .filter(Boolean);
+
+    const shouldShowNotes = notes.length > 0 && !isPushedToUniform;
+
+    if (hasMissingEnv || shouldShowNotes) {
       spinner.warn('⚠️  IMPORTANT NOTES BEFORE STARTING THE APPLICATION ⚠️');
 
-      if (!allEnvSet) {
+      if (hasMissingEnv) {
         console.info(
           `\n⚠️  Some environment variables are missing!\nPlease set the following variables in your .env file:\n${missingEnvKeys.map(key => `    • ${key}`).join('\n')}\n📘 For details, see: ${readmePath}\n`
         );
       }
 
-      const notes = recipes
-        .map(recipe => RECIPE_SPECIFIC_NOTES[recipe as keyof typeof RECIPE_SPECIFIC_NOTES])
-        .flat()
-        .filter(Boolean);
-
-      if (notes.length) {
+      if (shouldShowNotes) {
         console.info(`⚠️  Additional Setup Required:\n${notes.join('\n')}\n`);
       }
     }
