@@ -4,6 +4,7 @@ import { FC, useCallback, useState } from 'react';
 import { UniformText } from '@uniformdev/canvas-next-rsc/component';
 import BaseIconLabel from '@/components/ui/IconLabel';
 import BaseImage from '@/components/ui/Image';
+import InlineSVG from '@/components/ui/InlineSVG';
 import { resolveAsset } from '@/utils/assets';
 import { cn, resolveViewPort } from '@/utils/styling';
 import { NavigationGroupProps } from '.';
@@ -38,6 +39,16 @@ export const NavigationGroup: FC<NavigationGroupProps> = ({
   const [resolvedImage] = resolveAsset(icon);
   const { url, title = '' } = resolvedImage || {};
 
+  const renderUrl = () => {
+    if (!url) return null;
+
+    return url.endsWith('.svg') ? <InlineSVG src={url} alt={title} fill /> : <BaseImage src={url} alt={title} fill />;
+  };
+
+  const actionClassName = cn('transition-all duration-150', {
+    [resolveViewPort(hoverEffect, 'group-hover:{value}')]: !!hoverEffect,
+  });
+
   const [resolvedCaretIcon] = resolveAsset(caretIcon);
   const { url: caretUrl, title: caretTitle = '' } = resolvedCaretIcon || {};
 
@@ -45,10 +56,10 @@ export const NavigationGroup: FC<NavigationGroupProps> = ({
     <div className="relative" onMouseLeave={closeFlyout}>
       <button onMouseEnter={openFlyout} onClick={openFlyout} className={getButtonClasses({ color })}>
         <BaseIconLabel
-          icon={url && <BaseImage src={url} alt={title} fill />}
-          textClassName={cn('transition-all duration-150', {
-            [resolveViewPort(hoverEffect, 'hover:{value}')]: !!hoverEffect,
-          })}
+          icon={renderUrl()}
+          className="group"
+          iconClassName={actionClassName}
+          textClassName={actionClassName}
           {...{ size, tag, color, weight, font, transform, decoration, letterSpacing, alignment }}
         >
           <UniformText placeholder="Text goes here" parameterId="text" component={component} context={context} />
