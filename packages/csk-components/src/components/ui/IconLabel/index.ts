@@ -5,7 +5,8 @@ export type IconLabelProps = {
   icon?: ReactNode;
   children: ReactElement | string;
   textClassName?: string;
-
+  iconClassName?: string;
+  className?: string;
   text?: string;
   tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
   size?: BaseTextProps['size'];

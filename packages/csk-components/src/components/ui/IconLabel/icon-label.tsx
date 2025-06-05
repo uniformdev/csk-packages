@@ -16,13 +16,19 @@ export const IconLabel: FC<IconLabelProps> = ({
   alignment,
   children,
   textClassName,
+  iconClassName,
+  className,
 }) => (
   <div
-    className={cn('flex w-fit items-center gap-x-3', {
-      [`text-${size}`]: !!size,
-    })}
+    className={cn(
+      'flex w-fit items-center gap-x-3',
+      {
+        [`text-${size}`]: !!size,
+      },
+      className
+    )}
   >
-    {icon && <div className="relative size-[1em]">{icon}</div>}
+    {icon && <div className={cn('relative size-[1em]', iconClassName)}>{icon}</div>}
     <BaseText
       {...{
         alignment,

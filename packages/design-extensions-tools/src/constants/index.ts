@@ -17,7 +17,7 @@ export enum CONFIG_FILE {
 }
 
 export const DEFAULT_COLOR_PREFIXES = ['bg', 'text', 'decoration', 'border', 'ring', 'fill'];
-export const DEFAULT_COLOR_VARIANTS = ['hover', 'lg', 'md'];
+export const DEFAULT_COLOR_VARIANTS = ['hover', 'group-hover', 'lg', 'md'];
 
 export const DEFAULT_DIMENSION_PREFIXES = ['mt', 'mb', 'mr', 'ml', 'pt', 'pb', 'pr', 'pl', 'w', 'h'];
 export const DEFAULT_DIMENSION_VARIANTS: string[] = ['lg', 'md'];
