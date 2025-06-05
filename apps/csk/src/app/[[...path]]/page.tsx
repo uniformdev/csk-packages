@@ -1,4 +1,5 @@
 import { cookies } from 'next/headers';
+import { notFound } from 'next/navigation';
 import {
   ContextUpdateTransfer,
   PageParameters,
@@ -17,11 +18,35 @@ import { DesignExtensionsProvider } from '@uniformdev/design-extensions-tools/co
 //? }
 import { componentResolver } from '@/components';
 import { DeviceTypeSetter } from '@/components/custom-ui/DeviceTypeSetter';
+//? if (localization) {
+import { routing } from '@/i18n/routing';
+//? }
+import { isAIAssistantConfigurationPage } from '@/modules/chat/utils';
 import { DEVICE_TYPE_COOKIE_NAME } from '@/utils/deviceType';
 import { getPreviewViewports } from '@/utils/previewClient';
 
 export default async function Home(props: PageParameters) {
   const cookieStore = await cookies();
+
+  const { path = '' } = (await props.params) || {};
+  const pathname = typeof path === 'string' ? path : path.join('/');
+
+  //? if (localization) {
+  const currentLocale =
+    Array.isArray(path) && path.length > 0 && routing.locales.includes(path[0]) ? path[0] : routing.defaultLocale;
+  //? }
+
+  const searchParams = await props.searchParams;
+  const isPreviewMode = isIncontextEditingEnabled({ searchParams });
+
+  //? if (localization) {
+  if (isAIAssistantConfigurationPage(isPreviewMode, pathname, currentLocale)) {
+    //? } else {
+    //? write('if (isAIAssistantConfigurationPage(isPreviewMode, pathname)) {\n');
+    //? }
+    return notFound();
+  }
+
   const deviceType = cookieStore.get(DEVICE_TYPE_COOKIE_NAME)?.value || '';
   //? if (localization) {
   const route = await retrieveRoute(props);
@@ -29,11 +54,9 @@ export default async function Home(props: PageParameters) {
   //? write('const route = await retrieveRoute(props, locales.defaultLocale);\n');
   //? }
 
-  const searchParams = await props.searchParams;
   const serverContext = await createServerUniformContext({
     searchParams,
   });
-  const isPreviewMode = isIncontextEditingEnabled({ searchParams });
   const previewViewports = await getPreviewViewports();
 
   return (

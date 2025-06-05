@@ -313,6 +313,50 @@ composition:
             value: contrast-[.1]
         _overridability:
           hideLockedParameters: true
+      - _id: 803056e4-b10a-4143-b0ac-403aaffcaaef
+        type: aiAssistant
+        parameters:
+          starterPrompts:
+            type: $block
+            value:
+              - _id: d61969dc-dda3-43fb-9ae8-b848006a92f5
+                type: starterPrompt
+                fields:
+                  value:
+                    type: text
+                    value: Could you show me what’s in my shopping cart right now?
+              - _id: 2c4192c8-1528-4c63-b2dd-7b431857a7e5
+                type: starterPrompt
+                fields:
+                  value:
+                    type: text
+                    value: >-
+                      Based on what I like, do you have any recommendations for
+                      me?
+              - _id: f267ccf4-3c00-4ba6-9edf-888813a59ba6
+                type: starterPrompt
+                fields:
+                  value:
+                    type: text
+                    value: >-
+                      Hey, could you take a look at my shopping cart and suggest
+                      a few products that might suit me?
+              - _id: 557f3444-19e2-4bf9-8f44-4b7b568f81b3
+                type: starterPrompt
+                fields:
+                  value:
+                    type: text
+                    value: Trying to improve bean grinding technique
+              - _id: 37d73a3f-2965-41d5-8acf-9c256e49a464
+                type: starterPrompt
+                fields:
+                  value:
+                    type: text
+                    value: >-
+                      I am looking for an espresso machine that gives me
+                      precision grinding
+        _overridability:
+          hideLockedParameters: true
     headerCenterContent:
       - _id: 5832d439-1459-4a01-b422-fd1e66a71cbb
         type: navigationLink
@@ -1332,8 +1376,8 @@ composition:
           hideLockedParameters: true
   _locales:
     - en
-created: '2025-06-05T12:15:14.683835+00:00'
-modified: '2025-06-05T14:37:09.53008+00:00'
+created: '2025-05-26T08:41:07.352452+00:00'
+modified: '2025-05-26T08:44:18.058021+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/featured_header.png
