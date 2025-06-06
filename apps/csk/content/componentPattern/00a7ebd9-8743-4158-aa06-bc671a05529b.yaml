@@ -19,7 +19,7 @@ composition:
       value: true
     backgroundColor:
       type: dex-color-palette-parameter
-      value: general-color-3
+      value: general-color-6
   slots:
     containerContent:
       - _id: bb18931f-9ae0-4561-86ab-a9a1cc6ccab3
@@ -35,7 +35,7 @@ composition:
                     parameters:
                       tag:
                         type: dex-segmented-control-parameter
-                        value: span
+                        value: h2
                       size:
                         type: dex-segmented-control-parameter
                         value:
@@ -47,7 +47,7 @@ composition:
                         value: Find the perfect bean
                       color:
                         type: dex-color-palette-parameter
-                        value: text-secondary
+                        value: text-tertiary
                       weight:
                         type: dex-segmented-control-parameter
                         value: bold
@@ -77,7 +77,7 @@ composition:
                         value: Choose from a variety of beans for the perfect cup.
                       color:
                         type: dex-color-palette-parameter
-                        value: text-secondary
+                        value: text-tertiary
                       weight:
                         type: dex-segmented-control-parameter
                         value: normal
@@ -265,7 +265,7 @@ composition:
             Item/entry/fields/variants/value/0/fields/price/value} $
         color:
           type: dex-color-palette-parameter
-          value: text-secondary
+          value: text-tertiary
     5c78437e-dd37-42dc-a025-f332aa49f0b8|1af937fb-40ae-4938-b1a8-110b8ff73fc4|988f7805-9e0e-4b30-acaf-f97d7dd5099f:
       parameters:
         text:
@@ -275,16 +275,16 @@ composition:
             Item/entry/fields/name/value}
         color:
           type: dex-color-palette-parameter
-          value: text-secondary
+          value: text-tertiary
   _overridability:
     parameters:
       displayName: 'yes'
-      backgroundColor: 'yes'
+      backgroundColor: 'no'
     hideLockedParameters: true
   _locales:
     - en
-created: '2025-03-18T13:02:27.310877+00:00'
-modified: '2025-05-23T09:49:08.632844+00:00'
+created: '2025-06-06T09:06:58.350612+00:00'
+modified: '2025-06-06T09:06:58.350612+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/jd-template/primary-product-list.jpg

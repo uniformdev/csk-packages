@@ -50,7 +50,6 @@ composition:
         $slotSectionItems:
           - _id: 93046baf-1b7b-4e03-be0b-47ff9d91d1ca
             type: fixedHero
-            variant: ''
             parameters:
               image:
                 type: asset
@@ -94,9 +93,18 @@ composition:
               fullHeight:
                 type: checkbox
                 value: true
+              titleColor:
+                type: dex-color-palette-parameter
+                value: text-secondary
               contentAlignment:
                 type: dex-segmented-control-parameter
                 value: center
+              descriptionColor:
+                type: dex-color-palette-parameter
+                value: text-secondary
+              eyebrowTitleColor:
+                type: dex-color-palette-parameter
+                value: text-secondary
               primaryButtonText:
                 type: text
                 locales:
@@ -1272,6 +1280,6 @@ composition:
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-05-20T11:53:47.542221+00:00'
-modified: '2025-06-05T08:51:46.630552+00:00'
+created: '2025-06-06T09:07:06.239577+00:00'
+modified: '2025-06-06T09:07:06.239577+00:00'
 pattern: false
