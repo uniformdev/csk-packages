@@ -3,7 +3,6 @@ import { AssetParamValue } from '@uniformdev/assets';
 import { LinkParamValue } from '@uniformdev/canvas';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { ButtonProps as BaseButtonProps } from '@/components/ui/Button';
-import { withPlaygroundWrapper } from '@/hocs/withPlaygroundWrapper';
 import { ViewPort } from '@/types/cskTypes';
 import { Button } from './button';
 
@@ -32,4 +31,4 @@ export type ButtonAdditionalProps = {
 
 export type ButtonProps = ComponentProps<ButtonParameters & ButtonAdditionalProps>;
 
-export default withPlaygroundWrapper(Button);
+export default Button;

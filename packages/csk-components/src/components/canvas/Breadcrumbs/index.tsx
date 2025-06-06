@@ -1,7 +1,6 @@
 import { DataWithProperties } from '@uniformdev/canvas';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { TextParameters } from '@/components/canvas/Text/parameters';
-import { withPlaygroundWrapper } from '@/hocs/withPlaygroundWrapper';
 import { Breadcrumbs } from './breadcrumbs';
 
 export type BreadcrumbLink = {
@@ -20,4 +19,4 @@ export type BreadcrumbsProps = ComponentProps<
   BreadcrumbsParameters & Pick<TextParameters, 'size' | 'color' | 'font' | 'transform'>
 >;
 
-export default withPlaygroundWrapper(Breadcrumbs);
+export default Breadcrumbs;

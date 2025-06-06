@@ -3,7 +3,6 @@ import { AssetParamValue } from '@uniformdev/assets';
 import { LinkParamValue } from '@uniformdev/canvas';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { TextParameters } from '@/components/canvas/Text/parameters';
-import { withPlaygroundWrapper } from '@/hocs/withPlaygroundWrapper';
 import { ViewPort } from '@/types/cskTypes';
 
 export type NavigationGroupParameters = TextParameters & {
@@ -21,5 +20,5 @@ export enum NavigationGroupSlots {
 
 export type NavigationGroupProps = ComponentProps<NavigationGroupParameters, NavigationGroupSlots>;
 
-export default dynamic(() => import('./navigation-group').then(mod => withPlaygroundWrapper(mod.NavigationGroup)));
+export default dynamic(() => import('./navigation-group').then(mod => mod.NavigationGroup));
 export { NavigationGroupEmptyPlaceholder } from './empty-placeholder';

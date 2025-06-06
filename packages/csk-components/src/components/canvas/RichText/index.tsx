@@ -1,6 +1,5 @@
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { RichTextNode } from '@uniformdev/richtext';
-import { withPlaygroundWrapper } from '@/hocs/withPlaygroundWrapper';
 import { RichText } from './rich-text';
 
 export type RichTextAdditionalProps = {
@@ -16,4 +15,4 @@ export type RichTextParameters = {
 
 export type RichTextProps = ComponentProps<RichTextParameters & RichTextAdditionalProps>;
 
-export default withPlaygroundWrapper(RichText);
+export default RichText;

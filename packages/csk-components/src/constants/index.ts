@@ -85,8 +85,6 @@ export const EXTRACT_UTILS = [
   'styling.ts',
 ];
 
-export const EXTRACT_HOCS = ['withPlaygroundWrapper.tsx'];
-
 export const EXTRACT_TYPES = ['cskTypes.ts'];
 
 export enum cskComponentsNames {
