@@ -1,5 +1,4 @@
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
-import { withPlaygroundWrapper } from '@/hocs/withPlaygroundWrapper';
 import { ViewPort } from '@/types/cskTypes';
 import { GridItem } from './grid-item';
 
@@ -40,4 +39,4 @@ export enum GridItemSlots {
 
 export type GridItemProps = ComponentProps<GridItemParameters & GridItemAdditionalProps, GridItemSlots>;
 
-export default withPlaygroundWrapper(GridItem);
+export default GridItem;

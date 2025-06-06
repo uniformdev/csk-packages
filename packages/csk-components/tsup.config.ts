@@ -10,7 +10,6 @@ export default defineConfig({
     'src/utils/assets.ts',
     'src/utils/createEmptyPlaceholderResolver.tsx',
     'src/utils/createComponentResolver.ts',
-    'src/hocs/withPlaygroundWrapper.tsx',
     'src/components/providers/server.ts',
     'src/components/ui/index.ts',
     'src/components/canvas/index.ts',

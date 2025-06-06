@@ -1,6 +1,5 @@
 import { LinkParamValue } from '@uniformdev/canvas';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
-import { withPlaygroundWrapper } from '@/hocs/withPlaygroundWrapper';
 import { Link } from './link';
 
 export type LinkParameters = {
@@ -15,4 +14,4 @@ export enum LinkSlots {
 
 export type LinkProps = ComponentProps<LinkParameters, LinkSlots>;
 
-export default withPlaygroundWrapper(Link);
+export default Link;

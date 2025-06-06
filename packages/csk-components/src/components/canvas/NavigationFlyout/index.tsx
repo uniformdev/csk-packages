@@ -3,7 +3,6 @@ import { AssetParamValue } from '@uniformdev/assets';
 import { LinkParamValue } from '@uniformdev/canvas';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { TextParameters } from '@/components/canvas/Text/parameters';
-import { withPlaygroundWrapper } from '@/hocs/withPlaygroundWrapper';
 import { ViewPort } from '@/types/cskTypes';
 
 export type NavigationFlyoutParameters = TextParameters & {
@@ -22,5 +21,5 @@ export enum NavigationFlyoutSlots {
 
 export type NavigationFlyoutProps = ComponentProps<NavigationFlyoutParameters, NavigationFlyoutSlots>;
 
-export default dynamic(() => import('./navigation-flyout').then(mod => withPlaygroundWrapper(mod.NavigationFlyout)));
+export default dynamic(() => import('./navigation-flyout').then(mod => mod.NavigationFlyout));
 export { NavigationFlyoutEmptyPlaceholder } from './empty-placeholder';

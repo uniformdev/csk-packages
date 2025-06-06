@@ -1,11 +1,5 @@
 import path from 'node:path';
-import {
-  EXTRACT_CANVAS_COMPONENTS,
-  EXTRACT_HOCS,
-  EXTRACT_TYPES,
-  EXTRACT_UI_COMPONENTS,
-  EXTRACT_UTILS,
-} from '../constants';
+import { EXTRACT_CANVAS_COMPONENTS, EXTRACT_TYPES, EXTRACT_UI_COMPONENTS, EXTRACT_UTILS } from '../constants';
 import { copyFiles, copyFolders } from '../utils/copy';
 
 async function copyContent() {
@@ -26,9 +20,6 @@ async function copyContent() {
 
   // Copy utils
   await copyFiles(path.resolve('src', 'utils'), path.resolve('dist', 'content', 'utils'), EXTRACT_UTILS);
-
-  // Copy hocs
-  await copyFiles(path.resolve('src', 'hocs'), path.resolve('dist', 'content', 'hocs'), EXTRACT_HOCS);
 
   // Copy types
   await copyFiles(path.resolve('src', 'types'), path.resolve('dist', 'content', 'types'), EXTRACT_TYPES);

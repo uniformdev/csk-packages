@@ -1,6 +1,5 @@
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { ContainerParameters } from '@/components/canvas/Container/parameters';
-import { withPlaygroundWrapper } from '@/hocs/withPlaygroundWrapper';
 import { ViewPort } from '@/types/cskTypes';
 import { Flex } from './flex';
 
@@ -27,4 +26,4 @@ enum FlexSlots {
 
 export type FlexProps = ComponentProps<FlexParameters & FlexAdditionalProps, FlexSlots>;
 
-export default withPlaygroundWrapper(Flex);
+export default Flex;
