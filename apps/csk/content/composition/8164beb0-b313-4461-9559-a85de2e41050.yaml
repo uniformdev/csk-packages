@@ -199,9 +199,9 @@ composition:
                     size:
                       type: dex-segmented-control-parameter
                       value:
-                        mobile: 4xl
-                        tablet: 4xl
-                        desktop: 4xl
+                        mobile: 3xl
+                        tablet: 5xl
+                        desktop: 5xl
                     text:
                       type: text
                       value: Find the right Espresso Maker for your espresso needs
@@ -228,7 +228,10 @@ composition:
                       value: p
                     size:
                       type: dex-segmented-control-parameter
-                      value: {}
+                      value:
+                        mobile: sm
+                        tablet: lg
+                        desktop: xl
                     text:
                       type: text
                       locales:
@@ -335,8 +338,9 @@ composition:
                                 size:
                                   type: dex-segmented-control-parameter
                                   value:
-                                    tablet: 4xl
-                                    desktop: 4xl
+                                    mobile: 3xl
+                                    tablet: 5xl
+                                    desktop: 5xl
                                 text:
                                   type: text
                                   value: >-
@@ -350,7 +354,7 @@ composition:
                                   value: bold
                                 alignment:
                                   type: dex-segmented-control-parameter
-                                  value: left
+                                  value: center
                               _overridability:
                                 parameters:
                                   text: 'yes'
@@ -363,7 +367,10 @@ composition:
                                   value: span
                                 size:
                                   type: dex-segmented-control-parameter
-                                  value: {}
+                                  value:
+                                    mobile: sm
+                                    tablet: lg
+                                    desktop: xl
                                 text:
                                   type: text
                                   locales:
@@ -388,7 +395,7 @@ composition:
                                   value: normal
                                 alignment:
                                   type: dex-segmented-control-parameter
-                                  value: left
+                                  value: center
                             - _id: 5b0ac248-72ab-48f1-8f73-1d3923a89174
                               type: text
                               parameters:
@@ -401,9 +408,9 @@ composition:
                                 size:
                                   type: dex-segmented-control-parameter
                                   value:
-                                    mobile: lg
+                                    mobile: sm
                                     tablet: lg
-                                    desktop: lg
+                                    desktop: xl
                                 text:
                                   type: text
                                   value: >-
@@ -418,7 +425,7 @@ composition:
                                   value: bold
                                 alignment:
                                   type: dex-segmented-control-parameter
-                                  value: left
+                                  value: center
                                 letterSpacing:
                                   type: dex-segmented-control-parameter
                                   value: wide
@@ -573,8 +580,9 @@ composition:
                           size:
                             type: dex-segmented-control-parameter
                             value:
-                              tablet: 4xl
-                              desktop: 2xl
+                              mobile: 3xl
+                              tablet: 5xl
+                              desktop: 5xl
                           text:
                             type: text
                             value: Great Espresso since the  1930s
@@ -599,7 +607,10 @@ composition:
                             value: span
                           size:
                             type: dex-segmented-control-parameter
-                            value: {}
+                            value:
+                              mobile: sm
+                              tablet: lg
+                              desktop: xl
                           text:
                             type: text
                             value: >-
@@ -638,7 +649,7 @@ composition:
                             value: normal
                           alignment:
                             type: dex-segmented-control-parameter
-                            value: left
+                            value: center
                       - _id: e4ce938f-4fa9-4b28-bfd2-0f75adf84829
                         type: review
                         slots:
@@ -872,8 +883,9 @@ composition:
                           size:
                             type: dex-segmented-control-parameter
                             value:
-                              tablet: 4xl
-                              desktop: 4xl
+                              mobile: 3xl
+                              tablet: 5xl
+                              desktop: 5xl
                           text:
                             type: text
                             value: The getting started option
@@ -885,7 +897,7 @@ composition:
                             value: bold
                           alignment:
                             type: dex-segmented-control-parameter
-                            value: left
+                            value: center
                         _overridability:
                           parameters:
                             text: 'yes'
@@ -899,7 +911,9 @@ composition:
                           size:
                             type: dex-segmented-control-parameter
                             value:
-                              desktop: base
+                              mobile: sm
+                              tablet: lg
+                              desktop: xl
                           text:
                             type: text
                             value: >-
@@ -938,7 +952,7 @@ composition:
                             value: normal
                           alignment:
                             type: dex-segmented-control-parameter
-                            value: left
+                            value: center
                       - _id: ff6e23c2-c25c-4374-b43c-77fc00403215
                         type: review
                         slots:
@@ -1183,8 +1197,9 @@ composition:
                           size:
                             type: dex-segmented-control-parameter
                             value:
-                              tablet: 4xl
-                              desktop: 2xl
+                              mobile: 3xl
+                              tablet: 5xl
+                              desktop: 5xl
                           text:
                             type: text
                             value: Precision that works every time
@@ -1209,7 +1224,10 @@ composition:
                             value: span
                           size:
                             type: dex-segmented-control-parameter
-                            value: {}
+                            value:
+                              mobile: sm
+                              tablet: lg
+                              desktop: xl
                           text:
                             type: text
                             value: >-
@@ -1246,7 +1264,7 @@ composition:
                             value: normal
                           alignment:
                             type: dex-segmented-control-parameter
-                            value: left
+                            value: center
                       - _id: 3605105b-0643-4f56-886a-6ebdc253252b
                         type: review
                         slots:
@@ -1477,8 +1495,9 @@ composition:
                           size:
                             type: dex-segmented-control-parameter
                             value:
-                              tablet: 4xl
-                              desktop: 4xl
+                              mobile: 3xl
+                              tablet: 5xl
+                              desktop: 5xl
                           text:
                             type: text
                             value: Full automatic that won't let you down
@@ -1490,7 +1509,7 @@ composition:
                             value: bold
                           alignment:
                             type: dex-segmented-control-parameter
-                            value: left
+                            value: center
                         _overridability:
                           parameters:
                             text: 'yes'
@@ -1504,7 +1523,9 @@ composition:
                           size:
                             type: dex-segmented-control-parameter
                             value:
-                              desktop: base
+                              mobile: sm
+                              tablet: lg
+                              desktop: xl
                           text:
                             type: text
                             value: >-
@@ -1545,7 +1566,7 @@ composition:
                             value: normal
                           alignment:
                             type: dex-segmented-control-parameter
-                            value: left
+                            value: center
                       - _id: ce4486fa-c9e5-495f-8cf7-9c15be4ddb1f
                         type: review
                         slots:
@@ -1710,5 +1731,5 @@ composition:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-04-25T12:20:48.559008+00:00'
-modified: '2025-06-06T10:58:48.213838+00:00'
+modified: '2025-06-06T12:26:45.495716+00:00'
 pattern: false

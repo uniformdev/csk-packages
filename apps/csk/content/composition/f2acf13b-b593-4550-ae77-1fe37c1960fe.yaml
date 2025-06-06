@@ -143,6 +143,12 @@ composition:
                                       tag:
                                         type: dex-segmented-control-parameter
                                         value: span
+                                      size:
+                                        type: dex-segmented-control-parameter
+                                        value:
+                                          mobile: sm
+                                          tablet: lg
+                                          desktop: xl
                                       text:
                                         type: text
                                         value: >-
@@ -150,6 +156,9 @@ composition:
                                           please let us know if you have any
                                           questions and we will get back to you
                                           shortly. Thank you.
+                                      weight:
+                                        type: dex-segmented-control-parameter
+                                        value: normal
                               parameters:
                                 gap:
                                   type: dex-slider-control-parameter
@@ -242,9 +251,9 @@ composition:
                                     _overridability:
                                       variants: true
                                       parameters:
-                                        icon: 'yes'
                                         link: 'yes'
                                         text: 'yes'
+                                        fullWidth: 'yes'
                                         textColor: 'no'
                                       hideLockedParameters: true
                               parameters:
@@ -323,6 +332,6 @@ composition:
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-03-18T13:02:33.187932+00:00'
-modified: '2025-06-05T08:51:45.218301+00:00'
+created: '2025-01-29T11:09:36.869233+00:00'
+modified: '2025-06-06T12:26:45.351956+00:00'
 pattern: false

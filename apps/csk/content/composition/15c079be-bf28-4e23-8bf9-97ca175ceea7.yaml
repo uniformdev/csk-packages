@@ -166,8 +166,9 @@ composition:
                                 size:
                                   type: dex-segmented-control-parameter
                                   value:
-                                    tablet: 4xl
-                                    desktop: 4xl
+                                    mobile: 3xl
+                                    tablet: 5xl
+                                    desktop: 5xl
                                 text:
                                   type: text
                                   value: "Best Value for the Hobby Espresso\_Connoisseur"
@@ -237,9 +238,9 @@ composition:
                                 size:
                                   type: dex-segmented-control-parameter
                                   value:
-                                    mobile: lg
+                                    mobile: sm
                                     tablet: lg
-                                    desktop: lg
+                                    desktop: xl
                                 text:
                                   type: text
                                   value: >-
@@ -433,8 +434,9 @@ composition:
                           size:
                             type: dex-segmented-control-parameter
                             value:
-                              tablet: 4xl
-                              desktop: 4xl
+                              mobile: 3xl
+                              tablet: 5xl
+                              desktop: 5xl
                           text:
                             type: text
                             value: Royale IQ Espresso Machine
@@ -459,7 +461,10 @@ composition:
                             value: span
                           size:
                             type: dex-segmented-control-parameter
-                            value: {}
+                            value:
+                              mobile: sm
+                              tablet: lg
+                              desktop: xl
                           text:
                             type: text
                             value: >-
@@ -621,8 +626,9 @@ composition:
                           size:
                             type: dex-segmented-control-parameter
                             value:
-                              tablet: 4xl
-                              desktop: 4xl
+                              mobile: 3xl
+                              tablet: 5xl
+                              desktop: 5xl
                           text:
                             type: text
                             value: Ethiopian Blend
@@ -634,7 +640,7 @@ composition:
                             value: bold
                           alignment:
                             type: dex-segmented-control-parameter
-                            value: left
+                            value: center
                         _overridability:
                           parameters:
                             text: 'yes'
@@ -648,7 +654,9 @@ composition:
                           size:
                             type: dex-segmented-control-parameter
                             value:
-                              desktop: base
+                              mobile: sm
+                              tablet: lg
+                              desktop: xl
                           text:
                             type: text
                             value: >-
@@ -788,8 +796,9 @@ composition:
                           size:
                             type: dex-segmented-control-parameter
                             value:
-                              tablet: 4xl
-                              desktop: 4xl
+                              mobile: 3xl
+                              tablet: 5xl
+                              desktop: 5xl
                           text:
                             type: text
                             value: Irish Blend
@@ -812,6 +821,12 @@ composition:
                           tag:
                             type: dex-segmented-control-parameter
                             value: span
+                          size:
+                            type: dex-segmented-control-parameter
+                            value:
+                              mobile: sm
+                              tablet: lg
+                              desktop: xl
                           text:
                             type: text
                             value: >-
@@ -829,6 +844,12 @@ composition:
                               flavors and inviting aroma, JavaDrip Irish Blend
                               has secured a cherished spot in coffee shops and
                               home brewers' hearts alike.
+                          weight:
+                            type: dex-segmented-control-parameter
+                            value: normal
+                          alignment:
+                            type: dex-segmented-control-parameter
+                            value: center
                   parameters:
                     gap:
                       type: dex-slider-control-parameter
@@ -940,8 +961,9 @@ composition:
                           size:
                             type: dex-segmented-control-parameter
                             value:
-                              tablet: 4xl
-                              desktop: 4xl
+                              mobile: 3xl
+                              tablet: 5xl
+                              desktop: 5xl
                           text:
                             type: text
                             value: Organic Blend
@@ -953,7 +975,7 @@ composition:
                             value: bold
                           alignment:
                             type: dex-segmented-control-parameter
-                            value: left
+                            value: center
                         _overridability:
                           parameters:
                             text: 'yes'
@@ -967,7 +989,9 @@ composition:
                           size:
                             type: dex-segmented-control-parameter
                             value:
-                              desktop: base
+                              mobile: sm
+                              tablet: lg
+                              desktop: xl
                           text:
                             type: text
                             value: >-
@@ -1127,8 +1151,9 @@ composition:
                                 size:
                                   type: dex-segmented-control-parameter
                                   value:
-                                    tablet: 4xl
-                                    desktop: 4xl
+                                    mobile: 3xl
+                                    tablet: 5xl
+                                    desktop: 5xl
                                 text:
                                   type: text
                                   value: Order the Beans Bundle
@@ -1168,6 +1193,12 @@ composition:
                                 tag:
                                   type: dex-segmented-control-parameter
                                   value: span
+                                size:
+                                  type: dex-segmented-control-parameter
+                                  value:
+                                    mobile: sm
+                                    tablet: lg
+                                    desktop: xl
                                 text:
                                   type: text
                                   value: >-
@@ -1179,6 +1210,9 @@ composition:
                                     Elevate your coffee experience at home and
                                     savor the rich, complex flavors that only
                                     expertly chosen beans can deliver.
+                                weight:
+                                  type: dex-segmented-control-parameter
+                                  value: normal
                         parameters:
                           gap:
                             type: dex-slider-control-parameter
@@ -1216,8 +1250,15 @@ composition:
                     spacing:
                       type: dex-space-control-parameter
                       value:
-                        paddingTop: container-medium
-                        paddingBottom: container-medium
+                        mobile:
+                          paddingTop: container-medium
+                          paddingBottom: container-medium
+                        tablet:
+                          paddingTop: container-medium
+                          paddingBottom: container-medium
+                        desktop:
+                          paddingTop: container-medium
+                          paddingBottom: container-medium
                     displayName:
                       type: text
                       value: >-
@@ -1257,5 +1298,5 @@ composition:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-04-25T12:20:48.499781+00:00'
-modified: '2025-06-06T11:00:25.758882+00:00'
+modified: '2025-06-06T12:26:45.096049+00:00'
 pattern: false

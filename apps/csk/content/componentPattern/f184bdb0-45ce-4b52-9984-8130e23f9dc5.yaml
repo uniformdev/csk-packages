@@ -48,8 +48,9 @@ composition:
                 size:
                   type: dex-segmented-control-parameter
                   value:
-                    tablet: 4xl
-                    desktop: 4xl
+                    mobile: 3xl
+                    tablet: 5xl
+                    desktop: 5xl
                 text:
                   type: text
                   value: |
@@ -73,11 +74,20 @@ composition:
                 tag:
                   type: dex-segmented-control-parameter
                   value: span
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: sm
+                    tablet: lg
+                    desktop: xl
                 text:
                   type: text
                   value: >-
                     ${#jptr:/Article single
                     Content/entry/fields/shortDescription/value}
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
         parameters:
           gap:
             type: dex-slider-control-parameter
@@ -144,7 +154,7 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
-created: '2025-05-20T11:53:45.023137+00:00'
-modified: '2025-05-22T10:46:28.548715+00:00'
+created: '2025-04-25T12:20:45.934076+00:00'
+modified: '2025-06-06T12:56:07.094058+00:00'
 pattern: true
 categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9

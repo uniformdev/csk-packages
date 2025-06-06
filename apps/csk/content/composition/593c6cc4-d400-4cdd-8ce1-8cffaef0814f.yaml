@@ -97,7 +97,7 @@ composition:
             en: >-
               We understands your palette After just a few uses, EspressoGPT 
               learns to brew your espresso to your exact liking, adjusting grind
-              size, water temperature, and brewing time. 
+              size, water temperature, and brewing time.
     23b8c55c-5b1c-4ff0-a9db-6632891f261f|93a8a0a2-d5df-4e82-97ed-2c1f2f29e907:
       parameters:
         text:
@@ -147,7 +147,7 @@ composition:
               Touchscreens are a thing of the past. EspressoGPT 's floating
               holographic interface offers an intuitive user experience. Adjust
               settings, browse recipes, or get a virtual barista tutorial with a
-              simple hand gesture. 
+              simple hand gesture.
     27e6bc47-1806-483b-915e-71235813e0d2|93a8a0a2-d5df-4e82-97ed-2c1f2f29e907:
       parameters:
         text:
@@ -205,7 +205,7 @@ composition:
             en: Perfect specs
         alignment:
           type: dex-segmented-control-parameter
-          value: right
+          value: ''
     4026814e-9121-47fe-a2b6-258d9e7729f1|49bcd121-6f8b-458f-8e5e-2d260046d99b:
       parameters:
         text:
@@ -214,7 +214,7 @@ composition:
             en: >-
               Modern design seamlessly blends minimalistic elegance with
               cutting-edge functionality, making it a statement piece in any
-              contemporary kitchen. 
+              contemporary kitchen.
         alignment:
           type: dex-segmented-control-parameter
           value: right
@@ -224,6 +224,9 @@ composition:
           type: text
           locales:
             en: 'Celebrate the art of coffee making '
+        alignment:
+          type: dex-segmented-control-parameter
+          value: ''
     4026814e-9121-47fe-a2b6-258d9e7729f1|76787ced-2bbf-498b-8446-dc81bcadd0c7:
       parameters:
         image:
@@ -337,7 +340,9 @@ composition:
                                       size:
                                         type: dex-segmented-control-parameter
                                         value:
-                                          mobile: xl
+                                          mobile: xs
+                                          tablet: lg
+                                          desktop: xl
                                       text:
                                         type: text
                                         locales:
@@ -366,7 +371,9 @@ composition:
                                       size:
                                         type: dex-segmented-control-parameter
                                         value:
-                                          mobile: 4xl
+                                          mobile: 3xl
+                                          tablet: 5xl
+                                          desktop: 5xl
                                       text:
                                         type: text
                                         locales:
@@ -388,7 +395,9 @@ composition:
                                       size:
                                         type: dex-segmented-control-parameter
                                         value:
-                                          mobile: xl
+                                          mobile: sm
+                                          tablet: lg
+                                          desktop: xl
                                       text:
                                         type: text
                                         locales:
@@ -409,7 +418,10 @@ composition:
                                         value: span
                                       size:
                                         type: dex-segmented-control-parameter
-                                        value: {}
+                                        value:
+                                          mobile: sm
+                                          tablet: lg
+                                          desktop: xl
                                       text:
                                         type: text
                                         locales:
@@ -754,7 +766,9 @@ composition:
                     size:
                       type: dex-segmented-control-parameter
                       value:
-                        mobile: 2xl
+                        mobile: 3xl
+                        tablet: 5xl
+                        desktop: 5xl
                     text:
                       type: text
                       locales:
@@ -856,7 +870,9 @@ composition:
                     size:
                       type: dex-segmented-control-parameter
                       value:
-                        mobile: 2xl
+                        mobile: 3xl
+                        tablet: 5xl
+                        desktop: 5xl
                     text:
                       type: text
                       locales:
@@ -1004,7 +1020,7 @@ composition:
             en: >-
               We care for the planet as much as you do. Our espresso machine is
               powered by a sustainable and recyclable energy cell that has zero
-              carbon footprint. 
+              carbon footprint.
     ed9ccac2-f23c-4c4b-be99-eb59477f1240|93a8a0a2-d5df-4e82-97ed-2c1f2f29e907:
       parameters:
         text:
@@ -1090,6 +1106,6 @@ composition:
   _locales:
     - en
   _pattern: eb2c6df3-5cff-486a-814b-64b6ce9421ab
-created: '2025-05-21T12:14:16.372374+00:00'
-modified: '2025-06-05T08:51:46.707262+00:00'
+created: '2025-06-05T12:15:19.113804+00:00'
+modified: '2025-06-06T12:26:45.598821+00:00'
 pattern: false

@@ -192,8 +192,9 @@ composition:
                           size:
                             type: dex-segmented-control-parameter
                             value:
-                              tablet: 4xl
-                              desktop: 4xl
+                              mobile: 3xl
+                              tablet: 5xl
+                              desktop: 5xl
                           text:
                             type: text
                             value: "Cervello di Caffè - The ultimate\rAI-powered espresso"
@@ -301,9 +302,9 @@ composition:
                           size:
                             type: dex-segmented-control-parameter
                             value:
-                              mobile: 4xl
-                              tablet: 4xl
-                              desktop: 4xl
+                              mobile: 6xl
+                              tablet: 5xl
+                              desktop: 5xl
                           text:
                             type: text
                             value: Taste the future
@@ -319,9 +320,9 @@ composition:
                           size:
                             type: dex-segmented-control-parameter
                             value:
-                              mobile: 4xl
-                              tablet: 4xl
-                              desktop: base
+                              mobile: sm
+                              tablet: lg
+                              desktop: xl
                           text:
                             type: text
                             value: "Combining the greatest traditions with cutting edge technology, the Cervello di Caffè\rputs decades of coffee experience at your fingertips. By learning your tastes and assessing the beans, the smart barista adjusts the grind, pressure and length of each\respresso shot to make sure it’s perfect every time."
@@ -447,8 +448,9 @@ composition:
                           size:
                             type: dex-segmented-control-parameter
                             value:
-                              tablet: 4xl
-                              desktop: 4xl
+                              mobile: 3xl
+                              tablet: 5xl
+                              desktop: 5xl
                           text:
                             type: text
                             value: >
@@ -473,6 +475,9 @@ composition:
                           tag:
                             type: dex-segmented-control-parameter
                             value: span
+                          size:
+                            type: dex-segmented-control-parameter
+                            value: {}
                           text:
                             type: text
                             value: >-
@@ -482,6 +487,9 @@ composition:
                               time. That’s why we’ve worked with the industry’s
                               top experts to create an AI system that gives you
                               the coffee you deserve.
+                          weight:
+                            type: dex-segmented-control-parameter
+                            value: normal
                   parameters:
                     gap:
                       type: dex-slider-control-parameter
@@ -596,8 +604,9 @@ composition:
                           size:
                             type: dex-segmented-control-parameter
                             value:
-                              tablet: 4xl
-                              desktop: 4xl
+                              mobile: 3xl
+                              tablet: 5xl
+                              desktop: 5xl
                           text:
                             type: text
                             value: |
@@ -610,7 +619,7 @@ composition:
                             value: bold
                           alignment:
                             type: dex-segmented-control-parameter
-                            value: left
+                            value: center
                         _overridability:
                           parameters:
                             text: 'yes'
@@ -624,7 +633,9 @@ composition:
                           size:
                             type: dex-segmented-control-parameter
                             value:
-                              desktop: base
+                              mobile: sm
+                              tablet: lg
+                              desktop: xl
                           text:
                             type: text
                             value: >-
@@ -667,7 +678,10 @@ composition:
                         desktop: col
                     alignItems:
                       type: dex-segmented-control-parameter
-                      value: {}
+                      value:
+                        mobile: center
+                        tablet: center
+                        desktop: center
                     displayName:
                       type: text
                       value: Content
@@ -757,8 +771,9 @@ composition:
                           size:
                             type: dex-segmented-control-parameter
                             value:
-                              tablet: 4xl
-                              desktop: 4xl
+                              mobile: 3xl
+                              tablet: 5xl
+                              desktop: 5xl
                           text:
                             type: text
                             value: "12oz. bean hopper that grinds the\rexact amount needed, for optimum freshness\n\n"
@@ -783,7 +798,10 @@ composition:
                             value: span
                           size:
                             type: dex-segmented-control-parameter
-                            value: {}
+                            value:
+                              mobile: sm
+                              tablet: lg
+                              desktop: xl
                           text:
                             type: text
                             value: >-
@@ -798,7 +816,7 @@ composition:
                             value: normal
                           alignment:
                             type: dex-segmented-control-parameter
-                            value: left
+                            value: center
                   parameters:
                     gap:
                       type: dex-slider-control-parameter
@@ -913,8 +931,9 @@ composition:
                           size:
                             type: dex-segmented-control-parameter
                             value:
-                              tablet: 4xl
-                              desktop: 4xl
+                              mobile: 3xl
+                              tablet: 5xl
+                              desktop: 5xl
                           text:
                             type: text
                             value: |+
@@ -928,7 +947,7 @@ composition:
                             value: bold
                           alignment:
                             type: dex-segmented-control-parameter
-                            value: left
+                            value: center
                         _overridability:
                           parameters:
                             text: 'yes'
@@ -1454,5 +1473,5 @@ composition:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-01-29T11:09:38.43112+00:00'
-modified: '2025-06-06T10:53:00.496828+00:00'
+modified: '2025-06-06T12:26:45.073138+00:00'
 pattern: false
