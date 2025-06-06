@@ -11,31 +11,11 @@ composition:
       type: text
       locales:
         en: aficionado,occasional,newb
-  slots:
-    saveButton:
-      - _id: 60a6a4f4-b7b4-410c-8786-ea57743e8755
-        type: button
-        _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
-    successMessage:
-      - _id: dea621e2-bc14-423e-8e1b-58d41ae2b2a7
-        type: $slotSection
-        parameters:
-          name:
-            type: text
-            value: Success Message
-        _overridability:
-          hideLockedParameters: true
-  _overrides:
-    60a6a4f4-b7b4-410c-8786-ea57743e8755:
-      parameters:
-        text:
-          type: text
-          value: Save
   _overridability:
     hideLockedParameters: true
   _locales:
     - en
-created: '2025-03-18T13:02:27.524141+00:00'
-modified: '2025-05-22T11:25:34.154941+00:00'
+created: '2025-03-11T09:22:09.883534+00:00'
+modified: '2025-06-06T10:27:24.115264+00:00'
 pattern: true
 categoryId: 3bab40a0-d52d-49b3-8780-b26f737b84a3
