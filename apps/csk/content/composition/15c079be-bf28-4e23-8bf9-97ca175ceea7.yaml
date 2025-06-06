@@ -4,6 +4,17 @@ composition:
   _slug: beans-bundle
   type: page
   _overrides:
+    44d9a29d-f2f6-456b-92cb-96590d068768:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: '#OrderNow'
+              type: url
+        text:
+          type: text
+          value: ORDER NOW
     a4dc3dd0-9598-4af7-ace8-0bfcf3423a6a:
       parameters:
         text:
@@ -15,36 +26,6 @@ composition:
         hoverButtonColor:
           type: dex-color-palette-parameter
           value: button-tertiary
-    d86530f1-8df9-4fa2-bc48-b30a751c1290:
-      variant: ''
-      parameters:
-        link:
-          type: link
-          locales:
-            en:
-              path: '#OrderNow'
-              type: url
-        text:
-          type: text
-          value: ORDER NOW
-        textColor:
-          type: dex-color-palette-parameter
-          value: text-primary
-        textWeight:
-          type: dex-segmented-control-parameter
-          value: extrabold
-        buttonColor:
-          type: dex-color-palette-parameter
-          value: button-tertiary-hover
-        textTransform:
-          type: dex-segmented-control-parameter
-          value: capitalize
-        hoverTextColor:
-          type: dex-color-palette-parameter
-          value: text-primary
-        hoverButtonColor:
-          type: dex-color-palette-parameter
-          value: button-secondary
     15c079be-bf28-4e23-8bf9-97ca175ceea7|dc2e95be-21b5-4476-a309-f8a34922f528:
       slots:
         $slotSectionItems:
@@ -117,21 +98,16 @@ composition:
                   type: section
                   slots:
                     sectionCTA:
-                      - _id: d86530f1-8df9-4fa2-bc48-b30a751c1290
+                      - _id: 44d9a29d-f2f6-456b-92cb-96590d068768
                         type: button
-                        variant: ''
-                        _pattern: 8060e691-b0b3-428c-92f1-278fc76baf47
+                        _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
                         _overridability:
                           variants: true
                           parameters:
                             link: 'yes'
                             text: 'yes'
-                            textColor: 'yes'
-                            textWeight: 'yes'
-                            buttonColor: 'yes'
-                            textTransform: 'yes'
-                            hoverTextColor: 'yes'
-                            hoverButtonColor: 'yes'
+                            fullWidth: 'yes'
+                            textColor: 'no'
                           hideLockedParameters: true
                     sectionMedia:
                       - _id: fff1f182-7117-49d0-bcba-2f9cced570a4
@@ -1280,6 +1256,6 @@ composition:
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-06-06T09:07:06.239577+00:00'
-modified: '2025-06-06T09:07:06.239577+00:00'
+created: '2025-04-25T12:20:48.499781+00:00'
+modified: '2025-06-06T11:00:25.758882+00:00'
 pattern: false

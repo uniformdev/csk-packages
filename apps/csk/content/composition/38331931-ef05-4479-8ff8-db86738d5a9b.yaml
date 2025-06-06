@@ -4,6 +4,11 @@ composition:
   _slug: checkout
   type: page
   _overrides:
+    247bbe59-dcc0-4bbc-962c-d57064c43a38:
+      parameters:
+        text:
+          type: text
+          value: Complete Checkout
     38331931-ef05-4479-8ff8-db86738d5a9b:
       parameters:
         pageTitle:
@@ -384,43 +389,22 @@ composition:
             type: flex
             slots:
               flexItem:
-                - _id: 7d10b9a0-2c74-47d4-8408-e73acd1acf60
-                  type: completeCheckoutButton
-                  parameters:
-                    size:
-                      type: dex-token-selector-parameter
-                      value: button-medium
-                    text:
-                      type: text
-                      locales:
-                        en: Complete Checkout
-                    border:
-                      type: dex-token-selector-parameter
-                      value: border-button-secondary
-                    textSize:
-                      type: dex-segmented-control-parameter
-                      value:
-                        mobile: sm
-                        tablet: sm
-                        desktop: sm
-                    textColor:
-                      type: dex-color-palette-parameter
-                      value: text-primary
-                    textWeight:
-                      type: dex-segmented-control-parameter
-                      value: bold
-                    buttonColor:
-                      type: dex-color-palette-parameter
-                      value: button-secondary
-                    textTransform:
-                      type: dex-segmented-control-parameter
-                      value: uppercase
-                    hoverTextColor:
-                      type: dex-color-palette-parameter
-                      value: text-secondary
-                    hoverButtonColor:
-                      type: dex-color-palette-parameter
-                      value: button-primary
+                - _id: 247bbe59-dcc0-4bbc-962c-d57064c43a38
+                  type: button
+                  _pattern: 53b59aed-e378-4fcb-9135-20247d92074e
+                  _overridability:
+                    variants: true
+                    parameters:
+                      link: 'yes'
+                      text: 'yes'
+                      fullWidth: 'yes'
+                      textWeight: 'no'
+                      buttonColor: 'yes'
+                      iconPosition: 'yes'
+                      textTransform: 'no'
+                      hoverTextColor: 'no'
+                      hoverButtonColor: 'no'
+                    hideLockedParameters: true
             parameters:
               gap:
                 type: dex-slider-control-parameter
@@ -504,6 +488,6 @@ composition:
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-03-18T13:02:32.633965+00:00'
-modified: '2025-06-05T08:51:43.790302+00:00'
+created: '2025-03-07T12:12:23.596784+00:00'
+modified: '2025-06-06T11:01:34.997524+00:00'
 pattern: false

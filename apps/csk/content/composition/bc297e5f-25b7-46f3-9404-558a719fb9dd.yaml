@@ -4,7 +4,12 @@ composition:
   _slug: landing-page
   type: page
   _overrides:
-    1550c397-1df7-4dff-99ac-1b4e883f3eb5:
+    253a3bc8-43d3-4e32-936e-8999079d9ac4:
+      parameters:
+        displayName:
+          type: text
+          value: Recommended accessories for Cervello di Caffè
+    52c2c96a-ab48-4dc4-8cc4-f1d4b7fa26f0:
       parameters:
         link:
           type: link
@@ -19,11 +24,6 @@ composition:
         text:
           type: text
           value: SHOP COFFEE MAKERS
-    253a3bc8-43d3-4e32-936e-8999079d9ac4:
-      parameters:
-        displayName:
-          type: text
-          value: Recommended accessories for Cervello di Caffè
     bc297e5f-25b7-46f3-9404-558a719fb9dd:
       parameters:
         pageTitle:
@@ -1395,16 +1395,21 @@ composition:
     c93c8f9f-4ff0-4ed9-85b1-dfd37f01fbc0|5d86f5e9-47d6-4e77-a139-83228ec0be41:
       slots:
         $slotSectionItems:
-          - _id: 1550c397-1df7-4dff-99ac-1b4e883f3eb5
+          - _id: 52c2c96a-ab48-4dc4-8cc4-f1d4b7fa26f0
             type: button
-            _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
+            _pattern: 53b59aed-e378-4fcb-9135-20247d92074e
             _overridability:
               variants: true
               parameters:
                 link: 'yes'
                 text: 'yes'
                 fullWidth: 'yes'
-                textColor: 'no'
+                textWeight: 'no'
+                buttonColor: 'yes'
+                iconPosition: 'yes'
+                textTransform: 'no'
+                hoverTextColor: 'no'
+                hoverButtonColor: 'no'
               hideLockedParameters: true
     c93c8f9f-4ff0-4ed9-85b1-dfd37f01fbc0|c50e99a6-1d91-4d6e-9a22-3154d4e4a8b7:
       parameters:
@@ -1448,6 +1453,6 @@ composition:
   _locales:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-06-06T09:07:06.745031+00:00'
-modified: '2025-06-06T09:07:06.745031+00:00'
+created: '2025-01-29T11:09:38.43112+00:00'
+modified: '2025-06-06T10:53:00.496828+00:00'
 pattern: false
