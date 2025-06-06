@@ -18,7 +18,7 @@ export const FixedHero: FC<DemoHeroProps> = props => (
     titleSize={{
       mobile: '3xl',
       tablet: '5xl',
-      desktop: '7xl',
+      desktop: '5xl',
     }}
     titleWeight="bold"
     // Description Text Parameters
