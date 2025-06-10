@@ -30,6 +30,7 @@ export const NavigationGroup: FC<NavigationGroupProps> = ({
   context,
   slots,
   hoverEffect = '',
+  className,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -57,7 +58,7 @@ export const NavigationGroup: FC<NavigationGroupProps> = ({
       <button onMouseEnter={openFlyout} onClick={openFlyout} className={getButtonClasses({ color })}>
         <BaseIconLabel
           icon={renderUrl()}
-          className="group"
+          className={cn('group', className)}
           iconClassName={actionClassName}
           textClassName={actionClassName}
           {...{ size, tag, color, weight, font, transform, decoration, letterSpacing, alignment }}

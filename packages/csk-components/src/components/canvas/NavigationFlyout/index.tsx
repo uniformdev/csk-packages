@@ -12,6 +12,7 @@ export type NavigationFlyoutParameters = TextParameters & {
   border?: string | ViewPort<string>;
   caretIcon?: AssetParamValue;
   hoverEffect?: string | ViewPort<string>;
+  className?: string;
 };
 
 export enum NavigationFlyoutSlots {

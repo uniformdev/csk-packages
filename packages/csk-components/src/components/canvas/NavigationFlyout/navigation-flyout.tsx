@@ -30,6 +30,7 @@ export const NavigationFlyout: FC<NavigationFlyoutProps> = ({
   context,
   slots,
   hoverEffect = '',
+  className,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -62,7 +63,7 @@ export const NavigationFlyout: FC<NavigationFlyoutProps> = ({
       <button onMouseEnter={openFlyout} className={getButtonClasses({ color })}>
         <BaseIconLabel
           icon={renderUrl()}
-          className="group"
+          className={cn('group', className)}
           iconClassName={actionClassName}
           textClassName={actionClassName}
           {...{ size, tag, color, weight, font, transform, decoration, letterSpacing, alignment }}
