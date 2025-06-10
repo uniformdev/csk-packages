@@ -37,7 +37,7 @@ import {
   installDataSources,
   promptForAccessToken,
   runCommandWithSpinner,
-  runStartInteractive,
+  runStartDevInteractive,
   spawnCmdCommand,
 } from '../../utils';
 
@@ -136,7 +136,7 @@ const init = async ({
     let isPushedToUniform = false;
     if (isNeedToPushCanvasData && canPushCanvasData) {
       const confirmPush = await confirm({
-        message: `Do you want to push the canvas data${hasDataSources ? ' and install the data sources' : ''} to Uniform automatically?`,
+        message: `Would you like to push template content into your Uniform project now (project id: ${process.env.UNIFORM_PROJECT_ID})?\nThis will overwrite your existing content, so make a backup to prevent data loss. You can do this manually later. `,
       });
 
       if (confirmPush) {
@@ -145,22 +145,18 @@ const init = async ({
           await installDataSources(dataSourceToInstall, token, spinner);
         }
         await runCommandWithSpinner('npm run init', spinner, 'Pushing canvas data to Uniform:');
-        spinner.succeed('Done! Canvas data successfully pushed to Uniform.');
+        spinner.succeed('Content push complete. Open your project to see new content.');
         isPushedToUniform = true;
       }
     }
 
     const hasMissingEnv = missingEnvKeys.length > 0;
     if (!hasMissingEnv && (!isNeedToPushCanvasData || isPushedToUniform)) {
-      const startPrompt = 'Do you want to build and start the application now?';
+      const startPrompt = 'Would you like to start dev server now?';
       const buildAndStart = await confirm({ message: startPrompt });
 
       if (buildAndStart) {
-        spinner.start('Building the project...');
-        await spawnCmdCommand('npm run build');
-        spinner.succeed('Done! Your app has been built successfully and is ready to run.');
-
-        runStartInteractive();
+        runStartDevInteractive();
         return;
       }
     }
@@ -334,7 +330,7 @@ const setupApplication = async ({
   }
 
   setProgress(SETUP_PROJECT_STEP_PERCENTAGE.FINAL_STEP);
-  spinner.succeed('App created successfully!');
+  spinner.succeed('Process completed ✅');
 };
 
 /**
