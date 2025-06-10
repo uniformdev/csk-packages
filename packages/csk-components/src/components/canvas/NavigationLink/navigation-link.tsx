@@ -25,6 +25,7 @@ export const NavigationLink: FC<NavigationLinkProps> = ({
   component,
   context,
   hoverEffect = '',
+  className,
 }) => {
   const href = formatUniformLink(link);
   const isActive = activeState && resolveRouteToPath(context.matchedRoute, context.dynamicInputs) === href;
@@ -47,7 +48,7 @@ export const NavigationLink: FC<NavigationLinkProps> = ({
     <Wrapper href={href} isExternalLink={isExternalLink(href)}>
       <BaseIconLabel
         icon={renderUrl()}
-        className="group"
+        className={cn('group', className)}
         iconClassName={actionClassName}
         textClassName={actionClassName}
         {...{ size, tag, color, weight, font, transform, decoration, letterSpacing, alignment }}

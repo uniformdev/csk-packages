@@ -10,6 +10,7 @@ export type NavigationLinkParameters = TextParameters & {
   link?: LinkParamValue;
   activeState?: boolean;
   hoverEffect?: string | ViewPort<string>;
+  className?: string;
 };
 
 export type NavigationLinkProps = ComponentProps<NavigationLinkParameters>;
