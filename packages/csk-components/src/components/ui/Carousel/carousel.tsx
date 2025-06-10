@@ -1,9 +1,12 @@
 'use client';
 
-import { FC, useCallback, useEffect, useRef, useState } from 'react';
+import { FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import BaseContainer from '@/components/ui/Container';
 import { cn } from '@/utils/styling';
 import { CarouselProps } from '.';
+
+// 16px - gap-x-4, we have to divide it by 2 because we have 2 gaps
+const GAP_SIZE = 16;
 
 export const Carousel: FC<CarouselProps> = ({
   countOfItems,
@@ -12,19 +15,33 @@ export const Carousel: FC<CarouselProps> = ({
   border,
   fluidContent,
   fullHeight,
+  itemsPerPage = '1',
   children,
 }) => {
-  const container = useRef<HTMLInputElement>(null);
+  const container = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const itemsPerPageNumber = Number(itemsPerPage);
+
   const [reCheckCarouselSlider, setReCheckCarouselSlider] = useState<boolean>(false);
 
-  const totalCountOfItems = (() => {
-    if (countOfItems) return countOfItems;
-    return Array.isArray(children) ? children.length : 1;
-  })();
+  const totalCountOfItems = useMemo(() => {
+    if (itemsPerPageNumber > 1) {
+      return Math.ceil((countOfItems ?? 0) / itemsPerPageNumber);
+    }
+    return countOfItems ?? 0;
+  }, [countOfItems, itemsPerPageNumber]);
+
+  const totalGapSize = useMemo(() => {
+    if (itemsPerPageNumber > 1) {
+      const totalSize = GAP_SIZE * (itemsPerPageNumber - 1);
+
+      return Math.ceil(totalSize / itemsPerPageNumber);
+    }
+    return 0;
+  }, [itemsPerPageNumber]);
 
   useEffect(() => {
-    const handleResize = () => setReCheckCarouselSlider(prevState => !prevState);
+    const handleResize = () => setReCheckCarouselSlider(prev => !prev);
     window.addEventListener('resize', handleResize, { passive: true });
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -61,11 +78,23 @@ export const Carousel: FC<CarouselProps> = ({
     [backgroundColor, handlerClickNextButton, handlerPreviousNextButton]
   );
 
+  const renderSlides = () => {
+    return children({
+      className: 'flex size-full items-center justify-center',
+      style: { minWidth: itemsPerPageNumber > 1 ? `calc(${100 / itemsPerPageNumber}% - ${totalGapSize}px)` : '100%' },
+    });
+  };
+
   return (
     <BaseContainer {...{ backgroundColor, spacing, border, fluidContent, fullHeight }}>
       <div className="relative">
-        <div ref={container} className="flex flex-row items-center overflow-x-hidden scroll-smooth">
-          {children}
+        <div
+          ref={container}
+          className={cn('flex overflow-x-hidden scroll-smooth', {
+            'gap-x-4': itemsPerPageNumber > 1,
+          })}
+        >
+          {renderSlides()}
         </div>
         {renderCarouselButtons()}
       </div>
