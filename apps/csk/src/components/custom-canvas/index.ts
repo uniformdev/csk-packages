@@ -1,3 +1,4 @@
+import { Page } from '@uniformdev/csk-components/components/canvas';
 import { ComponentMapping } from '@uniformdev/csk-components/utils/createComponentResolver';
 import AccordionItem from './AccordionItem';
 import AddToCardButton from './AddToCardButton';
@@ -70,4 +71,5 @@ export const customComponentsMapping: ComponentMapping = {
   entriesSearchPageSize: { component: EntriesSearchPageSize },
   dynamicProductRecommendations: { component: DynamicProductRecommendations },
   formattedPrice: { component: FormattedPrice },
+  entryPreview: { component: Page },
 };
