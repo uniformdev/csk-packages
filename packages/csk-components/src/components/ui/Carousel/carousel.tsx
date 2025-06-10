@@ -2,11 +2,8 @@
 
 import { FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import BaseContainer from '@/components/ui/Container';
-import { cn } from '@/utils/styling';
+import { cn, resolveViewPort } from '@/utils/styling';
 import { CarouselProps } from '.';
-
-// 16px - gap-x-4, we have to divide it by 2 because we have 2 gaps
-const GAP_SIZE = 16;
 
 export const Carousel: FC<CarouselProps> = ({
   countOfItems,
@@ -17,6 +14,7 @@ export const Carousel: FC<CarouselProps> = ({
   fullHeight,
   itemsPerPage = '1',
   children,
+  gapX,
 }) => {
   const container = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -30,15 +28,6 @@ export const Carousel: FC<CarouselProps> = ({
     }
     return countOfItems ?? 0;
   }, [countOfItems, itemsPerPageNumber]);
-
-  const totalGapSize = useMemo(() => {
-    if (itemsPerPageNumber > 1) {
-      const totalSize = GAP_SIZE * (itemsPerPageNumber - 1);
-
-      return Math.ceil(totalSize / itemsPerPageNumber);
-    }
-    return 0;
-  }, [itemsPerPageNumber]);
 
   useEffect(() => {
     const handleResize = () => setReCheckCarouselSlider(prev => !prev);
@@ -80,20 +69,21 @@ export const Carousel: FC<CarouselProps> = ({
 
   const renderSlides = () => {
     return children({
-      className: 'flex size-full items-center justify-center',
-      style: { minWidth: itemsPerPageNumber > 1 ? `calc(${100 / itemsPerPageNumber}% - ${totalGapSize}px)` : '100%' },
+      className: cn('flex size-full items-center justify-center', {
+        [resolveViewPort(gapX, 'px-{value}')]: gapX,
+      }),
+      style: { minWidth: itemsPerPageNumber > 1 ? `calc(${100 / itemsPerPageNumber}%)` : '100%' },
     });
   };
 
   return (
     <BaseContainer {...{ backgroundColor, spacing, border, fluidContent, fullHeight }}>
-      <div className="relative">
-        <div
-          ref={container}
-          className={cn('flex overflow-x-hidden scroll-smooth', {
-            'gap-x-4': itemsPerPageNumber > 1,
-          })}
-        >
+      <div
+        className={cn('relative', {
+          [resolveViewPort(gapX, '-mx-{value}')]: gapX,
+        })}
+      >
+        <div ref={container} className="flex overflow-x-hidden scroll-smooth">
           {renderSlides()}
         </div>
         {renderCarouselButtons()}

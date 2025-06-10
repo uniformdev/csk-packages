@@ -15,9 +15,10 @@ export const Carousel: FC<CarouselProps> = ({
   fluidContent,
   fullHeight,
   itemsPerPage,
+  gapX,
 }) => (
   <BaseCarousel
-    {...{ backgroundColor, spacing, border, fluidContent, fullHeight, itemsPerPage }}
+    {...{ backgroundColor, spacing, border, fluidContent, fullHeight, itemsPerPage, gapX }}
     countOfItems={slots.carouselItems?.items.length ?? 0}
   >
     {({ className, style }) => (
