@@ -41,6 +41,7 @@ export type BaseImageParameters = {
   objectFit?: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';
   overlayColor?: string;
   overlayOpacity?: string;
+  contrastBaseColor?: string;
   border?: string | ViewPort<string>;
   priority?: boolean;
   unoptimized?: boolean;

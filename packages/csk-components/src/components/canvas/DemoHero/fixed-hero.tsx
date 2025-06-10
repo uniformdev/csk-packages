@@ -41,6 +41,8 @@ export const FixedHero: FC<DemoHeroProps> = props => (
     imagePriority
     imageObjectFit="cover"
     imageUnoptimized
+    imageContrastBaseColor={!props.component.variant ? props.titleColor : undefined}
+    imageOverlayOpacity="0.3"
     // Presentation Parameters
     spacing={{
       paddingTop: 'container-xlarge',

@@ -5,6 +5,7 @@ import { ViewPort } from '@/types/cskTypes';
 export type ImageProps = NextImageProps & {
   containerStyle?: NonNullable<HTMLAttributes<HTMLDivElement>['style']>;
   overlayColor?: string;
+  contrastBaseColor?: string;
   overlayOpacity?: NonNullable<NextImageProps['style']>['opacity'];
   border?: string | ViewPort<string>;
 };
