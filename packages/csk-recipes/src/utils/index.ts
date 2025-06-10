@@ -5,8 +5,8 @@ import prettier, { Options } from 'prettier';
 import { confirm, password } from '@inquirer/prompts';
 import { ENV_VARIABLES_DEFAULT_VALUES } from '../constants';
 
-export const runStartInteractive = () => {
-  const child = spawn('npm', ['run', 'start'], {
+export const runStartDevInteractive = () => {
+  const child = spawn('npm', ['run', 'dev'], {
     stdio: 'inherit',
     shell: true,
   });

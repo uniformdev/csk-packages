@@ -102,7 +102,7 @@ export const verifyGitProject = async (
  */
 export const selectTemplate = async (): Promise<Template> => {
   const shoudInstallTemplate = await confirm({
-    message: 'Do you want to install a template for current project?',
+    message: 'Would you like to install a template into the current project?',
   });
 
   if (!shoudInstallTemplate) {
@@ -110,7 +110,7 @@ export const selectTemplate = async (): Promise<Template> => {
   }
 
   return select<Template>({
-    message: "Let's start by choosing a template for your project:",
+    message: 'Pick a template:',
     choices: TEMPLATES,
   });
 };
@@ -164,7 +164,7 @@ export const selectRecipes = async (template?: Template): Promise<Recipe[]> => {
   const templateRecipes = template ? TEMPLATES_SPECIFIC_RECIPES[template] || [] : [];
 
   const recipes = await checkbox<Recipe>({
-    message: 'Now, select the additional recipes you want to include in your project:',
+    message: 'Would you like to add any recipes on top? (Optional):',
     choices: [
       { name: 'Multi-market Localization', value: 'localization' },
       { name: 'Google Analytics', value: 'ga' },
