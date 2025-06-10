@@ -12,6 +12,7 @@ export type NavigationGroupParameters = TextParameters & {
   backgroundColor?: string;
   border?: string | ViewPort<string>;
   hoverEffect?: string | ViewPort<string>;
+  className?: string;
 };
 
 export enum NavigationGroupSlots {
