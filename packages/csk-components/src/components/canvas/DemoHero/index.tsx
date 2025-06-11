@@ -41,6 +41,7 @@ export type BaseImageParameters = {
   objectFit?: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';
   overlayColor?: string;
   overlayOpacity?: string;
+  contrastBaseColor?: string;
   border?: string | ViewPort<string>;
   priority?: boolean;
   unoptimized?: boolean;
@@ -59,6 +60,9 @@ export type SecondaryButtonParameters = PrefixedKeys<BaseButtonParameters, 'seco
 export type ImageParameters = PrefixedKeys<Omit<BaseImageParameters, 'image'>, 'image'> &
   Pick<BaseImageParameters, 'image'>;
 
+/**
+ * @deprecated Use FixedHeroParameters or FlexibleHeroParameters directly instead.
+ */
 export type DemoHeroParameters = ContainerParameters & {
   contentAlignment?: ContentAlignment;
 } & EyebrowTitleTextParameters &
@@ -67,6 +71,12 @@ export type DemoHeroParameters = ContainerParameters & {
   PrimaryButtonParameters &
   SecondaryButtonParameters &
   ImageParameters;
+
+export type FixedHeroParameters = {
+  enableOverlayAutoTint?: boolean;
+} & DemoHeroParameters;
+
+export type FlexibleHeroParameters = DemoHeroParameters;
 
 export enum DemoHeroVariants {
   Columns = 'columns',
@@ -78,7 +88,12 @@ export enum FlexibleHeroSlots {
   FlexibleHeroCta = 'flexibleHeroCta',
 }
 
-export type DemoHeroProps = ComponentProps<DemoHeroParameters, FlexibleHeroSlots>;
+/**
+ * @deprecated Use FixedHeroProps or FlexibleHeroProps directly instead.
+ */
+export type DemoHeroProps = FixedHeroProps | FlexibleHeroProps;
+export type FixedHeroProps = ComponentProps<FixedHeroParameters>;
+export type FlexibleHeroProps = ComponentProps<FlexibleHeroParameters, FlexibleHeroSlots>;
 
 const DemoHero = { FixedHero, FlexibleHero };
 export default DemoHero;

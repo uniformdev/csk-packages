@@ -123,7 +123,11 @@ export {
 export {
   default as DemoHero,
   type DemoHeroProps,
+  type FixedHeroProps,
+  type FlexibleHeroProps,
   type DemoHeroParameters,
+  type FixedHeroParameters,
+  type FlexibleHeroParameters,
   FlexibleHeroSlots,
   DemoHeroVariants,
   ContentAlignment as DemoHeroContentAlignment,

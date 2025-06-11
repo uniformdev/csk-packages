@@ -90,6 +90,7 @@ export const BaseHeroImage: FC<BaseImageParameters & Omit<ComponentProps, 'param
   width,
   height,
   overlayColor,
+  contrastBaseColor,
   overlayOpacity,
   border,
   priority,
@@ -125,6 +126,7 @@ export const BaseHeroImage: FC<BaseImageParameters & Omit<ComponentProps, 'param
       sizes="100%"
       style={{ objectFit }}
       overlayColor={overlayColor}
+      contrastBaseColor={contrastBaseColor}
       overlayOpacity={overlayOpacity}
       border={border}
     />

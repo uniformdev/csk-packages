@@ -6,6 +6,7 @@ import { ImageProps } from './';
 export const Image: FC<ImageProps> = ({
   containerStyle,
   overlayColor,
+  contrastBaseColor,
   overlayOpacity,
   border = '',
   style: imageStyle,
@@ -21,10 +22,13 @@ export const Image: FC<ImageProps> = ({
     />
     <div
       className={cn('absolute bottom-0 left-0 right-0 top-0', {
-        [`bg-${overlayColor}`]: overlayColor,
+        [`bg-${overlayColor || contrastBaseColor}`]: overlayColor || contrastBaseColor,
         [resolveViewPort(border, '{value}')]: border,
       })}
-      style={{ opacity: overlayOpacity || 0 }}
+      style={{
+        opacity: overlayOpacity || 0,
+        ...(contrastBaseColor && !overlayColor ? { filter: 'grayscale(100%) invert(100%)' } : {}),
+      }}
     />
   </div>
 );

@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: fixedHero
 name: Fixed Hero
@@ -72,6 +72,8 @@ parameters:
         - eyebrowTitleColor
         - titleColor
         - descriptionColor
+        - enableBackgroundAutoTint
+        - enableOverlayAutoTint
   - id: contentAlignment
     name: Content Alignment
     type: dex-segmented-control-parameter
@@ -108,6 +110,13 @@ parameters:
       allowColors: []
       selectedGroup: text
       allowThemeColors: []
+  - id: enableOverlayAutoTint
+    name: Enable Overlay Auto Tint
+    type: checkbox
+    helpText: >-
+      Automatically generates a 30% transparent overlay from the title color.
+      This applies only when the component is in its default variant.
+    typeConfig: null
 categoryId: f22b05f0-c4bf-4158-8ebc-4856e4d453af
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/hero-fixed.jpg
@@ -115,8 +124,8 @@ useTeamPermissions: true
 slots: []
 titleParameter: displayName
 canBeComposition: false
-created: '2025-02-17T15:34:14.062996+00:00'
-updated: '2025-02-17T15:34:14.062996+00:00'
+created: '2025-01-29T10:47:01.402162+00:00'
+updated: '2025-06-11T09:15:40.035759+00:00'
 variants:
   - id: columns
     name: Columns

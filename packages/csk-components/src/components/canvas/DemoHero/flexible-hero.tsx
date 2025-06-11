@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { DemoHeroProps } from '.';
+import { FlexibleHeroProps } from '.';
 import { DemoHero } from './demo-hero';
 
-export const FlexibleHero: FC<DemoHeroProps> = props => <DemoHero {...props} isFlexibleHero={true} />;
+export const FlexibleHero: FC<FlexibleHeroProps> = props => <DemoHero {...props} isFlexibleHero={true} />;
