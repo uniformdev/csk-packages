@@ -1,13 +1,13 @@
 import { FC } from 'react';
 import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
-import { DemoHeroProps, DemoHeroVariants } from '.';
+import { DemoHeroVariants, FixedHeroProps, FlexibleHeroProps } from '.';
 import { BaseHeroButton, BaseHeroImage, BaseHeroText } from './atoms';
 import { ColumnsVariant } from './columns-variant';
 import { DefaultVariant } from './default-variant';
 import { getButtonAlignmentClass, getTextAlignmentClass } from './style-utils';
 import { cleanUpPrefix } from './utils';
 
-export const DemoHero: FC<DemoHeroProps & { isFlexibleHero?: boolean }> = ({
+export const DemoHero: FC<(FixedHeroProps | FlexibleHeroProps) & { isFlexibleHero?: boolean }> = ({
   // Eyebrow Text Parameters
   eyebrowTitleText,
   eyebrowTitleTag,

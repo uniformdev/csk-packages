@@ -1,12 +1,8 @@
 import { FC } from 'react';
-import { DemoHeroProps } from '.';
+import { FixedHeroProps } from '.';
 import { DemoHero } from './demo-hero';
 
-type FixedHeroParameters = {
-  enableOverlayAutoTint?: boolean;
-};
-
-export const FixedHero: FC<DemoHeroProps<FixedHeroParameters>> = ({ enableOverlayAutoTint = false, ...props }) => (
+export const FixedHero: FC<FixedHeroProps> = ({ enableOverlayAutoTint = false, ...props }) => (
   <DemoHero
     {...props}
     // Eyebrow Text Parameters

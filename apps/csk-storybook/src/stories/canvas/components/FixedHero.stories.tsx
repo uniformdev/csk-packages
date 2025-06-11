@@ -1,7 +1,7 @@
 import { UniformComposition } from '@uniformdev/canvas-next-rsc';
 import {
   DemoHero,
-  DemoHeroParameters as FixedHeroParameters,
+  FixedHeroParameters,
   DemoHeroVariants as FixedHeroVariants,
 } from '@uniformdev/csk-components/components/canvas';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
@@ -48,6 +48,7 @@ const argTypes: Partial<ArgTypes<FixedHeroParameters>> = {
   ...addPrefix({ text, color }, 'description'),
   ...addPrefix({ text: buttonText }, 'primaryButton'),
   contentAlignment: { control: 'select', options: ['left', 'center', 'right'] },
+  enableOverlayAutoTint: { control: 'boolean' },
   fullHeight,
 };
 
