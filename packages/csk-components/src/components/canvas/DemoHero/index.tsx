@@ -79,7 +79,7 @@ export enum FlexibleHeroSlots {
   FlexibleHeroCta = 'flexibleHeroCta',
 }
 
-export type DemoHeroProps = ComponentProps<DemoHeroParameters, FlexibleHeroSlots>;
+export type DemoHeroProps<T = object> = ComponentProps<DemoHeroParameters & T, FlexibleHeroSlots>;
 
 const DemoHero = { FixedHero, FlexibleHero };
 export default DemoHero;

@@ -2,7 +2,11 @@ import { FC } from 'react';
 import { DemoHeroProps } from '.';
 import { DemoHero } from './demo-hero';
 
-export const FixedHero: FC<DemoHeroProps> = props => (
+type FixedHeroParameters = {
+  enableOverlayAutoTint?: boolean;
+};
+
+export const FixedHero: FC<DemoHeroProps<FixedHeroParameters>> = ({ enableOverlayAutoTint = false, ...props }) => (
   <DemoHero
     {...props}
     // Eyebrow Text Parameters
@@ -41,7 +45,7 @@ export const FixedHero: FC<DemoHeroProps> = props => (
     imagePriority
     imageObjectFit="cover"
     imageUnoptimized
-    imageContrastBaseColor={!props.component.variant ? props.titleColor : undefined}
+    imageContrastBaseColor={!props.component.variant && enableOverlayAutoTint ? props.titleColor : undefined}
     imageOverlayOpacity="0.3"
     // Presentation Parameters
     spacing={{
