@@ -3,6 +3,23 @@ composition:
   _id: ccb4fb5b-0d75-4ab3-8463-92ab000385e9
   type: bikeProductDetailsPage
   _dataResources:
+    Bike Content:
+      type: bike
+      variables:
+        locale: ${locale}
+        entryId: 3990e219-fd53-4ed8-a9c8-328f9fd5b345
+    Bike Family Content:
+      type: bikeFamily
+      variables:
+        locale: ${locale}
+        entryId: c605b564-6e88-462a-94f8-3dbf1387c621
+    Global Link List Content:
+      type: globalLinkList
+      variables:
+        locale: ${locale}
+        search: ''
+        filters: '{"type[eq]":"globalLink"}'
+        contentTypes: globalLink
     Common translations List Content:
       type: commonTranslationsList
       variables:
@@ -10,6 +27,13 @@ composition:
         search: ''
         filters: '{"type[eq]":"commonTranslations"}'
         contentTypes: commonTranslations
+    Content translations List Content:
+      type: contentTranslationsList
+      variables:
+        locale: ${locale}
+        search: ''
+        filters: '{"type[eq]":"contentTranslations"}'
+        contentTypes: contentTranslations
     motorcycle translations List Content:
       type: motorcycleTranslationsList
       variables:
@@ -398,6 +422,12 @@ composition:
                         nl-NL: Puur. Doelgericht. Raceklaar.
                         pt-PT: Autêntica. Focada. Preparada para rodar em pista.
                         sv-SE: Pure. Focused. Track Ready.
+                    width:
+                      type: dex-segmented-control-parameter
+                      value: fullwidth
+                    height:
+                      type: dex-segmented-control-parameter
+                      value: large
                     tooltip:
                       type: text
                       value: >-
@@ -561,6 +591,18 @@ composition:
                             autoplay:
                               type: checkbox
                               value: true
+                    textAlignment:
+                      type: dex-segmented-control-parameter
+                      value: left
+                    horizontalAlignment:
+                      type: dex-segmented-control-parameter
+                      value: left
+                    mobileTextAlignment:
+                      type: dex-segmented-control-parameter
+                      value: left
+                    mobileVerticalAlignment:
+                      type: dex-segmented-control-parameter
+                      value: top
                 - _id: a5bd61da-cc68-4f68-b8f9-2cc24d8f457f
                   type: hero
                   parameters:
@@ -31658,5 +31700,5 @@ composition:
     - zh-TW
   _pattern: 27454177-f692-4df6-acee-5156224d7588
 created: '2025-06-12T07:28:50.4247+00:00'
-modified: '2025-06-12T08:39:15.009144+00:00'
+modified: '2025-06-12T10:14:02.361274+00:00'
 pattern: false

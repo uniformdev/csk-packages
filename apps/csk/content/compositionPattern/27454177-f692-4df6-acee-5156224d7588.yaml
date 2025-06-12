@@ -2,10 +2,6 @@ composition:
   _name: Bike product details page pattern
   _id: 27454177-f692-4df6-acee-5156224d7588
   type: bikeProductDetailsPage
-  parameters:
-    productAttributes:
-      type: json
-      value: ${#jptr:/Single Product Content/masterVariant/attributes}
   slots:
     content:
       - _id: 79ea1434-1e89-4523-8418-0a24168fb7e4
@@ -32,58 +28,7 @@ composition:
             value: inherit
         _overridability:
           hideLockedParameters: true
-  _dataResources:
-    Bike Content:
-      type: bike
-      variables:
-        locale: ${locale}
-        entryId: 0e80c74c-a094-4c02-804e-02d0e5da2c9f
-      isPatternParameter: true
-      ignorePatternParameterDefault: false
-    Bike Family Content:
-      type: bikeFamily
-      variables:
-        locale: ${locale}
-        entryId: c605b564-6e88-462a-94f8-3dbf1387c621
-      isPatternParameter: true
-      ignorePatternParameterDefault: false
-    Single Product Content:
-      type: singleProduct
-      variables:
-        locale: ${locale}
-        productId: 1100ffba-91cf-42b5-b528-959b1ae4275f
-      isPatternParameter: true
-      ignorePatternParameterDefault: false
-    Global Link List Content:
-      type: globalLinkList
-      variables:
-        locale: ${locale}
-        search: ''
-        filters: '{"type[eq]":"globalLink"}'
-        orderBy: created_at_ASC
-        contentTypes: globalLink
-    Global Translation List Content:
-      type: globalTranslationList
-      variables:
-        locale: ${locale}
-        search: ''
-        filters: '{"type[eq]":"globalTranslation"}'
-        contentTypes: globalTranslation
-      isPatternParameter: false
-      ignorePatternParameterDefault: false
-    Content translations List Content:
-      type: contentTranslationsList
-      variables:
-        limit: '40'
-        locale: ${locale}
-        search: ''
-        filters: '{"type[eq]":"contentTranslations"}'
-        orderBy: created_at_ASC
-        uiFilters: >-
-          [{"field":"type","operator":"eq","value":"contentTranslations"},{"field":"fields.key","operator":"starts","value":""}]
-        contentTypes: contentTranslations
-      isPatternParameter: true
-      ignorePatternParameterDefault: false
+  _dataResources: {}
   _overridability:
     parameters:
       $viz: 'yes'
@@ -93,5 +38,5 @@ composition:
     - en-GB
     - fr-FR
 created: '2025-06-12T07:28:50.754977+00:00'
-modified: '2025-06-12T07:29:47.788969+00:00'
+modified: '2025-06-12T10:08:31.908627+00:00'
 pattern: true
