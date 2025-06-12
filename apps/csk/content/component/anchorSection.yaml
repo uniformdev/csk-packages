@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: anchorSection
+name: Anchor section
+icon: display-fullwidth
+parameters:
+  - id: anchorTitle
+    name: Anchor Title
+    type: text
+    typeConfig:
+      regex: ''
+    localizable: true
+  - id: showInNavigation
+    name: Show in navigation
+    type: checkbox
+    typeConfig: null
+  - id: colorTheme
+    name: Color theme
+    type: dex-color-palette-parameter
+    typeConfig:
+      allowColors: []
+      selectedGroup: theme
+    allowConditionalValues: true
+categoryId: 9ff00250-0200-45ec-82d3-4e3b346d7ee6
+description: |-
+  A section that can group different components. 
+  It has colorshcemes to choose from.
+  An anchorlink can be added for navigation purposes
+useTeamPermissions: true
+slots:
+  - id: components
+    name: Components
+    allowedComponents:
+      - ctaLinks
+      - keyFeatures
+      - mediaGrid
+      - metrics
+      - hero
+      - slider
+      - article
+      - tabs
+      - columns
+      - spriteslider
+      - accordion
+      - quote
+      - anchorNavigation
+      - explorerCard
+      - linkButton
+      - mediablock
+      - richText
+      - slide
+      - tab
+      - $test
+      - $localization
+      - $loop
+      - $personalization
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: anchorTitle
+canBeComposition: false
+created: '2025-06-12T07:28:21.306184+00:00'
+updated: '2025-06-12T07:28:21.306184+00:00'

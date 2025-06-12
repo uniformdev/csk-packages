@@ -1,0 +1,64 @@
+id: commonTranslations
+name: Common translations
+created: '2025-06-12T07:30:36.537502+00:00'
+updated: '2025-06-12T07:30:36.537502+00:00'
+slugSettings:
+  unique: 'no'
+  required: 'yes'
+  regularExpression: ''
+  regularExpressionMessage: ''
+useTeamPermissions: true
+fields:
+  - id: key
+    name: Key
+    type: text
+    helpText: >-
+      Enter the unique identifier for this translation (e.g., 'field_required').
+      Use consistent naming for easy reference
+    typeConfig:
+      regex: ^[a-z_-]+$
+      required: true
+      regexMessage: >-
+        Only lowercase letters (a-z), underscores (_) and hyphen (-) are
+        allowed. Spaces must be replaced
+  - id: text
+    name: Text
+    type: text
+    helpText: >-
+      Enter plain text for the translation. Leave this field empty if rich text
+      is used
+    typeConfig: null
+    localizable: true
+  - id: richText
+    name: Rich Text
+    type: richText
+    helpText: >-
+      Enter formatted content for the translation using rich text. Leave this
+      field empty if plain text is used
+    typeConfig:
+      elements:
+        builtIn:
+          - h2
+          - h3
+          - h4
+          - h5
+          - h6
+          - unorderedList
+          - orderedList
+          - link
+      required: false
+      formatting:
+        builtIn:
+          - bold
+          - italic
+          - underline
+          - strikethrough
+    localizable: true
+entryName: key
+description: >-
+  Common translations are for standard words used throughout the site e.g. in,
+  on, from, to etc.
+icon: globe-alt
+type: contentType
+permissions: []
+previewConfigurations: []

@@ -1,0 +1,47 @@
+id: singleProduct
+displayName: Single Product
+ttl: 30
+path: /product-projections/${productId}
+custom: {}
+method: GET
+purgeKey: d7737675-c004-4d9f-8a11-0c40ed7e60b5
+archetype: singleEntry
+variables:
+  locale:
+    type: text
+    default: ''
+    displayName: Locale
+  productId:
+    type: text
+    default: ''
+    displayName: Product Id
+  priceChannel:
+    type: text
+    default: ''
+    displayName: Price channel code
+  priceCurrency:
+    type: text
+    default: ''
+    displayName: Price currency code
+  storeProjection:
+    type: text
+    default: ''
+    displayName: Store key
+parameters:
+  - key: localeProjection
+    value: ${locale}
+  - key: priceCurrency
+    value: ${priceCurrency}
+    omitIfEmpty: true
+  - key: priceChannel
+    value: ${priceChannel}
+    omitIfEmpty: true
+  - key: storeProjection
+    value: ${storeProjection}
+    omitIfEmpty: true
+  - key: expand
+    value: categories[*].key
+  - key: expand
+    value: productType
+dataSourceId: commercetoolsv2
+allowedOnComponents: []

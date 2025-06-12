@@ -1,0 +1,50 @@
+created: '2025-06-12T07:31:42.78243+00:00'
+modified: '2025-06-12T07:31:42.78243+00:00'
+pattern: false
+entry:
+  _id: 3990e219-fd53-4ed8-a9c8-328f9fd5b345
+  _name: Tiger 1200 GT Pro Explorer
+  _slug: tiger-1200-gt-pro-explorer
+  type: bike
+  fields:
+    key:
+      type: text
+      value: ${#jptr:/Single Product Content/key}
+    name:
+      type: text
+      locales:
+        en-GB: ${#jptr:/Single Product Content/name}
+    image:
+      type: asset
+      locales:
+        en-GB:
+          - _id: 94feaafc-0de0-406d-b4f2-fc505555d7a7
+            type: image
+            fields:
+              url:
+                type: text
+                value: >-
+                  ${#jptr:/Single Product
+                  Content/masterVariant/assets/0/sources/0/uri}
+            _source: custom-url
+    currency:
+      type: text
+      locales:
+        en-GB: GBP
+    fromPrice:
+      type: number
+      value: '1869500'
+    includeInTestRide:
+      type: checkbox
+      value: true
+    bikeCategorization:
+      type: select
+      value: Road
+  _dataResources:
+    Single Product Content:
+      type: singleProduct
+      variables:
+        locale: ${locale}
+        productId: e8f59187-b67f-459b-a289-31edee0b3570
+  _locales:
+    - en-GB

@@ -1,0 +1,19 @@
+id: multipleExplorerCardSelection
+displayName: Multiple Explorer Card Selection
+ttl: 30
+body: ''
+path: /multiple
+custom:
+  maxItems: 3
+  proposedName: Multiple Explorer Card
+  allowedContentTypes:
+    - explorerCard
+method: GET
+purgeKey: d85cfc88-e7ba-4bdb-88d9-276427fe5839
+archetype: multipleEntries
+variables:
+  entryIds:
+    type: text
+    default: ''
+dataSourceId: uniformContent
+allowedOnComponents: []

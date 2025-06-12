@@ -1,0 +1,50 @@
+created: '2025-06-12T07:31:35.251348+00:00'
+modified: '2025-06-12T07:31:35.251348+00:00'
+pattern: false
+entry:
+  _id: 30900d72-b6f6-4298-b04b-1c435fd2dc33
+  _name: Speed Twin 900
+  _slug: speed-twin-900
+  type: bike
+  fields:
+    key:
+      type: text
+      value: ${#jptr:/Single Product Content/key}
+    name:
+      type: text
+      locales:
+        en-GB: ${#jptr:/Single Product Content/name}
+    image:
+      type: asset
+      locales:
+        en-GB:
+          - _id: 94feaafc-0de0-406d-b4f2-fc505555d7a7
+            type: image
+            fields:
+              url:
+                type: text
+                value: >-
+                  ${#jptr:/Single Product
+                  Content/masterVariant/assets/0/sources/0/uri}
+            _source: custom-url
+    currency:
+      type: text
+      locales:
+        en-GB: GBP
+    fromPrice:
+      type: number
+      value: '919500'
+    includeInTestRide:
+      type: checkbox
+      value: true
+    bikeCategorization:
+      type: select
+      value: Road
+  _dataResources:
+    Single Product Content:
+      type: singleProduct
+      variables:
+        locale: ${locale}
+        productId: 01e7e3da-443a-4c07-b010-66ee830342a7
+  _locales:
+    - en-GB

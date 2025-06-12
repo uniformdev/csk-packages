@@ -1,0 +1,27 @@
+id: bikeList
+displayName: Bike List
+path: /query
+custom:
+  allowedContentTypes:
+    - bike
+method: GET
+purgeKey: 727c503f-58b1-4b70-9652-a44c16112955
+archetype: queryEntries
+variables:
+  limit:
+    type: text
+    default: '20'
+  offset:
+    type: text
+    default: '0'
+  filters:
+    type: text
+    default: '{}'
+  orderBy:
+    type: text
+    default: ''
+  contentTypes:
+    type: text
+    default: ''
+dataSourceId: uniformContent
+allowedOnComponents: []

@@ -1,0 +1,48 @@
+id: linkButton
+name: Link button
+created: '2025-06-12T07:30:41.207458+00:00'
+updated: '2025-06-12T07:30:41.207458+00:00'
+slugSettings:
+  required: 'no'
+useTeamPermissions: true
+fields:
+  - id: linkText
+    name: Link text
+    type: text
+    typeConfig:
+      required: true
+    localizable: true
+  - id: link
+    name: Link
+    type: link
+    typeConfig: null
+    localizable: true
+  - id: bordered
+    name: Bordered
+    type: checkbox
+    typeConfig: null
+  - id: colorTheme
+    name: Color theme
+    type: dex-color-palette-parameter
+    typeConfig:
+      allowColors: []
+      selectedGroup: button
+    allowConditionalValues: true
+  - id: target
+    name: Target
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Same window
+          value: _self
+        - key: New window
+          value: _blank
+      required: true
+      defaultValue: _self
+    allowConditionalValues: true
+entryName: linkText
+description: Link styled as button
+icon: rectangle-rounded
+type: block
+permissions: []
+previewConfigurations: []

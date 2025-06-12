@@ -1,0 +1,50 @@
+created: '2025-06-12T07:31:27.725056+00:00'
+modified: '2025-06-12T07:31:27.725056+00:00'
+pattern: false
+entry:
+  _id: 1efbb3ed-5c05-4e0a-a1d5-eb3c48bbf2c8
+  _name: Scrambler 900
+  _slug: scrambler-900
+  type: bike
+  fields:
+    key:
+      type: text
+      value: ${#jptr:/Single Product Content/key}
+    name:
+      type: text
+      locales:
+        en-GB: ${#jptr:/Single Product Content/name}
+    image:
+      type: asset
+      locales:
+        en-GB:
+          - _id: 94feaafc-0de0-406d-b4f2-fc505555d7a7
+            type: image
+            fields:
+              url:
+                type: text
+                value: >-
+                  ${#jptr:/Single Product
+                  Content/masterVariant/assets/0/sources/0/uri}
+            _source: custom-url
+    currency:
+      type: text
+      locales:
+        en-GB: GBP
+    fromPrice:
+      type: number
+      value: '979500'
+    includeInTestRide:
+      type: checkbox
+      value: true
+    bikeCategorization:
+      type: select
+      value: Road
+  _dataResources:
+    Single Product Content:
+      type: singleProduct
+      variables:
+        locale: ${locale}
+        productId: f8508f36-fa91-4566-a8b1-2443a8ceae22
+  _locales:
+    - en-GB

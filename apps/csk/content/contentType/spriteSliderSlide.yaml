@@ -1,0 +1,84 @@
+id: spriteSliderSlide
+name: Sprite Slider Slide
+created: '2025-06-12T07:30:44.281903+00:00'
+updated: '2025-06-12T07:30:44.281903+00:00'
+slugSettings:
+  required: 'no'
+useTeamPermissions: true
+fields:
+  - id: title
+    name: Title
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: text
+    name: Text
+    type: richText
+    typeConfig:
+      elements:
+        builtIn:
+          - h1
+          - h2
+          - h3
+          - h4
+          - h5
+          - h6
+          - unorderedList
+          - orderedList
+          - quote
+          - code
+          - table
+          - asset
+          - variable
+          - link
+      required: false
+      formatting:
+        builtIn:
+          - code
+          - bold
+          - italic
+          - underline
+          - strikethrough
+          - superscript
+          - subscript
+      elementsConfig:
+        asset:
+          allowedTypes:
+            - image
+    localizable: true
+  - id: sound
+    name: Sound
+    type: asset
+    typeConfig:
+      allowedTypes:
+        - audio
+    localizable: true
+  - id: animateToSpriteStep
+    name: Animate to sprite step
+    type: number
+    typeConfig: null
+  - id: zoom
+    name: Zoom
+    type: number
+    helpText: Zoom amount in percent
+    typeConfig:
+      max: '300'
+      min: '50'
+  - id: offsetx
+    name: OffsetX
+    type: number
+    helpText: Offset in percent
+    typeConfig:
+      max: '100'
+      min: '-100'
+  - id: offsety
+    name: OffsetY
+    type: number
+    typeConfig:
+      max: '100'
+      min: '-100'
+entryName: title
+icon: file-document
+type: block
+permissions: []
+previewConfigurations: []

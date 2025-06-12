@@ -1,27 +1,28 @@
-# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: tab
 name: Tab
 icon: tab
 parameters:
-  - id: text
-    name: Text
+  - id: title
+    name: Title
     type: text
     typeConfig: null
     localizable: true
-categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
-previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/tab.jpg
+categoryId: 9ff00250-0200-45ec-82d3-4e3b346d7ee6
 useTeamPermissions: true
 slots:
-  - id: tabContent
-    name: Tab Content
-    minComponents: 1
-    allowedComponents: []
-    allowAllComponents: true
+  - id: content
+    name: Content
+    allowedComponents:
+      - slider
+      - article
+      - $loop
+      - mediaGrid
+    allowAllComponents: false
     inheritAllowedComponents: false
-    patternsInAllowedComponents: false
-titleParameter: text
+    patternsInAllowedComponents: true
+titleParameter: title
 canBeComposition: false
-created: '2025-02-17T15:34:15.709692+00:00'
-updated: '2025-02-17T15:34:15.709692+00:00'
+created: '2025-06-12T07:28:41.257847+00:00'
+updated: '2025-06-12T07:28:41.257847+00:00'

@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: spriteslider
+name: SpriteSlider
+icon: screen
+parameters:
+  - id: icon
+    name: Icon
+    type: asset
+    typeConfig:
+      allowedTypes:
+        - image
+    localizable: true
+  - id: title
+    name: Title
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: snapScrollToSlides
+    name: Snap scroll to slides
+    type: checkbox
+    typeConfig: null
+  - id: spriteSteps
+    name: Sprite Steps
+    type: number
+    helpText: Select how many "steps" there are in the spritesheet, default will be 36
+    typeConfig: null
+  - id: sprites
+    name: Sprites
+    type: $block
+    typeConfig:
+      min: 1
+      allowedTypes:
+        - spritesheet
+  - id: slides
+    name: Slides
+    type: $block
+    typeConfig:
+      allowedTypes:
+        - spriteSliderSlide
+  - id: defaultSpriteStep
+    name: Default sprite step
+    type: number
+    helpText: If none is specified, spritesteps divided by to is default
+    typeConfig: null
+    allowConditionalValues: true
+  - id: accentColor
+    name: Accent color
+    type: dex-color-palette-parameter
+    typeConfig:
+      allowColors: []
+      selectedGroup: accent
+categoryId: 9ff00250-0200-45ec-82d3-4e3b346d7ee6
+useTeamPermissions: true
+slots: []
+thumbnailParameter: sprite
+canBeComposition: false
+created: '2025-06-12T07:28:40.42874+00:00'
+updated: '2025-06-12T07:28:40.42874+00:00'

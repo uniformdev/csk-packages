@@ -1,0 +1,39 @@
+id: pdpquery
+displayName: pdpquery
+ttl: 30
+path: /query
+custom:
+  proposedName: >-
+    Query Bike or Bike Family or Content translations or Common translations or
+    motorcycle translations or Global Translation or Explorer Card
+  allowedOrderBy:
+    - name_ASC
+  allowedContentTypes:
+    - bike
+    - bikeFamily
+    - contentTranslations
+    - commonTranslations
+    - motorcycleTranslations
+    - globalTranslation
+    - explorerCard
+method: GET
+purgeKey: 4f8a9c16-1548-49da-8c0e-59e7bce832f3
+archetype: queryEntries
+variables:
+  limit:
+    type: text
+    default: '20'
+  offset:
+    type: text
+    default: '0'
+  filters:
+    type: text
+    default: '{}'
+  orderBy:
+    type: text
+    default: ''
+  contentTypes:
+    type: text
+    default: ''
+dataSourceId: uniformContent
+allowedOnComponents: []

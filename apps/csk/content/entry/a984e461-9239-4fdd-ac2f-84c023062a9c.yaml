@@ -1,0 +1,74 @@
+created: '2025-06-12T07:30:53.111532+00:00'
+modified: '2025-06-12T07:30:53.111532+00:00'
+pattern: false
+entry:
+  _id: a984e461-9239-4fdd-ac2f-84c023062a9c
+  _name: Bike Entry Template
+  _slug: bike-entry-template
+  type: bike
+  fields:
+    name:
+      type: text
+      value: Bike Entry Template
+    currency:
+      type: text
+      locales:
+        cs-CZ: GBP
+        el-GR: EUR
+        en-AE: GBP
+        en-GB: GBP
+        en-US: USD
+        es-US: USD
+        ja-JP: YEN
+        sk-SK: GBP
+    bikeCategorization:
+      type: select
+      value: Road
+  _dataResources:
+    Single Product Content:
+      type: singleProduct
+      variables:
+        locale: ${locale}
+        productId: 1100ffba-91cf-42b5-b528-959b1ae4275f
+  _locales:
+    - en-GB
+    - en-US
+    - es-US
+    - en-CA
+    - fr-CA
+    - sv-SE
+    - nb-NO
+    - da-DK
+    - fi-FI
+    - en-AU
+    - ms-MY
+    - en-NZ
+    - zh-SG
+    - en-PH
+    - en-AE
+    - id-ID
+    - de-DE
+    - de-AT
+    - de-CH
+    - fr-FR
+    - fr-CH
+    - fr-BE
+    - fr-LU
+    - es-ES
+    - es-AR
+    - pt-PT
+    - nl-NL
+    - nl-BE
+    - it-IT
+    - ja-JP
+    - zh-CN
+    - pl-PL
+    - el-GR
+    - ko-KR
+    - hu-HU
+    - ro-RO
+    - cs-CZ
+    - sr-Latn-RS
+    - sl-SI
+    - sk-SK
+    - hr-HR

@@ -1,0 +1,17 @@
+id: globalLink
+displayName: Global Link
+ttl: 30
+path: /single
+custom:
+  proposedName: Global Link
+  allowedContentTypes:
+    - globalLink
+method: GET
+purgeKey: 036f086d-e05f-4252-b085-64ce508bc371
+archetype: singleEntry
+variables:
+  entryId:
+    type: text
+    default: ''
+dataSourceId: uniformContent
+allowedOnComponents: []

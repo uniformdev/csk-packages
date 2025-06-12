@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: specList
+name: Spec list
+icon: screen
+parameters:
+  - id: specs
+    name: Specs
+    type: $block
+    typeConfig:
+      min: 1
+      allowedTypes:
+        - fieldPair
+        - $loop
+        - commercetoolsAttributePair
+categoryId: 9ff00250-0200-45ec-82d3-4e3b346d7ee6
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2025-06-12T07:28:40.212714+00:00'
+updated: '2025-06-12T07:28:40.212714+00:00'

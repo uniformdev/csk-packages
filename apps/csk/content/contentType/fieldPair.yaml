@@ -1,0 +1,26 @@
+id: fieldPair
+name: Field Pair
+created: '2025-06-12T07:30:37.794283+00:00'
+updated: '2025-06-12T07:30:37.794283+00:00'
+slugSettings:
+  required: 'no'
+useTeamPermissions: true
+fields:
+  - id: label
+    name: Label
+    type: text
+    typeConfig:
+      required: true
+    localizable: true
+  - id: value
+    name: Value
+    type: text
+    typeConfig:
+      required: true
+    localizable: true
+entryName: label
+description: ''
+icon: rectangle-rounded
+type: block
+permissions: []
+previewConfigurations: []

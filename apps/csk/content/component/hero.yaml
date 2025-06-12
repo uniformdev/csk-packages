@@ -1,0 +1,158 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: hero
+name: Hero
+icon: display-fullwidth
+parameters:
+  - id: dynamicMedia
+    name: Media
+    type: $block
+    typeConfig:
+      max: 1
+      min: 0
+      allowedTypes:
+        - video
+        - youtubeVideo
+        - image
+  - id: title
+    name: Title
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: label
+    name: Label
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: description
+    name: Description
+    type: text
+    typeConfig:
+      multiline: true
+      linesCount: 5
+    localizable: true
+    allowConditionalValues: true
+  - id: linkButtons
+    name: Link buttons
+    type: $block
+    typeConfig:
+      allowedTypes:
+        - linkButton
+  - id: tooltip
+    name: Tooltip
+    type: text
+    helpText: A tooltip besides the hero text will be shown, if this is filled out
+    typeConfig: null
+    localizable: true
+    allowConditionalValues: true
+  - id: height
+    name: Height
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Small
+          value: small
+        - key: Medium
+          value: medium
+        - key: Large
+          value: large
+      defaultValue: large
+  - id: width
+    name: Width
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Fullwidth
+          value: fullwidth
+        - key: Narrow
+          value: narrow
+      defaultValue: fullwidth
+  - id: spacing
+    name: Spacing
+    type: dex-space-control-parameter
+    typeConfig:
+      selectedGroup: spacing
+  - id: 19b69001-9dc0-456d-b580-da1a55cad79b
+    name: Desktop
+    type: group
+    typeConfig:
+      collapsed: false
+      childrenParams:
+        - textAlignment
+        - horizontalAlignment
+  - id: textAlignment
+    name: Text alignment
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Left
+          value: left
+        - key: Right
+          value: right
+      defaultValue: left
+  - id: horizontalAlignment
+    name: Horizontal alignment
+    type: dex-segmented-control-parameter
+    helpText: Only in Fullwidth CTA variant
+    typeConfig:
+      options:
+        - key: Left aligned
+          value: left
+        - key: Center aligned
+          value: center
+        - key: Right aligned
+          value: right
+      defaultValue: left
+  - id: f3396a43-de88-4c89-b60b-6358d2217dbc
+    name: Mobile
+    type: group
+    typeConfig:
+      collapsed: false
+      childrenParams:
+        - mobileTextAlignment
+        - mobileVerticalAlignment
+        - inlineImage
+  - id: mobileTextAlignment
+    name: Text alignment
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Left
+          value: left
+        - key: Right
+          value: right
+      defaultValue: left
+  - id: mobileVerticalAlignment
+    name: Vertical alignment
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Top
+          value: top
+        - key: Space between
+          value: space-between
+        - key: Bottom
+          value: bottom
+      defaultValue: top
+  - id: inlineImage
+    name: Inline image
+    type: checkbox
+    helpText: This adds the image inline in mobile view
+    typeConfig: null
+categoryId: 9ff00250-0200-45ec-82d3-4e3b346d7ee6
+useTeamPermissions: true
+slots:
+  - id: content
+    name: Content
+    allowedComponents: []
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: title
+thumbnailParameter: image
+canBeComposition: false
+created: '2025-06-12T07:28:30.59301+00:00'
+updated: '2025-06-12T07:28:30.59301+00:00'
+variants:
+  - id: fullwidthCta
+    name: Fullwidth CTA

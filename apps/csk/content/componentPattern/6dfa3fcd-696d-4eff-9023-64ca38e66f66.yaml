@@ -1,0 +1,396 @@
+composition:
+  _name: ' Form Group Pattern: Planned Bike Purchase'
+  _id: 6dfa3fcd-696d-4eff-9023-64ca38e66f66
+  type: formGroup
+  parameters:
+    title:
+      type: text
+      locales:
+        cs-CZ: When are you considering purchasing a new motorcycle?
+        da-DK: When are you considering purchasing a new motorcycle?
+        de-AT: Wann planst Du den Kauf deines nächsten Motorrads?
+        de-CH: Wann planst Du den Kauf deines nächsten Motorrads?
+        de-DE: Wann planst Du den Kauf deines nächsten Motorrads?
+        el-GR: Πότε σκέφτεστε να αγοράσετε τη νέα σας μοτοσυκλέτα;
+        en-AE: When are you considering purchasing a new motorcycle?
+        en-AU: When are you considering purchasing a new motorcycle?
+        en-CA: When are you considering purchasing a new motorcycle?
+        en-GB: When are you considering purchasing a new motorcycle?
+        en-IN: When are you considering purchasing a new motorcycle?
+        en-NZ: When are you considering purchasing a new motorcycle?
+        en-PH: When are you considering purchasing a new motorcycle?
+        en-US: When are you considering purchasing a new motorcycle?
+        es-AR: ¿Cuál es tu intención de compra?
+        es-ES: ¿Cuál es tu intención de compra?
+        es-MX: ¿Cuál es tu intención de compra?
+        es-US: ¿Cuál es tu intención de compra?
+        fi-FI: When are you considering purchasing a new motorcycle?
+        fr-BE: Quand pensez-vous à acheter une moto?
+        fr-CA: Quand pensez-vous à acheter une moto?
+        fr-CH: Quand pensez-vous à acheter une moto?
+        fr-FR: Quand pensez-vous à acheter une moto?
+        fr-LU: Quand pensez-vous à acheter une moto?
+        hr-HR: When are you considering purchasing a new motorcycle?
+        hu-HU: Mikor kívánja megvásárolni új motorkerékpárját?
+        id-ID: When are you considering purchasing a new motorcycle?
+        it-IT: Quando pensi di acquistare la tua nuova moto?
+        ja-JP: ご購入予定を選択してください
+        ko-KR: When are you considering purchasing a new motorcycle?
+        ms-MY: When are you considering purchasing a new motorcycle?
+        nb-NO: When are you considering purchasing a new motorcycle?
+        nl-BE: Wanneer overweegt u de aankoop van een nieuwe motor?
+        nl-NL: Wanneer overweegt u de aankoop van een nieuwe motor?
+        pl-PL: When are you considering purchasing a new motorcycle?
+        pt-BR: Selecione a intenção de compra
+        pt-PT: Quando está a pensar comprar a sua nova moto?
+        ro-RO: Când vă gândiți să achiziționați noua motocicletă?
+        sk-SK: When are you considering purchasing a new motorcycle?
+        sl-SI: When are you considering purchasing a new motorcycle?
+        sv-SE: When are you considering purchasing a new motorcycle?
+        th-TH: ช่วงเวลาที่คิดจะออกรถ
+        tr-TR: When are you considering purchasing a new motorcycle?
+        zh-CN: When are you considering purchasing a new motorcycle?
+        zh-SG: When are you considering purchasing a new motorcycle?
+        zh-TW: When are you considering purchasing a new motorcycle?
+        sr-Latn-RS: When are you considering purchasing a new motorcycle?
+  slots:
+    content:
+      - _id: 742c554d-04dd-41c1-9d36-26b46f7804c7
+        type: radioGroup
+        slots:
+          content:
+            - _id: 09340772-53f5-435c-a4b9-141a93917544
+              type: radioOption
+              parameters:
+                label:
+                  type: text
+                  locales:
+                    cs-CZ: 0-3 months
+                    da-DK: 0-3 months
+                    de-AT: 0-3 months
+                    de-CH: 0-3 months
+                    de-DE: 0-3 months
+                    el-GR: 0-3 months
+                    en-AE: 0-3 months
+                    en-AU: 0-3 months
+                    en-CA: 0-3 months
+                    en-GB: 0-3 months
+                    en-IN: 0-3 months
+                    en-NZ: 0-3 months
+                    en-PH: 0-3 months
+                    en-US: 0-3 months
+                    es-AR: 0-3 months
+                    es-ES: 0-3 months
+                    es-MX: 0-3 months
+                    es-US: 0-3 months
+                    fi-FI: 0-3 months
+                    fr-BE: 0-3 months
+                    fr-CA: 0-3 months
+                    fr-CH: 0-3 months
+                    fr-FR: 0-3 mois SM
+                    fr-LU: 0-3 months
+                    hr-HR: 0-3 months
+                    hu-HU: 0-3 months
+                    id-ID: 0-3 months
+                    it-IT: 0-3 months
+                    ja-JP: 0-3 months
+                    ko-KR: 0-3 months
+                    ms-MY: 0-3 months
+                    nb-NO: 0-3 months
+                    nl-BE: 0-3 months
+                    nl-NL: 0-3 months
+                    pl-PL: 0-3 months
+                    pt-BR: 0-3 months
+                    pt-PT: 0-3 months
+                    ro-RO: 0-3 months
+                    sk-SK: 0-3 months
+                    sl-SI: 0-3 months
+                    sv-SE: 0-3 months
+                    th-TH: 0-3 months
+                    tr-TR: 0-3 months
+                    zh-CN: 0-3 months
+                    zh-SG: 0-3 months
+                    zh-TW: 0-3 months
+                    sr-Latn-RS: 0-3 months
+                value:
+                  type: text
+                  value: '0'
+            - _id: 855b902a-39bb-4f9c-a5f1-dacaae86956b
+              type: radioOption
+              parameters:
+                label:
+                  type: text
+                  locales:
+                    cs-CZ: 4-6 months
+                    da-DK: 4-6 months
+                    de-AT: 4-6 months
+                    de-CH: 4-6 months
+                    de-DE: 4-6 months
+                    el-GR: 4-6 months
+                    en-AE: 4-6 months
+                    en-AU: 4-6 months
+                    en-CA: 4-6 months
+                    en-GB: 4-6 months
+                    en-IN: 4-6 months
+                    en-NZ: 4-6 months
+                    en-PH: 4-6 months
+                    en-US: 4-6 months
+                    es-AR: 4-6 months
+                    es-ES: 4-6 months
+                    es-MX: 4-6 months
+                    es-US: 4-6 months
+                    fi-FI: 4-6 months
+                    fr-BE: 4-6 months
+                    fr-CA: 4-6 months
+                    fr-CH: 4-6 months
+                    fr-FR: 4-6 mois
+                    fr-LU: 4-6 months
+                    hr-HR: 4-6 months
+                    hu-HU: 4-6 months
+                    id-ID: 4-6 months
+                    it-IT: 4-6 months
+                    ja-JP: 4-6 months
+                    ko-KR: 4-6 months
+                    ms-MY: 4-6 months
+                    nb-NO: 4-6 months
+                    nl-BE: 4-6 months
+                    nl-NL: 4-6 months
+                    pl-PL: 4-6 months
+                    pt-BR: 4-6 months
+                    pt-PT: 4-6 months
+                    ro-RO: 4-6 months
+                    sk-SK: 4-6 months
+                    sl-SI: 4-6 months
+                    sv-SE: 4-6 months
+                    th-TH: 4-6 months
+                    tr-TR: 4-6 months
+                    zh-CN: 4-6 months
+                    zh-SG: 4-6 months
+                    zh-TW: 4-6 months
+                    sr-Latn-RS: 4-6 months
+                value:
+                  type: text
+                  value: '1'
+            - _id: 1821b6d5-6bf7-4bee-aec6-4e0e8d9c4326
+              type: radioOption
+              parameters:
+                label:
+                  type: text
+                  locales:
+                    cs-CZ: 7-12 months
+                    da-DK: 7-12 months
+                    de-AT: 7-12 months
+                    de-CH: 7-12 months
+                    de-DE: 7-12 months
+                    el-GR: 7-12 months
+                    en-AE: 7-12 months
+                    en-AU: 7-12 months
+                    en-CA: 7-12 months
+                    en-GB: 7-12 months
+                    en-IN: 7-12 months
+                    en-NZ: 7-12 months
+                    en-PH: 7-12 months
+                    en-US: 7-12 months
+                    es-AR: 7-12 months
+                    es-ES: 7-12 months
+                    es-MX: 7-12 months
+                    es-US: 7-12 months
+                    fi-FI: 7-12 months
+                    fr-BE: 7-12 months
+                    fr-CA: 7-12 months
+                    fr-CH: 7-12 months
+                    fr-FR: 7-12 mois
+                    fr-LU: 7-12 months
+                    hr-HR: 7-12 months
+                    hu-HU: 7-12 months
+                    id-ID: 7-12 months
+                    it-IT: 7-12 months
+                    ja-JP: 7-12 months
+                    ko-KR: 7-12 months
+                    ms-MY: 7-12 months
+                    nb-NO: 7-12 months
+                    nl-BE: 7-12 months
+                    nl-NL: 7-12 months
+                    pl-PL: 7-12 months
+                    pt-BR: 7-12 months
+                    pt-PT: 7-12 months
+                    ro-RO: 7-12 months
+                    sk-SK: 7-12 months
+                    sl-SI: 7-12 months
+                    sv-SE: 7-12 months
+                    th-TH: 7-12 months
+                    tr-TR: 7-12 months
+                    zh-CN: 7-12 months
+                    zh-SG: 7-12 months
+                    zh-TW: 7-12 months
+                    sr-Latn-RS: 7-12 months
+                value:
+                  type: text
+                  value: '2'
+            - _id: db767967-26cd-457f-bad2-e1b9a3ac560f
+              type: radioOption
+              parameters:
+                label:
+                  type: text
+                  locales:
+                    cs-CZ: Undecided
+                    da-DK: Undecided
+                    de-AT: Undecided
+                    de-CH: Undecided
+                    de-DE: Undecided
+                    el-GR: Undecided
+                    en-AE: Undecided
+                    en-AU: Undecided
+                    en-CA: Undecided
+                    en-GB: Undecided
+                    en-IN: Undecided
+                    en-NZ: Undecided
+                    en-PH: Undecided
+                    en-US: Undecided
+                    es-AR: Undecided
+                    es-ES: Undecided
+                    es-MX: Undecided
+                    es-US: Undecided
+                    fi-FI: Undecided
+                    fr-BE: Undecided
+                    fr-CA: Undecided
+                    fr-CH: Undecided
+                    fr-FR: Indécis
+                    fr-LU: Undecided
+                    hr-HR: Undecided
+                    hu-HU: Undecided
+                    id-ID: Undecided
+                    it-IT: Undecided
+                    ja-JP: Undecided
+                    ko-KR: Undecided
+                    ms-MY: Undecided
+                    nb-NO: Undecided
+                    nl-BE: Undecided
+                    nl-NL: Undecided
+                    pl-PL: Undecided
+                    pt-BR: Undecided
+                    pt-PT: Undecided
+                    ro-RO: Undecided
+                    sk-SK: Undecided
+                    sl-SI: Undecided
+                    sv-SE: Undecided
+                    th-TH: Undecided
+                    tr-TR: Undecided
+                    zh-CN: Undecided
+                    zh-SG: Undecided
+                    zh-TW: Undecided
+                    sr-Latn-RS: Undecided
+                value:
+                  type: text
+                  value: '3'
+        parameters:
+          required:
+            type: checkbox
+            value: true
+          radioGroupIdentifier:
+            type: text
+            value: tricmt_purchaseintentionindex
+          requiredErrorMessage:
+            type: text
+            locales:
+              cs-CZ: Please select an option
+              da-DK: Please select an option
+              de-AT: Please select an option
+              de-CH: Please select an option
+              de-DE: Please select an option
+              el-GR: Please select an option
+              en-AE: Please select an option
+              en-AU: Please select an option
+              en-CA: Please select an option
+              en-GB: Please select an option
+              en-IN: Please select an option
+              en-NZ: Please select an option
+              en-PH: Please select an option
+              en-US: Please select an option
+              es-AR: Please select an option
+              es-ES: Please select an option
+              es-MX: Please select an option
+              es-US: Please select an option
+              fi-FI: Please select an option
+              fr-BE: Please select an option
+              fr-CA: Please select an option
+              fr-CH: Please select an option
+              fr-FR: 'SM Select Purchase intention '
+              fr-LU: Please select an option
+              hr-HR: Please select an option
+              hu-HU: Please select an option
+              id-ID: Please select an option
+              it-IT: Please select an option
+              ja-JP: Please select an option
+              ko-KR: Please select an option
+              ms-MY: Please select an option
+              nb-NO: Please select an option
+              nl-BE: Please select an option
+              nl-NL: Please select an option
+              pl-PL: Please select an option
+              pt-BR: Please select an option
+              pt-PT: Please select an option
+              ro-RO: Please select an option
+              sk-SK: Please select an option
+              sl-SI: Please select an option
+              sv-SE: Please select an option
+              th-TH: Please select an option
+              tr-TR: Please select an option
+              zh-CN: Please select an option
+              zh-SG: Please select an option
+              zh-TW: Please select an option
+              sr-Latn-RS: Please select an option
+          radioGroupIdentifierLabel:
+            type: text
+            value: tricmt_purchaseintention
+  _locales:
+    - en-GB
+    - fr-FR
+    - en-US
+    - es-US
+    - en-CA
+    - fr-CA
+    - sv-SE
+    - nb-NO
+    - da-DK
+    - fi-FI
+    - en-IN
+    - tr-TR
+    - en-AU
+    - ms-MY
+    - en-NZ
+    - zh-SG
+    - en-PH
+    - en-AE
+    - id-ID
+    - de-DE
+    - de-AT
+    - de-CH
+    - fr-CH
+    - fr-BE
+    - fr-LU
+    - es-ES
+    - es-MX
+    - es-AR
+    - pt-PT
+    - nl-NL
+    - nl-BE
+    - it-IT
+    - th-TH
+    - ja-JP
+    - zh-CN
+    - pl-PL
+    - pt-BR
+    - el-GR
+    - ko-KR
+    - hu-HU
+    - ro-RO
+    - cs-CZ
+    - sr-Latn-RS
+    - sl-SI
+    - sk-SK
+    - hr-HR
+    - zh-TW
+created: '2025-06-12T07:28:58.459594+00:00'
+modified: '2025-06-12T07:29:57.228269+00:00'
+pattern: true

@@ -1,0 +1,31 @@
+id: contentTranslations
+displayName: Content translations
+ttl: 30
+body: ''
+path: /query
+custom:
+  proposedName: Query Content translations
+  includeTotalCount: true
+  allowedContentTypes:
+    - contentTranslations
+method: GET
+purgeKey: cfd1dff0-7ad0-475b-af22-a724f6ec3642
+archetype: queryEntries
+variables:
+  limit:
+    type: text
+    default: '20'
+  offset:
+    type: text
+    default: '0'
+  filters:
+    type: text
+    default: '{}'
+  orderBy:
+    type: text
+    default: ''
+  contentTypes:
+    type: text
+    default: ''
+dataSourceId: uniformContent
+allowedOnComponents: []

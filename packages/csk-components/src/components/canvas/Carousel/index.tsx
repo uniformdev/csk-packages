@@ -5,6 +5,8 @@ import { ContainerParameters } from '@/components/canvas/Container/parameters';
 export type CarouselParameters = ContainerParameters & {
   itemsPerPage: string;
   gapX: string;
+  arrowColor?: string;
+  arrowBackgroundColor?: string;
 };
 
 export enum CarouselSlots {

@@ -1,0 +1,10 @@
+id: e1da660c-f91f-4d92-bd0f-9ede33030a0c
+sourceUrl: /official-merchandise/:slug*
+sourceRetainQuerystring: true
+targetUrl: /casual/:slug*
+targetStatusCode: 301
+sourceMustMatchDomain: false
+targetPreserveIncomingProtocol: true
+targetPreserveIncomingDomain: true
+targetMergeQuerystring: true
+labelAsSystem: false

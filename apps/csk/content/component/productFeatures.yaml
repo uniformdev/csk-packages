@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: productFeatures
+name: Product Features
+icon: list
+parameters:
+  - id: imageTag
+    name: Image Tag
+    type: select
+    helpText: >-
+      Wich imagetag should this component pull from. If nothing is selected
+      "feature" will be used
+    typeConfig:
+      options:
+        - text: productshot
+          value: productshot
+        - text: details
+          value: details
+        - text: gallery
+          value: gallery
+        - text: grid
+          value: grid
+        - text: feature
+          value: feature
+        - text: inspirational
+          value: inspirational
+categoryId: 90b009c6-707b-49b2-a1c0-c5916278855c
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2025-06-12T07:28:35.25812+00:00'
+updated: '2025-06-12T07:28:35.25812+00:00'

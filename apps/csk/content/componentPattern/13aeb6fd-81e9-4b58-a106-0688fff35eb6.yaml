@@ -1,0 +1,195 @@
+composition:
+  _name: Bike link  card pattern
+  _id: 13aeb6fd-81e9-4b58-a106-0688fff35eb6
+  type: productLinkCard
+  parameters:
+    key:
+      type: text
+      value: ${#jptr:/Bike Content/entry/fields/key/value}
+    link:
+      type: link
+      value: ${#jptr:/Bike Content/entry/fields/link/value}
+    image:
+      type: asset
+      value:
+        - _id: 85427d91-910e-4bba-bda6-36a8183eb8ac
+          type: image
+          fields:
+            url:
+              type: text
+              value: >-
+                ${#jptr:/Bike
+                Content/entry/fields/image/value/0/fields/url/value}
+            title:
+              type: text
+              value: ${#jptr:/Bike Content/entry/fields/name/value}
+          _source: custom-url
+    title:
+      type: text
+      locales:
+        cs-CZ: ${#jptr:/Bike Content/entry/fields/name/value}
+        da-DK: ${#jptr:/Bike Content/entry/fields/name/value}
+        de-AT: ${#jptr:/Bike Content/entry/fields/name/value}
+        de-CH: ${#jptr:/Bike Content/entry/fields/name/value}
+        de-DE: ${#jptr:/Bike Content/entry/fields/name/value}
+        el-GR: ${#jptr:/Bike Content/entry/fields/name/value}
+        en-AE: ${#jptr:/Bike Content/entry/fields/name/value}
+        en-AU: ${#jptr:/Bike Content/entry/fields/name/value}
+        en-CA: ${#jptr:/Bike Content/entry/fields/name/value}
+        en-GB: ${#jptr:/Bike Content/entry/fields/name/value}
+        en-IN: ${#jptr:/Bike Content/entry/fields/name/value}
+        en-NZ: ${#jptr:/Bike Content/entry/fields/name/value}
+        en-PH: ${#jptr:/Bike Content/entry/fields/name/value}
+        en-US: ${#jptr:/Bike Content/entry/fields/name/value}
+        es-AR: ${#jptr:/Bike Content/entry/fields/name/value}
+        es-ES: ${#jptr:/Bike Content/entry/fields/name/value}
+        es-MX: ${#jptr:/Bike Content/entry/fields/name/value}
+        es-US: ${#jptr:/Bike Content/entry/fields/name/value}
+        fi-FI: ${#jptr:/Bike Content/entry/fields/name/value}
+        fr-BE: ${#jptr:/Bike Content/entry/fields/name/value}
+        fr-CA: ${#jptr:/Bike Content/entry/fields/name/value}
+        fr-CH: ${#jptr:/Bike Content/entry/fields/name/value}
+        fr-FR: ${#jptr:/Bike Content/entry/fields/name/value}
+        fr-LU: ${#jptr:/Bike Content/entry/fields/name/value}
+        hr-HR: ${#jptr:/Bike Content/entry/fields/name/value}
+        hu-HU: ${#jptr:/Bike Content/entry/fields/name/value}
+        id-ID: ${#jptr:/Bike Content/entry/fields/name/value}
+        it-IT: ${#jptr:/Bike Content/entry/fields/name/value}
+        ja-JP: ${#jptr:/Bike Content/entry/fields/name/value}
+        ko-KR: ${#jptr:/Bike Content/entry/fields/name/value}
+        ms-MY: ${#jptr:/Bike Content/entry/fields/name/value}
+        nb-NO: ${#jptr:/Bike Content/entry/fields/name/value}
+        nl-BE: ${#jptr:/Bike Content/entry/fields/name/value}
+        nl-NL: ${#jptr:/Bike Content/entry/fields/name/value}
+        pl-PL: ${#jptr:/Bike Content/entry/fields/name/value}
+        pt-BR: ${#jptr:/Bike Content/entry/fields/name/value}
+        pt-PT: ${#jptr:/Bike Content/entry/fields/name/value}
+        ro-RO: ${#jptr:/Bike Content/entry/fields/name/value}
+        sk-SK: ${#jptr:/Bike Content/entry/fields/name/value}
+        sl-SI: ${#jptr:/Bike Content/entry/fields/name/value}
+        sv-SE: ${#jptr:/Bike Content/entry/fields/name/value}
+        th-TH: ${#jptr:/Bike Content/entry/fields/name/value}
+        tr-TR: ${#jptr:/Bike Content/entry/fields/name/value}
+        zh-CN: ${#jptr:/Bike Content/entry/fields/name/value}
+        zh-SG: ${#jptr:/Bike Content/entry/fields/name/value}
+        zh-TW: ${#jptr:/Bike Content/entry/fields/name/value}
+        sr-Latn-RS: ${#jptr:/Bike Content/entry/fields/name/value}
+    description:
+      type: text
+      locales:
+        cs-CZ: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        da-DK: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        de-AT: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        de-CH: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        de-DE: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        el-GR: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        en-AE: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        en-AU: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        en-CA: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        en-GB: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        en-IN: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        en-NZ: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        en-PH: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        en-US: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        es-AR: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        es-ES: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        es-MX: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        es-US: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        fi-FI: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        fr-BE: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        fr-CA: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        fr-CH: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        fr-FR: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        fr-LU: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        hr-HR: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        hu-HU: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        id-ID: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        it-IT: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        ja-JP: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        ko-KR: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        ms-MY: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        nb-NO: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        nl-BE: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        nl-NL: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        pl-PL: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        pt-BR: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        pt-PT: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        ro-RO: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        sk-SK: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        sl-SI: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        sv-SE: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        th-TH: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        tr-TR: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        zh-CN: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        zh-SG: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        zh-TW: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+        sr-Latn-RS: '#{price ${#jptr:/Bike Content/entry/fields/fromPrice/value}} '
+  _dataResources:
+    Bike Content:
+      type: bike
+      variables:
+        locale: ${locale}
+        entryId: eaee3a12-404c-466a-8d2d-d7d4ad44b172
+      isPatternParameter: true
+      ignorePatternParameterDefault: true
+  _overridability:
+    parameters:
+      key: 'yes'
+      $viz: 'yes'
+      link: 'yes'
+      badge: 'yes'
+      image: 'yes'
+      title: 'yes'
+      description: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en-GB
+    - en-US
+    - es-US
+    - en-CA
+    - fr-CA
+    - sv-SE
+    - nb-NO
+    - da-DK
+    - fi-FI
+    - en-IN
+    - tr-TR
+    - en-AU
+    - ms-MY
+    - en-NZ
+    - zh-SG
+    - en-PH
+    - en-AE
+    - id-ID
+    - de-DE
+    - de-AT
+    - de-CH
+    - fr-FR
+    - fr-CH
+    - fr-BE
+    - fr-LU
+    - es-ES
+    - es-MX
+    - es-AR
+    - pt-PT
+    - nl-NL
+    - it-IT
+    - th-TH
+    - ja-JP
+    - zh-CN
+    - pl-PL
+    - pt-BR
+    - el-GR
+    - ko-KR
+    - hu-HU
+    - ro-RO
+    - cs-CZ
+    - sr-Latn-RS
+    - sl-SI
+    - sk-SK
+    - hr-HR
+    - zh-TW
+    - nl-BE
+created: '2025-06-12T07:28:50.099468+00:00'
+modified: '2025-06-12T07:29:55.288606+00:00'
+pattern: true

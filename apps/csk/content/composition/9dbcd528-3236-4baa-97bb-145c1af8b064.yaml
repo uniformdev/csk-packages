@@ -1,0 +1,628 @@
+composition:
+  _name: Checkout
+  _id: 9dbcd528-3236-4baa-97bb-145c1af8b064
+  _slug: checkout
+  type: checkoutpage
+  parameters:
+    robots:
+      type: $block
+      value:
+        - _id: f5b6149b-17c3-4027-b882-66daeec35a9b
+          type: robots
+          fields:
+            noindex:
+              type: checkbox
+              value: true
+            nofollow:
+              type: checkbox
+              value: true
+    metaData:
+      type: $block
+      value:
+        - _id: 2158037d-ed55-4f8d-95f9-bff1fab81a70
+          type: metaData
+          fields:
+            metaTitle:
+              type: text
+              locales:
+                de-DE: Checkout
+                en-GB: Checkout
+                en-US: Checkout
+                fr-FR: Checkout
+            metaDescription:
+              type: text
+              locales:
+                de-DE: Checkout - Triumph
+                en-GB: Checkout - Triumph
+                en-US: Checkout - Triumph
+                fr-FR: Checkout - Triumph
+  slots:
+    content:
+      - _id: 749c46df-5ccb-4b9f-a0ff-580a8ac107ad
+        type: checkoutoverview
+        parameters:
+          marketingSignup:
+            type: richText
+            locales:
+              de-DE:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Auswählen, wenn Sie zustimmen, von Triumph per
+                            E-Mail über künftige Produkte, Dienstleistungen und
+                            Angebote informiert zu werden.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textFormat: 0
+                  direction: ltr
+              en-GB:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Select if you agree for Triumph to send you emails
+                            about future products, services and offers.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                  direction: ltr
+              en-US:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Select if you agree for Triumph to send you emails
+                            about future products, services and offers.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textFormat: 0
+                  direction: ltr
+              fr-FR:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Souhaitez-vous recevoir des e-mails de Triumph sur
+                            de futurs produits, services et offres?
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textFormat: 0
+                  direction: ltr
+          termsAndConditions:
+            type: richText
+            locales:
+              de-DE:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: 'Durch Markieren des Kästchens stimme ich der '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - link:
+                            path: >-
+                              https://www.triumphmotorcycles.de/shop/clothing-shop-terms-and-conditions
+                            type: url
+                          type: link
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: 'Nutzungsbedingungen '
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - mode: normal
+                          text: von Triumph zu.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                  direction: ltr
+              en-GB:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: 'By checking, I agree to Triumph''s '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - link:
+                            path: >-
+                              https://www.triumphmotorcycles.co.uk/shop/clothing-shop-terms-and-conditions
+                            type: url
+                          type: link
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Terms & Conditions
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - mode: normal
+                          text: .
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                  direction: ltr
+              en-US:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: 'By checking I agree to Triumph''s '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - link:
+                            path: >-
+                              https://www.triumphmotorcycles.com/shop/clothing-shop-terms-and-conditions
+                            type: url
+                          type: link
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: terms and conditions
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - mode: normal
+                          text: .
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                  direction: ltr
+              fr-FR:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: 'En cochant cette case, j’accepte les '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - link:
+                            path: >-
+                              https://www.triumphmotorcycles.fr/shop/clothing-shop-terms-and-conditions
+                            type: url
+                          type: link
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: terms & conditions
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - mode: normal
+                          text: ' de Triumph.'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                  direction: ltr
+          privacyAndCookiePolicy:
+            type: richText
+            locales:
+              de-DE:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: 'Ich bestätige, dass ich die '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - link:
+                            path: >-
+                              https://www.triumphmotorcycles.de/weltweit-inhalt/privacy-policies
+                            type: url
+                          type: link
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Datenschutzrichtlinie
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - mode: normal
+                          text: ' und '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - link:
+                            path: >-
+                              https://www.triumphmotorcycles.de/weltweit-inhalt/cookies
+                            type: url
+                          type: link
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Cookie-Richtlinie
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - mode: normal
+                          text: ' von Triumph gelesen und akzeptiert habe.'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textFormat: 0
+                  direction: ltr
+              en-GB:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            I can confirm that I have read and accepted
+                            Triumph's 
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - link:
+                            path: >-
+                              https://www.triumphmotorcycles.co.uk/global-content/privacy-policies
+                            type: url
+                          type: link
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Privacy Policy
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - mode: normal
+                          text: ' and '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - link:
+                            path: >-
+                              https://www.triumphmotorcycles.co.uk/global-content/cookies
+                            type: url
+                          type: link
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Cookie Policy
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - mode: normal
+                          text: .
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                  direction: ltr
+              en-US:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: 'I can confirm that I have read and accepted the '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - link:
+                            path: >-
+                              https://www.triumphmotorcycles.com/global-content/privacy-policies
+                            type: url
+                          type: link
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: privacy policy
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - mode: normal
+                          text: ' and '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - link:
+                            path: >-
+                              https://www.triumphmotorcycles.com/global-content/cookies
+                            type: url
+                          type: link
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: cookie policy
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - mode: normal
+                          text: .
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textFormat: 0
+                  direction: ltr
+              fr-FR:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: 'Je confirme que j’ai lu et j’accepte la '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - link:
+                            path: >-
+                              https://www.triumphmotorcycles.fr/global-content/privacy-policies
+                            type: url
+                          type: link
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: privacy policy
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - mode: normal
+                          text: ' et la '
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                        - link:
+                            path: >-
+                              https://www.triumphmotorcycles.fr/global-content/cookies
+                            type: url
+                          type: link
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: cookie policy
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - mode: normal
+                          text: ' de Triumph.'
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textFormat: 0
+                  direction: ltr
+  _locales:
+    - en-US
+    - en-GB
+    - fr-FR
+    - de-DE
+created: '2025-06-12T07:28:52.691715+00:00'
+modified: '2025-06-12T07:28:52.691715+00:00'
+pattern: false

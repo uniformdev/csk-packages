@@ -15,6 +15,7 @@ export const Carousel: FC<CarouselProps> = ({
   itemsPerPage = '1',
   children,
   gapX,
+  variant = 'default',
 }) => {
   const container = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -52,8 +53,25 @@ export const Carousel: FC<CarouselProps> = ({
     [totalCountOfItems]
   );
 
-  const renderCarouselButtons = useCallback(
-    () => (
+  const renderCarouselButtons = () => {
+    if (variant === 'brochure') {
+      return (
+        <div
+          className={cn('flex py-3 z-5 justify-end', {
+            [`text-${backgroundColor} invert`]: !!backgroundColor,
+            'text-black dark:text-white': !backgroundColor,
+          })}
+        >
+          <button onClick={handlerPreviousNextButton}>❮</button>
+          <div className="flex flex-col px-4">
+            {currentIndex + 1} of {totalCountOfItems}
+          </div>
+          <button onClick={handlerClickNextButton}>❯</button>
+        </div>
+      );
+    }
+
+    return (
       <div
         className={cn('absolute inset-x-5 top-1/2 flex -translate-y-1/2 justify-between', {
           [`text-${backgroundColor} invert`]: !!backgroundColor,
@@ -63,9 +81,8 @@ export const Carousel: FC<CarouselProps> = ({
         <button onClick={handlerPreviousNextButton}>❮</button>
         <button onClick={handlerClickNextButton}>❯</button>
       </div>
-    ),
-    [backgroundColor, handlerClickNextButton, handlerPreviousNextButton]
-  );
+    );
+  };
 
   const renderSlides = () => {
     return children({

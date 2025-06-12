@@ -1,0 +1,243 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: ambientHero
+name: Ambient Hero
+icon: screen
+parameters:
+  - id: group_content
+    name: Content
+    type: group
+    typeConfig:
+      collapsed: false
+      childrenParams:
+        - description
+  - id: description
+    name: Description
+    type: text
+    helpText: Description will appear above the title
+    typeConfig:
+      required: true
+    localizable: true
+  - id: group_primaryCta
+    name: Primary CTA
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - ctaText
+        - ctaLink
+        - primaryCtaStyle
+  - id: ctaText
+    name: CTA text
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: ctaLink
+    name: CTA link
+    type: link
+    typeConfig: null
+    localizable: true
+  - id: primaryCtaStyle
+    name: Primary CTA Style
+    type: tp-button-style-parameter
+    typeConfig: null
+  - id: group_secondaryCta
+    name: Secondary CTA
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - secondCtaText
+        - secondCtaLink
+        - secondaryCtaStyle
+  - id: secondCtaText
+    name: CTA text
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: secondCtaLink
+    name: CTA link
+    type: link
+    typeConfig: null
+    localizable: true
+  - id: secondaryCtaStyle
+    name: Secondary CTA style
+    type: tp-button-style-parameter
+    typeConfig: null
+  - id: group_media
+    name: Media
+    type: group
+    typeConfig:
+      collapsed: false
+      childrenParams:
+        - image
+        - video
+        - youtubeVideo
+  - id: image
+    name: Image
+    type: cloudinary-image
+    helpText: >-
+      An image is required in this hero, if video is also provided this will be
+      shown - image is then used as poster and in mobile.
+    typeConfig:
+      required: true
+    localizable: true
+    notLocalizedByDefault: true
+  - id: video
+    name: Video
+    type: cloudinary-video
+    typeConfig: null
+    localizable: true
+    notLocalizedByDefault: true
+  - id: youtubeVideo
+    name: Youtube video ID
+    type: text
+    helpText: >-
+      Please only provide the ID - so if
+      https://www.youtube.com/embed/Hd3QZKRIT0Y - only the last part
+      'Hd3QZKRIT0Y' is the ID.
+    typeConfig: null
+    localizable: true
+  - id: group_presentationSettings
+    name: Presentation settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - verticalAlign
+        - contentTextColor
+        - height
+  - id: verticalAlign
+    name: Vertical align
+    type: tp-vertical-align-parameter
+    typeConfig: null
+  - id: contentTextColor
+    name: Content Text Color
+    type: tp-color-style-parameter
+    typeConfig: null
+  - id: height
+    name: Height
+    type: tp-slider-parameter
+    typeConfig:
+      step: 1
+      type: custom
+      unit: px
+      options:
+        - label: Small
+          value: Small
+        - label: Medium
+          value: Medium
+        - label: Large
+          value: Large
+        - label: Full height
+          value: Full height
+      maxValue: 10
+      minValue: 0
+    localizable: true
+  - id: group_notWorking
+    name: Not working
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - columnWidth
+        - titleStyle
+        - sliderSteps
+        - setUpTheme
+        - size
+        - sliderCustom
+        - itemsOrder
+        - horizontalAlign
+        - playAnimation
+        - opacity
+        - contentAlignment
+        - colorStyle
+        - badgeStyle
+        - bgType
+  - id: columnWidth
+    name: Column width
+    type: tp-column-width-parameter
+    typeConfig: null
+  - id: titleStyle
+    name: Title style
+    type: tp-title-style-parameter
+    typeConfig: null
+  - id: sliderSteps
+    name: Slider steps
+    type: tp-slider-parameter
+    typeConfig:
+      step: 1
+      type: steps
+      unit: px
+      options: []
+      maxValue: 10
+      minValue: 0
+  - id: setUpTheme
+    name: Set up theme
+    type: tp-set-up-theme-parameter
+    typeConfig: null
+  - id: size
+    name: Size
+    type: tp-size-parameter
+    typeConfig: null
+  - id: sliderCustom
+    name: Slider Custom
+    type: tp-slider-parameter
+    typeConfig:
+      step: 1
+      type: custom
+      unit: px
+      options:
+        - label: <text-and-value>
+          value: <text-and-value>
+        - label: text2-and-value2
+          value: text2-and-value2
+        - label: ''
+          value: ''
+      maxValue: 10
+      minValue: 0
+  - id: itemsOrder
+    name: Items order
+    type: tp-items-order-parameter
+    typeConfig: null
+  - id: horizontalAlign
+    name: Horizontal align
+    type: tp-horizontal-align-parameter
+    typeConfig: null
+  - id: playAnimation
+    name: Play animation
+    type: tp-play-animation-parameter
+    typeConfig: null
+  - id: opacity
+    name: Opacity
+    type: tp-opacity-parameter
+    typeConfig: null
+  - id: contentAlignment
+    name: Content alignment
+    type: tp-horizontal-align-parameter
+    typeConfig: null
+    localizable: true
+  - id: colorStyle
+    name: Color style
+    type: tp-color-style-parameter
+    typeConfig: null
+  - id: badgeStyle
+    name: Badge style
+    type: tp-badge-style-parameter
+    typeConfig: null
+  - id: bgType
+    name: Bg type
+    type: tp-background-type-parameter
+    typeConfig: null
+useTeamPermissions: true
+slots:
+  - id: headings
+    name: Headings
+    allowedComponents:
+      - heroHeading
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+canBeComposition: false
+created: '2025-06-12T07:28:20.491824+00:00'
+updated: '2025-06-12T07:28:20.491824+00:00'

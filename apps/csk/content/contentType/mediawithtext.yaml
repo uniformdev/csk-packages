@@ -1,0 +1,37 @@
+id: mediawithtext
+name: MediaWithText
+created: '2025-06-12T07:30:41.719296+00:00'
+updated: '2025-06-12T07:30:41.719296+00:00'
+slugSettings:
+  required: 'no'
+useTeamPermissions: true
+fields:
+  - id: media
+    name: Media
+    type: asset
+    typeConfig:
+      max: 1
+      min: 1
+      required: false
+      allowedTypes:
+        - image
+        - video
+    localizable: true
+    notLocalizedByDefault: true
+  - id: title
+    name: Title
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: description
+    name: Description
+    type: text
+    typeConfig: null
+    localizable: true
+entryName: title
+thumbnailField: media
+description: ''
+icon: image
+type: block
+permissions: []
+previewConfigurations: []

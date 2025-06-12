@@ -1,0 +1,27 @@
+id: bikeFamilyList
+displayName: Bike Family List
+path: /query
+custom:
+  allowedContentTypes:
+    - bikeFamily
+method: GET
+purgeKey: 3708bc41-9a19-4474-a24f-4c70613b735f
+archetype: queryEntries
+variables:
+  limit:
+    type: text
+    default: '20'
+  offset:
+    type: text
+    default: '0'
+  filters:
+    type: text
+    default: '{}'
+  orderBy:
+    type: text
+    default: ''
+  contentTypes:
+    type: text
+    default: ''
+dataSourceId: uniformContent
+allowedOnComponents: []

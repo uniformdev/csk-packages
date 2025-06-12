@@ -1,0 +1,34 @@
+id: commercetoolsAttributePair
+name: Commercetools - Attribute pair
+created: '2025-06-12T07:30:36.018703+00:00'
+updated: '2025-06-12T07:30:36.018703+00:00'
+slugSettings:
+  required: 'no'
+useTeamPermissions: true
+fields:
+  - id: label
+    name: Label
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: attributeKey
+    name: Attribute key
+    type: text
+    helpText: The attribute key as it is in commercetools
+    typeConfig:
+      required: true
+    notLocalizedByDefault: true
+  - id: unit
+    name: Unit
+    type: text
+    helpText: A unit property that will show after the attribute value
+    typeConfig: null
+    localizable: true
+entryName: label
+description: >-
+  Show a specific attribute from a commercetools product. Insert label and the
+  key from the attributes.
+icon: compress
+type: block
+permissions: []
+previewConfigurations: []

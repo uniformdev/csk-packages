@@ -1,0 +1,31 @@
+id: motorcycleTranslations
+displayName: motorcycle translations
+ttl: 30
+body: ''
+path: /query
+custom:
+  proposedName: Query motorcycle translations
+  includeTotalCount: true
+  allowedContentTypes:
+    - motorcycleTranslations
+method: GET
+purgeKey: e4261fbf-3ac1-4ce8-abff-eee2f45dbfbb
+archetype: queryEntries
+variables:
+  limit:
+    type: text
+    default: '20'
+  offset:
+    type: text
+    default: '0'
+  filters:
+    type: text
+    default: '{}'
+  orderBy:
+    type: text
+    default: ''
+  contentTypes:
+    type: text
+    default: ''
+dataSourceId: uniformContent
+allowedOnComponents: []

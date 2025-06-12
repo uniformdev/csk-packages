@@ -1,0 +1,58 @@
+composition:
+  _name: Product List or Details Page
+  _id: 89e5cf8f-87e1-4b59-a987-68afe77e87c3
+  _slug: ':product-list-or-details-page-level-4'
+  type: productlistordetailspage
+  slots:
+    content:
+      - _id: 2da5c38e-86c6-4d2c-91e2-b36b4f91c195
+        type: productdetailspage
+        _pattern: d4d6ccd3-f3a1-4bf7-b8bb-c961e687dc5f
+      - _id: 6e9004a4-58ef-4ce2-a66d-bf76f70526ca
+        type: productlistpage
+        _pattern: 21efd8d1-7549-4483-92c9-9f919edda646
+  _dataResources:
+    Single Product by Slug Content:
+      type: singleProductBySlug
+      variables:
+        value: ${product-list-or-details-page-level-4}
+        locale: ${locale}
+        priceChannel: ${priceChannel}
+        priceCurrency: ${currencyCode}
+        storeProjection: ${storeProjection}
+  _overrides:
+    2da5c38e-86c6-4d2c-91e2-b36b4f91c195:
+      parameters:
+        $viz:
+          type: $viz
+          value:
+            criteria:
+              clauses:
+                - op: '!empty'
+                  rule: $dt
+                  value: ''
+                  source: ${#jptr:/Single Product by Slug Content/results/0/name}
+        productData:
+          type: json
+          value: ${#jptr:/Single Product by Slug Content/results/0:fa=c}
+    6e9004a4-58ef-4ce2-a66d-bf76f70526ca:
+      parameters:
+        $viz:
+          type: $viz
+          value:
+            criteria:
+              clauses:
+                - op: is
+                  rule: $dt
+                  value: HIDE
+                  source: >-
+                    ${#jptr:/Single Product by Slug
+                    Content/results/0/name:fd=HIDE}
+  _locales:
+    - en-GB
+    - de-DE
+    - en-US
+    - fr-FR
+created: '2025-06-12T07:29:06.816214+00:00'
+modified: '2025-06-12T07:29:06.816214+00:00'
+pattern: false

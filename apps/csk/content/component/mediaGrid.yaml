@@ -1,0 +1,66 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: mediaGrid
+name: Media Grid
+icon: view-grid
+parameters:
+  - id: heading
+    name: Heading
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: dynamicMedia
+    name: Media
+    type: $block
+    typeConfig:
+      allowedTypes:
+        - video
+        - image
+  - id: overlayButtonText
+    name: Overlay button text
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: spacing
+    name: Spacing
+    type: dex-space-control-parameter
+    typeConfig:
+      selectedGroup: spacing
+  - id: layout
+    name: Layout
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Layout 1
+          value: layout-1
+        - key: Layout 2
+          value: layout-2
+        - key: Layout 3
+          value: layout-3
+        - key: Layout 4
+          value: layout-4
+      defaultValue: layout-1
+  - id: accentColor
+    name: Accent color
+    type: dex-color-palette-parameter
+    helpText: Accent colors of buttons, lines etc.
+    typeConfig:
+      allowColors: []
+      selectedGroup: accent
+categoryId: 9ff00250-0200-45ec-82d3-4e3b346d7ee6
+description: >-
+  A grid that can contain images and videos. Images and videos can be opened in
+  a gallery view.
+useTeamPermissions: true
+slots:
+  - id: overlay
+    name: Overlay
+    allowedComponents:
+      - article
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: heading
+canBeComposition: false
+created: '2025-06-12T07:28:32.21426+00:00'
+updated: '2025-06-12T07:28:32.21426+00:00'

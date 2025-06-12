@@ -1,0 +1,163 @@
+composition:
+  _name: Sale - USA
+  _id: ba9dc106-a641-48a9-81af-9c3b94d9e10d
+  _slug: adventure_sale
+  type: category
+  slots:
+    locales:
+      - _id: 64c697d3-e191-4768-8f7b-a277838e6738
+        type: $localization
+        slots:
+          localized:
+            - _id: 252029d2-9a23-4625-8cf2-ec643c73d41c
+              type: categoryTranslation
+              parameters:
+                title:
+                  type: text
+                  value: Outlet
+                locale:
+                  type: localeSelect
+                  value: en-US
+                metaTitle:
+                  type: text
+                  value: Triumph Sale
+                descriptionShort:
+                  type: richText
+                  value:
+                    root:
+                      type: root
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - type: paragraph
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Explore more offers in our Outlet Sale -
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                          textStyle: ''
+                          textFormat: 0
+                        - type: paragraph
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - link:
+                                path: >-
+                                  https://www.triumphmotorcycles.com/shop/clothing/us-sale-jackets
+                                type: url
+                              type: link
+                              format: ''
+                              indent: 0
+                              version: 1
+                              children:
+                                - mode: normal
+                                  text: Jackets
+                                  type: text
+                                  style: ''
+                                  detail: 0
+                                  format: 0
+                                  version: 1
+                              direction: ltr
+                            - mode: normal
+                              text: ' | '
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                            - link:
+                                path: >-
+                                  https://www.triumphmotorcycles.com/shop/clothing/us-sale-pants
+                                type: url
+                              type: link
+                              format: ''
+                              indent: 0
+                              version: 1
+                              children:
+                                - mode: normal
+                                  text: Pants
+                                  type: text
+                                  style: ''
+                                  detail: 0
+                                  format: 0
+                                  version: 1
+                              direction: ltr
+                            - mode: normal
+                              text: ' | '
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                            - link:
+                                path: >-
+                                  https://www.triumphmotorcycles.com/shop/clothing/us-sale-layers
+                                type: url
+                              type: link
+                              format: ''
+                              indent: 0
+                              version: 1
+                              children:
+                                - mode: normal
+                                  text: Mid-Layers
+                                  type: text
+                                  style: ''
+                                  detail: 0
+                                  format: 0
+                                  version: 1
+                              direction: ltr
+                            - mode: normal
+                              text: ' | '
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                            - link:
+                                path: >-
+                                  https://www.triumphmotorcycles.com/shop/clothing/us-sale-womenswear
+                                type: url
+                              type: link
+                              format: ''
+                              indent: 0
+                              version: 1
+                              children:
+                                - mode: normal
+                                  text: Womenswear
+                                  type: text
+                                  style: ''
+                                  detail: 0
+                                  format: 0
+                                  version: 1
+                              direction: ltr
+                          direction: ltr
+                          textStyle: ''
+                          textFormat: 0
+                      direction: ltr
+            - _id: ed69088c-ea0b-4cd0-9f89-2f683c6c69a8
+              type: categoryTranslation
+              parameters:
+                title:
+                  type: text
+                  value: US Outlet
+                locale:
+                  type: localeSelect
+                  value: en-GB
+                metaTitle:
+                  type: text
+                  value: Triumph Sale
+  _locales:
+    - en-GB
+    - en-US
+created: '2025-06-12T07:29:14.36351+00:00'
+modified: '2025-06-12T07:29:14.36351+00:00'
+pattern: false

@@ -1,0 +1,47 @@
+created: '2025-06-12T07:31:40.777035+00:00'
+modified: '2025-06-12T07:31:40.777035+00:00'
+pattern: false
+entry:
+  _id: ab23d37d-c70d-4959-bd6a-d6fa6b0d38b1
+  _name: TF 450 RC
+  _slug: tf-450-rc
+  type: bike
+  fields:
+    key:
+      type: text
+      value: ${#jptr:/Single Product Content/key}
+    name:
+      type: text
+      locales:
+        en-GB: ${#jptr:/Single Product Content/name}
+    image:
+      type: asset
+      locales:
+        en-GB:
+          - _id: 94feaafc-0de0-406d-b4f2-fc505555d7a7
+            type: image
+            fields:
+              url:
+                type: text
+                value: >-
+                  ${#jptr:/Single Product
+                  Content/masterVariant/assets/0/sources/0/uri}
+            _source: custom-url
+    currency:
+      type: text
+      locales:
+        en-GB: GBP
+    fromPrice:
+      type: number
+      value: '1069500'
+    bikeCategorization:
+      type: select
+      value: Off-Road
+  _dataResources:
+    Single Product Content:
+      type: singleProduct
+      variables:
+        locale: ${locale}
+        productId: 95e02c17-deb4-4ba2-820d-dcec7e60cf4d
+  _locales:
+    - en-GB

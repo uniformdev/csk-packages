@@ -1,0 +1,31 @@
+id: hiddenDynamicsFormField
+name: Hidden Dynamics Form Field
+created: '2025-06-12T07:30:39.071027+00:00'
+updated: '2025-06-12T07:30:39.071027+00:00'
+slugSettings:
+  required: 'no'
+useTeamPermissions: true
+fields:
+  - id: key
+    name: Key
+    type: text
+    helpText: >-
+      Enter the unique Dynamics Logical Name / Key for this hidden Dynamics Data
+      (e.g., tricmt_type')
+    typeConfig:
+      regex: ^[a-z_]+$
+      required: true
+      regexMessage: >-
+        Only lowercase letters (a-z) and underscores (_) are allowed. Spaces
+        must be replaced with underscores
+  - id: value
+    name: Value
+    type: text
+    typeConfig:
+      required: true
+    localizable: true
+entryName: key
+icon: file-document
+type: block
+permissions: []
+previewConfigurations: []

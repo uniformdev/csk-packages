@@ -1,0 +1,2838 @@
+composition:
+  _name: Bike tech spec accordion pattern
+  _id: 5dd6d48d-7a1d-4398-b4e2-5ac749a13983
+  type: accordion
+  parameters:
+    title:
+      type: text
+      locales:
+        cs-CZ: Tech specs
+        da-DK: Tech specs
+        de-AT: Spezifikationen
+        de-CH: Spezifikationen
+        de-DE: Spezifikationen
+        el-GR: Προδιαγραφεσ
+        en-AE: Tech specs
+        en-AU: Tech specs
+        en-CA: Tech specs
+        en-GB: Tech specs
+        en-IN: Tech specs
+        en-NZ: Tech specs
+        en-PH: Tech specs
+        en-US: Tech specs
+        es-AR: Especificaciones Técnicas
+        es-ES: Especificaciones Técnicas
+        es-MX: Especificaciones Técnicas
+        es-US: Tech specs
+        fi-FI: Tech specs
+        fr-BE: Caractéristiques
+        fr-CA: Caractéristiques
+        fr-CH: Caractéristiques
+        fr-FR: Caractéristiques
+        fr-LU: Caractéristiques
+        hr-HR: Tech specs
+        hu-HU: Specifikáció
+        id-ID: Tech specs
+        it-IT: Specifiche Tecniche
+        ja-JP: スペック
+        ko-KR: Tech specs
+        ms-MY: Tech specs
+        nb-NO: Tech specs
+        nl-BE: Specificaties
+        nl-NL: Specificaties
+        pl-PL: Specyfikacja
+        pt-BR: Ficha técnica
+        pt-PT: Especificações
+        ro-RO: Specificații
+        sk-SK: Tech specs
+        sl-SI: Tech specs
+        sv-SE: Tech specs
+        th-TH: สเปค
+        tr-TR: Tech specs
+        zh-CN: 技术参数
+        zh-SG: Tech specs
+        zh-TW: Tech specs
+        sr-Latn-RS: Tech specs
+  slots:
+    items:
+      - _id: c6602c3b-140d-4bb9-bdf6-eb0b3113a4df
+        type: $slotSection
+        parameters:
+          name:
+            type: text
+            value: Items
+          specific:
+            type: array
+            value:
+              - accordionItem
+          groupType:
+            type: text
+            value: specific
+        _overridability:
+          hideLockedParameters: true
+      - _id: 7948cab7-73be-482f-bc3c-bb51d9bc65a0
+        type: accordionItem
+        slots:
+          content:
+            - _id: 26de7c87-0f44-470d-8022-cb4be854f916
+              type: specList
+              parameters:
+                specs:
+                  type: $block
+                  value:
+                    - _id: e1e710d1-97dd-42dc-a4ee-ee13f1538048
+                      type: commercetoolsAttributePair
+                      fields:
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Typ
+                            da-DK: Type
+                            de-AT: 'Typ '
+                            de-CH: 'Typ '
+                            de-DE: 'Typ '
+                            el-GR: Τύπος
+                            en-AE: Type
+                            en-AU: Type
+                            en-CA: Type
+                            en-GB: Type
+                            en-IN: Type
+                            en-NZ: Type
+                            en-PH: Type
+                            en-US: Type
+                            es-AR: Tipo
+                            es-ES: Tipo
+                            es-MX: Tipo
+                            es-US: Tipo
+                            fi-FI: Type
+                            fr-BE: Type
+                            fr-CA: Type
+                            fr-CH: Type
+                            fr-FR: Type
+                            fr-LU: Type
+                            hr-HR: Type
+                            hu-HU: Típus
+                            id-ID: Type
+                            it-IT: Motore
+                            ja-JP: タイプ
+                            ko-KR: Type
+                            ms-MY: Type
+                            nb-NO: Type
+                            nl-BE: Type
+                            nl-NL: Type
+                            pl-PL: 'Rodzaj '
+                            pt-BR: 'Tipo '
+                            pt-PT: Tipo
+                            ro-RO: Tip
+                            sk-SK: Type
+                            sl-SI: Type
+                            sv-SE: Type
+                            th-TH: Type
+                            tr-TR: Type
+                            zh-CN: '型式 '
+                            zh-SG: Type
+                            zh-TW: 引擎型式
+                            sr-Latn-RS: Tip
+                        attributeKey:
+                          type: text
+                          value: mc_engine_type
+                    - _id: 525fbba3-972c-460a-93b7-41029f5aa0c3
+                      type: commercetoolsAttributePair
+                      fields:
+                        unit:
+                          type: text
+                          locales:
+                            cs-CZ: cm³
+                            da-DK: cc
+                            de-AT: cm³
+                            de-CH: cm³
+                            de-DE: cm³
+                            el-GR: cc
+                            en-AE: cc
+                            en-AU: cc
+                            en-CA: cc
+                            en-GB: cc
+                            en-IN: cc
+                            en-NZ: cc
+                            en-PH: cc
+                            en-US: cc
+                            es-AR: cc
+                            es-ES: cc
+                            es-MX: cc
+                            es-US: cc
+                            fi-FI: cc
+                            fr-BE: cm³
+                            fr-CA: cm³
+                            fr-CH: cm³
+                            fr-FR: cm³
+                            fr-LU: cm³
+                            hr-HR: cc
+                            hu-HU: cm3
+                            id-ID: cc
+                            it-IT: cc
+                            ja-JP: cc
+                            ko-KR: cc
+                            ms-MY: cc
+                            nb-NO: cc
+                            nl-BE: cc
+                            nl-NL: cc
+                            pl-PL: cm³
+                            pt-BR: cc
+                            pt-PT: cc
+                            ro-RO: cc
+                            sk-SK: cc
+                            sl-SI: cc
+                            sv-SE: cc
+                            th-TH: ซีซี
+                            tr-TR: cc
+                            zh-CN: 毫升
+                            zh-SG: cc
+                            zh-TW: cc
+                            sr-Latn-RS: cc
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Objem
+                            da-DK: Capacity
+                            de-AT: Hubraum
+                            de-CH: Hubraum
+                            de-DE: Hubraum
+                            el-GR: Χωρητικότητα
+                            en-AE: Capacity
+                            en-AU: Capacity
+                            en-CA: Capacity
+                            en-GB: Capacity
+                            en-IN: Capacity
+                            en-NZ: Capacity
+                            en-PH: Capacity
+                            en-US: Capacity
+                            es-AR: Cilindrada
+                            es-ES: Cilindrada
+                            es-MX: Cilindrada
+                            es-US: Cilindrada
+                            fi-FI: Capacity
+                            fr-BE: Cylindrée
+                            fr-CA: Cylindrée
+                            fr-CH: Cylindrée
+                            fr-FR: Cylindrée
+                            fr-LU: Cylindrée
+                            hr-HR: Capacity
+                            hu-HU: Lökettérfogat
+                            id-ID: Capacity
+                            it-IT: Cilindrata
+                            ja-JP: 排気量
+                            ko-KR: Capacity
+                            ms-MY: Capacity
+                            nb-NO: Capacity
+                            nl-BE: Inhoud
+                            nl-NL: Inhoud
+                            pl-PL: Pojemność
+                            pt-BR: Cilindrada
+                            pt-PT: Cilindrada
+                            ro-RO: Capacitate
+                            sk-SK: Capacity
+                            sl-SI: Capacity
+                            sv-SE: Capacity
+                            th-TH: Capacity
+                            tr-TR: Capacity
+                            zh-CN: 排量
+                            zh-SG: Capacity
+                            zh-TW: 排氣量
+                            sr-Latn-RS: Kapacitet
+                        attributeKey:
+                          type: text
+                          value: mc_engine_capacity
+                    - _id: ba4281f7-f3bf-4c79-8ea8-32897b093c1e
+                      type: commercetoolsAttributePair
+                      fields:
+                        unit:
+                          type: text
+                          locales:
+                            cs-CZ: mm
+                            da-DK: mm
+                            de-AT: mm
+                            de-CH: mm
+                            de-DE: mm
+                            el-GR: χλστ
+                            en-AE: mm
+                            en-AU: mm
+                            en-CA: mm
+                            en-GB: mm
+                            en-IN: mm
+                            en-NZ: mm
+                            en-PH: mm
+                            en-US: mm
+                            es-AR: mm
+                            es-ES: mm
+                            es-MX: mm
+                            es-US: mm
+                            fi-FI: mm
+                            fr-BE: mm
+                            fr-CA: mm
+                            fr-CH: mm
+                            fr-FR: mm
+                            fr-LU: mm
+                            hr-HR: mm
+                            hu-HU: mm
+                            id-ID: mm
+                            it-IT: mm
+                            ja-JP: mm
+                            ko-KR: mm
+                            ms-MY: mm
+                            nb-NO: mm
+                            nl-BE: mm
+                            nl-NL: mm
+                            pl-PL: mm
+                            pt-BR: mm
+                            pt-PT: mm
+                            ro-RO: mm
+                            sk-SK: mm
+                            sl-SI: mm
+                            sv-SE: mm
+                            th-TH: mm
+                            tr-TR: mm
+                            zh-CN: 毫米
+                            zh-SG: mm
+                            zh-TW: 毫米
+                            sr-Latn-RS: mm
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Vrtání
+                            da-DK: Bore
+                            de-AT: Bohrung
+                            de-CH: Bohrung
+                            de-DE: Bohrung
+                            el-GR: Διάμετρος
+                            en-AE: Bore
+                            en-AU: Bore
+                            en-CA: Bore
+                            en-GB: Bore
+                            en-IN: Bore
+                            en-NZ: Bore
+                            en-PH: Bore
+                            en-US: Bore
+                            es-AR: Diámetro
+                            es-ES: Diámetro
+                            es-MX: Diámetro
+                            es-US: Diámetro
+                            fi-FI: Bore
+                            fr-BE: Alésage
+                            fr-CA: Alésage
+                            fr-CH: Alésage
+                            fr-FR: Alésage
+                            fr-LU: Alésage
+                            hr-HR: Bore
+                            hu-HU: Furat
+                            id-ID: Bore
+                            it-IT: Alesaggio
+                            ja-JP: ボア
+                            ko-KR: Bore
+                            ms-MY: Bore
+                            nb-NO: Bore
+                            nl-BE: Boring
+                            nl-NL: Boring
+                            pl-PL: Średnica
+                            pt-BR: Diâmetro
+                            pt-PT: Diâmetro
+                            ro-RO: Alezaj
+                            sk-SK: Bore
+                            sl-SI: Bore
+                            sv-SE: Bore
+                            th-TH: Bore
+                            tr-TR: Bore
+                            zh-CN: 缸径
+                            zh-SG: Bore
+                            zh-TW: 缸徑
+                            sr-Latn-RS: Prečnik cilindra
+                        attributeKey:
+                          type: text
+                          value: mc_engine_bore
+                    - _id: 0ea263d6-b4d2-43e5-aa4d-0a2122ef72b6
+                      type: commercetoolsAttributePair
+                      fields:
+                        unit:
+                          type: text
+                          locales:
+                            da-DK: mm
+                            de-AT: mm
+                            de-CH: mm
+                            de-DE: mm
+                            el-GR: χλστ
+                            en-AE: mm
+                            en-AU: mm
+                            en-CA: mm
+                            en-GB: mm
+                            en-IN: mm
+                            en-NZ: mm
+                            en-PH: mm
+                            en-US: mm
+                            fi-FI: mm
+                            hu-HU: mm
+                            id-ID: mm
+                            ms-MY: mm
+                            nb-NO: mm
+                            sv-SE: mm
+                            tr-TR: mm
+                            zh-SG: mm
+                            zh-TW: 毫米
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Zdvih
+                            da-DK: Stroke
+                            de-AT: Hub
+                            de-CH: Hub
+                            de-DE: Hub
+                            el-GR: Διαδρομή
+                            en-AE: Stroke
+                            en-AU: Stroke
+                            en-CA: Stroke
+                            en-GB: Stroke
+                            en-IN: Stroke
+                            en-NZ: Stroke
+                            en-PH: Stroke
+                            en-US: Stroke
+                            es-AR: Carrera
+                            es-ES: Carrera
+                            es-MX: Carrera
+                            es-US: Carrera
+                            fi-FI: Stroke
+                            fr-BE: Course
+                            fr-CA: Course
+                            fr-CH: Course
+                            fr-FR: Course
+                            fr-LU: Course
+                            hr-HR: Stroke
+                            hu-HU: Löket
+                            id-ID: Stroke
+                            it-IT: Corsa
+                            ja-JP: ストローク
+                            ko-KR: Stroke
+                            ms-MY: Stroke
+                            nb-NO: Stroke
+                            nl-BE: Slag
+                            nl-NL: Slag
+                            pl-PL: Suw
+                            pt-BR: Curso
+                            pt-PT: Curso
+                            ro-RO: Cursa
+                            sk-SK: Stroke
+                            sl-SI: Stroke
+                            sv-SE: Stroke
+                            th-TH: Stroke
+                            tr-TR: Stroke
+                            zh-CN: 冲程
+                            zh-SG: Stroke
+                            zh-TW: 行程
+                            sr-Latn-RS: Hod cilindra
+                        attributeKey:
+                          type: text
+                          value: mc_engine_stroke
+                    - _id: d7d468e9-40ce-4415-8c0b-2fd2dc22c73a
+                      type: commercetoolsAttributePair
+                      fields:
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Kompresní poměr
+                            da-DK: Compression
+                            de-AT: Verdichtungsverhältnis
+                            de-CH: Verdichtungsverhältnis
+                            de-DE: Verdichtungsverhältnis
+                            el-GR: Συμπίεση
+                            en-AE: Compression
+                            en-AU: Compression
+                            en-CA: Compression
+                            en-GB: Compression
+                            en-IN: Compression
+                            en-NZ: Compression
+                            en-PH: Compression
+                            en-US: Compression
+                            es-AR: Relación de compresión
+                            es-ES: Relación de compresión
+                            es-MX: Relación de compresión
+                            es-US: Relación de compresión
+                            fi-FI: Compression
+                            fr-BE: Rapport de compression
+                            fr-CA: Rapport de compression
+                            fr-CH: Rapport de compression
+                            fr-FR: Rapport de compression
+                            fr-LU: Rapport de compression
+                            hr-HR: Compression
+                            hu-HU: Sűrítés
+                            id-ID: Compression
+                            it-IT: Rapporto di compressione
+                            ja-JP: 圧縮比
+                            ko-KR: Compression
+                            ms-MY: Compression
+                            nb-NO: Compression
+                            nl-BE: Compressieverhouding
+                            nl-NL: Compressieverhouding
+                            pl-PL: Stopień sprężania
+                            pt-BR: Compressão
+                            pt-PT: Taxa de compressão
+                            ro-RO: Raport de compresie
+                            sk-SK: Compression
+                            sl-SI: Compression
+                            sv-SE: Compression
+                            th-TH: Compression
+                            tr-TR: Compression
+                            zh-CN: 压缩比
+                            zh-SG: Compression
+                            zh-TW: 壓縮比
+                            sr-Latn-RS: Kompresija
+                        attributeKey:
+                          type: text
+                          value: mc_engine_compression
+                    - _id: 54e10505-4d4f-4406-9f1b-1b0842fccd6e
+                      type: commercetoolsAttributePair
+                      fields:
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Maximální výkon
+                            da-DK: Max power
+                            de-AT: Nennleistung
+                            de-CH: Nennleistung
+                            de-DE: Nennleistung
+                            el-GR: Μέγιστη ιπποδύναμη EC
+                            en-AE: Max power
+                            en-AU: Max power
+                            en-CA: Max power
+                            en-GB: Max power
+                            en-IN: Max power
+                            en-NZ: Max power
+                            en-PH: Max power
+                            en-US: Max power
+                            es-AR: 'Potencia máxima CE '
+                            es-ES: 'Potencia máxima CE '
+                            es-MX: 'Potencia máxima CE '
+                            es-US: 'Potencia máxima CE '
+                            fi-FI: Max power
+                            fr-BE: 'Puissance maximale '
+                            fr-CA: 'Puissance maximale '
+                            fr-CH: 'Puissance maximale '
+                            fr-FR: 'Puissance maximale '
+                            fr-LU: 'Puissance maximale '
+                            hr-HR: Max power
+                            hu-HU: Maximális teljesítmény EC
+                            id-ID: Max power
+                            it-IT: 'Potenza Massima (CE) '
+                            ja-JP: 最高出力
+                            ko-KR: Max power
+                            ms-MY: Max power
+                            nb-NO: Max power
+                            nl-BE: Max. vermogen EC
+                            nl-NL: Max. vermogen EC
+                            pl-PL: Maksymalna moc
+                            pt-BR: Potência Máx
+                            pt-PT: 'Potência máxima CE '
+                            ro-RO: Putere maximă EC
+                            sk-SK: Max power
+                            sl-SI: Max power
+                            sv-SE: Max power
+                            th-TH: Max power
+                            tr-TR: Max power
+                            zh-CN: 最大功率
+                            zh-SG: Max power
+                            zh-TW: 最大馬力
+                            sr-Latn-RS: Max Snaga EC
+                        attributeKey:
+                          type: text
+                          value: mc_engine_maximum_power
+                    - _id: 02831eac-b8e5-4e1c-ba2c-5264fc151d5e
+                      type: commercetoolsAttributePair
+                      fields:
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Maximální točivý moment
+                            da-DK: Max Torque
+                            de-AT: Max. Drehmoment
+                            de-CH: Max. Drehmoment
+                            de-DE: Max. Drehmoment
+                            el-GR: Μέγιστη ροπή EC
+                            en-AE: Max Torque
+                            en-AU: Max Torque
+                            en-CA: Max Torque
+                            en-GB: Max Torque
+                            en-IN: Max Torque
+                            en-NZ: Max Torque
+                            en-PH: Max Torque
+                            en-US: Max Torque
+                            es-AR: Par máximo CE
+                            es-ES: Par máximo CE
+                            es-MX: Par máximo CE
+                            es-US: Par máximo CE
+                            fi-FI: Max Torque
+                            fr-BE: Couple maximal
+                            fr-CA: Couple maximal
+                            fr-CH: Couple maximal
+                            fr-FR: Couple maximal
+                            fr-LU: Couple maximal
+                            hr-HR: Max Torque
+                            hu-HU: Maximális nyomaték EC
+                            id-ID: Max Torque
+                            it-IT: Coppia Massima
+                            ja-JP: 最大トルク
+                            ko-KR: Max Torque
+                            ms-MY: Max Torque
+                            nb-NO: Max Torque
+                            nl-BE: Max. koppel EC
+                            nl-NL: Max. koppel EC
+                            pl-PL: Maksymalny moment obrotowy
+                            pt-BR: Torque Máx
+                            pt-PT: Binário máximo CE
+                            ro-RO: Cuplu maxim EC
+                            sk-SK: Max Torque
+                            sl-SI: Max Torque
+                            sv-SE: Max Torque
+                            th-TH: Max Torque
+                            tr-TR: Max Torque
+                            zh-CN: 最大扭矩
+                            zh-SG: Max Torque
+                            zh-TW: 最大扭力
+                            sr-Latn-RS: Max Obrtni Momenat EC
+                        attributeKey:
+                          type: text
+                          value: mc_engine_maximum_torque
+                    - _id: c26e6d6e-b7d3-4c38-b0c6-7a30eda5ae3c
+                      type: commercetoolsAttributePair
+                      fields:
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Systém
+                            da-DK: System
+                            de-AT: Gemischaufbereitung
+                            de-CH: Gemischaufbereitung
+                            de-DE: Gemischaufbereitung
+                            el-GR: Σύστημα τροφοδοσίας
+                            en-AE: System
+                            en-AU: System
+                            en-CA: System
+                            en-GB: System
+                            en-IN: System
+                            en-NZ: System
+                            en-PH: System
+                            en-US: System
+                            es-AR: Alimentación
+                            es-ES: Alimentación
+                            es-MX: Alimentación
+                            es-US: Alimentación
+                            fi-FI: System
+                            fr-BE: Alimentation
+                            fr-CA: Alimentation
+                            fr-CH: Alimentation
+                            fr-FR: Alimentation
+                            fr-LU: Alimentation
+                            hr-HR: System
+                            hu-HU: Rendszer
+                            id-ID: System
+                            it-IT: Sistema di iniezione
+                            ja-JP: システム
+                            ko-KR: System
+                            ms-MY: System
+                            nb-NO: System
+                            nl-BE: Systeem
+                            nl-NL: Systeem
+                            pl-PL: Układ zasilania
+                            pt-BR: Alimentação
+                            pt-PT: Sistema
+                            ro-RO: Sistem
+                            sk-SK: System
+                            sl-SI: System
+                            sv-SE: System
+                            th-TH: System
+                            tr-TR: System
+                            zh-CN: 系统
+                            zh-SG: System
+                            zh-TW: 供油系統
+                            sr-Latn-RS: Sistem
+                        attributeKey:
+                          type: text
+                          value: mc_engine_fuel_system
+                    - _id: b843bdc4-d1bd-46d4-9bcb-94c75adbaeb3
+                      type: commercetoolsAttributePair
+                      fields:
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Výfuk
+                            da-DK: Exhaust
+                            de-AT: Auspuff
+                            de-CH: Auspuff
+                            de-DE: Auspuff
+                            el-GR: Εξάτμιση
+                            en-AE: Exhaust
+                            en-AU: Exhaust
+                            en-CA: Exhaust
+                            en-GB: Exhaust
+                            en-IN: Exhaust
+                            en-NZ: Exhaust
+                            en-PH: Exhaust
+                            en-US: Exhaust
+                            es-AR: Escape
+                            es-ES: Escape
+                            es-MX: Escape
+                            es-US: Escape
+                            fi-FI: Exhaust
+                            fr-BE: échappement
+                            fr-CA: échappement
+                            fr-CH: échappement
+                            fr-FR: échappement
+                            fr-LU: échappement
+                            hr-HR: Exhaust
+                            hu-HU: Kipufogó
+                            id-ID: Exhaust
+                            it-IT: Scarico
+                            ja-JP: エグゾーストシステム
+                            ko-KR: Exhaust
+                            ms-MY: Exhaust
+                            nb-NO: Exhaust
+                            nl-BE: Uitlaat
+                            nl-NL: Uitlaat
+                            pl-PL: Układ wydechowy
+                            pt-BR: Exaustão
+                            pt-PT: Escape
+                            ro-RO: Evacuare
+                            sk-SK: Exhaust
+                            sl-SI: Exhaust
+                            sv-SE: Exhaust
+                            th-TH: Exhaust
+                            tr-TR: Exhaust
+                            zh-CN: 排气
+                            zh-SG: Exhaust
+                            zh-TW: 排氣方式
+                            sr-Latn-RS: Izduv
+                        attributeKey:
+                          type: text
+                          value: mc_engine_exhaust
+                    - _id: 51966f3b-ab98-45ca-9305-76fb9c8bec58
+                      type: commercetoolsAttributePair
+                      fields:
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Koncový převod
+                            da-DK: Final drive
+                            de-AT: Endantrieb
+                            de-CH: Endantrieb
+                            de-DE: Endantrieb
+                            el-GR: Τελική μετάδοση
+                            en-AE: Final drive
+                            en-AU: Final drive
+                            en-CA: Final drive
+                            en-GB: Final drive
+                            en-IN: Final drive
+                            en-NZ: Final drive
+                            en-PH: Final drive
+                            en-US: Final drive
+                            es-AR: Transmisión final
+                            es-ES: Transmisión final
+                            es-MX: Transmisión final
+                            es-US: Transmisión final
+                            fi-FI: Final drive
+                            fr-BE: Transmission finale
+                            fr-CA: Transmission finale
+                            fr-CH: Transmission finale
+                            fr-FR: Transmission finale
+                            fr-LU: Transmission finale
+                            hr-HR: Final drive
+                            hu-HU: Végáttétel
+                            id-ID: Final drive
+                            it-IT: Trasmissione finale
+                            ja-JP: 駆動方式
+                            ko-KR: Final drive
+                            ms-MY: Final drive
+                            nb-NO: Final drive
+                            nl-BE: Eindaandrijving
+                            nl-NL: Eindaandrijving
+                            pl-PL: Układ napędowy
+                            pt-BR: Transmissão final
+                            pt-PT: Transmissão Final
+                            ro-RO: Transmisie finală
+                            sk-SK: Final drive
+                            sl-SI: Final drive
+                            sv-SE: Final drive
+                            th-TH: Final drive
+                            tr-TR: Final drive
+                            zh-CN: 最终传动
+                            zh-SG: Final drive
+                            zh-TW: 變速機構
+                            sr-Latn-RS: Prenos
+                        attributeKey:
+                          type: text
+                          value: mc_transmission_final_drive
+                    - _id: f8ea3824-ce5c-438c-9f19-e80c522936ef
+                      type: commercetoolsAttributePair
+                      fields:
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Spojka
+                            da-DK: Clutch
+                            de-AT: Kupplung
+                            de-CH: Kupplung
+                            de-DE: Kupplung
+                            el-GR: Συμπλέκτης
+                            en-AE: Clutch
+                            en-AU: Clutch
+                            en-CA: Clutch
+                            en-GB: Clutch
+                            en-IN: Clutch
+                            en-NZ: Clutch
+                            en-PH: Clutch
+                            en-US: Clutch
+                            es-AR: Embrague
+                            es-ES: Embrague
+                            es-MX: Embrague
+                            es-US: Embrague
+                            fi-FI: Clutch
+                            fr-BE: Embrayage
+                            fr-CA: Embrayage
+                            fr-CH: Embrayage
+                            fr-FR: Embrayage
+                            fr-LU: Embrayage
+                            hr-HR: Clutch
+                            hu-HU: Tengelykapcsoló
+                            id-ID: Clutch
+                            it-IT: Frizione
+                            ja-JP: クラッチ
+                            ko-KR: Clutch
+                            ms-MY: Clutch
+                            nb-NO: Clutch
+                            nl-BE: Koppeling
+                            nl-NL: Koppeling
+                            pl-PL: Sprzęgło
+                            pt-BR: Embreagem
+                            pt-PT: Embraiagem
+                            ro-RO: Ambreiaj
+                            sk-SK: Clutch
+                            sl-SI: Clutch
+                            sv-SE: Clutch
+                            th-TH: Clutch
+                            tr-TR: Clutch
+                            zh-CN: 离合器
+                            zh-SG: Clutch
+                            zh-TW: 離合器
+                            sr-Latn-RS: Kvačilo
+                        attributeKey:
+                          type: text
+                          value: mc_transmission_clutch
+                    - _id: 049c669c-c0d3-4a7a-92b1-927a8a84316b
+                      type: commercetoolsAttributePair
+                      fields:
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Převodovka
+                            da-DK: Gearbox
+                            de-AT: Getriebe
+                            de-CH: Getriebe
+                            de-DE: Getriebe
+                            el-GR: Κιβώτιο
+                            en-AE: Gearbox
+                            en-AU: Gearbox
+                            en-CA: Gearbox
+                            en-GB: Gearbox
+                            en-IN: Gearbox
+                            en-NZ: Gearbox
+                            en-PH: Gearbox
+                            en-US: Gearbox
+                            es-AR: Caja de cambios
+                            es-ES: Caja de cambios
+                            es-MX: Caja de cambios
+                            es-US: Caja de cambios
+                            fi-FI: Gearbox
+                            fr-BE: Boîte de vitesses
+                            fr-CA: Boîte de vitesses
+                            fr-CH: Boîte de vitesses
+                            fr-FR: Boîte de vitesses
+                            fr-LU: Boîte de vitesses
+                            hr-HR: Gearbox
+                            hu-HU: Sebességváltó
+                            id-ID: Gearbox
+                            it-IT: Cambio
+                            ja-JP: トランスミッション
+                            ko-KR: Gearbox
+                            ms-MY: Gearbox
+                            nb-NO: Gearbox
+                            nl-BE: Versnellingsbak
+                            nl-NL: Versnellingsbak
+                            pl-PL: Skrzynia biegów
+                            pt-BR: Caixa de câmbio
+                            pt-PT: Caixa de velocidades
+                            ro-RO: Cutie de viteze
+                            sk-SK: Gearbox
+                            sl-SI: Gearbox
+                            sv-SE: Gearbox
+                            th-TH: Gearbox
+                            tr-TR: Gearbox
+                            zh-CN: 变速箱
+                            zh-SG: Gearbox
+                            zh-TW: 變速箱
+                            sr-Latn-RS: Menjač
+                        attributeKey:
+                          type: text
+                          value: mc_transmission_gearbox
+        parameters:
+          title:
+            type: text
+            locales:
+              cs-CZ: Motor a převodovka
+              da-DK: Engine & Transmission
+              de-AT: Motor & Getriebe
+              de-CH: Motor & Getriebe
+              de-DE: Motor & Getriebe
+              el-GR: ΚΙΝΗΤΗΡΑΣ & ΜΕΤΑΔΟΣΗ
+              en-AE: Engine & Transmission
+              en-AU: Engine & Transmission
+              en-CA: Engine & Transmission
+              en-GB: Engine & Transmission
+              en-IN: Engine & Transmission
+              en-NZ: Engine & Transmission
+              en-PH: Engine & Transmission
+              en-US: Engine & Transmission
+              es-AR: Motor y transmisión
+              es-ES: Motor y transmisión
+              es-MX: Motor y transmisión
+              es-US: Motor y transmisión
+              fi-FI: Engine & Transmission
+              fr-BE: Moteur et Transmission
+              fr-CA: Moteur et Transmission
+              fr-CH: Moteur et Transmission
+              fr-FR: Moteur et Transmission
+              fr-LU: Moteur et Transmission
+              hr-HR: Engine & Transmission
+              hu-HU: Motor és sebességváltó
+              id-ID: Engine & Transmission
+              it-IT: Motore e Trasmissione
+              ja-JP: エンジン、トランスミッション
+              ko-KR: Engine & Transmission
+              ms-MY: Engine & Transmission
+              nb-NO: Engine & Transmission
+              nl-BE: Motor en transmissie
+              nl-NL: Motor en transmissie
+              pl-PL: Silnik
+              pt-BR: Motor e transmissão
+              pt-PT: Motor e transmissão
+              ro-RO: Motor și transmisie
+              sk-SK: Engine & Transmission
+              sl-SI: Engine & Transmission
+              sv-SE: Engine & Transmission
+              th-TH: Engine & Transmission
+              tr-TR: Engine & Transmission
+              zh-CN: 发动机和变速箱
+              zh-SG: Engine & Transmission
+              zh-TW: 引擎&變速箱
+              sr-Latn-RS: Agregat & Prenos
+        _overridability:
+          parameters:
+            $viz: 'yes'
+      - _id: cb2ffda3-25b3-4552-bd17-cb78238c381e
+        type: accordionItem
+        slots:
+          content:
+            - _id: 4ff535d7-05f1-4077-9b8d-a275e6598859
+              type: specList
+              parameters:
+                specs:
+                  type: $block
+                  value:
+                    - _id: 54e776d1-54f0-4a85-b962-30b187faeb23
+                      type: commercetoolsAttributePair
+                      fields:
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Rám
+                            da-DK: Frame
+                            de-AT: Rahmen
+                            de-CH: Rahmen
+                            de-DE: Rahmen
+                            el-GR: Πλαίσιο
+                            en-AE: Frame
+                            en-AU: Frame
+                            en-CA: Frame
+                            en-GB: Frame
+                            en-IN: Frame
+                            en-NZ: Frame
+                            en-PH: Frame
+                            en-US: Frame
+                            es-AR: Chasis
+                            es-ES: Chasis
+                            es-MX: Chasis
+                            es-US: Chasis
+                            fi-FI: Frame
+                            fr-BE: Cadre
+                            fr-CA: Cadre
+                            fr-CH: Cadre
+                            fr-FR: Cadre
+                            fr-LU: Cadre
+                            hr-HR: Frame
+                            hu-HU: Váz
+                            id-ID: Frame
+                            it-IT: Telaio
+                            ja-JP: フレーム
+                            ko-KR: Frame
+                            ms-MY: Frame
+                            nb-NO: Frame
+                            nl-BE: Frame
+                            nl-NL: Frame
+                            pl-PL: Rama
+                            pt-BR: Quadro
+                            pt-PT: Quadro
+                            ro-RO: Cadrul
+                            sk-SK: Frame
+                            sl-SI: Frame
+                            sv-SE: Frame
+                            th-TH: Frame
+                            tr-TR: Frame
+                            zh-CN: 车架
+                            zh-SG: Frame
+                            zh-TW: 車架型式
+                            sr-Latn-RS: Ram
+                        attributeKey:
+                          type: text
+                          value: mc_chassis_frame
+                    - _id: e2aab3ba-2557-4545-a69a-44df796af6bd
+                      type: commercetoolsAttributePair
+                      fields:
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Kyvná vidlice
+                            da-DK: Swingarm
+                            de-AT: 'Hinterradschwinge '
+                            de-CH: 'Hinterradschwinge '
+                            de-DE: 'Hinterradschwinge '
+                            el-GR: Ψαλίδι
+                            en-AE: Swingarm
+                            en-AU: Swingarm
+                            en-CA: Swingarm
+                            en-GB: Swingarm
+                            en-IN: Swingarm
+                            en-NZ: Swingarm
+                            en-PH: Swingarm
+                            en-US: Swingarm
+                            es-AR: 'Basculante '
+                            es-ES: 'Basculante '
+                            es-MX: 'Basculante '
+                            es-US: 'Basculante '
+                            fi-FI: Swingarm
+                            fr-BE: 'Bras oscillant '
+                            fr-CA: 'Bras oscillant '
+                            fr-CH: 'Bras oscillant '
+                            fr-FR: 'Bras oscillant '
+                            fr-LU: 'Bras oscillant '
+                            hr-HR: Swingarm
+                            hu-HU: Lengőkar
+                            id-ID: Swingarm
+                            it-IT: 'Forcellone '
+                            ja-JP: スイングアーム
+                            ko-KR: Swingarm
+                            ms-MY: Swingarm
+                            nb-NO: Swingarm
+                            nl-BE: Swingarm
+                            nl-NL: Swingarm
+                            pl-PL: Wahacz
+                            pt-BR: 'Braço oscilante '
+                            pt-PT: Braço oscilante
+                            ro-RO: Basculă
+                            sk-SK: Swingarm
+                            sl-SI: Swingarm
+                            sv-SE: Swingarm
+                            th-TH: Swingarm
+                            tr-TR: Swingarm
+                            zh-CN: 摇臂
+                            zh-SG: Swingarm
+                            zh-TW: 搖臂
+                            sr-Latn-RS: Zadnja viljuška
+                        attributeKey:
+                          type: text
+                          value: mc_chassis_swingarm
+                    - _id: 1103d207-24ae-47ec-a78e-8d6ab97eb18c
+                      type: commercetoolsAttributePair
+                      fields:
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Přední kolo
+                            da-DK: Wheel front
+                            de-AT: Vorderrad
+                            de-CH: Vorderrad
+                            de-DE: Vorderrad
+                            el-GR: Εμπρός Τροχός
+                            en-AE: Wheel front
+                            en-AU: Wheel front
+                            en-CA: Wheel front
+                            en-GB: Wheel front
+                            en-IN: Wheel front
+                            en-NZ: Wheel front
+                            en-PH: Wheel front
+                            en-US: Wheel front
+                            es-AR: Llanta delantera
+                            es-ES: Llanta delantera
+                            es-MX: Llanta delantera
+                            es-US: Llanta delantera
+                            fi-FI: Wheel front
+                            fr-BE: Roue avant
+                            fr-CA: Roue avant
+                            fr-CH: Roue avant
+                            fr-FR: Roue avant
+                            fr-LU: Roue avant
+                            hr-HR: Wheel front
+                            hu-HU: Első kerék
+                            id-ID: Wheel front
+                            it-IT: Ruota Anteriore
+                            ja-JP: フロントホイール
+                            ko-KR: Wheel front
+                            ms-MY: Wheel front
+                            nb-NO: Wheel front
+                            nl-BE: Voorband
+                            nl-NL: Voorband
+                            pl-PL: Przednie koło
+                            pt-BR: Roda dianteira
+                            pt-PT: Pneu dianteiro
+                            ro-RO: Roata față
+                            sk-SK: Wheel front
+                            sl-SI: Wheel front
+                            sv-SE: Wheel front
+                            th-TH: Wheel front
+                            tr-TR: Wheel front
+                            zh-CN: 前轮
+                            zh-SG: Wheel front
+                            zh-TW: 輪圈 前
+                            sr-Latn-RS: Prednji Točak
+                        attributeKey:
+                          type: text
+                          value: mc_chassis_wheel_front
+                    - _id: c37724b4-15cb-4eea-855c-76c07eeb1504
+                      type: commercetoolsAttributePair
+                      fields:
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Zadní kolo
+                            da-DK: Wheel rear
+                            de-AT: Hinterrad
+                            de-CH: Hinterrad
+                            de-DE: Hinterrad
+                            el-GR: Πίσω Τροχός
+                            en-AE: Wheel rear
+                            en-AU: Wheel rear
+                            en-CA: Wheel rear
+                            en-GB: Wheel rear
+                            en-IN: Wheel rear
+                            en-NZ: Wheel rear
+                            en-PH: Wheel rear
+                            en-US: Wheel rear
+                            es-AR: Llanta trasera
+                            es-ES: Llanta trasera
+                            es-MX: Llanta trasera
+                            es-US: Llanta trasera
+                            fi-FI: Wheel rear
+                            fr-BE: 'Roues arrière '
+                            fr-CA: 'Roues arrière '
+                            fr-CH: 'Roues arrière '
+                            fr-FR: 'Roues arrière '
+                            fr-LU: 'Roues arrière '
+                            hr-HR: Wheel rear
+                            hu-HU: Hátsó kerék
+                            id-ID: Wheel rear
+                            it-IT: Ruota Posteriore
+                            ja-JP: リアホイール
+                            ko-KR: Wheel rear
+                            ms-MY: Wheel rear
+                            nb-NO: Wheel rear
+                            nl-BE: Achterwiel
+                            nl-NL: Achterwiel
+                            pl-PL: Tylne koło
+                            pt-BR: 'Roda traseira '
+                            pt-PT: Roda traseira
+                            ro-RO: Roata spate
+                            sk-SK: Wheel rear
+                            sl-SI: Wheel rear
+                            sv-SE: Wheel rear
+                            th-TH: Wheel rear
+                            tr-TR: Wheel rear
+                            zh-CN: 后轮
+                            zh-SG: Wheel rear
+                            zh-TW: 輪圈 後
+                            sr-Latn-RS: Zadnji Točak
+                        attributeKey:
+                          type: text
+                          value: mc_chassis_wheel_rear
+                    - _id: fed8670a-b4cb-4b26-bdc8-0e0fb394099e
+                      type: commercetoolsAttributePair
+                      fields:
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Přední pneumatika
+                            da-DK: Tyre front
+                            de-AT: Vorderreifen
+                            de-CH: Vorderreifen
+                            de-DE: Vorderreifen
+                            el-GR: Εμπρός Ελαστικό
+                            en-AE: Tyre front
+                            en-AU: Tyre front
+                            en-CA: Tyre front
+                            en-GB: Tyre front
+                            en-IN: Tyre front
+                            en-NZ: Tyre front
+                            en-PH: Tyre front
+                            en-US: Tyre front
+                            es-AR: Neumático delantero
+                            es-ES: Neumático delantero
+                            es-MX: Neumático delantero
+                            es-US: Neumático delantero
+                            fi-FI: Tyre front
+                            fr-BE: Pneu avant
+                            fr-CA: Pneu avant
+                            fr-CH: Pneu avant
+                            fr-FR: Pneu avant
+                            fr-LU: Pneu avant
+                            hr-HR: Tyre front
+                            hu-HU: Első gumiabroncs
+                            id-ID: Tyre front
+                            it-IT: Pneumatico Anteriore
+                            ja-JP: フロントタイヤ
+                            ko-KR: Tyre front
+                            ms-MY: Tyre front
+                            nb-NO: Tyre front
+                            nl-BE: Voorband
+                            nl-NL: Voorband
+                            pl-PL: Przednia opona
+                            pt-BR: Pneu dianteiro
+                            pt-PT: Pneu dianteiro
+                            ro-RO: Anvelopa față
+                            sk-SK: Tyre front
+                            sl-SI: Tyre front
+                            sv-SE: Tyre front
+                            th-TH: Tyre front
+                            tr-TR: Tyre front
+                            zh-CN: 前轮胎
+                            zh-SG: Tyre front
+                            zh-TW: 輪胎尺寸 前
+                            sr-Latn-RS: Prednji Pneumatik
+                        attributeKey:
+                          type: text
+                          value: mc_chassis_tyre_front
+                    - _id: 38bd8a2f-46c1-4076-84dd-1e73923f1477
+                      type: commercetoolsAttributePair
+                      fields:
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Zadní pneumatika
+                            da-DK: Tyre rear
+                            de-AT: 'Hinterreifen '
+                            de-CH: 'Hinterreifen '
+                            de-DE: 'Hinterreifen '
+                            el-GR: Πίσω Ελαστικό
+                            en-AE: Tyre rear
+                            en-AU: Tyre rear
+                            en-CA: Tyre rear
+                            en-GB: Tyre rear
+                            en-IN: Tyre rear
+                            en-NZ: Tyre rear
+                            en-PH: Tyre rear
+                            en-US: Tyre rear
+                            es-AR: Neumático trasero
+                            es-ES: Neumático trasero
+                            es-MX: Neumático trasero
+                            es-US: Neumático trasero
+                            fi-FI: Tyre rear
+                            fr-BE: 'Pneus arrière '
+                            fr-CA: 'Pneus arrière '
+                            fr-CH: 'Pneus arrière '
+                            fr-FR: 'Pneus arrière '
+                            fr-LU: 'Pneus arrière '
+                            hr-HR: Tyre rear
+                            hu-HU: Hátsó gumiabroncs
+                            id-ID: Tyre rear
+                            it-IT: Pneumatico Posteriore
+                            ja-JP: リアタイヤ
+                            ko-KR: Tyre rear
+                            ms-MY: Tyre rear
+                            nb-NO: Tyre rear
+                            nl-BE: Achterband
+                            nl-NL: Achterband
+                            pl-PL: Tylna opona
+                            pt-BR: 'Pneu traseiro '
+                            pt-PT: Pneu traseiro
+                            ro-RO: Anvelopa spate
+                            sk-SK: Tyre rear
+                            sl-SI: Tyre rear
+                            sv-SE: Tyre rear
+                            th-TH: Tyre rear
+                            tr-TR: Tyre rear
+                            zh-CN: 后轮胎
+                            zh-SG: Tyre rear
+                            zh-TW: 輪胎尺寸 後
+                            sr-Latn-RS: Zadnji Pneumatik
+                        attributeKey:
+                          type: text
+                          value: mc_chassis_tyre_rear
+                    - _id: 79f41e6d-55bd-40a7-9936-39be4977e902
+                      type: commercetoolsAttributePair
+                      fields:
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Přední odpružení
+                            da-DK: Suspension front
+                            de-AT: Vorderradaufhängung
+                            de-CH: Vorderradaufhängung
+                            de-DE: Vorderradaufhängung
+                            el-GR: Εμπρός Ανάρτηση
+                            en-AE: Suspension front
+                            en-AU: Suspension front
+                            en-CA: Suspension front
+                            en-GB: Suspension front
+                            en-IN: Suspension front
+                            en-NZ: Suspension front
+                            en-PH: Suspension front
+                            en-US: Suspension front
+                            es-AR: Suspensión delantera
+                            es-ES: Suspensión delantera
+                            es-MX: Suspensión delantera
+                            es-US: Suspensión delantera
+                            fi-FI: Suspension front
+                            fr-BE: Suspension avant
+                            fr-CA: Suspension avant
+                            fr-CH: Suspension avant
+                            fr-FR: Suspension avant
+                            fr-LU: Suspension avant
+                            hr-HR: Suspension front
+                            hu-HU: Első felfüggesztés
+                            id-ID: Suspension front
+                            it-IT: Sospensione Anteriore
+                            ja-JP: フロントサスペンション
+                            ko-KR: Suspension front
+                            ms-MY: Suspension front
+                            nb-NO: Suspension front
+                            nl-BE: Voorvering
+                            nl-NL: Voorvering
+                            pl-PL: Przednie zawieszenie
+                            pt-BR: Suspensão dianteira
+                            pt-PT: Suspensão dianteira
+                            ro-RO: Suspensia față
+                            sk-SK: Suspension front
+                            sl-SI: Suspension front
+                            sv-SE: Suspension front
+                            th-TH: Suspension front
+                            tr-TR: Suspension front
+                            zh-CN: 前悬架
+                            zh-SG: Suspension front
+                            zh-TW: 前懸吊
+                            sr-Latn-RS: Prednje Vešanje
+                        attributeKey:
+                          type: text
+                          value: mc_chassis_suspension_front
+                    - _id: faa699de-587c-47da-b3a3-a53be85294c7
+                      type: commercetoolsAttributePair
+                      fields:
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Zadní odpružení
+                            da-DK: Suspension rear
+                            de-AT: Hinterradaufhängung
+                            de-CH: Hinterradaufhängung
+                            de-DE: Hinterradaufhängung
+                            el-GR: Πίσω Ανάρτηση
+                            en-AE: Suspension rear
+                            en-AU: Suspension rear
+                            en-CA: Suspension rear
+                            en-GB: Suspension rear
+                            en-IN: Suspension rear
+                            en-NZ: Suspension rear
+                            en-PH: Suspension rear
+                            en-US: Suspension rear
+                            es-AR: 'Suspensión trasera '
+                            es-ES: 'Suspensión trasera '
+                            es-MX: 'Suspensión trasera '
+                            es-US: 'Suspensión trasera '
+                            fi-FI: Suspension rear
+                            fr-BE: 'Suspension arrière '
+                            fr-CA: 'Suspension arrière '
+                            fr-CH: 'Suspension arrière '
+                            fr-FR: 'Suspension arrière '
+                            fr-LU: 'Suspension arrière '
+                            hr-HR: Suspension rear
+                            hu-HU: Hátsó felfüggesztés
+                            id-ID: Suspension rear
+                            it-IT: Sospensione Posteriore
+                            ja-JP: リアサスペンション
+                            ko-KR: Suspension rear
+                            ms-MY: Suspension rear
+                            nb-NO: Suspension rear
+                            nl-BE: Achterwielophanging
+                            nl-NL: Achterwielophanging
+                            pl-PL: Tylne zawieszenie
+                            pt-BR: 'Suspensão traseira '
+                            pt-PT: Suspensão traseira
+                            ro-RO: Suspensia spate
+                            sk-SK: Suspension rear
+                            sl-SI: Suspension rear
+                            sv-SE: Suspension rear
+                            th-TH: Suspension rear
+                            tr-TR: Suspension rear
+                            zh-CN: 后悬架
+                            zh-SG: Suspension rear
+                            zh-TW: 後懸吊
+                            sr-Latn-RS: Zadnje Vešanje
+                        attributeKey:
+                          type: text
+                          value: mc_chassis_suspension_rear
+                    - _id: d6e4de12-a72f-459f-8e3e-dc2fc94ba64f
+                      type: commercetoolsAttributePair
+                      fields:
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Přední brzdy
+                            da-DK: Brakes front
+                            de-AT: Vorderradbremse
+                            de-CH: Vorderradbremse
+                            de-DE: Vorderradbremse
+                            el-GR: Εμπρός Φρένα
+                            en-AE: Brakes front
+                            en-AU: Brakes front
+                            en-CA: Brakes front
+                            en-GB: Brakes front
+                            en-IN: Brakes front
+                            en-NZ: Brakes front
+                            en-PH: Brakes front
+                            en-US: Brakes front
+                            es-AR: Freno Delantero
+                            es-ES: Freno Delantero
+                            es-MX: Freno Delantero
+                            es-US: Freno Delantero
+                            fi-FI: Brakes front
+                            fr-BE: Frein avant
+                            fr-CA: Frein avant
+                            fr-CH: Frein avant
+                            fr-FR: Frein avant
+                            fr-LU: Frein avant
+                            hr-HR: Brakes front
+                            hu-HU: Első fékek
+                            id-ID: Brakes front
+                            it-IT: Freno Anteriore
+                            ja-JP: フロントブレーキ
+                            ko-KR: Brakes front
+                            ms-MY: Brakes front
+                            nb-NO: Brakes front
+                            nl-BE: Front Brakes
+                            nl-NL: Front Brakes
+                            pl-PL: Przedni hamulec
+                            pt-BR: Freio dianteiro
+                            pt-PT: Travão dianteiro
+                            ro-RO: Frâne față
+                            sk-SK: Brakes front
+                            sl-SI: Brakes front
+                            sv-SE: Brakes front
+                            th-TH: Brakes front
+                            tr-TR: Brakes front
+                            zh-CN: 前制动器
+                            zh-SG: Brakes front
+                            zh-TW: 煞車系統 前
+                            sr-Latn-RS: Prednje Kočnice
+                        attributeKey:
+                          type: text
+                          value: mc_chassis_brakes_front
+                    - _id: d44973f1-0377-4523-ad7b-fdc64fcb01ff
+                      type: commercetoolsAttributePair
+                      fields:
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Zadní brzdy
+                            da-DK: Brakes rear
+                            de-AT: Hinterradbremse
+                            de-CH: Hinterradbremse
+                            de-DE: Hinterradbremse
+                            el-GR: Πίσω Φρένο
+                            en-AE: Brakes rear
+                            en-AU: Brakes rear
+                            en-CA: Brakes rear
+                            en-GB: Brakes rear
+                            en-IN: Brakes rear
+                            en-NZ: Brakes rear
+                            en-PH: Brakes rear
+                            en-US: Brakes rear
+                            es-AR: Freno Trasero
+                            es-ES: Freno Trasero
+                            es-MX: Freno Trasero
+                            es-US: Freno Trasero
+                            fi-FI: Brakes rear
+                            fr-BE: Frein arrière
+                            fr-CA: Frein arrière
+                            fr-CH: Frein arrière
+                            fr-FR: Frein arrière
+                            fr-LU: Frein arrière
+                            hr-HR: Brakes rear
+                            hu-HU: Hátsó fékek
+                            id-ID: Brakes rear
+                            it-IT: Freno Posteriore
+                            ja-JP: リアブレーキ
+                            ko-KR: Brakes rear
+                            ms-MY: Brakes rear
+                            nb-NO: Brakes rear
+                            nl-BE: Rear Brakes
+                            nl-NL: Rear Brakes
+                            pl-PL: Tylny hamulec
+                            pt-BR: Freio traseiro
+                            pt-PT: Travão traseiro
+                            ro-RO: Frâne spate
+                            sk-SK: Brakes rear
+                            sl-SI: Brakes rear
+                            sv-SE: Brakes rear
+                            th-TH: Brakes rear
+                            tr-TR: Brakes rear
+                            zh-CN: 后制动器
+                            zh-SG: Brakes rear
+                            zh-TW: 煞車系統 後
+                            sr-Latn-RS: Zadnje Kočnice
+                        attributeKey:
+                          type: text
+                          value: mc_chassis_brakes_rear
+                    - _id: a2f0fa9d-c758-4f61-be64-ccfa5e371451
+                      type: commercetoolsAttributePair
+                      fields:
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Přístrojový panel a funkce
+                            da-DK: Instruments
+                            de-AT: Instrumente
+                            de-CH: Instrumente
+                            de-DE: Instrumente
+                            el-GR: Όργανα
+                            en-AE: Instruments
+                            en-AU: Instruments
+                            en-CA: Instruments
+                            en-GB: Instruments
+                            en-IN: Instruments
+                            en-NZ: Instruments
+                            en-PH: Instruments
+                            en-US: Instruments
+                            es-AR: Panel de Instrumentos y Funciones
+                            es-ES: Panel de Instrumentos y Funciones
+                            es-MX: Panel de Instrumentos y Funciones
+                            es-US: Panel de Instrumentos y Funciones
+                            fi-FI: Instruments
+                            fr-BE: Affichage et fonctions du tableau de bord
+                            fr-CA: Affichage et fonctions du tableau de bord
+                            fr-CH: Affichage et fonctions du tableau de bord
+                            fr-FR: Affichage et fonctions du tableau de bord
+                            fr-LU: Affichage et fonctions du tableau de bord
+                            hr-HR: Instruments
+                            hu-HU: Műszer kijelzője és funkciói
+                            id-ID: Instruments
+                            it-IT: Strumentazione e Funzioni
+                            ja-JP: インストルメントディスプレイとファンクション
+                            ko-KR: Instruments
+                            ms-MY: Instruments
+                            nb-NO: Instruments
+                            nl-BE: Instrumentendisplay en -functies
+                            nl-NL: Instrumentendisplay en -functies
+                            pl-PL: Przyrządy
+                            pt-BR: 'Painel de instrumentos e funções '
+                            pt-PT: Painel de instrumentos e funções
+                            ro-RO: Afișajul și funcțiile instrumentelor de bord
+                            sk-SK: Instruments
+                            sl-SI: Instruments
+                            sv-SE: Instruments
+                            th-TH: Instruments
+                            tr-TR: Instruments
+                            zh-CN: I仪表显示和功能
+                            zh-SG: Instruments
+                            zh-TW: 儀表功能與顯示內容
+                            sr-Latn-RS: Instrument Tabla I Funkcije
+                        attributeKey:
+                          type: text
+                          value: mc_chassis_instruments
+        parameters:
+          title:
+            type: text
+            locales:
+              cs-CZ: Podvozek
+              da-DK: Chassis
+              de-AT: Fahrwerk
+              de-CH: Fahrwerk
+              de-DE: Fahrwerk
+              el-GR: ΠΛΑΙΣΙΟ
+              en-AE: Chassis
+              en-AU: Chassis
+              en-CA: Chassis
+              en-GB: Chassis
+              en-IN: Chassis
+              en-NZ: Chassis
+              en-PH: Chassis
+              en-US: Chassis
+              es-AR: Parte ciclo
+              es-ES: Parte ciclo
+              es-MX: Parte ciclo
+              es-US: Parte ciclo
+              fi-FI: Chassis
+              fr-BE: Châssis
+              fr-CA: Châssis
+              fr-CH: Châssis
+              fr-FR: Châssis
+              fr-LU: Châssis
+              hr-HR: Chassis
+              hu-HU: Alváz
+              id-ID: Chassis
+              it-IT: Telaio
+              ja-JP: シャシー
+              ko-KR: Chassis
+              ms-MY: Chassis
+              nb-NO: Chassis
+              nl-BE: Frame
+              nl-NL: Frame
+              pl-PL: Podwozie
+              pt-BR: Chassi
+              pt-PT: Ciclística
+              ro-RO: Șasiu
+              sk-SK: Chassis
+              sl-SI: Chassis
+              sv-SE: Chassis
+              th-TH: Chassis
+              tr-TR: Chassis
+              zh-CN: 底盘
+              zh-SG: Chassis
+              zh-TW: 車身規格
+              sr-Latn-RS: Šasija
+        _overridability:
+          parameters:
+            $viz: 'yes'
+      - _id: 0eb55488-4cf2-4d2d-bebf-1ee8c4dd09a3
+        type: accordionItem
+        slots:
+          content:
+            - _id: bba3e18b-7233-4ece-8915-27c8efdc84bd
+              type: specList
+              parameters:
+                specs:
+                  type: $block
+                  value:
+                    - _id: dba945d3-0e83-4359-b5c7-7ef7480627b0
+                      type: commercetoolsAttributePair
+                      fields:
+                        unit:
+                          type: text
+                          locales:
+                            cs-CZ: mm
+                            da-DK: mm
+                            de-AT: mm
+                            de-CH: mm
+                            de-DE: mm
+                            el-GR: χλστ
+                            en-AE: mm
+                            en-AU: mm
+                            en-GB: mm
+                            en-IN: mm
+                            en-NZ: mm
+                            en-PH: mm
+                            es-AR: mm
+                            es-ES: mm
+                            es-MX: mm
+                            es-US: mm
+                            fi-FI: mm
+                            fr-BE: mm
+                            fr-CA: mm
+                            fr-CH: mm
+                            fr-FR: mm
+                            fr-LU: mm
+                            hr-HR: mm
+                            hu-HU: mm
+                            id-ID: mm
+                            it-IT: mm
+                            ja-JP: mm
+                            ko-KR: mm
+                            ms-MY: mm
+                            nb-NO: mm
+                            nl-BE: mm
+                            nl-NL: mm
+                            pl-PL: mm
+                            pt-BR: mm
+                            pt-PT: mm
+                            ro-RO: mm
+                            sk-SK: mm
+                            sl-SI: mm
+                            sv-SE: mm
+                            th-TH: ' มม'
+                            tr-TR: mm
+                            zh-CN: 毫米
+                            zh-SG: mm
+                            zh-TW: 毫米
+                            sr-Latn-RS: mm
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Šířka řídítek
+                            da-DK: Width
+                            de-AT: Breite, Lenker
+                            de-CH: Breite, Lenker
+                            de-DE: Breite, Lenker
+                            el-GR: Πλάτος (Τιμόνι)
+                            en-AE: Width
+                            en-AU: Width
+                            en-CA: Width
+                            en-GB: Width
+                            en-IN: Width
+                            en-NZ: Width
+                            en-PH: Width
+                            en-US: Width
+                            es-AR: Anchura del manillar
+                            es-ES: Anchura del manillar
+                            es-MX: Anchura del manillar
+                            es-US: Anchura del manillar
+                            fi-FI: Width
+                            fr-BE: Guidon large
+                            fr-CA: Guidon large
+                            fr-CH: Guidon large
+                            fr-FR: Guidon large
+                            fr-LU: Guidon large
+                            hr-HR: Width
+                            hu-HU: Kormány szélesség
+                            id-ID: Width
+                            it-IT: Larghezza Manubrio
+                            ja-JP: ハンドルを含む横幅
+                            ko-KR: Width
+                            ms-MY: Width
+                            nb-NO: Width
+                            nl-BE: Breedte stuur
+                            nl-NL: Breedte stuur
+                            pl-PL: Szerokość kierownicy
+                            pt-BR: Largura
+                            pt-PT: Largura do guiador
+                            ro-RO: Lățimea ghidonului
+                            sk-SK: Width
+                            sl-SI: Width
+                            sv-SE: Width
+                            th-TH: Width
+                            tr-TR: Width
+                            zh-CN: 车把宽度
+                            zh-SG: Width
+                            zh-TW: 全寬
+                            sr-Latn-RS: Širina Kormana
+                        attributeKey:
+                          type: text
+                          value: mc_width
+                    - _id: c0fb59aa-8fd8-4b21-a278-7dbc97e57d3b
+                      type: commercetoolsAttributePair
+                      fields:
+                        unit:
+                          type: text
+                          locales:
+                            cs-CZ: mm
+                            da-DK: mm
+                            de-AT: mm
+                            de-CH: mm
+                            de-DE: mm
+                            el-GR: χλστ
+                            en-AE: mm
+                            en-AU: mm
+                            en-GB: mm
+                            en-IN: mm
+                            en-NZ: mm
+                            en-PH: mm
+                            es-AR: mm
+                            es-ES: mm
+                            es-MX: mm
+                            es-US: mm
+                            fi-FI: mm
+                            fr-BE: mm
+                            fr-CA: mm
+                            fr-CH: mm
+                            fr-FR: mm
+                            fr-LU: mm
+                            hr-HR: mm
+                            hu-HU: mm
+                            id-ID: mm
+                            it-IT: mm
+                            ja-JP: mm
+                            ko-KR: mm
+                            ms-MY: mm
+                            nb-NO: mm
+                            nl-BE: mm
+                            nl-NL: mm
+                            pl-PL: mm
+                            pt-BR: mm
+                            pt-PT: mm
+                            ro-RO: mm
+                            sk-SK: mm
+                            sl-SI: mm
+                            sv-SE: mm
+                            th-TH: ' มม'
+                            tr-TR: mm
+                            zh-CN: 毫米
+                            zh-SG: mm
+                            zh-TW: 毫米
+                            sr-Latn-RS: mm
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Výška bez zrcátek
+                            da-DK: Height
+                            de-AT: Höhe
+                            de-CH: Höhe
+                            de-DE: Höhe
+                            el-GR: Ύψος Χωρίς Καθρέφτες
+                            en-AE: Height
+                            en-AU: Height
+                            en-CA: Height
+                            en-GB: Height
+                            en-IN: Height
+                            en-NZ: Height
+                            en-PH: Height
+                            en-US: Height
+                            es-AR: Altura (sin espejos)
+                            es-ES: Altura (sin espejos)
+                            es-MX: Altura (sin espejos)
+                            es-US: Altura (sin espejos)
+                            fi-FI: Height
+                            fr-BE: Hauteur hors rétroviseurs
+                            fr-CA: Hauteur hors rétroviseurs
+                            fr-CH: Hauteur hors rétroviseurs
+                            fr-FR: Hauteur hors rétroviseurs
+                            fr-LU: Hauteur hors rétroviseurs
+                            hr-HR: Height
+                            hu-HU: Magasság tükör nélkül
+                            id-ID: Height
+                            it-IT: Altezza Senza Specchietti
+                            ja-JP: 全高（ミラーを含まない）
+                            ko-KR: Height
+                            ms-MY: Height
+                            nb-NO: Height
+                            nl-BE: Hoogte zonder spiegels
+                            nl-NL: Hoogte zonder spiegels
+                            pl-PL: Wysokość bez lusterek
+                            pt-BR: Altura sem espelho
+                            pt-PT: Altura (sem espelhos)
+                            ro-RO: Înălțime fără oglinzi
+                            sk-SK: Height
+                            sl-SI: Height
+                            sv-SE: Height
+                            th-TH: Height
+                            tr-TR: Height
+                            zh-CN: 不含后视镜高度
+                            zh-SG: Height
+                            zh-TW: 全高(不包含後照鏡)
+                            sr-Latn-RS: Visina Bez Retrovizora
+                        attributeKey:
+                          type: text
+                          value: mc_height
+                    - _id: eaa83824-0c85-479c-90b6-80381eeb0964
+                      type: commercetoolsAttributePair
+                      fields:
+                        unit:
+                          type: text
+                          locales:
+                            cs-CZ: mm
+                            da-DK: mm
+                            de-AT: mm
+                            de-CH: mm
+                            de-DE: mm
+                            el-GR: χλστ
+                            en-AE: mm
+                            en-AU: mm
+                            en-GB: mm
+                            en-IN: mm
+                            en-NZ: mm
+                            en-PH: mm
+                            es-AR: mm
+                            es-ES: mm
+                            es-MX: mm
+                            es-US: mm
+                            fi-FI: mm
+                            fr-BE: mm
+                            fr-CA: mm
+                            fr-CH: mm
+                            fr-FR: mm
+                            fr-LU: mm
+                            hr-HR: mm
+                            hu-HU: mm
+                            id-ID: mm
+                            it-IT: mm
+                            ja-JP: mm
+                            ko-KR: mm
+                            ms-MY: mm
+                            nb-NO: mm
+                            nl-BE: mm
+                            nl-NL: mm
+                            pl-PL: mm
+                            pt-BR: mm
+                            pt-PT: mm
+                            ro-RO: mm
+                            sk-SK: mm
+                            sl-SI: mm
+                            sv-SE: mm
+                            th-TH: ' มม'
+                            tr-TR: mm
+                            zh-CN: 毫米
+                            zh-SG: mm
+                            zh-TW: 毫米
+                            sr-Latn-RS: mm
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Výška sedla
+                            da-DK: Seat height
+                            de-AT: Sitzhöhe
+                            de-CH: Sitzhöhe
+                            de-DE: Sitzhöhe
+                            el-GR: Ύψος Σέλας
+                            en-AE: Seat height
+                            en-AU: Seat height
+                            en-CA: Seat height
+                            en-GB: Seat height
+                            en-IN: Seat height
+                            en-NZ: Seat height
+                            en-PH: Seat height
+                            en-US: Seat height
+                            es-AR: Altura del asiento
+                            es-ES: Altura del asiento
+                            es-MX: Altura del asiento
+                            es-US: Altura del asiento
+                            fi-FI: Seat height
+                            fr-BE: Hauteur de la selle
+                            fr-CA: Hauteur de la selle
+                            fr-CH: Hauteur de la selle
+                            fr-FR: Hauteur de la selle
+                            fr-LU: Hauteur de la selle
+                            hr-HR: Seat height
+                            hu-HU: Ülésmagasság
+                            id-ID: Seat height
+                            it-IT: Altezza Sella
+                            ja-JP: 全高（ミラーを含まない）
+                            ko-KR: Seat height
+                            ms-MY: Seat height
+                            nb-NO: Seat height
+                            nl-BE: Zadelhoogte
+                            nl-NL: Zadelhoogte
+                            pl-PL: Wysokość siedzenia
+                            pt-BR: 'Altura do Assento '
+                            pt-PT: Altura do assento
+                            ro-RO: Înălțime la șa
+                            sk-SK: Seat height
+                            sl-SI: Seat height
+                            sv-SE: Seat height
+                            th-TH: Seat height
+                            tr-TR: Seat height
+                            zh-CN: 车座高度
+                            zh-SG: Seat height
+                            zh-TW: 坐高
+                            sr-Latn-RS: Visina Sedišta
+                        attributeKey:
+                          type: text
+                          value: mc_height_seat
+                    - _id: 1666af7e-dd9e-43cc-a68a-de11295f5ce7
+                      type: commercetoolsAttributePair
+                      fields:
+                        unit:
+                          type: text
+                          locales:
+                            cs-CZ: mm
+                            da-DK: mm
+                            de-AT: mm
+                            de-CH: mm
+                            de-DE: mm
+                            el-GR: χλστ
+                            en-AE: mm
+                            en-AU: mm
+                            en-GB: mm
+                            en-IN: mm
+                            en-NZ: mm
+                            en-PH: mm
+                            es-AR: mm
+                            es-ES: mm
+                            es-MX: mm
+                            es-US: mm
+                            fi-FI: mm
+                            fr-BE: mm
+                            fr-CA: mm
+                            fr-CH: mm
+                            fr-FR: mm
+                            fr-LU: mm
+                            hr-HR: mm
+                            hu-HU: mm
+                            id-ID: mm
+                            it-IT: mm
+                            ja-JP: mm
+                            ko-KR: mm
+                            ms-MY: mm
+                            nb-NO: mm
+                            nl-BE: mm
+                            nl-NL: mm
+                            pl-PL: mm
+                            pt-BR: mm
+                            pt-PT: mm
+                            ro-RO: mm
+                            sk-SK: mm
+                            sl-SI: mm
+                            sv-SE: mm
+                            th-TH: ' มม'
+                            tr-TR: mm
+                            zh-CN: 毫米
+                            zh-SG: mm
+                            zh-TW: 毫米
+                            sr-Latn-RS: mm
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Rozvor
+                            da-DK: Wheel base
+                            de-AT: Radstand
+                            de-CH: Radstand
+                            de-DE: Radstand
+                            el-GR: Μεταξόνιο
+                            en-AE: Wheel base
+                            en-AU: Wheel base
+                            en-CA: Wheel base
+                            en-GB: Wheel base
+                            en-IN: Wheel base
+                            en-NZ: Wheel base
+                            en-PH: Wheel base
+                            en-US: Wheel base
+                            es-AR: Distancia entre ejes
+                            es-ES: Distancia entre ejes
+                            es-MX: Distancia entre ejes
+                            es-US: Distancia entre ejes
+                            fi-FI: Wheel base
+                            fr-BE: 'Empattement '
+                            fr-CA: 'Empattement '
+                            fr-CH: 'Empattement '
+                            fr-FR: 'Empattement '
+                            fr-LU: 'Empattement '
+                            hr-HR: Wheel base
+                            hu-HU: Tengelytáv
+                            id-ID: Wheel base
+                            it-IT: Interasse
+                            ja-JP: ホイールベース
+                            ko-KR: Wheel base
+                            ms-MY: Wheel base
+                            nb-NO: Wheel base
+                            nl-BE: Wielbasis
+                            nl-NL: Wielbasis
+                            pl-PL: Rozstaw osi
+                            pt-BR: 'Distância entre eixos '
+                            pt-PT: Distância entre eixos
+                            ro-RO: Ampatament
+                            sk-SK: Wheel base
+                            sl-SI: Wheel base
+                            sv-SE: Wheel base
+                            th-TH: Wheel base
+                            tr-TR: Wheel base
+                            zh-CN: 轴距
+                            zh-SG: Wheel base
+                            zh-TW: 軸距
+                            sr-Latn-RS: Medjuosovinsko rastojanje
+                        attributeKey:
+                          type: text
+                          value: mc_wheelbase
+                    - _id: 228b752f-b546-4b6b-8628-590910f72d42
+                      type: commercetoolsAttributePair
+                      fields:
+                        unit:
+                          type: text
+                          locales:
+                            cs-CZ: °
+                            da-DK: °
+                            de-AT: °
+                            de-CH: °
+                            de-DE: °
+                            el-GR: °
+                            en-AE: °
+                            en-AU: °
+                            en-CA: °
+                            en-GB: °
+                            en-IN: °
+                            en-NZ: °
+                            en-PH: °
+                            en-US: °
+                            es-AR: °
+                            es-ES: °
+                            es-MX: °
+                            es-US: °
+                            fi-FI: °
+                            fr-BE: °
+                            fr-CA: °
+                            fr-CH: °
+                            fr-FR: °
+                            fr-LU: °
+                            hr-HR: °
+                            hu-HU: °
+                            id-ID: °
+                            it-IT: °
+                            ja-JP: °
+                            ko-KR: °
+                            ms-MY: °
+                            nb-NO: °
+                            nl-BE: °
+                            nl-NL: °
+                            pl-PL: °
+                            pt-BR: °
+                            pt-PT: °
+                            ro-RO: °
+                            sk-SK: °
+                            sl-SI: °
+                            sv-SE: °
+                            th-TH: °
+                            tr-TR: °
+                            zh-CN: °
+                            zh-SG: °
+                            zh-TW: °
+                            sr-Latn-RS: °
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Úhel hlavy řízení
+                            da-DK: Rake
+                            de-AT: 'Lenkkopfwinkel '
+                            de-CH: 'Lenkkopfwinkel '
+                            de-DE: 'Lenkkopfwinkel '
+                            el-GR: Γωνία Κάστερ
+                            en-AE: Rake
+                            en-AU: Rake
+                            en-CA: Rake
+                            en-GB: Rake
+                            en-IN: Rake
+                            en-NZ: Rake
+                            en-PH: Rake
+                            en-US: Rake
+                            es-AR: Lanzamiento
+                            es-ES: Lanzamiento
+                            es-MX: Lanzamiento
+                            es-US: Lanzamiento
+                            fi-FI: Rake
+                            fr-BE: 'Inclinaison '
+                            fr-CA: 'Inclinaison '
+                            fr-CH: 'Inclinaison '
+                            fr-FR: 'Inclinaison '
+                            fr-LU: 'Inclinaison '
+                            hr-HR: Rake
+                            hu-HU: Dőlésszög
+                            id-ID: Rake
+                            it-IT: Angolo di Inclinazione
+                            ja-JP: キャスターアングル
+                            ko-KR: Rake
+                            ms-MY: Rake
+                            nb-NO: Rake
+                            nl-BE: Vorksprong
+                            nl-NL: Vorksprong
+                            pl-PL: Kąt pochylenia główki ramy
+                            pt-BR: Inclinação
+                            pt-PT: Inclinação
+                            ro-RO: Rake
+                            sk-SK: Rake
+                            sl-SI: Rake
+                            sv-SE: Rake
+                            th-TH: Rake
+                            tr-TR: Rake
+                            zh-CN: 前倾角
+                            zh-SG: Rake
+                            zh-TW: 前叉後傾角
+                            sr-Latn-RS: Ugao upravljača
+                        attributeKey:
+                          type: text
+                          value: mc_rake
+                    - _id: 93038faa-30ee-4546-8473-c38df625ecf4
+                      type: commercetoolsAttributePair
+                      fields:
+                        unit:
+                          type: text
+                          locales:
+                            cs-CZ: mm
+                            da-DK: mm
+                            de-AT: mm
+                            de-CH: mm
+                            de-DE: mm
+                            el-GR: χλστ
+                            en-AE: mm
+                            en-AU: mm
+                            en-GB: mm
+                            en-IN: mm
+                            en-NZ: mm
+                            en-PH: mm
+                            es-AR: mm
+                            es-ES: mm
+                            es-MX: mm
+                            es-US: mm
+                            fi-FI: mm
+                            fr-BE: mm
+                            fr-CA: mm
+                            fr-CH: mm
+                            fr-FR: mm
+                            fr-LU: mm
+                            hr-HR: mm
+                            hu-HU: mm
+                            id-ID: mm
+                            it-IT: mm
+                            ja-JP: mm
+                            ko-KR: mm
+                            ms-MY: mm
+                            nb-NO: mm
+                            nl-BE: mm
+                            nl-NL: mm
+                            pl-PL: mm
+                            pt-BR: mm
+                            pt-PT: mm
+                            ro-RO: mm
+                            sk-SK: mm
+                            sl-SI: mm
+                            sv-SE: mm
+                            th-TH: ' มม'
+                            tr-TR: mm
+                            zh-CN: 毫米
+                            zh-SG: mm
+                            zh-TW: 毫米
+                            sr-Latn-RS: mm
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Závlek
+                            da-DK: Trail
+                            de-AT: 'Nachlauf '
+                            de-CH: 'Nachlauf '
+                            de-DE: 'Nachlauf '
+                            el-GR: Ίχνος
+                            en-AE: Trail
+                            en-AU: Trail
+                            en-CA: Trail
+                            en-GB: Trail
+                            en-IN: Trail
+                            en-NZ: Trail
+                            en-PH: Trail
+                            en-US: Trail
+                            es-AR: Avance
+                            es-ES: Avance
+                            es-MX: Avance
+                            es-US: Avance
+                            fi-FI: Trail
+                            fr-BE: 'Chasse '
+                            fr-CA: 'Chasse '
+                            fr-CH: 'Chasse '
+                            fr-FR: 'Chasse '
+                            fr-LU: 'Chasse '
+                            hr-HR: Trail
+                            hu-HU: Nyomtáv
+                            id-ID: Trail
+                            it-IT: Avancorsa
+                            ja-JP: トレール
+                            ko-KR: Trail
+                            ms-MY: Trail
+                            nb-NO: Trail
+                            nl-BE: Naloop
+                            nl-NL: Naloop
+                            pl-PL: Wyprzedzenie
+                            pt-BR: Trail
+                            pt-PT: Avanço
+                            ro-RO: Trail
+                            sk-SK: Trail
+                            sl-SI: Trail
+                            sv-SE: Trail
+                            th-TH: Trail
+                            tr-TR: Trail
+                            zh-CN: 拖曳距
+                            zh-SG: Trail
+                            zh-TW: 拖曳距
+                            sr-Latn-RS: Hod amortizera
+                        attributeKey:
+                          type: text
+                          value: mc_trail
+                    - _id: 2f11241d-bb43-4ef6-8814-c1b7d42044de
+                      type: commercetoolsAttributePair
+                      fields:
+                        unit:
+                          type: text
+                          locales:
+                            cs-CZ: kg
+                            da-DK: kg
+                            de-AT: kg
+                            de-CH: kg
+                            de-DE: kg
+                            el-GR: κιλά
+                            en-AE: kg
+                            en-AU: kg
+                            en-GB: kg
+                            en-IN: kg
+                            en-NZ: kg
+                            en-PH: kg
+                            es-AR: kg
+                            es-ES: kg
+                            es-MX: kg
+                            es-US: kg
+                            fi-FI: kg
+                            fr-BE: kg
+                            fr-CA: kg
+                            fr-CH: kg
+                            fr-FR: kg
+                            fr-LU: kg
+                            hr-HR: kg
+                            hu-HU: kg
+                            id-ID: kg
+                            it-IT: kg
+                            ja-JP: kg
+                            ko-KR: kg
+                            ms-MY: kg
+                            nb-NO: kg
+                            nl-BE: kg
+                            nl-NL: kg
+                            pl-PL: kg
+                            pt-BR: kg
+                            pt-PT: kg
+                            ro-RO: kg
+                            sk-SK: kg
+                            sl-SI: kg
+                            sv-SE: kg
+                            th-TH: ' กก'
+                            tr-TR: kg
+                            zh-CN: 公斤
+                            zh-SG: kg
+                            zh-TW: kg
+                            sr-Latn-RS: kg
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Pohotovostní hmotnost
+                            da-DK: Wet weight
+                            de-AT: Fahrfertiges Gewicht
+                            de-CH: Fahrfertiges Gewicht
+                            de-DE: Fahrfertiges Gewicht
+                            el-GR: Υγρό βάρος
+                            en-AE: Wet weight
+                            en-AU: Wet weight
+                            en-CA: Wet weight
+                            en-GB: Wet weight
+                            en-IN: Wet weight
+                            en-NZ: Wet weight
+                            en-PH: Wet weight
+                            en-US: Wet weight
+                            es-AR: Peso en orden de marcha
+                            es-ES: Peso en orden de marcha
+                            es-MX: Peso en orden de marcha
+                            es-US: Peso en orden de marcha
+                            fi-FI: Wet weight
+                            fr-BE: Poids pleins faits
+                            fr-CA: Poids pleins faits
+                            fr-CH: Poids pleins faits
+                            fr-FR: Poids pleins faits
+                            fr-LU: Poids pleins faits
+                            hr-HR: Wet weight
+                            hu-HU: Nedves tömeg
+                            id-ID: Wet weight
+                            it-IT: Peso in ordine di marcia
+                            ja-JP: 車体重量
+                            ko-KR: Wet weight
+                            ms-MY: Wet weight
+                            nb-NO: Wet weight
+                            nl-BE: Gewicht met volle tank
+                            nl-NL: Gewicht met volle tank
+                            pl-PL: 'Masa z płynami '
+                            pt-BR: Peso com depósitos cheios
+                            pt-PT: Peso com depósitos cheios
+                            ro-RO: Greutatea la plin
+                            sk-SK: Wet weight
+                            sl-SI: Wet weight
+                            sv-SE: Wet weight
+                            th-TH: Wet weight
+                            tr-TR: Wet weight
+                            zh-CN: 湿重
+                            zh-SG: Wet weight
+                            zh-TW: 裝備重量
+                            sr-Latn-RS: Težina vozila spremnog za vožnju
+                        attributeKey:
+                          type: text
+                          value: mc_weight_wet
+                    - _id: 258b79e7-59c1-4897-a36c-b6859a6ae3ed
+                      type: commercetoolsAttributePair
+                      fields:
+                        unit:
+                          type: text
+                          locales:
+                            cs-CZ: liters
+                            da-DK: liters
+                            de-AT: L
+                            de-CH: L
+                            de-DE: L
+                            el-GR: λίτρα
+                            en-AE: liters
+                            en-AU: liters
+                            en-GB: liters
+                            en-IN: liters
+                            en-NZ: liters
+                            en-PH: liters
+                            es-AR: L
+                            es-ES: L
+                            es-MX: L
+                            es-US: L
+                            fi-FI: liters
+                            fr-BE: liters
+                            fr-CA: liters
+                            fr-CH: liters
+                            fr-FR: liters
+                            fr-LU: liters
+                            hr-HR: liters
+                            hu-HU: L
+                            id-ID: liters
+                            it-IT: liters
+                            ja-JP: liters
+                            ko-KR: liters
+                            ms-MY: liters
+                            nb-NO: liters
+                            nl-BE: liters
+                            nl-NL: liters
+                            pl-PL: liters
+                            pt-BR: liters
+                            pt-PT: liters
+                            ro-RO: liters
+                            sk-SK: liters
+                            sl-SI: liters
+                            sv-SE: liters
+                            th-TH: ลิตร
+                            tr-TR: liters
+                            zh-CN: 升
+                            zh-SG: liters
+                            zh-TW: L
+                            sr-Latn-RS: liters
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Objem palivové nádrže
+                            da-DK: Fuel capacity
+                            de-AT: Tankvolumen
+                            de-CH: Tankvolumen
+                            de-DE: Tankvolumen
+                            el-GR: Χωρητικότητα Ρεζερβουάρ
+                            en-AE: Fuel capacity
+                            en-AU: Fuel capacity
+                            en-CA: Fuel capacity
+                            en-GB: Fuel capacity
+                            en-IN: Fuel capacity
+                            en-NZ: Fuel capacity
+                            en-PH: Fuel capacity
+                            en-US: Fuel capacity
+                            es-AR: Capacidad del depósito
+                            es-ES: Capacidad del depósito
+                            es-MX: Capacidad del depósito
+                            es-US: Capacidad del depósito
+                            fi-FI: Fuel capacity
+                            fr-BE: 'Contenance du réservoir '
+                            fr-CA: 'Contenance du réservoir '
+                            fr-CH: 'Contenance du réservoir '
+                            fr-FR: 'Contenance du réservoir '
+                            fr-LU: 'Contenance du réservoir '
+                            hr-HR: Fuel capacity
+                            hu-HU: Üzemanyag-kapacitás
+                            id-ID: Fuel capacity
+                            it-IT: Capacità Serbatoio
+                            ja-JP: 燃料タンク容量
+                            ko-KR: Fuel capacity
+                            ms-MY: Fuel capacity
+                            nb-NO: Fuel capacity
+                            nl-BE: Tankinhoud
+                            nl-NL: Tankinhoud
+                            pl-PL: Pojemność zbiornika paliwa
+                            pt-BR: 'Capacidade do tanque '
+                            pt-PT: Capacidade do depósito
+                            ro-RO: Capacitatea rezervorului
+                            sk-SK: Fuel capacity
+                            sl-SI: Fuel capacity
+                            sv-SE: Fuel capacity
+                            th-TH: Fuel capacity
+                            tr-TR: Fuel capacity
+                            zh-CN: 油箱容量
+                            zh-SG: Fuel capacity
+                            zh-TW: 油箱容量
+                            sr-Latn-RS: Kapacitet Rezervoara
+                        attributeKey:
+                          type: text
+                          value: mc_fuel_tank_capacity
+        parameters:
+          title:
+            type: text
+            locales:
+              cs-CZ: Rozměry a hmotnost
+              da-DK: Dimensions and weights
+              de-AT: Abmessungen und Gewicht
+              de-CH: Abmessungen und Gewicht
+              de-DE: Abmessungen und Gewicht
+              el-GR: ΔΙΑΣΤΑΣΕΙΣ ΚΑΙ ΒΑΡΗ
+              en-AE: Dimensions and weights
+              en-AU: Dimensions and weights
+              en-CA: Dimensions and weights
+              en-GB: Dimensions and weights
+              en-IN: Dimensions and weights
+              en-NZ: Dimensions and weights
+              en-PH: Dimensions and weights
+              en-US: Dimensions and weights
+              es-AR: Dimensiones y Peso
+              es-ES: Dimensiones y Peso
+              es-MX: Dimensiones y Peso
+              es-US: Dimensiones y Peso
+              fi-FI: Dimensions and weights
+              fr-BE: 'Consommation '
+              fr-CA: 'Consommation '
+              fr-CH: 'Consommation '
+              fr-FR: 'Consommation '
+              fr-LU: 'Consommation '
+              hr-HR: Dimensions and weights
+              hu-HU: Méretek és tömegek
+              id-ID: Dimensions and weights
+              it-IT: Dimensioni e Peso
+              ja-JP: 寸法、重量
+              ko-KR: Dimensions and weights
+              ms-MY: Dimensions and weights
+              nb-NO: Dimensions and weights
+              nl-BE: Afmetingen en Gewicht
+              nl-NL: Afmetingen en Gewicht
+              pl-PL: Wymiary oraz masa
+              pt-BR: Dimensões e Pesos
+              pt-PT: Dimensões e Peso
+              ro-RO: Dimensiuni și greutăți
+              sk-SK: Dimensions and weights
+              sl-SI: Dimensions and weights
+              sv-SE: Dimensions and weights
+              th-TH: Dimensions and weights
+              tr-TR: Dimensions and weights
+              zh-CN: 燃料消耗量
+              zh-SG: Dimensions and weights
+              zh-TW: 尺寸重量
+              sr-Latn-RS: Dimenzije & Težine
+        _overridability:
+          parameters:
+            $viz: 'yes'
+      - _id: fbc234a4-e6d3-4c6e-b700-dd7172fb9d1f
+        type: accordionItem
+        slots:
+          content:
+            - _id: 2c9132e5-967c-44e4-946c-226ce10ae35b
+              type: specList
+              parameters:
+                specs:
+                  type: $block
+                  value:
+                    - _id: 121c946c-2ab9-4c46-a9e4-170a7a593564
+                      type: commercetoolsAttributePair
+                      fields:
+                        unit:
+                          type: text
+                          locales:
+                            cs-CZ: l/100km
+                            da-DK: l/100km
+                            de-AT: l/100km
+                            de-CH: l/100km
+                            de-DE: l/100km
+                            el-GR: l/100km
+                            en-AE: l/100km
+                            en-AU: l/100km
+                            en-CA: l/100km
+                            en-GB: l/100km
+                            en-IN: l/100km
+                            en-NZ: l/100km
+                            en-PH: l/100km
+                            en-US: l/100km
+                            es-AR: l/100km
+                            es-ES: l/100km
+                            es-MX: l/100km
+                            es-US: l/100km
+                            fi-FI: l/100km
+                            fr-BE: l/100km
+                            fr-CA: l/100km
+                            fr-CH: l/100km
+                            fr-FR: l/100km
+                            fr-LU: l/100km
+                            hr-HR: l/100km
+                            hu-HU: l/100km
+                            id-ID: l/100km
+                            it-IT: l/100km
+                            ja-JP: l/100km
+                            ko-KR: l/100km
+                            ms-MY: l/100km
+                            nb-NO: l/100km
+                            nl-BE: l/100km
+                            nl-NL: l/100km
+                            pl-PL: l/100km
+                            pt-BR: l/100km
+                            pt-PT: l/100km
+                            ro-RO: l/100km
+                            sk-SK: l/100km
+                            sl-SI: l/100km
+                            sv-SE: l/100km
+                            th-TH: l/100km
+                            tr-TR: l/100km
+                            zh-CN: l/100km
+                            zh-SG: l/100km
+                            zh-TW: l/100km
+                            sr-Latn-RS: l/100km
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Spotřeba paliva
+                        attributeKey:
+                          type: text
+                          value: mc_fuel_consumption
+        parameters:
+          title:
+            type: text
+            locales:
+              cs-CZ: Spotřeba paliva
+              da-DK: Fuel consumption
+              de-AT: Kraftstoffverbrauch
+              de-CH: Kraftstoffverbrauch
+              de-DE: Kraftstoffverbrauch
+              el-GR: ΚΑΤΑΝΑΛΩΣΗ ΚΑΥΣΙΜΟΥ
+              en-AE: Fuel consumption
+              en-AU: Fuel consumption
+              en-CA: Fuel consumption
+              en-GB: Fuel consumption
+              en-IN: Fuel consumption
+              en-NZ: Fuel consumption
+              en-PH: Fuel consumption
+              en-US: Fuel consumption
+              es-AR: Consumo de combustible
+              es-ES: Consumo de combustible
+              es-MX: Consumo de combustible
+              es-US: Consumo de combustible
+              fi-FI: Fuel consumption
+              fr-BE: 'Consommation '
+              fr-CA: 'Consommation '
+              fr-CH: 'Consommation '
+              fr-FR: 'Consommation '
+              fr-LU: 'Consommation '
+              hr-HR: Fuel consumption
+              hu-HU: Üzemanyag-fogyasztás
+              id-ID: Fuel consumption
+              it-IT: Consumo di carburante
+              ja-JP: 燃料消費率
+              ko-KR: Fuel consumption
+              ms-MY: Fuel consumption
+              nb-NO: Fuel consumption
+              nl-BE: Brandstofverbruik
+              nl-NL: Brandstofverbruik
+              pl-PL: Zużycie paliwa
+              pt-BR: Consumo de combustível
+              pt-PT: Consumo
+              ro-RO: Consum de combustibil
+              sk-SK: Fuel consumption
+              sl-SI: Fuel consumption
+              sv-SE: Fuel consumption
+              th-TH: Fuel consumption
+              tr-TR: Fuel consumption
+              zh-CN: 燃料消耗量
+              zh-SG: Fuel consumption
+              zh-TW: 燃油消耗
+              sr-Latn-RS: Potrošnja Goriva
+        _overridability:
+          parameters:
+            $viz: 'yes'
+      - _id: a612b3bf-82e8-4a06-95c4-af0fc097b990
+        type: accordionItem
+        slots:
+          content:
+            - _id: ef0a9394-2990-4974-a820-b901579633ab
+              type: specList
+              parameters:
+                specs:
+                  type: $block
+                  value:
+                    - _id: 68a0c028-40db-486c-b417-9f7203186cea
+                      type: commercetoolsAttributePair
+                      fields:
+                        label:
+                          type: text
+                          locales:
+                            cs-CZ: Standardní výbava
+                        attributeKey:
+                          type: text
+                          value: mc_equipment_standard
+              _overridability:
+                hideLockedParameters: false
+        parameters:
+          title:
+            type: text
+            locales:
+              cs-CZ: Standardní výbava
+              da-DK: Standard Equipment
+              de-AT: Serienausstattung
+              de-CH: Serienausstattung
+              de-DE: Serienausstattung
+              el-GR: Στάνταρ Εξοπλισμός
+              en-AE: Standard Equipment
+              en-AU: Standard Equipment
+              en-CA: Standard Equipment
+              en-GB: Standard Equipment
+              en-IN: Standard Equipment
+              en-NZ: Standard Equipment
+              en-PH: Standard Equipment
+              en-US: Standard Equipment
+              es-AR: Equipamiento de serie
+              es-ES: Equipamiento de serie
+              es-MX: Equipamiento de serie
+              es-US: Equipamiento de serie
+              fi-FI: Standard Equipment
+              fr-BE: Équipement de série
+              fr-CA: Équipement de série
+              fr-CH: Équipement de série
+              fr-FR: Équipement de série
+              fr-LU: Équipement de série
+              hr-HR: Standard Equipment
+              hu-HU: Alapfelszereltség
+              id-ID: Standard Equipment
+              it-IT: Dotazioni di serie
+              ja-JP: 標準装備
+              ko-KR: Standard Equipment
+              ms-MY: Standard Equipment
+              nb-NO: Standard Equipment
+              nl-BE: Standaarduitrusting
+              nl-NL: Standaarduitrusting
+              pl-PL: Wyposażenie standardowe
+              pt-BR: Equipamento de Fábrica
+              pt-PT: Equipamento de série
+              ro-RO: Dotări standard
+              sk-SK: Standard Equipment
+              sl-SI: Standard Equipment
+              sv-SE: Standard Equipment
+              th-TH: อุปกรณ์มาตรฐาน
+              tr-TR: Standard Equipment
+              zh-CN: 标准配置
+              zh-SG: Standard Equipment
+              zh-TW: 标准配置
+              sr-Latn-RS: Standard equipment
+        _overridability:
+          parameters:
+            $viz: 'yes'
+          hideLockedParameters: false
+      - _id: 1a5c79e5-d80f-40c1-bc0f-71df69006bb2
+        type: accordionItem
+        slots:
+          content:
+            - _id: 0923400c-d589-4e85-8293-be71cade5567
+              type: specList
+              parameters:
+                specs:
+                  type: $block
+                  value:
+                    - _id: b4e1988f-883c-414e-b779-3a988f0b2bfb
+                      type: commercetoolsAttributePair
+                      fields:
+                        attributeKey:
+                          type: text
+                          value: mc_equipment_optional
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          $viz:
+            type: $viz
+            value:
+              explicitlyHidden: true
+          title:
+            type: text
+            locales:
+              cs-CZ: Optional Equipment
+              da-DK: Optional Equipment
+              de-AT: Optionale Ausstattung
+              de-CH: Optionale Ausstattung
+              de-DE: Optionale Ausstattung
+              el-GR: Προαιρετικός Εξοπλισμός
+              en-AE: Optional Equipment
+              en-AU: Optional Equipment
+              en-CA: Optional Equipment
+              en-GB: Optional Equipment
+              en-IN: Optional Equipment
+              en-NZ: Optional Equipment
+              en-PH: Optional Equipment
+              en-US: Optional Equipment
+              es-AR: Equipamiento opcional
+              es-ES: Equipamiento opcional
+              es-MX: Equipamiento opcional
+              es-US: Equipamiento opcional
+              fi-FI: Optional Equipment
+              fr-BE: Équipement en option
+              fr-CA: Équipement en option
+              fr-CH: Équipement en option
+              fr-FR: Équipement en option
+              fr-LU: Équipement en option
+              hr-HR: Optional Equipment
+              hu-HU: Választható felszerelés
+              id-ID: Optional Equipment
+              it-IT: Dotazioni optional
+              ja-JP: オプション装備
+              ko-KR: Optional Equipment
+              ms-MY: Optional Equipment
+              nb-NO: Optional Equipment
+              nl-BE: Optionele uitrusting
+              nl-NL: Optionele uitrusting
+              pl-PL: Wyposażenie opcjonalne
+              pt-BR: Equipamentos opcionais
+              pt-PT: Equipamento opcional
+              ro-RO: Dotări opționale
+              sk-SK: Optional Equipment
+              sl-SI: Optional Equipment
+              sv-SE: Optional Equipment
+              th-TH: อุปกรณ์เสริม
+              tr-TR: Optional Equipment
+              zh-CN: 可选装备
+              zh-SG: Optional Equipment
+              zh-TW: 选装配置
+              sr-Latn-RS: Optional Equipment
+        _overridability:
+          hideLockedParameters: true
+  _locales:
+    - en-GB
+    - fr-FR
+    - en-US
+    - de-DE
+    - es-ES
+    - pt-PT
+    - nl-NL
+    - it-IT
+    - th-TH
+    - ja-JP
+    - zh-CN
+    - pl-PL
+    - pt-BR
+    - el-GR
+    - ko-KR
+    - hu-HU
+    - ro-RO
+    - cs-CZ
+    - sr-Latn-RS
+    - sl-SI
+    - sk-SK
+    - hr-HR
+    - zh-TW
+    - en-CA
+    - fr-CA
+    - fr-CH
+    - fr-BE
+    - fr-LU
+    - de-AT
+    - de-CH
+    - nl-BE
+    - es-US
+    - es-MX
+    - es-AR
+    - sv-SE
+    - nb-NO
+    - da-DK
+    - fi-FI
+    - en-IN
+    - tr-TR
+    - en-AU
+    - ms-MY
+    - en-NZ
+    - zh-SG
+    - en-PH
+    - en-AE
+    - id-ID
+created: '2025-06-12T07:28:51.602085+00:00'
+modified: '2025-06-12T07:29:55.861354+00:00'
+pattern: true

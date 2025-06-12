@@ -1,0 +1,30 @@
+id: globalTranslation
+displayName: Global Translation
+ttl: 30
+body: ''
+path: /query
+custom:
+  proposedName: Query Global Translation
+  allowedContentTypes:
+    - globalTranslation
+method: GET
+purgeKey: f2eba744-c73c-4ca3-a60f-f352a0fd9bae
+archetype: queryEntries
+variables:
+  limit:
+    type: text
+    default: '20'
+  offset:
+    type: text
+    default: '0'
+  filters:
+    type: text
+    default: '{}'
+  orderBy:
+    type: text
+    default: ''
+  contentTypes:
+    type: text
+    default: ''
+dataSourceId: uniformContent
+allowedOnComponents: []

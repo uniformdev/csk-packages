@@ -1,0 +1,41 @@
+id: youtubeVideo
+name: Youtube video
+created: '2025-06-12T07:30:45.301892+00:00'
+updated: '2025-06-12T07:30:45.301892+00:00'
+slugSettings:
+  required: 'no'
+useTeamPermissions: true
+fields:
+  - id: youtubeId
+    name: Youtube id
+    type: text
+    helpText: Insert the id of the youtube video.
+    typeConfig:
+      required: true
+    localizable: true
+    allowConditionalValues: true
+  - id: controls
+    name: Controls
+    type: checkbox
+    typeConfig: null
+    allowConditionalValues: true
+  - id: muted
+    name: Muted
+    type: checkbox
+    typeConfig: null
+    allowConditionalValues: true
+  - id: loop
+    name: Loop
+    type: checkbox
+    typeConfig: null
+    allowConditionalValues: true
+  - id: autoplay
+    name: Autoplay
+    type: checkbox
+    typeConfig: null
+    allowConditionalValues: true
+entryName: youtubeId
+icon: file-document
+type: block
+permissions: []
+previewConfigurations: []

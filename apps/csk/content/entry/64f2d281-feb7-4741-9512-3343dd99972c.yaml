@@ -1,0 +1,64 @@
+created: '2025-06-12T07:30:58.095993+00:00'
+modified: '2025-06-12T07:30:58.095993+00:00'
+pattern: false
+entry:
+  _id: 64f2d281-feb7-4741-9512-3343dd99972c
+  _name: Bonneville T120
+  _slug: bonneville-t120
+  type: bike
+  fields:
+    key:
+      type: text
+      value: ${#jptr:/Single Product Content/key}
+    name:
+      type: text
+      locales:
+        en-GB: ${#jptr:/Single Product Content/name}
+    image:
+      type: asset
+      locales:
+        en-GB:
+          - _id: fcc951c2-50a0-41be-a983-27d4a4b30165
+            type: image
+            fields:
+              id:
+                type: text
+                value: Bonneville T120_MY25_Cranberry Red_RHS_kuojee
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1716291915/Bonneville%20T120_MY25_Cranberry%20Red_RHS_kuojee.png
+              size:
+                type: number
+                value: 13431196
+              title:
+                type: text
+                value: Bonneville T120_MY25_Cranberry Red_RHS_kuojee
+              width:
+                type: number
+                value: 9600
+              height:
+                type: number
+                value: 5400
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+    currency:
+      type: text
+      locales:
+        en-GB: GBP
+    fromPrice:
+      type: number
+      value: '1199500'
+    includeInTestRide:
+      type: checkbox
+      value: true
+    bikeCategorization:
+      type: select
+      value: Road
+  _dataResources:
+    Single Product Content:
+      type: singleProduct
+      variables:
+        locale: ${locale}
+        productId: a870b372-c897-4854-8d04-79448cac74b2
+  _locales:
+    - en-GB

@@ -1,0 +1,50 @@
+created: '2025-06-12T07:31:26.502621+00:00'
+modified: '2025-06-12T07:31:26.502621+00:00'
+pattern: false
+entry:
+  _id: eef9bb62-39aa-45c8-9c14-a98fd658cd00
+  _name: Scrambler 1200 X
+  _slug: scrambler-1200-x
+  type: bike
+  fields:
+    key:
+      type: text
+      value: ${#jptr:/Single Product Content/key}
+    name:
+      type: text
+      locales:
+        en-GB: ${#jptr:/Single Product Content/name}
+    image:
+      type: asset
+      locales:
+        en-GB:
+          - _id: 94feaafc-0de0-406d-b4f2-fc505555d7a7
+            type: image
+            fields:
+              url:
+                type: text
+                value: >-
+                  ${#jptr:/Single Product
+                  Content/masterVariant/assets/0/sources/0/uri}
+            _source: custom-url
+    currency:
+      type: text
+      locales:
+        en-GB: GBP
+    fromPrice:
+      type: number
+      value: '1189500'
+    includeInTestRide:
+      type: checkbox
+      value: true
+    bikeCategorization:
+      type: select
+      value: Road
+  _dataResources:
+    Single Product Content:
+      type: singleProduct
+      variables:
+        locale: ${locale}
+        productId: c0237d94-3067-40f2-adc2-3ad1982bd110
+  _locales:
+    - en-GB

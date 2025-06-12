@@ -1,0 +1,147 @@
+composition:
+  _name: Basket
+  _id: d14df266-2e87-475f-a578-64f06767b96d
+  _slug: basket
+  type: basketpage
+  parameters:
+    robots:
+      type: $block
+      value:
+        - _id: 5093f060-7490-439e-a347-03b677393c97
+          type: robots
+          fields:
+            noindex:
+              type: checkbox
+              value: true
+    metaData:
+      type: $block
+      value:
+        - _id: f257d483-4af5-4ca4-ba7f-9ef5368c69e8
+          type: metaData
+          fields:
+            metaImage:
+              type: asset
+              locales:
+                de-DE:
+                  - _id: d9007d90-af6b-430b-ac42-4e8b9448925e
+                    type: image
+                    fields:
+                      id:
+                        type: text
+                        value: vlcsnap-2022-11-01-12h24m18s051_anepu4
+                      url:
+                        type: text
+                        value: >-
+                          https://res.cloudinary.com/dev-triumph-motorcycles/image/upload/v1690791416/vlcsnap-2022-11-01-12h24m18s051_anepu4.png
+                      size:
+                        type: number
+                        value: 2131602
+                      title:
+                        type: text
+                        value: vlcsnap-2022-11-01-12h24m18s051_anepu4
+                      width:
+                        type: number
+                        value: 1920
+                      height:
+                        type: number
+                        value: 1090
+                    _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+                en-GB:
+                  - _id: d9007d90-af6b-430b-ac42-4e8b9448925e
+                    type: image
+                    fields:
+                      id:
+                        type: text
+                        value: vlcsnap-2022-11-01-12h24m18s051_anepu4
+                      url:
+                        type: text
+                        value: >-
+                          https://res.cloudinary.com/dev-triumph-motorcycles/image/upload/v1690791416/vlcsnap-2022-11-01-12h24m18s051_anepu4.png
+                      size:
+                        type: number
+                        value: 2131602
+                      title:
+                        type: text
+                        value: vlcsnap-2022-11-01-12h24m18s051_anepu4
+                      width:
+                        type: number
+                        value: 1920
+                      height:
+                        type: number
+                        value: 1090
+                    _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+                en-US:
+                  - _id: d9007d90-af6b-430b-ac42-4e8b9448925e
+                    type: image
+                    fields:
+                      id:
+                        type: text
+                        value: vlcsnap-2022-11-01-12h24m18s051_anepu4
+                      url:
+                        type: text
+                        value: >-
+                          https://res.cloudinary.com/dev-triumph-motorcycles/image/upload/v1690791416/vlcsnap-2022-11-01-12h24m18s051_anepu4.png
+                      size:
+                        type: number
+                        value: 2131602
+                      title:
+                        type: text
+                        value: vlcsnap-2022-11-01-12h24m18s051_anepu4
+                      width:
+                        type: number
+                        value: 1920
+                      height:
+                        type: number
+                        value: 1090
+                    _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+                fr-FR:
+                  - _id: d9007d90-af6b-430b-ac42-4e8b9448925e
+                    type: image
+                    fields:
+                      id:
+                        type: text
+                        value: vlcsnap-2022-11-01-12h24m18s051_anepu4
+                      url:
+                        type: text
+                        value: >-
+                          https://res.cloudinary.com/dev-triumph-motorcycles/image/upload/v1690791416/vlcsnap-2022-11-01-12h24m18s051_anepu4.png
+                      size:
+                        type: number
+                        value: 2131602
+                      title:
+                        type: text
+                        value: vlcsnap-2022-11-01-12h24m18s051_anepu4
+                      width:
+                        type: number
+                        value: 1920
+                      height:
+                        type: number
+                        value: 1090
+                    _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+            metaTitle:
+              type: text
+              locales:
+                de-DE: Basket
+                en-GB: Basket
+                en-US: Basket
+                fr-FR: Basket
+            metaDescription:
+              type: text
+              locales:
+                de-DE: Triumph basket
+                en-GB: Triumph basket
+                en-US: Triumph basket
+                fr-FR: Triumph basket
+  slots:
+    content:
+      - _id: 9ee6a9a8-c733-40c7-87a5-d23c9076907e
+        type: basketoverview
+        variant: ''
+  _locales:
+    - en-GB
+    - de-DE
+    - en-US
+    - fr-FR
+created: '2025-06-12T07:28:49.128149+00:00'
+modified: '2025-06-12T07:28:49.128149+00:00'
+pattern: false

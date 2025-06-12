@@ -1,0 +1,53 @@
+id: video
+name: Video
+created: '2025-06-12T07:30:44.789556+00:00'
+updated: '2025-06-12T07:30:44.789556+00:00'
+slugSettings:
+  required: 'no'
+useTeamPermissions: true
+fields:
+  - id: media
+    name: Media
+    type: asset
+    typeConfig:
+      max: 1
+      min: 0
+      allowedTypes:
+        - video
+    localizable: true
+    notLocalizedByDefault: true
+    allowConditionalValues: true
+  - id: muted
+    name: Muted
+    type: checkbox
+    typeConfig: null
+    allowConditionalValues: true
+  - id: controls
+    name: Controls
+    type: checkbox
+    typeConfig: null
+    allowConditionalValues: true
+  - id: loop
+    name: Loop
+    type: checkbox
+    typeConfig: null
+    allowConditionalValues: true
+  - id: poster
+    name: Poster
+    type: asset
+    typeConfig:
+      max: 1
+      min: 0
+      allowedTypes: []
+    localizable: true
+    allowConditionalValues: true
+  - id: autoplay
+    name: Autoplay
+    type: checkbox
+    typeConfig: null
+    allowConditionalValues: true
+description: ''
+icon: film
+type: block
+permissions: []
+previewConfigurations: []

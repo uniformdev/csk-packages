@@ -1,0 +1,130 @@
+composition:
+  _name: Dealership Form Step Pattern
+  _id: a38bc020-5082-44dc-ba62-e62e7cad1b6f
+  type: dealershipFormStep
+  parameters:
+    title:
+      type: text
+      locales:
+        en-GB: Choose your preferred dealership
+        fr-FR: Choisissez un endroit préféré
+    stepName:
+      type: text
+      locales:
+        en-GB: Choose Your Dealer
+        fr-FR: Sélectionner un concessionnaire
+    description:
+      type: text
+      locales:
+        en-GB: >-
+          Your selected dealer will contact you to discuss your request and
+          answer any questions you may have.
+        fr-FR: >-
+          Votre concessionnaire sélectionné vous contactera pour confirmer ou
+          suggérer un autre endroit en fonction de la disponibilité.
+    distanceUnit:
+      type: text
+      locales:
+        en-GB: mi
+        fr-FR: km
+    searchRadius:
+      type: number
+      locales:
+        en-GB: '50'
+        fr-FR: '100'
+    stepIdentifier:
+      type: text
+      value: tricmt_dealercode
+    filterModalTitle:
+      type: text
+      locales:
+        en-GB: Filter
+        fr-FR: Filtrer
+    filterDistanceTitle:
+      type: text
+      locales:
+        en-GB: ' Distance'
+        fr-FR: ' Distance'
+    filterBikeTypesTitle:
+      type: text
+      locales:
+        en-GB: Show me dealers that provide
+        fr-FR: Montrez-moi des concessionnaires qui proposent
+    requiredErrorMessage:
+      type: text
+      locales:
+        en-GB: Please select a dealership
+        fr-FR: Veuillez sélectionner un concessionnaire
+    noDealersFallbackText:
+      type: text
+      locales:
+        en-GB: >-
+          Your search has returned no results - please adjust your search
+          criteria.
+        fr-FR: Aucun concessionnaire trouvé
+    showDealersButtonText:
+      type: text
+      locales:
+        en-GB: Show all dealerships
+        fr-FR: Afficher tous les concessionnaires
+    closestDealershipTitle:
+      type: text
+      locales:
+        en-GB: Distance
+        fr-FR: Concessionnaire le plus proche
+    filterOptionsBikeTypes:
+      type: $block
+      value:
+        - _id: 3a7064d1-6e9e-4a62-825f-b7217c468be5
+          type: fieldPair
+          fields:
+            label:
+              type: text
+              locales:
+                en-GB: Off Road
+                fr-FR: Tout-terrain
+            value:
+              type: text
+              value: Off-Road
+        - _id: 6a5439ae-ca23-45c9-9a9b-c8befb3dc3f8
+          type: fieldPair
+          fields:
+            label:
+              type: text
+              locales:
+                en-GB: On Road
+                fr-FR: Sur route
+            value:
+              type: text
+              value: Road
+    lookupDealersInputLabel:
+      type: text
+      locales:
+        en-GB: Enter address or postcode
+        fr-FR: Adresse ou code postal
+    currentLocationButtonText:
+      type: text
+      locales:
+        en-GB: Use my current location
+        fr-FR: Utiliser ma position
+    dealersWithinDistanceText:
+      type: text
+      locales:
+        en-GB: '{{amountOfDealers}} dealers within {{distance}} miles of {{address}}'
+        fr-FR: >-
+          {{amountOfDealers}} concessionnaires dans un rayon de {{distance}}
+          miles de {{address}}
+    alertMessageEnableGeolocation:
+      type: text
+      locales:
+        en-GB: 'Gelocation is not currently supported by this browser. '
+        fr-FR: >-
+          La géolocalisation n'est pas prise en charge par ce navigateur.
+          Essayez de l'activer.
+  _dataResources: {}
+  _locales:
+    - en-GB
+    - fr-FR
+created: '2025-06-12T07:28:57.577373+00:00'
+modified: '2025-06-12T07:29:56.731+00:00'
+pattern: true

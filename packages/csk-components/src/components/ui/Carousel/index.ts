@@ -10,6 +10,11 @@ export type CarouselProps = Pick<
   children: (options: { className?: string; style?: React.CSSProperties }) => ReactElement;
   itemsPerPage?: string;
   gapX?: string;
+
+  arrowColor?: string;
+  arrowBackgroundColor?: string;
+
+  variant?: string;
 };
 
 export default dynamic(() => import('./carousel').then(mod => mod.Carousel));

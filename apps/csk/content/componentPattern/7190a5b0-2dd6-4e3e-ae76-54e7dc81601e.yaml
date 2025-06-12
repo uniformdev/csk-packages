@@ -1,0 +1,611 @@
+composition:
+  _name: Bike Slider Pattern
+  _id: 7190a5b0-2dd6-4e3e-ae76-54e7dc81601e
+  type: slider
+  parameters:
+    title:
+      type: text
+      locales:
+        cs-CZ: Insert the bike sub-headings for more information
+        da-DK: Insert the bike sub-headings for more information
+        de-AT: Insert the bike sub-headings for more information
+        de-CH: Insert the bike sub-headings for more information
+        de-DE: Insert the bike sub-headings for more information
+        el-GR: Insert the bike sub-headings for more information
+        en-AE: Insert the bike sub-headings for more information
+        en-AU: Insert the bike sub-headings for more information
+        en-CA: Insert the bike sub-headings for more information
+        en-GB: Insert the bike sub-headings for more information
+        en-IN: Insert the bike sub-headings for more information
+        en-NZ: Insert the bike sub-headings for more information
+        en-PH: Insert the bike sub-headings for more information
+        en-US: Insert the bike sub-headings for more information
+        es-AR: Insert the bike sub-headings for more information
+        es-ES: Insert the bike sub-headings for more information
+        es-MX: Insert the bike sub-headings for more information
+        es-US: Insert the bike sub-headings for more information
+        fi-FI: Insert the bike sub-headings for more information
+        fr-BE: Insert the bike sub-headings for more information
+        fr-CA: Insert the bike sub-headings for more information
+        fr-CH: Insert the bike sub-headings for more information
+        fr-FR: Insert the bike sub-headings for more information
+        fr-LU: Insert the bike sub-headings for more information
+        hr-HR: Insert the bike sub-headings for more information
+        hu-HU: Insert the bike sub-headings for more information
+        id-ID: Insert the bike sub-headings for more information
+        it-IT: Insert the bike sub-headings for more information
+        ja-JP: Insert the bike sub-headings for more information
+        ko-KR: Insert the bike sub-headings for more information
+        ms-MY: Insert the bike sub-headings for more information
+        nb-NO: Insert the bike sub-headings for more information
+        nl-BE: Insert the bike sub-headings for more information
+        nl-NL: Insert the bike sub-headings for more information
+        pl-PL: Insert the bike sub-headings for more information
+        pt-BR: Insert the bike sub-headings for more information
+        pt-PT: Insert the bike sub-headings for more information
+        ro-RO: Insert the bike sub-headings for more information
+        sk-SK: Insert the bike sub-headings for more information
+        sl-SI: Insert the bike sub-headings for more information
+        sv-SE: Insert the bike sub-headings for more information
+        th-TH: Insert the bike sub-headings for more information
+        tr-TR: Insert the bike sub-headings for more information
+        zh-CN: Insert the bike sub-headings for more information
+        zh-SG: Insert the bike sub-headings for more information
+        zh-TW: Insert the bike sub-headings for more information
+        sr-Latn-RS: Insert the bike sub-headings for more information
+    showArrowsOnMobile:
+      type: dex-segmented-control-parameter
+      value: 'false'
+    spacingBetweenSlides:
+      type: dex-segmented-control-parameter
+      value: 'true'
+  slots:
+    slides:
+      - _id: 72d2b9ea-27fa-49d7-92ab-410cea43431d
+        type: slide
+        slots:
+          content:
+            - _id: f0317894-8148-4556-98c6-711dd032cd69
+              type: mediablock
+              slots:
+                overlay:
+                  - _id: d1f0360b-8c42-4a58-b3dc-5158c7d9b3e8
+                    type: $slotSection
+                    parameters:
+                      name:
+                        type: text
+                        value: Articles
+                      specific:
+                        type: array
+                        value:
+                          - article
+                          - columns
+                          - mediaGrid
+                      groupType:
+                        type: text
+                        value: specific
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                label:
+                  type: text
+                  value: >-
+                    ${#jptr:/Common translations
+                    Content/entries/19/entry/fields/text/value}
+                overlayTitle:
+                  type: text
+                  value: >-
+                    ${#jptr:/Common translations
+                    Content/entries/19/entry/fields/text/value}
+              _overridability:
+                parameters:
+                  $viz: 'yes'
+                  label: 'yes'
+                  media: 'yes'
+                  title: 'yes'
+                  description: 'yes'
+                  overlayTitle: 'yes'
+                hideLockedParameters: true
+        parameters:
+          title:
+            type: text
+            value: >-
+              ${#jptr:/Common translations
+              Content/entries/19/entry/fields/text/value}
+        _overridability:
+          parameters:
+            $viz: 'yes'
+            title: 'yes'
+          hideLockedParameters: false
+      - _id: c3020427-30a2-48a9-b4e4-f859d8c4c864
+        type: slide
+        slots:
+          content:
+            - _id: 09f3e275-e6da-463b-85cb-5dcf74d36f9d
+              type: mediablock
+              slots:
+                overlay:
+                  - _id: e1595ea8-1653-4c1b-97e3-a085999f94ae
+                    type: $slotSection
+                    parameters:
+                      name:
+                        type: text
+                        value: Articles
+                      specific:
+                        type: array
+                        value:
+                          - article
+                          - columns
+                          - mediaGrid
+                      groupType:
+                        type: text
+                        value: specific
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                label:
+                  type: text
+                  locales:
+                    cs-CZ: Technologie
+                    da-DK: Technology
+                    de-AT: Technik
+                    de-CH: Technik
+                    de-DE: Technik
+                    el-GR: Τεχνολογια
+                    en-AE: Technology
+                    en-AU: Technology
+                    en-CA: Technology
+                    en-GB: Technology
+                    en-IN: Technology
+                    en-NZ: Technology
+                    en-PH: Technology
+                    en-US: Technology
+                    es-AR: Tecnología
+                    es-ES: Tecnología
+                    es-MX: Tecnología
+                    es-US: Tecnología
+                    fi-FI: Technology
+                    fr-BE: Technologies
+                    fr-CA: Technologies
+                    fr-CH: Technologies
+                    fr-FR: Technologies
+                    fr-LU: Technologies
+                    hr-HR: Tehnologija
+                    hu-HU: Technológia
+                    id-ID: Technology
+                    it-IT: Tecnologie
+                    ja-JP: テクノロジー
+                    ko-KR: 기술
+                    ms-MY: Technology
+                    nb-NO: Technology
+                    nl-BE: Technologie
+                    nl-NL: Technologie
+                    pl-PL: Technologia
+                    pt-BR: Tecnologia
+                    pt-PT: Tecnologia
+                    ro-RO: Tehnologie
+                    sk-SK: Technológia
+                    sl-SI: Tehnologija
+                    sv-SE: Technology
+                    th-TH: เทคโนโลยี
+                    tr-TR: Technology
+                    zh-CN: 先进科技
+                    zh-SG: Technology
+                    zh-TW: 科技
+                    sr-Latn-RS: Tehnologija
+                overlayTitle:
+                  type: text
+                  locales:
+                    cs-CZ: Technologie
+                    da-DK: Technology
+                    de-AT: Technik
+                    de-CH: Technik
+                    de-DE: Technik
+                    el-GR: Τεχνολογια
+                    en-AE: Technology
+                    en-AU: Technology
+                    en-CA: Technology
+                    en-GB: Technology
+                    en-IN: Technology
+                    en-NZ: Technology
+                    en-PH: Technology
+                    en-US: Technology
+                    es-AR: Tecnología
+                    es-ES: Tecnología
+                    es-MX: Tecnología
+                    es-US: Tecnología
+                    fi-FI: Technology
+                    fr-BE: Technologies
+                    fr-CA: Technologies
+                    fr-CH: Technologies
+                    fr-FR: Technologies
+                    fr-LU: Technologies
+                    hr-HR: Tehnologija
+                    hu-HU: Technológia
+                    id-ID: Technology
+                    it-IT: Tecnologie
+                    ja-JP: テクノロジー
+                    ko-KR: 기술
+                    ms-MY: Technology
+                    nb-NO: Technology
+                    nl-BE: Technologie
+                    nl-NL: Technologie
+                    pl-PL: Technologia
+                    pt-BR: Tecnologia
+                    pt-PT: Tecnologia
+                    ro-RO: Tehnologie
+                    sk-SK: Technológia
+                    sl-SI: Tehnologija
+                    sv-SE: Technology
+                    th-TH: เทคโนโลยี
+                    tr-TR: Technology
+                    zh-CN: 先进科技
+                    zh-SG: Technology
+                    zh-TW: 科技
+                    sr-Latn-RS: Tehnologija
+              _overridability:
+                parameters:
+                  $viz: 'yes'
+                  label: 'yes'
+                  media: 'yes'
+                  title: 'yes'
+                  description: 'yes'
+                  overlayTitle: 'yes'
+                hideLockedParameters: true
+        parameters:
+          title:
+            type: text
+            locales:
+              cs-CZ: Technologie
+              da-DK: Technology
+              de-AT: Technik
+              de-CH: Technik
+              de-DE: Technik
+              el-GR: Τεχνολογια
+              en-AE: Technology
+              en-AU: Technology
+              en-CA: Technology
+              en-GB: Technology
+              en-IN: Technology
+              en-NZ: Technology
+              en-PH: Technology
+              en-US: Technology
+              es-AR: Tecnología
+              es-ES: Tecnología
+              es-MX: Tecnología
+              es-US: Tecnología
+              fi-FI: Technology
+              fr-BE: Technologies
+              fr-CA: Technologies
+              fr-CH: Technologies
+              fr-FR: Technologies
+              fr-LU: Technologies
+              hr-HR: Tehnologija
+              hu-HU: Technológia
+              id-ID: Technology
+              it-IT: Tecnologie
+              ja-JP: テクノロジー
+              ko-KR: 기술
+              ms-MY: Technology
+              nb-NO: Technology
+              nl-BE: Technologie
+              nl-NL: Technologie
+              pl-PL: Technologia
+              pt-BR: Tecnologia
+              pt-PT: Tecnologia
+              ro-RO: Tehnologie
+              sk-SK: Technológia
+              sl-SI: Tehnologija
+              sv-SE: Technology
+              th-TH: เทคโนโลยี
+              tr-TR: Technology
+              zh-CN: 先进科技
+              zh-SG: Technology
+              zh-TW: 科技
+              sr-Latn-RS: Tehnologija
+        _overridability:
+          parameters:
+            $viz: 'yes'
+            title: 'yes'
+          hideLockedParameters: false
+      - _id: 3162e67e-1a90-4663-9332-72c850c3cd85
+        type: slide
+        slots:
+          content:
+            - _id: 5b1d8b25-23c3-4080-ab42-101909b932ab
+              type: mediablock
+              slots:
+                overlay:
+                  - _id: 60976a18-06ac-49b1-a155-c97d402ab49f
+                    type: $slotSection
+                    parameters:
+                      name:
+                        type: text
+                        value: Articles
+                      specific:
+                        type: array
+                        value:
+                          - article
+                          - columns
+                          - mediaGrid
+                      groupType:
+                        type: text
+                        value: specific
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                label:
+                  type: text
+                  value: >-
+                    ${#jptr:/Common translations
+                    Content/entries/18/entry/fields/text/value}
+                overlayTitle:
+                  type: text
+                  value: >-
+                    ${#jptr:/Common translations
+                    Content/entries/18/entry/fields/text/value}
+              _overridability:
+                parameters:
+                  $viz: 'yes'
+                  label: 'yes'
+                  media: 'yes'
+                  title: 'yes'
+                  description: 'yes'
+                  overlayTitle: 'yes'
+                hideLockedParameters: true
+        parameters:
+          title:
+            type: text
+            value: >-
+              ${#jptr:/Common translations
+              Content/entries/18/entry/fields/text/value}
+        _overridability:
+          parameters:
+            $viz: 'yes'
+            title: 'yes'
+          hideLockedParameters: false
+      - _id: 941fd49c-4ee7-43cd-9363-74ba36f65700
+        type: slide
+        slots:
+          content:
+            - _id: 8936a6a0-a780-4550-b2b5-78d87ef50dac
+              type: mediablock
+              slots:
+                overlay:
+                  - _id: 612ca879-fb35-4364-83ad-f6ebbe3a489f
+                    type: $slotSection
+                    parameters:
+                      name:
+                        type: text
+                        value: Articles
+                      specific:
+                        type: array
+                        value:
+                          - article
+                          - columns
+                          - mediaGrid
+                      groupType:
+                        type: text
+                        value: specific
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                label:
+                  type: text
+                  value: >-
+                    ${#jptr:/Common translations
+                    Content/entries/11/entry/fields/text/value}
+                overlayTitle:
+                  type: text
+                  value: >-
+                    ${#jptr:/Common translations
+                    Content/entries/11/entry/fields/text/value}
+              _overridability:
+                parameters:
+                  $viz: 'yes'
+                  label: 'yes'
+                  media: 'yes'
+                  title: 'yes'
+                  description: 'yes'
+                  overlayTitle: 'yes'
+                hideLockedParameters: true
+        parameters:
+          title:
+            type: text
+            value: >-
+              ${#jptr:/Common translations
+              Content/entries/11/entry/fields/text/value}
+        _overridability:
+          parameters:
+            $viz: 'yes'
+            title: 'yes'
+          hideLockedParameters: false
+      - _id: b8ed1045-3fa3-40a4-b702-bbe6a96b4e5c
+        type: slide
+        slots:
+          content:
+            - _id: cea2a520-d4be-4942-a2ee-0f9496a8d92d
+              type: mediablock
+              slots:
+                overlay:
+                  - _id: 589ab248-585a-4c88-b1f9-1714fe7e88c3
+                    type: $slotSection
+                    parameters:
+                      name:
+                        type: text
+                        value: Articles
+                      specific:
+                        type: array
+                        value:
+                          - article
+                          - columns
+                          - mediaGrid
+                      groupType:
+                        type: text
+                        value: specific
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                label:
+                  type: text
+                  value: >-
+                    ${#jptr:/Common translations
+                    Content/entries/6/entry/fields/text/value}
+                overlayTitle:
+                  type: text
+                  value: >-
+                    ${#jptr:/Common translations
+                    Content/entries/6/entry/fields/text/value}
+              _overridability:
+                parameters:
+                  $viz: 'yes'
+                  label: 'yes'
+                  media: 'yes'
+                  title: 'yes'
+                  description: 'yes'
+                  overlayTitle: 'yes'
+                hideLockedParameters: true
+        parameters:
+          title:
+            type: text
+            value: >-
+              ${#jptr:/Common translations
+              Content/entries/6/entry/fields/text/value}
+        _overridability:
+          parameters:
+            $viz: 'yes'
+            title: 'yes'
+          hideLockedParameters: false
+      - _id: 539b687c-fcf9-47ec-bf88-c97fc65c0015
+        type: slide
+        slots:
+          content:
+            - _id: 16b67ca8-365c-4f0d-8128-77968b1a4728
+              type: mediablock
+              slots:
+                overlay:
+                  - _id: 110cda5e-ac18-4412-adf0-ef95d27f309d
+                    type: $slotSection
+                    parameters:
+                      name:
+                        type: text
+                        value: Articles
+                      specific:
+                        type: array
+                        value:
+                          - article
+                          - columns
+                          - mediaGrid
+                      groupType:
+                        type: text
+                        value: specific
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                label:
+                  type: text
+                  value: >-
+                    ${#jptr:/Common translations
+                    Content/entries/7/entry/fields/text/value}
+                overlayTitle:
+                  type: text
+                  value: >-
+                    ${#jptr:/Common translations
+                    Content/entries/7/entry/fields/text/value}
+              _overridability:
+                parameters:
+                  $viz: 'yes'
+                  label: 'yes'
+                  media: 'yes'
+                  title: 'yes'
+                  description: 'yes'
+                  overlayTitle: 'yes'
+                hideLockedParameters: true
+        parameters:
+          title:
+            type: text
+            value: >-
+              ${#jptr:/Common translations
+              Content/entries/7/entry/fields/text/value}
+        _overridability:
+          parameters:
+            $viz: 'yes'
+            title: 'yes'
+          hideLockedParameters: false
+      - _id: d00d2ca5-823d-4234-9966-9544a93cb2e9
+        type: $slotSection
+        parameters:
+          name:
+            type: text
+            value: Additional Slides
+        _overridability:
+          hideLockedParameters: true
+  _dataResources:
+    Common translations Content:
+      type: commonTranslations
+      variables:
+        locale: ${locale}
+        search: ''
+        filters: '{"type[eq]":"commonTranslations"}'
+        contentTypes: commonTranslations
+      isPatternParameter: true
+      ignorePatternParameterDefault: false
+  _overridability:
+    parameters:
+      $viz: 'yes'
+      title: 'yes'
+      spacing: 'yes'
+      accentColor: 'yes'
+      showTabsOnMobile: 'yes'
+    hideLockedParameters: false
+  _locales:
+    - en-GB
+    - en-US
+    - es-US
+    - en-CA
+    - fr-CA
+    - sv-SE
+    - nb-NO
+    - da-DK
+    - fi-FI
+    - en-IN
+    - tr-TR
+    - en-AU
+    - ms-MY
+    - en-NZ
+    - zh-SG
+    - en-PH
+    - en-AE
+    - id-ID
+    - de-DE
+    - de-AT
+    - de-CH
+    - fr-FR
+    - fr-CH
+    - fr-BE
+    - fr-LU
+    - es-ES
+    - es-MX
+    - es-AR
+    - pt-PT
+    - nl-NL
+    - nl-BE
+    - it-IT
+    - th-TH
+    - ja-JP
+    - zh-CN
+    - pl-PL
+    - pt-BR
+    - el-GR
+    - ko-KR
+    - hu-HU
+    - ro-RO
+    - cs-CZ
+    - sr-Latn-RS
+    - sl-SI
+    - sk-SK
+    - hr-HR
+    - zh-TW
+created: '2025-06-12T07:28:51.137671+00:00'
+modified: '2025-06-12T07:29:55.540732+00:00'
+pattern: true

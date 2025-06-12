@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: productlistpage
+name: ProductListPage
+icon: list
+parameters:
+  - id: robots
+    name: Robots
+    type: $block
+    typeConfig:
+      max: 1
+      allowedTypes:
+        - robots
+categoryId: 90b009c6-707b-49b2-a1c0-c5916278855c
+useTeamPermissions: true
+slots:
+  - id: content
+    name: Content
+    allowedComponents:
+      - hero
+      - productlist
+      - $localization
+      - $personalization
+      - $test
+      - richText
+      - ambientHero
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+defaults:
+  type: productlistpage
+  slots:
+    content:
+      - type: productlist
+slugSettings:
+  unique: 'no'
+  required: disabled
+  regularExpression: ''
+  regularExpressionMessage: ''
+canBeComposition: true
+created: '2025-06-12T07:28:36.489977+00:00'
+updated: '2025-06-12T07:28:36.489977+00:00'

@@ -1,0 +1,38 @@
+id: metaData
+name: Meta data
+created: '2025-06-12T07:30:42.237297+00:00'
+updated: '2025-06-12T07:30:42.237297+00:00'
+slugSettings:
+  required: 'no'
+useTeamPermissions: true
+fields:
+  - id: metaTitle
+    name: Meta title
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+    localizable: true
+  - id: metaDescription
+    name: Meta Description
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+    localizable: true
+  - id: metaImage
+    name: Meta Image
+    type: asset
+    helpText: ''
+    typeConfig:
+      max: 1
+      min: 0
+      required: false
+    localizable: true
+entryName: metaTitle
+thumbnailField: metaImage
+description: ''
+icon: play-list-search
+type: block
+permissions: []
+previewConfigurations: []

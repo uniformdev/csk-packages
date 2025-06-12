@@ -1,0 +1,50 @@
+created: '2025-06-12T07:31:46.230187+00:00'
+modified: '2025-06-12T07:31:46.230187+00:00'
+pattern: false
+entry:
+  _id: d8ef6282-34f2-4657-a471-ecf9af7396d6
+  _name: Tiger 900 Rally Pro
+  _slug: tiger-900-rally-pro
+  type: bike
+  fields:
+    key:
+      type: text
+      value: ${#jptr:/Single Product Content/key}
+    name:
+      type: text
+      locales:
+        en-GB: ${#jptr:/Single Product Content/name}
+    image:
+      type: asset
+      locales:
+        en-GB:
+          - _id: 94feaafc-0de0-406d-b4f2-fc505555d7a7
+            type: image
+            fields:
+              url:
+                type: text
+                value: >-
+                  ${#jptr:/Single Product
+                  Content/masterVariant/assets/0/sources/0/uri}
+            _source: custom-url
+    currency:
+      type: text
+      locales:
+        en-GB: GBP
+    fromPrice:
+      type: number
+      value: '1449500'
+    includeInTestRide:
+      type: checkbox
+      value: true
+    bikeCategorization:
+      type: select
+      value: Road
+  _dataResources:
+    Single Product Content:
+      type: singleProduct
+      variables:
+        locale: ${locale}
+        productId: 6659cc37-453a-4992-b01b-3bdff469760e
+  _locales:
+    - en-GB

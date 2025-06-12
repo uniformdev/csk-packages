@@ -1,0 +1,105 @@
+composition:
+  _name: Products Slider Pattern
+  _id: 9970f264-bff0-4909-a1c2-7ea91dabd66e
+  type: slider
+  parameters:
+    showArrowsOnMobile:
+      type: dex-segmented-control-parameter
+      value: 'true'
+    spacingBetweenSlides:
+      type: dex-segmented-control-parameter
+      value: 'true'
+  slots:
+    slides:
+      - _id: 3ba3f521-55de-4d8e-9606-40a8cebe19ea
+        type: $slotSection
+        parameters:
+          name:
+            type: text
+            value: Slides
+          specific:
+            type: array
+            value:
+              - slide
+          groupType:
+            type: text
+            value: specific
+        _overridability:
+          hideLockedParameters: true
+      - _id: 57db25e6-01be-4cf4-af9e-fb19d21e844c
+        type: $loop
+        slots:
+          body:
+            - _id: d6a79d33-cf3b-4e2d-9e27-899a84d76be2
+              type: slide
+              slots:
+                content:
+                  - _id: 7c6984ee-c384-45a8-8979-40c3e8d7b0a0
+                    type: productVariantCard
+                    parameters:
+                      slug:
+                        type: text
+                        value: >-
+                          ${#jptr:/Products Query with custom filters Content
+                          results Loop Item/slug}
+                      title:
+                        type: text
+                        locales:
+                          en-GB: >-
+                            ${#jptr:/Products Query with custom filters Content
+                            results Loop Item/name}
+                          en-US: >-
+                            ${#jptr:/Products Query with custom filters Content
+                            results Loop Item/name}
+                      variant:
+                        type: json
+                        value: >-
+                          ${#jptr:/Products Query with custom filters Content
+                          results Loop Item/masterVariant}
+                      categories:
+                        type: json
+                        value: >-
+                          ${#jptr:/Products Query with custom filters Content
+                          results Loop Item/categories}
+              parameters:
+                title:
+                  type: text
+                  locales:
+                    en-GB: >-
+                      ${#jptr:/Products Query with custom filters Content
+                      results Loop Item/name}
+                    en-US: >-
+                      ${#jptr:/Products Query with custom filters Content
+                      results Loop Item/name}
+        _dataResources:
+          Products Query with custom filters Content results Loop Item:
+            type: sys-reserved-loop
+            variables:
+              connectedData: '#jptr:/Products Query with custom filters Content/results:fa=c'
+  _dataResources:
+    Products Query with custom filters Content:
+      type: productsQueryWithCustomFilters
+      variables:
+        locale: ${locale}
+        keyword: tee
+        categories: categories.id:"e3f0c181-61c6-462c-a282-f3883785a8dd"
+        productType: productType.id:"7471eb6d-1490-4bea-b165-6390a2a9ae29"
+      isPatternParameter: true
+      ignorePatternParameterDefault: false
+  _overridability:
+    parameters:
+      $viz: 'yes'
+      title: 'yes'
+      spacing: 'yes'
+      accentColor: 'yes'
+      showTabsOnMobile: 'yes'
+      showArrowsOnMobile: 'yes'
+      spacingBetweenSlides: 'yes'
+  _locales:
+    - en-GB
+    - de-DE
+    - fr-FR
+    - en-US
+created: '2025-06-12T07:29:08.802608+00:00'
+modified: '2025-06-12T07:29:59.185004+00:00'
+pattern: true

@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: slider
+name: Slider
+icon: stories
+parameters:
+  - id: title
+    name: Title
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: showTabsOnMobile
+    name: Show tabs on mobile
+    type: checkbox
+    typeConfig: null
+  - id: showArrowsOnMobile
+    name: Show arrows on mobile
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: 'Yes'
+          value: 'true'
+        - key: 'No'
+          value: 'false'
+      defaultValue: 'false'
+  - id: accentColor
+    name: Accent color
+    type: dex-color-palette-parameter
+    typeConfig:
+      allowColors: []
+      selectedGroup: accent
+  - id: spacingBetweenSlides
+    name: Spacing between slides
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: 'Yes'
+          value: 'true'
+        - key: 'No'
+          value: 'false'
+      defaultValue: 'true'
+  - id: spacing
+    name: Spacing
+    type: dex-space-control-parameter
+    typeConfig:
+      selectedGroup: spacing
+  - id: linkButton
+    name: Link
+    type: $block
+    typeConfig:
+      max: 1
+      allowedTypes:
+        - linkButton
+categoryId: 9ff00250-0200-45ec-82d3-4e3b346d7ee6
+description: >-
+  Slider component that can behave as a slider on desktop and optionally as a
+  tab on mobile.
+useTeamPermissions: true
+slots:
+  - id: slides
+    name: Slides
+    allowedComponents:
+      - slide
+      - $loop
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: title
+canBeComposition: false
+created: '2025-06-12T07:28:39.993017+00:00'
+updated: '2025-06-12T07:28:39.993017+00:00'

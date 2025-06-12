@@ -1,0 +1,39 @@
+id: link
+name: Link
+created: '2025-06-12T07:30:40.702094+00:00'
+updated: '2025-06-12T07:30:40.702094+00:00'
+slugSettings:
+  required: 'no'
+useTeamPermissions: true
+fields:
+  - id: link
+    name: Link
+    type: link
+    typeConfig:
+      required: true
+    localizable: true
+  - id: title
+    name: Title
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: target
+    name: Target
+    type: select
+    typeConfig:
+      options:
+        - text: New window
+          value: _blank
+        - text: Same window
+          value: _self
+  - id: description
+    name: Alternative text / Description
+    type: text
+    typeConfig: null
+    localizable: true
+entryName: link
+description: ''
+icon: link
+type: block
+permissions: []
+previewConfigurations: []

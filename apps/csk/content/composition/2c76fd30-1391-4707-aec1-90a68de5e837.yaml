@@ -1,0 +1,91 @@
+composition:
+  _name: Preorder Order Confirmation
+  _id: 2c76fd30-1391-4707-aec1-90a68de5e837
+  _slug: orderconfirmation
+  type: orderconfirmationpage
+  parameters:
+    robots:
+      type: $block
+      value:
+        - _id: 636d59f1-d425-4c7e-b14f-3b76a40bbb62
+          type: robots
+          fields:
+            noindex:
+              type: checkbox
+              value: true
+            nofollow:
+              type: checkbox
+              value: true
+    metaData:
+      type: $block
+      value:
+        - _id: 44931671-cd47-4bd0-b6d0-12989bd4740c
+          type: metaData
+          fields:
+            metaTitle:
+              type: text
+              locales:
+                en-GB: Preorder order confirmation
+            metaDescription:
+              type: text
+              locales:
+                en-GB: Preorder order confirmation
+  slots:
+    content:
+      - _id: 54e2fd26-e5bd-442a-95ca-a8c02fb4d957
+        type: orderconfirmation
+        variant: preorder
+        parameters:
+          description:
+            type: richText
+            locales:
+              en-GB:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Congratulations on reserving your new Triumph
+                            motorcycle!
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 1
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Your journey begins now. Your Triumph dealer will
+                            reach out soon to invite you to the showroom to see
+                            your motorcycle as soon as it’s available. They’ll
+                            keep you updated every step of the way, including
+                            the delivery date for your new ride.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                  direction: ltr
+  _locales:
+    - en-GB
+created: '2025-06-12T07:29:05.9979+00:00'
+modified: '2025-06-12T07:29:05.9979+00:00'
+pattern: false

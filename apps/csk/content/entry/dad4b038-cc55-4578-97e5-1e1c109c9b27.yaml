@@ -1,0 +1,61 @@
+created: '2025-06-12T07:31:40.218255+00:00'
+modified: '2025-06-12T07:31:40.218255+00:00'
+pattern: false
+entry:
+  _id: dad4b038-cc55-4578-97e5-1e1c109c9b27
+  _name: TF 250-X
+  _slug: tf-250-x
+  type: bike
+  fields:
+    key:
+      type: text
+      value: ${#jptr:/Single Product Content/key}
+    name:
+      type: text
+      locales:
+        en-GB: ${#jptr:/Single Product Content/name}
+    image:
+      type: asset
+      locales:
+        en-GB:
+          - _id: 839237ac-6071-4133-8a85-8dbb34ed2f52
+            type: image
+            fields:
+              id:
+                type: text
+                value: TF250X_MY24_JetBlack_RHS_mctxe5
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1704976181/TF250X_MY24_JetBlack_RHS_mctxe5.png
+              size:
+                type: number
+                value: 18562422
+              title:
+                type: text
+                value: TF250X_MY24_JetBlack_RHS_mctxe5
+              width:
+                type: number
+                value: 9600
+              height:
+                type: number
+                value: 5400
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+    currency:
+      type: text
+      locales:
+        en-GB: GBP
+    fromPrice:
+      type: number
+      value: '979500'
+    bikeCategorization:
+      type: select
+      value: Off-Road
+  _dataResources:
+    Single Product Content:
+      type: singleProduct
+      variables:
+        locale: ${locale}
+        productId: b87418ff-1d5d-4889-bcfb-00bee5e370e8
+  _locales:
+    - en-GB

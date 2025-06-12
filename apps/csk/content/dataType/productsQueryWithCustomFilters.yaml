@@ -1,0 +1,110 @@
+id: productsQueryWithCustomFilters
+displayName: Products Query with custom filters
+ttl: 30
+path: /product-projections/search
+custom: {}
+method: GET
+purgeKey: 2b3704b8-0631-4729-a777-a4e189ac9828
+archetype: query
+variables:
+  slug:
+    type: text
+    default: ''
+    displayName: Slug
+  sort:
+    type: text
+    default: ''
+    displayName: Sort by
+  limit:
+    type: text
+    default: '10'
+    displayName: Amount of items to return
+  price:
+    type: text
+    default: ''
+    displayName: Price
+  locale:
+    type: text
+    default: ''
+    displayName: Locale
+  offset:
+    type: text
+    default: '0'
+    displayName: Amount of items to skip
+  keyword:
+    type: text
+    default: ''
+    displayName: Keyword
+  categories:
+    type: text
+    default: ''
+    displayName: Filter by category(s) id
+  productKey:
+    type: text
+    default: ''
+    displayName: Filter by product key
+  productType:
+    type: text
+    default: ''
+    displayName: Filter by product type id
+  priceChannel:
+    type: text
+    default: ''
+    displayName: Price channel code
+  priceCurrency:
+    type: text
+    default: ''
+    displayName: Price currency code
+  storeProjection:
+    type: text
+    default: ''
+    displayName: Store key
+  productTypeFilter:
+    type: text
+    default: ''
+    displayName: Filter by product type id
+parameters:
+  - key: limit
+    value: ${limit}
+    omitIfEmpty: true
+  - key: offset
+    value: ${offset}
+    omitIfEmpty: true
+  - key: text
+    value: ${keyword}
+    omitIfEmpty: true
+  - key: filter
+    value: ${productTypeFilter}
+    omitIfEmpty: true
+  - key: filter
+    value: ${productKey}
+    omitIfEmpty: true
+  - key: filter
+    value: ${slug}
+    omitIfEmpty: true
+  - key: filter
+    value: ${price}
+    omitIfEmpty: true
+  - key: filter
+    value: ${categories}
+    omitIfEmpty: true
+  - key: sort
+    value: ${sort}
+    omitIfEmpty: true
+  - key: localeProjection
+    value: ${locale}
+  - key: priceCurrency
+    value: ${priceCurrency}
+    omitIfEmpty: true
+  - key: priceChannel
+    value: ${priceChannel}
+    omitIfEmpty: true
+  - key: storeProjection
+    value: ${storeProjection}
+    omitIfEmpty: true
+  - key: expand
+    value: categories[*].key
+  - key: expand
+    value: productType
+dataSourceId: commercetoolsv2
+allowedOnComponents: []

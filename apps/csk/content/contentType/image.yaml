@@ -1,0 +1,62 @@
+id: image
+name: Image
+created: '2025-06-12T07:30:39.308717+00:00'
+updated: '2025-06-12T07:30:39.308717+00:00'
+slugSettings:
+  required: 'no'
+useTeamPermissions: true
+fields:
+  - id: alternativeText
+    name: Alternative text
+    type: text
+    helpText: Specifies an alternate text for the image
+    typeConfig:
+      required: false
+    localizable: true
+    allowConditionalValues: true
+  - id: media
+    name: Media
+    type: asset
+    typeConfig:
+      max: 1
+      min: 0
+      required: true
+      allowedTypes:
+        - image
+    localizable: true
+    allowConditionalValues: true
+  - id: aspectRatio
+    name: Aspect ratio
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Automatic
+          value: automatic
+        - key: Square
+          value: square
+        - key: Portrait
+          value: portrait
+        - key: Landscape
+          value: landscape
+      defaultValue: automatic
+  - id: aspectRatioDesktop
+    name: Aspect ratio desktop
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Automatic
+          value: automatic
+        - key: Square
+          value: square
+        - key: Portrait
+          value: portrait
+        - key: Landscape
+          value: landscape
+      defaultValue: automatic
+entryName: media
+thumbnailField: image
+description: ''
+icon: image
+type: block
+permissions: []
+previewConfigurations: []

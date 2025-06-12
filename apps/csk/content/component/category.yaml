@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: category
+name: Category
+icon: notes
+parameters: []
+categoryId: 90b009c6-707b-49b2-a1c0-c5916278855c
+useTeamPermissions: true
+slots:
+  - id: locales
+    name: Locales
+    maxComponents: 1
+    minComponents: 1
+    allowedComponents:
+      - categoryTranslation
+      - $localization
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+defaults:
+  type: category
+  slots:
+    locales:
+      - type: $localization
+slugSettings:
+  unique: 'no'
+  required: 'yes'
+  regularExpression: ''
+  regularExpressionMessage: ''
+canBeComposition: true
+created: '2025-06-12T07:28:24.146582+00:00'
+updated: '2025-06-12T07:28:24.146582+00:00'

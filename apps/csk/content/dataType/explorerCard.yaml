@@ -1,0 +1,15 @@
+id: explorerCard
+displayName: Explorer Card
+path: /single
+custom:
+  allowedContentTypes:
+    - explorerCard
+method: GET
+purgeKey: 8320b561-ba46-4b44-849a-522a8cc68d33
+archetype: singleEntry
+variables:
+  entryId:
+    type: text
+    default: ''
+dataSourceId: uniformContent
+allowedOnComponents: []

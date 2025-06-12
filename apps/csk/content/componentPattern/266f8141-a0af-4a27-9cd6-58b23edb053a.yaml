@@ -1,0 +1,44 @@
+composition:
+  _name: Product variant card Pattern
+  _id: 266f8141-a0af-4a27-9cd6-58b23edb053a
+  type: productVariantCard
+  parameters:
+    slug:
+      type: text
+      value: ${#jptr:/Single Product Content/slug}
+    title:
+      type: text
+      locales:
+        en-GB: ${#jptr:/Single Product Content/name}
+        en-US: ${#jptr:/Single Product Content/name}
+    variant:
+      type: json
+      value: ${#jptr:/Single Product Content/masterVariant}
+    categories:
+      type: json
+      value: ${#jptr:/Single Product Content/categories}
+  _dataResources:
+    Single Product Content:
+      type: singleProduct
+      variables:
+        locale: ${locale}
+        productId: 01bf3ed9-9783-4d95-b3a0-a2824b9ff5dd
+      isPatternParameter: true
+      ignorePatternParameterDefault: true
+  _overridability:
+    parameters:
+      link: 'no'
+      image: 'no'
+      price: 'no'
+      title: 'no'
+      product: 'no'
+      variant: 'yes'
+      variantKey: 'no'
+      description: 'no'
+    hideLockedParameters: true
+  _locales:
+    - en-GB
+    - en-US
+created: '2025-06-12T07:29:09.083993+00:00'
+modified: '2025-06-12T07:29:59.474442+00:00'
+pattern: true

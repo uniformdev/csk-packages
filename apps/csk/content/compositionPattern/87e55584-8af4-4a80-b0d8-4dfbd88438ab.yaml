@@ -1,0 +1,463 @@
+composition:
+  _name: Test Ride Form Pattern
+  _id: 87e55584-8af4-4a80-b0d8-4dfbd88438ab
+  type: multistepformwrapper
+  parameters:
+    formName:
+      type: text
+      locales:
+        en-GB: Request a Test Ride
+        fr-FR: Demander un essai
+    privacyPolicy:
+      type: richText
+      locales:
+        en-GB:
+          root:
+            type: root
+            format: ''
+            indent: 0
+            version: 1
+            children:
+              - tag: h3
+                type: heading
+                format: ''
+                indent: 0
+                version: 1
+                children:
+                  - mode: normal
+                    text: Triumph Motorcycles & privacy
+                    type: text
+                    style: ''
+                    detail: 0
+                    format: 0
+                    version: 1
+                direction: ltr
+              - type: paragraph
+                format: ''
+                indent: 0
+                version: 1
+                children:
+                  - mode: normal
+                    text: >-
+                      Of course, we always want to respect your privacy, so if
+                      you would prefer not to receive future updates about our
+                      products, services, or promotions, then please just click
+                      the unsubscribe box below when sending this request. We’ll
+                      also provide an easy way to opt out of future updates in
+                      any messages that we send in the future.
+                    type: text
+                    style: ''
+                    detail: 0
+                    format: 0
+                    version: 1
+                  - type: linebreak
+                    version: 1
+                  - type: linebreak
+                    version: 1
+                  - mode: normal
+                    text: >-
+                      Your personal data may be shared with our authorised
+                      dealers.
+                    type: text
+                    style: ''
+                    detail: 0
+                    format: 0
+                    version: 1
+                  - type: linebreak
+                    version: 1
+                  - type: linebreak
+                    version: 1
+                  - mode: normal
+                    text: >-
+                      You can read more about how we manage personal data in our
+                      Privacy Policy.
+                    type: text
+                    style: ''
+                    detail: 0
+                    format: 0
+                    version: 1
+                direction: ltr
+                textStyle: ''
+                textFormat: 0
+            direction: ltr
+        fr-FR:
+          root:
+            type: root
+            format: ''
+            indent: 0
+            version: 1
+            children:
+              - tag: h3
+                type: heading
+                format: ''
+                indent: 0
+                version: 1
+                children:
+                  - mode: normal
+                    text: Triumph Motorcycles & Confidentialité
+                    type: text
+                    style: ''
+                    detail: 0
+                    format: 0
+                    version: 1
+                direction: ltr
+              - type: paragraph
+                format: ''
+                indent: 0
+                version: 1
+                children:
+                  - mode: normal
+                    text: >-
+                      Bien sûr, nous souhaitons toujours respecter votre
+                      confidentialité. Si vous préférez ne pas recevoir de
+                      futures mises à jour concernant nos produits, services ou
+                      promotions, veuillez simplement cocher la case de
+                      désabonnement ci-dessous lors de l'envoi de cette demande.
+                      Nous fournirons également un moyen simple de se
+                      désinscrire des futures communications dans tous les
+                      messages que nous envoyons.
+                    type: text
+                    style: ''
+                    detail: 0
+                    format: 0
+                    version: 1
+                direction: ltr
+                textStyle: ''
+                textFormat: 0
+              - type: paragraph
+                format: ''
+                indent: 0
+                version: 1
+                children:
+                  - mode: normal
+                    text: >-
+                      Vos données personnelles peuvent être partagées avec nos
+                      concessionnaires agréés.
+                    type: text
+                    style: ''
+                    detail: 0
+                    format: 0
+                    version: 1
+                direction: ltr
+                textStyle: ''
+                textFormat: 0
+              - type: paragraph
+                format: ''
+                indent: 0
+                version: 1
+                children:
+                  - mode: normal
+                    text: >-
+                      Vous pouvez en savoir plus sur la gestion de vos données
+                      personnelles dans notre 
+                    type: text
+                    style: ''
+                    detail: 0
+                    format: 0
+                    version: 1
+                  - mode: normal
+                    text: Politique de Confidentialité
+                    type: text
+                    style: ''
+                    detail: 0
+                    format: 1
+                    version: 1
+                  - mode: normal
+                    text: .
+                    type: text
+                    style: ''
+                    detail: 0
+                    format: 0
+                    version: 1
+                direction: ltr
+                textStyle: ''
+                textFormat: 0
+            direction: ltr
+    marketingSignup:
+      type: text
+      locales:
+        en-GB: >-
+          Except for responding to your specific enquiry) if you would prefer
+          that we do not in the future keep you updated about our products,
+          services or promotions, please tick this box
+        fr-FR: >-
+          Sauf pour répondre à votre demande spécifique) si vous préférez que
+          nous ne vous tenions pas informé à l’avenir de nos produits, services
+          ou promotions, veuillez cocher cette case.
+    submissionNotice:
+      type: richText
+      locales:
+        en-GB:
+          root:
+            type: root
+            format: ''
+            indent: 0
+            version: 1
+            children:
+              - tag: h3
+                type: heading
+                format: ''
+                indent: 0
+                version: 1
+                children:
+                  - mode: normal
+                    text: Keeping in touch
+                    type: text
+                    style: ''
+                    detail: 0
+                    format: 0
+                    version: 1
+                direction: ltr
+              - type: paragraph
+                format: ''
+                indent: 0
+                version: 1
+                children:
+                  - mode: normal
+                    text: >-
+                      When you click ‘Send enquiry’, your request will be passed
+                      to one of our team here at Triumph Motorcycles or at one
+                      of our authorised dealers who will get back to you very
+                      soon.
+                    type: text
+                    style: ''
+                    detail: 0
+                    format: 0
+                    version: 1
+                  - type: linebreak
+                    version: 1
+                  - type: linebreak
+                    version: 1
+                  - mode: normal
+                    text: >-
+                      In addition, we’ll keep you updated in the future about
+                      our products, services, and promotions. We usually send
+                      our updates by email but may also contact you by
+                      telephone, post, text, or other similar messaging service.
+                    type: text
+                    style: ''
+                    detail: 0
+                    format: 0
+                    version: 1
+                direction: ltr
+                textStyle: ''
+                textFormat: 0
+            direction: ltr
+        fr-FR:
+          root:
+            type: root
+            format: ''
+            indent: 0
+            version: 1
+            children:
+              - tag: h3
+                type: heading
+                format: ''
+                indent: 0
+                version: 1
+                children:
+                  - mode: normal
+                    text: Rester en contact
+                    type: text
+                    style: ''
+                    detail: 0
+                    format: 0
+                    version: 1
+                direction: ltr
+              - type: paragraph
+                format: ''
+                indent: 0
+                version: 1
+                children:
+                  - mode: normal
+                    text: >-
+                      Lorsque vous cliquez sur "Envoyer une demande", votre
+                      demande sera transmise à un membre de notre équipe chez
+                      Triumph Motorcycles ou à l'un de nos concessionnaires
+                      agréés, qui vous répondra très rapidement.
+                    type: text
+                    style: ''
+                    detail: 0
+                    format: 0
+                    version: 1
+                direction: ltr
+                textStyle: ''
+                textFormat: 0
+              - type: paragraph
+                format: ''
+                indent: 0
+                version: 1
+                children:
+                  - mode: normal
+                    text: >-
+                      De plus, nous vous tiendrons informé à l'avenir de nos
+                      produits, services et promotions. Nous envoyons
+                      généralement nos mises à jour par e-mail, mais nous
+                      pouvons également vous contacter par téléphone, courrier,
+                      SMS ou autre service de messagerie similaire.
+                    type: text
+                    style: ''
+                    detail: 0
+                    format: 0
+                    version: 1
+                direction: ltr
+                textStyle: ''
+                textFormat: 0
+            direction: ltr
+    dynamicsFormFields:
+      type: $block
+      value:
+        - _id: bb9ca957-42fa-43f8-940b-b153902d1a2a
+          type: hiddenDynamicsFormField
+          fields:
+            key:
+              type: text
+              value: tricmt_type
+            value:
+              type: text
+              value: '982890004'
+        - _id: f3dc1a28-23bb-4370-a8ac-12ef7047cb49
+          type: hiddenDynamicsFormField
+          fields:
+            key:
+              type: text
+              value: tricmt_leadtype
+            value:
+              type: text
+              value: Test Ride Request
+        - _id: 7bf9cf8c-d953-48a1-b209-218146c63ea7
+          type: hiddenDynamicsFormField
+          fields:
+            key:
+              type: text
+              value: tricmt_leadsource
+            value:
+              type: text
+              value: '982890002'
+        - _id: ffd64d85-7741-4e20-87f0-be36ea6a2328
+          type: hiddenDynamicsFormField
+          fields:
+            key:
+              type: text
+              value: tricmt_locale
+            value:
+              type: text
+              locales:
+                en-GB: ${locale}
+                fr-FR: ${locale}
+        - _id: ad76d540-b3aa-41ea-a34c-a36f4bb010b9
+          type: hiddenDynamicsFormField
+          fields:
+            key:
+              type: text
+              value: tricmt_captureplatform
+            value:
+              type: text
+              value: Triumph Website
+        - _id: c2d185d4-78ef-4fa8-b074-249e3891e273
+          type: hiddenDynamicsFormField
+          fields:
+            key:
+              type: text
+              value: tricmt_captureurl
+            value:
+              type: text
+              value: >-
+                http://www.triumphmotorcycles.co.uk/triumph-website/forms/test-ride
+        - _id: ecc40bf7-62cf-4820-a412-9597c36bfdcc
+          type: hiddenDynamicsFormField
+          fields:
+            key:
+              type: text
+              value: tricmt_capturecomponent
+            value:
+              type: text
+              value: 2024-test-ride-range
+        - _id: c22a10b0-557b-40df-8406-f0d6c26db734
+          type: hiddenDynamicsFormField
+          fields:
+            key:
+              type: text
+              value: tricmt_source
+            value:
+              type: text
+              value: Direct
+    submissionButtonText:
+      type: text
+      locales:
+        en-GB: SEND ENQUIRY
+        fr-FR: ENVOYER LA DEMANDE
+  slots:
+    content:
+      - _id: 8764de3e-4428-4b8e-ae02-b3ac3e8a8702
+        type: selectBikeFormStep
+        _pattern: 406033df-d85f-4fd3-93bf-6dbabacdd768
+      - _id: 3b19e387-10ea-460a-afe9-01623fe694f5
+        type: genericFormStep
+        _pattern: 6513b630-cdc2-4194-baca-e37e3593388d
+      - _id: 67427368-36f2-4ddd-98e0-532aa1a9bd8b
+        type: dealershipFormStep
+        _pattern: a38bc020-5082-44dc-ba62-e62e7cad1b6f
+      - _id: e435b9f3-3e49-48ac-8412-e444759fb105
+        type: calendarFormStep
+        _pattern: 2afcd009-a413-4c2a-9515-cf5be79df91c
+    orderconfirmation:
+      - _id: 0709e98f-96bc-4943-a4d3-a6f105534a11
+        type: orderConfirmationFormStep
+        _pattern: b83ca548-069b-482c-833c-49992c274d36
+  _dataResources:
+    Bike Family List Content:
+      type: bikeFamilyList
+      variables:
+        locale: ${locale}
+        search: ''
+        contentTypes: bikeFamily
+      isPatternParameter: true
+      ignorePatternParameterDefault: true
+  _overrides:
+    0709e98f-96bc-4943-a4d3-a6f105534a11:
+      dataResources:
+        Multiple Explorer Card Selection Content:
+          type: multipleExplorerCardSelection
+          variables:
+            locale: ${locale}
+            entryIds: >-
+              06ee5b3f-cde7-48fc-bf98-d1d2f8c52eb8,0fc2845f-c6cf-4c17-89c7-3ee7d5737530,d5f68ab1-1a48-4d9d-a54d-74128b09a19f
+    67427368-36f2-4ddd-98e0-532aa1a9bd8b:
+      dataResources:
+        Content Translations:
+          type: contentTranslationGroup
+          variables:
+            locale: ${locale}
+            entryId: d512c4e5-71fa-4b05-bed2-bbea5105cf22
+    8764de3e-4428-4b8e-ae02-b3ac3e8a8702:
+      dataResources:
+        Content Translations:
+          type: contentTranslationGroup
+          variables:
+            locale: ${locale}
+            entryId: d512c4e5-71fa-4b05-bed2-bbea5105cf22
+        Bike Family List Content:
+          type: bikeFamilyList
+          variables:
+            locale: ${locale}
+            search: ''
+            filters: '{"type[eq]":"bikeFamily","name[neq]":"MOTOCROSS"}'
+            uiFilters: >-
+              [{"field":"type","operator":"eq","value":"bikeFamily"},{"field":"name","operator":"neq","value":"MOTOCROSS"}]
+            contentTypes: bikeFamily
+    e435b9f3-3e49-48ac-8412-e444759fb105:
+      dataResources:
+        Content Translations:
+          type: contentTranslationGroup
+          variables:
+            locale: ${locale}
+            entryId: d512c4e5-71fa-4b05-bed2-bbea5105cf22
+  _overridability:
+    hideLockedParameters: true
+  _locales:
+    - en-GB
+    - fr-FR
+created: '2025-06-12T07:29:18.316277+00:00'
+modified: '2025-06-12T07:29:49.799128+00:00'
+pattern: true

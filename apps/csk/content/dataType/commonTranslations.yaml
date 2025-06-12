@@ -1,0 +1,31 @@
+id: commonTranslations
+displayName: Common translations
+ttl: 30
+body: ''
+path: /query
+custom:
+  proposedName: Query Common translations
+  includeTotalCount: false
+  allowedContentTypes:
+    - commonTranslations
+method: GET
+purgeKey: 7829e13d-a7a5-4206-9334-1a8e9792a645
+archetype: queryEntries
+variables:
+  limit:
+    type: text
+    default: '20'
+  offset:
+    type: text
+    default: '0'
+  filters:
+    type: text
+    default: '{}'
+  orderBy:
+    type: text
+    default: ''
+  contentTypes:
+    type: text
+    default: ''
+dataSourceId: uniformContent
+allowedOnComponents: []

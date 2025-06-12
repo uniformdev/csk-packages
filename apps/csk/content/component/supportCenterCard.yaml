@@ -1,0 +1,56 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: supportCenterCard
+name: Support Center Card
+icon: card
+parameters:
+  - id: icon
+    name: Icon
+    type: $block
+    typeConfig:
+      max: 1
+      required: false
+      allowedTypes:
+        - image
+  - id: title
+    name: Title
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: description
+    name: Description
+    type: richText
+    typeConfig:
+      elements:
+        builtIn:
+          - unorderedList
+          - orderedList
+          - link
+      required: false
+      formatting:
+        builtIn:
+          - bold
+          - italic
+          - underline
+          - strikethrough
+          - superscript
+          - subscript
+      elementsConfig:
+        asset:
+          allowedTypes:
+            - image
+    localizable: true
+  - id: link
+    name: Link
+    type: $block
+    typeConfig:
+      max: 1
+      allowedTypes:
+        - link
+categoryId: 9ff00250-0200-45ec-82d3-4e3b346d7ee6
+useTeamPermissions: true
+slots: []
+titleParameter: title
+canBeComposition: false
+created: '2025-06-12T07:28:40.874076+00:00'
+updated: '2025-06-12T07:28:40.874076+00:00'

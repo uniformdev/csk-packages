@@ -1,0 +1,62 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: radioGroupFinance
+name: Radio Group Finance
+icon: layout-list
+parameters:
+  - id: radioGroupIdentifier
+    name: Radio Group Identifier for Value
+    type: text
+    helpText: >-
+      Assign a unique identifier for this step to store its selected value in
+      Dynamics (Logical name)
+    typeConfig:
+      regex: ^[a-z][a-zA-Z0-9_]*$
+      required: true
+      regexMessage: The word must start with a lowercase letter and no spaces are allowed
+  - id: radioGroupIdentifierLabel
+    name: Radio Group Identifier for Label
+    type: text
+    helpText: >-
+      Assign a unique identifier to store selected Label in Dynamics (Logical
+      name)
+    typeConfig:
+      required: true
+  - id: d92d2335-06f4-4aaf-8d08-5c8b189089e6
+    name: Validation Rules
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - required
+        - requiredErrorMessage
+  - id: required
+    name: Required
+    type: checkbox
+    typeConfig: null
+  - id: requiredErrorMessage
+    name: Required Error Message
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: useAsStepIndicator
+    name: Use As Step Indicator
+    type: checkbox
+    helpText: >-
+      Enable this to display the selected radio option's value in the step
+      indicator when this step is completed
+    typeConfig: null
+categoryId: a9a6f849-713b-4fdc-8a24-aab1d9440bcf
+useTeamPermissions: true
+slots:
+  - id: content
+    name: content
+    allowedComponents:
+      - radioOption
+      - radioOptionFinance
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+canBeComposition: false
+created: '2025-06-12T07:28:38.362209+00:00'
+updated: '2025-06-12T07:28:38.362209+00:00'

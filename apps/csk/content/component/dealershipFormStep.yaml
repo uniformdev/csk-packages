@@ -1,0 +1,183 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: dealershipFormStep
+name: Dealership Form Step
+icon: list
+parameters:
+  - id: stepName
+    name: Step Name
+    type: text
+    typeConfig:
+      required: true
+    localizable: true
+  - id: stepIdentifier
+    name: Step Identifier
+    type: text
+    helpText: >-
+      Assign a unique identifier for this step to store its selected value in
+      Dynamics (Logical name)
+    typeConfig:
+      regex: ^[a-z][a-zA-Z0-9_]*$
+      required: true
+      regexMessage: The word must start with a lowercase letter and no spaces are allowed
+  - id: title
+    name: Title
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: description
+    name: Description
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: 103b52c7-5980-412d-828a-f8788f6b1d55
+    name: Content - Selected Dealer Card
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - closestDealershipTitle
+        - alertMessageEnableGeolocation
+  - id: closestDealershipTitle
+    name: Closest Dealership Title
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: alertMessageEnableGeolocation
+    name: Alert Message Enable Geolocation
+    type: text
+    helpText: >-
+      This text is shown in an alert if user tries to connect geolocation, but
+      it is not enabled in browser.
+    typeConfig:
+      required: true
+    localizable: true
+  - id: 2de1764b-73ae-4c63-9660-3dc686aa544b
+    name: Content - Dealers List
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - showDealersButtonText
+        - filterModalTitle
+        - filterBikeTypesTitle
+        - filterDistanceTitle
+        - noDealersFallbackText
+        - dealersWithinDistanceText
+  - id: showDealersButtonText
+    name: Show Dealers Button Text
+    type: text
+    typeConfig:
+      required: true
+    localizable: true
+  - id: filterModalTitle
+    name: Filter Modal Title
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: filterBikeTypesTitle
+    name: Filter Bike Types Title
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: filterDistanceTitle
+    name: Filter Distance Title
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: noDealersFallbackText
+    name: No Dealers Fallback Text
+    type: text
+    typeConfig:
+      required: true
+    localizable: true
+  - id: dealersWithinDistanceText
+    name: Dealers Within Distance Text
+    type: text
+    helpText: >-
+      This text is displayed when filtering dealers, so user can see which
+      dealerships is within X distance of specific location
+    typeConfig:
+      required: false
+    localizable: true
+  - id: aac07e4c-c577-4fd4-b7f1-72f6bf730a3a
+    name: Content - Dealer Search
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - lookupDealersInputLabel
+        - currentLocationButtonText
+  - id: lookupDealersInputLabel
+    name: Dealer Search Label
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: currentLocationButtonText
+    name: Current Location Button Text
+    type: text
+    typeConfig:
+      required: true
+    localizable: true
+  - id: c8469a4c-f168-412c-8076-8713b6392dc3
+    name: Step Validation
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - requiredErrorMessage
+  - id: requiredErrorMessage
+    name: Required Error Message
+    type: text
+    typeConfig:
+      required: true
+    localizable: true
+  - id: cd8ff9db-c30d-4315-b448-4eee14d36cbf
+    name: Search Configurations
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - filterOptionsBikeTypes
+        - searchRadius
+        - distanceUnit
+  - id: filterOptionsBikeTypes
+    name: Filter Options Bike Types
+    type: $block
+    helpText: >-
+      Add blocks with a label (filter option translation) and a value (must
+      match expected bike type values from the data API)
+    typeConfig:
+      min: 0
+      required: true
+      allowedTypes:
+        - fieldPair
+        - $loop
+  - id: searchRadius
+    name: Max Search Radius
+    type: number
+    helpText: >-
+      Enter the maximum radius of the search area here, and specify the unit in
+      the 'Distance Unit' parameter below
+    typeConfig:
+      decimal: true
+      required: true
+      decimalPlaces: '2'
+    localizable: true
+  - id: distanceUnit
+    name: Distance Unit
+    type: text
+    helpText: Unit of measurement for searchRadius (m, km, mi, ft)
+    typeConfig:
+      regex: ^(m|km|mi|ft)$
+      required: true
+      regexMessage: >-
+        Invalid unit. Please provide one of the following: 'm', 'km', 'mi', or
+        'ft'
+    localizable: true
+useTeamPermissions: true
+slots: []
+titleParameter: stepName
+canBeComposition: false
+created: '2025-06-12T07:28:28.317684+00:00'
+updated: '2025-06-12T07:28:28.317684+00:00'

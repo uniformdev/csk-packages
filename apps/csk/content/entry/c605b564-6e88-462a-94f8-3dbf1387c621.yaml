@@ -1,0 +1,2757 @@
+created: '2025-06-12T07:31:41.426377+00:00'
+modified: '2025-06-12T07:31:41.426377+00:00'
+pattern: false
+entry:
+  _id: c605b564-6e88-462a-94f8-3dbf1387c621
+  _name: TIGER
+  _slug: tiger
+  type: bikeFamily
+  fields:
+    id:
+      type: text
+      value: mc_adventure
+    name:
+      type: text
+      locales:
+        cs-CZ: TIGER
+        da-DK: TIGER
+        de-AT: TIGER
+        de-CH: TIGER
+        de-DE: TIGER
+        el-GR: TIGER
+        en-AE: TIGER
+        en-AU: TIGER
+        en-CA: TIGER
+        en-GB: TIGER
+        en-IN: TIGER
+        en-NZ: TIGER
+        en-PH: TIGER
+        en-US: TIGER
+        es-AR: TIGER
+        es-ES: TIGER
+        es-MX: TIGER
+        es-US: TIGER
+        fi-FI: TIGER
+        fr-BE: TIGER
+        fr-CA: TIGER
+        fr-CH: TIGER
+        fr-LU: TIGER
+        hr-HR: TIGER
+        hu-HU: TIGER
+        id-ID: TIGER
+        it-IT: TIGER
+        ja-JP: TIGER
+        ko-KR: TIGER
+        ms-MY: TIGER
+        nb-NO: TIGER
+        nl-BE: TIGER
+        nl-NL: TIGER
+        pl-PL: TIGER
+        pt-BR: TIGER
+        pt-PT: TIGER
+        ro-RO: TIGER
+        sk-SK: TIGER
+        sl-SI: TIGER
+        sv-SE: TIGER
+        th-TH: TIGER
+        tr-TR: TIGER
+        zh-CN: TIGER
+        zh-SG: TIGER
+        zh-TW: TIGER
+        sr-Latn-RS: TIGER
+    bikes:
+      type: contentReference
+      locales:
+        cs-CZ: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        da-DK: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        de-AT: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        de-CH: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        de-DE: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        el-GR: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        en-AE: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        en-AU: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        en-CA: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        en-GB: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        en-IN: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        en-NZ: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        en-PH: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        en-US: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        es-AR: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        es-ES: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        es-MX: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        es-US: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        fi-FI: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        fr-BE: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        fr-CA: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        fr-CH: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        fr-LU: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        hr-HR: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        hu-HU: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        id-ID: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        it-IT: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        ja-JP: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        ko-KR: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        ms-MY: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        nb-NO: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        nl-BE: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        nl-NL: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        pl-PL: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        pt-BR: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        pt-PT: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        ro-RO: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        sk-SK: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        sl-SI: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        sv-SE: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        th-TH: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        tr-TR: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        zh-CN: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        zh-SG: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        zh-TW: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+        sr-Latn-RS: ${#jptr:/ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB/entries}
+    image:
+      type: asset
+      locales:
+        cs-CZ:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        da-DK:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        de-AT:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        de-CH:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        de-DE:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        el-GR:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        en-AE:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        en-AU:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        en-CA:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        en-GB:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        en-IN:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        en-NZ:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        en-PH:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        en-US:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        es-AR:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        es-ES:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        es-MX:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        es-US:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        fi-FI:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        fr-BE:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        fr-CA:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        fr-CH:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        fr-LU:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        hr-HR:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        hu-HU:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        id-ID:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        it-IT:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        ja-JP:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        ko-KR:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        ms-MY:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        nb-NO:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        nl-BE:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        nl-NL:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        pl-PL:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        pt-BR:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        pt-PT:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        ro-RO:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        sk-SK:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        sl-SI:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        sv-SE:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        th-TH:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        tr-TR:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        zh-CN:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        zh-SG:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        zh-TW:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        sr-Latn-RS:
+          - _id: 3a287098-68f0-4b0e-a59b-973006dcf96e
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732271104/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/tiger-nav-image.png
+              size:
+                type: number
+                value: 3755483
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/tiger-nav-image
+              width:
+                type: number
+                value: 1750
+              height:
+                type: number
+                value: 875
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+    imageOverlay:
+      type: asset
+      locales:
+        cs-CZ:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        da-DK:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        de-AT:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        de-CH:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        de-DE:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        el-GR:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        en-AE:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        en-AU:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        en-CA:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        en-GB:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        en-IN:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        en-NZ:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        en-PH:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        en-US:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        es-AR:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        es-ES:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        es-MX:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        es-US:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        fi-FI:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        fr-BE:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        fr-CA:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        fr-CH:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        fr-LU:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        hr-HR:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        hu-HU:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        id-ID:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        it-IT:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        ja-JP:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        ko-KR:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        ms-MY:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        nb-NO:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        nl-BE:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        nl-NL:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        pl-PL:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        pt-BR:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        pt-PT:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        ro-RO:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        sk-SK:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        sl-SI:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        sv-SE:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        th-TH:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        tr-TR:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        zh-CN:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        zh-SG:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        zh-TW:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        sr-Latn-RS:
+          - _id: 025ad3c7-4f86-4f83-aa8a-eff27a77ce85
+            type: image
+            fields:
+              id:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              url:
+                type: text
+                value: >-
+                  https://media.triumphmotorcycles.co.uk/image/upload/v1732788344/sitecoremedialibrary/media-library/images/central%20marketing%20team/2024%20navigation/logos%20new%20nav%202024/tiger%20logo%20nav.svg
+              size:
+                type: number
+                value: 1836
+              title:
+                type: text
+                value: >-
+                  sitecoremedialibrary/media-library/images/central marketing
+                  team/2024 navigation/logos new nav 2024/tiger logo nav
+              width:
+                type: number
+                value: 226
+              height:
+                type: number
+                value: 101
+            _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+  _dataResources:
+    ref-26ef81d6-f953-495a-832c-37a45d526a52-bikes-en-GB:
+      type: uniformContentInternalReference
+      variables:
+        locale: en-GB
+        entryIds: 145ba9ed-b1ee-491b-9ea1-1262ff3a4156
+    ref-c605b564-6e88-462a-94f8-3dbf1387c621-bikes-en-GB:
+      type: uniformContentInternalReference
+      variables:
+        locale: en-GB
+        entryIds: >-
+          d2e8b81f-3d61-45c7-bfc7-ab161479cdbe,c9420261-5069-419c-a3d8-283647640d2a,d8ef6282-34f2-4657-a471-ecf9af7396d6,dac164a7-5301-483c-9260-4ad14eb84dbb,3990e219-fd53-4ed8-a9c8-328f9fd5b345,412805db-f953-4f14-ad7a-c104efc799ec,b20d943e-5541-4f5f-bf66-16fefb35c372
+    ref-d0939c58-136e-4e89-b11e-5177aab42ece-bikes-en-GB:
+      type: uniformContentInternalReference
+      variables:
+        locale: en-GB
+        entryIds: 847bb7a0-a022-44ec-96b7-a073cd076161
+  _locales:
+    - en-GB
+    - fr-FR
+    - en-US
+    - es-US
+    - en-CA
+    - fr-CA
+    - sv-SE
+    - nb-NO
+    - da-DK
+    - fi-FI
+    - en-IN
+    - tr-TR
+    - en-AU
+    - ms-MY
+    - en-NZ
+    - zh-SG
+    - en-PH
+    - en-AE
+    - id-ID
+    - de-DE
+    - de-AT
+    - de-CH
+    - fr-CH
+    - fr-BE
+    - fr-LU
+    - es-ES
+    - es-MX
+    - es-AR
+    - pt-PT
+    - nl-NL
+    - nl-BE
+    - it-IT
+    - th-TH
+    - ja-JP
+    - zh-CN
+    - pl-PL
+    - pt-BR
+    - el-GR
+    - ko-KR
+    - hu-HU
+    - ro-RO
+    - cs-CZ
+    - sr-Latn-RS
+    - sl-SI
+    - sk-SK
+    - hr-HR
+    - zh-TW

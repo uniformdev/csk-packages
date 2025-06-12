@@ -1,0 +1,50 @@
+created: '2025-06-12T07:31:47.600962+00:00'
+modified: '2025-06-12T07:31:47.600962+00:00'
+pattern: false
+entry:
+  _id: c30b133c-f46e-48b1-8e98-52021ecc8713
+  _name: Tiger Sport 800
+  _slug: tiger-sport-800
+  type: bike
+  fields:
+    key:
+      type: text
+      value: ${#jptr:/Single Product Content/key}
+    name:
+      type: text
+      locales:
+        en-GB: ${#jptr:/Single Product Content/name}
+    image:
+      type: asset
+      locales:
+        en-GB:
+          - _id: 94feaafc-0de0-406d-b4f2-fc505555d7a7
+            type: image
+            fields:
+              url:
+                type: text
+                value: >-
+                  ${#jptr:/Single Product
+                  Content/masterVariant/assets/0/sources/0/uri}
+            _source: custom-url
+    currency:
+      type: text
+      locales:
+        en-GB: GBP
+    fromPrice:
+      type: number
+      value: '1099500'
+    includeInTestRide:
+      type: checkbox
+      value: true
+    bikeCategorization:
+      type: select
+      value: Road
+  _dataResources:
+    Single Product Content:
+      type: singleProduct
+      variables:
+        locale: ${locale}
+        productId: 30a886d0-bb7d-4db2-8d21-c75d37264e98
+  _locales:
+    - en-GB

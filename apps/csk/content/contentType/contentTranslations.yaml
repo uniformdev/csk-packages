@@ -1,0 +1,63 @@
+id: contentTranslations
+name: Content translations
+created: '2025-06-12T07:30:37.053584+00:00'
+updated: '2025-06-12T07:30:37.053584+00:00'
+slugSettings:
+  required: 'no'
+useTeamPermissions: true
+fields:
+  - id: key
+    name: Key
+    type: text
+    helpText: >-
+      Enter the unique identifier for this translation (e.g., 'field_required').
+      Use consistent naming for easy reference
+    typeConfig:
+      regex: ^[a-z_-]+$
+      required: true
+      regexMessage: >-
+        Only lowercase letters (a-z), underscores (_) and hyphen (-) are
+        allowed. Spaces must be replaced
+  - id: text
+    name: Text
+    type: text
+    helpText: >-
+      Enter plain text for the translation. Leave this field empty if rich text
+      is used
+    typeConfig: null
+    localizable: true
+  - id: richText
+    name: Rich Text
+    type: richText
+    helpText: >-
+      Enter formatted content for the translation using rich text. Leave this
+      field empty if plain text is used
+    typeConfig:
+      elements:
+        builtIn:
+          - h2
+          - h3
+          - h4
+          - h5
+          - h6
+          - unorderedList
+          - orderedList
+          - link
+      required: false
+      formatting:
+        builtIn:
+          - bold
+          - italic
+          - underline
+          - strikethrough
+    localizable: true
+entryName: key
+description: >-
+  Content Translations are standardized, content-wide translations used for
+  content specific text, such as translations for a specific area of the site.
+  Use content Translations for specific parts of the site, ex bikePDP's. Please
+  prefix translations with a logic name, ex bikepdp_[translation-name].
+icon: globe-alt
+type: contentType
+permissions: []
+previewConfigurations: []

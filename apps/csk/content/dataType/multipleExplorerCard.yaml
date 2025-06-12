@@ -1,0 +1,17 @@
+id: multipleExplorerCard
+displayName: Multiple Explorer Card
+ttl: 30
+path: /multiple
+custom:
+  proposedName: Multiple Explorer Card
+  allowedContentTypes:
+    - explorerCard
+method: GET
+purgeKey: 1300e40c-2572-44e9-80dc-91caa191230e
+archetype: multipleEntries
+variables:
+  entryIds:
+    type: text
+    default: ''
+dataSourceId: uniformContent
+allowedOnComponents: []

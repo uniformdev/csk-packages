@@ -1,0 +1,55 @@
+id: bikeFamily
+name: Bike Family
+created: '2025-06-12T07:30:35.498978+00:00'
+updated: '2025-06-12T07:30:35.498978+00:00'
+slugSettings:
+  required: 'no'
+useTeamPermissions: true
+fields:
+  - id: name
+    name: Name
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: id
+    name: Bike Family model (mc_model_family_range)
+    type: text
+    helpText: mc_model_family_range field in commercetools and akeneo
+    typeConfig:
+      required: true
+  - id: image
+    name: Image
+    type: asset
+    helpText: Please upload from Cloudinary
+    typeConfig:
+      max: 1
+    localizable: true
+  - id: hideDarkOverlay
+    name: Hide Dark Overlay
+    type: checkbox
+    helpText: Removes the default dark overlay applied to the primary image
+    typeConfig: null
+  - id: imageOverlay
+    name: Image Overlay Bike Family Name
+    type: asset
+    helpText: >-
+      Please upload from Cloudinary. This overlay will be positioned on top of
+      the main Bike Family image
+    typeConfig:
+      max: 1
+    localizable: true
+  - id: bikes
+    name: Bikes
+    type: contentReference
+    typeConfig:
+      isMulti: true
+      allowedContentTypes:
+        - bike
+    localizable: true
+    allowConditionalValues: true
+entryName: name
+description: ''
+icon: rectangle-rounded
+type: contentType
+permissions: []
+previewConfigurations: []

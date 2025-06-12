@@ -1,0 +1,50 @@
+created: '2025-06-12T07:30:57.549652+00:00'
+modified: '2025-06-12T07:30:57.549652+00:00'
+pattern: false
+entry:
+  _id: 682c1d99-dc3c-4fcb-8ee2-d6b86775595e
+  _name: Bonneville Speedmaster
+  _slug: bonneville-speedmaster
+  type: bike
+  fields:
+    key:
+      type: text
+      value: ${#jptr:/Single Product Content/key}
+    name:
+      type: text
+      locales:
+        en-GB: ${#jptr:/Single Product Content/name}
+    image:
+      type: asset
+      locales:
+        en-GB:
+          - _id: 94feaafc-0de0-406d-b4f2-fc505555d7a7
+            type: image
+            fields:
+              url:
+                type: text
+                value: >-
+                  ${#jptr:/Single Product
+                  Content/masterVariant/assets/0/sources/0/uri}
+            _source: custom-url
+    currency:
+      type: text
+      locales:
+        en-GB: GBP
+    fromPrice:
+      type: number
+      value: '1319500'
+    includeInTestRide:
+      type: checkbox
+      value: true
+    bikeCategorization:
+      type: select
+      value: Road
+  _dataResources:
+    Single Product Content:
+      type: singleProduct
+      variables:
+        locale: ${locale}
+        productId: fa88ce48-e9b3-45c3-ad66-ae7ed749c98a
+  _locales:
+    - en-GB

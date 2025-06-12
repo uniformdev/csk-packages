@@ -1,0 +1,105 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: inputfield
+name: 'InputField '
+icon: loadbar
+parameters:
+  - id: label
+    name: Label
+    type: text
+    typeConfig:
+      required: true
+    localizable: true
+  - id: useAsStepIndicator
+    name: Use As Step Indicator
+    type: checkbox
+    helpText: >-
+      Enable this to display this field's value in the step indicator once the
+      step is completed.
+    typeConfig: null
+  - id: fieldIdentifier
+    name: Field Identifier
+    type: text
+    helpText: >-
+      Assign a unique identifier for this step to store its selected value in
+      Dynamics (Logical name)
+    typeConfig:
+      required: true
+  - id: 44c02235-25b1-491e-bf92-b034dfa60791
+    name: Tool Tip Dialog
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - dialogContent
+  - id: dialogContent
+    name: Dialog Content
+    type: richText
+    typeConfig:
+      elements:
+        builtIn:
+          - h3
+          - h4
+          - unorderedList
+          - orderedList
+          - h2
+      required: false
+      formatting:
+        builtIn:
+          - bold
+          - italic
+          - underline
+          - strikethrough
+    localizable: true
+  - id: 0d85c533-9381-4cac-af57-bb356d01ecd0
+    name: Validation Rules
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - required
+        - requiredErrorMessage
+        - validationPattern
+        - customValidationPattern
+        - validationPatternErrorMessage
+  - id: required
+    name: Required
+    type: checkbox
+    helpText: Check this box to mark the field as required
+    typeConfig: null
+  - id: requiredErrorMessage
+    name: Required Error Message
+    type: text
+    helpText: Fill out only if 'Required' is selected
+    typeConfig: null
+    localizable: true
+  - id: validationPattern
+    name: Validation Pattern (Optional)
+    type: select
+    helpText: Select a validation pattern
+    typeConfig:
+      options:
+        - text: Alphabetic
+          value: ^[A-Za-z]+$
+        - text: 'Numeric '
+          value: ^[0-9]+$
+        - text: Email
+          value: ^[\w.%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$
+  - id: customValidationPattern
+    name: Custom Validation Pattern (Optional)
+    type: text
+    helpText: >-
+      Enter a custom regex pattern to define specific validation rules for this
+      field
+    typeConfig: null
+  - id: validationPatternErrorMessage
+    name: Validation Pattern Error Message (Optional)
+    type: text
+    typeConfig: null
+    localizable: true
+useTeamPermissions: true
+slots: []
+titleParameter: label
+canBeComposition: false
+created: '2025-06-12T07:28:31.290802+00:00'
+updated: '2025-06-12T07:28:31.290802+00:00'

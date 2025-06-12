@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: slide
+name: Slide
+icon: rectangle-rounded
+parameters:
+  - id: title
+    name: Title
+    type: text
+    typeConfig: null
+    localizable: true
+categoryId: 9ff00250-0200-45ec-82d3-4e3b346d7ee6
+useTeamPermissions: true
+slots:
+  - id: content
+    name: content
+    allowedComponents:
+      - richText
+      - mediablock
+      - bikeCard
+      - descriptiveCard
+      - productLinkCard
+      - buttonCard
+      - productVariantCard
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: title
+canBeComposition: false
+created: '2025-06-12T07:28:39.755732+00:00'
+updated: '2025-06-12T07:28:39.755732+00:00'

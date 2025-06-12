@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: ctaLinks
+name: CTA Links
+icon: link
+parameters:
+  - id: title
+    name: Title
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: links
+    name: Links
+    type: $block
+    typeConfig:
+      allowedTypes:
+        - $loop
+        - link
+  - id: spacing
+    name: Spacing
+    type: dex-space-control-parameter
+    typeConfig: null
+categoryId: 9ff00250-0200-45ec-82d3-4e3b346d7ee6
+description: A block with a title and list of links
+useTeamPermissions: true
+slots: []
+titleParameter: title
+canBeComposition: false
+created: '2025-06-12T07:28:26.973403+00:00'
+updated: '2025-06-12T07:28:26.973403+00:00'

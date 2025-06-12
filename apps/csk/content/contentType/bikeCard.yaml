@@ -1,0 +1,69 @@
+id: bikeCard
+name: Bike Card
+created: '2025-06-12T07:30:34.993319+00:00'
+updated: '2025-06-12T07:30:34.993319+00:00'
+slugSettings:
+  required: 'no'
+useTeamPermissions: true
+fields:
+  - id: key
+    name: Product Key
+    type: text
+    typeConfig: null
+  - id: name
+    name: Name
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: description
+    name: Description
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: image
+    name: Image
+    type: asset
+    helpText: Please upload from Cloudinary
+    typeConfig:
+      max: 1
+    localizable: true
+    allowConditionalValues: true
+  - id: currency
+    name: Currency
+    type: text
+    typeConfig:
+      required: false
+    localizable: true
+  - id: market
+    name: Market
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: fromPrice
+    name: From Price
+    type: number
+    typeConfig:
+      decimal: true
+    localizable: true
+  - id: badge
+    name: Badge
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: bikeCategorization
+    name: Bike categorization
+    type: text
+    typeConfig: null
+    notLocalizedByDefault: true
+  - id: includeInTestRide
+    name: Include in test ride
+    type: checkbox
+    typeConfig: null
+    localizable: true
+    notLocalizedByDefault: true
+entryName: name
+description: ''
+icon: list-tree
+type: block
+permissions: []
+previewConfigurations: []

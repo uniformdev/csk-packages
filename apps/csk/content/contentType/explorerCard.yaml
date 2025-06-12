@@ -1,0 +1,49 @@
+id: explorerCard
+name: Explorer Card
+created: '2025-06-12T07:30:37.561058+00:00'
+updated: '2025-06-12T07:30:37.561058+00:00'
+slugSettings:
+  required: 'no'
+useTeamPermissions: true
+fields:
+  - id: image
+    name: Image
+    type: asset
+    typeConfig:
+      max: 1
+    localizable: true
+    notLocalizedByDefault: true
+  - id: title
+    name: Title
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: subtitle
+    name: Subtitle
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: tag
+    name: Tag
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: link
+    name: Link
+    type: $block
+    typeConfig:
+      max: 1
+      allowedTypes:
+        - link
+  - id: hideDarkOverlay
+    name: Hide Dark Overlay
+    type: checkbox
+    helpText: Removes the dark overlay applied to image by default
+    typeConfig: null
+entryName: title
+thumbnailField: image
+description: ''
+icon: card
+type: contentType
+permissions: []
+previewConfigurations: []

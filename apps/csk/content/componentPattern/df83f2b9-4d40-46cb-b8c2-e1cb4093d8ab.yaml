@@ -1,0 +1,247 @@
+composition:
+  _name: 'Form Group Pattern: My Details'
+  _id: df83f2b9-4d40-46cb-b8c2-e1cb4093d8ab
+  type: formGroup
+  parameters:
+    title:
+      type: text
+      locales:
+        en-GB: 'Your Details '
+        fr-FR: Mes informations
+  slots:
+    content:
+      - _id: bffdafa2-1d7d-41f6-8096-15d1353222dd
+        type: inputfield
+        parameters:
+          label:
+            type: text
+            locales:
+              en-GB: First name
+              fr-FR: Prénom SM
+          required:
+            type: checkbox
+            value: true
+          dialogContent:
+            type: richText
+            locales:
+              fr-FR:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: tool tip SM
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                  direction: ltr
+          fieldIdentifier:
+            type: text
+            value: firstname
+          validationPattern:
+            type: select
+            value: ^[A-Za-z]+$
+          requiredErrorMessage:
+            type: text
+            locales:
+              en-GB: please provide first name data
+              fr-FR: Provide a First name
+      - _id: 2b63c346-94fd-4b29-bdbb-b17cc7bdde34
+        type: inputfield
+        parameters:
+          label:
+            type: text
+            locales:
+              en-GB: Surname
+              fr-FR: Nom de famille SM
+          required:
+            type: checkbox
+            value: true
+          fieldIdentifier:
+            type: text
+            value: lastname
+          validationPattern:
+            type: select
+            value: ^[A-Za-z]+$
+          requiredErrorMessage:
+            type: text
+            locales:
+              en-GB: This field is required
+              fr-FR: Ce champ est requis
+      - _id: f0e931a9-ca7e-421b-9666-806916aaa383
+        type: inputfield
+        parameters:
+          label:
+            type: text
+            locales:
+              en-GB: Email address
+              fr-FR: E-Mail SM
+          required:
+            type: checkbox
+            value: true
+          dialogContent:
+            type: richText
+            locales:
+              en-GB:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Please enter a valid email address
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                  direction: ltr
+          fieldIdentifier:
+            type: text
+            value: emailaddress1
+          validationPattern:
+            type: select
+            value: ^[\w.%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$
+          useAsStepIndicator:
+            type: checkbox
+            value: true
+          requiredErrorMessage:
+            type: text
+            locales:
+              en-GB: This field is required
+              fr-FR: Ce champ est requis
+          validationPatternErrorMessage:
+            type: text
+            locales:
+              en-GB: Please enter a valid email
+              fr-FR: Veuillez entrer une adresse e-mail valide.
+      - _id: 94ff3cfb-6e79-4c89-a8e4-a178d905a566
+        type: inputfield
+        parameters:
+          label:
+            type: text
+            locales:
+              en-GB: Phone number
+              fr-FR: Numéro de téléphone SM
+          required:
+            type: checkbox
+            value: true
+          dialogContent:
+            type: richText
+            locales:
+              en-GB:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: h3
+                      type: heading
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Sharing your phone number
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Please share your telephone number, so we can
+                            contact you in case of any last-minute questions.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                  direction: ltr
+              fr-FR:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: h3
+                      type: heading
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Partage de votre numéro de téléphone
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Nous utilisons votre numéro de téléphone pour vous
+                            contacter en cas de questions de dernière minute."
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                  direction: ltr
+          fieldIdentifier:
+            type: text
+            value: mobilephone
+          validationPattern:
+            type: select
+            value: ^[0-9]+$
+          requiredErrorMessage:
+            type: text
+            locales:
+              en-GB: Please enter a valid telephone number
+  _dataResources: {}
+  _locales:
+    - en-GB
+    - fr-FR
+created: '2025-06-12T07:28:58.131544+00:00'
+modified: '2025-06-12T07:29:56.97223+00:00'
+pattern: true

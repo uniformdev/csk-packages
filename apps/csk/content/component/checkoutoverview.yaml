@@ -1,0 +1,133 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: checkoutoverview
+name: CheckoutOverview
+icon: credit-card
+parameters:
+  - id: hideDiscountInput
+    name: Hide Discount Input
+    type: checkbox
+    helpText: >-
+      Check this option to hide the discount input field in the checkout order
+      summary.
+    typeConfig: null
+  - id: paymentDescription
+    name: Payment description
+    type: richText
+    typeConfig:
+      elements:
+        builtIn:
+          - h2
+          - h3
+          - h4
+          - unorderedList
+          - orderedList
+          - link
+          - table
+      required: false
+      formatting:
+        builtIn:
+          - bold
+          - italic
+          - underline
+          - strikethrough
+    localizable: true
+  - id: marketingSignup
+    name: Marketing signup
+    type: richText
+    helpText: The text for marketing signup checkbox.
+    typeConfig:
+      elements:
+        builtIn:
+          - h1
+          - h2
+          - h3
+          - h4
+          - h5
+          - h6
+          - unorderedList
+          - orderedList
+          - link
+          - quote
+          - code
+          - variable
+      required: true
+      formatting:
+        builtIn:
+          - bold
+          - italic
+          - underline
+          - strikethrough
+          - code
+          - superscript
+          - subscript
+    localizable: true
+  - id: termsAndConditions
+    name: Terms and conditions
+    type: richText
+    helpText: The text and link for terms and conditions checkbox.
+    typeConfig:
+      elements:
+        builtIn:
+          - h1
+          - h2
+          - h3
+          - h4
+          - h5
+          - h6
+          - unorderedList
+          - orderedList
+          - link
+          - quote
+          - code
+          - variable
+      required: true
+      formatting:
+        builtIn:
+          - bold
+          - italic
+          - underline
+          - strikethrough
+          - code
+          - superscript
+          - subscript
+    localizable: true
+  - id: privacyAndCookiePolicy
+    name: Privacy and cookie policy
+    type: richText
+    helpText: The text and link for privacy and cookie policy checkbox.
+    typeConfig:
+      elements:
+        builtIn:
+          - h1
+          - h2
+          - h3
+          - h4
+          - h5
+          - h6
+          - unorderedList
+          - orderedList
+          - link
+          - quote
+          - code
+          - variable
+      required: true
+      formatting:
+        builtIn:
+          - bold
+          - italic
+          - underline
+          - strikethrough
+          - code
+          - superscript
+          - subscript
+    localizable: true
+categoryId: 295f2270-a167-46c2-bcb2-f318e5413e1a
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2025-06-12T07:28:24.793622+00:00'
+updated: '2025-06-12T07:28:24.793622+00:00'
+variants:
+  - id: preorder
+    name: preorder

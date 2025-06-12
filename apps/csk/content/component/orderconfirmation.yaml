@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: orderconfirmation
+name: OrderConfirmation
+icon: play-list-check
+parameters:
+  - id: description
+    name: Description
+    type: richText
+    typeConfig:
+      elements:
+        builtIn:
+          - h1
+          - h2
+          - h3
+          - unorderedList
+          - orderedList
+          - link
+          - table
+      required: false
+      formatting:
+        builtIn:
+          - bold
+          - italic
+          - underline
+    localizable: true
+categoryId: 295f2270-a167-46c2-bcb2-f318e5413e1a
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2025-06-12T07:28:32.885841+00:00'
+updated: '2025-06-12T07:28:32.885841+00:00'
+variants:
+  - id: preorder
+    name: preorder

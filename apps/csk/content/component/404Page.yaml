@@ -1,0 +1,57 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: 404Page
+name: 404 Page
+icon: close-o
+parameters:
+  - id: titleText
+    name: Title text
+    type: richText
+    typeConfig:
+      elements:
+        builtIn:
+          - h1
+          - h2
+          - h3
+          - h4
+          - h5
+          - h6
+          - unorderedList
+          - orderedList
+          - link
+          - quote
+          - code
+          - variable
+      required: true
+      formatting:
+        builtIn:
+          - bold
+          - italic
+          - underline
+          - strikethrough
+          - code
+          - superscript
+          - subscript
+    localizable: true
+  - id: linkUrl
+    name: Link URL
+    type: text
+    typeConfig:
+      required: true
+    localizable: true
+  - id: linkText
+    name: Link text
+    type: text
+    typeConfig:
+      required: true
+    localizable: true
+  - id: image
+    name: Image
+    type: cloudinary-image
+    typeConfig: null
+    localizable: true
+useTeamPermissions: true
+slots: []
+canBeComposition: true
+created: '2025-06-12T07:28:19.63675+00:00'
+updated: '2025-06-12T07:28:19.63675+00:00'

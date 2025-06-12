@@ -1,0 +1,116 @@
+id: bike
+name: Bike
+created: '2025-06-12T07:30:34.672447+00:00'
+updated: '2025-06-12T07:30:34.672447+00:00'
+slugSettings:
+  required: 'no'
+useTeamPermissions: true
+fields:
+  - id: key
+    name: Product Key
+    type: text
+    typeConfig: null
+  - id: name
+    name: Name
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: description
+    name: Description
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: image
+    name: Image
+    type: asset
+    helpText: Please upload from Cloudinary
+    typeConfig:
+      max: 1
+    localizable: true
+    notLocalizedByDefault: true
+    allowConditionalValues: true
+  - id: currency
+    name: Currency
+    type: text
+    typeConfig:
+      required: false
+    localizable: true
+  - id: market
+    name: Market
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: fromPrice
+    name: From Price
+    type: number
+    typeConfig:
+      decimal: true
+    localizable: true
+  - id: badge
+    name: Badge
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: bikeCategorization
+    name: Bike Categorization
+    type: select
+    typeConfig:
+      options:
+        - text: Road
+          value: Road
+        - text: Off-Road
+          value: Off-Road
+      required: true
+  - id: includeInTestRide
+    name: Include in test ride
+    type: checkbox
+    typeConfig: null
+    localizable: true
+    notLocalizedByDefault: true
+  - id: genre
+    name: Genre
+    type: text
+    typeConfig: null
+  - id: link
+    name: Link
+    type: link
+    typeConfig:
+      linkTypes:
+        tel: false
+        email: false
+    localizable: true
+  - id: testRideLink
+    name: Test ride link
+    type: link
+    typeConfig:
+      linkTypes:
+        tel: false
+        email: false
+        projectMapNode: false
+    localizable: true
+  - id: configuratorLink
+    name: Configurator link
+    type: link
+    typeConfig:
+      linkTypes:
+        tel: false
+        email: false
+        projectMapNode: false
+    localizable: true
+  - id: reserveNow
+    name: Reserve now
+    type: link
+    typeConfig: null
+    localizable: true
+    notLocalizedByDefault: true
+  - id: purchaseIntent
+    name: Purchase Intent
+    type: link
+    typeConfig: null
+    localizable: true
+entryName: name
+description: ''
+icon: list-tree
+type: contentType
+permissions: []
+previewConfigurations: []

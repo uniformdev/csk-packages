@@ -1,0 +1,149 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: article
+name: Article
+icon: card
+parameters:
+  - id: preTitle
+    name: Pre title
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: title
+    name: Title
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: logo
+    name: Logo
+    type: asset
+    typeConfig:
+      max: 1
+      min: 0
+      allowedTypes:
+        - image
+    localizable: true
+    notLocalizedByDefault: true
+  - id: dynamicMedia
+    name: Media
+    type: $block
+    typeConfig:
+      max: 1
+      min: 0
+      allowedTypes:
+        - video
+        - image
+        - youtubeVideo
+  - id: containerWidth
+    name: Container width
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Full
+          value: full
+        - key: Narrow
+          value: narrow
+        - key: Small
+          value: small
+      defaultValue: narrow
+  - id: containerAlignment
+    name: Container alignment
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Left
+          value: left
+        - key: Center
+          value: center
+        - key: Right
+          value: right
+      defaultValue: left
+  - id: textAlignment
+    name: Text alignment
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Left
+          value: left
+        - key: Center
+          value: center
+        - key: Right
+          value: right
+  - id: mediaPosition
+    name: Media position
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Top
+          value: top
+        - key: Left
+          value: left
+        - key: Right
+          value: right
+        - key: Bottom
+          value: bottom
+      defaultValue: left
+  - id: linkButtons
+    name: Link buttons
+    type: $block
+    typeConfig:
+      allowedTypes:
+        - linkButton
+  - id: textColumns
+    name: Text columns
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: '1'
+          value: '1'
+        - key: '2'
+          value: '2'
+        - key: '3'
+          value: '3'
+  - id: text
+    name: Text
+    type: richText
+    typeConfig:
+      elements:
+        builtIn:
+          - h2
+          - h3
+          - h4
+          - h5
+          - h6
+          - unorderedList
+          - orderedList
+          - link
+          - quote
+          - code
+          - table
+          - asset
+          - variable
+      required: false
+      formatting:
+        builtIn:
+          - bold
+          - italic
+          - underline
+          - strikethrough
+          - code
+          - superscript
+          - subscript
+      elementsConfig:
+        asset:
+          allowedTypes:
+            - image
+    localizable: true
+  - id: spacing
+    name: Spacing
+    type: dex-space-control-parameter
+    typeConfig:
+      selectedGroup: spacing
+categoryId: 9ff00250-0200-45ec-82d3-4e3b346d7ee6
+useTeamPermissions: true
+slots: []
+titleParameter: title
+thumbnailParameter: media
+canBeComposition: false
+created: '2025-06-12T07:28:21.530557+00:00'
+updated: '2025-06-12T07:28:21.530557+00:00'

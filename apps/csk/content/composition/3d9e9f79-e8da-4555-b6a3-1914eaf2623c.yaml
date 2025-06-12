@@ -1,0 +1,43 @@
+composition:
+  _name: Order confirmation
+  _id: 3d9e9f79-e8da-4555-b6a3-1914eaf2623c
+  _slug: orderconfirmation
+  type: orderconfirmationpage
+  parameters:
+    robots:
+      type: $block
+      value:
+        - _id: b79ca1f6-9415-4d25-a43f-688481209293
+          type: robots
+    metaData:
+      type: $block
+      value:
+        - _id: e7698d94-6530-41f7-bac2-e2eb3fad35c4
+          type: metaData
+          fields:
+            metaTitle:
+              type: text
+              locales:
+                de-DE: Order confirmation
+                en-GB: Order confirmation
+                en-US: Order confirmation
+                fr-FR: Order confirmation
+            metaDescription:
+              type: text
+              locales:
+                de-DE: Order confirmation - Triumph
+                en-GB: Order confirmation - Triumph
+                en-US: Order confirmation - Triumph
+                fr-FR: Order confirmation - Triumph
+  slots:
+    content:
+      - _id: 49a4f054-740e-464d-a7b5-904892112c50
+        type: orderconfirmation
+  _locales:
+    - en-GB
+    - en-US
+    - de-DE
+    - fr-FR
+created: '2025-06-12T07:29:01.815464+00:00'
+modified: '2025-06-12T07:29:01.815464+00:00'
+pattern: false

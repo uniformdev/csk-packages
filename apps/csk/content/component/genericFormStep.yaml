@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: genericFormStep
+name: Generic Form Step
+icon: list
+parameters:
+  - id: stepName
+    name: 'Step Name '
+    type: text
+    helpText: Enter a unique name for this form step
+    typeConfig:
+      required: true
+    localizable: true
+useTeamPermissions: true
+slots:
+  - id: content
+    name: content
+    allowedComponents:
+      - formGroup
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: stepName
+canBeComposition: false
+created: '2025-06-12T07:28:30.333469+00:00'
+updated: '2025-06-12T07:28:30.333469+00:00'

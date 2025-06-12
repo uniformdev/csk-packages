@@ -1,0 +1,50 @@
+created: '2025-06-12T07:31:27.087881+00:00'
+modified: '2025-06-12T07:31:27.087881+00:00'
+pattern: false
+entry:
+  _id: a752115d-833b-4721-b562-ba878d49c67b
+  _name: Scrambler 400 X
+  _slug: scrambler-400-x
+  type: bike
+  fields:
+    key:
+      type: text
+      value: ${#jptr:/Single Product Content/key}
+    name:
+      type: text
+      locales:
+        en-GB: ${#jptr:/Single Product Content/name}
+    image:
+      type: asset
+      locales:
+        en-GB:
+          - _id: 94feaafc-0de0-406d-b4f2-fc505555d7a7
+            type: image
+            fields:
+              url:
+                type: text
+                value: >-
+                  ${#jptr:/Single Product
+                  Content/masterVariant/assets/0/sources/0/uri}
+            _source: custom-url
+    currency:
+      type: text
+      locales:
+        en-GB: GBP
+    fromPrice:
+      type: number
+      value: '579500'
+    includeInTestRide:
+      type: checkbox
+      value: true
+    bikeCategorization:
+      type: select
+      value: Road
+  _dataResources:
+    Single Product Content:
+      type: singleProduct
+      variables:
+        locale: ${locale}
+        productId: 5393294a-2b12-42a2-a531-a3956affc994
+  _locales:
+    - en-GB

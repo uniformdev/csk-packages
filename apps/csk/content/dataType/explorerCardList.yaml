@@ -1,0 +1,27 @@
+id: explorerCardList
+displayName: Explorer Card List
+path: /query
+custom:
+  allowedContentTypes:
+    - explorerCard
+method: GET
+purgeKey: 233ecc7b-9168-463d-9d59-7a7a38229902
+archetype: queryEntries
+variables:
+  limit:
+    type: text
+    default: '20'
+  offset:
+    type: text
+    default: '0'
+  filters:
+    type: text
+    default: '{}'
+  orderBy:
+    type: text
+    default: ''
+  contentTypes:
+    type: text
+    default: ''
+dataSourceId: uniformContent
+allowedOnComponents: []

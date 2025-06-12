@@ -1,0 +1,82 @@
+composition:
+  _name: Test Ride
+  _id: 340e01eb-3034-4096-9792-8c21c9baa270
+  _slug: test-ride
+  type: multistepformwrapper
+  _dataResources:
+    Bike Family List Content:
+      type: bikeFamilyList
+      variables:
+        locale: ${locale}
+        search: ''
+        contentTypes: bikeFamily
+  _overrides:
+    340e01eb-3034-4096-9792-8c21c9baa270|0709e98f-96bc-4943-a4d3-a6f105534a11:
+      dataResources:
+        cards:
+          type: explorerCardList
+          variables:
+            locale: ${locale}
+            search: ''
+            entryId: ''
+            contentTypes: explorerCard
+          isPatternParameter: true
+          ignorePatternParameterDefault: false
+        Multiple Explorer Card Selection Content:
+          type: multipleExplorerCardSelection
+          variables:
+            locale: ${locale}
+            search: ''
+            entryIds: >-
+              06ee5b3f-cde7-48fc-bf98-d1d2f8c52eb8,0fc2845f-c6cf-4c17-89c7-3ee7d5737530,d5f68ab1-1a48-4d9d-a54d-74128b09a19f
+            contentTypes: explorerCard
+          isPatternParameter: true
+          ignorePatternParameterDefault: true
+    340e01eb-3034-4096-9792-8c21c9baa270|67427368-36f2-4ddd-98e0-532aa1a9bd8b:
+      dataResources:
+        Content Translations:
+          type: contentTranslationGroup
+          variables:
+            locale: ${locale}
+            entryId: d512c4e5-71fa-4b05-bed2-bbea5105cf22
+          isPatternParameter: true
+          ignorePatternParameterDefault: true
+    340e01eb-3034-4096-9792-8c21c9baa270|8764de3e-4428-4b8e-ae02-b3ac3e8a8702:
+      dataResources:
+        Content Translations:
+          type: contentTranslationGroup
+          variables:
+            locale: ${locale}
+            entryId: d512c4e5-71fa-4b05-bed2-bbea5105cf22
+          isPatternParameter: true
+          ignorePatternParameterDefault: true
+        Bike Family List By Id:
+          type: bikeFamilyList
+          variables:
+            locale: ${locale}
+            search: ''
+            filters: >-
+              {"type[eq]":"bikeFamily","fields.id[eq]":"${selectedBikeFamilyId}"}
+            contentTypes: bikeFamily
+        Bike Family List Content:
+          type: bikeFamilyList
+          variables:
+            locale: ${locale}
+            search: ''
+            contentTypes: bikeFamily
+    340e01eb-3034-4096-9792-8c21c9baa270|e435b9f3-3e49-48ac-8412-e444759fb105:
+      dataResources:
+        Content Translations:
+          type: contentTranslationGroup
+          variables:
+            locale: ${locale}
+            entryId: d512c4e5-71fa-4b05-bed2-bbea5105cf22
+          isPatternParameter: true
+          ignorePatternParameterDefault: true
+  _locales:
+    - en-GB
+    - fr-FR
+  _pattern: 87e55584-8af4-4a80-b0d8-4dfbd88438ab
+created: '2025-06-12T07:29:17.977484+00:00'
+modified: '2025-06-12T07:29:17.977484+00:00'
+pattern: false

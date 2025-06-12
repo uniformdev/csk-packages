@@ -1,0 +1,38 @@
+id: spritesheet
+name: Spritesheet
+created: '2025-06-12T07:30:43.763879+00:00'
+updated: '2025-06-12T07:30:43.763879+00:00'
+slugSettings:
+  required: 'no'
+useTeamPermissions: true
+fields:
+  - id: spriteSheet
+    name: Sprite sheet
+    type: asset
+    typeConfig:
+      max: 1
+      min: 0
+      required: true
+      allowedTypes:
+        - image
+    localizable: true
+    notLocalizedByDefault: true
+  - id: colorName
+    name: Color name
+    type: text
+    typeConfig:
+      required: true
+    localizable: true
+  - id: colorHex
+    name: Color hex
+    type: text
+    typeConfig:
+      required: true
+    localizable: true
+entryName: colorName
+thumbnailField: spriteSheet
+description: ''
+icon: image
+type: block
+permissions: []
+previewConfigurations: []

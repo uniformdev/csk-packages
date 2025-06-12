@@ -1,0 +1,18 @@
+id: multipleBikeFamily
+displayName: Multiple Bike Family
+ttl: 30
+path: /multiple
+custom:
+  maxItems: 1
+  proposedName: Multiple Bike Family
+  allowedContentTypes:
+    - bikeFamily
+method: GET
+purgeKey: e47051d9-1bbe-4712-b932-045cb6557165
+archetype: multipleEntries
+variables:
+  entryIds:
+    type: text
+    default: ''
+dataSourceId: uniformContent
+allowedOnComponents: []

@@ -1,0 +1,48 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: bikeFamilyCard
+name: Bike Family Card
+icon: card
+parameters:
+  - id: name
+    name: Name
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: id
+    name: Id
+    type: text
+    typeConfig:
+      required: true
+  - id: imageOverlay
+    name: Image Overlay
+    type: asset
+    typeConfig: {}
+    localizable: true
+  - id: image
+    name: Image
+    type: asset
+    typeConfig:
+      max: 1
+    localizable: true
+  - id: hideDarkOverlay
+    name: Hide Dark Overlay
+    type: checkbox
+    helpText: Removes the dark overlay applied to image by default
+    typeConfig: null
+    allowConditionalValues: true
+  - id: bikes
+    name: Bikes
+    type: $block
+    typeConfig:
+      min: 1
+      allowedTypes:
+        - bikeCard
+        - $loop
+useTeamPermissions: true
+slots: []
+titleParameter: name
+thumbnailParameter: image
+canBeComposition: false
+created: '2025-06-12T07:28:22.922811+00:00'
+updated: '2025-06-12T07:28:22.922811+00:00'

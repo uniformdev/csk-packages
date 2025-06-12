@@ -1,0 +1,122 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: bikeProductDetailsPage
+name: Bike product details page
+icon: website
+parameters:
+  - id: productAttributes
+    name: Product Attributes
+    type: json
+    helpText: Point to the products attributes from commercetools product.
+    typeConfig:
+      required: true
+useTeamPermissions: true
+slots:
+  - id: content
+    name: Content
+    allowedComponents:
+      - anchorSection
+      - keyFeatures
+      - ctaLinks
+      - mediaGrid
+      - metrics
+      - hero
+      - slider
+      - anchorNavigation
+      - tabs
+      - columns
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+defaults:
+  type: bikeProductDetailsPage
+  slots:
+    content:
+      - type: anchorNavigation
+        parameters:
+          title:
+            type: text
+            value: Insert title here
+          buttons:
+            type: $block
+            value:
+              - type: linkButton
+                fields:
+                  link:
+                    type: link
+                    value:
+                      path: >-
+                        ${#jptr:/Global Link List
+                        Content/entries/0/entry/fields/link/locales/en-GB/path}
+                      type: url
+                  target:
+                    type: dex-segmented-control-parameter
+                    value: _self
+                  linkText:
+                    type: text
+                    value: Configure
+                  colorTheme:
+                    type: dex-color-palette-parameter
+                    value: button-white
+              - type: linkButton
+                fields:
+                  link:
+                    type: link
+                    value:
+                      path: >-
+                        ${#jptr:/Global Link List
+                        Content/entries/1/entry/fields/link/locales/en-GB/path}
+                      type: url
+                  target:
+                    type: dex-segmented-control-parameter
+                    value: _self
+                  bordered:
+                    type: checkbox
+                    value: true
+                  linkText:
+                    type: text
+                    value: Test Ride
+                  colorTheme:
+                    type: dex-color-palette-parameter
+                    value: button-white
+              - type: linkButton
+                fields:
+                  link:
+                    type: link
+                    value:
+                      path: >-
+                        ${#jptr:/Global Link List
+                        Content/entries/2/entry/fields/link/locales/en-GB/path}
+                      type: url
+                  target:
+                    type: dex-segmented-control-parameter
+                    value: _self
+                  linkText:
+                    type: text
+                    value: Reserve Now
+          description:
+            type: text
+            value: Descriptions here
+      - type: hero
+        parameters:
+          title:
+            type: text
+            value: Hero
+  _dataResources:
+    Global Link List Content:
+      type: globalLinkList
+      variables:
+        locale: ${locale}
+        search: ''
+        entryId: 2414066c-3de4-4fc8-a81c-bcb81b797911
+        filters: '{"type[eq]":"globalLink"}'
+        orderBy: created_at_ASC
+        contentTypes: globalLink
+slugSettings:
+  unique: 'no'
+  required: disabled
+  regularExpression: ''
+  regularExpressionMessage: ''
+canBeComposition: true
+created: '2025-06-12T07:28:23.191421+00:00'
+updated: '2025-06-12T07:28:23.191421+00:00'

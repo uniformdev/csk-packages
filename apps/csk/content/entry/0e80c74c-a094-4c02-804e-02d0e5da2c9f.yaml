@@ -1,0 +1,65 @@
+created: '2025-06-12T07:30:58.356197+00:00'
+modified: '2025-06-12T07:30:58.356197+00:00'
+pattern: false
+entry:
+  _id: 0e80c74c-a094-4c02-804e-02d0e5da2c9f
+  _name: Bonneville T120 Black
+  _slug: bonneville-t120-black
+  type: bike
+  fields:
+    key:
+      type: text
+      value: ${#jptr:/Single Product Content/key}
+    name:
+      type: text
+      locales:
+        en-GB: ${#jptr:/Single Product Content/name}
+        fr-FR: ${#jptr:/Single Product Content/name}
+    image:
+      type: asset
+      locales:
+        en-GB:
+          - _id: 94feaafc-0de0-406d-b4f2-fc505555d7a7
+            type: image
+            fields:
+              url:
+                type: text
+                value: >-
+                  ${#jptr:/Single Product
+                  Content/masterVariant/assets/0/sources/0/uri}
+            _source: custom-url
+        fr-FR:
+          - _id: 94feaafc-0de0-406d-b4f2-fc505555d7a7
+            type: image
+            fields:
+              url:
+                type: text
+                value: >-
+                  ${#jptr:/Single Product
+                  Content/masterVariant/assets/0/sources/0/uri}
+            _source: custom-url
+    currency:
+      type: text
+      locales:
+        en-GB: GBP
+        fr-FR: EUR
+    fromPrice:
+      type: number
+      locales:
+        en-GB: '1199500'
+        fr-FR: '1429500'
+    includeInTestRide:
+      type: checkbox
+      value: true
+    bikeCategorization:
+      type: select
+      value: Road
+  _dataResources:
+    Single Product Content:
+      type: singleProduct
+      variables:
+        locale: ${locale}
+        productId: fad7c451-2e82-495f-9dce-32a812604055
+  _locales:
+    - en-GB
+    - fr-FR
