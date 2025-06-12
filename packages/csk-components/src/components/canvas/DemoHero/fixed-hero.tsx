@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { FixedHeroProps } from '.';
 import { DemoHero } from './demo-hero';
 
-export const FixedHero: FC<FixedHeroProps> = ({ enableOverlayAutoTint = false, ...props }) => (
+export const FixedHero: FC<FixedHeroProps> = ({ textColor, enableOverlayAutoTint = false, ...props }) => (
   <DemoHero
     {...props}
     // Eyebrow Text Parameters
@@ -14,6 +14,7 @@ export const FixedHero: FC<FixedHeroProps> = ({ enableOverlayAutoTint = false, .
     }}
     eyebrowTitleWeight="bold"
     eyebrowTitleTransform="uppercase"
+    eyebrowTitleColor={textColor || props.eyebrowTitleColor}
     // Title Text Parameters
     titleSize={{
       mobile: '3xl',
@@ -21,6 +22,7 @@ export const FixedHero: FC<FixedHeroProps> = ({ enableOverlayAutoTint = false, .
       desktop: '5xl',
     }}
     titleWeight="bold"
+    titleColor={textColor || props.titleColor}
     // Description Text Parameters
     descriptionTag="p"
     descriptionSize={{
@@ -29,6 +31,7 @@ export const FixedHero: FC<FixedHeroProps> = ({ enableOverlayAutoTint = false, .
       desktop: 'xl',
     }}
     descriptionWeight="normal"
+    descriptionColor={textColor || props.descriptionColor}
     // Primary Button Parameters
     primaryButtonSize="button-medium"
     primaryButtonTextSize="sm"
