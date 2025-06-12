@@ -1,0 +1,198 @@
+composition:
+  _name: Media Grid Pattern
+  _id: 6b22dc41-fa68-47be-b880-9282d916c1c5
+  type: mediaGrid
+  parameters:
+    layout:
+      type: dex-segmented-control-parameter
+      value: layout-4
+    dynamicMedia:
+      type: $block
+      value:
+        - _id: 5368f232-4819-4f26-9226-f930c8891733
+          type: video
+          fields:
+            loop:
+              type: checkbox
+              value: true
+            media:
+              type: asset
+              value:
+                - _id: b3e909f9-c9e3-45e6-b567-931f55f31c42
+                  type: video
+                  fields:
+                    id:
+                      type: text
+                      value: >-
+                        sitecoremedialibrary/media-library/files/central-marketing-team/videos/2025%20speed%20triple%20rs/clean_16x9_my25_speed%20triple%20rs_hero
+                    url:
+                      type: text
+                      value: >-
+                        https://media.triumphmotorcycles.co.uk/video/upload/v1742217917/sitecoremedialibrary/media-library/files/central-marketing-team/videos/2025%2520speed%2520triple%2520rs/clean_16x9_my25_speed%2520triple%2520rs_hero.mp4
+                    size:
+                      type: number
+                      value: 8522117
+                    title:
+                      type: text
+                      value: >-
+                        sitecoremedialibrary/media-library/files/central-marketing-team/videos/2025%20speed%20triple%20rs/clean_16x9_my25_speed%20triple%20rs_hero
+                    width:
+                      type: number
+                      value: 1920
+                    height:
+                      type: number
+                      value: 1080
+                    mediaType:
+                      type: text
+                      value: video/mp4
+                  _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+            muted:
+              type: checkbox
+              value: true
+            poster:
+              type: asset
+              value:
+                - _id: 46760031-2169-428f-aa4a-fd5a486fc364
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: SpeedTriple1200RX_MY25_06355_uhczda
+                    url:
+                      type: text
+                      value: >-
+                        https://media.triumphmotorcycles.co.uk/image/upload/v1747405735/SpeedTriple1200RX_MY25_06355_uhczda.jpg
+                    size:
+                      type: number
+                      value: 833878
+                    title:
+                      type: text
+                      value: SpeedTriple1200RX_MY25_06355_uhczda
+                    width:
+                      type: number
+                      value: 1920
+                    height:
+                      type: number
+                      value: 1281
+                    mediaType:
+                      type: text
+                      value: image/jpeg
+                  _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+            autoplay:
+              type: checkbox
+              value: true
+        - _id: 1228aea0-f5e8-4dad-8bec-d5e8afa583fa
+          type: image
+          fields:
+            media:
+              type: asset
+              value:
+                - _id: 53c58ecd-8e89-4e52-aef6-6cc53926d232
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: OE_Trident660_MY25_01261_ML_yd4nzv
+                    url:
+                      type: text
+                      value: >-
+                        https://media.triumphmotorcycles.co.uk/image/upload/v1727702146/OE_Trident660_MY25_01261_ML_yd4nzv.jpg
+                    size:
+                      type: number
+                      value: 20478619
+                    title:
+                      type: text
+                      value: OE_Trident660_MY25_01261_ML_yd4nzv
+                    width:
+                      type: number
+                      value: 8021
+                    height:
+                      type: number
+                      value: 5350
+                    mediaType:
+                      type: text
+                      value: image/jpeg
+                  _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+        - _id: 1dfac31a-c792-4341-8381-baf29abcf7af
+          type: image
+          fields:
+            media:
+              type: asset
+              value:
+                - _id: 21646925-3a66-4d5f-9036-662f3a9628cb
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: Street Triple RS_MY23_12138_ML_rh9xhs
+                    url:
+                      type: text
+                      value: >-
+                        https://media.triumphmotorcycles.co.uk/image/upload/v1708356435/Street%20Triple%20RS_MY23_12138_ML_rh9xhs.jpg
+                    size:
+                      type: number
+                      value: 1656040
+                    title:
+                      type: text
+                      value: Street Triple RS_MY23_12138_ML_rh9xhs
+                    width:
+                      type: number
+                      value: 3000
+                    height:
+                      type: number
+                      value: 2000
+                    mediaType:
+                      type: text
+                      value: image/jpeg
+                  _source: cloudinary-2c6d995a-4c3f-4f95-86ea-7d9f8af08667
+  _locales:
+    - en-GB
+    - en-US
+    - es-US
+    - en-CA
+    - fr-CA
+    - sv-SE
+    - nb-NO
+    - da-DK
+    - fi-FI
+    - en-IN
+    - tr-TR
+    - en-AU
+    - ms-MY
+    - en-NZ
+    - zh-SG
+    - en-PH
+    - en-AE
+    - id-ID
+    - de-DE
+    - de-AT
+    - de-CH
+    - fr-FR
+    - fr-CH
+    - fr-BE
+    - fr-LU
+    - es-ES
+    - es-MX
+    - es-AR
+    - pt-PT
+    - nl-NL
+    - nl-BE
+    - it-IT
+    - th-TH
+    - ja-JP
+    - zh-CN
+    - pl-PL
+    - pt-BR
+    - el-GR
+    - ko-KR
+    - hu-HU
+    - ro-RO
+    - cs-CZ
+    - sr-Latn-RS
+    - sl-SI
+    - sk-SK
+    - hr-HR
+    - zh-TW
+created: '2025-06-12T08:38:35.653133+00:00'
+modified: '2025-06-12T08:38:35.653133+00:00'
+pattern: true
