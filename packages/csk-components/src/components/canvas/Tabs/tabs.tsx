@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, useCallback, useEffect, useMemo, useState } from 'react';
+import { FC, Fragment, useCallback, useEffect, useMemo, useState } from 'react';
 import { flattenValues } from '@uniformdev/canvas';
 import { UniformSlot, UniformText } from '@uniformdev/canvas-next-rsc/component';
 import Container from '@/components/ui/Container';
@@ -65,7 +65,13 @@ export const Tabs: FC<TabsProps> = ({
         ))}
       </div>
       <UniformSlot data={component} context={context} slot={slots.tabItems}>
-        {({ child, component }) => (component._id === activeTabId ? <>{child}</> : <></>)}
+        {({ child, component: { _id: currentComponentId } }) =>
+          currentComponentId === activeTabId ? (
+            <Fragment key={currentComponentId}>{child}</Fragment>
+          ) : (
+            <Fragment key={currentComponentId} />
+          )
+        }
       </UniformSlot>
     </Container>
   );
