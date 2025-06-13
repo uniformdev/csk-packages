@@ -88,6 +88,11 @@ const PREVIEWS: Record<
   'feature-item': { id: 'c89210b7-c20c-453f-a22b-4a4794f30df5', width: 447, height: 250, scale: 2 },
   'stat-item': { id: '38dbf8fd-9322-4f39-8c30-8a1e57ff99d9', width: 447, height: 250, scale: 2 },
   'stat-item-with-background': { id: '8584c475-ed47-4dfc-9cbb-dc35c49e0914', width: 447, height: 250, scale: 2 },
+  'table-row': { id: '8f91d487-033b-4291-8587-f6b9ba782756', height: 48, onlyTitle: true },
+  'table-header-cell': { id: 'c45407b4-4856-414a-9c46-1c2ac6345a90', height: 48, onlyTitle: true },
+  'navigation-flyout': { id: 'c61478a3-a174-44e1-81ba-42a3188436f4', height: 48, onlyTitle: true },
+  'table-data-cell': { id: '00b39ce3-f591-44ca-b287-ea5193fdd182', height: 48, onlyTitle: true },
+  'table-custom-cell': { id: 'f8d807a7-b0af-4067-ac05-a384046e02fc', height: 48, onlyTitle: true },
 };
 
 const WITH_DELAY: string[] = ['video', 'section-default-variant-with-video'];

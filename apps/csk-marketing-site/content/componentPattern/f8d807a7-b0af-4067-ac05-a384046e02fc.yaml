@@ -1,0 +1,46 @@
+composition:
+  _name: Table Custom Cell
+  _id: f8d807a7-b0af-4067-ac05-a384046e02fc
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Table Custom Cell
+    anchor:
+      type: text
+      value: table-custom-cell
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        marginTop: ''
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    patternId:
+      type: text
+      value: f8d807a7-b0af-4067-ac05-a384046e02fc
+    fluidContent:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: a2e31b93-1e50-44c3-aec3-3333228e5fd6
+        type: tableCustomCell
+        parameters:
+          displayName:
+            type: text
+            value: Table Custom Cell
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      link: 'yes'
+    hideLockedParameters: true
+created: '2025-06-13T06:36:30.657831+00:00'
+modified: '2025-06-13T06:38:25.330441+00:00'
+pattern: true
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

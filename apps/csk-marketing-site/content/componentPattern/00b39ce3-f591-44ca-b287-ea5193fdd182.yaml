@@ -1,0 +1,46 @@
+composition:
+  _name: Table Data Cell
+  _id: 00b39ce3-f591-44ca-b287-ea5193fdd182
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Table Data Cell
+    anchor:
+      type: text
+      value: table-data-cell
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        marginTop: ''
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    patternId:
+      type: text
+      value: 00b39ce3-f591-44ca-b287-ea5193fdd182
+    fluidContent:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: aa39d7ea-ef08-4650-86fb-8cdda1921928
+        type: tableDataCell
+        parameters:
+          value:
+            type: text
+            value: Table Data Cell
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      link: 'yes'
+    hideLockedParameters: true
+created: '2025-06-13T06:34:37.969388+00:00'
+modified: '2025-06-13T06:36:09.254376+00:00'
+pattern: true
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

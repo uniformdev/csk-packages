@@ -1,0 +1,46 @@
+composition:
+  _name: Table Header Cell
+  _id: c45407b4-4856-414a-9c46-1c2ac6345a90
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Table Header Cell
+    anchor:
+      type: text
+      value: table-header-cell
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        marginTop: ''
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    patternId:
+      type: text
+      value: c45407b4-4856-414a-9c46-1c2ac6345a90
+    fluidContent:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: 4148d84b-4307-42c7-8a50-f487ab83f881
+        type: tableHeaderCell
+        parameters:
+          value:
+            type: text
+            value: Table Header Cell
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      link: 'yes'
+    hideLockedParameters: true
+created: '2025-06-13T06:29:47.678333+00:00'
+modified: '2025-06-13T06:30:52.528547+00:00'
+pattern: true
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
