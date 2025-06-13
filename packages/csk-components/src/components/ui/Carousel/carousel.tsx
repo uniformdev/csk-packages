@@ -17,47 +17,43 @@ export const Carousel: FC<CarouselProps> = ({
   gapX,
   variant = CarouselVariant.DEFAULT,
 }) => {
-  const container = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [recheckSlider, setRecheckSlider] = useState(false);
+
   const itemsPerPageNumber = Number(itemsPerPage);
 
-  const [reCheckCarouselSlider, setReCheckCarouselSlider] = useState<boolean>(false);
-
   const totalCountOfItems = useMemo(() => {
-    if (itemsPerPageNumber > 1) {
-      return Math.ceil((countOfItems ?? 0) / itemsPerPageNumber);
-    }
-    return countOfItems ?? 0;
+    if (!countOfItems) return 0;
+    return itemsPerPageNumber > 1 ? Math.ceil(countOfItems / itemsPerPageNumber) : countOfItems;
   }, [countOfItems, itemsPerPageNumber]);
 
   useEffect(() => {
-    const handleResize = () => setReCheckCarouselSlider(prev => !prev);
+    const handleResize = () => setRecheckSlider(prev => !prev);
     window.addEventListener('resize', handleResize, { passive: true });
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   useEffect(() => {
-    if (container.current) {
-      const { clientWidth } = container.current;
-      container.current.scrollLeft = currentIndex * clientWidth;
+    if (containerRef.current) {
+      const { clientWidth } = containerRef.current;
+      containerRef.current.scrollLeft = currentIndex * clientWidth;
     }
-  }, [currentIndex, reCheckCarouselSlider]);
+  }, [currentIndex, recheckSlider]);
 
-  const handlerPreviousNextButton = useCallback(
-    () => setCurrentIndex(prevState => (prevState === 0 ? totalCountOfItems - 1 : prevState - 1)),
-    [totalCountOfItems]
-  );
+  const goToPrevious = useCallback(() => {
+    setCurrentIndex(prev => (prev === 0 ? totalCountOfItems - 1 : prev - 1));
+  }, [totalCountOfItems]);
 
-  const handlerClickNextButton = useCallback(
-    () => setCurrentIndex(prevState => (totalCountOfItems - 1 === prevState ? 0 : prevState + 1)),
-    [totalCountOfItems]
-  );
+  const goToNext = useCallback(() => {
+    setCurrentIndex(prev => (prev === totalCountOfItems - 1 ? 0 : prev + 1));
+  }, [totalCountOfItems]);
 
-  const renderCarouselButtons = () => {
+  const renderPagination = () => {
     if (variant === CarouselVariant.BROCHURE) {
       return (
-        <div className={cn('flex py-4 px-4 z-5 gap-x-4 justify-end items-center', {})}>
-          <button onClick={handlerPreviousNextButton}>❮</button>
+        <div className={cn('flex py-4 px-4 z-5 gap-x-4 justify-end items-center')}>
+          <button onClick={goToPrevious}>❮</button>
 
           <div className="flex items-center gap-2">
             {Array.from({ length: totalCountOfItems }).map((_, index) => (
@@ -73,10 +69,12 @@ export const Carousel: FC<CarouselProps> = ({
               />
             ))}
           </div>
-          <button onClick={handlerClickNextButton}>❯</button>
+
+          <button onClick={goToNext}>❯</button>
         </div>
       );
     }
+
     if (variant === CarouselVariant.NUMERIC) {
       return (
         <div
@@ -85,14 +83,15 @@ export const Carousel: FC<CarouselProps> = ({
             'text-black dark:text-white': !backgroundColor,
           })}
         >
-          <button onClick={handlerPreviousNextButton}>❮</button>
+          <button onClick={goToPrevious}>❮</button>
           <div className="flex flex-col px-2">
             {currentIndex + 1} of {totalCountOfItems}
           </div>
-          <button onClick={handlerClickNextButton}>❯</button>
+          <button onClick={goToNext}>❯</button>
         </div>
       );
     }
+
     return (
       <div
         className={cn('absolute inset-x-5 top-1/2 flex -translate-y-1/2 justify-between', {
@@ -100,20 +99,21 @@ export const Carousel: FC<CarouselProps> = ({
           'text-black dark:text-white': !backgroundColor,
         })}
       >
-        <button onClick={handlerPreviousNextButton}>❮</button>
-        <button onClick={handlerClickNextButton}>❯</button>
+        <button onClick={goToPrevious}>❮</button>
+        <button onClick={goToNext}>❯</button>
       </div>
     );
   };
 
-  const renderSlides = () => {
-    return children({
+  const renderSlides = () =>
+    children({
       className: cn('flex size-full items-center justify-center', {
         [resolveViewPort(gapX, 'px-{value}')]: gapX,
       }),
-      style: { minWidth: itemsPerPageNumber > 1 ? `calc(${100 / itemsPerPageNumber}%)` : '100%' },
+      style: {
+        minWidth: itemsPerPageNumber > 1 ? `calc(${100 / itemsPerPageNumber}%)` : '100%',
+      },
     });
-  };
 
   return (
     <BaseContainer {...{ backgroundColor, spacing, border, fluidContent, fullHeight }}>
@@ -122,10 +122,10 @@ export const Carousel: FC<CarouselProps> = ({
           [resolveViewPort(gapX, '-mx-{value}')]: gapX,
         })}
       >
-        <div ref={container} className="flex overflow-x-hidden scroll-smooth">
+        <div ref={containerRef} className="flex overflow-x-hidden scroll-smooth">
           {renderSlides()}
         </div>
-        {renderCarouselButtons()}
+        {renderPagination()}
       </div>
     </BaseContainer>
   );
