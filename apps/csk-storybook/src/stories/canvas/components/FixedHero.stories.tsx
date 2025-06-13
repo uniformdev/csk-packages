@@ -43,11 +43,12 @@ const { text: buttonText } = ButtonArgTypes;
 
 const argTypes: Partial<ArgTypes<FixedHeroParameters>> = {
   displayName,
-  ...addPrefix({ text, color }, 'eyebrowTitle'),
-  ...addPrefix({ text, tag, color }, 'title'),
-  ...addPrefix({ text, color }, 'description'),
+  ...addPrefix({ text }, 'eyebrowTitle'),
+  ...addPrefix({ text, tag }, 'title'),
+  ...addPrefix({ text }, 'description'),
   ...addPrefix({ text: buttonText }, 'primaryButton'),
   contentAlignment: { control: 'select', options: ['left', 'center', 'right'] },
+  textColor: color,
   enableOverlayAutoTint: { control: 'boolean' },
   fullHeight,
 };

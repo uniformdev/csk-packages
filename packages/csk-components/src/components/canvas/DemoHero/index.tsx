@@ -73,6 +73,7 @@ export type DemoHeroParameters = ContainerParameters & {
   ImageParameters;
 
 export type FixedHeroParameters = {
+  textColor?: string;
   enableOverlayAutoTint?: boolean;
 } & DemoHeroParameters;
 

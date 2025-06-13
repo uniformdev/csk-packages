@@ -2,7 +2,7 @@ import { AssetParamValue } from '@uniformdev/assets';
 import {
   DemoHeroContentAlignment,
   TextParameters,
-  DemoHeroParameters as FixedHeroParameters,
+  FixedHeroParameters,
 } from '@uniformdev/csk-components/components/canvas';
 import { LIGHT_IMAGE_ASSET } from '@/assets';
 
@@ -27,7 +27,6 @@ export const getFixedHeroContent = (variant?: string): FixedHeroParameters => ({
 
   contentAlignment: DemoHeroContentAlignment.Center,
   fullHeight: false,
-  eyebrowTitleColor: !variant ? 'text-secondary' : 'text-tertiary',
-  titleColor: !variant ? 'text-secondary' : 'text-primary',
-  descriptionColor: !variant ? 'text-secondary' : 'text-primary',
+  textColor: !variant ? 'text-secondary' : 'text-primary',
+  enableOverlayAutoTint: true,
 });
