@@ -3,7 +3,7 @@
 import { FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import BaseContainer from '@/components/ui/Container';
 import { cn, resolveViewPort } from '@/utils/styling';
-import { CarouselProps } from '.';
+import { CarouselProps, CarouselVariant } from '.';
 
 export const Carousel: FC<CarouselProps> = ({
   countOfItems,
@@ -15,6 +15,7 @@ export const Carousel: FC<CarouselProps> = ({
   itemsPerPage = '1',
   children,
   gapX,
+  variant = CarouselVariant.DEFAULT,
 }) => {
   const container = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -52,8 +53,35 @@ export const Carousel: FC<CarouselProps> = ({
     [totalCountOfItems]
   );
 
-  const renderCarouselButtons = useCallback(
-    () => (
+  const renderCarouselButtons = () => {
+    if (variant === CarouselVariant.BROCHURE) {
+      return (
+        <div
+          className={cn('flex py-4 px-4 z-5 gap-x-4 justify-end items-center', {
+            [`bg-${backgroundColor}`]: !!backgroundColor,
+          })}
+        >
+          <button onClick={handlerPreviousNextButton}>❮</button>
+
+          <div className="flex items-center gap-2">
+            {Array.from({ length: totalCountOfItems }).map((_, index) => (
+              <button
+                key={`slide-${index}`}
+                onClick={() => setCurrentIndex(index)}
+                className={cn('h-2 rounded-full transition-all duration-300 size-2 opacity-50', {
+                  'w-6 opacity-100': index === currentIndex,
+                  [`bg-${backgroundColor} invert`]: !!backgroundColor,
+                  'bg-black dark:bg-white': !backgroundColor,
+                })}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+          <button onClick={handlerClickNextButton}>❯</button>
+        </div>
+      );
+    }
+    return (
       <div
         className={cn('absolute inset-x-5 top-1/2 flex -translate-y-1/2 justify-between', {
           [`text-${backgroundColor} invert`]: !!backgroundColor,
@@ -63,9 +91,8 @@ export const Carousel: FC<CarouselProps> = ({
         <button onClick={handlerPreviousNextButton}>❮</button>
         <button onClick={handlerClickNextButton}>❯</button>
       </div>
-    ),
-    [backgroundColor, handlerClickNextButton, handlerPreviousNextButton]
-  );
+    );
+  };
 
   const renderSlides = () => {
     return children({
