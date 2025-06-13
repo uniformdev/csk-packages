@@ -1,0 +1,46 @@
+composition:
+  _name: Navigation Flyout
+  _id: c61478a3-a174-44e1-81ba-42a3188436f4
+  type: demoCard
+  parameters:
+    title:
+      type: text
+      value: Navigation Flyout
+    anchor:
+      type: text
+      value: navigation-flyout
+    border:
+      type: dex-token-selector-parameter
+      value: border-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        marginTop: ''
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    patternId:
+      type: text
+      value: c61478a3-a174-44e1-81ba-42a3188436f4
+    fluidContent:
+      type: checkbox
+      value: true
+  slots:
+    demoItem:
+      - _id: fe404288-b27f-45c5-84e5-1aa252e067cf
+        type: navigationFlyout
+        parameters:
+          text:
+            type: text
+            value: Navigation Flyout
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      link: 'yes'
+    hideLockedParameters: true
+created: '2025-06-13T06:31:58.985036+00:00'
+modified: '2025-06-13T06:34:08.030679+00:00'
+pattern: true
+categoryId: b1163ce2-5ac7-4347-bc38-a42198180718
