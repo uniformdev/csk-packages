@@ -56,11 +56,7 @@ export const Carousel: FC<CarouselProps> = ({
   const renderCarouselButtons = () => {
     if (variant === CarouselVariant.BROCHURE) {
       return (
-        <div
-          className={cn('flex py-4 px-4 z-5 gap-x-4 justify-end items-center', {
-            [`bg-${backgroundColor}`]: !!backgroundColor,
-          })}
-        >
+        <div className={cn('flex py-4 px-4 z-5 gap-x-4 justify-end items-center', {})}>
           <button onClick={handlerPreviousNextButton}>❮</button>
 
           <div className="flex items-center gap-2">
@@ -76,6 +72,22 @@ export const Carousel: FC<CarouselProps> = ({
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}
+          </div>
+          <button onClick={handlerClickNextButton}>❯</button>
+        </div>
+      );
+    }
+    if (variant === CarouselVariant.NUMERIC) {
+      return (
+        <div
+          className={cn('flex py-4 px-4 z-5 gap-x-4 justify-end items-center', {
+            [`text-${backgroundColor} invert`]: !!backgroundColor,
+            'text-black dark:text-white': !backgroundColor,
+          })}
+        >
+          <button onClick={handlerPreviousNextButton}>❮</button>
+          <div className="flex flex-col px-2">
+            {currentIndex + 1} of {totalCountOfItems}
           </div>
           <button onClick={handlerClickNextButton}>❯</button>
         </div>

@@ -16,6 +16,7 @@ export type CarouselProps = Pick<
 export enum CarouselVariant {
   DEFAULT = 'default',
   BROCHURE = 'brochure',
+  NUMERIC = 'numeric',
 }
 
 export default dynamic(() => import('./carousel').then(mod => mod.Carousel));
