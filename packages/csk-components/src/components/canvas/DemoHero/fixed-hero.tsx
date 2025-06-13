@@ -44,7 +44,7 @@ export const FixedHero: FC<FixedHeroProps> = ({ textColor, enableOverlayAutoTint
     imagePriority
     imageObjectFit="cover"
     imageUnoptimized
-    imageContrastBaseColor={!props.component.variant && enableOverlayAutoTint ? props.titleColor : undefined}
+    imageContrastBaseColor={!props.component.variant && enableOverlayAutoTint ? textColor : undefined}
     imageOverlayOpacity="0.3"
     // Presentation Parameters
     spacing={{
