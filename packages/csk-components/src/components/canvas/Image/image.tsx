@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { imageFrom } from '@uniformdev/assets';
 import BaseImage from '@/components/ui/Image';
 import { resolveAsset } from '@/utils/assets';
 import { ImageProps } from '.';
@@ -17,20 +18,33 @@ export const Image: FC<ImageProps> = ({
   context,
   component,
 }) => {
+  const isBackground = component.variant === 'background';
+
   const [resolvedImage] = resolveAsset(image);
 
   if (!resolvedImage) {
     return <ImagePlaceholder context={context} component={component} width={width} height={height} />;
   }
 
-  const { url, title = '' } = resolvedImage;
+  const { focalPoint, title = '' } = resolvedImage;
+
+  const imageUrl = imageFrom(resolvedImage?.url)
+    .transform({
+      width: width,
+      height: height,
+      fit: objectFit,
+      focal: focalPoint,
+    })
+    .url();
+
+  const variantBasedProps = isBackground
+    ? { fill: true }
+    : { width: width || resolvedImage.width, height: height || resolvedImage.height };
 
   return (
     <BaseImage
-      containerStyle={{ ...(width ? { width: `${width}px` } : {}), ...(height ? { height: `${height}px` } : {}) }}
-      src={url}
+      src={imageUrl}
       alt={title}
-      fill
       unoptimized={unoptimized}
       priority={priority}
       sizes="100%"
@@ -38,6 +52,7 @@ export const Image: FC<ImageProps> = ({
       overlayColor={overlayColor}
       overlayOpacity={overlayOpacity}
       border={border}
+      {...variantBasedProps}
     />
   );
 };
