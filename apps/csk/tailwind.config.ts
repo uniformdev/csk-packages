@@ -13,6 +13,9 @@ import utilities from './tailwind.utilities.json';
 const safelist = [
   { pattern: /grid-cols-(1[0-2]|[1-9]|none|subgrid)/, variants: ['lg', 'md'] },
   { pattern: /gap(?:-(x|y))?-(0(\.5)?|1(\.5)?|2(\.5)?|3(\.5)?|[1-9]?[0-9]|px)/, variants: ['lg', 'md'] },
+  { pattern: /px?-([0-9]+|0(\.5)?|1(\.5)?|2(\.5)?|3(\.5)?|px)/, variants: ['lg', 'md'] },
+  { pattern: /mx?-([0-9]+|0(\.5)?|1(\.5)?|2(\.5)?|3(\.5)?|px)/, variants: ['lg', 'md'] },
+  { pattern: /-mx?-[0-9]+/, variants: ['lg', 'md'] },
   { pattern: /flex-(col|row|col-reverse|row-reverse)/, variants: ['lg', 'md'] },
   { pattern: /justify-(normal|start|end|center|between|around|evenly|stretch)/, variants: ['lg', 'md'] },
   { pattern: /items-(start|end|center|baseline|stretch)/, variants: ['lg', 'md'] },

@@ -1,3 +1,4 @@
+import { ReactElement } from 'react';
 import { UniformComposition } from '@uniformdev/canvas-next-rsc';
 import { Image, Carousel, CarouselParameters } from '@uniformdev/csk-components/components/canvas';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
@@ -21,33 +22,21 @@ const argTypes: Partial<ArgTypes<CarouselParameters>> = {
   ...baseContainerArgTypes,
 };
 
-export const Default: Story = {
-  args: {
-    displayName: 'Carousel',
-    backgroundColor: 'text-secondary',
-    fluidContent: true,
-    fullHeight: false,
-  },
-  argTypes,
-  render: (args: CarouselParameters) => {
-    const route = createFakeCompositionData(
-      'carousel',
-      undefined,
-      {
-        ...args,
-      },
-      {
-        carouselItems: Array.from({ length: 6 }, () => ({
-          type: 'image',
-          parameters: createUniformParameter({
-            image: IMAGE_ASSET,
-            objectFit: 'cover',
-            height: 500,
-            width: 500,
-          }),
-        })),
-      }
-    );
+const createCarouselItems = (count = 16) =>
+  Array.from({ length: count }, () => ({
+    type: 'image',
+    parameters: createUniformParameter({
+      image: IMAGE_ASSET,
+      objectFit: 'cover',
+      height: 500,
+      width: 500,
+    }),
+  }));
+
+const createStory = (variant?: string): ((args: CarouselParameters) => ReactElement) => {
+  return (args: CarouselParameters) => {
+    const route = createFakeCompositionData('carousel', variant, { ...args }, { carouselItems: createCarouselItems() });
+
     return (
       <UniformComposition
         serverContext={fakeContext}
@@ -61,5 +50,56 @@ export const Default: Story = {
         mode="server"
       />
     );
+  };
+};
+
+export const Default: Story = {
+  args: {
+    displayName: 'Carousel',
+    backgroundColor: 'text-secondary',
+    fluidContent: true,
+    fullHeight: false,
+    itemsPerPage: '1',
   },
+  argTypes,
+  render: createStory(),
+};
+
+export const DefaultWithMultipleItems: Story = {
+  args: {
+    displayName: 'Carousel',
+    backgroundColor: 'text-secondary',
+    fluidContent: true,
+    fullHeight: false,
+    itemsPerPage: '3',
+    gapX: '4',
+  },
+  argTypes,
+  render: createStory(),
+};
+
+export const BrochureWithMultipleItems: Story = {
+  args: {
+    displayName: 'Carousel',
+    backgroundColor: 'text-secondary',
+    fluidContent: true,
+    fullHeight: false,
+    itemsPerPage: '3',
+    gapX: '4',
+  },
+  argTypes,
+  render: createStory('brochure'),
+};
+
+export const NumericWithMultipleItems: Story = {
+  args: {
+    displayName: 'Carousel',
+    backgroundColor: 'text-secondary',
+    fluidContent: true,
+    fullHeight: false,
+    itemsPerPage: '3',
+    gapX: '4',
+  },
+  argTypes,
+  render: createStory('numeric'),
 };

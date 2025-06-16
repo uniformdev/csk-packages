@@ -1,9 +1,9 @@
 'use client';
 
-import { FC, useCallback, useEffect, useRef, useState } from 'react';
+import { FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import BaseContainer from '@/components/ui/Container';
-import { cn } from '@/utils/styling';
-import { CarouselProps } from '.';
+import { cn, resolveViewPort } from '@/utils/styling';
+import { CarouselProps, CarouselVariant } from '.';
 
 export const Carousel: FC<CarouselProps> = ({
   countOfItems,
@@ -12,62 +12,120 @@ export const Carousel: FC<CarouselProps> = ({
   border,
   fluidContent,
   fullHeight,
+  itemsPerPage = '1',
   children,
+  gapX,
+  variant = CarouselVariant.DEFAULT,
 }) => {
-  const container = useRef<HTMLInputElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [reCheckCarouselSlider, setReCheckCarouselSlider] = useState<boolean>(false);
+  const [recheckSlider, setRecheckSlider] = useState(false);
 
-  const totalCountOfItems = (() => {
-    if (countOfItems) return countOfItems;
-    return Array.isArray(children) ? children.length : 1;
-  })();
+  const itemsPerPageNumber = Number(itemsPerPage);
+
+  const totalCountOfItems = useMemo(() => {
+    if (!countOfItems) return 0;
+    return itemsPerPageNumber > 1 ? Math.ceil(countOfItems / itemsPerPageNumber) : countOfItems;
+  }, [countOfItems, itemsPerPageNumber]);
 
   useEffect(() => {
-    const handleResize = () => setReCheckCarouselSlider(prevState => !prevState);
+    const handleResize = () => setRecheckSlider(prev => !prev);
     window.addEventListener('resize', handleResize, { passive: true });
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   useEffect(() => {
-    if (container.current) {
-      const { clientWidth } = container.current;
-      container.current.scrollLeft = currentIndex * clientWidth;
+    if (containerRef.current) {
+      const { clientWidth } = containerRef.current;
+      containerRef.current.scrollLeft = currentIndex * clientWidth;
     }
-  }, [currentIndex, reCheckCarouselSlider]);
+  }, [currentIndex, recheckSlider]);
 
-  const handlerPreviousNextButton = useCallback(
-    () => setCurrentIndex(prevState => (prevState === 0 ? totalCountOfItems - 1 : prevState - 1)),
-    [totalCountOfItems]
-  );
+  const goToPrevious = useCallback(() => {
+    setCurrentIndex(prev => (prev === 0 ? totalCountOfItems - 1 : prev - 1));
+  }, [totalCountOfItems]);
 
-  const handlerClickNextButton = useCallback(
-    () => setCurrentIndex(prevState => (totalCountOfItems - 1 === prevState ? 0 : prevState + 1)),
-    [totalCountOfItems]
-  );
+  const goToNext = useCallback(() => {
+    setCurrentIndex(prev => (prev === totalCountOfItems - 1 ? 0 : prev + 1));
+  }, [totalCountOfItems]);
 
-  const renderCarouselButtons = useCallback(
-    () => (
+  const renderPagination = () => {
+    if (variant === CarouselVariant.BROCHURE) {
+      return (
+        <div className={cn('flex py-4 px-4 z-5 gap-x-4 justify-end items-center')}>
+          <button onClick={goToPrevious}>❮</button>
+
+          <div className="flex items-center gap-2">
+            {Array.from({ length: totalCountOfItems }).map((_, index) => (
+              <button
+                key={`slide-${index}`}
+                onClick={() => setCurrentIndex(index)}
+                className={cn('h-2 rounded-full transition-all duration-300 size-2 opacity-50', {
+                  'w-6 opacity-100': index === currentIndex,
+                  [`bg-${backgroundColor} invert`]: !!backgroundColor,
+                  'bg-black dark:bg-white': !backgroundColor,
+                })}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+
+          <button onClick={goToNext}>❯</button>
+        </div>
+      );
+    }
+
+    if (variant === CarouselVariant.NUMERIC) {
+      return (
+        <div
+          className={cn('flex py-4 px-4 z-5 gap-x-4 justify-end items-center', {
+            [`text-${backgroundColor} invert`]: !!backgroundColor,
+            'text-black dark:text-white': !backgroundColor,
+          })}
+        >
+          <button onClick={goToPrevious}>❮</button>
+          <div className="flex flex-col px-2">
+            {currentIndex + 1} of {totalCountOfItems}
+          </div>
+          <button onClick={goToNext}>❯</button>
+        </div>
+      );
+    }
+
+    return (
       <div
         className={cn('absolute inset-x-5 top-1/2 flex -translate-y-1/2 justify-between', {
           [`text-${backgroundColor} invert`]: !!backgroundColor,
           'text-black dark:text-white': !backgroundColor,
         })}
       >
-        <button onClick={handlerPreviousNextButton}>❮</button>
-        <button onClick={handlerClickNextButton}>❯</button>
+        <button onClick={goToPrevious}>❮</button>
+        <button onClick={goToNext}>❯</button>
       </div>
-    ),
-    [backgroundColor, handlerClickNextButton, handlerPreviousNextButton]
-  );
+    );
+  };
+
+  const renderSlides = () =>
+    children({
+      className: cn('flex size-full items-center justify-center', {
+        [resolveViewPort(gapX, 'px-{value}')]: gapX,
+      }),
+      style: {
+        minWidth: itemsPerPageNumber > 1 ? `calc(${100 / itemsPerPageNumber}%)` : '100%',
+      },
+    });
 
   return (
     <BaseContainer {...{ backgroundColor, spacing, border, fluidContent, fullHeight }}>
-      <div className="relative">
-        <div ref={container} className="flex flex-row items-center overflow-x-hidden scroll-smooth">
-          {children}
+      <div
+        className={cn('relative', {
+          [resolveViewPort(gapX, '-mx-{value}')]: gapX,
+        })}
+      >
+        <div ref={containerRef} className="flex overflow-x-hidden scroll-smooth">
+          {renderSlides()}
         </div>
-        {renderCarouselButtons()}
+        {renderPagination()}
       </div>
     </BaseContainer>
   );

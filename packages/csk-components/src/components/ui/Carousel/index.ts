@@ -7,7 +7,16 @@ export type CarouselProps = Pick<
   'title' | 'backgroundColor' | 'spacing' | 'border' | 'fluidContent' | 'fullHeight'
 > & {
   countOfItems?: number;
-  children: ReactElement | ReactElement[];
+  children: (options: { className?: string; style?: React.CSSProperties }) => ReactElement;
+  itemsPerPage?: string;
+  gapX?: string;
+  variant?: string;
 };
+
+export enum CarouselVariant {
+  DEFAULT = 'default',
+  BROCHURE = 'brochure',
+  NUMERIC = 'numeric',
+}
 
 export default dynamic(() => import('./carousel').then(mod => mod.Carousel));
