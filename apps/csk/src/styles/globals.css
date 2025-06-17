@@ -43,6 +43,36 @@ write('@custom-variant dark (&:is(.dark *));\n');
 @source inline("{hover:,}opacity-{0,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100}");
 @source inline("{hover:,}scale-{0,50,75,90,95,100,105,110,125,150}");
 @source inline("h-{full,screen}");
+@source inline("'contrast-[.1]");
+@source inline("'group-hover:contrast-[.1]");
+
+@theme {
+    --animate-shake: shake 0.6s ease-in-out infinite;
+
+    @keyframes shake {
+
+        0%,
+        100% {
+            transform: rotate(0deg);
+        }
+
+        20% {
+            transform: rotate(-10deg);
+        }
+
+        40% {
+            transform: rotate(10deg);
+        }
+
+        60% {
+            transform: rotate(-6deg);
+        }
+
+        80% {
+            transform: rotate(6deg);
+        }
+    }
+}
 
 @custom-variant dark (&:where(.dark, .dark *));
 
