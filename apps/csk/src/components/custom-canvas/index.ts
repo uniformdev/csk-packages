@@ -24,6 +24,10 @@ import FormattedPrice from './FormattedPrice';
 import Grid from './Grid';
 import GridItem from './GridItem';
 import Input from './Input';
+//? if (localization) {
+import Locale from './Locale';
+import LocaleSelector from './LocaleSelector';
+//? }
 import ModalLayout from './ModalLayout';
 import QuantitySelector from './QuantitySelector';
 import QuirkSelector from './QuirkSelector';
@@ -70,4 +74,8 @@ export const customComponentsMapping: ComponentMapping = {
   dynamicProductRecommendations: { component: DynamicProductRecommendations },
   formattedPrice: { component: FormattedPrice },
   entryPreview: { component: Page },
+  //? if (localization) {
+  locale: { component: Locale },
+  localeSelector: { component: LocaleSelector },
+  //? }
 };

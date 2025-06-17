@@ -7,6 +7,7 @@ import { syncSuccessLog } from './utils';
 type LocalizationSettings = {
   locales: string[];
   localeNames: { [key: string]: string };
+  localeGroups: { [key: string]: string };
   defaultLocale: string | null;
 };
 
@@ -32,6 +33,7 @@ export const pullLocales = async () => {
     (acc, l) => {
       acc.locales.push(l.locale);
       acc.localeNames[l.locale] = l.displayName;
+      acc.localeGroups[l.locale] = l.group ?? '';
       if (l.isDefault) {
         acc.defaultLocale = l.locale;
       }
@@ -40,6 +42,7 @@ export const pullLocales = async () => {
     {
       locales: [],
       localeNames: {},
+      localeGroups: {},
       defaultLocale: null,
     }
   );

@@ -304,6 +304,34 @@ composition:
             value: contrast-[.1]
         _overridability:
           hideLockedParameters: true
+      - _id: 6db4e94e-57df-4dbe-9740-376836444023
+        type: locale
+        variant: onlyIcons
+        parameters:
+          link:
+            type: link
+            locales:
+              en:
+                path: /${locale}/location-selector
+                type: projectMapNode
+                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+          size:
+            type: dex-segmented-control-parameter
+            value: 2xl
+          color:
+            type: dex-color-palette-parameter
+            value: text-primary
+          weight:
+            type: dex-segmented-control-parameter
+            value: normal
+          hoverEffect:
+            type: dex-segmented-control-parameter
+            value: ''
+        _overridability:
+          hideLockedParameters: true
     headerCenterContent:
       - _id: 5832d439-1459-4a01-b422-fd1e66a71cbb
         type: navigationLink

@@ -1,0 +1,277 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: localeSelector
+name: Locale Selector
+icon: screen
+parameters:
+  - id: 11b62b3a-9b88-4a4a-9ec3-0e4b77f60c2c
+    name: Locale Item
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - localeItemColor
+        - localeItemSize
+        - localeItemWeight
+        - localeItemFont
+        - localeItemTransform
+        - localeItemDecoration
+        - localeItemLetterSpacing
+        - localeItemAlignment
+        - localeItemBackgroundColor
+        - localeItemBorder
+        - localeItemSpacing
+  - id: localeItemColor
+    name: Color
+    type: dex-color-palette-parameter
+    typeConfig:
+      allowColors: []
+      selectedGroup: text
+      allowThemeColors: []
+  - id: localeItemSize
+    name: Size
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: XS
+          value: xs
+        - key: SM
+          value: sm
+        - key: Base
+          value: base
+        - key: LG
+          value: lg
+        - key: XL
+          value: xl
+        - key: 2XL
+          value: 2xl
+        - key: 4XL
+          value: 4xl
+        - key: 5XL
+          value: 5xl
+        - key: 7XL
+          value: 7xl
+      withViewPort: true
+  - id: localeItemWeight
+    name: Weight
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Normal
+          value: normal
+        - key: Medium
+          value: medium
+        - key: Bold
+          value: bold
+        - key: Extrabold
+          value: extrabold
+      defaultValue: normal
+  - id: localeItemFont
+    name: Font
+    type: dex-token-selector-parameter
+    typeConfig:
+      selectedTokenType: font
+  - id: localeItemTransform
+    name: Transform
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Uppercase
+          value: uppercase
+        - key: Lowercase
+          value: lowercase
+        - key: Capitalize
+          value: capitalize
+  - id: localeItemDecoration
+    name: Decoration
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Underline
+          value: underline
+        - key: Overline
+          value: overline
+        - key: Line Through
+          value: line-through
+  - id: localeItemLetterSpacing
+    name: Letter Spacing
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Tighter
+          value: tighter
+        - key: Tight
+          value: tight
+        - key: Wide
+          value: wide
+        - key: Wider
+          value: wider
+  - id: localeItemAlignment
+    name: Alignment
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Left
+          value: left
+        - key: Center
+          value: center
+        - key: Right
+          value: right
+  - id: localeItemBackgroundColor
+    name: Background Color
+    type: dex-color-palette-parameter
+    typeConfig: null
+  - id: localeItemBorder
+    name: Border
+    type: dex-token-selector-parameter
+    typeConfig:
+      selectedTokenType: border
+  - id: localeItemSpacing
+    name: Spacing
+    type: dex-space-control-parameter
+    typeConfig:
+      type: dimensions
+      defaultValue:
+        mobile: {}
+        tablet: {}
+        desktop: {}
+      withViewPort: true
+      selectedGroup: container      
+  - id: 013838e8-b7a5-4a90-bbe7-de9bcebf8d25
+    name: Accordion Item
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - accordionItemColor
+        - accordionItemSize
+        - accordionItemWeight
+        - accordionItemFont
+        - accordionItemTransform
+        - accordionItemDecoration
+        - accordionItemLetterSpacing
+        - accordionItemAlignment
+        - accordionItemBackgroundColor
+        - accordionItemBorder
+        - accordionItemSpacing
+  - id: accordionItemColor
+    name: Color
+    type: dex-color-palette-parameter
+    typeConfig:
+      allowColors: []
+      selectedGroup: text
+      allowThemeColors: []
+  - id: accordionItemSize
+    name: Size
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: XS
+          value: xs
+        - key: SM
+          value: sm
+        - key: Base
+          value: base
+        - key: LG
+          value: lg
+        - key: XL
+          value: xl
+        - key: 2XL
+          value: 2xl
+        - key: 4XL
+          value: 4xl
+        - key: 5XL
+          value: 5xl
+        - key: 7XL
+          value: 7xl
+      withViewPort: true
+  - id: accordionItemWeight
+    name: Weight
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Normal
+          value: normal
+        - key: Medium
+          value: medium
+        - key: Bold
+          value: bold
+        - key: Extrabold
+          value: extrabold
+      defaultValue: normal
+  - id: accordionItemFont
+    name: Font
+    type: dex-token-selector-parameter
+    typeConfig:
+      selectedTokenType: font
+  - id: accordionItemTransform
+    name: Transform
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Uppercase
+          value: uppercase
+        - key: Lowercase
+          value: lowercase
+        - key: Capitalize
+          value: capitalize
+  - id: accordionItemDecoration
+    name: Decoration
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Underline
+          value: underline
+        - key: Overline
+          value: overline
+        - key: Line Through
+          value: line-through
+  - id: accordionItemLetterSpacing
+    name: Letter Spacing
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Tighter
+          value: tighter
+        - key: Tight
+          value: tight
+        - key: Wide
+          value: wide
+        - key: Wider
+          value: wider
+  - id: accordionItemAlignment
+    name: Alignment
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Left
+          value: left
+        - key: Center
+          value: center
+        - key: Right
+          value: right
+  - id: accordionItemBackgroundColor
+    name: Background Color
+    type: dex-color-palette-parameter
+    typeConfig: null
+  - id: accordionItemBorder
+    name: Border
+    type: dex-token-selector-parameter
+    typeConfig:
+      selectedTokenType: border
+  - id: accordionItemSpacing
+    name: Spacing
+    type: dex-space-control-parameter
+    typeConfig:
+      type: dimensions
+      defaultValue:
+        mobile: {}
+        tablet: {}
+        desktop: {}
+      withViewPort: true
+      selectedGroup: container
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2025-07-02T11:44:41.758259+00:00'
+updated: '2025-07-02T13:40:42.393426+00:00'
