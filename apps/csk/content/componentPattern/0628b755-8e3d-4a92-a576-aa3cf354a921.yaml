@@ -36,7 +36,7 @@ composition:
       value: {}
     backgroundColor:
       type: dex-color-palette-parameter
-      value: general-color-5
+      value: general-color-12
   slots:
     flexItem:
       - _id: 29b74799-cf5d-4d42-9f9a-4a4b240f4388
@@ -51,6 +51,9 @@ composition:
               mobile: 5xl
               tablet: 5xl
               desktop: 2xl
+          text:
+            type: text
+            value: 44 million
           color:
             type: dex-color-palette-parameter
             value: text-secondary
@@ -76,6 +79,9 @@ composition:
             type: dex-segmented-control-parameter
             value:
               desktop: base
+          text:
+            type: text
+            value: Transactions every 24 hours
           color:
             type: dex-color-palette-parameter
             value: text-secondary
@@ -104,5 +110,5 @@ created: '2025-02-17T15:34:18.113975+00:00'
 modified: '2025-02-17T15:34:18.113975+00:00'
 pattern: true
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/stat-item-with-background.jpg
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/stat-item-with-background.jpg
 categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

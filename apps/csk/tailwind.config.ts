@@ -37,11 +37,16 @@ const safelist = [
   { pattern: /shrink-(0|1)/ },
   { pattern: /opacity-(0|5|10|15|20|25|30|35|40|45|50|55|60|65|70|75|80|85|90|95|100)/, variants: ['hover'] },
   { pattern: /scale-(0|50|75|90|95|100|105|110|125|150)/, variants: ['hover'] },
+  'contrast-[.1] group-hover:contrast-[.1]',
 ];
 
 const colorKeys = Object.keys(theme.extend.colors || {});
 if (colorKeys.length) {
-  safelist.push(generateTailwindcssColorKeysPattern(colorKeys));
+  safelist.push(
+    generateTailwindcssColorKeysPattern(colorKeys, {
+      prefixes: ['from', 'to'],
+    })
+  );
 }
 
 const dimensionKeys = Object.keys(theme.extend.spacing || {});
@@ -85,11 +90,40 @@ export default {
         foreground: 'hsl(var(--foreground))',
         ...theme.extend.colors,
       },
+      animation: {
+        shake: 'shake 0.6s ease-in-out infinite',
+      },
+      keyframes: {
+        shake: {
+          '0%, 100%': { transform: 'rotate(0deg)' },
+          '20%': { transform: 'rotate(-10deg)' },
+          '40%': { transform: 'rotate(10deg)' },
+          '60%': { transform: 'rotate(-6deg)' },
+          '80%': { transform: 'rotate(6deg)' },
+        },
+      },
     },
   },
   //? }
   //? if (!shadcn) {
-  //? write('theme,\n');
+  //? write('  theme: {\n');
+  //? write('    ...theme,\n');
+  //? write('    extend: {\n');
+  //? write('      ...theme.extend,\n');
+  //? write('      animation: {\n');
+  //? write('        shake: "shake 0.6s ease-in-out infinite",\n');
+  //? write('      },\n');
+  //? write('      keyframes: {\n');
+  //? write('        shake: {\n');
+  //? write('          "0%, 100%": { transform: "rotate(0deg)" },\n');
+  //? write('          "20%": { transform: "rotate(-10deg)" },\n');
+  //? write('          "40%": { transform: "rotate(10deg)" },\n');
+  //? write('          "60%": { transform: "rotate(-6deg)" },\n');
+  //? write('          "80%": { transform: "rotate(6deg)" },\n');
+  //? write('        },\n');
+  //? write('      },\n');
+  //? write('    },\n');
+  //? write('  },\n');
   //? }
   plugins: [
     typography,

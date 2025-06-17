@@ -1,0 +1,327 @@
+composition:
+  _name: Articles Quick Picks
+  _id: 90cf0a21-78be-4cc6-b460-acb78b5c1f31
+  type: grid
+  parameters:
+    gapX:
+      type: dex-slider-control-parameter
+      value:
+        mobile: '4'
+        tablet: '8'
+        desktop: '16'
+    gapY:
+      type: dex-slider-control-parameter
+      value:
+        mobile: '8'
+        tablet: '8'
+        desktop: '16'
+    displayName:
+      type: text
+      value: Quick View Articles
+    columnsCount:
+      type: dex-slider-control-parameter
+      value:
+        mobile: '1'
+        tablet: '2'
+        desktop: '2'
+    fluidContent:
+      type: checkbox
+      value: true
+  slots:
+    gridInner:
+      - _id: cde73dfb-c7ea-43fe-8683-b6b4960d53ae
+        type: flexCard
+        _pattern: c895d189-c093-4ee8-aeef-5cdccd7efd2e
+      - _id: f9838a65-697c-4f8c-ab3c-56ed288c36df
+        type: flexCard
+        _pattern: c895d189-c093-4ee8-aeef-5cdccd7efd2e
+      - _id: 1b8ec53b-9996-435f-9d54-66cc2bb82d2d
+        type: flexCard
+        _pattern: c895d189-c093-4ee8-aeef-5cdccd7efd2e
+      - _id: 75708a22-6dc2-4a3f-9e26-9fcc8544ee8f
+        type: flexCard
+        _pattern: c895d189-c093-4ee8-aeef-5cdccd7efd2e
+  _dataResources:
+    Proper Cuppa:
+      type: article
+      variables:
+        slug: a-proper-cuppa-how-to-brew-tea-right
+        locale: ${locale}
+    Grinding Beans:
+      type: article
+      variables:
+        slug: grinding-beans-the-key-to-perfect-coffee
+        locale: ${locale}
+      isPatternParameter: false
+      ignorePatternParameterDefault: false
+    Picking The Right Bean:
+      type: article
+      variables:
+        slug: picking-the-right-bean-a-guide-to-coffee-selection
+        locale: ${locale}
+    Whats Up With The Slow Drip:
+      type: article
+      variables:
+        slug: whats-up-with-the-slow-drip
+        locale: ${locale}
+  _overrides:
+    1b8ec53b-9996-435f-9d54-66cc2bb82d2d:
+      parameters:
+        displayName:
+          type: text
+          value: ${#jptr:/Grinding Beans/entry/fields/title/value}
+    75708a22-6dc2-4a3f-9e26-9fcc8544ee8f:
+      parameters:
+        displayName:
+          type: text
+          value: ${#jptr:/Proper Cuppa/entry/fields/title/value}
+    cde73dfb-c7ea-43fe-8683-b6b4960d53ae:
+      parameters:
+        displayName:
+          type: text
+          value: ${#jptr:/Picking The Right Bean/entry/fields/title/value}
+    f9838a65-697c-4f8c-ab3c-56ed288c36df:
+      parameters:
+        displayName:
+          type: text
+          value: ${#jptr:/Whats Up With The Slow Drip/entry/fields/title/value}
+    1b8ec53b-9996-435f-9d54-66cc2bb82d2d|4a7ce726-321d-4e77-ac0e-a11e42946127:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: /${locale}/articles/${#jptr:/Grinding Beans/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Grinding Beans/entry/_slug}
+    1b8ec53b-9996-435f-9d54-66cc2bb82d2d|78f51974-be44-4ed8-b379-47237f91d7e3:
+      parameters:
+        text:
+          type: text
+          value: ${#jptr:/Grinding Beans/entry/fields/title/value}
+    1b8ec53b-9996-435f-9d54-66cc2bb82d2d|e0aba200-251a-45f1-a1c2-ac94bbb9ca3f:
+      parameters:
+        text:
+          type: text
+          value: ${#jptr:/Grinding Beans/entry/fields/shortDescription/value}
+    1b8ec53b-9996-435f-9d54-66cc2bb82d2d|f02a551f-116f-48d2-99b3-21ebe2ca74e5:
+      parameters:
+        image:
+          type: asset
+          value:
+            - _id: e8b52771-e1b7-4733-9769-29ecac7935d7
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: c37d4bed-a237-4eba-b7f4-c03fbb1e5025
+                url:
+                  value: >-
+                    https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/8im-wDvoQ8y1eItLOAmTTg-grinding-beans.svg
+                  type: text
+                file:
+                  type: file
+                  value: 13475335-cbad-4227-9073-69b668583775
+                size:
+                  value: 5220
+                  type: number
+                title:
+                  type: text
+                  value: grinding-beans.svg
+                width:
+                  value: 60
+                  type: number
+                height:
+                  value: 84
+                  type: number
+                mediaType:
+                  value: image/svg+xml
+                  type: text
+              _source: uniform-assets
+        width:
+          type: number
+          value: '83'
+        height:
+          type: number
+          value: '72'
+        objectFit:
+          type: dex-segmented-control-parameter
+          value: fill
+    75708a22-6dc2-4a3f-9e26-9fcc8544ee8f|4a7ce726-321d-4e77-ac0e-a11e42946127:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: /${locale}/articles/${#jptr:/Proper Cuppa/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Proper Cuppa/entry/_slug}
+    75708a22-6dc2-4a3f-9e26-9fcc8544ee8f|78f51974-be44-4ed8-b379-47237f91d7e3:
+      parameters:
+        text:
+          type: text
+          value: ${#jptr:/Proper Cuppa/entry/fields/title/value}
+    75708a22-6dc2-4a3f-9e26-9fcc8544ee8f|e0aba200-251a-45f1-a1c2-ac94bbb9ca3f:
+      parameters:
+        text:
+          type: text
+          value: ${#jptr:/Proper Cuppa/entry/fields/shortDescription/value}
+    75708a22-6dc2-4a3f-9e26-9fcc8544ee8f|f02a551f-116f-48d2-99b3-21ebe2ca74e5:
+      parameters:
+        image:
+          type: asset
+          value:
+            - _id: 6b8cea03-4503-4c17-868e-727f82b21e73
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: 0973bc45-3d32-4621-92e6-c5dbb685d1a0
+                url:
+                  value: >-
+                    https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/cl1SqrAuSLCvniOFr3E2RA-a-propper-cuppa.svg
+                  type: text
+                file:
+                  type: file
+                  value: e4449b9e-191c-4193-929c-1526537d9322
+                size:
+                  value: 3682
+                  type: number
+                title:
+                  type: text
+                  value: a-propper-cuppa.svg
+                width:
+                  value: 82
+                  type: number
+                height:
+                  value: 88
+                  type: number
+                mediaType:
+                  value: image/svg+xml
+                  type: text
+              _source: uniform-assets
+        width:
+          type: number
+          value: '83'
+        height:
+          type: number
+          value: '72'
+        objectFit:
+          type: dex-segmented-control-parameter
+          value: fill
+    cde73dfb-c7ea-43fe-8683-b6b4960d53ae|4a7ce726-321d-4e77-ac0e-a11e42946127:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: /${locale}/articles/${#jptr:/Picking The Right Bean/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Picking The Right Bean/entry/_slug}
+    cde73dfb-c7ea-43fe-8683-b6b4960d53ae|78f51974-be44-4ed8-b379-47237f91d7e3:
+      parameters:
+        text:
+          type: text
+          value: ${#jptr:/Picking The Right Bean/entry/fields/title/value}
+    cde73dfb-c7ea-43fe-8683-b6b4960d53ae|e0aba200-251a-45f1-a1c2-ac94bbb9ca3f:
+      parameters:
+        text:
+          type: text
+          value: ${#jptr:/Picking The Right Bean/entry/fields/shortDescription/value}
+    cde73dfb-c7ea-43fe-8683-b6b4960d53ae|f02a551f-116f-48d2-99b3-21ebe2ca74e5:
+      parameters:
+        objectFit:
+          type: dex-segmented-control-parameter
+          value: fill
+    f9838a65-697c-4f8c-ab3c-56ed288c36df|4a7ce726-321d-4e77-ac0e-a11e42946127:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: >-
+                /${locale}/articles/${#jptr:/Whats Up With The Slow
+                Drip/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Whats Up With The Slow Drip/entry/_slug}
+    f9838a65-697c-4f8c-ab3c-56ed288c36df|78f51974-be44-4ed8-b379-47237f91d7e3:
+      parameters:
+        text:
+          type: text
+          value: ${#jptr:/Whats Up With The Slow Drip/entry/fields/title/value}
+    f9838a65-697c-4f8c-ab3c-56ed288c36df|e0aba200-251a-45f1-a1c2-ac94bbb9ca3f:
+      parameters:
+        text:
+          type: text
+          value: >-
+            ${#jptr:/Whats Up With The Slow
+            Drip/entry/fields/shortDescription/value}
+    f9838a65-697c-4f8c-ab3c-56ed288c36df|f02a551f-116f-48d2-99b3-21ebe2ca74e5:
+      parameters:
+        image:
+          type: asset
+          value:
+            - _id: 2edc2bb6-598e-43c5-b771-e6cbbe536bba
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: 6babea2d-9a72-4a21-b1ff-c5dcbcf01669
+                url:
+                  value: >-
+                    https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/99lQZWxLSvCd8nCBglVbwQ-slow-drip.svg
+                  type: text
+                file:
+                  type: file
+                  value: 3f12efff-e091-4b75-91d4-d20b3dbe315f
+                size:
+                  value: 2458
+                  type: number
+                title:
+                  type: text
+                  value: slow-drip.svg
+                width:
+                  value: 79
+                  type: number
+                height:
+                  value: 94
+                  type: number
+                mediaType:
+                  value: image/svg+xml
+                  type: text
+              _source: uniform-assets
+        width:
+          type: number
+          value: '83'
+        height:
+          type: number
+          value: '72'
+        objectFit:
+          type: dex-segmented-control-parameter
+          value: fill
+  _overridability:
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2025-06-06T09:07:01.75606+00:00'
+modified: '2025-06-06T09:07:01.75606+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/articles-quick-picks.jpg
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9
