@@ -15,9 +15,10 @@ export const Flex: FC<FlexProps> = ({
   border,
   fluidContent,
   fullHeight,
+  fitHeight,
   children,
 }) => (
-  <BaseContainer {...{ backgroundColor, spacing, border, fluidContent, fullHeight, wrapperClassName }}>
+  <BaseContainer {...{ backgroundColor, spacing, border, fluidContent, fullHeight, fitHeight, wrapperClassName }}>
     <div
       className={cn(
         'flex',
@@ -26,6 +27,7 @@ export const Flex: FC<FlexProps> = ({
           [resolveViewPort(justifyContent, 'justify-{value}')]: justifyContent,
           [resolveViewPort(gap, 'gap-{value}')]: gap,
           [resolveViewPort(alignItems, 'items-{value}')]: alignItems,
+          'h-full': fitHeight,
         },
         className
       )}

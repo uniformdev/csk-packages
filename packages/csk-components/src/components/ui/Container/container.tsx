@@ -12,6 +12,7 @@ export const Container: FC<ContainerProps> = ({
   border = '',
   fluidContent = false,
   fullHeight = false,
+  fitHeight = false,
   maxWidth,
   ...rest
 }) => {
@@ -29,6 +30,7 @@ export const Container: FC<ContainerProps> = ({
           'mx-auto w-full': !fluidContent,
           'max-w-7xl max-w-container-width': !maxWidth && !fluidContent,
           [`max-w-${maxWidth}`]: !!maxWidth && !fluidContent,
+          'h-full': fitHeight,
         },
         wrapperClassName
       )}
@@ -37,6 +39,7 @@ export const Container: FC<ContainerProps> = ({
         className={cn(
           {
             '!h-screen': fullHeight,
+            'h-full': fitHeight,
             [`bg-${backgroundColor}`]: !!backgroundColor,
             [resolveViewPort(marginTop, 'mt-{value}')]: marginTop,
             [resolveViewPort(marginBottom, 'mb-{value}')]: marginBottom,

@@ -17,6 +17,7 @@ export const ImageGallery: FC<ImageGalleryProps> = ({
   border,
   fluidContent,
   fullHeight,
+  fitHeight,
   config,
   context,
   component,
@@ -43,7 +44,7 @@ export const ImageGallery: FC<ImageGalleryProps> = ({
       ?.length;
 
   return (
-    <Container {...{ backgroundColor, spacing, border, fluidContent, fullHeight }}>
+    <Container {...{ backgroundColor, spacing, border, fluidContent, fullHeight, fitHeight }}>
       <div className="flex flex-col gap-1">
         {showEmptySlot ? (
           <UniformSlot context={context} slot={slots.imageGalleryItems} data={component} />

@@ -44,6 +44,7 @@ export const Default: Story = {
     backgroundColor: 'text-secondary',
     fluidContent: false,
     fullHeight: false,
+    fitHeight: false,
   },
   argTypes,
   render: (args: FlexParameters) => {

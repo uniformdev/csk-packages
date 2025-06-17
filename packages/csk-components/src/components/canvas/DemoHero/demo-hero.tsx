@@ -78,7 +78,7 @@ export const DemoHero: FC<(FixedHeroProps | FlexibleHeroProps) & { isFlexibleHer
   border,
   fluidContent,
   fullHeight,
-
+  fitHeight,
   isFlexibleHero = false,
   component,
   context,
@@ -195,6 +195,7 @@ export const DemoHero: FC<(FixedHeroProps | FlexibleHeroProps) & { isFlexibleHer
     border,
     fluidContent,
     fullHeight,
+    fitHeight,
     textAlignmentClass: getTextAlignmentClass({ contentAlignment }),
     buttonAlignmentClass: getButtonAlignmentClass({ contentAlignment }),
     demoHeroMedia: (

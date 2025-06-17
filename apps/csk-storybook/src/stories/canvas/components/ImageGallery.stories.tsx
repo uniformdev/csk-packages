@@ -29,6 +29,7 @@ export const Default: Story = {
     backgroundColor: 'text-secondary',
     fluidContent: true,
     fullHeight: false,
+    fitHeight: false,
   },
   argTypes,
   render: (args: ImageGalleryParameters) => {

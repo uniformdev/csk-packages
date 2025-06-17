@@ -8,4 +8,5 @@ export type ContainerParameters = {
   border?: string | ViewPort<string>;
   fluidContent?: boolean;
   fullHeight?: boolean;
+  fitHeight?: boolean;
 };

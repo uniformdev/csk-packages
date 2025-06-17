@@ -4,7 +4,7 @@ import { TestimonialProps } from '.';
 
 type WithLargeAvatarVariantProps = Pick<
   TestimonialProps,
-  'backgroundColor' | 'spacing' | 'border' | 'fluidContent' | 'fullHeight'
+  'backgroundColor' | 'spacing' | 'border' | 'fluidContent' | 'fullHeight' | 'fitHeight'
 > & {
   testimonialPrimaryImage: React.ReactNode;
   testimonialContent: React.ReactNode;
@@ -22,8 +22,9 @@ export const WithOverlappingImageVariant: FC<WithLargeAvatarVariantProps> = ({
   border,
   fluidContent,
   fullHeight,
+  fitHeight,
 }) => (
-  <Container {...{ backgroundColor, spacing, border, fluidContent, fullHeight }}>
+  <Container {...{ backgroundColor, spacing, border, fluidContent, fullHeight, fitHeight }}>
     <Container className="pb-10 lg:pb-0">
       <div className="mx-auto flex max-w-2xl flex-col items-center gap-10 lg:max-w-none lg:flex-row">
         <div className="-mt-7 aspect-[2/1] w-full shrink-0 overflow-hidden rounded-xl lg:-my-7 lg:aspect-[1/1.4] lg:max-w-xs">

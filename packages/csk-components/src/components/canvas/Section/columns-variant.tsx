@@ -9,6 +9,7 @@ type ColumnsVariantProps = {
   border: SectionParameters['border'];
   fluidContent: SectionParameters['fluidContent'];
   fullHeight: SectionParameters['fullHeight'];
+  fitHeight: SectionParameters['fitHeight'];
   variant: SectionVariants;
   sectionMedia: React.ReactNode;
   sectionContent: React.ReactNode;
@@ -23,6 +24,7 @@ export const ColumnsVariant: FC<ColumnsVariantProps> = ({
   border,
   fluidContent,
   fullHeight,
+  fitHeight,
   variant,
   sectionMedia,
   sectionContent,
@@ -30,7 +32,7 @@ export const ColumnsVariant: FC<ColumnsVariantProps> = ({
   textAlignmentClass,
   buttonAlignmentClass,
 }) => (
-  <Container {...{ backgroundColor, spacing, border, fluidContent, fullHeight }}>
+  <Container {...{ backgroundColor, spacing, border, fluidContent, fullHeight, fitHeight }}>
     <div className={cn('grid grid-cols-1 items-center gap-4 px-4 lg:grid-cols-2 xl:px-0')}>
       <div className={cn('aspect-square', { 'order-last': variant === SectionVariants.ColumnsReverse })}>
         <div className="flex size-full items-center justify-center overflow-hidden">{sectionMedia}</div>
