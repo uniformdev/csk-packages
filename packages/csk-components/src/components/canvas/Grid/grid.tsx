@@ -12,6 +12,7 @@ export const Grid: FC<GridProps> = ({
   border,
   fluidContent,
   fullHeight,
+  fitHeight,
   slots,
   component,
   context,
@@ -19,7 +20,7 @@ export const Grid: FC<GridProps> = ({
 }) => (
   <BaseGrid
     className={className}
-    {...{ columnsCount, gapX, gapY, backgroundColor, spacing, border, fluidContent, fullHeight }}
+    {...{ columnsCount, gapX, gapY, backgroundColor, spacing, border, fluidContent, fullHeight, fitHeight }}
   >
     <UniformSlot data={component} context={context} slot={slots.gridInner} />
   </BaseGrid>

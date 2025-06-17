@@ -7,6 +7,7 @@ export type ContainerProps = HTMLAttributes<HTMLDivElement> & {
   border?: string | ViewPort<string>;
   fluidContent?: boolean;
   fullHeight?: boolean;
+  fitHeight?: boolean;
   wrapperClassName?: string;
   maxWidth?: string;
 };

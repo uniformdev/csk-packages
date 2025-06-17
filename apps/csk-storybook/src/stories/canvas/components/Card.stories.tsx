@@ -81,6 +81,7 @@ export const Default: Story = createStory({
     backgroundColor: 'text-secondary',
     fluidContent: true,
     fullHeight: false,
+    fitHeight: false,
   },
   content: cardDefault,
 });

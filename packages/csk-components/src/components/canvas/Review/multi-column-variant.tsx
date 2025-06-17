@@ -19,11 +19,12 @@ export const MultiColumnVariant: FC<MultiColumnVariantProps> = ({
   border,
   fluidContent,
   fullHeight,
+  fitHeight,
   ReviewImage,
   ReviewPersonInfo,
   ReviewContent,
 }) => (
-  <Container {...{ backgroundColor, spacing, border, fluidContent, fullHeight }}>
+  <Container {...{ backgroundColor, spacing, border, fluidContent, fullHeight, fitHeight }}>
     <div className="grid md:grid-cols-12">
       <div className="mb-2 md:col-span-4 md:my-0">
         <div className="mb-2 aspect-square size-12 rounded-full">{ReviewImage}</div>

@@ -9,6 +9,7 @@ type DefaultVariantProps = {
   border: DemoHeroParameters['border'];
   fluidContent: DemoHeroParameters['fluidContent'];
   fullHeight: DemoHeroParameters['fullHeight'];
+  fitHeight: DemoHeroParameters['fitHeight'];
   demoHeroMedia: React.ReactNode;
   demoHeroContent: React.ReactNode;
   demoHeroCTA: React.ReactNode;
@@ -22,13 +23,17 @@ export const DefaultVariant: FC<DefaultVariantProps> = ({
   border,
   fluidContent,
   fullHeight,
+  fitHeight,
   demoHeroMedia,
   demoHeroContent,
   demoHeroCTA,
   textAlignmentClass,
   buttonAlignmentClass,
 }) => (
-  <Container className="relative overflow-hidden" {...{ backgroundColor, spacing, border, fluidContent, fullHeight }}>
+  <Container
+    className="relative overflow-hidden"
+    {...{ backgroundColor, spacing, border, fluidContent, fullHeight, fitHeight }}
+  >
     <div className="absolute left-0 top-0 size-full overflow-hidden">{demoHeroMedia}</div>
     <Container className="relative flex flex-col gap-8">
       <div className={cn('flex flex-col gap-4', textAlignmentClass)}>{demoHeroContent}</div>

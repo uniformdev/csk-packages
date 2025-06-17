@@ -13,9 +13,10 @@ export const Grid: FC<GridProps> = ({
   border,
   fluidContent,
   fullHeight,
+  fitHeight,
   children,
 }) => (
-  <BaseContainer {...{ backgroundColor, spacing, border, fluidContent, fullHeight }}>
+  <BaseContainer {...{ backgroundColor, spacing, border, fluidContent, fullHeight, fitHeight }}>
     <div
       className={cn(
         'grid',
@@ -23,6 +24,7 @@ export const Grid: FC<GridProps> = ({
           [resolveViewPort(columnsCount, 'grid-cols-{value}')]: columnsCount,
           [resolveViewPort(gapX, 'gap-x-{value}')]: gapX,
           [resolveViewPort(gapY, 'gap-y-{value}')]: gapY,
+          'h-full': fitHeight,
         },
         className
       )}

@@ -69,6 +69,7 @@ parameters:
       childrenParams:
         - contentAlignment
         - fullHeight
+        - fitHeight
         - textColor
         - enableOverlayAutoTint
   - id: contentAlignment
@@ -85,6 +86,10 @@ parameters:
       defaultValue: center
   - id: fullHeight
     name: Full Height
+    type: checkbox
+    typeConfig: null
+  - id: fitHeight
+    name: Fit Height
     type: checkbox
     typeConfig: null
   - id: textColor

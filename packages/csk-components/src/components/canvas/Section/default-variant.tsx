@@ -9,6 +9,7 @@ type DefaultVariantProps = {
   border?: SectionParameters['border'];
   fluidContent?: SectionParameters['fluidContent'];
   fullHeight?: SectionParameters['fullHeight'];
+  fitHeight?: SectionParameters['fitHeight'];
   sectionMedia: React.ReactNode;
   sectionContent: React.ReactNode;
   sectionCTA: React.ReactNode;
@@ -22,13 +23,17 @@ export const DefaultVariant: FC<DefaultVariantProps> = ({
   border,
   fluidContent,
   fullHeight,
+  fitHeight,
   sectionMedia,
   sectionContent,
   sectionCTA,
   textAlignmentClass,
   buttonAlignmentClass,
 }) => (
-  <Container className="relative overflow-hidden" {...{ backgroundColor, spacing, border, fluidContent, fullHeight }}>
+  <Container
+    className="relative overflow-hidden"
+    {...{ backgroundColor, spacing, border, fluidContent, fullHeight, fitHeight }}
+  >
     <div className="absolute left-0 top-0 size-full overflow-hidden">{sectionMedia}</div>
     <Container className="relative flex flex-col gap-8">
       <div className={cn('flex flex-col gap-4', textAlignmentClass)}>{sectionContent}</div>

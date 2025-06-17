@@ -7,7 +7,7 @@ type AvailableGap = keyof DefaultTheme['spacing'];
 
 export type GridProps = Pick<
   BaseContainerProps,
-  'title' | 'backgroundColor' | 'spacing' | 'border' | 'fluidContent' | 'fullHeight' | 'children'
+  'title' | 'backgroundColor' | 'spacing' | 'border' | 'fluidContent' | 'fullHeight' | 'fitHeight' | 'children'
 > & {
   columnsCount?: AvailableColumnsCount | ViewPort<AvailableColumnsCount>;
   gapY?: AvailableGap | ViewPort<AvailableGap>;
