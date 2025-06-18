@@ -1,11 +1,12 @@
 import { FC } from 'react';
+import probe from 'probe-image-size';
 import { imageFrom } from '@uniformdev/assets';
 import BaseImage from '@/components/ui/Image';
 import { resolveAsset } from '@/utils/assets';
 import { ImageProps } from '.';
 import { ImagePlaceholder } from './placeholder';
 
-export const Image: FC<ImageProps> = ({
+export const Image: FC<ImageProps> = async ({
   image,
   objectFit,
   width,
@@ -18,7 +19,7 @@ export const Image: FC<ImageProps> = ({
   context,
   component,
 }) => {
-  const isBackground = component.variant === 'background';
+  const isFill = component.variant === 'fill';
 
   const [resolvedImage] = resolveAsset(image);
 
@@ -27,6 +28,14 @@ export const Image: FC<ImageProps> = ({
   }
 
   const { focalPoint, title = '' } = resolvedImage;
+
+  const imageWidth = width || resolvedImage.width;
+  const imageHeight = height || resolvedImage.height;
+
+  const fallbackSize =
+    (!imageWidth || !imageHeight) && resolvedImage.url
+      ? await probe(resolvedImage.url).catch(() => ({ width: undefined, height: undefined }))
+      : { width: undefined, height: undefined };
 
   const imageUrl = imageFrom(resolvedImage?.url)
     .transform({
@@ -37,9 +46,12 @@ export const Image: FC<ImageProps> = ({
     })
     .url();
 
-  const variantBasedProps = isBackground
+  const variantBasedProps = isFill
     ? { fill: true }
-    : { width: width || resolvedImage.width, height: height || resolvedImage.height };
+    : {
+        width: imageWidth || fallbackSize.width,
+        height: imageHeight || fallbackSize.height,
+      };
 
   return (
     <BaseImage
