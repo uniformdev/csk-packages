@@ -20,6 +20,7 @@ export const ContainerArgTypes: Partial<ArgTypes<ContainerParameters>> = {
   backgroundColor: { control: 'select', options: colorKeys },
   fluidContent: { control: 'boolean' },
   fullHeight: { control: 'boolean' },
+  fitHeight: { control: 'boolean' },
 };
 
 export const TextArgTypes: Partial<ArgTypes<TextParameters>> = {
