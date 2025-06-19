@@ -15,12 +15,11 @@ export const Image: FC<ImageProps> = async ({
   overlayOpacity,
   border,
   priority,
+  fill,
   unoptimized,
   context,
   component,
 }) => {
-  const isFill = component.variant === 'fill';
-
   const [resolvedImage] = resolveAsset(image);
 
   if (!resolvedImage) {
@@ -46,7 +45,7 @@ export const Image: FC<ImageProps> = async ({
     })
     .url();
 
-  const variantBasedProps = isFill
+  const variantBasedProps = fill
     ? { fill: true }
     : {
         width: imageWidth || fallbackSize.width,

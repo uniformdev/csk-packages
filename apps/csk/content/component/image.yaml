@@ -19,6 +19,7 @@ parameters:
         - objectFit
         - width
         - height
+        - fill
   - id: objectFit
     name: Object Fit
     type: dex-segmented-control-parameter
@@ -33,15 +34,20 @@ parameters:
     name: Width
     type: number
     helpText: >-
-      Sets the image’s intrinsic width in pixels. This does not control how
-      large the image appears
+      Defines intrinsic width (not visual size). For 'background' variant, helps
+      set focal point.
     typeConfig: null
   - id: height
     name: Height
     type: number
     helpText: >-
-      Sets the image’s intrinsic height in pixels. This does not control how
-      large the image appears
+      Defines intrinsic height (not visual size). For 'background' variant,
+      helps set focal point.
+    typeConfig: null
+  - id: fill
+    name: Fill
+    type: checkbox
+    helpText: Fills the parent container
     typeConfig: null
   - id: 6a821149-f836-49f2-806c-db36ecc79dc8
     name: Loading Settings
@@ -117,7 +123,4 @@ titleParameter: image
 thumbnailParameter: image
 canBeComposition: false
 created: '2025-03-20T12:55:44.383837+00:00'
-updated: '2025-06-16T12:52:11.394466+00:00'
-variants:
-  - id: fill
-    name: Fill
+updated: '2025-06-19T14:23:44.458359+00:00'
