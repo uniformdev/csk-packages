@@ -44,6 +44,9 @@ composition:
             - _id: 64fa10f0-d43c-408e-b09a-1783f2e77398
               type: image
               parameters:
+                fill:
+                  type: checkbox
+                  value: true
                 image:
                   type: asset
                   value:
@@ -158,8 +161,8 @@ composition:
       backgroundColor: 'no'
       enableComponentPreview: 'yes'
     hideLockedParameters: true
-created: '2025-03-03T09:52:32.091248+00:00'
-modified: '2025-03-03T10:39:40.126656+00:00'
+created: '2025-06-20T12:39:41.850306+00:00'
+modified: '2025-06-20T12:59:54.031647+00:00'
 pattern: true
 description: >-
   This example is constructed utilizing the Hero component, which incorporates
