@@ -1294,9 +1294,15 @@ composition:
                                 spacing:
                                   type: dex-space-control-parameter
                                   value:
-                                    mobile: {}
-                                    tablet: {}
-                                    desktop: {}
+                                    mobile:
+                                      marginBottom: container-small
+                                      paddingBottom: container-small
+                                    tablet:
+                                      marginBottom: container-medium
+                                      paddingBottom: container-medium
+                                    desktop:
+                                      marginBottom: container-medium
+                                      paddingBottom: container-medium
                                 displayName:
                                   type: text
                                   value: Uniform Data sync
@@ -1373,5 +1379,5 @@ composition:
                   desktop: '12'
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-01-29T11:28:43.863139+00:00'
-modified: '2025-05-16T10:19:16.321782+00:00'
+modified: '2025-06-20T10:56:53.874259+00:00'
 pattern: false
