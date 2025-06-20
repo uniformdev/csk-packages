@@ -11,6 +11,10 @@ type ResolvedAsset = {
   height?: number;
   mediaType?: string;
   description?: string;
+  focalPoint?: {
+    x: number;
+    y: number;
+  };
 };
 
 /**
