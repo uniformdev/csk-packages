@@ -12,7 +12,7 @@ export const Image: FC<ImageProps> = ({
   style: imageStyle,
   ...nextImageStyle
 }) => (
-  <div className="relative size-full" style={containerStyle}>
+  <div className={cn('relative', { 'size-full': nextImageStyle.fill })} style={containerStyle}>
     <NextImage
       {...nextImageStyle}
       className={cn({
