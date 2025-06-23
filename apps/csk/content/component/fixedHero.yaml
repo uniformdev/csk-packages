@@ -70,6 +70,7 @@ parameters:
         - contentAlignment
         - height
         - textColor
+        - overlayAutoTint
         - enableOverlayAutoTint
   - id: contentAlignment
     name: Content Alignment
@@ -106,13 +107,31 @@ parameters:
     typeConfig:
       allowColors: []
       selectedGroup: text
-  - id: enableOverlayAutoTint
-    name: Enable Overlay Auto Tint
-    type: checkbox
+  - id: overlayAutoTint
+    name: Overlay Auto Tint
+    type: dex-slider-control-parameter
     helpText: >-
-      Automatically generates a 30% transparent overlay from the title color.
-      This applies only when the component is in its default variant.
-    typeConfig: null
+      Generates a high-contrast overlay based on the text color with adjustable
+      opacity. Applies only when the component is in its default variant.
+    typeConfig:
+      step: 1
+      type: custom
+      units: px
+      options:
+        - key: 0%
+          value: '0'
+        - key: 20%
+          value: '0.2'
+        - key: 40%
+          value: '0.4'
+        - key: 60%
+          value: '0.6'
+        - key: 80%
+          value: '0.8'
+        - key: 100%
+          value: '1'
+      maxValue: 10
+      minValue: 0
   - id: 855b7e83-5dfc-448c-b9a6-f59060c1637b
     name: Deprecated
     type: group
@@ -124,6 +143,7 @@ parameters:
         - descriptionColor
         - fitHeight
         - fullHeight
+        - enableOverlayAutoTint
   - id: eyebrowTitleColor
     name: Eyebrow Text Color (Deprecated)
     type: dex-color-palette-parameter
@@ -161,6 +181,13 @@ parameters:
     name: Full Height (Deprecated)
     type: checkbox
     typeConfig: null
+  - id: enableOverlayAutoTint
+    name: Enable Overlay Auto Tint (Deprecated)
+    type: checkbox
+    helpText: >-
+      Automatically generates a 30% transparent overlay from the title color.
+      This applies only when the component is in its default variant.
+    typeConfig: null
 categoryId: f22b05f0-c4bf-4158-8ebc-4856e4d453af
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/hero-fixed.jpg
@@ -169,7 +196,7 @@ slots: []
 titleParameter: displayName
 canBeComposition: false
 created: '2025-01-29T10:47:01.402162+00:00'
-updated: '2025-06-23T10:30:12.456625+00:00'
+updated: '2025-06-23T11:28:59.000319+00:00'
 variants:
   - id: columns
     name: Columns
