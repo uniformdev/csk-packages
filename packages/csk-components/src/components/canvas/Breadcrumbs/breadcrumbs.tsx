@@ -18,6 +18,10 @@ export const Breadcrumbs: FC<BreadcrumbsProps> = async ({
   autoGenerate,
   context,
 }) => {
+  // Matched route is 'composition' — this means we're in the composition pattern,
+  // so we don't have access to the project map at this point.
+  const isInPattern = !context?.matchedRoute || context?.matchedRoute === 'composition';
+
   const getManualBreadcrumbs = async (): Promise<BreadcrumbLink[]> =>
     links?.reduce<BreadcrumbLink[]>((acc, item) => {
       const { title, link } = flattenValues(item) as {
@@ -31,6 +35,8 @@ export const Breadcrumbs: FC<BreadcrumbsProps> = async ({
     }, []) || [];
 
   const getAutoBreadcrumbs = async (): Promise<BreadcrumbLink[]> => {
+    if (isInPattern) return [];
+
     const client = new ProjectMapClient({
       projectId: process.env.UNIFORM_PROJECT_ID,
       apiKey: process.env.UNIFORM_API_KEY,
@@ -70,6 +76,18 @@ export const Breadcrumbs: FC<BreadcrumbsProps> = async ({
   };
 
   const itemToDisplay = autoGenerate ? await getAutoBreadcrumbs() : await getManualBreadcrumbs();
+
+  if (isInPattern && autoGenerate) {
+    return (
+      <ul className="flex items-center">
+        <li className="flex items-center">
+          <BaseText size={size} font={font} color={color} transform={transform}>
+            Breadcrumbs cannot be auto-generated because the project map is not accessible in this context.
+          </BaseText>
+        </li>
+      </ul>
+    );
+  }
 
   if (!itemToDisplay.length) {
     // ToDo: Add breadcrumbs placeholder
