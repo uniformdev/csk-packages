@@ -94,7 +94,6 @@ export const BackgroundImage: Story = createStory({
     },
     border: borderKeys[0],
     fluidContent: true,
-    fullHeight: false,
   },
   content: cardWithBackgroundImage,
 });

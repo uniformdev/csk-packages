@@ -54,7 +54,6 @@ export const Default: Story = {
     textColor: 'text-primary',
     backgroundColor: 'text-secondary',
     fluidContent: false,
-    fullHeight: false,
     size: sizeKeys[0],
   },
   argTypes,
@@ -86,7 +85,6 @@ export const WithCustomCells: Story = {
     textColor: 'text-primary',
     backgroundColor: 'text-secondary',
     fluidContent: false,
-    fullHeight: false,
   },
   argTypes,
   render: (args: TableParameters) => {

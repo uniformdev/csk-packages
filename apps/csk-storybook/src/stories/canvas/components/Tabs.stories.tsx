@@ -47,7 +47,6 @@ export const Default: Story = {
     color: 'text-primary',
     backgroundColor: 'text-secondary',
     fluidContent: false,
-    fullHeight: false,
   },
   argTypes,
   render: (args: TabsParameters) => {
@@ -71,7 +70,6 @@ export const Bordered: Story = {
     color: 'text-primary',
     backgroundColor: 'text-secondary',
     fluidContent: false,
-    fullHeight: false,
   },
   argTypes,
   render: (args: TabsParameters) => {
