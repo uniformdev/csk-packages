@@ -74,7 +74,11 @@ export type DemoHeroParameters = ContainerParameters & {
 
 export type FixedHeroParameters = {
   textColor?: string;
+  /**
+   * @deprecated Use overlayAutoTint instead.
+   */
   enableOverlayAutoTint?: boolean;
+  overlayAutoTint?: string;
 } & DemoHeroParameters;
 
 export type FlexibleHeroParameters = DemoHeroParameters;

@@ -49,7 +49,7 @@ const argTypes: Partial<ArgTypes<FixedHeroParameters>> = {
   ...addPrefix({ text: buttonText }, 'primaryButton'),
   contentAlignment: { control: 'select', options: ['left', 'center', 'right'] },
   textColor: color,
-  enableOverlayAutoTint: { control: 'boolean' },
+  overlayAutoTint: { control: { type: 'number', min: 0, max: 1, step: 0.1 } },
   height,
 };
 

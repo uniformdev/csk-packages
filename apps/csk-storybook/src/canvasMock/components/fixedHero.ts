@@ -28,5 +28,5 @@ export const getFixedHeroContent = (variant?: string): FixedHeroParameters => ({
   contentAlignment: DemoHeroContentAlignment.Center,
   fullHeight: false,
   textColor: !variant ? 'text-secondary' : 'text-primary',
-  enableOverlayAutoTint: true,
+  overlayAutoTint: '0.4',
 });
