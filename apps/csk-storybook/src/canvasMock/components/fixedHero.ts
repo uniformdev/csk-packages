@@ -26,7 +26,6 @@ export const getFixedHeroContent = (variant?: string): FixedHeroParameters => ({
   image: LIGHT_IMAGE_ASSET.value as AssetParamValue,
 
   contentAlignment: DemoHeroContentAlignment.Center,
-  fullHeight: false,
   textColor: !variant ? 'text-secondary' : 'text-primary',
   overlayAutoTint: '0.4',
 });

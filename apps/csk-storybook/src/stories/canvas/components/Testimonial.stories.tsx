@@ -87,7 +87,6 @@ export const WithOverlappingImage: Story = {
     },
     backgroundColor: 'general-color-2',
     fluidContent: true,
-    fullHeight: false,
   },
   argTypes,
   render: renderStory(TestimonialVariants.WithOverlappingImage),
