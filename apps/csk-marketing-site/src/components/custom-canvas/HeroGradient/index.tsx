@@ -23,7 +23,7 @@ const HeroGradient: FC<HeroGradientProps> = ({
   spacing,
   border,
   fluidContent,
-  fullHeight,
+  height,
 }) => {
   const heroContent = <UniformSlot data={component} context={context} slot={slots.content} />;
   const heroCTA = <UniformSlot data={component} context={context} slot={slots.buttonsSection} />;
@@ -31,7 +31,7 @@ const HeroGradient: FC<HeroGradientProps> = ({
   return (
     <Container
       className={cn('bg-gradient-to-b', { [`from-${gradientColor}`]: !!gradientColor })}
-      {...{ backgroundColor, spacing, border, fluidContent, fullHeight }}
+      {...{ backgroundColor, spacing, border, fluidContent, height }}
     >
       <Container className="relative flex flex-col gap-8">
         <div className={cn('flex flex-col gap-4')}>{heroContent}</div>

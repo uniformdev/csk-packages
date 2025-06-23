@@ -1,8 +1,8 @@
 import { cn } from '@/utils/styling';
-import { ContentAlignment, DemoHeroParameters } from '.';
+import { ContentAlignment, FlexibleHeroParameters } from '.';
 
 type AlignmentClass = {
-  contentAlignment: DemoHeroParameters['contentAlignment'];
+  contentAlignment: FlexibleHeroParameters['contentAlignment'];
 };
 
 export const getButtonAlignmentClass = ({ contentAlignment }: AlignmentClass) =>

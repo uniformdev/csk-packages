@@ -43,8 +43,6 @@ export const Default: Story = {
     alignItems: 'center',
     backgroundColor: 'text-secondary',
     fluidContent: false,
-    fullHeight: false,
-    fitHeight: false,
   },
   argTypes,
   render: (args: FlexParameters) => {

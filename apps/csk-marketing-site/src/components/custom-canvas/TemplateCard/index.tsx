@@ -36,7 +36,7 @@ const TemplateCard: FC<TemplateCardProps> = ({
   spacing,
   border,
   fluidContent,
-  fullHeight,
+  height,
   displayName,
   comingSoon,
 }) => {
@@ -47,7 +47,7 @@ const TemplateCard: FC<TemplateCardProps> = ({
       className={classNames('relative', {
         'cursor-not-allowed': comingSoon,
       })}
-      {...{ backgroundColor, spacing, border, fluidContent, fullHeight }}
+      {...{ backgroundColor, spacing, border, fluidContent, height }}
     >
       <WrapCard
         href={href && anchor ? `${href}#${anchor}` : href}

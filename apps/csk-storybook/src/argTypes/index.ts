@@ -19,8 +19,7 @@ export const ContainerArgTypes: Partial<ArgTypes<ContainerParameters>> = {
   border: { control: 'select', options: borderKeys },
   backgroundColor: { control: 'select', options: colorKeys },
   fluidContent: { control: 'boolean' },
-  fullHeight: { control: 'boolean' },
-  fitHeight: { control: 'boolean' },
+  height: { control: 'select', options: ['full', 'screen', 'svh', 'lvh', 'dvh', 'min', 'max', 'fit'] },
 };
 
 export const TextArgTypes: Partial<ArgTypes<TextParameters>> = {

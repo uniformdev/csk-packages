@@ -18,6 +18,7 @@ export const Tabs: FC<TabsProps> = ({
   fluidContent,
   fullHeight,
   fitHeight,
+  height,
 }) => {
   const variant = (component.variant || TabsVariants.Default) as TabsVariants;
   const [activeTabId, setActiveTabId] = useState(component?.slots?.tabItems?.[0]?._id as string);
@@ -47,7 +48,7 @@ export const Tabs: FC<TabsProps> = ({
   return (
     <Container
       className="flex flex-col gap-5"
-      {...{ backgroundColor, spacing, border, fluidContent, fullHeight, fitHeight }}
+      {...{ backgroundColor, spacing, border, fluidContent, fullHeight, fitHeight, height }}
     >
       <div className={getButtonContainerClasses({ color, variant })}>
         {tabItems.map((tabItem, index) => (

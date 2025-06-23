@@ -18,6 +18,7 @@ export type FlexProps = Pick<
   | 'fluidContent'
   | 'fullHeight'
   | 'fitHeight'
+  | 'height'
   | 'children'
 > & {
   direction?: Direction | ViewPort<Direction>;

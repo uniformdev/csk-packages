@@ -30,7 +30,7 @@ export const AccordionItem: FC<AccordionItemProps> = ({
   const toggleOpenAccordion = useCallback(() => setOpened(isOpened => !isOpened), []);
 
   return (
-    <Container {...{ fluidContent: true, fullHeight: false }}>
+    <Container {...{ fluidContent: true }}>
       <Container {...{ backgroundColor, spacing, fluidContent: true, className }}>
         <button onClick={toggleOpenAccordion} className="flex w-full flex-row items-center justify-between text-start">
           <BaseText {...{ alignment, color, size, font, weight, transform, decoration, letterSpacing }}>

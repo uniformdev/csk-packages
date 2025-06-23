@@ -4,7 +4,7 @@ import { TestimonialProps } from '.';
 
 type WithLargeAvatarVariantProps = Pick<
   TestimonialProps,
-  'backgroundColor' | 'spacing' | 'border' | 'fluidContent' | 'fullHeight' | 'fitHeight'
+  'backgroundColor' | 'spacing' | 'border' | 'fluidContent' | 'fullHeight' | 'fitHeight' | 'height'
 > & {
   testimonialPrimaryImage: React.ReactNode;
   testimonialContent: React.ReactNode;
@@ -23,8 +23,9 @@ export const WithLargeAvatarVariant: FC<WithLargeAvatarVariantProps> = ({
   fluidContent,
   fullHeight,
   fitHeight,
+  height,
 }) => (
-  <Container {...{ backgroundColor, spacing, border, fluidContent, fullHeight, fitHeight }}>
+  <Container {...{ backgroundColor, spacing, border, fluidContent, fullHeight, fitHeight, height }}>
     <div className="mx-auto flex items-center gap-x-10 md:max-w-[80%]">
       <div className="hidden aspect-square w-full max-w-xs shrink-0 overflow-hidden rounded-xl lg:block">
         {testimonialPrimaryImage}

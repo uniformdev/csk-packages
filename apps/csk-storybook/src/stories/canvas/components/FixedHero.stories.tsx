@@ -37,7 +37,7 @@ const meta: Meta<typeof DemoHero.FixedHero> = {
 export default meta;
 type Story = StoryObj<typeof DemoHero.FixedHero>;
 
-const { displayName, fullHeight, fitHeight } = ContainerArgTypes;
+const { displayName, height } = ContainerArgTypes;
 const { text, tag, color } = TextArgTypes;
 const { text: buttonText } = ButtonArgTypes;
 
@@ -50,8 +50,7 @@ const argTypes: Partial<ArgTypes<FixedHeroParameters>> = {
   contentAlignment: { control: 'select', options: ['left', 'center', 'right'] },
   textColor: color,
   enableOverlayAutoTint: { control: 'boolean' },
-  fullHeight,
-  fitHeight,
+  height,
 };
 
 const renderStory = (variant?: FixedHeroVariants) => (args: FixedHeroParameters) => {

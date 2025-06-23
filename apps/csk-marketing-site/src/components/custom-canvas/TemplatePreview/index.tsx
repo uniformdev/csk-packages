@@ -24,7 +24,7 @@ const TemplatePreview: FC<TemplatePreviewProps> = ({
   previewLink,
   backgroundColor,
   spacing,
-  fullHeight,
+  height,
 }) => {
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
@@ -44,7 +44,7 @@ const TemplatePreview: FC<TemplatePreviewProps> = ({
   };
 
   return (
-    <BaseContainer className="relative" {...{ backgroundColor, spacing, fluidContent: true, fullHeight }}>
+    <BaseContainer className="relative" {...{ backgroundColor, spacing, fluidContent: true, height }}>
       <iframe ref={iframeRef} src={templateLinkHref} className="size-full min-h-[600px] rounded-sm shadow" />
       <div
         className={cn('my-8 flex flex-col gap-4 md:flex-row md:justify-between', { 'justify-end': !previewLinkHref })}

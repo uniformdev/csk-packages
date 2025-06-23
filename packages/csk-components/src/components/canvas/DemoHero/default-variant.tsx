@@ -1,15 +1,16 @@
 import { FC } from 'react';
 import Container from '@/components/ui/Container';
 import { cn } from '@/utils/styling';
-import { DemoHeroParameters } from '.';
+import { FlexibleHeroParameters } from '.';
 
 type DefaultVariantProps = {
-  backgroundColor: DemoHeroParameters['backgroundColor'];
-  spacing: DemoHeroParameters['spacing'];
-  border: DemoHeroParameters['border'];
-  fluidContent: DemoHeroParameters['fluidContent'];
-  fullHeight: DemoHeroParameters['fullHeight'];
-  fitHeight: DemoHeroParameters['fitHeight'];
+  backgroundColor: FlexibleHeroParameters['backgroundColor'];
+  spacing: FlexibleHeroParameters['spacing'];
+  border: FlexibleHeroParameters['border'];
+  fluidContent: FlexibleHeroParameters['fluidContent'];
+  fullHeight: FlexibleHeroParameters['fullHeight'];
+  fitHeight: FlexibleHeroParameters['fitHeight'];
+  height: FlexibleHeroParameters['height'];
   demoHeroMedia: React.ReactNode;
   demoHeroContent: React.ReactNode;
   demoHeroCTA: React.ReactNode;
@@ -24,6 +25,7 @@ export const DefaultVariant: FC<DefaultVariantProps> = ({
   fluidContent,
   fullHeight,
   fitHeight,
+  height,
   demoHeroMedia,
   demoHeroContent,
   demoHeroCTA,
@@ -32,7 +34,7 @@ export const DefaultVariant: FC<DefaultVariantProps> = ({
 }) => (
   <Container
     className="relative overflow-hidden"
-    {...{ backgroundColor, spacing, border, fluidContent, fullHeight, fitHeight }}
+    {...{ backgroundColor, spacing, border, fluidContent, fullHeight, fitHeight, height }}
   >
     <div className="absolute left-0 top-0 size-full overflow-hidden">{demoHeroMedia}</div>
     <Container className="relative flex flex-col gap-8">

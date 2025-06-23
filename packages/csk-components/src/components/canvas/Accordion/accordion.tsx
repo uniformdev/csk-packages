@@ -13,10 +13,11 @@ export const Accordion: FC<AccordionProps> = ({
   fluidContent,
   fullHeight,
   fitHeight,
+  height,
 }) => (
   <Container
     className="flex flex-col gap-8"
-    {...{ backgroundColor, spacing, border, fluidContent, fullHeight, fitHeight }}
+    {...{ backgroundColor, spacing, border, fluidContent, fullHeight, fitHeight, height }}
   >
     <div className="flex flex-col gap-4 text-start">
       <UniformSlot data={component} context={context} slot={slots.accordionContent} />
