@@ -19,7 +19,7 @@ const meta: Meta<typeof Banner> = {
 export default meta;
 type Story = StoryObj<typeof Banner>;
 
-const { displayName: _title, fullHeight: _fullHeight, ...baseContainerArgTypes } = ContainerArgTypes;
+const { displayName: _title, height: _height, ...baseContainerArgTypes } = ContainerArgTypes;
 
 // Define argument types for the storybook controls
 const argTypes: Partial<ArgTypes<BannerParameters>> = {

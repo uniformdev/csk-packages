@@ -66,7 +66,7 @@ const DemoCard: FC<DemoCardProps> = ({
   spacing,
   border,
   fluidContent,
-  fullHeight,
+  height,
   context,
   enableComponentPreview,
   patternId,
@@ -76,7 +76,7 @@ const DemoCard: FC<DemoCardProps> = ({
   const href = formatUniformLink(link);
   const [isCopy, setIsCopy] = useState(false);
   const [resolvedImage] = resolveAsset(previewImage);
-  const { url, title: imageTitle = '', width, height } = resolvedImage || {};
+  const { url, title: imageTitle = '', width: imageWidth, height: imageHeight } = resolvedImage || {};
   const [name, currentComponentCache] = useMemo(() => {
     const componentData = component.slots?.[slots.demoItem.name][0];
     return [
@@ -115,7 +115,7 @@ const DemoCard: FC<DemoCardProps> = ({
     : `/preview-images/${currentTheme}/${component._pattern || patternId}.jpeg`;
 
   return (
-    <Container {...{ backgroundColor, spacing, border, fluidContent, fullHeight }}>
+    <Container {...{ backgroundColor, spacing, border, fluidContent, height }}>
       <WrapCard href={href && anchor ? `${href}#${anchor}` : href} name={capitalizeFirstLetter(name)}>
         <div className="flex flex-col justify-between gap-4">
           {enableComponentPreview ? (
@@ -127,8 +127,8 @@ const DemoCard: FC<DemoCardProps> = ({
               className="aspect-video object-contain"
               src={componentImagePreviewUrl}
               alt={imageTitle}
-              width={width || 574}
-              height={height || 200}
+              width={imageWidth || 574}
+              height={imageHeight || 200}
               unoptimized
             />
           )}

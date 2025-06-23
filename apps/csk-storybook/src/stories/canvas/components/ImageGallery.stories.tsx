@@ -28,8 +28,6 @@ export const Default: Story = {
     aspectRatio: 'square',
     backgroundColor: 'text-secondary',
     fluidContent: true,
-    fullHeight: false,
-    fitHeight: false,
   },
   argTypes,
   render: (args: ImageGalleryParameters) => {

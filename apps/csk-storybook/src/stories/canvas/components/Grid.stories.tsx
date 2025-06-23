@@ -35,8 +35,6 @@ export const Default: Story = {
     gapY: '8',
     backgroundColor: 'text-secondary',
     fluidContent: false,
-    fullHeight: false,
-    fitHeight: false,
   },
   argTypes,
   render: (args: GridParameters) => {

@@ -16,6 +16,7 @@ export const Section: FC<SectionProps> = ({
   fluidContent,
   fullHeight,
   fitHeight,
+  height,
 }) => {
   const variant = component.variant as SectionVariants;
 
@@ -27,6 +28,7 @@ export const Section: FC<SectionProps> = ({
     fluidContent,
     fullHeight,
     fitHeight,
+    height,
     textAlignmentClass: getTextAlignmentClass({ contentAlignment }),
     buttonAlignmentClass: getButtonAlignmentClass({ contentAlignment }),
     sectionMedia: <UniformSlot data={component} context={context} slot={slots.sectionMedia} />,

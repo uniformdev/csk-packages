@@ -80,8 +80,6 @@ export const Default: Story = createStory({
     border: borderKeys[0],
     backgroundColor: 'text-secondary',
     fluidContent: true,
-    fullHeight: false,
-    fitHeight: false,
   },
   content: cardDefault,
 });
