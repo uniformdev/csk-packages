@@ -9,6 +9,17 @@ parameters:
     type: text
     typeConfig: null
     localizable: true
+  - id: 66c64fb5-2d29-4bc8-8b98-02c37b519cee
+    name: Content
+    type: group
+    typeConfig:
+      collapsed: false
+      childrenParams:
+        - eyebrowTitleText
+        - titleText
+        - titleTag
+        - descriptionText
+        - image
   - id: eyebrowTitleText
     name: Eyebrow Text
     type: text
@@ -39,6 +50,23 @@ parameters:
     type: text
     typeConfig: null
     localizable: true
+  - id: image
+    name: Image
+    type: asset
+    typeConfig:
+      max: 1
+      min: 0
+      allowedTypes:
+        - image
+    allowConditionalValues: true
+  - id: 6f7eed5b-dd00-46d0-b5bd-48cf3e264beb
+    name: Call to Action
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - primaryButtonText
+        - primaryButtonLink
   - id: primaryButtonText
     name: Button Text
     type: text
@@ -52,15 +80,6 @@ parameters:
     helpText: Select type and target link to set the button's link.
     typeConfig: null
     localizable: true
-  - id: image
-    name: Image
-    type: asset
-    typeConfig:
-      max: 1
-      min: 0
-      allowedTypes:
-        - image
-    allowConditionalValues: true
   - id: 9f8178c3-539f-4a1e-8a4e-71bfcedfe223
     name: Presentation Settings
     type: group
@@ -71,7 +90,6 @@ parameters:
         - height
         - textColor
         - overlayAutoTint
-        - enableOverlayAutoTint
   - id: contentAlignment
     name: Content Alignment
     type: dex-segmented-control-parameter
@@ -196,7 +214,7 @@ slots: []
 titleParameter: displayName
 canBeComposition: false
 created: '2025-01-29T10:47:01.402162+00:00'
-updated: '2025-06-23T11:28:59.000319+00:00'
+updated: '2025-06-23T11:45:20.91083+00:00'
 variants:
   - id: columns
     name: Columns
