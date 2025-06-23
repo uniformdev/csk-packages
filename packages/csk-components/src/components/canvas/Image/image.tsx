@@ -1,10 +1,11 @@
 import { FC } from 'react';
+import { imageFrom } from '@uniformdev/assets';
 import BaseImage from '@/components/ui/Image';
 import { resolveAsset } from '@/utils/assets';
 import { ImageProps } from '.';
 import { ImagePlaceholder } from './placeholder';
 
-export const Image: FC<ImageProps> = ({
+export const Image: FC<ImageProps> = async ({
   image,
   objectFit,
   width,
@@ -13,6 +14,7 @@ export const Image: FC<ImageProps> = ({
   overlayOpacity,
   border,
   priority,
+  fill,
   unoptimized,
   context,
   component,
@@ -23,14 +25,38 @@ export const Image: FC<ImageProps> = ({
     return <ImagePlaceholder context={context} component={component} width={width} height={height} />;
   }
 
-  const { url, title = '' } = resolvedImage;
+  const { focalPoint, title = '' } = resolvedImage;
+
+  const imageWidth = width || resolvedImage.width;
+  const imageHeight = height || resolvedImage.height;
+
+  if (!fill && (!imageWidth || !imageHeight)) {
+    console.warn(
+      'No dimensions provided for the Next.js Image component. Falling back to a standard <img> tag for rendering.'
+    );
+    return <img src={resolvedImage.url} alt={title} />;
+  }
+
+  const imageUrl = imageFrom(resolvedImage?.url)
+    .transform({
+      width: width,
+      height: height,
+      fit: objectFit,
+      focal: focalPoint,
+    })
+    .url();
+
+  const variantBasedProps = fill
+    ? { fill: true }
+    : {
+        width: imageWidth,
+        height: imageHeight,
+      };
 
   return (
     <BaseImage
-      containerStyle={{ ...(width ? { width: `${width}px` } : {}), ...(height ? { height: `${height}px` } : {}) }}
-      src={url}
+      src={imageUrl}
       alt={title}
-      fill
       unoptimized={unoptimized}
       priority={priority}
       sizes="100%"
@@ -38,6 +64,7 @@ export const Image: FC<ImageProps> = ({
       overlayColor={overlayColor}
       overlayOpacity={overlayOpacity}
       border={border}
+      {...variantBasedProps}
     />
   );
 };

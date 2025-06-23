@@ -37,6 +37,9 @@ composition:
             - _id: 24da591f-710f-4796-9a05-b032b6cd8243
               type: image
               parameters:
+                fill:
+                  type: checkbox
+                  value: true
                 image:
                   type: asset
                   value:
@@ -54,6 +57,9 @@ composition:
                 border:
                   type: dex-token-selector-parameter
                   value: border-image-radius-medium
+                objectFit:
+                  type: dex-segmented-control-parameter
+                  value: cover
               _overridability:
                 hideLockedParameters: true
           reviewContent:
@@ -152,8 +158,8 @@ composition:
       link: 'yes'
       enableComponentPreview: 'yes'
     hideLockedParameters: true
-created: '2025-03-03T09:52:34.039176+00:00'
-modified: '2025-03-03T09:52:34.039176+00:00'
+created: '2025-06-20T12:39:42.872386+00:00'
+modified: '2025-06-20T12:50:23.684123+00:00'
 pattern: true
 description: >-
   This example is constructed utilizing the Hero component, which incorporates a

@@ -12,6 +12,7 @@ export type ImageParameters = {
   border?: string | ViewPort<string>;
   priority?: boolean;
   unoptimized?: boolean;
+  fill?: boolean;
 };
 
 export type ImageProps = ComponentProps<ImageParameters>;
