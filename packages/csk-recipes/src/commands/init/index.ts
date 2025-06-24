@@ -137,6 +137,7 @@ const init = async ({
     if (isNeedToPushCanvasData && canPushCanvasData) {
       const confirmPush = await confirm({
         message: `Would you like to push template content into your Uniform project now (project id: ${process.env.UNIFORM_PROJECT_ID})?\nThis will overwrite your existing content, so make a backup to prevent data loss. You can do this manually later. `,
+        default: false,
       });
 
       if (confirmPush) {
@@ -225,6 +226,7 @@ const setupApplication = async ({
   spinner: ora.Ora;
   dev: boolean;
 }) => {
+  return;
   const { template, recipes, envVariables } = projectConfiguration;
   const externalBranchName = getExternalBranchName(template, recipes, dev);
   if (!externalBranchName) return;
