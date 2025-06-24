@@ -6,7 +6,7 @@ import { EnvVariable, Recipe } from './types';
 import {
   FILES_TO_IGNORE_OUTSIDE_OF_MONOREPO,
   JSX_COMMENT_REGEX,
-  META_NOT_PROCESABLE_FILE_PATH_SEGMENTS,
+  META_PROCESABLE_FILE_PATH_SEGMENTS,
   PACKAGE_JSON_COPY_FILE,
   RECIPE_ADDITIONAL_FILES,
 } from '../../constants';
@@ -37,16 +37,14 @@ const cleanOutput = async (source: string, fileExtension: string): Promise<strin
 /**
  * Determines whether a file is eligible for meta-processing.
  * A file is considered processable if it exists on disk and its path
- * does not contain any of the excluded segments defined in
- * `META_NOT_PROCESABLE_FILE_PATH_SEGMENTS`.
+ * contain any of the included segments defined in
+ * `META_PROCESABLE_FILE_PATH_SEGMENTS`.
  *
  * @param {string} filePath - The full path to the file to check.
  * @returns {boolean} True if the file exists and is processable; otherwise, false.
  */
 export const isMetaProcessable = (filePath: string) => {
-  return (
-    fsSync.existsSync(filePath) && !META_NOT_PROCESABLE_FILE_PATH_SEGMENTS.some(segment => filePath.includes(segment))
-  );
+  return fsSync.existsSync(filePath) && META_PROCESABLE_FILE_PATH_SEGMENTS.some(segment => filePath.endsWith(segment));
 };
 
 /**
