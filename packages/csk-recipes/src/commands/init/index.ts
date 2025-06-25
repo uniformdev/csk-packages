@@ -226,7 +226,6 @@ const setupApplication = async ({
   spinner: ora.Ora;
   dev: boolean;
 }) => {
-  return;
   const { template, recipes, envVariables } = projectConfiguration;
   const externalBranchName = getExternalBranchName(template, recipes, dev);
   if (!externalBranchName) return;
