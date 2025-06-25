@@ -27,8 +27,8 @@ export const FixedHero: FC<FixedHeroProps> = ({ textColor, overlayAutoTint, enab
       // Title Text Parameters
       titleSize={{
         mobile: '3xl',
-        tablet: '5xl',
-        desktop: '5xl',
+        tablet: '4xl',
+        desktop: '4xl',
       }}
       titleWeight="bold"
       titleColor={textColor || props.titleColor}
