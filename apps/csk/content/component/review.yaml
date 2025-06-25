@@ -69,14 +69,8 @@ parameters:
       options:
         - key: Full
           value: full
-        - key: Viewport
+        - key: Screen
           value: screen
-        - key: Dynamic viewport
-          value: dvh
-        - key: Large viewport
-          value: lvh
-        - key: Small viewport
-          value: svh
       withViewPort: true
   - id: showRatingLabel
     name: Show Rating Label
@@ -127,7 +121,7 @@ slots:
 titleParameter: displayName
 canBeComposition: false
 created: '2025-01-29T10:47:02.552456+00:00'
-updated: '2025-06-23T10:27:51.672846+00:00'
+updated: '2025-06-25T09:40:33.221121+00:00'
 variants:
   - id: multiColumn
     name: Multi Column
