@@ -22,6 +22,7 @@ import {
   RECIPE_SPECIFIC_BRANCHES,
   TEMPLATES,
   REQUIRED_UNIFORM_ENV_VARIABLES,
+  PACKAGE_VERSION,
 } from '../../constants';
 import { runCmdCommand, spawnCmdCommand } from '../../utils';
 
@@ -322,11 +323,12 @@ export const copyDirectory = (sourceDir: string, targetDir: string): void => {
 };
 
 /**
- * Gets the external branch name based on the template.
+ * Returns the formatted external branch name based on template, recipes, and environment.
  *
- * @param {string} template - The template name
- * @param {Recipe[]} recipes - The recipes to check
- * @returns {string} The formatted branch name
+ * @param template - Template name (e.g., 'baseline' or other)
+ * @param recipes - Array of Recipe identifiers
+ * @param dev - Whether to use the dev suffix or package version
+ * @returns Formatted branch name string
  */
 export const getExternalBranchName = (template: string, recipes: Recipe[], dev: boolean): string => {
   const getBranchName = () => {
@@ -345,7 +347,8 @@ export const getExternalBranchName = (template: string, recipes: Recipe[], dev: 
     return `${TEMPLATE_BRANCH_PREFIX_LOCAL}${template}`;
   };
 
-  return dev ? `${getBranchName()}-dev` : getBranchName();
+  const suffix = dev ? '-dev' : `-${PACKAGE_VERSION}`;
+  return `${getBranchName()}${suffix}`;
 };
 
 /**
