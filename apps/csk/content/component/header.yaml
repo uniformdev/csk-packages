@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: header
 name: Header
@@ -76,13 +76,14 @@ slots:
       - shoppingCartIcon
       - favoritesIcon
       - aiShoppingAssistantButton
+      - localeSelector
     allowAllComponents: false
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
 titleParameter: displayName
 canBeComposition: false
-created: '2025-04-24T11:34:26.120947+00:00'
-updated: '2025-04-24T11:34:26.120947+00:00'
+created: '2025-02-27T10:44:56.873536+00:00'
+updated: '2025-06-19T08:34:03.873848+00:00'
 variants:
   - id: sticky
     name: Sticky
