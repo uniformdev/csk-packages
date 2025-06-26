@@ -2,16 +2,15 @@
 
 import { FC, useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
-import { DefaultTheme } from 'tailwindcss/types/generated/default-theme';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { Text } from '@uniformdev/csk-components/components/ui';
 import { cn } from '@uniformdev/csk-components/utils/styling';
 
 export type AnchorLinksParameters = {
-  size?: keyof DefaultTheme['fontSize'];
+  size?: string;
   color?: string;
   font?: string;
-  weight?: keyof DefaultTheme['fontWeight'];
+  weight?: string;
   containerId?: string;
 };
 

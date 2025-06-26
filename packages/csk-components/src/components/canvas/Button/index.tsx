@@ -1,4 +1,3 @@
-import { DefaultTheme } from 'tailwindcss/types/generated/default-theme';
 import { AssetParamValue } from '@uniformdev/assets';
 import { LinkParamValue } from '@uniformdev/canvas';
 import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
@@ -10,7 +9,7 @@ export type ButtonParameters = {
   text?: string;
   link?: LinkParamValue;
   textColor?: string;
-  textWeight?: keyof DefaultTheme['fontWeight'];
+  textWeight?: string;
   textFont?: 'uppercase' | 'lowercase' | 'capitalize' | 'normal-case';
   textTransform?: string;
   buttonColor?: string;
