@@ -1,0 +1,179 @@
+composition:
+  _name: 🛒 See my cart
+  _id: 759a8084-68e2-40b8-9615-45c7789aabd3
+  _slug: see-my-cart
+  type: aiConfiguration
+  slots:
+    content:
+      - _id: 03179326-b7ed-4645-add2-65fdf06b9ead
+        type: shoppingCart
+        slots:
+          checkoutButton:
+            - _id: 8a3d19eb-3c7d-48c6-8c6a-8a30b87973e9
+              type: button
+              _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
+          emptyCartContent:
+            - _id: 0d41b5c4-37f4-4ed5-a48c-f0c3167acea9
+              type: flex
+              slots:
+                flexItem:
+                  - _id: eb9a72c4-7ad2-4308-b862-5ab7446926cd
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: span
+                      size:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: 3xl
+                          tablet: 3xl
+                          desktop: 3xl
+                      text:
+                        type: text
+                        locales:
+                          en: Your shopping cart is empty
+                      color:
+                        type: dex-color-palette-parameter
+                        value: text-primary
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: bold
+                  - _id: bdfa92b1-1cca-4f56-a67f-ade2aeb5657f
+                    type: image
+                    parameters:
+                      image:
+                        type: asset
+                        value:
+                          - _id: 9d34fc65-5359-4543-bdaa-f496a697133c
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: b207e5e2-a19f-4bda-a9c2-e96a64e1d62c
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/xOBo-4wuSIO8vGPQFReOlg/MDJaAZb3SYqNFljZhXI26g-icon-cart.svg
+                                type: text
+                              file:
+                                type: file
+                                value: d23b35bb-c04d-4bde-bf7d-15435850034e
+                              size:
+                                value: 872
+                                type: number
+                              title:
+                                type: text
+                                value: icon-cart.svg
+                              width:
+                                value: 24
+                                type: number
+                              height:
+                                value: 24
+                                type: number
+                              mediaType:
+                                value: image/svg+xml
+                                type: text
+                            _source: uniform-assets
+                      width:
+                        type: number
+                        value: '100'
+                      height:
+                        type: number
+                        value: '100'
+                      objectFit:
+                        type: dex-segmented-control-parameter
+                        value: cover
+                  - _id: a4eedd91-cb14-491f-b3f6-ce37c42fbc97
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: span
+                      size:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: lg
+                          tablet: lg
+                          desktop: xl
+                      text:
+                        type: text
+                        locales:
+                          en: Your shopping cart is empty
+                      color:
+                        type: dex-color-palette-parameter
+                        value: text-primary
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: normal
+              parameters:
+                gap:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: '8'
+                    tablet: '8'
+                    desktop: '8'
+                direction:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: col
+                    tablet: col
+                    desktop: col
+                alignItems:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: center
+                    tablet: center
+                    desktop: center
+                displayName:
+                  type: text
+                  locales:
+                    en: 'The shopping cart is empty '
+                justifyContent:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: center
+                    tablet: center
+                    desktop: center
+        parameters:
+          primaryTextColor:
+            type: dex-color-palette-parameter
+            value: text-primary
+          secondaryTextColor:
+            type: dex-color-palette-parameter
+            value: text-link
+  _overrides:
+    5667a267-5c8a-48f1-8cde-e7deecc37806:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: /${locale}/cart/checkout
+              type: projectMapNode
+              nodeId: 56d212ca-516a-42ee-86e6-2df10e284b60
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+        text:
+          type: text
+          value: Proceed to Checkout
+    8a3d19eb-3c7d-48c6-8c6a-8a30b87973e9:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: /${locale}/cart/checkout
+              type: projectMapNode
+              nodeId: 56d212ca-516a-42ee-86e6-2df10e284b60
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+        text:
+          type: text
+          value: Proceed to Checkout
+  _locales:
+    - en
+created: '2025-04-24T11:31:53.153196+00:00'
+modified: '2025-04-28T14:37:45.895972+00:00'
+pattern: false
