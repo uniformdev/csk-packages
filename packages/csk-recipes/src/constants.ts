@@ -1,4 +1,7 @@
+import packageJson from '../package.json';
 import { EnvVariable, Recipe, Template } from './commands/init/types';
+
+export const PACKAGE_VERSION = packageJson.version;
 
 export const TEMPLATE_BRANCH_PREFIX = 'refs/heads/templates/';
 export const TEMPLATE_BRANCH_PREFIX_LOCAL = 'templates/';
