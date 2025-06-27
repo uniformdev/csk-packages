@@ -1,3 +1,115 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss' source(none);
+
+
+
+@source '../components/**/*.{js,ts,jsx,tsx,mdx}';
+@source '../app/**/*.{js,ts,jsx,tsx,mdx}';
+@source '../../../../node_modules/@uniformdev/csk-components/dist/content/**/*.{js,ts,jsx,tsx,mdx}';
+
+@source inline("{lg:,md:,}grid-cols-{1,2,3,4,5,6,7,8,9,10,11,12,none,subgrid}");
+@source inline("{lg:,md:,}gap-{0,0.5,1,1.5,2,2.5,3,3.5,4,5,6,8,10,12,16,20,24,32,40,48,56,64,72,80,96,px}");
+@source inline("{lg:,md:,}gap-x-{0,0.5,1,1.5,2,2.5,3,3.5,4,5,6,8,10,12,16,20,24,32,40,48,56,64,72,80,96,px}");
+@source inline("{lg:,md:,}gap-y-{0,0.5,1,1.5,2,2.5,3,3.5,4,5,6,8,10,12,16,20,24,32,40,48,56,64,72,80,96,px}");
+@source inline("{lg:,md:,}p{x,}-{0,0.5,1,1.5,2,2.5,3,3.5,4,5,6,8,10,12,16,20,24,32,40,48,56,64,72,80,96,px}");
+@source inline("{lg:,md:,}m{x,}-{0,0.5,1,1.5,2,2.5,3,3.5,4,5,6,8,10,12,16,20,24,32,40,48,56,64,72,80,96,px}");
+@source inline("{lg:,md:,}-m{x,}-{0,1,2,3,4,5,6,8,10,12,16,20,24,32,40,48,56,64,72,80,96,px}");
+@source inline("{lg:,md:,}flex-{col,row,col-reverse,row-reverse}");
+@source inline("{lg:,md:,}justify-{normal,start,end,center,between,around,evenly,stretch}");
+@source inline("{lg:,md:,}items-{start,end,center,baseline,stretch}");
+@source inline("{lg:,md:,}self-{start,end,center,baseline,stretch}");
+@source inline("{lg:,md:,}{col,row}-start-{1,2,3,4,5,6,7,8,9,10,11,12,none,subgrid}");
+@source inline("{lg:,md:,}{col,row}-{auto,span-{1,2,3,4,5,6,7,8,9,10,11,12},span-full}");
+@source inline("justify-{start,center,end}");
+@source inline("{lg:,md:,}text-{xs,sm,base,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl,8xl,9xl}");
+@source inline("text-{left,center,right}");
+@source inline("{lg:,md:,}font-{normal,medium,bold,extrabold}");
+@source inline("{,lg:,md:}[&>:not(script)]line-clamp-{none,1,2,3,4,5,6}");
+@source inline("{lg:,md:,}{uppercase,lowercase,capitalize}");
+@source inline("{lg:,md:,}{underline,overline,line-through}");
+@source inline("{lg:,md:,}tracking-{tighter,tight,normal,wide,wider,widest}");
+@source inline("aspect-{auto,square,video}");
+@source inline("shrink-{0,1}");
+@source inline("{hover:,}opacity-{0,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100}");
+@source inline("{hover:,}scale-{0,50,75,90,95,100,105,110,125,150}");
+@source inline("{hover:,group-hover:,lg:,md:,}{bg,text,decoration,border,ring,fill}-{button-primary,button-primary-hover,button-secondary,button-secondary-hover,button-tertiary,button-tertiary-hover,text-primary,text-secondary,text-tertiary,text-light,text-dark,general-color-1,general-color-2,general-color-3,general-color-4,general-color-5,page-background-primary}");
+@source inline("{lg:,md:,}{mt,mb,ml,mr,pt,pb,pl,pr,w,h}-{container-small,container-medium,container-large,container-xlarge,table-small,table-medium,table-large,badge-small,badge-large,button-small,button-medium,button-large,spacer-extra-small,spacer-small,spacer-medium,spacer-large}");
+@source inline("{[&_td]:,[&_th]:,}p-{container-small,container-medium,container-large,container-xlarge,table-small,table-medium,table-large,badge-small,badge-large,button-small,button-medium,button-large,spacer-extra-small,spacer-small,spacer-medium,spacer-large}");
+@source inline("{lg:,md:,}font-{dm-sans,space-mono,default}");
+@source inline("{lg:,md:,}border-{primary,secondary,footer,image-radius-small}");
+
+@theme {
+    --color-button-primary: var(--button-primary);
+    --color-button-primary-hover: var(--button-primary-hover);
+    --color-button-secondary: var(--button-secondary);
+    --color-button-secondary-hover: var(--button-secondary-hover);
+    --color-button-tertiary: var(--button-tertiary);
+    --color-button-tertiary-hover: var(--button-tertiary-hover);
+    --color-text-primary: var(--text-primary);
+    --color-text-secondary: var(--text-secondary);
+    --color-text-tertiary: var(--text-tertiary);
+    --color-text-light: var(--text-light);
+    --color-text-dark: var(--text-dark);
+    --color-general-color-1: var(--general-color-1);
+    --color-general-color-2: var(--general-color-2);
+    --color-general-color-3: var(--general-color-3);
+    --color-general-color-4: var(--general-color-4);
+    --color-general-color-5: var(--general-color-5);
+    --color-page-background-primary: var(--page-background-primary);
+
+    --spacing-container-small: var(--container-small);
+    --spacing-container-medium: var(--container-medium);
+    --spacing-container-large: var(--container-large);
+    --spacing-container-xlarge: var(--container-xlarge);
+    --spacing-table-small: var(--table-small);
+    --spacing-table-medium: var(--table-medium);
+    --spacing-table-large: var(--table-large);
+    --spacing-badge-small: var(--badge-small);
+    --spacing-badge-large: var(--badge-large);
+    --spacing-button-small: var(--button-small);
+    --spacing-button-medium: var(--button-medium);
+    --spacing-button-large: var(--button-large);
+    --spacing-spacer-extra-small: var(--spacer-extra-small);
+    --spacing-spacer-small: var(--spacer-small);
+    --spacing-spacer-medium: var(--spacer-medium);
+    --spacing-spacer-large: var(--spacer-large);
+
+    --font-dm-sans: var(--dm-sans);
+    --font-space-mono: var(--space-mono);
+    --font-boldonse: var(--boldonse);
+    --font-noto-serif-hentaigana: var(--noto-serif-hentaigana);
+    --font-pochaevsk: var(--pochaevsk);
+    --font-poppins: var(--poppins);
+    --font-roboto-mono: var(--roboto-mono);
+    --font-roboto: var(--roboto);
+    --font-default: var(--default-font);
+}
+
+.border-primary {
+    border-style: var(--border-primary-style);
+    border-radius: var(--border-primary-radius);
+    border-width: var(--border-primary-width);
+    border-color: var(--border-primary-color);
+}
+
+.border-secondary {
+    border-style: var(--border-secondary-style);
+    border-radius: var(--border-secondary-radius);
+    border-width: var(--border-secondary-width);
+    border-color: var(--border-secondary-color);
+}
+
+.border-footer {
+    border-style: var(--border-footer-style);
+    border-radius: var(--border-footer-radius);
+    border-width: var(--border-footer-width);
+    border-color: var(--border-footer-color);
+}
+
+.border-image-radius-small {
+    border-style: var(--border-image-radius-small-style);
+    border-radius: var(--border-image-radius-small-radius);
+    border-width: var(--border-image-radius-small-width);
+    border-color: var(--border-image-radius-small-color);
+}
+
+@plugin "@tailwindcss/typography";
