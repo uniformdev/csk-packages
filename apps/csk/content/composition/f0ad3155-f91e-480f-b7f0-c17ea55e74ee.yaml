@@ -1,0 +1,187 @@
+composition:
+  _name: 💡User Recommendations
+  _id: f0ad3155-f91e-480f-b7f0-c17ea55e74ee
+  _slug: user-recommendations
+  type: aiConfiguration
+  slots:
+    content:
+      - _id: deb54d06-7383-447b-a887-83c59163ebad
+        type: $personalization
+        slots:
+          pz:
+            - _id: 05b0d6ab-6d7c-4a9f-b2ff-6c4ee77dfc1e
+              type: flex
+              _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
+            - _id: 19736869-a87c-4653-a0b8-f387c508a8a0
+              type: flex
+              _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
+            - _id: 06d4db25-2982-45e5-94dd-1ed0f3c4ecef
+              type: flex
+              _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
+            - _id: 46dd8de6-d6ff-4f6e-be75-b714153157fb
+              type: flex
+              _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
+            - _id: 8389a989-0906-4838-a43c-1f63892479f0
+              type: flex
+              _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
+            - _id: b5c786ff-b0ad-431a-8d7b-af5daa2f9dda
+              type: flex
+              _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
+            - _id: c2d6999e-f277-4e64-82c6-4b2c25e0849f
+              type: flex
+              _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
+            - _id: 60e43a43-0e40-4e2a-ba09-c82617c55c2a
+              type: flex
+              _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
+            - _id: 16d6c5ec-276d-4d09-b374-3e91adeaffff
+              type: flex
+              _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
+            - _id: ee80c87c-9651-4b43-ae61-bc5e86561244
+              type: flex
+              _pattern: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
+        parameters:
+          count:
+            type: number
+            value: '3'
+          algorithm:
+            type: pzAlgorithm
+            value: ssc
+          trackingEventName:
+            type: text
+            value: Recommendations
+  _overrides:
+    05b0d6ab-6d7c-4a9f-b2ff-6c4ee77dfc1e:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            dim: subCategory_arabica
+            name: arabica 1
+      dataResources:
+        Single Product Content:
+          type: singleProduct
+          variables:
+            locale: ${locale}
+            entryId: f7e77f37-2646-410e-8596-6ae16379d5d9
+    06d4db25-2982-45e5-94dd-1ed0f3c4ecef:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            dim: subCategory_arabica
+            name: arabica 3
+      dataResources:
+        Single Product Content:
+          type: singleProduct
+          variables:
+            locale: ${locale}
+            entryId: 79ddd1f3-30a9-4f4d-8a93-0d9e17ad5967
+    16d6c5ec-276d-4d09-b374-3e91adeaffff:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            dim: subCategory_turkish
+            name: turkish
+      dataResources:
+        Single Product Content:
+          type: singleProduct
+          variables:
+            locale: ${locale}
+            entryId: 368a700a-adfd-4304-9186-534f7cbac088
+    19736869-a87c-4653-a0b8-f387c508a8a0:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            dim: subCategory_arabica
+            name: arabica 2
+      dataResources:
+        Single Product Content:
+          type: singleProduct
+          variables:
+            locale: ${locale}
+            entryId: ff365bbd-13c4-43ab-9747-e4cf5a85a4ce
+    46dd8de6-d6ff-4f6e-be75-b714153157fb:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            dim: subCategory_espresso
+            name: espresso-1
+      dataResources:
+        Single Product Content:
+          type: singleProduct
+          variables:
+            locale: ${locale}
+            entryId: 2f042be4-1e8b-4fae-be0e-a5294b89d8dd
+    60e43a43-0e40-4e2a-ba09-c82617c55c2a:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            dim: subCategory_pour-over
+            name: Medium Coffee Makers interest
+      dataResources:
+        Single Product Content:
+          type: singleProduct
+          variables:
+            locale: ${locale}
+            entryId: 493503ea-3332-4bb9-b995-b311658b26c6
+    8389a989-0906-4838-a43c-1f63892479f0:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            dim: subCategory_espresso
+            name: espresso-2
+      dataResources:
+        Single Product Content:
+          type: singleProduct
+          variables:
+            locale: ${locale}
+            entryId: d4af2511-76c3-4c8c-b979-1c3da1c667fb
+    b5c786ff-b0ad-431a-8d7b-af5daa2f9dda:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            dim: subCategory_espresso
+            name: espresso-3
+      dataResources:
+        Single Product Content:
+          type: singleProduct
+          variables:
+            locale: ${locale}
+            entryId: d2719c84-ddf5-4020-8d11-a75fbe3ef2f7
+    c2d6999e-f277-4e64-82c6-4b2c25e0849f:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            dim: subCategory_pour-over
+            name: High Coffee Makers interest
+      dataResources:
+        Single Product Content:
+          type: singleProduct
+          variables:
+            locale: ${locale}
+            entryId: d7047783-160a-4d26-a172-e8330f55c567
+    ee80c87c-9651-4b43-ae61-bc5e86561244:
+      parameters:
+        $pzCrit:
+          type: $pzCrit
+          value:
+            dim: subCategory_french-press
+            name: french press
+      dataResources:
+        Single Product Content:
+          type: singleProduct
+          variables:
+            locale: ${locale}
+            entryId: 28bf4036-f588-4ee0-94bb-241d39270972
+  _locales:
+    - en
+created: '2025-04-24T11:51:44.798972+00:00'
+modified: '2025-04-28T14:27:34.005827+00:00'
+pattern: false

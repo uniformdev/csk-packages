@@ -10,6 +10,8 @@ import '@/styles/dimensions.css';
 import '@/styles/fonts.css';
 import '@/styles/borders.css';
 import { customFontVariables } from '@/fonts';
+import { Chat } from '@/modules/chat';
+import { ChatProvider } from '@/modules/chat/providers/ChatProvider';
 import { CardProvider } from '@/providers/CardProvider';
 import { FavoritesProvider } from '@/providers/FavoritesProvider';
 import { UniformClientContext } from '@/utils/clientContext';
@@ -26,7 +28,14 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <NextThemeProvider attribute="class" defaultTheme="light" enableSystem>
             <UniformContext clientContextComponent={UniformClientContext}>
               <CardProvider>
-                <FavoritesProvider>{children}</FavoritesProvider>
+                <ChatProvider>
+                  <FavoritesProvider>
+                    <div className="flex">
+                      <div className="flex-1">{children}</div>
+                      <Chat />
+                    </div>
+                  </FavoritesProvider>
+                </ChatProvider>
               </CardProvider>
             </UniformContext>
           </NextThemeProvider>
