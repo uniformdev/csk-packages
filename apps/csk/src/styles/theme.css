@@ -1,0 +1,80 @@
+@source inline("{hover:,group-hover:,lg:,md:,}{bg,text,decoration,border,ring,fill}-{button-primary,button-primary-hover,button-secondary,button-secondary-hover,button-tertiary,button-tertiary-hover,text-primary,text-secondary,text-tertiary,text-light,text-dark,general-color-1,general-color-2,general-color-3,general-color-4,general-color-5,page-background-primary}");
+@source inline("{lg:,md:,}{mt,mb,ml,mr,pt,pb,pl,pr,w,h}-{container-small,container-medium,container-large,container-xlarge,table-small,table-medium,table-large,badge-small,badge-large,button-small,button-medium,button-large,spacer-extra-small,spacer-small,spacer-medium,spacer-large}");
+@source inline("{[&_td]:,[&_th]:,}p-{container-small,container-medium,container-large,container-xlarge,table-small,table-medium,table-large,badge-small,badge-large,button-small,button-medium,button-large,spacer-extra-small,spacer-small,spacer-medium,spacer-large}");
+@source inline("{lg:,md:,}font-{dm-sans,space-mono,default}");
+@source inline("{lg:,md:,}border-{primary,secondary,footer,image-radius-small}");
+
+@theme {
+    --color-button-primary: var(--button-primary);
+    --color-button-primary-hover: var(--button-primary-hover);
+    --color-button-secondary: var(--button-secondary);
+    --color-button-secondary-hover: var(--button-secondary-hover);
+    --color-button-tertiary: var(--button-tertiary);
+    --color-button-tertiary-hover: var(--button-tertiary-hover);
+    --color-text-primary: var(--text-primary);
+    --color-text-secondary: var(--text-secondary);
+    --color-text-tertiary: var(--text-tertiary);
+    --color-text-light: var(--text-light);
+    --color-text-dark: var(--text-dark);
+    --color-general-color-1: var(--general-color-1);
+    --color-general-color-2: var(--general-color-2);
+    --color-general-color-3: var(--general-color-3);
+    --color-general-color-4: var(--general-color-4);
+    --color-general-color-5: var(--general-color-5);
+    --color-page-background-primary: var(--page-background-primary);
+
+    --spacing-container-small: var(--container-small);
+    --spacing-container-medium: var(--container-medium);
+    --spacing-container-large: var(--container-large);
+    --spacing-container-xlarge: var(--container-xlarge);
+    --spacing-table-small: var(--table-small);
+    --spacing-table-medium: var(--table-medium);
+    --spacing-table-large: var(--table-large);
+    --spacing-badge-small: var(--badge-small);
+    --spacing-badge-large: var(--badge-large);
+    --spacing-button-small: var(--button-small);
+    --spacing-button-medium: var(--button-medium);
+    --spacing-button-large: var(--button-large);
+    --spacing-spacer-extra-small: var(--spacer-extra-small);
+    --spacing-spacer-small: var(--spacer-small);
+    --spacing-spacer-medium: var(--spacer-medium);
+    --spacing-spacer-large: var(--spacer-large);
+
+    --font-dm-sans: var(--dm-sans);
+    --font-space-mono: var(--space-mono);
+    --font-boldonse: var(--boldonse);
+    --font-noto-serif-hentaigana: var(--noto-serif-hentaigana);
+    --font-pochaevsk: var(--pochaevsk);
+    --font-poppins: var(--poppins);
+    --font-roboto-mono: var(--roboto-mono);
+    --font-roboto: var(--roboto);
+    --font-default: var(--default-font);
+}
+
+.border-primary {
+    border-style: var(--border-primary-style);
+    border-radius: var(--border-primary-radius);
+    border-width: var(--border-primary-width);
+    border-color: var(--border-primary-color);
+}
+
+.border-secondary {
+    border-style: var(--border-secondary-style);
+    border-radius: var(--border-secondary-radius);
+    border-width: var(--border-secondary-width);
+    border-color: var(--border-secondary-color);
+}
+
+.border-footer {
+    border-style: var(--border-footer-style);
+    border-radius: var(--border-footer-radius);
+    border-width: var(--border-footer-width);
+    border-color: var(--border-footer-color);
+}
+
+.border-image-radius-small {
+    border-style: var(--border-image-radius-small-style);
+    border-radius: var(--border-image-radius-small-radius);
+    border-width: var(--border-image-radius-small-width);
+    border-color: var(--border-image-radius-small-color);
+}
