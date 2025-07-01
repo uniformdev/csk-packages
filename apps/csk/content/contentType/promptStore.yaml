@@ -1,0 +1,30 @@
+id: promptStore
+name: Prompt Store
+created: '2025-04-24T10:56:12.927036+00:00'
+updated: '2025-04-24T10:56:12.927036+00:00'
+slugSettings: {}
+useTeamPermissions: true
+fields:
+  - id: name
+    name: Name
+    type: text
+    typeConfig: null
+  - id: prompts
+    name: Prompts
+    type: $block
+    typeConfig:
+      allowedTypes:
+        - promptItem
+  - id: thumbnail
+    name: Thumbnail
+    type: asset
+    typeConfig:
+      allowedTypes:
+        - image
+entryName: name
+thumbnailField: thumbnail
+description: ''
+icon: file-remove
+type: contentType
+permissions: []
+previewConfigurations: []
