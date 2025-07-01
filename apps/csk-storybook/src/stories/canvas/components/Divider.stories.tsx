@@ -3,9 +3,9 @@ import { Divider, DividerParameters } from '@uniformdev/csk-components/component
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
 import { createFakeCompositionData, fakeContext } from '@/utils';
 import { ArgTypes, Meta, StoryObj } from '@storybook/react';
-import theme from '../../../../tailwind.config.theme.json';
+import theme from '../../../../themeData.json';
 
-const colorKeys = Object.keys(theme.extend.colors || {});
+const colorKeys = theme.colors.map(color => color.colorKey);
 
 const meta: Meta<typeof Divider> = {
   title: 'Component Starter Kit/Components/Divider',

@@ -3,9 +3,9 @@ import { Spacer, SpacerParameters, SpacerVariants } from '@uniformdev/csk-compon
 import createComponentResolver, { ComponentMapping } from '@uniformdev/csk-components/utils/createComponentResolver';
 import { createFakeCompositionData, fakeContext } from '@/utils';
 import { ArgTypes, Meta, StoryObj } from '@storybook/react';
-import theme from '../../../../tailwind.config.theme.json';
+import theme from '../../../../themeData.json';
 
-const sizeKeys = Object.keys(theme.extend.spacing || {}).filter(key => key.startsWith('spacer'));
+const sizeKeys = theme.dimensions.map(dimension => dimension.dimensionKey);
 
 const meta: Meta<typeof Spacer> = {
   title: 'Component Starter Kit/Components/Spacer',

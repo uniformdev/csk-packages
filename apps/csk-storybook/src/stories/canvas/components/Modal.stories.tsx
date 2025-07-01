@@ -4,14 +4,14 @@ import createComponentResolver, { ComponentMapping } from '@uniformdev/csk-compo
 import { modalDefault, modalWithActionButtons } from '@/canvasMock/components/modal';
 import { createFakeCompositionData, fakeContext } from '@/utils';
 import { ArgTypes, Meta, StoryObj } from '@storybook/react';
-import theme from '../../../../tailwind.config.theme.json';
+import theme from '../../../../themeData.json';
 
 const meta: Meta<typeof Modal> = {
   title: 'Component Starter Kit/Components/Modal',
   component: Modal,
 };
 
-const colorKeys = Object.keys(theme.extend.colors || {});
+const colorKeys = theme.colors.map(color => color.colorKey);
 
 const argTypes: Partial<ArgTypes<ModalParameters>> = {
   maxWidth: { control: 'select', options: ['small', 'medium', 'large'] },

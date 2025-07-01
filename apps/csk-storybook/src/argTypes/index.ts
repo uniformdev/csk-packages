@@ -6,13 +6,12 @@ import {
   VideoParameters,
 } from '@uniformdev/csk-components/components/canvas';
 import { ArgTypes } from '@storybook/react';
-import theme from '../../tailwind.config.theme.json';
-import utilities from '../../tailwind.utilities.json';
+import theme from '../../themeData.json';
 
-const colorKeys = Object.keys(theme.extend.colors || {});
-const fontKeys = Object.keys(theme.extend.fontFamily || {});
-const borderKeys = Object.keys(utilities || {}).map(key => key.substring(1));
-const sizeKeys = Object.keys(theme.extend.spacing || {}).filter(key => key.startsWith('button'));
+const colorKeys = theme.colors.map(color => color.colorKey);
+const fontKeys = theme.fonts.map(font => font.fontKey);
+const borderKeys = theme.borders.map(border => border.borderKey);
+const sizeKeys = theme.dimensions.map(dimension => dimension.dimensionKey);
 
 export const ContainerArgTypes: Partial<ArgTypes<ContainerParameters>> = {
   displayName: { control: 'text' },
