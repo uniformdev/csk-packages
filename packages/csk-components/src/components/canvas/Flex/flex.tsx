@@ -18,6 +18,7 @@ export const Flex: FC<FlexProps> = ({
   context,
   className,
   fitHeight,
+  height,
   wrapperClassName,
 }) => (
   <BaseFlex
@@ -32,6 +33,7 @@ export const Flex: FC<FlexProps> = ({
       fluidContent,
       fullHeight,
       fitHeight,
+      height,
       wrapperClassName,
       className,
     }}
