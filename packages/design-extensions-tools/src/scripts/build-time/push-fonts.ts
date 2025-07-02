@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { PATH_TO_STYLE_FOLDER, TOKEN_STYLE_FILE } from '../../constants';
+import { PATH_TO_STYLE_FOLDER, REGEX_ALIAS_VALUE, TOKEN_STYLE_FILE } from '../../constants';
 import { checkEnvironmentVariable, pushTokenValue, syncSuccessLog } from '../../utils';
 import { getFontFamilyName } from '../../utils/getTokenStyles';
 
@@ -43,10 +43,12 @@ export const pushFonts = async () => {
 
   const { defaultFont, ...resolvedFonts } = Object.entries(fonts).reduce<Record<string, string>>(
     (acc, [key, value]) => {
-      if (value.endsWith(' !important')) {
-        return { ...acc, defaultFont: key, [key]: googleFontValues[value.replace(' !important', '')] || '' };
+      if (key === 'default-font') {
+        acc.defaultFont = value.match(REGEX_ALIAS_VALUE)?.[1] || '';
+      } else {
+        acc[key] = googleFontValues[value] || '';
       }
-      return { ...acc, [key]: googleFontValues[value] || '' };
+      return acc;
     },
     {}
   );

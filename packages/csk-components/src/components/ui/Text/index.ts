@@ -1,18 +1,15 @@
 import { ReactElement } from 'react';
-import { DefaultTheme } from 'tailwindcss/types/generated/default-theme';
 import { ViewPort } from '@/types/cskTypes';
-
-type TextSize = keyof DefaultTheme['fontSize'];
 
 export type TextProps = {
   className?: string;
-  size?: TextSize | ViewPort<TextSize>;
+  size?: string | ViewPort<string>;
   color?: string;
-  weight?: keyof DefaultTheme['fontWeight'];
+  weight?: string;
   font?: string;
   transform?: 'uppercase' | 'lowercase' | 'capitalize' | 'normal-case';
   decoration?: 'underline' | 'overline' | 'line-through' | 'no-underline';
-  letterSpacing?: keyof DefaultTheme['letterSpacing'];
+  letterSpacing?: string;
   children: ReactElement | string;
   alignment?: 'left' | 'center' | 'right';
   lineCountRestrictions?: string;

@@ -9,7 +9,7 @@ import {
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
 import { createFakeCompositionData, fakeContext } from '@/utils';
 import { ArgTypes, Meta, StoryObj } from '@storybook/react';
-import theme from '../../../../tailwind.config.theme.json';
+import theme from '../../../../themeData.json';
 import { TextArgTypes, ContainerArgTypes } from '../../../argTypes';
 
 type FutureDateSettings = {
@@ -23,7 +23,7 @@ const getFutureDate = ({ daysAhead = 1 }: FutureDateSettings = {}) => {
   return futureDate.toISOString();
 };
 
-const colorKeys = Object.keys(theme.extend.colors || {});
+const colorKeys = theme.colors.map(color => color.colorKey);
 
 const meta: Meta<typeof Countdown> = {
   title: 'Component Starter Kit/Components/Countdown',

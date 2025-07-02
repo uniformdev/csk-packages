@@ -1,6 +1,5 @@
 import js from '@eslint/js';
 import eslintConfigPrettier from 'eslint-config-prettier';
-import tailwind from 'eslint-plugin-tailwindcss';
 import prettierPlugin from 'eslint-plugin-prettier';
 import turboPlugin from 'eslint-plugin-turbo';
 import tseslint from 'typescript-eslint';
@@ -13,7 +12,6 @@ export const config = [
   js.configs.recommended,
   eslintConfigPrettier,
   ...tseslint.configs.recommended,
-  ...tailwind.configs['flat/recommended'],
   importPlugin.flatConfigs.recommended,
   {
     plugins: { turbo: turboPlugin },

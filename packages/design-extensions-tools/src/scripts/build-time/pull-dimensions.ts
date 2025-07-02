@@ -1,10 +1,33 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { DEFAULT_TAILWIND_CONF_PATH, PATH_TO_STYLE_FOLDER, TOKEN_STYLE_FILE } from '../../constants';
+import { generateTailwindcssSource } from 'src/utils/generateTailwindcssPatterns';
+import {
+  DEFAULT_DIMENSION_PREFIXES,
+  DEFAULT_DIMENSION_VARIANTS,
+  DEFAULT_TAILWIND_DIMENSION_CONF_PATH,
+  PATH_TO_STYLE_FOLDER,
+  TOKEN_STYLE_FILE,
+} from '../../constants';
 import { checkEnvironmentVariable, fetchTokenValue, getRootSimpleTokensValue, syncSuccessLog } from '../../utils';
 
-const generateTailwindcssConfigDimensions = (dimensions: Record<string, { light: string; dark: string }>) =>
-  Object.fromEntries(Object.entries(dimensions).map(([key]) => [`${key}`, `var(--${key})`]));
+const generateDimensionsData = (dimensions: Record<string, { light: string; dark: string }>) => {
+  const { dimensionKeys, themeLines } = Object.keys(dimensions).reduce<{
+    dimensionKeys: string[];
+    themeLines: string[];
+  }>(
+    ({ dimensionKeys, themeLines }, key) => {
+      dimensionKeys.push(key);
+      themeLines.push(`\t--spacing-${key}: var(--${key});`);
+      return { dimensionKeys, themeLines };
+    },
+    { dimensionKeys: [], themeLines: [] }
+  );
+
+  return {
+    dimensionKeys,
+    themeBlock: `@theme {\r\n${themeLines.join('\r\n')}\r\n}`,
+  };
+};
 
 export const buildDimensions = async () => {
   if (!checkEnvironmentVariable(TOKEN_STYLE_FILE.Dimensions)) return;
@@ -24,30 +47,20 @@ export const buildDimensions = async () => {
 
   const fetchedDimensions = await response.json();
 
-  const themeConfigPath = path.resolve(DEFAULT_TAILWIND_CONF_PATH);
+  const { dimensionKeys, themeBlock } = generateDimensionsData(fetchedDimensions);
 
-  const dimensionsCssPath = path.resolve(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Dimensions}.css`);
-
-  const themeConfig = !fs.existsSync(themeConfigPath)
-    ? undefined
-    : JSON.parse(fs.readFileSync(themeConfigPath, 'utf8'));
-
-  const tailwindcssDimensions = generateTailwindcssConfigDimensions(fetchedDimensions);
-
-  const updatedThemeConfig = {
-    theme: {
-      ...themeConfig.theme,
-      extend: {
-        ...themeConfig.extend,
-        spacing: tailwindcssDimensions,
-      },
-    },
-  };
+  const sourceLine = generateTailwindcssSource({
+    variants: DEFAULT_DIMENSION_VARIANTS,
+    prefixes: DEFAULT_DIMENSION_PREFIXES,
+    keys: dimensionKeys,
+  });
 
   const cssDimensions = getRootSimpleTokensValue(fetchedDimensions);
 
-  fs.writeFileSync(themeConfigPath, JSON.stringify(updatedThemeConfig.theme, null, 2), 'utf8');
+  const dimensionsCssPath = path.resolve(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Dimensions}.css`);
+  const dimensionsTailwindcssPath = path.resolve(PATH_TO_STYLE_FOLDER, DEFAULT_TAILWIND_DIMENSION_CONF_PATH);
 
+  fs.writeFileSync(dimensionsTailwindcssPath, `${sourceLine}\r\n\r\n${themeBlock}`, 'utf8');
   fs.writeFileSync(dimensionsCssPath, cssDimensions, 'utf8');
 
   syncSuccessLog(TOKEN_STYLE_FILE.Dimensions, 'pulled');

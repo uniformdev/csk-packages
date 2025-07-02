@@ -4,9 +4,9 @@ import createComponentResolver from '@uniformdev/csk-components/utils/createComp
 import { TextArgTypes } from '@/argTypes';
 import { createFakeCompositionData, fakeContext } from '@/utils';
 import { ArgTypes, Meta, StoryObj } from '@storybook/react';
-import theme from '../../../../tailwind.config.theme.json';
+import theme from '../../../../themeData.json';
 
-const fontKeys = Object.keys(theme.extend.fontFamily || {});
+const fontKeys = theme.fonts.map(font => font.fontKey);
 
 const meta: Meta<typeof Breadcrumbs> = {
   title: 'Component Starter Kit/Components/Breadcrumbs',

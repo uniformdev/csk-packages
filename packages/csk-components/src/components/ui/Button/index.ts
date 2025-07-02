@@ -1,12 +1,9 @@
 import { PropsWithChildren, ReactNode } from 'react';
-import { DefaultTheme } from 'tailwindcss/types/generated/default-theme';
 import { ViewPort } from '@/types/cskTypes';
 
 export enum ButtonVariant {
   Link = 'link',
 }
-
-type TextSize = keyof DefaultTheme['fontSize'];
 
 export type ButtonProps = PropsWithChildren<{
   variant?: ButtonVariant;
@@ -15,8 +12,8 @@ export type ButtonProps = PropsWithChildren<{
   size?: string;
   className?: string;
   textColor?: string;
-  textSize?: TextSize | ViewPort<TextSize>;
-  textWeight?: keyof DefaultTheme['fontWeight'];
+  textSize?: string | ViewPort<string>;
+  textWeight?: string;
   textFont?: 'uppercase' | 'lowercase' | 'capitalize' | 'normal-case';
   textTransform?: string;
   buttonColor?: string;

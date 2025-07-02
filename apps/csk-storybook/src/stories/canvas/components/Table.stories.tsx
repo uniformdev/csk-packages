@@ -15,15 +15,15 @@ import { ContainerArgTypes } from '@/argTypes';
 import { tableDefault, tableWithCustomCells } from '@/canvasMock/components/table';
 import { createFakeCompositionData, fakeContext } from '@/utils';
 import { ArgTypes, Meta, StoryObj } from '@storybook/react';
-import theme from '../../../../tailwind.config.theme.json';
+import theme from '../../../../themeData.json';
 
 const meta: Meta<typeof Table> = {
   title: 'Component Starter Kit/Components/Table',
   component: Table,
 };
 
-const colorKeys = Object.keys(theme.extend.colors || {});
-const sizeKeys = Object.keys(theme.extend.spacing || {}).filter(key => key.startsWith('table'));
+const colorKeys = theme.colors.map(color => color.colorKey);
+const sizeKeys = theme.dimensions.map(dimension => dimension.dimensionKey).filter(key => key.startsWith('table'));
 
 const { displayName: _, ...baseContainerArgTypes } = ContainerArgTypes;
 

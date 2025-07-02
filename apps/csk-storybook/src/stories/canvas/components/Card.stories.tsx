@@ -14,9 +14,9 @@ import { ContainerArgTypes } from '@/argTypes';
 import { cardDefault, cardWithBackgroundImage } from '@/canvasMock/components/card';
 import { createFakeCompositionData, createUniformParameter, fakeContext } from '@/utils';
 import { ArgTypes, Meta, StoryObj } from '@storybook/react';
-import utilities from '../../../../tailwind.utilities.json';
+import theme from '../../../../themeData.json';
 
-const borderKeys = Object.keys(utilities || {}).map(key => key.substring(1));
+const borderKeys = theme.borders.map(border => border.borderKey);
 
 const meta: Meta<typeof Card> = {
   title: 'Component Starter Kit/Components/Card',

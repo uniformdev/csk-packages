@@ -1,6 +1,1 @@
-export {
-  generateTailwindcssColorKeysPattern,
-  generateTailwindcssDimensionKeysPattern,
-  generateTailwindcssFontKeysPattern,
-  generateTailwindcssBorderKeysPattern,
-} from '../src/utils';
+export { generateTailwindcssSource } from '../src/utils';

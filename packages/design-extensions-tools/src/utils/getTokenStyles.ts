@@ -58,13 +58,15 @@ export const getRootBordersValue = (
 export const getFontFamilyName = (font: string) => font.split(':')[0];
 
 export const getRootFontsValue = (fonts: Record<string, string>, defaultFont?: string) => {
-  const styleContent = Object.entries(fonts)
-    .map(
-      ([key, value]) =>
-        `--${key}: ${getFontFamilyName(value) || 'custom-font'}${defaultFont && key === defaultFont ? ' !important' : ''};\r\n\t`
-    )
-    .join('');
-  return styleContent ? `:root {\r\n\t${styleContent}}` : '';
+  if (!fonts || Object.keys(fonts).length === 0) return '';
+
+  const fontVars = Object.entries(fonts)
+    .map(([key, value]) => `\t--${key}: ${getFontFamilyName(value) || 'custom-font'};`)
+    .join('\r\n');
+
+  const defaultVar = defaultFont ? `\r\n\t--default-font: var(--${defaultFont});` : '';
+
+  return `:root {\r\n${fontVars}${defaultVar}\r\n}`;
 };
 
 export const getFontUrl = (fonts: Record<string, string>) => {

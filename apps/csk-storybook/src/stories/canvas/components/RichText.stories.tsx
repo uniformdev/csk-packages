@@ -4,10 +4,10 @@ import createComponentResolver from '@uniformdev/csk-components/utils/createComp
 import { richTextDefault } from '@/canvasMock/components/richText';
 import { createFakeCompositionData, fakeContext } from '@/utils';
 import { ArgTypes, Meta, StoryObj } from '@storybook/react';
-import theme from '../../../../tailwind.config.theme.json';
+import theme from '../../../../themeData.json';
 
-const colorKeys = Object.keys(theme.extend.colors || {});
-const fontKeys = Object.keys(theme.extend.fontFamily || {});
+const colorKeys = theme.colors.map(color => color.colorKey);
+const fontKeys = theme.fonts.map(font => font.fontKey);
 
 const meta: Meta<typeof RichText> = {
   title: 'Component Starter Kit/Components/RichText',

@@ -1,11 +1,6 @@
 import { BASE_API_URL, CONFIG_FILE, DEFAULT_INTEGRATION_URL, FG_GREEN, TOKEN_STYLE_FILE } from '../constants';
 
-export {
-  generateTailwindcssColorKeysPattern,
-  generateTailwindcssDimensionKeysPattern,
-  generateTailwindcssBorderKeysPattern,
-  generateTailwindcssFontKeysPattern,
-} from './generateTailwindcssPatterns';
+export { generateTailwindcssSource } from './generateTailwindcssPatterns';
 
 export { getTokenStyles, getRootSimpleTokensValue, getRootBordersValue } from './getTokenStyles';
 

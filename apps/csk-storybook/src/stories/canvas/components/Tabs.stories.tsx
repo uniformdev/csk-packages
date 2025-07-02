@@ -5,14 +5,14 @@ import { ContainerArgTypes } from '@/argTypes';
 import { tabsDefault } from '@/canvasMock/components/tabs';
 import { createFakeCompositionData, fakeContext } from '@/utils';
 import { ArgTypes, Meta, StoryObj } from '@storybook/react';
-import theme from '../../../../tailwind.config.theme.json';
+import theme from '../../../../themeData.json';
 
 const meta: Meta<typeof Tabs> = {
   title: 'Component Starter Kit/Components/Tabs',
   component: Tabs,
 };
 
-const colorKeys = Object.keys(theme.extend.colors || {});
+const colorKeys = theme.colors.map(color => color.colorKey);
 
 export default meta;
 type Story = StoryObj<typeof Tabs>;

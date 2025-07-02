@@ -10,13 +10,11 @@ export const DesignExtensionsProvider: FC<DesignExtensionsProviderProps> = async
 }) => {
   try {
     if (!isPreviewMode && process.env.WATCH !== 'true') {
-      // eslint-disable-next-line tailwindcss/no-custom-classname
       return <div className="font-default">{children}</div>;
     }
 
     const { colors, dimensions, defaultFont, borders } = (await getTokenConfiguration()) || {};
     return (
-      // eslint-disable-next-line tailwindcss/no-custom-classname
       <div className={defaultFont ? `font-${defaultFont}` : ''}>
         {!!colors && <div dangerouslySetInnerHTML={{ __html: colors }} />}
         {!!dimensions && <div dangerouslySetInnerHTML={{ __html: dimensions }} />}

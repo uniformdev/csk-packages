@@ -4,14 +4,14 @@ import { ThemeSwitcher, ThemeSwitcherParameters } from '@uniformdev/csk-componen
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
 import { createFakeCompositionData, fakeContext } from '@/utils';
 import { ArgTypes, Meta, StoryObj } from '@storybook/react';
-import theme from '../../../../tailwind.config.theme.json';
+import theme from '../../../../themeData.json';
 
 const meta: Meta<typeof ThemeSwitcher> = {
   title: 'Component Starter Kit/Components/ThemeSwitcher',
   component: ThemeSwitcher,
 };
 
-const colorKeys = Object.keys(theme.extend.colors || {});
+const colorKeys = theme.colors.map(color => color.colorKey);
 
 export default meta;
 type Story = StoryObj<typeof ThemeSwitcher>;

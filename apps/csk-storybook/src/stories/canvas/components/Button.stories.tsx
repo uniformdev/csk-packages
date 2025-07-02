@@ -4,10 +4,10 @@ import createComponentResolver, { ComponentMapping } from '@uniformdev/csk-compo
 import { SMILE_ASSET } from '@/assets';
 import { createFakeCompositionData, fakeContext } from '@/utils';
 import { Meta, StoryObj } from '@storybook/react';
-import theme from '../../../../tailwind.config.theme.json';
+import theme from '../../../../themeData.json';
 import { ButtonArgTypes } from '../../../argTypes';
 
-const sizeKeys = Object.keys(theme.extend.spacing || {}).filter(key => key.startsWith('button'));
+const sizeKeys = theme.dimensions.map(dimension => dimension.dimensionKey).filter(key => key.startsWith('button'));
 
 const meta: Meta<typeof Button> = {
   title: 'Component Starter Kit/Components/Button',

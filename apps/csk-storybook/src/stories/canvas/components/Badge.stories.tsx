@@ -3,10 +3,10 @@ import { Badge, BadgeParameters } from '@uniformdev/csk-components/components/ca
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
 import { createFakeCompositionData, fakeContext } from '@/utils';
 import { ArgTypes, Meta, StoryObj } from '@storybook/react';
-import theme from '../../../../tailwind.config.theme.json';
+import theme from '../../../../themeData.json';
 
-const colorKeys = Object.keys(theme.extend.colors || {});
-const sizeKeys = Object.keys(theme.extend.spacing || {}).filter(key => key.startsWith('badge'));
+const colorKeys = theme.colors.map(color => color.colorKey);
+const sizeKeys = theme.dimensions.map(dimension => dimension.dimensionKey);
 
 const meta: Meta<typeof Badge> = {
   title: 'Component Starter Kit/Components/Badge',

@@ -1,9 +1,5 @@
-import { DefaultTheme } from 'tailwindcss/types/generated/default-theme';
 import { ContainerProps as BaseContainerProps } from '@/components/ui/Container';
 import { ViewPort } from '@/types/cskTypes';
-
-type AvailableColumnsCount = keyof DefaultTheme['gridTemplateColumns'];
-type AvailableGap = keyof DefaultTheme['spacing'];
 
 export type GridProps = Pick<
   BaseContainerProps,
@@ -17,9 +13,9 @@ export type GridProps = Pick<
   | 'children'
   | 'height'
 > & {
-  columnsCount?: AvailableColumnsCount | ViewPort<AvailableColumnsCount>;
-  gapY?: AvailableGap | ViewPort<AvailableGap>;
-  gapX?: AvailableGap | ViewPort<AvailableGap>;
+  columnsCount?: string | ViewPort<string>;
+  gapY?: string | ViewPort<string>;
+  gapX?: string | ViewPort<string>;
   className?: string;
 };
 
