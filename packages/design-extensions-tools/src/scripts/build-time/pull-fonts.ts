@@ -10,18 +10,28 @@ import {
 import { checkEnvironmentVariable, fetchTokenValue, syncSuccessLog } from '../../utils';
 import { getFontUrl, getRootFontsValue } from '../../utils/getTokenStyles';
 
-const generateTailwindcssConfigFonts = (fonts: Record<string, string>, defaultFontKey: string) =>
-  Object.fromEntries([
-    ...Object.entries(fonts).map(([key]) => [`${key}`, `var(--${key})`]),
-    ...(defaultFontKey ? [['default', `var(--default-font)`]] : []),
-  ]);
+const generateFontsData = (fonts: Record<string, string>, defaultFontKey: string) => {
+  const { fontKeys, themeLines } = Object.keys(fonts).reduce<{
+    fontKeys: string[];
+    themeLines: string[];
+  }>(
+    ({ fontKeys, themeLines }, key) => {
+      fontKeys.push(key);
+      themeLines.push(`\t--font-${key}: var(--${key});`);
+      return { fontKeys, themeLines };
+    },
+    { fontKeys: [], themeLines: [] }
+  );
 
-const generateThemeBlock = (fontConfig: Record<string, string>) => {
-  const lines = Object.entries(fontConfig)
-    .map(([key, value]) => `\t--font-${key}: ${value};`)
-    .join('\r\n');
+  if (defaultFontKey) {
+    fontKeys.push('default');
+    themeLines.push(`\t--font-default: var(--default-font);`);
+  }
 
-  return `@theme {\r\n${lines}\r\n}`;
+  return {
+    fontKeys,
+    themeBlock: `@theme {\r\n${themeLines.join('\r\n')}\r\n}`,
+  };
 };
 
 export const buildFontsStyle = async () => {
@@ -40,13 +50,13 @@ export const buildFontsStyle = async () => {
   const fetchedFonts = await fontsResponse.json();
   const fetchedDefaultFontKey = await defaultFontKeyResponse.text();
 
-  const tailwindcssFonts = generateTailwindcssConfigFonts(fetchedFonts, fetchedDefaultFontKey);
+  const { fontKeys, themeBlock } = generateFontsData(fetchedFonts, fetchedDefaultFontKey);
+
   const sourceLine = generateTailwindcssSource({
     variants: DEFAULT_FONT_VARIANTS,
     prefixes: 'font',
-    keys: Object.keys(tailwindcssFonts),
+    keys: fontKeys,
   });
-  const themeBlock = generateThemeBlock(tailwindcssFonts);
 
   const cssFonts = getRootFontsValue(fetchedFonts, fetchedDefaultFontKey);
   const fontUrl = getFontUrl(fetchedFonts);

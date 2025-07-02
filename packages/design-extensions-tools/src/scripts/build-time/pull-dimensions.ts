@@ -10,15 +10,23 @@ import {
 } from '../../constants';
 import { checkEnvironmentVariable, fetchTokenValue, getRootSimpleTokensValue, syncSuccessLog } from '../../utils';
 
-const generateTailwindcssConfigDimensions = (dimensions: Record<string, { light: string; dark: string }>) =>
-  Object.fromEntries(Object.entries(dimensions).map(([key]) => [`${key}`, `var(--${key})`]));
+const generateDimensionsData = (dimensions: Record<string, { light: string; dark: string }>) => {
+  const { dimensionKeys, themeLines } = Object.keys(dimensions).reduce<{
+    dimensionKeys: string[];
+    themeLines: string[];
+  }>(
+    ({ dimensionKeys, themeLines }, key) => {
+      dimensionKeys.push(key);
+      themeLines.push(`\t--spacing-${key}: var(--${key});`);
+      return { dimensionKeys, themeLines };
+    },
+    { dimensionKeys: [], themeLines: [] }
+  );
 
-const generateThemeBlock = (fontConfig: Record<string, string>) => {
-  const lines = Object.entries(fontConfig)
-    .map(([key, value]) => `\t--spacing-${key}: ${value};`)
-    .join('\r\n');
-
-  return `@theme {\r\n${lines}\r\n}`;
+  return {
+    dimensionKeys,
+    themeBlock: `@theme {\r\n${themeLines.join('\r\n')}\r\n}`,
+  };
 };
 
 export const buildDimensions = async () => {
@@ -39,18 +47,18 @@ export const buildDimensions = async () => {
 
   const fetchedDimensions = await response.json();
 
-  const dimensionsCssPath = path.resolve(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Dimensions}.css`);
-  const dimensionsTailwindcssPath = path.resolve(PATH_TO_STYLE_FOLDER, DEFAULT_TAILWIND_DIMENSION_CONF_PATH);
+  const { dimensionKeys, themeBlock } = generateDimensionsData(fetchedDimensions);
 
-  const tailwindcssDimensions = generateTailwindcssConfigDimensions(fetchedDimensions);
   const sourceLine = generateTailwindcssSource({
     variants: DEFAULT_DIMENSION_VARIANTS,
     prefixes: DEFAULT_DIMENSION_PREFIXES,
-    keys: Object.keys(tailwindcssDimensions),
+    keys: dimensionKeys,
   });
-  const themeBlock = generateThemeBlock(tailwindcssDimensions);
 
   const cssDimensions = getRootSimpleTokensValue(fetchedDimensions);
+
+  const dimensionsCssPath = path.resolve(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Dimensions}.css`);
+  const dimensionsTailwindcssPath = path.resolve(PATH_TO_STYLE_FOLDER, DEFAULT_TAILWIND_DIMENSION_CONF_PATH);
 
   fs.writeFileSync(dimensionsTailwindcssPath, `${sourceLine}\r\n\r\n${themeBlock}`, 'utf8');
   fs.writeFileSync(dimensionsCssPath, cssDimensions, 'utf8');

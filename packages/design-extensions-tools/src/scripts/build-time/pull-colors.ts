@@ -5,7 +5,6 @@ import {
   DEFAULT_COLOR_PREFIXES,
   DEFAULT_COLOR_VARIANTS,
   DEFAULT_TAILWIND_COLOR_CONF_PATH,
-  DEFAULT_TAILWIND_CONF_PATH,
   PATH_TO_STYLE_FOLDER,
   ROOT_COLOR_SCHEME_KEY,
   TOKEN_STYLE_FILE,
@@ -13,15 +12,23 @@ import {
 import { checkEnvironmentVariable, fetchTokenValue, syncSuccessLog } from '../../utils';
 import { getColorTokensValue } from '../../utils/getTokenStyles';
 
-const generateTailwindcssConfigColors = (colors: Record<string, { light: string; dark: string }>) =>
-  Object.fromEntries(Object.entries(colors).map(([key]) => [`${key}`, `var(--${key})`]));
+const generateColorsData = (colors: Record<string, { light: string; dark: string }>) => {
+  const { colorKeys, themeLines } = Object.keys(colors).reduce<{
+    colorKeys: string[];
+    themeLines: string[];
+  }>(
+    ({ colorKeys, themeLines }, key) => {
+      colorKeys.push(key);
+      themeLines.push(`\t--color-${key}: var(--${key});`);
+      return { colorKeys, themeLines };
+    },
+    { colorKeys: [], themeLines: [] }
+  );
 
-const generateThemeBlock = (fontConfig: Record<string, string>) => {
-  const lines = Object.entries(fontConfig)
-    .map(([key, value]) => `\t--color-${key}: ${value};`)
-    .join('\r\n');
-
-  return `@theme {\r\n${lines}\r\n}`;
+  return {
+    colorKeys,
+    themeBlock: `@theme {\r\n${themeLines.join('\r\n')}\r\n}`,
+  };
 };
 
 export const buildColors = async () => {
@@ -35,23 +42,21 @@ export const buildColors = async () => {
   }
 
   const response = await fetchTokenValue('getColors');
-
   const fetchedPalette = await response.json();
 
-  const colorsCssPath = path.resolve(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Colors}.css`);
-  const colorsTailwindcssPath = path.resolve(PATH_TO_STYLE_FOLDER, DEFAULT_TAILWIND_COLOR_CONF_PATH);
+  const palette = fetchedPalette[ROOT_COLOR_SCHEME_KEY] || {};
+  const { colorKeys, themeBlock } = generateColorsData(palette);
 
-  const tailwindcssColors = generateTailwindcssConfigColors(fetchedPalette[ROOT_COLOR_SCHEME_KEY] || {});
   const sourceLine = generateTailwindcssSource({
     variants: DEFAULT_COLOR_VARIANTS,
     prefixes: DEFAULT_COLOR_PREFIXES,
-    keys: Object.keys(tailwindcssColors),
+    keys: colorKeys,
   });
-  const themeBlock = generateThemeBlock(tailwindcssColors);
 
   const cssPalette = getColorTokensValue(fetchedPalette);
 
-  fs.writeFileSync(colorsCssPath, cssPalette, 'utf8');
+  const colorsCssPath = path.resolve(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Colors}.css`);
+  const colorsTailwindcssPath = path.resolve(PATH_TO_STYLE_FOLDER, DEFAULT_TAILWIND_COLOR_CONF_PATH);
 
   fs.writeFileSync(colorsTailwindcssPath, `${sourceLine}\r\n\r\n${themeBlock}`, 'utf8');
   fs.writeFileSync(colorsCssPath, cssPalette, 'utf8');

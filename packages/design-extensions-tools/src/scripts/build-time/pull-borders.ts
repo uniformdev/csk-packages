@@ -9,36 +9,32 @@ import {
 } from '../../constants';
 import { checkEnvironmentVariable, fetchTokenValue, getRootBordersValue, syncSuccessLog } from '../../utils';
 
-const generateTailwindcssUtilitiesBorders = (
-  borders: Record<string, { color: string; width: string; radius: string; style: string }>
-) =>
-  Object.keys(borders).reduce((acc, borderKey) => {
-    return {
-      ...acc,
-      [`${borderKey}`]: {
-        borderStyle: `var(--${borderKey}-style)`,
-        borderRadius: `var(--${borderKey}-radius)`,
-        borderWidth: `var(--${borderKey}-width)`,
-        borderColor: `var(--${borderKey}-color)`,
-      },
-    };
-  }, {});
-
-const generateThemeBlock = (
+const generateBordersData = (
   borders: Record<string, { color: string; width: string; radius: string; style: string }>
 ) => {
-  return Object.keys(borders)
-    .map(key => {
-      return (
+  const { borderKeys, themeLines } = Object.keys(borders).reduce<{
+    borderKeys: string[];
+    themeLines: string[];
+  }>(
+    (acc, key) => {
+      acc.borderKeys.push(key);
+      acc.themeLines.push(
         `.${key} {\r\n` +
-        `\tborder-style: var(--${key}-style);\r\n` +
-        `\tborder-radius: var(--${key}-radius);\r\n` +
-        `\tborder-width: var(--${key}-width);\r\n` +
-        `\tborder-color: var(--${key}-color);\r\n` +
-        `}`
+          `\tborder-style: var(--${key}-style);\r\n` +
+          `\tborder-radius: var(--${key}-radius);\r\n` +
+          `\tborder-width: var(--${key}-width);\r\n` +
+          `\tborder-color: var(--${key}-color);\r\n` +
+          `}`
       );
-    })
-    .join('\r\n\r\n');
+      return acc;
+    },
+    { borderKeys: [], themeLines: [] }
+  );
+
+  return {
+    borderKeys,
+    themeBlock: themeLines.join('\r\n\r\n'),
+  };
 };
 
 export const buildBorders = async () => {
@@ -52,23 +48,20 @@ export const buildBorders = async () => {
   }
 
   const response = await fetchTokenValue('getBorders');
-
   const fetchedBorders = await response.json();
 
-  const utilitiesPath = path.resolve(PATH_TO_STYLE_FOLDER, DEFAULT_TAILWIND_BORDER_CONF_PATH);
-
-  const bordersCssPath = path.resolve(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Borders}.css`);
-
-  const tailwindcssBorders = generateTailwindcssUtilitiesBorders(fetchedBorders);
+  const { borderKeys, themeBlock } = generateBordersData(fetchedBorders);
 
   const sourceLine = generateTailwindcssSource({
     variants: DEFAULT_BORDER_VARIANTS,
     prefixes: 'border',
-    keys: Object.keys(tailwindcssBorders).map(key => key.replace('.border-', '')),
+    keys: borderKeys,
   });
-  const themeBlock = generateThemeBlock(tailwindcssBorders);
 
   const cssBorders = getRootBordersValue(fetchedBorders);
+
+  const utilitiesPath = path.resolve(PATH_TO_STYLE_FOLDER, DEFAULT_TAILWIND_BORDER_CONF_PATH);
+  const bordersCssPath = path.resolve(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Borders}.css`);
 
   fs.writeFileSync(utilitiesPath, `${sourceLine}\r\n\r\n${themeBlock}`, 'utf8');
   fs.writeFileSync(bordersCssPath, cssBorders, 'utf8');
