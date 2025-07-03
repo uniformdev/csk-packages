@@ -25,13 +25,13 @@ composition:
         displayName:
           type: text
           locales:
-            en: AI-powered taste customization
+            en-us: AI-powered taste customization
     27e6bc47-1806-483b-915e-71235813e0d2:
       parameters:
         displayName:
           type: text
           locales:
-            en: Holographic interface
+            en-us: Holographic interface
     4026814e-9121-47fe-a2b6-258d9e7729f1:
       variant: columnsReverse
     593c6cc4-d400-4cdd-8ce1-8cffaef0814f:
@@ -42,7 +42,7 @@ composition:
         pageDescription:
           type: text
           locales:
-            en: ${#jptr:/Product Content/entry/fields/shortDescription/value}
+            en-us: ${#jptr:/Product Content/entry/fields/shortDescription/value}
     c5220bc2-b515-4469-bfbb-0899b26320e3:
       parameters:
         link:
@@ -60,7 +60,7 @@ composition:
         displayName:
           type: text
           locales:
-            en: >-
+            en-us: >-
               ${#jptr:/Product List Content entries Loop
               Item/entry/fields/name/value}
     d7b56486-65b3-48e3-bbdf-e5562b949049:
@@ -94,7 +94,7 @@ composition:
         text:
           type: text
           locales:
-            en: >-
+            en-us: >-
               We understands your palette After just a few uses, EspressoGPT 
               learns to brew your espresso to your exact liking, adjusting grind
               size, water temperature, and brewing time.
@@ -103,7 +103,7 @@ composition:
         text:
           type: text
           locales:
-            en: AI-powered taste customization
+            en-us: AI-powered taste customization
     23b8c55c-5b1c-4ff0-a9db-6632891f261f|df99286b-2378-4646-a0a3-fc0921dd8940:
       parameters:
         image:
@@ -143,7 +143,7 @@ composition:
         text:
           type: text
           locales:
-            en: >-
+            en-us: >-
               Touchscreens are a thing of the past. EspressoGPT 's floating
               holographic interface offers an intuitive user experience. Adjust
               settings, browse recipes, or get a virtual barista tutorial with a
@@ -153,7 +153,7 @@ composition:
         text:
           type: text
           locales:
-            en: "Holographic interface\_ \_ \_"
+            en-us: "Holographic interface\_ \_ \_"
     27e6bc47-1806-483b-915e-71235813e0d2|df99286b-2378-4646-a0a3-fc0921dd8940:
       parameters:
         image:
@@ -202,7 +202,7 @@ composition:
         text:
           type: text
           locales:
-            en: Perfect specs
+            en-us: Perfect specs
         alignment:
           type: dex-segmented-control-parameter
           value: ''
@@ -211,7 +211,7 @@ composition:
         text:
           type: text
           locales:
-            en: >-
+            en-us: >-
               Modern design seamlessly blends minimalistic elegance with
               cutting-edge functionality, making it a statement piece in any
               contemporary kitchen.
@@ -223,7 +223,7 @@ composition:
         text:
           type: text
           locales:
-            en: 'Celebrate the art of coffee making '
+            en-us: 'Celebrate the art of coffee making '
         alignment:
           type: dex-segmented-control-parameter
           value: ''
@@ -349,7 +349,7 @@ composition:
                                       text:
                                         type: text
                                         locales:
-                                          en: EXPERIENCE A REVOLUTION
+                                          en-us: EXPERIENCE A REVOLUTION
                                       color:
                                         type: dex-color-palette-parameter
                                         value: text-secondary
@@ -380,7 +380,7 @@ composition:
                                       text:
                                         type: text
                                         locales:
-                                          en: >-
+                                          en-us: >-
                                             ${#jptr:/Product
                                             Content/entry/fields/title/value}
                                       color:
@@ -404,7 +404,7 @@ composition:
                                       text:
                                         type: text
                                         locales:
-                                          en: >-
+                                          en-us: >-
                                             Where modern technology meets timeless
                                             taste
                                       color:
@@ -428,7 +428,7 @@ composition:
                                       text:
                                         type: text
                                         locales:
-                                          en: >-
+                                          en-us: >-
                                             ${#jptr:/Product
                                             Content/entry/fields/shortDescription/value}
                                       color:
@@ -457,7 +457,7 @@ composition:
                                             text:
                                               type: text
                                               locales:
-                                                en: >-
+                                                en-us: >-
                                                   $${#jptr:/Product
                                                   Content/entry/fields/variants/value/0/fields/price/value}
                                             color:
@@ -478,7 +478,7 @@ composition:
                                       displayName:
                                         type: text
                                         locales:
-                                          en: Price Wrapper
+                                          en-us: Price Wrapper
                                       fluidContent:
                                         type: checkbox
                                         value: true
@@ -500,7 +500,7 @@ composition:
                                 displayName:
                                   type: text
                                   locales:
-                                    en: Content
+                                    en-us: Content
                                 justifyContent:
                                   type: dex-segmented-control-parameter
                                   value:
@@ -516,7 +516,7 @@ composition:
                                 text:
                                   type: text
                                   locales:
-                                    en: Buy now
+                                    en-us: Buy now
                                 textSize:
                                   type: dex-segmented-control-parameter
                                   value:
@@ -535,7 +535,7 @@ composition:
                                 productSlug:
                                   type: text
                                   locales:
-                                    en: espresso-gpt
+                                    en-us: espresso-gpt
                                 openMiniCart:
                                   type: checkbox
                                   value: true
@@ -561,7 +561,7 @@ composition:
                           displayName:
                             type: text
                             locales:
-                              en: Second Column
+                              en-us: Second Column
                   parameters:
                     gapX:
                       type: dex-slider-control-parameter
@@ -578,7 +578,7 @@ composition:
                     displayName:
                       type: text
                       locales:
-                        en: Columns Content
+                        en-us: Columns Content
                     columnsCount:
                       type: dex-slider-control-parameter
                       value:
@@ -598,7 +598,7 @@ composition:
               displayName:
                 type: text
                 locales:
-                  en: Main Section
+                  en-us: Main Section
               fluidContent:
                 type: checkbox
                 value: true
@@ -657,7 +657,7 @@ composition:
               displayName:
                 type: text
                 locales:
-                  en: Features Section
+                  en-us: Features Section
               columnsCount:
                 type: dex-slider-control-parameter
                 value:
@@ -684,7 +684,7 @@ composition:
                     text:
                       type: text
                       locales:
-                        en: Tech Information
+                        en-us: Tech Information
                     color:
                       type: dex-color-palette-parameter
                       value: text-featured
@@ -704,7 +704,7 @@ composition:
                           text:
                             type: richText
                             locales:
-                              en: >-
+                              en-us: >-
                                 ${#jptr:/Product
                                 Content/entry/fields/body/value}
                           color:
@@ -748,7 +748,7 @@ composition:
               displayName:
                 type: text
                 locales:
-                  en: Main Information
+                  en-us: Main Information
               justifyContent:
                 type: dex-segmented-control-parameter
                 value: {}
@@ -774,7 +774,7 @@ composition:
                     text:
                       type: text
                       locales:
-                        en: PRODUCT GALLERY
+                        en-us: PRODUCT GALLERY
                     color:
                       type: dex-color-palette-parameter
                       value: text-featured
@@ -790,7 +790,7 @@ composition:
                     items:
                       type: asset
                       locales:
-                        en: >-
+                        en-us: >-
                           ${#jptr:/Product
                           Content/entry/fields/variants/value/0/fields/imageGallery/value}
                     aspectRatio:
@@ -799,7 +799,7 @@ composition:
                     displayName:
                       type: text
                       locales:
-                        en: Image Callery
+                        en-us: Image Callery
             parameters:
               gap:
                 type: dex-slider-control-parameter
@@ -827,7 +827,7 @@ composition:
               displayName:
                 type: text
                 locales:
-                  en: Image Callery
+                  en-us: Image Callery
               justifyContent:
                 type: dex-segmented-control-parameter
                 value: {}
@@ -878,7 +878,7 @@ composition:
                     text:
                       type: text
                       locales:
-                        en: Recommended Beans
+                        en-us: Recommended Beans
                     color:
                       type: dex-color-palette-parameter
                       value: text-featured
@@ -970,7 +970,7 @@ composition:
               displayName:
                 type: text
                 locales:
-                  en: Beans For you
+                  en-us: Beans For you
               justifyContent:
                 type: dex-segmented-control-parameter
                 value: {}
@@ -1019,7 +1019,7 @@ composition:
         text:
           type: text
           locales:
-            en: >-
+            en-us: >-
               We care for the planet as much as you do. Our espresso machine is
               powered by a sustainable and recyclable energy cell that has zero
               carbon footprint.
@@ -1028,7 +1028,7 @@ composition:
         text:
           type: text
           locales:
-            en: Carbon-neutral energy source
+            en-us: Carbon-neutral energy source
     ed9ccac2-f23c-4c4b-be99-eb59477f1240|df99286b-2378-4646-a0a3-fc0921dd8940:
       parameters:
         image:
@@ -1084,7 +1084,7 @@ composition:
         productSlug:
           type: text
           locales:
-            en: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            en-us: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
     c5220bc2-b515-4469-bfbb-0899b26320e3|1af937fb-40ae-4938-b1a8-110b8ff73fc4|8bad3ddd-add0-43d3-a314-5836bf0c7a93:
       parameters:
         text:
@@ -1106,7 +1106,7 @@ composition:
           type: dex-color-palette-parameter
           value: text-secondary
   _locales:
-    - en
+    - en-us
   _pattern: eb2c6df3-5cff-486a-814b-64b6ce9421ab
 created: '2025-06-05T12:15:19.113804+00:00'
 modified: '2025-06-25T12:31:03.634759+00:00'

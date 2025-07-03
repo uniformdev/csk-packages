@@ -12,7 +12,7 @@ entry:
     body:
       type: richText
       locales:
-        en:
+        en-us:
           root:
             type: root
             format: ''
@@ -126,15 +126,15 @@ entry:
             price:
               type: number
               locales:
-                en: '24.95'
+                en-us: '24.95'
             title:
               type: text
               locales:
-                en: Glass Carafe & Brew-Through Lid
+                en-us: Glass Carafe & Brew-Through Lid
             currency:
               type: text
               locales:
-                en: USD
+                en-us: USD
             imageGallery:
               type: asset
               value:
@@ -211,13 +211,13 @@ entry:
     metaDescription:
       type: text
       locales:
-        en: >-
+        en-us: >-
           Sleek Glass Carafe with Brew-Through Lid for perfect coffee brewing
           and serving, enhancing flavor with its durable design.
     shortDescription:
       type: text
       locales:
-        en: >-
+        en-us: >-
           The Glass Carafe & Brew-Through Lid is designed for specialty coffee
           makers, offering seamless brewing and serving with a sleek, durable
           glass construction and a convenient lid that locks in flavor.
@@ -233,4 +233,4 @@ entry:
         locale: ${locale}
         entryIds: 6b8b91ea-1922-4c2a-8233-4a4a20ab285b
   _locales:
-    - en
+    - en-us

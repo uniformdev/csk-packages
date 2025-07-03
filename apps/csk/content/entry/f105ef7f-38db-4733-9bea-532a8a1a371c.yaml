@@ -12,7 +12,7 @@ entry:
     body:
       type: richText
       locales:
-        en:
+        en-us:
           root:
             type: root
             format: ''
@@ -164,15 +164,15 @@ entry:
             price:
               type: number
               locales:
-                en: '44'
+                en-us: '44'
             title:
               type: text
               locales:
-                en: Milk carafe
+                en-us: Milk carafe
             currency:
               type: text
               locales:
-                en: USD
+                en-us: USD
             imageGallery:
               type: asset
               value:
@@ -249,13 +249,13 @@ entry:
     metaDescription:
       type: text
       locales:
-        en: >-
+        en-us: >-
           Compact milk cooler for perfect foam. Keeps milk fresh for coffee.
           Elegant and space-saving design.
     shortDescription:
       type: text
       locales:
-        en: >-
+        en-us: >-
           Compact and elegant milk cooler for perfect milk foam. Keep milk fresh
           and chilled for your favorite coffee drinks. Ideal for small spaces.
   _dataResources:
@@ -270,4 +270,4 @@ entry:
         locale: ${locale}
         entryIds: 6b8b91ea-1922-4c2a-8233-4a4a20ab285b
   _locales:
-    - en
+    - en-us

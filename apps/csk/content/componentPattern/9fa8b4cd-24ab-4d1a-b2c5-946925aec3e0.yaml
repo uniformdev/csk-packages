@@ -14,7 +14,7 @@ composition:
     displayName:
       type: text
       locales:
-        en: Recommendations
+        en-us: Recommendations
     boostEnrichments:
       type: multi-select
       value:
@@ -41,7 +41,7 @@ composition:
           text:
             type: text
             locales:
-              en: Recommended for you
+              en-us: Recommended for you
           weight:
             type: dex-segmented-control-parameter
             value: bold
@@ -55,7 +55,7 @@ composition:
       maxRecommendations: 'yes'
     hideLockedParameters: true
   _locales:
-    - en
+    - en-us
 created: '2025-04-25T12:20:45.050676+00:00'
 modified: '2025-06-25T10:20:36.778496+00:00'
 pattern: true

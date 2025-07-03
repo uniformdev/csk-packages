@@ -12,7 +12,7 @@ composition:
     displayName:
       type: text
       locales:
-        en: Global P13n CtA
+        en-us: Global P13n CtA
   slots:
     containerContent:
       - _id: f60f174a-198a-427c-9e49-d847f0cf76cc
@@ -37,15 +37,15 @@ composition:
                 titleText:
                   type: text
                   locales:
-                    en: Personalized
+                    en-us: Personalized
                 displayName:
                   type: text
                   locales:
-                    en: Beans interest
+                    en-us: Beans interest
                 descriptionText:
                   type: text
                   locales:
-                    en: Interest is Beans
+                    en-us: Interest is Beans
             - _id: 24528a36-5c58-413d-80ee-ae8d1ea44569
               type: fixedHero
               variant: columns
@@ -93,26 +93,26 @@ composition:
                 titleText:
                   type: text
                   locales:
-                    en: Default Content
+                    en-us: Default Content
                 displayName:
                   type: text
                   locales:
-                    en: Main Home Hero
+                    en-us: Main Home Hero
                 descriptionText:
                   type: text
                   locales:
-                    en: Handpicked by Hans Anderson
+                    en-us: Handpicked by Hans Anderson
                 contentAlignment:
                   type: dex-segmented-control-parameter
                   value: left
                 eyebrowTitleText:
                   type: text
                   locales:
-                    en: Special offer
+                    en-us: Special offer
                 primaryButtonLink:
                   type: link
                   locales:
-                    en:
+                    en-us:
                       path: /${locale}/beans-bundle
                       type: projectMapNode
                       nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
@@ -122,7 +122,7 @@ composition:
                 primaryButtonText:
                   type: text
                   locales:
-                    en: Explore the bundle
+                    en-us: Explore the bundle
         parameters:
           trackingEventName:
             type: text
@@ -130,7 +130,7 @@ composition:
   _overridability:
     hideLockedParameters: true
   _locales:
-    - en
+    - en-us
 created: '2025-05-20T11:53:42.779662+00:00'
 modified: '2025-05-22T10:54:59.91842+00:00'
 pattern: true

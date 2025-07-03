@@ -381,7 +381,7 @@ composition:
         displayName:
           type: text
           locales:
-            en: >-
+            en-us: >-
               ${#jptr:/Product List Content entries Loop
               Item/entry/fields/name/value}
     9052a1f0-04e4-4bba-9d94-2d371f9ece8f|1af937fb-40ae-4938-b1a8-110b8ff73fc4:
@@ -403,7 +403,7 @@ composition:
         productSlug:
           type: text
           locales:
-            en: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            en-us: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
     9052a1f0-04e4-4bba-9d94-2d371f9ece8f|1af937fb-40ae-4938-b1a8-110b8ff73fc4|8bad3ddd-add0-43d3-a314-5836bf0c7a93:
       parameters:
         text:
@@ -419,7 +419,7 @@ composition:
             ${#jptr:/Product List Content entries Loop
             Item/entry/fields/name/value}
   _locales:
-    - en
+    - en-us
 created: '2025-03-18T13:02:27.149852+00:00'
 modified: '2025-05-22T11:13:32.467074+00:00'
 pattern: true

@@ -12,7 +12,7 @@ entry:
     body:
       type: richText
       locales:
-        en:
+        en-us:
           root:
             type: root
             format: ''
@@ -126,15 +126,15 @@ entry:
             price:
               type: number
               locales:
-                en: '35'
+                en-us: '35'
             title:
               type: text
               locales:
-                en: Descaling tablets
+                en-us: Descaling tablets
             currency:
               type: text
               locales:
-                en: USD
+                en-us: USD
             imageGallery:
               type: asset
               value:
@@ -211,13 +211,13 @@ entry:
     metaDescription:
       type: text
       locales:
-        en: >-
+        en-us: >-
           Extend your coffee machine's life with JavaDrip's descaling tablets,
           ensuring optimal performance and safety.
     shortDescription:
       type: text
       locales:
-        en: >-
+        en-us: >-
           JavaDrip's descaling tablets effectively remove scale buildup to
           extend the life of your coffee machine, ensuring optimal performance
           without causing any damage.
@@ -233,4 +233,4 @@ entry:
         locale: ${locale}
         entryIds: 6b8b91ea-1922-4c2a-8233-4a4a20ab285b
   _locales:
-    - en
+    - en-us

@@ -30,7 +30,7 @@ composition:
         twitterTitle:
           type: text
           locales:
-            en: ${#jptr:/Article Content/entry/fields/metaTitle/value}
+            en-us: ${#jptr:/Article Content/entry/fields/metaTitle/value}
         openGraphType:
           type: select
           value: article
@@ -46,7 +46,7 @@ composition:
         twitterDescription:
           type: text
           locales:
-            en: ${#jptr:/Article Content/entry/fields/title/value}
+            en-us: ${#jptr:/Article Content/entry/fields/title/value}
         openGraphDescription:
           type: text
           value: ${#jptr:/Article Content/entry/fields/metaDescription/value}
@@ -153,7 +153,7 @@ composition:
           type: text
           value: Finding the Perfect Choice for You
   _locales:
-    - en
+    - en-us
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-01-29T11:09:35.854539+00:00'
 modified: '2025-06-25T14:27:01.909687+00:00'

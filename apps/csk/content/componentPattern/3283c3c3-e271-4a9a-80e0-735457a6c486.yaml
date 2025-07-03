@@ -137,7 +137,7 @@ composition:
                                         value:
                                           type: text
                                           locales:
-                                            en: >-
+                                            en-us: >-
                                               ${#jptr:/Product
                                               Content/entry/fields/variants/value/0/fields/code/value}
                                       _overridability:
@@ -191,7 +191,7 @@ composition:
                                         value:
                                           type: text
                                           locales:
-                                            en: >-
+                                            en-us: >-
                                               ${#jptr:/Product
                                               Content/entry/fields/brand/value/entry/fields/title/value}
                                       _overridability:
@@ -245,7 +245,7 @@ composition:
                                         value:
                                           type: text
                                           locales:
-                                            en: >-
+                                            en-us: >-
                                               ${#jptr:/Product
                                               Content/entry/fields/category/value/0/entry/fields/title/value}
                                       _overridability:
@@ -590,7 +590,7 @@ composition:
   _overridability:
     hideLockedParameters: true
   _locales:
-    - en
+    - en-us
 created: '2025-01-29T11:09:28.776714+00:00'
 modified: '2025-06-25T09:08:15.776714+00:00'
 pattern: true

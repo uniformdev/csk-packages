@@ -78,7 +78,7 @@ composition:
             title:
               type: text
               locales:
-                en: Filter by type
+                en-us: Filter by type
             values:
               type: $block
               value:
@@ -124,7 +124,7 @@ composition:
             title:
               type: text
               locales:
-                en: Refine by brand
+                en-us: Refine by brand
             values:
               type: $block
               value:
@@ -170,7 +170,7 @@ composition:
             title:
               type: text
               locales:
-                en: Refine by customer rating
+                en-us: Refine by customer rating
             values:
               type: $block
               value:
@@ -267,7 +267,7 @@ composition:
             title:
               type: text
               locales:
-                en: Coffee Makers
+                en-us: Coffee Makers
             values:
               type: $block
               value:
@@ -342,7 +342,7 @@ composition:
                 displayName:
                   type: text
                   locales:
-                    en: Search Box
+                    en-us: Search Box
             - _id: c512aff5-9eed-44cf-8756-a06480b64c6d
               type: entriesSearchSorting
         parameters:
@@ -367,7 +367,7 @@ composition:
           displayName:
             type: text
             locales:
-              en: Search Box and Sorting
+              en-us: Search Box and Sorting
           columnsCount:
             type: dex-slider-control-parameter
             value:
@@ -415,7 +415,7 @@ composition:
                 displayName:
                   type: text
                   locales:
-                    en: Left Content
+                    en-us: Left Content
             - _id: 73a254c3-eb9f-45d7-8227-7c50f8519c4a
               type: gridItem
               slots:
@@ -437,7 +437,7 @@ composition:
                                   textTemplate:
                                     type: text
                                     locales:
-                                      en: Found {totalItems} product(s)
+                                      en-us: Found {totalItems} product(s)
                                 _overridability:
                                   hideLockedParameters: true
                           parameters:
@@ -450,7 +450,7 @@ composition:
                             displayName:
                               type: text
                               locales:
-                                en: Total Items Found
+                                en-us: Total Items Found
                           _overridability:
                             hideLockedParameters: true
                         - _id: f5572abc-bf1b-48d2-b338-c81fccd00644
@@ -472,7 +472,7 @@ composition:
                                   text:
                                     type: text
                                     locales:
-                                      en: Products per page
+                                      en-us: Products per page
                                   color:
                                     type: dex-color-palette-parameter
                                     value: text-primary
@@ -513,7 +513,7 @@ composition:
                             displayName:
                               type: text
                               locales:
-                                en: Per page
+                                en-us: Per page
                             fluidContent:
                               type: checkbox
                               value: true
@@ -553,7 +553,7 @@ composition:
                       displayName:
                         type: text
                         locales:
-                          en: Top Content
+                          en-us: Top Content
                       fluidContent:
                         type: checkbox
                         value: true
@@ -614,7 +614,7 @@ composition:
                 displayName:
                   type: text
                   locales:
-                    en: Right Content
+                    en-us: Right Content
         parameters:
           gapX:
             type: dex-slider-control-parameter
@@ -637,7 +637,7 @@ composition:
           displayName:
             type: text
             locales:
-              en: Search Content
+              en-us: Search Content
           columnsCount:
             type: dex-slider-control-parameter
             value:
@@ -678,7 +678,7 @@ composition:
       boostEnrichments: 'yes'
     hideLockedParameters: true
   _locales:
-    - en
+    - en-us
 created: '2025-05-20T11:53:44.816175+00:00'
 modified: '2025-05-22T11:17:31.50274+00:00'
 pattern: true

@@ -26,7 +26,7 @@ composition:
           text:
             type: text
             locales:
-              en: Title
+              en-us: Title
           color:
             type: dex-color-palette-parameter
             value: text-primary
@@ -44,7 +44,7 @@ composition:
           text:
             type: text
             locales:
-              en: description
+              en-us: description
         _overridability:
           hideLockedParameters: true
       - _id: 3e2f7686-e7fa-4f93-b44f-9bff7fbcc984
@@ -53,7 +53,7 @@ composition:
           link:
             type: link
             locales:
-              en:
+              en-us:
                 path: /${locale}/summer-campaign
                 type: projectMapNode
                 nodeId: 94663b98-2fd8-4852-b75f-7eb89bbccb63
@@ -63,7 +63,7 @@ composition:
           text:
             type: text
             locales:
-              en: Click me
+              en-us: Click me
           textColor:
             type: dex-color-palette-parameter
             value: text-secondary
@@ -75,7 +75,7 @@ composition:
   _overridability:
     hideLockedParameters: true
   _locales:
-    - en
+    - en-us
 created: '2025-05-20T11:53:45.018544+00:00'
 modified: '2025-05-22T10:51:32.354287+00:00'
 pattern: true

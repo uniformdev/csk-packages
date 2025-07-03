@@ -12,7 +12,7 @@ entry:
     body:
       type: richText
       locales:
-        en:
+        en-us:
           root:
             type: root
             format: ''
@@ -124,15 +124,15 @@ entry:
             price:
               type: number
               locales:
-                en: '9.95'
+                en-us: '9.95'
             title:
               type: text
               locales:
-                en: Frother Whisk
+                en-us: Frother Whisk
             currency:
               type: text
               locales:
-                en: USD
+                en-us: USD
             imageGallery:
               type: asset
               value:
@@ -209,13 +209,13 @@ entry:
     metaDescription:
       type: text
       locales:
-        en: >-
+        en-us: >-
           Create café-quality frothed milk at home with the Frother
           Whisk—perfect for lattes and cappuccinos.
     shortDescription:
       type: text
       locales:
-        en: >-
+        en-us: >-
           The Frother Whisk is designed for specialty coffee makers, enabling
           you to create perfectly frothed milk for lattes, cappuccinos, and
           other café-style beverages at home.
@@ -231,4 +231,4 @@ entry:
         locale: ${locale}
         entryIds: 6b8b91ea-1922-4c2a-8233-4a4a20ab285b
   _locales:
-    - en
+    - en-us

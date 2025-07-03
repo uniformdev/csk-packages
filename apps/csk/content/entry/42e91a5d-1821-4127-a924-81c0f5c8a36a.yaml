@@ -12,7 +12,7 @@ entry:
     body:
       type: richText
       locales:
-        en:
+        en-us:
           root:
             type: root
             format: ''
@@ -126,15 +126,15 @@ entry:
             price:
               type: number
               locales:
-                en: '12.95'
+                en-us: '12.95'
             title:
               type: text
               locales:
-                en: Coffee Removable Filter Holder for Specialty Coffee Maker
+                en-us: Coffee Removable Filter Holder for Specialty Coffee Maker
             currency:
               type: text
               locales:
-                en: USD
+                en-us: USD
             imageGallery:
               type: asset
               value:
@@ -211,13 +211,13 @@ entry:
     metaDescription:
       type: text
       locales:
-        en: >-
+        en-us: >-
           Effortless brewing with our Coffee Removable Filter Holder—perfect for
           specialty coffee makers and easy cleaning.
     shortDescription:
       type: text
       locales:
-        en: >-
+        en-us: >-
           The Coffee Removable Filter Holder is designed for specialty coffee
           makers, offering easy insertion and removal for a seamless brewing
           experience and simple cleaning.
@@ -233,4 +233,4 @@ entry:
         locale: ${locale}
         entryIds: 6b8b91ea-1922-4c2a-8233-4a4a20ab285b
   _locales:
-    - en
+    - en-us

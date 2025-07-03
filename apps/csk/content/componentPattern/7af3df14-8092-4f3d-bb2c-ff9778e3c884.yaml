@@ -73,7 +73,7 @@ composition:
         displayName:
           type: text
           locales:
-            en: >-
+            en-us: >-
               ${#jptr:/Product List Content entries Loop
               Item/entry/fields/name/value}
     bac871f9-5ac4-4743-931d-2c88bac89cac|1af937fb-40ae-4938-b1a8-110b8ff73fc4:
@@ -95,7 +95,7 @@ composition:
         productSlug:
           type: text
           locales:
-            en: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            en-us: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
     bac871f9-5ac4-4743-931d-2c88bac89cac|1af937fb-40ae-4938-b1a8-110b8ff73fc4|8bad3ddd-add0-43d3-a314-5836bf0c7a93:
       parameters:
         text:
@@ -116,7 +116,7 @@ composition:
       displayName: 'yes'
     hideLockedParameters: true
   _locales:
-    - en
+    - en-us
 created: '2025-03-18T13:02:29.225484+00:00'
 modified: '2025-05-22T11:10:30.208152+00:00'
 pattern: true

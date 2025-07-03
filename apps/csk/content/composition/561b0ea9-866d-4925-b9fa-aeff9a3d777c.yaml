@@ -67,7 +67,7 @@ composition:
         link:
           type: link
           locales:
-            en:
+            en-us:
               path: /${locale}/cart/checkout
               type: projectMapNode
               nodeId: 56d212ca-516a-42ee-86e6-2df10e284b60
@@ -119,7 +119,7 @@ composition:
                                 text:
                                   type: text
                                   locales:
-                                    en: Your shopping cart is empty
+                                    en-us: Your shopping cart is empty
                                 color:
                                   type: dex-color-palette-parameter
                                   value: text-primary
@@ -185,7 +185,7 @@ composition:
                                 text:
                                   type: text
                                   locales:
-                                    en: Your shopping cart is empty
+                                    en-us: Your shopping cart is empty
                                 color:
                                   type: dex-color-palette-parameter
                                   value: text-primary
@@ -214,7 +214,7 @@ composition:
                           displayName:
                             type: text
                             locales:
-                              en: 'The shopping cart is empty '
+                              en-us: 'The shopping cart is empty '
                           justifyContent:
                             type: dex-segmented-control-parameter
                             value:
@@ -259,12 +259,12 @@ composition:
               displayName:
                 type: text
                 locales:
-                  en: Cart Content
+                  en-us: Cart Content
               justifyContent:
                 type: dex-segmented-control-parameter
                 value: {}
   _locales:
-    - en
+    - en-us
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-01-29T11:09:35.80566+00:00'
 modified: '2025-06-25T11:57:13.978534+00:00'

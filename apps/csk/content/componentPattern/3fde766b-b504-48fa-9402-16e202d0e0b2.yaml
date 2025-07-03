@@ -13,26 +13,26 @@ composition:
     titleText:
       type: text
       locales:
-        en: ${#jptr:/Article single Content/entry/fields/title/value}
+        en-us: ${#jptr:/Article single Content/entry/fields/title/value}
     displayName:
       type: text
       locales:
-        en: ${#jptr:/Article single Content/entry/fields/title/value}
+        en-us: ${#jptr:/Article single Content/entry/fields/title/value}
     descriptionText:
       type: text
       locales:
-        en: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        en-us: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
     contentAlignment:
       type: dex-segmented-control-parameter
       value: center
     eyebrowTitleText:
       type: text
       locales:
-        en: Featured blog
+        en-us: Featured blog
     primaryButtonLink:
       type: link
       locales:
-        en:
+        en-us:
           path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
           type: projectMapNode
           nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
@@ -43,7 +43,7 @@ composition:
     primaryButtonText:
       type: text
       locales:
-        en: Read more
+        en-us: Read more
   _dataResources:
     Article single Content:
       type: articleSingle
@@ -59,7 +59,7 @@ composition:
       eyebrowTitleText: 'yes'
     hideLockedParameters: true
   _locales:
-    - en
+    - en-us
 created: '2025-04-24T11:35:07.343882+00:00'
 modified: '2025-04-24T11:35:07.343882+00:00'
 pattern: true

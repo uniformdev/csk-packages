@@ -12,7 +12,7 @@ entry:
     body:
       type: richText
       locales:
-        en:
+        en-us:
           root:
             type: root
             format: ''
@@ -128,15 +128,15 @@ entry:
             price:
               type: number
               locales:
-                en: '12.95'
+                en-us: '12.95'
             title:
               type: text
               locales:
-                en: Coffee Permanent Filter
+                en-us: Coffee Permanent Filter
             currency:
               type: text
               locales:
-                en: USD
+                en-us: USD
             imageGallery:
               type: asset
               value:
@@ -213,13 +213,13 @@ entry:
     metaDescription:
       type: text
       locales:
-        en: >-
+        en-us: >-
           Eco-friendly Coffee Permanent Filter for rich, flavorful brews.
           Reusable, cost-effective, and perfect for specialty coffee makers.
     shortDescription:
       type: text
       locales:
-        en: >-
+        en-us: >-
           The Coffee Permanent Filter is a reusable accessory designed for
           specialty coffee makers, providing an eco-friendly and cost-effective
           solution for consistently rich, flavorful brews.
@@ -235,4 +235,4 @@ entry:
         locale: ${locale}
         entryIds: 6b8b91ea-1922-4c2a-8233-4a4a20ab285b
   _locales:
-    - en
+    - en-us

@@ -12,7 +12,7 @@ entry:
     body:
       type: richText
       locales:
-        en:
+        en-us:
           root:
             type: root
             format: ''
@@ -106,15 +106,15 @@ entry:
             price:
               type: number
               locales:
-                en: '24.95'
+                en-us: '24.95'
             title:
               type: text
               locales:
-                en: Water Reservoir with Flip-Top Lid
+                en-us: Water Reservoir with Flip-Top Lid
             currency:
               type: text
               locales:
-                en: USD
+                en-us: USD
             imageGallery:
               type: asset
               value:
@@ -191,13 +191,13 @@ entry:
     metaDescription:
       type: text
       locales:
-        en: >-
+        en-us: >-
           Quickly refill specialty coffee makers with our spill-free Water
           Reservoir & Flip-Top Lid, enhancing your brewing experience.
     shortDescription:
       type: text
       locales:
-        en: >-
+        en-us: >-
           Designed for ease and convenience, this Water Reservoir with a
           Flip-Top Lid allows quick, spill-free refilling, specifically tailored
           for specialty coffee makers to enhance your brewing experience.
@@ -213,4 +213,4 @@ entry:
         locale: ${locale}
         entryIds: 6b8b91ea-1922-4c2a-8233-4a4a20ab285b
   _locales:
-    - en
+    - en-us

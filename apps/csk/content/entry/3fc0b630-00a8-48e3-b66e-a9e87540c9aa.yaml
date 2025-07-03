@@ -12,7 +12,7 @@ entry:
     body:
       type: richText
       locales:
-        en:
+        en-us:
           root:
             type: root
             format: ''
@@ -108,15 +108,15 @@ entry:
             price:
               type: number
               locales:
-                en: '65'
+                en-us: '65'
             title:
               type: text
               locales:
-                en: Water filter
+                en-us: Water filter
             currency:
               type: text
               locales:
-                en: USD
+                en-us: USD
             imageGallery:
               type: asset
               value:
@@ -193,13 +193,13 @@ entry:
     metaDescription:
       type: text
       locales:
-        en: >-
+        en-us: >-
           Enhance coffee flavor by reducing pollutants and scale with this
           ion-exchange and coconut carbon filter. Prolongs machine life.
     shortDescription:
       type: text
       locales:
-        en: >-
+        en-us: >-
           This filter is using ion-exchange resin and natural coconut granular
           activated carbon, effectively remove odor, reduce rust, chlorine and
           other pollutants; Coffee machine can prevent the formation of scale,
@@ -216,4 +216,4 @@ entry:
         locale: ${locale}
         entryIds: 6b8b91ea-1922-4c2a-8233-4a4a20ab285b
   _locales:
-    - en
+    - en-us

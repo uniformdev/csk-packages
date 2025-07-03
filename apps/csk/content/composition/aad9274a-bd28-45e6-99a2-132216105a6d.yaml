@@ -7,7 +7,7 @@ composition:
     pageTitle:
       type: text
       locales:
-        en: Article Components
+        en-us: Article Components
   slots:
     pageContent:
       - _id: fe485767-c888-4622-bf36-b705e66f74b4
@@ -36,7 +36,7 @@ composition:
                 text:
                   type: text
                   locales:
-                    en: 'Featured Article Card:'
+                    en-us: 'Featured Article Card:'
                 color:
                   type: dex-color-palette-parameter
                   value: text-link
@@ -65,7 +65,7 @@ composition:
           displayName:
             type: text
             locales:
-              en: Featured Article Card
+              en-us: Featured Article Card
       - _id: 737df75a-b80f-4daf-b961-ecdeae7ce845
         type: spacer
         parameters:
@@ -113,7 +113,7 @@ composition:
                 text:
                   type: text
                   locales:
-                    en: 'Small Article Card:'
+                    en-us: 'Small Article Card:'
                 color:
                   type: dex-color-palette-parameter
                   value: text-link
@@ -144,7 +144,7 @@ composition:
           displayName:
             type: text
             locales:
-              en: Small Article Card
+              en-us: Small Article Card
           backgroundColor:
             type: dex-color-palette-parameter
             value: general-color-1
@@ -195,7 +195,7 @@ composition:
                 text:
                   type: text
                   locales:
-                    en: 'Article Highlight:'
+                    en-us: 'Article Highlight:'
                 color:
                   type: dex-color-palette-parameter
                   value: text-link
@@ -346,7 +346,7 @@ composition:
           displayName:
             type: text
             locales:
-              en: Article Highlight
+              en-us: Article Highlight
       - _id: d95670f7-65ad-4a3b-90ab-0c1f218f77ec
         type: spacer
         parameters:
@@ -365,7 +365,7 @@ composition:
         link:
           type: link
           locales:
-            en:
+            en-us:
               path: /${locale}/articles/${#jptr:/Article/entry/_slug}
               type: projectMapNode
               nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
@@ -391,7 +391,7 @@ composition:
             slug: ${article-slug}
             locale: ${locale}
   _locales:
-    - en
+    - en-us
 created: '2025-04-24T11:34:40.694323+00:00'
 modified: '2025-04-24T11:34:40.694323+00:00'
 pattern: false
