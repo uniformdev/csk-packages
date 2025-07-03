@@ -29,3 +29,17 @@ export const cleanUpPrefix = <T extends Record<string, unknown>, Prefix extends 
     {} as RemovePrefix<T, Prefix>
   );
 };
+
+const HALF_DISPLAY_WIDTH = 608;
+export const getImageParametersFocalPoint = (isVariant: boolean) => {
+  const columnImageDimensions = isVariant ? HALF_DISPLAY_WIDTH : undefined;
+  return {
+    imageFill: !isVariant,
+    ...(columnImageDimensions
+      ? {
+          imageWidth: columnImageDimensions,
+          imageHeight: columnImageDimensions,
+        }
+      : {}),
+  };
+};

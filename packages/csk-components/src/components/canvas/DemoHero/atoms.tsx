@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { imageFrom } from '@uniformdev/assets';
 import { ComponentInstance } from '@uniformdev/canvas';
 import { CompositionContext, UniformText } from '@uniformdev/canvas-next-rsc/component';
 import { TextParameters } from '@/components/canvas/Text/parameters';
@@ -95,6 +96,7 @@ export const BaseHeroImage: FC<BaseImageParameters & Omit<ComponentProps, 'param
   border,
   priority,
   unoptimized,
+  fill,
 }) => {
   const [resolvedImage] = resolveAsset(image);
 
@@ -113,14 +115,38 @@ export const BaseHeroImage: FC<BaseImageParameters & Omit<ComponentProps, 'param
     );
   }
 
-  const { url, title = '' } = resolvedImage;
+  const { focalPoint, title = '' } = resolvedImage;
+
+  const imageWidth = width || resolvedImage.width;
+  const imageHeight = height || resolvedImage.height;
+
+  if (!fill && (!imageWidth || !imageHeight)) {
+    console.warn(
+      'No dimensions provided for the Next.js Image component. Falling back to a standard <img> tag for rendering.'
+    );
+    return <img src={resolvedImage.url} alt={title} />;
+  }
+
+  const imageUrl = imageFrom(resolvedImage?.url)
+    .transform({
+      width: width,
+      height: height,
+      fit: objectFit,
+      focal: focalPoint,
+    })
+    .url();
+
+  const variantBasedProps = fill
+    ? { fill: true }
+    : {
+        width: imageWidth,
+        height: imageHeight,
+      };
 
   return (
     <BaseImage
-      containerStyle={{ ...(width ? { width: `${width}px` } : {}), ...(height ? { height: `${height}px` } : {}) }}
-      src={url}
+      src={imageUrl}
       alt={title}
-      fill
       unoptimized={unoptimized}
       priority={priority}
       sizes="100%"
@@ -129,6 +155,7 @@ export const BaseHeroImage: FC<BaseImageParameters & Omit<ComponentProps, 'param
       contrastBaseColor={contrastBaseColor}
       overlayOpacity={overlayOpacity}
       border={border}
+      {...variantBasedProps}
     />
   );
 };

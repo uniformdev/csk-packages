@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { FixedHeroProps } from '.';
 import { DemoHero } from './demo-hero';
+import { getImageParametersFocalPoint } from './utils';
 
 const getImageOverlayOpacity = (overlayAutoTint?: string, enableOverlayAutoTint?: boolean) => {
   if (overlayAutoTint) return overlayAutoTint;
@@ -55,6 +56,7 @@ export const FixedHero: FC<FixedHeroProps> = ({ textColor, overlayAutoTint, enab
       imageUnoptimized
       imageContrastBaseColor={!props.component.variant && imageOverlayOpacity ? textColor : undefined}
       imageOverlayOpacity={imageOverlayOpacity}
+      {...getImageParametersFocalPoint(!!props.component.variant)}
       // Presentation Parameters
       spacing={{
         paddingTop: 'container-xlarge',
