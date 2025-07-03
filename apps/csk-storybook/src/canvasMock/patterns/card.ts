@@ -75,7 +75,7 @@ export const cardContentCSK = {
         parameters: createUniformParameter({
           size: 'button-small',
           text: 'View Details',
-          textColor: 'text-light',
+          textColor: 'text-secondary',
           textWeight: 'normal',
           buttonColor: 'button-primary',
         }),

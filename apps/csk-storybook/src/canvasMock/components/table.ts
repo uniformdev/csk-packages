@@ -228,7 +228,7 @@ export const tableWithCustomCells = {
                   parameters: createUniformParameter({
                     size: 'small',
                     text: 'Active',
-                    textColor: 'text-light',
+                    textColor: 'text-secondary',
                     backgroundColor: 'general-success',
                   }),
                 },
@@ -247,7 +247,7 @@ export const tableWithCustomCells = {
                   parameters: createUniformParameter({
                     link: { path: '#', type: 'url' },
                     text: 'Edit',
-                    textColor: 'text-light',
+                    textColor: 'text-secondary',
                     buttonColor: 'button-primary',
                     size: 'table-small',
                   }),
@@ -321,7 +321,7 @@ export const tableWithCustomCells = {
                   parameters: createUniformParameter({
                     size: 'small',
                     text: 'Active',
-                    textColor: 'text-light',
+                    textColor: 'text-secondary',
                     backgroundColor: 'general-success',
                   }),
                 },
@@ -340,7 +340,7 @@ export const tableWithCustomCells = {
                   parameters: createUniformParameter({
                     link: { path: '#', type: 'url' },
                     text: 'Edit',
-                    textColor: 'text-light',
+                    textColor: 'text-secondary',
                     buttonColor: 'button-primary',
                     size: 'table-small',
                   }),
@@ -414,7 +414,7 @@ export const tableWithCustomCells = {
                   parameters: createUniformParameter({
                     size: 'small',
                     text: 'Offline',
-                    textColor: 'text-light',
+                    textColor: 'text-secondary',
                     backgroundColor: 'general-error',
                   }),
                 },
@@ -433,7 +433,7 @@ export const tableWithCustomCells = {
                   parameters: createUniformParameter({
                     link: { path: '#', type: 'url' },
                     text: 'Edit',
-                    textColor: 'text-light',
+                    textColor: 'text-secondary',
                     buttonColor: 'button-primary',
                     size: 'table-small',
                   }),
@@ -507,7 +507,7 @@ export const tableWithCustomCells = {
                   parameters: createUniformParameter({
                     size: 'small',
                     text: 'Active',
-                    textColor: 'text-light',
+                    textColor: 'text-secondary',
                     backgroundColor: 'general-success',
                   }),
                 },
@@ -526,7 +526,7 @@ export const tableWithCustomCells = {
                   parameters: createUniformParameter({
                     link: { path: '#', type: 'url' },
                     text: 'Edit',
-                    textColor: 'text-light',
+                    textColor: 'text-secondary',
                     buttonColor: 'button-primary',
                     size: 'table-small',
                   }),

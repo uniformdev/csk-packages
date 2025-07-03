@@ -58,7 +58,7 @@ const TemplateCard: FC<TemplateCardProps> = ({
         </div>
       </WrapCard>
       {comingSoon && (
-        <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-sm bg-button-primary px-5 py-2.5 text-center text-sm font-bold uppercase text-text-light">
+        <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-sm bg-button-primary px-5 py-2.5 text-center text-sm font-bold uppercase text-text-secondary">
           Coming Soon
         </div>
       )}

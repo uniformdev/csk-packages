@@ -90,9 +90,9 @@ const AnchorLinks: FC<AnchorLinksProps> = ({ size, color, font, weight, containe
         >
           <div
             className={cn(
-              'flex justify-between mx-1 my-[2px] px-5 py-4 items-center hover:bg-sky-50 dark:hover:bg-[#0036CF]',
+              'flex justify-between mx-1 my-[2px] px-5 py-4 items-center hover:bg-sky-50 dark:hover:bg-general-color-3 text-text-primary hover:text-text-secondary',
               {
-                'bg-[#DCEEFF] dark:bg-general-color-5': activeAnchor?.href === link.href,
+                'bg-general-color-3 text-text-secondary': activeAnchor?.href === link.href,
               }
             )}
           >
