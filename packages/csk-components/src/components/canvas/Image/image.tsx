@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import { imageFrom } from '@uniformdev/assets';
+import { MediaPlaceholder } from '@/components/ui';
 import BaseImage from '@/components/ui/Image';
 import { resolveAsset } from '@/utils/assets';
 import { ImageProps } from '.';
-import { ImagePlaceholder } from './placeholder';
 
 export const Image: FC<ImageProps> = async ({
   image,
@@ -22,7 +22,18 @@ export const Image: FC<ImageProps> = async ({
   const [resolvedImage] = resolveAsset(image);
 
   if (!resolvedImage) {
-    return <ImagePlaceholder context={context} component={component} width={width} height={height} />;
+    const isEditorPreviewMode = context.previewMode === 'editor' && context.isContextualEditing;
+    const isPlaceholder = component?._id?.includes('placeholder_');
+
+    if (!isEditorPreviewMode || isPlaceholder || !component.variant) {
+      return null;
+    }
+
+    return (
+      <div style={{ width: width ? `${width}px` : 'auto', height: height ? `${height}px` : 'auto' }}>
+        <MediaPlaceholder type="image" placeholder="Please add an asset to display an image" />
+      </div>
+    );
   }
 
   const { focalPoint, title = '' } = resolvedImage;

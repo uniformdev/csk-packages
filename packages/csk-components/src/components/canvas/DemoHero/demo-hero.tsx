@@ -71,6 +71,7 @@ export const DemoHero: FC<(FixedHeroProps | FlexibleHeroProps) & { isFlexibleHer
   imageBorder,
   imagePriority,
   imageUnoptimized,
+  imageFill,
   // Presentation Parameters
   contentAlignment,
   backgroundColor,
@@ -215,6 +216,7 @@ export const DemoHero: FC<(FixedHeroProps | FlexibleHeroProps) & { isFlexibleHer
               imageBorder,
               imagePriority,
               imageUnoptimized,
+              imageFill,
             },
             'image'
           )}

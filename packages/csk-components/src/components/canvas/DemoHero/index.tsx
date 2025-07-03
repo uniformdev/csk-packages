@@ -44,6 +44,7 @@ export type BaseImageParameters = {
   border?: string | ViewPort<string>;
   priority?: boolean;
   unoptimized?: boolean;
+  fill?: boolean;
 };
 
 export type EyebrowTitleTextParameters = PrefixedKeys<TextParameters, 'eyebrowTitle'>;
