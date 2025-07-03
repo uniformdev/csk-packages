@@ -44,7 +44,7 @@ export const FixedHero: FC<FixedHeroProps> = ({ textColor, overlayAutoTint, enab
       // Primary Button Parameters
       primaryButtonSize="button-medium"
       primaryButtonTextSize="sm"
-      primaryButtonTextColor="text-light"
+      primaryButtonTextColor="text-secondary"
       primaryButtonTextWeight="normal"
       primaryButtonButtonColor="button-primary"
       primaryButtonTextTransform="uppercase"
