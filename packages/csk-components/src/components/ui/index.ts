@@ -17,3 +17,6 @@ export { default as Rating, type RatingProps } from './Rating';
 export { default as Text, type TextProps } from './Text';
 export { default as ThemeSwitcher, type ThemeSwitcherProps } from './ThemeSwitcher';
 export { default as Video, type VideoProps } from './Video';
+export { default as InlineSVG, type InlineSVGProps } from './InlineSVG';
+export { default as Accordion, type AccordionProps } from './Accordion';
+export { default as AccordionItem, type AccordionItemProps } from './AccordionItem';
