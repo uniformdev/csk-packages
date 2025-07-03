@@ -1,5 +1,5 @@
-created: '2025-04-25T12:21:44.722117+00:00'
-modified: '2025-06-25T14:22:51.576776+00:00'
+created: '2025-05-20T11:54:38.168991+00:00'
+modified: '2025-07-03T12:41:01.405123+00:00'
 pattern: false
 entry:
   _id: 50ec10c5-f4eb-41f9-a977-bd8ca73fb6c8
@@ -541,77 +541,92 @@ entry:
           direction: ltr
     ogImage:
       type: asset
-      locales:
-        en-us:
-          - _id: a4e5ddb5-5f06-45bc-a067-6028d25ffa3e
-            type: image
-            fields:
-              id:
-                type: text
-                value: a36f8a32-32cd-4dff-9f5a-8c835d7dbf4e
-              url:
-                value: >-
-                  https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/MZrZdWt4SOC4_RXvGFCsiQ-image.png
-                type: text
-              file:
-                type: file
-                value: 16f0ec6a-0e6e-4fec-9364-fa1a65510462
-              size:
-                value: 354223
-                type: number
-              title:
-                type: text
-                value: image.png
-              width:
-                value: 686
-                type: number
-              height:
-                value: 338
-                type: number
-              mediaType:
-                value: image/png
-                type: text
-            _source: uniform-assets
+      value:
+        - _id: a4e5ddb5-5f06-45bc-a067-6028d25ffa3e
+          type: image
+          fields:
+            id:
+              type: text
+              value: a36f8a32-32cd-4dff-9f5a-8c835d7dbf4e
+            url:
+              value: >-
+                https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/MZrZdWt4SOC4_RXvGFCsiQ-image.png
+              type: text
+            file:
+              type: file
+              value: 16f0ec6a-0e6e-4fec-9364-fa1a65510462
+            size:
+              value: 354223
+              type: number
+            title:
+              type: text
+              value: image.png
+            width:
+              value: 686
+              type: number
+            height:
+              value: 338
+              type: number
+            mediaType:
+              value: image/png
+              type: text
+          _source: uniform-assets
     category:
       type: contentReference
       value: ${#jptr:/ref-50ec10c5-f4eb-41f9-a977-bd8ca73fb6c8-category/entries/0}
     metaTitle:
       type: text
       locales:
+        da-dk: How to get the perfect grind for your beans at home
+        de-at: How to get the perfect grind for your beans at home
+        de-de: How to get the perfect grind for your beans at home
+        en-ca: How to get the perfect grind for your beans at home
+        en-de: How to get the perfect grind for your beans at home
+        en-fr: How to get the perfect grind for your beans at home
+        en-gb: How to get the perfect grind for your beans at home
+        en-nl: How to get the perfect grind for your beans at home
         en-us: How to get the perfect grind for your beans at home
+        es-us: How to get the perfect grind for your beans at home
+        fr-ca: How to get the perfect grind for your beans at home
+        fr-fr: How to get the perfect grind for your beans at home
+        ja-jp: How to get the perfect grind for your beans at home
+        nb-no: How to get the perfect grind for your beans at home
+        nl-nl: How to get the perfect grind for your beans at home
+        sv-se: How to get the perfect grind for your beans at home
+        ar-ksa: How to get the perfect grind for your beans at home
+        ar-uae: How to get the perfect grind for your beans at home
     thumbnail:
       type: asset
-      locales:
-        en-us:
-          - _id: 9ac81062-160a-4eaa-a552-de8b111a873c
-            type: image
-            fields:
-              id:
-                type: text
-                value: a36f8a32-32cd-4dff-9f5a-8c835d7dbf4e
-              url:
-                value: >-
-                  https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/MZrZdWt4SOC4_RXvGFCsiQ-image.png
-                type: text
-              file:
-                type: file
-                value: 16f0ec6a-0e6e-4fec-9364-fa1a65510462
-              size:
-                value: 354223
-                type: number
-              title:
-                type: text
-                value: image.png
-              width:
-                value: 686
-                type: number
-              height:
-                value: 338
-                type: number
-              mediaType:
-                value: image/png
-                type: text
-            _source: uniform-assets
+      value:
+        - _id: 9ac81062-160a-4eaa-a552-de8b111a873c
+          type: image
+          fields:
+            id:
+              type: text
+              value: a36f8a32-32cd-4dff-9f5a-8c835d7dbf4e
+            url:
+              value: >-
+                https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/MZrZdWt4SOC4_RXvGFCsiQ-image.png
+              type: text
+            file:
+              type: file
+              value: 16f0ec6a-0e6e-4fec-9364-fa1a65510462
+            size:
+              value: 354223
+              type: number
+            title:
+              type: text
+              value: image.png
+            width:
+              value: 686
+              type: number
+            height:
+              value: 338
+              type: number
+            mediaType:
+              value: image/png
+              type: text
+          _source: uniform-assets
     enrichments:
       type: $enr
       value:
@@ -624,7 +639,75 @@ entry:
     metaDescription:
       type: text
       locales:
+        da-dk: >-
+          Cappuccino as Bar decaffeinated Beans carajillo aged extra, redeye ut
+          Black aroma Aromatic As Aftertaste, single au barista Arabica bar
+          aftertaste.
+        de-at: >-
+          Cappuccino as Bar decaffeinated Beans carajillo aged extra, redeye ut
+          Black aroma Aromatic As Aftertaste, single au barista Arabica bar
+          aftertaste.
+        de-de: >-
+          Cappuccino as Bar decaffeinated Beans carajillo aged extra, redeye ut
+          Black aroma Aromatic As Aftertaste, single au barista Arabica bar
+          aftertaste.
+        en-ca: >-
+          Cappuccino as Bar decaffeinated Beans carajillo aged extra, redeye ut
+          Black aroma Aromatic As Aftertaste, single au barista Arabica bar
+          aftertaste.
+        en-de: >-
+          Cappuccino as Bar decaffeinated Beans carajillo aged extra, redeye ut
+          Black aroma Aromatic As Aftertaste, single au barista Arabica bar
+          aftertaste.
+        en-fr: >-
+          Cappuccino as Bar decaffeinated Beans carajillo aged extra, redeye ut
+          Black aroma Aromatic As Aftertaste, single au barista Arabica bar
+          aftertaste.
+        en-gb: >-
+          Cappuccino as Bar decaffeinated Beans carajillo aged extra, redeye ut
+          Black aroma Aromatic As Aftertaste, single au barista Arabica bar
+          aftertaste.
+        en-nl: >-
+          Cappuccino as Bar decaffeinated Beans carajillo aged extra, redeye ut
+          Black aroma Aromatic As Aftertaste, single au barista Arabica bar
+          aftertaste.
         en-us: >-
+          Cappuccino as Bar decaffeinated Beans carajillo aged extra, redeye ut
+          Black aroma Aromatic As Aftertaste, single au barista Arabica bar
+          aftertaste.
+        es-us: >-
+          Cappuccino as Bar decaffeinated Beans carajillo aged extra, redeye ut
+          Black aroma Aromatic As Aftertaste, single au barista Arabica bar
+          aftertaste.
+        fr-ca: >-
+          Cappuccino as Bar decaffeinated Beans carajillo aged extra, redeye ut
+          Black aroma Aromatic As Aftertaste, single au barista Arabica bar
+          aftertaste.
+        fr-fr: >-
+          Cappuccino as Bar decaffeinated Beans carajillo aged extra, redeye ut
+          Black aroma Aromatic As Aftertaste, single au barista Arabica bar
+          aftertaste.
+        ja-jp: >-
+          Cappuccino as Bar decaffeinated Beans carajillo aged extra, redeye ut
+          Black aroma Aromatic As Aftertaste, single au barista Arabica bar
+          aftertaste.
+        nb-no: >-
+          Cappuccino as Bar decaffeinated Beans carajillo aged extra, redeye ut
+          Black aroma Aromatic As Aftertaste, single au barista Arabica bar
+          aftertaste.
+        nl-nl: >-
+          Cappuccino as Bar decaffeinated Beans carajillo aged extra, redeye ut
+          Black aroma Aromatic As Aftertaste, single au barista Arabica bar
+          aftertaste.
+        sv-se: >-
+          Cappuccino as Bar decaffeinated Beans carajillo aged extra, redeye ut
+          Black aroma Aromatic As Aftertaste, single au barista Arabica bar
+          aftertaste.
+        ar-ksa: >-
+          Cappuccino as Bar decaffeinated Beans carajillo aged extra, redeye ut
+          Black aroma Aromatic As Aftertaste, single au barista Arabica bar
+          aftertaste.
+        ar-uae: >-
           Cappuccino as Bar decaffeinated Beans carajillo aged extra, redeye ut
           Black aroma Aromatic As Aftertaste, single au barista Arabica bar
           aftertaste.
@@ -647,3 +730,20 @@ entry:
         entryIds: 8f126a53-19d3-46d9-a855-63be62ffca1d
   _locales:
     - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa

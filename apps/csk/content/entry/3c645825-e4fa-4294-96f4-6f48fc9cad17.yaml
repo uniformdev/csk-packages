@@ -1,5 +1,5 @@
-created: '2025-04-25T12:21:37.72869+00:00'
-modified: '2025-06-25T14:24:24.570273+00:00'
+created: '2025-05-20T11:54:32.190859+00:00'
+modified: '2025-07-03T12:49:08.428386+00:00'
 pattern: false
 entry:
   _id: 3c645825-e4fa-4294-96f4-6f48fc9cad17
@@ -264,77 +264,92 @@ entry:
           direction: ltr
     ogImage:
       type: asset
-      locales:
-        en-us:
-          - _id: eb16abca-e73e-4359-98d7-4a263d732475
-            type: image
-            fields:
-              id:
-                type: text
-                value: d3a8701d-e216-45a0-8def-381858fad958
-              url:
-                value: >-
-                  https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/mHXjUr5AQc-A_gbj_oe7vw-image.png
-                type: text
-              file:
-                type: file
-                value: bd1c84df-d205-4779-a145-d6d915f95282
-              size:
-                value: 1478877
-                type: number
-              title:
-                type: text
-                value: image.png
-              width:
-                value: 1440
-                type: number
-              height:
-                value: 960
-                type: number
-              mediaType:
-                value: image/png
-                type: text
-            _source: uniform-assets
+      value:
+        - _id: eb16abca-e73e-4359-98d7-4a263d732475
+          type: image
+          fields:
+            id:
+              type: text
+              value: d3a8701d-e216-45a0-8def-381858fad958
+            url:
+              value: >-
+                https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/mHXjUr5AQc-A_gbj_oe7vw-image.png
+              type: text
+            file:
+              type: file
+              value: bd1c84df-d205-4779-a145-d6d915f95282
+            size:
+              value: 1478877
+              type: number
+            title:
+              type: text
+              value: image.png
+            width:
+              value: 1440
+              type: number
+            height:
+              value: 960
+              type: number
+            mediaType:
+              value: image/png
+              type: text
+          _source: uniform-assets
     category:
       type: contentReference
       value: ${#jptr:/ref-3c645825-e4fa-4294-96f4-6f48fc9cad17-category/entries/0}
     metaTitle:
       type: text
       locales:
+        da-dk: Indulge in Luxury Espresso at Home
+        de-at: Indulge in Luxury Espresso at Home
+        de-de: Indulge in Luxury Espresso at Home
+        en-ca: Indulge in Luxury Espresso at Home
+        en-de: Indulge in Luxury Espresso at Home
+        en-fr: Indulge in Luxury Espresso at Home
+        en-gb: Indulge in Luxury Espresso at Home
+        en-nl: Indulge in Luxury Espresso at Home
         en-us: Indulge in Luxury Espresso at Home
+        es-us: Indulge in Luxury Espresso at Home
+        fr-ca: Indulge in Luxury Espresso at Home
+        fr-fr: Indulge in Luxury Espresso at Home
+        ja-jp: Indulge in Luxury Espresso at Home
+        nb-no: Indulge in Luxury Espresso at Home
+        nl-nl: Indulge in Luxury Espresso at Home
+        sv-se: Indulge in Luxury Espresso at Home
+        ar-ksa: Indulge in Luxury Espresso at Home
+        ar-uae: Indulge in Luxury Espresso at Home
     thumbnail:
       type: asset
-      locales:
-        en-us:
-          - _id: ee289b00-f3af-4fa8-8b6d-1e9eff06ece9
-            type: image
-            fields:
-              id:
-                type: text
-                value: d3a8701d-e216-45a0-8def-381858fad958
-              url:
-                value: >-
-                  https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/mHXjUr5AQc-A_gbj_oe7vw-image.png
-                type: text
-              file:
-                type: file
-                value: bd1c84df-d205-4779-a145-d6d915f95282
-              size:
-                value: 1478877
-                type: number
-              title:
-                type: text
-                value: image.png
-              width:
-                value: 1440
-                type: number
-              height:
-                value: 960
-                type: number
-              mediaType:
-                value: image/png
-                type: text
-            _source: uniform-assets
+      value:
+        - _id: ee289b00-f3af-4fa8-8b6d-1e9eff06ece9
+          type: image
+          fields:
+            id:
+              type: text
+              value: d3a8701d-e216-45a0-8def-381858fad958
+            url:
+              value: >-
+                https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/mHXjUr5AQc-A_gbj_oe7vw-image.png
+              type: text
+            file:
+              type: file
+              value: bd1c84df-d205-4779-a145-d6d915f95282
+            size:
+              value: 1478877
+              type: number
+            title:
+              type: text
+              value: image.png
+            width:
+              value: 1440
+              type: number
+            height:
+              value: 960
+              type: number
+            mediaType:
+              value: image/png
+              type: text
+          _source: uniform-assets
     enrichments:
       type: $enr
       value:
@@ -347,7 +362,75 @@ entry:
     metaDescription:
       type: text
       locales:
+        da-dk: >-
+          Watching a barista dance behind a cafe’s massive, steaming three-group
+          hotrod espresso machine is its own pleasure, sure—a moment of respect
+          and awe for these artisans and their seemingly arcane skills.
+        de-at: >-
+          Watching a barista dance behind a cafe’s massive, steaming three-group
+          hotrod espresso machine is its own pleasure, sure—a moment of respect
+          and awe for these artisans and their seemingly arcane skills.
+        de-de: >-
+          Watching a barista dance behind a cafe’s massive, steaming three-group
+          hotrod espresso machine is its own pleasure, sure—a moment of respect
+          and awe for these artisans and their seemingly arcane skills.
+        en-ca: >-
+          Watching a barista dance behind a cafe’s massive, steaming three-group
+          hotrod espresso machine is its own pleasure, sure—a moment of respect
+          and awe for these artisans and their seemingly arcane skills.
+        en-de: >-
+          Watching a barista dance behind a cafe’s massive, steaming three-group
+          hotrod espresso machine is its own pleasure, sure—a moment of respect
+          and awe for these artisans and their seemingly arcane skills.
+        en-fr: >-
+          Watching a barista dance behind a cafe’s massive, steaming three-group
+          hotrod espresso machine is its own pleasure, sure—a moment of respect
+          and awe for these artisans and their seemingly arcane skills.
+        en-gb: >-
+          Watching a barista dance behind a cafe’s massive, steaming three-group
+          hotrod espresso machine is its own pleasure, sure—a moment of respect
+          and awe for these artisans and their seemingly arcane skills.
+        en-nl: >-
+          Watching a barista dance behind a cafe’s massive, steaming three-group
+          hotrod espresso machine is its own pleasure, sure—a moment of respect
+          and awe for these artisans and their seemingly arcane skills.
         en-us: >-
+          Watching a barista dance behind a cafe’s massive, steaming three-group
+          hotrod espresso machine is its own pleasure, sure—a moment of respect
+          and awe for these artisans and their seemingly arcane skills.
+        es-us: >-
+          Watching a barista dance behind a cafe’s massive, steaming three-group
+          hotrod espresso machine is its own pleasure, sure—a moment of respect
+          and awe for these artisans and their seemingly arcane skills.
+        fr-ca: >-
+          Watching a barista dance behind a cafe’s massive, steaming three-group
+          hotrod espresso machine is its own pleasure, sure—a moment of respect
+          and awe for these artisans and their seemingly arcane skills.
+        fr-fr: >-
+          Watching a barista dance behind a cafe’s massive, steaming three-group
+          hotrod espresso machine is its own pleasure, sure—a moment of respect
+          and awe for these artisans and their seemingly arcane skills.
+        ja-jp: >-
+          Watching a barista dance behind a cafe’s massive, steaming three-group
+          hotrod espresso machine is its own pleasure, sure—a moment of respect
+          and awe for these artisans and their seemingly arcane skills.
+        nb-no: >-
+          Watching a barista dance behind a cafe’s massive, steaming three-group
+          hotrod espresso machine is its own pleasure, sure—a moment of respect
+          and awe for these artisans and their seemingly arcane skills.
+        nl-nl: >-
+          Watching a barista dance behind a cafe’s massive, steaming three-group
+          hotrod espresso machine is its own pleasure, sure—a moment of respect
+          and awe for these artisans and their seemingly arcane skills.
+        sv-se: >-
+          Watching a barista dance behind a cafe’s massive, steaming three-group
+          hotrod espresso machine is its own pleasure, sure—a moment of respect
+          and awe for these artisans and their seemingly arcane skills.
+        ar-ksa: >-
+          Watching a barista dance behind a cafe’s massive, steaming three-group
+          hotrod espresso machine is its own pleasure, sure—a moment of respect
+          and awe for these artisans and their seemingly arcane skills.
+        ar-uae: >-
           Watching a barista dance behind a cafe’s massive, steaming three-group
           hotrod espresso machine is its own pleasure, sure—a moment of respect
           and awe for these artisans and their seemingly arcane skills.
@@ -370,3 +453,20 @@ entry:
         entryIds: 8f126a53-19d3-46d9-a855-63be62ffca1d
   _locales:
     - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa

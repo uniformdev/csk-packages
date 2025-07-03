@@ -1,5 +1,5 @@
-created: '2025-04-25T12:21:55.692639+00:00'
-modified: '2025-06-25T14:16:36.468793+00:00'
+created: '2025-05-20T11:54:50.348932+00:00'
+modified: '2025-07-03T12:22:37.566033+00:00'
 pattern: false
 entry:
   _id: abe861b5-a1d5-4e25-8d29-81ee18087f10
@@ -220,77 +220,92 @@ entry:
           direction: ltr
     ogImage:
       type: asset
-      locales:
-        en-us:
-          - _id: c1c86cf5-9749-491e-b699-391fb73a8b93
-            type: image
-            fields:
-              id:
-                type: text
-                value: e2498392-c75c-418a-bb5d-d9433ab4f20a
-              url:
-                value: >-
-                  https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/iQBZR7ZySIeWiojofxdFHw-image.png
-                type: text
-              file:
-                type: file
-                value: 582ecdd2-738c-421d-b5e5-2448217d0f51
-              size:
-                value: 432902
-                type: number
-              title:
-                type: text
-                value: image.png
-              width:
-                value: 1486
-                type: number
-              height:
-                value: 960
-                type: number
-              mediaType:
-                value: image/png
-                type: text
-            _source: uniform-assets
+      value:
+        - _id: c1c86cf5-9749-491e-b699-391fb73a8b93
+          type: image
+          fields:
+            id:
+              type: text
+              value: e2498392-c75c-418a-bb5d-d9433ab4f20a
+            url:
+              value: >-
+                https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/iQBZR7ZySIeWiojofxdFHw-image.png
+              type: text
+            file:
+              type: file
+              value: 582ecdd2-738c-421d-b5e5-2448217d0f51
+            size:
+              value: 432902
+              type: number
+            title:
+              type: text
+              value: image.png
+            width:
+              value: 1486
+              type: number
+            height:
+              value: 960
+              type: number
+            mediaType:
+              value: image/png
+              type: text
+          _source: uniform-assets
     category:
       type: contentReference
       value: ${#jptr:/ref-abe861b5-a1d5-4e25-8d29-81ee18087f10-category/entries/0}
     metaTitle:
       type: text
       locales:
+        da-dk: 'EspressoGPT: Elevating Coffee Brewing to Futuristic Heights'
+        de-at: 'EspressoGPT: Elevating Coffee Brewing to Futuristic Heights'
+        de-de: 'EspressoGPT: Elevating Coffee Brewing to Futuristic Heights'
+        en-ca: 'EspressoGPT: Elevating Coffee Brewing to Futuristic Heights'
+        en-de: 'EspressoGPT: Elevating Coffee Brewing to Futuristic Heights'
+        en-fr: 'EspressoGPT: Elevating Coffee Brewing to Futuristic Heights'
+        en-gb: 'EspressoGPT: Elevating Coffee Brewing to Futuristic Heights'
+        en-nl: 'EspressoGPT: Elevating Coffee Brewing to Futuristic Heights'
         en-us: 'EspressoGPT: Elevating Coffee Brewing to Futuristic Heights'
+        es-us: 'EspressoGPT: Elevating Coffee Brewing to Futuristic Heights'
+        fr-ca: 'EspressoGPT: Elevating Coffee Brewing to Futuristic Heights'
+        fr-fr: 'EspressoGPT: Elevating Coffee Brewing to Futuristic Heights'
+        ja-jp: 'EspressoGPT: Elevating Coffee Brewing to Futuristic Heights'
+        nb-no: 'EspressoGPT: Elevating Coffee Brewing to Futuristic Heights'
+        nl-nl: 'EspressoGPT: Elevating Coffee Brewing to Futuristic Heights'
+        sv-se: 'EspressoGPT: Elevating Coffee Brewing to Futuristic Heights'
+        ar-ksa: 'EspressoGPT: Elevating Coffee Brewing to Futuristic Heights'
+        ar-uae: 'EspressoGPT: Elevating Coffee Brewing to Futuristic Heights'
     thumbnail:
       type: asset
-      locales:
-        en-us:
-          - _id: cb1d1c26-19df-4e2b-8556-f6ef0f9e88d1
-            type: image
-            fields:
-              id:
-                type: text
-                value: e2498392-c75c-418a-bb5d-d9433ab4f20a
-              url:
-                value: >-
-                  https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/iQBZR7ZySIeWiojofxdFHw-image.png
-                type: text
-              file:
-                type: file
-                value: 582ecdd2-738c-421d-b5e5-2448217d0f51
-              size:
-                value: 432902
-                type: number
-              title:
-                type: text
-                value: image.png
-              width:
-                value: 1486
-                type: number
-              height:
-                value: 960
-                type: number
-              mediaType:
-                value: image/png
-                type: text
-            _source: uniform-assets
+      value:
+        - _id: cb1d1c26-19df-4e2b-8556-f6ef0f9e88d1
+          type: image
+          fields:
+            id:
+              type: text
+              value: e2498392-c75c-418a-bb5d-d9433ab4f20a
+            url:
+              value: >-
+                https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/iQBZR7ZySIeWiojofxdFHw-image.png
+              type: text
+            file:
+              type: file
+              value: 582ecdd2-738c-421d-b5e5-2448217d0f51
+            size:
+              value: 432902
+              type: number
+            title:
+              type: text
+              value: image.png
+            width:
+              value: 1486
+              type: number
+            height:
+              value: 960
+              type: number
+            mediaType:
+              value: image/png
+              type: text
+          _source: uniform-assets
     enrichments:
       type: $enr
       value:
@@ -303,7 +318,75 @@ entry:
     metaDescription:
       type: text
       locales:
+        da-dk: >-
+          Where future technologies meet timeless taste.  Experience coffee like
+          never before. From the moment you power up the EspressoGPT, you're not
+          just brewing an espresso—you're entering the future of coffee
+        de-at: >-
+          Where future technologies meet timeless taste.  Experience coffee like
+          never before. From the moment you power up the EspressoGPT, you're not
+          just brewing an espresso—you're entering the future of coffee
+        de-de: >-
+          Where future technologies meet timeless taste.  Experience coffee like
+          never before. From the moment you power up the EspressoGPT, you're not
+          just brewing an espresso—you're entering the future of coffee
+        en-ca: >-
+          Where future technologies meet timeless taste.  Experience coffee like
+          never before. From the moment you power up the EspressoGPT, you're not
+          just brewing an espresso—you're entering the future of coffee
+        en-de: >-
+          Where future technologies meet timeless taste.  Experience coffee like
+          never before. From the moment you power up the EspressoGPT, you're not
+          just brewing an espresso—you're entering the future of coffee
+        en-fr: >-
+          Where future technologies meet timeless taste.  Experience coffee like
+          never before. From the moment you power up the EspressoGPT, you're not
+          just brewing an espresso—you're entering the future of coffee
+        en-gb: >-
+          Where future technologies meet timeless taste.  Experience coffee like
+          never before. From the moment you power up the EspressoGPT, you're not
+          just brewing an espresso—you're entering the future of coffee
+        en-nl: >-
+          Where future technologies meet timeless taste.  Experience coffee like
+          never before. From the moment you power up the EspressoGPT, you're not
+          just brewing an espresso—you're entering the future of coffee
         en-us: >-
+          Where future technologies meet timeless taste.  Experience coffee like
+          never before. From the moment you power up the EspressoGPT, you're not
+          just brewing an espresso—you're entering the future of coffee
+        es-us: >-
+          Where future technologies meet timeless taste.  Experience coffee like
+          never before. From the moment you power up the EspressoGPT, you're not
+          just brewing an espresso—you're entering the future of coffee
+        fr-ca: >-
+          Where future technologies meet timeless taste.  Experience coffee like
+          never before. From the moment you power up the EspressoGPT, you're not
+          just brewing an espresso—you're entering the future of coffee
+        fr-fr: >-
+          Where future technologies meet timeless taste.  Experience coffee like
+          never before. From the moment you power up the EspressoGPT, you're not
+          just brewing an espresso—you're entering the future of coffee
+        ja-jp: >-
+          Where future technologies meet timeless taste.  Experience coffee like
+          never before. From the moment you power up the EspressoGPT, you're not
+          just brewing an espresso—you're entering the future of coffee
+        nb-no: >-
+          Where future technologies meet timeless taste.  Experience coffee like
+          never before. From the moment you power up the EspressoGPT, you're not
+          just brewing an espresso—you're entering the future of coffee
+        nl-nl: >-
+          Where future technologies meet timeless taste.  Experience coffee like
+          never before. From the moment you power up the EspressoGPT, you're not
+          just brewing an espresso—you're entering the future of coffee
+        sv-se: >-
+          Where future technologies meet timeless taste.  Experience coffee like
+          never before. From the moment you power up the EspressoGPT, you're not
+          just brewing an espresso—you're entering the future of coffee
+        ar-ksa: >-
+          Where future technologies meet timeless taste.  Experience coffee like
+          never before. From the moment you power up the EspressoGPT, you're not
+          just brewing an espresso—you're entering the future of coffee
+        ar-uae: >-
           Where future technologies meet timeless taste.  Experience coffee like
           never before. From the moment you power up the EspressoGPT, you're not
           just brewing an espresso—you're entering the future of coffee
@@ -326,3 +409,20 @@ entry:
         entryIds: 8f126a53-19d3-46d9-a855-63be62ffca1d
   _locales:
     - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa

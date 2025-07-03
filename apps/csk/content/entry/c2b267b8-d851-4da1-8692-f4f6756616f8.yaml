@@ -1,5 +1,5 @@
-created: '2025-04-25T12:21:59.752998+00:00'
-modified: '2025-06-25T14:16:06.064053+00:00'
+created: '2025-05-20T11:54:53.123755+00:00'
+modified: '2025-07-03T12:16:34.213503+00:00'
 pattern: false
 entry:
   _id: c2b267b8-d851-4da1-8692-f4f6756616f8
@@ -467,77 +467,92 @@ entry:
           textFormat: 1
     ogImage:
       type: asset
-      locales:
-        en-us:
-          - _id: 537e7a02-12ca-4176-be79-5bfa2210f417
-            type: image
-            fields:
-              id:
-                type: text
-                value: a65bde85-2774-4f96-806d-47fe27e91949
-              url:
-                value: >-
-                  https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/f_4L_0koTbCdsI_eI_phzw-image.png
-                type: text
-              file:
-                type: file
-                value: 10133c00-e426-4f9f-bd6f-885c024068bc
-              size:
-                value: 427088
-                type: number
-              title:
-                type: text
-                value: image.png
-              width:
-                value: 684
-                type: number
-              height:
-                value: 450
-                type: number
-              mediaType:
-                value: image/png
-                type: text
-            _source: uniform-assets
+      value:
+        - _id: 537e7a02-12ca-4176-be79-5bfa2210f417
+          type: image
+          fields:
+            id:
+              type: text
+              value: a65bde85-2774-4f96-806d-47fe27e91949
+            url:
+              value: >-
+                https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/f_4L_0koTbCdsI_eI_phzw-image.png
+              type: text
+            file:
+              type: file
+              value: 10133c00-e426-4f9f-bd6f-885c024068bc
+            size:
+              value: 427088
+              type: number
+            title:
+              type: text
+              value: image.png
+            width:
+              value: 684
+              type: number
+            height:
+              value: 450
+              type: number
+            mediaType:
+              value: image/png
+              type: text
+          _source: uniform-assets
     category:
       type: contentReference
       value: ${#jptr:/ref-c2b267b8-d851-4da1-8692-f4f6756616f8-category/entries/0}
     metaTitle:
       type: text
       locales:
+        da-dk: What is Acidity in Coffee? And is it good?
+        de-at: What is Acidity in Coffee? And is it good?
+        de-de: What is Acidity in Coffee? And is it good?
+        en-ca: What is Acidity in Coffee? And is it good?
+        en-de: What is Acidity in Coffee? And is it good?
+        en-fr: What is Acidity in Coffee? And is it good?
+        en-gb: What is Acidity in Coffee? And is it good?
+        en-nl: What is Acidity in Coffee? And is it good?
         en-us: What is Acidity in Coffee? And is it good?
+        es-us: What is Acidity in Coffee? And is it good?
+        fr-ca: What is Acidity in Coffee? And is it good?
+        fr-fr: What is Acidity in Coffee? And is it good?
+        ja-jp: What is Acidity in Coffee? And is it good?
+        nb-no: What is Acidity in Coffee? And is it good?
+        nl-nl: What is Acidity in Coffee? And is it good?
+        sv-se: What is Acidity in Coffee? And is it good?
+        ar-ksa: What is Acidity in Coffee? And is it good?
+        ar-uae: What is Acidity in Coffee? And is it good?
     thumbnail:
       type: asset
-      locales:
-        en-us:
-          - _id: d991a28f-6dcd-41c9-b053-92464f2ac647
-            type: image
-            fields:
-              id:
-                type: text
-                value: a65bde85-2774-4f96-806d-47fe27e91949
-              url:
-                value: >-
-                  https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/f_4L_0koTbCdsI_eI_phzw-image.png
-                type: text
-              file:
-                type: file
-                value: 10133c00-e426-4f9f-bd6f-885c024068bc
-              size:
-                value: 427088
-                type: number
-              title:
-                type: text
-                value: image.png
-              width:
-                value: 684
-                type: number
-              height:
-                value: 450
-                type: number
-              mediaType:
-                value: image/png
-                type: text
-            _source: uniform-assets
+      value:
+        - _id: d991a28f-6dcd-41c9-b053-92464f2ac647
+          type: image
+          fields:
+            id:
+              type: text
+              value: a65bde85-2774-4f96-806d-47fe27e91949
+            url:
+              value: >-
+                https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/f_4L_0koTbCdsI_eI_phzw-image.png
+              type: text
+            file:
+              type: file
+              value: 10133c00-e426-4f9f-bd6f-885c024068bc
+            size:
+              value: 427088
+              type: number
+            title:
+              type: text
+              value: image.png
+            width:
+              value: 684
+              type: number
+            height:
+              value: 450
+              type: number
+            mediaType:
+              value: image/png
+              type: text
+          _source: uniform-assets
     enrichments:
       type: $enr
       value:
@@ -550,7 +565,92 @@ entry:
     metaDescription:
       type: text
       locales:
+        da-dk: >-
+          Coffee is marketed as an acidic beverage, but it actually has a pH of
+          about five, making it less acidic than beer, orange juice, and even
+          soda. When we talk about acid and coffee, we aren’t really referring
+          to the pH level of the beverage. 
+        de-at: >-
+          Coffee is marketed as an acidic beverage, but it actually has a pH of
+          about five, making it less acidic than beer, orange juice, and even
+          soda. When we talk about acid and coffee, we aren’t really referring
+          to the pH level of the beverage. 
+        de-de: >-
+          Coffee is marketed as an acidic beverage, but it actually has a pH of
+          about five, making it less acidic than beer, orange juice, and even
+          soda. When we talk about acid and coffee, we aren’t really referring
+          to the pH level of the beverage. 
+        en-ca: >-
+          Coffee is marketed as an acidic beverage, but it actually has a pH of
+          about five, making it less acidic than beer, orange juice, and even
+          soda. When we talk about acid and coffee, we aren’t really referring
+          to the pH level of the beverage. 
+        en-de: >-
+          Coffee is marketed as an acidic beverage, but it actually has a pH of
+          about five, making it less acidic than beer, orange juice, and even
+          soda. When we talk about acid and coffee, we aren’t really referring
+          to the pH level of the beverage. 
+        en-fr: >-
+          Coffee is marketed as an acidic beverage, but it actually has a pH of
+          about five, making it less acidic than beer, orange juice, and even
+          soda. When we talk about acid and coffee, we aren’t really referring
+          to the pH level of the beverage. 
+        en-gb: >-
+          Coffee is marketed as an acidic beverage, but it actually has a pH of
+          about five, making it less acidic than beer, orange juice, and even
+          soda. When we talk about acid and coffee, we aren’t really referring
+          to the pH level of the beverage. 
+        en-nl: >-
+          Coffee is marketed as an acidic beverage, but it actually has a pH of
+          about five, making it less acidic than beer, orange juice, and even
+          soda. When we talk about acid and coffee, we aren’t really referring
+          to the pH level of the beverage. 
         en-us: >-
+          Coffee is marketed as an acidic beverage, but it actually has a pH of
+          about five, making it less acidic than beer, orange juice, and even
+          soda. When we talk about acid and coffee, we aren’t really referring
+          to the pH level of the beverage. 
+        es-us: >-
+          Coffee is marketed as an acidic beverage, but it actually has a pH of
+          about five, making it less acidic than beer, orange juice, and even
+          soda. When we talk about acid and coffee, we aren’t really referring
+          to the pH level of the beverage. 
+        fr-ca: >-
+          Coffee is marketed as an acidic beverage, but it actually has a pH of
+          about five, making it less acidic than beer, orange juice, and even
+          soda. When we talk about acid and coffee, we aren’t really referring
+          to the pH level of the beverage. 
+        fr-fr: >-
+          Coffee is marketed as an acidic beverage, but it actually has a pH of
+          about five, making it less acidic than beer, orange juice, and even
+          soda. When we talk about acid and coffee, we aren’t really referring
+          to the pH level of the beverage. 
+        ja-jp: >-
+          Coffee is marketed as an acidic beverage, but it actually has a pH of
+          about five, making it less acidic than beer, orange juice, and even
+          soda. When we talk about acid and coffee, we aren’t really referring
+          to the pH level of the beverage. 
+        nb-no: >-
+          Coffee is marketed as an acidic beverage, but it actually has a pH of
+          about five, making it less acidic than beer, orange juice, and even
+          soda. When we talk about acid and coffee, we aren’t really referring
+          to the pH level of the beverage. 
+        nl-nl: >-
+          Coffee is marketed as an acidic beverage, but it actually has a pH of
+          about five, making it less acidic than beer, orange juice, and even
+          soda. When we talk about acid and coffee, we aren’t really referring
+          to the pH level of the beverage. 
+        sv-se: >-
+          Coffee is marketed as an acidic beverage, but it actually has a pH of
+          about five, making it less acidic than beer, orange juice, and even
+          soda. When we talk about acid and coffee, we aren’t really referring
+          to the pH level of the beverage. 
+        ar-ksa: >-
+          Coffee is marketed as an acidic beverage, but it actually has a pH of
+          about five, making it less acidic than beer, orange juice, and even
+          soda. When we talk about acid and coffee, we aren’t really referring
+          to the pH level of the beverage. 
+        ar-uae: >-
           Coffee is marketed as an acidic beverage, but it actually has a pH of
           about five, making it less acidic than beer, orange juice, and even
           soda. When we talk about acid and coffee, we aren’t really referring
@@ -575,3 +675,20 @@ entry:
         entryIds: 8f126a53-19d3-46d9-a855-63be62ffca1d
   _locales:
     - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa

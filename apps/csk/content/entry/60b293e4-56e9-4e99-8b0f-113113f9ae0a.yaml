@@ -1,5 +1,5 @@
-created: '2025-04-25T12:21:43.749909+00:00'
-modified: '2025-06-25T14:13:22.984391+00:00'
+created: '2025-05-20T11:54:37.127161+00:00'
+modified: '2025-07-03T12:36:43.122058+00:00'
 pattern: false
 entry:
   _id: 60b293e4-56e9-4e99-8b0f-113113f9ae0a
@@ -629,82 +629,97 @@ entry:
           direction: ltr
     ogImage:
       type: asset
-      locales:
-        en-us:
-          - _id: 01a29831-dc9b-46da-8f20-fd4d6c0b0f11
-            type: image
-            fields:
-              id:
-                type: text
-                value: e65e6f2b-8650-4113-afa3-dc05d39f24d6
-              url:
-                value: >-
-                  https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/LgP--lZ5R_Cjc3etpnolDg-image.png
-                type: text
-              file:
-                type: file
-                value: b493f28c-ad22-443e-b354-5f6ddcaa1c31
-              size:
-                value: 236289
-                type: number
-              title:
-                type: text
-                value: image.png
-              width:
-                value: 686
-                type: number
-              height:
-                value: 338
-                type: number
-              mediaType:
-                value: image/png
-                type: text
-            _source: uniform-assets
+      value:
+        - _id: 01a29831-dc9b-46da-8f20-fd4d6c0b0f11
+          type: image
+          fields:
+            id:
+              type: text
+              value: e65e6f2b-8650-4113-afa3-dc05d39f24d6
+            url:
+              value: >-
+                https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/LgP--lZ5R_Cjc3etpnolDg-image.png
+              type: text
+            file:
+              type: file
+              value: b493f28c-ad22-443e-b354-5f6ddcaa1c31
+            size:
+              value: 236289
+              type: number
+            title:
+              type: text
+              value: image.png
+            width:
+              value: 686
+              type: number
+            height:
+              value: 338
+              type: number
+            mediaType:
+              value: image/png
+              type: text
+          _source: uniform-assets
     category:
       type: contentReference
       value: ${#jptr:/ref-60b293e4-56e9-4e99-8b0f-113113f9ae0a-category/entries/0}
     metaTitle:
       type: text
       locales:
+        da-dk: Best Home Espresso Machines on the Market
+        de-at: Best Home Espresso Machines on the Market
+        de-de: Best Home Espresso Machines on the Market
+        en-ca: Best Home Espresso Machines on the Market
+        en-de: Best Home Espresso Machines on the Market
+        en-fr: Best Home Espresso Machines on the Market
+        en-gb: Best Home Espresso Machines on the Market
+        en-nl: Best Home Espresso Machines on the Market
         en-us: Best Home Espresso Machines on the Market
+        es-us: Best Home Espresso Machines on the Market
+        fr-ca: Best Home Espresso Machines on the Market
+        fr-fr: Best Home Espresso Machines on the Market
+        ja-jp: Best Home Espresso Machines on the Market
+        nb-no: Best Home Espresso Machines on the Market
+        nl-nl: Best Home Espresso Machines on the Market
+        sv-se: Best Home Espresso Machines on the Market
+        ar-ksa: Best Home Espresso Machines on the Market
+        ar-uae: Best Home Espresso Machines on the Market
     thumbnail:
       type: asset
-      locales:
-        en-us:
-          - _id: e281f562-0eaa-463f-9f8c-33696b1eaf5b
-            type: image
-            fields:
-              id:
-                type: text
-                value: e65e6f2b-8650-4113-afa3-dc05d39f24d6
-              url:
-                value: >-
-                  https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/LgP--lZ5R_Cjc3etpnolDg-image.png
-                type: text
-              file:
-                type: file
-                value: b493f28c-ad22-443e-b354-5f6ddcaa1c31
-              size:
-                value: 236289
-                type: number
-              title:
-                type: text
-                value: image.png
-              width:
-                value: 686
-                type: number
-              height:
-                value: 338
-                type: number
-              mediaType:
-                value: image/png
-                type: text
-              focalPoint:
-                type: focalPoint
-                value:
-                  x: 0.21
-                  'y': 0.46
-            _source: uniform-assets
+      value:
+        - _id: e281f562-0eaa-463f-9f8c-33696b1eaf5b
+          type: image
+          fields:
+            id:
+              type: text
+              value: e65e6f2b-8650-4113-afa3-dc05d39f24d6
+            url:
+              value: >-
+                https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/LgP--lZ5R_Cjc3etpnolDg-image.png
+              type: text
+            file:
+              type: file
+              value: b493f28c-ad22-443e-b354-5f6ddcaa1c31
+            size:
+              value: 236289
+              type: number
+            title:
+              type: text
+              value: image.png
+            width:
+              value: 686
+              type: number
+            height:
+              value: 338
+              type: number
+            mediaType:
+              value: image/png
+              type: text
+            focalPoint:
+              type: focalPoint
+              value:
+                x: 0.21
+                'y': 0.46
+          _source: uniform-assets
     enrichments:
       type: $enr
       value:
@@ -717,7 +732,58 @@ entry:
     metaDescription:
       type: text
       locales:
+        da-dk: >-
+          So, it's time to invest in an espresso machine. We have given it some
+          thought and have come up with the BEST MACHINES TO BUY
+        de-at: >-
+          So, it's time to invest in an espresso machine. We have given it some
+          thought and have come up with the BEST MACHINES TO BUY
+        de-de: >-
+          So, it's time to invest in an espresso machine. We have given it some
+          thought and have come up with the BEST MACHINES TO BUY
+        en-ca: >-
+          So, it's time to invest in an espresso machine. We have given it some
+          thought and have come up with the BEST MACHINES TO BUY
+        en-de: >-
+          So, it's time to invest in an espresso machine. We have given it some
+          thought and have come up with the BEST MACHINES TO BUY
+        en-fr: >-
+          So, it's time to invest in an espresso machine. We have given it some
+          thought and have come up with the BEST MACHINES TO BUY
+        en-gb: >-
+          So, it's time to invest in an espresso machine. We have given it some
+          thought and have come up with the BEST MACHINES TO BUY
+        en-nl: >-
+          So, it's time to invest in an espresso machine. We have given it some
+          thought and have come up with the BEST MACHINES TO BUY
         en-us: >-
+          So, it's time to invest in an espresso machine. We have given it some
+          thought and have come up with the BEST MACHINES TO BUY
+        es-us: >-
+          So, it's time to invest in an espresso machine. We have given it some
+          thought and have come up with the BEST MACHINES TO BUY
+        fr-ca: >-
+          So, it's time to invest in an espresso machine. We have given it some
+          thought and have come up with the BEST MACHINES TO BUY
+        fr-fr: >-
+          So, it's time to invest in an espresso machine. We have given it some
+          thought and have come up with the BEST MACHINES TO BUY
+        ja-jp: >-
+          So, it's time to invest in an espresso machine. We have given it some
+          thought and have come up with the BEST MACHINES TO BUY
+        nb-no: >-
+          So, it's time to invest in an espresso machine. We have given it some
+          thought and have come up with the BEST MACHINES TO BUY
+        nl-nl: >-
+          So, it's time to invest in an espresso machine. We have given it some
+          thought and have come up with the BEST MACHINES TO BUY
+        sv-se: >-
+          So, it's time to invest in an espresso machine. We have given it some
+          thought and have come up with the BEST MACHINES TO BUY
+        ar-ksa: >-
+          So, it's time to invest in an espresso machine. We have given it some
+          thought and have come up with the BEST MACHINES TO BUY
+        ar-uae: >-
           So, it's time to invest in an espresso machine. We have given it some
           thought and have come up with the BEST MACHINES TO BUY
     shortDescription:
@@ -738,3 +804,20 @@ entry:
         entryIds: 57ef5f21-f90f-401d-a6b2-7a1e91bbae92
   _locales:
     - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa

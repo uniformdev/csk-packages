@@ -4,53 +4,11 @@ composition:
   _slug: profile
   type: page
   _overrides:
-    1d72bf11-3812-45c3-a4fd-927cfdbc00f1:
-      parameters:
-        $pzCrit:
-          type: $pzCrit
-          value:
-            crit:
-              - l: segment
-                r: occasional
-                t: q
-                op: '='
-            name: Occasional
-        fluidContent:
-          type: checkbox
-          value: true
     4b531db1-0939-41fd-9991-aa08d210bbb6:
       parameters:
         displayName:
           type: text
           value: Profile
-    5c23965e-e196-4403-861a-183024970d07:
-      parameters:
-        $pzCrit:
-          type: $pzCrit
-          value:
-            crit:
-              - l: segment
-                r: aficionado
-                t: q
-                op: '='
-            name: Aficionado
-        fluidContent:
-          type: checkbox
-          value: true
-    d47f2d1c-c006-4606-8901-26a23f74150b:
-      parameters:
-        $pzCrit:
-          type: $pzCrit
-          value:
-            crit:
-              - l: segment
-                r: newb
-                t: q
-                op: '='
-            name: Newb
-        fluidContent:
-          type: checkbox
-          value: true
     fc327a1a-ef47-4793-b03b-adbb77a3ed27:
       parameters:
         pageTitle:
@@ -109,51 +67,6 @@ composition:
             Manage your personal profile at Java Drip. Update your contact
             information, view your order history, and discover personalized
             coffee recommendations to enhance your coffee experience.
-    1d72bf11-3812-45c3-a4fd-927cfdbc00f1|4e7f1617-1524-4771-bad7-e871c177ef53:
-      parameters:
-        text:
-          type: text
-          value: Occasional has been activated!
-    1d72bf11-3812-45c3-a4fd-927cfdbc00f1|84b8ca9c-90a0-4c34-bd96-a2391bf97f62:
-      parameters:
-        text:
-          type: text
-          value: Occasional mode on — we’ll keep things light and useful
-    4873f22b-b646-4b66-9666-3ddffdc48447|dea621e2-bc14-423e-8e1b-58d41ae2b2a7:
-      slots:
-        $slotSectionItems:
-          - _id: 79e06d05-114d-4b60-a86a-7f9f6781ae39
-            type: $personalization
-            slots:
-              pz:
-                - _id: 5c23965e-e196-4403-861a-183024970d07
-                  type: grid
-                  _pattern: c2122c4c-1d68-44db-b880-19612776c3df
-                  _overridability:
-                    parameters:
-                      displayName: 'yes'
-                      fluidContent: 'yes'
-                    hideLockedParameters: true
-                - _id: 1d72bf11-3812-45c3-a4fd-927cfdbc00f1
-                  type: grid
-                  _pattern: c2122c4c-1d68-44db-b880-19612776c3df
-                  _overridability:
-                    parameters:
-                      displayName: 'yes'
-                      fluidContent: 'yes'
-                    hideLockedParameters: true
-                - _id: d47f2d1c-c006-4606-8901-26a23f74150b
-                  type: grid
-                  _pattern: c2122c4c-1d68-44db-b880-19612776c3df
-                  _overridability:
-                    parameters:
-                      displayName: 'yes'
-                      fluidContent: 'yes'
-                    hideLockedParameters: true
-            parameters:
-              trackingEventName:
-                type: text
-                value: Selected Segment
     4b531db1-0939-41fd-9991-aa08d210bbb6|2058ad6d-25b3-4eea-a276-cb996b4188cc:
       slots:
         $slotSectionItems:
@@ -173,7 +86,24 @@ composition:
                     text:
                       type: text
                       locales:
+                        da-dk: 'Select audience to associate with current visitor:'
+                        de-at: 'Select audience to associate with current visitor:'
+                        de-de: 'Select audience to associate with current visitor:'
+                        en-ca: 'Select audience to associate with current visitor:'
+                        en-de: 'Select audience to associate with current visitor:'
+                        en-fr: 'Select audience to associate with current visitor:'
+                        en-gb: 'Select audience to associate with current visitor:'
+                        en-nl: 'Select audience to associate with current visitor:'
                         en-us: 'Select audience to associate with current visitor:'
+                        es-us: 'Select audience to associate with current visitor:'
+                        fr-ca: 'Select audience to associate with current visitor:'
+                        fr-fr: 'Select audience to associate with current visitor:'
+                        ja-jp: 'Select audience to associate with current visitor:'
+                        nb-no: 'Select audience to associate with current visitor:'
+                        nl-nl: 'Select audience to associate with current visitor:'
+                        sv-se: 'Select audience to associate with current visitor:'
+                        ar-ksa: 'Select audience to associate with current visitor:'
+                        ar-uae: 'Select audience to associate with current visitor:'
                     weight:
                       type: dex-segmented-control-parameter
                       value: normal
@@ -213,7 +143,24 @@ composition:
               displayName:
                 type: text
                 locales:
+                  da-dk: Personalization Selector
+                  de-at: Personalization Selector
+                  de-de: Personalization Selector
+                  en-ca: Personalization Selector
+                  en-de: Personalization Selector
+                  en-fr: Personalization Selector
+                  en-gb: Personalization Selector
+                  en-nl: Personalization Selector
                   en-us: Personalization Selector
+                  es-us: Personalization Selector
+                  fr-ca: Personalization Selector
+                  fr-fr: Personalization Selector
+                  ja-jp: Personalization Selector
+                  nb-no: Personalization Selector
+                  nl-nl: Personalization Selector
+                  sv-se: Personalization Selector
+                  ar-ksa: Personalization Selector
+                  ar-uae: Personalization Selector
               fluidContent:
                 type: checkbox
                 value: true
@@ -225,28 +172,6 @@ composition:
         text:
           type: text
           value: 🛩️ Audience Simulator
-    5c23965e-e196-4403-861a-183024970d07|4e7f1617-1524-4771-bad7-e871c177ef53:
-      parameters:
-        text:
-          type: text
-          value: Aficionado has been activated!
-    5c23965e-e196-4403-861a-183024970d07|84b8ca9c-90a0-4c34-bd96-a2391bf97f62:
-      parameters:
-        text:
-          type: text
-          value: >-
-            Welcome back, aficionado — your experience is now fully
-            personalized.
-    d47f2d1c-c006-4606-8901-26a23f74150b|4e7f1617-1524-4771-bad7-e871c177ef53:
-      parameters:
-        text:
-          type: text
-          value: Newb has been activated!
-    d47f2d1c-c006-4606-8901-26a23f74150b|84b8ca9c-90a0-4c34-bd96-a2391bf97f62:
-      parameters:
-        text:
-          type: text
-          value: Welcome, newcomer — we’ll guide you every step of the way
     fc327a1a-ef47-4793-b03b-adbb77a3ed27|dc2e95be-21b5-4476-a309-f8a34922f528:
       slots:
         $slotSectionItems:
@@ -257,9 +182,396 @@ composition:
               parameters:
                 displayName: 'yes'
               hideLockedParameters: true
+    fc327a1a-ef47-4793-b03b-adbb77a3ed27|38f88562-6b70-411b-a550-ada8514eef22|f82aa025-12eb-4c87-b18b-ccc33b20fe02:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            de-at:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            de-de:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-ca:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-de:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-fr:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-gb:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-nl:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            es-us:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            fr-ca:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            fr-fr:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ja-jp:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            nb-no:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            nl-nl:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            sv-se:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ar-ksa:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ar-uae:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+    fc327a1a-ef47-4793-b03b-adbb77a3ed27|7607f998-992d-4b35-9fa5-4e560f8c179a|36ef82db-8556-4006-be7a-957216a76758:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: Recommended for you
+            de-at: Recommended for you
+            de-de: Recommended for you
+            en-ca: Recommended for you
+            en-de: Recommended for you
+            en-fr: Recommended for you
+            en-gb: Recommended for you
+            en-nl: Recommended for you
+            es-us: Recommended for you
+            fr-ca: Recommended for you
+            fr-fr: Recommended for you
+            ja-jp: Recommended for you
+            nb-no: Recommended for you
+            nl-nl: Recommended for you
+            sv-se: Recommended for you
+            ar-ksa: Recommended for you
+            ar-uae: Recommended for you
+    fc327a1a-ef47-4793-b03b-adbb77a3ed27|bbf196c6-4821-414c-9b14-b08fb1c7fede|44623ac6-5327-44e3-ab3e-b7455ff829e8:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-demo
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-demo
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-de:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-fr:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-demo
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-demo
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-demo
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-demo
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-demo
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-demo
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-demo
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-demo
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-demo
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-demo
+              type: url
+    fc327a1a-ef47-4793-b03b-adbb77a3ed27|bbf196c6-4821-414c-9b14-b08fb1c7fede|44d64138-618e-4c6a-b4cc-6ea9b9a22cba:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-de:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-fr:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+    fc327a1a-ef47-4793-b03b-adbb77a3ed27|bbf196c6-4821-414c-9b14-b08fb1c7fede|6db01010-cff2-458e-85d6-358dc75ca48c:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-sb
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-sb
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-de:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-fr:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-sb
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-sb
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-sb
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-sb
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-sb
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-sb
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-sb
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-sb
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-sb
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-sb
+              type: url
+    fc327a1a-ef47-4793-b03b-adbb77a3ed27|bbf196c6-4821-414c-9b14-b08fb1c7fede|ea891105-3b48-41b4-8fa0-6c2ecca00a75:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-docs
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-docs
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-de:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-fr:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-docs
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-docs
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-docs
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-docs
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-docs
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-docs
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-docs
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-docs
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-docs
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-docs
+              type: url
   _locales:
     - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
-created: '2025-06-06T09:07:07.408468+00:00'
-modified: '2025-06-06T09:07:07.408468+00:00'
+created: '2025-03-18T13:02:33.273105+00:00'
+modified: '2025-07-03T13:13:48.320387+00:00'
 pattern: false

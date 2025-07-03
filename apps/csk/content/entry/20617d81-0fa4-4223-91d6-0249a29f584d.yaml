@@ -1,5 +1,5 @@
-created: '2025-01-29T11:10:21.317441+00:00'
-modified: '2025-06-25T14:25:54.186747+00:00'
+created: '2025-03-18T13:02:43.143539+00:00'
+modified: '2025-07-03T12:56:54.842911+00:00'
 pattern: false
 entry:
   _id: 20617d81-0fa4-4223-91d6-0249a29f584d
@@ -1687,77 +1687,92 @@ entry:
           direction: ltr
     ogImage:
       type: asset
-      locales:
-        en-us:
-          - _id: 52bc55ad-3b28-490f-b8de-e8039a1bc169
-            type: image
-            fields:
-              id:
-                type: text
-                value: 1021bed7-3253-4963-a96a-73c485ca5121
-              url:
-                value: >-
-                  https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/GN3afw41RnqvETFRD1uTxg-grinding-beans-the-key-to-perfect-coffee.jpg
-                type: text
-              file:
-                type: file
-                value: 00802dce-12d4-4917-887b-521d32766e19
-              size:
-                value: 7363523
-                type: number
-              title:
-                type: text
-                value: grinding-beans-the-key-to-perfect-coffee.jpg
-              width:
-                value: 7360
-                type: number
-              height:
-                value: 4912
-                type: number
-              mediaType:
-                value: image/jpeg
-                type: text
-            _source: uniform-assets
+      value:
+        - _id: 52bc55ad-3b28-490f-b8de-e8039a1bc169
+          type: image
+          fields:
+            id:
+              type: text
+              value: 1021bed7-3253-4963-a96a-73c485ca5121
+            url:
+              value: >-
+                https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/GN3afw41RnqvETFRD1uTxg-grinding-beans-the-key-to-perfect-coffee.jpg
+              type: text
+            file:
+              type: file
+              value: 00802dce-12d4-4917-887b-521d32766e19
+            size:
+              value: 7363523
+              type: number
+            title:
+              type: text
+              value: grinding-beans-the-key-to-perfect-coffee.jpg
+            width:
+              value: 7360
+              type: number
+            height:
+              value: 4912
+              type: number
+            mediaType:
+              value: image/jpeg
+              type: text
+          _source: uniform-assets
     category:
       type: contentReference
       value: ${#jptr:/ref-20617d81-0fa4-4223-91d6-0249a29f584d-category/entries/0}
     metaTitle:
       type: text
       locales:
+        da-dk: 'Grinding Beans: The Key to Perfect Coffee'
+        de-at: 'Grinding Beans: The Key to Perfect Coffee'
+        de-de: 'Grinding Beans: The Key to Perfect Coffee'
+        en-ca: 'Grinding Beans: The Key to Perfect Coffee'
+        en-de: 'Grinding Beans: The Key to Perfect Coffee'
+        en-fr: 'Grinding Beans: The Key to Perfect Coffee'
+        en-gb: 'Grinding Beans: The Key to Perfect Coffee'
+        en-nl: 'Grinding Beans: The Key to Perfect Coffee'
         en-us: 'Grinding Beans: The Key to Perfect Coffee'
+        es-us: 'Grinding Beans: The Key to Perfect Coffee'
+        fr-ca: 'Grinding Beans: The Key to Perfect Coffee'
+        fr-fr: 'Grinding Beans: The Key to Perfect Coffee'
+        ja-jp: 'Grinding Beans: The Key to Perfect Coffee'
+        nb-no: 'Grinding Beans: The Key to Perfect Coffee'
+        nl-nl: 'Grinding Beans: The Key to Perfect Coffee'
+        sv-se: 'Grinding Beans: The Key to Perfect Coffee'
+        ar-ksa: 'Grinding Beans: The Key to Perfect Coffee'
+        ar-uae: 'Grinding Beans: The Key to Perfect Coffee'
     thumbnail:
       type: asset
-      locales:
-        en-us:
-          - _id: 504bb5d8-eb81-45f7-a918-158f773482f7
-            type: image
-            fields:
-              id:
-                type: text
-                value: 1021bed7-3253-4963-a96a-73c485ca5121
-              url:
-                value: >-
-                  https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/GN3afw41RnqvETFRD1uTxg-grinding-beans-the-key-to-perfect-coffee.jpg
-                type: text
-              file:
-                type: file
-                value: 7bf0484e-439f-49d3-9c99-7c9bfe6d58a8
-              size:
-                value: 7363523
-                type: number
-              title:
-                type: text
-                value: grinding-beans-the-key-to-perfect-coffee.jpg
-              width:
-                value: 7360
-                type: number
-              height:
-                value: 4912
-                type: number
-              mediaType:
-                value: image/jpeg
-                type: text
-            _source: uniform-assets
+      value:
+        - _id: 504bb5d8-eb81-45f7-a918-158f773482f7
+          type: image
+          fields:
+            id:
+              type: text
+              value: 1021bed7-3253-4963-a96a-73c485ca5121
+            url:
+              value: >-
+                https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/GN3afw41RnqvETFRD1uTxg-grinding-beans-the-key-to-perfect-coffee.jpg
+              type: text
+            file:
+              type: file
+              value: 7bf0484e-439f-49d3-9c99-7c9bfe6d58a8
+            size:
+              value: 7363523
+              type: number
+            title:
+              type: text
+              value: grinding-beans-the-key-to-perfect-coffee.jpg
+            width:
+              value: 7360
+              type: number
+            height:
+              value: 4912
+              type: number
+            mediaType:
+              value: image/jpeg
+              type: text
+          _source: uniform-assets
     enrichments:
       type: $enr
       value:
@@ -1770,7 +1785,58 @@ entry:
     metaDescription:
       type: text
       locales:
+        da-dk: >-
+          There are many ways to grind a coffee bean - is one way better than
+          another? Experts weigh in
+        de-at: >-
+          There are many ways to grind a coffee bean - is one way better than
+          another? Experts weigh in
+        de-de: >-
+          There are many ways to grind a coffee bean - is one way better than
+          another? Experts weigh in
+        en-ca: >-
+          There are many ways to grind a coffee bean - is one way better than
+          another? Experts weigh in
+        en-de: >-
+          There are many ways to grind a coffee bean - is one way better than
+          another? Experts weigh in
+        en-fr: >-
+          There are many ways to grind a coffee bean - is one way better than
+          another? Experts weigh in
+        en-gb: >-
+          There are many ways to grind a coffee bean - is one way better than
+          another? Experts weigh in
+        en-nl: >-
+          There are many ways to grind a coffee bean - is one way better than
+          another? Experts weigh in
         en-us: >-
+          There are many ways to grind a coffee bean - is one way better than
+          another? Experts weigh in
+        es-us: >-
+          There are many ways to grind a coffee bean - is one way better than
+          another? Experts weigh in
+        fr-ca: >-
+          There are many ways to grind a coffee bean - is one way better than
+          another? Experts weigh in
+        fr-fr: >-
+          There are many ways to grind a coffee bean - is one way better than
+          another? Experts weigh in
+        ja-jp: >-
+          There are many ways to grind a coffee bean - is one way better than
+          another? Experts weigh in
+        nb-no: >-
+          There are many ways to grind a coffee bean - is one way better than
+          another? Experts weigh in
+        nl-nl: >-
+          There are many ways to grind a coffee bean - is one way better than
+          another? Experts weigh in
+        sv-se: >-
+          There are many ways to grind a coffee bean - is one way better than
+          another? Experts weigh in
+        ar-ksa: >-
+          There are many ways to grind a coffee bean - is one way better than
+          another? Experts weigh in
+        ar-uae: >-
           There are many ways to grind a coffee bean - is one way better than
           another? Experts weigh in
     shortDescription:
@@ -1791,3 +1857,20 @@ entry:
         entryIds: fc7a50e2-9d37-47e8-89f2-46b1b453751a
   _locales:
     - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa

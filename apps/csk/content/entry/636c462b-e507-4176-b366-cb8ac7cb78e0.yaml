@@ -1,5 +1,5 @@
-created: '2025-01-29T11:10:24.236507+00:00'
-modified: '2025-06-25T14:20:06.811615+00:00'
+created: '2025-03-18T13:02:50.314299+00:00'
+modified: '2025-07-03T12:36:12.763118+00:00'
 pattern: false
 entry:
   _id: 636c462b-e507-4176-b366-cb8ac7cb78e0
@@ -1273,77 +1273,92 @@ entry:
           direction: ltr
     ogImage:
       type: asset
-      locales:
-        en-us:
-          - _id: 075e189c-549a-49bd-b6d7-de038b408fdc
-            type: image
-            fields:
-              id:
-                type: text
-                value: 5bbc5b07-ed0c-4b99-b210-65d7010f94f5
-              url:
-                value: >-
-                  https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/LAmCDsJLQDSgBp7KjbikoA-picking-the-right-bean-a-guide-to-coffee-selection.jpg
-                type: text
-              file:
-                type: file
-                value: 810fb4b0-3b11-4ac4-a29c-75095408119a
-              size:
-                value: 9269401
-                type: number
-              title:
-                type: text
-                value: picking-the-right-bean-a-guide-to-coffee-selection.jpg
-              width:
-                value: 9453
-                type: number
-              height:
-                value: 7090
-                type: number
-              mediaType:
-                value: image/jpeg
-                type: text
-            _source: uniform-assets
+      value:
+        - _id: 075e189c-549a-49bd-b6d7-de038b408fdc
+          type: image
+          fields:
+            id:
+              type: text
+              value: 5bbc5b07-ed0c-4b99-b210-65d7010f94f5
+            url:
+              value: >-
+                https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/LAmCDsJLQDSgBp7KjbikoA-picking-the-right-bean-a-guide-to-coffee-selection.jpg
+              type: text
+            file:
+              type: file
+              value: 810fb4b0-3b11-4ac4-a29c-75095408119a
+            size:
+              value: 9269401
+              type: number
+            title:
+              type: text
+              value: picking-the-right-bean-a-guide-to-coffee-selection.jpg
+            width:
+              value: 9453
+              type: number
+            height:
+              value: 7090
+              type: number
+            mediaType:
+              value: image/jpeg
+              type: text
+          _source: uniform-assets
     category:
       type: contentReference
       value: ${#jptr:/ref-636c462b-e507-4176-b366-cb8ac7cb78e0-category/entries/0}
     metaTitle:
       type: text
       locales:
+        da-dk: 'Picking the Right Bean: A Guide to Coffee Selection'
+        de-at: 'Picking the Right Bean: A Guide to Coffee Selection'
+        de-de: 'Picking the Right Bean: A Guide to Coffee Selection'
+        en-ca: 'Picking the Right Bean: A Guide to Coffee Selection'
+        en-de: 'Picking the Right Bean: A Guide to Coffee Selection'
+        en-fr: 'Picking the Right Bean: A Guide to Coffee Selection'
+        en-gb: 'Picking the Right Bean: A Guide to Coffee Selection'
+        en-nl: 'Picking the Right Bean: A Guide to Coffee Selection'
         en-us: 'Picking the Right Bean: A Guide to Coffee Selection'
+        es-us: 'Picking the Right Bean: A Guide to Coffee Selection'
+        fr-ca: 'Picking the Right Bean: A Guide to Coffee Selection'
+        fr-fr: 'Picking the Right Bean: A Guide to Coffee Selection'
+        ja-jp: 'Picking the Right Bean: A Guide to Coffee Selection'
+        nb-no: 'Picking the Right Bean: A Guide to Coffee Selection'
+        nl-nl: 'Picking the Right Bean: A Guide to Coffee Selection'
+        sv-se: 'Picking the Right Bean: A Guide to Coffee Selection'
+        ar-ksa: 'Picking the Right Bean: A Guide to Coffee Selection'
+        ar-uae: 'Picking the Right Bean: A Guide to Coffee Selection'
     thumbnail:
       type: asset
-      locales:
-        en-us:
-          - _id: db8fff66-ec0d-4c7d-9453-1c1428809ca8
-            type: image
-            fields:
-              id:
-                type: text
-                value: 5bbc5b07-ed0c-4b99-b210-65d7010f94f5
-              url:
-                value: >-
-                  https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/LAmCDsJLQDSgBp7KjbikoA-picking-the-right-bean-a-guide-to-coffee-selection.jpg
-                type: text
-              file:
-                type: file
-                value: 82a322c4-31fd-458a-96b6-665d6744acb6
-              size:
-                value: 9269401
-                type: number
-              title:
-                type: text
-                value: picking-the-right-bean-a-guide-to-coffee-selection.jpg
-              width:
-                value: 9453
-                type: number
-              height:
-                value: 7090
-                type: number
-              mediaType:
-                value: image/jpeg
-                type: text
-            _source: uniform-assets
+      value:
+        - _id: db8fff66-ec0d-4c7d-9453-1c1428809ca8
+          type: image
+          fields:
+            id:
+              type: text
+              value: 5bbc5b07-ed0c-4b99-b210-65d7010f94f5
+            url:
+              value: >-
+                https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/LAmCDsJLQDSgBp7KjbikoA-picking-the-right-bean-a-guide-to-coffee-selection.jpg
+              type: text
+            file:
+              type: file
+              value: 82a322c4-31fd-458a-96b6-665d6744acb6
+            size:
+              value: 9269401
+              type: number
+            title:
+              type: text
+              value: picking-the-right-bean-a-guide-to-coffee-selection.jpg
+            width:
+              value: 9453
+              type: number
+            height:
+              value: 7090
+              type: number
+            mediaType:
+              value: image/jpeg
+              type: text
+          _source: uniform-assets
     enrichments:
       type: $enr
       value:
@@ -1356,7 +1371,58 @@ entry:
     metaDescription:
       type: text
       locales:
+        da-dk: >-
+          Is it just a cup of coffee or is there more than meets the eye? See
+          what kind of coffee is best for your taste buds.
+        de-at: >-
+          Is it just a cup of coffee or is there more than meets the eye? See
+          what kind of coffee is best for your taste buds.
+        de-de: >-
+          Is it just a cup of coffee or is there more than meets the eye? See
+          what kind of coffee is best for your taste buds.
+        en-ca: >-
+          Is it just a cup of coffee or is there more than meets the eye? See
+          what kind of coffee is best for your taste buds.
+        en-de: >-
+          Is it just a cup of coffee or is there more than meets the eye? See
+          what kind of coffee is best for your taste buds.
+        en-fr: >-
+          Is it just a cup of coffee or is there more than meets the eye? See
+          what kind of coffee is best for your taste buds.
+        en-gb: >-
+          Is it just a cup of coffee or is there more than meets the eye? See
+          what kind of coffee is best for your taste buds.
+        en-nl: >-
+          Is it just a cup of coffee or is there more than meets the eye? See
+          what kind of coffee is best for your taste buds.
         en-us: >-
+          Is it just a cup of coffee or is there more than meets the eye? See
+          what kind of coffee is best for your taste buds.
+        es-us: >-
+          Is it just a cup of coffee or is there more than meets the eye? See
+          what kind of coffee is best for your taste buds.
+        fr-ca: >-
+          Is it just a cup of coffee or is there more than meets the eye? See
+          what kind of coffee is best for your taste buds.
+        fr-fr: >-
+          Is it just a cup of coffee or is there more than meets the eye? See
+          what kind of coffee is best for your taste buds.
+        ja-jp: >-
+          Is it just a cup of coffee or is there more than meets the eye? See
+          what kind of coffee is best for your taste buds.
+        nb-no: >-
+          Is it just a cup of coffee or is there more than meets the eye? See
+          what kind of coffee is best for your taste buds.
+        nl-nl: >-
+          Is it just a cup of coffee or is there more than meets the eye? See
+          what kind of coffee is best for your taste buds.
+        sv-se: >-
+          Is it just a cup of coffee or is there more than meets the eye? See
+          what kind of coffee is best for your taste buds.
+        ar-ksa: >-
+          Is it just a cup of coffee or is there more than meets the eye? See
+          what kind of coffee is best for your taste buds.
+        ar-uae: >-
           Is it just a cup of coffee or is there more than meets the eye? See
           what kind of coffee is best for your taste buds.
     shortDescription:
@@ -1377,3 +1443,20 @@ entry:
         entryIds: fc7a50e2-9d37-47e8-89f2-46b1b453751a
   _locales:
     - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa

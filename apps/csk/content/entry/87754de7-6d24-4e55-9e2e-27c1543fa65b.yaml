@@ -1,5 +1,5 @@
-created: '2025-01-29T11:10:25.455076+00:00'
-modified: '2025-06-25T14:18:45.424148+00:00'
+created: '2025-03-18T13:02:52.135869+00:00'
+modified: '2025-07-03T12:30:18.924801+00:00'
 pattern: false
 entry:
   _id: 87754de7-6d24-4e55-9e2e-27c1543fa65b
@@ -1084,77 +1084,92 @@ entry:
           direction: ltr
     ogImage:
       type: asset
-      locales:
-        en-us:
-          - _id: fce93805-5d16-499d-a828-fce0c20497ca
-            type: image
-            fields:
-              id:
-                type: text
-                value: 4fdc25de-c62a-4e97-9162-9b199f622780
-              url:
-                value: >-
-                  https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/5WZ_SsMtR7O2aPB2lt4QcA-the-secret-to-a-great-french-press.jpg
-                type: text
-              file:
-                type: file
-                value: 1b05259d-9e3e-44e0-a12a-47892deb6533
-              size:
-                value: 1122173
-                type: number
-              title:
-                type: text
-                value: the-secret-to-a-great-french-press.jpg
-              width:
-                value: 3000
-                type: number
-              height:
-                value: 2000
-                type: number
-              mediaType:
-                value: image/jpeg
-                type: text
-            _source: uniform-assets
+      value:
+        - _id: fce93805-5d16-499d-a828-fce0c20497ca
+          type: image
+          fields:
+            id:
+              type: text
+              value: 4fdc25de-c62a-4e97-9162-9b199f622780
+            url:
+              value: >-
+                https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/5WZ_SsMtR7O2aPB2lt4QcA-the-secret-to-a-great-french-press.jpg
+              type: text
+            file:
+              type: file
+              value: 1b05259d-9e3e-44e0-a12a-47892deb6533
+            size:
+              value: 1122173
+              type: number
+            title:
+              type: text
+              value: the-secret-to-a-great-french-press.jpg
+            width:
+              value: 3000
+              type: number
+            height:
+              value: 2000
+              type: number
+            mediaType:
+              value: image/jpeg
+              type: text
+          _source: uniform-assets
     category:
       type: contentReference
       value: ${#jptr:/ref-87754de7-6d24-4e55-9e2e-27c1543fa65b-category/entries/0}
     metaTitle:
       type: text
       locales:
+        da-dk: The Secret to a Great French Press
+        de-at: The Secret to a Great French Press
+        de-de: The Secret to a Great French Press
+        en-ca: The Secret to a Great French Press
+        en-de: The Secret to a Great French Press
+        en-fr: The Secret to a Great French Press
+        en-gb: The Secret to a Great French Press
+        en-nl: The Secret to a Great French Press
         en-us: The Secret to a Great French Press
+        es-us: The Secret to a Great French Press
+        fr-ca: The Secret to a Great French Press
+        fr-fr: The Secret to a Great French Press
+        ja-jp: The Secret to a Great French Press
+        nb-no: The Secret to a Great French Press
+        nl-nl: The Secret to a Great French Press
+        sv-se: The Secret to a Great French Press
+        ar-ksa: The Secret to a Great French Press
+        ar-uae: The Secret to a Great French Press
     thumbnail:
       type: asset
-      locales:
-        en-us:
-          - _id: 10a00992-ba91-41fd-9e0b-edb1d9d5d772
-            type: image
-            fields:
-              id:
-                type: text
-                value: 4fdc25de-c62a-4e97-9162-9b199f622780
-              url:
-                value: >-
-                  https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/5WZ_SsMtR7O2aPB2lt4QcA-the-secret-to-a-great-french-press.jpg
-                type: text
-              file:
-                type: file
-                value: 8d3d5fbb-f65d-425c-adca-3dff46f40217
-              size:
-                value: 1122173
-                type: number
-              title:
-                type: text
-                value: the-secret-to-a-great-french-press.jpg
-              width:
-                value: 3000
-                type: number
-              height:
-                value: 2000
-                type: number
-              mediaType:
-                value: image/jpeg
-                type: text
-            _source: uniform-assets
+      value:
+        - _id: 10a00992-ba91-41fd-9e0b-edb1d9d5d772
+          type: image
+          fields:
+            id:
+              type: text
+              value: 4fdc25de-c62a-4e97-9162-9b199f622780
+            url:
+              value: >-
+                https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/5WZ_SsMtR7O2aPB2lt4QcA-the-secret-to-a-great-french-press.jpg
+              type: text
+            file:
+              type: file
+              value: 8d3d5fbb-f65d-425c-adca-3dff46f40217
+            size:
+              value: 1122173
+              type: number
+            title:
+              type: text
+              value: the-secret-to-a-great-french-press.jpg
+            width:
+              value: 3000
+              type: number
+            height:
+              value: 2000
+              type: number
+            mediaType:
+              value: image/jpeg
+              type: text
+          _source: uniform-assets
     enrichments:
       type: $enr
       value:
@@ -1167,7 +1182,58 @@ entry:
     metaDescription:
       type: text
       locales:
+        da-dk: >-
+          The French press is one of the simplest and most beloved brewing
+          methods, delivering a rich, full-bodied coffee with minimal effort.
+        de-at: >-
+          The French press is one of the simplest and most beloved brewing
+          methods, delivering a rich, full-bodied coffee with minimal effort.
+        de-de: >-
+          The French press is one of the simplest and most beloved brewing
+          methods, delivering a rich, full-bodied coffee with minimal effort.
+        en-ca: >-
+          The French press is one of the simplest and most beloved brewing
+          methods, delivering a rich, full-bodied coffee with minimal effort.
+        en-de: >-
+          The French press is one of the simplest and most beloved brewing
+          methods, delivering a rich, full-bodied coffee with minimal effort.
+        en-fr: >-
+          The French press is one of the simplest and most beloved brewing
+          methods, delivering a rich, full-bodied coffee with minimal effort.
+        en-gb: >-
+          The French press is one of the simplest and most beloved brewing
+          methods, delivering a rich, full-bodied coffee with minimal effort.
+        en-nl: >-
+          The French press is one of the simplest and most beloved brewing
+          methods, delivering a rich, full-bodied coffee with minimal effort.
         en-us: >-
+          The French press is one of the simplest and most beloved brewing
+          methods, delivering a rich, full-bodied coffee with minimal effort.
+        es-us: >-
+          The French press is one of the simplest and most beloved brewing
+          methods, delivering a rich, full-bodied coffee with minimal effort.
+        fr-ca: >-
+          The French press is one of the simplest and most beloved brewing
+          methods, delivering a rich, full-bodied coffee with minimal effort.
+        fr-fr: >-
+          The French press is one of the simplest and most beloved brewing
+          methods, delivering a rich, full-bodied coffee with minimal effort.
+        ja-jp: >-
+          The French press is one of the simplest and most beloved brewing
+          methods, delivering a rich, full-bodied coffee with minimal effort.
+        nb-no: >-
+          The French press is one of the simplest and most beloved brewing
+          methods, delivering a rich, full-bodied coffee with minimal effort.
+        nl-nl: >-
+          The French press is one of the simplest and most beloved brewing
+          methods, delivering a rich, full-bodied coffee with minimal effort.
+        sv-se: >-
+          The French press is one of the simplest and most beloved brewing
+          methods, delivering a rich, full-bodied coffee with minimal effort.
+        ar-ksa: >-
+          The French press is one of the simplest and most beloved brewing
+          methods, delivering a rich, full-bodied coffee with minimal effort.
+        ar-uae: >-
           The French press is one of the simplest and most beloved brewing
           methods, delivering a rich, full-bodied coffee with minimal effort.
     shortDescription:
@@ -1188,3 +1254,20 @@ entry:
         entryIds: 8f126a53-19d3-46d9-a855-63be62ffca1d
   _locales:
     - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa

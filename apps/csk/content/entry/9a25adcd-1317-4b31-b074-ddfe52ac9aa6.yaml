@@ -1,5 +1,5 @@
-created: '2025-04-25T12:21:52.703138+00:00'
-modified: '2025-06-25T14:17:17.197876+00:00'
+created: '2025-05-20T11:54:47.10679+00:00'
+modified: '2025-07-03T12:26:25.479125+00:00'
 pattern: false
 entry:
   _id: 9a25adcd-1317-4b31-b074-ddfe52ac9aa6
@@ -472,77 +472,92 @@ entry:
           direction: ltr
     ogImage:
       type: asset
-      locales:
-        en-us:
-          - _id: 94eca5d7-00ad-419e-86df-6e7f04519b39
-            type: image
-            fields:
-              id:
-                type: text
-                value: 17377237-096b-420f-bf63-1c702d063fad
-              url:
-                value: >-
-                  https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/Ucc4GHmuT6u4lcukjCM8Tw-image.png
-                type: text
-              file:
-                type: file
-                value: 8868c984-8722-4787-894b-40b58ddc2c0c
-              size:
-                value: 266960
-                type: number
-              title:
-                type: text
-                value: image.png
-              width:
-                value: 683
-                type: number
-              height:
-                value: 472
-                type: number
-              mediaType:
-                value: image/png
-                type: text
-            _source: uniform-assets
+      value:
+        - _id: 94eca5d7-00ad-419e-86df-6e7f04519b39
+          type: image
+          fields:
+            id:
+              type: text
+              value: 17377237-096b-420f-bf63-1c702d063fad
+            url:
+              value: >-
+                https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/Ucc4GHmuT6u4lcukjCM8Tw-image.png
+              type: text
+            file:
+              type: file
+              value: 8868c984-8722-4787-894b-40b58ddc2c0c
+            size:
+              value: 266960
+              type: number
+            title:
+              type: text
+              value: image.png
+            width:
+              value: 683
+              type: number
+            height:
+              value: 472
+              type: number
+            mediaType:
+              value: image/png
+              type: text
+          _source: uniform-assets
     category:
       type: contentReference
       value: ${#jptr:/ref-9a25adcd-1317-4b31-b074-ddfe52ac9aa6-category/entries/0}
     metaTitle:
       type: text
       locales:
+        da-dk: What Coffee Filter is Right for Your Brew?
+        de-at: What Coffee Filter is Right for Your Brew?
+        de-de: What Coffee Filter is Right for Your Brew?
+        en-ca: What Coffee Filter is Right for Your Brew?
+        en-de: What Coffee Filter is Right for Your Brew?
+        en-fr: What Coffee Filter is Right for Your Brew?
+        en-gb: What Coffee Filter is Right for Your Brew?
+        en-nl: What Coffee Filter is Right for Your Brew?
         en-us: What Coffee Filter is Right for Your Brew?
+        es-us: What Coffee Filter is Right for Your Brew?
+        fr-ca: What Coffee Filter is Right for Your Brew?
+        fr-fr: What Coffee Filter is Right for Your Brew?
+        ja-jp: What Coffee Filter is Right for Your Brew?
+        nb-no: What Coffee Filter is Right for Your Brew?
+        nl-nl: What Coffee Filter is Right for Your Brew?
+        sv-se: What Coffee Filter is Right for Your Brew?
+        ar-ksa: What Coffee Filter is Right for Your Brew?
+        ar-uae: What Coffee Filter is Right for Your Brew?
     thumbnail:
       type: asset
-      locales:
-        en-us:
-          - _id: 2d69b357-767c-4be9-a3df-41e715edb753
-            type: image
-            fields:
-              id:
-                type: text
-                value: 17377237-096b-420f-bf63-1c702d063fad
-              url:
-                value: >-
-                  https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/Ucc4GHmuT6u4lcukjCM8Tw-image.png
-                type: text
-              file:
-                type: file
-                value: 8868c984-8722-4787-894b-40b58ddc2c0c
-              size:
-                value: 266960
-                type: number
-              title:
-                type: text
-                value: image.png
-              width:
-                value: 683
-                type: number
-              height:
-                value: 472
-                type: number
-              mediaType:
-                value: image/png
-                type: text
-            _source: uniform-assets
+      value:
+        - _id: 2d69b357-767c-4be9-a3df-41e715edb753
+          type: image
+          fields:
+            id:
+              type: text
+              value: 17377237-096b-420f-bf63-1c702d063fad
+            url:
+              value: >-
+                https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/Ucc4GHmuT6u4lcukjCM8Tw-image.png
+              type: text
+            file:
+              type: file
+              value: 8868c984-8722-4787-894b-40b58ddc2c0c
+            size:
+              value: 266960
+              type: number
+            title:
+              type: text
+              value: image.png
+            width:
+              value: 683
+              type: number
+            height:
+              value: 472
+              type: number
+            mediaType:
+              value: image/png
+              type: text
+          _source: uniform-assets
     enrichments:
       type: $enr
       value:
@@ -555,7 +570,75 @@ entry:
     metaDescription:
       type: text
       locales:
+        da-dk: >-
+          Even the TYPE OF FILTER matters when it comes to getting the best out
+          of your brew. So check out which filter style works best for your brew
+          below!
+        de-at: >-
+          Even the TYPE OF FILTER matters when it comes to getting the best out
+          of your brew. So check out which filter style works best for your brew
+          below!
+        de-de: >-
+          Even the TYPE OF FILTER matters when it comes to getting the best out
+          of your brew. So check out which filter style works best for your brew
+          below!
+        en-ca: >-
+          Even the TYPE OF FILTER matters when it comes to getting the best out
+          of your brew. So check out which filter style works best for your brew
+          below!
+        en-de: >-
+          Even the TYPE OF FILTER matters when it comes to getting the best out
+          of your brew. So check out which filter style works best for your brew
+          below!
+        en-fr: >-
+          Even the TYPE OF FILTER matters when it comes to getting the best out
+          of your brew. So check out which filter style works best for your brew
+          below!
+        en-gb: >-
+          Even the TYPE OF FILTER matters when it comes to getting the best out
+          of your brew. So check out which filter style works best for your brew
+          below!
+        en-nl: >-
+          Even the TYPE OF FILTER matters when it comes to getting the best out
+          of your brew. So check out which filter style works best for your brew
+          below!
         en-us: >-
+          Even the TYPE OF FILTER matters when it comes to getting the best out
+          of your brew. So check out which filter style works best for your brew
+          below!
+        es-us: >-
+          Even the TYPE OF FILTER matters when it comes to getting the best out
+          of your brew. So check out which filter style works best for your brew
+          below!
+        fr-ca: >-
+          Even the TYPE OF FILTER matters when it comes to getting the best out
+          of your brew. So check out which filter style works best for your brew
+          below!
+        fr-fr: >-
+          Even the TYPE OF FILTER matters when it comes to getting the best out
+          of your brew. So check out which filter style works best for your brew
+          below!
+        ja-jp: >-
+          Even the TYPE OF FILTER matters when it comes to getting the best out
+          of your brew. So check out which filter style works best for your brew
+          below!
+        nb-no: >-
+          Even the TYPE OF FILTER matters when it comes to getting the best out
+          of your brew. So check out which filter style works best for your brew
+          below!
+        nl-nl: >-
+          Even the TYPE OF FILTER matters when it comes to getting the best out
+          of your brew. So check out which filter style works best for your brew
+          below!
+        sv-se: >-
+          Even the TYPE OF FILTER matters when it comes to getting the best out
+          of your brew. So check out which filter style works best for your brew
+          below!
+        ar-ksa: >-
+          Even the TYPE OF FILTER matters when it comes to getting the best out
+          of your brew. So check out which filter style works best for your brew
+          below!
+        ar-uae: >-
           Even the TYPE OF FILTER matters when it comes to getting the best out
           of your brew. So check out which filter style works best for your brew
           below!
@@ -578,3 +661,20 @@ entry:
         entryIds: 57ef5f21-f90f-401d-a6b2-7a1e91bbae92
   _locales:
     - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa

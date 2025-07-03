@@ -1,5 +1,5 @@
-created: '2025-04-25T12:22:02.741867+00:00'
-modified: '2025-06-25T14:14:38.698089+00:00'
+created: '2025-05-20T11:54:57.109814+00:00'
+modified: '2025-07-03T12:11:31.11796+00:00'
 pattern: false
 entry:
   _id: f6663a55-c9e0-46e8-8e06-5abcf3f33d7d
@@ -182,77 +182,92 @@ entry:
           direction: null
     ogImage:
       type: asset
-      locales:
-        en-us:
-          - _id: 1542a436-6ef3-42da-ba0b-dc0c69e65dba
-            type: image
-            fields:
-              id:
-                type: text
-                value: 343e6e3f-f884-4d64-b0b1-002adacbea91
-              url:
-                value: >-
-                  https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/rrF3KAvWTimcW-VpQK4KFw-Summer-2025-Fields-of-Beans.png
-                type: text
-              file:
-                type: file
-                value: 76703096-5e35-429f-a2ea-e7879ae274cb
-              size:
-                value: 2676410
-                type: number
-              title:
-                type: text
-                value: Summer-2025-Fields-of-Beans.png
-              width:
-                value: 1536
-                type: number
-              height:
-                value: 1024
-                type: number
-              mediaType:
-                value: image/png
-                type: text
-            _source: uniform-assets
+      value:
+        - _id: 1542a436-6ef3-42da-ba0b-dc0c69e65dba
+          type: image
+          fields:
+            id:
+              type: text
+              value: 343e6e3f-f884-4d64-b0b1-002adacbea91
+            url:
+              value: >-
+                https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/rrF3KAvWTimcW-VpQK4KFw-Summer-2025-Fields-of-Beans.png
+              type: text
+            file:
+              type: file
+              value: 76703096-5e35-429f-a2ea-e7879ae274cb
+            size:
+              value: 2676410
+              type: number
+            title:
+              type: text
+              value: Summer-2025-Fields-of-Beans.png
+            width:
+              value: 1536
+              type: number
+            height:
+              value: 1024
+              type: number
+            mediaType:
+              value: image/png
+              type: text
+          _source: uniform-assets
     category:
       type: contentReference
       value: ${#jptr:/ref-f6663a55-c9e0-46e8-8e06-5abcf3f33d7d-category/entries/0}
     metaTitle:
       type: text
       locales:
+        da-dk: Best Summer Coffee Beans and Brewing Tips
+        de-at: Best Summer Coffee Beans and Brewing Tips
+        de-de: Best Summer Coffee Beans and Brewing Tips
+        en-ca: Best Summer Coffee Beans and Brewing Tips
+        en-de: Best Summer Coffee Beans and Brewing Tips
+        en-fr: Best Summer Coffee Beans and Brewing Tips
+        en-gb: Best Summer Coffee Beans and Brewing Tips
+        en-nl: Best Summer Coffee Beans and Brewing Tips
         en-us: Best Summer Coffee Beans and Brewing Tips
+        es-us: Best Summer Coffee Beans and Brewing Tips
+        fr-ca: Best Summer Coffee Beans and Brewing Tips
+        fr-fr: Best Summer Coffee Beans and Brewing Tips
+        ja-jp: Best Summer Coffee Beans and Brewing Tips
+        nb-no: Best Summer Coffee Beans and Brewing Tips
+        nl-nl: Best Summer Coffee Beans and Brewing Tips
+        sv-se: Best Summer Coffee Beans and Brewing Tips
+        ar-ksa: Best Summer Coffee Beans and Brewing Tips
+        ar-uae: Best Summer Coffee Beans and Brewing Tips
     thumbnail:
       type: asset
-      locales:
-        en-us:
-          - _id: 4d7a4e23-6159-45a8-86e3-16704a8b111e
-            type: image
-            fields:
-              id:
-                type: text
-                value: 7e2d6341-389a-4bc5-b32b-e1ff671c5747
-              url:
-                value: >-
-                  https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/gvEk0AviTY6_bqTaeL4exQ-Summer-2025-Watching-a-race.png
-                type: text
-              file:
-                type: file
-                value: c9b8a5be-c46a-473c-9cc6-6df281ab9cd8
-              size:
-                value: 2147107
-                type: number
-              title:
-                type: text
-                value: Summer-2025-Watching-a-race.png
-              width:
-                value: 1536
-                type: number
-              height:
-                value: 1024
-                type: number
-              mediaType:
-                value: image/png
-                type: text
-            _source: uniform-assets
+      value:
+        - _id: 4d7a4e23-6159-45a8-86e3-16704a8b111e
+          type: image
+          fields:
+            id:
+              type: text
+              value: 7e2d6341-389a-4bc5-b32b-e1ff671c5747
+            url:
+              value: >-
+                https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/gvEk0AviTY6_bqTaeL4exQ-Summer-2025-Watching-a-race.png
+              type: text
+            file:
+              type: file
+              value: c9b8a5be-c46a-473c-9cc6-6df281ab9cd8
+            size:
+              value: 2147107
+              type: number
+            title:
+              type: text
+              value: Summer-2025-Watching-a-race.png
+            width:
+              value: 1536
+              type: number
+            height:
+              value: 1024
+              type: number
+            mediaType:
+              value: image/png
+              type: text
+          _source: uniform-assets
     enrichments:
       type: $enr
       value:
@@ -277,7 +292,75 @@ entry:
     metaDescription:
       type: text
       locales:
+        da-dk: >-
+          Unearth the finest coffee beans for summertime, master new cold brew
+          techniques, and decide between Arabica and Liberica beans with expert
+          insights.
+        de-at: >-
+          Unearth the finest coffee beans for summertime, master new cold brew
+          techniques, and decide between Arabica and Liberica beans with expert
+          insights.
+        de-de: >-
+          Unearth the finest coffee beans for summertime, master new cold brew
+          techniques, and decide between Arabica and Liberica beans with expert
+          insights.
+        en-ca: >-
+          Unearth the finest coffee beans for summertime, master new cold brew
+          techniques, and decide between Arabica and Liberica beans with expert
+          insights.
+        en-de: >-
+          Unearth the finest coffee beans for summertime, master new cold brew
+          techniques, and decide between Arabica and Liberica beans with expert
+          insights.
+        en-fr: >-
+          Unearth the finest coffee beans for summertime, master new cold brew
+          techniques, and decide between Arabica and Liberica beans with expert
+          insights.
+        en-gb: >-
+          Unearth the finest coffee beans for summertime, master new cold brew
+          techniques, and decide between Arabica and Liberica beans with expert
+          insights.
+        en-nl: >-
+          Unearth the finest coffee beans for summertime, master new cold brew
+          techniques, and decide between Arabica and Liberica beans with expert
+          insights.
         en-us: >-
+          Unearth the finest coffee beans for summertime, master new cold brew
+          techniques, and decide between Arabica and Liberica beans with expert
+          insights.
+        es-us: >-
+          Unearth the finest coffee beans for summertime, master new cold brew
+          techniques, and decide between Arabica and Liberica beans with expert
+          insights.
+        fr-ca: >-
+          Unearth the finest coffee beans for summertime, master new cold brew
+          techniques, and decide between Arabica and Liberica beans with expert
+          insights.
+        fr-fr: >-
+          Unearth the finest coffee beans for summertime, master new cold brew
+          techniques, and decide between Arabica and Liberica beans with expert
+          insights.
+        ja-jp: >-
+          Unearth the finest coffee beans for summertime, master new cold brew
+          techniques, and decide between Arabica and Liberica beans with expert
+          insights.
+        nb-no: >-
+          Unearth the finest coffee beans for summertime, master new cold brew
+          techniques, and decide between Arabica and Liberica beans with expert
+          insights.
+        nl-nl: >-
+          Unearth the finest coffee beans for summertime, master new cold brew
+          techniques, and decide between Arabica and Liberica beans with expert
+          insights.
+        sv-se: >-
+          Unearth the finest coffee beans for summertime, master new cold brew
+          techniques, and decide between Arabica and Liberica beans with expert
+          insights.
+        ar-ksa: >-
+          Unearth the finest coffee beans for summertime, master new cold brew
+          techniques, and decide between Arabica and Liberica beans with expert
+          insights.
+        ar-uae: >-
           Unearth the finest coffee beans for summertime, master new cold brew
           techniques, and decide between Arabica and Liberica beans with expert
           insights.
@@ -300,3 +383,20 @@ entry:
         entryIds: 8f126a53-19d3-46d9-a855-63be62ffca1d
   _locales:
     - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa

@@ -1,5 +1,5 @@
-created: '2025-04-25T12:21:33.832484+00:00'
-modified: '2025-06-25T14:24:53.462657+00:00'
+created: '2025-05-20T11:54:27.451711+00:00'
+modified: '2025-07-03T12:51:51.599246+00:00'
 pattern: false
 entry:
   _id: 353fc373-eede-4767-8556-ef4255ca4623
@@ -327,77 +327,92 @@ entry:
           direction: ltr
     ogImage:
       type: asset
-      locales:
-        en-us:
-          - _id: 601e2584-17f8-4b82-bc69-2b4e1931ec31
-            type: image
-            fields:
-              id:
-                type: text
-                value: 771b511d-c4e8-42c5-9a71-30b0e99719e9
-              url:
-                value: >-
-                  https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/KIY1tYG8QmSgDbgSO1i8Nw-image.png
-                type: text
-              file:
-                type: file
-                value: 4b4cee41-6770-4bb2-a797-3a87050ae45c
-              size:
-                value: 382917
-                type: number
-              title:
-                type: text
-                value: image.png
-              width:
-                value: 660
-                type: number
-              height:
-                value: 440
-                type: number
-              mediaType:
-                value: image/png
-                type: text
-            _source: uniform-assets
+      value:
+        - _id: 601e2584-17f8-4b82-bc69-2b4e1931ec31
+          type: image
+          fields:
+            id:
+              type: text
+              value: 771b511d-c4e8-42c5-9a71-30b0e99719e9
+            url:
+              value: >-
+                https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/KIY1tYG8QmSgDbgSO1i8Nw-image.png
+              type: text
+            file:
+              type: file
+              value: 4b4cee41-6770-4bb2-a797-3a87050ae45c
+            size:
+              value: 382917
+              type: number
+            title:
+              type: text
+              value: image.png
+            width:
+              value: 660
+              type: number
+            height:
+              value: 440
+              type: number
+            mediaType:
+              value: image/png
+              type: text
+          _source: uniform-assets
     category:
       type: contentReference
       value: ${#jptr:/ref-353fc373-eede-4767-8556-ef4255ca4623-category/entries/0}
     metaTitle:
       type: text
       locales:
+        da-dk: How To Clean ANY Espresso Machine!
+        de-at: How To Clean ANY Espresso Machine!
+        de-de: How To Clean ANY Espresso Machine!
+        en-ca: How To Clean ANY Espresso Machine!
+        en-de: How To Clean ANY Espresso Machine!
+        en-fr: How To Clean ANY Espresso Machine!
+        en-gb: How To Clean ANY Espresso Machine!
+        en-nl: How To Clean ANY Espresso Machine!
         en-us: How To Clean ANY Espresso Machine!
+        es-us: How To Clean ANY Espresso Machine!
+        fr-ca: How To Clean ANY Espresso Machine!
+        fr-fr: How To Clean ANY Espresso Machine!
+        ja-jp: How To Clean ANY Espresso Machine!
+        nb-no: How To Clean ANY Espresso Machine!
+        nl-nl: How To Clean ANY Espresso Machine!
+        sv-se: How To Clean ANY Espresso Machine!
+        ar-ksa: How To Clean ANY Espresso Machine!
+        ar-uae: How To Clean ANY Espresso Machine!
     thumbnail:
       type: asset
-      locales:
-        en-us:
-          - _id: aa982a5f-e0c2-4b2e-bb2c-1911a822d55a
-            type: image
-            fields:
-              id:
-                type: text
-                value: 771b511d-c4e8-42c5-9a71-30b0e99719e9
-              url:
-                value: >-
-                  https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/KIY1tYG8QmSgDbgSO1i8Nw-image.png
-                type: text
-              file:
-                type: file
-                value: 4b4cee41-6770-4bb2-a797-3a87050ae45c
-              size:
-                value: 382917
-                type: number
-              title:
-                type: text
-                value: image.png
-              width:
-                value: 660
-                type: number
-              height:
-                value: 440
-                type: number
-              mediaType:
-                value: image/png
-                type: text
-            _source: uniform-assets
+      value:
+        - _id: aa982a5f-e0c2-4b2e-bb2c-1911a822d55a
+          type: image
+          fields:
+            id:
+              type: text
+              value: 771b511d-c4e8-42c5-9a71-30b0e99719e9
+            url:
+              value: >-
+                https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/KIY1tYG8QmSgDbgSO1i8Nw-image.png
+              type: text
+            file:
+              type: file
+              value: 4b4cee41-6770-4bb2-a797-3a87050ae45c
+            size:
+              value: 382917
+              type: number
+            title:
+              type: text
+              value: image.png
+            width:
+              value: 660
+              type: number
+            height:
+              value: 440
+              type: number
+            mediaType:
+              value: image/png
+              type: text
+          _source: uniform-assets
     enrichments:
       type: $enr
       value:
@@ -410,7 +425,75 @@ entry:
     metaDescription:
       type: text
       locales:
+        da-dk: >-
+          It doesn't matter what coffee machine you own. These methods are
+          UNIVERSAL!   If you follow these steps you will greatly increase your
+          espresso taste as well increase the lifespan of your machine.
+        de-at: >-
+          It doesn't matter what coffee machine you own. These methods are
+          UNIVERSAL!   If you follow these steps you will greatly increase your
+          espresso taste as well increase the lifespan of your machine.
+        de-de: >-
+          It doesn't matter what coffee machine you own. These methods are
+          UNIVERSAL!   If you follow these steps you will greatly increase your
+          espresso taste as well increase the lifespan of your machine.
+        en-ca: >-
+          It doesn't matter what coffee machine you own. These methods are
+          UNIVERSAL!   If you follow these steps you will greatly increase your
+          espresso taste as well increase the lifespan of your machine.
+        en-de: >-
+          It doesn't matter what coffee machine you own. These methods are
+          UNIVERSAL!   If you follow these steps you will greatly increase your
+          espresso taste as well increase the lifespan of your machine.
+        en-fr: >-
+          It doesn't matter what coffee machine you own. These methods are
+          UNIVERSAL!   If you follow these steps you will greatly increase your
+          espresso taste as well increase the lifespan of your machine.
+        en-gb: >-
+          It doesn't matter what coffee machine you own. These methods are
+          UNIVERSAL!   If you follow these steps you will greatly increase your
+          espresso taste as well increase the lifespan of your machine.
+        en-nl: >-
+          It doesn't matter what coffee machine you own. These methods are
+          UNIVERSAL!   If you follow these steps you will greatly increase your
+          espresso taste as well increase the lifespan of your machine.
         en-us: >-
+          It doesn't matter what coffee machine you own. These methods are
+          UNIVERSAL!   If you follow these steps you will greatly increase your
+          espresso taste as well increase the lifespan of your machine.
+        es-us: >-
+          It doesn't matter what coffee machine you own. These methods are
+          UNIVERSAL!   If you follow these steps you will greatly increase your
+          espresso taste as well increase the lifespan of your machine.
+        fr-ca: >-
+          It doesn't matter what coffee machine you own. These methods are
+          UNIVERSAL!   If you follow these steps you will greatly increase your
+          espresso taste as well increase the lifespan of your machine.
+        fr-fr: >-
+          It doesn't matter what coffee machine you own. These methods are
+          UNIVERSAL!   If you follow these steps you will greatly increase your
+          espresso taste as well increase the lifespan of your machine.
+        ja-jp: >-
+          It doesn't matter what coffee machine you own. These methods are
+          UNIVERSAL!   If you follow these steps you will greatly increase your
+          espresso taste as well increase the lifespan of your machine.
+        nb-no: >-
+          It doesn't matter what coffee machine you own. These methods are
+          UNIVERSAL!   If you follow these steps you will greatly increase your
+          espresso taste as well increase the lifespan of your machine.
+        nl-nl: >-
+          It doesn't matter what coffee machine you own. These methods are
+          UNIVERSAL!   If you follow these steps you will greatly increase your
+          espresso taste as well increase the lifespan of your machine.
+        sv-se: >-
+          It doesn't matter what coffee machine you own. These methods are
+          UNIVERSAL!   If you follow these steps you will greatly increase your
+          espresso taste as well increase the lifespan of your machine.
+        ar-ksa: >-
+          It doesn't matter what coffee machine you own. These methods are
+          UNIVERSAL!   If you follow these steps you will greatly increase your
+          espresso taste as well increase the lifespan of your machine.
+        ar-uae: >-
           It doesn't matter what coffee machine you own. These methods are
           UNIVERSAL!   If you follow these steps you will greatly increase your
           espresso taste as well increase the lifespan of your machine.
@@ -433,3 +516,20 @@ entry:
         entryIds: 57ef5f21-f90f-401d-a6b2-7a1e91bbae92
   _locales:
     - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa

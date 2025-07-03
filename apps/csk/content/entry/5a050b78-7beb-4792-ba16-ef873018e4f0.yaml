@@ -1,5 +1,5 @@
-created: '2025-01-29T11:10:24.46778+00:00'
-modified: '2025-06-25T14:22:03.528436+00:00'
+created: '2025-03-18T13:02:49.265505+00:00'
+modified: '2025-07-03T12:37:13.228297+00:00'
 pattern: false
 entry:
   _id: 5a050b78-7beb-4792-ba16-ef873018e4f0
@@ -1218,77 +1218,92 @@ entry:
           direction: ltr
     ogImage:
       type: asset
-      locales:
-        en-us:
-          - _id: ee5e5d87-14c6-4363-81ed-e3f18525d7e2
-            type: image
-            fields:
-              id:
-                type: text
-                value: ed66c8bd-781a-4287-992c-4cc72b2dd05f
-              url:
-                value: >-
-                  https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/HtaK34vKQSOZ9raD3yVNcQ-a-proper-cuppa-how-to-brew-tea-right.jpg
-                type: text
-              file:
-                type: file
-                value: aa13ba9e-d1eb-4ae3-9e31-b5c921d2f883
-              size:
-                value: 3906323
-                type: number
-              title:
-                type: text
-                value: a-proper-cuppa-how-to-brew-tea-right.jpg
-              width:
-                value: 7008
-                type: number
-              height:
-                value: 4672
-                type: number
-              mediaType:
-                value: image/jpeg
-                type: text
-            _source: uniform-assets
+      value:
+        - _id: ee5e5d87-14c6-4363-81ed-e3f18525d7e2
+          type: image
+          fields:
+            id:
+              type: text
+              value: ed66c8bd-781a-4287-992c-4cc72b2dd05f
+            url:
+              value: >-
+                https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/HtaK34vKQSOZ9raD3yVNcQ-a-proper-cuppa-how-to-brew-tea-right.jpg
+              type: text
+            file:
+              type: file
+              value: aa13ba9e-d1eb-4ae3-9e31-b5c921d2f883
+            size:
+              value: 3906323
+              type: number
+            title:
+              type: text
+              value: a-proper-cuppa-how-to-brew-tea-right.jpg
+            width:
+              value: 7008
+              type: number
+            height:
+              value: 4672
+              type: number
+            mediaType:
+              value: image/jpeg
+              type: text
+          _source: uniform-assets
     category:
       type: contentReference
       value: ${#jptr:/ref-5a050b78-7beb-4792-ba16-ef873018e4f0-category/entries/0}
     metaTitle:
       type: text
       locales:
+        da-dk: 'A Proper Cuppa: How to Brew Tea Right'
+        de-at: 'A Proper Cuppa: How to Brew Tea Right'
+        de-de: 'A Proper Cuppa: How to Brew Tea Right'
+        en-ca: 'A Proper Cuppa: How to Brew Tea Right'
+        en-de: 'A Proper Cuppa: How to Brew Tea Right'
+        en-fr: 'A Proper Cuppa: How to Brew Tea Right'
+        en-gb: 'A Proper Cuppa: How to Brew Tea Right'
+        en-nl: 'A Proper Cuppa: How to Brew Tea Right'
         en-us: 'A Proper Cuppa: How to Brew Tea Right'
+        es-us: 'A Proper Cuppa: How to Brew Tea Right'
+        fr-ca: 'A Proper Cuppa: How to Brew Tea Right'
+        fr-fr: 'A Proper Cuppa: How to Brew Tea Right'
+        ja-jp: 'A Proper Cuppa: How to Brew Tea Right'
+        nb-no: 'A Proper Cuppa: How to Brew Tea Right'
+        nl-nl: 'A Proper Cuppa: How to Brew Tea Right'
+        sv-se: 'A Proper Cuppa: How to Brew Tea Right'
+        ar-ksa: 'A Proper Cuppa: How to Brew Tea Right'
+        ar-uae: 'A Proper Cuppa: How to Brew Tea Right'
     thumbnail:
       type: asset
-      locales:
-        en-us:
-          - _id: c1ee2d09-4b75-4f43-96f4-f8132f5449c5
-            type: image
-            fields:
-              id:
-                type: text
-                value: ed66c8bd-781a-4287-992c-4cc72b2dd05f
-              url:
-                value: >-
-                  https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/HtaK34vKQSOZ9raD3yVNcQ-a-proper-cuppa-how-to-brew-tea-right.jpg
-                type: text
-              file:
-                type: file
-                value: 718e598d-58b1-4f5f-a37d-d495b1a069f5
-              size:
-                value: 3906323
-                type: number
-              title:
-                type: text
-                value: a-proper-cuppa-how-to-brew-tea-right.jpg
-              width:
-                value: 7008
-                type: number
-              height:
-                value: 4672
-                type: number
-              mediaType:
-                value: image/jpeg
-                type: text
-            _source: uniform-assets
+      value:
+        - _id: c1ee2d09-4b75-4f43-96f4-f8132f5449c5
+          type: image
+          fields:
+            id:
+              type: text
+              value: ed66c8bd-781a-4287-992c-4cc72b2dd05f
+            url:
+              value: >-
+                https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/HtaK34vKQSOZ9raD3yVNcQ-a-proper-cuppa-how-to-brew-tea-right.jpg
+              type: text
+            file:
+              type: file
+              value: 718e598d-58b1-4f5f-a37d-d495b1a069f5
+            size:
+              value: 3906323
+              type: number
+            title:
+              type: text
+              value: a-proper-cuppa-how-to-brew-tea-right.jpg
+            width:
+              value: 7008
+              type: number
+            height:
+              value: 4672
+              type: number
+            mediaType:
+              value: image/jpeg
+              type: text
+          _source: uniform-assets
     enrichments:
       type: $enr
       value:
@@ -1301,7 +1316,58 @@ entry:
     metaDescription:
       type: text
       locales:
+        da-dk: >-
+          Tea is awesome, but only if its properly brewed and made according to
+          the type of tea it is. Don’t mess it up.
+        de-at: >-
+          Tea is awesome, but only if its properly brewed and made according to
+          the type of tea it is. Don’t mess it up.
+        de-de: >-
+          Tea is awesome, but only if its properly brewed and made according to
+          the type of tea it is. Don’t mess it up.
+        en-ca: >-
+          Tea is awesome, but only if its properly brewed and made according to
+          the type of tea it is. Don’t mess it up.
+        en-de: >-
+          Tea is awesome, but only if its properly brewed and made according to
+          the type of tea it is. Don’t mess it up.
+        en-fr: >-
+          Tea is awesome, but only if its properly brewed and made according to
+          the type of tea it is. Don’t mess it up.
+        en-gb: >-
+          Tea is awesome, but only if its properly brewed and made according to
+          the type of tea it is. Don’t mess it up.
+        en-nl: >-
+          Tea is awesome, but only if its properly brewed and made according to
+          the type of tea it is. Don’t mess it up.
         en-us: >-
+          Tea is awesome, but only if its properly brewed and made according to
+          the type of tea it is. Don’t mess it up.
+        es-us: >-
+          Tea is awesome, but only if its properly brewed and made according to
+          the type of tea it is. Don’t mess it up.
+        fr-ca: >-
+          Tea is awesome, but only if its properly brewed and made according to
+          the type of tea it is. Don’t mess it up.
+        fr-fr: >-
+          Tea is awesome, but only if its properly brewed and made according to
+          the type of tea it is. Don’t mess it up.
+        ja-jp: >-
+          Tea is awesome, but only if its properly brewed and made according to
+          the type of tea it is. Don’t mess it up.
+        nb-no: >-
+          Tea is awesome, but only if its properly brewed and made according to
+          the type of tea it is. Don’t mess it up.
+        nl-nl: >-
+          Tea is awesome, but only if its properly brewed and made according to
+          the type of tea it is. Don’t mess it up.
+        sv-se: >-
+          Tea is awesome, but only if its properly brewed and made according to
+          the type of tea it is. Don’t mess it up.
+        ar-ksa: >-
+          Tea is awesome, but only if its properly brewed and made according to
+          the type of tea it is. Don’t mess it up.
+        ar-uae: >-
           Tea is awesome, but only if its properly brewed and made according to
           the type of tea it is. Don’t mess it up.
     shortDescription:
@@ -1322,3 +1388,20 @@ entry:
         entryIds: bec8d216-984a-48b9-867c-f7a38d9e7fa6
   _locales:
     - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa

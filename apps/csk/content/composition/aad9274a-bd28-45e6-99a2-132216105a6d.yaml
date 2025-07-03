@@ -7,7 +7,24 @@ composition:
     pageTitle:
       type: text
       locales:
+        da-dk: Article Components
+        de-at: Article Components
+        de-de: Article Components
+        en-ca: Article Components
+        en-de: Article Components
+        en-fr: Article Components
+        en-gb: Article Components
+        en-nl: Article Components
         en-us: Article Components
+        es-us: Article Components
+        fr-ca: Article Components
+        fr-fr: Article Components
+        ja-jp: Article Components
+        nb-no: Article Components
+        nl-nl: Article Components
+        sv-se: Article Components
+        ar-ksa: Article Components
+        ar-uae: Article Components
   slots:
     pageContent:
       - _id: fe485767-c888-4622-bf36-b705e66f74b4
@@ -36,7 +53,24 @@ composition:
                 text:
                   type: text
                   locales:
+                    da-dk: 'Featured Article Card:'
+                    de-at: 'Featured Article Card:'
+                    de-de: 'Featured Article Card:'
+                    en-ca: 'Featured Article Card:'
+                    en-de: 'Featured Article Card:'
+                    en-fr: 'Featured Article Card:'
+                    en-gb: 'Featured Article Card:'
+                    en-nl: 'Featured Article Card:'
                     en-us: 'Featured Article Card:'
+                    es-us: 'Featured Article Card:'
+                    fr-ca: 'Featured Article Card:'
+                    fr-fr: 'Featured Article Card:'
+                    ja-jp: 'Featured Article Card:'
+                    nb-no: 'Featured Article Card:'
+                    nl-nl: 'Featured Article Card:'
+                    sv-se: 'Featured Article Card:'
+                    ar-ksa: 'Featured Article Card:'
+                    ar-uae: 'Featured Article Card:'
                 color:
                   type: dex-color-palette-parameter
                   value: text-link
@@ -65,7 +99,24 @@ composition:
           displayName:
             type: text
             locales:
+              da-dk: Featured Article Card
+              de-at: Featured Article Card
+              de-de: Featured Article Card
+              en-ca: Featured Article Card
+              en-de: Featured Article Card
+              en-fr: Featured Article Card
+              en-gb: Featured Article Card
+              en-nl: Featured Article Card
               en-us: Featured Article Card
+              es-us: Featured Article Card
+              fr-ca: Featured Article Card
+              fr-fr: Featured Article Card
+              ja-jp: Featured Article Card
+              nb-no: Featured Article Card
+              nl-nl: Featured Article Card
+              sv-se: Featured Article Card
+              ar-ksa: Featured Article Card
+              ar-uae: Featured Article Card
       - _id: 737df75a-b80f-4daf-b961-ecdeae7ce845
         type: spacer
         parameters:
@@ -113,7 +164,24 @@ composition:
                 text:
                   type: text
                   locales:
+                    da-dk: 'Small Article Card:'
+                    de-at: 'Small Article Card:'
+                    de-de: 'Small Article Card:'
+                    en-ca: 'Small Article Card:'
+                    en-de: 'Small Article Card:'
+                    en-fr: 'Small Article Card:'
+                    en-gb: 'Small Article Card:'
+                    en-nl: 'Small Article Card:'
                     en-us: 'Small Article Card:'
+                    es-us: 'Small Article Card:'
+                    fr-ca: 'Small Article Card:'
+                    fr-fr: 'Small Article Card:'
+                    ja-jp: 'Small Article Card:'
+                    nb-no: 'Small Article Card:'
+                    nl-nl: 'Small Article Card:'
+                    sv-se: 'Small Article Card:'
+                    ar-ksa: 'Small Article Card:'
+                    ar-uae: 'Small Article Card:'
                 color:
                   type: dex-color-palette-parameter
                   value: text-link
@@ -144,7 +212,24 @@ composition:
           displayName:
             type: text
             locales:
+              da-dk: Small Article Card
+              de-at: Small Article Card
+              de-de: Small Article Card
+              en-ca: Small Article Card
+              en-de: Small Article Card
+              en-fr: Small Article Card
+              en-gb: Small Article Card
+              en-nl: Small Article Card
               en-us: Small Article Card
+              es-us: Small Article Card
+              fr-ca: Small Article Card
+              fr-fr: Small Article Card
+              ja-jp: Small Article Card
+              nb-no: Small Article Card
+              nl-nl: Small Article Card
+              sv-se: Small Article Card
+              ar-ksa: Small Article Card
+              ar-uae: Small Article Card
           backgroundColor:
             type: dex-color-palette-parameter
             value: general-color-1
@@ -195,7 +280,24 @@ composition:
                 text:
                   type: text
                   locales:
+                    da-dk: 'Article Highlight:'
+                    de-at: 'Article Highlight:'
+                    de-de: 'Article Highlight:'
+                    en-ca: 'Article Highlight:'
+                    en-de: 'Article Highlight:'
+                    en-fr: 'Article Highlight:'
+                    en-gb: 'Article Highlight:'
+                    en-nl: 'Article Highlight:'
                     en-us: 'Article Highlight:'
+                    es-us: 'Article Highlight:'
+                    fr-ca: 'Article Highlight:'
+                    fr-fr: 'Article Highlight:'
+                    ja-jp: 'Article Highlight:'
+                    nb-no: 'Article Highlight:'
+                    nl-nl: 'Article Highlight:'
+                    sv-se: 'Article Highlight:'
+                    ar-ksa: 'Article Highlight:'
+                    ar-uae: 'Article Highlight:'
                 color:
                   type: dex-color-palette-parameter
                   value: text-link
@@ -346,7 +448,24 @@ composition:
           displayName:
             type: text
             locales:
+              da-dk: Article Highlight
+              de-at: Article Highlight
+              de-de: Article Highlight
+              en-ca: Article Highlight
+              en-de: Article Highlight
+              en-fr: Article Highlight
+              en-gb: Article Highlight
+              en-nl: Article Highlight
               en-us: Article Highlight
+              es-us: Article Highlight
+              fr-ca: Article Highlight
+              fr-fr: Article Highlight
+              ja-jp: Article Highlight
+              nb-no: Article Highlight
+              nl-nl: Article Highlight
+              sv-se: Article Highlight
+              ar-ksa: Article Highlight
+              ar-uae: Article Highlight
       - _id: d95670f7-65ad-4a3b-90ab-0c1f218f77ec
         type: spacer
         parameters:
@@ -365,7 +484,143 @@ composition:
         link:
           type: link
           locales:
+            da-dk:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            de-at:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            de-de:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            en-ca:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            en-de:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            en-fr:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            en-gb:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            en-nl:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
             en-us:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            es-us:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            fr-ca:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            fr-fr:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            ja-jp:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            nb-no:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            nl-nl:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            sv-se:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            ar-ksa:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            ar-uae:
               path: /${locale}/articles/${#jptr:/Article/entry/_slug}
               type: projectMapNode
               nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
@@ -390,8 +645,290 @@ composition:
           variables:
             slug: ${article-slug}
             locale: ${locale}
+    b6fcc659-875e-4380-b0c8-af6777437bc1|91a39649-d9d5-4f11-9090-203b4fea8a13:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            de-at:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            de-de:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            en-ca:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            en-de:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            en-fr:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            en-gb:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            en-nl:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            es-us:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            fr-ca:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            fr-fr:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            ja-jp:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            nb-no:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            nl-nl:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            sv-se:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            ar-ksa:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            ar-uae:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+    bd23faeb-85e2-4b15-a48b-4d22dbb3099e|4a7ce726-321d-4e77-ac0e-a11e42946127:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            de-at:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            de-de:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-ca:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-de:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-fr:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-gb:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-nl:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            es-us:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            fr-ca:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            fr-fr:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ja-jp:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            nb-no:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            nl-nl:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            sv-se:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ar-ksa:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ar-uae:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
   _locales:
     - en-us
-created: '2025-04-24T11:34:40.694323+00:00'
-modified: '2025-04-24T11:34:40.694323+00:00'
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa
+created: '2025-05-20T11:53:47.936479+00:00'
+modified: '2025-07-03T13:15:23.403393+00:00'
 pattern: false

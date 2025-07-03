@@ -1,5 +1,5 @@
-created: '2025-01-29T11:10:23.519077+00:00'
-modified: '2025-06-25T14:23:56.072912+00:00'
+created: '2025-03-18T13:02:48.038809+00:00'
+modified: '2025-07-03T12:42:57.16273+00:00'
 pattern: false
 entry:
   _id: 4db3128b-5b2a-45fe-8c56-2271508fe091
@@ -1113,77 +1113,92 @@ entry:
           direction: ltr
     ogImage:
       type: asset
-      locales:
-        en-us:
-          - _id: 409f201d-60bf-40b4-92c6-df9e79be791f
-            type: image
-            fields:
-              id:
-                type: text
-                value: ea01b62e-bb99-4346-801c-950f73bef567
-              url:
-                value: >-
-                  https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/sQZwlqnmTyKYSRsypQrP6A-the-art-of-the-perfect-espresso.jpg
-                type: text
-              file:
-                type: file
-                value: 2f838ca5-ae6c-40c0-854e-c046ce9c997b
-              size:
-                value: 2353234
-                type: number
-              title:
-                type: text
-                value: the-art-of-the-perfect-espresso.jpg
-              width:
-                value: 5837
-                type: number
-              height:
-                value: 3891
-                type: number
-              mediaType:
-                value: image/jpeg
-                type: text
-            _source: uniform-assets
+      value:
+        - _id: 409f201d-60bf-40b4-92c6-df9e79be791f
+          type: image
+          fields:
+            id:
+              type: text
+              value: ea01b62e-bb99-4346-801c-950f73bef567
+            url:
+              value: >-
+                https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/sQZwlqnmTyKYSRsypQrP6A-the-art-of-the-perfect-espresso.jpg
+              type: text
+            file:
+              type: file
+              value: 2f838ca5-ae6c-40c0-854e-c046ce9c997b
+            size:
+              value: 2353234
+              type: number
+            title:
+              type: text
+              value: the-art-of-the-perfect-espresso.jpg
+            width:
+              value: 5837
+              type: number
+            height:
+              value: 3891
+              type: number
+            mediaType:
+              value: image/jpeg
+              type: text
+          _source: uniform-assets
     category:
       type: contentReference
       value: ${#jptr:/ref-4db3128b-5b2a-45fe-8c56-2271508fe091-category/entries/0}
     metaTitle:
       type: text
       locales:
+        da-dk: The Art of the Perfect Espresso
+        de-at: The Art of the Perfect Espresso
+        de-de: The Art of the Perfect Espresso
+        en-ca: The Art of the Perfect Espresso
+        en-de: The Art of the Perfect Espresso
+        en-fr: The Art of the Perfect Espresso
+        en-gb: The Art of the Perfect Espresso
+        en-nl: The Art of the Perfect Espresso
         en-us: The Art of the Perfect Espresso
+        es-us: The Art of the Perfect Espresso
+        fr-ca: The Art of the Perfect Espresso
+        fr-fr: The Art of the Perfect Espresso
+        ja-jp: The Art of the Perfect Espresso
+        nb-no: The Art of the Perfect Espresso
+        nl-nl: The Art of the Perfect Espresso
+        sv-se: The Art of the Perfect Espresso
+        ar-ksa: The Art of the Perfect Espresso
+        ar-uae: The Art of the Perfect Espresso
     thumbnail:
       type: asset
-      locales:
-        en-us:
-          - _id: 62bd5740-a528-4670-ab94-4d1a44670d0f
-            type: image
-            fields:
-              id:
-                type: text
-                value: ea01b62e-bb99-4346-801c-950f73bef567
-              url:
-                value: >-
-                  https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/sQZwlqnmTyKYSRsypQrP6A-the-art-of-the-perfect-espresso.jpg
-                type: text
-              file:
-                type: file
-                value: 36f77c84-2047-4a1d-96a2-4f3014a90ac2
-              size:
-                value: 2353234
-                type: number
-              title:
-                type: text
-                value: the-art-of-the-perfect-espresso.jpg
-              width:
-                value: 5837
-                type: number
-              height:
-                value: 3891
-                type: number
-              mediaType:
-                value: image/jpeg
-                type: text
-            _source: uniform-assets
+      value:
+        - _id: 62bd5740-a528-4670-ab94-4d1a44670d0f
+          type: image
+          fields:
+            id:
+              type: text
+              value: ea01b62e-bb99-4346-801c-950f73bef567
+            url:
+              value: >-
+                https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/sQZwlqnmTyKYSRsypQrP6A-the-art-of-the-perfect-espresso.jpg
+              type: text
+            file:
+              type: file
+              value: 36f77c84-2047-4a1d-96a2-4f3014a90ac2
+            size:
+              value: 2353234
+              type: number
+            title:
+              type: text
+              value: the-art-of-the-perfect-espresso.jpg
+            width:
+              value: 5837
+              type: number
+            height:
+              value: 3891
+              type: number
+            mediaType:
+              value: image/jpeg
+              type: text
+          _source: uniform-assets
     enrichments:
       type: $enr
       value:
@@ -1196,7 +1211,58 @@ entry:
     metaDescription:
       type: text
       locales:
+        da-dk: >-
+          Espresso is the foundation of many beloved coffee drinks, from lattes
+          to cappuccinos, but it’s also an art form in itself
+        de-at: >-
+          Espresso is the foundation of many beloved coffee drinks, from lattes
+          to cappuccinos, but it’s also an art form in itself
+        de-de: >-
+          Espresso is the foundation of many beloved coffee drinks, from lattes
+          to cappuccinos, but it’s also an art form in itself
+        en-ca: >-
+          Espresso is the foundation of many beloved coffee drinks, from lattes
+          to cappuccinos, but it’s also an art form in itself
+        en-de: >-
+          Espresso is the foundation of many beloved coffee drinks, from lattes
+          to cappuccinos, but it’s also an art form in itself
+        en-fr: >-
+          Espresso is the foundation of many beloved coffee drinks, from lattes
+          to cappuccinos, but it’s also an art form in itself
+        en-gb: >-
+          Espresso is the foundation of many beloved coffee drinks, from lattes
+          to cappuccinos, but it’s also an art form in itself
+        en-nl: >-
+          Espresso is the foundation of many beloved coffee drinks, from lattes
+          to cappuccinos, but it’s also an art form in itself
         en-us: >-
+          Espresso is the foundation of many beloved coffee drinks, from lattes
+          to cappuccinos, but it’s also an art form in itself
+        es-us: >-
+          Espresso is the foundation of many beloved coffee drinks, from lattes
+          to cappuccinos, but it’s also an art form in itself
+        fr-ca: >-
+          Espresso is the foundation of many beloved coffee drinks, from lattes
+          to cappuccinos, but it’s also an art form in itself
+        fr-fr: >-
+          Espresso is the foundation of many beloved coffee drinks, from lattes
+          to cappuccinos, but it’s also an art form in itself
+        ja-jp: >-
+          Espresso is the foundation of many beloved coffee drinks, from lattes
+          to cappuccinos, but it’s also an art form in itself
+        nb-no: >-
+          Espresso is the foundation of many beloved coffee drinks, from lattes
+          to cappuccinos, but it’s also an art form in itself
+        nl-nl: >-
+          Espresso is the foundation of many beloved coffee drinks, from lattes
+          to cappuccinos, but it’s also an art form in itself
+        sv-se: >-
+          Espresso is the foundation of many beloved coffee drinks, from lattes
+          to cappuccinos, but it’s also an art form in itself
+        ar-ksa: >-
+          Espresso is the foundation of many beloved coffee drinks, from lattes
+          to cappuccinos, but it’s also an art form in itself
+        ar-uae: >-
           Espresso is the foundation of many beloved coffee drinks, from lattes
           to cappuccinos, but it’s also an art form in itself
     shortDescription:
@@ -1217,3 +1283,20 @@ entry:
         entryIds: 8f126a53-19d3-46d9-a855-63be62ffca1d
   _locales:
     - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa

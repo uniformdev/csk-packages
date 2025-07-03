@@ -140,7 +140,24 @@ composition:
                           displayName:
                             type: text
                             locales:
+                              da-dk: Search Box
+                              de-at: Search Box
+                              de-de: Search Box
+                              en-ca: Search Box
+                              en-de: Search Box
+                              en-fr: Search Box
+                              en-gb: Search Box
+                              en-nl: Search Box
                               en-us: Search Box
+                              es-us: Search Box
+                              fr-ca: Search Box
+                              fr-fr: Search Box
+                              ja-jp: Search Box
+                              nb-no: Search Box
+                              nl-nl: Search Box
+                              sv-se: Search Box
+                              ar-ksa: Search Box
+                              ar-uae: Search Box
                       - _id: b7e771d2-1634-4b03-91b2-709ecc7fdc02
                         type: entriesSearchSorting
                   parameters:
@@ -165,7 +182,24 @@ composition:
                     displayName:
                       type: text
                       locales:
+                        da-dk: Search Box and Sorting
+                        de-at: Search Box and Sorting
+                        de-de: Search Box and Sorting
+                        en-ca: Search Box and Sorting
+                        en-de: Search Box and Sorting
+                        en-fr: Search Box and Sorting
+                        en-gb: Search Box and Sorting
+                        en-nl: Search Box and Sorting
                         en-us: Search Box and Sorting
+                        es-us: Search Box and Sorting
+                        fr-ca: Search Box and Sorting
+                        fr-fr: Search Box and Sorting
+                        ja-jp: Search Box and Sorting
+                        nb-no: Search Box and Sorting
+                        nl-nl: Search Box and Sorting
+                        sv-se: Search Box and Sorting
+                        ar-ksa: Search Box and Sorting
+                        ar-uae: Search Box and Sorting
                     columnsCount:
                       type: dex-slider-control-parameter
                       value:
@@ -213,7 +247,24 @@ composition:
                           displayName:
                             type: text
                             locales:
+                              da-dk: Left Content
+                              de-at: Left Content
+                              de-de: Left Content
+                              en-ca: Left Content
+                              en-de: Left Content
+                              en-fr: Left Content
+                              en-gb: Left Content
+                              en-nl: Left Content
                               en-us: Left Content
+                              es-us: Left Content
+                              fr-ca: Left Content
+                              fr-fr: Left Content
+                              ja-jp: Left Content
+                              nb-no: Left Content
+                              nl-nl: Left Content
+                              sv-se: Left Content
+                              ar-ksa: Left Content
+                              ar-uae: Left Content
                       - _id: abdaa09f-7446-432b-b541-82a4ca46871a
                         type: gridItem
                         slots:
@@ -259,7 +310,24 @@ composition:
                           displayName:
                             type: text
                             locales:
+                              da-dk: Right Content
+                              de-at: Right Content
+                              de-de: Right Content
+                              en-ca: Right Content
+                              en-de: Right Content
+                              en-fr: Right Content
+                              en-gb: Right Content
+                              en-nl: Right Content
                               en-us: Right Content
+                              es-us: Right Content
+                              fr-ca: Right Content
+                              fr-fr: Right Content
+                              ja-jp: Right Content
+                              nb-no: Right Content
+                              nl-nl: Right Content
+                              sv-se: Right Content
+                              ar-ksa: Right Content
+                              ar-uae: Right Content
                   parameters:
                     gapX:
                       type: dex-slider-control-parameter
@@ -282,7 +350,24 @@ composition:
                     displayName:
                       type: text
                       locales:
+                        da-dk: Search Content
+                        de-at: Search Content
+                        de-de: Search Content
+                        en-ca: Search Content
+                        en-de: Search Content
+                        en-fr: Search Content
+                        en-gb: Search Content
+                        en-nl: Search Content
                         en-us: Search Content
+                        es-us: Search Content
+                        fr-ca: Search Content
+                        fr-fr: Search Content
+                        ja-jp: Search Content
+                        nb-no: Search Content
+                        nl-nl: Search Content
+                        sv-se: Search Content
+                        ar-ksa: Search Content
+                        ar-uae: Search Content
                     columnsCount:
                       type: dex-slider-control-parameter
                       value:
@@ -320,7 +405,24 @@ composition:
                       title:
                         type: text
                         locales:
+                          da-dk: Pick a category
+                          de-at: Pick a category
+                          de-de: Pick a category
+                          en-ca: Pick a category
+                          en-de: Pick a category
+                          en-fr: Pick a category
+                          en-gb: Pick a category
+                          en-nl: Pick a category
                           en-us: Pick a category
+                          es-us: Pick a category
+                          fr-ca: Pick a category
+                          fr-fr: Pick a category
+                          ja-jp: Pick a category
+                          nb-no: Pick a category
+                          nl-nl: Pick a category
+                          sv-se: Pick a category
+                          ar-ksa: Pick a category
+                          ar-uae: Pick a category
                       values:
                         type: $block
                         value:
@@ -366,7 +468,24 @@ composition:
                       title:
                         type: text
                         locales:
+                          da-dk: Refine by author
+                          de-at: Refine by author
+                          de-de: Refine by author
+                          en-ca: Refine by author
+                          en-de: Refine by author
+                          en-fr: Refine by author
+                          en-gb: Refine by author
+                          en-nl: Refine by author
                           en-us: Refine by author
+                          es-us: Refine by author
+                          fr-ca: Refine by author
+                          fr-fr: Refine by author
+                          ja-jp: Refine by author
+                          nb-no: Refine by author
+                          nl-nl: Refine by author
+                          sv-se: Refine by author
+                          ar-ksa: Refine by author
+                          ar-uae: Refine by author
                       values:
                         type: $block
                         value:
@@ -420,9 +539,396 @@ composition:
         text:
           type: text
           value: Our curated content on all things brewing
+    3f4d35dd-7510-4068-9c41-3166b271dea3|38f88562-6b70-411b-a550-ada8514eef22|f82aa025-12eb-4c87-b18b-ccc33b20fe02:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            de-at:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            de-de:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-ca:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-de:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-fr:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-gb:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-nl:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            es-us:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            fr-ca:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            fr-fr:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ja-jp:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            nb-no:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            nl-nl:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            sv-se:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ar-ksa:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ar-uae:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+    3f4d35dd-7510-4068-9c41-3166b271dea3|7607f998-992d-4b35-9fa5-4e560f8c179a|36ef82db-8556-4006-be7a-957216a76758:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: Recommended for you
+            de-at: Recommended for you
+            de-de: Recommended for you
+            en-ca: Recommended for you
+            en-de: Recommended for you
+            en-fr: Recommended for you
+            en-gb: Recommended for you
+            en-nl: Recommended for you
+            es-us: Recommended for you
+            fr-ca: Recommended for you
+            fr-fr: Recommended for you
+            ja-jp: Recommended for you
+            nb-no: Recommended for you
+            nl-nl: Recommended for you
+            sv-se: Recommended for you
+            ar-ksa: Recommended for you
+            ar-uae: Recommended for you
+    3f4d35dd-7510-4068-9c41-3166b271dea3|bbf196c6-4821-414c-9b14-b08fb1c7fede|44623ac6-5327-44e3-ab3e-b7455ff829e8:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-demo
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-demo
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-de:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-fr:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-demo
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-demo
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-demo
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-demo
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-demo
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-demo
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-demo
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-demo
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-demo
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-demo
+              type: url
+    3f4d35dd-7510-4068-9c41-3166b271dea3|bbf196c6-4821-414c-9b14-b08fb1c7fede|44d64138-618e-4c6a-b4cc-6ea9b9a22cba:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-de:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-fr:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+    3f4d35dd-7510-4068-9c41-3166b271dea3|bbf196c6-4821-414c-9b14-b08fb1c7fede|6db01010-cff2-458e-85d6-358dc75ca48c:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-sb
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-sb
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-de:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-fr:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-sb
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-sb
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-sb
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-sb
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-sb
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-sb
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-sb
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-sb
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-sb
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-sb
+              type: url
+    3f4d35dd-7510-4068-9c41-3166b271dea3|bbf196c6-4821-414c-9b14-b08fb1c7fede|ea891105-3b48-41b4-8fa0-6c2ecca00a75:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-docs
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-docs
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-de:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-fr:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-docs
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-docs
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-docs
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-docs
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-docs
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-docs
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-docs
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-docs
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-docs
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-docs
+              type: url
   _locales:
     - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-03-18T13:02:32.603847+00:00'
-modified: '2025-06-05T08:51:43.840079+00:00'
+modified: '2025-07-03T13:10:42.378384+00:00'
 pattern: false
