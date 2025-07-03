@@ -137,7 +137,7 @@ const DemoCard: FC<DemoCardProps> = ({
             <p className="text-lg font-semibold text-text-primary">{title}</p>
             <button className="cursor-pointer p-1" title="Copy to clipboard" onClick={copyToClipboard}>
               {currentComponentCache && !isCopy ? (
-                <CopyIcon className="size-5 text-button-primary transition duration-1000 hover:text-blue-200 hover:duration-100 dark:text-white" />
+                <CopyIcon className="size-5 text-button-primary transition duration-1000 hover:text-blue-200 hover:duration-100" />
               ) : (
                 <CheckIcon className="size-5 text-button-primary transition duration-700" />
               )}
