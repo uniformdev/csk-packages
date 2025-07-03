@@ -6,7 +6,7 @@ export const modalDefault = {
       type: 'button',
       _id: '3a772d6f-a601-45e5-a773-ff2d018dde26',
       parameters: createUniformParameter({
-        textColor: 'text-light',
+        textColor: 'text-secondary',
         buttonColor: 'button-primary',
         text: 'Open Modal',
         size: 'button-small',
@@ -50,7 +50,7 @@ export const modalWithActionButtons = {
     {
       type: 'button',
       parameters: createUniformParameter({
-        textColor: 'text-light',
+        textColor: 'text-secondary',
         buttonColor: 'button-primary',
         text: 'Open Modal',
         size: 'button-small',
@@ -93,7 +93,7 @@ export const modalWithActionButtons = {
             parameters: createUniformParameter({
               link: { path: '#', type: 'url' },
               text: 'See details',
-              textColor: 'text-light',
+              textColor: 'text-secondary',
               buttonColor: 'button-primary',
               size: 'button-small',
             }),

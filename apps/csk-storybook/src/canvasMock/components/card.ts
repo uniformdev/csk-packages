@@ -94,7 +94,7 @@ export const cardDefault = {
         },
         textColor: {
           type: 'tp2-color-palette-parameter',
-          value: 'text-light',
+          value: 'text-secondary',
         },
         size: {
           type: 'tp2-size-parameter',
