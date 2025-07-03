@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
-import Container from '@/components/ui/Container';
+import BaseAccordion from '@/components/ui/Accordion';
 import { AccordionProps } from '.';
 
 export const Accordion: FC<AccordionProps> = ({
@@ -15,13 +15,9 @@ export const Accordion: FC<AccordionProps> = ({
   fitHeight,
   height,
 }) => (
-  <Container
-    className="flex flex-col gap-8"
+  <BaseAccordion
+    accordionContent={<UniformSlot data={component} context={context} slot={slots.accordionContent} />}
+    accordionItems={<UniformSlot data={component} context={context} slot={slots.accordionItems} />}
     {...{ backgroundColor, spacing, border, fluidContent, fullHeight, fitHeight, height }}
-  >
-    <div className="flex flex-col gap-4 text-start">
-      <UniformSlot data={component} context={context} slot={slots.accordionContent} />
-    </div>
-    <UniformSlot data={component} context={context} slot={slots.accordionItems} />
-  </Container>
+  />
 );
