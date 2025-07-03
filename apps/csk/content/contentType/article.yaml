@@ -1,7 +1,7 @@
 id: article
 name: Article
 created: '2025-03-18T13:02:37.915553+00:00'
-updated: '2025-06-26T13:29:24.933576+00:00'
+updated: '2025-07-03T11:50:55.687264+00:00'
 slugSettings:
   required: 'no'
 useTeamPermissions: true
@@ -23,7 +23,6 @@ fields:
     type: asset
     typeConfig:
       max: 1
-    localizable: true
   - id: content
     name: Content
     type: richText
@@ -105,7 +104,6 @@ fields:
       max: 1
       allowedTypes:
         - image
-    localizable: true
 entryName: title
 thumbnailField: thumbnail
 description: ''

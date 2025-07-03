@@ -1,7 +1,7 @@
 id: product
 name: Product
 created: '2025-03-18T13:02:38.073619+00:00'
-updated: '2025-06-27T06:06:03.193401+00:00'
+updated: '2025-07-03T11:50:30.856483+00:00'
 slugSettings:
   required: 'no'
 useTeamPermissions: true
@@ -10,12 +10,13 @@ fields:
     name: Title
     type: text
     typeConfig: null
-    notLocalizedByDefault: true
+    localizable: true
   - id: name
     name: Product Name
     type: text
     typeConfig:
       required: true
+    localizable: true
   - id: shortDescription
     name: Short Description
     type: text
@@ -138,7 +139,6 @@ fields:
       max: 1
       allowedTypes:
         - image
-    localizable: true
 entryName: title
 thumbnailField: primaryImage
 description: ''
