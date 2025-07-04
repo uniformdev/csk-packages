@@ -9,9 +9,5 @@ export type ContainerParameters = {
   spacing?: SpaceType | ViewPort<SpaceType>;
   border?: string | ViewPort<string>;
   fluidContent?: boolean;
-  /** @deprecated Use height prop instead */
-  fullHeight?: boolean;
-  /** @deprecated Use height prop instead */
-  fitHeight?: boolean;
   height?: HeightType | ViewPort<HeightType>;
 };

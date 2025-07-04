@@ -12,8 +12,6 @@ export const Card: FC<CardProps> = ({
   spacing,
   border,
   fluidContent,
-  fullHeight,
-  fitHeight,
   height,
   className,
   contentClassName,
@@ -23,7 +21,7 @@ export const Card: FC<CardProps> = ({
   return (
     <Container
       className={cn('relative overflow-hidden', className)}
-      {...{ backgroundColor, spacing, border, fluidContent, fullHeight, fitHeight, height }}
+      {...{ backgroundColor, spacing, border, fluidContent, height }}
     >
       <div
         className={cn({

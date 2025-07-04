@@ -1,7 +1,6 @@
 import { FC } from 'react';
 import { cn, formatSpaceParameterValue, resolveViewPort } from '@/utils/styling';
 import { ContainerProps } from '.';
-import { getHeightValue } from './utils';
 
 export const Container: FC<ContainerProps> = ({
   className,
@@ -12,8 +11,6 @@ export const Container: FC<ContainerProps> = ({
   spacing,
   border = '',
   fluidContent = false,
-  fullHeight = false,
-  fitHeight = false,
   height,
   maxWidth,
   ...rest
@@ -22,8 +19,6 @@ export const Container: FC<ContainerProps> = ({
     fixedSpacingValue,
     { marginTop, marginBottom, marginRight, marginLeft, paddingTop, paddingBottom, paddingRight, paddingLeft },
   ] = formatSpaceParameterValue(spacing);
-
-  const heightValue = getHeightValue({ height, fullHeight, fitHeight });
 
   return (
     <div
@@ -34,7 +29,7 @@ export const Container: FC<ContainerProps> = ({
           'mx-auto w-full': !fluidContent,
           'max-w-7xl max-w-container-width': !maxWidth && !fluidContent,
           [`max-w-${maxWidth}`]: !!maxWidth && !fluidContent,
-          [resolveViewPort(heightValue, 'h-{value}')]: heightValue,
+          [resolveViewPort(height, 'h-{value}')]: height,
         },
         wrapperClassName
       )}
@@ -52,7 +47,7 @@ export const Container: FC<ContainerProps> = ({
             [resolveViewPort(paddingRight, 'pr-{value}')]: paddingRight,
             [resolveViewPort(paddingLeft, 'pl-{value}')]: paddingLeft,
             [resolveViewPort(border, '{value}')]: border,
-            [resolveViewPort(heightValue, 'h-{value}')]: heightValue,
+            [resolveViewPort(height, 'h-{value}')]: height,
           },
           className
         )}

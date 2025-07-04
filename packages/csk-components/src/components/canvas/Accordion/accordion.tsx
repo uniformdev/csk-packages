@@ -11,13 +11,11 @@ export const Accordion: FC<AccordionProps> = ({
   spacing,
   border,
   fluidContent,
-  fullHeight,
-  fitHeight,
   height,
 }) => (
   <BaseAccordion
     accordionContent={<UniformSlot data={component} context={context} slot={slots.accordionContent} />}
     accordionItems={<UniformSlot data={component} context={context} slot={slots.accordionItems} />}
-    {...{ backgroundColor, spacing, border, fluidContent, fullHeight, fitHeight, height }}
+    {...{ backgroundColor, spacing, border, fluidContent, height }}
   />
 );

@@ -8,10 +8,6 @@ type DefaultVariantProps = {
   spacing?: SectionParameters['spacing'];
   border?: SectionParameters['border'];
   fluidContent?: SectionParameters['fluidContent'];
-  /** @deprecated Use height prop instead */
-  fullHeight?: SectionParameters['fullHeight'];
-  /** @deprecated Use height prop instead */
-  fitHeight?: SectionParameters['fitHeight'];
   height?: SectionParameters['height'];
   sectionMedia: React.ReactNode;
   sectionContent: React.ReactNode;
@@ -25,8 +21,6 @@ export const DefaultVariant: FC<DefaultVariantProps> = ({
   spacing,
   border,
   fluidContent,
-  fullHeight,
-  fitHeight,
   height,
   sectionMedia,
   sectionContent,
@@ -34,10 +28,7 @@ export const DefaultVariant: FC<DefaultVariantProps> = ({
   textAlignmentClass,
   buttonAlignmentClass,
 }) => (
-  <Container
-    className="relative overflow-hidden"
-    {...{ backgroundColor, spacing, border, fluidContent, fullHeight, fitHeight, height }}
-  >
+  <Container className="relative overflow-hidden" {...{ backgroundColor, spacing, border, fluidContent, height }}>
     <div className="absolute left-0 top-0 size-full overflow-hidden">{sectionMedia}</div>
     <Container className="relative flex flex-col gap-8">
       <div className={cn('flex flex-col gap-4', textAlignmentClass)}>{sectionContent}</div>
