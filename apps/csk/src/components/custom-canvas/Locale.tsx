@@ -11,11 +11,10 @@ import {
   IconLabel as BaseIconLabel,
   TextProps,
   InlineSVG,
-  Link as BaseLink,
 } from '@uniformdev/csk-components/components/ui';
 import { ViewPort } from '@uniformdev/csk-components/types/cskTypes';
 import { resolveAsset } from '@uniformdev/csk-components/utils/assets';
-import { formatUniformLink, isExternalLink, resolveRouteToPath } from '@uniformdev/csk-components/utils/routing';
+import { formatUniformLink, resolveRouteToPath } from '@uniformdev/csk-components/utils/routing';
 import { resolveViewPort } from '@uniformdev/csk-components/utils/styling';
 import { cn } from '@uniformdev/csk-components/utils/styling';
 import locales from '@/i18n/locales.json';
@@ -91,17 +90,15 @@ export const Locale: FC<LocaleProps> = ({
   });
 
   return (
-    <BaseLink className="cursor-pointer hover:no-underline" link={href} openInNewTab={isExternalLink(href)}>
-      <BaseIconLabel
-        icon={renderUrl()}
-        className={cn('group', className)}
-        iconClassName={actionClassName}
-        textClassName={actionClassName}
-        {...{ size, color, weight, font, transform, decoration, letterSpacing, alignment }}
-      >
-        {getLabel(currentLocalization?.value ?? '', currentLocalization?.label ?? '', component.variant)}
-      </BaseIconLabel>
-    </BaseLink>
+    <BaseIconLabel
+      icon={renderUrl()}
+      className={cn('group cursor-pointer', className)}
+      iconClassName={actionClassName}
+      textClassName={actionClassName}
+      {...{ size, color, weight, font, transform, decoration, letterSpacing, alignment }}
+    >
+      {getLabel(currentLocalization?.value ?? '', currentLocalization?.label ?? '', component.variant)}
+    </BaseIconLabel>
   );
 };
 
