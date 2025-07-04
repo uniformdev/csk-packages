@@ -8,10 +8,6 @@ type ColumnsVariantProps = {
   spacing: FlexibleHeroParameters['spacing'];
   border: FlexibleHeroParameters['border'];
   fluidContent: FlexibleHeroParameters['fluidContent'];
-  /** @deprecated Use height prop instead */
-  fullHeight: FlexibleHeroParameters['fullHeight'];
-  /** @deprecated Use height prop instead */
-  fitHeight: FlexibleHeroParameters['fitHeight'];
   height: FlexibleHeroParameters['height'];
   variant?: DemoHeroVariants;
   demoHeroMedia: React.ReactNode;
@@ -26,8 +22,6 @@ export const ColumnsVariant: FC<ColumnsVariantProps> = ({
   spacing,
   border,
   fluidContent,
-  fullHeight,
-  fitHeight,
   height,
   variant,
   demoHeroMedia,
@@ -36,7 +30,7 @@ export const ColumnsVariant: FC<ColumnsVariantProps> = ({
   textAlignmentClass,
   buttonAlignmentClass,
 }) => (
-  <Container {...{ backgroundColor, spacing, border, fluidContent, fullHeight, fitHeight, height }}>
+  <Container {...{ backgroundColor, spacing, border, fluidContent, height }}>
     <div className={cn('grid grid-cols-1 items-center gap-4 px-4 lg:grid-cols-2 xl:px-0')}>
       <div className={cn('aspect-square', { 'order-last': variant === DemoHeroVariants.ColumnsReverse })}>
         <div className="flex size-full items-center justify-center overflow-hidden">{demoHeroMedia}</div>
