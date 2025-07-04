@@ -3,15 +3,7 @@ import { ViewPort } from '@/types/cskTypes';
 
 export type GridProps = Pick<
   BaseContainerProps,
-  | 'title'
-  | 'backgroundColor'
-  | 'spacing'
-  | 'border'
-  | 'fluidContent'
-  | 'fullHeight'
-  | 'fitHeight'
-  | 'children'
-  | 'height'
+  'title' | 'backgroundColor' | 'spacing' | 'border' | 'fluidContent' | 'children' | 'height'
 > & {
   columnsCount?: string | ViewPort<string>;
   gapY?: string | ViewPort<string>;

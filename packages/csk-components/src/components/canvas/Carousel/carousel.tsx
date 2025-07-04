@@ -13,14 +13,12 @@ export const Carousel: FC<CarouselProps> = ({
   spacing,
   border,
   fluidContent,
-  fullHeight,
-  fitHeight,
   height,
   itemsPerPage,
   gapX,
 }) => (
   <BaseCarousel
-    {...{ backgroundColor, spacing, border, fluidContent, fullHeight, fitHeight, height, itemsPerPage, gapX }}
+    {...{ backgroundColor, spacing, border, fluidContent, height, itemsPerPage, gapX }}
     countOfItems={slots.carouselItems?.items.length ?? 0}
     variant={component.variant}
   >

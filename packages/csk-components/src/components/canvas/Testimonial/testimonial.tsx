@@ -13,8 +13,6 @@ export const Testimonial: FC<TestimonialProps> = ({
   spacing,
   border,
   fluidContent,
-  fullHeight,
-  fitHeight,
   height,
 }) => {
   const variant = component.variant as TestimonialVariants | undefined;
@@ -24,8 +22,6 @@ export const Testimonial: FC<TestimonialProps> = ({
     spacing,
     border,
     fluidContent,
-    fullHeight,
-    fitHeight,
     height,
     testimonialPrimaryImage: <UniformSlot context={context} data={component} slot={slots.testimonialPrimaryImage} />,
     testimonialContent: <UniformSlot context={context} data={component} slot={slots.testimonialContent} />,

@@ -60,10 +60,7 @@ export type SecondaryButtonParameters = PrefixedKeys<BaseButtonParameters, 'seco
 export type ImageParameters = PrefixedKeys<Omit<BaseImageParameters, 'image'>, 'image'> &
   Pick<BaseImageParameters, 'image'>;
 
-/**
- * @deprecated Use FixedHeroParameters or FlexibleHeroParameters directly instead.
- */
-export type DemoHeroParameters = ContainerParameters & {
+type DemoHeroParameters = ContainerParameters & {
   contentAlignment?: ContentAlignment;
 } & EyebrowTitleTextParameters &
   TitleTextParameters &
@@ -74,10 +71,6 @@ export type DemoHeroParameters = ContainerParameters & {
 
 export type FixedHeroParameters = {
   textColor?: string;
-  /**
-   * @deprecated Use overlayAutoTint instead.
-   */
-  enableOverlayAutoTint?: boolean;
   overlayAutoTint?: string;
 } & DemoHeroParameters;
 
@@ -93,10 +86,6 @@ export enum FlexibleHeroSlots {
   FlexibleHeroCta = 'flexibleHeroCta',
 }
 
-/**
- * @deprecated Use FixedHeroProps or FlexibleHeroProps directly instead.
- */
-export type DemoHeroProps = FixedHeroProps | FlexibleHeroProps;
 export type FixedHeroProps = ComponentProps<FixedHeroParameters>;
 export type FlexibleHeroProps = ComponentProps<FlexibleHeroParameters, FlexibleHeroSlots>;
 

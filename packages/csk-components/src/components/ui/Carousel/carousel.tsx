@@ -11,7 +11,7 @@ export const Carousel: FC<CarouselProps> = ({
   spacing,
   border,
   fluidContent,
-  fullHeight,
+  height,
   itemsPerPage = '1',
   children,
   gapX,
@@ -116,7 +116,7 @@ export const Carousel: FC<CarouselProps> = ({
     });
 
   return (
-    <BaseContainer {...{ backgroundColor, spacing, border, fluidContent, fullHeight }}>
+    <BaseContainer {...{ backgroundColor, spacing, border, fluidContent, height }}>
       <div
         className={cn('relative', {
           [resolveViewPort(gapX, '-mx-{value}')]: gapX,

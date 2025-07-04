@@ -14,8 +14,6 @@ export const Section: FC<SectionProps> = ({
   spacing,
   border,
   fluidContent,
-  fullHeight,
-  fitHeight,
   height,
 }) => {
   const variant = component.variant as SectionVariants;
@@ -26,8 +24,6 @@ export const Section: FC<SectionProps> = ({
     spacing,
     border,
     fluidContent,
-    fullHeight,
-    fitHeight,
     height,
     textAlignmentClass: getTextAlignmentClass({ contentAlignment }),
     buttonAlignmentClass: getButtonAlignmentClass({ contentAlignment }),

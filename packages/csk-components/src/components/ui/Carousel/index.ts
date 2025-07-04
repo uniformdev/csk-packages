@@ -4,7 +4,7 @@ import { ContainerProps as BaseContainerProps } from '@/components/ui/Container'
 
 export type CarouselProps = Pick<
   BaseContainerProps,
-  'title' | 'backgroundColor' | 'spacing' | 'border' | 'fluidContent' | 'fullHeight'
+  'title' | 'backgroundColor' | 'spacing' | 'border' | 'fluidContent' | 'height'
 > & {
   countOfItems?: number;
   children: (options: { className?: string; style?: React.CSSProperties }) => ReactElement;

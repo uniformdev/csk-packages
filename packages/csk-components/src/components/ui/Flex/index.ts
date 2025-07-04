@@ -14,8 +14,6 @@ export type FlexProps = Pick<
   | 'spacing'
   | 'border'
   | 'fluidContent'
-  | 'fullHeight'
-  | 'fitHeight'
   | 'height'
   | 'children'
 > & {

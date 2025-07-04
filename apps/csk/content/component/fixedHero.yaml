@@ -144,62 +144,6 @@ parameters:
           value: '1'
       maxValue: 10
       minValue: 0
-  - id: 855b7e83-5dfc-448c-b9a6-f59060c1637b
-    name: Deprecated
-    type: group
-    typeConfig:
-      collapsed: true
-      childrenParams:
-        - eyebrowTitleColor
-        - titleColor
-        - descriptionColor
-        - fitHeight
-        - fullHeight
-        - enableOverlayAutoTint
-  - id: eyebrowTitleColor
-    name: Eyebrow Text Color (Deprecated)
-    type: dex-color-palette-parameter
-    helpText: >-
-      This parameter is deprecated — please use the Text Color parameter to set
-      the color for all text elements.
-    typeConfig:
-      allowColors: []
-      selectedGroup: text
-      allowThemeColors: []
-  - id: titleColor
-    name: Title Color (Deprecated)
-    type: dex-color-palette-parameter
-    helpText: >-
-      This parameter is deprecated — please use the Text Color parameter to set
-      the color for all text elements.
-    typeConfig:
-      allowColors: []
-      selectedGroup: text
-  - id: descriptionColor
-    name: Description Color (Deprecated)
-    type: dex-color-palette-parameter
-    helpText: >-
-      This parameter is deprecated — please use the Text Color parameter to set
-      the color for all text elements.
-    typeConfig:
-      allowColors: []
-      selectedGroup: text
-      allowThemeColors: []
-  - id: fitHeight
-    name: Fit Height (Deprecated)
-    type: checkbox
-    typeConfig: null
-  - id: fullHeight
-    name: Full Height (Deprecated)
-    type: checkbox
-    typeConfig: null
-  - id: enableOverlayAutoTint
-    name: Enable Overlay Auto Tint (Deprecated)
-    type: checkbox
-    helpText: >-
-      Automatically generates a 30% transparent overlay from the title color.
-      This applies only when the component is in its default variant.
-    typeConfig: null
 categoryId: f22b05f0-c4bf-4158-8ebc-4856e4d453af
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/hero-fixed.jpg
@@ -207,8 +151,8 @@ useTeamPermissions: true
 slots: []
 titleParameter: displayName
 canBeComposition: false
-created: '2025-01-29T10:47:01.402162+00:00'
-updated: '2025-06-25T09:40:33.309461+00:00'
+created: '2025-06-26T12:10:50.382836+00:00'
+updated: '2025-07-04T13:55:28.365833+00:00'
 variants:
   - id: columns
     name: Columns

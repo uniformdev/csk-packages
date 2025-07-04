@@ -18,14 +18,12 @@ export const DefaultVariant: FC<DefaultVariantProps> = ({
   spacing,
   border,
   fluidContent,
-  fullHeight,
-  fitHeight,
   height,
   ReviewImage,
   ReviewPersonInfo,
   ReviewContent,
 }) => (
-  <Container {...{ backgroundColor, spacing, border, fluidContent, fullHeight, fitHeight, height }}>
+  <Container {...{ backgroundColor, spacing, border, fluidContent, height }}>
     <div className="mx-auto flex lg:max-w-[60%]">
       <div className="aspect-square size-12 shrink-0 rounded-full">{ReviewImage}</div>
       <div className="ml-6">

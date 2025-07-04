@@ -14,14 +14,9 @@ export const Table: FC<TableProps> = ({
   spacing,
   border,
   fluidContent,
-  fullHeight,
-  fitHeight,
   height,
 }) => (
-  <Container
-    className="flex flex-col gap-5"
-    {...{ backgroundColor, spacing, border, fluidContent, fullHeight, fitHeight, height }}
-  >
+  <Container className="flex flex-col gap-5" {...{ backgroundColor, spacing, border, fluidContent, height }}>
     <div className="overflow-x-auto">
       <table className={getTableClasses({ size, textColor })}>
         <thead>
