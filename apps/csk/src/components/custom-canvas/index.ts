@@ -26,6 +26,7 @@ import GridItem from './GridItem';
 import Input from './Input';
 //? if (localization) {
 import Locale from './Locale';
+import LocaleLink from './LocaleLink';
 import LocaleSelector from './LocaleSelector';
 //? }
 import ModalLayout from './ModalLayout';
@@ -77,5 +78,6 @@ export const customComponentsMapping: ComponentMapping = {
   //? if (localization) {
   locale: { component: Locale },
   localeSelector: { component: LocaleSelector },
+  localeLink: { component: LocaleLink },
   //? }
 };
