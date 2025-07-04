@@ -2419,139 +2419,9 @@ composition:
             value: contrast-[.1]
         _overridability:
           hideLockedParameters: true
-      - _id: 6db4e94e-57df-4dbe-9740-376836444023
-        type: locale
-        variant: onlyIcons
-        parameters:
-          link:
-            type: link
-            locales:
-              da-dk:
-                path: /${locale}/location-selector
-                type: projectMapNode
-                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
-                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-                dynamicInputValues:
-                  locale: ${locale}
-              de-at:
-                path: /${locale}/location-selector
-                type: projectMapNode
-                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
-                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-                dynamicInputValues:
-                  locale: ${locale}
-              de-de:
-                path: /${locale}/location-selector
-                type: projectMapNode
-                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
-                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-                dynamicInputValues:
-                  locale: ${locale}
-              en-ca:
-                path: /${locale}/location-selector
-                type: projectMapNode
-                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
-                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-                dynamicInputValues:
-                  locale: ${locale}
-              en-de:
-                path: /${locale}/location-selector
-                type: projectMapNode
-                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
-                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-                dynamicInputValues:
-                  locale: ${locale}
-              en-fr:
-                path: /${locale}/location-selector
-                type: projectMapNode
-                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
-                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-                dynamicInputValues:
-                  locale: ${locale}
-              en-gb:
-                path: /${locale}/location-selector
-                type: projectMapNode
-                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
-                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-                dynamicInputValues:
-                  locale: ${locale}
-              en-nl:
-                path: /${locale}/location-selector
-                type: projectMapNode
-                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
-                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-                dynamicInputValues:
-                  locale: ${locale}
-              en-us:
-                path: /${locale}/location-selector
-                type: projectMapNode
-                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
-                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-                dynamicInputValues:
-                  locale: ${locale}
-              es-us:
-                path: /${locale}/location-selector
-                type: projectMapNode
-                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
-                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-                dynamicInputValues:
-                  locale: ${locale}
-              fr-ca:
-                path: /${locale}/location-selector
-                type: projectMapNode
-                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
-                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-                dynamicInputValues:
-                  locale: ${locale}
-              fr-fr:
-                path: /${locale}/location-selector
-                type: projectMapNode
-                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
-                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-                dynamicInputValues:
-                  locale: ${locale}
-              ja-jp:
-                path: /${locale}/location-selector
-                type: projectMapNode
-                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
-                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-                dynamicInputValues:
-                  locale: ${locale}
-              nb-no:
-                path: /${locale}/location-selector
-                type: projectMapNode
-                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
-                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-                dynamicInputValues:
-                  locale: ${locale}
-              nl-nl:
-                path: /${locale}/location-selector
-                type: projectMapNode
-                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
-                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-                dynamicInputValues:
-                  locale: ${locale}
-              sv-se:
-                path: /${locale}/location-selector
-                type: projectMapNode
-                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
-                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
-                dynamicInputValues:
-                  locale: ${locale}
-          size:
-            type: dex-segmented-control-parameter
-            value: 2xl
-          color:
-            type: dex-color-palette-parameter
-            value: text-primary
-          weight:
-            type: dex-segmented-control-parameter
-            value: normal
-          hoverEffect:
-            type: dex-segmented-control-parameter
-            value: ''
-        _overridability:
-          hideLockedParameters: true
+      - _id: b4c529b6-3e08-4b24-b233-0cacda24d5f5
+        type: modal
+        _pattern: 64d6a0e6-8288-41d9-82a8-38c5916d52e2
     headerCenterContent:
       - _id: 5832d439-1459-4a01-b422-fd1e66a71cbb
         type: navigationLink
@@ -2570,7 +2440,23 @@ composition:
             value: base
           text:
             type: text
-            value: Home
+            locales:
+              da-dk: Home
+              de-at: Home Austria
+              de-de: Home German
+              en-ca: Home
+              en-de: Home
+              en-fr: Home
+              en-gb: Home GB
+              en-nl: Home
+              en-us: Home
+              es-us: Home Spain
+              fr-ca: Home Français
+              fr-fr: Home
+              ja-jp: Home
+              nb-no: Home
+              nl-nl: Home Dutch
+              sv-se: Home
           color:
             type: dex-color-palette-parameter
             value: text-primary
@@ -4124,7 +4010,7 @@ composition:
     - en-fr
     - ja-jp
 created: '2025-02-27T10:44:59.728246+00:00'
-modified: '2025-07-03T13:43:07.117298+00:00'
+modified: '2025-07-04T12:05:46.82058+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/global_header.png

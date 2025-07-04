@@ -1,0 +1,335 @@
+composition:
+  _name: Locale Selector
+  _id: 64d6a0e6-8288-41d9-82a8-38c5916d52e2
+  type: modal
+  parameters:
+    maxWidth:
+      type: dex-segmented-control-parameter
+      value: large
+    displayName:
+      type: text
+      locales:
+        en-us: Locale Selector
+    closeIconColor:
+      type: dex-color-palette-parameter
+      value: general-color-3
+    backgroundColor:
+      type: dex-color-palette-parameter
+      value: general-color-1
+  slots:
+    trigger:
+      - _id: 6db4e94e-57df-4dbe-9740-376836444023
+        type: locale
+        variant: onlyIcons
+        parameters:
+          link:
+            type: link
+            locales:
+              da-dk:
+                path: /${locale}/location-selector
+                type: projectMapNode
+                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              de-at:
+                path: /${locale}/location-selector
+                type: projectMapNode
+                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              de-de:
+                path: /${locale}/location-selector
+                type: projectMapNode
+                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              en-ca:
+                path: /${locale}/location-selector
+                type: projectMapNode
+                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              en-de:
+                path: /${locale}/location-selector
+                type: projectMapNode
+                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              en-fr:
+                path: /${locale}/location-selector
+                type: projectMapNode
+                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              en-gb:
+                path: /${locale}/location-selector
+                type: projectMapNode
+                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              en-nl:
+                path: /${locale}/location-selector
+                type: projectMapNode
+                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              es-us:
+                path: /${locale}/location-selector
+                type: projectMapNode
+                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              fr-ca:
+                path: /${locale}/location-selector
+                type: projectMapNode
+                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              fr-fr:
+                path: /${locale}/location-selector
+                type: projectMapNode
+                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              ja-jp:
+                path: /${locale}/location-selector
+                type: projectMapNode
+                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              nb-no:
+                path: /${locale}/location-selector
+                type: projectMapNode
+                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              nl-nl:
+                path: /${locale}/location-selector
+                type: projectMapNode
+                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              sv-se:
+                path: /${locale}/location-selector
+                type: projectMapNode
+                nodeId: ead75066-4fcb-4224-860d-9af0bf43008d
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+          size:
+            type: dex-segmented-control-parameter
+            value: 2xl
+          color:
+            type: dex-color-palette-parameter
+            value: text-primary
+          weight:
+            type: dex-segmented-control-parameter
+            value: normal
+          hoverEffect:
+            type: dex-segmented-control-parameter
+            value: ''
+        _overridability:
+          hideLockedParameters: true
+    modalContent:
+      - _id: 94eb13d0-76cc-4c72-962a-245aec91fc1e
+        type: accordion
+        slots:
+          accordionItems:
+            - _id: 44524c22-0db7-41ec-afa0-38a85cf45dbf
+              type: $loop
+              slots:
+                body:
+                  - _id: 97b494c2-769f-4a2e-b881-8001ebca2183
+                    type: accordionItem
+                    slots:
+                      accordionItemContent:
+                        - _id: 49883bbb-6da2-43c5-b05f-b5789ed56c29
+                          type: flex
+                          slots:
+                            flexItem:
+                              - _id: 4dea77f2-77c0-4ab2-be47-24b4efec1f3f
+                                type: $loop
+                                slots:
+                                  body:
+                                    - _id: 8864b62e-cf53-46c8-8772-33ad4d30b8fe
+                                      type: localeLink
+                                      parameters:
+                                        text:
+                                          type: text
+                                          locales:
+                                            en-us: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/label}
+                                        localeCode:
+                                          type: text
+                                          locales:
+                                            en-us: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/value}
+                                      _overridability:
+                                        hideLockedParameters: true
+                                _dataResources:
+                                  Get Localization Settings Content Loop Item locales Loop Item:
+                                    type: sys-reserved-loop
+                                    variables:
+                                      connectedData: >-
+                                        #jptr:/Get Localization Settings Content
+                                        Loop Item/locales:fa=c
+                                _overridability:
+                                  hideLockedParameters: true
+                          parameters:
+                            gap:
+                              type: dex-slider-control-parameter
+                              value:
+                                mobile: '8'
+                                tablet: '8'
+                                desktop: '8'
+                            direction:
+                              type: dex-segmented-control-parameter
+                              value:
+                                mobile: col
+                                tablet: col
+                                desktop: col
+                            alignItems:
+                              type: dex-segmented-control-parameter
+                              value: {}
+                            justifyContent:
+                              type: dex-segmented-control-parameter
+                              value: {}
+                          _overridability:
+                            hideLockedParameters: true
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: span
+                      size:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: lg
+                          tablet: ''
+                          desktop: ''
+                      text:
+                        type: text
+                        value: >-
+                          ${#jptr:/Get Localization Settings Content Loop
+                          Item/name}
+                      color:
+                        type: dex-color-palette-parameter
+                        value: text-secondary
+                      border:
+                        type: dex-token-selector-parameter
+                        value: border-bottom
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: bold
+                      spacing:
+                        type: dex-space-control-parameter
+                        value:
+                          mobile:
+                            paddingBottom: container-small
+                          tablet: {}
+                          desktop: {}
+                      backgroundColor:
+                        type: dex-color-palette-parameter
+                        value: general-color-3
+                    _overridability:
+                      parameters:
+                        size: 'yes'
+                        text: 'yes'
+                        color: 'yes'
+                        backgroundColor: 'yes'
+                      hideLockedParameters: true
+              _dataResources:
+                Get Localization Settings Content Loop Item:
+                  type: sys-reserved-loop
+                  variables:
+                    connectedData: '#jptr:/Get Localization Settings Content:fa=c'
+              _overridability:
+                hideLockedParameters: true
+          accordionContent:
+            - _id: 7eddcd93-3830-48ae-97b9-626790f2f9f5
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: span
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: 3xl
+                    tablet: 4xl
+                    desktop: 4xl
+                text:
+                  type: text
+                  locales:
+                    en-us: Locations and Languages
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          height:
+            type: dex-segmented-control-parameter
+            value: {}
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              mobile:
+                paddingTop: container-small
+                paddingBottom: container-small
+              tablet: {}
+              desktop: {}
+          displayName:
+            type: text
+            locales:
+              en-us: Locales Accordion
+        _overridability:
+          hideLockedParameters: true
+  _dataResources:
+    Get Localization Settings Content:
+      type: getLocalizationSettings
+      variables: {}
+      isPatternParameter: true
+      ignorePatternParameterDefault: false
+  _overridability:
+    hideLockedParameters: true
+  _locales:
+    - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+created: '2025-07-04T12:05:34.94344+00:00'
+modified: '2025-07-04T12:55:41.309377+00:00'
+pattern: true

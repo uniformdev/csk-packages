@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: modal
 name: Modal
@@ -51,6 +51,7 @@ slots:
     name: Trigger
     allowedComponents:
       - button
+      - locale
     allowAllComponents: false
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
@@ -68,5 +69,5 @@ slots:
     patternsInAllowedComponents: false
 titleParameter: displayName
 canBeComposition: false
-created: '2025-02-17T15:34:14.933607+00:00'
-updated: '2025-02-17T15:34:14.933607+00:00'
+created: '2025-02-27T10:44:57.777797+00:00'
+updated: '2025-07-04T11:25:45.156573+00:00'
