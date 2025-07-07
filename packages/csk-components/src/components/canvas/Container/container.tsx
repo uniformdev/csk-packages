@@ -13,8 +13,6 @@ export const Container: FC<ContainerProps> = ({
   spacing,
   border,
   fluidContent,
-  fullHeight,
-  fitHeight,
   height,
   className,
 }) => (
@@ -26,8 +24,6 @@ export const Container: FC<ContainerProps> = ({
       spacing,
       border,
       fluidContent,
-      fullHeight,
-      fitHeight,
       height,
       className,
     }}

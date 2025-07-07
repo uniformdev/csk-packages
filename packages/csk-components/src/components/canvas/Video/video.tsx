@@ -8,7 +8,6 @@ import { VideoPlaceholder } from './placeholder';
 
 export const Video: FC<VideoProps> = ({
   video,
-  url, // Deprecated. Please use video parameter instead of url
   placeholderImage,
   autoPlay,
   lazyLoad,
@@ -24,7 +23,7 @@ export const Video: FC<VideoProps> = ({
   const [resolvedVideo] = resolveAsset(video);
   const [resolvedImage] = resolveAsset(placeholderImage);
 
-  const resolvedVideoUrl = resolvedVideo?.url || (url?.type === 'url' ? url.path : undefined);
+  const resolvedVideoUrl = resolvedVideo?.url;
 
   if (!resolvedVideoUrl) {
     return <VideoPlaceholder component={component} context={context} />;

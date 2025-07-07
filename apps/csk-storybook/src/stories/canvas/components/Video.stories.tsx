@@ -16,7 +16,6 @@ type Story = StoryObj<typeof Video>;
 
 export const Default: Story = {
   args: {
-    url: undefined,
     video: [
       {
         _id: '',

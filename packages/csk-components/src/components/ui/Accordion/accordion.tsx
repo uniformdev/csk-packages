@@ -10,14 +10,12 @@ export const Accordion: FC<AccordionProps> = ({
   spacing,
   border,
   fluidContent,
-  fullHeight,
-  fitHeight,
   height,
   className,
 }) => (
   <Container
     className={cn('flex flex-col gap-8', className)}
-    {...{ backgroundColor, spacing, border, fluidContent, fullHeight, fitHeight, height }}
+    {...{ backgroundColor, spacing, border, fluidContent, height }}
   >
     {accordionContent && <div className="flex flex-col gap-4 text-start">{accordionContent}</div>}
     {accordionItems}

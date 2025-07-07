@@ -72,14 +72,15 @@ export const FluidContainer: Story = {
   render: renderStory('Fluid Container'),
 };
 
-export const FullHeightContainer: Story = {
+export const ScreenHeightContainer: Story = {
   args: {
-    displayName: 'Full Height Container',
+    displayName: 'Screen Height Container',
     backgroundColor: 'text-secondary',
     fluidContent: false,
+    height: 'screen',
   },
   argTypes,
-  render: renderStory('Full Height Container'),
+  render: renderStory('Screen Height Container'),
 };
 
 export const WithSpacingContainer: Story = {
