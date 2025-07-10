@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic';
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { ContainerParameters } from '@/components/canvas/Container/parameters';
+import { ComponentProps } from '@/types/cskTypes';
 
 export enum ContentAlignment {
   Left = 'left',
@@ -19,5 +19,5 @@ export enum BannerSlots {
 
 export type BannerProps = ComponentProps<BannerParameters, BannerSlots>;
 
-export default dynamic(() => import('./banner').then(mod => mod.Banner));
+export default dynamic(() => import('./banner').then(mod => mod.default));
 export { BannerEmptyPlaceholder } from './empty-placeholder';

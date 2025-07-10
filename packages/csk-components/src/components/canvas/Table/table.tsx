@@ -1,15 +1,14 @@
 import { FC } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
+import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
 import Container from '@/components/ui/Container';
-import { TableProps } from '.';
+import { withFlattenParameters } from '@/utils/withFlattenParameters';
+import { TableParameters, TableProps } from '.';
 import { getTableClasses } from './style-utils';
 
-export const Table: FC<TableProps> = ({
+const Table: FC<TableProps & TableParameters> = ({
   size,
   textColor,
   slots,
-  component,
-  context,
   backgroundColor,
   spacing,
   border,
@@ -20,12 +19,14 @@ export const Table: FC<TableProps> = ({
     <div className="overflow-x-auto">
       <table className={getTableClasses({ size, textColor })}>
         <thead>
-          <UniformSlot slot={slots.tableHead} context={context} data={component} />
+          <UniformSlot slot={slots.tableHead} />
         </thead>
         <tbody>
-          <UniformSlot slot={slots.tableBody} context={context} data={component} />
+          <UniformSlot slot={slots.tableBody} />
         </tbody>
       </table>
     </div>
   </Container>
 );
+
+export default withFlattenParameters(Table);

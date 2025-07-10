@@ -5,7 +5,7 @@ import { RatingProps } from '.';
 export const Rating: FC<RatingProps> = ({ rating, showReviewLabel, starsColor, activeStarsColor }) => (
   <div className="flex items-center space-x-1">
     {Array.from({ length: 5 }, (_, starIndex) => {
-      const selectedRating = rating >= starIndex + 1;
+      const selectedRating = rating && rating >= starIndex + 1;
       return (
         <svg
           key={starIndex}

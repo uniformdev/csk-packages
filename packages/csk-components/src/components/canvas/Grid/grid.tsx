@@ -1,9 +1,10 @@
 import { FC } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
+import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
 import BaseGrid from '@/components/ui/Grid';
-import { GridProps } from '.';
+import { withFlattenParameters } from '@/utils/withFlattenParameters';
+import { GridParameters, GridProps } from '.';
 
-export const Grid: FC<GridProps> = ({
+const Grid: FC<GridProps & GridParameters> = ({
   columnsCount,
   gapX,
   gapY,
@@ -13,14 +14,14 @@ export const Grid: FC<GridProps> = ({
   fluidContent,
   height,
   slots,
-  component,
-  context,
   className,
 }) => (
   <BaseGrid
     className={className}
     {...{ columnsCount, gapX, gapY, backgroundColor, spacing, border, fluidContent, height }}
   >
-    <UniformSlot data={component} context={context} slot={slots.gridInner} />
+    <UniformSlot slot={slots.gridInner} />
   </BaseGrid>
 );
+
+export default withFlattenParameters(Grid);

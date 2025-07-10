@@ -1,12 +1,11 @@
 import { FC } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
+import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
 import Container from '@/components/ui/Container';
 import { cn } from '@/utils/styling';
-import { CardProps, CardVariants } from '.';
+import { withFlattenParameters } from '@/utils/withFlattenParameters';
+import { CardParameters, CardProps, CardVariants } from '.';
 
-export const Card: FC<CardProps> = ({
-  component,
-  context,
+const Card: FC<CardProps & CardParameters> = ({
   slots,
   backgroundColor,
   spacing,
@@ -15,8 +14,9 @@ export const Card: FC<CardProps> = ({
   height,
   className,
   contentClassName,
+  variant,
 }) => {
-  const isBackgroundImageVariant = component.variant === CardVariants.BackgroundImage;
+  const isBackgroundImageVariant = variant === CardVariants.BackgroundImage;
 
   return (
     <Container
@@ -28,13 +28,13 @@ export const Card: FC<CardProps> = ({
           'inset-0 size-full absolute': isBackgroundImageVariant,
         })}
       >
-        <UniformSlot data={component} context={context} slot={slots.cardMedia} />
+        <UniformSlot slot={slots.cardMedia} />
       </div>
       <div className={cn('relative flex flex-col gap-y-2', contentClassName)}>
-        <UniformSlot data={component} context={context} slot={slots.cardContent} />
+        <UniformSlot slot={slots.cardContent} />
       </div>
     </Container>
   );
 };
 
-export default Card;
+export default withFlattenParameters(Card);

@@ -1,43 +1,43 @@
 'use client';
 
-import { FC, Fragment, useCallback, useEffect, useMemo, useState } from 'react';
-import { flattenValues } from '@uniformdev/canvas';
-import { UniformSlot, UniformText } from '@uniformdev/canvas-next-rsc/component';
+import { FC, Fragment, useCallback, useState, MouseEvent, FocusEvent } from 'react';
+import { ComponentInstance, flattenValues } from '@uniformdev/canvas';
+import { UniformSlot, UniformText, ComponentParameter } from '@uniformdev/canvas-next-rsc-v2/component';
 import Container from '@/components/ui/Container';
-import { TabsProps, TabsVariants } from '.';
+import { TabsParameters, TabsProps } from '.';
 import { getButtonClasses, getButtonContainerClasses } from './style-utils';
 
-export const Tabs: FC<TabsProps> = ({
+const TAB_ITEM_TEXT_PARAMETER_ID = 'text';
+const TAB_ITEM_TEXT_PARAMETER_TYPE = 'text';
+
+export const Tabs: FC<TabsProps & TabsParameters & { slotData?: Record<string, ComponentInstance[]> }> = ({
   slots,
   color,
-  component,
-  context,
   backgroundColor,
   spacing,
   border,
   fluidContent,
   height,
+  variant,
+  slotData,
+  context,
 }) => {
-  const variant = (component.variant || TabsVariants.Default) as TabsVariants;
-  const [activeTabId, setActiveTabId] = useState(component?.slots?.tabItems?.[0]?._id as string);
+  const tabItems = slotData?.tabItems?.map(tabComponent => ({
+    ...(flattenValues(tabComponent) as { text?: string }),
+    id: (tabComponent?._id as string) || '',
+  }));
 
-  const tabItems = useMemo(() => {
-    if (!component?.slots?.tabItems) return [];
-    return component.slots.tabItems.map(tabComponent => ({
-      ...(flattenValues(tabComponent) as { title?: string }),
-      id: tabComponent._id as string,
-    }));
-  }, [component?.slots?.tabItems]);
+  const [activeTabId, setActiveTabId] = useState(tabItems?.[0]?.id || '');
 
-  useEffect(() => {
-    if (!tabItems.length) return;
-    if (!activeTabId) setActiveTabId(tabItems[0]?.id || '');
-  }, [tabItems, activeTabId]);
+  const handleTabClick = useCallback((event: MouseEvent<HTMLButtonElement>) => {
+    const tabId = (event.target as HTMLButtonElement).id;
+    setActiveTabId(tabId);
+  }, []);
 
   const handleContextualEditingTabClick = useCallback(
-    (tabId: string) => {
+    (event: FocusEvent<HTMLButtonElement>) => {
+      const tabId = event.target.id;
       if (!context.isContextualEditing) return;
-
       setActiveTabId(tabId);
     },
     [context.isContextualEditing]
@@ -46,31 +46,33 @@ export const Tabs: FC<TabsProps> = ({
   return (
     <Container className="flex flex-col gap-5" {...{ backgroundColor, spacing, border, fluidContent, height }}>
       <div className={getButtonContainerClasses({ color, variant })}>
-        {tabItems.map((tabItem, index) => (
+        {tabItems?.map(({ id: currentTabId, [TAB_ITEM_TEXT_PARAMETER_ID]: currentTabText }) => (
           <button
-            key={tabItem.id}
-            onClick={() => setActiveTabId(tabItem.id)}
-            className={getButtonClasses({ color, variant, tabItem, activeTabId })}
+            id={currentTabId}
+            key={currentTabId}
+            onClick={handleTabClick}
+            className={getButtonClasses({ color, variant, isActiveTab: currentTabId === activeTabId })}
           >
-            {component?.slots?.tabItems?.[index] && (
-              <UniformText
-                onFocus={() => handleContextualEditingTabClick(tabItem.id)}
-                context={context}
-                parameterId="text"
-                component={component?.slots?.tabItems[index]}
-                placeholder="Tab title"
-              />
-            )}
+            <UniformText
+              id={currentTabId}
+              placeholder="Text goes here"
+              onFocus={handleContextualEditingTabClick}
+              parameter={
+                {
+                  parameterId: TAB_ITEM_TEXT_PARAMETER_ID,
+                  type: TAB_ITEM_TEXT_PARAMETER_TYPE,
+                  value: currentTabText,
+                  _contextualEditing: { isEditable: true },
+                } as ComponentParameter<string>
+              }
+              component={{ _id: currentTabId }}
+            />
           </button>
         ))}
       </div>
-      <UniformSlot data={component} context={context} slot={slots.tabItems}>
-        {({ child, component: { _id: currentComponentId } }) =>
-          currentComponentId === activeTabId ? (
-            <Fragment key={currentComponentId}>{child}</Fragment>
-          ) : (
-            <Fragment key={currentComponentId} />
-          )
+      <UniformSlot slot={slots.tabItems}>
+        {({ child, _id: currentComponentId, key }) =>
+          currentComponentId === activeTabId ? <Fragment key={key}>{child}</Fragment> : <Fragment key={key} />
         }
       </UniformSlot>
     </Container>

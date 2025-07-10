@@ -1,23 +1,23 @@
 'use client';
 
 import { FC, useState, useEffect, useMemo } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
-import { CountdownProps, CountdownVariants } from '.';
+import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
+import { withFlattenParameters } from '@/utils/withFlattenParameters';
+import { CountdownParameters, CountdownProps, CountdownVariants } from '.';
 import { CountdownUnit } from './constants';
 import { getTextClass, getUnitClass } from './style-utils';
 import { formatTime, renderNumberList } from './utils';
 
 const UNITS_TO_SHOW = [CountdownUnit.Days, CountdownUnit.Hours, CountdownUnit.Minutes, CountdownUnit.Seconds];
 
-export const Countdown: FC<CountdownProps> = ({
+const Countdown: FC<CountdownProps & CountdownParameters> = ({
   targetDate,
   backgroundColor,
   textColor,
   border,
   size,
-  component,
-  context,
   slots,
+  variant,
 }) => {
   const [{ timeDifference, ...time }, setTime] = useState(formatTime(targetDate));
 
@@ -55,7 +55,7 @@ export const Countdown: FC<CountdownProps> = ({
               <div
                 key={unit}
                 className={getUnitClass({
-                  variant: component.variant as CountdownVariants,
+                  variant: variant as CountdownVariants,
                   backgroundColor,
                   border,
                   size,
@@ -77,8 +77,10 @@ export const Countdown: FC<CountdownProps> = ({
           })}
         </div>
       ) : (
-        <UniformSlot data={component} context={context} slot={slots.countdownComplete} />
+        <UniformSlot slot={slots.countdownComplete} />
       )}
     </div>
   );
 };
+
+export default withFlattenParameters(Countdown);

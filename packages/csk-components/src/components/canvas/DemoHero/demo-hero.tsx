@@ -1,13 +1,34 @@
 import { FC } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
-import { DemoHeroVariants, FixedHeroProps, FlexibleHeroProps } from '.';
+import { SlotDefinition } from '@uniformdev/canvas-next-rsc-shared-v2';
+import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
+import { ReplaceFieldsWithAssets } from '@/types/cskTypes';
+import {
+  DemoHeroVariants,
+  FixedHeroParameters,
+  FixedHeroProps,
+  FlexibleHeroParameters,
+  FlexibleHeroProps,
+  FlexibleHeroSlots,
+} from '.';
 import { BaseHeroButton, BaseHeroImage, BaseHeroText } from './atoms';
 import { ColumnsVariant } from './columns-variant';
 import { DefaultVariant } from './default-variant';
 import { getButtonAlignmentClass, getTextAlignmentClass } from './style-utils';
 import { cleanUpPrefix } from './utils';
 
-export const DemoHero: FC<(FixedHeroProps | FlexibleHeroProps) & { isFlexibleHero?: boolean }> = ({
+type FixedHeroComponentProps = {
+  isFlexibleHero?: false;
+  slots: Record<never, SlotDefinition>;
+} & FixedHeroProps &
+  ReplaceFieldsWithAssets<FixedHeroParameters, 'image' | 'primaryButtonIcon'>;
+
+type FlexibleHeroComponentProps = {
+  isFlexibleHero: true;
+  slots: Record<FlexibleHeroSlots, SlotDefinition>;
+} & FlexibleHeroProps &
+  ReplaceFieldsWithAssets<FlexibleHeroParameters, 'image' | 'primaryButtonIcon'>;
+
+export const DemoHero: FC<FixedHeroComponentProps | FlexibleHeroComponentProps> = ({
   // Eyebrow Text Parameters
   eyebrowTitleText,
   eyebrowTitleTag,
@@ -79,15 +100,17 @@ export const DemoHero: FC<(FixedHeroProps | FlexibleHeroProps) & { isFlexibleHer
   border,
   fluidContent,
   height,
-  isFlexibleHero = false,
+  isFlexibleHero,
   component,
   context,
   slots,
+  variant,
+  parameters,
 }) => {
-  const variant = component.variant as DemoHeroVariants | undefined;
+  const isEditorPreviewMode = context.isContextualEditing;
 
   const demoHeroContent = isFlexibleHero ? (
-    <UniformSlot data={component} context={context} slot={slots.flexibleHeroContent} />
+    <UniformSlot slot={slots.flexibleHeroContent} />
   ) : (
     <>
       <BaseHeroText
@@ -107,9 +130,9 @@ export const DemoHero: FC<(FixedHeroProps | FlexibleHeroProps) & { isFlexibleHer
           },
           'eyebrowTitle'
         )}
+        isEditorPreviewMode={isEditorPreviewMode}
         component={component}
-        context={context}
-        parameterId="eyebrowTitleText"
+        parameter={parameters.eyebrowTitleText}
       />
       <BaseHeroText
         {...cleanUpPrefix(
@@ -128,9 +151,9 @@ export const DemoHero: FC<(FixedHeroProps | FlexibleHeroProps) & { isFlexibleHer
           },
           'title'
         )}
+        isEditorPreviewMode={isEditorPreviewMode}
         component={component}
-        context={context}
-        parameterId="titleText"
+        parameter={parameters.titleText}
       />
       <BaseHeroText
         {...cleanUpPrefix(
@@ -149,15 +172,15 @@ export const DemoHero: FC<(FixedHeroProps | FlexibleHeroProps) & { isFlexibleHer
           },
           'description'
         )}
+        isEditorPreviewMode={isEditorPreviewMode}
         component={component}
-        context={context}
-        parameterId="descriptionText"
+        parameter={parameters.descriptionText}
       />
     </>
   );
 
   const demoHeroCTA = isFlexibleHero ? (
-    <UniformSlot data={component} context={context} slot={slots.flexibleHeroCta} />
+    <UniformSlot slot={slots.flexibleHeroCta} />
   ) : (
     <>
       <BaseHeroButton
@@ -181,15 +204,14 @@ export const DemoHero: FC<(FixedHeroProps | FlexibleHeroProps) & { isFlexibleHer
           },
           'primaryButton'
         )}
+        isEditorPreviewMode={isEditorPreviewMode}
         component={component}
-        context={context}
-        parameterId="primaryButtonText"
+        parameter={parameters.primaryButtonText}
       />
     </>
   );
 
   const variantProps = {
-    variant,
     backgroundColor,
     spacing,
     border,
@@ -217,7 +239,8 @@ export const DemoHero: FC<(FixedHeroProps | FlexibleHeroProps) & { isFlexibleHer
             'image'
           )}
           component={component}
-          context={context}
+          isEditorPreviewMode={isEditorPreviewMode}
+          variant={variant}
         />
       </>
     ),
@@ -228,7 +251,7 @@ export const DemoHero: FC<(FixedHeroProps | FlexibleHeroProps) & { isFlexibleHer
   switch (variant) {
     case DemoHeroVariants.Columns:
     case DemoHeroVariants.ColumnsReverse:
-      return <ColumnsVariant {...variantProps} />;
+      return <ColumnsVariant variant={variant} {...variantProps} />;
     default:
       return <DefaultVariant {...variantProps} />;
   }

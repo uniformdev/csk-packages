@@ -1,5 +1,7 @@
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
+import { ComponentProps } from '@/types/cskTypes';
 
-export type TableRowProps = ComponentProps;
+export type TableRowParameters = unknown;
 
-export { TableRow as default } from './table-row';
+export type TableRowProps = ComponentProps<TableRowParameters>;
+
+export { default } from './table-row';

@@ -26,10 +26,10 @@ const updateMapping = (content: string, componentId: string, componentName: stri
     const fieldRegex = new RegExp(REGISTER_KEY_REGEX(componentId));
     if (fieldRegex.test(match)) {
       spinner?.info(`Registration key already in use. Overriding with ${componentName}.`);
-      return match.replace(fieldRegex, `${componentId}: { component: ${componentName} },`);
+      return match.replace(fieldRegex, `${componentId}: ${componentName},`);
     }
     spinner?.info(`Registration for ${componentName} added to the resolver.`);
-    const newField = `${componentId}: { component: ${componentName} },`;
+    const newField = `${componentId}: ${componentName},`;
     return match.replace(END_MAPPER_REGEX, `${newField}}`);
   });
 

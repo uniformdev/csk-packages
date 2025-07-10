@@ -1,7 +1,6 @@
 import { DataWithProperties } from '@uniformdev/canvas';
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { TextParameters } from '@/components/canvas/Text/parameters';
-import { Breadcrumbs } from './breadcrumbs';
+import { ComponentProps } from '@/types/cskTypes';
 
 export type BreadcrumbLink = {
   title: string;
@@ -13,10 +12,8 @@ export type BreadcrumbsParameters = {
   separator?: 'slash' | 'chevron';
   links?: DataWithProperties[];
   autoGenerate?: boolean;
-};
+} & Pick<TextParameters, 'size' | 'color' | 'font' | 'transform'>;
 
-export type BreadcrumbsProps = ComponentProps<
-  BreadcrumbsParameters & Pick<TextParameters, 'size' | 'color' | 'font' | 'transform'>
->;
+export type BreadcrumbsProps = ComponentProps<BreadcrumbsParameters>;
 
-export default Breadcrumbs;
+export { default } from './breadcrumbs';

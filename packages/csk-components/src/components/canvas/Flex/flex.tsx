@@ -1,9 +1,10 @@
 import { FC } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
+import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
 import BaseFlex from '@/components/ui/Flex';
-import { FlexProps } from '.';
+import { withFlattenParameters } from '@/utils/withFlattenParameters';
+import { FlexProps, FlexParameters } from '.';
 
-export const Flex: FC<FlexProps> = ({
+const Flex: FC<FlexProps & FlexParameters> = ({
   direction,
   justifyContent,
   gap,
@@ -13,8 +14,6 @@ export const Flex: FC<FlexProps> = ({
   border,
   fluidContent,
   slots,
-  component,
-  context,
   className,
   height,
   wrapperClassName,
@@ -34,6 +33,8 @@ export const Flex: FC<FlexProps> = ({
       className,
     }}
   >
-    <UniformSlot data={component} context={context} slot={slots.flexItem} />
+    <UniformSlot slot={slots.flexItem} />
   </BaseFlex>
 );
+
+export default withFlattenParameters(Flex);

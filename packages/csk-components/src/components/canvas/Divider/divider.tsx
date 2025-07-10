@@ -1,9 +1,12 @@
 import { FC } from 'react';
 import { cn } from '@/utils/styling';
-import { DividerProps } from '.';
+import { withFlattenParameters } from '@/utils/withFlattenParameters';
+import { DividerParameters, DividerProps } from '.';
 
-export const Divider: FC<DividerProps> = ({ color, thickness, width, alignment }) => (
+const Divider: FC<DividerProps & DividerParameters> = ({ color, thickness, width, alignment }) => (
   <div className={cn('flex w-full', `justify-${alignment || 'center'}`)}>
     <div className={cn({ [`bg-${color}`]: !!color })} style={{ width, height: thickness }} />
   </div>
 );
+
+export default withFlattenParameters(Divider);

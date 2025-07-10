@@ -1,10 +1,10 @@
 import dynamic from 'next/dynamic';
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { ContainerParameters } from '@/components/canvas/Container/parameters';
+import { ComponentProps } from '@/types/cskTypes';
 
 export type CarouselParameters = ContainerParameters & {
-  itemsPerPage: string;
-  gapX: string;
+  itemsPerPage?: string;
+  gapX?: string;
 };
 
 export enum CarouselSlots {
@@ -13,5 +13,5 @@ export enum CarouselSlots {
 
 export type CarouselProps = ComponentProps<CarouselParameters, CarouselSlots>;
 
-export default dynamic(() => import('./carousel').then(mod => mod.Carousel));
+export default dynamic(() => import('./carousel').then(mod => mod.default));
 export { CarouselEmptyPlaceholder } from './empty-placeholder';

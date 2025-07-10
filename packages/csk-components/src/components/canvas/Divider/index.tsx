@@ -1,4 +1,4 @@
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
+import { ComponentProps } from '@/types/cskTypes';
 
 export type DividerParameters = {
   color?: string;
@@ -9,4 +9,4 @@ export type DividerParameters = {
 
 export type DividerProps = ComponentProps<DividerParameters>;
 
-export { Divider as default } from './divider';
+export { default } from './divider';

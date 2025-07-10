@@ -36,7 +36,9 @@
     "make-components-preview": "tsx ./src/scripts/make-preview-images.ts"
   },
   "dependencies": {
-    "@uniformdev/canvas-next-rsc": "^20.25.0",
+    "@uniformdev/canvas-next-rsc-client-v2": "20.7.1-alpha.63",
+    "@uniformdev/canvas-next-rsc-shared-v2": "20.7.1-alpha.63",
+    "@uniformdev/canvas-next-rsc-v2": "20.7.1-alpha.63",
     "@uniformdev/csk-components": "*",
     "@uniformdev/design-extensions-tools": "*",
     "next": "^15.3.2",
@@ -51,7 +53,7 @@
     "@types/node": "^20.0.0",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
-    "@uniformdev/cli": "^20.25.0",
+    "@uniformdev/cli": "20.7.1-alpha.63",
     "@uniformdev/csk-cli": "*",
     "cross-env": "^7.0.3",
     "eslint": "^9.19.0",

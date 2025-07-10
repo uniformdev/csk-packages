@@ -1,12 +1,15 @@
 import { FC } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
+import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
 import { cn } from '@/utils/styling';
-import { AlignmentMap, TableCustomCellProps } from '.';
+import { withFlattenParameters } from '@/utils/withFlattenParameters';
+import { AlignmentMap, TableCustomCellParameters, TableCustomCellProps } from '.';
 
-export const TableCustomCell: FC<TableCustomCellProps> = ({ component, context, slots, alignment }) => (
+const TableCustomCell: FC<TableCustomCellProps & TableCustomCellParameters> = ({ slots, alignment }) => (
   <td>
     <div className={cn('w-fit', AlignmentMap[alignment || 'left'])}>
-      <UniformSlot slot={slots.tableCustomCellContent} context={context} data={component} />
+      <UniformSlot slot={slots.tableCustomCellContent} />
     </div>
   </td>
 );
+
+export default withFlattenParameters(TableCustomCell);

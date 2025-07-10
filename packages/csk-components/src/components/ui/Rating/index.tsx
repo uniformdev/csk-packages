@@ -1,5 +1,5 @@
 export type RatingProps = {
-  rating: number;
+  rating?: number;
   showReviewLabel?: boolean;
   starsColor?: string;
   activeStarsColor?: string;

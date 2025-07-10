@@ -1,36 +1,25 @@
 'use client';
 
-import { ChangeEvent, FC, useCallback, useMemo } from 'react';
-import { ComponentInstance, flattenValues } from '@uniformdev/canvas';
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
+import { ChangeEvent, FC, useCallback } from 'react';
+import { ComponentProps } from '@uniformdev/csk-components/types/cskTypes';
+import { withFlattenParameters } from '@uniformdev/csk-components/utils/withFlattenParameters';
 import { SelectIcon } from '@/components/custom-canvas/DemoCard/icons';
 import { useUniformSearchFilterEngineContext } from './ComponentsSearchProvider';
 
 type CategoriesFilterBoxParameters = {
-  title: string;
+  title?: string;
   filters?: {
-    _id?: string;
-    type: string;
-    fields?: ComponentInstance['parameters'];
+    filterName?: string;
+    value?: string;
   }[];
-};
-
-type Filter = {
-  filterName?: string;
-  value?: string;
 };
 
 type CategoriesFilterBoxProps = ComponentProps<CategoriesFilterBoxParameters>;
 
 const allCategoriesOption = { filterName: 'All', value: '' };
 
-const CategoriesFilterBox: FC<CategoriesFilterBoxProps> = ({ title, filters }) => {
+const CategoriesFilterBox: FC<CategoriesFilterBoxProps & CategoriesFilterBoxParameters> = ({ title, filters }) => {
   const { setAllowCategoryIds } = useUniformSearchFilterEngineContext();
-
-  const filtersToDisplay = useMemo(
-    () => filters?.map(filter => flattenValues(filter) as Filter).filter(Boolean) || [],
-    [filters]
-  );
 
   const handleFilterSelect = useCallback(
     (e: ChangeEvent<HTMLSelectElement>) => {
@@ -55,7 +44,7 @@ const CategoriesFilterBox: FC<CategoriesFilterBoxProps> = ({ title, filters }) =
           className="w-full appearance-none rounded-md border border-gray-300 bg-transparent px-4 py-3 pr-10 text-sm font-medium text-text-primary"
         >
           <option value={allCategoriesOption.value}>{allCategoriesOption.filterName}</option>
-          {filtersToDisplay.map(({ filterName, value }) => (
+          {filters?.map(({ filterName, value }) => (
             <option key={`${filterName}-${value}`} value={value}>
               {filterName}
             </option>
@@ -66,4 +55,4 @@ const CategoriesFilterBox: FC<CategoriesFilterBoxProps> = ({ title, filters }) =
   );
 };
 
-export default CategoriesFilterBox;
+export default withFlattenParameters(CategoriesFilterBox);

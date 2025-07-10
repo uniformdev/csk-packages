@@ -1,19 +1,16 @@
 import { FC } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
+import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
 import { cn, resolveViewPort } from '@/utils/styling';
-import { NavigationGroupProps } from '.';
+import { NavigationGroupParameters, NavigationGroupProps } from '.';
 
-type NavigationGroupDesktopContentProps = Pick<
-  NavigationGroupProps,
-  'backgroundColor' | 'border' | 'context' | 'slots'
-> & {
-  isOpen: boolean;
-};
+type NavigationGroupDesktopContentProps = Pick<NavigationGroupProps, 'context' | 'slots'> &
+  Pick<NavigationGroupParameters, 'backgroundColor' | 'border'> & {
+    isOpen: boolean;
+  };
 
 export const NavigationGroupDesktopContent: FC<NavigationGroupDesktopContentProps> = ({
   isOpen,
   backgroundColor,
-  context,
   slots,
   border,
 }) => (
@@ -30,7 +27,7 @@ export const NavigationGroupDesktopContent: FC<NavigationGroupDesktopContentProp
       })}
     >
       <div className="flex flex-col gap-y-4 p-4">
-        <UniformSlot data={context} slot={slots.links} context={context} />
+        <UniformSlot slot={slots.links} />
       </div>
     </div>
   </div>

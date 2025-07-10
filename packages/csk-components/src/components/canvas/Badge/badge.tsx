@@ -1,20 +1,21 @@
 import { FC } from 'react';
-import { UniformText } from '@uniformdev/canvas-next-rsc/component';
+import { ComponentParameter, UniformText } from '@uniformdev/canvas-next-rsc-v2/component';
 import BaseText from '@/components/ui/Text';
 import { cn } from '@/utils/styling';
-import { BadgeProps } from '.';
+import { withFlattenParameters } from '@/utils/withFlattenParameters';
+import { BadgeParameters, BadgeProps } from '.';
 import { Dot } from './dot';
 import { getBadgeClass } from './style-utils';
 
-export const Badge: FC<BadgeProps> = ({
+const Badge: FC<BadgeProps & BadgeParameters> = ({
   component,
-  context,
   textColor,
   backgroundColor,
   borderColor,
   dotColor,
   pill = false,
   size,
+  parameters,
 }) => (
   <div className={getBadgeClass({ pill, size, dotColor, borderColor, backgroundColor })}>
     {dotColor && (
@@ -25,7 +26,13 @@ export const Badge: FC<BadgeProps> = ({
       />
     )}
     <BaseText color={textColor} size="xs">
-      <UniformText placeholder="Badge text goes here" parameterId="text" component={component} context={context} />
+      <UniformText
+        placeholder="Badge text goes here"
+        parameter={parameters.text as ComponentParameter<string>}
+        component={component}
+      />
     </BaseText>
   </div>
 );
+
+export default withFlattenParameters(Badge);
