@@ -1,6 +1,5 @@
 import { LinkParamValue } from '@uniformdev/canvas';
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
-import { Link } from './link';
+import { ComponentProps } from '@/types/cskTypes';
 
 export type LinkParameters = {
   displayName?: string;
@@ -14,4 +13,4 @@ export enum LinkSlots {
 
 export type LinkProps = ComponentProps<LinkParameters, LinkSlots>;
 
-export default Link;
+export { default } from './link';

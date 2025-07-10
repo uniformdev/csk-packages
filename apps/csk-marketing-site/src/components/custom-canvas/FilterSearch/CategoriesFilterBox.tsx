@@ -2,12 +2,13 @@
 
 import { ChangeEvent, FC, useCallback, useMemo } from 'react';
 import { ComponentInstance, flattenValues } from '@uniformdev/canvas';
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
+import { ComponentProps } from '@uniformdev/csk-components/types/cskTypes';
+import { withFlattenParameters } from '@uniformdev/csk-components/utils/withFlattenParameters';
 import { SelectIcon } from '@/components/custom-canvas/DemoCard/icons';
 import { useUniformSearchFilterEngineContext } from './ComponentsSearchProvider';
 
 type CategoriesFilterBoxParameters = {
-  title: string;
+  title?: string;
   filters?: {
     _id?: string;
     type: string;
@@ -24,7 +25,7 @@ type CategoriesFilterBoxProps = ComponentProps<CategoriesFilterBoxParameters>;
 
 const allCategoriesOption = { filterName: 'All', value: '' };
 
-const CategoriesFilterBox: FC<CategoriesFilterBoxProps> = ({ title, filters }) => {
+const CategoriesFilterBox: FC<CategoriesFilterBoxProps & CategoriesFilterBoxParameters> = ({ title, filters }) => {
   const { setAllowCategoryIds } = useUniformSearchFilterEngineContext();
 
   const filtersToDisplay = useMemo(
@@ -66,4 +67,4 @@ const CategoriesFilterBox: FC<CategoriesFilterBoxProps> = ({ title, filters }) =
   );
 };
 
-export default CategoriesFilterBox;
+export default withFlattenParameters(CategoriesFilterBox);

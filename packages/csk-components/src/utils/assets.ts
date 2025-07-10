@@ -1,21 +1,6 @@
-import { AssetParamValue } from '@uniformdev/assets';
+import { AssetParamValue, AssetParamValueItem } from '@uniformdev/assets';
 import { flattenValues } from '@uniformdev/canvas';
-
-type ResolvedAsset = {
-  id?: string;
-  url: string;
-  file?: string;
-  size?: number;
-  title?: string;
-  width?: number;
-  height?: number;
-  mediaType?: string;
-  description?: string;
-  focalPoint?: {
-    x: number;
-    y: number;
-  };
-};
+import { ResolvedAssetFromItem } from '@/types/cskTypes';
 
 /**
  * Resolves a list of assets, filtering out any entries without a valid URL.
@@ -23,5 +8,5 @@ type ResolvedAsset = {
  * @param {AssetParamValue | undefined} image - The list of assets to resolve.
  * @returns {ResolvedAsset[]} - An array of resolved assets with valid URLs.
  */
-export const resolveAsset = (image?: AssetParamValue): ResolvedAsset[] =>
+export const resolveAsset = (image?: AssetParamValue): ResolvedAssetFromItem<AssetParamValueItem>[] =>
   (flattenValues(image as never) || []).filter(({ url }) => Boolean(url));

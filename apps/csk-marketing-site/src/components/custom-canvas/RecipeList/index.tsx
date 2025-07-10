@@ -1,5 +1,7 @@
 import React, { FC } from 'react';
-import { ComponentProps, UniformSlot } from '@uniformdev/canvas-next-rsc/component';
+import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
+import { ComponentProps } from '@uniformdev/csk-components/types/cskTypes';
+import { withFlattenParameters } from '@uniformdev/csk-components/utils/withFlattenParameters';
 import RecipeCard from '@/components/custom-ui/RecipeCard';
 
 export interface RecipeItem {
@@ -10,18 +12,24 @@ export interface RecipeItem {
   slug: string;
 }
 
-export type RecipeListParameters = {
-  recipesList: RecipeItem[];
+export type RecipeListAdditionalParameters = {
+  recipesList?: RecipeItem[];
 };
 
-type RecipeListProps = ComponentProps<RecipeListParameters, 'filters'>;
+export type RecipeListParameters = unknown;
 
-const RecipeList: FC<RecipeListProps> = ({ context, component, slots, recipesList }) => (
+enum RecipeListSlots {
+  Filters = 'filters',
+}
+
+type RecipeListProps = ComponentProps<RecipeListParameters, RecipeListSlots> & RecipeListAdditionalParameters;
+
+const RecipeList: FC<RecipeListProps & RecipeListParameters> = ({ slots, recipesList }) => (
   <div className="grid gap-6 lg:grid-cols-12">
     <div className="grid lg:col-span-3 lg:col-start-1">
       <div className="h-full">
         <div className="flex flex-col lg:sticky lg:top-28">
-          <UniformSlot context={context} data={component} slot={slots.filters} />
+          <UniformSlot slot={slots.filters} />
         </div>
       </div>
     </div>
@@ -33,4 +41,4 @@ const RecipeList: FC<RecipeListProps> = ({ context, component, slots, recipesLis
   </div>
 );
 
-export default RecipeList;
+export default withFlattenParameters(RecipeList);

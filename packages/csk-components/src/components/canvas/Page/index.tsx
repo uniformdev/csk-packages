@@ -1,9 +1,9 @@
-import { ComponentProps, CustomSlotChildRenderFunc } from '@uniformdev/canvas-next-rsc/component';
-
+import { UniformSlotProps } from '@uniformdev/canvas-next-rsc-v2/component';
+import { ComponentProps } from '@/types/cskTypes';
 export type PageAdditionalProps = {
-  headerCustomRenderer?: CustomSlotChildRenderFunc;
-  contentCustomRenderer?: CustomSlotChildRenderFunc;
-  footerCustomRenderer?: CustomSlotChildRenderFunc;
+  headerCustomRenderer?: UniformSlotProps['children'];
+  contentCustomRenderer?: UniformSlotProps['children'];
+  footerCustomRenderer?: UniformSlotProps['children'];
 };
 
 export type PageParameters = {
@@ -17,7 +17,7 @@ export enum CommonPageSlots {
   PageFooter = 'pageFooter',
 }
 
-export type PageProps = ComponentProps<PageParameters & PageAdditionalProps, CommonPageSlots>;
+export type PageProps = ComponentProps<PageParameters, CommonPageSlots> & PageAdditionalProps;
 
-export { Page as default } from './page';
+export { default } from './page';
 export { PageEmptyPlaceholder } from './empty-placeholder';

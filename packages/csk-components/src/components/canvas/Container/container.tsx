@@ -1,14 +1,13 @@
 import { FC } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
+import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
 import BaseContainer from '@/components/ui/Container';
-import { ContainerProps } from '.';
+import { withFlattenParameters } from '@/utils/withFlattenParameters';
+import { ContainerParameters, ContainerProps } from '.';
 
-export const Container: FC<ContainerProps> = ({
+const Container: FC<ContainerProps & ContainerParameters> = ({
   displayName,
   anchor: id,
   slots,
-  component,
-  context,
   backgroundColor,
   spacing,
   border,
@@ -28,6 +27,8 @@ export const Container: FC<ContainerProps> = ({
       className,
     }}
   >
-    <UniformSlot data={component} context={context} slot={slots.containerContent} />
+    <UniformSlot slot={slots.containerContent} />
   </BaseContainer>
 );
+
+export default withFlattenParameters(Container);

@@ -1,21 +1,28 @@
 import React from 'react';
 import { DataWithProperties } from '@uniformdev/canvas';
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
-import { getRecipesByCategory } from '@/utils/canvas/contentClient';
+import { ComponentProps } from '@uniformdev/csk-components/types/cskTypes';
 import RecipeList from '.';
 
 type RecipeListWrapperParameters = {
-  categories: DataWithProperties[];
+  categories?: DataWithProperties[];
 };
 
-type RecipeListWrapperProps = ComponentProps<RecipeListWrapperParameters, 'filters'>;
+enum RecipeListWrapperSlots {
+  Filters = 'filters',
+}
 
-const RecipeListWrapper: React.FC<RecipeListWrapperProps> = async ({ context, component, slots, ...restProps }) => {
-  const searchParams = context.searchParams;
+type RecipeListWrapperProps = ComponentProps<RecipeListWrapperParameters, RecipeListWrapperSlots>;
 
-  const recipesList = await getRecipesByCategory({ categoryId: searchParams?.category });
+const RecipeListWrapper: React.FC<RecipeListWrapperProps> = async props => {
+  // TODO: Add search params from context
+  //const searchParams = '';
 
-  return <RecipeList {...restProps} recipesList={recipesList} context={context} component={component} slots={slots} />;
+  // TODO: Add recipes list
+  //const recipesList = await getRecipesByCategory({ categoryId: '' });
+
+  // TODO: Add flatten parameters
+  // return <RecipeList {...props} recipesList={recipesList} />;
+  return <RecipeList {...props} />;
 };
 
 export default RecipeListWrapper;

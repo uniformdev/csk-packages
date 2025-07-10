@@ -2,10 +2,10 @@ import {
   createPreviewGETRouteHandler,
   createPreviewPOSTRouteHandler,
   createPreviewOPTIONSRouteHandler,
-} from '@uniformdev/canvas-next-rsc/handler';
+} from '@uniformdev/canvas-next-rsc-v2/handler';
 
+// TODO: No playground path is configured for patterns preview
 export const GET = createPreviewGETRouteHandler({
-  playgroundPath: '/playground',
   resolveFullPath: ({ path }) => (path ? path : '/playground'),
 });
 export const POST = createPreviewPOSTRouteHandler();

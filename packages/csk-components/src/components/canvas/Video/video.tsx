@@ -2,11 +2,11 @@
 
 import { FC } from 'react';
 import BaseVideo from '@/components/ui/Video';
-import { resolveAsset } from '@/utils/assets';
-import { VideoProps } from '.';
+import { ReplaceFieldsWithAssets } from '@/types/cskTypes';
+import { VideoParameters, VideoProps } from '.';
 import { VideoPlaceholder } from './placeholder';
 
-export const Video: FC<VideoProps> = ({
+export const Video: FC<VideoProps & ReplaceFieldsWithAssets<VideoParameters, 'video' | 'placeholderImage'>> = ({
   video,
   placeholderImage,
   autoPlay,
@@ -20,8 +20,8 @@ export const Video: FC<VideoProps> = ({
   component,
   context,
 }) => {
-  const [resolvedVideo] = resolveAsset(video);
-  const [resolvedImage] = resolveAsset(placeholderImage);
+  const [resolvedVideo] = video || [];
+  const [resolvedImage] = placeholderImage || [];
 
   const resolvedVideoUrl = resolvedVideo?.url;
 

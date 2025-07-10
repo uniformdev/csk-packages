@@ -19,6 +19,7 @@ export const EXTRACT_CANVAS_COMPONENTS = [
   'Button',
   'Card',
   'Carousel',
+  'ComponentEmptyPlaceholder',
   'Container',
   'Countdown',
   'DemoHero',
@@ -84,6 +85,7 @@ export const EXTRACT_UI_COMPONENTS = [
 export const EXTRACT_UTILS = [
   'assets.ts',
   'createComponentResolver.ts',
+  'withFlattenParameters.tsx',
   'createEmptyPlaceholderResolver.tsx',
   'routing.ts',
   'styling.ts',

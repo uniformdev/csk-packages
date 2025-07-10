@@ -1,15 +1,18 @@
 import { FC } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
+import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
 import BaseHeader from '@/components/ui/Header';
-import { HeaderProps, HeaderVariants } from '.';
+import { withFlattenParameters } from '@/utils/withFlattenParameters';
+import { HeaderParameters, HeaderProps, HeaderVariants } from '.';
 
-export const Header: FC<HeaderProps> = ({ backgroundColor, color, spacing, border, context, component, slots }) => (
+const Header: FC<HeaderProps & HeaderParameters> = ({ backgroundColor, color, spacing, border, slots, variant }) => (
   <BaseHeader
-    sticky={component.variant === HeaderVariants.Sticky}
-    leftSection={<UniformSlot context={context} slot={slots.headerLeftContent} data={component} />}
-    rightSection={<UniformSlot context={context} slot={slots.headerRightContent} data={component} />}
+    sticky={variant === HeaderVariants.Sticky}
+    leftSection={<UniformSlot slot={slots.headerLeftContent} />}
+    rightSection={<UniformSlot slot={slots.headerRightContent} />}
     {...{ backgroundColor, color, spacing, border }}
   >
-    <UniformSlot context={context} slot={slots.headerCenterContent} data={component} />
+    <UniformSlot slot={slots.headerCenterContent} />
   </BaseHeader>
 );
+
+export default withFlattenParameters(Header);

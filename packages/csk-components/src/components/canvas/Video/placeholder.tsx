@@ -5,7 +5,7 @@ import { VideoProps } from '.';
 type VideoPlaceholderProps = Pick<VideoProps, 'component' | 'context'>;
 
 export const VideoPlaceholder: FC<VideoPlaceholderProps> = ({ context, component }) => {
-  const isEditorPreviewMode = context.previewMode === 'editor' && context.isContextualEditing;
+  const isEditorPreviewMode = context.isContextualEditing;
   const isPlaceholder = component?._id?.includes('placeholder_');
 
   if (!isEditorPreviewMode || isPlaceholder) {

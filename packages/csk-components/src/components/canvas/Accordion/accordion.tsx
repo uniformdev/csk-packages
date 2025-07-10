@@ -1,12 +1,11 @@
 import { FC } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
+import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
 import BaseAccordion from '@/components/ui/Accordion';
-import { AccordionProps } from '.';
+import { withFlattenParameters } from '@/utils/withFlattenParameters';
+import { AccordionParameters, AccordionProps } from '.';
 
-export const Accordion: FC<AccordionProps> = ({
+const Accordion: FC<AccordionProps & AccordionParameters> = ({
   slots,
-  component,
-  context,
   backgroundColor,
   spacing,
   border,
@@ -14,8 +13,10 @@ export const Accordion: FC<AccordionProps> = ({
   height,
 }) => (
   <BaseAccordion
-    accordionContent={<UniformSlot data={component} context={context} slot={slots.accordionContent} />}
-    accordionItems={<UniformSlot data={component} context={context} slot={slots.accordionItems} />}
+    accordionContent={<UniformSlot slot={slots.accordionContent} />}
+    accordionItems={<UniformSlot slot={slots.accordionItems} />}
     {...{ backgroundColor, spacing, border, fluidContent, height }}
   />
 );
+
+export default withFlattenParameters(Accordion);

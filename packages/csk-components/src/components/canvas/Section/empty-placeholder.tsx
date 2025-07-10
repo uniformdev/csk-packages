@@ -2,8 +2,11 @@ import { ResolveEmptyPlaceholderOptions } from '@/types/cskTypes';
 import { DEFAULT_EMPTY_PLACEHOLDER } from '@/utils/createEmptyPlaceholderResolver';
 import { SectionSlots } from '.';
 
-export const SectionEmptyPlaceholder = ({ parentComponent, slotName }: ResolveEmptyPlaceholderOptions) => {
-  const isDefault = !parentComponent?.variant;
+export const SectionEmptyPlaceholder = ({ slotName }: ResolveEmptyPlaceholderOptions) => {
+  // To show correct empty placeholder for current variant
+  //const isDefault = !parentComponent?.variant;
+  const isDefault = true;
+
   switch (slotName) {
     case SectionSlots.SectionMedia:
       return {
