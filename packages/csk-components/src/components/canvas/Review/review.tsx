@@ -1,24 +1,24 @@
 import { FC } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
-import { ReviewProps, ReviewVariants } from '.';
+import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
+import { withFlattenParameters } from '@/utils/withFlattenParameters';
+import { ReviewParameters, ReviewProps, ReviewVariants } from '.';
 import { DefaultVariant } from './default-variant';
 import { MultiColumnVariant } from './multi-column-variant';
 
-export const Review: FC<ReviewProps> = props => {
-  const { component, context, slots } = props;
-  const variant = component.variant as ReviewVariants | undefined;
-
+const Review: FC<ReviewProps & ReviewParameters> = ({ slots, variant, ...props }) => {
   const variantProps = {
     ...props,
-    ReviewImage: <UniformSlot context={context} data={component} slot={slots.reviewImage} />,
-    ReviewPersonInfo: <UniformSlot context={context} data={component} slot={slots.reviewPersonInfo} />,
-    ReviewContent: <UniformSlot context={context} data={component} slot={slots.reviewContent} />,
+    ReviewImage: <UniformSlot slot={slots.reviewImage} />,
+    ReviewPersonInfo: <UniformSlot slot={slots.reviewPersonInfo} />,
+    ReviewContent: <UniformSlot slot={slots.reviewContent} />,
   };
 
   switch (variant) {
     case ReviewVariants.MultiColumn:
-      return <MultiColumnVariant {...variantProps} />;
+      return <MultiColumnVariant variant={variant} slots={slots} {...variantProps} />;
     default:
-      return <DefaultVariant {...variantProps} />;
+      return <DefaultVariant variant={variant} slots={slots} {...variantProps} />;
   }
 };
+
+export default withFlattenParameters(Review);

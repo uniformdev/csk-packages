@@ -2,12 +2,12 @@ import { IMPORTS, THEME_PACK_PARAMETERS_TYPES, UNIFORM_PARAMETERS, UNIFORM_PARAM
 import { ParameterHandler } from './types';
 
 const uniformTextParameterHandler: ParameterHandler = {
-  import: [IMPORTS.UNIFORM_TEXT],
-  needsProps: [UNIFORM_PARAMETERS.CONTEXT, UNIFORM_PARAMETERS.COMPONENT],
+  import: [IMPORTS.UNIFORM_TEXT, IMPORTS.COMPONENT_PARAMETER],
+  needsProps: [UNIFORM_PARAMETERS.COMPONENT, UNIFORM_PARAMETERS.PARAMETERS],
   supports: UNIFORM_PARAMETERS_TYPES.TEXT,
   type: 'string',
   render: parameter =>
-    `<span>Text value: </span><UniformText parameterId="${parameter.canvasId || parameter.id}" placeholder="${parameter.name} goes here" context={context} component={component} />`,
+    `<span>Text value: </span><UniformText parameter={parameters.${parameter.canvasId || parameter.id} as ComponentParameter<string>} placeholder="${parameter.name} goes here" component={component} />`,
 };
 
 const numberParameterHandler: ParameterHandler = {
@@ -49,16 +49,15 @@ const linkParameterHandler: ParameterHandler = {
 };
 
 const assetParameterValue: ParameterHandler = {
-  import: [IMPORTS.IMAGE, IMPORTS.ASSET_TYPE, IMPORTS.FLATTEN_VALUES],
+  import: [IMPORTS.IMAGE, IMPORTS.ASSET_TYPE, IMPORTS.REPLACE_FIELDS_WITH_ASSETS],
   supports: UNIFORM_PARAMETERS_TYPES.ASSET,
   type: `AssetParamValue`,
   render: parameter =>
-    // ToDo: have to fix it(never)
     `<div className="flex flex-row gap-2 overflow-x-auto">
-      {(flattenValues(${parameter.id} as never) || [])
+      {(${parameter.id} || [])
         .filter(({ url }) => Boolean(url))
         .map(({ title, url }, index) => (
-            <NextImage key={index} src={url} width={200} height={200} alt={title} style={{ objectFit: 'cover' }}  />
+            <NextImage key={index} src={url} width={200} height={200} alt={title || ''} style={{ objectFit: 'cover' }}  />
           ))}
     </div>`,
 };
@@ -70,12 +69,12 @@ const checkboxParameterHandler: ParameterHandler = {
 };
 
 const richTextParameterHandler: ParameterHandler = {
-  import: [IMPORTS.UNIFORM_RICH_TEXT, IMPORTS.RICH_TEXT_NODE],
-  needsProps: [UNIFORM_PARAMETERS.CONTEXT, UNIFORM_PARAMETERS.COMPONENT],
+  import: [IMPORTS.UNIFORM_RICH_TEXT, IMPORTS.RICH_TEXT_NODE, IMPORTS.COMPONENT_PARAMETER],
+  needsProps: [UNIFORM_PARAMETERS.COMPONENT, UNIFORM_PARAMETERS.PARAMETERS],
   supports: UNIFORM_PARAMETERS_TYPES.RICH_TEXT,
   type: 'RichTextNode',
   render: parameter =>
-    `<UniformRichText placeholder="Content goes here..." className="prose max-w-full text-current marker:text-current [&_*:not(pre)]:text-current" parameterId="${parameter.canvasId || parameter.id}" context={context} component={component} />`,
+    `<UniformRichText placeholder="Content goes here..." className="prose max-w-full text-current marker:text-current [&_*:not(pre)]:text-current" parameter={parameters.${parameter.canvasId || parameter.id} as ComponentParameter<string>} component={component} />`,
 };
 
 const imageParameterHandler: ParameterHandler = {

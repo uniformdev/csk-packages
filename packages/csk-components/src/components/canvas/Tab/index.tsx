@@ -1,5 +1,4 @@
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
-import { Tab } from './tab';
+import { ComponentProps } from '@/types/cskTypes';
 
 export type TabParameters = { title?: string };
 
@@ -9,4 +8,4 @@ export enum TabSlots {
 
 export type TabProps = ComponentProps<TabParameters, TabSlots>;
 
-export default Tab;
+export { default } from './tab';

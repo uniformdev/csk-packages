@@ -1,5 +1,5 @@
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { ContainerParameters } from '@/components/canvas/Container/parameters';
+import { ComponentProps } from '@/types/cskTypes';
 
 export enum TestimonialVariants {
   WithLargeAvatar = 'withLargeAvatar',
@@ -17,5 +17,5 @@ export enum TestimonialSlots {
 
 export type TestimonialProps = ComponentProps<TestimonialParameters, TestimonialSlots>;
 
-export { Testimonial as default } from './testimonial';
+export { default } from './testimonial';
 export { TestimonialEmptyPlaceholder } from './empty-placeholder';

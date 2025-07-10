@@ -1,9 +1,8 @@
 import dynamic from 'next/dynamic';
 import { AssetParamValue } from '@uniformdev/assets';
 import { LinkParamValue } from '@uniformdev/canvas';
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { TextParameters } from '@/components/canvas/Text/parameters';
-import { ViewPort } from '@/types/cskTypes';
+import { ComponentProps, ViewPort } from '@/types/cskTypes';
 
 export type NavigationGroupParameters = TextParameters & {
   icon?: AssetParamValue;
@@ -21,5 +20,5 @@ export enum NavigationGroupSlots {
 
 export type NavigationGroupProps = ComponentProps<NavigationGroupParameters, NavigationGroupSlots>;
 
-export default dynamic(() => import('./navigation-group').then(mod => mod.NavigationGroup));
+export default dynamic(() => import('./navigation-group').then(mod => mod.default));
 export { NavigationGroupEmptyPlaceholder } from './empty-placeholder';

@@ -1,12 +1,11 @@
 import { FC } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
+import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
 import BasePage from '@/components/ui/Page';
-import { PageProps } from '.';
+import { withFlattenParameters } from '@/utils/withFlattenParameters';
+import { PageProps, PageParameters } from '.';
 
-export const Page: FC<PageProps> = ({
+const Page: FC<PageProps & PageParameters> = ({
   slots,
-  component,
-  context,
   backgroundColor,
   headerCustomRenderer,
   contentCustomRenderer,
@@ -14,19 +13,11 @@ export const Page: FC<PageProps> = ({
 }) => (
   <BasePage
     backgroundColor={backgroundColor}
-    header={
-      <UniformSlot context={context} slot={slots.pageHeader} data={component}>
-        {headerCustomRenderer}
-      </UniformSlot>
-    }
-    footer={
-      <UniformSlot context={context} slot={slots.pageFooter} data={component}>
-        {footerCustomRenderer}
-      </UniformSlot>
-    }
+    header={<UniformSlot slot={slots.pageHeader}>{headerCustomRenderer}</UniformSlot>}
+    footer={<UniformSlot slot={slots.pageFooter}>{footerCustomRenderer}</UniformSlot>}
   >
-    <UniformSlot context={context} slot={slots.pageContent} data={component}>
-      {contentCustomRenderer}
-    </UniformSlot>
+    <UniformSlot slot={slots.pageContent}>{contentCustomRenderer}</UniformSlot>
   </BasePage>
 );
+
+export default withFlattenParameters(Page);

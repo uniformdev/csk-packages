@@ -1,5 +1,5 @@
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { ContainerParameters } from '@/components/canvas/Container/parameters';
+import { ComponentProps } from '@/types/cskTypes';
 
 export type CardAdditionalProps = {
   className?: string;
@@ -17,7 +17,7 @@ export enum CardSlots {
   CardContent = 'cardContent',
 }
 
-export type CardProps = ComponentProps<CardParameters & CardAdditionalProps, CardSlots>;
+export type CardProps = ComponentProps<CardParameters, CardSlots> & CardAdditionalProps;
 
-export { Card as default } from './card';
+export { default } from './card';
 export { CardEmptyPlaceholder } from './empty-placeholder';

@@ -1,15 +1,16 @@
 import { FC } from 'react';
-import { UniformText } from '@uniformdev/canvas-next-rsc/component';
+import { ComponentParameter, UniformText } from '@uniformdev/canvas-next-rsc-v2/component';
 import BaseIconLabel from '@/components/ui/IconLabel';
 import BaseImage from '@/components/ui/Image';
 import InlineSVG from '@/components/ui/InlineSVG';
-import { resolveAsset } from '@/utils/assets';
-import { formatUniformLink, isExternalLink, resolveRouteToPath } from '@/utils/routing';
+import { ReplaceFieldsWithAssets } from '@/types/cskTypes';
+import { formatUniformLink, isExternalLink } from '@/utils/routing';
 import { cn, resolveViewPort } from '@/utils/styling';
-import { NavigationLinkProps } from '.';
+import { withFlattenParameters } from '@/utils/withFlattenParameters';
+import { NavigationLinkProps, NavigationLinkParameters } from '.';
 import { Wrapper } from './wrapper';
 
-export const NavigationLink: FC<NavigationLinkProps> = ({
+const NavigationLink: FC<NavigationLinkProps & ReplaceFieldsWithAssets<NavigationLinkParameters, 'icon'>> = ({
   icon,
   link,
   activeState,
@@ -26,11 +27,12 @@ export const NavigationLink: FC<NavigationLinkProps> = ({
   context,
   hoverEffect = '',
   className,
+  parameters,
 }) => {
   const href = formatUniformLink(link);
-  const isActive = activeState && resolveRouteToPath(context.matchedRoute, context.dynamicInputs) === href;
+  const isActive = !activeState && context.pageState.routePath === href;
 
-  const [resolvedImage] = resolveAsset(icon);
+  const [resolvedImage] = icon || [];
   const { url, title = '' } = resolvedImage || {};
 
   const renderUrl = () => {
@@ -55,12 +57,13 @@ export const NavigationLink: FC<NavigationLinkProps> = ({
       >
         <UniformText
           placeholder="Text goes here"
-          parameterId="text"
+          parameter={parameters.text as ComponentParameter<string>}
           className="whitespace-nowrap"
           component={component}
-          context={context}
         />
       </BaseIconLabel>
     </Wrapper>
   );
 };
+
+export default withFlattenParameters(NavigationLink);

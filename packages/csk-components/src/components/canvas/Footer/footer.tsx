@@ -1,11 +1,10 @@
 import { FC } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
+import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
 import BaseFooter from '@/components/ui/Footer';
-import { FooterProps } from '.';
+import { withFlattenParameters } from '@/utils/withFlattenParameters';
+import { FooterParameters, FooterProps } from '.';
 
-export const Footer: FC<FooterProps> = ({
-  context,
-  component,
+export const Footer: FC<FooterProps & FooterParameters> = ({
   slots,
   backgroundColor,
   spacing,
@@ -13,9 +12,11 @@ export const Footer: FC<FooterProps> = ({
   fluidContent,
 }) => (
   <BaseFooter
-    logo={<UniformSlot context={context} slot={slots.footerLogo} data={component} />}
-    copyright={<UniformSlot context={context} slot={slots.footerCopyright} data={component} />}
-    content={<UniformSlot context={context} slot={slots.footerContent} data={component} />}
+    logo={<UniformSlot slot={slots.footerLogo} />}
+    copyright={<UniformSlot slot={slots.footerCopyright} />}
+    content={<UniformSlot slot={slots.footerContent} />}
     {...{ backgroundColor, spacing, border, fluidContent }}
   />
 );
+
+export default withFlattenParameters(Footer);

@@ -1,18 +1,21 @@
 'use client';
 
 import { FC, useCallback, useState } from 'react';
-import { UniformText } from '@uniformdev/canvas-next-rsc/component';
+import { ComponentParameter, UniformText } from '@uniformdev/canvas-next-rsc-v2/component';
 import BaseIconLabel from '@/components/ui/IconLabel';
 import BaseImage from '@/components/ui/Image';
 import InlineSVG from '@/components/ui/InlineSVG';
-import { resolveAsset } from '@/utils/assets';
+import { ReplaceFieldsWithAssets } from '@/types/cskTypes';
 import { cn, resolveViewPort } from '@/utils/styling';
-import { NavigationGroupProps } from '.';
+import { withFlattenParameters } from '@/utils/withFlattenParameters';
+import { NavigationGroupParameters, NavigationGroupProps } from '.';
 import { NavigationGroupDesktopContent } from './desktop';
 import { NavigationGroupMobileContent } from './mobile';
 import { getButtonClasses, getCaretClasses } from './style-utils';
 
-export const NavigationGroup: FC<NavigationGroupProps> = ({
+const NavigationGroup: FC<
+  NavigationGroupProps & ReplaceFieldsWithAssets<NavigationGroupParameters, 'icon' | 'caretIcon'>
+> = ({
   icon,
   caretIcon,
   backgroundColor,
@@ -31,13 +34,14 @@ export const NavigationGroup: FC<NavigationGroupProps> = ({
   slots,
   hoverEffect = '',
   className,
+  parameters,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const openFlyout = useCallback(() => setIsOpen(true), []);
   const closeFlyout = useCallback(() => setIsOpen(false), []);
 
-  const [resolvedImage] = resolveAsset(icon);
+  const [resolvedImage] = icon || [];
   const { url, title = '' } = resolvedImage || {};
 
   const renderUrl = () => {
@@ -50,7 +54,7 @@ export const NavigationGroup: FC<NavigationGroupProps> = ({
     [resolveViewPort(hoverEffect, 'group-hover:{value}')]: !!hoverEffect,
   });
 
-  const [resolvedCaretIcon] = resolveAsset(caretIcon);
+  const [resolvedCaretIcon] = caretIcon || [];
   const { url: caretUrl, title: caretTitle = '' } = resolvedCaretIcon || {};
 
   return (
@@ -63,7 +67,11 @@ export const NavigationGroup: FC<NavigationGroupProps> = ({
           textClassName={actionClassName}
           {...{ size, tag, color, weight, font, transform, decoration, letterSpacing, alignment }}
         >
-          <UniformText placeholder="Text goes here" parameterId="text" component={component} context={context} />
+          <UniformText
+            placeholder="Text goes here"
+            parameter={parameters.text as ComponentParameter<string>}
+            component={component}
+          />
         </BaseIconLabel>
         {caretUrl && (
           <div
@@ -86,3 +94,5 @@ export const NavigationGroup: FC<NavigationGroupProps> = ({
     </div>
   );
 };
+
+export default withFlattenParameters(NavigationGroup);

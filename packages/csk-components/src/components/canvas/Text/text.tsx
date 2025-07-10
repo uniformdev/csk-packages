@@ -1,9 +1,10 @@
 import { FC } from 'react';
-import { UniformText } from '@uniformdev/canvas-next-rsc/component';
+import { UniformText, ComponentParameter } from '@uniformdev/canvas-next-rsc-v2/component';
 import BaseText from '@/components/ui/Text';
-import { TextProps } from '.';
+import { withFlattenParameters } from '@/utils/withFlattenParameters';
+import { TextParameters, TextProps } from '.';
 
-export const Text: FC<TextProps> = ({
+const Text: FC<TextProps & TextParameters> = ({
   tag,
   size,
   color,
@@ -15,15 +16,16 @@ export const Text: FC<TextProps> = ({
   lineCountRestrictions,
   alignment,
   component,
-  context,
+  parameters,
 }) => (
   <BaseText {...{ color, size, font, weight, transform, decoration, letterSpacing, alignment, lineCountRestrictions }}>
     <UniformText
       placeholder="Text goes here"
-      parameterId="text"
+      parameter={parameters.text as ComponentParameter<string>}
       as={tag || undefined}
       component={component}
-      context={context}
     />
   </BaseText>
 );
+
+export default withFlattenParameters(Text);

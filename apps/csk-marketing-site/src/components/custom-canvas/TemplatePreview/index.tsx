@@ -3,22 +3,23 @@
 import { FC, useRef } from 'react';
 import Link from 'next/link';
 import { LinkParamValue } from '@uniformdev/canvas';
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
-import { ContainerParameters } from '@uniformdev/csk-components/components/canvas';
+import { ContainerParameters } from '@uniformdev/csk-components/components/canvas/clientCompatible';
 import { Container as BaseContainer } from '@uniformdev/csk-components/components/ui';
+import { ComponentProps } from '@uniformdev/csk-components/types/cskTypes';
 import { formatUniformLink } from '@uniformdev/csk-components/utils/routing';
 import { cn } from '@uniformdev/csk-components/utils/styling';
+import { withFlattenParameters } from '@uniformdev/csk-components/utils/withFlattenParameters';
 import { DownloadIcon, FullScreenIcon } from '@/components/custom-ui/icons';
 
-type TemplatePreviewParams = {
+type TemplatePreviewParameters = {
   templateLink?: LinkParamValue;
   downloadLink?: LinkParamValue;
   previewLink?: LinkParamValue;
-};
+} & ContainerParameters;
 
-type TemplatePreviewProps = ComponentProps<ContainerParameters & TemplatePreviewParams>;
+type TemplatePreviewProps = ComponentProps<TemplatePreviewParameters>;
 
-const TemplatePreview: FC<TemplatePreviewProps> = ({
+const TemplatePreview: FC<TemplatePreviewProps & TemplatePreviewParameters> = ({
   templateLink,
   downloadLink,
   previewLink,
@@ -84,4 +85,4 @@ const TemplatePreview: FC<TemplatePreviewProps> = ({
   );
 };
 
-export default TemplatePreview;
+export default withFlattenParameters(TemplatePreview);

@@ -1,6 +1,4 @@
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
-import { ViewPort } from '@/types/cskTypes';
-import { GridItem } from './grid-item';
+import { ComponentProps, ViewPort } from '@/types/cskTypes';
 
 type AvailableGridItemColumnsCount = '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12';
 type AvailableGridItemSpan =
@@ -37,6 +35,6 @@ export enum GridItemSlots {
   Inner = 'inner',
 }
 
-export type GridItemProps = ComponentProps<GridItemParameters & GridItemAdditionalProps, GridItemSlots>;
+export type GridItemProps = ComponentProps<GridItemParameters, GridItemSlots> & GridItemAdditionalProps;
 
-export default GridItem;
+export { default } from './grid-item';

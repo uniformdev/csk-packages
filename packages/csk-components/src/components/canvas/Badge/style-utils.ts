@@ -1,12 +1,12 @@
 import { cn } from '@/utils/styling';
-import { BadgeProps } from '.';
+import { BadgeParameters } from '.';
 
 type BadgeClass = {
-  pill: BadgeProps['pill'];
-  size: BadgeProps['size'];
-  dotColor: BadgeProps['dotColor'];
-  borderColor: BadgeProps['borderColor'];
-  backgroundColor: BadgeProps['backgroundColor'];
+  pill: BadgeParameters['pill'];
+  size: BadgeParameters['size'];
+  dotColor: BadgeParameters['dotColor'];
+  borderColor: BadgeParameters['borderColor'];
+  backgroundColor: BadgeParameters['backgroundColor'];
 };
 export const getBadgeClass = ({ pill, size, dotColor, borderColor, backgroundColor }: BadgeClass) =>
   cn('inline-flex items-center w-fit', {

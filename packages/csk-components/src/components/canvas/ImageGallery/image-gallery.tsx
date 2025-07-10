@@ -1,56 +1,42 @@
 'use client';
 
 import { FC } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
 import Container from '@/components/ui/Container';
 import BaseImage from '@/components/ui/Image';
-import { resolveAsset } from '@/utils/assets';
-import { ImageGalleryProps } from '.';
+import { ReplaceFieldsWithAssets } from '@/types/cskTypes';
+import { withFlattenParameters } from '@/utils/withFlattenParameters';
+import { ImageGalleryParameters, ImageGalleryProps } from '.';
 import { GalleryInner } from './gallery-inner';
 
-export const ImageGallery: FC<ImageGalleryProps> = ({
+const ImageGallery: FC<ImageGalleryProps & ReplaceFieldsWithAssets<ImageGalleryParameters, 'items'>> = ({
   slots,
-  aspectRatio,
-  items,
   backgroundColor,
   spacing,
   border,
   fluidContent,
   height,
+  aspectRatio,
   config,
-  context,
-  component,
+  items,
 }) => {
-  const slotsToRender = !items?.length
-    ? slots.imageGalleryItems
-    : {
-        name: 'items',
-        items:
-          resolveAsset(items)?.map((image, index) => (
-            <BaseImage
-              key={image?.id || `image-${index}`}
-              src={image.url}
-              style={{ objectFit: 'cover' }}
-              alt={`Image ${index}`}
-              fill
-            />
-          )) || [],
-      };
-
-  const showEmptySlot =
-    !items?.length &&
-    !(component?.slots?.imageGalleryItems as { _id?: string }[])?.filter(({ _id }) => !_id?.startsWith('placeholder'))
-      ?.length;
+  const slotsToRender = {
+    ...slots.imageGalleryItems,
+    items: !items?.length
+      ? slots.imageGalleryItems.items
+      : items.map((item, index) => ({
+          _id: `image-${index}-${item?.id}`,
+          component: <BaseImage src={item.url} alt={item.title || ''} style={{ objectFit: 'cover' }} fill />,
+          $pzCrit: undefined,
+        })),
+  };
 
   return (
     <Container {...{ backgroundColor, spacing, border, fluidContent, height }}>
       <div className="flex flex-col gap-1">
-        {showEmptySlot ? (
-          <UniformSlot context={context} slot={slots.imageGalleryItems} data={component} />
-        ) : (
-          <GalleryInner slot={slotsToRender} aspectRatio={aspectRatio} config={config} />
-        )}
+        <GalleryInner slot={slotsToRender} aspectRatio={aspectRatio} config={config} />
       </div>
     </Container>
   );
 };
+
+export default withFlattenParameters(ImageGallery);

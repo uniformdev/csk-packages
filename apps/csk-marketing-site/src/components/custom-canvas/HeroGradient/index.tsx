@@ -1,8 +1,10 @@
 import { FC } from 'react';
-import { ComponentProps, UniformSlot } from '@uniformdev/canvas-next-rsc/component';
-import { ContainerParameters } from '@uniformdev/csk-components/components/canvas';
+import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
+import { ContainerParameters } from '@uniformdev/csk-components/components/canvas/clientCompatible';
 import { Container } from '@uniformdev/csk-components/components/ui';
+import { ComponentProps } from '@uniformdev/csk-components/types/cskTypes';
 import { cn } from '@uniformdev/csk-components/utils/styling';
+import { withFlattenParameters } from '@uniformdev/csk-components/utils/withFlattenParameters';
 
 export type HeroGradientParameters = ContainerParameters & {
   gradientColor?: string;
@@ -14,19 +16,17 @@ enum HeroGradientSlots {
 
 type HeroGradientProps = ComponentProps<HeroGradientParameters, HeroGradientSlots>;
 
-const HeroGradient: FC<HeroGradientProps> = ({
+const HeroGradient: FC<HeroGradientProps & HeroGradientParameters> = ({
   gradientColor,
   slots,
-  component,
-  context,
   backgroundColor,
   spacing,
   border,
   fluidContent,
   height,
 }) => {
-  const heroContent = <UniformSlot data={component} context={context} slot={slots.content} />;
-  const heroCTA = <UniformSlot data={component} context={context} slot={slots.buttonsSection} />;
+  const heroContent = <UniformSlot slot={slots.content} />;
+  const heroCTA = <UniformSlot slot={slots.buttonsSection} />;
 
   return (
     <Container
@@ -41,4 +41,4 @@ const HeroGradient: FC<HeroGradientProps> = ({
   );
 };
 
-export default HeroGradient;
+export default withFlattenParameters(HeroGradient);

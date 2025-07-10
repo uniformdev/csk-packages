@@ -1,14 +1,13 @@
 'use client';
 
 import { FC } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
+import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
 import BaseCarousel from '@/components/ui/Carousel';
-import { CarouselProps } from '.';
+import { withFlattenParameters } from '@/utils/withFlattenParameters';
+import { CarouselParameters, CarouselProps } from '.';
 
-export const Carousel: FC<CarouselProps> = ({
+const Carousel: FC<CarouselProps & CarouselParameters> = ({
   slots,
-  component,
-  context,
   backgroundColor,
   spacing,
   border,
@@ -16,14 +15,15 @@ export const Carousel: FC<CarouselProps> = ({
   height,
   itemsPerPage,
   gapX,
+  variant,
 }) => (
   <BaseCarousel
     {...{ backgroundColor, spacing, border, fluidContent, height, itemsPerPage, gapX }}
     countOfItems={slots.carouselItems?.items.length ?? 0}
-    variant={component.variant}
+    variant={variant}
   >
     {({ className, style }) => (
-      <UniformSlot context={context} slot={slots.carouselItems} data={component}>
+      <UniformSlot slot={slots.carouselItems}>
         {({ child, key }) => (
           <div key={key} className={className} style={style}>
             {child}
@@ -33,3 +33,5 @@ export const Carousel: FC<CarouselProps> = ({
     )}
   </BaseCarousel>
 );
+
+export default withFlattenParameters(Carousel);

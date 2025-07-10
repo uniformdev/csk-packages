@@ -1,9 +1,8 @@
 import dynamic from 'next/dynamic';
 import { AssetParamValue } from '@uniformdev/assets';
 import { LinkParamValue } from '@uniformdev/canvas';
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { TextParameters } from '@/components/canvas/Text/parameters';
-import { ViewPort } from '@/types/cskTypes';
+import { ComponentProps, ViewPort } from '@/types/cskTypes';
 
 export type NavigationFlyoutParameters = TextParameters & {
   icon?: AssetParamValue;
@@ -22,5 +21,5 @@ export enum NavigationFlyoutSlots {
 
 export type NavigationFlyoutProps = ComponentProps<NavigationFlyoutParameters, NavigationFlyoutSlots>;
 
-export default dynamic(() => import('./navigation-flyout').then(mod => mod.NavigationFlyout));
+export default dynamic(() => import('./navigation-flyout').then(mod => mod.default));
 export { NavigationFlyoutEmptyPlaceholder } from './empty-placeholder';

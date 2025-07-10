@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
+import { ComponentProps } from '@/types/cskTypes';
 
 export type ThemeSwitcherParameters = {
   iconColor?: string;
@@ -7,4 +7,4 @@ export type ThemeSwitcherParameters = {
 
 export type ThemeSwitcherProps = ComponentProps<ThemeSwitcherParameters>;
 
-export default dynamic(() => import('./theme-switcher').then(mod => mod.ThemeSwitcher));
+export default dynamic(() => import('./theme-switcher').then(mod => mod.default));

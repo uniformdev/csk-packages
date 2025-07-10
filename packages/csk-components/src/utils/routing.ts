@@ -1,23 +1,68 @@
 import { ResolvedRouteGetResponse, RouteGetResponseEdgehancedComposition, LinkParamValue } from '@uniformdev/canvas';
 
-const DYNAMIC_KEY_REGEX = /:([a-zA-Z0-9-_]+)/g;
-
 /**
- * Resolves a dynamic route to a concrete path by replacing placeholders with values from the provided inputs.
+ * Replaces dynamic segments in an unresolved path template (with `:tokens`)
+ * using values from a resolved path.
  *
- * @param {string} matchedRoute - The route containing dynamic placeholders.
- * @param {{ [dynamicKey: string]: string } | undefined} dynamicInputs - A map of dynamic keys to their replacement values.
- * @returns {string} - The resolved route with placeholders replaced.
+ * If the structure doesn't match, returns `undefined` instead of throwing an error.
+ *
+ * @param {string} unresolved - The path template containing dynamic segments (e.g. `/:locale/:dynamic/static`).
+ * @param {string} resolved - The fully resolved path with actual values (e.g. `/en/test/static`).
+ * @returns {string | undefined} - The final path with dynamic tokens replaced (e.g. `/en/test/static`), or `undefined` on mismatch.
+ *
+ * @example
+ * resolveRouteToPath("/:locale/:dynamic", "/en/test");
+ * // Returns: "/en/test"
+ *
+ * @example
+ * resolveRouteToPath("/:locale/:dynamic/static/:dynamic", "/en/test/static/foo");
+ * // Returns: "/en/test/static/foo"
+ *
+ * @example
+ * resolveRouteToPath("/:locale/static", "/en/test");
+ * // Returns: undefined
  */
-export const resolveRouteToPath = (
-  matchedRoute: string,
-  dynamicInputs: { [dynamicKey: string]: string } | undefined
-): string =>
-  dynamicInputs
-    ? matchedRoute.replace(DYNAMIC_KEY_REGEX, dynamicKey => {
-        return dynamicInputs?.[dynamicKey.substring(1)] || dynamicKey;
-      })
-    : matchedRoute;
+export const resolveRouteToPath = (unresolved: string, resolved: string): string | undefined => {
+  const unresolvedParts = unresolved.split('/').filter(Boolean);
+  const resolvedParts = resolved.split('/').filter(Boolean);
+
+  if (resolvedParts.length < unresolvedParts.length) {
+    return undefined;
+  }
+
+  const { valid, result } = unresolvedParts.reduce<{
+    valid: boolean;
+    result: string[];
+    index: number;
+  }>(
+    (acc, part) => {
+      if (!acc.valid) return acc;
+      const currentResolved = resolvedParts[acc.index];
+      if (!currentResolved) return { ...acc, valid: false };
+
+      if (part.startsWith(':')) {
+        return {
+          ...acc,
+          result: [...acc.result, currentResolved],
+          index: acc.index + 1,
+        };
+      }
+
+      if (part === currentResolved) {
+        return {
+          ...acc,
+          result: [...acc.result, part],
+          index: acc.index + 1,
+        };
+      }
+
+      return { ...acc, valid: false };
+    },
+    { valid: true, result: [], index: 0 }
+  );
+
+  return valid ? '/' + result.join('/') : undefined;
+};
 
 /**
  * Checks if a given route response is free of errors and contains a composition.

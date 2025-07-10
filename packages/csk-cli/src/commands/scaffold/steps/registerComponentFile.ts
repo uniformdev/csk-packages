@@ -52,10 +52,10 @@ export const registerComponentFile: FileHandler = {
             progressSpinner.info(
               `This registration key is already in use, so we have overridden it with the new ${componentName} component.`
             );
-            return match.replace(fieldRegex, `${definition.id}: { component: ${componentName} },`);
+            return match.replace(fieldRegex, `${definition.id}: ${componentName},`);
           } else {
             progressSpinner.info(`Added registration for the new ${componentName} component in the mapper.`);
-            const newField = `${definition.id}: { component: ${componentName} },`;
+            const newField = `${definition.id}: ${componentName},`;
             return match.replace(END_MAPPER_REGEX, `${newField}}`);
           }
         });

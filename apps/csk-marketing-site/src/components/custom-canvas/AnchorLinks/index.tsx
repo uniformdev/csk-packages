@@ -2,9 +2,10 @@
 
 import { FC, useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { Text } from '@uniformdev/csk-components/components/ui';
+import { ComponentProps } from '@uniformdev/csk-components/types/cskTypes';
 import { cn } from '@uniformdev/csk-components/utils/styling';
+import { withFlattenParameters } from '@uniformdev/csk-components/utils/withFlattenParameters';
 
 export type AnchorLinksParameters = {
   size?: string;
@@ -26,7 +27,7 @@ type AnchorLinksProps = ComponentProps<AnchorLinksParameters>;
 
 export const DEFAULT_COMPONENT_DETAILS_PAGE_ID = 'component-details-page-content-section';
 
-const AnchorLinks: FC<AnchorLinksProps> = ({ size, color, font, weight, containerId }) => {
+const AnchorLinks: FC<AnchorLinksProps & AnchorLinksParameters> = ({ size, color, font, weight, containerId }) => {
   const [anchorLinks, setAnchorLinks] = useState<AnchorLink[]>([]);
   const [activeAnchor, setActiveAnchor] = useState<AnchorLink | null>(null);
 
@@ -111,4 +112,4 @@ const AnchorLinks: FC<AnchorLinksProps> = ({ size, color, font, weight, containe
   );
 };
 
-export default AnchorLinks;
+export default withFlattenParameters(AnchorLinks);

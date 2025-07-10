@@ -3,7 +3,7 @@ import * as ora from 'ora';
 import path from 'path';
 import { confirm, input } from '@inquirer/prompts';
 import { formatWithPrettier, runCmdCommand } from '../../../utils';
-import { IMPORTS, UNIFORM_PARAMETERS } from '../constants';
+import { IMPORTS, UNIFORM_PARAMETERS, UNIFORM_PARAMETERS_TYPES } from '../constants';
 import { FileHandler } from '../types';
 import { getComponentNameBasedOnId, getSupportedParameters } from '../utils';
 
@@ -51,13 +51,15 @@ export const indexComponentFile: FileHandler = {
       const imports = new Set([
         IMPORTS.REACT,
         IMPORTS.COMPONENT_PROPS,
+        IMPORTS.WITH_FLATTEN_PARAMETERS,
         ...supportedParameters
           .map(item => item.handler?.import)
           .filter(Boolean)
           .flat(),
       ]);
       const uniformProps = new Set([
-        UNIFORM_PARAMETERS.COMPONENT,
+        UNIFORM_PARAMETERS.CONTEXT,
+        UNIFORM_PARAMETERS.VARIANT,
         ...supportedParameters.flatMap(item => item.handler?.needsProps).filter(Boolean),
       ]);
       const slotsMapping = definition.slots?.map(({ id }) => id) || [];
@@ -65,8 +67,11 @@ export const indexComponentFile: FileHandler = {
       if (slotsMapping.length) {
         imports.add(IMPORTS.UNIFORM_SLOT);
         uniformProps.add(UNIFORM_PARAMETERS.SLOTS);
-        uniformProps.add(UNIFORM_PARAMETERS.CONTEXT);
       }
+
+      const assetParameters = supportedParameters
+        .filter(item => item.handler?.supports === UNIFORM_PARAMETERS_TYPES.ASSET)
+        .map(item => item.id);
 
       const totalParameters = (definition.parameters || []).filter(({ type }) => type !== 'group').length;
       const detectedParameters = supportedParameters.length;
@@ -84,7 +89,7 @@ export const indexComponentFile: FileHandler = {
         : 'Record<string, never>;'
     }
 
-    export type ${componentName}Props = ComponentProps<${componentName}Parameters${slotsMapping.length ? `, '${slotsMapping.join("' | '")}'` : ''}>;`;
+    export type ${componentName}Props = ComponentProps<${componentName}Parameters${slotsMapping.length ? `, '${slotsMapping.join("' | '")}'` : ''}>${assetParameters.length ? `& ReplaceFieldsWithAssets<${componentName}Parameters, '${assetParameters.join("' | '")}'>;` : `& ${componentName}Parameters;`}`;
 
       const componentSection = `
     const ${componentName}:FC<${componentName}Props> = ({
@@ -100,11 +105,11 @@ export const indexComponentFile: FileHandler = {
       <div className="flex flex-col items-center">
         <div className="text-left">
           <h2 className="text-3xl text-black md:text-4xl">Component Name: ${componentName}</h2>
-          <p className="text-gray-600">Public ID: {component.type}</p>
+          <p className="text-gray-600">Public ID: {context.type}</p>
         </div>
       </div>
 
-      <h3 className="text-2xl text-black md:text-3xl">Component Variant ID: {component.variant || 'Default'}</h3>
+      <h3 className="text-2xl text-black md:text-3xl">Component Variant ID: {variant || 'Default'}</h3>
 
       {/* Parameters section */}
       ${
@@ -161,7 +166,7 @@ export const indexComponentFile: FileHandler = {
               `<li>
                 <strong>${slot}: </strong>
                 <div className="min-h-20">
-                  <UniformSlot data={component} context={context} slot={slots['${slot}']} />
+                  <UniformSlot slot={slots['${slot}']} />
                 </div>
               </li>`
           )
@@ -178,7 +183,7 @@ export const indexComponentFile: FileHandler = {
     );
 
 
-    export default ${componentName};
+    export default withFlattenParameters(${componentName});
     `;
 
       await fs.promises.writeFile(

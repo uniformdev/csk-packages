@@ -2,9 +2,9 @@
 
 import { FC, ReactNode } from 'react';
 import Masonry from 'react-responsive-masonry';
-import { UniformSlotProps } from '@uniformdev/canvas-next-rsc/component';
+import { UniformSlotProps } from '@uniformdev/canvas-next-rsc-v2/component';
 import { cn } from '@/utils/styling';
-import { ImageGalleryProps } from '.';
+import { ImageGalleryParameters, ImageGalleryProps } from '.';
 
 const DEFAULT_GALLERY_CONFIG = {
   firstLineCount: 2,
@@ -14,7 +14,7 @@ const DEFAULT_GALLERY_CONFIG = {
 
 type GalleryInnerProps = {
   slot: UniformSlotProps['slot'];
-  aspectRatio?: ImageGalleryProps['aspectRatio'];
+  aspectRatio?: ImageGalleryParameters['aspectRatio'];
   config?: ImageGalleryProps['config'];
 };
 
@@ -31,11 +31,11 @@ export const GalleryInner: FC<GalleryInnerProps> = ({ slot, aspectRatio, config 
     items.reduce<ReactNode[][]>(
       (acc, item, index) => {
         if (index < firstLineCount) {
-          acc[0]?.push(item);
+          acc[0]?.push(item?.component);
         } else if (index < firstLineCount + secondLineCount) {
-          acc[1]?.push(item);
+          acc[1]?.push(item?.component);
         } else {
-          acc[2]?.push(item);
+          acc[2]?.push(item?.component);
         }
         return acc;
       },

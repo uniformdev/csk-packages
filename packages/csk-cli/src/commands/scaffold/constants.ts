@@ -7,11 +7,11 @@ export const PATH_TO_CUSTOM_CANVAS_FOLDER = path.join(
 );
 
 export enum THEME_PACK_PARAMETERS_TYPES {
-  COLOR_PALETTE = 'tp2-color-palette-parameter',
-  SPACER_CONTROL = 'tp2-space-control-parameter',
-  SLIDER = 'tp2-slider-control-parameter',
-  SEGMENTED_CONTROL = 'tp2-segmented-control-parameter',
-  TOKEN_SELECTOR = 'tp2-token-selector-parameter',
+  COLOR_PALETTE = 'dex-color-palette-parameter',
+  SPACER_CONTROL = 'dex-space-control-parameter',
+  SLIDER = 'dex-slider-control-parameter',
+  SEGMENTED_CONTROL = 'dex-segmented-control-parameter',
+  TOKEN_SELECTOR = 'dex-token-selector-parameter',
 }
 
 export enum UNIFORM_PARAMETERS_TYPES {
@@ -27,7 +27,6 @@ export enum UNIFORM_PARAMETERS_TYPES {
   ASSET = 'asset',
   JSON_DATA = 'jsonData',
   IMAGE_URL = 'imageUrl',
-  COLOR_PALETTE = 'colorPalette',
   BLOCK = '$block',
 }
 
@@ -35,16 +34,19 @@ export enum IMPORTS {
   REACT = "import { FC } from 'react';",
   NEXT_LINK = "import NextLink from 'next/link';",
   IMAGE = "import NextImage from 'next/image';",
+  WITH_FLATTEN_PARAMETERS = "import { withFlattenParameters } from '@uniformdev/csk-components/utils/withFlattenParameters';",
 
   ASSET_TYPE = "import type { AssetParamValue } from '@uniformdev/assets';",
   LINK_PARAM_VALUE = "import { LinkParamValue } from '@uniformdev/canvas';",
   FLATTEN_VALUES = "import { flattenValues } from '@uniformdev/canvas';",
-  COMPONENT_PROPS = "import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';",
-  UNIFORM_TEXT = "import { UniformText } from '@uniformdev/canvas-next-rsc/component';",
-  UNIFORM_RICH_TEXT = "import { UniformRichText } from '@uniformdev/canvas-next-rsc/component';",
-  UNIFORM_SLOT = "import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';",
+  COMPONENT_PROPS = "import { ComponentProps } from '@uniformdev/csk-components/types/cskTypes';",
+  UNIFORM_TEXT = "import { UniformText } from '@uniformdev/canvas-next-rsc-v2/component';",
+  COMPONENT_PARAMETER = "import { ComponentParameter } from '@uniformdev/canvas-next-rsc-v2/component';",
+  UNIFORM_RICH_TEXT = "import { UniformRichText } from '@uniformdev/canvas-next-rsc-v2/component';",
+  UNIFORM_SLOT = "import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';",
   RICH_TEXT_NODE = "import { RichTextNode } from '@uniformdev/richtext';",
   DATA_WITH_PROPERTIES = "import { DataWithProperties } from '@uniformdev/canvas';",
+  REPLACE_FIELDS_WITH_ASSETS = "import { ReplaceFieldsWithAssets } from '@uniformdev/csk-components/types/cskTypes';",
 
   CN = "import { cn } from '@uniformdev/csk-components/utils/styling';",
   VIEWPORT = "import { ViewPort } from '@uniformdev/csk-components/types/cskTypes';",
@@ -57,6 +59,8 @@ export enum UNIFORM_PARAMETERS {
   CONTEXT = 'context',
   SLOT_INDEX = 'slotIndex',
   SLOT_NAME = 'slotName',
+  PARAMETERS = 'parameters',
+  VARIANT = 'variant',
 }
 
 export const MAPPING_REGEX = /\b[a-zA-Z0-9_]+Mapping\s*=\s*{(?:[^{}]*|\{(?:[^{}]*|\{[^{}]*\})*\})*}/g;

@@ -3,9 +3,10 @@
 import React, { useCallback, useMemo } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { DataWithProperties, flattenValues } from '@uniformdev/canvas';
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { Image } from '@uniformdev/csk-components/components/ui';
+import { ComponentProps } from '@uniformdev/csk-components/types/cskTypes';
 import { cn } from '@uniformdev/csk-components/utils/styling';
+import { withFlattenParameters } from '@uniformdev/csk-components/utils/withFlattenParameters';
 
 interface FilterKey {
   title?: string;
@@ -18,21 +19,21 @@ interface FilterKey {
 }
 
 interface FilterParameters {
-  title: string;
-  id: string;
-  filterKeys: DataWithProperties[];
+  title?: string;
+  id?: string;
+  filterKeys?: DataWithProperties[];
 }
 
 type RecipeFilterProps = ComponentProps<FilterParameters>;
 
-const RecipeFilter: React.FC<RecipeFilterProps> = ({ id, filterKeys }) => {
+const RecipeFilter: React.FC<RecipeFilterProps & FilterParameters> = ({ id = 'unknown', filterKeys }) => {
   const searchParams = useSearchParams();
   const router = useRouter();
   const selectedFilterId = useMemo(() => searchParams.get(id) || 'all', [searchParams, id]);
 
   const mappedFilters = useMemo(
     () =>
-      filterKeys.map(item => {
+      filterKeys?.map(item => {
         const { title, slug, id, icon } = flattenValues(item) as FilterKey;
         return {
           title,
@@ -92,4 +93,4 @@ const RecipeFilter: React.FC<RecipeFilterProps> = ({ id, filterKeys }) => {
   );
 };
 
-export default RecipeFilter;
+export default withFlattenParameters(RecipeFilter);
