@@ -1,5 +1,5 @@
 import { cn } from '@/utils/styling';
-import { MaxWidthMap, ModalParameters } from '.';
+import { MaxWidthMap, ModalProps } from '.';
 
 type DialogClassesProps = {
   showModal?: boolean;
@@ -11,8 +11,8 @@ export const getDialogClasses = ({ showModal }: DialogClassesProps) =>
   });
 
 type FormClassesProps = {
-  maxWidth?: ModalParameters['maxWidth'];
-  backgroundColor?: ModalParameters['backgroundColor'];
+  maxWidth?: ModalProps['maxWidth'];
+  backgroundColor?: ModalProps['backgroundColor'];
 };
 export const getFormClasses = ({ maxWidth, backgroundColor }: FormClassesProps) =>
   cn('rounded-lg shadow-lg relative', MaxWidthMap[maxWidth || 'small'], {
@@ -20,7 +20,7 @@ export const getFormClasses = ({ maxWidth, backgroundColor }: FormClassesProps) 
   });
 
 type CloseButtonClassesProps = {
-  disableCloseModalOnClickOutside?: ModalParameters['disableCloseModalOnClickOutside'];
+  disableCloseModalOnClickOutside?: ModalProps['disableCloseModalOnClickOutside'];
 };
 export const getCloseButtonClasses = ({ disableCloseModalOnClickOutside }: CloseButtonClassesProps) =>
   cn('group absolute right-4 top-4 opacity-40 hover:opacity-100', {

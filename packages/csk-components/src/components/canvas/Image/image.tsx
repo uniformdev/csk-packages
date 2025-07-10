@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { imageFrom } from '@uniformdev/assets';
-import { MediaPlaceholder } from '@/components/ui';
 import BaseImage from '@/components/ui/Image';
+import MediaPlaceholder from '@/components/ui/MediaPlaceholder';
 import { resolveAsset } from '@/utils/assets';
 import { ImageProps } from '.';
 
