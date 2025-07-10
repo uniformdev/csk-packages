@@ -56,6 +56,8 @@ export const EXTRACT_CANVAS_COMPONENTS = [
 ];
 
 export const EXTRACT_UI_COMPONENTS = [
+  'Accordion',
+  'AccordionItem',
   'Button',
   'Container',
   'FlexItem',
@@ -63,6 +65,8 @@ export const EXTRACT_UI_COMPONENTS = [
   'Header',
   'Image',
   'MediaPlaceholder',
+  'InlineSVG',
+  'Modal',
   'Rating',
   'ThemeSwitcher',
   '_icons',
