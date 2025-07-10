@@ -2710,6 +2710,50 @@ composition:
             value: contrast-[.1]
         _overridability:
           hideLockedParameters: true
+      - _id: 803056e4-b10a-4143-b0ac-403aaffcaaef
+        type: aiAssistant
+        parameters:
+          starterPrompts:
+            type: $block
+            value:
+              - _id: d61969dc-dda3-43fb-9ae8-b848006a92f5
+                type: starterPrompt
+                fields:
+                  value:
+                    type: text
+                    value: Could you show me what’s in my shopping cart right now?
+              - _id: 2c4192c8-1528-4c63-b2dd-7b431857a7e5
+                type: starterPrompt
+                fields:
+                  value:
+                    type: text
+                    value: >-
+                      Based on what I like, do you have any recommendations for
+                      me?
+              - _id: f267ccf4-3c00-4ba6-9edf-888813a59ba6
+                type: starterPrompt
+                fields:
+                  value:
+                    type: text
+                    value: >-
+                      Hey, could you take a look at my shopping cart and suggest
+                      a few products that might suit me?
+              - _id: 557f3444-19e2-4bf9-8f44-4b7b568f81b3
+                type: starterPrompt
+                fields:
+                  value:
+                    type: text
+                    value: Trying to improve bean grinding technique
+              - _id: 37d73a3f-2965-41d5-8acf-9c256e49a464
+                type: starterPrompt
+                fields:
+                  value:
+                    type: text
+                    value: >-
+                      I am looking for an espresso machine that gives me
+                      precision grinding
+        _overridability:
+          hideLockedParameters: true
       - _id: 5c13f6a2-4500-492d-ad1e-8ab9f2f804d8
         type: compositionModal
         slots:

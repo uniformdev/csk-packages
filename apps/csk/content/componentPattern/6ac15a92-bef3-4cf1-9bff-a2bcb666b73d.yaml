@@ -1,0 +1,208 @@
+composition:
+  _name: Product Recommendation
+  _id: 6ac15a92-bef3-4cf1-9bff-a2bcb666b73d
+  type: flex
+  parameters:
+    gap:
+      type: dex-slider-control-parameter
+      value:
+        mobile: '4'
+        tablet: '4'
+        desktop: '4'
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        mobile: {}
+        tablet: {}
+        desktop: {}
+    direction:
+      type: dex-segmented-control-parameter
+      value:
+        mobile: col
+        tablet: col
+        desktop: col
+    alignItems:
+      type: dex-segmented-control-parameter
+      value: {}
+    displayName:
+      type: text
+      locales:
+        da-dk: ${#jptr:/Single Product Content/entry/_name}
+        de-at: ${#jptr:/Single Product Content/entry/_name}
+        de-de: ${#jptr:/Single Product Content/entry/_name}
+        en-ca: ${#jptr:/Single Product Content/entry/_name}
+        en-de: ${#jptr:/Single Product Content/entry/_name}
+        en-fr: ${#jptr:/Single Product Content/entry/_name}
+        en-gb: ${#jptr:/Single Product Content/entry/_name}
+        en-nl: ${#jptr:/Single Product Content/entry/_name}
+        en-us: ${#jptr:/Single Product Content/entry/_name}
+        es-us: ${#jptr:/Single Product Content/entry/_name}
+        fr-ca: ${#jptr:/Single Product Content/entry/_name}
+        fr-fr: ${#jptr:/Single Product Content/entry/_name}
+        ja-jp: ${#jptr:/Single Product Content/entry/_name}
+        nb-no: ${#jptr:/Single Product Content/entry/_name}
+        nl-nl: ${#jptr:/Single Product Content/entry/_name}
+        sv-se: ${#jptr:/Single Product Content/entry/_name}
+        ar-ksa: ${#jptr:/Single Product Content/entry/_name}
+        ar-uae: ${#jptr:/Single Product Content/entry/_name}
+    fluidContent:
+      type: checkbox
+      value: true
+    justifyContent:
+      type: dex-segmented-control-parameter
+      value:
+        mobile: between
+        tablet: between
+        desktop: between
+  slots:
+    flexItem:
+      - _id: 2e6f1f7c-6b5b-4736-9fb7-3fd2b1d129b1
+        type: link
+        _pattern: 1b9cb318-a532-4c1a-af19-c0ee1a66855f
+      - _id: 0c35961b-b836-40e4-a0f5-e23594ea9462
+        type: addToCardButton
+        _pattern: 20161830-c75e-4695-8622-41032f5be75d
+  _dataResources:
+    Single Product Content:
+      type: singleProduct
+      variables:
+        locale: ${locale}
+        entryId: efc7afec-03c4-4fd4-b478-a32708f5852e
+      isPatternParameter: true
+      ignorePatternParameterDefault: true
+  _overrides:
+    0c35961b-b836-40e4-a0f5-e23594ea9462:
+      parameters:
+        productSlug:
+          type: text
+          locales:
+            da-dk: ${#jptr:/Single Product Content/entry/_slug}
+            de-at: ${#jptr:/Single Product Content/entry/_slug}
+            de-de: ${#jptr:/Single Product Content/entry/_slug}
+            en-ca: ${#jptr:/Single Product Content/entry/_slug}
+            en-de: ${#jptr:/Single Product Content/entry/_slug}
+            en-fr: ${#jptr:/Single Product Content/entry/_slug}
+            en-gb: ${#jptr:/Single Product Content/entry/_slug}
+            en-nl: ${#jptr:/Single Product Content/entry/_slug}
+            en-us: ${#jptr:/Single Product Content/entry/_slug}
+            es-us: ${#jptr:/Single Product Content/entry/_slug}
+            fr-ca: ${#jptr:/Single Product Content/entry/_slug}
+            fr-fr: ${#jptr:/Single Product Content/entry/_slug}
+            ja-jp: ${#jptr:/Single Product Content/entry/_slug}
+            nb-no: ${#jptr:/Single Product Content/entry/_slug}
+            nl-nl: ${#jptr:/Single Product Content/entry/_slug}
+            sv-se: ${#jptr:/Single Product Content/entry/_slug}
+            ar-ksa: ${#jptr:/Single Product Content/entry/_slug}
+            ar-uae: ${#jptr:/Single Product Content/entry/_slug}
+        openMiniCart:
+          type: checkbox
+          value: null
+    2e6f1f7c-6b5b-4736-9fb7-3fd2b1d129b1:
+      parameters:
+        link:
+          type: link
+          value:
+            path: /${locale}/products/${#jptr:/Single Product Content/entry/_slug}
+            type: projectMapNode
+            nodeId: 702b0e0b-3858-4b5d-99e4-bdb98097ca0f
+            projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+            dynamicInputValues:
+              locale: ${locale}
+              product-slug: ${#jptr:/Single Product Content/entry/_slug}
+        displayName:
+          type: text
+          locales:
+            da-dk: ${#jptr:/Single Product Content/entry/_name}
+            de-at: ${#jptr:/Single Product Content/entry/_name}
+            de-de: ${#jptr:/Single Product Content/entry/_name}
+            en-ca: ${#jptr:/Single Product Content/entry/_name}
+            en-de: ${#jptr:/Single Product Content/entry/_name}
+            en-fr: ${#jptr:/Single Product Content/entry/_name}
+            en-gb: ${#jptr:/Single Product Content/entry/_name}
+            en-nl: ${#jptr:/Single Product Content/entry/_name}
+            en-us: ${#jptr:/Single Product Content/entry/_name}
+            es-us: ${#jptr:/Single Product Content/entry/_name}
+            fr-ca: ${#jptr:/Single Product Content/entry/_name}
+            fr-fr: ${#jptr:/Single Product Content/entry/_name}
+            ja-jp: ${#jptr:/Single Product Content/entry/_name}
+            nb-no: ${#jptr:/Single Product Content/entry/_name}
+            nl-nl: ${#jptr:/Single Product Content/entry/_name}
+            sv-se: ${#jptr:/Single Product Content/entry/_name}
+            ar-ksa: ${#jptr:/Single Product Content/entry/_name}
+            ar-uae: ${#jptr:/Single Product Content/entry/_name}
+    2e6f1f7c-6b5b-4736-9fb7-3fd2b1d129b1|1af937fb-40ae-4938-b1a8-110b8ff73fc4:
+      parameters:
+        displayName:
+          type: text
+          value: ${#jptr:/Single Product Content/entry/_name}
+    2e6f1f7c-6b5b-4736-9fb7-3fd2b1d129b1|1af937fb-40ae-4938-b1a8-110b8ff73fc4|0952417a-061c-4634-91df-1341269e4054:
+      parameters:
+        image:
+          type: asset
+          value: ${#jptr:/Single Product Content/entry/fields/primaryImage/value}
+    2e6f1f7c-6b5b-4736-9fb7-3fd2b1d129b1|1af937fb-40ae-4938-b1a8-110b8ff73fc4|41f41812-74a8-48f1-9e2a-920dfff8ea04:
+      parameters:
+        productSlug:
+          type: text
+          locales:
+            da-dk: ${#jptr:/Single Product Content/entry/_slug}
+            de-at: ${#jptr:/Single Product Content/entry/_slug}
+            de-de: ${#jptr:/Single Product Content/entry/_slug}
+            en-ca: ${#jptr:/Single Product Content/entry/_slug}
+            en-de: ${#jptr:/Single Product Content/entry/_slug}
+            en-fr: ${#jptr:/Single Product Content/entry/_slug}
+            en-gb: ${#jptr:/Single Product Content/entry/_slug}
+            en-nl: ${#jptr:/Single Product Content/entry/_slug}
+            en-us: ${#jptr:/Single Product Content/entry/_slug}
+            es-us: ${#jptr:/Single Product Content/entry/_slug}
+            fr-ca: ${#jptr:/Single Product Content/entry/_slug}
+            fr-fr: ${#jptr:/Single Product Content/entry/_slug}
+            ja-jp: ${#jptr:/Single Product Content/entry/_slug}
+            nb-no: ${#jptr:/Single Product Content/entry/_slug}
+            nl-nl: ${#jptr:/Single Product Content/entry/_slug}
+            sv-se: ${#jptr:/Single Product Content/entry/_slug}
+            ar-ksa: ${#jptr:/Single Product Content/entry/_slug}
+            ar-uae: ${#jptr:/Single Product Content/entry/_slug}
+    2e6f1f7c-6b5b-4736-9fb7-3fd2b1d129b1|1af937fb-40ae-4938-b1a8-110b8ff73fc4|8bad3ddd-add0-43d3-a314-5836bf0c7a93:
+      parameters:
+        text:
+          type: text
+          value: >-
+            ${#jptr:/Single Product
+            Content/entry/fields/variants/value/0/fields/price/value}
+            ${#jptr:/Single Product
+            Content/entry/fields/variants/value/0/fields/currency/value}
+    2e6f1f7c-6b5b-4736-9fb7-3fd2b1d129b1|1af937fb-40ae-4938-b1a8-110b8ff73fc4|988f7805-9e0e-4b30-acaf-f97d7dd5099f:
+      parameters:
+        text:
+          type: text
+          value: >-
+            ${#jptr:/Single Product
+            Content/entry/fields/variants/value/0/fields/title/value}
+  _overridability:
+    hideLockedParameters: true
+  _locales:
+    - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa
+created: '2025-07-10T10:17:53.16005+00:00'
+modified: '2025-07-10T10:40:35.465548+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1731065901/csk-v-next/jd-template/product-card.jpg
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9

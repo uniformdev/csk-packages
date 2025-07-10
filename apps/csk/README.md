@@ -62,6 +62,58 @@ This integration brings new parameter types for design and layout control via Un
    ![Your project](https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/doc/project_page.png)
 1. Navigate to the `Integrations` tab, find the `Design Extensions` integration and install it.
 
+## 🚀 RAG integration
+
+Retrieval-augmented generation (RAG) keeps your assistant grounded in your content: it fetches the most relevant documents from a Postgres-backed vector store and passes them to the LLM, so answers stay on-topic and up-to-date.
+
+### Step 4. Create a Postgres database
+
+You will need a **Postgres** database to complete this tutorial. If you don’t have Postgres locally you can either:
+
+- Spin up a **free Postgres** instance on [Vercel Postgres](https://vercel.com/postgres).
+- Follow [this guide](https://www.postgresqltutorial.com/install-postgresql/) to install Postgres locally.
+
+Once your database is ready, copy its connection string – you’ll need it in the next step.
+
+### Step 5. Migrate the database
+
+1. Open `.env` and paste your **database connection string** after the `DATABASE_URL=` key.
+1. Run the migration:
+
+   ```bash
+   npm run db:migrate
+   ```
+
+   The script will:
+
+   - Enable the `pgvector` extension.
+   - Create tables for the `resources` and `embeddings` schema defined in `src/module/chat/rag/schema` with necessary columns.
+
+1. Fill the data to database:
+   ```bash
+   npm run db:load
+   ```
+
+### Step 6. Add your OpenAI API key
+
+Some starter features – like AI-Assistant and RAG integration – require an **OpenAI API key**.
+
+1. Generate a key in your OpenAI dashboard: <https://platform.openai.com>.
+1. Add it to `.env`:
+   ```bash
+   OPENAI_API_KEY=
+   ```
+
+### Step 7. Add Webhook (Additional)
+
+You can configure a webhook so your external database (e.g. the Postgres layer you added above) stays automatically up‑to‑date whenever content is published or deleted in Uniform.
+
+1. Open Settings → Webhooks
+1. Set the Endpoint URL to: `https://your_domain/api/webhook/entry-event`
+1. Enable the following events:
+   - entry.published
+   - entry.deleted
+
 ## How to sync content
 
 The following scripts are created to facilitate sync of content between the `./content` folder and your project.

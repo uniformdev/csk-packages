@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: aiAssistant
+name: AI Assistant
+icon: ghost-character
+parameters:
+  - id: starterPrompts
+    name: Starter Prompts
+    type: $block
+    typeConfig:
+      allowedTypes:
+        - starterPrompt
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/ai-assistant.jpg
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2025-04-24T11:11:12.057056+00:00'
+updated: '2025-04-24T11:11:12.057056+00:00'
