@@ -1,0 +1,92 @@
+{
+  "composition": {
+    "_name": "Secondary Button",
+    "_id": "646faee6-b476-43c6-a1a8-eebe85699889",
+    "type": "button",
+    "parameters": {
+      "size": {
+        "type": "dex-token-selector-parameter",
+        "value": "button-medium"
+      },
+      "text": {
+        "type": "text",
+        "value": "Learn more"
+      },
+      "border": {
+        "type": "dex-token-selector-parameter",
+        "value": "border-button-secondary"
+      },
+      "textSize": {
+        "type": "dex-segmented-control-parameter",
+        "value": {
+          "mobile": "sm",
+          "tablet": "sm",
+          "desktop": "sm"
+        }
+      },
+      "textColor": {
+        "type": "dex-color-palette-parameter",
+        "value": "text-primary"
+      },
+      "textWeight": {
+        "type": "dex-segmented-control-parameter",
+        "value": "bold"
+      },
+      "buttonColor": {
+        "type": "dex-color-palette-parameter",
+        "value": "button-secondary"
+      },
+      "iconPosition": {
+        "type": "dex-segmented-control-parameter",
+        "value": "right"
+      },
+      "textTransform": {
+        "type": "dex-segmented-control-parameter",
+        "value": "uppercase"
+      },
+      "hoverTextColor": {
+        "type": "dex-color-palette-parameter",
+        "value": "text-primary"
+      },
+      "hoverButtonColor": {
+        "type": "dex-color-palette-parameter",
+        "value": "button-secondary-hover"
+      }
+    },
+    "_overridability": {
+      "variants": true,
+      "parameters": {
+        "link": "yes",
+        "text": "yes",
+        "fullWidth": "yes",
+        "textColor": "no"
+      },
+      "hideLockedParameters": true
+    },
+    "_locales": [
+      "en-us",
+      "es-us",
+      "fr-ca",
+      "en-ca",
+      "en-gb",
+      "de-de",
+      "en-de",
+      "de-at",
+      "nl-nl",
+      "en-nl",
+      "da-dk",
+      "sv-se",
+      "nb-no",
+      "fr-fr",
+      "en-fr",
+      "ja-jp",
+      "ar-uae",
+      "ar-ksa"
+    ]
+  },
+  "created": "2025-02-27T10:44:59.993774+00:00",
+  "modified": "2025-07-07T12:24:21.514581+00:00",
+  "pattern": true,
+  "previewImageUrl": "https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/jd-template/secondary-button_jakvxw.jpg",
+  "categoryId": "70d03350-bbf9-457d-abc0-cf7d7aa2a3a4"
+}

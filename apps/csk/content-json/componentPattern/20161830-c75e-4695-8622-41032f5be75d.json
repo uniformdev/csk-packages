@@ -1,0 +1,116 @@
+{
+  "composition": {
+    "_name": "Add To Card Primary",
+    "_id": "20161830-c75e-4695-8622-41032f5be75d",
+    "type": "addToCardButton",
+    "parameters": {
+      "size": {
+        "type": "dex-token-selector-parameter",
+        "value": "button-medium"
+      },
+      "text": {
+        "type": "text",
+        "locales": {
+          "da-dk": "ADD TO CART",
+          "de-at": "ADD TO CART",
+          "de-de": "ADD TO CART",
+          "en-ca": "ADD TO CART",
+          "en-de": "ADD TO CART",
+          "en-fr": "ADD TO CART",
+          "en-gb": "ADD TO CART",
+          "en-nl": "ADD TO CART",
+          "en-us": "ADD TO CART",
+          "es-us": "ADD TO CART",
+          "fr-ca": "ADD TO CART",
+          "fr-fr": "ADD TO CART",
+          "ja-jp": "ADD TO CART",
+          "nb-no": "ADD TO CART",
+          "nl-nl": "ADD TO CART",
+          "sv-se": "ADD TO CART",
+          "ar-ksa": "ADD TO CART",
+          "ar-uae": "ADD TO CART"
+        }
+      },
+      "border": {
+        "type": "dex-token-selector-parameter",
+        "value": "border-button-secondary"
+      },
+      "textSize": {
+        "type": "dex-segmented-control-parameter",
+        "value": {
+          "mobile": "sm",
+          "tablet": "sm",
+          "desktop": "sm"
+        }
+      },
+      "fullWidth": {
+        "type": "checkbox",
+        "value": true
+      },
+      "textColor": {
+        "type": "dex-color-palette-parameter",
+        "value": "text-secondary"
+      },
+      "textWeight": {
+        "type": "dex-segmented-control-parameter",
+        "value": "bold"
+      },
+      "buttonColor": {
+        "type": "dex-color-palette-parameter",
+        "value": "button-primary"
+      },
+      "iconPosition": {
+        "type": "dex-segmented-control-parameter",
+        "value": "left"
+      },
+      "openMiniCart": {
+        "type": "checkbox",
+        "value": true
+      },
+      "textTransform": {
+        "type": "dex-segmented-control-parameter",
+        "value": "uppercase"
+      },
+      "hoverTextColor": {
+        "type": "dex-color-palette-parameter",
+        "value": "text-secondary"
+      },
+      "hoverButtonColor": {
+        "type": "dex-color-palette-parameter",
+        "value": "button-primary-hover"
+      }
+    },
+    "_overridability": {
+      "parameters": {
+        "product": "yes",
+        "productSlug": "yes",
+        "openMiniCart": "yes"
+      },
+      "hideLockedParameters": true
+    },
+    "_locales": [
+      "en-us",
+      "es-us",
+      "fr-ca",
+      "en-ca",
+      "en-gb",
+      "de-de",
+      "en-de",
+      "de-at",
+      "nl-nl",
+      "en-nl",
+      "da-dk",
+      "sv-se",
+      "nb-no",
+      "fr-fr",
+      "en-fr",
+      "ja-jp",
+      "ar-uae",
+      "ar-ksa"
+    ]
+  },
+  "created": "2025-03-18T13:02:27.20022+00:00",
+  "modified": "2025-07-07T12:38:45.626071+00:00",
+  "pattern": true,
+  "categoryId": "70d03350-bbf9-457d-abc0-cf7d7aa2a3a4"
+}

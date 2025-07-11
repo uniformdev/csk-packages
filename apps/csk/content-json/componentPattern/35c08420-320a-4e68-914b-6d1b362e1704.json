@@ -1,0 +1,531 @@
+{
+  "composition": {
+    "_name": "Global P13n CTA",
+    "_id": "35c08420-320a-4e68-914b-6d1b362e1704",
+    "type": "container",
+    "parameters": {
+      "height": {
+        "type": "dex-segmented-control-parameter",
+        "value": {}
+      },
+      "spacing": {
+        "type": "dex-space-control-parameter",
+        "value": {
+          "mobile": {},
+          "tablet": {},
+          "desktop": {}
+        }
+      },
+      "displayName": {
+        "type": "text",
+        "locales": {
+          "da-dk": "Global P13n CtA",
+          "de-at": "Global P13n CtA",
+          "de-de": "Global P13n CtA",
+          "en-ca": "Global P13n CtA",
+          "en-de": "Global P13n CtA",
+          "en-fr": "Global P13n CtA",
+          "en-gb": "Global P13n CtA",
+          "en-nl": "Global P13n CtA",
+          "en-us": "Global P13n CtA",
+          "es-us": "Global P13n CtA",
+          "fr-ca": "Global P13n CtA",
+          "fr-fr": "Global P13n CtA",
+          "ja-jp": "Global P13n CtA",
+          "nb-no": "Global P13n CtA",
+          "nl-nl": "Global P13n CtA",
+          "sv-se": "Global P13n CtA",
+          "ar-ksa": "Global P13n CtA",
+          "ar-uae": "Global P13n CtA"
+        }
+      }
+    },
+    "slots": {
+      "containerContent": [
+        {
+          "_id": "f60f174a-198a-427c-9e49-d847f0cf76cc",
+          "type": "$personalization",
+          "slots": {
+            "pz": [
+              {
+                "_id": "9e675a07-c9c2-4c79-a601-1654cbd4522d",
+                "type": "fixedHero",
+                "variant": "columns",
+                "parameters": {
+                  "$pzCrit": {
+                    "type": "$pzCrit",
+                    "value": {
+                      "crit": [
+                        {
+                          "l": "int_beans",
+                          "r": 0,
+                          "op": "^"
+                        }
+                      ],
+                      "name": "fixedHero-9e67"
+                    }
+                  },
+                  "titleTag": {
+                    "type": "dex-segmented-control-parameter",
+                    "value": "h2"
+                  },
+                  "titleText": {
+                    "type": "text",
+                    "locales": {
+                      "da-dk": "Personalized",
+                      "de-at": "Personalized",
+                      "de-de": "Personalized",
+                      "en-ca": "Personalized",
+                      "en-de": "Personalized",
+                      "en-fr": "Personalized",
+                      "en-gb": "Personalized",
+                      "en-nl": "Personalized",
+                      "en-us": "Personalized",
+                      "es-us": "Personalized",
+                      "fr-ca": "Personalized",
+                      "fr-fr": "Personalized",
+                      "ja-jp": "Personalized",
+                      "nb-no": "Personalized",
+                      "nl-nl": "Personalized",
+                      "sv-se": "Personalized",
+                      "ar-ksa": "Personalized",
+                      "ar-uae": "Personalized"
+                    }
+                  },
+                  "displayName": {
+                    "type": "text",
+                    "locales": {
+                      "da-dk": "Beans interest",
+                      "de-at": "Beans interest",
+                      "de-de": "Beans interest",
+                      "en-ca": "Beans interest",
+                      "en-de": "Beans interest",
+                      "en-fr": "Beans interest",
+                      "en-gb": "Beans interest",
+                      "en-nl": "Beans interest",
+                      "en-us": "Beans interest",
+                      "es-us": "Beans interest",
+                      "fr-ca": "Beans interest",
+                      "fr-fr": "Beans interest",
+                      "ja-jp": "Beans interest",
+                      "nb-no": "Beans interest",
+                      "nl-nl": "Beans interest",
+                      "sv-se": "Beans interest",
+                      "ar-ksa": "Beans interest",
+                      "ar-uae": "Beans interest"
+                    }
+                  },
+                  "descriptionText": {
+                    "type": "text",
+                    "locales": {
+                      "da-dk": "Interest is Beans",
+                      "de-at": "Interest is Beans",
+                      "de-de": "Interest is Beans",
+                      "en-ca": "Interest is Beans",
+                      "en-de": "Interest is Beans",
+                      "en-fr": "Interest is Beans",
+                      "en-gb": "Interest is Beans",
+                      "en-nl": "Interest is Beans",
+                      "en-us": "Interest is Beans",
+                      "es-us": "Interest is Beans",
+                      "fr-ca": "Interest is Beans",
+                      "fr-fr": "Interest is Beans",
+                      "ja-jp": "Interest is Beans",
+                      "nb-no": "Interest is Beans",
+                      "nl-nl": "Interest is Beans",
+                      "sv-se": "Interest is Beans",
+                      "ar-ksa": "Interest is Beans",
+                      "ar-uae": "Interest is Beans"
+                    }
+                  }
+                }
+              },
+              {
+                "_id": "24528a36-5c58-413d-80ee-ae8d1ea44569",
+                "type": "fixedHero",
+                "variant": "columns",
+                "parameters": {
+                  "image": {
+                    "type": "asset",
+                    "value": [
+                      {
+                        "_id": "aeb6daf4-57fd-478d-ad98-131dd1d9892b",
+                        "type": "image",
+                        "fields": {
+                          "id": {
+                            "type": "text",
+                            "value": "75ebf11f-2f1d-4a4e-9062-cca926fe65c1"
+                          },
+                          "url": {
+                            "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/sOAxssUvS-Onko8YWWGp8Q-Beans_BG.png",
+                            "type": "text"
+                          },
+                          "file": {
+                            "type": "file",
+                            "value": "b76064f7-04ff-4299-bdc1-65cc1d9f67b9"
+                          },
+                          "size": {
+                            "value": 3551148,
+                            "type": "number"
+                          },
+                          "title": {
+                            "type": "text",
+                            "value": "Beans_BG.png"
+                          },
+                          "width": {
+                            "value": 1536,
+                            "type": "number"
+                          },
+                          "height": {
+                            "value": 1024,
+                            "type": "number"
+                          },
+                          "mediaType": {
+                            "value": "image/png",
+                            "type": "text"
+                          }
+                        },
+                        "_source": "uniform-assets"
+                      }
+                    ]
+                  },
+                  "$pzCrit": {
+                    "type": "$pzCrit",
+                    "value": {
+                      "crit": [],
+                      "name": "fixedHero-2452"
+                    }
+                  },
+                  "titleTag": {
+                    "type": "dex-segmented-control-parameter",
+                    "value": "h1"
+                  },
+                  "titleText": {
+                    "type": "text",
+                    "locales": {
+                      "da-dk": "Default Content",
+                      "de-at": "Default Content",
+                      "de-de": "Default Content",
+                      "en-ca": "Default Content",
+                      "en-de": "Default Content",
+                      "en-fr": "Default Content",
+                      "en-gb": "Default Content",
+                      "en-nl": "Default Content",
+                      "en-us": "Default Content",
+                      "es-us": "Default Content",
+                      "fr-ca": "Default Content",
+                      "fr-fr": "Default Content",
+                      "ja-jp": "Default Content",
+                      "nb-no": "Default Content",
+                      "nl-nl": "Default Content",
+                      "sv-se": "Default Content",
+                      "ar-ksa": "Default Content",
+                      "ar-uae": "Default Content"
+                    }
+                  },
+                  "displayName": {
+                    "type": "text",
+                    "locales": {
+                      "da-dk": "Main Home Hero",
+                      "de-at": "Main Home Hero",
+                      "de-de": "Main Home Hero",
+                      "en-ca": "Main Home Hero",
+                      "en-de": "Main Home Hero",
+                      "en-fr": "Main Home Hero",
+                      "en-gb": "Main Home Hero",
+                      "en-nl": "Main Home Hero",
+                      "en-us": "Main Home Hero",
+                      "es-us": "Main Home Hero",
+                      "fr-ca": "Main Home Hero",
+                      "fr-fr": "Main Home Hero",
+                      "ja-jp": "Main Home Hero",
+                      "nb-no": "Main Home Hero",
+                      "nl-nl": "Main Home Hero",
+                      "sv-se": "Main Home Hero",
+                      "ar-ksa": "Main Home Hero",
+                      "ar-uae": "Main Home Hero"
+                    }
+                  },
+                  "descriptionText": {
+                    "type": "text",
+                    "locales": {
+                      "da-dk": "Handpicked by Hans Anderson",
+                      "de-at": "Handpicked by Hans Anderson",
+                      "de-de": "Handpicked by Hans Anderson",
+                      "en-ca": "Handpicked by Hans Anderson",
+                      "en-de": "Handpicked by Hans Anderson",
+                      "en-fr": "Handpicked by Hans Anderson",
+                      "en-gb": "Handpicked by Hans Anderson",
+                      "en-nl": "Handpicked by Hans Anderson",
+                      "en-us": "Handpicked by Hans Anderson",
+                      "es-us": "Handpicked by Hans Anderson",
+                      "fr-ca": "Handpicked by Hans Anderson",
+                      "fr-fr": "Handpicked by Hans Anderson",
+                      "ja-jp": "Handpicked by Hans Anderson",
+                      "nb-no": "Handpicked by Hans Anderson",
+                      "nl-nl": "Handpicked by Hans Anderson",
+                      "sv-se": "Handpicked by Hans Anderson",
+                      "ar-ksa": "Handpicked by Hans Anderson",
+                      "ar-uae": "Handpicked by Hans Anderson"
+                    }
+                  },
+                  "contentAlignment": {
+                    "type": "dex-segmented-control-parameter",
+                    "value": "left"
+                  },
+                  "eyebrowTitleText": {
+                    "type": "text",
+                    "locales": {
+                      "da-dk": "Special offer",
+                      "de-at": "Special offer",
+                      "de-de": "Special offer",
+                      "en-ca": "Special offer",
+                      "en-de": "Special offer",
+                      "en-fr": "Special offer",
+                      "en-gb": "Special offer",
+                      "en-nl": "Special offer",
+                      "en-us": "Special offer",
+                      "es-us": "Special offer",
+                      "fr-ca": "Special offer",
+                      "fr-fr": "Special offer",
+                      "ja-jp": "Special offer",
+                      "nb-no": "Special offer",
+                      "nl-nl": "Special offer",
+                      "sv-se": "Special offer",
+                      "ar-ksa": "Special offer",
+                      "ar-uae": "Special offer"
+                    }
+                  },
+                  "primaryButtonLink": {
+                    "type": "link",
+                    "locales": {
+                      "da-dk": {
+                        "path": "/${locale}/beans-bundle",
+                        "type": "projectMapNode",
+                        "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                        "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                        "dynamicInputValues": {
+                          "locale": "${locale}"
+                        }
+                      },
+                      "de-at": {
+                        "path": "/${locale}/beans-bundle",
+                        "type": "projectMapNode",
+                        "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                        "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                        "dynamicInputValues": {
+                          "locale": "${locale}"
+                        }
+                      },
+                      "de-de": {
+                        "path": "/${locale}/beans-bundle",
+                        "type": "projectMapNode",
+                        "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                        "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                        "dynamicInputValues": {
+                          "locale": "${locale}"
+                        }
+                      },
+                      "en-ca": {
+                        "path": "/${locale}/beans-bundle",
+                        "type": "projectMapNode",
+                        "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                        "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                        "dynamicInputValues": {
+                          "locale": "${locale}"
+                        }
+                      },
+                      "en-de": {
+                        "path": "/${locale}/beans-bundle",
+                        "type": "projectMapNode",
+                        "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                        "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                        "dynamicInputValues": {
+                          "locale": "${locale}"
+                        }
+                      },
+                      "en-fr": {
+                        "path": "/${locale}/beans-bundle",
+                        "type": "projectMapNode",
+                        "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                        "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                        "dynamicInputValues": {
+                          "locale": "${locale}"
+                        }
+                      },
+                      "en-gb": {
+                        "path": "/${locale}/beans-bundle",
+                        "type": "projectMapNode",
+                        "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                        "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                        "dynamicInputValues": {
+                          "locale": "${locale}"
+                        }
+                      },
+                      "en-nl": {
+                        "path": "/${locale}/beans-bundle",
+                        "type": "projectMapNode",
+                        "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                        "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                        "dynamicInputValues": {
+                          "locale": "${locale}"
+                        }
+                      },
+                      "en-us": {
+                        "path": "/${locale}/beans-bundle",
+                        "type": "projectMapNode",
+                        "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                        "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                        "dynamicInputValues": {
+                          "locale": "${locale}"
+                        }
+                      },
+                      "es-us": {
+                        "path": "/${locale}/beans-bundle",
+                        "type": "projectMapNode",
+                        "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                        "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                        "dynamicInputValues": {
+                          "locale": "${locale}"
+                        }
+                      },
+                      "fr-ca": {
+                        "path": "/${locale}/beans-bundle",
+                        "type": "projectMapNode",
+                        "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                        "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                        "dynamicInputValues": {
+                          "locale": "${locale}"
+                        }
+                      },
+                      "fr-fr": {
+                        "path": "/${locale}/beans-bundle",
+                        "type": "projectMapNode",
+                        "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                        "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                        "dynamicInputValues": {
+                          "locale": "${locale}"
+                        }
+                      },
+                      "ja-jp": {
+                        "path": "/${locale}/beans-bundle",
+                        "type": "projectMapNode",
+                        "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                        "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                        "dynamicInputValues": {
+                          "locale": "${locale}"
+                        }
+                      },
+                      "nb-no": {
+                        "path": "/${locale}/beans-bundle",
+                        "type": "projectMapNode",
+                        "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                        "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                        "dynamicInputValues": {
+                          "locale": "${locale}"
+                        }
+                      },
+                      "nl-nl": {
+                        "path": "/${locale}/beans-bundle",
+                        "type": "projectMapNode",
+                        "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                        "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                        "dynamicInputValues": {
+                          "locale": "${locale}"
+                        }
+                      },
+                      "sv-se": {
+                        "path": "/${locale}/beans-bundle",
+                        "type": "projectMapNode",
+                        "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                        "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                        "dynamicInputValues": {
+                          "locale": "${locale}"
+                        }
+                      },
+                      "ar-ksa": {
+                        "path": "/${locale}/beans-bundle",
+                        "type": "projectMapNode",
+                        "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                        "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                        "dynamicInputValues": {
+                          "locale": "${locale}"
+                        }
+                      },
+                      "ar-uae": {
+                        "path": "/${locale}/beans-bundle",
+                        "type": "projectMapNode",
+                        "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                        "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                        "dynamicInputValues": {
+                          "locale": "${locale}"
+                        }
+                      }
+                    }
+                  },
+                  "primaryButtonText": {
+                    "type": "text",
+                    "locales": {
+                      "da-dk": "Explore the bundle",
+                      "de-at": "Explore the bundle",
+                      "de-de": "Explore the bundle",
+                      "en-ca": "Explore the bundle",
+                      "en-de": "Explore the bundle",
+                      "en-fr": "Explore the bundle",
+                      "en-gb": "Explore the bundle",
+                      "en-nl": "Explore the bundle",
+                      "en-us": "Explore the bundle",
+                      "es-us": "Explore the bundle",
+                      "fr-ca": "Explore the bundle",
+                      "fr-fr": "Explore the bundle",
+                      "ja-jp": "Explore the bundle",
+                      "nb-no": "Explore the bundle",
+                      "nl-nl": "Explore the bundle",
+                      "sv-se": "Explore the bundle",
+                      "ar-ksa": "Explore the bundle",
+                      "ar-uae": "Explore the bundle"
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "parameters": {
+            "trackingEventName": {
+              "type": "text",
+              "value": "Container pattern-Fixed Hero"
+            }
+          }
+        }
+      ]
+    },
+    "_overridability": {
+      "hideLockedParameters": true
+    },
+    "_locales": [
+      "en-us",
+      "es-us",
+      "fr-ca",
+      "en-ca",
+      "en-gb",
+      "de-de",
+      "en-de",
+      "de-at",
+      "nl-nl",
+      "en-nl",
+      "da-dk",
+      "sv-se",
+      "nb-no",
+      "fr-fr",
+      "en-fr",
+      "ja-jp",
+      "ar-uae",
+      "ar-ksa"
+    ]
+  },
+  "created": "2025-05-20T11:53:42.779662+00:00",
+  "modified": "2025-07-07T12:36:45.130202+00:00",
+  "pattern": true,
+  "previewImageUrl": "https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/global_P13n_CTA.png",
+  "categoryId": "3bab40a0-d52d-49b3-8780-b26f737b84a3"
+}

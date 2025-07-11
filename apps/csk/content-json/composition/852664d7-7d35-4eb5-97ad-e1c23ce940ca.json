@@ -1,0 +1,3844 @@
+{
+  "composition": {
+    "_name": "Home",
+    "_id": "852664d7-7d35-4eb5-97ad-e1c23ce940ca",
+    "_slug": "/",
+    "type": "page",
+    "_dataResources": {
+      "Product List Content": {
+        "type": "productList",
+        "variables": {
+          "limit": "3",
+          "locale": "${locale}",
+          "search": "",
+          "filters": "{\"type[eq]\":\"product\",\"fields.category[eq]\":\"2f6cc670-cdaa-4532-b70e-424206c8d0ba\"}",
+          "contentTypes": "product"
+        },
+        "isPatternParameter": true,
+        "ignorePatternParameterDefault": false
+      }
+    },
+    "_overrides": {
+      "076ec962-8c25-417f-9070-50d96979b484": {
+        "parameters": {
+          "link": {
+            "type": "link",
+            "locales": {
+              "da-dk": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "de-at": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "de-de": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-ca": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-de": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-fr": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-gb": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-nl": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-us": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "es-us": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "fr-ca": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "fr-fr": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "ja-jp": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "nb-no": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "nl-nl": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "sv-se": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "ar-ksa": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "ar-uae": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              }
+            }
+          },
+          "text": {
+            "type": "text",
+            "value": "Sign up for membership"
+          }
+        }
+      },
+      "1fc9f4b5-b1ea-4e47-b430-d985b4ec2b41": {
+        "parameters": {
+          "$pzCrit": {
+            "type": "$pzCrit",
+            "value": null
+          },
+          "displayName": {
+            "type": "text",
+            "value": "Find the perfect bean"
+          },
+          "backgroundColor": {
+            "type": "dex-color-palette-parameter",
+            "value": "general-color-6"
+          }
+        }
+      },
+      "2f992602-e0b0-44be-b932-00a6f5002583": {
+        "parameters": {
+          "link": {
+            "type": "link",
+            "locales": {
+              "da-dk": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "de-at": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "de-de": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-ca": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-de": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-fr": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-gb": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-nl": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-us": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "es-us": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "fr-ca": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "fr-fr": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "ja-jp": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "nb-no": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "nl-nl": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "sv-se": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "ar-ksa": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "ar-uae": {
+                "path": "/${locale}/beans-bundle",
+                "type": "projectMapNode",
+                "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              }
+            }
+          },
+          "text": {
+            "type": "text",
+            "value": "Sign up for membership"
+          }
+        }
+      },
+      "3074410a-05a6-475d-a592-d12154625515": {
+        "parameters": {
+          "$pzCrit": {
+            "type": "$pzCrit",
+            "value": null
+          },
+          "backgroundColor": {
+            "type": "dex-color-palette-parameter",
+            "value": "general-color-11"
+          }
+        },
+        "dataResources": {
+          "Product List Content": {
+            "type": "productList",
+            "variables": {
+              "limit": "3",
+              "locale": "${locale}",
+              "search": "espresso",
+              "filters": "{\"type[eq]\":\"product\"}",
+              "orderBy": "creator_ASC",
+              "uiFilters": "[{\"field\":\"type\",\"operator\":\"eq\",\"value\":[\"product\"]},{\"field\":\"fields.category\",\"operator\":\"eq\",\"value\":\"\"}]",
+              "contentTypes": "product"
+            }
+          }
+        }
+      },
+      "4985d1ca-6d4a-4857-9313-eed9ecb9bc3c": {
+        "parameters": {
+          "link": {
+            "type": "link",
+            "locales": {
+              "da-dk": {
+                "path": "/${locale}/coffee-makers",
+                "type": "projectMapNode",
+                "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "de-at": {
+                "path": "/${locale}/coffee-makers",
+                "type": "projectMapNode",
+                "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "de-de": {
+                "path": "/${locale}/coffee-makers",
+                "type": "projectMapNode",
+                "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-ca": {
+                "path": "/${locale}/coffee-makers",
+                "type": "projectMapNode",
+                "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-de": {
+                "path": "/${locale}/coffee-makers",
+                "type": "projectMapNode",
+                "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-fr": {
+                "path": "/${locale}/coffee-makers",
+                "type": "projectMapNode",
+                "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-gb": {
+                "path": "/${locale}/coffee-makers",
+                "type": "projectMapNode",
+                "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-nl": {
+                "path": "/${locale}/coffee-makers",
+                "type": "projectMapNode",
+                "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-us": {
+                "path": "/${locale}/coffee-makers",
+                "type": "projectMapNode",
+                "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "es-us": {
+                "path": "/${locale}/coffee-makers",
+                "type": "projectMapNode",
+                "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "fr-ca": {
+                "path": "/${locale}/coffee-makers",
+                "type": "projectMapNode",
+                "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "fr-fr": {
+                "path": "/${locale}/coffee-makers",
+                "type": "projectMapNode",
+                "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "ja-jp": {
+                "path": "/${locale}/coffee-makers",
+                "type": "projectMapNode",
+                "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "nb-no": {
+                "path": "/${locale}/coffee-makers",
+                "type": "projectMapNode",
+                "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "nl-nl": {
+                "path": "/${locale}/coffee-makers",
+                "type": "projectMapNode",
+                "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "sv-se": {
+                "path": "/${locale}/coffee-makers",
+                "type": "projectMapNode",
+                "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "ar-ksa": {
+                "path": "/${locale}/coffee-makers",
+                "type": "projectMapNode",
+                "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "ar-uae": {
+                "path": "/${locale}/coffee-makers",
+                "type": "projectMapNode",
+                "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              }
+            }
+          },
+          "text": {
+            "type": "text",
+            "value": "See all"
+          }
+        }
+      },
+      "61ec067e-41d4-4e57-8862-dd76a0242028": {
+        "parameters": {
+          "link": {
+            "type": "link",
+            "locales": {
+              "da-dk": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "de-at": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "de-de": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-ca": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-de": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-fr": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-gb": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-nl": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-us": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "es-us": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "fr-ca": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "fr-fr": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "ja-jp": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "nb-no": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "nl-nl": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "sv-se": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "ar-ksa": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "ar-uae": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              }
+            }
+          },
+          "text": {
+            "type": "text",
+            "value": "Learn more "
+          },
+          "fullWidth": {
+            "type": "checkbox",
+            "value": null
+          }
+        }
+      },
+      "852664d7-7d35-4eb5-97ad-e1c23ce940ca": {
+        "parameters": {
+          "pageTitle": {
+            "type": "text",
+            "value": "Java Drip – Premium Coffee Makers, Beans, and Accessories"
+          },
+          "twitterCard": {
+            "type": "select",
+            "value": "summary_large_image"
+          },
+          "pageKeywords": {
+            "type": "text",
+            "value": "uniform, java drip, coffee store, coffee makers, coffee beans, coffee accessories, premium coffee, best coffee makers, coffee brewing"
+          },
+          "twitterImage": {
+            "type": "asset",
+            "value": [
+              {
+                "_id": "8f8b745c-4520-4b12-acc4-391b0c6bbf35",
+                "type": "image",
+                "fields": {
+                  "id": {
+                    "type": "text",
+                    "value": "240cb8b5-fdea-4570-af4f-cad7878eec92"
+                  },
+                  "url": {
+                    "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/F9_HGsPeSTiVKKM54YvGig-jd-earth-to-bean.jpg",
+                    "type": "text"
+                  },
+                  "file": {
+                    "type": "file",
+                    "value": "3460ce7f-742e-4f59-b880-31fffddbf613"
+                  },
+                  "size": {
+                    "value": 945417,
+                    "type": "number"
+                  },
+                  "title": {
+                    "type": "text",
+                    "value": "jd-earth-to-bean.jpg"
+                  },
+                  "width": {
+                    "value": 2600,
+                    "type": "number"
+                  },
+                  "height": {
+                    "value": 1300,
+                    "type": "number"
+                  },
+                  "mediaType": {
+                    "value": "image/jpeg",
+                    "type": "text"
+                  }
+                },
+                "_source": "uniform-assets"
+              }
+            ]
+          },
+          "twitterTitle": {
+            "type": "text",
+            "value": "Uniform // Component Starter Kit"
+          },
+          "openGraphType": {
+            "type": "select",
+            "value": "website"
+          },
+          "openGraphImage": {
+            "type": "asset",
+            "value": [
+              {
+                "_id": "e1e1d26c-dcb6-409f-adba-3d6ca12e6ed4",
+                "type": "image",
+                "fields": {
+                  "id": {
+                    "type": "text",
+                    "value": "240cb8b5-fdea-4570-af4f-cad7878eec92"
+                  },
+                  "url": {
+                    "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/F9_HGsPeSTiVKKM54YvGig-jd-earth-to-bean.jpg",
+                    "type": "text"
+                  },
+                  "file": {
+                    "type": "file",
+                    "value": "e18fb21b-0e5c-413c-bff7-816c37aeaa0a"
+                  },
+                  "size": {
+                    "value": 945417,
+                    "type": "number"
+                  },
+                  "title": {
+                    "type": "text",
+                    "value": "jd-earth-to-bean.jpg"
+                  },
+                  "width": {
+                    "value": 2600,
+                    "type": "number"
+                  },
+                  "height": {
+                    "value": 1300,
+                    "type": "number"
+                  },
+                  "mediaType": {
+                    "value": "image/jpeg",
+                    "type": "text"
+                  }
+                },
+                "_source": "uniform-assets"
+              }
+            ]
+          },
+          "openGraphTitle": {
+            "type": "text",
+            "value": "Java Drip // Premium Coffee Makers, Beans, and Accessories"
+          },
+          "pageDescription": {
+            "type": "text",
+            "value": "Discover Java Drip’s premium selection of coffee makers, quality coffee beans, and stylish accessories. Elevate your coffee experience with our carefully curated products for coffee lovers."
+          },
+          "openGraphDescription": {
+            "type": "text",
+            "value": "Discover Java Drip’s premium selection of coffee makers, quality coffee beans, and stylish accessories. Elevate your coffee experience with our carefully curated products for coffee lovers."
+          }
+        }
+      },
+      "9d607fb8-aac2-468f-9370-193972317c55": {
+        "parameters": {
+          "link": {
+            "type": "link",
+            "locales": {
+              "da-dk": {
+                "path": "/${locale}/coffee-beans",
+                "type": "projectMapNode",
+                "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "de-at": {
+                "path": "/${locale}/coffee-beans",
+                "type": "projectMapNode",
+                "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "de-de": {
+                "path": "/${locale}/coffee-beans",
+                "type": "projectMapNode",
+                "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-ca": {
+                "path": "/${locale}/coffee-beans",
+                "type": "projectMapNode",
+                "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-de": {
+                "path": "/${locale}/coffee-beans",
+                "type": "projectMapNode",
+                "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-fr": {
+                "path": "/${locale}/coffee-beans",
+                "type": "projectMapNode",
+                "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-gb": {
+                "path": "/${locale}/coffee-beans",
+                "type": "projectMapNode",
+                "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-nl": {
+                "path": "/${locale}/coffee-beans",
+                "type": "projectMapNode",
+                "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-us": {
+                "path": "/${locale}/coffee-beans",
+                "type": "projectMapNode",
+                "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "es-us": {
+                "path": "/${locale}/coffee-beans",
+                "type": "projectMapNode",
+                "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "fr-ca": {
+                "path": "/${locale}/coffee-beans",
+                "type": "projectMapNode",
+                "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "fr-fr": {
+                "path": "/${locale}/coffee-beans",
+                "type": "projectMapNode",
+                "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "ja-jp": {
+                "path": "/${locale}/coffee-beans",
+                "type": "projectMapNode",
+                "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "nb-no": {
+                "path": "/${locale}/coffee-beans",
+                "type": "projectMapNode",
+                "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "nl-nl": {
+                "path": "/${locale}/coffee-beans",
+                "type": "projectMapNode",
+                "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "sv-se": {
+                "path": "/${locale}/coffee-beans",
+                "type": "projectMapNode",
+                "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "ar-ksa": {
+                "path": "/${locale}/coffee-beans",
+                "type": "projectMapNode",
+                "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "ar-uae": {
+                "path": "/${locale}/coffee-beans",
+                "type": "projectMapNode",
+                "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              }
+            }
+          },
+          "text": {
+            "type": "text",
+            "value": "See all"
+          }
+        }
+      },
+      "f6a22f48-de97-4a4a-8a12-42ad6ec6179a": {
+        "parameters": {
+          "$pzCrit": {
+            "type": "$pzCrit",
+            "value": {
+              "name": "default"
+            }
+          },
+          "displayName": {
+            "type": "text",
+            "value": "Default Hero"
+          }
+        }
+      },
+      "13a58c2b-eced-49bc-98fb-13c6ed96c9e7|088f579b-a38b-4ec9-8474-99d67793284d": {
+        "parameters": {
+          "link": {
+            "type": "link",
+            "locales": {
+              "da-dk": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "de-at": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "de-de": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-ca": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-de": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-fr": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-gb": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-nl": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "es-us": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "fr-ca": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "fr-fr": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "ja-jp": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "nb-no": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "nl-nl": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "sv-se": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "ar-ksa": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "ar-uae": {
+                "path": "/${locale}/articles",
+                "type": "projectMapNode",
+                "nodeId": "078321b0-280e-409e-bd7e-bc6a6d0abeae",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              }
+            }
+          }
+        }
+      },
+      "13a58c2b-eced-49bc-98fb-13c6ed96c9e7|3090a8f6-e088-4d8f-a8f0-e6dff9ddb28a": {
+        "slots": {
+          "$slotSectionItems": [
+            {
+              "_id": "3faa3ed8-4ca0-4096-b6f6-3b155b375580",
+              "type": "grid",
+              "_pattern": "90cf0a21-78be-4cc6-b460-acb78b5c1f31",
+              "_overridability": {
+                "hideLockedParameters": true
+              }
+            }
+          ]
+        }
+      },
+      "1fc9f4b5-b1ea-4e47-b430-d985b4ec2b41|23ef179e-28e2-4551-83b4-80296f479519": {
+        "slots": {
+          "$slotSectionItems": [
+            {
+              "_id": "9d607fb8-aac2-468f-9370-193972317c55",
+              "type": "button",
+              "_pattern": "53b59aed-e378-4fcb-9135-20247d92074e",
+              "_overridability": {
+                "variants": true,
+                "parameters": {
+                  "link": "yes",
+                  "text": "yes",
+                  "fullWidth": "yes",
+                  "textWeight": "no",
+                  "buttonColor": "yes",
+                  "iconPosition": "yes",
+                  "textTransform": "no",
+                  "hoverTextColor": "no",
+                  "hoverButtonColor": "no"
+                },
+                "hideLockedParameters": true
+              }
+            }
+          ]
+        }
+      },
+      "1fc9f4b5-b1ea-4e47-b430-d985b4ec2b41|46da22a2-ba9a-4d15-b626-d893fe0fc748": {
+        "parameters": {
+          "text": {
+            "type": "text",
+            "value": "Find the perfect bean for your liking"
+          },
+          "color": {
+            "type": "dex-color-palette-parameter",
+            "value": "text-tertiary"
+          }
+        }
+      },
+      "1fc9f4b5-b1ea-4e47-b430-d985b4ec2b41|5c78437e-dd37-42dc-a025-f332aa49f0b8": {
+        "parameters": {
+          "displayName": {
+            "type": "text",
+            "locales": {
+              "da-dk": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "de-at": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "de-de": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "en-ca": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "en-de": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "en-fr": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "en-gb": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "en-nl": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "es-us": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "fr-ca": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "fr-fr": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "ja-jp": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "nb-no": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "nl-nl": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "sv-se": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "ar-ksa": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "ar-uae": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}"
+            }
+          }
+        }
+      },
+      "3074410a-05a6-475d-a592-d12154625515|23ef179e-28e2-4551-83b4-80296f479519": {
+        "slots": {
+          "$slotSectionItems": [
+            {
+              "_id": "4985d1ca-6d4a-4857-9313-eed9ecb9bc3c",
+              "type": "button",
+              "_pattern": "646faee6-b476-43c6-a1a8-eebe85699889",
+              "_overridability": {
+                "variants": true,
+                "parameters": {
+                  "link": "yes",
+                  "text": "yes",
+                  "fullWidth": "yes",
+                  "textColor": "no"
+                },
+                "hideLockedParameters": true
+              }
+            }
+          ]
+        }
+      },
+      "3074410a-05a6-475d-a592-d12154625515|448086b7-a7de-47c1-a1bc-f11bf5581647": {
+        "parameters": {
+          "displayName": {
+            "type": "text",
+            "locales": {
+              "da-dk": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "de-at": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "de-de": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "en-ca": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "en-de": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "en-fr": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "en-gb": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "en-nl": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "es-us": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "fr-ca": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "fr-fr": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "ja-jp": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "nb-no": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "nl-nl": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "sv-se": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "ar-ksa": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "ar-uae": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}"
+            }
+          }
+        }
+      },
+      "3074410a-05a6-475d-a592-d12154625515|46da22a2-ba9a-4d15-b626-d893fe0fc748": {
+        "parameters": {
+          "text": {
+            "type": "text",
+            "value": "Tools to make great espresso at home"
+          }
+        }
+      },
+      "3faa3ed8-4ca0-4096-b6f6-3b155b375580|2bed8436-53e8-448c-a11b-ac96f536eaea": {
+        "parameters": {
+          "$viz": {
+            "type": "$viz",
+            "value": {
+              "criteria": {
+                "clauses": [
+                  {
+                    "op": "has",
+                    "rule": "$dt",
+                    "value": "a-proper-cuppa-how-to-brew-tea-right",
+                    "source": "${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "3faa3ed8-4ca0-4096-b6f6-3b155b375580|61c58f68-eeb0-4355-829b-0b79c26d7aaa": {
+        "parameters": {
+          "$viz": {
+            "type": "$viz",
+            "value": {
+              "criteria": {
+                "clauses": [
+                  {
+                    "op": "has",
+                    "rule": "$dt",
+                    "value": "grinding-beans-the-key-to-perfect-coffee",
+                    "source": "${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "3faa3ed8-4ca0-4096-b6f6-3b155b375580|cb13389f-1f77-45c7-8d70-3bfec7fd8f45": {
+        "parameters": {
+          "$viz": {
+            "type": "$viz",
+            "value": {
+              "criteria": {
+                "clauses": [
+                  {
+                    "op": "has",
+                    "rule": "$dt",
+                    "value": "picking-the-right-bean-a-guide-to-coffee-selection",
+                    "source": "${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "3faa3ed8-4ca0-4096-b6f6-3b155b375580|e3e2cbdf-aa92-41da-ac1c-9a0921066244": {
+        "parameters": {
+          "$viz": {
+            "type": "$viz",
+            "value": {
+              "criteria": {
+                "clauses": [
+                  {
+                    "op": "has",
+                    "rule": "$dt",
+                    "value": "whats-up-with-the-slow-drip",
+                    "source": "${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "852664d7-7d35-4eb5-97ad-e1c23ce940ca|dc2e95be-21b5-4476-a309-f8a34922f528": {
+        "slots": {
+          "$slotSectionItems": [
+            {
+              "_id": "1374242f-092a-49c0-8afd-9627bf022b78",
+              "type": "$personalization",
+              "slots": {
+                "pz": [
+                  {
+                    "_id": "edebb9bf-7b86-4c6b-9972-687084cbff7b",
+                    "type": "fixedHero",
+                    "variant": "columns",
+                    "parameters": {
+                      "image": {
+                        "type": "asset",
+                        "value": [
+                          {
+                            "_id": "0f1ac269-7f8d-4f3d-a8bf-447fb57de7aa",
+                            "type": "image",
+                            "fields": {
+                              "id": {
+                                "type": "text",
+                                "value": "4a540191-b713-42b0-a2f6-e96ce1450aca"
+                              },
+                              "url": {
+                                "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/R2uNG3KaTMOefiRv2XpBlQ-beans-heart.jpg",
+                                "type": "text"
+                              },
+                              "file": {
+                                "type": "file",
+                                "value": "0d81a7d7-f5b1-48a0-869f-dd23aff77741"
+                              },
+                              "size": {
+                                "value": 1836620,
+                                "type": "number"
+                              },
+                              "title": {
+                                "type": "text",
+                                "value": "beans-heart.jpg"
+                              },
+                              "width": {
+                                "value": 4608,
+                                "type": "number"
+                              },
+                              "height": {
+                                "value": 3072,
+                                "type": "number"
+                              },
+                              "mediaType": {
+                                "value": "image/jpeg",
+                                "type": "text"
+                              }
+                            },
+                            "_source": "uniform-assets",
+                            "_overrides": {
+                              "fields": {
+                                "focalPoint": {
+                                  "type": "focalPoint",
+                                  "value": {
+                                    "x": 0.28,
+                                    "y": 0.64
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      "$pzCrit": {
+                        "type": "$pzCrit",
+                        "value": {
+                          "dim": "aficionado",
+                          "name": "aficionados-audience"
+                        }
+                      },
+                      "titleTag": {
+                        "type": "dex-segmented-control-parameter",
+                        "value": "h1"
+                      },
+                      "titleText": {
+                        "type": "text",
+                        "locales": {
+                          "da-dk": "Exclusive Brews for Coffee Connoisseurs",
+                          "de-at": "Exclusive Brews for Coffee Connoisseurs",
+                          "de-de": "Exclusive Brews for Coffee Connoisseurs",
+                          "en-ca": "Exclusive Brews for Coffee Connoisseurs",
+                          "en-de": "Exclusive Brews for Coffee Connoisseurs",
+                          "en-fr": "Exclusive Brews for Coffee Connoisseurs",
+                          "en-gb": "Exclusive Brews for Coffee Connoisseurs",
+                          "en-nl": "Exclusive Brews for Coffee Connoisseurs",
+                          "en-us": "Exclusive Brews for Coffee Connoisseurs",
+                          "es-us": "Exclusive Brews for Coffee Connoisseurs",
+                          "fr-ca": "Exclusive Brews for Coffee Connoisseurs",
+                          "fr-fr": "Exclusive Brews for Coffee Connoisseurs",
+                          "ja-jp": "Exclusive Brews for Coffee Connoisseurs",
+                          "nb-no": "Exclusive Brews for Coffee Connoisseurs",
+                          "nl-nl": "Exclusive Brews for Coffee Connoisseurs",
+                          "sv-se": "Exclusive Brews for Coffee Connoisseurs",
+                          "ar-ksa": "Exclusive Brews for Coffee Connoisseurs",
+                          "ar-uae": "Exclusive Brews for Coffee Connoisseurs"
+                        }
+                      },
+                      "displayName": {
+                        "type": "text",
+                        "locales": {
+                          "da-dk": "Main Home Hero",
+                          "de-at": "Main Home Hero",
+                          "de-de": "Main Home Hero",
+                          "en-ca": "Main Home Hero",
+                          "en-de": "Main Home Hero",
+                          "en-fr": "Main Home Hero",
+                          "en-gb": "Main Home Hero",
+                          "en-nl": "Main Home Hero",
+                          "en-us": "Main Home Hero",
+                          "es-us": "Main Home Hero",
+                          "fr-ca": "Main Home Hero",
+                          "fr-fr": "Main Home Hero",
+                          "ja-jp": "Main Home Hero",
+                          "nb-no": "Main Home Hero",
+                          "nl-nl": "Main Home Hero",
+                          "sv-se": "Main Home Hero",
+                          "ar-ksa": "Main Home Hero",
+                          "ar-uae": "Main Home Hero"
+                        }
+                      },
+                      "contentAlignment": {
+                        "type": "dex-segmented-control-parameter",
+                        "value": "right"
+                      },
+                      "eyebrowTitleText": {
+                        "type": "text",
+                        "locales": {
+                          "da-dk": "For the True Coffee Lover",
+                          "de-at": "For the True Coffee Lover",
+                          "de-de": "For the True Coffee Lover",
+                          "en-ca": "For the True Coffee Lover",
+                          "en-de": "For the True Coffee Lover",
+                          "en-fr": "For the True Coffee Lover",
+                          "en-gb": "For the True Coffee Lover",
+                          "en-nl": "For the True Coffee Lover",
+                          "en-us": "For the True Coffee Lover",
+                          "es-us": "For the True Coffee Lover",
+                          "fr-ca": "For the True Coffee Lover",
+                          "fr-fr": "For the True Coffee Lover",
+                          "ja-jp": "For the True Coffee Lover",
+                          "nb-no": "For the True Coffee Lover",
+                          "nl-nl": "For the True Coffee Lover",
+                          "sv-se": "For the True Coffee Lover",
+                          "ar-ksa": "For the True Coffee Lover",
+                          "ar-uae": "For the True Coffee Lover"
+                        }
+                      },
+                      "primaryButtonLink": {
+                        "type": "link",
+                        "locales": {
+                          "da-dk": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "de-at": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "de-de": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "en-ca": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "en-de": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "en-fr": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "en-gb": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "en-nl": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "en-us": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "es-us": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "fr-ca": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "fr-fr": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "ja-jp": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "nb-no": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "nl-nl": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "sv-se": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "ar-ksa": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "ar-uae": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          }
+                        }
+                      },
+                      "primaryButtonText": {
+                        "type": "text",
+                        "locales": {
+                          "da-dk": "Discover Premium Brews",
+                          "de-at": "Discover Premium Brews",
+                          "de-de": "Discover Premium Brews",
+                          "en-ca": "Discover Premium Brews",
+                          "en-de": "Discover Premium Brews",
+                          "en-fr": "Discover Premium Brews",
+                          "en-gb": "Discover Premium Brews",
+                          "en-nl": "Discover Premium Brews",
+                          "en-us": "Discover Premium Brews",
+                          "es-us": "Discover Premium Brews",
+                          "fr-ca": "Discover Premium Brews",
+                          "fr-fr": "Discover Premium Brews",
+                          "ja-jp": "Discover Premium Brews",
+                          "nb-no": "Discover Premium Brews",
+                          "nl-nl": "Discover Premium Brews",
+                          "sv-se": "Discover Premium Brews",
+                          "ar-ksa": "Discover Premium Brews",
+                          "ar-uae": "Discover Premium Brews"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "_id": "977d16e4-bfd5-462a-9ff9-876984f0b874",
+                    "type": "fixedHero",
+                    "parameters": {
+                      "image": {
+                        "type": "asset",
+                        "value": [
+                          {
+                            "_id": "1122314a-62c0-4ef1-a5de-d77b704cdea8",
+                            "type": "image",
+                            "fields": {
+                              "id": {
+                                "type": "text",
+                                "value": "3b585523-8581-4f92-ba28-31212944e28d"
+                              },
+                              "url": {
+                                "value": "https://img.uniform.global/p/4DvqtylHQMOCu7DIwD3nVA/IVreP46rT_KOywOWBr8sFw-pexels-photo.jpeg",
+                                "type": "text"
+                              },
+                              "file": {
+                                "type": "file",
+                                "value": "9e4ce947-9991-44cf-9512-038193547233"
+                              },
+                              "size": {
+                                "value": 204305,
+                                "type": "number"
+                              },
+                              "title": {
+                                "type": "text",
+                                "value": "pexels-photo.jpeg"
+                              },
+                              "width": {
+                                "value": 1920,
+                                "type": "number"
+                              },
+                              "height": {
+                                "value": 1280,
+                                "type": "number"
+                              },
+                              "mediaType": {
+                                "value": "image/jpeg",
+                                "type": "text"
+                              }
+                            },
+                            "_source": "uniform-assets"
+                          }
+                        ]
+                      },
+                      "$pzCrit": {
+                        "type": "$pzCrit",
+                        "value": {
+                          "dim": "int_beans",
+                          "name": "beans-interest"
+                        }
+                      },
+                      "titleTag": {
+                        "type": "dex-segmented-control-parameter",
+                        "value": "h1"
+                      },
+                      "textColor": {
+                        "type": "dex-color-palette-parameter",
+                        "value": "text-secondary"
+                      },
+                      "titleText": {
+                        "type": "text",
+                        "locales": {
+                          "da-dk": "Discover the world’s rarest coffee beans.",
+                          "de-at": "Discover the world’s rarest coffee beans.",
+                          "de-de": "Discover the world’s rarest coffee beans.",
+                          "en-ca": "Discover the world’s rarest coffee beans.",
+                          "en-de": "Discover the world’s rarest coffee beans.",
+                          "en-fr": "Discover the world’s rarest coffee beans.",
+                          "en-gb": "Discover the world’s rarest coffee beans.",
+                          "en-nl": "Discover the world’s rarest coffee beans.",
+                          "en-us": "Discover the world’s rarest coffee beans.",
+                          "es-us": "Discover the world’s rarest coffee beans.",
+                          "fr-ca": "Discover the world’s rarest coffee beans.",
+                          "fr-fr": "Discover the world’s rarest coffee beans.",
+                          "ja-jp": "Discover the world’s rarest coffee beans.",
+                          "nb-no": "Discover the world’s rarest coffee beans.",
+                          "nl-nl": "Discover the world’s rarest coffee beans.",
+                          "sv-se": "Discover the world’s rarest coffee beans.",
+                          "ar-ksa": "Discover the world’s rarest coffee beans.",
+                          "ar-uae": "Discover the world’s rarest coffee beans."
+                        }
+                      },
+                      "displayName": {
+                        "type": "text",
+                        "locales": {
+                          "da-dk": "Coffee Bean Hero",
+                          "de-at": "Coffee Bean Hero",
+                          "de-de": "Coffee Bean Hero",
+                          "en-ca": "Coffee Bean Hero",
+                          "en-de": "Coffee Bean Hero",
+                          "en-fr": "Coffee Bean Hero",
+                          "en-gb": "Coffee Bean Hero",
+                          "en-nl": "Coffee Bean Hero",
+                          "en-us": "Coffee Bean Hero",
+                          "es-us": "Coffee Bean Hero",
+                          "fr-ca": "Coffee Bean Hero",
+                          "fr-fr": "Coffee Bean Hero",
+                          "ja-jp": "Coffee Bean Hero",
+                          "nb-no": "Coffee Bean Hero",
+                          "nl-nl": "Coffee Bean Hero",
+                          "sv-se": "Coffee Bean Hero",
+                          "ar-ksa": "Coffee Bean Hero",
+                          "ar-uae": "Coffee Bean Hero"
+                        }
+                      },
+                      "descriptionText": {
+                        "type": "text",
+                        "locales": {
+                          "da-dk": "From Arabica to Liberica. ",
+                          "de-at": "From Arabica to Liberica. ",
+                          "de-de": "From Arabica to Liberica. ",
+                          "en-ca": "From Arabica to Liberica. ",
+                          "en-de": "From Arabica to Liberica. ",
+                          "en-fr": "From Arabica to Liberica. ",
+                          "en-gb": "From Arabica to Liberica. ",
+                          "en-nl": "From Arabica to Liberica. ",
+                          "en-us": "From Arabica to Liberica. ",
+                          "es-us": "From Arabica to Liberica. ",
+                          "fr-ca": "From Arabica to Liberica. ",
+                          "fr-fr": "From Arabica to Liberica. ",
+                          "ja-jp": "From Arabica to Liberica. ",
+                          "nb-no": "From Arabica to Liberica. ",
+                          "nl-nl": "From Arabica to Liberica. ",
+                          "sv-se": "From Arabica to Liberica. ",
+                          "ar-ksa": "From Arabica to Liberica. ",
+                          "ar-uae": "From Arabica to Liberica. "
+                        }
+                      },
+                      "contentAlignment": {
+                        "type": "dex-segmented-control-parameter",
+                        "value": "left"
+                      },
+                      "eyebrowTitleText": {
+                        "type": "text",
+                        "locales": {
+                          "da-dk": "Curated for the most demanding taste",
+                          "de-at": "Curated for the most demanding taste",
+                          "de-de": "Curated for the most demanding taste",
+                          "en-ca": "Curated for the most demanding taste",
+                          "en-de": "Curated for the most demanding taste",
+                          "en-fr": "Curated for the most demanding taste",
+                          "en-gb": "Curated for the most demanding taste",
+                          "en-nl": "Curated for the most demanding taste",
+                          "en-us": "Curated for the most demanding taste",
+                          "es-us": "Curated for the most demanding taste",
+                          "fr-ca": "Curated for the most demanding taste",
+                          "fr-fr": "Curated for the most demanding taste",
+                          "ja-jp": "Curated for the most demanding taste",
+                          "nb-no": "Curated for the most demanding taste",
+                          "nl-nl": "Curated for the most demanding taste",
+                          "sv-se": "Curated for the most demanding taste",
+                          "ar-ksa": "Curated for the most demanding taste",
+                          "ar-uae": "Curated for the most demanding taste"
+                        }
+                      },
+                      "primaryButtonLink": {
+                        "type": "link",
+                        "locales": {
+                          "da-dk": {
+                            "path": "/${locale}/coffee-beans",
+                            "type": "projectMapNode",
+                            "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "de-at": {
+                            "path": "/${locale}/coffee-beans",
+                            "type": "projectMapNode",
+                            "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "de-de": {
+                            "path": "/${locale}/coffee-beans",
+                            "type": "projectMapNode",
+                            "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "en-ca": {
+                            "path": "/${locale}/coffee-beans",
+                            "type": "projectMapNode",
+                            "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "en-de": {
+                            "path": "/${locale}/coffee-beans",
+                            "type": "projectMapNode",
+                            "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "en-fr": {
+                            "path": "/${locale}/coffee-beans",
+                            "type": "projectMapNode",
+                            "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "en-gb": {
+                            "path": "/${locale}/coffee-beans",
+                            "type": "projectMapNode",
+                            "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "en-nl": {
+                            "path": "/${locale}/coffee-beans",
+                            "type": "projectMapNode",
+                            "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "en-us": {
+                            "path": "/${locale}/coffee-beans",
+                            "type": "projectMapNode",
+                            "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "es-us": {
+                            "path": "/${locale}/coffee-beans",
+                            "type": "projectMapNode",
+                            "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "fr-ca": {
+                            "path": "/${locale}/coffee-beans",
+                            "type": "projectMapNode",
+                            "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "fr-fr": {
+                            "path": "/${locale}/coffee-beans",
+                            "type": "projectMapNode",
+                            "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "ja-jp": {
+                            "path": "/${locale}/coffee-beans",
+                            "type": "projectMapNode",
+                            "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "nb-no": {
+                            "path": "/${locale}/coffee-beans",
+                            "type": "projectMapNode",
+                            "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "nl-nl": {
+                            "path": "/${locale}/coffee-beans",
+                            "type": "projectMapNode",
+                            "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "sv-se": {
+                            "path": "/${locale}/coffee-beans",
+                            "type": "projectMapNode",
+                            "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "ar-ksa": {
+                            "path": "/${locale}/coffee-beans",
+                            "type": "projectMapNode",
+                            "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "ar-uae": {
+                            "path": "/${locale}/coffee-beans",
+                            "type": "projectMapNode",
+                            "nodeId": "9db6eee2-5e3b-4e3e-9e26-836d3973217c",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          }
+                        }
+                      },
+                      "primaryButtonText": {
+                        "type": "text",
+                        "locales": {
+                          "da-dk": "Discover our beans",
+                          "de-at": "Discover our beans",
+                          "de-de": "Discover our beans",
+                          "en-ca": "Discover our beans",
+                          "en-de": "Discover our beans",
+                          "en-fr": "Discover our beans",
+                          "en-gb": "Discover our beans",
+                          "en-nl": "Discover our beans",
+                          "en-us": "Discover our beans",
+                          "es-us": "Discover our beans",
+                          "fr-ca": "Discover our beans",
+                          "fr-fr": "Discover our beans",
+                          "ja-jp": "Discover our beans",
+                          "nb-no": "Discover our beans",
+                          "nl-nl": "Discover our beans",
+                          "sv-se": "Discover our beans",
+                          "ar-ksa": "Discover our beans",
+                          "ar-uae": "Discover our beans"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "_id": "a1148d47-b087-4c04-a0c9-1dbdb5b8c21c",
+                    "type": "fixedHero",
+                    "parameters": {
+                      "image": {
+                        "type": "asset",
+                        "value": [
+                          {
+                            "_id": "59b53b35-24ad-49db-93d7-6585247a06a7",
+                            "type": "image",
+                            "fields": {
+                              "id": {
+                                "type": "text",
+                                "value": "0207c17d-ecb7-4b02-b116-285aa4d10b8f"
+                              },
+                              "url": {
+                                "value": "https://img.uniform.global/p/4DvqtylHQMOCu7DIwD3nVA/IYkUFRm2S3CdTS1imtJbSA-image.png",
+                                "type": "text"
+                              },
+                              "file": {
+                                "type": "file",
+                                "value": "ae8ddc9a-89d9-4911-b97b-4e9ba0b0c7e2"
+                              },
+                              "size": {
+                                "value": 1441088,
+                                "type": "number"
+                              },
+                              "title": {
+                                "type": "text",
+                                "value": "image.png"
+                              },
+                              "width": {
+                                "value": 1920,
+                                "type": "number"
+                              },
+                              "height": {
+                                "value": 1282,
+                                "type": "number"
+                              },
+                              "mediaType": {
+                                "value": "image/png",
+                                "type": "text"
+                              }
+                            },
+                            "_source": "uniform-assets"
+                          }
+                        ]
+                      },
+                      "$pzCrit": {
+                        "type": "$pzCrit",
+                        "value": {
+                          "dim": "int_coffee-makers",
+                          "name": "machine-interest"
+                        }
+                      },
+                      "titleTag": {
+                        "type": "dex-segmented-control-parameter",
+                        "value": "h1"
+                      },
+                      "textColor": {
+                        "type": "dex-color-palette-parameter",
+                        "value": "text-secondary"
+                      },
+                      "titleText": {
+                        "type": "text",
+                        "locales": {
+                          "da-dk": "Discover precision-crafted brewing gear.",
+                          "de-at": "Discover precision-crafted brewing gear.",
+                          "de-de": "Discover precision-crafted brewing gear.",
+                          "en-ca": "Discover precision-crafted brewing gear.",
+                          "en-de": "Discover precision-crafted brewing gear.",
+                          "en-fr": "Discover precision-crafted brewing gear.",
+                          "en-gb": "Discover precision-crafted brewing gear.",
+                          "en-nl": "Discover precision-crafted brewing gear.",
+                          "en-us": "Discover precision-crafted brewing gear.",
+                          "es-us": "Discover precision-crafted brewing gear.",
+                          "fr-ca": "Discover precision-crafted brewing gear.",
+                          "fr-fr": "Discover precision-crafted brewing gear.",
+                          "ja-jp": "Discover precision-crafted brewing gear.",
+                          "nb-no": "Discover precision-crafted brewing gear.",
+                          "nl-nl": "Discover precision-crafted brewing gear.",
+                          "sv-se": "Discover precision-crafted brewing gear.",
+                          "ar-ksa": "Discover precision-crafted brewing gear.",
+                          "ar-uae": "Discover precision-crafted brewing gear."
+                        }
+                      },
+                      "displayName": {
+                        "type": "text",
+                        "locales": {
+                          "da-dk": "Coffee Machines Hero",
+                          "de-at": "Coffee Machines Hero",
+                          "de-de": "Coffee Machines Hero",
+                          "en-ca": "Coffee Machines Hero",
+                          "en-de": "Coffee Machines Hero",
+                          "en-fr": "Coffee Machines Hero",
+                          "en-gb": "Coffee Machines Hero",
+                          "en-nl": "Coffee Machines Hero",
+                          "en-us": "Coffee Machines Hero",
+                          "es-us": "Coffee Machines Hero",
+                          "fr-ca": "Coffee Machines Hero",
+                          "fr-fr": "Coffee Machines Hero",
+                          "ja-jp": "Coffee Machines Hero",
+                          "nb-no": "Coffee Machines Hero",
+                          "nl-nl": "Coffee Machines Hero",
+                          "sv-se": "Coffee Machines Hero",
+                          "ar-ksa": "Coffee Machines Hero",
+                          "ar-uae": "Coffee Machines Hero"
+                        }
+                      },
+                      "descriptionText": {
+                        "type": "text",
+                        "locales": {
+                          "da-dk": "From Espresso machines to French Press",
+                          "de-at": "From Espresso machines to French Press",
+                          "de-de": "From Espresso machines to French Press",
+                          "en-ca": "From Espresso machines to French Press",
+                          "en-de": "From Espresso machines to French Press",
+                          "en-fr": "From Espresso machines to French Press",
+                          "en-gb": "From Espresso machines to French Press",
+                          "en-nl": "From Espresso machines to French Press",
+                          "en-us": "From Espresso machines to French Press",
+                          "es-us": "From Espresso machines to French Press",
+                          "fr-ca": "From Espresso machines to French Press",
+                          "fr-fr": "From Espresso machines to French Press",
+                          "ja-jp": "From Espresso machines to French Press",
+                          "nb-no": "From Espresso machines to French Press",
+                          "nl-nl": "From Espresso machines to French Press",
+                          "sv-se": "From Espresso machines to French Press",
+                          "ar-ksa": "From Espresso machines to French Press",
+                          "ar-uae": "From Espresso machines to French Press"
+                        }
+                      },
+                      "contentAlignment": {
+                        "type": "dex-segmented-control-parameter",
+                        "value": "left"
+                      },
+                      "eyebrowTitleText": {
+                        "type": "text",
+                        "locales": {
+                          "da-dk": "smartest coffee machines",
+                          "de-at": "smartest coffee machines",
+                          "de-de": "smartest coffee machines",
+                          "en-ca": "smartest coffee machines",
+                          "en-de": "smartest coffee machines",
+                          "en-fr": "smartest coffee machines",
+                          "en-gb": "smartest coffee machines",
+                          "en-nl": "smartest coffee machines",
+                          "en-us": "smartest coffee machines",
+                          "es-us": "smartest coffee machines",
+                          "fr-ca": "smartest coffee machines",
+                          "fr-fr": "smartest coffee machines",
+                          "ja-jp": "smartest coffee machines",
+                          "nb-no": "smartest coffee machines",
+                          "nl-nl": "smartest coffee machines",
+                          "sv-se": "smartest coffee machines",
+                          "ar-ksa": "smartest coffee machines",
+                          "ar-uae": "smartest coffee machines"
+                        }
+                      },
+                      "primaryButtonLink": {
+                        "type": "link",
+                        "locales": {
+                          "da-dk": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "de-at": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "de-de": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "en-ca": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "en-de": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "en-fr": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "en-gb": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "en-nl": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "en-us": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "es-us": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "fr-ca": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "fr-fr": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "ja-jp": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "nb-no": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "nl-nl": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "sv-se": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "ar-ksa": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          },
+                          "ar-uae": {
+                            "path": "/${locale}/coffee-makers",
+                            "type": "projectMapNode",
+                            "nodeId": "c9869cee-a65c-4064-b296-78c4a5ba4ffc",
+                            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                            "dynamicInputValues": {
+                              "locale": "${locale}"
+                            }
+                          }
+                        }
+                      },
+                      "primaryButtonText": {
+                        "type": "text",
+                        "locales": {
+                          "da-dk": "Shop machines",
+                          "de-at": "Shop machines",
+                          "de-de": "Shop machines",
+                          "en-ca": "Shop machines",
+                          "en-de": "Shop machines",
+                          "en-fr": "Shop machines",
+                          "en-gb": "Shop machines",
+                          "en-nl": "Shop machines",
+                          "en-us": "Shop machines",
+                          "es-us": "Shop machines",
+                          "fr-ca": "Shop machines",
+                          "fr-fr": "Shop machines",
+                          "ja-jp": "Shop machines",
+                          "nb-no": "Shop machines",
+                          "nl-nl": "Shop machines",
+                          "sv-se": "Shop machines",
+                          "ar-ksa": "Shop machines",
+                          "ar-uae": "Shop machines"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "_id": "f6a22f48-de97-4a4a-8a12-42ad6ec6179a",
+                    "type": "featuredSection",
+                    "_pattern": "d7181e81-f3d1-4e21-af6f-1e73c8dfa6b5",
+                    "_overridability": {
+                      "parameters": {
+                        "displayName": "yes",
+                        "contentBackgroundColor": "yes"
+                      },
+                      "hideLockedParameters": true
+                    }
+                  }
+                ]
+              },
+              "parameters": {
+                "algorithm": {
+                  "type": "pzAlgorithm",
+                  "value": "ssc"
+                },
+                "trackingEventName": {
+                  "type": "text",
+                  "value": "Home Hero"
+                }
+              }
+            },
+            {
+              "_id": "fada7724-57a6-4055-a75b-f7d9af44400a",
+              "type": "$test",
+              "slots": {
+                "test": [
+                  {
+                    "_id": "92ac3652-804d-4ecd-9d5c-af752e7b85a7",
+                    "type": "section",
+                    "slots": {
+                      "sectionCTA": [
+                        {
+                          "_id": "2f992602-e0b0-44be-b932-00a6f5002583",
+                          "type": "button",
+                          "_pattern": "8060e691-b0b3-428c-92f1-278fc76baf47",
+                          "_overridability": {
+                            "variants": true,
+                            "parameters": {
+                              "link": "yes",
+                              "text": "yes",
+                              "textColor": "yes",
+                              "textWeight": "yes",
+                              "buttonColor": "yes",
+                              "textTransform": "yes",
+                              "hoverTextColor": "yes",
+                              "hoverButtonColor": "yes"
+                            },
+                            "hideLockedParameters": true
+                          }
+                        }
+                      ],
+                      "sectionContent": [
+                        {
+                          "_id": "65f1426e-e522-4f5c-9834-ece9fea5a6f1",
+                          "type": "text",
+                          "parameters": {
+                            "tag": {
+                              "type": "dex-segmented-control-parameter",
+                              "value": "h2"
+                            },
+                            "size": {
+                              "type": "dex-segmented-control-parameter",
+                              "value": {
+                                "mobile": "3xl",
+                                "tablet": "4xl",
+                                "desktop": "4xl"
+                              }
+                            },
+                            "text": {
+                              "type": "text",
+                              "value": "Why we’re obsessed with coffee"
+                            },
+                            "color": {
+                              "type": "dex-color-palette-parameter",
+                              "value": "text-primary"
+                            },
+                            "weight": {
+                              "type": "dex-segmented-control-parameter",
+                              "value": "bold"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "5c6cbe45-7548-4158-ae1e-15b5fe67b0ff",
+                          "type": "text",
+                          "parameters": {
+                            "tag": {
+                              "type": "dex-segmented-control-parameter",
+                              "value": "span"
+                            },
+                            "size": {
+                              "type": "dex-segmented-control-parameter",
+                              "value": {
+                                "mobile": "sm",
+                                "tablet": "lg",
+                                "desktop": "xl"
+                              }
+                            },
+                            "text": {
+                              "type": "text",
+                              "value": "At JavaDrip, coffee isn’t just a drink—it’s an experience, a ritual, and a connection. From the perfect grind to the rich aroma, we’re passionate about every step of the journey that brings the finest coffee to your cup. Our obsession drives us to source only the highest quality beans, create state-of-the-art brewing equipment, and offer accessories that elevate your daily coffee routine. Join us in celebrating the art of coffee, one sip at a time"
+                            },
+                            "color": {
+                              "type": "dex-color-palette-parameter",
+                              "value": "text-primary"
+                            },
+                            "weight": {
+                              "type": "dex-segmented-control-parameter",
+                              "value": "normal"
+                            },
+                            "alignment": {
+                              "type": "dex-segmented-control-parameter",
+                              "value": "center"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "parameters": {
+                      "spacing": {
+                        "type": "dex-space-control-parameter",
+                        "value": {
+                          "mobile": {
+                            "paddingTop": "container-medium",
+                            "paddingLeft": "container-medium",
+                            "paddingRight": "container-medium",
+                            "paddingBottom": "container-medium"
+                          },
+                          "tablet": {
+                            "paddingTop": "container-xlarge",
+                            "paddingBottom": "container-medium"
+                          },
+                          "desktop": {
+                            "paddingTop": "container-xlarge",
+                            "paddingBottom": "container-medium"
+                          }
+                        }
+                      },
+                      "$tstVrnt": {
+                        "type": "testVariant",
+                        "value": {
+                          "id": "text"
+                        }
+                      },
+                      "displayName": {
+                        "type": "text",
+                        "value": "Why we’re obsessed with coffee"
+                      },
+                      "contentAlignment": {
+                        "type": "dex-segmented-control-parameter",
+                        "value": "center"
+                      }
+                    }
+                  },
+                  {
+                    "_id": "15887854-8d4c-4e52-af66-e6b318fa9d76",
+                    "type": "container",
+                    "slots": {
+                      "containerContent": [
+                        {
+                          "_id": "a3cbce1b-3ab3-4d7b-92d2-a5022e2445fc",
+                          "type": "section",
+                          "slots": {
+                            "sectionCTA": [
+                              {
+                                "_id": "076ec962-8c25-417f-9070-50d96979b484",
+                                "type": "button",
+                                "_pattern": "8060e691-b0b3-428c-92f1-278fc76baf47",
+                                "_overridability": {
+                                  "variants": true,
+                                  "parameters": {
+                                    "link": "yes",
+                                    "text": "yes",
+                                    "textColor": "yes",
+                                    "textWeight": "yes",
+                                    "buttonColor": "yes",
+                                    "textTransform": "yes",
+                                    "hoverTextColor": "yes",
+                                    "hoverButtonColor": "yes"
+                                  },
+                                  "hideLockedParameters": true
+                                }
+                              }
+                            ],
+                            "sectionMedia": [
+                              {
+                                "_id": "414fe284-9c27-4c15-b4e6-000fb9b3e48f",
+                                "type": "video",
+                                "parameters": {
+                                  "loop": {
+                                    "type": "checkbox",
+                                    "value": true
+                                  },
+                                  "muted": {
+                                    "type": "checkbox",
+                                    "value": true
+                                  },
+                                  "video": {
+                                    "type": "asset",
+                                    "value": [
+                                      {
+                                        "_id": "66f94224-bfea-45d8-b8ea-c049aee0c06e",
+                                        "type": "video",
+                                        "fields": {
+                                          "id": {
+                                            "type": "text",
+                                            "value": "ede2372e-b790-4da5-9d8b-09bf6365b537"
+                                          },
+                                          "url": {
+                                            "value": "https://files.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/FYULhpFQTq24MfxMbCkOTA-4820352-uhd_4096_2160_25fps.mp4",
+                                            "type": "text"
+                                          },
+                                          "file": {
+                                            "type": "file",
+                                            "value": "8bbfcbb1-4e17-4f0a-a101-33a2075b10b9"
+                                          },
+                                          "size": {
+                                            "value": 39836004,
+                                            "type": "number"
+                                          },
+                                          "title": {
+                                            "type": "text",
+                                            "value": "4820352-uhd_4096_2160_25fps.mp4"
+                                          },
+                                          "mediaType": {
+                                            "value": "video/mp4",
+                                            "type": "text"
+                                          }
+                                        },
+                                        "_source": "uniform-assets"
+                                      }
+                                    ]
+                                  },
+                                  "autoPlay": {
+                                    "type": "checkbox",
+                                    "value": true
+                                  },
+                                  "displayName": {
+                                    "type": "text",
+                                    "locales": {
+                                      "da-dk": "Video",
+                                      "de-at": "Video",
+                                      "de-de": "Video",
+                                      "en-ca": "Video",
+                                      "en-de": "Video",
+                                      "en-fr": "Video",
+                                      "en-gb": "Video",
+                                      "en-nl": "Video",
+                                      "en-us": "Video",
+                                      "es-us": "Video",
+                                      "fr-ca": "Video",
+                                      "fr-fr": "Video",
+                                      "ja-jp": "Video",
+                                      "nb-no": "Video",
+                                      "nl-nl": "Video",
+                                      "sv-se": "Video",
+                                      "ar-ksa": "Video",
+                                      "ar-uae": "Video"
+                                    }
+                                  }
+                                }
+                              }
+                            ],
+                            "sectionContent": [
+                              {
+                                "_id": "855dfdfe-14d0-4c5c-ad87-97cf3b3b4e7b",
+                                "type": "text",
+                                "parameters": {
+                                  "tag": {
+                                    "type": "dex-segmented-control-parameter",
+                                    "value": "h2"
+                                  },
+                                  "size": {
+                                    "type": "dex-segmented-control-parameter",
+                                    "value": {
+                                      "mobile": "3xl",
+                                      "tablet": "4xl",
+                                      "desktop": "4xl"
+                                    }
+                                  },
+                                  "text": {
+                                    "type": "text",
+                                    "value": "Why we’re obsessed with coffee"
+                                  },
+                                  "color": {
+                                    "type": "dex-color-palette-parameter",
+                                    "value": "text-primary"
+                                  },
+                                  "weight": {
+                                    "type": "dex-segmented-control-parameter",
+                                    "value": "bold"
+                                  }
+                                }
+                              },
+                              {
+                                "_id": "a84e9c58-8557-4bad-b6ad-cf7258d0de09",
+                                "type": "text",
+                                "parameters": {
+                                  "tag": {
+                                    "type": "dex-segmented-control-parameter",
+                                    "value": "span"
+                                  },
+                                  "size": {
+                                    "type": "dex-segmented-control-parameter",
+                                    "value": {
+                                      "mobile": "sm",
+                                      "tablet": "lg",
+                                      "desktop": "xl"
+                                    }
+                                  },
+                                  "text": {
+                                    "type": "text",
+                                    "value": "At JavaDrip, coffee isn’t just a drink—it’s an experience, a ritual, and a connection. From the perfect grind to the rich aroma, we’re passionate about every step of the journey that brings the finest coffee to your cup. Our obsession drives us to source only the highest quality beans, create state-of-the-art brewing equipment, and offer accessories that elevate your daily coffee routine. Join us in celebrating the art of coffee, one sip at a time"
+                                  },
+                                  "color": {
+                                    "type": "dex-color-palette-parameter",
+                                    "value": "text-primary"
+                                  },
+                                  "weight": {
+                                    "type": "dex-segmented-control-parameter",
+                                    "value": "normal"
+                                  },
+                                  "alignment": {
+                                    "type": "dex-segmented-control-parameter",
+                                    "value": "center"
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          "variant": "columns",
+                          "parameters": {
+                            "spacing": {
+                              "type": "dex-space-control-parameter",
+                              "value": {
+                                "mobile": {
+                                  "paddingTop": "container-medium",
+                                  "paddingBottom": "container-medium"
+                                },
+                                "tablet": {
+                                  "paddingTop": "container-xlarge",
+                                  "paddingBottom": "container-medium"
+                                },
+                                "desktop": {
+                                  "paddingTop": "container-xlarge",
+                                  "paddingBottom": "container-medium"
+                                }
+                              }
+                            },
+                            "$tstVrnt": {
+                              "type": "testVariant",
+                              "value": {
+                                "id": "video"
+                              }
+                            },
+                            "displayName": {
+                              "type": "text",
+                              "value": "Why we’re obsessed with coffee"
+                            },
+                            "backgroundColor": {
+                              "type": "dex-color-palette-parameter",
+                              "value": "general-color-6"
+                            },
+                            "contentAlignment": {
+                              "type": "dex-segmented-control-parameter",
+                              "value": "center"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "parameters": {
+                      "height": {
+                        "type": "dex-segmented-control-parameter",
+                        "value": {}
+                      },
+                      "spacing": {
+                        "type": "dex-space-control-parameter",
+                        "value": {
+                          "mobile": {},
+                          "tablet": {},
+                          "desktop": {}
+                        }
+                      },
+                      "$tstVrnt": {
+                        "type": "testVariant",
+                        "value": {
+                          "id": "video"
+                        }
+                      },
+                      "displayName": {
+                        "type": "text",
+                        "locales": {
+                          "da-dk": "Why we’re obsessed with coffee",
+                          "de-at": "Why we’re obsessed with coffee",
+                          "de-de": "Why we’re obsessed with coffee",
+                          "en-ca": "Why we’re obsessed with coffee",
+                          "en-de": "Why we’re obsessed with coffee",
+                          "en-fr": "Why we’re obsessed with coffee",
+                          "en-gb": "Why we’re obsessed with coffee",
+                          "en-nl": "Why we’re obsessed with coffee",
+                          "en-us": "Why we’re obsessed with coffee",
+                          "es-us": "Why we’re obsessed with coffee",
+                          "fr-ca": "Why we’re obsessed with coffee",
+                          "fr-fr": "Why we’re obsessed with coffee",
+                          "ja-jp": "Why we’re obsessed with coffee",
+                          "nb-no": "Why we’re obsessed with coffee",
+                          "nl-nl": "Why we’re obsessed with coffee",
+                          "sv-se": "Why we’re obsessed with coffee",
+                          "ar-ksa": "Why we’re obsessed with coffee",
+                          "ar-uae": "Why we’re obsessed with coffee"
+                        }
+                      },
+                      "fluidContent": {
+                        "type": "checkbox",
+                        "value": true
+                      },
+                      "backgroundColor": {
+                        "type": "dex-color-palette-parameter",
+                        "value": "general-color-6"
+                      }
+                    }
+                  }
+                ]
+              },
+              "parameters": {
+                "test": {
+                  "type": "testSelect",
+                  "value": "membershipCta"
+                }
+              }
+            },
+            {
+              "_id": "3074410a-05a6-475d-a592-d12154625515",
+              "type": "container",
+              "_pattern": "4a0a5fb2-25d0-4563-955b-714233ddffe6",
+              "_dataResources": {
+                "Product List Content": {
+                  "type": "productList",
+                  "variables": {
+                    "limit": "3",
+                    "locale": "${locale}",
+                    "search": "espresso",
+                    "filters": "{\"type[eq]\":\"product\"}",
+                    "orderBy": "creator_ASC",
+                    "uiFilters": "[{\"field\":\"type\",\"operator\":\"eq\",\"value\":[\"product\"]},{\"field\":\"fields.category\",\"operator\":\"eq\",\"value\":\"\"}]",
+                    "contentTypes": "product"
+                  }
+                }
+              },
+              "_overridability": {
+                "parameters": {
+                  "displayName": "yes",
+                  "backgroundColor": "yes"
+                },
+                "hideLockedParameters": true
+              }
+            },
+            {
+              "_id": "1fc9f4b5-b1ea-4e47-b430-d985b4ec2b41",
+              "type": "container",
+              "_pattern": "00a7ebd9-8743-4158-aa06-bc671a05529b",
+              "_overridability": {
+                "parameters": {
+                  "displayName": "yes",
+                  "backgroundColor": "no"
+                },
+                "hideLockedParameters": true
+              }
+            },
+            {
+              "_id": "13a58c2b-eced-49bc-98fb-13c6ed96c9e7",
+              "type": "grid",
+              "_pattern": "2fa494d2-d69a-49bc-b728-229a1684d77f",
+              "_overridability": {
+                "parameters": {
+                  "displayName": "yes"
+                },
+                "hideLockedParameters": true
+              }
+            }
+          ]
+        }
+      },
+      "f6a22f48-de97-4a4a-8a12-42ad6ec6179a|5d86f5e9-47d6-4e77-a139-83228ec0be41": {
+        "slots": {
+          "$slotSectionItems": [
+            {
+              "_id": "61ec067e-41d4-4e57-8862-dd76a0242028",
+              "type": "button",
+              "_pattern": "646faee6-b476-43c6-a1a8-eebe85699889",
+              "_overridability": {
+                "variants": true,
+                "parameters": {
+                  "link": "yes",
+                  "text": "yes",
+                  "fullWidth": "yes",
+                  "textColor": "no"
+                },
+                "hideLockedParameters": true
+              }
+            }
+          ]
+        }
+      },
+      "f6a22f48-de97-4a4a-8a12-42ad6ec6179a|c50e99a6-1d91-4d6e-9a22-3154d4e4a8b7": {
+        "parameters": {
+          "text": {
+            "type": "text",
+            "value": "Only the rarest coffee beans and precision brewers"
+          }
+        }
+      },
+      "f6a22f48-de97-4a4a-8a12-42ad6ec6179a|fcac6346-1864-4284-8715-a0e4fb4854f4": {
+        "parameters": {
+          "image": {
+            "type": "asset",
+            "value": [
+              {
+                "_id": "0de14705-6e41-4ba3-a524-8ee267b0397a",
+                "type": "image",
+                "fields": {
+                  "id": {
+                    "type": "text",
+                    "value": "e48a76d6-773f-4e3a-9b4e-409d77e8648a"
+                  },
+                  "url": {
+                    "value": "https://img.uniform.global/p/4DvqtylHQMOCu7DIwD3nVA/oY_-jA82QvKSfAKoE-0VHQ-coffee.png",
+                    "type": "text"
+                  },
+                  "file": {
+                    "type": "file",
+                    "value": "3ff76bc4-89d0-4b69-8c22-9312b68cf66f"
+                  },
+                  "size": {
+                    "value": 1206370,
+                    "type": "number"
+                  },
+                  "title": {
+                    "type": "text",
+                    "value": "coffee.png"
+                  },
+                  "width": {
+                    "value": 1920,
+                    "type": "number"
+                  },
+                  "height": {
+                    "value": 1280,
+                    "type": "number"
+                  },
+                  "mediaType": {
+                    "value": "image/png",
+                    "type": "text"
+                  }
+                },
+                "_source": "uniform-assets"
+              }
+            ]
+          }
+        }
+      },
+      "3faa3ed8-4ca0-4096-b6f6-3b155b375580|cde73dfb-c7ea-43fe-8683-b6b4960d53ae|4a7ce726-321d-4e77-ac0e-a11e42946127": {
+        "parameters": {
+          "link": {
+            "type": "link",
+            "locales": {
+              "da-dk": {
+                "path": "/${locale}/articles/${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}",
+                "type": "projectMapNode",
+                "nodeId": "0b2a6284-3d74-4ef6-a3de-b2617058c861",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}",
+                  "article-slug": "${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}"
+                }
+              },
+              "de-at": {
+                "path": "/${locale}/articles/${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}",
+                "type": "projectMapNode",
+                "nodeId": "0b2a6284-3d74-4ef6-a3de-b2617058c861",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}",
+                  "article-slug": "${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}"
+                }
+              },
+              "de-de": {
+                "path": "/${locale}/articles/${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}",
+                "type": "projectMapNode",
+                "nodeId": "0b2a6284-3d74-4ef6-a3de-b2617058c861",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}",
+                  "article-slug": "${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}"
+                }
+              },
+              "en-ca": {
+                "path": "/${locale}/articles/${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}",
+                "type": "projectMapNode",
+                "nodeId": "0b2a6284-3d74-4ef6-a3de-b2617058c861",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}",
+                  "article-slug": "${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}"
+                }
+              },
+              "en-de": {
+                "path": "/${locale}/articles/${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}",
+                "type": "projectMapNode",
+                "nodeId": "0b2a6284-3d74-4ef6-a3de-b2617058c861",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}",
+                  "article-slug": "${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}"
+                }
+              },
+              "en-fr": {
+                "path": "/${locale}/articles/${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}",
+                "type": "projectMapNode",
+                "nodeId": "0b2a6284-3d74-4ef6-a3de-b2617058c861",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}",
+                  "article-slug": "${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}"
+                }
+              },
+              "en-gb": {
+                "path": "/${locale}/articles/${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}",
+                "type": "projectMapNode",
+                "nodeId": "0b2a6284-3d74-4ef6-a3de-b2617058c861",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}",
+                  "article-slug": "${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}"
+                }
+              },
+              "en-nl": {
+                "path": "/${locale}/articles/${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}",
+                "type": "projectMapNode",
+                "nodeId": "0b2a6284-3d74-4ef6-a3de-b2617058c861",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}",
+                  "article-slug": "${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}"
+                }
+              },
+              "es-us": {
+                "path": "/${locale}/articles/${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}",
+                "type": "projectMapNode",
+                "nodeId": "0b2a6284-3d74-4ef6-a3de-b2617058c861",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}",
+                  "article-slug": "${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}"
+                }
+              },
+              "fr-ca": {
+                "path": "/${locale}/articles/${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}",
+                "type": "projectMapNode",
+                "nodeId": "0b2a6284-3d74-4ef6-a3de-b2617058c861",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}",
+                  "article-slug": "${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}"
+                }
+              },
+              "fr-fr": {
+                "path": "/${locale}/articles/${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}",
+                "type": "projectMapNode",
+                "nodeId": "0b2a6284-3d74-4ef6-a3de-b2617058c861",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}",
+                  "article-slug": "${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}"
+                }
+              },
+              "ja-jp": {
+                "path": "/${locale}/articles/${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}",
+                "type": "projectMapNode",
+                "nodeId": "0b2a6284-3d74-4ef6-a3de-b2617058c861",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}",
+                  "article-slug": "${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}"
+                }
+              },
+              "nb-no": {
+                "path": "/${locale}/articles/${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}",
+                "type": "projectMapNode",
+                "nodeId": "0b2a6284-3d74-4ef6-a3de-b2617058c861",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}",
+                  "article-slug": "${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}"
+                }
+              },
+              "nl-nl": {
+                "path": "/${locale}/articles/${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}",
+                "type": "projectMapNode",
+                "nodeId": "0b2a6284-3d74-4ef6-a3de-b2617058c861",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}",
+                  "article-slug": "${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}"
+                }
+              },
+              "sv-se": {
+                "path": "/${locale}/articles/${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}",
+                "type": "projectMapNode",
+                "nodeId": "0b2a6284-3d74-4ef6-a3de-b2617058c861",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}",
+                  "article-slug": "${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}"
+                }
+              },
+              "ar-ksa": {
+                "path": "/${locale}/articles/${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}",
+                "type": "projectMapNode",
+                "nodeId": "0b2a6284-3d74-4ef6-a3de-b2617058c861",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}",
+                  "article-slug": "${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}"
+                }
+              },
+              "ar-uae": {
+                "path": "/${locale}/articles/${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}",
+                "type": "projectMapNode",
+                "nodeId": "0b2a6284-3d74-4ef6-a3de-b2617058c861",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}",
+                  "article-slug": "${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}"
+                }
+              }
+            }
+          }
+        }
+      },
+      "3faa3ed8-4ca0-4096-b6f6-3b155b375580|cde73dfb-c7ea-43fe-8683-b6b4960d53ae|f02a551f-116f-48d2-99b3-21ebe2ca74e5": {
+        "parameters": {
+          "$viz": {
+            "type": "$viz",
+            "value": {
+              "criteria": {
+                "clauses": [
+                  {
+                    "op": "!is",
+                    "rule": "$dt",
+                    "value": [
+                      "picking-the-right-bean-a-guide-to-coffee-selection",
+                      "whats-up-with-the-slow-drip",
+                      "grinding-beans-the-key-to-perfect-coffee",
+                      "a-proper-cuppa-how-to-brew-tea-right"
+                    ],
+                    "source": "${#jptr:/Multiple Article Content entries Loop Item/entry/_slug}"
+                  }
+                ]
+              }
+            }
+          },
+          "objectFit": {
+            "type": "dex-segmented-control-parameter",
+            "value": "contain"
+          }
+        }
+      },
+      "852664d7-7d35-4eb5-97ad-e1c23ce940ca|38f88562-6b70-411b-a550-ada8514eef22|f82aa025-12eb-4c87-b18b-ccc33b20fe02": {
+        "parameters": {
+          "link": {
+            "type": "link",
+            "locales": {
+              "da-dk": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "de-at": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "de-de": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-ca": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-de": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-fr": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-gb": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-nl": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "es-us": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "fr-ca": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "fr-fr": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "ja-jp": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "nb-no": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "nl-nl": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "sv-se": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "ar-ksa": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "ar-uae": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              }
+            }
+          }
+        }
+      },
+      "852664d7-7d35-4eb5-97ad-e1c23ce940ca|7607f998-992d-4b35-9fa5-4e560f8c179a|36ef82db-8556-4006-be7a-957216a76758": {
+        "parameters": {
+          "text": {
+            "type": "text",
+            "locales": {
+              "da-dk": "Recommended for you",
+              "de-at": "Recommended for you",
+              "de-de": "Recommended for you",
+              "en-ca": "Recommended for you",
+              "en-de": "Recommended for you",
+              "en-fr": "Recommended for you",
+              "en-gb": "Recommended for you",
+              "en-nl": "Recommended for you",
+              "es-us": "Recommended for you",
+              "fr-ca": "Recommended for you",
+              "fr-fr": "Recommended for you",
+              "ja-jp": "Recommended for you",
+              "nb-no": "Recommended for you",
+              "nl-nl": "Recommended for you",
+              "sv-se": "Recommended for you",
+              "ar-ksa": "Recommended for you",
+              "ar-uae": "Recommended for you"
+            }
+          }
+        }
+      },
+      "852664d7-7d35-4eb5-97ad-e1c23ce940ca|bbf196c6-4821-414c-9b14-b08fb1c7fede|44623ac6-5327-44e3-ab3e-b7455ff829e8": {
+        "parameters": {
+          "link": {
+            "type": "link",
+            "locales": {
+              "da-dk": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "de-at": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "de-de": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "en-ca": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "en-de": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "en-fr": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "en-gb": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "en-nl": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "es-us": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "fr-ca": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "fr-fr": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "ja-jp": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "nb-no": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "nl-nl": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "sv-se": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "ar-ksa": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "ar-uae": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              }
+            }
+          }
+        }
+      },
+      "852664d7-7d35-4eb5-97ad-e1c23ce940ca|bbf196c6-4821-414c-9b14-b08fb1c7fede|44d64138-618e-4c6a-b4cc-6ea9b9a22cba": {
+        "parameters": {
+          "link": {
+            "type": "link",
+            "locales": {
+              "da-dk": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "de-at": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "de-de": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "en-ca": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "en-de": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "en-fr": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "en-gb": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "en-nl": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "es-us": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "fr-ca": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "fr-fr": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "ja-jp": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "nb-no": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "nl-nl": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "sv-se": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "ar-ksa": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "ar-uae": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              }
+            }
+          }
+        }
+      },
+      "852664d7-7d35-4eb5-97ad-e1c23ce940ca|bbf196c6-4821-414c-9b14-b08fb1c7fede|6db01010-cff2-458e-85d6-358dc75ca48c": {
+        "parameters": {
+          "link": {
+            "type": "link",
+            "locales": {
+              "da-dk": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "de-at": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "de-de": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "en-ca": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "en-de": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "en-fr": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "en-gb": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "en-nl": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "es-us": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "fr-ca": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "fr-fr": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "ja-jp": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "nb-no": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "nl-nl": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "sv-se": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "ar-ksa": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "ar-uae": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              }
+            }
+          }
+        }
+      },
+      "852664d7-7d35-4eb5-97ad-e1c23ce940ca|bbf196c6-4821-414c-9b14-b08fb1c7fede|ea891105-3b48-41b4-8fa0-6c2ecca00a75": {
+        "parameters": {
+          "link": {
+            "type": "link",
+            "locales": {
+              "da-dk": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "de-at": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "de-de": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "en-ca": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "en-de": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "en-fr": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "en-gb": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "en-nl": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "es-us": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "fr-ca": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "fr-fr": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "ja-jp": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "nb-no": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "nl-nl": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "sv-se": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "ar-ksa": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "ar-uae": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              }
+            }
+          }
+        }
+      },
+      "1fc9f4b5-b1ea-4e47-b430-d985b4ec2b41|5c78437e-dd37-42dc-a025-f332aa49f0b8|1af937fb-40ae-4938-b1a8-110b8ff73fc4|41f41812-74a8-48f1-9e2a-920dfff8ea04": {
+        "parameters": {
+          "productSlug": {
+            "type": "text",
+            "locales": {
+              "da-dk": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "de-at": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "de-de": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "en-ca": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "en-de": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "en-fr": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "en-gb": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "en-nl": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "es-us": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "fr-ca": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "fr-fr": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "ja-jp": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "nb-no": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "nl-nl": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "sv-se": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "ar-ksa": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "ar-uae": "${#jptr:/Product List Content entries Loop Item/entry/_slug}"
+            }
+          }
+        }
+      },
+      "3074410a-05a6-475d-a592-d12154625515|448086b7-a7de-47c1-a1bc-f11bf5581647|1af937fb-40ae-4938-b1a8-110b8ff73fc4|41f41812-74a8-48f1-9e2a-920dfff8ea04": {
+        "parameters": {
+          "productSlug": {
+            "type": "text",
+            "locales": {
+              "da-dk": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "de-at": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "de-de": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "en-ca": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "en-de": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "en-fr": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "en-gb": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "en-nl": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "es-us": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "fr-ca": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "fr-fr": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "ja-jp": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "nb-no": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "nl-nl": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "sv-se": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "ar-ksa": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "ar-uae": "${#jptr:/Product List Content entries Loop Item/entry/_slug}"
+            }
+          }
+        }
+      }
+    },
+    "_locales": [
+      "en-us",
+      "es-us",
+      "fr-ca",
+      "en-ca",
+      "en-gb",
+      "de-de",
+      "en-de",
+      "de-at",
+      "nl-nl",
+      "en-nl",
+      "da-dk",
+      "sv-se",
+      "nb-no",
+      "fr-fr",
+      "en-fr",
+      "ja-jp",
+      "ar-uae",
+      "ar-ksa"
+    ],
+    "_pattern": "f9c058ea-c40d-4435-ac5a-53423cf654dc"
+  },
+  "created": "2025-02-27T10:45:03.714698+00:00",
+  "modified": "2025-07-09T12:39:48.112995+00:00",
+  "pattern": false
+}

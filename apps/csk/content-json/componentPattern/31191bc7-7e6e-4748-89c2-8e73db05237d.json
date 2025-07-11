@@ -1,0 +1,80 @@
+{
+  "composition": {
+    "_name": "Link Button",
+    "_id": "31191bc7-7e6e-4748-89c2-8e73db05237d",
+    "type": "button",
+    "variant": "link",
+    "parameters": {
+      "icon": {
+        "type": "asset",
+        "value": []
+      },
+      "size": {
+        "type": "dex-token-selector-parameter",
+        "value": ""
+      },
+      "text": {
+        "type": "text",
+        "value": "No uniform access? Request one"
+      },
+      "textSize": {
+        "type": "dex-segmented-control-parameter",
+        "value": {
+          "mobile": "sm",
+          "tablet": "sm",
+          "desktop": "sm"
+        }
+      },
+      "textColor": {
+        "type": "dex-color-palette-parameter",
+        "value": "text-tertiary"
+      },
+      "textWeight": {
+        "type": "dex-segmented-control-parameter",
+        "value": "normal"
+      },
+      "iconPosition": {
+        "type": "dex-segmented-control-parameter",
+        "value": "right"
+      },
+      "textTransform": {
+        "type": "dex-segmented-control-parameter",
+        "value": "uppercase"
+      }
+    },
+    "_overridability": {
+      "variants": false,
+      "parameters": {
+        "link": "yes",
+        "text": "yes",
+        "textColor": "yes"
+      },
+      "hideLockedParameters": true
+    },
+    "_locales": [
+      "en-us",
+      "es-us",
+      "fr-ca",
+      "en-ca",
+      "en-gb",
+      "de-de",
+      "en-de",
+      "de-at",
+      "nl-nl",
+      "en-nl",
+      "da-dk",
+      "sv-se",
+      "nb-no",
+      "fr-fr",
+      "en-fr",
+      "ja-jp",
+      "ar-uae",
+      "ar-ksa"
+    ]
+  },
+  "created": "2025-02-27T10:45:02.205728+00:00",
+  "modified": "2025-07-07T12:38:17.54622+00:00",
+  "pattern": true,
+  "previewImageUrl": "https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/button-link.jpg",
+  "categoryId": "70d03350-bbf9-457d-abc0-cf7d7aa2a3a4"
+}

@@ -1,0 +1,348 @@
+{
+  "composition": {
+    "_name": "Container pattern",
+    "_id": "e1162711-ee40-4a8b-b932-859ef691b90c",
+    "type": "container",
+    "parameters": {
+      "height": {
+        "type": "dex-segmented-control-parameter",
+        "value": {}
+      },
+      "spacing": {
+        "type": "dex-space-control-parameter",
+        "value": {
+          "mobile": {},
+          "tablet": {},
+          "desktop": {
+            "paddingTop": "container-medium",
+            "paddingBottom": "container-medium"
+          }
+        }
+      }
+    },
+    "slots": {
+      "containerContent": [
+        {
+          "_id": "1764d052-9668-4189-9ddb-793dac3c09ab",
+          "type": "text",
+          "parameters": {
+            "tag": {
+              "type": "dex-segmented-control-parameter",
+              "value": "h1"
+            },
+            "size": {
+              "type": "dex-segmented-control-parameter",
+              "value": {
+                "desktop": "4xl"
+              }
+            },
+            "text": {
+              "type": "text",
+              "locales": {
+                "da-dk": "Title",
+                "de-at": "Title",
+                "de-de": "Title",
+                "en-ca": "Title",
+                "en-de": "Title",
+                "en-fr": "Title",
+                "en-gb": "Title",
+                "en-nl": "Title",
+                "en-us": "Title",
+                "es-us": "Title",
+                "fr-ca": "Title",
+                "fr-fr": "Title",
+                "ja-jp": "Title",
+                "nb-no": "Title",
+                "nl-nl": "Title",
+                "sv-se": "Title",
+                "ar-ksa": "Title",
+                "ar-uae": "Title"
+              }
+            },
+            "color": {
+              "type": "dex-color-palette-parameter",
+              "value": "text-primary"
+            },
+            "weight": {
+              "type": "dex-segmented-control-parameter",
+              "value": "bold"
+            }
+          },
+          "_overridability": {
+            "hideLockedParameters": true
+          }
+        },
+        {
+          "_id": "39d84418-235a-4a72-95a0-3e567aa443f3",
+          "type": "text",
+          "parameters": {
+            "tag": {
+              "type": "dex-segmented-control-parameter",
+              "value": "h2"
+            },
+            "text": {
+              "type": "text",
+              "locales": {
+                "da-dk": "description",
+                "de-at": "description",
+                "de-de": "description",
+                "en-ca": "description",
+                "en-de": "description",
+                "en-fr": "description",
+                "en-gb": "description",
+                "en-nl": "description",
+                "en-us": "description",
+                "es-us": "description",
+                "fr-ca": "description",
+                "fr-fr": "description",
+                "ja-jp": "description",
+                "nb-no": "description",
+                "nl-nl": "description",
+                "sv-se": "description",
+                "ar-ksa": "description",
+                "ar-uae": "description"
+              }
+            }
+          },
+          "_overridability": {
+            "hideLockedParameters": true
+          }
+        },
+        {
+          "_id": "3e2f7686-e7fa-4f93-b44f-9bff7fbcc984",
+          "type": "button",
+          "parameters": {
+            "link": {
+              "type": "link",
+              "locales": {
+                "da-dk": {
+                  "path": "/${locale}/summer-campaign",
+                  "type": "projectMapNode",
+                  "nodeId": "94663b98-2fd8-4852-b75f-7eb89bbccb63",
+                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                  "dynamicInputValues": {
+                    "locale": "${locale}"
+                  }
+                },
+                "de-at": {
+                  "path": "/${locale}/summer-campaign",
+                  "type": "projectMapNode",
+                  "nodeId": "94663b98-2fd8-4852-b75f-7eb89bbccb63",
+                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                  "dynamicInputValues": {
+                    "locale": "${locale}"
+                  }
+                },
+                "de-de": {
+                  "path": "/${locale}/summer-campaign",
+                  "type": "projectMapNode",
+                  "nodeId": "94663b98-2fd8-4852-b75f-7eb89bbccb63",
+                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                  "dynamicInputValues": {
+                    "locale": "${locale}"
+                  }
+                },
+                "en-ca": {
+                  "path": "/${locale}/summer-campaign",
+                  "type": "projectMapNode",
+                  "nodeId": "94663b98-2fd8-4852-b75f-7eb89bbccb63",
+                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                  "dynamicInputValues": {
+                    "locale": "${locale}"
+                  }
+                },
+                "en-de": {
+                  "path": "/${locale}/summer-campaign",
+                  "type": "projectMapNode",
+                  "nodeId": "94663b98-2fd8-4852-b75f-7eb89bbccb63",
+                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                  "dynamicInputValues": {
+                    "locale": "${locale}"
+                  }
+                },
+                "en-fr": {
+                  "path": "/${locale}/summer-campaign",
+                  "type": "projectMapNode",
+                  "nodeId": "94663b98-2fd8-4852-b75f-7eb89bbccb63",
+                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                  "dynamicInputValues": {
+                    "locale": "${locale}"
+                  }
+                },
+                "en-gb": {
+                  "path": "/${locale}/summer-campaign",
+                  "type": "projectMapNode",
+                  "nodeId": "94663b98-2fd8-4852-b75f-7eb89bbccb63",
+                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                  "dynamicInputValues": {
+                    "locale": "${locale}"
+                  }
+                },
+                "en-nl": {
+                  "path": "/${locale}/summer-campaign",
+                  "type": "projectMapNode",
+                  "nodeId": "94663b98-2fd8-4852-b75f-7eb89bbccb63",
+                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                  "dynamicInputValues": {
+                    "locale": "${locale}"
+                  }
+                },
+                "en-us": {
+                  "path": "/${locale}/summer-campaign",
+                  "type": "projectMapNode",
+                  "nodeId": "94663b98-2fd8-4852-b75f-7eb89bbccb63",
+                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                  "dynamicInputValues": {
+                    "locale": "${locale}"
+                  }
+                },
+                "es-us": {
+                  "path": "/${locale}/summer-campaign",
+                  "type": "projectMapNode",
+                  "nodeId": "94663b98-2fd8-4852-b75f-7eb89bbccb63",
+                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                  "dynamicInputValues": {
+                    "locale": "${locale}"
+                  }
+                },
+                "fr-ca": {
+                  "path": "/${locale}/summer-campaign",
+                  "type": "projectMapNode",
+                  "nodeId": "94663b98-2fd8-4852-b75f-7eb89bbccb63",
+                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                  "dynamicInputValues": {
+                    "locale": "${locale}"
+                  }
+                },
+                "fr-fr": {
+                  "path": "/${locale}/summer-campaign",
+                  "type": "projectMapNode",
+                  "nodeId": "94663b98-2fd8-4852-b75f-7eb89bbccb63",
+                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                  "dynamicInputValues": {
+                    "locale": "${locale}"
+                  }
+                },
+                "ja-jp": {
+                  "path": "/${locale}/summer-campaign",
+                  "type": "projectMapNode",
+                  "nodeId": "94663b98-2fd8-4852-b75f-7eb89bbccb63",
+                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                  "dynamicInputValues": {
+                    "locale": "${locale}"
+                  }
+                },
+                "nb-no": {
+                  "path": "/${locale}/summer-campaign",
+                  "type": "projectMapNode",
+                  "nodeId": "94663b98-2fd8-4852-b75f-7eb89bbccb63",
+                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                  "dynamicInputValues": {
+                    "locale": "${locale}"
+                  }
+                },
+                "nl-nl": {
+                  "path": "/${locale}/summer-campaign",
+                  "type": "projectMapNode",
+                  "nodeId": "94663b98-2fd8-4852-b75f-7eb89bbccb63",
+                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                  "dynamicInputValues": {
+                    "locale": "${locale}"
+                  }
+                },
+                "sv-se": {
+                  "path": "/${locale}/summer-campaign",
+                  "type": "projectMapNode",
+                  "nodeId": "94663b98-2fd8-4852-b75f-7eb89bbccb63",
+                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                  "dynamicInputValues": {
+                    "locale": "${locale}"
+                  }
+                },
+                "ar-ksa": {
+                  "path": "/${locale}/summer-campaign",
+                  "type": "projectMapNode",
+                  "nodeId": "94663b98-2fd8-4852-b75f-7eb89bbccb63",
+                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                  "dynamicInputValues": {
+                    "locale": "${locale}"
+                  }
+                },
+                "ar-uae": {
+                  "path": "/${locale}/summer-campaign",
+                  "type": "projectMapNode",
+                  "nodeId": "94663b98-2fd8-4852-b75f-7eb89bbccb63",
+                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                  "dynamicInputValues": {
+                    "locale": "${locale}"
+                  }
+                }
+              }
+            },
+            "text": {
+              "type": "text",
+              "locales": {
+                "da-dk": "Click me",
+                "de-at": "Click me",
+                "de-de": "Click me",
+                "en-ca": "Click me",
+                "en-de": "Click me",
+                "en-fr": "Click me",
+                "en-gb": "Click me",
+                "en-nl": "Click me",
+                "en-us": "Click me",
+                "es-us": "Click me",
+                "fr-ca": "Click me",
+                "fr-fr": "Click me",
+                "ja-jp": "Click me",
+                "nb-no": "Click me",
+                "nl-nl": "Click me",
+                "sv-se": "Click me",
+                "ar-ksa": "Click me",
+                "ar-uae": "Click me"
+              }
+            },
+            "textColor": {
+              "type": "dex-color-palette-parameter",
+              "value": "text-secondary"
+            },
+            "buttonColor": {
+              "type": "dex-color-palette-parameter",
+              "value": "button-primary"
+            }
+          },
+          "_overridability": {
+            "hideLockedParameters": true
+          }
+        }
+      ]
+    },
+    "_overridability": {
+      "hideLockedParameters": true
+    },
+    "_locales": [
+      "en-us",
+      "es-us",
+      "fr-ca",
+      "en-ca",
+      "en-gb",
+      "de-de",
+      "en-de",
+      "de-at",
+      "nl-nl",
+      "en-nl",
+      "da-dk",
+      "sv-se",
+      "nb-no",
+      "fr-fr",
+      "en-fr",
+      "ja-jp",
+      "ar-uae",
+      "ar-ksa"
+    ]
+  },
+  "created": "2025-05-20T11:53:45.018544+00:00",
+  "modified": "2025-07-07T12:08:43.596644+00:00",
+  "pattern": true,
+  "categoryId": "ae15b0f6-4953-4ccb-9984-ad0525e77b01"
+}

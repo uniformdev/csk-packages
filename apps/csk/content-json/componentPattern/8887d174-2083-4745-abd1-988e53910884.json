@@ -1,0 +1,135 @@
+{
+  "composition": {
+    "_name": "Accordion",
+    "_id": "8887d174-2083-4745-abd1-988e53910884",
+    "type": "accordion",
+    "parameters": {
+      "spacing": {
+        "type": "dex-space-control-parameter",
+        "value": {
+          "mobile": {
+            "marginTop": "container-small",
+            "marginBottom": "container-small"
+          },
+          "tablet": {
+            "marginTop": "container-small",
+            "marginBottom": "container-small"
+          },
+          "desktop": {
+            "marginTop": "container-small",
+            "marginBottom": "container-small"
+          }
+        }
+      },
+      "displayName": {
+        "type": "text",
+        "value": "Bean There, Asked That:"
+      }
+    },
+    "slots": {
+      "accordionItems": [
+        {
+          "_id": "fc0685d7-4cc2-4157-aab6-34d82d451b21",
+          "type": "$slotSection",
+          "parameters": {
+            "name": {
+              "type": "text",
+              "value": "Accordion Items"
+            },
+            "specific": {
+              "type": "array",
+              "value": [
+                "$p:aa9019a0-1baa-44bc-966f-5cb18278f350"
+              ]
+            },
+            "groupType": {
+              "type": "text",
+              "value": "specific"
+            }
+          },
+          "_overridability": {
+            "hideLockedParameters": true
+          }
+        }
+      ],
+      "accordionContent": [
+        {
+          "_id": "e02e7d43-a487-48f6-a9de-156d98e0185e",
+          "type": "text",
+          "parameters": {
+            "tag": {
+              "type": "dex-segmented-control-parameter",
+              "value": "h2"
+            },
+            "size": {
+              "type": "dex-segmented-control-parameter",
+              "value": {
+                "mobile": "2xl",
+                "tablet": "",
+                "desktop": ""
+              }
+            },
+            "text": {
+              "type": "text",
+              "value": "Bean There, Asked That:"
+            },
+            "color": {
+              "type": "dex-color-palette-parameter",
+              "value": "text-secondary"
+            },
+            "weight": {
+              "type": "dex-segmented-control-parameter",
+              "value": "normal"
+            },
+            "transform": {
+              "type": "dex-segmented-control-parameter",
+              "value": "uppercase"
+            },
+            "letterSpacing": {
+              "type": "dex-segmented-control-parameter",
+              "value": "wider"
+            }
+          },
+          "_overridability": {
+            "parameters": {
+              "size": "yes",
+              "text": "yes",
+              "color": "yes"
+            },
+            "hideLockedParameters": true
+          }
+        }
+      ]
+    },
+    "_overridability": {
+      "parameters": {
+        "displayName": "yes"
+      },
+      "hideLockedParameters": true
+    },
+    "_locales": [
+      "en-us",
+      "es-us",
+      "fr-ca",
+      "en-ca",
+      "en-gb",
+      "de-de",
+      "en-de",
+      "de-at",
+      "nl-nl",
+      "en-nl",
+      "da-dk",
+      "sv-se",
+      "nb-no",
+      "fr-fr",
+      "en-fr",
+      "ja-jp",
+      "ar-uae",
+      "ar-ksa"
+    ]
+  },
+  "created": "2025-03-25T09:38:01.152319+00:00",
+  "modified": "2025-07-07T12:26:23.844526+00:00",
+  "pattern": true,
+  "categoryId": "70d03350-bbf9-457d-abc0-cf7d7aa2a3a4"
+}

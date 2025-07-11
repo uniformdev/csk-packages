@@ -1,0 +1,833 @@
+{
+  "composition": {
+    "_name": "Article Details",
+    "_id": "15e5e99e-1ff0-463d-9e98-7920f6ba6b95",
+    "_slug": ":article-slug",
+    "type": "page",
+    "_dataResources": {
+      "Article Content": {
+        "type": "article",
+        "variables": {
+          "slug": "${article-slug}",
+          "locale": "${locale}"
+        }
+      }
+    },
+    "_overrides": {
+      "15e5e99e-1ff0-463d-9e98-7920f6ba6b95": {
+        "parameters": {
+          "$enr": {
+            "type": "$enr",
+            "value": "${#jptr:/Article Content/entry/fields/enrichments/value}"
+          },
+          "pageTitle": {
+            "type": "text",
+            "value": "${#jptr:/Article Content/entry/fields/title/value}"
+          },
+          "twitterCard": {
+            "type": "select",
+            "value": "summary_large_image"
+          },
+          "pageKeywords": {
+            "type": "text",
+            "value": "article, uniform, csk, coffee"
+          },
+          "twitterImage": {
+            "type": "asset",
+            "value": "${#jptr:/Article Content/entry/fields/ogImage/value}"
+          },
+          "twitterTitle": {
+            "type": "text",
+            "locales": {
+              "da-dk": "${#jptr:/Article Content/entry/fields/metaTitle/value}",
+              "de-at": "${#jptr:/Article Content/entry/fields/metaTitle/value}",
+              "de-de": "${#jptr:/Article Content/entry/fields/metaTitle/value}",
+              "en-ca": "${#jptr:/Article Content/entry/fields/metaTitle/value}",
+              "en-de": "${#jptr:/Article Content/entry/fields/metaTitle/value}",
+              "en-fr": "${#jptr:/Article Content/entry/fields/metaTitle/value}",
+              "en-gb": "${#jptr:/Article Content/entry/fields/metaTitle/value}",
+              "en-nl": "${#jptr:/Article Content/entry/fields/metaTitle/value}",
+              "en-us": "${#jptr:/Article Content/entry/fields/metaTitle/value}",
+              "es-us": "${#jptr:/Article Content/entry/fields/metaTitle/value}",
+              "fr-ca": "${#jptr:/Article Content/entry/fields/metaTitle/value}",
+              "fr-fr": "${#jptr:/Article Content/entry/fields/metaTitle/value}",
+              "ja-jp": "${#jptr:/Article Content/entry/fields/metaTitle/value}",
+              "nb-no": "${#jptr:/Article Content/entry/fields/metaTitle/value}",
+              "nl-nl": "${#jptr:/Article Content/entry/fields/metaTitle/value}",
+              "sv-se": "${#jptr:/Article Content/entry/fields/metaTitle/value}",
+              "ar-ksa": "${#jptr:/Article Content/entry/fields/metaTitle/value}",
+              "ar-uae": "${#jptr:/Article Content/entry/fields/metaTitle/value}"
+            }
+          },
+          "openGraphType": {
+            "type": "select",
+            "value": "article"
+          },
+          "openGraphImage": {
+            "type": "asset",
+            "value": "${#jptr:/Article Content/entry/fields/ogImage/value}"
+          },
+          "openGraphTitle": {
+            "type": "text",
+            "value": "${#jptr:/Article Content/entry/fields/metaTitle/value}"
+          },
+          "pageDescription": {
+            "type": "text",
+            "value": "${#jptr:/Article Content/entry/fields/shortDescription/value}"
+          },
+          "twitterDescription": {
+            "type": "text",
+            "locales": {
+              "da-dk": "${#jptr:/Article Content/entry/fields/title/value}",
+              "de-at": "${#jptr:/Article Content/entry/fields/title/value}",
+              "de-de": "${#jptr:/Article Content/entry/fields/title/value}",
+              "en-ca": "${#jptr:/Article Content/entry/fields/title/value}",
+              "en-de": "${#jptr:/Article Content/entry/fields/title/value}",
+              "en-fr": "${#jptr:/Article Content/entry/fields/title/value}",
+              "en-gb": "${#jptr:/Article Content/entry/fields/title/value}",
+              "en-nl": "${#jptr:/Article Content/entry/fields/title/value}",
+              "en-us": "${#jptr:/Article Content/entry/fields/title/value}",
+              "es-us": "${#jptr:/Article Content/entry/fields/title/value}",
+              "fr-ca": "${#jptr:/Article Content/entry/fields/title/value}",
+              "fr-fr": "${#jptr:/Article Content/entry/fields/title/value}",
+              "ja-jp": "${#jptr:/Article Content/entry/fields/title/value}",
+              "nb-no": "${#jptr:/Article Content/entry/fields/title/value}",
+              "nl-nl": "${#jptr:/Article Content/entry/fields/title/value}",
+              "sv-se": "${#jptr:/Article Content/entry/fields/title/value}",
+              "ar-ksa": "${#jptr:/Article Content/entry/fields/title/value}",
+              "ar-uae": "${#jptr:/Article Content/entry/fields/title/value}"
+            }
+          },
+          "openGraphDescription": {
+            "type": "text",
+            "value": "${#jptr:/Article Content/entry/fields/metaDescription/value}"
+          }
+        }
+      },
+      "15e5e99e-1ff0-463d-9e98-7920f6ba6b95|dc2e95be-21b5-4476-a309-f8a34922f528": {
+        "slots": {
+          "$slotSectionItems": [
+            {
+              "_id": "922e013a-710a-4dcc-a8bb-2632a8628907",
+              "type": "section",
+              "_pattern": "90b32c21-f5d8-4a40-b971-c97c359ecce9",
+              "_overridability": {
+                "parameters": {
+                  "displayName": "yes"
+                },
+                "hideLockedParameters": true
+              }
+            },
+            {
+              "_id": "cd114cba-9290-4eae-b5da-6741dd4f9797",
+              "type": "container",
+              "slots": {
+                "containerContent": [
+                  {
+                    "_id": "e011ac3b-1ff6-4a4f-a0de-c91869335011",
+                    "type": "text",
+                    "parameters": {
+                      "tag": {
+                        "type": "dex-segmented-control-parameter",
+                        "value": "span"
+                      },
+                      "size": {
+                        "type": "dex-segmented-control-parameter",
+                        "value": {
+                          "mobile": "2xl",
+                          "tablet": "2xl",
+                          "desktop": "2xl"
+                        }
+                      },
+                      "text": {
+                        "type": "text",
+                        "value": "by ${#jptr:/Article Content/entry/fields/author/value/entry/fields/name/value}"
+                      },
+                      "color": {
+                        "type": "dex-color-palette-parameter",
+                        "value": "text-primary"
+                      },
+                      "weight": {
+                        "type": "dex-segmented-control-parameter",
+                        "value": "normal"
+                      }
+                    }
+                  },
+                  {
+                    "_id": "e4b4c560-d978-4f5a-82cd-51fa551bd5d0",
+                    "type": "spacer",
+                    "parameters": {
+                      "size": {
+                        "type": "dex-token-selector-parameter",
+                        "value": "spacer-medium"
+                      }
+                    }
+                  },
+                  {
+                    "_id": "a753f23a-141d-4816-911b-2ccba3d44c88",
+                    "type": "richText",
+                    "parameters": {
+                      "text": {
+                        "type": "richText",
+                        "value": "${#jptr:/Article Content/entry/fields/content/value}"
+                      }
+                    }
+                  }
+                ]
+              },
+              "parameters": {
+                "spacing": {
+                  "type": "dex-space-control-parameter",
+                  "value": {
+                    "paddingTop": "container-medium",
+                    "paddingBottom": "container-medium"
+                  }
+                },
+                "displayName": {
+                  "type": "text",
+                  "value": "${#jptr:/Article Content/entry/fields/title/value}"
+                }
+              }
+            },
+            {
+              "_id": "99175748-eb71-482b-a474-bdf06a23f051",
+              "type": "container",
+              "_pattern": "00a7ebd9-8743-4158-aa06-bc671a05529b",
+              "_overridability": {
+                "parameters": {
+                  "displayName": "yes",
+                  "backgroundColor": "no"
+                },
+                "hideLockedParameters": true
+              }
+            }
+          ]
+        }
+      },
+      "922e013a-710a-4dcc-a8bb-2632a8628907|215f54df-5063-4f0a-81c0-d8bda909b52c": {
+        "parameters": {
+          "image": {
+            "type": "asset",
+            "value": [
+              {
+                "_id": "c09577c1-c89b-43d7-812d-bb9416001625",
+                "type": "image",
+                "fields": {
+                  "url": {
+                    "type": "text",
+                    "value": "${#jptr:/Article Content/entry/fields/thumbnail/value/0/fields/url/value}"
+                  },
+                  "title": {
+                    "type": "text",
+                    "value": "${#jptr:/Article Content/entry/fields/title/value}"
+                  },
+                  "description": {
+                    "type": "text",
+                    "value": "${#jptr:/Article Content/entry/fields/title/value}"
+                  }
+                },
+                "_source": "custom-url"
+              }
+            ]
+          },
+          "overlayColor": {
+            "type": "dex-color-palette-parameter",
+            "value": "general-color-3"
+          },
+          "overlayOpacity": {
+            "type": "dex-slider-control-parameter",
+            "value": "0.6"
+          }
+        }
+      },
+      "922e013a-710a-4dcc-a8bb-2632a8628907|edea6a24-f36d-48c7-acdb-e0dbd8ed511e": {
+        "parameters": {
+          "text": {
+            "type": "text",
+            "value": "${#jptr:/Article Content/entry/fields/title/value}"
+          }
+        }
+      },
+      "99175748-eb71-482b-a474-bdf06a23f051|46da22a2-ba9a-4d15-b626-d893fe0fc748": {
+        "parameters": {
+          "text": {
+            "type": "text",
+            "value": "Finding the Perfect Choice for You"
+          }
+        }
+      },
+      "99175748-eb71-482b-a474-bdf06a23f051|5c78437e-dd37-42dc-a025-f332aa49f0b8": {
+        "parameters": {
+          "displayName": {
+            "type": "text",
+            "locales": {
+              "da-dk": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "de-at": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "de-de": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "en-ca": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "en-de": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "en-fr": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "en-gb": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "en-nl": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "es-us": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "fr-ca": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "fr-fr": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "ja-jp": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "nb-no": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "nl-nl": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "sv-se": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "ar-ksa": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "ar-uae": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}"
+            }
+          }
+        }
+      },
+      "15e5e99e-1ff0-463d-9e98-7920f6ba6b95|38f88562-6b70-411b-a550-ada8514eef22|f82aa025-12eb-4c87-b18b-ccc33b20fe02": {
+        "parameters": {
+          "link": {
+            "type": "link",
+            "locales": {
+              "da-dk": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "de-at": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "de-de": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-ca": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-de": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-fr": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-gb": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-nl": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "es-us": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "fr-ca": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "fr-fr": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "ja-jp": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "nb-no": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "nl-nl": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "sv-se": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "ar-ksa": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "ar-uae": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              }
+            }
+          }
+        }
+      },
+      "15e5e99e-1ff0-463d-9e98-7920f6ba6b95|7607f998-992d-4b35-9fa5-4e560f8c179a|36ef82db-8556-4006-be7a-957216a76758": {
+        "parameters": {
+          "text": {
+            "type": "text",
+            "locales": {
+              "da-dk": "Recommended for you",
+              "de-at": "Recommended for you",
+              "de-de": "Recommended for you",
+              "en-ca": "Recommended for you",
+              "en-de": "Recommended for you",
+              "en-fr": "Recommended for you",
+              "en-gb": "Recommended for you",
+              "en-nl": "Recommended for you",
+              "es-us": "Recommended for you",
+              "fr-ca": "Recommended for you",
+              "fr-fr": "Recommended for you",
+              "ja-jp": "Recommended for you",
+              "nb-no": "Recommended for you",
+              "nl-nl": "Recommended for you",
+              "sv-se": "Recommended for you",
+              "ar-ksa": "Recommended for you",
+              "ar-uae": "Recommended for you"
+            }
+          }
+        }
+      },
+      "15e5e99e-1ff0-463d-9e98-7920f6ba6b95|bbf196c6-4821-414c-9b14-b08fb1c7fede|44623ac6-5327-44e3-ab3e-b7455ff829e8": {
+        "parameters": {
+          "link": {
+            "type": "link",
+            "locales": {
+              "da-dk": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "de-at": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "de-de": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "en-ca": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "en-de": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "en-fr": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "en-gb": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "en-nl": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "es-us": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "fr-ca": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "fr-fr": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "ja-jp": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "nb-no": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "nl-nl": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "sv-se": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "ar-ksa": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "ar-uae": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              }
+            }
+          }
+        }
+      },
+      "15e5e99e-1ff0-463d-9e98-7920f6ba6b95|bbf196c6-4821-414c-9b14-b08fb1c7fede|44d64138-618e-4c6a-b4cc-6ea9b9a22cba": {
+        "parameters": {
+          "link": {
+            "type": "link",
+            "locales": {
+              "da-dk": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "de-at": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "de-de": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "en-ca": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "en-de": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "en-fr": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "en-gb": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "en-nl": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "es-us": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "fr-ca": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "fr-fr": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "ja-jp": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "nb-no": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "nl-nl": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "sv-se": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "ar-ksa": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "ar-uae": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              }
+            }
+          }
+        }
+      },
+      "15e5e99e-1ff0-463d-9e98-7920f6ba6b95|bbf196c6-4821-414c-9b14-b08fb1c7fede|6db01010-cff2-458e-85d6-358dc75ca48c": {
+        "parameters": {
+          "link": {
+            "type": "link",
+            "locales": {
+              "da-dk": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "de-at": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "de-de": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "en-ca": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "en-de": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "en-fr": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "en-gb": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "en-nl": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "es-us": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "fr-ca": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "fr-fr": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "ja-jp": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "nb-no": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "nl-nl": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "sv-se": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "ar-ksa": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "ar-uae": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              }
+            }
+          }
+        }
+      },
+      "15e5e99e-1ff0-463d-9e98-7920f6ba6b95|bbf196c6-4821-414c-9b14-b08fb1c7fede|ea891105-3b48-41b4-8fa0-6c2ecca00a75": {
+        "parameters": {
+          "link": {
+            "type": "link",
+            "locales": {
+              "da-dk": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "de-at": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "de-de": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "en-ca": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "en-de": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "en-fr": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "en-gb": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "en-nl": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "es-us": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "fr-ca": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "fr-fr": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "ja-jp": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "nb-no": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "nl-nl": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "sv-se": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "ar-ksa": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "ar-uae": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              }
+            }
+          }
+        }
+      },
+      "99175748-eb71-482b-a474-bdf06a23f051|5c78437e-dd37-42dc-a025-f332aa49f0b8|1af937fb-40ae-4938-b1a8-110b8ff73fc4|41f41812-74a8-48f1-9e2a-920dfff8ea04": {
+        "parameters": {
+          "productSlug": {
+            "type": "text",
+            "locales": {
+              "da-dk": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "de-at": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "de-de": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "en-ca": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "en-de": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "en-fr": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "en-gb": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "en-nl": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "es-us": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "fr-ca": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "fr-fr": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "ja-jp": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "nb-no": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "nl-nl": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "sv-se": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "ar-ksa": "${#jptr:/Product List Content entries Loop Item/entry/_slug}",
+              "ar-uae": "${#jptr:/Product List Content entries Loop Item/entry/_slug}"
+            }
+          }
+        }
+      }
+    },
+    "_locales": [
+      "en-us",
+      "es-us",
+      "fr-ca",
+      "en-ca",
+      "en-gb",
+      "de-de",
+      "en-de",
+      "de-at",
+      "nl-nl",
+      "en-nl",
+      "da-dk",
+      "sv-se",
+      "nb-no",
+      "fr-fr",
+      "en-fr",
+      "ja-jp",
+      "ar-uae",
+      "ar-ksa"
+    ],
+    "_pattern": "f9c058ea-c40d-4435-ac5a-53423cf654dc"
+  },
+  "created": "2025-03-18T13:02:32.592485+00:00",
+  "modified": "2025-07-03T13:11:16.237341+00:00",
+  "pattern": false
+}

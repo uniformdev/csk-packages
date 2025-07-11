@@ -1,0 +1,101 @@
+{
+  "composition": {
+    "_name": "Segment Quirk Selector",
+    "_id": "0bc0e924-445c-47de-9217-3dc6f889f1e7",
+    "type": "quirkSelector",
+    "parameters": {
+      "quirkId": {
+        "type": "text",
+        "locales": {
+          "da-dk": "segment",
+          "de-at": "segment",
+          "de-de": "segment",
+          "en-ca": "segment",
+          "en-de": "segment",
+          "en-fr": "segment",
+          "en-gb": "segment",
+          "en-nl": "segment",
+          "en-us": "segment",
+          "es-us": "segment",
+          "fr-ca": "segment",
+          "fr-fr": "segment",
+          "ja-jp": "segment",
+          "nb-no": "segment",
+          "nl-nl": "segment",
+          "sv-se": "segment",
+          "ar-ksa": "segment",
+          "ar-uae": "segment"
+        }
+      },
+      "variants": {
+        "type": "text",
+        "locales": {
+          "da-dk": "aficionado,occasional,newb",
+          "de-at": "aficionado,occasional,newb",
+          "de-de": "aficionado,occasional,newb",
+          "en-ca": "aficionado,occasional,newb",
+          "en-de": "aficionado,occasional,newb",
+          "en-fr": "aficionado,occasional,newb",
+          "en-gb": "aficionado,occasional,newb",
+          "en-nl": "aficionado,occasional,newb",
+          "en-us": "aficionado,occasional,newb",
+          "es-us": "aficionado,occasional,newb",
+          "fr-ca": "aficionado,occasional,newb",
+          "fr-fr": "aficionado,occasional,newb",
+          "ja-jp": "aficionado,occasional,newb",
+          "nb-no": "aficionado,occasional,newb",
+          "nl-nl": "aficionado,occasional,newb",
+          "sv-se": "aficionado,occasional,newb",
+          "ar-ksa": "aficionado,occasional,newb",
+          "ar-uae": "aficionado,occasional,newb"
+        }
+      }
+    },
+    "slots": {
+      "quirkSelectorSaveButton": [
+        {
+          "_id": "f57a3162-0c07-4318-be4b-69050daa2629",
+          "type": "button",
+          "_pattern": "53b59aed-e378-4fcb-9135-20247d92074e"
+        }
+      ]
+    },
+    "_overrides": {
+      "f57a3162-0c07-4318-be4b-69050daa2629": {
+        "parameters": {
+          "text": {
+            "type": "text",
+            "value": "Save"
+          }
+        }
+      }
+    },
+    "_overridability": {
+      "hideLockedParameters": true
+    },
+    "_locales": [
+      "en-us",
+      "es-us",
+      "fr-ca",
+      "en-ca",
+      "en-gb",
+      "de-de",
+      "en-de",
+      "de-at",
+      "nl-nl",
+      "en-nl",
+      "da-dk",
+      "sv-se",
+      "nb-no",
+      "fr-fr",
+      "en-fr",
+      "ja-jp",
+      "ar-uae",
+      "ar-ksa"
+    ]
+  },
+  "created": "2025-03-18T13:02:27.524141+00:00",
+  "modified": "2025-07-07T12:47:46.781008+00:00",
+  "pattern": true,
+  "categoryId": "3bab40a0-d52d-49b3-8780-b26f737b84a3"
+}

@@ -1,0 +1,88 @@
+{
+  "composition": {
+    "_name": "Tertiary Button",
+    "_id": "8060e691-b0b3-428c-92f1-278fc76baf47",
+    "type": "button",
+    "parameters": {
+      "size": {
+        "type": "dex-token-selector-parameter",
+        "value": "button-medium"
+      },
+      "text": {
+        "type": "text",
+        "value": "Learn more"
+      },
+      "textSize": {
+        "type": "dex-segmented-control-parameter",
+        "value": {
+          "mobile": "sm",
+          "tablet": "sm",
+          "desktop": "sm"
+        }
+      },
+      "textColor": {
+        "type": "dex-color-palette-parameter",
+        "value": "text-secondary"
+      },
+      "textWeight": {
+        "type": "dex-segmented-control-parameter",
+        "value": "normal"
+      },
+      "buttonColor": {
+        "type": "dex-color-palette-parameter",
+        "value": "button-tertiary"
+      },
+      "iconPosition": {
+        "type": "dex-segmented-control-parameter",
+        "value": "right"
+      },
+      "hoverTextColor": {
+        "type": "dex-color-palette-parameter",
+        "value": "text-secondary"
+      },
+      "hoverButtonColor": {
+        "type": "dex-color-palette-parameter",
+        "value": "button-tertiary-hover"
+      }
+    },
+    "_overridability": {
+      "variants": true,
+      "parameters": {
+        "link": "yes",
+        "text": "yes",
+        "textColor": "yes",
+        "textWeight": "yes",
+        "buttonColor": "yes",
+        "textTransform": "yes",
+        "hoverTextColor": "yes",
+        "hoverButtonColor": "yes"
+      },
+      "hideLockedParameters": true
+    },
+    "_locales": [
+      "en-us",
+      "es-us",
+      "fr-ca",
+      "en-ca",
+      "en-gb",
+      "de-de",
+      "en-de",
+      "de-at",
+      "nl-nl",
+      "en-nl",
+      "da-dk",
+      "sv-se",
+      "nb-no",
+      "fr-fr",
+      "en-fr",
+      "ja-jp",
+      "ar-uae",
+      "ar-ksa"
+    ]
+  },
+  "created": "2025-02-27T10:45:00.112242+00:00",
+  "modified": "2025-07-07T12:28:11.189307+00:00",
+  "pattern": true,
+  "previewImageUrl": "https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/jd-template/tertiary-button.jpg",
+  "categoryId": "70d03350-bbf9-457d-abc0-cf7d7aa2a3a4"
+}

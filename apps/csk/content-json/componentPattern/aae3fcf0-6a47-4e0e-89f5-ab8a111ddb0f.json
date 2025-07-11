@@ -1,0 +1,192 @@
+{
+  "composition": {
+    "_name": "Card Example",
+    "_id": "aae3fcf0-6a47-4e0e-89f5-ab8a111ddb0f",
+    "type": "card",
+    "parameters": {
+      "spacing": {
+        "type": "dex-space-control-parameter",
+        "value": {
+          "marginTop": "",
+          "marginLeft": "",
+          "paddingTop": "",
+          "marginRight": "",
+          "paddingLeft": "",
+          "marginBottom": "",
+          "paddingRight": "",
+          "paddingBottom": ""
+        }
+      },
+      "displayName": {
+        "type": "text",
+        "value": "Card Example"
+      },
+      "fluidContent": {
+        "type": "checkbox",
+        "value": true
+      }
+    },
+    "slots": {
+      "cardMedia": [
+        {
+          "_id": "fbb7fcd0-5300-4ab2-90e4-492181d65867",
+          "type": "image",
+          "parameters": {
+            "image": {
+              "type": "asset",
+              "value": [
+                {
+                  "_id": "ffc04ba4-ce16-4487-b2d0-0ab45284908d",
+                  "type": "image",
+                  "fields": {
+                    "id": {
+                      "type": "text",
+                      "value": "96036875-082e-4497-b43c-663bb1682bb9"
+                    },
+                    "url": {
+                      "value": "https://img.uniform.global/p/gUU_Q79PTn-Qq52vB7L2Jg/DcTO8-tOSxqX3i80ehzrjw-clay-banks-pNEmlb1CMZM-unsplash.jpg",
+                      "type": "text"
+                    },
+                    "file": {
+                      "type": "file",
+                      "value": "5f68ab0d-0cb5-4da3-904a-fba00dd8135a"
+                    },
+                    "size": {
+                      "value": 2383415,
+                      "type": "number"
+                    },
+                    "title": {
+                      "type": "text",
+                      "value": "clay-banks-pNEmlb1CMZM-unsplash.jpg"
+                    },
+                    "width": {
+                      "value": 4500,
+                      "type": "number"
+                    },
+                    "height": {
+                      "value": 3000,
+                      "type": "number"
+                    },
+                    "mediaType": {
+                      "value": "image/jpeg",
+                      "type": "text"
+                    }
+                  },
+                  "_source": "uniform-assets"
+                }
+              ]
+            },
+            "border": {
+              "type": "dex-token-selector-parameter",
+              "value": "border-image-radius-small"
+            },
+            "height": {
+              "type": "number",
+              "value": "220"
+            },
+            "objectFit": {
+              "type": "dex-segmented-control-parameter",
+              "value": "cover"
+            },
+            "overlayColor": {
+              "type": "dex-color-palette-parameter",
+              "value": "general-color-5"
+            },
+            "overlayOpacity": {
+              "type": "dex-slider-control-parameter",
+              "value": "0.6"
+            }
+          },
+          "_overridability": {
+            "parameters": {
+              "image": "yes"
+            },
+            "hideLockedParameters": true
+          }
+        }
+      ],
+      "cardContent": [
+        {
+          "_id": "06f3f1a7-27c7-4928-beee-233d720b84c0",
+          "type": "text",
+          "parameters": {
+            "tag": {
+              "type": "dex-segmented-control-parameter",
+              "value": "h2"
+            },
+            "size": {
+              "type": "dex-segmented-control-parameter",
+              "value": {
+                "mobile": "2xl",
+                "tablet": "2xl",
+                "desktop": "2xl"
+              }
+            },
+            "color": {
+              "type": "dex-color-palette-parameter",
+              "value": "text-primary"
+            },
+            "weight": {
+              "type": "dex-segmented-control-parameter",
+              "value": "medium"
+            }
+          },
+          "_overridability": {
+            "parameters": {
+              "tag": "yes",
+              "text": "yes"
+            },
+            "hideLockedParameters": true
+          }
+        },
+        {
+          "_id": "e0b7bb8e-b912-4c20-97eb-7831d87eb739",
+          "type": "button",
+          "_pattern": "31191bc7-7e6e-4748-89c2-8e73db05237d"
+        }
+      ]
+    },
+    "_overrides": {
+      "e0b7bb8e-b912-4c20-97eb-7831d87eb739": {
+        "parameters": {
+          "text": {
+            "type": "text",
+            "value": null
+          }
+        }
+      }
+    },
+    "_overridability": {
+      "variants": false,
+      "parameters": {
+        "displayName": "yes"
+      },
+      "hideLockedParameters": true
+    },
+    "_locales": [
+      "en-us",
+      "es-us",
+      "fr-ca",
+      "en-ca",
+      "en-gb",
+      "de-de",
+      "en-de",
+      "de-at",
+      "nl-nl",
+      "en-nl",
+      "da-dk",
+      "sv-se",
+      "nb-no",
+      "fr-fr",
+      "en-fr",
+      "ja-jp",
+      "ar-uae",
+      "ar-ksa"
+    ]
+  },
+  "created": "2025-03-25T09:38:01.305237+00:00",
+  "modified": "2025-07-07T12:14:20.784401+00:00",
+  "pattern": true,
+  "previewImageUrl": "https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/examples-card.jpg",
+  "categoryId": "096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9"
+}
