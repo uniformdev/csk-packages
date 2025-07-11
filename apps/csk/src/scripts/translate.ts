@@ -1,7 +1,8 @@
 /**
  * All-in-one translation runner
  * Reads entry JSON files, normalizes missing en-us locales,
- * and ensures all target locales exist using OpenAI translations.
+ * ensures all target locales exist using OpenAI translations,
+ * and handles nested $block structures recursively.
  */
 
 import dotenv from 'dotenv';
@@ -43,7 +44,7 @@ const openai = new OpenAI({
 
 // =============== TYPES ===============
 
-type FieldType = 'text' | 'richText';
+type FieldType = 'text' | 'richText' | '$block';
 
 interface FieldConfig {
   description: string;
@@ -84,6 +85,10 @@ const TRANSLATION_CONFIG: TranslationConfig = {
       metaDescription: {
         description: 'SEO meta description for the product page.',
         type: 'text',
+      },
+      variants: {
+        description: 'Product variants (block of nested fields).',
+        type: '$block',
       },
     },
   },
@@ -163,43 +168,33 @@ async function translate(text: string, entryType: string, fieldName: string, loc
   }
 }
 
-// =============== MAIN PROCESSING FUNCTION ===============
+// =============== RECURSIVE FIELD PROCESSOR ===============
 
-async function processEntryFile(entryFile: string) {
-  const entryJsonPath = path.join(ENTRY_PATH, entryFile);
-  const raw = await fs.readFile(entryJsonPath, 'utf8');
-  const data = JSON.parse(raw);
-
-  if (data.translated) {
-    console.info(`✅ Skipping ${entryFile}: Already translated`);
-    return;
-  }
-
-  if (!data?.entry || !data.entry.fields) {
-    console.warn(`⚠️ Skipping ${entryFile}: No entry.fields found`);
-    return;
-  }
-
-  const entryType = data.entry.type;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+async function processTranslatableFields(fields: Record<string, any>, entryType: string): Promise<void> {
   const entryConfig = TRANSLATION_CONFIG[entryType];
-  if (!entryConfig) {
-    console.warn(`⚠️ Skipping ${entryFile}: No config for entry type "${entryType}"`);
-    return;
-  }
-
-  const fields = data.entry.fields;
-
-  const updatedFields = { ...fields };
+  if (!entryConfig) return;
 
   for (const [fieldName, fieldValue] of Object.entries(fields)) {
     const fieldConfig = entryConfig.fields[fieldName];
+    if (!fieldConfig) continue;
 
-    if (!fieldConfig) {
-      console.warn(`⚠️ No config for field "${fieldName}" in type "${entryType}". Skipping.`);
+    if (!fieldValue || typeof fieldValue !== 'object') continue;
+
+    if (fieldConfig.type === '$block') {
+      // Process nested blocks
+      if (Array.isArray(fieldValue.value)) {
+        for (const item of fieldValue.value) {
+          if (item.fields) {
+            await processTranslatableFields(item.fields, entryType);
+          }
+        }
+      }
       continue;
     }
 
-    if (fieldValue && typeof fieldValue === 'object' && fieldValue !== null) {
+    // Normalize old "value" to "locales.en-us"
+    if ('value' in fieldValue || 'locales' in fieldValue) {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const obj = fieldValue as Record<string, any>;
 
@@ -208,32 +203,56 @@ async function processEntryFile(entryFile: string) {
       }
 
       if (!obj.locales[ORIGINAL_LOCALE] && obj.value) {
-        console.info(`🛠️ Normalizing "${fieldName}" in ${entryFile}: moving "value" to "locales.en-us"`);
+        console.info(`🛠️ Normalizing "${fieldName}": moving "value" to "locales.en-us"`);
         obj.locales[ORIGINAL_LOCALE] = obj.value;
         delete obj.value;
       }
-    }
 
-    const locales = (fieldValue as { locales?: Record<string, string> })?.locales;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const locales = obj.locales as Record<string, any>;
+      if (!locales?.[ORIGINAL_LOCALE]) {
+        console.warn(`⚠️ No "${ORIGINAL_LOCALE}" for field "${fieldName}"`);
+        continue;
+      }
 
-    if (!locales || !locales[ORIGINAL_LOCALE]) {
-      console.warn(`⚠️ No "${ORIGINAL_LOCALE}" value for field "${fieldName}" in ${entryFile}`);
-      continue;
-    }
+      const sourceText = locales[ORIGINAL_LOCALE];
 
-    const sourceText = locales[ORIGINAL_LOCALE];
-
-    // Ensure translation for every TARGET_LOCALE
-    for (const targetLocale of TARGET_LOCALES) {
-      if (targetLocale === ORIGINAL_LOCALE) continue;
-
-      console.info(
-        `🌐 Translating [${entryType}.${fieldName}] with type '${fieldConfig.type}' to missing locale: ${targetLocale}`
-      );
-      const translated = await translate(sourceText, entryType, fieldName, targetLocale);
-      updatedFields[fieldName].locales[targetLocale] = translated;
+      for (const targetLocale of TARGET_LOCALES) {
+        if (targetLocale === ORIGINAL_LOCALE) continue;
+        console.info(`🌐 Translating [${entryType}.${fieldName}] → ${targetLocale}`);
+        locales[targetLocale] = await translate(sourceText, entryType, fieldName, targetLocale);
+      }
     }
   }
+}
+
+// =============== MAIN PROCESSING FUNCTION ===============
+
+async function processEntryFile(entryFile: string) {
+  const entryJsonPath = path.join(ENTRY_PATH, entryFile);
+  const raw = await fs.readFile(entryJsonPath, 'utf8');
+  const data = JSON.parse(raw);
+
+  if (data.translated) {
+    console.info(`✅ Skipping ${entryFile}: Already translated \n\n\n\r`);
+    return;
+  }
+
+  if (!data?.entry || !data.entry.fields) {
+    console.warn(`⚠️ Skipping ${entryFile}: No entry.fields found  \n\n\n\r`);
+    return;
+  }
+
+  const entryType = data.entry.type;
+  const entryConfig = TRANSLATION_CONFIG[entryType];
+  if (!entryConfig) {
+    console.warn(`⚠️ Skipping ${entryFile}: No config for entry type "${entryType}"  \n\n\n\r`);
+    return;
+  }
+
+  const updatedFields = { ...data.entry.fields };
+
+  await processTranslatableFields(updatedFields, entryType);
 
   const updatedEntry = {
     ...data,
