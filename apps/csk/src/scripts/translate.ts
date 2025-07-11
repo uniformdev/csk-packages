@@ -1,6 +1,7 @@
 /**
  * All-in-one translation runner
- * Reads entry JSON files, finds fields to translate, and translates them to all locales using OpenAI
+ * Reads entry JSON files, normalizes missing en-us locales,
+ * and ensures all target locales exist using OpenAI translations.
  */
 
 import dotenv from 'dotenv';
@@ -12,8 +13,29 @@ dotenv.config();
 
 // =============== SETUP ===============
 
-const ENTRY_PATH = './content-json/entry'; // Folder with JSON entries
+const ENTRY_PATH = './content-json/entry';
 const ORIGINAL_LOCALE = 'en-us';
+
+const TARGET_LOCALES = [
+  'en-us',
+  'es-us',
+  'fr-ca',
+  'en-ca',
+  'en-gb',
+  'de-de',
+  'en-de',
+  'de-at',
+  'nl-nl',
+  'en-nl',
+  'da-dk',
+  'sv-se',
+  'nb-no',
+  'fr-fr',
+  'en-fr',
+  'ja-jp',
+  'ar-uae',
+  'ar-ksa',
+];
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -70,7 +92,7 @@ const TRANSLATION_CONFIG: TranslationConfig = {
 // =============== PROMPT BUILDERS ===============
 
 function buildTextPrompt(text: string, description: string, contentType: string, locale: string): string {
-  return `You are a professional translator.
+  return `You are a professional translator. The original text is in en-us language.
 
 Please translate the following text into ${locale}:
 
@@ -85,14 +107,18 @@ Return only the translated text. Do not include any extra comments. Be faithful 
 function buildRichTextPrompt(text: string, description: string, contentType: string, locale: string): string {
   return `You are a professional translator.
 
-This is a JSON Rich Text object. Translate **all text** into ${locale}, keeping the original JSON structure exactly the same:
+You will receive a JSON Rich Text object in en-us. Your task is to translate all human-readable text into ${locale}, while keeping the JSON structure 100% identical.
+
+Below is the JSON:
 
 ${text}
 
-Field description: ${description}
-Content type: ${contentType}
-
-Return only the translated JSON object. Do not add any extra comments or change the structure.`;
+Instructions:
+- Return ONLY the translated JSON object.
+- Do NOT include any code fences, headers, or Markdown.
+- Do NOT add any comments or explanations.
+- The output MUST be valid JSON that starts with '{' and ends with '}'.
+`;
 }
 
 // =============== TRANSLATE FUNCTION ===============
@@ -111,9 +137,10 @@ async function translate(text: string, entryType: string, fieldName: string, loc
   }
 
   const { description, type } = fieldConfig;
+
   const prompt =
     type === 'richText'
-      ? buildRichTextPrompt(text, description, entryType, locale)
+      ? buildRichTextPrompt(JSON.stringify(text), description, entryType, locale)
       : buildTextPrompt(text, description, entryType, locale);
 
   try {
@@ -123,7 +150,13 @@ async function translate(text: string, entryType: string, fieldName: string, loc
       temperature: 0.3,
     });
 
-    return res.choices[0]?.message?.content?.trim() ?? text;
+    const result = res.choices[0]?.message?.content?.trim() ?? text;
+
+    if (type === 'richText') {
+      return JSON.parse(result);
+    }
+
+    return result;
   } catch (error) {
     console.error(`❌ OpenAI error for locale "${locale}":`, error);
     return text;
@@ -136,6 +169,11 @@ async function processEntryFile(entryFile: string) {
   const entryJsonPath = path.join(ENTRY_PATH, entryFile);
   const raw = await fs.readFile(entryJsonPath, 'utf8');
   const data = JSON.parse(raw);
+
+  if (data.translated) {
+    console.info(`✅ Skipping ${entryFile}: Already translated`);
+    return;
+  }
 
   if (!data?.entry || !data.entry.fields) {
     console.warn(`⚠️ Skipping ${entryFile}: No entry.fields found`);
@@ -150,23 +188,48 @@ async function processEntryFile(entryFile: string) {
   }
 
   const fields = data.entry.fields;
+
   const updatedFields = { ...fields };
 
   for (const [fieldName, fieldValue] of Object.entries(fields)) {
     const fieldConfig = entryConfig.fields[fieldName];
-    if (!fieldConfig) continue; // Not in translation config
+
+    if (!fieldConfig) {
+      console.warn(`⚠️ No config for field "${fieldName}" in type "${entryType}". Skipping.`);
+      continue;
+    }
+
+    if (fieldValue && typeof fieldValue === 'object' && fieldValue !== null) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const obj = fieldValue as Record<string, any>;
+
+      if (!obj.locales) {
+        obj.locales = {};
+      }
+
+      if (!obj.locales[ORIGINAL_LOCALE] && obj.value) {
+        console.info(`🛠️ Normalizing "${fieldName}" in ${entryFile}: moving "value" to "locales.en-us"`);
+        obj.locales[ORIGINAL_LOCALE] = obj.value;
+        delete obj.value;
+      }
+    }
 
     const locales = (fieldValue as { locales?: Record<string, string> })?.locales;
+
     if (!locales || !locales[ORIGINAL_LOCALE]) {
       console.warn(`⚠️ No "${ORIGINAL_LOCALE}" value for field "${fieldName}" in ${entryFile}`);
       continue;
     }
 
     const sourceText = locales[ORIGINAL_LOCALE];
-    const targetLocales = Object.keys(locales).filter(l => l !== ORIGINAL_LOCALE);
 
-    for (const targetLocale of targetLocales) {
-      console.info(`🌐 Translating [${entryType}.${fieldName}] for locale: ${targetLocale}`);
+    // Ensure translation for every TARGET_LOCALE
+    for (const targetLocale of TARGET_LOCALES) {
+      if (targetLocale === ORIGINAL_LOCALE) continue;
+
+      console.info(
+        `🌐 Translating [${entryType}.${fieldName}] with type '${fieldConfig.type}' to missing locale: ${targetLocale}`
+      );
       const translated = await translate(sourceText, entryType, fieldName, targetLocale);
       updatedFields[fieldName].locales[targetLocale] = translated;
     }
@@ -174,6 +237,7 @@ async function processEntryFile(entryFile: string) {
 
   const updatedEntry = {
     ...data,
+    translated: true,
     entry: {
       ...data.entry,
       fields: updatedFields,
@@ -190,10 +254,6 @@ async function run() {
   try {
     const files = await fs.readdir(ENTRY_PATH);
     for (const file of files) {
-      if (file !== '2f042be4-1e8b-4fae-be0e-a5294b89d8dd.json') {
-        continue;
-      }
-
       if (file.endsWith('.json')) {
         await processEntryFile(file);
       }
