@@ -6,7 +6,26 @@
     "parameters": {
       "displayName": {
         "type": "text",
-        "value": "Small Article Card"
+        "locales": {
+          "en-us": "Small Article Card",
+          "es-us": "Tarjeta de Artículo Pequeño",
+          "fr-ca": "Petite carte d'article",
+          "en-ca": "Small Article Card",
+          "en-gb": "Small Article Card",
+          "de-de": "Kleine Artikelkarte",
+          "en-de": "Kleine Artikelkarte",
+          "de-at": "Kleine Artikelkarte",
+          "nl-nl": "Kleine Artikelkaart",
+          "en-nl": "Kleine Artikelkaart",
+          "da-dk": "Lille Artikelkort",
+          "sv-se": "Liten artikelkort",
+          "nb-no": "Liten artikkelkort",
+          "fr-fr": "Petite carte d'article",
+          "en-fr": "Petite Carte d'Article",
+          "ja-jp": "小さな記事カード",
+          "ar-uae": "بطاقة مقالة صغيرة",
+          "ar-ksa": "بطاقة مقالة صغيرة"
+        }
       }
     },
     "slots": {
@@ -22,7 +41,26 @@
                 "parameters": {
                   "name": {
                     "type": "text",
-                    "value": "Custom Image"
+                    "locales": {
+                      "en-us": "Custom Image",
+                      "es-us": "Imagen Personalizada",
+                      "fr-ca": "Image personnalisée",
+                      "en-ca": "Custom Image",
+                      "en-gb": "Custom Image",
+                      "de-de": "Benutzerdefiniertes Bild",
+                      "en-de": "Benutzerdefiniertes Bild",
+                      "de-at": "Benutzerdefiniertes Bild",
+                      "nl-nl": "Aangepaste Afbeelding",
+                      "en-nl": "Aangepaste Afbeelding",
+                      "da-dk": "Brugerdefineret billede",
+                      "sv-se": "Anpassad bild",
+                      "nb-no": "Egendefinert bilde",
+                      "fr-fr": "Image personnalisée",
+                      "en-fr": "Image personnalisée",
+                      "ja-jp": "カスタム画像",
+                      "ar-uae": "صورة مخصصة",
+                      "ar-ksa": "صورة مخصصة"
+                    }
                   },
                   "specific": {
                     "type": "array",
@@ -32,7 +70,26 @@
                   },
                   "groupType": {
                     "type": "text",
-                    "value": "specific"
+                    "locales": {
+                      "en-us": "specific",
+                      "es-us": "específico",
+                      "fr-ca": "spécifique",
+                      "en-ca": "specific",
+                      "en-gb": "specific",
+                      "de-de": "spezifisch",
+                      "en-de": "spezifisch",
+                      "de-at": "spezifisch",
+                      "nl-nl": "specifiek",
+                      "en-nl": "specifiek",
+                      "da-dk": "specifik",
+                      "sv-se": "specifik",
+                      "nb-no": "spesifikk",
+                      "fr-fr": "spécifique",
+                      "en-fr": "spécifique",
+                      "ja-jp": "特定の",
+                      "ar-uae": "محدد",
+                      "ar-ksa": "محدد"
+                    }
                   }
                 },
                 "_overridability": {
@@ -142,7 +199,26 @@
             },
             "displayName": {
               "type": "text",
-              "value": "Logo Container"
+              "locales": {
+                "en-us": "Logo Container",
+                "es-us": "Contenedor de Logotipo",
+                "fr-ca": "Conteneur de logo",
+                "en-ca": "Logo Container",
+                "en-gb": "Logo Container",
+                "de-de": "Logo-Container",
+                "en-de": "Logo-Container",
+                "de-at": "Logo-Container",
+                "nl-nl": "Logo Container",
+                "en-nl": "Logo Container",
+                "da-dk": "Logo Container",
+                "sv-se": "Logobehållare",
+                "nb-no": "Logobeholder",
+                "fr-fr": "Conteneur de logo",
+                "en-fr": "Conteneur de logo",
+                "ja-jp": "ロゴコンテナ",
+                "ar-uae": "حاوية الشعار",
+                "ar-ksa": "حاوية الشعار"
+              }
             },
             "fluidContent": {
               "type": "checkbox",
@@ -178,7 +254,26 @@
                   },
                   "text": {
                     "type": "text",
-                    "value": "Picking the right bean"
+                    "locales": {
+                      "en-us": "Picking the right bean",
+                      "es-us": "Escogiendo el frijol correcto",
+                      "fr-ca": "Choisir le bon grain",
+                      "en-ca": "Choosing the right bean",
+                      "en-gb": "Choosing the right bean",
+                      "de-de": "Die richtige Bohne auswählen",
+                      "en-de": "Die richtige Bohne auswählen",
+                      "de-at": "Die richtige Bohne auswählen",
+                      "nl-nl": "De juiste boon kiezen",
+                      "en-nl": "De juiste boon kiezen",
+                      "da-dk": "At vælge den rigtige bønne",
+                      "sv-se": "Att välja rätt böna",
+                      "nb-no": "Å velge riktig bønne",
+                      "fr-fr": "Choisir le bon grain",
+                      "en-fr": "Choisir le bon grain",
+                      "ja-jp": "正しい豆を選ぶ",
+                      "ar-uae": "اختيار الحبة المناسبة",
+                      "ar-ksa": "اختيار الحبة المناسبة"
+                    }
                   },
                   "color": {
                     "type": "dex-color-palette-parameter",
@@ -214,7 +309,26 @@
                   },
                   "text": {
                     "type": "text",
-                    "value": "Is it just a cup of coffee or is there more than meets the eye? See what kind of coffee is best for your taste buds."
+                    "locales": {
+                      "en-us": "Is it just a cup of coffee or is there more than meets the eye? See what kind of coffee is best for your taste buds.",
+                      "es-us": "¿Es solo una taza de café o hay más de lo que parece? Descubre qué tipo de café es mejor para tu paladar.",
+                      "fr-ca": "Est-ce juste une tasse de café ou y a-t-il plus qu'il n'y paraît ? Découvrez quel type de café convient le mieux à vos papilles gustatives.",
+                      "en-ca": "Is it just a cup of coffee or is there more than meets the eye? See what kind of coffee is best for your taste buds.",
+                      "en-gb": "Is it just a cup of coffee or is there more than meets the eye? See what kind of coffee is best for your taste buds.",
+                      "de-de": "Ist es nur eine Tasse Kaffee oder steckt mehr dahinter? Finden Sie heraus, welcher Kaffee am besten zu Ihrem Geschmack passt.",
+                      "en-de": "Ist es nur eine Tasse Kaffee oder steckt mehr dahinter? Finden Sie heraus, welche Kaffeesorte am besten zu Ihrem Geschmack passt.",
+                      "de-at": "Ist es nur eine Tasse Kaffee oder steckt mehr dahinter? Finden Sie heraus, welcher Kaffee am besten zu Ihrem Geschmack passt.",
+                      "nl-nl": "Is het gewoon een kopje koffie of is er meer dan op het eerste gezicht lijkt? Ontdek welke soort koffie het beste bij uw smaakpapillen past.",
+                      "en-nl": "Is het gewoon een kopje koffie of is er meer dan op het eerste gezicht lijkt? Ontdek welke soort koffie het beste bij uw smaakpapillen past.",
+                      "da-dk": "Er det bare en kop kaffe, eller er der mere end øjet kan se? Se hvilken slags kaffe der passer bedst til dine smagsløg.",
+                      "sv-se": "Är det bara en kopp kaffe eller finns det mer än vad ögat kan se? Se vilken typ av kaffe som passar bäst för dina smaklökar.",
+                      "nb-no": "Er det bare en kopp kaffe, eller er det mer enn det som møter øyet? Se hvilken type kaffe som passer best for smaksløkene dine.",
+                      "fr-fr": "Est-ce juste une tasse de café ou y a-t-il plus qu'il n'y paraît ? Découvrez quel type de café convient le mieux à vos papilles gustatives.",
+                      "en-fr": "Est-ce juste une tasse de café ou y a-t-il plus qu'il n'y paraît ? Découvrez quel type de café est le meilleur pour vos papilles gustatives.",
+                      "ja-jp": "ただのコーヒー一杯なのか、それとも見た目以上のものがあるのか？あなたの味覚に最適なコーヒーを見つけてください。",
+                      "ar-uae": "هل هو مجرد فنجان قهوة أم أن هناك ما هو أكثر مما تراه العين؟ اكتشف نوع القهوة الذي يناسب ذوقك.",
+                      "ar-ksa": "هل هو مجرد فنجان قهوة أم أن هناك ما هو أكثر مما تراه العين؟ اكتشف نوع القهوة الأنسب لذوقك."
+                    }
                   },
                   "color": {
                     "type": "dex-color-palette-parameter",
@@ -271,7 +385,26 @@
             },
             "displayName": {
               "type": "text",
-              "value": "Content"
+              "locales": {
+                "en-us": "Content",
+                "es-us": "Contenido",
+                "fr-ca": "Contenu",
+                "en-ca": "Content",
+                "en-gb": "Content",
+                "de-de": "Inhalt",
+                "en-de": "Inhalt",
+                "de-at": "Inhalt",
+                "nl-nl": "Inhoud",
+                "en-nl": "Inhoud",
+                "da-dk": "Indhold",
+                "sv-se": "Innehåll",
+                "nb-no": "Innhold",
+                "fr-fr": "Contenu",
+                "en-fr": "Contenu",
+                "ja-jp": "コンテンツ",
+                "ar-uae": "المحتوى",
+                "ar-ksa": "المحتوى"
+              }
             },
             "fluidContent": {
               "type": "checkbox",
@@ -1040,7 +1173,26 @@
             },
             "text": {
               "type": "text",
-              "value": "READ"
+              "locales": {
+                "en-us": "READ",
+                "es-us": "LEER",
+                "fr-ca": "LIRE",
+                "en-ca": "READ",
+                "en-gb": "READ",
+                "de-de": "LESEN",
+                "en-de": "LESEN",
+                "de-at": "LESEN",
+                "nl-nl": "LEZEN",
+                "en-nl": "LEZEN",
+                "da-dk": "LÆS",
+                "sv-se": "LÄS",
+                "nb-no": "LES",
+                "fr-fr": "LIRE",
+                "en-fr": "LIRE",
+                "ja-jp": "読む",
+                "ar-uae": "اقرأ",
+                "ar-ksa": "اقرأ"
+              }
             },
             "textSize": {
               "type": "dex-segmented-control-parameter",

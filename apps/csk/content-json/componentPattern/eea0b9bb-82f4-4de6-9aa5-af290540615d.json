@@ -15,7 +15,26 @@
       },
       "displayName": {
         "type": "text",
-        "value": "Hero Section"
+        "locales": {
+          "en-us": "Hero Section",
+          "es-us": "Sección de Héroe",
+          "fr-ca": "Section Héros",
+          "en-ca": "Hero Section",
+          "en-gb": "Hero Section",
+          "de-de": "Heldenbereich",
+          "en-de": "Heldenbereich",
+          "de-at": "Hero-Bereich",
+          "nl-nl": "Hero Sectie",
+          "en-nl": "Heldensectie",
+          "da-dk": "Hero Sektion",
+          "sv-se": "Hjältedel",
+          "nb-no": "Heltedelen",
+          "fr-fr": "Section Héros",
+          "en-fr": "Section Héros",
+          "ja-jp": "ヒーローセクション",
+          "ar-uae": "قسم البطل",
+          "ar-ksa": "قسم الأبطال"
+        }
       },
       "fluidContent": {
         "type": "checkbox",
@@ -34,11 +53,32 @@
           "parameters": {
             "max": {
               "type": "text",
-              "value": 2
+              "locales": {
+                "en-us": 2
+              }
             },
             "name": {
               "type": "text",
-              "value": "CTAs"
+              "locales": {
+                "en-us": "CTAs",
+                "es-us": "CTAs",
+                "fr-ca": "CTA",
+                "en-ca": "CTAs",
+                "en-gb": "CTAs",
+                "de-de": "CTAs",
+                "en-de": "CTAs",
+                "de-at": "CTAs",
+                "nl-nl": "CTA's",
+                "en-nl": "CTA's",
+                "da-dk": "CTA'er",
+                "sv-se": "Uppmaningar",
+                "nb-no": "CTA-er",
+                "fr-fr": "CTA",
+                "en-fr": "CTA",
+                "ja-jp": "CTA（コール・トゥ・アクション）",
+                "ar-uae": "عبارات الحث على اتخاذ إجراء",
+                "ar-ksa": "عبارات الحث على اتخاذ إجراء"
+              }
             },
             "specific": {
               "type": "array",
@@ -50,7 +90,26 @@
             },
             "groupType": {
               "type": "text",
-              "value": "specific"
+              "locales": {
+                "en-us": "specific",
+                "es-us": "específico",
+                "fr-ca": "spécifique",
+                "en-ca": "specific",
+                "en-gb": "specific",
+                "de-de": "spezifisch",
+                "en-de": "spezifisch",
+                "de-at": "spezifisch",
+                "nl-nl": "specifiek",
+                "en-nl": "specifiek",
+                "da-dk": "specifik",
+                "sv-se": "specifik",
+                "nb-no": "spesifikk",
+                "fr-fr": "spécifique",
+                "en-fr": "spécifique",
+                "ja-jp": "特定の",
+                "ar-uae": "محدد",
+                "ar-ksa": "محدد"
+              }
             }
           },
           "_overridability": {

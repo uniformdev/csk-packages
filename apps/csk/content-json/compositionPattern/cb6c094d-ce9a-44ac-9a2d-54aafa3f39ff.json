@@ -50,7 +50,26 @@
       },
       "pageTitle": {
         "type": "text",
-        "value": "Java Drip"
+        "locales": {
+          "en-us": "Java Drip",
+          "es-us": "Goteo de Java",
+          "fr-ca": "Goutte à goutte de Java",
+          "en-ca": "Java Drip",
+          "en-gb": "Java Filter",
+          "de-de": "Java Tropfen",
+          "en-de": "Java-Tropfen",
+          "de-at": "Java-Tropf",
+          "nl-nl": "Java Druppel",
+          "en-nl": "Java Druppel",
+          "da-dk": "Java Drip",
+          "sv-se": "Java Dropp",
+          "nb-no": "Java Drypp",
+          "fr-fr": "Goutte à goutte de Java",
+          "en-fr": "Goutte à goutte de Java",
+          "ja-jp": "ジャバドリップ",
+          "ar-uae": "جافا دريب",
+          "ar-ksa": "قطرة جافا"
+        }
       },
       "backgroundColor": {
         "type": "dex-color-palette-parameter",
@@ -94,24 +113,24 @@
                   "displayName": {
                     "type": "text",
                     "locales": {
-                      "da-dk": "Breadcrumbs",
-                      "de-at": "Breadcrumbs",
-                      "de-de": "Breadcrumbs",
+                      "da-dk": "Brødkrummer",
+                      "de-at": "Brotkrümel",
+                      "de-de": "Brotkrumen",
                       "en-ca": "Breadcrumbs",
-                      "en-de": "Breadcrumbs",
-                      "en-fr": "Breadcrumbs",
+                      "en-de": "Brotkrumen",
+                      "en-fr": "Chapelure",
                       "en-gb": "Breadcrumbs",
-                      "en-nl": "Breadcrumbs",
+                      "en-nl": "Broodkruimels",
                       "en-us": "Breadcrumbs",
-                      "es-us": "Breadcrumbs",
-                      "fr-ca": "Breadcrumbs",
-                      "fr-fr": "Breadcrumbs",
-                      "ja-jp": "Breadcrumbs",
-                      "nb-no": "Breadcrumbs",
-                      "nl-nl": "Breadcrumbs",
-                      "sv-se": "Breadcrumbs",
-                      "ar-ksa": "Breadcrumbs",
-                      "ar-uae": "Breadcrumbs"
+                      "es-us": "Migas de pan",
+                      "fr-ca": "Chapelure",
+                      "fr-fr": "Chapelure",
+                      "ja-jp": "パンくずリスト",
+                      "nb-no": "Brødsmuler",
+                      "nl-nl": "Broodkruimels",
+                      "sv-se": "Brödsmulor",
+                      "ar-ksa": "فتات الخبز",
+                      "ar-uae": "فتات الخبز"
                     }
                   },
                   "autoGenerate": {
@@ -144,24 +163,24 @@
             "displayName": {
               "type": "text",
               "locales": {
-                "da-dk": "Breadcrumbs",
-                "de-at": "Breadcrumbs",
-                "de-de": "Breadcrumbs",
+                "da-dk": "Brødkrummer",
+                "de-at": "Brotkrümel",
+                "de-de": "Brotkrumen",
                 "en-ca": "Breadcrumbs",
-                "en-de": "Breadcrumbs",
-                "en-fr": "Breadcrumbs",
+                "en-de": "Brotkrumen",
+                "en-fr": "Chapelure",
                 "en-gb": "Breadcrumbs",
-                "en-nl": "Breadcrumbs",
+                "en-nl": "Broodkruimels",
                 "en-us": "Breadcrumbs",
-                "es-us": "Breadcrumbs",
-                "fr-ca": "Breadcrumbs",
-                "fr-fr": "Breadcrumbs",
-                "ja-jp": "Breadcrumbs",
-                "nb-no": "Breadcrumbs",
-                "nl-nl": "Breadcrumbs",
-                "sv-se": "Breadcrumbs",
-                "ar-ksa": "Breadcrumbs",
-                "ar-uae": "Breadcrumbs"
+                "es-us": "Migas de pan",
+                "fr-ca": "Chapelure",
+                "fr-fr": "Chapelure",
+                "ja-jp": "パンくずリスト",
+                "nb-no": "Brødsmuler",
+                "nl-nl": "Broodkruimels",
+                "sv-se": "Brödsmulor",
+                "ar-ksa": "فتات الخبز",
+                "ar-uae": "فتات الخبز"
               }
             }
           },
@@ -178,7 +197,26 @@
           "parameters": {
             "name": {
               "type": "text",
-              "value": "Page Content"
+              "locales": {
+                "en-us": "Page Content",
+                "es-us": "Contenido de la página",
+                "fr-ca": "Contenu de la page",
+                "en-ca": "Page Content",
+                "en-gb": "Page Content",
+                "de-de": "Seiteninhalt",
+                "en-de": "Seiteninhalt",
+                "de-at": "Seiteninhalt",
+                "nl-nl": "Paginainhoud",
+                "en-nl": "Pagina-inhoud\n\nInstructies:",
+                "da-dk": "Sideindhold\n\nInstruktioner:",
+                "sv-se": "Sidinnehåll",
+                "nb-no": "Sideinnhold\n\nInstruksjoner:",
+                "fr-fr": "Contenu de la page",
+                "en-fr": "Contenu de la page",
+                "ja-jp": "ページコンテンツ",
+                "ar-uae": "محتوى الصفحة",
+                "ar-ksa": "محتوى الصفحة"
+              }
             },
             "specific": {
               "type": "array",
@@ -192,7 +230,26 @@
             },
             "groupType": {
               "type": "text",
-              "value": "specific"
+              "locales": {
+                "en-us": "specific",
+                "es-us": "específico",
+                "fr-ca": "spécifique",
+                "en-ca": "specific",
+                "en-gb": "specific",
+                "de-de": "spezifisch",
+                "en-de": "spezifisch",
+                "de-at": "spezifisch",
+                "nl-nl": "specifiek",
+                "en-nl": "specifiek",
+                "da-dk": "specifik",
+                "sv-se": "specifik",
+                "nb-no": "spesifikk",
+                "fr-fr": "spécifique",
+                "en-fr": "spécifique",
+                "ja-jp": "具体的",
+                "ar-uae": "محدد",
+                "ar-ksa": "محدد"
+              }
             }
           },
           "_overridability": {
@@ -541,7 +598,26 @@
         "parameters": {
           "text": {
             "type": "text",
-            "value": "Landing page title"
+            "locales": {
+              "en-us": "Landing page title",
+              "es-us": "Título de la página de destino",
+              "fr-ca": "Titre de la page d'accueil",
+              "en-ca": "Landing page title",
+              "en-gb": "Landing page title",
+              "de-de": "Landingpage-Titel",
+              "en-de": "Landingpage-Titel",
+              "de-at": "Landingpage-Titel",
+              "nl-nl": "Landingspagina titel",
+              "en-nl": "Landingspagina titel",
+              "da-dk": "Landingsside titel",
+              "sv-se": "Landningssidans titel",
+              "nb-no": "Landingsside tittel",
+              "fr-fr": "Titre de la page d'accueil",
+              "en-fr": "Titre de la page d'accueil",
+              "ja-jp": "ランディングページのタイトル",
+              "ar-uae": "عنوان الصفحة الرئيسية",
+              "ar-ksa": "عنوان الصفحة الرئيسية"
+            }
           }
         }
       },

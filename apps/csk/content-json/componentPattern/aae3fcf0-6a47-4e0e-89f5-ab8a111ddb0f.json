@@ -19,7 +19,26 @@
       },
       "displayName": {
         "type": "text",
-        "value": "Card Example"
+        "locales": {
+          "en-us": "Card Example",
+          "es-us": "Ejemplo de Tarjeta",
+          "fr-ca": "Exemple de carte",
+          "en-ca": "Card Example",
+          "en-gb": "Card Example",
+          "de-de": "Kartenbeispiel",
+          "en-de": "Kartenbeispiel",
+          "de-at": "Kartenbeispiel",
+          "nl-nl": "Kaartvoorbeeld",
+          "en-nl": "Kaartvoorbeeld",
+          "da-dk": "Kort Eksempel",
+          "sv-se": "Kortexempel",
+          "nb-no": "Korteksempel",
+          "fr-fr": "Exemple de carte",
+          "en-fr": "Exemple de Carte",
+          "ja-jp": "カードの例",
+          "ar-uae": "مثال على البطاقة",
+          "ar-ksa": "مثال على البطاقة"
+        }
       },
       "fluidContent": {
         "type": "checkbox",
@@ -151,7 +170,8 @@
         "parameters": {
           "text": {
             "type": "text",
-            "value": null
+            "value": null,
+            "locales": {}
           }
         }
       }

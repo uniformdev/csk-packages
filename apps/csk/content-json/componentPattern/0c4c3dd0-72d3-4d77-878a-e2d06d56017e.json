@@ -39,7 +39,26 @@
       },
       "displayName": {
         "type": "text",
-        "value": "Product with Categories"
+        "locales": {
+          "en-us": "Product with Categories",
+          "es-us": "Producto con Categorías",
+          "fr-ca": "Produit avec catégories",
+          "en-ca": "Product with Categories",
+          "en-gb": "Product with Categories",
+          "de-de": "Produkt mit Kategorien",
+          "en-de": "Produkt mit Kategorien",
+          "de-at": "Produkt mit Kategorien",
+          "nl-nl": "Product met Categorieën",
+          "en-nl": "Product met Categorieën",
+          "da-dk": "Produkt med kategorier",
+          "sv-se": "Produkt med kategorier",
+          "nb-no": "Produkt med kategorier",
+          "fr-fr": "Produit avec Catégories",
+          "en-fr": "Produit avec Catégories",
+          "ja-jp": "カテゴリー付き製品",
+          "ar-uae": "منتج مع الفئات",
+          "ar-ksa": "المنتج مع الفئات"
+        }
       },
       "columnsCount": {
         "type": "dex-slider-control-parameter",
@@ -80,7 +99,26 @@
                         },
                         "text": {
                           "type": "text",
-                          "value": "Categories"
+                          "locales": {
+                            "en-us": "Categories",
+                            "es-us": "Categorías",
+                            "fr-ca": "Catégories",
+                            "en-ca": "Categories",
+                            "en-gb": "Categories",
+                            "de-de": "Kategorien",
+                            "en-de": "Kategorien",
+                            "de-at": "Kategorien",
+                            "nl-nl": "Categorieën",
+                            "en-nl": "Categorieën",
+                            "da-dk": "Kategorier",
+                            "sv-se": "Kategorier",
+                            "nb-no": "Kategorier",
+                            "fr-fr": "Catégories",
+                            "en-fr": "Catégories",
+                            "ja-jp": "カテゴリー",
+                            "ar-uae": "الفئات",
+                            "ar-ksa": "الفئات"
+                          }
                         },
                         "color": {
                           "type": "dex-color-palette-parameter",
@@ -116,7 +154,26 @@
                               },
                               "text": {
                                 "type": "text",
-                                "value": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}"
+                                "locales": {
+                                  "en-us": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "es-us": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "fr-ca": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "en-ca": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "en-gb": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "de-de": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "en-de": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "de-at": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "nl-nl": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "en-nl": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "da-dk": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "sv-se": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "nb-no": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "fr-fr": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "en-fr": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "ja-jp": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "ar-uae": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "ar-ksa": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}"
+                                }
                               },
                               "color": {
                                 "type": "dex-color-palette-parameter",
@@ -180,7 +237,26 @@
                   },
                   "displayName": {
                     "type": "text",
-                    "value": "Categories"
+                    "locales": {
+                      "en-us": "Categories",
+                      "es-us": "Categorías",
+                      "fr-ca": "Catégories",
+                      "en-ca": "Categories",
+                      "en-gb": "Categories",
+                      "de-de": "Kategorien",
+                      "en-de": "Kategorien",
+                      "de-at": "Kategorien",
+                      "nl-nl": "Categorieën",
+                      "en-nl": "Categorieën",
+                      "da-dk": "Kategorier",
+                      "sv-se": "Kategorier",
+                      "nb-no": "Kategorier",
+                      "fr-fr": "Catégories",
+                      "en-fr": "Catégories",
+                      "ja-jp": "カテゴリー",
+                      "ar-uae": "الفئات",
+                      "ar-ksa": "فئات"
+                    }
                   },
                   "justifyContent": {
                     "type": "dex-segmented-control-parameter",
@@ -229,7 +305,26 @@
                         },
                         "text": {
                           "type": "text",
-                          "value": "Brands"
+                          "locales": {
+                            "en-us": "Brands",
+                            "es-us": "Marcas",
+                            "fr-ca": "Marques",
+                            "en-ca": "Brands",
+                            "en-gb": "Brands",
+                            "de-de": "Marken",
+                            "en-de": "Marken",
+                            "de-at": "Marken",
+                            "nl-nl": "Merken",
+                            "en-nl": "Merken",
+                            "da-dk": "Mærker",
+                            "sv-se": "Varumärken",
+                            "nb-no": "Merker",
+                            "fr-fr": "Marques",
+                            "en-fr": "Marques",
+                            "ja-jp": "ブランド",
+                            "ar-uae": "العلامات التجارية",
+                            "ar-ksa": "العلامات التجارية"
+                          }
                         },
                         "color": {
                           "type": "dex-color-palette-parameter",
@@ -267,7 +362,26 @@
                               },
                               "text": {
                                 "type": "text",
-                                "value": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}"
+                                "locales": {
+                                  "en-us": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "es-us": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "fr-ca": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "en-ca": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "en-gb": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "de-de": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "en-de": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "de-at": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "nl-nl": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "en-nl": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "da-dk": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "sv-se": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "nb-no": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "fr-fr": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "en-fr": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "ja-jp": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "ar-uae": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}",
+                                  "ar-ksa": "${#jptr:/Product List Content entries Loop Item/entry/fields/title/value}"
+                                }
                               },
                               "color": {
                                 "type": "dex-color-palette-parameter",
@@ -325,7 +439,26 @@
                   },
                   "displayName": {
                     "type": "text",
-                    "value": "Brands"
+                    "locales": {
+                      "en-us": "Brands",
+                      "es-us": "Marcas",
+                      "fr-ca": "Marques",
+                      "en-ca": "Brands",
+                      "en-gb": "Brands",
+                      "de-de": "Marken",
+                      "en-de": "Marken",
+                      "de-at": "Marken",
+                      "nl-nl": "Merken",
+                      "en-nl": "Merken",
+                      "da-dk": "Mærker",
+                      "sv-se": "Varumärken",
+                      "nb-no": "Merker",
+                      "fr-fr": "Marques",
+                      "en-fr": "Marques",
+                      "ja-jp": "ブランド",
+                      "ar-uae": "العلامات التجارية",
+                      "ar-ksa": "العلامات التجارية"
+                    }
                   },
                   "justifyContent": {
                     "type": "dex-segmented-control-parameter",
@@ -368,7 +501,26 @@
             },
             "displayName": {
               "type": "text",
-              "value": "Categories"
+              "locales": {
+                "en-us": "Categories",
+                "es-us": "Categorías",
+                "fr-ca": "Catégories",
+                "en-ca": "Categories",
+                "en-gb": "Categories",
+                "de-de": "Kategorien",
+                "en-de": "Kategorien",
+                "de-at": "Kategorien",
+                "nl-nl": "Categorieën",
+                "en-nl": "Categorieën",
+                "da-dk": "Kategorier",
+                "sv-se": "Kategorier",
+                "nb-no": "Kategorier",
+                "fr-fr": "Catégories",
+                "en-fr": "Catégories",
+                "ja-jp": "カテゴリー",
+                "ar-uae": "الفئات",
+                "ar-ksa": "الفئات"
+              }
             }
           },
           "_overridability": {
@@ -434,7 +586,26 @@
                   },
                   "displayName": {
                     "type": "text",
-                    "value": "Products Grid"
+                    "locales": {
+                      "en-us": "Products Grid",
+                      "es-us": "Cuadrícula de Productos",
+                      "fr-ca": "Grille de produits",
+                      "en-ca": "Products Grid",
+                      "en-gb": "Products Grid",
+                      "de-de": "Produktgitter",
+                      "en-de": "Produktgitter",
+                      "de-at": "Produktgitter",
+                      "nl-nl": "Productrooster",
+                      "en-nl": "Productrooster",
+                      "da-dk": "Produktgitter",
+                      "sv-se": "Produktgalleri",
+                      "nb-no": "Produktgitter",
+                      "fr-fr": "Grille de produits",
+                      "en-fr": "Grille de produits",
+                      "ja-jp": "製品グリッド",
+                      "ar-uae": "شبكة المنتجات",
+                      "ar-ksa": "شبكة المنتجات"
+                    }
                   },
                   "columnsCount": {
                     "type": "dex-slider-control-parameter",
@@ -481,7 +652,26 @@
             },
             "displayName": {
               "type": "text",
-              "value": "Products"
+              "locales": {
+                "en-us": "Products",
+                "es-us": "Productos",
+                "fr-ca": "Produits",
+                "en-ca": "Products",
+                "en-gb": "Products",
+                "de-de": "Produkte",
+                "en-de": "Produkte",
+                "de-at": "Produkte",
+                "nl-nl": "Producten",
+                "en-nl": "Producten",
+                "da-dk": "Produkter",
+                "sv-se": "Produkter",
+                "nb-no": "Produkter",
+                "fr-fr": "Produits",
+                "en-fr": "Produits",
+                "ja-jp": "製品",
+                "ar-uae": "المنتجات",
+                "ar-ksa": "منتجات"
+              }
             }
           },
           "_overridability": {
@@ -566,7 +756,26 @@
         "parameters": {
           "displayName": {
             "type": "text",
-            "value": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}"
+            "locales": {
+              "en-us": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "es-us": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "fr-ca": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "en-ca": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "en-gb": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "de-de": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "en-de": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "de-at": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "nl-nl": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "en-nl": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "da-dk": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "sv-se": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "nb-no": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "fr-fr": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "en-fr": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "ja-jp": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "ar-uae": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "ar-ksa": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}"
+            }
           }
         }
       },
@@ -609,7 +818,26 @@
         "parameters": {
           "text": {
             "type": "text",
-            "value": "${#jptr:/Product List Content entries Loop Item/entry/fields/variants/value/0/fields/price/value} $"
+            "locales": {
+              "en-us": "${#jptr:/Product List Content entries Loop Item/entry/fields/variants/value/0/fields/price/value} $",
+              "es-us": "${#jptr:/Product List Content entries Loop Item/entry/fields/variants/value/0/fields/price/value} $",
+              "fr-ca": "${#jptr:/Product List Content entries Loop Item/entry/fields/variants/value/0/fields/price/value} $",
+              "en-ca": "${#jptr:/Product List Content entries Loop Item/entry/fields/variants/value/0/fields/price/value} $",
+              "en-gb": "${#jptr:/Product List Content entries Loop Item/entry/fields/variants/value/0/fields/price/value} $",
+              "de-de": "${#jptr:/Product List Content entries Loop Item/entry/fields/variants/value/0/fields/price/value} $",
+              "en-de": "${#jptr:/Product List Content entries Loop Item/entry/fields/variants/value/0/fields/price/value} $",
+              "de-at": "${#jptr:/Product List Content entries Loop Item/entry/fields/variants/value/0/fields/price/value} $",
+              "nl-nl": "${#jptr:/Product List Content entries Loop Item/entry/fields/variants/value/0/fields/price/value} $",
+              "en-nl": "${#jptr:/Product List Content entries Loop Item/entry/fields/variants/value/0/fields/price/value} $",
+              "da-dk": "${#jptr:/Product List Content entries Loop Item/entry/fields/variants/value/0/fields/price/value} $",
+              "sv-se": "${#jptr:/Product List Content entries Loop Item/entry/fields/variants/value/0/fields/price/value} $",
+              "nb-no": "${#jptr:/Product List Content entries Loop Item/entry/fields/variants/value/0/fields/price/value} $",
+              "fr-fr": "${#jptr:/Product List Content entries Loop Item/entry/fields/variants/value/0/fields/price/value} $",
+              "en-fr": "${#jptr:/Product List Content entries Loop Item/entry/fields/variants/value/0/fields/price/value} $",
+              "ja-jp": "${#jptr:/Product List Content entries Loop Item/entry/fields/variants/value/0/fields/price/value} $",
+              "ar-uae": "${#jptr:/Product List Content entries Loop Item/entry/fields/variants/value/0/fields/price/value} $",
+              "ar-ksa": "${#jptr:/Product List Content entries Loop Item/entry/fields/variants/value/0/fields/price/value} $"
+            }
           }
         }
       },
@@ -617,7 +845,26 @@
         "parameters": {
           "text": {
             "type": "text",
-            "value": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}"
+            "locales": {
+              "en-us": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "es-us": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "fr-ca": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "en-ca": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "en-gb": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "de-de": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "en-de": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "de-at": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "nl-nl": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "en-nl": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "da-dk": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "sv-se": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "nb-no": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "fr-fr": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "en-fr": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "ja-jp": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "ar-uae": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}",
+              "ar-ksa": "${#jptr:/Product List Content entries Loop Item/entry/fields/name/value}"
+            }
           }
         }
       }

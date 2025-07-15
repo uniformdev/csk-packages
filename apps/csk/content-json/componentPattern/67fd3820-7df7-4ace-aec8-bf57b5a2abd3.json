@@ -18,7 +18,26 @@
       },
       "displayName": {
         "type": "text",
-        "value": "Purchase History "
+        "locales": {
+          "en-us": "Purchase History ",
+          "es-us": "Historial de Compras",
+          "fr-ca": "Historique des achats",
+          "en-ca": "Purchase History",
+          "en-gb": "Purchase History",
+          "de-de": "Kaufhistorie",
+          "en-de": "Kaufhistorie",
+          "de-at": "Kaufhistorie",
+          "nl-nl": "Aankoopgeschiedenis",
+          "en-nl": "Aankoopgeschiedenis",
+          "da-dk": "Købshistorik",
+          "sv-se": "Köphistorik",
+          "nb-no": "Kjøpshistorikk",
+          "fr-fr": "Historique des achats",
+          "en-fr": "Historique des achats",
+          "ja-jp": "購入履歴",
+          "ar-uae": "تاريخ الشراء",
+          "ar-ksa": "تاريخ الشراء"
+        }
       }
     },
     "slots": {
@@ -41,7 +60,26 @@
             },
             "text": {
               "type": "text",
-              "value": "Purchase History "
+              "locales": {
+                "en-us": "Purchase History ",
+                "es-us": "Historial de Compras",
+                "fr-ca": "Historique des achats",
+                "en-ca": "Purchase History",
+                "en-gb": "Purchase History",
+                "de-de": "Kaufhistorie",
+                "en-de": "Kaufhistorie",
+                "de-at": "Kaufhistorie",
+                "nl-nl": "Aankoopgeschiedenis",
+                "en-nl": "Aankoopgeschiedenis",
+                "da-dk": "Købshistorik",
+                "sv-se": "Köphistorik",
+                "nb-no": "Kjøpshistorikk",
+                "fr-fr": "Historique des achats",
+                "en-fr": "Historique des achats",
+                "ja-jp": "購入履歴",
+                "ar-uae": "تاريخ الشراء",
+                "ar-ksa": "تاريخ الشراء"
+              }
             },
             "color": {
               "type": "dex-color-palette-parameter",
@@ -98,7 +136,26 @@
             },
             "displayName": {
               "type": "text",
-              "value": "Divider"
+              "locales": {
+                "en-us": "Divider",
+                "es-us": "Divisor",
+                "fr-ca": "Séparateur",
+                "en-ca": "Divider",
+                "en-gb": "Divider",
+                "de-de": "Teiler",
+                "en-de": "Teiler",
+                "de-at": "Teiler",
+                "nl-nl": "Verdeler",
+                "en-nl": "Verdeler",
+                "da-dk": "Skillelinje",
+                "sv-se": "Avdelare",
+                "nb-no": "Skillelinje",
+                "fr-fr": "Séparateur",
+                "en-fr": "Séparateur",
+                "ja-jp": "仕切り",
+                "ar-uae": "فاصل",
+                "ar-ksa": "فاصل"
+              }
             },
             "fluidContent": {
               "type": "checkbox",
@@ -169,7 +226,26 @@
             },
             "displayName": {
               "type": "text",
-              "value": "Products Link"
+              "locales": {
+                "en-us": "Products Link",
+                "es-us": "Enlace de Productos",
+                "fr-ca": "Lien vers les produits",
+                "en-ca": "Products Link",
+                "en-gb": "Products Link",
+                "de-de": "Produktlink",
+                "en-de": "Produktlink",
+                "de-at": "Produktlink",
+                "nl-nl": "Productenlink",
+                "en-nl": "Producten Link",
+                "da-dk": "Produkter Link",
+                "sv-se": "Produktlänk",
+                "nb-no": "Produktlenke",
+                "fr-fr": "Lien des produits",
+                "en-fr": "Lien des produits",
+                "ja-jp": "製品リンク",
+                "ar-uae": "رابط المنتجات",
+                "ar-ksa": "رابط المنتجات"
+              }
             },
             "fluidContent": {
               "type": "checkbox",
@@ -202,7 +278,26 @@
         "parameters": {
           "displayName": {
             "type": "text",
-            "value": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}"
+            "locales": {
+              "en-us": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "es-us": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "fr-ca": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "en-ca": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "en-gb": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "de-de": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "en-de": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "de-at": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "nl-nl": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "en-nl": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "da-dk": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "sv-se": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "nb-no": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "fr-fr": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "en-fr": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "ja-jp": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "ar-uae": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "ar-ksa": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}"
+            }
           }
         }
       },
@@ -210,7 +305,26 @@
         "parameters": {
           "text": {
             "type": "text",
-            "value": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/currency/value} ${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/price/value}"
+            "locales": {
+              "en-us": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/currency/value} ${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/price/value}",
+              "es-us": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/currency/value} ${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/price/value}",
+              "fr-ca": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/currency/value} ${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/price/value}",
+              "en-ca": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/currency/value} ${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/price/value}",
+              "en-gb": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/currency/value} ${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/price/value}",
+              "de-de": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/currency/value} ${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/price/value}",
+              "en-de": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/currency/value} ${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/price/value}",
+              "de-at": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/currency/value} ${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/price/value}",
+              "nl-nl": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/currency/value} ${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/price/value}",
+              "en-nl": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/currency/value} ${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/price/value}",
+              "da-dk": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/currency/value} ${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/price/value}",
+              "sv-se": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/currency/value} ${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/price/value}",
+              "nb-no": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/currency/value} ${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/price/value}",
+              "fr-fr": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/currency/value} ${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/price/value}",
+              "en-fr": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/currency/value} ${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/price/value}",
+              "ja-jp": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/currency/value} ${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/price/value}",
+              "ar-uae": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/currency/value} ${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/price/value}",
+              "ar-ksa": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/currency/value} ${#jptr:/Multiple Product Content entries Loop Item/entry/fields/variants/value/0/fields/price/value}"
+            }
           }
         }
       },
@@ -435,7 +549,26 @@
         "parameters": {
           "text": {
             "type": "text",
-            "value": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}"
+            "locales": {
+              "en-us": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "es-us": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "fr-ca": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "en-ca": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "en-gb": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "de-de": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "en-de": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "de-at": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "nl-nl": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "en-nl": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "da-dk": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "sv-se": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "nb-no": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "fr-fr": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "en-fr": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "ja-jp": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "ar-uae": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}",
+              "ar-ksa": "${#jptr:/Multiple Product Content entries Loop Item/entry/fields/name/value}"
+            }
           }
         }
       }

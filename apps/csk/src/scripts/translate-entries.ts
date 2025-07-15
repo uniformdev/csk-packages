@@ -60,35 +60,135 @@ type TranslationConfig = Record<string, EntryTypeConfig>;
 // =============== TRANSLATION CONFIG ===============
 
 const TRANSLATION_CONFIG: TranslationConfig = {
-  product: {
+  // product: {
+  //   fields: {
+  //     title: {
+  //       description: 'Title of the product entry (shown in listings or internal references).',
+  //       type: 'text',
+  //     },
+  //     name: {
+  //       description: 'Name of the product as displayed to customers.',
+  //       type: 'text',
+  //     },
+  //     shortDescription: {
+  //       description: 'Short marketing description for the product (multiline text).',
+  //       type: 'text',
+  //     },
+  //     body: {
+  //       description: 'Detailed Rich Text body content describing the product.',
+  //       type: 'richText',
+  //     },
+  //     metaTitle: {
+  //       description: 'SEO meta title for the product page.',
+  //       type: 'text',
+  //     },
+  //     metaDescription: {
+  //       description: 'SEO meta description for the product page.',
+  //       type: 'text',
+  //     },
+  //     variants: {
+  //       description: 'Product variants (block of nested fields).',
+  //       type: '$block',
+  //     },
+  //   },
+  // },
+  // articleCategory: {
+  //   fields: {
+  //     title: {
+  //       description: 'Title of the article category (used for categorizing articles).',
+  //       type: 'text',
+  //     },
+  //   },
+  // },
+  // author: {
+  //   fields: {
+  //     name: {
+  //       description: 'Name of the author (displayed to readers).',
+  //       type: 'text',
+  //     },
+  //     about: {
+  //       description: 'Short biography or description of the author (multiline text).',
+  //       type: 'text',
+  //     },
+  //   },
+  // },
+  // brand: {
+  //   fields: {
+  //     title: {
+  //       description: 'Title of the brand (shown to customers).',
+  //       type: 'text',
+  //     },
+  //     description: {
+  //       description: 'Description of the brand for customers.',
+  //       type: 'text',
+  //     },
+  //   },
+  // },
+  // filterBy: {
+  //   fields: {
+  //     title: {
+  //       description: 'Title of the filter (shown to users in the filter UI).',
+  //       type: 'text',
+  //     },
+  //     values: {
+  //       description: 'Nested block of filter values or options.',
+  //       type: '$block',
+  //     },
+  //   },
+  // },
+  // filterByItem: {
+  //   fields: {
+  //     title: {
+  //       description: 'Title of the individual filter option (shown to users).',
+  //       type: 'text',
+  //     },
+  //     value: {
+  //       description: 'Value of the filter option (shown to users or used for matching).',
+  //       type: 'text',
+  //     },
+  //   },
+  // },
+  // orderBy: {
+  //   fields: {
+  //     title: {
+  //       description: 'Title of the sort option (shown to users).',
+  //       type: 'text',
+  //     },
+  //   },
+  // },
+  // productCategory: {
+  //   fields: {
+  //     title: {
+  //       description: 'Title of the product category (shown to customers in category listings).',
+  //       type: 'text',
+  //     },
+  //     description: {
+  //       description: 'Description of the product category (shown to customers).',
+  //       type: 'text',
+  //     },
+  //   },
+  // },
+  article: {
     fields: {
       title: {
-        description: 'Title of the product entry (shown in listings or internal references).',
-        type: 'text',
-      },
-      name: {
-        description: 'Name of the product as displayed to customers.',
+        description: 'Title of the article (shown to readers).',
         type: 'text',
       },
       shortDescription: {
-        description: 'Short marketing description for the product (multiline text).',
+        description: 'Short marketing or introductory description of the article (multiline text).',
         type: 'text',
       },
-      body: {
-        description: 'Detailed Rich Text body content describing the product.',
+      content: {
+        description: 'Rich Text content of the article body.',
         type: 'richText',
       },
       metaTitle: {
-        description: 'SEO meta title for the product page.',
+        description: 'SEO meta title for the article page.',
         type: 'text',
       },
       metaDescription: {
-        description: 'SEO meta description for the product page.',
+        description: 'SEO meta description for the article page.',
         type: 'text',
-      },
-      variants: {
-        description: 'Product variants (block of nested fields).',
-        type: '$block',
       },
     },
   },

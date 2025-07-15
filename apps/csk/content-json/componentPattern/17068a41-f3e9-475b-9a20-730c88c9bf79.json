@@ -6,7 +6,26 @@
     "parameters": {
       "displayName": {
         "type": "text",
-        "value": "Small Article Card"
+        "locales": {
+          "en-us": "Small Article Card",
+          "es-us": "Tarjeta de Artículo Pequeño",
+          "fr-ca": "Petite carte d'article",
+          "en-ca": "Small Article Card",
+          "en-gb": "Small Article Card",
+          "de-de": "Kleine Artikelkarte",
+          "en-de": "Kleine Artikelkarte",
+          "de-at": "Kleine Artikelkarte",
+          "nl-nl": "Kleine Artikelkaart",
+          "en-nl": "Kleine Artikelkaart",
+          "da-dk": "Lille Artikelkort",
+          "sv-se": "Liten artikelkort",
+          "nb-no": "Liten artikkelkort",
+          "fr-fr": "Petite Carte d'Article",
+          "en-fr": "Petite Carte d'Article",
+          "ja-jp": "小さな記事カード",
+          "ar-uae": "بطاقة مقالة صغيرة",
+          "ar-ksa": "بطاقة مقالة صغيرة"
+        }
       }
     },
     "slots": {
@@ -118,7 +137,26 @@
             },
             "displayName": {
               "type": "text",
-              "value": "Logo Container"
+              "locales": {
+                "en-us": "Logo Container",
+                "es-us": "Contenedor de Logotipo",
+                "fr-ca": "Conteneur de logo",
+                "en-ca": "Logo Container",
+                "en-gb": "Logo Container",
+                "de-de": "Logo-Container",
+                "en-de": "Logo-Container",
+                "de-at": "Logo-Container",
+                "nl-nl": "Logo Container",
+                "en-nl": "Logo Container",
+                "da-dk": "Logo Beholder",
+                "sv-se": "Logobehållare",
+                "nb-no": "Logobeholder",
+                "fr-fr": "Conteneur de Logo",
+                "en-fr": "Conteneur de Logo",
+                "ja-jp": "ロゴコンテナ",
+                "ar-uae": "حاوية الشعار",
+                "ar-ksa": "حاوية الشعار"
+              }
             },
             "fluidContent": {
               "type": "checkbox",
@@ -154,7 +192,26 @@
                   },
                   "text": {
                     "type": "text",
-                    "value": "${#jptr:/Article/entry/fields/title/value}"
+                    "locales": {
+                      "en-us": "${#jptr:/Article/entry/fields/title/value}",
+                      "es-us": "${#jptr:/Article/entry/fields/title/value}",
+                      "fr-ca": "${#jptr:/Article/entry/fields/title/value}",
+                      "en-ca": "${#jptr:/Article/entry/fields/title/value}",
+                      "en-gb": "${#jptr:/Article/entry/fields/title/value}",
+                      "de-de": "${#jptr:/Article/entry/fields/title/value}",
+                      "en-de": "${#jptr:/Article/entry/fields/title/value}",
+                      "de-at": "${#jptr:/Article/entry/fields/title/value}",
+                      "nl-nl": "${#jptr:/Article/entry/fields/title/value}",
+                      "en-nl": "${#jptr:/Article/entry/fields/title/value}",
+                      "da-dk": "${#jptr:/Article/entry/fields/title/value}",
+                      "sv-se": "${#jptr:/Article/entry/fields/title/value}",
+                      "nb-no": "${#jptr:/Article/entry/fields/title/value}",
+                      "fr-fr": "${#jptr:/Article/entry/fields/title/value}",
+                      "en-fr": "${#jptr:/Article/entry/fields/title/value}",
+                      "ja-jp": "${#jptr:/Article/entry/fields/title/value}",
+                      "ar-uae": "${#jptr:/Article/entry/fields/title/value}",
+                      "ar-ksa": "${#jptr:/Article/entry/fields/title/value}"
+                    }
                   },
                   "color": {
                     "type": "dex-color-palette-parameter",
@@ -190,7 +247,26 @@
                   },
                   "text": {
                     "type": "text",
-                    "value": "${#jptr:/Article/entry/fields/shortDescription/value}"
+                    "locales": {
+                      "en-us": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "es-us": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "fr-ca": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "en-ca": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "en-gb": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "de-de": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "en-de": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "de-at": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "nl-nl": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "en-nl": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "da-dk": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "sv-se": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "nb-no": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "fr-fr": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "en-fr": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "ja-jp": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "ar-uae": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "ar-ksa": "${#jptr:/Article/entry/fields/shortDescription/value}"
+                    }
                   },
                   "color": {
                     "type": "dex-color-palette-parameter",
@@ -247,7 +323,26 @@
             },
             "displayName": {
               "type": "text",
-              "value": "Content"
+              "locales": {
+                "en-us": "Content",
+                "es-us": "Contenido",
+                "fr-ca": "Contenu",
+                "en-ca": "Content",
+                "en-gb": "Content",
+                "de-de": "Inhalt",
+                "en-de": "Inhalt",
+                "de-at": "Inhalt",
+                "nl-nl": "Inhoud",
+                "en-nl": "Inhoud",
+                "da-dk": "Indhold",
+                "sv-se": "Innehåll",
+                "nb-no": "Innhold",
+                "fr-fr": "Contenu",
+                "en-fr": "Contenu",
+                "ja-jp": "コンテンツ",
+                "ar-uae": "المحتوى",
+                "ar-ksa": "المحتوى"
+              }
             },
             "fluidContent": {
               "type": "checkbox",
@@ -1183,7 +1278,26 @@
             },
             "text": {
               "type": "text",
-              "value": "READ"
+              "locales": {
+                "en-us": "READ",
+                "es-us": "LEER",
+                "fr-ca": "LIRE",
+                "en-ca": "READ",
+                "en-gb": "READ",
+                "de-de": "LESEN",
+                "en-de": "LESEN",
+                "de-at": "LESEN",
+                "nl-nl": "LEES",
+                "en-nl": "LEES",
+                "da-dk": "LÆS",
+                "sv-se": "LÄS",
+                "nb-no": "LESE",
+                "fr-fr": "LIRE",
+                "en-fr": "LIRE",
+                "ja-jp": "読む",
+                "ar-uae": "اقرأ",
+                "ar-ksa": "اقرأ"
+              }
             },
             "textSize": {
               "type": "dex-segmented-control-parameter",

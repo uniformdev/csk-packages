@@ -34,7 +34,26 @@
       },
       "displayName": {
         "type": "text",
-        "value": "Two Column Flex Container"
+        "locales": {
+          "en-us": "Two Column Flex Container",
+          "es-us": "Contenedor Flex de Dos Columnas",
+          "fr-ca": "Conteneur flexible à deux colonnes",
+          "en-ca": "Two Column Flex Container",
+          "en-gb": "Two Column Flex Container",
+          "de-de": "Zwei-Spalten-Flex-Container",
+          "en-de": "Zwei-Spalten-Flex-Container",
+          "de-at": "Zwei-Spalten-Flex-Container",
+          "nl-nl": "Twee Kolom Flex Container",
+          "en-nl": "Twee Kolom Flex Container",
+          "da-dk": "To kolonne fleksbeholder",
+          "sv-se": "Tvåkolumners flexbehållare",
+          "nb-no": "To kolonne fleksbeholder",
+          "fr-fr": "Conteneur flexible à deux colonnes",
+          "en-fr": "Conteneur flexible à deux colonnes",
+          "ja-jp": "2カラムフレックスコンテナ",
+          "ar-uae": "حاوية مرنة بعمودين",
+          "ar-ksa": "حاوية مرنة بعمودين"
+        }
       },
       "justifyContent": {
         "type": "dex-segmented-control-parameter",
@@ -60,11 +79,32 @@
                 "parameters": {
                   "max": {
                     "type": "text",
-                    "value": 1
+                    "locales": {
+                      "en-us": 1
+                    }
                   },
                   "name": {
                     "type": "text",
-                    "value": "Media"
+                    "locales": {
+                      "en-us": "Media",
+                      "es-us": "Medios",
+                      "fr-ca": "Médias",
+                      "en-ca": "Media",
+                      "en-gb": "Media",
+                      "de-de": "Medien",
+                      "en-de": "Medien",
+                      "de-at": "Medien",
+                      "nl-nl": "Media",
+                      "en-nl": "Media",
+                      "da-dk": "Medier",
+                      "sv-se": "Media",
+                      "nb-no": "Media",
+                      "fr-fr": "Médias",
+                      "en-fr": "Médias",
+                      "ja-jp": "メディア",
+                      "ar-uae": "وسائل الإعلام",
+                      "ar-ksa": "وسائل الإعلام"
+                    }
                   },
                   "specific": {
                     "type": "array",
@@ -75,7 +115,26 @@
                   },
                   "groupType": {
                     "type": "text",
-                    "value": "specific"
+                    "locales": {
+                      "en-us": "specific",
+                      "es-us": "específico",
+                      "fr-ca": "spécifique",
+                      "en-ca": "specific",
+                      "en-gb": "specific",
+                      "de-de": "spezifisch",
+                      "en-de": "spezifisch",
+                      "de-at": "spezifisch",
+                      "nl-nl": "specifiek",
+                      "en-nl": "specifiek",
+                      "da-dk": "specifik",
+                      "sv-se": "specifik",
+                      "nb-no": "spesifikk",
+                      "fr-fr": "spécifique",
+                      "en-fr": "spécifique",
+                      "ja-jp": "特定",
+                      "ar-uae": "محدد",
+                      "ar-ksa": "محدد"
+                    }
                   }
                 },
                 "_overridability": {
@@ -104,7 +163,26 @@
             },
             "displayName": {
               "type": "text",
-              "value": "Left Col"
+              "locales": {
+                "en-us": "Left Col",
+                "es-us": "Columna Izquierda",
+                "fr-ca": "Colonne de gauche",
+                "en-ca": "Left Column",
+                "en-gb": "Left Column",
+                "de-de": "Linke Spalte",
+                "en-de": "Linke Spalte",
+                "de-at": "Linke Spalte",
+                "nl-nl": "Linker kolom",
+                "en-nl": "Linker kolom",
+                "da-dk": "Venstre kolonne",
+                "sv-se": "Vänster kolumn",
+                "nb-no": "Venstre kolonne",
+                "fr-fr": "Colonne de gauche",
+                "en-fr": "Colonne de gauche",
+                "ja-jp": "左列",
+                "ar-uae": "العمود الأيسر",
+                "ar-ksa": "العمود الأيسر"
+              }
             },
             "backgroundColor": {
               "type": "dex-color-palette-parameter",
@@ -134,7 +212,26 @@
                       "parameters": {
                         "name": {
                           "type": "text",
-                          "value": "Content Column"
+                          "locales": {
+                            "en-us": "Content Column",
+                            "es-us": "Columna de Contenido",
+                            "fr-ca": "Colonne de contenu",
+                            "en-ca": "Content Column",
+                            "en-gb": "Content Column",
+                            "de-de": "Inhaltsspalte",
+                            "en-de": "Inhaltsspalte",
+                            "de-at": "Inhaltsspalte",
+                            "nl-nl": "Inhoud Kolom",
+                            "en-nl": "Inhoudskolom",
+                            "da-dk": "Indholdssøjle",
+                            "sv-se": "Innehållskolumn",
+                            "nb-no": "Innholdskolonne",
+                            "fr-fr": "Colonne de contenu",
+                            "en-fr": "Colonne de contenu",
+                            "ja-jp": "コンテンツ列",
+                            "ar-uae": "عمود المحتوى",
+                            "ar-ksa": "عمود المحتوى"
+                          }
                         },
                         "specific": {
                           "type": "array",
@@ -150,7 +247,26 @@
                         },
                         "groupType": {
                           "type": "text",
-                          "value": "specific"
+                          "locales": {
+                            "en-us": "specific",
+                            "es-us": "específico",
+                            "fr-ca": "spécifique",
+                            "en-ca": "specific",
+                            "en-gb": "specific",
+                            "de-de": "spezifisch",
+                            "en-de": "spezifisch",
+                            "de-at": "spezifisch",
+                            "nl-nl": "specifiek",
+                            "en-nl": "specifiek",
+                            "da-dk": "specifik",
+                            "sv-se": "specifik",
+                            "nb-no": "spesifikk",
+                            "fr-fr": "spécifique",
+                            "en-fr": "spécifique",
+                            "ja-jp": "特定の",
+                            "ar-uae": "محدد",
+                            "ar-ksa": "محدد"
+                          }
                         }
                       },
                       "_overridability": {
@@ -191,7 +307,26 @@
                   },
                   "displayName": {
                     "type": "text",
-                    "value": "Flex"
+                    "locales": {
+                      "en-us": "Flex",
+                      "es-us": "Flexionar",
+                      "fr-ca": "Flexibilité",
+                      "en-ca": "Flex",
+                      "en-gb": "Flex",
+                      "de-de": "Flex",
+                      "en-de": "Flex",
+                      "de-at": "Flex",
+                      "nl-nl": "Flexibiliteit",
+                      "en-nl": "Flex",
+                      "da-dk": "Fleks",
+                      "sv-se": "Flex",
+                      "nb-no": "Fleksibilitet",
+                      "fr-fr": "Flex",
+                      "en-fr": "Flex",
+                      "ja-jp": "フレックス",
+                      "ar-uae": "فليكس",
+                      "ar-ksa": "فليكس"
+                    }
                   },
                   "justifyContent": {
                     "type": "dex-segmented-control-parameter",
@@ -233,7 +368,26 @@
             },
             "displayName": {
               "type": "text",
-              "value": "Right Col"
+              "locales": {
+                "en-us": "Right Col",
+                "es-us": "Columna Derecha",
+                "fr-ca": "Colonne de droite",
+                "en-ca": "Right Column",
+                "en-gb": "Right Column",
+                "de-de": "Rechte Spalte",
+                "en-de": "Rechte Spalte",
+                "de-at": "Rechte Spalte",
+                "nl-nl": "Rechterkolom",
+                "en-nl": "Rechterkolom",
+                "da-dk": "Højre kolonne",
+                "sv-se": "Höger kolumn",
+                "nb-no": "Høyre kolonne",
+                "fr-fr": "Colonne de droite",
+                "en-fr": "Colonne de droite",
+                "ja-jp": "右列",
+                "ar-uae": "العمود الأيمن",
+                "ar-ksa": "العمود الأيمن"
+              }
             },
             "backgroundColor": {
               "type": "dex-color-palette-parameter",

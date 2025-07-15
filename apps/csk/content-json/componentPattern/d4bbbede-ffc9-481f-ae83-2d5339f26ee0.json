@@ -19,7 +19,26 @@
       },
       "displayName": {
         "type": "text",
-        "value": "Article Card | ${#jptr:/Article/entry/_name}"
+        "locales": {
+          "en-us": "Article Card | ${#jptr:/Article/entry/_name}",
+          "es-us": "Article Card | ${#jptr:/Article/entry/_name}",
+          "fr-ca": "Article Card | ${#jptr:/Article/entry/_name}",
+          "en-ca": "Article Card | ${#jptr:/Article/entry/_name}",
+          "en-gb": "Article Card | ${#jptr:/Article/entry/_name}",
+          "de-de": "Article Card | ${#jptr:/Article/entry/_name}",
+          "en-de": "Article Card | ${#jptr:/Article/entry/_name}",
+          "de-at": "Article Card | ${#jptr:/Article/entry/_name}",
+          "nl-nl": "Article Card | ${#jptr:/Article/entry/_name}",
+          "en-nl": "Article Card | ${#jptr:/Article/entry/_name}",
+          "da-dk": "Article Card | ${#jptr:/Article/entry/_name}",
+          "sv-se": "Article Card | ${#jptr:/Article/entry/_name}",
+          "nb-no": "Article Card | ${#jptr:/Article/entry/_name}",
+          "fr-fr": "Article Card | ${#jptr:/Article/entry/_name}",
+          "en-fr": "Article Card | ${#jptr:/Article/entry/_name}",
+          "ja-jp": "Article Card | ${#jptr:/Article/entry/_name}",
+          "ar-uae": "Article Card | ${#jptr:/Article/entry/_name}",
+          "ar-ksa": "Article Card | ${#jptr:/Article/entry/_name}"
+        }
       }
     },
     "slots": {
@@ -85,7 +104,26 @@
                   },
                   "text": {
                     "type": "text",
-                    "value": "${#jptr:/Article/entry/fields/title/value}"
+                    "locales": {
+                      "en-us": "${#jptr:/Article/entry/fields/title/value}",
+                      "es-us": "${#jptr:/Article/entry/fields/title/value}",
+                      "fr-ca": "${#jptr:/Article/entry/fields/title/value}",
+                      "en-ca": "${#jptr:/Article/entry/fields/title/value}",
+                      "en-gb": "${#jptr:/Article/entry/fields/title/value}",
+                      "de-de": "${#jptr:/Article/entry/fields/title/value}",
+                      "en-de": "${#jptr:/Article/entry/fields/title/value}",
+                      "de-at": "${#jptr:/Article/entry/fields/title/value}",
+                      "nl-nl": "${#jptr:/Article/entry/fields/title/value}",
+                      "en-nl": "${#jptr:/Article/entry/fields/title/value}",
+                      "da-dk": "${#jptr:/Article/entry/fields/title/value}",
+                      "sv-se": "${#jptr:/Article/entry/fields/title/value}",
+                      "nb-no": "${#jptr:/Article/entry/fields/title/value}",
+                      "fr-fr": "${#jptr:/Article/entry/fields/title/value}",
+                      "en-fr": "${#jptr:/Article/entry/fields/title/value}",
+                      "ja-jp": "${#jptr:/Article/entry/fields/title/value}",
+                      "ar-uae": "${#jptr:/Article/entry/fields/title/value}",
+                      "ar-ksa": "${#jptr:/Article/entry/fields/title/value}"
+                    }
                   },
                   "color": {
                     "type": "dex-color-palette-parameter",
@@ -117,7 +155,26 @@
                   },
                   "text": {
                     "type": "text",
-                    "value": "${#jptr:/Article/entry/fields/shortDescription/value}"
+                    "locales": {
+                      "en-us": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "es-us": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "fr-ca": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "en-ca": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "en-gb": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "de-de": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "en-de": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "de-at": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "nl-nl": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "en-nl": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "da-dk": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "sv-se": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "nb-no": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "fr-fr": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "en-fr": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "ja-jp": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "ar-uae": "${#jptr:/Article/entry/fields/shortDescription/value}",
+                      "ar-ksa": "${#jptr:/Article/entry/fields/shortDescription/value}"
+                    }
                   },
                   "weight": {
                     "type": "dex-segmented-control-parameter",
@@ -149,7 +206,26 @@
                   },
                   "text": {
                     "type": "text",
-                    "value": "by ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}"
+                    "locales": {
+                      "en-us": "by ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}",
+                      "es-us": "by ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}",
+                      "fr-ca": "by ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}",
+                      "en-ca": "by ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}",
+                      "en-gb": "by ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}",
+                      "de-de": "by ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}",
+                      "en-de": "by ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}",
+                      "de-at": "by ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}",
+                      "nl-nl": "by ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}",
+                      "en-nl": "by ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}",
+                      "da-dk": "by ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}",
+                      "sv-se": "by ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}",
+                      "nb-no": "by ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}",
+                      "fr-fr": "by ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}",
+                      "en-fr": "by ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}",
+                      "ja-jp": "by ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}",
+                      "ar-uae": "by ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}",
+                      "ar-ksa": "by ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}"
+                    }
                   },
                   "color": {
                     "type": "dex-color-palette-parameter",
@@ -203,7 +279,26 @@
             },
             "displayName": {
               "type": "text",
-              "value": "Content"
+              "locales": {
+                "en-us": "Content",
+                "es-us": "Contenido",
+                "fr-ca": "Contenu",
+                "en-ca": "Content",
+                "en-gb": "Content",
+                "de-de": "Inhalt",
+                "en-de": "Inhalt",
+                "de-at": "Inhalt",
+                "nl-nl": "Inhoud",
+                "en-nl": "Inhoud",
+                "da-dk": "Indhold",
+                "sv-se": "Innehåll",
+                "nb-no": "Innhold",
+                "fr-fr": "Contenu",
+                "en-fr": "Contenu",
+                "ja-jp": "コンテンツ",
+                "ar-uae": "المحتوى",
+                "ar-ksa": "المحتوى"
+              }
             },
             "fluidContent": {
               "type": "checkbox",
@@ -413,7 +508,26 @@
             },
             "text": {
               "type": "text",
-              "value": "Read Article"
+              "locales": {
+                "en-us": "Read Article",
+                "es-us": "Leer artículo",
+                "fr-ca": "Lire l'article",
+                "en-ca": "Read Article",
+                "en-gb": "Read Article",
+                "de-de": "Artikel lesen",
+                "en-de": "Artikel lesen",
+                "de-at": "Artikel lesen",
+                "nl-nl": "Artikel lezen",
+                "en-nl": "Artikel Lezen",
+                "da-dk": "Læs artikel",
+                "sv-se": "Läs artikel",
+                "nb-no": "Les artikkel",
+                "fr-fr": "Lire l'article",
+                "en-fr": "Lire l'article",
+                "ja-jp": "記事を読む",
+                "ar-uae": "اقرأ المقال",
+                "ar-ksa": "اقرأ المقال"
+              }
             },
             "border": {
               "type": "dex-token-selector-parameter",

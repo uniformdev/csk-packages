@@ -33,7 +33,26 @@
       },
       "displayName": {
         "type": "text",
-        "value": "Content Spotlight"
+        "locales": {
+          "en-us": "Content Spotlight",
+          "es-us": "Destacado de Contenido",
+          "fr-ca": "Projecteur sur le contenu",
+          "en-ca": "Content Spotlight",
+          "en-gb": "Content Highlight",
+          "de-de": "Inhalt im Rampenlicht",
+          "en-de": "Inhalt im Rampenlicht",
+          "de-at": "Inhalt im Rampenlicht",
+          "nl-nl": "Inhoud in de schijnwerpers",
+          "en-nl": "Inhoud in de schijnwerpers",
+          "da-dk": "Indhold i fokus",
+          "sv-se": "Innehåll i fokus",
+          "nb-no": "Innhold i fokus",
+          "fr-fr": "Projecteur sur le contenu",
+          "en-fr": "Mise en lumière du contenu",
+          "ja-jp": "コンテンツスポットライト",
+          "ar-uae": "تسليط الضوء على المحتوى",
+          "ar-ksa": "تسليط الضوء على المحتوى"
+        }
       },
       "justifyContent": {
         "type": "dex-segmented-control-parameter",
@@ -60,7 +79,26 @@
             },
             "text": {
               "type": "text",
-              "value": "Related reading"
+              "locales": {
+                "en-us": "Related reading",
+                "es-us": "Lecturas relacionadas",
+                "fr-ca": "Lecture connexe",
+                "en-ca": "Related reading",
+                "en-gb": "Related reading",
+                "de-de": "Verwandte Lektüre",
+                "en-de": "Verwandte Lektüre",
+                "de-at": "Verwandte Lektüre",
+                "nl-nl": "Gerelateerde lectuur",
+                "en-nl": "Gerelateerde lectuur",
+                "da-dk": "Relateret læsning",
+                "sv-se": "Relaterad läsning",
+                "nb-no": "Relatert lesing",
+                "fr-fr": "Lecture connexe",
+                "en-fr": "Lecture connexe",
+                "ja-jp": "関連読書",
+                "ar-uae": "قراءة ذات صلة",
+                "ar-ksa": "قراءة ذات صلة"
+              }
             },
             "color": {
               "type": "dex-color-palette-parameter",
@@ -161,7 +199,26 @@
         "parameters": {
           "text": {
             "type": "text",
-            "value": "${#jptr:/Article List Content entries Loop Item/entry/fields/title/value}"
+            "locales": {
+              "en-us": "${#jptr:/Article List Content entries Loop Item/entry/fields/title/value}",
+              "es-us": "${#jptr:/Article List Content entries Loop Item/entry/fields/title/value}",
+              "fr-ca": "${#jptr:/Article List Content entries Loop Item/entry/fields/title/value}",
+              "en-ca": "${#jptr:/Article List Content entries Loop Item/entry/fields/title/value}",
+              "en-gb": "${#jptr:/Article List Content entries Loop Item/entry/fields/title/value}",
+              "de-de": "${#jptr:/Article List Content entries Loop Item/entry/fields/title/value}",
+              "en-de": "${#jptr:/Article List Content entries Loop Item/entry/fields/title/value}",
+              "de-at": "${#jptr:/Article List Content entries Loop Item/entry/fields/title/value}",
+              "nl-nl": "${#jptr:/Article List Content entries Loop Item/entry/fields/title/value}",
+              "en-nl": "${#jptr:/Article List Content entries Loop Item/entry/fields/title/value}",
+              "da-dk": "${#jptr:/Article List Content entries Loop Item/entry/fields/title/value}",
+              "sv-se": "${#jptr:/Article List Content entries Loop Item/entry/fields/title/value}",
+              "nb-no": "${#jptr:/Article List Content entries Loop Item/entry/fields/title/value}",
+              "fr-fr": "${#jptr:/Article List Content entries Loop Item/entry/fields/title/value}",
+              "en-fr": "${#jptr:/Article List Content entries Loop Item/entry/fields/title/value}",
+              "ja-jp": "${#jptr:/Article List Content entries Loop Item/entry/fields/title/value}",
+              "ar-uae": "${#jptr:/Article List Content entries Loop Item/entry/fields/title/value}",
+              "ar-ksa": "${#jptr:/Article List Content entries Loop Item/entry/fields/title/value}"
+            }
           }
         }
       },
@@ -169,7 +226,26 @@
         "parameters": {
           "text": {
             "type": "text",
-            "value": "${#jptr:/Article List Content entries Loop Item/entry/fields/shortDescription/value}"
+            "locales": {
+              "en-us": "${#jptr:/Article List Content entries Loop Item/entry/fields/shortDescription/value}",
+              "es-us": "${#jptr:/Article List Content entries Loop Item/entry/fields/shortDescription/value}",
+              "fr-ca": "${#jptr:/Article List Content entries Loop Item/entry/fields/shortDescription/value}",
+              "en-ca": "${#jptr:/Article List Content entries Loop Item/entry/fields/shortDescription/value}",
+              "en-gb": "${#jptr:/Article List Content entries Loop Item/entry/fields/shortDescription/value}",
+              "de-de": "${#jptr:/Article List Content entries Loop Item/entry/fields/shortDescription/value}",
+              "en-de": "${#jptr:/Article List Content entries Loop Item/entry/fields/shortDescription/value}",
+              "de-at": "${#jptr:/Article List Content entries Loop Item/entry/fields/shortDescription/value}",
+              "nl-nl": "${#jptr:/Article List Content entries Loop Item/entry/fields/shortDescription/value}",
+              "en-nl": "${#jptr:/Article List Content entries Loop Item/entry/fields/shortDescription/value}",
+              "da-dk": "${#jptr:/Article List Content entries Loop Item/entry/fields/shortDescription/value}",
+              "sv-se": "${#jptr:/Article List Content entries Loop Item/entry/fields/shortDescription/value}",
+              "nb-no": "${#jptr:/Article List Content entries Loop Item/entry/fields/shortDescription/value}",
+              "fr-fr": "${#jptr:/Article List Content entries Loop Item/entry/fields/shortDescription/value}",
+              "en-fr": "${#jptr:/Article List Content entries Loop Item/entry/fields/shortDescription/value}",
+              "ja-jp": "${#jptr:/Article List Content entries Loop Item/entry/fields/shortDescription/value}",
+              "ar-uae": "${#jptr:/Article List Content entries Loop Item/entry/fields/shortDescription/value}",
+              "ar-ksa": "${#jptr:/Article List Content entries Loop Item/entry/fields/shortDescription/value}"
+            }
           }
         }
       },

@@ -32,7 +32,8 @@
     "uniform:push": "run-s push:dex push:content",
     "uniform:publish": "uniform context manifest publish",
     "recipes": "csk-recipes init",
-    "translate": "tsx ./src/scripts/translate.ts"
+    "translate": "tsx ./src/scripts/translate.ts",
+    "translate-composiitons": "tsx ./src/scripts/translate-compositions.ts"
   },
   "dependencies": {
     "@next/third-parties": "^15.3.2",
