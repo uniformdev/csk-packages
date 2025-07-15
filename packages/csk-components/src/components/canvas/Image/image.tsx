@@ -25,7 +25,7 @@ export const Image: FC<ImageProps> = async ({
     const isEditorPreviewMode = context.previewMode === 'editor' && context.isContextualEditing;
     const isPlaceholder = component?._id?.includes('placeholder_');
 
-    if (!isEditorPreviewMode || isPlaceholder || !component.variant) {
+    if (!isEditorPreviewMode || isPlaceholder) {
       return null;
     }
 
