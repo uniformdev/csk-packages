@@ -31,7 +31,7 @@ parameters:
         - imageObjectFit
         - imageWidth
         - imageHeight
-        - fill
+        - imageFill
         - imageUnoptimized
         - imagePriority
         - imageOverlayColor
@@ -62,7 +62,7 @@ parameters:
     name: Height
     type: number
     typeConfig: null
-  - id: fill
+  - id: imageFill
     name: Fill
     type: checkbox
     helpText: Fills the parent container
