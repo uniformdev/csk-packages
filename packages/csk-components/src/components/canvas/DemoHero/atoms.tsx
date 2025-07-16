@@ -104,7 +104,7 @@ export const BaseHeroImage: FC<BaseImageParameters & Omit<ComponentProps, 'param
     const isEditorPreviewMode = context.previewMode === 'editor' && context.isContextualEditing;
     const isPlaceholder = component?._id?.includes('placeholder_');
 
-    if (!isEditorPreviewMode || isPlaceholder) {
+    if (!isEditorPreviewMode || isPlaceholder || !component.variant) {
       return null;
     }
 
