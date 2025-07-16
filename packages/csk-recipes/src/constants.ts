@@ -25,6 +25,12 @@ export const TEMPLATES_SPECIFIC_RECIPES: Partial<{
       value: 'ai-assistant',
     },
   ],
+  'coffee-shop-localized': [
+    {
+      name: 'AI Assistant',
+      value: 'ai-assistant-localized',
+    },
+  ],
 };
 
 export const TEMPLATES = [
@@ -32,10 +38,21 @@ export const TEMPLATES = [
     name: 'Coffee Shop',
     value: 'coffee-shop',
   },
+  {
+    name: 'Coffee Shop Localized',
+    value: 'coffee-shop-localized',
+  },
 ];
 
 export const RECIPE_SPECIFIC_BRANCHES = {
   'ai-assistant': 'coffee-shop-ai',
+  'ai-assistant-localized': 'coffee-shop-ai-localized',
+};
+
+export const EXCLUDE_TEMPLATE_SPECIFIC_RECIPES: Partial<{
+  [key in Template]: string[];
+}> = {
+  'coffee-shop-localized': ['localization'],
 };
 
 export const GIT_COMMANDS = {
@@ -56,6 +73,7 @@ export const REQUIRED_ENV_VARIABLES: {
 } = {
   'uniform-insights': ['UNIFORM_INSIGHTS_ENDPOINT', 'UNIFORM_INSIGHTS_KEY'],
   'ai-assistant': ['OPENAI_API_KEY', 'DATABASE_URL'],
+  'ai-assistant-localized': ['OPENAI_API_KEY', 'DATABASE_URL'],
   localization: [],
   ga: ['GOOGLE_ANALYTICS_ID'],
   shadcn: [],
@@ -127,6 +145,7 @@ const DataSource = {
 
 export const REQUIRED_DATA_SOURCES = {
   'ai-assistant': [DataSource.UniformApp],
+  'ai-assistant-localized': [DataSource.UniformApp],
 };
 
 // Calculated based on the total number of steps and the percentage of each step depends on step complexity

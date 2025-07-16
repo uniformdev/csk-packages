@@ -1,5 +1,5 @@
 export type Template = 'baseline' | 'coffee-shop' | string;
-export type Recipe = 'localization' | 'ga' | 'uniform-insights' | 'shadcn' | 'ai-assistant';
+export type Recipe = 'localization' | 'ga' | 'uniform-insights' | 'shadcn' | 'ai-assistant' | 'ai-assistant-localized';
 
 export type EnvVariable =
   | 'UNIFORM_PROJECT_ID'
