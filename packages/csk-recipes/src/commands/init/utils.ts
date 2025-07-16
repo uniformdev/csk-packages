@@ -23,6 +23,7 @@ import {
   TEMPLATES,
   REQUIRED_UNIFORM_ENV_VARIABLES,
   PACKAGE_VERSION,
+  EXCLUDE_TEMPLATE_SPECIFIC_RECIPES,
 } from '../../constants';
 import { runCmdCommand, spawnCmdCommand } from '../../utils';
 
@@ -163,16 +164,21 @@ export const getValidRecipesFromArgs = async (recipes: Recipe[], spinner: ora.Or
  */
 export const selectRecipes = async (template?: Template): Promise<Recipe[]> => {
   const templateRecipes = template ? TEMPLATES_SPECIFIC_RECIPES[template] || [] : [];
+  const templatesToExclude = template ? EXCLUDE_TEMPLATE_SPECIFIC_RECIPES[template] || [] : [];
+
+  const allRecipes: { name: string; value: Recipe }[] = [
+    { name: 'Multi-market Localization', value: 'localization' },
+    { name: 'Google Analytics', value: 'ga' },
+    { name: 'Uniform Insights', value: 'uniform-insights' },
+    { name: 'Shadcn', value: 'shadcn' },
+    ...templateRecipes,
+  ];
+
+  const recipesToShow = allRecipes.filter(recipe => !templatesToExclude.includes(recipe.value as Recipe));
 
   const recipes = await checkbox<Recipe>({
     message: 'Would you like to add any recipes on top? (Optional):',
-    choices: [
-      { name: 'Multi-market Localization', value: 'localization' },
-      { name: 'Google Analytics', value: 'ga' },
-      { name: 'Uniform Insights', value: 'uniform-insights' },
-      { name: 'Shadcn', value: 'shadcn' },
-      ...templateRecipes,
-    ],
+    choices: recipesToShow,
   });
 
   return recipes;
