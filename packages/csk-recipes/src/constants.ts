@@ -109,6 +109,23 @@ export const RECIPE_SPECIFIC_NOTES = {
     • Header:        'X-Api-Key' — set this to your Uniform API key
     • Public ID:     'uniformApp'`,
   ],
+  'ai-assistant-localized': [
+    `🔧 Please create a Data Source with the following settings:
+    • Type:          HTTP Request
+    • Base URL:      ${process.env.UNIFORM_CLI_BASE_URL || ENV_VARIABLES_DEFAULT_VALUES.UNIFORM_CLI_BASE_URL || 'https://uniform.app'}
+    • Query Param:   'projectId' — set this to your Uniform project's ID
+    • Header:        'X-Api-Key' — set this to your Uniform API key
+    • Public ID:     'uniformApp'`,
+  ],
+};
+
+export const TEMPLATE_SPECIFIC_NOTES = {
+  'coffee-shop-localized': [
+    `🔧 Please create a Data Source with the following settings:
+    • Type:          HTTP Request
+    • Base URL:      https://coffee-shop-localized-dev.vercel.app - replace with your own domain if you have one
+    • Public ID:     'nextApi'`,
+  ],
 };
 
 export const RECIPE_ADDITIONAL_FILES: Partial<{
@@ -141,11 +158,27 @@ const DataSource = {
     },
     integrationType: 'canvas',
   },
+  NextApi: {
+    data: {
+      connectorType: 'genericrestapi',
+      baseUrl: 'https://coffee-shop-localized-dev.vercel.app',
+      displayName: 'Next API',
+      id: 'nextApi',
+      parameters: [],
+      custom: { proposedName: 'coffee-shop-localized-dev.vercel.app' },
+      variants: {},
+    },
+    integrationType: 'canvas',
+  },
 };
 
 export const REQUIRED_DATA_SOURCES = {
   'ai-assistant': [DataSource.UniformApp],
   'ai-assistant-localized': [DataSource.UniformApp],
+};
+
+export const TEMPLATE_SPECIFIC_DATA_SOURCES = {
+  'coffee-shop-localized': [DataSource.NextApi],
 };
 
 // Calculated based on the total number of steps and the percentage of each step depends on step complexity

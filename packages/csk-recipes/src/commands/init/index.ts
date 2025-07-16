@@ -29,8 +29,10 @@ import {
 } from './utils';
 import {
   RECIPE_SPECIFIC_NOTES,
+  TEMPLATE_SPECIFIC_NOTES,
   REQUEST_ENV_VARIABLES_TO_PUSH,
   REQUIRED_DATA_SOURCES,
+  TEMPLATE_SPECIFIC_DATA_SOURCES,
   SETUP_PROJECT_STEP_PERCENTAGE,
 } from '../../constants';
 import {
@@ -122,7 +124,7 @@ const init = async ({
       });
     }
 
-    const dataSourceToInstall = Array.from(
+    const recipesDataSourceToInstall = Array.from(
       new Map(
         recipes
           .flatMap(recipe => REQUIRED_DATA_SOURCES[recipe as keyof typeof RECIPE_SPECIFIC_NOTES])
@@ -130,6 +132,11 @@ const init = async ({
           .map(obj => [obj.data.id, obj])
       ).values()
     );
+
+    const templatesDataSourceToInstall =
+      TEMPLATE_SPECIFIC_DATA_SOURCES[template as keyof typeof TEMPLATE_SPECIFIC_DATA_SOURCES] || [];
+
+    const dataSourceToInstall = [...recipesDataSourceToInstall, ...templatesDataSourceToInstall];
 
     const hasDataSources = dataSourceToInstall.length > 0;
 
@@ -162,9 +169,13 @@ const init = async ({
       }
     }
 
-    const notes = recipes
+    const recipesNotes = recipes
       .flatMap(recipe => RECIPE_SPECIFIC_NOTES[recipe as keyof typeof RECIPE_SPECIFIC_NOTES] || [])
       .filter(Boolean);
+
+    const templatesNotes = TEMPLATE_SPECIFIC_NOTES[template as keyof typeof TEMPLATE_SPECIFIC_NOTES] || [];
+
+    const notes = [...recipesNotes, ...templatesNotes];
 
     const shouldShowNotes = notes.length > 0 && !isPushedToUniform;
 
