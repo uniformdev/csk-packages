@@ -1,0 +1,83 @@
+composition:
+  _name: Product Recommendation
+  _id: 19ea7368-29fc-4e61-b730-b78ee47e74de
+  type: link
+  parameters:
+    link:
+      type: link
+      value:
+        path: /${locale}/products/${#jptr:/Single Product Content/entry/_slug}
+        type: projectMapNode
+        nodeId: 702b0e0b-3858-4b5d-99e4-bdb98097ca0f
+        projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+        dynamicInputValues:
+          locale: ${locale}
+          product-slug: ${#jptr:/Single Product Content/entry/_slug}
+    displayName:
+      type: text
+      locales:
+        da-dk: ${#jptr:/Single Product Content/entry/_name}
+        de-at: ${#jptr:/Single Product Content/entry/_name}
+        de-de: ${#jptr:/Single Product Content/entry/_name}
+        en-ca: ${#jptr:/Single Product Content/entry/_name}
+        en-de: ${#jptr:/Single Product Content/entry/_name}
+        en-fr: ${#jptr:/Single Product Content/entry/_name}
+        en-gb: ${#jptr:/Single Product Content/entry/_name}
+        en-nl: ${#jptr:/Single Product Content/entry/_name}
+        en-us: ${#jptr:/Single Product Content/entry/_name}
+        es-us: ${#jptr:/Single Product Content/entry/_name}
+        fr-ca: ${#jptr:/Single Product Content/entry/_name}
+        fr-fr: ${#jptr:/Single Product Content/entry/_name}
+        ja-jp: ${#jptr:/Single Product Content/entry/_name}
+        nb-no: ${#jptr:/Single Product Content/entry/_name}
+        nl-nl: ${#jptr:/Single Product Content/entry/_name}
+        sv-se: ${#jptr:/Single Product Content/entry/_name}
+        ar-ksa: ${#jptr:/Single Product Content/entry/_name}
+        ar-uae: ${#jptr:/Single Product Content/entry/_name}
+  slots:
+    linkContent:
+      - _id: baf65f29-3f6b-460f-8206-f46f74460edd
+        type: card
+        _pattern: 665b55aa-f241-413e-8778-cff9a2f1f8aa
+  _dataResources:
+    Single Product Content:
+      type: singleProduct
+      variables:
+        locale: ${locale}
+        entryId: efc7afec-03c4-4fd4-b478-a32708f5852e
+      isPatternParameter: true
+      ignorePatternParameterDefault: true
+  _overrides:
+    baf65f29-3f6b-460f-8206-f46f74460edd:
+      parameters:
+        displayName:
+          type: text
+          locales:
+            en-us: ${#jptr:/Single Product Content/entry/_name}
+  _overridability:
+    hideLockedParameters: true
+  _locales:
+    - en-us
+    - es-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-de
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - nb-no
+    - fr-fr
+    - en-fr
+    - ja-jp
+    - ar-uae
+    - ar-ksa
+created: '2025-07-10T10:17:49.802178+00:00'
+modified: '2025-07-10T10:41:23.328229+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1731065901/csk-v-next/jd-template/product-card.jpg
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9

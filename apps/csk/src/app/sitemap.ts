@@ -1,9 +1,10 @@
 import { generateSitemap } from '@uniformdev/csk-components/utils/sitemap';
 import localesConfig from '@/i18n/locales.json';
+import { AI_ASSISTANT_CONFIGURATION_PLACEHOLDER } from '@/modules/chat/constants';
 import { ContentType } from '@/types';
 import contentClient from '@/utils/contentClient';
 
-const SKIP_SITEMAP_URLS = ['/:locale/previews'];
+const SKIP_SITEMAP_URLS = ['/:locale/previews', AI_ASSISTANT_CONFIGURATION_PLACEHOLDER];
 
 export const getAllEntrySlugs = ({
   offset = 0,

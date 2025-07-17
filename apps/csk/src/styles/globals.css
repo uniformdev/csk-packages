@@ -2,6 +2,7 @@
 
 @source '../components/**/*.{js,ts,jsx,tsx,mdx}';
 @source '../app/**/*.{js,ts,jsx,tsx,mdx}';
+@source '../modules/**/*.{js,ts,jsx,tsx,mdx}';
 /*? if (monorepo) { */
 @source '../../../../packages/csk-components/**/*.{js,ts,jsx,tsx,mdx}';
 @source '../../../../node_modules/@uniformdev/csk-components/dist/content/**/*.{js,ts,jsx,tsx,mdx}';
@@ -73,6 +74,29 @@ write('@custom-variant dark (&:is(.dark *));\n');
             transform: rotate(6deg);
         }
     }
+}
+
+.thin-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(100, 100, 100, 0.5);
+    border-radius: 10px;
+}
+
+.thin-scrollbar::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
