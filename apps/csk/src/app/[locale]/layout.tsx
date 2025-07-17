@@ -4,6 +4,8 @@ import { NextIntlClientProvider } from 'next-intl';
 import { ThemeProvider as NextThemeProvider } from 'next-themes';
 import { UniformContext } from '@uniformdev/canvas-next-rsc';
 import { customFontVariables } from '@/fonts';
+import { Chat } from '@/modules/chat';
+import { ChatProvider } from '@/modules/chat/providers/ChatProvider';
 import { CardProvider } from '@/providers/CardProvider';
 import { FavoritesProvider } from '@/providers/FavoritesProvider';
 import { getDir } from '@/utils/ localization';
@@ -22,7 +24,14 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
           <NextThemeProvider attribute="class" defaultTheme="light" enableSystem>
             <UniformContext clientContextComponent={UniformClientContext}>
               <CardProvider>
-                <FavoritesProvider>{children}</FavoritesProvider>
+                <ChatProvider>
+                  <FavoritesProvider>
+                    <div className="flex">
+                      <div className="flex-1">{children}</div>
+                      <Chat />
+                    </div>
+                  </FavoritesProvider>
+                </ChatProvider>
               </CardProvider>
             </UniformContext>
           </NextThemeProvider>

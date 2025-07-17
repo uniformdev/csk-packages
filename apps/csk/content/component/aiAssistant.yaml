@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: aiAssistant
+name: AI Assistant
+icon: ghost-character
+parameters:
+  - id: starterPrompts
+    name: Starter Prompts
+    type: $block
+    typeConfig:
+      allowedTypes:
+        - starterPrompt
+  - id: 49b789f8-b959-448a-a5ec-5248d562905d
+    name: Modal
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - modalTitle
+        - modalSubtitle
+        - inputPlaceholder
+  - id: modalTitle
+    name: Modal Title
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: modalSubtitle
+    name: Modal Subtitle
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: inputPlaceholder
+    name: Input Placeholder
+    type: text
+    typeConfig: null
+    localizable: true
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/ai-assistant.jpg
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2025-07-10T10:17:44.311592+00:00'
+updated: '2025-07-17T07:50:09.631686+00:00'
