@@ -1,62 +1,54 @@
 import { FC } from 'react';
 import { imageFrom } from '@uniformdev/assets';
-import { ComponentInstance } from '@uniformdev/canvas';
-import { CompositionContext, UniformText } from '@uniformdev/canvas-next-rsc/component';
+
+import { ComponentContext, ComponentParameter, UniformText } from '@uniformdev/canvas-next-rsc-v2/component';
 import { TextParameters } from '@/components/canvas/Text/parameters';
 import BaseButton, { ButtonVariant } from '@/components/ui/Button';
 import BaseImage from '@/components/ui/Image';
 import MediaPlaceholder from '@/components/ui/MediaPlaceholder';
 import BaseText from '@/components/ui/Text';
-import { resolveAsset } from '@/utils/assets';
+import { ReplaceFieldsWithAssets } from '@/types/cskTypes';
 import { formatUniformLink } from '@/utils/routing';
 import { BaseButtonParameters, BaseImageParameters } from '.';
 
 type ComponentProps = {
-  component: ComponentInstance;
-  context: CompositionContext;
-  parameterId: string;
+  isEditorPreviewMode?: boolean;
+  component: Pick<ComponentContext, '_id'>;
+  parameter?: ComponentParameter<string | undefined>;
+  variant?: string;
 };
 
-export const BaseHeroText: FC<TextParameters & ComponentProps> = ({
+export const BaseHeroText: FC<TextParameters & Omit<ComponentProps, 'variant'>> = ({
   component,
-  context,
-  parameterId,
+  parameter,
   text,
+  isEditorPreviewMode,
   ...props
 }) => {
-  const isEditorPreviewMode = context.previewMode === 'editor' && context.isContextualEditing;
-
   if (!text && !isEditorPreviewMode) return null;
 
   return (
     <BaseText {...props}>
       <UniformText
         placeholder="Text goes here"
-        parameterId={parameterId}
+        parameter={parameter as ComponentParameter<string>}
         as={props.tag || undefined}
         component={component}
-        context={context}
       />
     </BaseText>
   );
 };
 
-export const BaseHeroButton: FC<BaseButtonParameters & { variant?: ButtonVariant } & ComponentProps> = ({
-  component,
-  context,
-  parameterId,
-  text,
-  ...props
-}) => {
+export const BaseHeroButton: FC<
+  ReplaceFieldsWithAssets<BaseButtonParameters, 'icon'> & { variant?: ButtonVariant } & Omit<ComponentProps, 'variant'>
+> = ({ component, parameter, isEditorPreviewMode, text, ...props }) => {
   const { link, icon } = props;
   const href = formatUniformLink(link);
-
-  const isEditorPreviewMode = context.previewMode === 'editor' && context.isContextualEditing;
 
   if (!text && !href && !isEditorPreviewMode) return null;
 
   const Icon = () => {
-    const [resolvedImage] = resolveAsset(icon);
+    const [resolvedImage] = icon || [];
     const { url, title = '' } = resolvedImage || {};
     return url ? (
       <BaseImage
@@ -75,17 +67,18 @@ export const BaseHeroButton: FC<BaseButtonParameters & { variant?: ButtonVariant
     <BaseButton {...props} href={href} icon={<Icon />}>
       <UniformText
         placeholder="Button text goes here"
-        parameterId={parameterId}
+        parameter={parameter as ComponentParameter<string>}
         component={component}
-        context={context}
       />
     </BaseButton>
   );
 };
 
-export const BaseHeroImage: FC<BaseImageParameters & Omit<ComponentProps, 'parameterId'>> = ({
+export const BaseHeroImage: FC<
+  ReplaceFieldsWithAssets<BaseImageParameters, 'image'> & Omit<ComponentProps, 'parameter'>
+> = ({
   component,
-  context,
+  isEditorPreviewMode,
   image,
   objectFit,
   width,
@@ -97,14 +90,14 @@ export const BaseHeroImage: FC<BaseImageParameters & Omit<ComponentProps, 'param
   priority,
   unoptimized,
   fill,
+  variant,
 }) => {
-  const [resolvedImage] = resolveAsset(image);
+  const [resolvedImage] = image || [];
 
   if (!resolvedImage) {
-    const isEditorPreviewMode = context.previewMode === 'editor' && context.isContextualEditing;
     const isPlaceholder = component?._id?.includes('placeholder_');
 
-    if (!isEditorPreviewMode || isPlaceholder || !component.variant) {
+    if (!isEditorPreviewMode || isPlaceholder || !variant) {
       return null;
     }
 

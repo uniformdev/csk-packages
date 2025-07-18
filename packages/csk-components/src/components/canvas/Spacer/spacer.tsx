@@ -1,8 +1,9 @@
 import { FC } from 'react';
 import { cn } from '@/utils/styling';
-import { SpacerProps, SpacerVariants } from '.';
+import { withFlattenParameters } from '@/utils/withFlattenParameters';
+import { SpacerParameters, SpacerProps, SpacerVariants } from '.';
 
-export const Spacer: FC<SpacerProps> = ({ size, component: { variant } }) => {
+export const Spacer: FC<SpacerProps & SpacerParameters> = ({ size, variant }) => {
   const isHorizontal = variant === SpacerVariants.Horizontal;
 
   return (
@@ -14,3 +15,5 @@ export const Spacer: FC<SpacerProps> = ({ size, component: { variant } }) => {
     />
   );
 };
+
+export default withFlattenParameters(Spacer);

@@ -60,6 +60,7 @@ export const EXTRACT_UI_COMPONENTS = [
   'AccordionItem',
   'Button',
   'Container',
+  'ComponentEmptyPlaceholder',
   'FlexItem',
   'Grid',
   'Header',
@@ -84,6 +85,9 @@ export const EXTRACT_UI_COMPONENTS = [
 export const EXTRACT_UTILS = [
   'assets.ts',
   'createComponentResolver.ts',
+  'withFlattenParameters.tsx',
+  'withSlotsDataValue.tsx',
+  'getSlotComponents.ts',
   'createEmptyPlaceholderResolver.tsx',
   'routing.ts',
   'styling.ts',

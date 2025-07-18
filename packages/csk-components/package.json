@@ -32,6 +32,18 @@
       "types": "./dist/utils/createComponentResolver.d.mts",
       "default": "./dist/utils/createComponentResolver.mjs"
     },
+    "./utils/getSlotComponents": {
+      "types": "./dist/utils/getSlotComponents.d.mts",
+      "default": "./dist/utils/getSlotComponents.mjs"
+    },
+    "./utils/withSlotsDataValue": {
+      "types": "./dist/utils/withSlotsDataValue.d.mts",
+      "default": "./dist/utils/withSlotsDataValue.mjs"
+    },
+    "./utils/withFlattenParameters": {
+      "types": "./dist/utils/withFlattenParameters.d.mts",
+      "default": "./dist/utils/withFlattenParameters.mjs"
+    },
     "./components/ui": {
       "types": "./dist/components/ui/index.d.mts",
       "default": "./dist/components/ui/index.mjs"
@@ -77,9 +89,11 @@
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
-    "@uniformdev/assets": "^20.25.0",
-    "@uniformdev/canvas": "^20.25.0",
-    "@uniformdev/canvas-next-rsc": "^20.25.0",
+    "@uniformdev/assets": "20.7.1-alpha.63",
+    "@uniformdev/canvas": "20.7.1-alpha.63",
+    "@uniformdev/canvas-next-rsc-client-v2": "20.7.1-alpha.63",
+    "@uniformdev/canvas-next-rsc-shared-v2": "20.7.1-alpha.63",
+    "@uniformdev/canvas-next-rsc-v2": "20.7.1-alpha.63",
     "next": "^15.3.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -88,9 +102,11 @@
     "tsx": "^4.19.2"
   },
   "peerDependencies": {
-    "@uniformdev/assets": ">=20",
-    "@uniformdev/canvas": ">=20",
-    "@uniformdev/canvas-next-rsc": ">=20",
+    "@uniformdev/assets": "20.7.1-alpha.63",
+    "@uniformdev/canvas": "20.7.1-alpha.63",
+    "@uniformdev/canvas-next-rsc-client-v2": "20.7.1-alpha.63",
+    "@uniformdev/canvas-next-rsc-shared-v2": "20.7.1-alpha.63",
+    "@uniformdev/canvas-next-rsc-v2": "20.7.1-alpha.63",
     "next": ">=15",
     "react": ">=19",
     "react-dom": ">=19",

@@ -1,9 +1,12 @@
 import { FC } from 'react';
-import { UniformText } from '@uniformdev/canvas-next-rsc/component';
-import { TableHeaderCellProps } from '.';
+import { ComponentParameter, UniformText } from '@uniformdev/canvas-next-rsc-v2/component';
+import { withFlattenParameters } from '@/utils/withFlattenParameters';
+import { TableHeaderCellParameters, TableHeaderCellProps } from '.';
 
-export const TableHeaderCell: FC<TableHeaderCellProps> = ({ component, context }) => (
+const TableHeaderCell: FC<TableHeaderCellProps & TableHeaderCellParameters> = ({ parameters, component }) => (
   <th>
-    <UniformText component={component} context={context} parameterId="value" placeholder="Value" />
+    <UniformText component={component} parameter={parameters.value as ComponentParameter<string>} placeholder="Value" />
   </th>
 );
+
+export default withFlattenParameters(TableHeaderCell);

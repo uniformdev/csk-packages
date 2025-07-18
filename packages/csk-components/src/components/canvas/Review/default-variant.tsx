@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react';
 import Container from '@/components/ui/Container';
 import Rating from '@/components/ui/Rating';
-import { ReviewProps } from '.';
+import { ReviewParameters, ReviewProps } from '.';
 
 type DefaultVariantProps = ReviewProps & {
   ReviewImage: ReactNode;
@@ -9,7 +9,7 @@ type DefaultVariantProps = ReviewProps & {
   ReviewContent: ReactNode;
 };
 
-export const DefaultVariant: FC<DefaultVariantProps> = ({
+export const DefaultVariant: FC<DefaultVariantProps & ReviewParameters> = ({
   stars,
   starsColor,
   activeStarsColor,

@@ -1,12 +1,11 @@
 import { AssetParamValue } from '@uniformdev/assets';
 import { LinkParamValue } from '@uniformdev/canvas';
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { ContainerParameters } from '@/components/canvas/Container/parameters';
 import { TextParameters } from '@/components/canvas/Text/parameters';
 import { ButtonVariant, ButtonProps as BaseButtonProps } from '@/components/ui/Button';
-import { ViewPort } from '@/types/cskTypes';
-import { FixedHero } from './fixed-hero';
-import { FlexibleHero } from './flexible-hero';
+import { ViewPort, ComponentProps } from '@/types/cskTypes';
+import FixedHero from './fixed-hero';
+import FlexibleHero from './flexible-hero';
 import { PrefixedKeys } from './utils';
 
 export enum ContentAlignment {

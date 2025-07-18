@@ -1,12 +1,9 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { AssetParamValue } from '@uniformdev/assets';
+import { AssetParamValue, AssetParamValueItem } from '@uniformdev/assets';
 import { flattenValues } from '@uniformdev/canvas';
-import { PageParameters } from '@uniformdev/canvas-next-rsc';
-import { resolveAsset } from '@uniformdev/csk-components/utils/assets';
-import { isRouteWithoutErrors } from '@uniformdev/csk-components/utils/routing';
-import locales from '@/i18n/locales.json';
-import retrieveRoute from '@/utils/retrieveRoute';
+import { resolveRouteFromCode, UniformPageParameters } from '@uniformdev/canvas-next-rsc-v2';
+import { ResolvedAssetFromItem } from '@uniformdev/csk-components/types/cskTypes';
 
 type UniformMetadataParameters = {
   pageTitle: string;
@@ -36,18 +33,29 @@ type UniformMetadataParameters = {
 };
 
 /**
+ * Resolves a list of assets, filtering out any entries without a valid URL.
+ *
+ * @param {AssetParamValue | undefined} image - The list of assets to resolve.
+ * @returns {ResolvedAsset[]} - An array of resolved assets with valid URLs.
+ */
+export const resolveAsset = (image?: AssetParamValue): ResolvedAssetFromItem<AssetParamValueItem>[] =>
+  (flattenValues(image as never) || []).filter(({ url }) => Boolean(url));
+
+/**
  * Generates metadata for a page using Uniform parameters and assets.
  *
  * @param {PageParameters} props - The parameters for the page, including routing and locale data.
  * @returns {Promise<Metadata>} - The metadata object compatible with Next.js.
  * @throws Will throw an error if the route contains issues or cannot be found.
  */
-export async function generateMetadata(props: PageParameters): Promise<Metadata> {
-  // Retrieve the route for the current page and locale
-  const route = await retrieveRoute(props, locales.defaultLocale);
+export async function generateMetadata(props: UniformPageParameters): Promise<Metadata> {
+  const result = await resolveRouteFromCode(props);
 
-  // Handle cases where the route contains errors or is not found
-  if (!isRouteWithoutErrors(route)) return notFound();
+  if (!result.route) {
+    notFound();
+  }
+
+  const { route } = result;
 
   const {
     compositionApiResponse: { composition },

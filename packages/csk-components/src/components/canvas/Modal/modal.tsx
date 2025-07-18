@@ -1,14 +1,13 @@
 'use client';
 
 import { FC } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
+import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
 import BaseModal from '@/components/ui/Modal';
-import { ModalProps } from '.';
+import { withFlattenParameters } from '@/utils/withFlattenParameters';
+import { ModalParameters, ModalProps } from '.';
 
-export const Modal: FC<ModalProps> = ({
+const Modal: FC<ModalProps & ModalParameters> = ({
   slots,
-  component,
-  context,
   maxWidth,
   backgroundColor,
   closeIconColor,
@@ -16,10 +15,10 @@ export const Modal: FC<ModalProps> = ({
 }) => (
   <BaseModal
     {...{ maxWidth, backgroundColor, closeIconColor, disableCloseModalOnClickOutside }}
-    trigger={<UniformSlot data={component} context={context} slot={slots.trigger} />}
-    content={<UniformSlot data={component} context={context} slot={slots.modalContent} />}
-    actions={
-      slots?.modalActions?.items?.length && <UniformSlot data={component} context={context} slot={slots.modalActions} />
-    }
+    trigger={<UniformSlot slot={slots.trigger} />}
+    content={<UniformSlot slot={slots.modalContent} />}
+    actions={slots?.modalActions?.items?.length && <UniformSlot slot={slots.modalActions} />}
   />
 );
+
+export default withFlattenParameters(Modal);

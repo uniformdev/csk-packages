@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
+import { ComponentProps } from '@/types/cskTypes';
 
 export const MaxWidthMap = {
   small: 'max-w-xl',
@@ -22,5 +22,5 @@ export enum ModalSlots {
 
 export type ModalProps = ComponentProps<ModalParameters, ModalSlots>;
 
-export default dynamic(() => import('./modal').then(mod => mod.Modal));
+export default dynamic(() => import('./modal').then(mod => mod.default));
 export { ModalEmptyPlaceholder } from './empty-placeholder';

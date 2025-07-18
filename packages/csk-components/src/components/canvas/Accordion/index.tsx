@@ -1,5 +1,5 @@
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { ContainerParameters } from '@/components/canvas/Container/parameters';
+import { ComponentProps } from '@/types/cskTypes';
 
 export type AccordionParameters = ContainerParameters;
 
@@ -10,5 +10,5 @@ export enum AccordionSlots {
 
 export type AccordionProps = ComponentProps<AccordionParameters, AccordionSlots>;
 
-export { Accordion as default } from './accordion';
+export { default } from './accordion';
 export { AccordionEmptyPlaceholder } from './empty-placeholder';

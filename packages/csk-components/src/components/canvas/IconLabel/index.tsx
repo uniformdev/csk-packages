@@ -1,7 +1,6 @@
 import { AssetParamValue } from '@uniformdev/assets';
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { TextParameters } from '@/components/canvas/Text/parameters';
-import { IconLabel } from './icon-label';
+import { ComponentProps } from '@/types/cskTypes';
 
 export type IconLabelParameters = TextParameters & {
   icon?: AssetParamValue;
@@ -9,4 +8,4 @@ export type IconLabelParameters = TextParameters & {
 
 export type IconLabelProps = ComponentProps<IconLabelParameters>;
 
-export default IconLabel;
+export { default } from './icon-label';

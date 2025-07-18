@@ -1,6 +1,5 @@
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { RichTextNode } from '@uniformdev/richtext';
-import { RichText } from './rich-text';
+import { ComponentProps } from '@/types/cskTypes';
 
 export type RichTextAdditionalProps = {
   className?: string;
@@ -10,9 +9,8 @@ export type RichTextParameters = {
   text?: RichTextNode;
   color?: string;
   font?: string;
-  lineCountRestrictions: string;
+  lineCountRestrictions?: string;
 };
 
-export type RichTextProps = ComponentProps<RichTextParameters & RichTextAdditionalProps>;
-
-export default RichText;
+export { default } from './rich-text';
+export type RichTextProps = ComponentProps<RichTextParameters> & RichTextAdditionalProps;

@@ -1,11 +1,11 @@
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { ContainerParameters } from '@/components/canvas/Container/parameters';
+import { ComponentProps } from '@/types/cskTypes';
 
 export type ReviewParameters = ContainerParameters & {
-  stars: number;
-  starsColor: string;
-  activeStarsColor: string;
-  showRatingLabel: boolean;
+  stars?: number;
+  starsColor?: string;
+  activeStarsColor?: string;
+  showRatingLabel?: boolean;
 };
 
 export enum ReviewVariants {
@@ -20,5 +20,5 @@ export enum ReviewSlots {
 
 export type ReviewProps = ComponentProps<ReviewParameters, ReviewSlots>;
 
-export { Review as default } from './review';
+export { default } from './review';
 export { ReviewEmptyPlaceholder } from './empty-placeholder';

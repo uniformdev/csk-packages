@@ -1,25 +1,21 @@
 import { FC } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
+import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
 import Grid from '@/components/ui/Grid';
 import GridItem from '@/components/ui/GridItem';
 import { cn, resolveViewPort } from '@/utils/styling';
-import { NavigationFlyoutProps } from '.';
+import { NavigationFlyoutProps, NavigationFlyoutParameters } from '.';
 
-type NavigationFlyoutPropsDesktopContentProps = Pick<
-  NavigationFlyoutProps,
-  'backgroundColor' | 'border' | 'context' | 'slots' | 'component'
-> & {
-  isOpen: boolean;
-  hasRightContent: boolean;
-};
+type NavigationFlyoutPropsDesktopContentProps = Pick<NavigationFlyoutProps, 'context' | 'slots' | 'component'> &
+  Pick<NavigationFlyoutParameters, 'backgroundColor' | 'border'> & {
+    isOpen: boolean;
+    hasRightContent: boolean;
+  };
 
 export const NavigationFlyoutPropsDesktopContent: FC<NavigationFlyoutPropsDesktopContentProps> = ({
   isOpen,
   backgroundColor,
-  context,
   slots,
   border,
-  component,
   hasRightContent,
 }) => (
   <div
@@ -39,11 +35,11 @@ export const NavigationFlyoutPropsDesktopContent: FC<NavigationFlyoutPropsDeskto
       <Grid columnsCount="2" gapX="4">
         <GridItem>
           <div className="flex flex-col gap-y-4">
-            <UniformSlot context={context} data={component} slot={slots.navigationFlyoutLeftContent} />
+            <UniformSlot slot={slots.navigationFlyoutLeftContent} />
           </div>
         </GridItem>
         <GridItem>
-          <UniformSlot context={context} data={component} slot={slots.navigationFlyoutRightContent} />
+          <UniformSlot slot={slots.navigationFlyoutRightContent} />
         </GridItem>
       </Grid>
     </div>

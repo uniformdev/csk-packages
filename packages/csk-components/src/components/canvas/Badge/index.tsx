@@ -1,5 +1,4 @@
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
-import { Badge } from './badge';
+import { ComponentProps } from '@/types/cskTypes';
 
 export type BadgeParameters = {
   text?: string;
@@ -13,4 +12,4 @@ export type BadgeParameters = {
 
 export type BadgeProps = ComponentProps<BadgeParameters>;
 
-export default Badge;
+export { default } from './badge';

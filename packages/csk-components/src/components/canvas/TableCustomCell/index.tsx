@@ -1,4 +1,4 @@
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
+import { ComponentProps } from '@/types/cskTypes';
 
 export const AlignmentMap = {
   left: 'ml-0',
@@ -16,4 +16,4 @@ export enum TableCustomCellSlots {
 
 export type TableCustomCellProps = ComponentProps<TableCustomCellParameters, TableCustomCellSlots>;
 
-export { TableCustomCell as default } from './table-custom-cell';
+export { default } from './table-custom-cell';
