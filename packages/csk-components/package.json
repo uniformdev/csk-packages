@@ -1,6 +1,6 @@
 {
   "name": "@uniformdev/csk-components",
-  "version": "6.0.121",
+  "version": "6.0.122",
   "description": "Components Starter Kit that provides a set of basic components for building websites within a Uniform project",
   "license": "SEE LICENSE IN LICENSE.txt",
   "engines": {
@@ -31,6 +31,10 @@
     "./utils/createComponentResolver": {
       "types": "./dist/utils/createComponentResolver.d.mts",
       "default": "./dist/utils/createComponentResolver.mjs"
+    },
+    "./utils/sitemap": {
+      "types": "./dist/utils/sitemap.d.mts",
+      "default": "./dist/utils/sitemap.mjs"
     },
     "./components/ui": {
       "types": "./dist/components/ui/index.d.mts",
