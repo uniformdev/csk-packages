@@ -26,7 +26,7 @@ const cartesianProduct = (arrays: string[][]): string[][] =>
  * @returns An array of fully substituted static paths.
  */
 const generatePaths = (dynamicValues: Record<string, string | string[]>, pathTemplate: string): string[] => {
-  const paramMatches = [...pathTemplate.matchAll(/:([a-zA-Z0-9_]+)/g)];
+  const paramMatches = [...pathTemplate.matchAll(/:([^/]+)/g)];
 
   if (paramMatches.length === 0) return [pathTemplate];
 
