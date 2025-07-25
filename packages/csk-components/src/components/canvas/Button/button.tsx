@@ -1,12 +1,13 @@
 import { FC, useMemo } from 'react';
-import { UniformText } from '@uniformdev/canvas-next-rsc/component';
+import { ComponentParameter, UniformText } from '@uniformdev/canvas-next-rsc-v2/component';
 import BaseButton, { ButtonProps as BaseButtonProps } from '@/components/ui/Button';
 import BaseImage from '@/components/ui/Image';
-import { resolveAsset } from '@/utils/assets';
+import { ReplaceFieldsWithAssets } from '@/types/cskTypes';
 import { formatUniformLink } from '@/utils/routing';
-import { ButtonProps } from '.';
+import { withFlattenParameters } from '@/utils/withFlattenParameters';
+import { ButtonParameters, ButtonProps } from '.';
 
-export const Button: FC<ButtonProps> = ({
+const Button: FC<ButtonProps & ReplaceFieldsWithAssets<ButtonParameters, 'icon'>> = ({
   component,
   context,
   link,
@@ -25,13 +26,13 @@ export const Button: FC<ButtonProps> = ({
   className,
   onClick,
   text,
+  variant,
+  parameters,
 }) => {
   const href = formatUniformLink(link);
 
-  const isEditorPreviewMode = context.previewMode === 'editor' && context?.isContextualEditing;
-
   const iconParameters = useMemo(() => {
-    const [resolvedImage] = resolveAsset(icon);
+    const [resolvedImage] = icon || [];
     const { url, title = '' } = resolvedImage || {};
     if (!url) return undefined;
 
@@ -62,18 +63,18 @@ export const Button: FC<ButtonProps> = ({
 
   const hasContent = !!text || !!iconParameters;
 
-  if (!hasContent && !isEditorPreviewMode) return null;
+  if (!hasContent && !context.isContextualEditing) return null;
 
   return (
     <BaseButton
-      variant={component.variant as BaseButtonProps['variant']}
+      variant={variant as BaseButtonProps['variant']}
       href={href}
       border={border}
       size={size}
       onClick={onClick}
       className={className}
       textSize={textSize}
-      isActive={context.matchedRoute === href}
+      isActive={context.pageState.routePath === href}
       textColor={textColor}
       textFont={textFont}
       textWeight={textWeight}
@@ -84,7 +85,13 @@ export const Button: FC<ButtonProps> = ({
       icon={<Icon />}
       iconPosition={iconPosition}
     >
-      <UniformText placeholder="Button text goes here" parameterId="text" component={component} context={context} />
+      <UniformText
+        placeholder="Button text goes here"
+        parameter={parameters.text as ComponentParameter<string>}
+        component={component}
+      />
     </BaseButton>
   );
 };
+
+export default withFlattenParameters(Button);

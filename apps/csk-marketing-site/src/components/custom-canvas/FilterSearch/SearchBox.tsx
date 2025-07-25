@@ -3,7 +3,8 @@
 import { ChangeEvent, FC, SVGProps, useCallback, useEffect, useState } from 'react';
 import classNames from 'classnames';
 import { useDebouncedCallback } from 'use-debounce';
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
+import { ComponentProps } from '@uniformdev/csk-components/types/cskTypes';
+import { withFlattenParameters } from '@uniformdev/csk-components/utils/withFlattenParameters';
 import { useUniformSearchFilterEngineContext } from './ComponentsSearchProvider';
 
 const IconSearch: FC<SVGProps<SVGSVGElement>> = props => (
@@ -38,7 +39,7 @@ type SearchBoxParameters = {
 
 type SearchBoxProps = ComponentProps<SearchBoxParameters>;
 
-const SearchBox: FC<ComponentProps<SearchBoxProps>> = ({ placeholder, searchDelay = DEFAULT_SEARCH_DELAY }) => {
+const SearchBox: FC<SearchBoxProps & SearchBoxParameters> = ({ placeholder, searchDelay = DEFAULT_SEARCH_DELAY }) => {
   const { search, setSearch, isLoading } = useUniformSearchFilterEngineContext();
   const [inputValue, setInputValue] = useState(search);
 
@@ -81,4 +82,4 @@ const SearchBox: FC<ComponentProps<SearchBoxProps>> = ({ placeholder, searchDela
   );
 };
 
-export default SearchBox;
+export default withFlattenParameters(SearchBox);

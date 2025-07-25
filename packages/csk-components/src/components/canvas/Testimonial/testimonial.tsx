@@ -1,34 +1,30 @@
 import { FC } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
-import { TestimonialVariants, TestimonialProps } from '.';
+import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
+import { withFlattenParameters } from '@/utils/withFlattenParameters';
+import { TestimonialVariants, TestimonialProps, TestimonialParameters } from '.';
 import { DefaultVariant } from './default-variant';
 import { WithLargeAvatarVariant } from './with-large-avatar-variant';
 import { WithOverlappingImageVariant } from './with-overlapping-image-variant';
 
-export const Testimonial: FC<TestimonialProps> = ({
-  context,
-  component,
+const Testimonial: FC<TestimonialProps & TestimonialParameters> = ({
   slots,
   backgroundColor,
   spacing,
   border,
   fluidContent,
   height,
+  variant,
 }) => {
-  const variant = component.variant as TestimonialVariants | undefined;
-
   const variantProps = {
     backgroundColor,
     spacing,
     border,
     fluidContent,
     height,
-    testimonialPrimaryImage: <UniformSlot context={context} data={component} slot={slots.testimonialPrimaryImage} />,
-    testimonialContent: <UniformSlot context={context} data={component} slot={slots.testimonialContent} />,
-    testimonialAuthor: <UniformSlot context={context} data={component} slot={slots.testimonialAuthor} />,
-    testimonialSecondaryImage: (
-      <UniformSlot context={context} data={component} slot={slots.testimonialSecondaryImage} />
-    ),
+    testimonialPrimaryImage: <UniformSlot slot={slots.testimonialPrimaryImage} />,
+    testimonialContent: <UniformSlot slot={slots.testimonialContent} />,
+    testimonialAuthor: <UniformSlot slot={slots.testimonialAuthor} />,
+    testimonialSecondaryImage: <UniformSlot slot={slots.testimonialSecondaryImage} />,
   };
 
   switch (variant) {
@@ -42,3 +38,5 @@ export const Testimonial: FC<TestimonialProps> = ({
       return <DefaultVariant {...variantProps} />;
   }
 };
+
+export default withFlattenParameters(Testimonial);

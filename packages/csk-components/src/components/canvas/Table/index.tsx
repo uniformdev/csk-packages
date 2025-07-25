@@ -1,5 +1,5 @@
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { ContainerParameters } from '@/components/canvas/Container/parameters';
+import { ComponentProps } from '@/types/cskTypes';
 
 export type TableParameters = ContainerParameters & {
   size?: string;
@@ -13,5 +13,5 @@ export enum TableSlots {
 
 export type TableProps = ComponentProps<TableParameters, TableSlots>;
 
-export { Table as default } from './table';
+export { default } from './table';
 export { TableEmptyPlaceholder } from './empty-placeholder';

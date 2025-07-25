@@ -1,9 +1,13 @@
 import { cn } from '@/utils/styling';
-import { TabsParameters, TabsVariants } from '.';
+import { TabsParameters } from '.';
+
+export enum TabsVariants {
+  Bordered = 'bordered',
+}
 
 type ButtonContainerClassesProps = {
   color: TabsParameters['color'];
-  variant: TabsVariants;
+  variant?: string;
 };
 export const getButtonContainerClasses = ({ color, variant }: ButtonContainerClassesProps) =>
   cn('flex flex-row overflow-x-auto ', {
@@ -12,17 +16,14 @@ export const getButtonContainerClasses = ({ color, variant }: ButtonContainerCla
 
 type ButtonClassesProps = {
   color: TabsParameters['color'];
-  variant: TabsVariants;
-  tabItem: {
-    id: string;
-  };
-  activeTabId: string;
+  variant?: string;
+  isActiveTab?: boolean;
 };
-export const getButtonClasses = ({ color, variant, tabItem, activeTabId }: ButtonClassesProps) =>
+export const getButtonClasses = ({ color, variant, isActiveTab = false }: ButtonClassesProps) =>
   cn('text-lg shrink-0 font-medium px-5 py-3', {
     [`text-${color}`]: color,
-    [`border-${color}`]: tabItem.id === activeTabId && variant === TabsVariants.Bordered,
+    [`border-${color}`]: isActiveTab && variant === TabsVariants.Bordered,
     'border-b-2': variant === TabsVariants.Bordered,
-    'opacity-60 hover:opacity-100': tabItem.id !== activeTabId,
-    'border-transparent': tabItem.id !== activeTabId && variant === TabsVariants.Bordered,
+    'opacity-60 hover:opacity-100': !isActiveTab,
+    'border-transparent': !isActiveTab && variant === TabsVariants.Bordered,
   });

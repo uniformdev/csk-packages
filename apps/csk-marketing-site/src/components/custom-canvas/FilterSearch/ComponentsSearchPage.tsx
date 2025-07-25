@@ -1,6 +1,8 @@
 import { FC } from 'react';
-import { ComponentProps, UniformSlot } from '@uniformdev/canvas-next-rsc/component';
+import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
 import { Page as BasePage } from '@uniformdev/csk-components/components/ui';
+import { ComponentProps } from '@uniformdev/csk-components/types/cskTypes';
+import { withFlattenParameters } from '@uniformdev/csk-components/utils/withFlattenParameters';
 import ComponentsSearchProvider from './ComponentsSearchProvider';
 
 type ComponentsSearchPageParameters = {
@@ -17,16 +19,19 @@ export enum ComponentsSearchPageSlots {
 
 type ComponentsSearchPageProps = ComponentProps<ComponentsSearchPageParameters, ComponentsSearchPageSlots>;
 
-const ComponentsSearchPage: FC<ComponentsSearchPageProps> = ({ backgroundColor, component, context, slots }) => (
+const ComponentsSearchPage: FC<ComponentsSearchPageProps & ComponentsSearchPageParameters> = ({
+  backgroundColor,
+  slots,
+}) => (
   <ComponentsSearchProvider>
     <BasePage
       backgroundColor={backgroundColor}
-      header={<UniformSlot context={context} slot={slots.pageHeader} data={component} />}
-      footer={<UniformSlot context={context} slot={slots.pageFooter} data={component} />}
+      header={<UniformSlot slot={slots.pageHeader} />}
+      footer={<UniformSlot slot={slots.pageFooter} />}
     >
-      <UniformSlot context={context} slot={slots.pageContent} data={component} />
+      <UniformSlot slot={slots.pageContent} />
     </BasePage>
   </ComponentsSearchProvider>
 );
 
-export default ComponentsSearchPage;
+export default withFlattenParameters(ComponentsSearchPage);

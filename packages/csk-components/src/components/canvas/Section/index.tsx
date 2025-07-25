@@ -1,5 +1,5 @@
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { ContainerParameters } from '@/components/canvas/Container/parameters';
+import { ComponentProps } from '@/types/cskTypes';
 
 export enum ContentAlignment {
   Left = 'left',
@@ -24,5 +24,5 @@ export enum SectionSlots {
 
 export type SectionProps = ComponentProps<SectionParameters, SectionSlots>;
 
-export { Section as default } from './section';
+export { default } from './section';
 export { SectionEmptyPlaceholder } from './empty-placeholder';

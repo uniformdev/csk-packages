@@ -1,4 +1,4 @@
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
+import { ComponentProps } from '@/types/cskTypes';
 
 export type SpacerParameters = {
   size?: string;
@@ -9,4 +9,4 @@ export enum SpacerVariants {
 
 export type SpacerProps = ComponentProps<SpacerParameters>;
 
-export { Spacer as default } from './spacer';
+export { default } from './spacer';

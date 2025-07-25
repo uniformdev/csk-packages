@@ -1,18 +1,21 @@
 'use client';
 
 import { FC, useCallback, useMemo, useState } from 'react';
-import { UniformText } from '@uniformdev/canvas-next-rsc/component';
+import { ComponentParameter, UniformText } from '@uniformdev/canvas-next-rsc-v2/component';
 import BaseIconLabel from '@/components/ui/IconLabel';
 import BaseImage from '@/components/ui/Image';
 import InlineSVG from '@/components/ui/InlineSVG';
-import { resolveAsset } from '@/utils/assets';
+import { ReplaceFieldsWithAssets } from '@/types/cskTypes';
 import { cn, resolveViewPort } from '@/utils/styling';
-import { NavigationFlyoutProps } from '.';
+import { withFlattenParameters } from '@/utils/withFlattenParameters';
+import { NavigationFlyoutParameters, NavigationFlyoutProps } from '.';
 import { NavigationFlyoutPropsDesktopContent } from './desktop';
 import { NavigationFlyoutPropsMobileContent } from './mobile';
 import { getButtonClasses, getCaretClasses } from './style-utils';
 
-export const NavigationFlyout: FC<NavigationFlyoutProps> = ({
+const NavigationFlyout: FC<
+  NavigationFlyoutProps & ReplaceFieldsWithAssets<NavigationFlyoutParameters, 'icon' | 'caretIcon'>
+> = ({
   icon,
   caretIcon,
   backgroundColor,
@@ -31,6 +34,7 @@ export const NavigationFlyout: FC<NavigationFlyoutProps> = ({
   slots,
   hoverEffect = '',
   className,
+  parameters,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -38,11 +42,14 @@ export const NavigationFlyout: FC<NavigationFlyoutProps> = ({
   const closeFlyout = useCallback(() => setIsOpen(false), []);
 
   const hasRightContent = useMemo(
-    () => Boolean(component.slots?.navigationFlyoutRightContent?.length),
-    [component.slots]
+    () =>
+      Boolean(
+        slots?.navigationFlyoutRightContent?.items?.filter(item => !item?._id.startsWith('placeholder_'))?.length
+      ),
+    [slots]
   );
 
-  const [resolvedImage] = resolveAsset(icon);
+  const [resolvedImage] = icon || [];
   const { url, title = '' } = resolvedImage || {};
 
   const renderUrl = () => {
@@ -55,7 +62,7 @@ export const NavigationFlyout: FC<NavigationFlyoutProps> = ({
     [resolveViewPort(hoverEffect, 'group-hover:{value}')]: !!hoverEffect,
   });
 
-  const [resolvedCaretIcon] = resolveAsset(caretIcon);
+  const [resolvedCaretIcon] = caretIcon || [];
   const { url: caretUrl, title: caretTitle = '' } = resolvedCaretIcon || {};
 
   return (
@@ -68,7 +75,11 @@ export const NavigationFlyout: FC<NavigationFlyoutProps> = ({
           textClassName={actionClassName}
           {...{ size, tag, color, weight, font, transform, decoration, letterSpacing, alignment }}
         >
-          <UniformText placeholder="Text goes here" parameterId="text" component={component} context={context} />
+          <UniformText
+            placeholder="Text goes here"
+            parameter={parameters.text as ComponentParameter<string>}
+            component={component}
+          />
         </BaseIconLabel>
         {caretUrl && (
           <div
@@ -99,3 +110,5 @@ export const NavigationFlyout: FC<NavigationFlyoutProps> = ({
     </div>
   );
 };
+
+export default withFlattenParameters(NavigationFlyout);

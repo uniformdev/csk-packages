@@ -29,7 +29,7 @@ jobs:
       id-token: write
 
     env:
-      PACKAGES: "csk-cli design-extensions-tools csk-components csk-recipes" # Define packages as a single string variable
+      PACKAGES: "csk-cli design-extensions-tools csk-components csk-recipes"
 
     steps:
       # Step 1: Checkout repository
@@ -43,11 +43,15 @@ jobs:
           node-version: "20.x"
           registry-url: "https://registry.npmjs.org"
 
-      # Step 3: Install dependencies
+      # Step 3: Export NPM_TOKEN for .npmrc
+      - name: 🌱 Export NPM_TOKEN
+        run: echo "NPM_TOKEN=${{ secrets.NPM_TOKEN }}" >> $GITHUB_ENV
+
+      # Step 4: Install dependencies
       - name: Install dependencies
         run: npm ci
 
-      # Step 4: Publish Selected Package(s)
+      # Step 5: Publish Selected Package(s)
       - name: Publish Package(s)
         run: |
           if [ "${{ inputs.publish_env }}" == "alpha" ]; then

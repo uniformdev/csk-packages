@@ -1,6 +1,5 @@
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { HeaderProps as BaseHeaderProps } from '@/components/ui/Header';
-import { Header } from './header';
+import { ComponentProps } from '@/types/cskTypes';
 
 export type HeaderParameters = Omit<BaseHeaderProps, 'sticky'>;
 
@@ -16,5 +15,5 @@ export enum HeaderVariants {
 
 export type HeaderProps = ComponentProps<HeaderParameters, HeaderSlots>;
 
-export default Header;
+export { default } from './header';
 export { HeaderEmptyPlaceholder } from './empty-placeholder';

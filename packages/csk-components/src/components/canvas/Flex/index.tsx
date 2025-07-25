@@ -1,7 +1,5 @@
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { ContainerParameters } from '@/components/canvas/Container/parameters';
-import { ViewPort } from '@/types/cskTypes';
-import { Flex } from './flex';
+import { ViewPort, ComponentProps } from '@/types/cskTypes';
 
 type Direction = 'row' | 'row-reverse' | 'col' | 'col-reverse';
 type Justify = 'start' | 'end' | 'center' | 'between';
@@ -20,10 +18,10 @@ export type FlexParameters = ContainerParameters & {
   alignItems?: Align | ViewPort<Align>;
 };
 
-enum FlexSlots {
+export enum FlexSlots {
   FlexItem = 'flexItem',
 }
 
-export type FlexProps = ComponentProps<FlexParameters & FlexAdditionalProps, FlexSlots>;
+export type FlexProps = ComponentProps<FlexParameters, FlexSlots> & FlexAdditionalProps;
 
-export default Flex;
+export { default } from './flex';

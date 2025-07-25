@@ -1,19 +1,20 @@
 import { FC } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc/component';
+import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
 import BaseGridItem from '@/components/ui/GridItem';
-import { GridItemProps } from '.';
+import { withFlattenParameters } from '@/utils/withFlattenParameters';
+import { GridItemParameters, GridItemProps } from '.';
 
-export const GridItem: FC<GridItemProps> = ({
+const GridItem: FC<GridItemProps & GridItemParameters> = ({
   columnStart,
   columnSpan,
   rowStart,
   className,
   rowSpan,
-  context,
-  component,
   slots,
 }) => (
   <BaseGridItem {...{ columnStart, columnSpan, rowStart, rowSpan, className }}>
-    <UniformSlot data={component} context={context} slot={slots.inner} />
+    <UniformSlot slot={slots.inner} />
   </BaseGridItem>
 );
+
+export default withFlattenParameters(GridItem);

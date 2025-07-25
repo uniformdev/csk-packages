@@ -33,7 +33,7 @@ turbo.json                      # Turborepo configuration
 
 ### 1. Install Dependencies
 
-Ensure you have **Node.js 20+** installed, then run:
+Ensure you have **Node.js 20+** installed and you have NPM_TOKEN for @uniformdev packages, then run:
 
 ```bash
 npm install

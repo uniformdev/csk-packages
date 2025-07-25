@@ -1,9 +1,7 @@
 import { AssetParamValue } from '@uniformdev/assets';
 import { LinkParamValue } from '@uniformdev/canvas';
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { ButtonProps as BaseButtonProps } from '@/components/ui/Button';
-import { ViewPort } from '@/types/cskTypes';
-import { Button } from './button';
+import { ComponentProps, ViewPort } from '@/types/cskTypes';
 
 export type ButtonParameters = {
   text?: string;
@@ -28,6 +26,6 @@ export type ButtonAdditionalProps = {
   onClick?: () => void;
 };
 
-export type ButtonProps = ComponentProps<ButtonParameters & ButtonAdditionalProps>;
+export type ButtonProps = ComponentProps<ButtonParameters> & ButtonAdditionalProps;
 
-export default Button;
+export { default } from './button';

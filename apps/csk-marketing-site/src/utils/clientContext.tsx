@@ -5,7 +5,7 @@ import {
   ClientContextComponent,
   createClientUniformContext,
   useInitUniformContext,
-} from '@uniformdev/canvas-next-rsc/component';
+} from '@uniformdev/canvas-next-rsc-v2/component';
 import { ContextPlugin, enableContextDevTools } from '@uniformdev/context';
 // NOTE: npm install @uniformdev/context-gtag if you need to enable GA4 plugin
 // import { enableGoogleGtagAnalytics } from "@uniformdev/context-gtag";

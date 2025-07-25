@@ -1,6 +1,5 @@
 import { AssetParamValue } from '@uniformdev/assets';
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
-import { ViewPort } from '@/types/cskTypes';
+import { ComponentProps, ViewPort } from '@/types/cskTypes';
 
 export type VideoParameters = {
   video?: AssetParamValue;
@@ -17,4 +16,4 @@ export type VideoParameters = {
 
 export type VideoProps = ComponentProps<VideoParameters>;
 
-export { Video as default } from './video';
+export { default } from './video';

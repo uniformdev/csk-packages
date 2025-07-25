@@ -2,10 +2,11 @@ import { FC } from 'react';
 import { imageFrom } from '@uniformdev/assets';
 import BaseImage from '@/components/ui/Image';
 import MediaPlaceholder from '@/components/ui/MediaPlaceholder';
-import { resolveAsset } from '@/utils/assets';
-import { ImageProps } from '.';
+import { ReplaceFieldsWithAssets } from '@/types/cskTypes';
+import { withFlattenParameters } from '@/utils/withFlattenParameters';
+import { ImageParameters, ImageProps } from '.';
 
-export const Image: FC<ImageProps> = async ({
+const Image: FC<ImageProps & ReplaceFieldsWithAssets<ImageParameters, 'image'>> = async ({
   image,
   objectFit,
   width,
@@ -19,10 +20,10 @@ export const Image: FC<ImageProps> = async ({
   context,
   component,
 }) => {
-  const [resolvedImage] = resolveAsset(image);
+  const [resolvedImage] = image || [];
 
   if (!resolvedImage) {
-    const isEditorPreviewMode = context.previewMode === 'editor' && context.isContextualEditing;
+    const isEditorPreviewMode = context.isContextualEditing;
     const isPlaceholder = component?._id?.includes('placeholder_');
 
     if (!isEditorPreviewMode || isPlaceholder) {
@@ -79,3 +80,5 @@ export const Image: FC<ImageProps> = async ({
     />
   );
 };
+
+export default withFlattenParameters(Image);

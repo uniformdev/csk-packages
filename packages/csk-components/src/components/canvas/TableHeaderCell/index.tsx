@@ -1,7 +1,7 @@
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
+import { ComponentProps } from '@/types/cskTypes';
 
 export type TableHeaderCellParameters = { value?: string };
 
 export type TableHeaderCellProps = ComponentProps<TableHeaderCellParameters>;
 
-export { TableHeaderCell as default } from './table-header-cell';
+export { default } from './table-header-cell';

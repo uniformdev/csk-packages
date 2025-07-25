@@ -2,11 +2,13 @@ import { FC, PropsWithChildren } from 'react';
 import Link from 'next/link';
 import classNames from 'classnames';
 import { LinkParamValue } from '@uniformdev/canvas';
-import { UniformSlot, ComponentProps } from '@uniformdev/canvas-next-rsc/component';
-import { ContainerParameters } from '@uniformdev/csk-components/components/canvas';
+import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
+import { ContainerParameters } from '@uniformdev/csk-components/components/canvas/clientCompatible';
 import { Container as BaseContainer } from '@uniformdev/csk-components/components/ui';
+import { ComponentProps } from '@uniformdev/csk-components/types/cskTypes';
 import { formatUniformLink } from '@uniformdev/csk-components/utils/routing';
 import { cn } from '@uniformdev/csk-components/utils/styling';
+import { withFlattenParameters } from '@uniformdev/csk-components/utils/withFlattenParameters';
 import { capitalizeFirstLetter } from '@/utils/text';
 
 const WrapCard: FC<PropsWithChildren & { href?: string; name: string }> = ({ href, name, children }) =>
@@ -22,16 +24,18 @@ enum TemplateCardSlots {
   TemplateItem = 'templateItem',
 }
 
-type TemplateCardProps = ComponentProps<
-  ContainerParameters & { link?: LinkParamValue; anchor?: string; comingSoon: boolean },
-  TemplateCardSlots
->;
-const TemplateCard: FC<TemplateCardProps> = ({
+type TemplateCardParameters = {
+  link?: LinkParamValue;
+  anchor?: string;
+  comingSoon?: boolean;
+} & ContainerParameters;
+
+type TemplateCardProps = ComponentProps<TemplateCardParameters, TemplateCardSlots>;
+
+const TemplateCard: FC<TemplateCardProps & TemplateCardParameters> = ({
   link,
   anchor,
   slots,
-  component,
-  context,
   backgroundColor,
   spacing,
   border,
@@ -54,7 +58,7 @@ const TemplateCard: FC<TemplateCardProps> = ({
         name={capitalizeFirstLetter(displayName || 'Component')}
       >
         <div className={cn('flex size-full flex-col items-center', { 'opacity-40': comingSoon })}>
-          <UniformSlot data={component} context={context} slot={slots.templateItem} />
+          <UniformSlot slot={slots.templateItem} />
         </div>
       </WrapCard>
       {comingSoon && (
@@ -66,4 +70,4 @@ const TemplateCard: FC<TemplateCardProps> = ({
   );
 };
 
-export default TemplateCard;
+export default withFlattenParameters(TemplateCard);

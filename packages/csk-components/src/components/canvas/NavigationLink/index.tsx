@@ -1,9 +1,7 @@
 import { AssetParamValue } from '@uniformdev/assets';
 import { LinkParamValue } from '@uniformdev/canvas';
-import { ComponentProps } from '@uniformdev/canvas-next-rsc/component';
 import { TextParameters } from '@/components/canvas/Text/parameters';
-import { ViewPort } from '@/types/cskTypes';
-import { NavigationLink } from './navigation-link';
+import { ComponentProps, ViewPort } from '@/types/cskTypes';
 
 export type NavigationLinkParameters = TextParameters & {
   icon?: AssetParamValue;
@@ -15,4 +13,4 @@ export type NavigationLinkParameters = TextParameters & {
 
 export type NavigationLinkProps = ComponentProps<NavigationLinkParameters>;
 
-export default NavigationLink;
+export { default } from './navigation-link';
