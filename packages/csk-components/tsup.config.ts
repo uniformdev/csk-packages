@@ -17,7 +17,7 @@ export default defineConfig({
     'src/components/providers/server.ts',
     'src/components/ui/index.ts',
     'src/components/canvas/serverOnly.ts',
-    'src/components/canvas/clientCompatible.ts',
+    'src/components/canvas/serverClient.ts',
     'src/components/canvas/index.ts',
     'src/components/canvas/emptyPlaceholders.tsx',
   ],

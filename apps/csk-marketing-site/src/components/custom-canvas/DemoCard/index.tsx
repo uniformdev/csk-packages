@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 import { AssetParamValueItem } from '@uniformdev/assets';
 import { LinkParamValue } from '@uniformdev/canvas';
-import { ContainerParameters } from '@uniformdev/csk-components/components/canvas/clientCompatible';
+import { ContainerParameters } from '@uniformdev/csk-components/components/canvas/serverClient';
 import { ComponentProps } from '@uniformdev/csk-components/types/cskTypes';
 import { withFlattenParameters } from '@uniformdev/csk-components/utils/withFlattenParameters';
 import { withSlotsDataValue } from '@uniformdev/csk-components/utils/withSlotsDataValue';

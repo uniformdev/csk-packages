@@ -3,7 +3,7 @@
 import { FC, useRef } from 'react';
 import Link from 'next/link';
 import { LinkParamValue } from '@uniformdev/canvas';
-import { ContainerParameters } from '@uniformdev/csk-components/components/canvas/clientCompatible';
+import { ContainerParameters } from '@uniformdev/csk-components/components/canvas/serverClient';
 import { Container as BaseContainer } from '@uniformdev/csk-components/components/ui';
 import { ComponentProps } from '@uniformdev/csk-components/types/cskTypes';
 import { formatUniformLink } from '@uniformdev/csk-components/utils/routing';
