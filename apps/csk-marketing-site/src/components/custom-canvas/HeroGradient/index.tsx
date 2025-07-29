@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
-import { ContainerParameters } from '@uniformdev/csk-components/components/canvas/clientCompatible';
+import { ContainerParameters } from '@uniformdev/csk-components/components/canvas/serverClient';
 import { Container } from '@uniformdev/csk-components/components/ui';
 import { ComponentProps } from '@uniformdev/csk-components/types/cskTypes';
 import { cn } from '@uniformdev/csk-components/utils/styling';

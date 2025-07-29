@@ -1,3 +1,12 @@
+/**
+ * 🔁 Shared Server/Client Components
+ *
+ * This file exports components that are safe to use in both server and client components.
+ * These components are not dependent on server-only logic and can be imported freely
+ * without restrictions on the environment.
+ *
+ */
+
 // Component - Properties(Parameters) - Slots - Variants
 export { default as Accordion, type AccordionProps, type AccordionParameters, AccordionSlots } from './Accordion';
 export {

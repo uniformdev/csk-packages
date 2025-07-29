@@ -1,6 +1,6 @@
 {
   "name": "@uniformdev/csk-components",
-  "version": "6.1.0",
+  "version": "6.1.1",
   "description": "Components Starter Kit that provides a set of basic components for building websites within a Uniform project",
   "license": "SEE LICENSE IN LICENSE.txt",
   "engines": {
@@ -60,9 +60,9 @@
       "types": "./dist/components/canvas/serverOnly.d.mts",
       "default": "./dist/components/canvas/serverOnly.mjs"
     },
-    "./components/canvas/clientCompatible": {
-      "types": "./dist/components/canvas/clientCompatible.d.mts",
-      "default": "./dist/components/canvas/clientCompatible.mjs"
+    "./components/canvas/serverClient": {
+      "types": "./dist/components/canvas/serverClient.d.mts",
+      "default": "./dist/components/canvas/serverClient.mjs"
     },
     "./components/canvas/emptyPlaceholders": {
       "types": "./dist/components/canvas/emptyPlaceholders.d.mts",
