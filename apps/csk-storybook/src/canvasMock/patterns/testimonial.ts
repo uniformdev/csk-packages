@@ -120,7 +120,7 @@ export const testimonialContentCSK = {
                   url: {
                     type: 'text',
                     value:
-                      'https://res.cloudinary.com/utidinary/image/upload/f_auto,q_auto,h_200,t_Auto-Quality-and-Format/UTI-Logo-Full-Color-White.svg',
+                      'https://res.cloudinary.com/uniform-demos/image/upload/v1753882068/csk-v-next/baseline/shared-images/icon-uniform-logo_white.svg',
                   },
                 },
                 _source: 'custom-url',
