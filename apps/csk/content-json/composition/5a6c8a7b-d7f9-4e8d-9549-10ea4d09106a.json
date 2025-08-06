@@ -11,6 +11,7 @@
           "locale": "${locale}",
           "search": "",
           "filters": "{\"type[eq]\":\"brand\"}",
+          "uiFilters": "[{\"field\":\"type\",\"operator\":\"eq\",\"value\":\"brand\"}]",
           "contentTypes": "brand"
         }
       },
@@ -27,6 +28,7 @@
           "locale": "${locale}",
           "search": "",
           "filters": "{\"type[eq]\":\"productCategory\"}",
+          "uiFilters": "[{\"field\":\"type\",\"operator\":\"eq\",\"value\":\"productCategory\"}]",
           "contentTypes": "productCategory"
         }
       }
@@ -37,24 +39,24 @@
           "displayName": {
             "type": "text",
             "locales": {
+              "da-dk": "Kategorihelt",
+              "de-at": "Kategorie Held",
+              "de-de": "Kategorie Held",
+              "en-au": "Héros de catégorie",
+              "en-ca": "Category Hero",
+              "en-gb": "Category Hero",
+              "en-nl": "Categorieheld",
+              "en-nz": "Kategorie Held",
               "en-us": "Category Hero",
               "es-us": "Héroe de Categoría",
               "fr-ca": "Héros de catégorie",
-              "en-ca": "Category Hero",
-              "en-gb": "Category Hero",
-              "de-de": "Kategorie Held",
-              "en-de": "Kategorie Held",
-              "de-at": "Kategorie Held",
-              "nl-nl": "Categorieheld",
-              "en-nl": "Categorieheld",
-              "da-dk": "Kategorihelt",
-              "sv-se": "Kategori Hjälte",
-              "nb-no": "Kategorihelt",
               "fr-fr": "Héros de catégorie",
-              "en-fr": "Héros de catégorie",
               "ja-jp": "カテゴリーヒーロー",
-              "ar-uae": "بطل الفئة",
-              "ar-ksa": "بطل الفئة"
+              "nb-no": "Kategorihelt",
+              "nl-nl": "Categorieheld",
+              "sv-se": "Kategori Hjälte",
+              "ar-ksa": "بطل الفئة",
+              "ar-uae": "بطل الفئة"
             }
           }
         }
@@ -74,47 +76,47 @@
           "pageTitle": {
             "type": "text",
             "locales": {
+              "da-dk": "Kaffemaskiner til enhver bryggestil | Find din perfekte kaffemaskine i dag",
+              "de-at": "Kaffeemaschinen für jeden Brühstil | Finden Sie noch heute Ihre perfekte Kaffeemaschine",
+              "de-de": "Kaffeemaschinen für jeden Brühstil | Finden Sie noch heute Ihre perfekte Kaffeemaschine",
+              "en-au": "Cafetière pour chaque style d'infusion | Trouvez votre cafetière parfaite aujourd'hui",
+              "en-ca": "Coffee Makers for Every Brew Style | Find Your Perfect Coffee Maker Today",
+              "en-gb": "Coffee Machines for Every Brew Style | Find Your Perfect Coffee Machine Today",
+              "en-nl": "Koffiezetapparaten voor elke zetstijl | Vind vandaag nog uw perfecte koffiezetapparaat",
+              "en-nz": "Kaffeemaschinen für jeden Brühstil | Finden Sie noch heute Ihre perfekte Kaffeemaschine",
               "en-us": "Coffee Makers for Every Brew Style | Find Your Perfect Coffee Maker Today",
               "es-us": "Cafeteras para Cada Estilo de Preparación | Encuentra Tu Cafetera Perfecta Hoy",
               "fr-ca": "Cafetière pour chaque style d'infusion | Trouvez votre cafetière idéale aujourd'hui",
-              "en-ca": "Coffee Makers for Every Brew Style | Find Your Perfect Coffee Maker Today",
-              "en-gb": "Coffee Machines for Every Brew Style | Find Your Perfect Coffee Machine Today",
-              "de-de": "Kaffeemaschinen für jeden Brühstil | Finden Sie noch heute Ihre perfekte Kaffeemaschine",
-              "en-de": "Kaffeemaschinen für jeden Brühstil | Finden Sie noch heute Ihre perfekte Kaffeemaschine",
-              "de-at": "Kaffeemaschinen für jeden Brühstil | Finden Sie noch heute Ihre perfekte Kaffeemaschine",
-              "nl-nl": "Koffiezetapparaten voor elke zetstijl | Vind vandaag nog uw perfecte koffiezetapparaat",
-              "en-nl": "Koffiezetapparaten voor elke zetstijl | Vind vandaag nog uw perfecte koffiezetapparaat",
-              "da-dk": "Kaffemaskiner til enhver bryggestil | Find din perfekte kaffemaskine i dag",
-              "sv-se": "Kaffebryggare för varje bryggstil | Hitta din perfekta kaffebryggare idag",
-              "nb-no": "Kaffetraktere for enhver bryggestil | Finn din perfekte kaffetrakter i dag",
               "fr-fr": "Cafetière pour chaque style de préparation | Trouvez votre cafetière parfaite aujourd'hui",
-              "en-fr": "Cafetière pour chaque style d'infusion | Trouvez votre cafetière parfaite aujourd'hui",
               "ja-jp": "あらゆる抽出スタイルに対応するコーヒーメーカー | あなたにぴったりのコーヒーメーカーを見つけよう",
-              "ar-uae": "ماكينات قهوة لكل أسلوب تحضير | اعثر على ماكينة القهوة المثالية لك اليوم",
-              "ar-ksa": "آلات صنع القهوة لكل أسلوب تحضير | اعثر على آلة صنع القهوة المثالية لك اليوم"
+              "nb-no": "Kaffetraktere for enhver bryggestil | Finn din perfekte kaffetrakter i dag",
+              "nl-nl": "Koffiezetapparaten voor elke zetstijl | Vind vandaag nog uw perfecte koffiezetapparaat",
+              "sv-se": "Kaffebryggare för varje bryggstil | Hitta din perfekta kaffebryggare idag",
+              "ar-ksa": "آلات صنع القهوة لكل أسلوب تحضير | اعثر على آلة صنع القهوة المثالية لك اليوم",
+              "ar-uae": "ماكينات قهوة لكل أسلوب تحضير | اعثر على ماكينة القهوة المثالية لك اليوم"
             }
           },
           "pageKeywords": {
             "type": "text",
             "locales": {
+              "da-dk": "kaffemaskiner, bedste kaffemaskiner, kaffemaskiner, kaffemaskine, kaffemaskine",
+              "de-at": "Kaffeemaschinen, beste Kaffeemaschinen, Kaffeeautomaten, Kaffeemaschine, Kaffeeautomat",
+              "de-de": "Kaffeemaschinen, beste Kaffeemaschinen, Kaffeeautomaten, Kaffeemaschine, Kaffeeautomat",
+              "en-au": "cafetières, meilleures cafetières, machines à café, cafetière, machine à café",
+              "en-ca": "coffee makers, best coffee makers, coffee machines, coffee maker, coffee machine",
+              "en-gb": "coffee makers, best coffee makers, coffee machines, coffee maker, coffee machine",
+              "en-nl": "koffiezetapparaten, beste koffiezetapparaten, koffiemachines, koffiezetapparaat, koffiemachine",
+              "en-nz": "Kaffeemaschinen, beste Kaffeemaschinen, Kaffeeautomaten, Kaffeemaschine, Kaffeeautomat",
               "en-us": "coffee makers, best coffee makers, coffee machines, coffee maker, coffee machine",
               "es-us": "cafeteras, mejores cafeteras, máquinas de café, cafetera, máquina de café",
               "fr-ca": "cafetières, meilleures cafetières, machines à café, cafetière, machine à café",
-              "en-ca": "coffee makers, best coffee makers, coffee machines, coffee maker, coffee machine",
-              "en-gb": "coffee makers, best coffee makers, coffee machines, coffee maker, coffee machine",
-              "de-de": "Kaffeemaschinen, beste Kaffeemaschinen, Kaffeeautomaten, Kaffeemaschine, Kaffeeautomat",
-              "en-de": "Kaffeemaschinen, beste Kaffeemaschinen, Kaffeeautomaten, Kaffeemaschine, Kaffeeautomat",
-              "de-at": "Kaffeemaschinen, beste Kaffeemaschinen, Kaffeeautomaten, Kaffeemaschine, Kaffeeautomat",
-              "nl-nl": "koffiezetapparaten, beste koffiezetapparaten, koffiemachines, koffiezetapparaat, koffiemachine",
-              "en-nl": "koffiezetapparaten, beste koffiezetapparaten, koffiemachines, koffiezetapparaat, koffiemachine",
-              "da-dk": "kaffemaskiner, bedste kaffemaskiner, kaffemaskiner, kaffemaskine, kaffemaskine",
-              "sv-se": "kaffebryggare, bästa kaffebryggare, kaffemaskiner, kaffebryggare, kaffemaskin",
-              "nb-no": "kaffetraktere, beste kaffetraktere, kaffemaskiner, kaffetrakter, kaffemaskin",
               "fr-fr": "cafetières, meilleures cafetières, machines à café, cafetière, machine à café",
-              "en-fr": "cafetières, meilleures cafetières, machines à café, cafetière, machine à café",
               "ja-jp": "コーヒーメーカー、ベストコーヒーメーカー、コーヒーマシン、コーヒーメーカー、コーヒーマシン",
-              "ar-uae": "صانعات القهوة، أفضل صانعات القهوة، آلات القهوة، صانعة القهوة، آلة القهوة",
-              "ar-ksa": "صانعات القهوة، أفضل صانعات القهوة، آلات القهوة، صانعة القهوة، آلة القهوة"
+              "nb-no": "kaffetraktere, beste kaffetraktere, kaffemaskiner, kaffetrakter, kaffemaskin",
+              "nl-nl": "koffiezetapparaten, beste koffiezetapparaten, koffiemachines, koffiezetapparaat, koffiemachine",
+              "sv-se": "kaffebryggare, bästa kaffebryggare, kaffemaskiner, kaffebryggare, kaffemaskin",
+              "ar-ksa": "صانعات القهوة، أفضل صانعات القهوة، آلات القهوة، صانعة القهوة، آلة القهوة",
+              "ar-uae": "صانعات القهوة، أفضل صانعات القهوة، آلات القهوة، صانعة القهوة، آلة القهوة"
             }
           },
           "openGraphType": {
@@ -168,70 +170,70 @@
           "openGraphTitle": {
             "type": "text",
             "locales": {
+              "da-dk": "Kaffemaskiner til enhver bryggestil | Find din perfekte kaffemaskine i dag",
+              "de-at": "Kaffeemaschinen für jeden Brühstil | Finden Sie noch heute Ihre perfekte Kaffeemaschine",
+              "de-de": "Kaffeemaschinen für jeden Brühstil | Finden Sie noch heute Ihre perfekte Kaffeemaschine",
+              "en-au": "Cafetière pour chaque style de préparation | Trouvez votre cafetière parfaite aujourd'hui",
+              "en-ca": "Coffee Makers for Every Brew Style | Find Your Perfect Coffee Maker Today",
+              "en-gb": "Coffee Makers for Every Brew Style | Find Your Perfect Coffee Maker Today",
+              "en-nl": "Koffiezetapparaten voor elke zetstijl | Vind vandaag nog jouw perfecte koffiezetapparaat",
+              "en-nz": "Kaffeemaschinen für jeden Brühstil | Finden Sie noch heute Ihre perfekte Kaffeemaschine",
               "en-us": "Coffee Makers for Every Brew Style | Find Your Perfect Coffee Maker Today",
               "es-us": "Cafeteras para Cada Estilo de Preparación | Encuentra tu Cafetera Perfecta Hoy",
               "fr-ca": "Cafetière pour chaque style d'infusion | Trouvez votre cafetière idéale aujourd'hui",
-              "en-ca": "Coffee Makers for Every Brew Style | Find Your Perfect Coffee Maker Today",
-              "en-gb": "Coffee Makers for Every Brew Style | Find Your Perfect Coffee Maker Today",
-              "de-de": "Kaffeemaschinen für jeden Brühstil | Finden Sie noch heute Ihre perfekte Kaffeemaschine",
-              "en-de": "Kaffeemaschinen für jeden Brühstil | Finden Sie noch heute Ihre perfekte Kaffeemaschine",
-              "de-at": "Kaffeemaschinen für jeden Brühstil | Finden Sie noch heute Ihre perfekte Kaffeemaschine",
-              "nl-nl": "Koffiezetapparaten voor elke zetstijl | Vind vandaag nog jouw perfecte koffiezetapparaat",
-              "en-nl": "Koffiezetapparaten voor elke zetstijl | Vind vandaag nog jouw perfecte koffiezetapparaat",
-              "da-dk": "Kaffemaskiner til enhver bryggestil | Find din perfekte kaffemaskine i dag",
-              "sv-se": "Kaffebryggare för varje bryggstil | Hitta din perfekta kaffebryggare idag",
-              "nb-no": "Kaffetraktere for enhver bryggestil | Finn din perfekte kaffetrakter i dag",
               "fr-fr": "Cafetière pour chaque style de préparation | Trouvez votre cafetière parfaite aujourd'hui",
-              "en-fr": "Cafetière pour chaque style de préparation | Trouvez votre cafetière parfaite aujourd'hui",
               "ja-jp": "あらゆる抽出スタイルに対応するコーヒーメーカー | あなたにぴったりのコーヒーメーカーを見つけましょう",
-              "ar-uae": "صانعات القهوة لكل أسلوب تحضير | اعثر على صانعة القهوة المثالية لك اليوم",
-              "ar-ksa": "صانعات القهوة لكل أسلوب تحضير | اعثر على صانعة القهوة المثالية لك اليوم"
+              "nb-no": "Kaffetraktere for enhver bryggestil | Finn din perfekte kaffetrakter i dag",
+              "nl-nl": "Koffiezetapparaten voor elke zetstijl | Vind vandaag nog jouw perfecte koffiezetapparaat",
+              "sv-se": "Kaffebryggare för varje bryggstil | Hitta din perfekta kaffebryggare idag",
+              "ar-ksa": "صانعات القهوة لكل أسلوب تحضير | اعثر على صانعة القهوة المثالية لك اليوم",
+              "ar-uae": "صانعات القهوة لكل أسلوب تحضير | اعثر على صانعة القهوة المثالية لك اليوم"
             }
           },
           "pageDescription": {
             "type": "text",
             "locales": {
+              "da-dk": "Opdag de bedste kaffemaskiner til enhver smag og stil. Fra espressomaskiner til filterkaffemaskiner har vi kvalitetsmuligheder, der kan løfte din kaffeoplevelse. Find din ideelle kaffemaskine i dag og bryg som en professionel!",
+              "de-at": "Entdecken Sie die besten Kaffeemaschinen für jeden Geschmack und Stil. Von Espressomaschinen bis zu Filterkaffeemaschinen bieten wir hochwertige Optionen, um Ihr Kaffeeerlebnis zu verbessern. Finden Sie noch heute Ihre ideale Kaffeemaschine und brühen Sie wie ein Profi!",
+              "de-de": "Entdecken Sie die besten Kaffeemaschinen für jeden Geschmack und Stil. Von Espressomaschinen bis zu Filterkaffeemaschinen bieten wir hochwertige Optionen, um Ihr Kaffeeerlebnis zu verbessern. Finden Sie noch heute Ihre ideale Kaffeemaschine und brühen Sie wie ein Profi!",
+              "en-au": "Découvrez les meilleures cafetières pour tous les goûts et styles. Des machines à espresso aux cafetières à filtre, nous avons des options de haute qualité pour améliorer votre expérience café. Trouvez votre cafetière idéale aujourd'hui et préparez du café comme un pro !",
+              "en-ca": "Discover the best coffee makers for every taste and style. From espresso machines to drip coffee makers, we have high-quality options to elevate your coffee experience. Find your ideal coffee maker today and brew like a pro!",
+              "en-gb": "Discover the best coffee makers for every taste and style. From espresso machines to filter coffee makers, we have high-quality options to elevate your coffee experience. Find your ideal coffee maker today and brew like a pro!",
+              "en-nl": "Ontdek de beste koffiemachines voor elke smaak en stijl. Van espressomachines tot filterkoffiemachines, wij hebben hoogwaardige opties om uw koffie-ervaring te verbeteren. Vind vandaag nog uw ideale koffiemachine en zet koffie als een professional!",
+              "en-nz": "Entdecken Sie die besten Kaffeemaschinen für jeden Geschmack und Stil. Von Espressomaschinen bis hin zu Filterkaffeemaschinen bieten wir hochwertige Optionen, um Ihr Kaffeeerlebnis zu verbessern. Finden Sie noch heute Ihre ideale Kaffeemaschine und brühen Sie wie ein Profi!",
               "en-us": "Discover the best coffee makers for every taste and style. From espresso machines to drip coffee makers, we have high-quality options to elevate your coffee experience. Find your ideal coffee maker today and brew like a pro!",
               "es-us": "Descubre las mejores cafeteras para cada gusto y estilo. Desde máquinas de espresso hasta cafeteras de goteo, tenemos opciones de alta calidad para elevar tu experiencia cafetera. ¡Encuentra tu cafetera ideal hoy y prepara café como un profesional!",
               "fr-ca": "Découvrez les meilleures cafetières pour tous les goûts et tous les styles. Des machines à espresso aux cafetières à filtre, nous avons des options de haute qualité pour améliorer votre expérience café. Trouvez votre cafetière idéale aujourd'hui et préparez du café comme un pro !",
-              "en-ca": "Discover the best coffee makers for every taste and style. From espresso machines to drip coffee makers, we have high-quality options to elevate your coffee experience. Find your ideal coffee maker today and brew like a pro!",
-              "en-gb": "Discover the best coffee makers for every taste and style. From espresso machines to filter coffee makers, we have high-quality options to elevate your coffee experience. Find your ideal coffee maker today and brew like a pro!",
-              "de-de": "Entdecken Sie die besten Kaffeemaschinen für jeden Geschmack und Stil. Von Espressomaschinen bis zu Filterkaffeemaschinen bieten wir hochwertige Optionen, um Ihr Kaffeeerlebnis zu verbessern. Finden Sie noch heute Ihre ideale Kaffeemaschine und brühen Sie wie ein Profi!",
-              "en-de": "Entdecken Sie die besten Kaffeemaschinen für jeden Geschmack und Stil. Von Espressomaschinen bis hin zu Filterkaffeemaschinen bieten wir hochwertige Optionen, um Ihr Kaffeeerlebnis zu verbessern. Finden Sie noch heute Ihre ideale Kaffeemaschine und brühen Sie wie ein Profi!",
-              "de-at": "Entdecken Sie die besten Kaffeemaschinen für jeden Geschmack und Stil. Von Espressomaschinen bis zu Filterkaffeemaschinen bieten wir hochwertige Optionen, um Ihr Kaffeeerlebnis zu verbessern. Finden Sie noch heute Ihre ideale Kaffeemaschine und brühen Sie wie ein Profi!",
-              "nl-nl": "Ontdek de beste koffiemachines voor elke smaak en stijl. Van espressomachines tot filterkoffiezetapparaten, wij hebben hoogwaardige opties om uw koffie-ervaring te verbeteren. Vind vandaag nog uw ideale koffiemachine en zet koffie als een professional!",
-              "en-nl": "Ontdek de beste koffiemachines voor elke smaak en stijl. Van espressomachines tot filterkoffiemachines, wij hebben hoogwaardige opties om uw koffie-ervaring te verbeteren. Vind vandaag nog uw ideale koffiemachine en zet koffie als een professional!",
-              "da-dk": "Opdag de bedste kaffemaskiner til enhver smag og stil. Fra espressomaskiner til filterkaffemaskiner har vi kvalitetsmuligheder, der kan løfte din kaffeoplevelse. Find din ideelle kaffemaskine i dag og bryg som en professionel!",
-              "sv-se": "Upptäck de bästa kaffebryggarna för varje smak och stil. Från espressomaskiner till droppkaffebryggare, vi har högkvalitativa alternativ för att höja din kaffeupplevelse. Hitta din perfekta kaffebryggare idag och brygg som ett proffs!",
-              "nb-no": "Oppdag de beste kaffemaskinene for enhver smak og stil. Fra espressomaskiner til dryppkaffemaskiner, vi har høykvalitetsalternativer for å heve din kaffeopplevelse. Finn din ideelle kaffemaskin i dag og brygg som en proff!",
               "fr-fr": "Découvrez les meilleures cafetières pour chaque goût et style. Des machines à expresso aux cafetières à filtre, nous avons des options de haute qualité pour améliorer votre expérience café. Trouvez votre cafetière idéale aujourd'hui et préparez votre café comme un pro !",
-              "en-fr": "Découvrez les meilleures cafetières pour tous les goûts et styles. Des machines à espresso aux cafetières à filtre, nous avons des options de haute qualité pour améliorer votre expérience café. Trouvez votre cafetière idéale aujourd'hui et préparez du café comme un pro !",
               "ja-jp": "あらゆる好みやスタイルに合った最高のコーヒーメーカーを見つけましょう。エスプレッソマシンからドリップコーヒーメーカーまで、コーヒー体験を向上させる高品質なオプションをご用意しています。理想のコーヒーメーカーを見つけて、プロのように淹れましょう！",
-              "ar-uae": "اكتشف أفضل ماكينات القهوة لكل ذوق وأسلوب. من ماكينات الإسبريسو إلى ماكينات القهوة بالتنقيط، لدينا خيارات عالية الجودة لتحسين تجربة قهوتك. اعثر على ماكينة القهوة المثالية لك اليوم واصنع القهوة كمحترف!",
-              "ar-ksa": "اكتشف أفضل ماكينات القهوة لكل ذوق وأسلوب. من ماكينات الإسبريسو إلى ماكينات القهوة بالتنقيط، لدينا خيارات عالية الجودة لرفع مستوى تجربة القهوة الخاصة بك. اعثر على ماكينة القهوة المثالية لك اليوم واصنع القهوة كمحترف!"
+              "nb-no": "Oppdag de beste kaffemaskinene for enhver smak og stil. Fra espressomaskiner til dryppkaffemaskiner, vi har høykvalitetsalternativer for å heve din kaffeopplevelse. Finn din ideelle kaffemaskin i dag og brygg som en proff!",
+              "nl-nl": "Ontdek de beste koffiemachines voor elke smaak en stijl. Van espressomachines tot filterkoffiezetapparaten, wij hebben hoogwaardige opties om uw koffie-ervaring te verbeteren. Vind vandaag nog uw ideale koffiemachine en zet koffie als een professional!",
+              "sv-se": "Upptäck de bästa kaffebryggarna för varje smak och stil. Från espressomaskiner till droppkaffebryggare, vi har högkvalitativa alternativ för att höja din kaffeupplevelse. Hitta din perfekta kaffebryggare idag och brygg som ett proffs!",
+              "ar-ksa": "اكتشف أفضل ماكينات القهوة لكل ذوق وأسلوب. من ماكينات الإسبريسو إلى ماكينات القهوة بالتنقيط، لدينا خيارات عالية الجودة لرفع مستوى تجربة القهوة الخاصة بك. اعثر على ماكينة القهوة المثالية لك اليوم واصنع القهوة كمحترف!",
+              "ar-uae": "اكتشف أفضل ماكينات القهوة لكل ذوق وأسلوب. من ماكينات الإسبريسو إلى ماكينات القهوة بالتنقيط، لدينا خيارات عالية الجودة لتحسين تجربة قهوتك. اعثر على ماكينة القهوة المثالية لك اليوم واصنع القهوة كمحترف!"
             }
           },
           "openGraphDescription": {
             "type": "text",
             "locales": {
+              "da-dk": "Opdag de bedste kaffemaskiner til enhver smag og stil. Fra espressomaskiner til filterkaffemaskiner, vi har kvalitetsmuligheder til at forbedre din kaffeoplevelse. Find din ideelle kaffemaskine i dag og bryg som en professionel!",
+              "de-at": "Entdecken Sie die besten Kaffeemaschinen für jeden Geschmack und Stil. Von Espressomaschinen bis hin zu Filterkaffeemaschinen bieten wir hochwertige Optionen, um Ihr Kaffeeerlebnis zu verbessern. Finden Sie noch heute Ihre ideale Kaffeemaschine und brühen Sie wie ein Profi!",
+              "de-de": "Entdecken Sie die besten Kaffeemaschinen für jeden Geschmack und Stil. Von Espressomaschinen bis hin zu Filterkaffeemaschinen bieten wir hochwertige Optionen, um Ihr Kaffeeerlebnis zu verbessern. Finden Sie noch heute Ihre ideale Kaffeemaschine und brühen Sie wie ein Profi!",
+              "en-au": "Découvrez les meilleures cafetières pour tous les goûts et tous les styles. Des machines à expresso aux cafetières à filtre, nous avons des options de haute qualité pour améliorer votre expérience café. Trouvez votre cafetière idéale aujourd'hui et préparez du café comme un pro !",
+              "en-ca": "Discover the best coffee makers for every taste and style. From espresso machines to drip coffee makers, we have high-quality options to elevate your coffee experience. Find your ideal coffee maker today and brew like a pro!",
+              "en-gb": "Discover the best coffee makers for every taste and style. From espresso machines to filter coffee makers, we have high-quality options to elevate your coffee experience. Find your ideal coffee maker today and brew like a pro!",
+              "en-nl": "Ontdek de beste koffiemachines voor elke smaak en stijl. Van espressomachines tot filterkoffiezetapparaten, wij hebben hoogwaardige opties om uw koffie-ervaring te verbeteren. Vind vandaag nog uw ideale koffiemachine en zet koffie als een professional!",
+              "en-nz": "Entdecken Sie die besten Kaffeemaschinen für jeden Geschmack und Stil. Von Espressomaschinen bis zu Filterkaffeemaschinen haben wir hochwertige Optionen, um Ihr Kaffeeerlebnis zu verbessern. Finden Sie noch heute Ihre ideale Kaffeemaschine und brühen Sie wie ein Profi!",
               "en-us": "Discover the best coffee makers for every taste and style. From espresso machines to drip coffee makers, we have high-quality options to elevate your coffee experience. Find your ideal coffee maker today and brew like a pro!",
               "es-us": "Descubre las mejores cafeteras para cada gusto y estilo. Desde máquinas de espresso hasta cafeteras de goteo, tenemos opciones de alta calidad para elevar tu experiencia con el café. ¡Encuentra tu cafetera ideal hoy y prepara café como un profesional!",
               "fr-ca": "Découvrez les meilleures cafetières pour tous les goûts et styles. Des machines à espresso aux cafetières à filtre, nous avons des options de haute qualité pour rehausser votre expérience café. Trouvez votre cafetière idéale aujourd'hui et préparez votre café comme un pro!",
-              "en-ca": "Discover the best coffee makers for every taste and style. From espresso machines to drip coffee makers, we have high-quality options to elevate your coffee experience. Find your ideal coffee maker today and brew like a pro!",
-              "en-gb": "Discover the best coffee makers for every taste and style. From espresso machines to filter coffee makers, we have high-quality options to elevate your coffee experience. Find your ideal coffee maker today and brew like a pro!",
-              "de-de": "Entdecken Sie die besten Kaffeemaschinen für jeden Geschmack und Stil. Von Espressomaschinen bis hin zu Filterkaffeemaschinen bieten wir hochwertige Optionen, um Ihr Kaffeeerlebnis zu verbessern. Finden Sie noch heute Ihre ideale Kaffeemaschine und brühen Sie wie ein Profi!",
-              "en-de": "Entdecken Sie die besten Kaffeemaschinen für jeden Geschmack und Stil. Von Espressomaschinen bis zu Filterkaffeemaschinen haben wir hochwertige Optionen, um Ihr Kaffeeerlebnis zu verbessern. Finden Sie noch heute Ihre ideale Kaffeemaschine und brühen Sie wie ein Profi!",
-              "de-at": "Entdecken Sie die besten Kaffeemaschinen für jeden Geschmack und Stil. Von Espressomaschinen bis hin zu Filterkaffeemaschinen bieten wir hochwertige Optionen, um Ihr Kaffeeerlebnis zu verbessern. Finden Sie noch heute Ihre ideale Kaffeemaschine und brühen Sie wie ein Profi!",
-              "nl-nl": "Ontdek de beste koffiezetapparaten voor elke smaak en stijl. Van espressomachines tot filterkoffiezetapparaten, wij hebben hoogwaardige opties om uw koffie-ervaring te verbeteren. Vind vandaag nog uw ideale koffiezetapparaat en zet koffie als een professional!",
-              "en-nl": "Ontdek de beste koffiemachines voor elke smaak en stijl. Van espressomachines tot filterkoffiezetapparaten, wij hebben hoogwaardige opties om uw koffie-ervaring te verbeteren. Vind vandaag nog uw ideale koffiemachine en zet koffie als een professional!",
-              "da-dk": "Opdag de bedste kaffemaskiner til enhver smag og stil. Fra espressomaskiner til filterkaffemaskiner, vi har kvalitetsmuligheder til at forbedre din kaffeoplevelse. Find din ideelle kaffemaskine i dag og bryg som en professionel!",
-              "sv-se": "Upptäck de bästa kaffebryggarna för varje smak och stil. Från espressomaskiner till droppkaffebryggare, vi har högkvalitativa alternativ för att höja din kaffeupplevelse. Hitta din idealiska kaffebryggare idag och brygg som ett proffs!",
-              "nb-no": "Oppdag de beste kaffetrakterne for enhver smak og stil. Fra espressomaskiner til dryppkaffetraktere, vi har høykvalitetsalternativer for å heve din kaffeopplevelse. Finn din ideelle kaffetrakter i dag og brygg som en proff!",
               "fr-fr": "Découvrez les meilleures cafetières pour tous les goûts et tous les styles. Des machines à expresso aux cafetières à filtre, nous avons des options de haute qualité pour améliorer votre expérience café. Trouvez votre cafetière idéale aujourd'hui et préparez votre café comme un pro !",
-              "en-fr": "Découvrez les meilleures cafetières pour tous les goûts et tous les styles. Des machines à expresso aux cafetières à filtre, nous avons des options de haute qualité pour améliorer votre expérience café. Trouvez votre cafetière idéale aujourd'hui et préparez du café comme un pro !",
               "ja-jp": "あらゆる好みやスタイルに合った最高のコーヒーメーカーを見つけましょう。エスプレッソマシンからドリップコーヒーメーカーまで、コーヒー体験を向上させる高品質な選択肢をご用意しています。理想のコーヒーメーカーを見つけて、プロのように淹れましょう！",
-              "ar-uae": "اكتشف أفضل ماكينات القهوة لكل ذوق وأسلوب. من آلات الإسبريسو إلى ماكينات القهوة بالتنقيط، لدينا خيارات عالية الجودة لتحسين تجربتك مع القهوة. اعثر على ماكينة القهوة المثالية لك اليوم واصنع القهوة كمحترف!",
-              "ar-ksa": "اكتشف أفضل ماكينات القهوة لكل ذوق وأسلوب. من ماكينات الإسبريسو إلى ماكينات القهوة بالتنقيط، لدينا خيارات عالية الجودة لرفع تجربتك مع القهوة. اعثر على ماكينة القهوة المثالية لك اليوم واصنع القهوة كمحترف!"
+              "nb-no": "Oppdag de beste kaffetrakterne for enhver smak og stil. Fra espressomaskiner til dryppkaffetraktere, vi har høykvalitetsalternativer for å heve din kaffeopplevelse. Finn din ideelle kaffetrakter i dag og brygg som en proff!",
+              "nl-nl": "Ontdek de beste koffiezetapparaten voor elke smaak en stijl. Van espressomachines tot filterkoffiezetapparaten, wij hebben hoogwaardige opties om uw koffie-ervaring te verbeteren. Vind vandaag nog uw ideale koffiezetapparaat en zet koffie als een professional!",
+              "sv-se": "Upptäck de bästa kaffebryggarna för varje smak och stil. Från espressomaskiner till droppkaffebryggare, vi har högkvalitativa alternativ för att höja din kaffeupplevelse. Hitta din idealiska kaffebryggare idag och brygg som ett proffs!",
+              "ar-ksa": "اكتشف أفضل ماكينات القهوة لكل ذوق وأسلوب. من ماكينات الإسبريسو إلى ماكينات القهوة بالتنقيط، لدينا خيارات عالية الجودة لرفع تجربتك مع القهوة. اعثر على ماكينة القهوة المثالية لك اليوم واصنع القهوة كمحترف!",
+              "ar-uae": "اكتشف أفضل ماكينات القهوة لكل ذوق وأسلوب. من آلات الإسبريسو إلى ماكينات القهوة بالتنقيط، لدينا خيارات عالية الجودة لتحسين تجربتك مع القهوة. اعثر على ماكينة القهوة المثالية لك اليوم واصنع القهوة كمحترف!"
             }
           }
         }
@@ -307,24 +309,24 @@
           "text": {
             "type": "text",
             "locales": {
+              "da-dk": "Find din perfekte kaffemaskine",
+              "de-at": "Finden Sie Ihre perfekte Kaffeemaschine",
+              "de-de": "Finden Sie Ihre perfekte Kaffeemaschine",
+              "en-au": "Trouvez votre cafetière parfaite",
+              "en-ca": "Find your perfect coffee maker",
+              "en-gb": "Find your perfect coffee machine",
+              "en-nl": "Vind uw perfecte koffiezetapparaat",
+              "en-nz": "Finden Sie Ihre perfekte Kaffeemaschine",
               "en-us": "Find your perfect coffee maker",
               "es-us": "Encuentra tu cafetera perfecta",
               "fr-ca": "Trouvez votre cafetière idéale",
-              "en-ca": "Find your perfect coffee maker",
-              "en-gb": "Find your perfect coffee machine",
-              "de-de": "Finden Sie Ihre perfekte Kaffeemaschine",
-              "en-de": "Finden Sie Ihre perfekte Kaffeemaschine",
-              "de-at": "Finden Sie Ihre perfekte Kaffeemaschine",
-              "nl-nl": "Vind uw perfecte koffiezetapparaat",
-              "en-nl": "Vind uw perfecte koffiezetapparaat",
-              "da-dk": "Find din perfekte kaffemaskine",
-              "sv-se": "Hitta din perfekta kaffebryggare",
-              "nb-no": "Finn din perfekte kaffetrakter",
               "fr-fr": "Trouvez votre cafetière parfaite",
-              "en-fr": "Trouvez votre cafetière parfaite",
               "ja-jp": "あなたにぴったりのコーヒーメーカーを見つけましょう",
-              "ar-uae": "ابحث عن ماكينة القهوة المثالية لك",
-              "ar-ksa": "اعثر على ماكينة القهوة المثالية لك"
+              "nb-no": "Finn din perfekte kaffetrakter",
+              "nl-nl": "Vind uw perfecte koffiezetapparaat",
+              "sv-se": "Hitta din perfekta kaffebryggare",
+              "ar-ksa": "اعثر على ماكينة القهوة المثالية لك",
+              "ar-uae": "ابحث عن ماكينة القهوة المثالية لك"
             }
           }
         }
@@ -387,11 +389,11 @@
                     "da-dk": "Facetteret søgning",
                     "de-at": "Facettierte Suche",
                     "de-de": "Facettensuche",
+                    "en-au": "Recherche à facettes",
                     "en-ca": "Faceted Search",
-                    "en-de": "Facettensuche",
-                    "en-fr": "Recherche à facettes",
                     "en-gb": "Faceted Search",
                     "en-nl": "Gefacetteerd Zoeken",
+                    "en-nz": "Facettensuche",
                     "en-us": "Faceted Search",
                     "es-us": "Búsqueda Facetada",
                     "fr-ca": "Recherche à facettes",
@@ -441,25 +443,16 @@
                   "locale": "${locale}"
                 }
               },
+              "en-au": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
               "en-ca": {
-                "path": "/${locale}/landing-page",
-                "type": "projectMapNode",
-                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
-                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
-                "dynamicInputValues": {
-                  "locale": "${locale}"
-                }
-              },
-              "en-de": {
-                "path": "/${locale}/landing-page",
-                "type": "projectMapNode",
-                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
-                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
-                "dynamicInputValues": {
-                  "locale": "${locale}"
-                }
-              },
-              "en-fr": {
                 "path": "/${locale}/landing-page",
                 "type": "projectMapNode",
                 "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
@@ -478,6 +471,15 @@
                 }
               },
               "en-nl": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-nz": {
                 "path": "/${locale}/landing-page",
                 "type": "projectMapNode",
                 "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
@@ -576,23 +578,23 @@
           "text": {
             "type": "text",
             "locales": {
-              "da-dk": "Recommended for you",
-              "de-at": "Recommended for you",
-              "de-de": "Recommended for you",
+              "da-dk": "Anbefalet til dig",
+              "de-at": "Empfohlen für Sie",
+              "de-de": "Empfohlen für Sie",
+              "en-au": "Recommended for you",
               "en-ca": "Recommended for you",
-              "en-de": "Recommended for you",
-              "en-fr": "Recommended for you",
               "en-gb": "Recommended for you",
               "en-nl": "Recommended for you",
-              "es-us": "Recommended for you",
-              "fr-ca": "Recommended for you",
-              "fr-fr": "Recommended for you",
-              "ja-jp": "Recommended for you",
-              "nb-no": "Recommended for you",
-              "nl-nl": "Recommended for you",
-              "sv-se": "Recommended for you",
-              "ar-ksa": "Recommended for you",
-              "ar-uae": "Recommended for you"
+              "en-nz": "Recommended for you",
+              "es-us": "Recomendado para ti",
+              "fr-ca": "Recommandé pour vous",
+              "fr-fr": "Recommandé pour vous",
+              "ja-jp": "あなたへのおすすめ",
+              "nb-no": "Anbefalt for deg",
+              "nl-nl": "Aanbevolen voor jou",
+              "sv-se": "Rekommenderat för dig",
+              "ar-ksa": "موصى به لك",
+              "ar-uae": "موصى به لك"
             }
           }
         }
@@ -614,15 +616,11 @@
                 "path": "https://unfrm.to/csk-demo",
                 "type": "url"
               },
+              "en-au": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
               "en-ca": {
-                "path": "https://unfrm.to/csk-demo",
-                "type": "url"
-              },
-              "en-de": {
-                "path": "https://unfrm.to/csk-demo",
-                "type": "url"
-              },
-              "en-fr": {
                 "path": "https://unfrm.to/csk-demo",
                 "type": "url"
               },
@@ -631,6 +629,10 @@
                 "type": "url"
               },
               "en-nl": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "en-nz": {
                 "path": "https://unfrm.to/csk-demo",
                 "type": "url"
               },
@@ -691,15 +693,11 @@
                 "path": "https://unfrm.to/csk-demo-request",
                 "type": "url"
               },
+              "en-au": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
               "en-ca": {
-                "path": "https://unfrm.to/csk-demo-request",
-                "type": "url"
-              },
-              "en-de": {
-                "path": "https://unfrm.to/csk-demo-request",
-                "type": "url"
-              },
-              "en-fr": {
                 "path": "https://unfrm.to/csk-demo-request",
                 "type": "url"
               },
@@ -708,6 +706,10 @@
                 "type": "url"
               },
               "en-nl": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "en-nz": {
                 "path": "https://unfrm.to/csk-demo-request",
                 "type": "url"
               },
@@ -768,15 +770,11 @@
                 "path": "https://unfrm.to/csk-sb",
                 "type": "url"
               },
+              "en-au": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
               "en-ca": {
-                "path": "https://unfrm.to/csk-sb",
-                "type": "url"
-              },
-              "en-de": {
-                "path": "https://unfrm.to/csk-sb",
-                "type": "url"
-              },
-              "en-fr": {
                 "path": "https://unfrm.to/csk-sb",
                 "type": "url"
               },
@@ -785,6 +783,10 @@
                 "type": "url"
               },
               "en-nl": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "en-nz": {
                 "path": "https://unfrm.to/csk-sb",
                 "type": "url"
               },
@@ -845,15 +847,11 @@
                 "path": "https://unfrm.to/csk-docs",
                 "type": "url"
               },
+              "en-au": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
               "en-ca": {
-                "path": "https://unfrm.to/csk-docs",
-                "type": "url"
-              },
-              "en-de": {
-                "path": "https://unfrm.to/csk-docs",
-                "type": "url"
-              },
-              "en-fr": {
                 "path": "https://unfrm.to/csk-docs",
                 "type": "url"
               },
@@ -862,6 +860,10 @@
                 "type": "url"
               },
               "en-nl": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "en-nz": {
                 "path": "https://unfrm.to/csk-docs",
                 "type": "url"
               },
@@ -913,7 +915,7 @@
       "en-ca",
       "en-gb",
       "de-de",
-      "en-de",
+      "en-nz",
       "de-at",
       "nl-nl",
       "en-nl",
@@ -921,7 +923,7 @@
       "sv-se",
       "nb-no",
       "fr-fr",
-      "en-fr",
+      "en-au",
       "ja-jp",
       "ar-uae",
       "ar-ksa"
@@ -929,6 +931,6 @@
     "_pattern": "f9c058ea-c40d-4435-ac5a-53423cf654dc"
   },
   "created": "2025-03-18T13:02:32.661565+00:00",
-  "modified": "2025-07-03T13:15:45.798665+00:00",
+  "modified": "2025-07-31T12:51:41.968562+00:00",
   "pattern": false
 }

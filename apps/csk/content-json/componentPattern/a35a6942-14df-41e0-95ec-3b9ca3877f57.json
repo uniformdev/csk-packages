@@ -17,7 +17,7 @@
                 "value": "e7805216-a37b-46b7-b032-cae1df18ae00"
               },
               "url": {
-                "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/SRB5XSgdS4CTNrxzEu36bQ-BB_WebCTA_NoCopy.png",
+                "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/3A8R6nmcTXC1F8MKQNwXJA-BB_WebCTA_NoCopy.png",
                 "type": "text"
               },
               "file": {
@@ -77,11 +77,11 @@
           "da-dk": "Vores Eksklusive Bønnepakke",
           "de-at": "Unser Exklusives Bohnen-Bundle",
           "de-de": "Unser Exklusives Bohnenpaket",
+          "en-au": "Notre Ensemble Exclusif de Grains",
           "en-ca": "Our Exclusive Beans Bundle",
-          "en-de": "Unser Exklusives Bohnen-Bundle",
-          "en-fr": "Notre Ensemble Exclusif de Grains",
           "en-gb": "Our Exclusive Beans Bundle",
           "en-nl": "Ons Exclusieve Bonenpakket",
+          "en-nz": "Unser Exklusives Bohnen-Bundle",
           "en-us": "Our Exclusive Beans Bundle",
           "es-us": "Nuestro Paquete Exclusivo de Frijoles",
           "fr-ca": "Notre ensemble exclusif de grains",
@@ -100,11 +100,11 @@
           "da-dk": "Hovedhjemhelt",
           "de-at": "Hauptseite Held",
           "de-de": "Hauptseite Held",
+          "en-au": "Héros Principal de la Maison",
           "en-ca": "Main Home Hero",
-          "en-de": "Hauptheim Held",
-          "en-fr": "Héros Principal de la Maison",
           "en-gb": "Main Home Hero",
           "en-nl": "Hoofd Home Held",
+          "en-nz": "Hauptheim Held",
           "en-us": "Main Home Hero",
           "es-us": "Héroe Principal del Hogar",
           "fr-ca": "Héros Principal de la Maison",
@@ -123,11 +123,11 @@
           "da-dk": "Håndplukket af Hans Anderson",
           "de-at": "Ausgewählt von Hans Anderson",
           "de-de": "Handverlesen von Hans Anderson",
+          "en-au": "Choisi par Hans Anderson",
           "en-ca": "Handpicked by Hans Anderson",
-          "en-de": "Handverlesen von Hans Anderson",
-          "en-fr": "Choisi par Hans Anderson",
           "en-gb": "Hand-picked by Hans Anderson",
           "en-nl": "Met zorg geselecteerd door Hans Anderson",
+          "en-nz": "Handverlesen von Hans Anderson",
           "en-us": "Handpicked by Hans Anderson",
           "es-us": "Seleccionado por Hans Anderson",
           "fr-ca": "Choisi par Hans Anderson",
@@ -150,11 +150,11 @@
           "da-dk": "Særtilbud",
           "de-at": "Sonderangebot",
           "de-de": "Sonderangebot",
+          "en-au": "Offre spéciale",
           "en-ca": "Special offer",
-          "en-de": "Sonderangebot",
-          "en-fr": "Offre spéciale",
           "en-gb": "Special offer",
           "en-nl": "Speciale aanbieding",
+          "en-nz": "Sonderangebot",
           "en-us": "Special offer",
           "es-us": "Oferta especial",
           "fr-ca": "Offre spéciale",
@@ -197,25 +197,16 @@
               "locale": "${locale}"
             }
           },
+          "en-au": {
+            "path": "/${locale}/beans-bundle",
+            "type": "projectMapNode",
+            "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+            "dynamicInputValues": {
+              "locale": "${locale}"
+            }
+          },
           "en-ca": {
-            "path": "/${locale}/beans-bundle",
-            "type": "projectMapNode",
-            "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
-            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
-            "dynamicInputValues": {
-              "locale": "${locale}"
-            }
-          },
-          "en-de": {
-            "path": "/${locale}/beans-bundle",
-            "type": "projectMapNode",
-            "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
-            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
-            "dynamicInputValues": {
-              "locale": "${locale}"
-            }
-          },
-          "en-fr": {
             "path": "/${locale}/beans-bundle",
             "type": "projectMapNode",
             "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
@@ -234,6 +225,15 @@
             }
           },
           "en-nl": {
+            "path": "/${locale}/beans-bundle",
+            "type": "projectMapNode",
+            "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
+            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+            "dynamicInputValues": {
+              "locale": "${locale}"
+            }
+          },
+          "en-nz": {
             "path": "/${locale}/beans-bundle",
             "type": "projectMapNode",
             "nodeId": "77389775-4c2c-4114-b135-c66e53ccbda1",
@@ -340,11 +340,11 @@
           "da-dk": "Udforsk pakken",
           "de-at": "Entdecken Sie das Paket",
           "de-de": "Entdecken Sie das Paket",
+          "en-au": "Explorez le lot",
           "en-ca": "Explore the bundle",
-          "en-de": "Erkunde das Paket",
-          "en-fr": "Explorez le lot",
           "en-gb": "Explore the bundle",
           "en-nl": "Verken het pakket",
+          "en-nz": "Erkunde das Paket",
           "en-us": "Explore the bundle",
           "es-us": "Explora el paquete",
           "fr-ca": "Explorez le forfait",
@@ -365,7 +365,7 @@
       "en-ca",
       "en-gb",
       "de-de",
-      "en-de",
+      "en-nz",
       "de-at",
       "nl-nl",
       "en-nl",
@@ -373,14 +373,14 @@
       "sv-se",
       "nb-no",
       "fr-fr",
-      "en-fr",
+      "en-au",
       "ja-jp",
       "ar-uae",
       "ar-ksa"
     ]
   },
   "created": "2025-06-18T12:12:05.559732+00:00",
-  "modified": "2025-07-07T12:20:40.588998+00:00",
+  "modified": "2025-07-31T12:51:33.820104+00:00",
   "pattern": true,
   "previewImageUrl": "https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/special_offer_hero.png"
 }

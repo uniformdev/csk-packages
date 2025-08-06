@@ -2,7 +2,7 @@
   "id": "product",
   "name": "Product",
   "created": "2025-03-18T13:02:38.073619+00:00",
-  "updated": "2025-07-03T11:50:30.856483+00:00",
+  "updated": "2025-07-30T09:12:43.457182+00:00",
   "slugSettings": {
     "required": "no"
   },
@@ -83,8 +83,7 @@
           "category",
           "subcategory",
           "brand",
-          "variants",
-          "recommendations"
+          "variants"
         ]
       }
     },
@@ -140,17 +139,6 @@
         "allowedTypes": [
           "$loop",
           "variant"
-        ]
-      }
-    },
-    {
-      "id": "recommendations",
-      "name": "Recommendations",
-      "type": "contentReference",
-      "typeConfig": {
-        "isMulti": true,
-        "allowedContentTypes": [
-          "product"
         ]
       }
     },

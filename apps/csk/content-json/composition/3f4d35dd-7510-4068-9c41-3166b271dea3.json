@@ -11,6 +11,7 @@
           "locale": "${locale}",
           "search": "",
           "filters": "{\"type[eq]\":\"author\"}",
+          "uiFilters": "[{\"field\":\"type\",\"operator\":\"eq\",\"value\":\"author\"}]",
           "contentTypes": "author"
         }
       },
@@ -20,6 +21,7 @@
           "locale": "${locale}",
           "search": "",
           "filters": "{\"type[eq]\":\"articleCategory\"}",
+          "uiFilters": "[{\"field\":\"type\",\"operator\":\"eq\",\"value\":\"articleCategory\"}]",
           "contentTypes": "articleCategory"
         }
       }
@@ -30,47 +32,47 @@
           "pageTitle": {
             "type": "text",
             "locales": {
+              "da-dk": "Java Drip Kaffebar Artikler - Opdag Din Perfekte Bryg",
+              "de-at": "Java Drip Coffee Shop Artikel - Entdecken Sie Ihren perfekten Kaffee",
+              "de-de": "Java Drip Coffee Shop Artikel - Entdecken Sie Ihren perfekten Kaffee",
+              "en-au": "Articles de Java Drip Coffee Shop - Découvrez votre infusion parfaite",
+              "en-ca": "Java Drip Coffee Shop Articles - Discover Your Perfect Brew",
+              "en-gb": "Java Drip Coffee Shop Articles - Discover Your Perfect Brew",
+              "en-nl": "Java Drip Koffiebar Artikelen - Ontdek Je Perfecte Brouwsel",
+              "en-nz": "Java Drip Coffee Shop Artikel - Entdecken Sie Ihren perfekten Kaffee",
               "en-us": "Java Drip Coffee Shop Articles - Discover Your Perfect Brew",
               "es-us": "Artículos de Java Drip Coffee Shop - Descubre tu Preparación Perfecta",
               "fr-ca": "Articles de Java Drip Coffee Shop - Découvrez votre infusion parfaite",
-              "en-ca": "Java Drip Coffee Shop Articles - Discover Your Perfect Brew",
-              "en-gb": "Java Drip Coffee Shop Articles - Discover Your Perfect Brew",
-              "de-de": "Java Drip Coffee Shop Artikel - Entdecken Sie Ihren perfekten Kaffee",
-              "en-de": "Java Drip Coffee Shop Artikel - Entdecken Sie Ihren perfekten Kaffee",
-              "de-at": "Java Drip Coffee Shop Artikel - Entdecken Sie Ihren perfekten Kaffee",
-              "nl-nl": "Java Drip Koffiebar Artikelen - Ontdek je Perfecte Brouwsel",
-              "en-nl": "Java Drip Koffiebar Artikelen - Ontdek Je Perfecte Brouwsel",
-              "da-dk": "Java Drip Kaffebar Artikler - Opdag Din Perfekte Bryg",
-              "sv-se": "Java Drip Coffee Shop Artiklar - Upptäck ditt perfekta bryggkaffe",
-              "nb-no": "Java Drip Kaffebar Artikler - Oppdag Din Perfekte Brygg",
               "fr-fr": "Articles de Java Drip Coffee Shop - Découvrez votre infusion parfaite",
-              "en-fr": "Articles de Java Drip Coffee Shop - Découvrez votre infusion parfaite",
               "ja-jp": "ジャバドリップコーヒーショップの記事 - あなたにぴったりの一杯を見つけよう",
-              "ar-uae": "مقالات مقهى جافا دريب - اكتشف قهوتك المثالية",
-              "ar-ksa": "مقالات مقهى جافا دريب - اكتشف قهوتك المثالية"
+              "nb-no": "Java Drip Kaffebar Artikler - Oppdag Din Perfekte Brygg",
+              "nl-nl": "Java Drip Koffiebar Artikelen - Ontdek je Perfecte Brouwsel",
+              "sv-se": "Java Drip Coffee Shop Artiklar - Upptäck ditt perfekta bryggkaffe",
+              "ar-ksa": "مقالات مقهى جافا دريب - اكتشف قهوتك المثالية",
+              "ar-uae": "مقالات مقهى جافا دريب - اكتشف قهوتك المثالية"
             }
           },
           "pageKeywords": {
             "type": "text",
             "locales": {
+              "da-dk": "Kaffe, Kaffebønner, Bryggeteknikker, Kaffetips, Kaffeartikler, Java Drip, Espresso, Specialkaffe",
+              "de-at": "Kaffee, Kaffeebohnen, Brühtechniken, Kaffeetipps, Kaffeeartikel, Java Drip, Espresso, Spezialitätenkaffee",
+              "de-de": "Kaffee, Kaffeebohnen, Brühtechniken, Kaffeetipps, Kaffeeartikel, Java Drip, Espresso, Spezialitätenkaffee",
+              "en-au": "Café, Grains de café, Techniques d'infusion, Conseils sur le café, Articles sur le café, Goutte à goutte Java, Espresso, Café de spécialité",
+              "en-ca": "Coffee, Coffee Beans, Brewing Techniques, Coffee Tips, Coffee Articles, Java Drip, Espresso, Specialty Coffee",
+              "en-gb": "Coffee, Coffee Beans, Brewing Techniques, Coffee Tips, Coffee Articles, Java Drip, Espresso, Speciality Coffee",
+              "en-nl": "Koffie, Koffiebonen, Zetmethoden, Koffietips, Koffieartikelen, Java Drip, Espresso, Specialty Coffee",
+              "en-nz": "Kaffee, Kaffeebohnen, Brühtechniken, Kaffeetipps, Kaffeeartikel, Java Drip, Espresso, Spezialitätenkaffee",
               "en-us": "Coffee, Coffee Beans, Brewing Techniques, Coffee Tips, Coffee Articles, Java Drip, Espresso, Specialty Coffee",
               "es-us": "Café, Granos de Café, Técnicas de Preparación, Consejos de Café, Artículos de Café, Goteo de Java, Espresso, Café de Especialidad",
               "fr-ca": "Café, Grains de café, Techniques d'infusion, Conseils sur le café, Articles sur le café, Java Drip, Espresso, Café de spécialité",
-              "en-ca": "Coffee, Coffee Beans, Brewing Techniques, Coffee Tips, Coffee Articles, Java Drip, Espresso, Specialty Coffee",
-              "en-gb": "Coffee, Coffee Beans, Brewing Techniques, Coffee Tips, Coffee Articles, Java Drip, Espresso, Speciality Coffee",
-              "de-de": "Kaffee, Kaffeebohnen, Brühtechniken, Kaffeetipps, Kaffeeartikel, Java Drip, Espresso, Spezialitätenkaffee",
-              "en-de": "Kaffee, Kaffeebohnen, Brühtechniken, Kaffeetipps, Kaffeeartikel, Java Drip, Espresso, Spezialitätenkaffee",
-              "de-at": "Kaffee, Kaffeebohnen, Brühtechniken, Kaffeetipps, Kaffeeartikel, Java Drip, Espresso, Spezialitätenkaffee",
-              "nl-nl": "Koffie, Koffiebonen, Zetmethoden, Koffietips, Koffieartikelen, Java Drip, Espresso, Specialty Coffee",
-              "en-nl": "Koffie, Koffiebonen, Zetmethoden, Koffietips, Koffieartikelen, Java Drip, Espresso, Specialty Coffee",
-              "da-dk": "Kaffe, Kaffebønner, Bryggeteknikker, Kaffetips, Kaffeartikler, Java Drip, Espresso, Specialkaffe",
-              "sv-se": "Kaffe, Kaffebönor, Bryggtekniker, Kaffetips, Kaffeartiklar, Java Drip, Espresso, Specialkaffe",
-              "nb-no": "Kaffe, Kaffebønner, Bryggeteknikker, Kaffetips, Kaffeartikler, Java Drip, Espresso, Spesialkaffe",
               "fr-fr": "Café, Grains de café, Techniques d'infusion, Conseils sur le café, Articles sur le café, Java Drip, Espresso, Café de spécialité",
-              "en-fr": "Café, Grains de café, Techniques d'infusion, Conseils sur le café, Articles sur le café, Goutte à goutte Java, Espresso, Café de spécialité",
               "ja-jp": "コーヒー、コーヒー豆、抽出技術、コーヒーのヒント、コーヒー記事、ジャバドリップ、エスプレッソ、スペシャルティコーヒー",
-              "ar-uae": "قهوة، حبوب القهوة، تقنيات التخمير، نصائح القهوة، مقالات القهوة، جافا دريب، إسبريسو، قهوة مختصة",
-              "ar-ksa": "قهوة، حبوب القهوة، تقنيات التحضير، نصائح القهوة، مقالات القهوة، جافا دريب، إسبرسو، قهوة مختصة"
+              "nb-no": "Kaffe, Kaffebønner, Bryggeteknikker, Kaffetips, Kaffeartikler, Java Drip, Espresso, Spesialkaffe",
+              "nl-nl": "Koffie, Koffiebonen, Zetmethoden, Koffietips, Koffieartikelen, Java Drip, Espresso, Specialty Coffee",
+              "sv-se": "Kaffe, Kaffebönor, Bryggtekniker, Kaffetips, Kaffeartiklar, Java Drip, Espresso, Specialkaffe",
+              "ar-ksa": "قهوة، حبوب القهوة، تقنيات التحضير، نصائح القهوة، مقالات القهوة، جافا دريب، إسبرسو، قهوة مختصة",
+              "ar-uae": "قهوة، حبوب القهوة، تقنيات التخمير، نصائح القهوة، مقالات القهوة، جافا دريب، إسبريسو، قهوة مختصة"
             }
           },
           "openGraphType": {
@@ -124,70 +126,70 @@
           "openGraphTitle": {
             "type": "text",
             "locales": {
+              "da-dk": "Java Drip Kaffebar Artikler - Opdag Din Perfekte Bryg",
+              "de-at": "Java Drip Coffee Shop Artikel - Entdecken Sie Ihren perfekten Kaffee",
+              "de-de": "Java Drip Coffee Shop Artikel - Entdecken Sie Ihren perfekten Kaffee",
+              "en-au": "Articles de la Java Drip Coffee Shop - Découvrez votre infusion parfaite",
+              "en-ca": "Java Drip Coffee Shop Articles - Discover Your Perfect Brew",
+              "en-gb": "Java Drip Coffee Shop Articles - Discover Your Perfect Brew",
+              "en-nl": "Java Drip Coffee Shop Artikelen - Ontdek Jouw Perfecte Brouwsel",
+              "en-nz": "Java Drip Coffee Shop Artikel - Entdecken Sie Ihren perfekten Kaffee",
               "en-us": "Java Drip Coffee Shop Articles - Discover Your Perfect Brew",
               "es-us": "Artículos de Java Drip Coffee Shop - Descubre tu Preparación Perfecta",
               "fr-ca": "Articles sur le café goutte-à-goutte Java - Découvrez votre infusion parfaite",
-              "en-ca": "Java Drip Coffee Shop Articles - Discover Your Perfect Brew",
-              "en-gb": "Java Drip Coffee Shop Articles - Discover Your Perfect Brew",
-              "de-de": "Java Drip Coffee Shop Artikel - Entdecken Sie Ihren perfekten Kaffee",
-              "en-de": "Java Drip Coffee Shop Artikel - Entdecken Sie Ihren perfekten Kaffee",
-              "de-at": "Java Drip Coffee Shop Artikel - Entdecken Sie Ihren perfekten Kaffee",
-              "nl-nl": "Java Drip Koffiebar Artikelen - Ontdek Jouw Perfecte Brouwsel",
-              "en-nl": "Java Drip Coffee Shop Artikelen - Ontdek Jouw Perfecte Brouwsel",
-              "da-dk": "Java Drip Kaffebar Artikler - Opdag Din Perfekte Bryg",
-              "sv-se": "Java Drip Coffee Shop Artiklar - Upptäck ditt perfekta bryggkaffe",
-              "nb-no": "Java Drip Kaffebar Artikler - Oppdag Din Perfekte Brygg",
               "fr-fr": "Articles de Java Drip Coffee Shop - Découvrez votre infusion parfaite",
-              "en-fr": "Articles de la Java Drip Coffee Shop - Découvrez votre infusion parfaite",
               "ja-jp": "Javaドリップコーヒーショップの記事 - あなたにぴったりの一杯を見つけよう",
-              "ar-uae": "مقالات مقهى جافا دريب - اكتشف قهوتك المثالية",
-              "ar-ksa": "مقالات مقهى جافا دريب - اكتشف قهوتك المثالية"
+              "nb-no": "Java Drip Kaffebar Artikler - Oppdag Din Perfekte Brygg",
+              "nl-nl": "Java Drip Koffiebar Artikelen - Ontdek Jouw Perfecte Brouwsel",
+              "sv-se": "Java Drip Coffee Shop Artiklar - Upptäck ditt perfekta bryggkaffe",
+              "ar-ksa": "مقالات مقهى جافا دريب - اكتشف قهوتك المثالية",
+              "ar-uae": "مقالات مقهى جافا دريب - اكتشف قهوتك المثالية"
             }
           },
           "pageDescription": {
             "type": "text",
             "locales": {
+              "da-dk": "Udforsk vores samling af kaffeartikler. Fra at vælge de rigtige kaffebønner til at mestre de perfekte bryggeteknikker, opdag alt hvad du behøver at vide om kaffe her.",
+              "de-at": "Entdecken Sie unsere Sammlung von Kaffeeartikeln. Von der Auswahl der richtigen Kaffeebohnen bis hin zum Beherrschen der perfekten Brühtechniken – hier finden Sie alles, was Sie über Kaffee wissen müssen.",
+              "de-de": "Entdecken Sie unsere Sammlung von Kaffeeartikeln. Von der Auswahl der richtigen Kaffeebohnen bis hin zur Beherrschung der perfekten Brühtechniken – entdecken Sie hier alles, was Sie über Kaffee wissen müssen.",
+              "en-au": "Explorez notre collection d'articles sur le café. Du choix des bons grains de café à la maîtrise des techniques de préparation parfaites, découvrez tout ce que vous devez savoir sur le café ici.",
+              "en-ca": "Explore our collection of coffee articles. From choosing the right coffee beans to mastering the perfect brewing techniques, discover all you need to know about coffee here.",
+              "en-gb": "Explore our collection of coffee articles. From choosing the right coffee beans to mastering the perfect brewing techniques, discover all you need to know about coffee here.",
+              "en-nl": "Verken onze verzameling koffieartikelen. Van het kiezen van de juiste koffiebonen tot het beheersen van de perfecte zetmethoden, ontdek hier alles wat je moet weten over koffie.",
+              "en-nz": "Entdecken Sie unsere Sammlung von Kaffeeartikeln. Von der Auswahl der richtigen Kaffeebohnen bis hin zur Beherrschung der perfekten Brühtechniken – entdecken Sie hier alles, was Sie über Kaffee wissen müssen.",
               "en-us": "Explore our collection of coffee articles. From choosing the right coffee beans to mastering the perfect brewing techniques, discover all you need to know about coffee here.",
               "es-us": "Explora nuestra colección de artículos sobre café. Desde elegir los granos de café adecuados hasta dominar las técnicas de preparación perfectas, descubre todo lo que necesitas saber sobre el café aquí.",
               "fr-ca": "Explorez notre collection d'articles sur le café. De la sélection des bons grains de café à la maîtrise des techniques de préparation parfaites, découvrez tout ce que vous devez savoir sur le café ici.",
-              "en-ca": "Explore our collection of coffee articles. From choosing the right coffee beans to mastering the perfect brewing techniques, discover all you need to know about coffee here.",
-              "en-gb": "Explore our collection of coffee articles. From choosing the right coffee beans to mastering the perfect brewing techniques, discover all you need to know about coffee here.",
-              "de-de": "Entdecken Sie unsere Sammlung von Kaffeeartikeln. Von der Auswahl der richtigen Kaffeebohnen bis hin zur Beherrschung der perfekten Brühtechniken – entdecken Sie hier alles, was Sie über Kaffee wissen müssen.",
-              "en-de": "Entdecken Sie unsere Sammlung von Kaffeeartikeln. Von der Auswahl der richtigen Kaffeebohnen bis hin zur Beherrschung der perfekten Brühtechniken – entdecken Sie hier alles, was Sie über Kaffee wissen müssen.",
-              "de-at": "Entdecken Sie unsere Sammlung von Kaffeeartikeln. Von der Auswahl der richtigen Kaffeebohnen bis hin zum Beherrschen der perfekten Brühtechniken – hier finden Sie alles, was Sie über Kaffee wissen müssen.",
-              "nl-nl": "Verken onze verzameling koffieartikelen. Van het kiezen van de juiste koffiebonen tot het beheersen van de perfecte zetmethodes, ontdek hier alles wat je moet weten over koffie.",
-              "en-nl": "Verken onze verzameling koffieartikelen. Van het kiezen van de juiste koffiebonen tot het beheersen van de perfecte zetmethoden, ontdek hier alles wat je moet weten over koffie.",
-              "da-dk": "Udforsk vores samling af kaffeartikler. Fra at vælge de rigtige kaffebønner til at mestre de perfekte bryggeteknikker, opdag alt hvad du behøver at vide om kaffe her.",
-              "sv-se": "Utforska vår samling av kaffeartiklar. Från att välja rätt kaffebönor till att bemästra de perfekta bryggteknikerna, upptäck allt du behöver veta om kaffe här.",
-              "nb-no": "Utforsk vår samling av kaffearikler. Fra å velge de riktige kaffebønnene til å mestre de perfekte bryggeteknikkene, oppdag alt du trenger å vite om kaffe her.",
               "fr-fr": "Explorez notre collection d'articles sur le café. Du choix des bons grains de café à la maîtrise des techniques de préparation parfaites, découvrez tout ce que vous devez savoir sur le café ici.",
-              "en-fr": "Explorez notre collection d'articles sur le café. Du choix des bons grains de café à la maîtrise des techniques de préparation parfaites, découvrez tout ce que vous devez savoir sur le café ici.",
               "ja-jp": "コーヒーに関する記事のコレクションを探索してください。適切なコーヒー豆の選び方から完璧な抽出技術の習得まで、コーヒーについて知っておくべきすべてをここで発見してください。",
-              "ar-uae": "استكشف مجموعتنا من مقالات القهوة. من اختيار حبوب القهوة المناسبة إلى إتقان تقنيات التحضير المثالية، اكتشف كل ما تحتاج لمعرفته حول القهوة هنا.",
-              "ar-ksa": "استكشف مجموعتنا من مقالات القهوة. من اختيار حبوب القهوة المناسبة إلى إتقان تقنيات التحضير المثالية، اكتشف كل ما تحتاج لمعرفته عن القهوة هنا."
+              "nb-no": "Utforsk vår samling av kaffearikler. Fra å velge de riktige kaffebønnene til å mestre de perfekte bryggeteknikkene, oppdag alt du trenger å vite om kaffe her.",
+              "nl-nl": "Verken onze verzameling koffieartikelen. Van het kiezen van de juiste koffiebonen tot het beheersen van de perfecte zetmethodes, ontdek hier alles wat je moet weten over koffie.",
+              "sv-se": "Utforska vår samling av kaffeartiklar. Från att välja rätt kaffebönor till att bemästra de perfekta bryggteknikerna, upptäck allt du behöver veta om kaffe här.",
+              "ar-ksa": "استكشف مجموعتنا من مقالات القهوة. من اختيار حبوب القهوة المناسبة إلى إتقان تقنيات التحضير المثالية، اكتشف كل ما تحتاج لمعرفته عن القهوة هنا.",
+              "ar-uae": "استكشف مجموعتنا من مقالات القهوة. من اختيار حبوب القهوة المناسبة إلى إتقان تقنيات التحضير المثالية، اكتشف كل ما تحتاج لمعرفته حول القهوة هنا."
             }
           },
           "openGraphDescription": {
             "type": "text",
             "locales": {
+              "da-dk": "Udforsk vores samling af kaffeartikler. Fra at vælge de rigtige kaffebønner til at mestre de perfekte bryggeteknikker, opdag alt, hvad du behøver at vide om kaffe her.",
+              "de-at": "Entdecken Sie unsere Sammlung von Kaffeeartikeln. Von der Auswahl der richtigen Kaffeebohnen bis hin zur Beherrschung der perfekten Brühtechniken – hier erfahren Sie alles, was Sie über Kaffee wissen müssen.",
+              "de-de": "Entdecken Sie unsere Sammlung von Kaffeeartikeln. Von der Auswahl der richtigen Kaffeebohnen bis hin zur Beherrschung der perfekten Brühtechniken – hier erfahren Sie alles, was Sie über Kaffee wissen müssen.",
+              "en-au": "Explorez notre collection d'articles sur le café. De la sélection des bons grains de café à la maîtrise des techniques de préparation parfaites, découvrez tout ce que vous devez savoir sur le café ici.",
+              "en-ca": "Explore our collection of coffee articles. From choosing the right coffee beans to mastering the perfect brewing techniques, discover all you need to know about coffee here.",
+              "en-gb": "Explore our collection of coffee articles. From choosing the right coffee beans to mastering the perfect brewing techniques, discover all you need to know about coffee here.",
+              "en-nl": "Verken onze verzameling koffieartikelen. Van het kiezen van de juiste koffiebonen tot het beheersen van de perfecte zetmethoden, ontdek hier alles wat je moet weten over koffie.",
+              "en-nz": "Entdecken Sie unsere Sammlung von Kaffeeartikeln. Von der Auswahl der richtigen Kaffeebohnen bis hin zur Beherrschung der perfekten Brühtechniken – entdecken Sie hier alles, was Sie über Kaffee wissen müssen.",
               "en-us": "Explore our collection of coffee articles. From choosing the right coffee beans to mastering the perfect brewing techniques, discover all you need to know about coffee here.",
               "es-us": "Explora nuestra colección de artículos sobre café. Desde elegir los granos de café adecuados hasta dominar las técnicas de preparación perfectas, descubre todo lo que necesitas saber sobre el café aquí.",
               "fr-ca": "Explorez notre collection d'articles sur le café. Du choix des bons grains de café à la maîtrise des techniques de préparation parfaites, découvrez tout ce que vous devez savoir sur le café ici.",
-              "en-ca": "Explore our collection of coffee articles. From choosing the right coffee beans to mastering the perfect brewing techniques, discover all you need to know about coffee here.",
-              "en-gb": "Explore our collection of coffee articles. From choosing the right coffee beans to mastering the perfect brewing techniques, discover all you need to know about coffee here.",
-              "de-de": "Entdecken Sie unsere Sammlung von Kaffeeartikeln. Von der Auswahl der richtigen Kaffeebohnen bis hin zur Beherrschung der perfekten Brühtechniken – hier erfahren Sie alles, was Sie über Kaffee wissen müssen.",
-              "en-de": "Entdecken Sie unsere Sammlung von Kaffeeartikeln. Von der Auswahl der richtigen Kaffeebohnen bis hin zur Beherrschung der perfekten Brühtechniken – entdecken Sie hier alles, was Sie über Kaffee wissen müssen.",
-              "de-at": "Entdecken Sie unsere Sammlung von Kaffeeartikeln. Von der Auswahl der richtigen Kaffeebohnen bis hin zur Beherrschung der perfekten Brühtechniken – hier erfahren Sie alles, was Sie über Kaffee wissen müssen.",
-              "nl-nl": "Ontdek onze verzameling koffieartikelen. Van het kiezen van de juiste koffiebonen tot het beheersen van de perfecte zetmethodes, ontdek hier alles wat je moet weten over koffie.",
-              "en-nl": "Verken onze verzameling koffieartikelen. Van het kiezen van de juiste koffiebonen tot het beheersen van de perfecte zetmethoden, ontdek hier alles wat je moet weten over koffie.",
-              "da-dk": "Udforsk vores samling af kaffeartikler. Fra at vælge de rigtige kaffebønner til at mestre de perfekte bryggeteknikker, opdag alt, hvad du behøver at vide om kaffe her.",
-              "sv-se": "Utforska vår samling av artiklar om kaffe. Från att välja rätt kaffebönor till att bemästra de perfekta bryggteknikerna, upptäck allt du behöver veta om kaffe här.",
-              "nb-no": "Utforsk vår samling av kaffeartikler. Fra å velge de riktige kaffebønnene til å mestre de perfekte bryggemetodene, oppdag alt du trenger å vite om kaffe her.",
               "fr-fr": "Explorez notre collection d'articles sur le café. Du choix des bons grains de café à la maîtrise des techniques de préparation parfaites, découvrez tout ce que vous devez savoir sur le café ici.",
-              "en-fr": "Explorez notre collection d'articles sur le café. De la sélection des bons grains de café à la maîtrise des techniques de préparation parfaites, découvrez tout ce que vous devez savoir sur le café ici.",
               "ja-jp": "私たちのコーヒー記事のコレクションを探索してください。適切なコーヒー豆の選び方から完璧な抽出技術の習得まで、ここでコーヒーに関するすべてを知ることができます。",
-              "ar-uae": "استكشف مجموعتنا من مقالات القهوة. من اختيار حبوب القهوة المناسبة إلى إتقان تقنيات التحضير المثالية، اكتشف كل ما تحتاج لمعرفته حول القهوة هنا.",
-              "ar-ksa": "استكشف مجموعتنا من مقالات القهوة. من اختيار حبوب القهوة المناسبة إلى إتقان تقنيات التحضير المثالية، اكتشف كل ما تحتاج لمعرفته عن القهوة هنا."
+              "nb-no": "Utforsk vår samling av kaffeartikler. Fra å velge de riktige kaffebønnene til å mestre de perfekte bryggemetodene, oppdag alt du trenger å vite om kaffe her.",
+              "nl-nl": "Ontdek onze verzameling koffieartikelen. Van het kiezen van de juiste koffiebonen tot het beheersen van de perfecte zetmethodes, ontdek hier alles wat je moet weten over koffie.",
+              "sv-se": "Utforska vår samling av artiklar om kaffe. Från att välja rätt kaffebönor till att bemästra de perfekta bryggteknikerna, upptäck allt du behöver veta om kaffe här.",
+              "ar-ksa": "استكشف مجموعتنا من مقالات القهوة. من اختيار حبوب القهوة المناسبة إلى إتقان تقنيات التحضير المثالية، اكتشف كل ما تحتاج لمعرفته عن القهوة هنا.",
+              "ar-uae": "استكشف مجموعتنا من مقالات القهوة. من اختيار حبوب القهوة المناسبة إلى إتقان تقنيات التحضير المثالية، اكتشف كل ما تحتاج لمعرفته حول القهوة هنا."
             }
           }
         }
@@ -242,24 +244,24 @@
                                   "placeholder": {
                                     "type": "text",
                                     "locales": {
+                                      "da-dk": "Begynd at søge efter en artikel",
+                                      "de-at": "Beginnen Sie mit der Suche nach einem Artikel",
+                                      "de-de": "Beginnen Sie mit der Suche nach einem Artikel.",
+                                      "en-au": "Commencez à rechercher un article",
+                                      "en-ca": "Start searching for an article",
+                                      "en-gb": "Start searching for an article",
+                                      "en-nl": "Begin met zoeken naar een artikel",
+                                      "en-nz": "Beginnen Sie mit der Suche nach einem Artikel",
                                       "en-us": "Start searching for an article",
                                       "es-us": "Comienza a buscar un artículo",
                                       "fr-ca": "Commencez à chercher un article",
-                                      "en-ca": "Start searching for an article",
-                                      "en-gb": "Start searching for an article",
-                                      "de-de": "Beginnen Sie mit der Suche nach einem Artikel.",
-                                      "en-de": "Beginnen Sie mit der Suche nach einem Artikel",
-                                      "de-at": "Beginnen Sie mit der Suche nach einem Artikel",
-                                      "nl-nl": "Begin met het zoeken naar een artikel",
-                                      "en-nl": "Begin met zoeken naar een artikel",
-                                      "da-dk": "Begynd at søge efter en artikel",
-                                      "sv-se": "Börja söka efter en artikel",
-                                      "nb-no": "Begynn å søke etter en artikkel",
                                       "fr-fr": "Commencez à rechercher un article",
-                                      "en-fr": "Commencez à rechercher un article",
                                       "ja-jp": "記事の検索を開始する",
-                                      "ar-uae": "ابدأ البحث عن مقال",
-                                      "ar-ksa": "ابدأ البحث عن مقال"
+                                      "nb-no": "Begynn å søke etter en artikkel",
+                                      "nl-nl": "Begin met het zoeken naar een artikel",
+                                      "sv-se": "Börja söka efter en artikel",
+                                      "ar-ksa": "ابدأ البحث عن مقال",
+                                      "ar-uae": "ابدأ البحث عن مقال"
                                     }
                                   }
                                 }
@@ -300,11 +302,11 @@
                                 "da-dk": "Søgefelt",
                                 "de-at": "Suchfeld",
                                 "de-de": "Suchfeld",
+                                "en-au": "Boîte de recherche",
                                 "en-ca": "Search Bar",
-                                "en-de": "Suchfeld",
-                                "en-fr": "Boîte de recherche",
                                 "en-gb": "Search Bar",
                                 "en-nl": "Zoekvak",
+                                "en-nz": "Suchfeld",
                                 "en-us": "Search Box",
                                 "es-us": "Cuadro de búsqueda",
                                 "fr-ca": "Boîte de recherche",
@@ -357,11 +359,11 @@
                           "da-dk": "Søgefelt og sortering",
                           "de-at": "Suchfeld und Sortierung",
                           "de-de": "Suchfeld und Sortierung",
+                          "en-au": "Boîte de recherche et tri",
                           "en-ca": "Search Box and Sorting",
-                          "en-de": "Suchfeld und Sortierung",
-                          "en-fr": "Boîte de recherche et tri",
                           "en-gb": "Search Bar and Sorting",
                           "en-nl": "Zoekvak en Sorteren",
+                          "en-nz": "Suchfeld und Sortierung",
                           "en-us": "Search Box and Sorting",
                           "es-us": "Cuadro de Búsqueda y Ordenamiento",
                           "fr-ca": "Boîte de recherche et tri",
@@ -445,11 +447,11 @@
                                 "da-dk": "Venstre Indhold",
                                 "de-at": "Linker Inhalt",
                                 "de-de": "Linker Inhalt",
+                                "en-au": "Contenu de gauche",
                                 "en-ca": "Left Content",
-                                "en-de": "Linker Inhalt",
-                                "en-fr": "Contenu de gauche",
                                 "en-gb": "Left Content",
                                 "en-nl": "Linker Inhoud",
+                                "en-nz": "Linker Inhalt",
                                 "en-us": "Left Content",
                                 "es-us": "Contenido Izquierdo",
                                 "fr-ca": "Contenu de gauche",
@@ -480,6 +482,29 @@
                                   "textColor": {
                                     "type": "dex-color-palette-parameter",
                                     "value": "text-primary"
+                                  },
+                                  "cardButtonText": {
+                                    "type": "text",
+                                    "locales": {
+                                      "da-dk": "Læs artikel",
+                                      "de-at": "Artikel lesen",
+                                      "de-de": "Artikel lesen",
+                                      "en-au": "Read Article",
+                                      "en-ca": "Read Article",
+                                      "en-gb": "Read Article",
+                                      "en-nl": "Read Article",
+                                      "en-nz": "Read Article",
+                                      "en-us": "Read Article",
+                                      "es-us": "Leer artículo",
+                                      "fr-ca": "Lire l’article",
+                                      "fr-fr": "Lire l’article",
+                                      "ja-jp": "記事を読む",
+                                      "nb-no": "Les artikkel",
+                                      "nl-nl": "Artikel lezen",
+                                      "sv-se": "Läs artikel",
+                                      "ar-ksa": "اقرأ المقال",
+                                      "ar-uae": "اقرأ المقال"
+                                    }
                                   }
                                 }
                               },
@@ -533,11 +558,11 @@
                                 "da-dk": "Rigtigt indhold",
                                 "de-at": "Richtiger Inhalt",
                                 "de-de": "Rechter Inhalt",
+                                "en-au": "Contenu Correct",
                                 "en-ca": "Right Content",
-                                "en-de": "Richtiger Inhalt",
-                                "en-fr": "Contenu Correct",
                                 "en-gb": "Right Content",
                                 "en-nl": "Juiste Inhoud",
+                                "en-nz": "Richtiger Inhalt",
                                 "en-us": "Right Content",
                                 "es-us": "Contenido Correcto",
                                 "fr-ca": "Contenu approprié",
@@ -586,11 +611,11 @@
                           "da-dk": "Søg indhold",
                           "de-at": "Suchinhalt",
                           "de-de": "Inhalt durchsuchen",
+                          "en-au": "Rechercher du contenu",
                           "en-ca": "Search Content",
-                          "en-de": "Inhalt durchsuchen",
-                          "en-fr": "Rechercher du contenu",
                           "en-gb": "Search Content",
                           "en-nl": "Zoekinhoud",
+                          "en-nz": "Inhalt durchsuchen",
                           "en-us": "Search Content",
                           "es-us": "Buscar contenido",
                           "fr-ca": "Rechercher du contenu",
@@ -629,48 +654,49 @@
                       "fields": {
                         "field": {
                           "type": "text",
+                          "value": "fields.publishDate",
                           "locales": {
-                            "en-us": "fields.publishDate",
-                            "es-us": "fields.fechaDePublicación",
-                            "fr-ca": "fields.dateDePublication",
+                            "da-dk": "fields.publishDate",
+                            "de-at": "fields.publishDate",
+                            "de-de": "fields.publishDate",
+                            "en-au": "fields.publishDate",
                             "en-ca": "fields.publishDate",
                             "en-gb": "fields.publishDate",
-                            "de-de": "fields.veröffentlichungsdatum",
-                            "en-de": "fields.veröffentlichungsDatum",
-                            "de-at": "fields.veröffentlichungsdatum",
-                            "nl-nl": "velden.publicatiedatum",
-                            "en-nl": "velden.publicatiedatum",
-                            "da-dk": "fields.udgivelsesdato",
-                            "sv-se": "fields.publiceringsdatum",
-                            "nb-no": "fields.publiseringsdato",
-                            "fr-fr": "fields.dateDePublication",
-                            "en-fr": "fields.dateDePublication",
+                            "en-nl": "fields.publishDate",
+                            "en-nz": "fields.publishDate",
+                            "en-us": "fields.publishDate",
+                            "es-us": "fields.publishDate",
+                            "fr-ca": "fields.publishDate",
+                            "fr-fr": "fields.publishDate",
                             "ja-jp": "fields.publishDate",
-                            "ar-uae": "fields.publishDate",
-                            "ar-ksa": "fields.publishDate"
+                            "nb-no": "fields.publishDate",
+                            "nl-nl": "fields.publishDate",
+                            "sv-se": "fields.publishDate",
+                            "ar-ksa": "fields.publishDate",
+                            "ar-uae": "fields.publishDate"
                           }
                         },
                         "title": {
                           "type": "text",
                           "locales": {
+                            "da-dk": "Nyeste først",
+                            "de-at": "Neueste zuerst",
+                            "de-de": "Neueste zuerst",
+                            "en-au": "Les plus récents d'abord",
+                            "en-ca": "Newest First",
+                            "en-gb": "Newest First",
+                            "en-nl": "Nieuwste eerst",
+                            "en-nz": "Neueste zuerst",
                             "en-us": "Newest First",
                             "es-us": "Más recientes primero",
                             "fr-ca": "Les plus récents d'abord",
-                            "en-ca": "Newest First",
-                            "en-gb": "Newest First",
-                            "de-de": "Neueste zuerst",
-                            "en-de": "Neueste zuerst",
-                            "de-at": "Neueste zuerst",
-                            "nl-nl": "Nieuwste eerst",
-                            "en-nl": "Nieuwste eerst",
-                            "da-dk": "Nyeste først",
-                            "sv-se": "Nyaste först",
-                            "nb-no": "Nyeste først",
                             "fr-fr": "Les plus récents d'abord",
-                            "en-fr": "Les plus récents d'abord",
                             "ja-jp": "最新のものから表示",
-                            "ar-uae": "الأحدث أولاً",
-                            "ar-ksa": "الأحدث أولاً"
+                            "nb-no": "Nyeste først",
+                            "nl-nl": "Nieuwste eerst",
+                            "sv-se": "Nyaste först",
+                            "ar-ksa": "الأحدث أولاً",
+                            "ar-uae": "الأحدث أولاً"
                           }
                         },
                         "direction": {
@@ -698,11 +724,11 @@
                             "da-dk": "Vælg en kategori",
                             "de-at": "Wählen Sie eine Kategorie",
                             "de-de": "Wählen Sie eine Kategorie",
+                            "en-au": "Choisissez une catégorie",
                             "en-ca": "Choose a category",
-                            "en-de": "Wählen Sie eine Kategorie",
-                            "en-fr": "Choisissez une catégorie",
                             "en-gb": "Choose a category",
                             "en-nl": "Kies een categorie",
+                            "en-nz": "Wählen Sie eine Kategorie",
                             "en-us": "Pick a category",
                             "es-us": "Elige una categoría",
                             "fr-ca": "Choisissez une catégorie",
@@ -732,47 +758,48 @@
                                         "title": {
                                           "type": "text",
                                           "locales": {
+                                            "da-dk": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}",
+                                            "de-at": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}",
+                                            "de-de": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}",
+                                            "en-au": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}",
+                                            "en-ca": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}",
+                                            "en-gb": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}",
+                                            "en-nl": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}",
+                                            "en-nz": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}",
                                             "en-us": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}",
                                             "es-us": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}",
                                             "fr-ca": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}",
-                                            "en-ca": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}",
-                                            "en-gb": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}",
-                                            "de-de": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}",
-                                            "en-de": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}",
-                                            "de-at": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}",
-                                            "nl-nl": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}",
-                                            "en-nl": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}",
-                                            "da-dk": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}",
-                                            "sv-se": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}",
-                                            "nb-no": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}",
                                             "fr-fr": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}",
-                                            "en-fr": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}",
                                             "ja-jp": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}",
-                                            "ar-uae": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}",
-                                            "ar-ksa": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}"
+                                            "nb-no": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}",
+                                            "nl-nl": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}",
+                                            "sv-se": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}",
+                                            "ar-ksa": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}",
+                                            "ar-uae": "${#jptr:/All Article Categories entries Loop Item/entry/fields/title/value}"
                                           }
                                         },
                                         "value": {
                                           "type": "text",
+                                          "value": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}",
                                           "locales": {
+                                            "da-dk": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}",
+                                            "de-at": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}",
+                                            "de-de": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}",
+                                            "en-au": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}",
+                                            "en-ca": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}",
+                                            "en-gb": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}",
+                                            "en-nl": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}",
+                                            "en-nz": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}",
                                             "en-us": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}",
                                             "es-us": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}",
                                             "fr-ca": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}",
-                                            "en-ca": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}",
-                                            "en-gb": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}",
-                                            "de-de": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}",
-                                            "en-de": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}",
-                                            "de-at": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}",
-                                            "nl-nl": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}",
-                                            "en-nl": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}",
-                                            "da-dk": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}",
-                                            "sv-se": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}",
-                                            "nb-no": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}",
                                             "fr-fr": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}",
-                                            "en-fr": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}",
                                             "ja-jp": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}",
-                                            "ar-uae": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}",
-                                            "ar-ksa": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}"
+                                            "nb-no": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}",
+                                            "nl-nl": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}",
+                                            "sv-se": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}",
+                                            "ar-ksa": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}",
+                                            "ar-uae": "${#jptr:/All Article Categories entries Loop Item/entry/_slug}"
                                           }
                                         }
                                       }
@@ -793,48 +820,50 @@
                         },
                         "fieldId": {
                           "type": "text",
+                          "value": "category",
                           "locales": {
-                            "en-us": "category",
-                            "es-us": "categoría",
-                            "fr-ca": "catégorie",
+                            "da-dk": "category",
+                            "de-at": "category",
+                            "de-de": "category",
+                            "en-au": "category",
                             "en-ca": "category",
                             "en-gb": "category",
-                            "de-de": "Kategorie",
-                            "en-de": "Kategorie",
-                            "de-at": "Kategorie",
-                            "nl-nl": "categorie",
-                            "en-nl": "categorie",
-                            "da-dk": "kategori",
-                            "sv-se": "kategori",
-                            "nb-no": "kategori",
-                            "fr-fr": "catégorie",
-                            "en-fr": "catégorie",
-                            "ja-jp": "カテゴリー",
-                            "ar-uae": "فئة",
-                            "ar-ksa": "فئة"
+                            "en-nl": "category",
+                            "en-nz": "category",
+                            "en-us": "category",
+                            "es-us": "category",
+                            "fr-ca": "category",
+                            "fr-fr": "category",
+                            "ja-jp": "category",
+                            "nb-no": "category",
+                            "nl-nl": "category",
+                            "sv-se": "category",
+                            "ar-ksa": "category",
+                            "ar-uae": "category"
                           }
                         },
                         "fieldKey": {
                           "type": "text",
+                          "value": "fields.category.slug",
                           "locales": {
-                            "en-us": "fields.category.slug",
-                            "es-us": "fields.category.slug",
-                            "fr-ca": "champs.catégorie.slug",
+                            "da-dk": "fields.category.slug",
+                            "de-at": "fields.category.slug",
+                            "de-de": "fields.category.slug",
+                            "en-au": "fields.category.slug",
                             "en-ca": "fields.category.slug",
                             "en-gb": "fields.category.slug",
-                            "de-de": "felder.kategorie.slug",
-                            "en-de": "felder.kategorie.slug",
-                            "de-at": "felder.kategorie.slug",
-                            "nl-nl": "velden.categorie.slug",
-                            "en-nl": "velden.categorie.slug",
-                            "da-dk": "felter.kategori.slug",
-                            "sv-se": "fields.kategori.slug",
-                            "nb-no": "felt.kategori.snegle",
-                            "fr-fr": "champs.catégorie.limace",
-                            "en-fr": "fields.categorie.limace",
-                            "ja-jp": "フィールド.カテゴリー.スラッグ",
-                            "ar-uae": "حقل.فئة.سبيكة",
-                            "ar-ksa": "حقل.فئة.سبيكة"
+                            "en-nl": "fields.category.slug",
+                            "en-nz": "fields.category.slug",
+                            "en-us": "fields.category.slug",
+                            "es-us": "fields.category.slug",
+                            "fr-ca": "fields.category.slug",
+                            "fr-fr": "fields.category.slug",
+                            "ja-jp": "fields.category.slug",
+                            "nb-no": "fields.category.slug",
+                            "nl-nl": "fields.category.slug",
+                            "sv-se": "fields.category.slug",
+                            "ar-ksa": "fields.category.slug",
+                            "ar-uae": "fields.category.slug"
                           }
                         },
                         "enableFaceting": {
@@ -857,11 +886,11 @@
                             "da-dk": "Forfin efter forfatter",
                             "de-at": "Nach Autor filtern",
                             "de-de": "Nach Autor filtern",
+                            "en-au": "Affiner par auteur",
                             "en-ca": "Refine by author",
-                            "en-de": "Nach Autor filtern",
-                            "en-fr": "Affiner par auteur",
                             "en-gb": "Refine by author",
                             "en-nl": "Verfijnen op auteur",
+                            "en-nz": "Nach Autor filtern",
                             "en-us": "Refine by author",
                             "es-us": "Refinar por autor",
                             "fr-ca": "Affiner par auteur",
@@ -891,47 +920,48 @@
                                         "title": {
                                           "type": "text",
                                           "locales": {
+                                            "da-dk": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}",
+                                            "de-at": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}",
+                                            "de-de": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}",
+                                            "en-au": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}",
+                                            "en-ca": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}",
+                                            "en-gb": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}",
+                                            "en-nl": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}",
+                                            "en-nz": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}",
                                             "en-us": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}",
                                             "es-us": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}",
                                             "fr-ca": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}",
-                                            "en-ca": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}",
-                                            "en-gb": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}",
-                                            "de-de": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}",
-                                            "en-de": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}",
-                                            "de-at": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}",
-                                            "nl-nl": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}",
-                                            "en-nl": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}",
-                                            "da-dk": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}",
-                                            "sv-se": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}",
-                                            "nb-no": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}",
                                             "fr-fr": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}",
-                                            "en-fr": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}",
                                             "ja-jp": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}",
-                                            "ar-uae": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}",
-                                            "ar-ksa": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}"
+                                            "nb-no": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}",
+                                            "nl-nl": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}",
+                                            "sv-se": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}",
+                                            "ar-ksa": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}",
+                                            "ar-uae": "${#jptr:/All Article Authors 0 Loop Item/entry/fields/name/value}"
                                           }
                                         },
                                         "value": {
                                           "type": "text",
+                                          "value": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}",
                                           "locales": {
+                                            "da-dk": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}",
+                                            "de-at": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}",
+                                            "de-de": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}",
+                                            "en-au": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}",
+                                            "en-ca": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}",
+                                            "en-gb": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}",
+                                            "en-nl": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}",
+                                            "en-nz": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}",
                                             "en-us": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}",
                                             "es-us": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}",
                                             "fr-ca": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}",
-                                            "en-ca": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}",
-                                            "en-gb": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}",
-                                            "de-de": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}",
-                                            "en-de": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}",
-                                            "de-at": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}",
-                                            "nl-nl": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}",
-                                            "en-nl": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}",
-                                            "da-dk": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}",
-                                            "sv-se": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}",
-                                            "nb-no": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}",
                                             "fr-fr": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}",
-                                            "en-fr": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}",
                                             "ja-jp": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}",
-                                            "ar-uae": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}",
-                                            "ar-ksa": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}"
+                                            "nb-no": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}",
+                                            "nl-nl": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}",
+                                            "sv-se": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}",
+                                            "ar-ksa": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}",
+                                            "ar-uae": "${#jptr:/All Article Authors 0 Loop Item/entry/_slug}"
                                           }
                                         }
                                       }
@@ -952,48 +982,50 @@
                         },
                         "fieldId": {
                           "type": "text",
+                          "value": "author",
                           "locales": {
-                            "en-us": "author",
-                            "es-us": "autor",
-                            "fr-ca": "auteur",
+                            "da-dk": "author",
+                            "de-at": "author",
+                            "de-de": "author",
+                            "en-au": "author",
                             "en-ca": "author",
                             "en-gb": "author",
-                            "de-de": "Autor",
-                            "en-de": "Autor",
-                            "de-at": "Autor",
-                            "nl-nl": "auteur",
-                            "en-nl": "auteur",
-                            "da-dk": "forfatter",
-                            "sv-se": "författare",
-                            "nb-no": "forfatter",
-                            "fr-fr": "auteur",
-                            "en-fr": "auteur",
-                            "ja-jp": "著者",
-                            "ar-uae": "مؤلف",
-                            "ar-ksa": "مؤلف"
+                            "en-nl": "author",
+                            "en-nz": "author",
+                            "en-us": "author",
+                            "es-us": "author",
+                            "fr-ca": "author",
+                            "fr-fr": "author",
+                            "ja-jp": "author",
+                            "nb-no": "author",
+                            "nl-nl": "author",
+                            "sv-se": "author",
+                            "ar-ksa": "author",
+                            "ar-uae": "author"
                           }
                         },
                         "fieldKey": {
                           "type": "text",
+                          "value": "fields.author.slug",
                           "locales": {
-                            "en-us": "fields.author.slug",
-                            "es-us": "campos.autor.slug",
-                            "fr-ca": "fields.auteur.slug",
+                            "da-dk": "fields.author.slug",
+                            "de-at": "fields.author.slug",
+                            "de-de": "fields.author.slug",
+                            "en-au": "fields.author.slug",
                             "en-ca": "fields.author.slug",
                             "en-gb": "fields.author.slug",
-                            "de-de": "felder.autor.slug",
-                            "en-de": "fields.author.slug",
-                            "de-at": "felder.autor.slug",
-                            "nl-nl": "velden.auteur.slug",
-                            "en-nl": "velden.auteur.slug",
-                            "da-dk": "fields.forfatter.slug",
-                            "sv-se": "fields.author.slug",
-                            "nb-no": "fields.author.slug",
-                            "fr-fr": "fields.auteur.slug",
-                            "en-fr": "champs.auteur.limace",
+                            "en-nl": "fields.author.slug",
+                            "en-nz": "fields.author.slug",
+                            "en-us": "fields.author.slug",
+                            "es-us": "fields.author.slug",
+                            "fr-ca": "fields.author.slug",
+                            "fr-fr": "fields.author.slug",
                             "ja-jp": "fields.author.slug",
-                            "ar-uae": "fields.author.slug",
-                            "ar-ksa": "fields.author.slug"
+                            "nb-no": "fields.author.slug",
+                            "nl-nl": "fields.author.slug",
+                            "sv-se": "fields.author.slug",
+                            "ar-ksa": "fields.author.slug",
+                            "ar-uae": "fields.author.slug"
                           }
                         },
                         "enableFaceting": {
@@ -1033,24 +1065,24 @@
           "text": {
             "type": "text",
             "locales": {
+              "da-dk": "Vores kuraterede indhold om alt inden for brygning",
+              "de-at": "Unser kuratierter Inhalt zu allem rund ums Brauen",
+              "de-de": "Unser kuratierter Inhalt zu allem, was mit Brauen zu tun hat.",
+              "en-au": "Notre contenu sélectionné sur tout ce qui concerne le brassage",
+              "en-ca": "Our curated content on all things brewing",
+              "en-gb": "Our curated content on all things brewing",
+              "en-nl": "Onze samengestelde inhoud over alles wat met brouwen te maken heeft",
+              "en-nz": "Unser kuratierter Inhalt zu allem, was mit Brauen zu tun hat.",
               "en-us": "Our curated content on all things brewing",
               "es-us": "Nuestro contenido seleccionado sobre todo lo relacionado con la elaboración de cerveza",
               "fr-ca": "Notre contenu sélectionné sur tout ce qui concerne le brassage",
-              "en-ca": "Our curated content on all things brewing",
-              "en-gb": "Our curated content on all things brewing",
-              "de-de": "Unser kuratierter Inhalt zu allem, was mit Brauen zu tun hat.",
-              "en-de": "Unser kuratierter Inhalt zu allem, was mit Brauen zu tun hat.",
-              "de-at": "Unser kuratierter Inhalt zu allem rund ums Brauen",
-              "nl-nl": "Onze samengestelde inhoud over alles wat met brouwen te maken heeft",
-              "en-nl": "Onze samengestelde inhoud over alles wat met brouwen te maken heeft",
-              "da-dk": "Vores kuraterede indhold om alt inden for brygning",
-              "sv-se": "Vårt kuraterade innehåll om allt som rör bryggning",
-              "nb-no": "Vårt kuraterte innhold om alt som har med brygging å gjøre",
               "fr-fr": "Notre contenu sélectionné sur tout ce qui concerne le brassage",
-              "en-fr": "Notre contenu sélectionné sur tout ce qui concerne le brassage",
               "ja-jp": "醸造に関するすべてのキュレーションコンテンツ",
-              "ar-uae": "محتوانا المختار حول كل ما يتعلق بالتخمير",
-              "ar-ksa": "محتوى مختار حول كل ما يتعلق بالتخمير"
+              "nb-no": "Vårt kuraterte innhold om alt som har med brygging å gjøre",
+              "nl-nl": "Onze samengestelde inhoud over alles wat met brouwen te maken heeft",
+              "sv-se": "Vårt kuraterade innehåll om allt som rör bryggning",
+              "ar-ksa": "محتوى مختار حول كل ما يتعلق بالتخمير",
+              "ar-uae": "محتوانا المختار حول كل ما يتعلق بالتخمير"
             }
           }
         }
@@ -1087,25 +1119,16 @@
                   "locale": "${locale}"
                 }
               },
+              "en-au": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
               "en-ca": {
-                "path": "/${locale}/landing-page",
-                "type": "projectMapNode",
-                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
-                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
-                "dynamicInputValues": {
-                  "locale": "${locale}"
-                }
-              },
-              "en-de": {
-                "path": "/${locale}/landing-page",
-                "type": "projectMapNode",
-                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
-                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
-                "dynamicInputValues": {
-                  "locale": "${locale}"
-                }
-              },
-              "en-fr": {
                 "path": "/${locale}/landing-page",
                 "type": "projectMapNode",
                 "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
@@ -1124,6 +1147,15 @@
                 }
               },
               "en-nl": {
+                "path": "/${locale}/landing-page",
+                "type": "projectMapNode",
+                "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                "dynamicInputValues": {
+                  "locale": "${locale}"
+                }
+              },
+              "en-nz": {
                 "path": "/${locale}/landing-page",
                 "type": "projectMapNode",
                 "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
@@ -1222,23 +1254,23 @@
           "text": {
             "type": "text",
             "locales": {
-              "da-dk": "Recommended for you",
-              "de-at": "Recommended for you",
-              "de-de": "Recommended for you",
+              "da-dk": "Anbefalet til dig",
+              "de-at": "Empfohlen für Sie",
+              "de-de": "Empfohlen für Sie",
+              "en-au": "Recommended for you",
               "en-ca": "Recommended for you",
-              "en-de": "Recommended for you",
-              "en-fr": "Recommended for you",
               "en-gb": "Recommended for you",
               "en-nl": "Recommended for you",
-              "es-us": "Recommended for you",
-              "fr-ca": "Recommended for you",
-              "fr-fr": "Recommended for you",
-              "ja-jp": "Recommended for you",
-              "nb-no": "Recommended for you",
-              "nl-nl": "Recommended for you",
-              "sv-se": "Recommended for you",
-              "ar-ksa": "Recommended for you",
-              "ar-uae": "Recommended for you"
+              "en-nz": "Recommended for you",
+              "es-us": "Recomendado para ti",
+              "fr-ca": "Recommandé pour vous",
+              "fr-fr": "Recommandé pour vous",
+              "ja-jp": "あなたへのおすすめ",
+              "nb-no": "Anbefalt for deg",
+              "nl-nl": "Aanbevolen voor jou",
+              "sv-se": "Rekommenderat för dig",
+              "ar-ksa": "موصى به لك",
+              "ar-uae": "موصى به لك"
             }
           }
         }
@@ -1260,15 +1292,11 @@
                 "path": "https://unfrm.to/csk-demo",
                 "type": "url"
               },
+              "en-au": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
               "en-ca": {
-                "path": "https://unfrm.to/csk-demo",
-                "type": "url"
-              },
-              "en-de": {
-                "path": "https://unfrm.to/csk-demo",
-                "type": "url"
-              },
-              "en-fr": {
                 "path": "https://unfrm.to/csk-demo",
                 "type": "url"
               },
@@ -1277,6 +1305,10 @@
                 "type": "url"
               },
               "en-nl": {
+                "path": "https://unfrm.to/csk-demo",
+                "type": "url"
+              },
+              "en-nz": {
                 "path": "https://unfrm.to/csk-demo",
                 "type": "url"
               },
@@ -1337,15 +1369,11 @@
                 "path": "https://unfrm.to/csk-demo-request",
                 "type": "url"
               },
+              "en-au": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
               "en-ca": {
-                "path": "https://unfrm.to/csk-demo-request",
-                "type": "url"
-              },
-              "en-de": {
-                "path": "https://unfrm.to/csk-demo-request",
-                "type": "url"
-              },
-              "en-fr": {
                 "path": "https://unfrm.to/csk-demo-request",
                 "type": "url"
               },
@@ -1354,6 +1382,10 @@
                 "type": "url"
               },
               "en-nl": {
+                "path": "https://unfrm.to/csk-demo-request",
+                "type": "url"
+              },
+              "en-nz": {
                 "path": "https://unfrm.to/csk-demo-request",
                 "type": "url"
               },
@@ -1414,15 +1446,11 @@
                 "path": "https://unfrm.to/csk-sb",
                 "type": "url"
               },
+              "en-au": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
               "en-ca": {
-                "path": "https://unfrm.to/csk-sb",
-                "type": "url"
-              },
-              "en-de": {
-                "path": "https://unfrm.to/csk-sb",
-                "type": "url"
-              },
-              "en-fr": {
                 "path": "https://unfrm.to/csk-sb",
                 "type": "url"
               },
@@ -1431,6 +1459,10 @@
                 "type": "url"
               },
               "en-nl": {
+                "path": "https://unfrm.to/csk-sb",
+                "type": "url"
+              },
+              "en-nz": {
                 "path": "https://unfrm.to/csk-sb",
                 "type": "url"
               },
@@ -1491,15 +1523,11 @@
                 "path": "https://unfrm.to/csk-docs",
                 "type": "url"
               },
+              "en-au": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
               "en-ca": {
-                "path": "https://unfrm.to/csk-docs",
-                "type": "url"
-              },
-              "en-de": {
-                "path": "https://unfrm.to/csk-docs",
-                "type": "url"
-              },
-              "en-fr": {
                 "path": "https://unfrm.to/csk-docs",
                 "type": "url"
               },
@@ -1508,6 +1536,10 @@
                 "type": "url"
               },
               "en-nl": {
+                "path": "https://unfrm.to/csk-docs",
+                "type": "url"
+              },
+              "en-nz": {
                 "path": "https://unfrm.to/csk-docs",
                 "type": "url"
               },
@@ -1559,7 +1591,7 @@
       "en-ca",
       "en-gb",
       "de-de",
-      "en-de",
+      "en-nz",
       "de-at",
       "nl-nl",
       "en-nl",
@@ -1567,7 +1599,7 @@
       "sv-se",
       "nb-no",
       "fr-fr",
-      "en-fr",
+      "en-au",
       "ja-jp",
       "ar-uae",
       "ar-ksa"
@@ -1575,6 +1607,6 @@
     "_pattern": "f9c058ea-c40d-4435-ac5a-53423cf654dc"
   },
   "created": "2025-03-18T13:02:32.603847+00:00",
-  "modified": "2025-07-03T13:10:42.378384+00:00",
+  "modified": "2025-07-31T12:51:42.154175+00:00",
   "pattern": false
 }

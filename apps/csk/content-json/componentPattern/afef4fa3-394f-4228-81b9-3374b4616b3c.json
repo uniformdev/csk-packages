@@ -8,53 +8,71 @@
         "type": "$block",
         "value": [
           {
+            "_id": "d4096feb-1cad-413e-8a2e-a6ffccea811a",
+            "type": "orderBy",
+            "fields": {
+              "field": {
+                "type": "text",
+                "value": "relevance"
+              },
+              "title": {
+                "type": "text",
+                "locales": {
+                  "da-dk": "Relevans",
+                  "de-at": "Relevanz",
+                  "de-de": "Relevanz",
+                  "en-au": "Relevance",
+                  "en-ca": "Relevance",
+                  "en-gb": "Relevance",
+                  "en-nl": "Relevance",
+                  "en-nz": "Relevance",
+                  "en-us": "Relevance",
+                  "es-us": "Relevancia",
+                  "fr-ca": "Pertinence",
+                  "fr-fr": "Pertinence",
+                  "ja-jp": "関連性",
+                  "nb-no": "Relevans",
+                  "nl-nl": "Relevantie",
+                  "sv-se": "Relevans",
+                  "ar-ksa": "الصلة",
+                  "ar-uae": "الصلة"
+                }
+              },
+              "direction": {
+                "type": "select",
+                "value": "DESC"
+              }
+            }
+          },
+          {
             "_id": "2a53ef92-66ce-4c25-96b0-33ddf6ade010",
             "type": "orderBy",
             "fields": {
               "field": {
                 "type": "text",
-                "locales": {
-                  "en-us": "created_at",
-                  "es-us": "creado_en",
-                  "fr-ca": "créé_le",
-                  "en-ca": "created_at",
-                  "en-gb": "created_at",
-                  "de-de": "erstellt_am",
-                  "en-de": "erstellt_am",
-                  "de-at": "erstellt_am",
-                  "nl-nl": "aangemaakt_op",
-                  "en-nl": "gemaakt_op",
-                  "da-dk": "oprettet_den",
-                  "sv-se": "skapad_den",
-                  "nb-no": "opprettet_dato",
-                  "fr-fr": "créé_le",
-                  "en-fr": "créé_le",
-                  "ja-jp": "作成日",
-                  "ar-uae": "تاريخ الإنشاء",
-                  "ar-ksa": "تاريخ الإنشاء"
-                }
+                "value": "created_at"
               },
               "title": {
                 "type": "text",
                 "locales": {
+                  "da-dk": "Nyeste ankomster",
+                  "de-at": "Neueste Ankünfte",
+                  "de-de": "Neueste Ankünfte",
+                  "en-au": "Nouveautés",
+                  "en-ca": "Latest Arrivals",
+                  "en-gb": "Latest Arrivals",
+                  "en-nl": "Nieuwste Aankomsten",
+                  "en-nz": "Neueste Ankünfte",
                   "en-us": "Newest Arrivals",
                   "es-us": "Nuevas Llegadas",
                   "fr-ca": "Nouveautés",
-                  "en-ca": "Latest Arrivals",
-                  "en-gb": "Latest Arrivals",
-                  "de-de": "Neueste Ankünfte",
-                  "en-de": "Neueste Ankünfte",
-                  "de-at": "Neueste Ankünfte",
-                  "nl-nl": "Nieuwste Aankomsten",
-                  "en-nl": "Nieuwste Aankomsten",
-                  "da-dk": "Nyeste ankomster",
-                  "sv-se": "Nyaste ankomster",
-                  "nb-no": "Nyeste ankomster",
                   "fr-fr": "Nouveautés",
-                  "en-fr": "Nouveautés",
                   "ja-jp": "最新入荷",
-                  "ar-uae": "أحدث الوافدين",
-                  "ar-ksa": "أحدث الوافدين"
+                  "nb-no": "Nyeste ankomster",
+                  "nl-nl": "Nieuwste Aankomsten",
+                  "sv-se": "Nyaste ankomster",
+                  "ar-ksa": "أحدث الوافدين",
+                  "ar-uae": "أحدث الوافدين"
                 }
               },
               "direction": {
@@ -69,48 +87,29 @@
             "fields": {
               "field": {
                 "type": "text",
-                "locales": {
-                  "en-us": "fields.title",
-                  "es-us": "campos.título",
-                  "fr-ca": "champs.titre",
-                  "en-ca": "fields.title",
-                  "en-gb": "fields.title",
-                  "de-de": "fields.titel",
-                  "en-de": "fields.titel",
-                  "de-at": "felder.titel",
-                  "nl-nl": "velden.titel",
-                  "en-nl": "velden.titel",
-                  "da-dk": "felter.titel",
-                  "sv-se": "fields.titel",
-                  "nb-no": "fields.tittel",
-                  "fr-fr": "champs.titre",
-                  "en-fr": "fields.titre",
-                  "ja-jp": "フィールド.タイトル",
-                  "ar-uae": "fields.title",
-                  "ar-ksa": "fields.title"
-                }
+                "value": "fields.title"
               },
               "title": {
                 "type": "text",
                 "locales": {
+                  "da-dk": "Alfabetisk: A-Å",
+                  "de-at": "Alphabetisch: A-Z",
+                  "de-de": "Alphabetisch: A-Z",
+                  "en-au": "Par ordre alphabétique : A-Z",
+                  "en-ca": "Alphabetically: A-Z",
+                  "en-gb": "Alphabetically: A-Z",
+                  "en-nl": "Alfabetisch: A-Z",
+                  "en-nz": "Alphabetisch: A-Z",
                   "en-us": "Alphabetically: A-Z",
                   "es-us": "Alfabéticamente: A-Z",
                   "fr-ca": "Alphabétiquement : A-Z",
-                  "en-ca": "Alphabetically: A-Z",
-                  "en-gb": "Alphabetically: A-Z",
-                  "de-de": "Alphabetisch: A-Z",
-                  "en-de": "Alphabetisch: A-Z",
-                  "de-at": "Alphabetisch: A-Z",
-                  "nl-nl": "Alfabetisch: A-Z",
-                  "en-nl": "Alfabetisch: A-Z",
-                  "da-dk": "Alfabetisk: A-Å",
-                  "sv-se": "Alfabetiskt: A-Ö",
-                  "nb-no": "Alfabetisk: A-Å",
                   "fr-fr": "Par ordre alphabétique : A-Z",
-                  "en-fr": "Par ordre alphabétique : A-Z",
                   "ja-jp": "アルファベット順：A-Z",
-                  "ar-uae": "أبجديًا: أ-ي",
-                  "ar-ksa": "أبجدياً: أ-ي"
+                  "nb-no": "Alfabetisk: A-Å",
+                  "nl-nl": "Alfabetisch: A-Z",
+                  "sv-se": "Alfabetiskt: A-Ö",
+                  "ar-ksa": "أبجدياً: أ-ي",
+                  "ar-uae": "أبجديًا: أ-ي"
                 }
               },
               "direction": {
@@ -125,48 +124,29 @@
             "fields": {
               "field": {
                 "type": "text",
-                "locales": {
-                  "en-us": "fields.title",
-                  "es-us": "campos.título",
-                  "fr-ca": "champs.titre",
-                  "en-ca": "fields.title",
-                  "en-gb": "fields.title",
-                  "de-de": "fields.titel",
-                  "en-de": "fields.titel",
-                  "de-at": "fields.titel",
-                  "nl-nl": "velden.titel",
-                  "en-nl": "velden.titel",
-                  "da-dk": "fields.titel",
-                  "sv-se": "fields.titel",
-                  "nb-no": "felt.tittel",
-                  "fr-fr": "champs.titre",
-                  "en-fr": "champs.titre",
-                  "ja-jp": "フィールド.タイトル",
-                  "ar-uae": "fields.title",
-                  "ar-ksa": "fields.title"
-                }
+                "value": "fields.title"
               },
               "title": {
                 "type": "text",
                 "locales": {
+                  "da-dk": "Alfabetisk: Å-Æ",
+                  "de-at": "Alphabetisch: Z-A",
+                  "de-de": "Alphabetisch: Z-A",
+                  "en-au": "Alphabétiquement : Z-A",
+                  "en-ca": "Alphabetically: Z-A",
+                  "en-gb": "Z-A: Alphabetically",
+                  "en-nl": "Alfabetisch: Z-A",
+                  "en-nz": "Alphabetisch: Z-A",
                   "en-us": "Alphabetically: Z-A",
                   "es-us": "Alfabéticamente: Z-A",
                   "fr-ca": "Alphabétiquement : Z-A",
-                  "en-ca": "Alphabetically: Z-A",
-                  "en-gb": "Z-A: Alphabetically",
-                  "de-de": "Alphabetisch: Z-A",
-                  "en-de": "Alphabetisch: Z-A",
-                  "de-at": "Alphabetisch: Z-A",
-                  "nl-nl": "Alfabetisch: Z-A",
-                  "en-nl": "Alfabetisch: Z-A",
-                  "da-dk": "Alfabetisk: Å-Æ",
-                  "sv-se": "Alfabetiskt: Ö-A",
-                  "nb-no": "Alfabetisk: Å-A",
                   "fr-fr": "Alphabétiquement : Z-A",
-                  "en-fr": "Alphabétiquement : Z-A",
                   "ja-jp": "アルファベット順：Z-A",
-                  "ar-uae": "أبجدياً: ز-أ",
-                  "ar-ksa": "أبجدياً: ز-أ"
+                  "nb-no": "Alfabetisk: Å-A",
+                  "nl-nl": "Alfabetisch: Z-A",
+                  "sv-se": "Alfabetiskt: Ö-A",
+                  "ar-ksa": "أبجدياً: ز-أ",
+                  "ar-uae": "أبجدياً: ز-أ"
                 }
               },
               "direction": {
@@ -181,48 +161,29 @@
             "fields": {
               "field": {
                 "type": "text",
-                "locales": {
-                  "en-us": "fields.rating",
-                  "es-us": "campos.calificación",
-                  "fr-ca": "champs.évaluation",
-                  "en-ca": "fields.rating",
-                  "en-gb": "fields.rating",
-                  "de-de": "fields.bewertung",
-                  "en-de": "fields.bewertung",
-                  "de-at": "felder.bewertung",
-                  "nl-nl": "velden.beoordeling",
-                  "en-nl": "velden.beoordeling",
-                  "da-dk": "fields.vurdering",
-                  "sv-se": "fields.betyg",
-                  "nb-no": "fields.vurdering",
-                  "fr-fr": "fields.évaluation",
-                  "en-fr": "fields.évaluation",
-                  "ja-jp": "fields.rating",
-                  "ar-uae": "تصنيف الحقول",
-                  "ar-ksa": "التقييم"
-                }
+                "value": "fields.rating"
               },
               "title": {
                 "type": "text",
                 "locales": {
+                  "da-dk": "Bedømmelse: Højeste først",
+                  "de-at": "Bewertung: Höchste zuerst",
+                  "de-de": "Bewertung: Höchste zuerst",
+                  "en-au": "Classement : Du plus élevé au plus bas",
+                  "en-ca": "Rating: Highest first",
+                  "en-gb": "Rating: Highest first",
+                  "en-nl": "Beoordeling: Hoogste eerst",
+                  "en-nz": "Bewertung: Höchste zuerst",
                   "en-us": "Rating: Highest first",
                   "es-us": "Calificación: De mayor a menor",
                   "fr-ca": "Évaluation : Du plus élevé au plus bas",
-                  "en-ca": "Rating: Highest first",
-                  "en-gb": "Rating: Highest first",
-                  "de-de": "Bewertung: Höchste zuerst",
-                  "en-de": "Bewertung: Höchste zuerst",
-                  "de-at": "Bewertung: Höchste zuerst",
-                  "nl-nl": "Beoordeling: Hoogste eerst",
-                  "en-nl": "Beoordeling: Hoogste eerst",
-                  "da-dk": "Bedømmelse: Højeste først",
-                  "sv-se": "Betyg: Högst först",
-                  "nb-no": "Vurdering: Høyest først",
                   "fr-fr": "Évaluation : Du plus élevé au plus bas",
-                  "en-fr": "Classement : Du plus élevé au plus bas",
                   "ja-jp": "評価: 高い順",
-                  "ar-uae": "التقييم: الأعلى أولاً",
-                  "ar-ksa": "التقييم: الأعلى أولاً"
+                  "nb-no": "Vurdering: Høyest først",
+                  "nl-nl": "Beoordeling: Hoogste eerst",
+                  "sv-se": "Betyg: Högst först",
+                  "ar-ksa": "التقييم: الأعلى أولاً",
+                  "ar-uae": "التقييم: الأعلى أولاً"
                 }
               },
               "direction": {
@@ -237,48 +198,29 @@
             "fields": {
               "field": {
                 "type": "text",
-                "locales": {
-                  "en-us": "fields.rating",
-                  "es-us": "fields.calificación",
-                  "fr-ca": "champs.évaluation",
-                  "en-ca": "fields.rating",
-                  "en-gb": "fields.rating",
-                  "de-de": "fields.bewertung",
-                  "en-de": "fields.bewertung",
-                  "de-at": "felder.bewertung",
-                  "nl-nl": "velden.beoordeling",
-                  "en-nl": "velden.beoordeling",
-                  "da-dk": "fields.vurdering",
-                  "sv-se": "fields.betyg",
-                  "nb-no": "fields.vurdering",
-                  "fr-fr": "évaluations.champ",
-                  "en-fr": "fields.évaluation",
-                  "ja-jp": "フィールド.評価",
-                  "ar-uae": "fields.rating",
-                  "ar-ksa": "fields.rating"
-                }
+                "value": "fields.rating"
               },
               "title": {
                 "type": "text",
                 "locales": {
+                  "da-dk": "Bedømmelse: Laveste først",
+                  "de-at": "Bewertung: Niedrigste zuerst",
+                  "de-de": "Bewertung: Niedrigste zuerst",
+                  "en-au": "Évaluation : Du plus bas au plus élevé",
+                  "en-ca": "Rating: Lowest first",
+                  "en-gb": "Rating: Lowest first",
+                  "en-nl": "Beoordeling: Laagste eerst",
+                  "en-nz": "Bewertung: Niedrigste zuerst",
                   "en-us": "Rating: Lowest first",
                   "es-us": "Calificación: De menor a mayor",
                   "fr-ca": "Évaluation : Du plus bas au plus élevé",
-                  "en-ca": "Rating: Lowest first",
-                  "en-gb": "Rating: Lowest first",
-                  "de-de": "Bewertung: Niedrigste zuerst",
-                  "en-de": "Bewertung: Niedrigste zuerst",
-                  "de-at": "Bewertung: Niedrigste zuerst",
-                  "nl-nl": "Beoordeling: Laagste eerst",
-                  "en-nl": "Beoordeling: Laagste eerst",
-                  "da-dk": "Bedømmelse: Laveste først",
-                  "sv-se": "Betyg: Lägst först",
-                  "nb-no": "Vurdering: Lavest først",
                   "fr-fr": "Évaluation : Du plus bas au plus élevé",
-                  "en-fr": "Évaluation : Du plus bas au plus élevé",
                   "ja-jp": "評価: 低い順",
-                  "ar-uae": "التقييم: الأقل أولاً",
-                  "ar-ksa": "التقييم: من الأدنى إلى الأعلى"
+                  "nb-no": "Vurdering: Lavest først",
+                  "nl-nl": "Beoordeling: Laagste eerst",
+                  "sv-se": "Betyg: Lägst först",
+                  "ar-ksa": "التقييم: من الأدنى إلى الأعلى",
+                  "ar-uae": "التقييم: الأقل أولاً"
                 }
               },
               "direction": {
@@ -306,11 +248,11 @@
                   "da-dk": "Filtrer efter type",
                   "de-at": "Nach Typ filtern",
                   "de-de": "Nach Typ filtern",
+                  "en-au": "Filtrer par type",
                   "en-ca": "Filter by type",
-                  "en-de": "Nach Typ filtern",
-                  "en-fr": "Filtrer par type",
                   "en-gb": "Filter by type",
                   "en-nl": "Filter op type",
+                  "en-nz": "Nach Typ filtern",
                   "en-us": "Filter by type",
                   "es-us": "Filtrar por tipo",
                   "fr-ca": "Filtrer par type",
@@ -340,48 +282,29 @@
                               "title": {
                                 "type": "text",
                                 "locales": {
+                                  "da-dk": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
+                                  "de-at": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
+                                  "de-de": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
+                                  "en-au": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
+                                  "en-ca": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
+                                  "en-gb": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
+                                  "en-nl": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
+                                  "en-nz": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
                                   "en-us": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
                                   "es-us": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
                                   "fr-ca": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
-                                  "en-ca": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
-                                  "en-gb": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
-                                  "de-de": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
-                                  "en-de": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
-                                  "de-at": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
-                                  "nl-nl": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
-                                  "en-nl": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
-                                  "da-dk": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
-                                  "sv-se": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
-                                  "nb-no": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
                                   "fr-fr": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
-                                  "en-fr": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
                                   "ja-jp": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
-                                  "ar-uae": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
-                                  "ar-ksa": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}"
+                                  "nb-no": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
+                                  "nl-nl": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
+                                  "sv-se": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
+                                  "ar-ksa": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
+                                  "ar-uae": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}"
                                 }
                               },
                               "value": {
                                 "type": "text",
-                                "locales": {
-                                  "en-us": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "es-us": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "fr-ca": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "en-ca": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "en-gb": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "de-de": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "en-de": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "de-at": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "nl-nl": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "en-nl": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "da-dk": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "sv-se": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "nb-no": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "fr-fr": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "en-fr": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "ja-jp": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "ar-uae": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "ar-ksa": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}"
-                                }
+                                "value": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}"
                               }
                             }
                           }
@@ -401,49 +324,11 @@
               },
               "fieldId": {
                 "type": "text",
-                "locales": {
-                  "en-us": "category",
-                  "es-us": "categoría",
-                  "fr-ca": "catégorie",
-                  "en-ca": "category",
-                  "en-gb": "category",
-                  "de-de": "Kategorie",
-                  "en-de": "Kategorie",
-                  "de-at": "Kategorie",
-                  "nl-nl": "categorie",
-                  "en-nl": "categorie",
-                  "da-dk": "kategori",
-                  "sv-se": "kategori",
-                  "nb-no": "kategori",
-                  "fr-fr": "catégorie",
-                  "en-fr": "catégorie",
-                  "ja-jp": "カテゴリー",
-                  "ar-uae": "فئة",
-                  "ar-ksa": "فئة"
-                }
+                "value": "category"
               },
               "fieldKey": {
                 "type": "text",
-                "locales": {
-                  "en-us": "fields.subcategory.slug",
-                  "es-us": "fields.subcategory.slug",
-                  "fr-ca": "fields.sous-categorie.limace",
-                  "en-ca": "fields.subcategory.slug",
-                  "en-gb": "fields.subcategory.slug",
-                  "de-de": "felder.unterkategorie.slug",
-                  "en-de": "fields.unterkategorie.slug",
-                  "de-at": "felder.unterkategorie.slug",
-                  "nl-nl": "velden.subcategorie.slug",
-                  "en-nl": "velden.subcategorie.slug",
-                  "da-dk": "fields.underkategori.slug",
-                  "sv-se": "fields.underkategori.slug",
-                  "nb-no": "fields.underkategori.slug",
-                  "fr-fr": "fields.sous-categorie.limace",
-                  "en-fr": "fields.sous-categorie.limace",
-                  "ja-jp": "fields.subcategory.slug",
-                  "ar-uae": "fields.subcategory.slug",
-                  "ar-ksa": "fields.subcategory.slug"
-                }
+                "value": "fields.subcategory.slug"
               },
               "enableFaceting": {
                 "type": "checkbox",
@@ -465,11 +350,11 @@
                   "da-dk": "Filtrer efter mærke",
                   "de-at": "Nach Marke filtern",
                   "de-de": "Nach Marke filtern",
+                  "en-au": "Affiner par marque",
                   "en-ca": "Refine by brand",
-                  "en-de": "Nach Marke verfeinern",
-                  "en-fr": "Affiner par marque",
                   "en-gb": "Refine by brand",
                   "en-nl": "Verfijnen op merk",
+                  "en-nz": "Nach Marke verfeinern",
                   "en-us": "Refine by brand",
                   "es-us": "Refinar por marca",
                   "fr-ca": "Affiner par marque",
@@ -499,48 +384,29 @@
                               "title": {
                                 "type": "text",
                                 "locales": {
+                                  "da-dk": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
+                                  "de-at": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
+                                  "de-de": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
+                                  "en-au": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
+                                  "en-ca": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
+                                  "en-gb": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
+                                  "en-nl": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
+                                  "en-nz": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
                                   "en-us": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
                                   "es-us": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
                                   "fr-ca": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
-                                  "en-ca": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
-                                  "en-gb": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
-                                  "de-de": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
-                                  "en-de": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
-                                  "de-at": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
-                                  "nl-nl": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
-                                  "en-nl": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
-                                  "da-dk": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
-                                  "sv-se": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
-                                  "nb-no": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
                                   "fr-fr": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
-                                  "en-fr": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
                                   "ja-jp": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
-                                  "ar-uae": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
-                                  "ar-ksa": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}"
+                                  "nb-no": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
+                                  "nl-nl": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
+                                  "sv-se": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
+                                  "ar-ksa": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}",
+                                  "ar-uae": "${#jptr:/All Product Categories entries Loop Item/entry/fields/title/value}"
                                 }
                               },
                               "value": {
                                 "type": "text",
-                                "locales": {
-                                  "en-us": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "es-us": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "fr-ca": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "en-ca": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "en-gb": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "de-de": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "en-de": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "de-at": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "nl-nl": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "en-nl": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "da-dk": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "sv-se": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "nb-no": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "fr-fr": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "en-fr": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "ja-jp": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "ar-uae": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}",
-                                  "ar-ksa": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}"
-                                }
+                                "value": "${#jptr:/All Product Categories entries Loop Item/entry/_slug}"
                               }
                             }
                           }
@@ -560,49 +426,11 @@
               },
               "fieldId": {
                 "type": "text",
-                "locales": {
-                  "en-us": "brand",
-                  "es-us": "marca",
-                  "fr-ca": "marque",
-                  "en-ca": "brand",
-                  "en-gb": "brand",
-                  "de-de": "Marke",
-                  "en-de": "Marke",
-                  "de-at": "Marke",
-                  "nl-nl": "merk",
-                  "en-nl": "merk",
-                  "da-dk": "mærke",
-                  "sv-se": "varumärke",
-                  "nb-no": "merkevare",
-                  "fr-fr": "marque",
-                  "en-fr": "marque",
-                  "ja-jp": "ブランド",
-                  "ar-uae": "علامة تجارية",
-                  "ar-ksa": "علامة تجارية"
-                }
+                "value": "brand"
               },
               "fieldKey": {
                 "type": "text",
-                "locales": {
-                  "en-us": "fields.brand.slug",
-                  "es-us": "fields.brand.slug",
-                  "fr-ca": "fields.marque.slug",
-                  "en-ca": "fields.brand.slug",
-                  "en-gb": "fields.brand.slug",
-                  "de-de": "fields.marke.slug",
-                  "en-de": "fields.marke.slug",
-                  "de-at": "felder.marke.slug",
-                  "nl-nl": "velden.merk.slug",
-                  "en-nl": "velden.merk.slug",
-                  "da-dk": "fields.brand.slug",
-                  "sv-se": "fields.varumarke.slug",
-                  "nb-no": "fields.brand.slug",
-                  "fr-fr": "fields.marque.slug",
-                  "en-fr": "fields.marque.slug",
-                  "ja-jp": "fields.brand.slug",
-                  "ar-uae": "fields.brand.slug",
-                  "ar-ksa": "الحقول.العلامة-التجارية.الاسم-المختصر"
-                }
+                "value": "fields.brand.slug"
               },
               "enableFaceting": {
                 "type": "checkbox",
@@ -624,11 +452,11 @@
                   "da-dk": "Filtrer efter kundevurdering",
                   "de-at": "Nach Kundenbewertung filtern",
                   "de-de": "Nach Kundenbewertung filtern",
+                  "en-au": "Affiner par note des clients",
                   "en-ca": "Filter by customer rating",
-                  "en-de": "Nach Kundenbewertung filtern",
-                  "en-fr": "Affiner par note des clients",
                   "en-gb": "Refine by customer rating",
                   "en-nl": "Verfijnen op klantbeoordeling",
+                  "en-nz": "Nach Kundenbewertung filtern",
                   "en-us": "Refine by customer rating",
                   "es-us": "Refinar por calificación del cliente",
                   "fr-ca": "Affiner par évaluation des clients",
@@ -651,48 +479,29 @@
                       "title": {
                         "type": "text",
                         "locales": {
+                          "da-dk": "0",
+                          "de-at": "0",
+                          "de-de": "0",
+                          "en-au": "0",
+                          "en-ca": "0",
+                          "en-gb": "0",
+                          "en-nl": "0",
+                          "en-nz": "0",
                           "en-us": "0",
                           "es-us": "0",
                           "fr-ca": "0",
-                          "en-ca": "0",
-                          "en-gb": "0",
-                          "de-de": "0",
-                          "en-de": "0",
-                          "de-at": "0",
-                          "nl-nl": "0",
-                          "en-nl": "0",
-                          "da-dk": "0",
-                          "sv-se": "0",
-                          "nb-no": "0",
                           "fr-fr": "0",
-                          "en-fr": "0",
                           "ja-jp": "0",
-                          "ar-uae": "٠",
-                          "ar-ksa": "٠"
+                          "nb-no": "0",
+                          "nl-nl": "0",
+                          "sv-se": "0",
+                          "ar-ksa": "٠",
+                          "ar-uae": "٠"
                         }
                       },
                       "value": {
                         "type": "text",
-                        "locales": {
-                          "en-us": "0",
-                          "es-us": "0",
-                          "fr-ca": "0",
-                          "en-ca": "0",
-                          "en-gb": "0",
-                          "de-de": "0",
-                          "en-de": "0",
-                          "de-at": "0",
-                          "nl-nl": "0",
-                          "en-nl": "0",
-                          "da-dk": "0",
-                          "sv-se": "0",
-                          "nb-no": "0",
-                          "fr-fr": "0",
-                          "en-fr": "0",
-                          "ja-jp": "0",
-                          "ar-uae": "٠",
-                          "ar-ksa": "٠"
-                        }
+                        "value": "0"
                       }
                     }
                   },
@@ -703,48 +512,29 @@
                       "title": {
                         "type": "text",
                         "locales": {
+                          "da-dk": "1",
+                          "de-at": "1",
+                          "de-de": "Eins",
+                          "en-au": "1",
+                          "en-ca": "1",
+                          "en-gb": "1",
+                          "en-nl": "Eén",
+                          "en-nz": "1",
                           "en-us": "1",
                           "es-us": "1",
                           "fr-ca": "1",
-                          "en-ca": "1",
-                          "en-gb": "1",
-                          "de-de": "Eins",
-                          "en-de": "1",
-                          "de-at": "1",
-                          "nl-nl": "1",
-                          "en-nl": "Eén",
-                          "da-dk": "1",
-                          "sv-se": "1",
-                          "nb-no": "1",
                           "fr-fr": "Un",
-                          "en-fr": "1",
                           "ja-jp": "1",
-                          "ar-uae": "واحد",
-                          "ar-ksa": "١"
+                          "nb-no": "1",
+                          "nl-nl": "1",
+                          "sv-se": "1",
+                          "ar-ksa": "١",
+                          "ar-uae": "واحد"
                         }
                       },
                       "value": {
                         "type": "text",
-                        "locales": {
-                          "en-us": "1",
-                          "es-us": "1",
-                          "fr-ca": "1",
-                          "en-ca": "1",
-                          "en-gb": "1",
-                          "de-de": "1",
-                          "en-de": "1",
-                          "de-at": "1",
-                          "nl-nl": "1",
-                          "en-nl": "1",
-                          "da-dk": "1",
-                          "sv-se": "Ett",
-                          "nb-no": "1",
-                          "fr-fr": "1",
-                          "en-fr": "1",
-                          "ja-jp": "1",
-                          "ar-uae": "١",
-                          "ar-ksa": "١"
-                        }
+                        "value": "1"
                       }
                     }
                   },
@@ -755,48 +545,29 @@
                       "title": {
                         "type": "text",
                         "locales": {
+                          "da-dk": "2",
+                          "de-at": "2",
+                          "de-de": "2",
+                          "en-au": "2",
+                          "en-ca": "2",
+                          "en-gb": "2",
+                          "en-nl": "2",
+                          "en-nz": "2",
                           "en-us": "2",
                           "es-us": "2",
                           "fr-ca": "2",
-                          "en-ca": "2",
-                          "en-gb": "2",
-                          "de-de": "2",
-                          "en-de": "2",
-                          "de-at": "2",
-                          "nl-nl": "2",
-                          "en-nl": "2",
-                          "da-dk": "2",
-                          "sv-se": "2",
-                          "nb-no": "2",
                           "fr-fr": "2",
-                          "en-fr": "2",
                           "ja-jp": "2",
-                          "ar-uae": "٢",
-                          "ar-ksa": "٢"
+                          "nb-no": "2",
+                          "nl-nl": "2",
+                          "sv-se": "2",
+                          "ar-ksa": "٢",
+                          "ar-uae": "٢"
                         }
                       },
                       "value": {
                         "type": "text",
-                        "locales": {
-                          "en-us": "2",
-                          "es-us": "2",
-                          "fr-ca": "2",
-                          "en-ca": "2",
-                          "en-gb": "2",
-                          "de-de": "2",
-                          "en-de": "2",
-                          "de-at": "2",
-                          "nl-nl": "2",
-                          "en-nl": "2",
-                          "da-dk": "2",
-                          "sv-se": "2",
-                          "nb-no": "2",
-                          "fr-fr": "2",
-                          "en-fr": "2",
-                          "ja-jp": "2",
-                          "ar-uae": "٢",
-                          "ar-ksa": "٢"
-                        }
+                        "value": "2"
                       }
                     }
                   },
@@ -807,48 +578,29 @@
                       "title": {
                         "type": "text",
                         "locales": {
+                          "da-dk": "3",
+                          "de-at": "3",
+                          "de-de": "3",
+                          "en-au": "3",
+                          "en-ca": "3",
+                          "en-gb": "3",
+                          "en-nl": "3",
+                          "en-nz": "3",
                           "en-us": "3",
                           "es-us": "3",
                           "fr-ca": "3",
-                          "en-ca": "3",
-                          "en-gb": "3",
-                          "de-de": "3",
-                          "en-de": "3",
-                          "de-at": "3",
-                          "nl-nl": "3",
-                          "en-nl": "3",
-                          "da-dk": "3",
-                          "sv-se": "3",
-                          "nb-no": "3",
                           "fr-fr": "3",
-                          "en-fr": "3",
                           "ja-jp": "3",
-                          "ar-uae": "٣",
-                          "ar-ksa": "٣"
+                          "nb-no": "3",
+                          "nl-nl": "3",
+                          "sv-se": "3",
+                          "ar-ksa": "٣",
+                          "ar-uae": "٣"
                         }
                       },
                       "value": {
                         "type": "text",
-                        "locales": {
-                          "en-us": "3",
-                          "es-us": "3",
-                          "fr-ca": "3",
-                          "en-ca": "3",
-                          "en-gb": "3",
-                          "de-de": "3",
-                          "en-de": "3",
-                          "de-at": "3",
-                          "nl-nl": "3",
-                          "en-nl": "3",
-                          "da-dk": "3",
-                          "sv-se": "3",
-                          "nb-no": "3",
-                          "fr-fr": "3",
-                          "en-fr": "3",
-                          "ja-jp": "3",
-                          "ar-uae": "٣",
-                          "ar-ksa": "٣"
-                        }
+                        "value": "3"
                       }
                     }
                   },
@@ -859,48 +611,29 @@
                       "title": {
                         "type": "text",
                         "locales": {
+                          "da-dk": "4",
+                          "de-at": "4",
+                          "de-de": "4",
+                          "en-au": "4",
+                          "en-ca": "4",
+                          "en-gb": "4",
+                          "en-nl": "4",
+                          "en-nz": "4",
                           "en-us": "4",
                           "es-us": "4",
                           "fr-ca": "4",
-                          "en-ca": "4",
-                          "en-gb": "4",
-                          "de-de": "4",
-                          "en-de": "4",
-                          "de-at": "4",
-                          "nl-nl": "4",
-                          "en-nl": "4",
-                          "da-dk": "4",
-                          "sv-se": "4",
-                          "nb-no": "4",
                           "fr-fr": "4",
-                          "en-fr": "4",
                           "ja-jp": "4",
-                          "ar-uae": "٤",
-                          "ar-ksa": "٤"
+                          "nb-no": "4",
+                          "nl-nl": "4",
+                          "sv-se": "4",
+                          "ar-ksa": "٤",
+                          "ar-uae": "٤"
                         }
                       },
                       "value": {
                         "type": "text",
-                        "locales": {
-                          "en-us": "4",
-                          "es-us": "4",
-                          "fr-ca": "4",
-                          "en-ca": "4",
-                          "en-gb": "4",
-                          "de-de": "4",
-                          "en-de": "4",
-                          "de-at": "4",
-                          "nl-nl": "4",
-                          "en-nl": "4",
-                          "da-dk": "4",
-                          "sv-se": "4",
-                          "nb-no": "4",
-                          "fr-fr": "4",
-                          "en-fr": "4",
-                          "ja-jp": "4",
-                          "ar-uae": "٤",
-                          "ar-ksa": "٤"
-                        }
+                        "value": "4"
                       }
                     }
                   },
@@ -911,48 +644,29 @@
                       "title": {
                         "type": "text",
                         "locales": {
+                          "da-dk": "5",
+                          "de-at": "5",
+                          "de-de": "5",
+                          "en-au": "5",
+                          "en-ca": "5",
+                          "en-gb": "5",
+                          "en-nl": "5",
+                          "en-nz": "5",
                           "en-us": "5",
                           "es-us": "5",
                           "fr-ca": "5",
-                          "en-ca": "5",
-                          "en-gb": "5",
-                          "de-de": "5",
-                          "en-de": "5",
-                          "de-at": "5",
-                          "nl-nl": "5",
-                          "en-nl": "5",
-                          "da-dk": "5",
-                          "sv-se": "5",
-                          "nb-no": "5",
                           "fr-fr": "5",
-                          "en-fr": "5",
                           "ja-jp": "5",
-                          "ar-uae": "٥",
-                          "ar-ksa": "٥"
+                          "nb-no": "5",
+                          "nl-nl": "5",
+                          "sv-se": "5",
+                          "ar-ksa": "٥",
+                          "ar-uae": "٥"
                         }
                       },
                       "value": {
                         "type": "text",
-                        "locales": {
-                          "en-us": "5",
-                          "es-us": "5",
-                          "fr-ca": "5",
-                          "en-ca": "5",
-                          "en-gb": "5",
-                          "de-de": "5",
-                          "en-de": "5",
-                          "de-at": "5",
-                          "nl-nl": "5",
-                          "en-nl": "5",
-                          "da-dk": "5",
-                          "sv-se": "5",
-                          "nb-no": "5",
-                          "fr-fr": "5",
-                          "en-fr": "5",
-                          "ja-jp": "5",
-                          "ar-uae": "٥",
-                          "ar-ksa": "٥"
-                        }
+                        "value": "5"
                       }
                     }
                   }
@@ -960,49 +674,11 @@
               },
               "fieldId": {
                 "type": "text",
-                "locales": {
-                  "en-us": "rating",
-                  "es-us": "calificación",
-                  "fr-ca": "évaluation",
-                  "en-ca": "rating",
-                  "en-gb": "rating",
-                  "de-de": "Bewertung",
-                  "en-de": "Bewertung",
-                  "de-at": "Bewertung",
-                  "nl-nl": "beoordeling",
-                  "en-nl": "waardering",
-                  "da-dk": "bedømmelse",
-                  "sv-se": "betyg",
-                  "nb-no": "vurdering",
-                  "fr-fr": "évaluation",
-                  "en-fr": "évaluation",
-                  "ja-jp": "評価",
-                  "ar-uae": "تقييم",
-                  "ar-ksa": "تقييم"
-                }
+                "value": "rating"
               },
               "fieldKey": {
                 "type": "text",
-                "locales": {
-                  "en-us": "fields.rating",
-                  "es-us": "campos.calificación",
-                  "fr-ca": "champs.évaluation",
-                  "en-ca": "fields.rating",
-                  "en-gb": "fields.rating",
-                  "de-de": "fields.bewertung",
-                  "en-de": "fields.bewertung",
-                  "de-at": "felder.bewertung",
-                  "nl-nl": "velden.beoordeling",
-                  "en-nl": "velden.beoordeling",
-                  "da-dk": "fields.vurdering",
-                  "sv-se": "fields.betyg",
-                  "nb-no": "fields.vurdering",
-                  "fr-fr": "évaluations.champ",
-                  "en-fr": "fields.évaluation",
-                  "ja-jp": "フィールド.評価",
-                  "ar-uae": "fields.rating",
-                  "ar-ksa": "fields.rating"
-                }
+                "value": "fields.rating"
               }
             }
           }
@@ -1060,11 +736,11 @@
                   "da-dk": "Kaffemaskiner",
                   "de-at": "Kaffeemaschinen",
                   "de-de": "Kaffeemaschinen",
+                  "en-au": "Cafetière",
                   "en-ca": "Coffee Makers",
-                  "en-de": "Kaffeemaschinen",
-                  "en-fr": "Cafetière",
                   "en-gb": "Coffee Machines",
                   "en-nl": "Koffiezetapparaten",
+                  "en-nz": "Kaffeemaschinen",
                   "en-us": "Coffee Makers",
                   "es-us": "Cafeteras",
                   "fr-ca": "Cafetière",
@@ -1087,48 +763,29 @@
                       "title": {
                         "type": "text",
                         "locales": {
+                          "da-dk": "${#jptr:/Base Product Category/entry/fields/title/value}",
+                          "de-at": "${#jptr:/Base Product Category/entry/fields/title/value}",
+                          "de-de": "${#jptr:/Base Product Category/entry/fields/title/value}",
+                          "en-au": "${#jptr:/Base Product Category/entry/fields/title/value}",
+                          "en-ca": "${#jptr:/Base Product Category/entry/fields/title/value}",
+                          "en-gb": "${#jptr:/Base Product Category/entry/fields/title/value}",
+                          "en-nl": "${#jptr:/Base Product Category/entry/fields/title/value}",
+                          "en-nz": "${#jptr:/Base Product Category/entry/fields/title/value}",
                           "en-us": "${#jptr:/Base Product Category/entry/fields/title/value}",
                           "es-us": "${#jptr:/Base Product Category/entry/fields/title/value}",
                           "fr-ca": "${#jptr:/Base Product Category/entry/fields/title/value}",
-                          "en-ca": "${#jptr:/Base Product Category/entry/fields/title/value}",
-                          "en-gb": "${#jptr:/Base Product Category/entry/fields/title/value}",
-                          "de-de": "${#jptr:/Base Product Category/entry/fields/title/value}",
-                          "en-de": "${#jptr:/Base Product Category/entry/fields/title/value}",
-                          "de-at": "${#jptr:/Base Product Category/entry/fields/title/value}",
-                          "nl-nl": "${#jptr:/Base Product Category/entry/fields/title/value}",
-                          "en-nl": "${#jptr:/Base Product Category/entry/fields/title/value}",
-                          "da-dk": "${#jptr:/Base Product Category/entry/fields/title/value}",
-                          "sv-se": "${#jptr:/Base Product Category/entry/fields/title/value}",
-                          "nb-no": "${#jptr:/Base Product Category/entry/fields/title/value}",
                           "fr-fr": "${#jptr:/Base Product Category/entry/fields/title/value}",
-                          "en-fr": "${#jptr:/Base Product Category/entry/fields/title/value}",
                           "ja-jp": "${#jptr:/Base Product Category/entry/fields/title/value}",
-                          "ar-uae": "${#jptr:/Base Product Category/entry/fields/title/value}",
-                          "ar-ksa": "${#jptr:/Base Product Category/entry/fields/title/value}"
+                          "nb-no": "${#jptr:/Base Product Category/entry/fields/title/value}",
+                          "nl-nl": "${#jptr:/Base Product Category/entry/fields/title/value}",
+                          "sv-se": "${#jptr:/Base Product Category/entry/fields/title/value}",
+                          "ar-ksa": "${#jptr:/Base Product Category/entry/fields/title/value}",
+                          "ar-uae": "${#jptr:/Base Product Category/entry/fields/title/value}"
                         }
                       },
                       "value": {
                         "type": "text",
-                        "locales": {
-                          "en-us": "${#jptr:/Base Product Category/entry/_slug}",
-                          "es-us": "${#jptr:/Base Product Category/entry/_slug}",
-                          "fr-ca": "${#jptr:/Base Product Category/entry/_slug}",
-                          "en-ca": "${#jptr:/Base Product Category/entry/_slug}",
-                          "en-gb": "${#jptr:/Base Product Category/entry/_slug}",
-                          "de-de": "${#jptr:/Base Product Category/entry/_slug}",
-                          "en-de": "${#jptr:/Base Product Category/entry/_slug}",
-                          "de-at": "${#jptr:/Base Product Category/entry/_slug}",
-                          "nl-nl": "${#jptr:/Base Product Category/entry/_slug}",
-                          "en-nl": "${#jptr:/Base Product Category/entry/_slug}",
-                          "da-dk": "${#jptr:/Base Product Category/entry/_slug}",
-                          "sv-se": "${#jptr:/Base Product Category/entry/_slug}",
-                          "nb-no": "${#jptr:/Base Product Category/entry/_slug}",
-                          "fr-fr": "${#jptr:/Base Product Category/entry/_slug}",
-                          "en-fr": "${#jptr:/Base Product Category/entry/_slug}",
-                          "ja-jp": "${#jptr:/Base Product Category/entry/_slug}",
-                          "ar-uae": "${#jptr:/Base Product Category/entry/_slug}",
-                          "ar-ksa": "${#jptr:/Base Product Category/entry/_slug}"
-                        }
+                        "value": "${#jptr:/Base Product Category/entry/_slug}"
                       }
                     }
                   }
@@ -1136,49 +793,11 @@
               },
               "fieldId": {
                 "type": "text",
-                "locales": {
-                  "en-us": "category",
-                  "es-us": "categoría",
-                  "fr-ca": "catégorie",
-                  "en-ca": "category",
-                  "en-gb": "category",
-                  "de-de": "Kategorie",
-                  "en-de": "Kategorie",
-                  "de-at": "Kategorie",
-                  "nl-nl": "categorie",
-                  "en-nl": "categorie",
-                  "da-dk": "kategori",
-                  "sv-se": "kategori",
-                  "nb-no": "kategori",
-                  "fr-fr": "catégorie",
-                  "en-fr": "catégorie",
-                  "ja-jp": "カテゴリー",
-                  "ar-uae": "فئة",
-                  "ar-ksa": "فئة"
-                }
+                "value": "category"
               },
               "fieldKey": {
                 "type": "text",
-                "locales": {
-                  "en-us": "fields.category.slug",
-                  "es-us": "fields.category.slug",
-                  "fr-ca": "fields.category.slug",
-                  "en-ca": "fields.category.slug",
-                  "en-gb": "fields.category.slug",
-                  "de-de": "felder.kategorie.slug",
-                  "en-de": "felder.kategorie.slug",
-                  "de-at": "felder.kategorie.slug",
-                  "nl-nl": "velden.categorie.slug",
-                  "en-nl": "velden.categorie.slug",
-                  "da-dk": "felter.kategori.snegl",
-                  "sv-se": "fields.category.slug",
-                  "nb-no": "fields.kategori.slug",
-                  "fr-fr": "fields.category.slug",
-                  "en-fr": "champs.catégorie.limace",
-                  "ja-jp": "fields.category.slug",
-                  "ar-uae": "حقل.فئة.سبيكة",
-                  "ar-ksa": "الحقول.الفئة.سبيكة"
-                }
+                "value": "fields.category.slug"
               }
             }
           }
@@ -1222,24 +841,24 @@
                         "placeholder": {
                           "type": "text",
                           "locales": {
+                            "da-dk": "Begynd at søge efter en kaffemaskine",
+                            "de-at": "Beginnen Sie mit der Suche nach einer Kaffeemaschine.",
+                            "de-de": "Beginnen Sie mit der Suche nach einer Kaffeemaschine.",
+                            "en-au": "Commencez à chercher une cafetière",
+                            "en-ca": "Start searching for a coffee maker",
+                            "en-gb": "Start searching for a coffee machine",
+                            "en-nl": "Begin met zoeken naar een koffiezetapparaat",
+                            "en-nz": "Beginnen Sie mit der Suche nach einer Kaffeemaschine.",
                             "en-us": "Start searching for a coffee maker",
                             "es-us": "Comienza a buscar una cafetera",
                             "fr-ca": "Commencez à chercher une cafetière",
-                            "en-ca": "Start searching for a coffee maker",
-                            "en-gb": "Start searching for a coffee machine",
-                            "de-de": "Beginnen Sie mit der Suche nach einer Kaffeemaschine.",
-                            "en-de": "Beginnen Sie mit der Suche nach einer Kaffeemaschine.",
-                            "de-at": "Beginnen Sie mit der Suche nach einer Kaffeemaschine.",
-                            "nl-nl": "Begin met zoeken naar een koffiezetapparaat",
-                            "en-nl": "Begin met zoeken naar een koffiezetapparaat",
-                            "da-dk": "Begynd at søge efter en kaffemaskine",
-                            "sv-se": "Börja leta efter en kaffebryggare",
-                            "nb-no": "Begynn å søke etter en kaffetrakter",
                             "fr-fr": "Commencez à chercher une cafetière",
-                            "en-fr": "Commencez à chercher une cafetière",
                             "ja-jp": "コーヒーメーカーを探し始める",
-                            "ar-uae": "ابدأ البحث عن ماكينة قهوة",
-                            "ar-ksa": "ابدأ البحث عن ماكينة قهوة"
+                            "nb-no": "Begynn å søke etter en kaffetrakter",
+                            "nl-nl": "Begin met zoeken naar een koffiezetapparaat",
+                            "sv-se": "Börja leta efter en kaffebryggare",
+                            "ar-ksa": "ابدأ البحث عن ماكينة قهوة",
+                            "ar-uae": "ابدأ البحث عن ماكينة قهوة"
                           }
                         }
                       },
@@ -1285,11 +904,11 @@
                       "da-dk": "Søgefelt",
                       "de-at": "Suchfeld",
                       "de-de": "Suchfeld",
+                      "en-au": "Boîte de recherche",
                       "en-ca": "Search Bar",
-                      "en-de": "Suchfeld",
-                      "en-fr": "Boîte de recherche",
                       "en-gb": "Search Bar",
                       "en-nl": "Zoekvak",
+                      "en-nz": "Suchfeld",
                       "en-us": "Search Box",
                       "es-us": "Cuadro de búsqueda",
                       "fr-ca": "Boîte de recherche",
@@ -1342,11 +961,11 @@
                 "da-dk": "Søgefelt og sortering",
                 "de-at": "Suchfeld und Sortierung",
                 "de-de": "Suchfeld und Sortierung",
+                "en-au": "Boîte de recherche et tri",
                 "en-ca": "Search Box and Sorting",
-                "en-de": "Suchfeld und Sortierung",
-                "en-fr": "Boîte de recherche et tri",
                 "en-gb": "Search Bar and Sorting",
                 "en-nl": "Zoekvak en Sorteren",
+                "en-nz": "Suchfeld und Sortierung",
                 "en-us": "Search Box and Sorting",
                 "es-us": "Cuadro de búsqueda y ordenación",
                 "fr-ca": "Boîte de recherche et tri",
@@ -1430,11 +1049,11 @@
                       "da-dk": "Venstre Indhold",
                       "de-at": "Linker Inhalt",
                       "de-de": "Linker Inhalt",
+                      "en-au": "Contenu de gauche",
                       "en-ca": "Left Content",
-                      "en-de": "Linker Inhalt",
-                      "en-fr": "Contenu de gauche",
                       "en-gb": "Left Content",
                       "en-nl": "Linker inhoud",
+                      "en-nz": "Linker Inhalt",
                       "en-us": "Left Content",
                       "es-us": "Contenido Izquierdo",
                       "fr-ca": "Contenu de gauche",
@@ -1478,11 +1097,11 @@
                                         "da-dk": "Fundet {totalItems} produkt(er)",
                                         "de-at": "{totalItems} Produkt(e) gefunden",
                                         "de-de": "{totalItems} Produkt(e) gefunden",
+                                        "en-au": "{totalItems} produit(s) trouvé(s)",
                                         "en-ca": "Found {totalItems} product(s)",
-                                        "en-de": "{totalItems} Produkt(e) gefunden",
-                                        "en-fr": "{totalItems} produit(s) trouvé(s)",
                                         "en-gb": "Found {totalItems} product(s)",
                                         "en-nl": "{totalItems} product(en) gevonden",
+                                        "en-nz": "{totalItems} Produkt(e) gefunden",
                                         "en-us": "Found {totalItems} product(s)",
                                         "es-us": "Se encontraron {totalItems} producto(s)",
                                         "fr-ca": "{totalItems} produit(s) trouvé(s)",
@@ -1517,11 +1136,11 @@
                                   "da-dk": "Samlede fundne emner",
                                   "de-at": "Gesamtanzahl der gefundenen Artikel",
                                   "de-de": "Gesamtanzahl der gefundenen Artikel",
+                                  "en-au": "Nombre total d'articles trouvés",
                                   "en-ca": "Total Items Found",
-                                  "en-de": "Gesamtanzahl der gefundenen Artikel",
-                                  "en-fr": "Nombre total d'articles trouvés",
                                   "en-gb": "Total Items Found",
                                   "en-nl": "Totaal aantal gevonden items",
+                                  "en-nz": "Gesamtanzahl der gefundenen Artikel",
                                   "en-us": "Total Items Found",
                                   "es-us": "Total de artículos encontrados",
                                   "fr-ca": "Nombre total d'articles trouvés",
@@ -1566,11 +1185,11 @@
                                         "da-dk": "Produkter pr. side",
                                         "de-at": "Produkte pro Seite",
                                         "de-de": "Produkte pro Seite",
+                                        "en-au": "Produits par page",
                                         "en-ca": "Products per page",
-                                        "en-de": "Produkte pro Seite",
-                                        "en-fr": "Produits par page",
                                         "en-gb": "Products per page",
                                         "en-nl": "Producten per pagina",
+                                        "en-nz": "Produkte pro Seite",
                                         "en-us": "Products per page",
                                         "es-us": "Productos por página",
                                         "fr-ca": "Produits par page",
@@ -1644,11 +1263,11 @@
                                   "da-dk": "Per side",
                                   "de-at": "Pro Seite",
                                   "de-de": "Pro Seite",
+                                  "en-au": "Par page",
                                   "en-ca": "Per page",
-                                  "en-de": "Pro Seite",
-                                  "en-fr": "Par page",
                                   "en-gb": "Per page",
                                   "en-nl": "Per pagina",
+                                  "en-nz": "Pro Seite",
                                   "en-us": "Per page",
                                   "es-us": "Por página",
                                   "fr-ca": "Par page",
@@ -1719,11 +1338,11 @@
                             "da-dk": "Topindhold",
                             "de-at": "Top-Inhalte",
                             "de-de": "Top-Inhalte",
+                            "en-au": "Contenu Principal",
                             "en-ca": "Top Content",
-                            "en-de": "Top-Inhalt",
-                            "en-fr": "Contenu Principal",
                             "en-gb": "Top Content",
                             "en-nl": "Topinhoud",
+                            "en-nz": "Top-Inhalt",
                             "en-us": "Top Content",
                             "es-us": "Contenido Principal",
                             "fr-ca": "Contenu Principal",
@@ -1777,6 +1396,75 @@
                         "textColor": {
                           "type": "dex-color-palette-parameter",
                           "value": "text-primary"
+                        },
+                        "clearAllFilterText": {
+                          "type": "text",
+                          "locales": {
+                            "da-dk": "ryd alle filtre",
+                            "de-at": "alle Filter löschen",
+                            "de-de": "alle Filter löschen",
+                            "en-au": "clear all filters",
+                            "en-ca": "clear all filters",
+                            "en-gb": "clear all filters",
+                            "en-nl": "clear all filters",
+                            "en-nz": "clear all filters",
+                            "en-us": "clear all filters",
+                            "es-us": "borrar todos los filtros",
+                            "fr-ca": "effacer tous les filtres",
+                            "fr-fr": "effacer tous les filtres",
+                            "ja-jp": "すべてのフィルターをクリア",
+                            "nb-no": "fjern alle filtre",
+                            "nl-nl": "alle filters wissen",
+                            "sv-se": "rensa alla filter",
+                            "ar-ksa": "مسح جميع الفلاتر",
+                            "ar-uae": "مسح جميع الفلاتر"
+                          }
+                        },
+                        "noResultsFoundText": {
+                          "type": "text",
+                          "locales": {
+                            "da-dk": "Ingen resultater fundet",
+                            "de-at": "Keine Ergebnisse gefunden",
+                            "de-de": "Keine Ergebnisse gefunden",
+                            "en-au": "No results found",
+                            "en-ca": "No results found",
+                            "en-gb": "No results found",
+                            "en-nl": "No results found",
+                            "en-nz": "No results found",
+                            "en-us": "No results found",
+                            "es-us": "No se encontraron resultados",
+                            "fr-ca": "Aucun résultat trouvé",
+                            "fr-fr": "Aucun résultat trouvé",
+                            "ja-jp": "結果が見つかりません",
+                            "nb-no": "Ingen resultater funnet",
+                            "nl-nl": "Geen resultaten gevonden",
+                            "sv-se": "Inga resultat hittades",
+                            "ar-ksa": "لم يتم العثور على نتائج",
+                            "ar-uae": "لم يتم العثور على نتائج"
+                          }
+                        },
+                        "tryDifferentFiltersText": {
+                          "type": "text",
+                          "locales": {
+                            "da-dk": "Prøv venligst igen med andre filtre eller",
+                            "de-at": "Bitte versuchen Sie es mit anderen Filtern erneut oder",
+                            "de-de": "Bitte versuchen Sie es mit anderen Filtern erneut oder",
+                            "en-au": "Please try again with different filters or",
+                            "en-ca": "Please try again with different filters or",
+                            "en-gb": "Please try again with different filters or",
+                            "en-nl": "Please try again with different filters or",
+                            "en-nz": "Please try again with different filters or",
+                            "en-us": "Please try again with different filters or",
+                            "es-us": "Inténtelo de nuevo con otros filtros o",
+                            "fr-ca": "Veuillez réessayer avec d'autres filtres ou",
+                            "fr-fr": "Veuillez réessayer avec d'autres filtres ou",
+                            "ja-jp": "別のフィルターで再試行してください または",
+                            "nb-no": "Prøv igjen med andre filtre eller",
+                            "nl-nl": "Probeer het opnieuw met andere filters of",
+                            "sv-se": "Försök igen med andra filter eller",
+                            "ar-ksa": "يرجى المحاولة مرة أخرى باستخدام فلاتر مختلفة أو",
+                            "ar-uae": "يرجى المحاولة مرة أخرى باستخدام فلاتر مختلفة أو"
+                          }
                         }
                       }
                     },
@@ -1830,11 +1518,11 @@
                       "da-dk": "Rigtigt indhold",
                       "de-at": "Richtiger Inhalt",
                       "de-de": "Richtiger Inhalt",
+                      "en-au": "Contenu Correct",
                       "en-ca": "Right Content",
-                      "en-de": "Rechter Inhalt",
-                      "en-fr": "Contenu Correct",
                       "en-gb": "Right Content",
                       "en-nl": "Juiste Inhoud",
+                      "en-nz": "Rechter Inhalt",
                       "en-us": "Right Content",
                       "es-us": "Contenido Correcto",
                       "fr-ca": "Contenu correct",
@@ -1883,11 +1571,11 @@
                 "da-dk": "Søg indhold",
                 "de-at": "Inhalt durchsuchen",
                 "de-de": "Inhalt durchsuchen",
+                "en-au": "Rechercher du contenu",
                 "en-ca": "Search Content",
-                "en-de": "Inhalt durchsuchen",
-                "en-fr": "Rechercher du contenu",
                 "en-gb": "Search Content",
                 "en-nl": "Zoekinhoud",
+                "en-nz": "Inhalt durchsuchen",
                 "en-us": "Search Content",
                 "es-us": "Buscar contenido",
                 "fr-ca": "Rechercher du contenu",
@@ -1923,6 +1611,7 @@
           "locale": "${locale}",
           "search": "",
           "filters": "{\"type[eq]\":\"brand\"}",
+          "uiFilters": "[{\"field\":\"type\",\"operator\":\"eq\",\"value\":\"brand\"}]",
           "contentTypes": "brand"
         },
         "isPatternParameter": false,
@@ -1943,6 +1632,7 @@
           "locale": "${locale}",
           "search": "",
           "filters": "{\"type[eq]\":\"productCategory\"}",
+          "uiFilters": "[{\"field\":\"type\",\"operator\":\"eq\",\"value\":\"productCategory\"}]",
           "contentTypes": "productCategory"
         },
         "isPatternParameter": false,
@@ -1962,7 +1652,7 @@
       "en-ca",
       "en-gb",
       "de-de",
-      "en-de",
+      "en-nz",
       "de-at",
       "nl-nl",
       "en-nl",
@@ -1970,14 +1660,14 @@
       "sv-se",
       "nb-no",
       "fr-fr",
-      "en-fr",
+      "en-au",
       "ja-jp",
       "ar-uae",
       "ar-ksa"
     ]
   },
   "created": "2025-05-20T11:53:44.816175+00:00",
-  "modified": "2025-07-03T13:16:19.611204+00:00",
+  "modified": "2025-07-31T12:51:34.357507+00:00",
   "pattern": true,
   "categoryId": "adaebea8-ba58-494b-9c3b-9f82906d9415"
 }

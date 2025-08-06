@@ -19,11 +19,11 @@
           "da-dk": "${#jptr:/Article single Content/entry/fields/title/value}",
           "de-at": "${#jptr:/Article single Content/entry/fields/title/value}",
           "de-de": "${#jptr:/Article single Content/entry/fields/title/value}",
+          "en-au": "${#jptr:/Article single Content/entry/fields/title/value}",
           "en-ca": "${#jptr:/Article single Content/entry/fields/title/value}",
-          "en-de": "${#jptr:/Article single Content/entry/fields/title/value}",
-          "en-fr": "${#jptr:/Article single Content/entry/fields/title/value}",
           "en-gb": "${#jptr:/Article single Content/entry/fields/title/value}",
           "en-nl": "${#jptr:/Article single Content/entry/fields/title/value}",
+          "en-nz": "${#jptr:/Article single Content/entry/fields/title/value}",
           "en-us": "${#jptr:/Article single Content/entry/fields/title/value}",
           "es-us": "${#jptr:/Article single Content/entry/fields/title/value}",
           "fr-ca": "${#jptr:/Article single Content/entry/fields/title/value}",
@@ -42,11 +42,11 @@
           "da-dk": "${#jptr:/Article single Content/entry/fields/title/value}",
           "de-at": "${#jptr:/Article single Content/entry/fields/title/value}",
           "de-de": "${#jptr:/Article single Content/entry/fields/title/value}",
+          "en-au": "${#jptr:/Article single Content/entry/fields/title/value}",
           "en-ca": "${#jptr:/Article single Content/entry/fields/title/value}",
-          "en-de": "${#jptr:/Article single Content/entry/fields/title/value}",
-          "en-fr": "${#jptr:/Article single Content/entry/fields/title/value}",
           "en-gb": "${#jptr:/Article single Content/entry/fields/title/value}",
           "en-nl": "${#jptr:/Article single Content/entry/fields/title/value}",
+          "en-nz": "${#jptr:/Article single Content/entry/fields/title/value}",
           "en-us": "${#jptr:/Article single Content/entry/fields/title/value}",
           "es-us": "${#jptr:/Article single Content/entry/fields/title/value}",
           "fr-ca": "${#jptr:/Article single Content/entry/fields/title/value}",
@@ -65,11 +65,11 @@
           "da-dk": "${#jptr:/Article single Content/entry/fields/shortDescription/value}",
           "de-at": "${#jptr:/Article single Content/entry/fields/shortDescription/value}",
           "de-de": "${#jptr:/Article single Content/entry/fields/shortDescription/value}",
+          "en-au": "${#jptr:/Article single Content/entry/fields/shortDescription/value}",
           "en-ca": "${#jptr:/Article single Content/entry/fields/shortDescription/value}",
-          "en-de": "${#jptr:/Article single Content/entry/fields/shortDescription/value}",
-          "en-fr": "${#jptr:/Article single Content/entry/fields/shortDescription/value}",
           "en-gb": "${#jptr:/Article single Content/entry/fields/shortDescription/value}",
           "en-nl": "${#jptr:/Article single Content/entry/fields/shortDescription/value}",
+          "en-nz": "${#jptr:/Article single Content/entry/fields/shortDescription/value}",
           "en-us": "${#jptr:/Article single Content/entry/fields/shortDescription/value}",
           "es-us": "${#jptr:/Article single Content/entry/fields/shortDescription/value}",
           "fr-ca": "${#jptr:/Article single Content/entry/fields/shortDescription/value}",
@@ -92,11 +92,11 @@
           "da-dk": "Fremhævet blog",
           "de-at": "Ausgewählter Blog",
           "de-de": "Ausgewählter Blog",
+          "en-au": "Blog en vedette",
           "en-ca": "Featured blog",
-          "en-de": "Ausgewählter Blog",
-          "en-fr": "Blog en vedette",
           "en-gb": "Featured blog",
           "en-nl": "Uitgelichte blog",
+          "en-nz": "Ausgewählter Blog",
           "en-us": "Featured blog",
           "es-us": "Blog destacado",
           "fr-ca": "Blog en vedette",
@@ -142,27 +142,17 @@
               "article-slug": "${#jptr:/Article single Content/entry/_slug}"
             }
           },
+          "en-au": {
+            "path": "/${locale}/articles/${#jptr:/Article single Content/entry/_slug}",
+            "type": "projectMapNode",
+            "nodeId": "0b2a6284-3d74-4ef6-a3de-b2617058c861",
+            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+            "dynamicInputValues": {
+              "locale": "${locale}",
+              "article-slug": "${#jptr:/Article single Content/entry/_slug}"
+            }
+          },
           "en-ca": {
-            "path": "/${locale}/articles/${#jptr:/Article single Content/entry/_slug}",
-            "type": "projectMapNode",
-            "nodeId": "0b2a6284-3d74-4ef6-a3de-b2617058c861",
-            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
-            "dynamicInputValues": {
-              "locale": "${locale}",
-              "article-slug": "${#jptr:/Article single Content/entry/_slug}"
-            }
-          },
-          "en-de": {
-            "path": "/${locale}/articles/${#jptr:/Article single Content/entry/_slug}",
-            "type": "projectMapNode",
-            "nodeId": "0b2a6284-3d74-4ef6-a3de-b2617058c861",
-            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
-            "dynamicInputValues": {
-              "locale": "${locale}",
-              "article-slug": "${#jptr:/Article single Content/entry/_slug}"
-            }
-          },
-          "en-fr": {
             "path": "/${locale}/articles/${#jptr:/Article single Content/entry/_slug}",
             "type": "projectMapNode",
             "nodeId": "0b2a6284-3d74-4ef6-a3de-b2617058c861",
@@ -183,6 +173,16 @@
             }
           },
           "en-nl": {
+            "path": "/${locale}/articles/${#jptr:/Article single Content/entry/_slug}",
+            "type": "projectMapNode",
+            "nodeId": "0b2a6284-3d74-4ef6-a3de-b2617058c861",
+            "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+            "dynamicInputValues": {
+              "locale": "${locale}",
+              "article-slug": "${#jptr:/Article single Content/entry/_slug}"
+            }
+          },
+          "en-nz": {
             "path": "/${locale}/articles/${#jptr:/Article single Content/entry/_slug}",
             "type": "projectMapNode",
             "nodeId": "0b2a6284-3d74-4ef6-a3de-b2617058c861",
@@ -300,11 +300,11 @@
           "da-dk": "Læs mere",
           "de-at": "Mehr erfahren",
           "de-de": "Mehr erfahren",
+          "en-au": "Lire la suite",
           "en-ca": "Read more",
-          "en-de": "Mehr erfahren",
-          "en-fr": "Lire la suite",
           "en-gb": "Read more",
           "en-nl": "Lees meer",
+          "en-nz": "Mehr erfahren",
           "en-us": "Read more",
           "es-us": "Leer más",
           "fr-ca": "Lire la suite",
@@ -344,7 +344,7 @@
       "en-ca",
       "en-gb",
       "de-de",
-      "en-de",
+      "en-nz",
       "de-at",
       "nl-nl",
       "en-nl",
@@ -352,14 +352,14 @@
       "sv-se",
       "nb-no",
       "fr-fr",
-      "en-fr",
+      "en-au",
       "ja-jp",
       "ar-uae",
       "ar-ksa"
     ]
   },
   "created": "2025-05-20T11:53:43.00626+00:00",
-  "modified": "2025-07-09T06:34:05.32361+00:00",
+  "modified": "2025-07-31T12:51:31.268668+00:00",
   "pattern": true,
   "previewImageUrl": "https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/blog_highlight.png",
   "categoryId": "3bab40a0-d52d-49b3-8780-b26f737b84a3"

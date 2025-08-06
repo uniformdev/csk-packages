@@ -95,7 +95,8 @@
         "collapsed": true,
         "childrenParams": [
           "primaryButtonText",
-          "primaryButtonLink"
+          "primaryButtonLink",
+          "primaryButtonTextColor"
         ]
       }
     },
@@ -116,6 +117,15 @@
       "helpText": "Select type and target link to set the button's link.",
       "typeConfig": null,
       "localizable": true
+    },
+    {
+      "id": "primaryButtonTextColor",
+      "name": "Button Text Color",
+      "type": "dex-color-palette-parameter",
+      "typeConfig": {
+        "allowColors": [],
+        "selectedGroup": "text"
+      }
     },
     {
       "id": "9f8178c3-539f-4a1e-8a4e-71bfcedfe223",
@@ -228,7 +238,7 @@
   "titleParameter": "displayName",
   "canBeComposition": false,
   "created": "2025-02-27T10:44:55.836751+00:00",
-  "updated": "2025-07-09T06:34:03.108772+00:00",
+  "updated": "2025-07-17T05:45:03.359439+00:00",
   "variants": [
     {
       "id": "columns",

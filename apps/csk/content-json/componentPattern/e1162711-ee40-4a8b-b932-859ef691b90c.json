@@ -42,11 +42,11 @@
                 "da-dk": "Titel",
                 "de-at": "Titel",
                 "de-de": "Titel",
+                "en-au": "Titre",
                 "en-ca": "Title",
-                "en-de": "Titel",
-                "en-fr": "Titre",
                 "en-gb": "Title",
                 "en-nl": "Titel",
+                "en-nz": "Titel",
                 "en-us": "Title",
                 "es-us": "Título",
                 "fr-ca": "Titre",
@@ -86,11 +86,11 @@
                 "da-dk": "beskrivelse",
                 "de-at": "Beschreibung",
                 "de-de": "Beschreibung",
+                "en-au": "description",
                 "en-ca": "description",
-                "en-de": "Beschreibung",
-                "en-fr": "description",
                 "en-gb": "description",
                 "en-nl": "beschrijving",
+                "en-nz": "Beschreibung",
                 "en-us": "description",
                 "es-us": "descripción",
                 "fr-ca": "description",
@@ -142,25 +142,16 @@
                     "locale": "${locale}"
                   }
                 },
+                "en-au": {
+                  "path": "/${locale}/summer-campaign",
+                  "type": "projectMapNode",
+                  "nodeId": "94663b98-2fd8-4852-b75f-7eb89bbccb63",
+                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                  "dynamicInputValues": {
+                    "locale": "${locale}"
+                  }
+                },
                 "en-ca": {
-                  "path": "/${locale}/summer-campaign",
-                  "type": "projectMapNode",
-                  "nodeId": "94663b98-2fd8-4852-b75f-7eb89bbccb63",
-                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
-                  "dynamicInputValues": {
-                    "locale": "${locale}"
-                  }
-                },
-                "en-de": {
-                  "path": "/${locale}/summer-campaign",
-                  "type": "projectMapNode",
-                  "nodeId": "94663b98-2fd8-4852-b75f-7eb89bbccb63",
-                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
-                  "dynamicInputValues": {
-                    "locale": "${locale}"
-                  }
-                },
-                "en-fr": {
                   "path": "/${locale}/summer-campaign",
                   "type": "projectMapNode",
                   "nodeId": "94663b98-2fd8-4852-b75f-7eb89bbccb63",
@@ -179,6 +170,15 @@
                   }
                 },
                 "en-nl": {
+                  "path": "/${locale}/summer-campaign",
+                  "type": "projectMapNode",
+                  "nodeId": "94663b98-2fd8-4852-b75f-7eb89bbccb63",
+                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                  "dynamicInputValues": {
+                    "locale": "${locale}"
+                  }
+                },
+                "en-nz": {
                   "path": "/${locale}/summer-campaign",
                   "type": "projectMapNode",
                   "nodeId": "94663b98-2fd8-4852-b75f-7eb89bbccb63",
@@ -285,11 +285,11 @@
                 "da-dk": "Klik på mig",
                 "de-at": "Klick mich",
                 "de-de": "Klick mich",
+                "en-au": "Cliquez-moi",
                 "en-ca": "Click me",
-                "en-de": "Klick mich",
-                "en-fr": "Cliquez-moi",
                 "en-gb": "Click me",
                 "en-nl": "Klik mij",
+                "en-nz": "Klick mich",
                 "en-us": "Click me",
                 "es-us": "Haz clic en mí",
                 "fr-ca": "Cliquez-moi",
@@ -327,7 +327,7 @@
       "en-ca",
       "en-gb",
       "de-de",
-      "en-de",
+      "en-nz",
       "de-at",
       "nl-nl",
       "en-nl",
@@ -335,14 +335,14 @@
       "sv-se",
       "nb-no",
       "fr-fr",
-      "en-fr",
+      "en-au",
       "ja-jp",
       "ar-uae",
       "ar-ksa"
     ]
   },
   "created": "2025-05-20T11:53:45.018544+00:00",
-  "modified": "2025-07-07T12:08:43.596644+00:00",
+  "modified": "2025-07-31T12:51:36.566786+00:00",
   "pattern": true,
   "categoryId": "ae15b0f6-4953-4ccb-9984-ad0525e77b01"
 }

@@ -29,24 +29,24 @@
       "displayName": {
         "type": "text",
         "locales": {
+          "da-dk": "Overskrift",
+          "de-at": "Überschrift",
+          "de-de": "Überschrift",
+          "en-au": "En-tête",
+          "en-ca": "Header",
+          "en-gb": "Header",
+          "en-nl": "Koptekst",
+          "en-nz": "Überschrift",
           "en-us": "Header",
           "es-us": "Encabezado",
           "fr-ca": "En-tête",
-          "en-ca": "Header",
-          "en-gb": "Header",
-          "de-de": "Überschrift",
-          "en-de": "Überschrift",
-          "de-at": "Überschrift",
-          "nl-nl": "Koptekst",
-          "en-nl": "Koptekst",
-          "da-dk": "Overskrift",
-          "sv-se": "Rubrik",
-          "nb-no": "Overskrift",
           "fr-fr": "En-tête",
-          "en-fr": "En-tête",
           "ja-jp": "ヘッダー",
-          "ar-uae": "رأس الصفحة",
-          "ar-ksa": "رأس الصفحة"
+          "nb-no": "Overskrift",
+          "nl-nl": "Koptekst",
+          "sv-se": "Rubrik",
+          "ar-ksa": "رأس الصفحة",
+          "ar-uae": "رأس الصفحة"
         }
       },
       "backgroundColor": {
@@ -77,7 +77,7 @@
                             "value": "3976a407-c116-43bf-8d3d-8850e5efbbb6"
                           },
                           "url": {
-                            "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/ePsLWZ-SRky6qH27gssUKA-jd-white-big-logo.png",
+                            "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/nac-KNPhR6eKRckxy6gjQw-jd-white-big-logo.png",
                             "type": "text"
                           },
                           "file": {
@@ -141,24 +141,24 @@
             "displayName": {
               "type": "text",
               "locales": {
+                "da-dk": "Logo",
+                "de-at": "Logo",
+                "de-de": "Logo",
+                "en-au": "Logo",
+                "en-ca": "Logo",
+                "en-gb": "Logo",
+                "en-nl": "Logo",
+                "en-nz": "Logo",
                 "en-us": "Logo",
                 "es-us": "Logotipo",
                 "fr-ca": "Logo",
-                "en-ca": "Logo",
-                "en-gb": "Logo",
-                "de-de": "Logo",
-                "en-de": "Logo",
-                "de-at": "Logo",
-                "nl-nl": "Logo",
-                "en-nl": "Logo",
-                "da-dk": "Logo",
-                "sv-se": "Logotyp",
-                "nb-no": "Logo",
                 "fr-fr": "Logo",
-                "en-fr": "Logo",
                 "ja-jp": "ロゴ",
-                "ar-uae": "شعار",
-                "ar-ksa": "شعار"
+                "nb-no": "Logo",
+                "nl-nl": "Logo",
+                "sv-se": "Logotyp",
+                "ar-ksa": "شعار",
+                "ar-uae": "شعار"
               }
             }
           },
@@ -202,25 +202,16 @@
                     "locale": "${locale}"
                   }
                 },
+                "en-au": {
+                  "path": "/${locale}/favorites",
+                  "type": "projectMapNode",
+                  "nodeId": "4de4c5ea-3448-49f5-aa21-b3ab8147b8fd",
+                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                  "dynamicInputValues": {
+                    "locale": "${locale}"
+                  }
+                },
                 "en-ca": {
-                  "path": "/${locale}/favorites",
-                  "type": "projectMapNode",
-                  "nodeId": "4de4c5ea-3448-49f5-aa21-b3ab8147b8fd",
-                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
-                  "dynamicInputValues": {
-                    "locale": "${locale}"
-                  }
-                },
-                "en-de": {
-                  "path": "/${locale}/favorites",
-                  "type": "projectMapNode",
-                  "nodeId": "4de4c5ea-3448-49f5-aa21-b3ab8147b8fd",
-                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
-                  "dynamicInputValues": {
-                    "locale": "${locale}"
-                  }
-                },
-                "en-fr": {
                   "path": "/${locale}/favorites",
                   "type": "projectMapNode",
                   "nodeId": "4de4c5ea-3448-49f5-aa21-b3ab8147b8fd",
@@ -239,6 +230,15 @@
                   }
                 },
                 "en-nl": {
+                  "path": "/${locale}/favorites",
+                  "type": "projectMapNode",
+                  "nodeId": "4de4c5ea-3448-49f5-aa21-b3ab8147b8fd",
+                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                  "dynamicInputValues": {
+                    "locale": "${locale}"
+                  }
+                },
+                "en-nz": {
                   "path": "/${locale}/favorites",
                   "type": "projectMapNode",
                   "nodeId": "4de4c5ea-3448-49f5-aa21-b3ab8147b8fd",
@@ -485,89 +485,48 @@
                     "_source": "uniform-assets"
                   }
                 ],
+                "en-au": [
+                  {
+                    "_id": "e6a2b050-695b-453d-8dae-984ed0d731f3",
+                    "type": "image",
+                    "fields": {
+                      "id": {
+                        "type": "text",
+                        "value": "c13180f0-750f-4fc7-837e-46ade3070952"
+                      },
+                      "url": {
+                        "value": "https://img.uniform.global/p/fXI0WUH5SnyXbh5uXS2QzQ/S0eGPIMnSlOPiKhIps_uQg-favourite-icon-white.svg",
+                        "type": "text"
+                      },
+                      "file": {
+                        "type": "file",
+                        "value": "28894c59-713a-41f0-a4c5-6e2ca49aaad2"
+                      },
+                      "size": {
+                        "value": 722,
+                        "type": "number"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "favourite-icon-white.svg"
+                      },
+                      "width": {
+                        "value": 24,
+                        "type": "number"
+                      },
+                      "height": {
+                        "value": 24,
+                        "type": "number"
+                      },
+                      "mediaType": {
+                        "value": "image/svg+xml",
+                        "type": "text"
+                      }
+                    },
+                    "_source": "uniform-assets"
+                  }
+                ],
                 "en-ca": [
-                  {
-                    "_id": "e6a2b050-695b-453d-8dae-984ed0d731f3",
-                    "type": "image",
-                    "fields": {
-                      "id": {
-                        "type": "text",
-                        "value": "c13180f0-750f-4fc7-837e-46ade3070952"
-                      },
-                      "url": {
-                        "value": "https://img.uniform.global/p/fXI0WUH5SnyXbh5uXS2QzQ/S0eGPIMnSlOPiKhIps_uQg-favourite-icon-white.svg",
-                        "type": "text"
-                      },
-                      "file": {
-                        "type": "file",
-                        "value": "28894c59-713a-41f0-a4c5-6e2ca49aaad2"
-                      },
-                      "size": {
-                        "value": 722,
-                        "type": "number"
-                      },
-                      "title": {
-                        "type": "text",
-                        "value": "favourite-icon-white.svg"
-                      },
-                      "width": {
-                        "value": 24,
-                        "type": "number"
-                      },
-                      "height": {
-                        "value": 24,
-                        "type": "number"
-                      },
-                      "mediaType": {
-                        "value": "image/svg+xml",
-                        "type": "text"
-                      }
-                    },
-                    "_source": "uniform-assets"
-                  }
-                ],
-                "en-de": [
-                  {
-                    "_id": "e6a2b050-695b-453d-8dae-984ed0d731f3",
-                    "type": "image",
-                    "fields": {
-                      "id": {
-                        "type": "text",
-                        "value": "c13180f0-750f-4fc7-837e-46ade3070952"
-                      },
-                      "url": {
-                        "value": "https://img.uniform.global/p/fXI0WUH5SnyXbh5uXS2QzQ/S0eGPIMnSlOPiKhIps_uQg-favourite-icon-white.svg",
-                        "type": "text"
-                      },
-                      "file": {
-                        "type": "file",
-                        "value": "28894c59-713a-41f0-a4c5-6e2ca49aaad2"
-                      },
-                      "size": {
-                        "value": 722,
-                        "type": "number"
-                      },
-                      "title": {
-                        "type": "text",
-                        "value": "favourite-icon-white.svg"
-                      },
-                      "width": {
-                        "value": 24,
-                        "type": "number"
-                      },
-                      "height": {
-                        "value": 24,
-                        "type": "number"
-                      },
-                      "mediaType": {
-                        "value": "image/svg+xml",
-                        "type": "text"
-                      }
-                    },
-                    "_source": "uniform-assets"
-                  }
-                ],
-                "en-fr": [
                   {
                     "_id": "e6a2b050-695b-453d-8dae-984ed0d731f3",
                     "type": "image",
@@ -650,6 +609,47 @@
                   }
                 ],
                 "en-nl": [
+                  {
+                    "_id": "e6a2b050-695b-453d-8dae-984ed0d731f3",
+                    "type": "image",
+                    "fields": {
+                      "id": {
+                        "type": "text",
+                        "value": "c13180f0-750f-4fc7-837e-46ade3070952"
+                      },
+                      "url": {
+                        "value": "https://img.uniform.global/p/fXI0WUH5SnyXbh5uXS2QzQ/S0eGPIMnSlOPiKhIps_uQg-favourite-icon-white.svg",
+                        "type": "text"
+                      },
+                      "file": {
+                        "type": "file",
+                        "value": "28894c59-713a-41f0-a4c5-6e2ca49aaad2"
+                      },
+                      "size": {
+                        "value": 722,
+                        "type": "number"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "favourite-icon-white.svg"
+                      },
+                      "width": {
+                        "value": 24,
+                        "type": "number"
+                      },
+                      "height": {
+                        "value": 24,
+                        "type": "number"
+                      },
+                      "mediaType": {
+                        "value": "image/svg+xml",
+                        "type": "text"
+                      }
+                    },
+                    "_source": "uniform-assets"
+                  }
+                ],
+                "en-nz": [
                   {
                     "_id": "e6a2b050-695b-453d-8dae-984ed0d731f3",
                     "type": "image",
@@ -1115,7 +1115,7 @@
                         "value": "f118b73e-d427-4db0-960f-76b018aacc03"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/9xX-8KCySTC5FhrWOBWWoA-favourite-icon-red.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/ZouU7QO2QoGe3QUm95binw-favourite-icon-red.svg",
                         "type": "text"
                       },
                       "file": {
@@ -1156,7 +1156,7 @@
                         "value": "f118b73e-d427-4db0-960f-76b018aacc03"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/9xX-8KCySTC5FhrWOBWWoA-favourite-icon-red.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/ZouU7QO2QoGe3QUm95binw-favourite-icon-red.svg",
                         "type": "text"
                       },
                       "file": {
@@ -1197,7 +1197,48 @@
                         "value": "f118b73e-d427-4db0-960f-76b018aacc03"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/9xX-8KCySTC5FhrWOBWWoA-favourite-icon-red.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/ZouU7QO2QoGe3QUm95binw-favourite-icon-red.svg",
+                        "type": "text"
+                      },
+                      "file": {
+                        "type": "file",
+                        "value": "a8b111b7-62f0-4ae4-92ed-f8b6531e6df0"
+                      },
+                      "size": {
+                        "value": 689,
+                        "type": "number"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "favourite-icon-red.svg"
+                      },
+                      "width": {
+                        "value": 24,
+                        "type": "number"
+                      },
+                      "height": {
+                        "value": 24,
+                        "type": "number"
+                      },
+                      "mediaType": {
+                        "value": "image/svg+xml",
+                        "type": "text"
+                      }
+                    },
+                    "_source": "uniform-assets"
+                  }
+                ],
+                "en-au": [
+                  {
+                    "_id": "341425ff-6fd9-45b8-96e5-64e347b951e4",
+                    "type": "image",
+                    "fields": {
+                      "id": {
+                        "type": "text",
+                        "value": "f118b73e-d427-4db0-960f-76b018aacc03"
+                      },
+                      "url": {
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/ZouU7QO2QoGe3QUm95binw-favourite-icon-red.svg",
                         "type": "text"
                       },
                       "file": {
@@ -1238,89 +1279,7 @@
                         "value": "f118b73e-d427-4db0-960f-76b018aacc03"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/9xX-8KCySTC5FhrWOBWWoA-favourite-icon-red.svg",
-                        "type": "text"
-                      },
-                      "file": {
-                        "type": "file",
-                        "value": "a8b111b7-62f0-4ae4-92ed-f8b6531e6df0"
-                      },
-                      "size": {
-                        "value": 689,
-                        "type": "number"
-                      },
-                      "title": {
-                        "type": "text",
-                        "value": "favourite-icon-red.svg"
-                      },
-                      "width": {
-                        "value": 24,
-                        "type": "number"
-                      },
-                      "height": {
-                        "value": 24,
-                        "type": "number"
-                      },
-                      "mediaType": {
-                        "value": "image/svg+xml",
-                        "type": "text"
-                      }
-                    },
-                    "_source": "uniform-assets"
-                  }
-                ],
-                "en-de": [
-                  {
-                    "_id": "341425ff-6fd9-45b8-96e5-64e347b951e4",
-                    "type": "image",
-                    "fields": {
-                      "id": {
-                        "type": "text",
-                        "value": "f118b73e-d427-4db0-960f-76b018aacc03"
-                      },
-                      "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/9xX-8KCySTC5FhrWOBWWoA-favourite-icon-red.svg",
-                        "type": "text"
-                      },
-                      "file": {
-                        "type": "file",
-                        "value": "a8b111b7-62f0-4ae4-92ed-f8b6531e6df0"
-                      },
-                      "size": {
-                        "value": 689,
-                        "type": "number"
-                      },
-                      "title": {
-                        "type": "text",
-                        "value": "favourite-icon-red.svg"
-                      },
-                      "width": {
-                        "value": 24,
-                        "type": "number"
-                      },
-                      "height": {
-                        "value": 24,
-                        "type": "number"
-                      },
-                      "mediaType": {
-                        "value": "image/svg+xml",
-                        "type": "text"
-                      }
-                    },
-                    "_source": "uniform-assets"
-                  }
-                ],
-                "en-fr": [
-                  {
-                    "_id": "341425ff-6fd9-45b8-96e5-64e347b951e4",
-                    "type": "image",
-                    "fields": {
-                      "id": {
-                        "type": "text",
-                        "value": "f118b73e-d427-4db0-960f-76b018aacc03"
-                      },
-                      "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/9xX-8KCySTC5FhrWOBWWoA-favourite-icon-red.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/ZouU7QO2QoGe3QUm95binw-favourite-icon-red.svg",
                         "type": "text"
                       },
                       "file": {
@@ -1361,7 +1320,7 @@
                         "value": "f118b73e-d427-4db0-960f-76b018aacc03"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/9xX-8KCySTC5FhrWOBWWoA-favourite-icon-red.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/ZouU7QO2QoGe3QUm95binw-favourite-icon-red.svg",
                         "type": "text"
                       },
                       "file": {
@@ -1402,7 +1361,48 @@
                         "value": "f118b73e-d427-4db0-960f-76b018aacc03"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/9xX-8KCySTC5FhrWOBWWoA-favourite-icon-red.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/ZouU7QO2QoGe3QUm95binw-favourite-icon-red.svg",
+                        "type": "text"
+                      },
+                      "file": {
+                        "type": "file",
+                        "value": "a8b111b7-62f0-4ae4-92ed-f8b6531e6df0"
+                      },
+                      "size": {
+                        "value": 689,
+                        "type": "number"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "favourite-icon-red.svg"
+                      },
+                      "width": {
+                        "value": 24,
+                        "type": "number"
+                      },
+                      "height": {
+                        "value": 24,
+                        "type": "number"
+                      },
+                      "mediaType": {
+                        "value": "image/svg+xml",
+                        "type": "text"
+                      }
+                    },
+                    "_source": "uniform-assets"
+                  }
+                ],
+                "en-nz": [
+                  {
+                    "_id": "341425ff-6fd9-45b8-96e5-64e347b951e4",
+                    "type": "image",
+                    "fields": {
+                      "id": {
+                        "type": "text",
+                        "value": "f118b73e-d427-4db0-960f-76b018aacc03"
+                      },
+                      "url": {
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/ZouU7QO2QoGe3QUm95binw-favourite-icon-red.svg",
                         "type": "text"
                       },
                       "file": {
@@ -1443,7 +1443,7 @@
                         "value": "f118b73e-d427-4db0-960f-76b018aacc03"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/9xX-8KCySTC5FhrWOBWWoA-favourite-icon-red.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/ZouU7QO2QoGe3QUm95binw-favourite-icon-red.svg",
                         "type": "text"
                       },
                       "file": {
@@ -1484,7 +1484,7 @@
                         "value": "f118b73e-d427-4db0-960f-76b018aacc03"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/9xX-8KCySTC5FhrWOBWWoA-favourite-icon-red.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/ZouU7QO2QoGe3QUm95binw-favourite-icon-red.svg",
                         "type": "text"
                       },
                       "file": {
@@ -1525,7 +1525,7 @@
                         "value": "f118b73e-d427-4db0-960f-76b018aacc03"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/9xX-8KCySTC5FhrWOBWWoA-favourite-icon-red.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/ZouU7QO2QoGe3QUm95binw-favourite-icon-red.svg",
                         "type": "text"
                       },
                       "file": {
@@ -1566,7 +1566,7 @@
                         "value": "f118b73e-d427-4db0-960f-76b018aacc03"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/9xX-8KCySTC5FhrWOBWWoA-favourite-icon-red.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/ZouU7QO2QoGe3QUm95binw-favourite-icon-red.svg",
                         "type": "text"
                       },
                       "file": {
@@ -1607,7 +1607,7 @@
                         "value": "f118b73e-d427-4db0-960f-76b018aacc03"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/9xX-8KCySTC5FhrWOBWWoA-favourite-icon-red.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/ZouU7QO2QoGe3QUm95binw-favourite-icon-red.svg",
                         "type": "text"
                       },
                       "file": {
@@ -1648,7 +1648,7 @@
                         "value": "f118b73e-d427-4db0-960f-76b018aacc03"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/9xX-8KCySTC5FhrWOBWWoA-favourite-icon-red.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/ZouU7QO2QoGe3QUm95binw-favourite-icon-red.svg",
                         "type": "text"
                       },
                       "file": {
@@ -1689,7 +1689,7 @@
                         "value": "f118b73e-d427-4db0-960f-76b018aacc03"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/9xX-8KCySTC5FhrWOBWWoA-favourite-icon-red.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/ZouU7QO2QoGe3QUm95binw-favourite-icon-red.svg",
                         "type": "text"
                       },
                       "file": {
@@ -1730,7 +1730,7 @@
                         "value": "f118b73e-d427-4db0-960f-76b018aacc03"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/9xX-8KCySTC5FhrWOBWWoA-favourite-icon-red.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/ZouU7QO2QoGe3QUm95binw-favourite-icon-red.svg",
                         "type": "text"
                       },
                       "file": {
@@ -1771,7 +1771,7 @@
                         "value": "f118b73e-d427-4db0-960f-76b018aacc03"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/9xX-8KCySTC5FhrWOBWWoA-favourite-icon-red.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/ZouU7QO2QoGe3QUm95binw-favourite-icon-red.svg",
                         "type": "text"
                       },
                       "file": {
@@ -1812,7 +1812,7 @@
                         "value": "f118b73e-d427-4db0-960f-76b018aacc03"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/9xX-8KCySTC5FhrWOBWWoA-favourite-icon-red.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/ZouU7QO2QoGe3QUm95binw-favourite-icon-red.svg",
                         "type": "text"
                       },
                       "file": {
@@ -1851,7 +1851,7 @@
           }
         },
         {
-          "_id": "7034b802-1c54-4e50-8d6c-34339f57fa65",
+          "_id": "ced7021a-03bd-4b5c-b019-f9ae4383ee2b",
           "type": "shoppingCartIcon",
           "parameters": {
             "icon": {
@@ -1859,28 +1859,28 @@
               "locales": {
                 "da-dk": [
                   {
-                    "_id": "7c11c445-2dc8-47bd-a038-4b5c913def48",
+                    "_id": "a2bada31-8b01-4742-8838-b95041895727",
                     "type": "image",
                     "fields": {
                       "id": {
                         "type": "text",
-                        "value": "4469d093-0095-43fe-a6f1-9ccd66da351c"
+                        "value": "b207e5e2-a19f-4bda-a9c2-e96a64e1d62c"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/fXI0WUH5SnyXbh5uXS2QzQ/FamC7ScPSaq9iOJGkbgKcQ-icon-cart-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/EhGSScLvSBaAXaddQxONwg-icon-cart.svg",
                         "type": "text"
                       },
                       "file": {
                         "type": "file",
-                        "value": "a78b1db5-82f2-4db5-9405-d900a716c1e4"
+                        "value": "d23b35bb-c04d-4bde-bf7d-15435850034e"
                       },
                       "size": {
-                        "value": 904,
+                        "value": 872,
                         "type": "number"
                       },
                       "title": {
                         "type": "text",
-                        "value": "icon-cart-white.svg"
+                        "value": "icon-cart.svg"
                       },
                       "width": {
                         "value": 24,
@@ -1900,28 +1900,28 @@
                 ],
                 "de-at": [
                   {
-                    "_id": "7c11c445-2dc8-47bd-a038-4b5c913def48",
+                    "_id": "a2bada31-8b01-4742-8838-b95041895727",
                     "type": "image",
                     "fields": {
                       "id": {
                         "type": "text",
-                        "value": "4469d093-0095-43fe-a6f1-9ccd66da351c"
+                        "value": "b207e5e2-a19f-4bda-a9c2-e96a64e1d62c"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/fXI0WUH5SnyXbh5uXS2QzQ/FamC7ScPSaq9iOJGkbgKcQ-icon-cart-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/EhGSScLvSBaAXaddQxONwg-icon-cart.svg",
                         "type": "text"
                       },
                       "file": {
                         "type": "file",
-                        "value": "a78b1db5-82f2-4db5-9405-d900a716c1e4"
+                        "value": "d23b35bb-c04d-4bde-bf7d-15435850034e"
                       },
                       "size": {
-                        "value": 904,
+                        "value": 872,
                         "type": "number"
                       },
                       "title": {
                         "type": "text",
-                        "value": "icon-cart-white.svg"
+                        "value": "icon-cart.svg"
                       },
                       "width": {
                         "value": 24,
@@ -1941,28 +1941,69 @@
                 ],
                 "de-de": [
                   {
-                    "_id": "7c11c445-2dc8-47bd-a038-4b5c913def48",
+                    "_id": "a2bada31-8b01-4742-8838-b95041895727",
                     "type": "image",
                     "fields": {
                       "id": {
                         "type": "text",
-                        "value": "4469d093-0095-43fe-a6f1-9ccd66da351c"
+                        "value": "b207e5e2-a19f-4bda-a9c2-e96a64e1d62c"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/fXI0WUH5SnyXbh5uXS2QzQ/FamC7ScPSaq9iOJGkbgKcQ-icon-cart-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/EhGSScLvSBaAXaddQxONwg-icon-cart.svg",
                         "type": "text"
                       },
                       "file": {
                         "type": "file",
-                        "value": "a78b1db5-82f2-4db5-9405-d900a716c1e4"
+                        "value": "d23b35bb-c04d-4bde-bf7d-15435850034e"
                       },
                       "size": {
-                        "value": 904,
+                        "value": 872,
                         "type": "number"
                       },
                       "title": {
                         "type": "text",
-                        "value": "icon-cart-white.svg"
+                        "value": "icon-cart.svg"
+                      },
+                      "width": {
+                        "value": 24,
+                        "type": "number"
+                      },
+                      "height": {
+                        "value": 24,
+                        "type": "number"
+                      },
+                      "mediaType": {
+                        "value": "image/svg+xml",
+                        "type": "text"
+                      }
+                    },
+                    "_source": "uniform-assets"
+                  }
+                ],
+                "en-au": [
+                  {
+                    "_id": "a2bada31-8b01-4742-8838-b95041895727",
+                    "type": "image",
+                    "fields": {
+                      "id": {
+                        "type": "text",
+                        "value": "b207e5e2-a19f-4bda-a9c2-e96a64e1d62c"
+                      },
+                      "url": {
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/EhGSScLvSBaAXaddQxONwg-icon-cart.svg",
+                        "type": "text"
+                      },
+                      "file": {
+                        "type": "file",
+                        "value": "d23b35bb-c04d-4bde-bf7d-15435850034e"
+                      },
+                      "size": {
+                        "value": 872,
+                        "type": "number"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "icon-cart.svg"
                       },
                       "width": {
                         "value": 24,
@@ -1982,110 +2023,28 @@
                 ],
                 "en-ca": [
                   {
-                    "_id": "7c11c445-2dc8-47bd-a038-4b5c913def48",
+                    "_id": "a2bada31-8b01-4742-8838-b95041895727",
                     "type": "image",
                     "fields": {
                       "id": {
                         "type": "text",
-                        "value": "4469d093-0095-43fe-a6f1-9ccd66da351c"
+                        "value": "b207e5e2-a19f-4bda-a9c2-e96a64e1d62c"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/fXI0WUH5SnyXbh5uXS2QzQ/FamC7ScPSaq9iOJGkbgKcQ-icon-cart-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/EhGSScLvSBaAXaddQxONwg-icon-cart.svg",
                         "type": "text"
                       },
                       "file": {
                         "type": "file",
-                        "value": "a78b1db5-82f2-4db5-9405-d900a716c1e4"
+                        "value": "d23b35bb-c04d-4bde-bf7d-15435850034e"
                       },
                       "size": {
-                        "value": 904,
+                        "value": 872,
                         "type": "number"
                       },
                       "title": {
                         "type": "text",
-                        "value": "icon-cart-white.svg"
-                      },
-                      "width": {
-                        "value": 24,
-                        "type": "number"
-                      },
-                      "height": {
-                        "value": 24,
-                        "type": "number"
-                      },
-                      "mediaType": {
-                        "value": "image/svg+xml",
-                        "type": "text"
-                      }
-                    },
-                    "_source": "uniform-assets"
-                  }
-                ],
-                "en-de": [
-                  {
-                    "_id": "7c11c445-2dc8-47bd-a038-4b5c913def48",
-                    "type": "image",
-                    "fields": {
-                      "id": {
-                        "type": "text",
-                        "value": "4469d093-0095-43fe-a6f1-9ccd66da351c"
-                      },
-                      "url": {
-                        "value": "https://img.uniform.global/p/fXI0WUH5SnyXbh5uXS2QzQ/FamC7ScPSaq9iOJGkbgKcQ-icon-cart-white.svg",
-                        "type": "text"
-                      },
-                      "file": {
-                        "type": "file",
-                        "value": "a78b1db5-82f2-4db5-9405-d900a716c1e4"
-                      },
-                      "size": {
-                        "value": 904,
-                        "type": "number"
-                      },
-                      "title": {
-                        "type": "text",
-                        "value": "icon-cart-white.svg"
-                      },
-                      "width": {
-                        "value": 24,
-                        "type": "number"
-                      },
-                      "height": {
-                        "value": 24,
-                        "type": "number"
-                      },
-                      "mediaType": {
-                        "value": "image/svg+xml",
-                        "type": "text"
-                      }
-                    },
-                    "_source": "uniform-assets"
-                  }
-                ],
-                "en-fr": [
-                  {
-                    "_id": "7c11c445-2dc8-47bd-a038-4b5c913def48",
-                    "type": "image",
-                    "fields": {
-                      "id": {
-                        "type": "text",
-                        "value": "4469d093-0095-43fe-a6f1-9ccd66da351c"
-                      },
-                      "url": {
-                        "value": "https://img.uniform.global/p/fXI0WUH5SnyXbh5uXS2QzQ/FamC7ScPSaq9iOJGkbgKcQ-icon-cart-white.svg",
-                        "type": "text"
-                      },
-                      "file": {
-                        "type": "file",
-                        "value": "a78b1db5-82f2-4db5-9405-d900a716c1e4"
-                      },
-                      "size": {
-                        "value": 904,
-                        "type": "number"
-                      },
-                      "title": {
-                        "type": "text",
-                        "value": "icon-cart-white.svg"
+                        "value": "icon-cart.svg"
                       },
                       "width": {
                         "value": 24,
@@ -2105,28 +2064,28 @@
                 ],
                 "en-gb": [
                   {
-                    "_id": "7c11c445-2dc8-47bd-a038-4b5c913def48",
+                    "_id": "a2bada31-8b01-4742-8838-b95041895727",
                     "type": "image",
                     "fields": {
                       "id": {
                         "type": "text",
-                        "value": "4469d093-0095-43fe-a6f1-9ccd66da351c"
+                        "value": "b207e5e2-a19f-4bda-a9c2-e96a64e1d62c"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/fXI0WUH5SnyXbh5uXS2QzQ/FamC7ScPSaq9iOJGkbgKcQ-icon-cart-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/EhGSScLvSBaAXaddQxONwg-icon-cart.svg",
                         "type": "text"
                       },
                       "file": {
                         "type": "file",
-                        "value": "a78b1db5-82f2-4db5-9405-d900a716c1e4"
+                        "value": "d23b35bb-c04d-4bde-bf7d-15435850034e"
                       },
                       "size": {
-                        "value": 904,
+                        "value": 872,
                         "type": "number"
                       },
                       "title": {
                         "type": "text",
-                        "value": "icon-cart-white.svg"
+                        "value": "icon-cart.svg"
                       },
                       "width": {
                         "value": 24,
@@ -2146,28 +2105,69 @@
                 ],
                 "en-nl": [
                   {
-                    "_id": "7c11c445-2dc8-47bd-a038-4b5c913def48",
+                    "_id": "a2bada31-8b01-4742-8838-b95041895727",
                     "type": "image",
                     "fields": {
                       "id": {
                         "type": "text",
-                        "value": "4469d093-0095-43fe-a6f1-9ccd66da351c"
+                        "value": "b207e5e2-a19f-4bda-a9c2-e96a64e1d62c"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/fXI0WUH5SnyXbh5uXS2QzQ/FamC7ScPSaq9iOJGkbgKcQ-icon-cart-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/EhGSScLvSBaAXaddQxONwg-icon-cart.svg",
                         "type": "text"
                       },
                       "file": {
                         "type": "file",
-                        "value": "a78b1db5-82f2-4db5-9405-d900a716c1e4"
+                        "value": "d23b35bb-c04d-4bde-bf7d-15435850034e"
                       },
                       "size": {
-                        "value": 904,
+                        "value": 872,
                         "type": "number"
                       },
                       "title": {
                         "type": "text",
-                        "value": "icon-cart-white.svg"
+                        "value": "icon-cart.svg"
+                      },
+                      "width": {
+                        "value": 24,
+                        "type": "number"
+                      },
+                      "height": {
+                        "value": 24,
+                        "type": "number"
+                      },
+                      "mediaType": {
+                        "value": "image/svg+xml",
+                        "type": "text"
+                      }
+                    },
+                    "_source": "uniform-assets"
+                  }
+                ],
+                "en-nz": [
+                  {
+                    "_id": "a2bada31-8b01-4742-8838-b95041895727",
+                    "type": "image",
+                    "fields": {
+                      "id": {
+                        "type": "text",
+                        "value": "b207e5e2-a19f-4bda-a9c2-e96a64e1d62c"
+                      },
+                      "url": {
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/EhGSScLvSBaAXaddQxONwg-icon-cart.svg",
+                        "type": "text"
+                      },
+                      "file": {
+                        "type": "file",
+                        "value": "d23b35bb-c04d-4bde-bf7d-15435850034e"
+                      },
+                      "size": {
+                        "value": 872,
+                        "type": "number"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "icon-cart.svg"
                       },
                       "width": {
                         "value": 24,
@@ -2187,28 +2187,28 @@
                 ],
                 "en-us": [
                   {
-                    "_id": "7c11c445-2dc8-47bd-a038-4b5c913def48",
+                    "_id": "a2bada31-8b01-4742-8838-b95041895727",
                     "type": "image",
                     "fields": {
                       "id": {
                         "type": "text",
-                        "value": "4469d093-0095-43fe-a6f1-9ccd66da351c"
+                        "value": "b207e5e2-a19f-4bda-a9c2-e96a64e1d62c"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/fXI0WUH5SnyXbh5uXS2QzQ/FamC7ScPSaq9iOJGkbgKcQ-icon-cart-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/EhGSScLvSBaAXaddQxONwg-icon-cart.svg",
                         "type": "text"
                       },
                       "file": {
                         "type": "file",
-                        "value": "a78b1db5-82f2-4db5-9405-d900a716c1e4"
+                        "value": "d23b35bb-c04d-4bde-bf7d-15435850034e"
                       },
                       "size": {
-                        "value": 904,
+                        "value": 872,
                         "type": "number"
                       },
                       "title": {
                         "type": "text",
-                        "value": "icon-cart-white.svg"
+                        "value": "icon-cart.svg"
                       },
                       "width": {
                         "value": 24,
@@ -2228,28 +2228,28 @@
                 ],
                 "es-us": [
                   {
-                    "_id": "7c11c445-2dc8-47bd-a038-4b5c913def48",
+                    "_id": "a2bada31-8b01-4742-8838-b95041895727",
                     "type": "image",
                     "fields": {
                       "id": {
                         "type": "text",
-                        "value": "4469d093-0095-43fe-a6f1-9ccd66da351c"
+                        "value": "b207e5e2-a19f-4bda-a9c2-e96a64e1d62c"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/fXI0WUH5SnyXbh5uXS2QzQ/FamC7ScPSaq9iOJGkbgKcQ-icon-cart-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/EhGSScLvSBaAXaddQxONwg-icon-cart.svg",
                         "type": "text"
                       },
                       "file": {
                         "type": "file",
-                        "value": "a78b1db5-82f2-4db5-9405-d900a716c1e4"
+                        "value": "d23b35bb-c04d-4bde-bf7d-15435850034e"
                       },
                       "size": {
-                        "value": 904,
+                        "value": 872,
                         "type": "number"
                       },
                       "title": {
                         "type": "text",
-                        "value": "icon-cart-white.svg"
+                        "value": "icon-cart.svg"
                       },
                       "width": {
                         "value": 24,
@@ -2269,28 +2269,28 @@
                 ],
                 "fr-ca": [
                   {
-                    "_id": "7c11c445-2dc8-47bd-a038-4b5c913def48",
+                    "_id": "a2bada31-8b01-4742-8838-b95041895727",
                     "type": "image",
                     "fields": {
                       "id": {
                         "type": "text",
-                        "value": "4469d093-0095-43fe-a6f1-9ccd66da351c"
+                        "value": "b207e5e2-a19f-4bda-a9c2-e96a64e1d62c"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/fXI0WUH5SnyXbh5uXS2QzQ/FamC7ScPSaq9iOJGkbgKcQ-icon-cart-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/EhGSScLvSBaAXaddQxONwg-icon-cart.svg",
                         "type": "text"
                       },
                       "file": {
                         "type": "file",
-                        "value": "a78b1db5-82f2-4db5-9405-d900a716c1e4"
+                        "value": "d23b35bb-c04d-4bde-bf7d-15435850034e"
                       },
                       "size": {
-                        "value": 904,
+                        "value": 872,
                         "type": "number"
                       },
                       "title": {
                         "type": "text",
-                        "value": "icon-cart-white.svg"
+                        "value": "icon-cart.svg"
                       },
                       "width": {
                         "value": 24,
@@ -2310,28 +2310,28 @@
                 ],
                 "fr-fr": [
                   {
-                    "_id": "7c11c445-2dc8-47bd-a038-4b5c913def48",
+                    "_id": "a2bada31-8b01-4742-8838-b95041895727",
                     "type": "image",
                     "fields": {
                       "id": {
                         "type": "text",
-                        "value": "4469d093-0095-43fe-a6f1-9ccd66da351c"
+                        "value": "b207e5e2-a19f-4bda-a9c2-e96a64e1d62c"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/fXI0WUH5SnyXbh5uXS2QzQ/FamC7ScPSaq9iOJGkbgKcQ-icon-cart-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/EhGSScLvSBaAXaddQxONwg-icon-cart.svg",
                         "type": "text"
                       },
                       "file": {
                         "type": "file",
-                        "value": "a78b1db5-82f2-4db5-9405-d900a716c1e4"
+                        "value": "d23b35bb-c04d-4bde-bf7d-15435850034e"
                       },
                       "size": {
-                        "value": 904,
+                        "value": 872,
                         "type": "number"
                       },
                       "title": {
                         "type": "text",
-                        "value": "icon-cart-white.svg"
+                        "value": "icon-cart.svg"
                       },
                       "width": {
                         "value": 24,
@@ -2351,28 +2351,28 @@
                 ],
                 "ja-jp": [
                   {
-                    "_id": "7c11c445-2dc8-47bd-a038-4b5c913def48",
+                    "_id": "a2bada31-8b01-4742-8838-b95041895727",
                     "type": "image",
                     "fields": {
                       "id": {
                         "type": "text",
-                        "value": "4469d093-0095-43fe-a6f1-9ccd66da351c"
+                        "value": "b207e5e2-a19f-4bda-a9c2-e96a64e1d62c"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/fXI0WUH5SnyXbh5uXS2QzQ/FamC7ScPSaq9iOJGkbgKcQ-icon-cart-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/EhGSScLvSBaAXaddQxONwg-icon-cart.svg",
                         "type": "text"
                       },
                       "file": {
                         "type": "file",
-                        "value": "a78b1db5-82f2-4db5-9405-d900a716c1e4"
+                        "value": "d23b35bb-c04d-4bde-bf7d-15435850034e"
                       },
                       "size": {
-                        "value": 904,
+                        "value": 872,
                         "type": "number"
                       },
                       "title": {
                         "type": "text",
-                        "value": "icon-cart-white.svg"
+                        "value": "icon-cart.svg"
                       },
                       "width": {
                         "value": 24,
@@ -2392,28 +2392,28 @@
                 ],
                 "nb-no": [
                   {
-                    "_id": "7c11c445-2dc8-47bd-a038-4b5c913def48",
+                    "_id": "a2bada31-8b01-4742-8838-b95041895727",
                     "type": "image",
                     "fields": {
                       "id": {
                         "type": "text",
-                        "value": "4469d093-0095-43fe-a6f1-9ccd66da351c"
+                        "value": "b207e5e2-a19f-4bda-a9c2-e96a64e1d62c"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/fXI0WUH5SnyXbh5uXS2QzQ/FamC7ScPSaq9iOJGkbgKcQ-icon-cart-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/EhGSScLvSBaAXaddQxONwg-icon-cart.svg",
                         "type": "text"
                       },
                       "file": {
                         "type": "file",
-                        "value": "a78b1db5-82f2-4db5-9405-d900a716c1e4"
+                        "value": "d23b35bb-c04d-4bde-bf7d-15435850034e"
                       },
                       "size": {
-                        "value": 904,
+                        "value": 872,
                         "type": "number"
                       },
                       "title": {
                         "type": "text",
-                        "value": "icon-cart-white.svg"
+                        "value": "icon-cart.svg"
                       },
                       "width": {
                         "value": 24,
@@ -2433,28 +2433,28 @@
                 ],
                 "nl-nl": [
                   {
-                    "_id": "7c11c445-2dc8-47bd-a038-4b5c913def48",
+                    "_id": "a2bada31-8b01-4742-8838-b95041895727",
                     "type": "image",
                     "fields": {
                       "id": {
                         "type": "text",
-                        "value": "4469d093-0095-43fe-a6f1-9ccd66da351c"
+                        "value": "b207e5e2-a19f-4bda-a9c2-e96a64e1d62c"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/fXI0WUH5SnyXbh5uXS2QzQ/FamC7ScPSaq9iOJGkbgKcQ-icon-cart-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/EhGSScLvSBaAXaddQxONwg-icon-cart.svg",
                         "type": "text"
                       },
                       "file": {
                         "type": "file",
-                        "value": "a78b1db5-82f2-4db5-9405-d900a716c1e4"
+                        "value": "d23b35bb-c04d-4bde-bf7d-15435850034e"
                       },
                       "size": {
-                        "value": 904,
+                        "value": 872,
                         "type": "number"
                       },
                       "title": {
                         "type": "text",
-                        "value": "icon-cart-white.svg"
+                        "value": "icon-cart.svg"
                       },
                       "width": {
                         "value": 24,
@@ -2474,28 +2474,28 @@
                 ],
                 "sv-se": [
                   {
-                    "_id": "7c11c445-2dc8-47bd-a038-4b5c913def48",
+                    "_id": "a2bada31-8b01-4742-8838-b95041895727",
                     "type": "image",
                     "fields": {
                       "id": {
                         "type": "text",
-                        "value": "4469d093-0095-43fe-a6f1-9ccd66da351c"
+                        "value": "b207e5e2-a19f-4bda-a9c2-e96a64e1d62c"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/fXI0WUH5SnyXbh5uXS2QzQ/FamC7ScPSaq9iOJGkbgKcQ-icon-cart-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/EhGSScLvSBaAXaddQxONwg-icon-cart.svg",
                         "type": "text"
                       },
                       "file": {
                         "type": "file",
-                        "value": "a78b1db5-82f2-4db5-9405-d900a716c1e4"
+                        "value": "d23b35bb-c04d-4bde-bf7d-15435850034e"
                       },
                       "size": {
-                        "value": 904,
+                        "value": 872,
                         "type": "number"
                       },
                       "title": {
                         "type": "text",
-                        "value": "icon-cart-white.svg"
+                        "value": "icon-cart.svg"
                       },
                       "width": {
                         "value": 24,
@@ -2515,28 +2515,28 @@
                 ],
                 "ar-ksa": [
                   {
-                    "_id": "7c11c445-2dc8-47bd-a038-4b5c913def48",
+                    "_id": "a2bada31-8b01-4742-8838-b95041895727",
                     "type": "image",
                     "fields": {
                       "id": {
                         "type": "text",
-                        "value": "4469d093-0095-43fe-a6f1-9ccd66da351c"
+                        "value": "b207e5e2-a19f-4bda-a9c2-e96a64e1d62c"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/fXI0WUH5SnyXbh5uXS2QzQ/FamC7ScPSaq9iOJGkbgKcQ-icon-cart-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/EhGSScLvSBaAXaddQxONwg-icon-cart.svg",
                         "type": "text"
                       },
                       "file": {
                         "type": "file",
-                        "value": "a78b1db5-82f2-4db5-9405-d900a716c1e4"
+                        "value": "d23b35bb-c04d-4bde-bf7d-15435850034e"
                       },
                       "size": {
-                        "value": 904,
+                        "value": 872,
                         "type": "number"
                       },
                       "title": {
                         "type": "text",
-                        "value": "icon-cart-white.svg"
+                        "value": "icon-cart.svg"
                       },
                       "width": {
                         "value": 24,
@@ -2556,28 +2556,28 @@
                 ],
                 "ar-uae": [
                   {
-                    "_id": "7c11c445-2dc8-47bd-a038-4b5c913def48",
+                    "_id": "a2bada31-8b01-4742-8838-b95041895727",
                     "type": "image",
                     "fields": {
                       "id": {
                         "type": "text",
-                        "value": "4469d093-0095-43fe-a6f1-9ccd66da351c"
+                        "value": "b207e5e2-a19f-4bda-a9c2-e96a64e1d62c"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/fXI0WUH5SnyXbh5uXS2QzQ/FamC7ScPSaq9iOJGkbgKcQ-icon-cart-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/EhGSScLvSBaAXaddQxONwg-icon-cart.svg",
                         "type": "text"
                       },
                       "file": {
                         "type": "file",
-                        "value": "a78b1db5-82f2-4db5-9405-d900a716c1e4"
+                        "value": "d23b35bb-c04d-4bde-bf7d-15435850034e"
                       },
                       "size": {
-                        "value": 904,
+                        "value": 872,
                         "type": "number"
                       },
                       "title": {
                         "type": "text",
-                        "value": "icon-cart-white.svg"
+                        "value": "icon-cart.svg"
                       },
                       "width": {
                         "value": 24,
@@ -2627,25 +2627,16 @@
                     "locale": "${locale}"
                   }
                 },
+                "en-au": {
+                  "path": "/${locale}/cart",
+                  "type": "projectMapNode",
+                  "nodeId": "5c88cfb5-bf57-4dc4-b25c-be9510d01b81",
+                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                  "dynamicInputValues": {
+                    "locale": "${locale}"
+                  }
+                },
                 "en-ca": {
-                  "path": "/${locale}/cart",
-                  "type": "projectMapNode",
-                  "nodeId": "5c88cfb5-bf57-4dc4-b25c-be9510d01b81",
-                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
-                  "dynamicInputValues": {
-                    "locale": "${locale}"
-                  }
-                },
-                "en-de": {
-                  "path": "/${locale}/cart",
-                  "type": "projectMapNode",
-                  "nodeId": "5c88cfb5-bf57-4dc4-b25c-be9510d01b81",
-                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
-                  "dynamicInputValues": {
-                    "locale": "${locale}"
-                  }
-                },
-                "en-fr": {
                   "path": "/${locale}/cart",
                   "type": "projectMapNode",
                   "nodeId": "5c88cfb5-bf57-4dc4-b25c-be9510d01b81",
@@ -2664,6 +2655,15 @@
                   }
                 },
                 "en-nl": {
+                  "path": "/${locale}/cart",
+                  "type": "projectMapNode",
+                  "nodeId": "5c88cfb5-bf57-4dc4-b25c-be9510d01b81",
+                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                  "dynamicInputValues": {
+                    "locale": "${locale}"
+                  }
+                },
+                "en-nz": {
                   "path": "/${locale}/cart",
                   "type": "projectMapNode",
                   "nodeId": "5c88cfb5-bf57-4dc4-b25c-be9510d01b81",
@@ -2783,6 +2783,213 @@
             "hoverEffect": {
               "type": "dex-segmented-control-parameter",
               "value": "contrast-[.1]"
+            },
+            "modalItemTitle": {
+              "type": "text",
+              "locales": {
+                "da-dk": "Vare",
+                "de-at": "Artikel",
+                "de-de": "Artikel",
+                "en-au": "Article",
+                "en-ca": "Item",
+                "en-gb": "Item",
+                "en-nl": "Item",
+                "en-nz": "Item",
+                "en-us": "Item",
+                "es-us": "Artículo",
+                "fr-ca": "Article",
+                "fr-fr": "Article",
+                "ja-jp": "商品",
+                "nb-no": "Vare",
+                "nl-nl": "Artikel",
+                "sv-se": "Produkt",
+                "ar-ksa": "عنصر",
+                "ar-uae": "عنصر"
+              }
+            },
+            "modalCloseTitle": {
+              "type": "text",
+              "locales": {
+                "da-dk": "Luk",
+                "de-at": "Schließen",
+                "de-de": "Schließen",
+                "en-au": "Fermer",
+                "en-ca": "Close",
+                "en-gb": "Close",
+                "en-nl": "Sluiten",
+                "en-nz": "Close",
+                "en-us": "Close",
+                "es-us": "Cerrar",
+                "fr-ca": "Fermer",
+                "fr-fr": "Fermer",
+                "ja-jp": "閉じる",
+                "nb-no": "Lukk",
+                "nl-nl": "Sluiten",
+                "sv-se": "Stäng",
+                "ar-ksa": "إغلاق",
+                "ar-uae": "إغلاق"
+              }
+            },
+            "modalPriceTitle": {
+              "type": "text",
+              "locales": {
+                "da-dk": "Pris",
+                "de-at": "Preis",
+                "de-de": "Preis",
+                "en-au": "Prix",
+                "en-ca": "Price",
+                "en-gb": "Price",
+                "en-nl": "Prijs",
+                "en-nz": "Price",
+                "en-us": "Price",
+                "es-us": "Precio",
+                "fr-ca": "Prix",
+                "fr-fr": "Prix",
+                "ja-jp": "価格",
+                "nb-no": "Pris",
+                "nl-nl": "Prijs",
+                "sv-se": "Pris",
+                "ar-ksa": "السعر",
+                "ar-uae": "السعر"
+              }
+            },
+            "modalMyCartTitle": {
+              "type": "text",
+              "locales": {
+                "da-dk": "Min kurv",
+                "de-at": "Mein Warenkorb",
+                "de-de": "Mein Warenkorb",
+                "en-au": "Mon panier",
+                "en-ca": "My Cart",
+                "en-gb": "My Cart",
+                "en-nl": "Mijn winkelwagen",
+                "en-nz": "My Cart",
+                "en-us": "My Cart",
+                "es-us": "Mi carrito",
+                "fr-ca": "Mon panier",
+                "fr-fr": "Mon panier",
+                "ja-jp": "カート",
+                "nb-no": "Handlekurven min",
+                "nl-nl": "Mijn winkelwagen",
+                "sv-se": "Min kundvagn",
+                "ar-ksa": "سلة التسوق الخاصة بي",
+                "ar-uae": "سلة التسوق الخاصة بي"
+              }
+            },
+            "modalRemoveTitle": {
+              "type": "text",
+              "locales": {
+                "da-dk": "Fjern",
+                "de-at": "Entfernen",
+                "de-de": "Entfernen",
+                "en-au": "Supprimer",
+                "en-ca": "Remove",
+                "en-gb": "Remove",
+                "en-nl": "Verwijderen",
+                "en-nz": "Remove",
+                "en-us": "Remove",
+                "es-us": "Eliminar",
+                "fr-ca": "Supprimer",
+                "fr-fr": "Supprimer",
+                "ja-jp": "削除",
+                "nb-no": "Fjern",
+                "nl-nl": "Verwijderen",
+                "sv-se": "Ta bort",
+                "ar-ksa": "إزالة",
+                "ar-uae": "إزالة"
+              }
+            },
+            "modalCheckoutTitle": {
+              "type": "text",
+              "locales": {
+                "da-dk": "Betal",
+                "de-at": "Zur Kasse",
+                "de-de": "Zur Kasse",
+                "en-au": "Paiement",
+                "en-ca": "Checkout",
+                "en-gb": "Checkout",
+                "en-nl": "Afrekenen",
+                "en-nz": "Checkout",
+                "en-us": "Checkout",
+                "es-us": "Pagar",
+                "fr-ca": "Paiement",
+                "fr-fr": "Paiement",
+                "ja-jp": "レジに進む",
+                "nb-no": "Til kassen",
+                "nl-nl": "Afrekenen",
+                "sv-se": "Till kassan",
+                "ar-ksa": "الدفع",
+                "ar-uae": "الدفع"
+              }
+            },
+            "modalQuantityTitle": {
+              "type": "text",
+              "locales": {
+                "da-dk": "Antal",
+                "de-at": "Menge",
+                "de-de": "Menge",
+                "en-au": "Qté",
+                "en-ca": "QTY",
+                "en-gb": "QTY",
+                "en-nl": "Aantal",
+                "en-nz": "QTY",
+                "en-us": "QTY",
+                "es-us": "Cant.",
+                "fr-ca": "Qté",
+                "fr-fr": "Qté",
+                "ja-jp": "数量",
+                "nb-no": "Antall",
+                "nl-nl": "Aantal",
+                "sv-se": "Antal",
+                "ar-ksa": "الكمية",
+                "ar-uae": "الكمية"
+              }
+            },
+            "modalSubtotalTitle": {
+              "type": "text",
+              "locales": {
+                "da-dk": "Subtotal",
+                "de-at": "Zwischensumme",
+                "de-de": "Zwischensumme",
+                "en-au": "Sous-total",
+                "en-ca": "Subtotal",
+                "en-gb": "Subtotal",
+                "en-nl": "Subtotaal",
+                "en-nz": "Subtotal",
+                "en-us": "Subtotal",
+                "es-us": "Subtotal",
+                "fr-ca": "Sous-total",
+                "fr-fr": "Sous-total",
+                "ja-jp": "小計",
+                "nb-no": "Delsum",
+                "nl-nl": "Subtotaal",
+                "sv-se": "Delsumma",
+                "ar-ksa": "المجموع الفرعي",
+                "ar-uae": "المجموع الفرعي"
+              }
+            },
+            "modalCurrencySymbol": {
+              "type": "text",
+              "locales": {
+                "da-dk": "kr",
+                "de-at": "€",
+                "de-de": "€",
+                "en-au": "$",
+                "en-ca": "$",
+                "en-gb": "£",
+                "en-nl": "$",
+                "en-nz": "$",
+                "en-us": "$",
+                "es-us": "$",
+                "fr-ca": "$",
+                "fr-fr": "€",
+                "ja-jp": "¥",
+                "nb-no": "kr",
+                "nl-nl": "€",
+                "sv-se": "kr",
+                "ar-ksa": "ر.س",
+                "ar-uae": "د.إ"
+              }
             }
           },
           "_overridability": {
@@ -2919,89 +3126,48 @@
                     "_source": "uniform-assets"
                   }
                 ],
+                "en-au": [
+                  {
+                    "_id": "8c2f4891-7ebd-46dc-8b7b-88635e1beac1",
+                    "type": "image",
+                    "fields": {
+                      "id": {
+                        "type": "text",
+                        "value": "7770ab14-93dd-46bb-9ef6-7dab66fff401"
+                      },
+                      "url": {
+                        "value": "https://img.uniform.global/p/fXI0WUH5SnyXbh5uXS2QzQ/hCTBt4ZsQ5OIsCud4b_TOg-profile-icon-white.svg",
+                        "type": "text"
+                      },
+                      "file": {
+                        "type": "file",
+                        "value": "9977b90c-f32d-46ac-a50f-27ce7f9aa661"
+                      },
+                      "size": {
+                        "value": 610,
+                        "type": "number"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "profile-icon-white.svg"
+                      },
+                      "width": {
+                        "value": 24,
+                        "type": "number"
+                      },
+                      "height": {
+                        "value": 24,
+                        "type": "number"
+                      },
+                      "mediaType": {
+                        "value": "image/svg+xml",
+                        "type": "text"
+                      }
+                    },
+                    "_source": "uniform-assets"
+                  }
+                ],
                 "en-ca": [
-                  {
-                    "_id": "8c2f4891-7ebd-46dc-8b7b-88635e1beac1",
-                    "type": "image",
-                    "fields": {
-                      "id": {
-                        "type": "text",
-                        "value": "7770ab14-93dd-46bb-9ef6-7dab66fff401"
-                      },
-                      "url": {
-                        "value": "https://img.uniform.global/p/fXI0WUH5SnyXbh5uXS2QzQ/hCTBt4ZsQ5OIsCud4b_TOg-profile-icon-white.svg",
-                        "type": "text"
-                      },
-                      "file": {
-                        "type": "file",
-                        "value": "9977b90c-f32d-46ac-a50f-27ce7f9aa661"
-                      },
-                      "size": {
-                        "value": 610,
-                        "type": "number"
-                      },
-                      "title": {
-                        "type": "text",
-                        "value": "profile-icon-white.svg"
-                      },
-                      "width": {
-                        "value": 24,
-                        "type": "number"
-                      },
-                      "height": {
-                        "value": 24,
-                        "type": "number"
-                      },
-                      "mediaType": {
-                        "value": "image/svg+xml",
-                        "type": "text"
-                      }
-                    },
-                    "_source": "uniform-assets"
-                  }
-                ],
-                "en-de": [
-                  {
-                    "_id": "8c2f4891-7ebd-46dc-8b7b-88635e1beac1",
-                    "type": "image",
-                    "fields": {
-                      "id": {
-                        "type": "text",
-                        "value": "7770ab14-93dd-46bb-9ef6-7dab66fff401"
-                      },
-                      "url": {
-                        "value": "https://img.uniform.global/p/fXI0WUH5SnyXbh5uXS2QzQ/hCTBt4ZsQ5OIsCud4b_TOg-profile-icon-white.svg",
-                        "type": "text"
-                      },
-                      "file": {
-                        "type": "file",
-                        "value": "9977b90c-f32d-46ac-a50f-27ce7f9aa661"
-                      },
-                      "size": {
-                        "value": 610,
-                        "type": "number"
-                      },
-                      "title": {
-                        "type": "text",
-                        "value": "profile-icon-white.svg"
-                      },
-                      "width": {
-                        "value": 24,
-                        "type": "number"
-                      },
-                      "height": {
-                        "value": 24,
-                        "type": "number"
-                      },
-                      "mediaType": {
-                        "value": "image/svg+xml",
-                        "type": "text"
-                      }
-                    },
-                    "_source": "uniform-assets"
-                  }
-                ],
-                "en-fr": [
                   {
                     "_id": "8c2f4891-7ebd-46dc-8b7b-88635e1beac1",
                     "type": "image",
@@ -3084,6 +3250,47 @@
                   }
                 ],
                 "en-nl": [
+                  {
+                    "_id": "8c2f4891-7ebd-46dc-8b7b-88635e1beac1",
+                    "type": "image",
+                    "fields": {
+                      "id": {
+                        "type": "text",
+                        "value": "7770ab14-93dd-46bb-9ef6-7dab66fff401"
+                      },
+                      "url": {
+                        "value": "https://img.uniform.global/p/fXI0WUH5SnyXbh5uXS2QzQ/hCTBt4ZsQ5OIsCud4b_TOg-profile-icon-white.svg",
+                        "type": "text"
+                      },
+                      "file": {
+                        "type": "file",
+                        "value": "9977b90c-f32d-46ac-a50f-27ce7f9aa661"
+                      },
+                      "size": {
+                        "value": 610,
+                        "type": "number"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "profile-icon-white.svg"
+                      },
+                      "width": {
+                        "value": 24,
+                        "type": "number"
+                      },
+                      "height": {
+                        "value": 24,
+                        "type": "number"
+                      },
+                      "mediaType": {
+                        "value": "image/svg+xml",
+                        "type": "text"
+                      }
+                    },
+                    "_source": "uniform-assets"
+                  }
+                ],
+                "en-nz": [
                   {
                     "_id": "8c2f4891-7ebd-46dc-8b7b-88635e1beac1",
                     "type": "image",
@@ -3566,25 +3773,16 @@
                     "locale": "${locale}"
                   }
                 },
+                "en-au": {
+                  "path": "/${locale}/profile",
+                  "type": "projectMapNode",
+                  "nodeId": "2b51fe3c-56f4-425b-94f5-88c5e3b3af14",
+                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                  "dynamicInputValues": {
+                    "locale": "${locale}"
+                  }
+                },
                 "en-ca": {
-                  "path": "/${locale}/profile",
-                  "type": "projectMapNode",
-                  "nodeId": "2b51fe3c-56f4-425b-94f5-88c5e3b3af14",
-                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
-                  "dynamicInputValues": {
-                    "locale": "${locale}"
-                  }
-                },
-                "en-de": {
-                  "path": "/${locale}/profile",
-                  "type": "projectMapNode",
-                  "nodeId": "2b51fe3c-56f4-425b-94f5-88c5e3b3af14",
-                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
-                  "dynamicInputValues": {
-                    "locale": "${locale}"
-                  }
-                },
-                "en-fr": {
                   "path": "/${locale}/profile",
                   "type": "projectMapNode",
                   "nodeId": "2b51fe3c-56f4-425b-94f5-88c5e3b3af14",
@@ -3603,6 +3801,15 @@
                   }
                 },
                 "en-nl": {
+                  "path": "/${locale}/profile",
+                  "type": "projectMapNode",
+                  "nodeId": "2b51fe3c-56f4-425b-94f5-88c5e3b3af14",
+                  "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                  "dynamicInputValues": {
+                    "locale": "${locale}"
+                  }
+                },
+                "en-nz": {
                   "path": "/${locale}/profile",
                   "type": "projectMapNode",
                   "nodeId": "2b51fe3c-56f4-425b-94f5-88c5e3b3af14",
@@ -3769,24 +3976,24 @@
             "displayName": {
               "type": "text",
               "locales": {
+                "da-dk": "Lokalitetsvælger",
+                "de-at": "Sprachauswahl",
+                "de-de": "Sprachauswahl",
+                "en-au": "Sélecteur de région",
+                "en-ca": "Locale Selector",
+                "en-gb": "Locale Selector",
+                "en-nl": "Locatiekiezer",
+                "en-nz": "Gebietsschema-Auswahl",
                 "en-us": "Locale Selector",
                 "es-us": "Selector de ubicación",
                 "fr-ca": "Sélecteur de région",
-                "en-ca": "Locale Selector",
-                "en-gb": "Locale Selector",
-                "de-de": "Sprachauswahl",
-                "en-de": "Gebietsschema-Auswahl",
-                "de-at": "Sprachauswahl",
-                "nl-nl": "Locatiekiezer",
-                "en-nl": "Locatiekiezer",
-                "da-dk": "Lokalitetsvælger",
-                "sv-se": "Platsväljare",
-                "nb-no": "Valg av sted",
                 "fr-fr": "Sélecteur de langue",
-                "en-fr": "Sélecteur de région",
                 "ja-jp": "ロケールセレクター",
-                "ar-uae": "محدد الموقع",
-                "ar-ksa": "محدد الموقع"
+                "nb-no": "Valg av sted",
+                "nl-nl": "Locatiekiezer",
+                "sv-se": "Platsväljare",
+                "ar-ksa": "محدد الموقع",
+                "ar-uae": "محدد الموقع"
               }
             },
             "closeIconColor": {
@@ -3843,24 +4050,24 @@
             "text": {
               "type": "text",
               "locales": {
+                "da-dk": "Hjem",
+                "de-at": "Startseite",
+                "de-de": "Zuhause",
+                "en-au": "Accueil",
+                "en-ca": "Home",
+                "en-gb": "Home",
+                "en-nl": "Thuis",
+                "en-nz": "Startseite",
                 "en-us": "Home",
                 "es-us": "Inicio",
                 "fr-ca": "Accueil",
-                "en-ca": "Home",
-                "en-gb": "Home",
-                "de-de": "Zuhause",
-                "en-de": "Startseite",
-                "de-at": "Startseite",
-                "nl-nl": "Thuis",
-                "en-nl": "Thuis",
-                "da-dk": "Hjem",
-                "sv-se": "Hem",
-                "nb-no": "Hjem",
                 "fr-fr": "Accueil",
-                "en-fr": "Accueil",
                 "ja-jp": "ホーム",
-                "ar-uae": "الصفحة الرئيسية",
-                "ar-ksa": "الرئيسية"
+                "nb-no": "Hjem",
+                "nl-nl": "Thuis",
+                "sv-se": "Hem",
+                "ar-ksa": "الرئيسية",
+                "ar-uae": "الصفحة الرئيسية"
               }
             },
             "color": {
@@ -3904,24 +4111,24 @@
             "text": {
               "type": "text",
               "locales": {
+                "da-dk": "Kaffemaskiner",
+                "de-at": "Kaffeemaschinen",
+                "de-de": "Kaffeemaschinen",
+                "en-au": "Cafetière",
+                "en-ca": "Coffee Makers",
+                "en-gb": "Coffee Machines",
+                "en-nl": "Koffiezetapparaten",
+                "en-nz": "Kaffeemaschinen",
                 "en-us": "Coffee Makers",
                 "es-us": "Cafeteras",
                 "fr-ca": "Cafetière",
-                "en-ca": "Coffee Makers",
-                "en-gb": "Coffee Machines",
-                "de-de": "Kaffeemaschinen",
-                "en-de": "Kaffeemaschinen",
-                "de-at": "Kaffeemaschinen",
-                "nl-nl": "Koffiezetapparaten",
-                "en-nl": "Koffiezetapparaten",
-                "da-dk": "Kaffemaskiner",
-                "sv-se": "Kaffebryggare",
-                "nb-no": "Kaffetraktere",
                 "fr-fr": "Cafetière",
-                "en-fr": "Cafetière",
                 "ja-jp": "コーヒーメーカー",
-                "ar-uae": "صانعات القهوة",
-                "ar-ksa": "صانعات القهوة"
+                "nb-no": "Kaffetraktere",
+                "nl-nl": "Koffiezetapparaten",
+                "sv-se": "Kaffebryggare",
+                "ar-ksa": "صانعات القهوة",
+                "ar-uae": "صانعات القهوة"
               }
             },
             "color": {
@@ -3965,24 +4172,24 @@
             "text": {
               "type": "text",
               "locales": {
+                "da-dk": "Bønner",
+                "de-at": "Bohnen",
+                "de-de": "Bohnen",
+                "en-au": "Haricots",
+                "en-ca": "Beans",
+                "en-gb": "Beans",
+                "en-nl": "Bonen",
+                "en-nz": "Bohnen",
                 "en-us": "Beans",
                 "es-us": "Frijoles",
                 "fr-ca": "Haricots",
-                "en-ca": "Beans",
-                "en-gb": "Beans",
-                "de-de": "Bohnen",
-                "en-de": "Bohnen",
-                "de-at": "Bohnen",
-                "nl-nl": "Bonen",
-                "en-nl": "Bonen",
-                "da-dk": "Bønner",
-                "sv-se": "Bönor",
-                "nb-no": "Bønner",
                 "fr-fr": "Haricots",
-                "en-fr": "Haricots",
                 "ja-jp": "豆",
-                "ar-uae": "فاصوليا",
-                "ar-ksa": "فاصوليا"
+                "nb-no": "Bønner",
+                "nl-nl": "Bonen",
+                "sv-se": "Bönor",
+                "ar-ksa": "فاصوليا",
+                "ar-uae": "فاصوليا"
               }
             },
             "color": {
@@ -4026,24 +4233,24 @@
             "text": {
               "type": "text",
               "locales": {
+                "da-dk": "Artikler",
+                "de-at": "Artikel",
+                "de-de": "Artikel",
+                "en-au": "Articles",
+                "en-ca": "Articles",
+                "en-gb": "Articles",
+                "en-nl": "Artikelen",
+                "en-nz": "Artikel",
                 "en-us": "Articles",
                 "es-us": "Artículos",
                 "fr-ca": "Articles",
-                "en-ca": "Articles",
-                "en-gb": "Articles",
-                "de-de": "Artikel",
-                "en-de": "Artikel",
-                "de-at": "Artikel",
-                "nl-nl": "Artikelen",
-                "en-nl": "Artikelen",
-                "da-dk": "Artikler",
-                "sv-se": "Artiklar",
-                "nb-no": "Artikler",
                 "fr-fr": "Articles",
-                "en-fr": "Articles",
                 "ja-jp": "記事",
-                "ar-uae": "مقالات",
-                "ar-ksa": "مقالات"
+                "nb-no": "Artikler",
+                "nl-nl": "Artikelen",
+                "sv-se": "Artiklar",
+                "ar-ksa": "مقالات",
+                "ar-uae": "مقالات"
               }
             },
             "color": {
@@ -4096,24 +4303,24 @@
                               "text": {
                                 "type": "text",
                                 "locales": {
+                                  "da-dk": "Topprodukter",
+                                  "de-at": "Top-Produkte",
+                                  "de-de": "Top-Produkte",
+                                  "en-au": "Produits Phare",
+                                  "en-ca": "Top Products",
+                                  "en-gb": "Top Products",
+                                  "en-nl": "Topproducten",
+                                  "en-nz": "Top-Produkte",
                                   "en-us": "Top Products",
                                   "es-us": "Productos Principales",
                                   "fr-ca": "Produits phares",
-                                  "en-ca": "Top Products",
-                                  "en-gb": "Top Products",
-                                  "de-de": "Top-Produkte",
-                                  "en-de": "Top-Produkte",
-                                  "de-at": "Top-Produkte",
-                                  "nl-nl": "Topproducten",
-                                  "en-nl": "Topproducten",
-                                  "da-dk": "Topprodukter",
-                                  "sv-se": "Topprodukter",
-                                  "nb-no": "Topp produkter",
                                   "fr-fr": "Produits phares",
-                                  "en-fr": "Produits Phare",
                                   "ja-jp": "トップ製品",
-                                  "ar-uae": "أفضل المنتجات",
-                                  "ar-ksa": "أفضل المنتجات"
+                                  "nb-no": "Topp produkter",
+                                  "nl-nl": "Topproducten",
+                                  "sv-se": "Topprodukter",
+                                  "ar-ksa": "أفضل المنتجات",
+                                  "ar-uae": "أفضل المنتجات"
                                 }
                               },
                               "color": {
@@ -4157,24 +4364,24 @@
                               "text": {
                                 "type": "text",
                                 "locales": {
+                                  "da-dk": "EspressoGPT",
+                                  "de-at": "EspressoGPT",
+                                  "de-de": "EspressoGPT",
+                                  "en-au": "EspressoGPT",
+                                  "en-ca": "EspressoGPT",
+                                  "en-gb": "EspressoGPT",
+                                  "en-nl": "EspressoGPT",
+                                  "en-nz": "EspressoGPT",
                                   "en-us": "EspressoGPT",
                                   "es-us": "EspressoGPT",
                                   "fr-ca": "EspressoGPT",
-                                  "en-ca": "EspressoGPT",
-                                  "en-gb": "EspressoGPT",
-                                  "de-de": "EspressoGPT",
-                                  "en-de": "EspressoGPT",
-                                  "de-at": "EspressoGPT",
-                                  "nl-nl": "EspressoGPT",
-                                  "en-nl": "EspressoGPT",
-                                  "da-dk": "EspressoGPT",
-                                  "sv-se": "EspressoGPT",
-                                  "nb-no": "EspressoGPT",
                                   "fr-fr": "EspressoGPT",
-                                  "en-fr": "EspressoGPT",
                                   "ja-jp": "エスプレッソGPT",
-                                  "ar-uae": "إسبريسو جي بي تي",
-                                  "ar-ksa": "إسبريسو جي بي تي"
+                                  "nb-no": "EspressoGPT",
+                                  "nl-nl": "EspressoGPT",
+                                  "sv-se": "EspressoGPT",
+                                  "ar-ksa": "إسبريسو جي بي تي",
+                                  "ar-uae": "إسبريسو جي بي تي"
                                 }
                               },
                               "color": {
@@ -4211,24 +4418,24 @@
                               "text": {
                                 "type": "text",
                                 "locales": {
+                                  "da-dk": "Kosmisk Kaffebarista",
+                                  "de-at": "Kosmic Coffee Barista",
+                                  "de-de": "Kosmic Coffee Barista",
+                                  "en-au": "Barista de Café Kosmic",
+                                  "en-ca": "Kosmic Coffee Barista",
+                                  "en-gb": "Kosmic Coffee Barista",
+                                  "en-nl": "Kosmische Koffie Barista",
+                                  "en-nz": "Kosmic Coffee Barista",
                                   "en-us": "Kosmic Coffee Barista",
                                   "es-us": "Barista de Café Cósmico",
                                   "fr-ca": "Barista de Kosmic Coffee",
-                                  "en-ca": "Kosmic Coffee Barista",
-                                  "en-gb": "Kosmic Coffee Barista",
-                                  "de-de": "Kosmic Coffee Barista",
-                                  "en-de": "Kosmic Coffee Barista",
-                                  "de-at": "Kosmic Coffee Barista",
-                                  "nl-nl": "Kosmic Koffie Barista",
-                                  "en-nl": "Kosmische Koffie Barista",
-                                  "da-dk": "Kosmisk Kaffebarista",
-                                  "sv-se": "Kosmic Coffee Barista",
-                                  "nb-no": "Kosmisk Kaffebar Barista",
                                   "fr-fr": "Barista de Café Kosmic",
-                                  "en-fr": "Barista de Café Kosmic",
                                   "ja-jp": "コスミックコーヒーバリスタ",
-                                  "ar-uae": "بارستا قهوة كوزميك",
-                                  "ar-ksa": "باريستا مقهى كوزميك"
+                                  "nb-no": "Kosmisk Kaffebar Barista",
+                                  "nl-nl": "Kosmic Koffie Barista",
+                                  "sv-se": "Kosmic Coffee Barista",
+                                  "ar-ksa": "باريستا مقهى كوزميك",
+                                  "ar-uae": "بارستا قهوة كوزميك"
                                 }
                               },
                               "color": {
@@ -4265,24 +4472,24 @@
                               "text": {
                                 "type": "text",
                                 "locales": {
+                                  "da-dk": "Irsk Blend Kaffe",
+                                  "de-at": "Irischer Mischkaffee",
+                                  "de-de": "Irischer Mischkaffee",
+                                  "en-au": "Café Mélange Irlandais",
+                                  "en-ca": "Irish Blend Coffee",
+                                  "en-gb": "Irish Blend Coffee",
+                                  "en-nl": "Ierse Blend Koffie",
+                                  "en-nz": "Irischer Mischkaffee",
                                   "en-us": "Irish Blend Coffee",
                                   "es-us": "Café Mezcla Irlandesa",
                                   "fr-ca": "Café Mélange Irlandais",
-                                  "en-ca": "Irish Blend Coffee",
-                                  "en-gb": "Irish Blend Coffee",
-                                  "de-de": "Irischer Mischkaffee",
-                                  "en-de": "Irischer Mischkaffee",
-                                  "de-at": "Irischer Mischkaffee",
-                                  "nl-nl": "Ierse Blend Koffie",
-                                  "en-nl": "Ierse Blend Koffie",
-                                  "da-dk": "Irsk Blend Kaffe",
-                                  "sv-se": "Irländskt Blandkaffe",
-                                  "nb-no": "Irsk blandingskaffe",
                                   "fr-fr": "Café Mélange Irlandais",
-                                  "en-fr": "Café Mélange Irlandais",
                                   "ja-jp": "アイリッシュブレンドコーヒー",
-                                  "ar-uae": "قهوة الخلطة الأيرلندية",
-                                  "ar-ksa": "قهوة الخلطة الأيرلندية"
+                                  "nb-no": "Irsk blandingskaffe",
+                                  "nl-nl": "Ierse Blend Koffie",
+                                  "sv-se": "Irländskt Blandkaffe",
+                                  "ar-ksa": "قهوة الخلطة الأيرلندية",
+                                  "ar-uae": "قهوة الخلطة الأيرلندية"
                                 }
                               },
                               "color": {
@@ -4325,24 +4532,24 @@
                               "text": {
                                 "type": "text",
                                 "locales": {
+                                  "da-dk": "Topartikler",
+                                  "de-at": "Top-Artikel",
+                                  "de-de": "Top-Artikel",
+                                  "en-au": "Articles Principaux",
+                                  "en-ca": "Top Articles",
+                                  "en-gb": "Top Articles",
+                                  "en-nl": "Topartikelen",
+                                  "en-nz": "Top-Artikel",
                                   "en-us": "Top Articles",
                                   "es-us": "Artículos Principales",
                                   "fr-ca": "Articles Principaux",
-                                  "en-ca": "Top Articles",
-                                  "en-gb": "Top Articles",
-                                  "de-de": "Top-Artikel",
-                                  "en-de": "Top-Artikel",
-                                  "de-at": "Top-Artikel",
-                                  "nl-nl": "Topartikelen",
-                                  "en-nl": "Topartikelen",
-                                  "da-dk": "Topartikler",
-                                  "sv-se": "Toppartiklar",
-                                  "nb-no": "Toppartikler",
                                   "fr-fr": "Articles Principaux",
-                                  "en-fr": "Articles Principaux",
                                   "ja-jp": "トップ記事",
-                                  "ar-uae": "أهم المقالات",
-                                  "ar-ksa": "المقالات الأعلى"
+                                  "nb-no": "Toppartikler",
+                                  "nl-nl": "Topartikelen",
+                                  "sv-se": "Toppartiklar",
+                                  "ar-ksa": "المقالات الأعلى",
+                                  "ar-uae": "أهم المقالات"
                                 }
                               },
                               "color": {
@@ -4386,24 +4593,24 @@
                               "text": {
                                 "type": "text",
                                 "locales": {
-                                  "en-us": "How to Brew Tea Right",
-                                  "es-us": "Cómo Preparar Té Correctamente",
-                                  "fr-ca": "Comment préparer le thé correctement\n\nInstructions :",
-                                  "en-ca": "How to Brew Tea Right",
+                                  "da-dk": "Sådan brygger du te",
+                                  "de-at": "Tee richtig aufbrühen",
+                                  "de-de": "Tee richtig aufbrühen",
+                                  "en-au": "Comment préparer le thé",
+                                  "en-ca": "How to Brew Tea Properly",
                                   "en-gb": "How to Brew Tea Properly",
-                                  "de-de": "Wie man Tee richtig aufbrüht\n\nAnleitung:",
-                                  "en-de": "Wie man Tee richtig aufbrüht\n\nAnleitung:",
-                                  "de-at": "Wie man Tee richtig aufbrüht\n\nAnleitung:",
-                                  "nl-nl": "Hoe je Thee op de Juiste Manier Zet",
-                                  "en-nl": "Hoe je Thee op de Juiste Manier Zet",
-                                  "da-dk": "Sådan brygger du te korrekt\n\nInstruktioner:",
-                                  "sv-se": "Hur man brygger te på rätt sätt",
-                                  "nb-no": "Hvordan brygge te riktig",
-                                  "fr-fr": "Comment Infuser le Thé Correctement\n\nInstructions :",
-                                  "en-fr": "Comment préparer le thé correctement\n\nInstructions :",
-                                  "ja-jp": "お茶を正しく淹れる方法\n\n手順:",
-                                  "ar-uae": "كيفية تحضير الشاي بشكل صحيح\n\nالتعليمات:",
-                                  "ar-ksa": "كيفية تحضير الشاي بشكل صحيح\n\nالتعليمات:"
+                                  "en-nl": "Thee goed zetten",
+                                  "en-nz": "Tee richtig aufbrühen",
+                                  "en-us": "How to Brew Tea Right",
+                                  "es-us": "Cómo preparar té",
+                                  "fr-ca": "Comment préparer le thé",
+                                  "fr-fr": "Infuser le thé",
+                                  "ja-jp": "お茶の淹れ方",
+                                  "nb-no": "Hvordan brygge te",
+                                  "nl-nl": "Thee goed zetten",
+                                  "sv-se": "Brygga te korrekt",
+                                  "ar-ksa": "كيفية تحضير الشاي",
+                                  "ar-uae": "كيفية تحضير الشاي"
                                 }
                               },
                               "color": {
@@ -4440,24 +4647,24 @@
                               "text": {
                                 "type": "text",
                                 "locales": {
-                                  "en-us": "Great French Press Secret",
-                                  "es-us": "Gran Secreto de la Prensa Francesa",
-                                  "fr-ca": "Grand Secret de la Presse Française",
+                                  "da-dk": "Fransk presse hemmelighed",
+                                  "de-at": "French Press Geheimnis",
+                                  "de-de": "French Press Geheimnis",
+                                  "en-au": "Secret Presse Française",
                                   "en-ca": "Great French Press Secret",
                                   "en-gb": "Great French Press Secret",
-                                  "de-de": "Großes Geheimnis der French Press",
-                                  "en-de": "Großes Geheimnis der French Press",
-                                  "de-at": "Das große Geheimnis der French Press",
-                                  "nl-nl": "Groot geheim van de Franse pers",
-                                  "en-nl": "Groot Frans Pers Geheim",
-                                  "da-dk": "Den store hemmelighed bag en fransk presse",
-                                  "sv-se": "Stort Fransk Presshemlighet",
-                                  "nb-no": "Den store franske pressens hemmelighet",
-                                  "fr-fr": "Le grand secret de la cafetière à piston",
-                                  "en-fr": "Grand Secret de la Presse Française",
-                                  "ja-jp": "フレンチプレスの秘密",
-                                  "ar-uae": "سر الفرنش برس العظيم",
-                                  "ar-ksa": "سر الفرنش بريس العظيم"
+                                  "en-nl": "Frans pers geheim",
+                                  "en-nz": "French Press Geheimnis",
+                                  "en-us": "Great French Press Secret",
+                                  "es-us": "Secreto prensa francesa",
+                                  "fr-ca": "Secret Presse Française",
+                                  "fr-fr": "Secret cafetière piston",
+                                  "ja-jp": "フレンチプレス秘密",
+                                  "nb-no": "Fransk press hemmelighet",
+                                  "nl-nl": "Frans pers geheim",
+                                  "sv-se": "Franskt presshemlighet",
+                                  "ar-ksa": "سر الفرنش بريس",
+                                  "ar-uae": "سر الفرنش بريس"
                                 }
                               },
                               "color": {
@@ -4494,24 +4701,24 @@
                               "text": {
                                 "type": "text",
                                 "locales": {
-                                  "en-us": "Perfect Espresso Art",
-                                  "es-us": "Arte Perfecto de Espresso",
-                                  "fr-ca": "Art parfait de l'espresso",
+                                  "da-dk": "Perfekt Espresso Kunst",
+                                  "de-at": "Espresso-Kunst",
+                                  "de-de": "Espresso-Kunst",
+                                  "en-au": "Art Espresso Parfait",
                                   "en-ca": "Perfect Espresso Art",
                                   "en-gb": "Perfect Espresso Art",
-                                  "de-de": "Perfekte Espresso-Kunst",
-                                  "en-de": "Perfekte Espresso-Kunst",
-                                  "de-at": "Perfekte Espresso-Kunst",
-                                  "nl-nl": "Perfecte Espresso Kunst",
-                                  "en-nl": "Perfecte Espresso Kunst",
-                                  "da-dk": "Perfekt Espresso Kunst",
-                                  "sv-se": "Perfekt Espresso-konst",
-                                  "nb-no": "Perfekt espresso-kunst",
-                                  "fr-fr": "Art parfait de l'espresso",
-                                  "en-fr": "Art parfait de l'espresso",
-                                  "ja-jp": "完璧なエスプレッソアート",
-                                  "ar-uae": "فن الإسبريسو المثالي",
-                                  "ar-ksa": "فن الإسبريسو المثالي"
+                                  "en-nl": "Espresso Kunst",
+                                  "en-nz": "Espresso-Kunst",
+                                  "en-us": "Perfect Espresso Art",
+                                  "es-us": "Arte Espresso",
+                                  "fr-ca": "Art Espresso Parfait",
+                                  "fr-fr": "Art Espresso Parfait",
+                                  "ja-jp": "エスプレッソアート",
+                                  "nb-no": "Espresso-kunst",
+                                  "nl-nl": "Espresso Kunst",
+                                  "sv-se": "Espresso-konst",
+                                  "ar-ksa": "فن الإسبريسو",
+                                  "ar-uae": "فن الإسبريسو"
                                 }
                               },
                               "color": {
@@ -4558,24 +4765,24 @@
                         "displayName": {
                           "type": "text",
                           "locales": {
+                            "da-dk": "Topvalg",
+                            "de-at": "Top-Auswahl",
+                            "de-de": "Top-Auswahl",
+                            "en-au": "Meilleures Sélections",
+                            "en-ca": "Top Choices",
+                            "en-gb": "Top Choices",
+                            "en-nl": "Topkeuzes",
+                            "en-nz": "Top-Auswahl",
                             "en-us": "Top Picks",
                             "es-us": "Selecciones Principales",
                             "fr-ca": "Meilleurs choix",
-                            "en-ca": "Top Choices",
-                            "en-gb": "Top Choices",
-                            "de-de": "Top-Auswahl",
-                            "en-de": "Top-Auswahl",
-                            "de-at": "Top-Auswahl",
-                            "nl-nl": "Topkeuzes",
-                            "en-nl": "Topkeuzes",
-                            "da-dk": "Topvalg",
-                            "sv-se": "Toppval",
-                            "nb-no": "Toppvalg",
                             "fr-fr": "Meilleures Sélections",
-                            "en-fr": "Meilleures Sélections",
                             "ja-jp": "おすすめ商品",
-                            "ar-uae": "أفضل الاختيارات",
-                            "ar-ksa": "أفضل الاختيارات"
+                            "nb-no": "Toppvalg",
+                            "nl-nl": "Topkeuzes",
+                            "sv-se": "Toppval",
+                            "ar-ksa": "أفضل الاختيارات",
+                            "ar-uae": "أفضل الاختيارات"
                           }
                         },
                         "fluidContent": {
@@ -4618,24 +4825,24 @@
                                     "text": {
                                       "type": "text",
                                       "locales": {
+                                        "da-dk": "Min JavaDrip",
+                                        "de-at": "Mein JavaDrip",
+                                        "de-de": "Mein JavaDrip",
+                                        "en-au": "Mon JavaDrip",
+                                        "en-ca": "My JavaDrip",
+                                        "en-gb": "My JavaDrip",
+                                        "en-nl": "Mijn JavaDrip",
+                                        "en-nz": "Mein JavaDrip",
                                         "en-us": "My JavaDrip",
                                         "es-us": "Mi JavaDrip",
                                         "fr-ca": "Mon JavaDrip",
-                                        "en-ca": "My JavaDrip",
-                                        "en-gb": "My JavaDrip",
-                                        "de-de": "Mein JavaDrip",
-                                        "en-de": "Mein JavaDrip",
-                                        "de-at": "Mein JavaDrip",
-                                        "nl-nl": "Mijn JavaDrip",
-                                        "en-nl": "Mijn JavaDrip",
-                                        "da-dk": "Min JavaDrip",
-                                        "sv-se": "Min JavaDrip",
-                                        "nb-no": "Min JavaDrip",
                                         "fr-fr": "Mon JavaDrip",
-                                        "en-fr": "Mon JavaDrip",
                                         "ja-jp": "私のジャバドリップ",
-                                        "ar-uae": "ماي جافا درب",
-                                        "ar-ksa": "قهوة جافا درب الخاصة بي"
+                                        "nb-no": "Min JavaDrip",
+                                        "nl-nl": "Mijn JavaDrip",
+                                        "sv-se": "Min JavaDrip",
+                                        "ar-ksa": "قهوة جافا درب الخاصة بي",
+                                        "ar-uae": "ماي جافا درب"
                                       }
                                     },
                                     "color": {
@@ -4678,24 +4885,24 @@
                                     "text": {
                                       "type": "text",
                                       "locales": {
+                                        "da-dk": "Din profil",
+                                        "de-at": "Ihr Profil",
+                                        "de-de": "Ihr Profil",
+                                        "en-au": "Votre Profil",
+                                        "en-ca": "Your Profile",
+                                        "en-gb": "Your Profile",
+                                        "en-nl": "Je Profiel",
+                                        "en-nz": "Ihr Profil",
                                         "en-us": "Your Profile",
                                         "es-us": "Tu perfil",
                                         "fr-ca": "Votre profil",
-                                        "en-ca": "Your Profile",
-                                        "en-gb": "Your Profile",
-                                        "de-de": "Ihr Profil",
-                                        "en-de": "Ihr Profil",
-                                        "de-at": "Ihr Profil",
-                                        "nl-nl": "Je Profiel",
-                                        "en-nl": "Je Profiel",
-                                        "da-dk": "Din profil",
-                                        "sv-se": "Din profil",
-                                        "nb-no": "Din profil",
                                         "fr-fr": "Votre Profil",
-                                        "en-fr": "Votre Profil",
                                         "ja-jp": "あなたのプロフィール",
-                                        "ar-uae": "ملفك الشخصي",
-                                        "ar-ksa": "ملفك الشخصي"
+                                        "nb-no": "Din profil",
+                                        "nl-nl": "Je Profiel",
+                                        "sv-se": "Din profil",
+                                        "ar-ksa": "ملفك الشخصي",
+                                        "ar-uae": "ملفك الشخصي"
                                       }
                                     },
                                     "color": {
@@ -4735,24 +4942,24 @@
                                     "text": {
                                       "type": "text",
                                       "locales": {
+                                        "da-dk": "Din Kurv",
+                                        "de-at": "Ihr Warenkorb",
+                                        "de-de": "Ihr Warenkorb",
+                                        "en-au": "Votre Panier",
+                                        "en-ca": "Your Cart",
+                                        "en-gb": "Your Basket",
+                                        "en-nl": "Je Winkelwagen",
+                                        "en-nz": "Ihr Warenkorb",
                                         "en-us": "Your Cart",
                                         "es-us": "Tu Carrito",
                                         "fr-ca": "Votre panier",
-                                        "en-ca": "Your Cart",
-                                        "en-gb": "Your Basket",
-                                        "de-de": "Ihr Warenkorb",
-                                        "en-de": "Ihr Warenkorb",
-                                        "de-at": "Ihr Warenkorb",
-                                        "nl-nl": "Je Winkelwagen",
-                                        "en-nl": "Je Winkelwagen",
-                                        "da-dk": "Din Kurv",
-                                        "sv-se": "Din kundvagn",
-                                        "nb-no": "Handlekurven din",
                                         "fr-fr": "Votre Panier",
-                                        "en-fr": "Votre Panier",
                                         "ja-jp": "カート",
-                                        "ar-uae": "عربة التسوق الخاصة بك",
-                                        "ar-ksa": "عربة التسوق الخاصة بك"
+                                        "nb-no": "Handlekurven din",
+                                        "nl-nl": "Je Winkelwagen",
+                                        "sv-se": "Din kundvagn",
+                                        "ar-ksa": "عربة التسوق الخاصة بك",
+                                        "ar-uae": "عربة التسوق الخاصة بك"
                                       }
                                     },
                                     "color": {
@@ -4792,24 +4999,24 @@
                                     "text": {
                                       "type": "text",
                                       "locales": {
+                                        "da-dk": "Dine favoritter",
+                                        "de-at": "Ihre Favoriten",
+                                        "de-de": "Ihre Favoriten",
+                                        "en-au": "Vos Favoris",
+                                        "en-ca": "Your Favourites",
+                                        "en-gb": "Your Favourites",
+                                        "en-nl": "Je favorieten",
+                                        "en-nz": "Ihre Favoriten",
                                         "en-us": "Your Favorites ",
                                         "es-us": "Tus Favoritos",
                                         "fr-ca": "Vos favoris",
-                                        "en-ca": "Your Favourites",
-                                        "en-gb": "Your Favourites",
-                                        "de-de": "Ihre Favoriten",
-                                        "en-de": "Ihre Favoriten",
-                                        "de-at": "Ihre Favoriten",
-                                        "nl-nl": "Je favorieten",
-                                        "en-nl": "Je favorieten",
-                                        "da-dk": "Dine favoritter",
-                                        "sv-se": "Dina favoriter",
-                                        "nb-no": "Dine favoritter",
                                         "fr-fr": "Vos Favoris",
-                                        "en-fr": "Vos Favoris",
                                         "ja-jp": "お気に入り",
-                                        "ar-uae": "مفضلاتك",
-                                        "ar-ksa": "مفضلاتك"
+                                        "nb-no": "Dine favoritter",
+                                        "nl-nl": "Je favorieten",
+                                        "sv-se": "Dina favoriter",
+                                        "ar-ksa": "مفضلاتك",
+                                        "ar-uae": "مفضلاتك"
                                       }
                                     },
                                     "color": {
@@ -4856,24 +5063,24 @@
                                     "text": {
                                       "type": "text",
                                       "locales": {
+                                        "da-dk": "Ressourcer",
+                                        "de-at": "Ressourcen",
+                                        "de-de": "Ressourcen",
+                                        "en-au": "Ressources",
+                                        "en-ca": "Resources",
+                                        "en-gb": "Resources",
+                                        "en-nl": "Middelen",
+                                        "en-nz": "Ressourcen",
                                         "en-us": "Resources",
                                         "es-us": "Recursos",
                                         "fr-ca": "Ressources",
-                                        "en-ca": "Resources",
-                                        "en-gb": "Resources",
-                                        "de-de": "Ressourcen",
-                                        "en-de": "Ressourcen",
-                                        "de-at": "Ressourcen",
-                                        "nl-nl": "Middelen",
-                                        "en-nl": "Middelen",
-                                        "da-dk": "Ressourcer",
-                                        "sv-se": "Resurser",
-                                        "nb-no": "Ressurser",
                                         "fr-fr": "Ressources",
-                                        "en-fr": "Ressources",
                                         "ja-jp": "リソース",
-                                        "ar-uae": "الموارد",
-                                        "ar-ksa": "الموارد"
+                                        "nb-no": "Ressurser",
+                                        "nl-nl": "Middelen",
+                                        "sv-se": "Resurser",
+                                        "ar-ksa": "الموارد",
+                                        "ar-uae": "الموارد"
                                       }
                                     },
                                     "color": {
@@ -4916,24 +5123,24 @@
                                     "text": {
                                       "type": "text",
                                       "locales": {
+                                        "da-dk": "Kontakt os",
+                                        "de-at": "Kontaktieren Sie uns",
+                                        "de-de": "Kontaktieren Sie uns",
+                                        "en-au": "Contactez-nous",
+                                        "en-ca": "Contact Us",
+                                        "en-gb": "Contact Us",
+                                        "en-nl": "Neem contact met ons op",
+                                        "en-nz": "Kontaktieren Sie uns",
                                         "en-us": "Contact Us",
                                         "es-us": "Contáctenos",
                                         "fr-ca": "Contactez-nous",
-                                        "en-ca": "Contact Us",
-                                        "en-gb": "Contact Us",
-                                        "de-de": "Kontaktieren Sie uns",
-                                        "en-de": "Kontaktieren Sie uns",
-                                        "de-at": "Kontaktieren Sie uns",
-                                        "nl-nl": "Neem contact met ons op",
-                                        "en-nl": "Neem contact met ons op",
-                                        "da-dk": "Kontakt os",
-                                        "sv-se": "Kontakta oss",
-                                        "nb-no": "Kontakt oss",
                                         "fr-fr": "Contactez-nous",
-                                        "en-fr": "Contactez-nous",
                                         "ja-jp": "お問い合わせ",
-                                        "ar-uae": "اتصل بنا",
-                                        "ar-ksa": "اتصل بنا"
+                                        "nb-no": "Kontakt oss",
+                                        "nl-nl": "Neem contact met ons op",
+                                        "sv-se": "Kontakta oss",
+                                        "ar-ksa": "اتصل بنا",
+                                        "ar-uae": "اتصل بنا"
                                       }
                                     },
                                     "color": {
@@ -4968,24 +5175,24 @@
                                     "text": {
                                       "type": "text",
                                       "locales": {
+                                        "da-dk": "Få en demo",
+                                        "de-at": "Eine Demo erhalten",
+                                        "de-de": "Demo anfordern",
+                                        "en-au": "Obtenez une démo",
+                                        "en-ca": "Request a demo",
+                                        "en-gb": "Request a demo",
+                                        "en-nl": "Vraag een demo aan",
+                                        "en-nz": "Eine Demo erhalten",
                                         "en-us": "Get a demo",
                                         "es-us": "Obtén una demostración",
                                         "fr-ca": "Obtenez une démonstration",
-                                        "en-ca": "Request a demo",
-                                        "en-gb": "Request a demo",
-                                        "de-de": "Demo anfordern",
-                                        "en-de": "Eine Demo erhalten",
-                                        "de-at": "Eine Demo erhalten",
-                                        "nl-nl": "Vraag een demo aan",
-                                        "en-nl": "Vraag een demo aan",
-                                        "da-dk": "Få en demo",
-                                        "sv-se": "Få en demo",
-                                        "nb-no": "Få en demo",
                                         "fr-fr": "Obtenez une démonstration",
-                                        "en-fr": "Obtenez une démo",
                                         "ja-jp": "デモを受ける",
-                                        "ar-uae": "احصل على عرض توضيحي",
-                                        "ar-ksa": "احصل على عرض توضيحي"
+                                        "nb-no": "Få en demo",
+                                        "nl-nl": "Vraag een demo aan",
+                                        "sv-se": "Få en demo",
+                                        "ar-ksa": "احصل على عرض توضيحي",
+                                        "ar-uae": "احصل على عرض توضيحي"
                                       }
                                     },
                                     "color": {
@@ -5036,24 +5243,24 @@
                               "displayName": {
                                 "type": "text",
                                 "locales": {
+                                  "da-dk": "Links Container",
+                                  "de-at": "Link-Container",
+                                  "de-de": "Link-Container",
+                                  "en-au": "Conteneur de liens",
+                                  "en-ca": "Links Container",
+                                  "en-gb": "Links Container",
+                                  "en-nl": "Links Container",
+                                  "en-nz": "Link-Container",
                                   "en-us": "Links Container",
                                   "es-us": "Contenedor de Enlaces",
                                   "fr-ca": "Conteneur de liens",
-                                  "en-ca": "Links Container",
-                                  "en-gb": "Links Container",
-                                  "de-de": "Link-Container",
-                                  "en-de": "Link-Container",
-                                  "de-at": "Link-Container",
-                                  "nl-nl": "Linkcontainer",
-                                  "en-nl": "Links Container",
-                                  "da-dk": "Links Container",
-                                  "sv-se": "Länkkontainer",
-                                  "nb-no": "Lenkebeholder",
                                   "fr-fr": "Conteneur de liens",
-                                  "en-fr": "Conteneur de liens",
                                   "ja-jp": "リンクコンテナ",
-                                  "ar-uae": "حاوية الروابط",
-                                  "ar-ksa": "حاوية الروابط"
+                                  "nb-no": "Lenkebeholder",
+                                  "nl-nl": "Linkcontainer",
+                                  "sv-se": "Länkkontainer",
+                                  "ar-ksa": "حاوية الروابط",
+                                  "ar-uae": "حاوية الروابط"
                                 }
                               },
                               "fluidContent": {
@@ -5105,24 +5312,24 @@
                         "displayName": {
                           "type": "text",
                           "locales": {
+                            "da-dk": "Min JavaDrip",
+                            "de-at": "Mein JavaDrip",
+                            "de-de": "Mein JavaDrip",
+                            "en-au": "Mon JavaDrip",
+                            "en-ca": "My JavaDrip",
+                            "en-gb": "My JavaDrip",
+                            "en-nl": "Mijn JavaDrip",
+                            "en-nz": "Mein JavaDrip",
                             "en-us": "My JavaDrip",
                             "es-us": "Mi JavaDrip",
                             "fr-ca": "Mon JavaDrip",
-                            "en-ca": "My JavaDrip",
-                            "en-gb": "My JavaDrip",
-                            "de-de": "Mein JavaDrip",
-                            "en-de": "Mein JavaDrip",
-                            "de-at": "Mein JavaDrip",
-                            "nl-nl": "Mijn JavaDrip",
-                            "en-nl": "Mijn JavaDrip",
-                            "da-dk": "Min JavaDrip",
-                            "sv-se": "Min JavaDrip",
-                            "nb-no": "Min JavaDrip",
                             "fr-fr": "Mon JavaDrip",
-                            "en-fr": "Mon JavaDrip",
                             "ja-jp": "私のジャバドリップ",
-                            "ar-uae": "ماي جافا درِب",
-                            "ar-ksa": "جافا درب الخاص بي"
+                            "nb-no": "Min JavaDrip",
+                            "nl-nl": "Mijn JavaDrip",
+                            "sv-se": "Min JavaDrip",
+                            "ar-ksa": "جافا درب الخاص بي",
+                            "ar-uae": "ماي جافا درِب"
                           }
                         },
                         "fluidContent": {
@@ -5167,24 +5374,24 @@
                   "displayName": {
                     "type": "text",
                     "locales": {
+                      "da-dk": "Links Wrapper",
+                      "de-at": "Links-Wrapper",
+                      "de-de": "Links-Wrapper",
+                      "en-au": "Enveloppe de Liens",
+                      "en-ca": "Links Wrapper",
+                      "en-gb": "Links Wrapper",
+                      "en-nl": "Links Wrapper",
+                      "en-nz": "Links-Wrapper",
                       "en-us": "Links Wrapper",
                       "es-us": "Envoltura de Enlaces",
                       "fr-ca": "Enveloppe de Liens",
-                      "en-ca": "Links Wrapper",
-                      "en-gb": "Links Wrapper",
-                      "de-de": "Links-Wrapper",
-                      "en-de": "Links-Wrapper",
-                      "de-at": "Links-Wrapper",
-                      "nl-nl": "Links Wrapper",
-                      "en-nl": "Links Wrapper",
-                      "da-dk": "Links Wrapper",
-                      "sv-se": "Länkar Wrapper",
-                      "nb-no": "Lenker Wrapper",
                       "fr-fr": "Enveloppe de Liens",
-                      "en-fr": "Enveloppe de Liens",
                       "ja-jp": "リンクラッパー",
-                      "ar-uae": "مغلف الروابط",
-                      "ar-ksa": "روابط التغليف"
+                      "nb-no": "Lenker Wrapper",
+                      "nl-nl": "Links Wrapper",
+                      "sv-se": "Länkar Wrapper",
+                      "ar-ksa": "روابط التغليف",
+                      "ar-uae": "مغلف الروابط"
                     }
                   },
                   "columnsCount": {
@@ -5242,7 +5449,7 @@
                                                     "value": "c38a6695-b6bc-41cd-a6b3-33ae76b95c60"
                                                   },
                                                   "url": {
-                                                    "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/MG4eIkFbQYatOWgC5jujug-cervello-di-caffe-the-ultimate-ai-powered-espresso.png",
+                                                    "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/MkDCJoEBR2GHjEXQJYqAjA-cervello-di-caffe-the-ultimate-ai-powered-espresso.png",
                                                     "type": "text"
                                                   },
                                                   "file": {
@@ -5316,24 +5523,24 @@
                                     "displayName": {
                                       "type": "text",
                                       "locales": {
+                                        "da-dk": "Relativ beholder",
+                                        "de-at": "Relativer Container",
+                                        "de-de": "Relativer Container",
+                                        "en-au": "Conteneur Relatif",
+                                        "en-ca": "Relative Container",
+                                        "en-gb": "Relative Container",
+                                        "en-nl": "Relatieve Container",
+                                        "en-nz": "Relativer Container",
                                         "en-us": "Relative Container",
                                         "es-us": "Contenedor Relativo",
                                         "fr-ca": "Conteneur relatif",
-                                        "en-ca": "Relative Container",
-                                        "en-gb": "Relative Container",
-                                        "de-de": "Relativer Container",
-                                        "en-de": "Relativer Container",
-                                        "de-at": "Relativer Container",
-                                        "nl-nl": "Relatieve Container",
-                                        "en-nl": "Relatieve Container",
-                                        "da-dk": "Relativ beholder",
-                                        "sv-se": "Relativ behållare",
-                                        "nb-no": "Relativ beholder",
                                         "fr-fr": "Conteneur relatif",
-                                        "en-fr": "Conteneur Relatif",
                                         "ja-jp": "相対コンテナ",
-                                        "ar-uae": "حاوية نسبية",
-                                        "ar-ksa": "حاوية نسبية"
+                                        "nb-no": "Relativ beholder",
+                                        "nl-nl": "Relatieve Container",
+                                        "sv-se": "Relativ behållare",
+                                        "ar-ksa": "حاوية نسبية",
+                                        "ar-uae": "حاوية نسبية"
                                       }
                                     },
                                     "fluidContent": {
@@ -5382,24 +5589,24 @@
                               "displayName": {
                                 "type": "text",
                                 "locales": {
+                                  "da-dk": "Baggrundsbeholder",
+                                  "de-at": "Hintergrundbehälter",
+                                  "de-de": "Hintergrundcontainer",
+                                  "en-au": "Conteneur de fond",
+                                  "en-ca": "Background Container",
+                                  "en-gb": "Background Container",
+                                  "en-nl": "Achtergrondcontainer",
+                                  "en-nz": "Hintergrundbehälter",
                                   "en-us": "Background Container",
                                   "es-us": "Contenedor de Fondo",
                                   "fr-ca": "Conteneur de fond",
-                                  "en-ca": "Background Container",
-                                  "en-gb": "Background Container",
-                                  "de-de": "Hintergrundcontainer",
-                                  "en-de": "Hintergrundbehälter",
-                                  "de-at": "Hintergrundbehälter",
-                                  "nl-nl": "Achtergrondcontainer",
-                                  "en-nl": "Achtergrondcontainer",
-                                  "da-dk": "Baggrundsbeholder",
-                                  "sv-se": "Bakgrundsbehållare",
-                                  "nb-no": "Bakgrunnsbeholder",
                                   "fr-fr": "Conteneur de fond",
-                                  "en-fr": "Conteneur de fond",
                                   "ja-jp": "背景コンテナ",
-                                  "ar-uae": "حاوية الخلفية",
-                                  "ar-ksa": "خلفية الحاوية"
+                                  "nb-no": "Bakgrunnsbeholder",
+                                  "nl-nl": "Achtergrondcontainer",
+                                  "sv-se": "Bakgrundsbehållare",
+                                  "ar-ksa": "خلفية الحاوية",
+                                  "ar-uae": "حاوية الخلفية"
                                 }
                               },
                               "fluidContent": {
@@ -5441,24 +5648,24 @@
                                     "text": {
                                       "type": "text",
                                       "locales": {
+                                        "da-dk": "Cervello di Caffè",
+                                        "de-at": "Cervello di Caffè",
+                                        "de-de": "Kaffee-Gehirn",
+                                        "en-au": "Cervello de Café",
+                                        "en-ca": "Café Brain",
+                                        "en-gb": "Café Brain",
+                                        "en-nl": "Cervello van Koffie",
+                                        "en-nz": "Kaffee-Gehirn",
                                         "en-us": "Cervello di Caffè",
                                         "es-us": "Cerebro de Café",
                                         "fr-ca": "Cervello de Café",
-                                        "en-ca": "Café Brain",
-                                        "en-gb": "Café Brain",
-                                        "de-de": "Kaffee-Gehirn",
-                                        "en-de": "Kaffee-Gehirn",
-                                        "de-at": "Cervello di Caffè",
-                                        "nl-nl": "Cervello di Caffè",
-                                        "en-nl": "Cervello van Koffie",
-                                        "da-dk": "Cervello di Caffè",
-                                        "sv-se": "Cervello di Caffè",
-                                        "nb-no": "Cervello di Caffè",
                                         "fr-fr": "Cerveau de Café",
-                                        "en-fr": "Cervello de Café",
                                         "ja-jp": "カフェの脳",
-                                        "ar-uae": "سيرفيلو دي كافيه",
-                                        "ar-ksa": "دماغ القهوة"
+                                        "nb-no": "Cervello di Caffè",
+                                        "nl-nl": "Cervello di Caffè",
+                                        "sv-se": "Cervello di Caffè",
+                                        "ar-ksa": "دماغ القهوة",
+                                        "ar-uae": "سيرفيلو دي كافيه"
                                       }
                                     },
                                     "color": {
@@ -5516,25 +5723,16 @@
                                             "locale": "${locale}"
                                           }
                                         },
+                                        "en-au": {
+                                          "path": "/${locale}/landing-page",
+                                          "type": "projectMapNode",
+                                          "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                                          "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                                          "dynamicInputValues": {
+                                            "locale": "${locale}"
+                                          }
+                                        },
                                         "en-ca": {
-                                          "path": "/${locale}/landing-page",
-                                          "type": "projectMapNode",
-                                          "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
-                                          "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
-                                          "dynamicInputValues": {
-                                            "locale": "${locale}"
-                                          }
-                                        },
-                                        "en-de": {
-                                          "path": "/${locale}/landing-page",
-                                          "type": "projectMapNode",
-                                          "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
-                                          "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
-                                          "dynamicInputValues": {
-                                            "locale": "${locale}"
-                                          }
-                                        },
-                                        "en-fr": {
                                           "path": "/${locale}/landing-page",
                                           "type": "projectMapNode",
                                           "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
@@ -5553,6 +5751,15 @@
                                           }
                                         },
                                         "en-nl": {
+                                          "path": "/${locale}/landing-page",
+                                          "type": "projectMapNode",
+                                          "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
+                                          "projectMapId": "537d11ff-9ebe-4420-9682-36694477e2f9",
+                                          "dynamicInputValues": {
+                                            "locale": "${locale}"
+                                          }
+                                        },
+                                        "en-nz": {
                                           "path": "/${locale}/landing-page",
                                           "type": "projectMapNode",
                                           "nodeId": "50be580b-ba2a-48d0-bcea-25e2ede87060",
@@ -5660,24 +5867,24 @@
                                     "text": {
                                       "type": "text",
                                       "locales": {
+                                        "da-dk": "Afslør detaljer",
+                                        "de-at": "Details aufdecken",
+                                        "de-de": "Details aufdecken",
+                                        "en-au": "Découvrir les détails",
+                                        "en-ca": "Reveal Details",
+                                        "en-gb": "Reveal Details",
+                                        "en-nl": "Details Onthullen",
+                                        "en-nz": "Details aufdecken",
                                         "en-us": "Uncover Details",
                                         "es-us": "Descubrir Detalles",
                                         "fr-ca": "Découvrir les détails",
-                                        "en-ca": "Reveal Details",
-                                        "en-gb": "Reveal Details",
-                                        "de-de": "Details aufdecken",
-                                        "en-de": "Details aufdecken",
-                                        "de-at": "Details aufdecken",
-                                        "nl-nl": "Ontdek Details",
-                                        "en-nl": "Details Onthullen",
-                                        "da-dk": "Afslør detaljer",
-                                        "sv-se": "Avslöja detaljer",
-                                        "nb-no": "Avdekk detaljer",
                                         "fr-fr": "Découvrir les détails",
-                                        "en-fr": "Découvrir les détails",
                                         "ja-jp": "詳細を明らかにする",
-                                        "ar-uae": "اكتشف التفاصيل",
-                                        "ar-ksa": "اكتشف التفاصيل"
+                                        "nb-no": "Avdekk detaljer",
+                                        "nl-nl": "Ontdek Details",
+                                        "sv-se": "Avslöja detaljer",
+                                        "ar-ksa": "اكتشف التفاصيل",
+                                        "ar-uae": "اكتشف التفاصيل"
                                       }
                                     },
                                     "border": {
@@ -5777,24 +5984,24 @@
                               "displayName": {
                                 "type": "text",
                                 "locales": {
+                                  "da-dk": "Indholdsbeholder",
+                                  "de-at": "Inhaltsbehälter",
+                                  "de-de": "Inhaltscontainer",
+                                  "en-au": "Conteneur de contenu",
+                                  "en-ca": "Content Container",
+                                  "en-gb": "Content Container",
+                                  "en-nl": "Inhoud Container",
+                                  "en-nz": "Inhaltscontainer",
                                   "en-us": "Content Container",
                                   "es-us": "Contenedor de Contenido",
                                   "fr-ca": "Conteneur de contenu",
-                                  "en-ca": "Content Container",
-                                  "en-gb": "Content Container",
-                                  "de-de": "Inhaltscontainer",
-                                  "en-de": "Inhaltscontainer",
-                                  "de-at": "Inhaltsbehälter",
-                                  "nl-nl": "Inhoud Container",
-                                  "en-nl": "Inhoud Container",
-                                  "da-dk": "Indholdsbeholder",
-                                  "sv-se": "Innehållsbehållare",
-                                  "nb-no": "Innholdsbeholder",
                                   "fr-fr": "Conteneur de contenu",
-                                  "en-fr": "Conteneur de contenu",
                                   "ja-jp": "コンテントコンテナ",
-                                  "ar-uae": "حاوية المحتوى",
-                                  "ar-ksa": "حاوية المحتوى"
+                                  "nb-no": "Innholdsbeholder",
+                                  "nl-nl": "Inhoud Container",
+                                  "sv-se": "Innehållsbehållare",
+                                  "ar-ksa": "حاوية المحتوى",
+                                  "ar-uae": "حاوية المحتوى"
                                 }
                               },
                               "fluidContent": {
@@ -5829,24 +6036,24 @@
                         "displayName": {
                           "type": "text",
                           "locales": {
+                            "da-dk": "Cervello di Caffè",
+                            "de-at": "Kaffeehirn",
+                            "de-de": "Cervello di Caffè",
+                            "en-au": "Cervello di Caffè",
+                            "en-ca": "Coffee Brain",
+                            "en-gb": "Caffè Brain",
+                            "en-nl": "Koffiebrein",
+                            "en-nz": "Cervello di Kaffee",
                             "en-us": "Cervello di Caffè",
                             "es-us": "Cerebro de Café",
                             "fr-ca": "Cervello di Caffè",
-                            "en-ca": "Coffee Brain",
-                            "en-gb": "Caffè Brain",
-                            "de-de": "Cervello di Caffè",
-                            "en-de": "Cervello di Kaffee",
-                            "de-at": "Kaffeehirn",
-                            "nl-nl": "Cervello di Caffè",
-                            "en-nl": "Koffiebrein",
-                            "da-dk": "Cervello di Caffè",
-                            "sv-se": "Cervello di Caffè",
-                            "nb-no": "Cervello di Caffè",
                             "fr-fr": "Cervello di Caffè",
-                            "en-fr": "Cervello di Caffè",
                             "ja-jp": "カフェの脳",
-                            "ar-uae": "سيرفيلو دي كافيه",
-                            "ar-ksa": "سيرفيلو دي كافيه"
+                            "nb-no": "Cervello di Caffè",
+                            "nl-nl": "Cervello di Caffè",
+                            "sv-se": "Cervello di Caffè",
+                            "ar-ksa": "سيرفيلو دي كافيه",
+                            "ar-uae": "سيرفيلو دي كافيه"
                           }
                         },
                         "fluidContent": {
@@ -5894,24 +6101,24 @@
                   "displayName": {
                     "type": "text",
                     "locales": {
+                      "da-dk": "Kortbeholder",
+                      "de-at": "Kartenbehälter",
+                      "de-de": "Kartenbehälter",
+                      "en-au": "Conteneur de carte",
+                      "en-ca": "Card Container",
+                      "en-gb": "Card Container",
+                      "en-nl": "Kaartcontainer",
+                      "en-nz": "Kartencontainer",
                       "en-us": "Card Container",
                       "es-us": "Contenedor de Tarjetas",
                       "fr-ca": "Conteneur de cartes",
-                      "en-ca": "Card Container",
-                      "en-gb": "Card Container",
-                      "de-de": "Kartenbehälter",
-                      "en-de": "Kartencontainer",
-                      "de-at": "Kartenbehälter",
-                      "nl-nl": "Kaartcontainer",
-                      "en-nl": "Kaartcontainer",
-                      "da-dk": "Kortbeholder",
-                      "sv-se": "Kortbehållare",
-                      "nb-no": "Kortbeholder",
                       "fr-fr": "Conteneur de cartes",
-                      "en-fr": "Conteneur de carte",
                       "ja-jp": "カードコンテナ",
-                      "ar-uae": "حاوية البطاقات",
-                      "ar-ksa": "حاوية البطاقات"
+                      "nb-no": "Kortbeholder",
+                      "nl-nl": "Kaartcontainer",
+                      "sv-se": "Kortbehållare",
+                      "ar-ksa": "حاوية البطاقات",
+                      "ar-uae": "حاوية البطاقات"
                     }
                   },
                   "fluidContent": {
@@ -5941,24 +6148,24 @@
             "text": {
               "type": "text",
               "locales": {
+                "da-dk": "Mere",
+                "de-at": "Mehr",
+                "de-de": "Mehr",
+                "en-au": "Plus",
+                "en-ca": "More",
+                "en-gb": "More",
+                "en-nl": "Meer",
+                "en-nz": "Mehr",
                 "en-us": "More",
                 "es-us": "Más",
                 "fr-ca": "Plus",
-                "en-ca": "More",
-                "en-gb": "More",
-                "de-de": "Mehr",
-                "en-de": "Mehr",
-                "de-at": "Mehr",
-                "nl-nl": "Meer",
-                "en-nl": "Meer",
-                "da-dk": "Mere",
-                "sv-se": "Mer",
-                "nb-no": "Mer",
                 "fr-fr": "Plus",
-                "en-fr": "Plus",
                 "ja-jp": "もっと",
-                "ar-uae": "المزيد",
-                "ar-ksa": "المزيد"
+                "nb-no": "Mer",
+                "nl-nl": "Meer",
+                "sv-se": "Mer",
+                "ar-ksa": "المزيد",
+                "ar-uae": "المزيد"
               }
             },
             "color": {
@@ -5982,7 +6189,7 @@
                         "value": "5cecc18f-87ba-4a83-8456-0aabfb2db3a5"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/H9CXZ6XGRueXn1jD3BIBHg-chevron-down-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/TbF1A9J_QHWrqn2J8zYR2w-chevron-down-white.svg",
                         "type": "text"
                       },
                       "file": {
@@ -6023,7 +6230,7 @@
                         "value": "5cecc18f-87ba-4a83-8456-0aabfb2db3a5"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/H9CXZ6XGRueXn1jD3BIBHg-chevron-down-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/TbF1A9J_QHWrqn2J8zYR2w-chevron-down-white.svg",
                         "type": "text"
                       },
                       "file": {
@@ -6064,7 +6271,48 @@
                         "value": "5cecc18f-87ba-4a83-8456-0aabfb2db3a5"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/H9CXZ6XGRueXn1jD3BIBHg-chevron-down-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/TbF1A9J_QHWrqn2J8zYR2w-chevron-down-white.svg",
+                        "type": "text"
+                      },
+                      "file": {
+                        "type": "file",
+                        "value": "29997414-1698-4f3b-8803-bc9b520da13e"
+                      },
+                      "size": {
+                        "value": 228,
+                        "type": "number"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "chevron-down-white.svg"
+                      },
+                      "width": {
+                        "value": 24,
+                        "type": "number"
+                      },
+                      "height": {
+                        "value": 24,
+                        "type": "number"
+                      },
+                      "mediaType": {
+                        "value": "image/svg+xml",
+                        "type": "text"
+                      }
+                    },
+                    "_source": "uniform-assets"
+                  }
+                ],
+                "en-au": [
+                  {
+                    "_id": "ef9876d5-cb77-49de-aa4e-a854dc7cb972",
+                    "type": "image",
+                    "fields": {
+                      "id": {
+                        "type": "text",
+                        "value": "5cecc18f-87ba-4a83-8456-0aabfb2db3a5"
+                      },
+                      "url": {
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/TbF1A9J_QHWrqn2J8zYR2w-chevron-down-white.svg",
                         "type": "text"
                       },
                       "file": {
@@ -6105,89 +6353,7 @@
                         "value": "5cecc18f-87ba-4a83-8456-0aabfb2db3a5"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/H9CXZ6XGRueXn1jD3BIBHg-chevron-down-white.svg",
-                        "type": "text"
-                      },
-                      "file": {
-                        "type": "file",
-                        "value": "29997414-1698-4f3b-8803-bc9b520da13e"
-                      },
-                      "size": {
-                        "value": 228,
-                        "type": "number"
-                      },
-                      "title": {
-                        "type": "text",
-                        "value": "chevron-down-white.svg"
-                      },
-                      "width": {
-                        "value": 24,
-                        "type": "number"
-                      },
-                      "height": {
-                        "value": 24,
-                        "type": "number"
-                      },
-                      "mediaType": {
-                        "value": "image/svg+xml",
-                        "type": "text"
-                      }
-                    },
-                    "_source": "uniform-assets"
-                  }
-                ],
-                "en-de": [
-                  {
-                    "_id": "ef9876d5-cb77-49de-aa4e-a854dc7cb972",
-                    "type": "image",
-                    "fields": {
-                      "id": {
-                        "type": "text",
-                        "value": "5cecc18f-87ba-4a83-8456-0aabfb2db3a5"
-                      },
-                      "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/H9CXZ6XGRueXn1jD3BIBHg-chevron-down-white.svg",
-                        "type": "text"
-                      },
-                      "file": {
-                        "type": "file",
-                        "value": "29997414-1698-4f3b-8803-bc9b520da13e"
-                      },
-                      "size": {
-                        "value": 228,
-                        "type": "number"
-                      },
-                      "title": {
-                        "type": "text",
-                        "value": "chevron-down-white.svg"
-                      },
-                      "width": {
-                        "value": 24,
-                        "type": "number"
-                      },
-                      "height": {
-                        "value": 24,
-                        "type": "number"
-                      },
-                      "mediaType": {
-                        "value": "image/svg+xml",
-                        "type": "text"
-                      }
-                    },
-                    "_source": "uniform-assets"
-                  }
-                ],
-                "en-fr": [
-                  {
-                    "_id": "ef9876d5-cb77-49de-aa4e-a854dc7cb972",
-                    "type": "image",
-                    "fields": {
-                      "id": {
-                        "type": "text",
-                        "value": "5cecc18f-87ba-4a83-8456-0aabfb2db3a5"
-                      },
-                      "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/H9CXZ6XGRueXn1jD3BIBHg-chevron-down-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/TbF1A9J_QHWrqn2J8zYR2w-chevron-down-white.svg",
                         "type": "text"
                       },
                       "file": {
@@ -6228,7 +6394,7 @@
                         "value": "5cecc18f-87ba-4a83-8456-0aabfb2db3a5"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/H9CXZ6XGRueXn1jD3BIBHg-chevron-down-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/TbF1A9J_QHWrqn2J8zYR2w-chevron-down-white.svg",
                         "type": "text"
                       },
                       "file": {
@@ -6269,7 +6435,48 @@
                         "value": "5cecc18f-87ba-4a83-8456-0aabfb2db3a5"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/H9CXZ6XGRueXn1jD3BIBHg-chevron-down-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/TbF1A9J_QHWrqn2J8zYR2w-chevron-down-white.svg",
+                        "type": "text"
+                      },
+                      "file": {
+                        "type": "file",
+                        "value": "29997414-1698-4f3b-8803-bc9b520da13e"
+                      },
+                      "size": {
+                        "value": 228,
+                        "type": "number"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "chevron-down-white.svg"
+                      },
+                      "width": {
+                        "value": 24,
+                        "type": "number"
+                      },
+                      "height": {
+                        "value": 24,
+                        "type": "number"
+                      },
+                      "mediaType": {
+                        "value": "image/svg+xml",
+                        "type": "text"
+                      }
+                    },
+                    "_source": "uniform-assets"
+                  }
+                ],
+                "en-nz": [
+                  {
+                    "_id": "ef9876d5-cb77-49de-aa4e-a854dc7cb972",
+                    "type": "image",
+                    "fields": {
+                      "id": {
+                        "type": "text",
+                        "value": "5cecc18f-87ba-4a83-8456-0aabfb2db3a5"
+                      },
+                      "url": {
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/TbF1A9J_QHWrqn2J8zYR2w-chevron-down-white.svg",
                         "type": "text"
                       },
                       "file": {
@@ -6310,7 +6517,7 @@
                         "value": "5cecc18f-87ba-4a83-8456-0aabfb2db3a5"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/H9CXZ6XGRueXn1jD3BIBHg-chevron-down-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/TbF1A9J_QHWrqn2J8zYR2w-chevron-down-white.svg",
                         "type": "text"
                       },
                       "file": {
@@ -6351,7 +6558,7 @@
                         "value": "5cecc18f-87ba-4a83-8456-0aabfb2db3a5"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/H9CXZ6XGRueXn1jD3BIBHg-chevron-down-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/TbF1A9J_QHWrqn2J8zYR2w-chevron-down-white.svg",
                         "type": "text"
                       },
                       "file": {
@@ -6392,7 +6599,7 @@
                         "value": "5cecc18f-87ba-4a83-8456-0aabfb2db3a5"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/H9CXZ6XGRueXn1jD3BIBHg-chevron-down-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/TbF1A9J_QHWrqn2J8zYR2w-chevron-down-white.svg",
                         "type": "text"
                       },
                       "file": {
@@ -6433,7 +6640,7 @@
                         "value": "5cecc18f-87ba-4a83-8456-0aabfb2db3a5"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/H9CXZ6XGRueXn1jD3BIBHg-chevron-down-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/TbF1A9J_QHWrqn2J8zYR2w-chevron-down-white.svg",
                         "type": "text"
                       },
                       "file": {
@@ -6474,7 +6681,7 @@
                         "value": "5cecc18f-87ba-4a83-8456-0aabfb2db3a5"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/H9CXZ6XGRueXn1jD3BIBHg-chevron-down-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/TbF1A9J_QHWrqn2J8zYR2w-chevron-down-white.svg",
                         "type": "text"
                       },
                       "file": {
@@ -6515,7 +6722,7 @@
                         "value": "5cecc18f-87ba-4a83-8456-0aabfb2db3a5"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/H9CXZ6XGRueXn1jD3BIBHg-chevron-down-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/TbF1A9J_QHWrqn2J8zYR2w-chevron-down-white.svg",
                         "type": "text"
                       },
                       "file": {
@@ -6556,7 +6763,7 @@
                         "value": "5cecc18f-87ba-4a83-8456-0aabfb2db3a5"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/H9CXZ6XGRueXn1jD3BIBHg-chevron-down-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/TbF1A9J_QHWrqn2J8zYR2w-chevron-down-white.svg",
                         "type": "text"
                       },
                       "file": {
@@ -6597,7 +6804,7 @@
                         "value": "5cecc18f-87ba-4a83-8456-0aabfb2db3a5"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/H9CXZ6XGRueXn1jD3BIBHg-chevron-down-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/TbF1A9J_QHWrqn2J8zYR2w-chevron-down-white.svg",
                         "type": "text"
                       },
                       "file": {
@@ -6638,7 +6845,7 @@
                         "value": "5cecc18f-87ba-4a83-8456-0aabfb2db3a5"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/H9CXZ6XGRueXn1jD3BIBHg-chevron-down-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/TbF1A9J_QHWrqn2J8zYR2w-chevron-down-white.svg",
                         "type": "text"
                       },
                       "file": {
@@ -6679,7 +6886,7 @@
                         "value": "5cecc18f-87ba-4a83-8456-0aabfb2db3a5"
                       },
                       "url": {
-                        "value": "https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/H9CXZ6XGRueXn1jD3BIBHg-chevron-down-white.svg",
+                        "value": "https://img.uniform.global/p/Sf3F43Z6SfylRb0JaQ1fuQ/TbF1A9J_QHWrqn2J8zYR2w-chevron-down-white.svg",
                         "type": "text"
                       },
                       "file": {
@@ -6734,7 +6941,7 @@
       "en-ca",
       "en-gb",
       "de-de",
-      "en-de",
+      "en-nz",
       "de-at",
       "nl-nl",
       "en-nl",
@@ -6742,14 +6949,14 @@
       "sv-se",
       "nb-no",
       "fr-fr",
-      "en-fr",
+      "en-au",
       "ja-jp",
       "ar-uae",
       "ar-ksa"
     ]
   },
   "created": "2025-05-21T12:05:10.094671+00:00",
-  "modified": "2025-07-10T10:00:51.79918+00:00",
+  "modified": "2025-07-31T12:51:33.900783+00:00",
   "pattern": true,
   "previewImageUrl": "https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/featured_header.png",
   "categoryId": "b1163ce2-5ac7-4347-bc38-a42198180718"

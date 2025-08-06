@@ -12,7 +12,8 @@
         "collapsed": true,
         "childrenParams": [
           "textColor",
-          "border"
+          "border",
+          "cardButtonText"
         ]
       }
     },
@@ -32,6 +33,48 @@
       "typeConfig": {
         "selectedTokenType": "border"
       }
+    },
+    {
+      "id": "cardButtonText",
+      "name": "Card Button Text",
+      "type": "text",
+      "helpText": "Applies if the button exists in the card",
+      "typeConfig": null,
+      "localizable": true
+    },
+    {
+      "id": "d6e80361-d979-4bfb-b5ef-e7b89d88fb2d",
+      "name": "No Results Settings ",
+      "type": "group",
+      "typeConfig": {
+        "collapsed": true,
+        "childrenParams": [
+          "noResultsFoundText",
+          "tryDifferentFiltersText",
+          "clearAllFilterText"
+        ]
+      }
+    },
+    {
+      "id": "noResultsFoundText",
+      "name": "No Results Found Text",
+      "type": "text",
+      "typeConfig": null,
+      "localizable": true
+    },
+    {
+      "id": "tryDifferentFiltersText",
+      "name": "Try Different Filters Text",
+      "type": "text",
+      "typeConfig": null,
+      "localizable": true
+    },
+    {
+      "id": "clearAllFilterText",
+      "name": "Clear All Filter Text",
+      "type": "text",
+      "typeConfig": null,
+      "localizable": true
     }
   ],
   "categoryId": "624b55ca-4671-46e2-8fd5-4a9b34b4c121",
@@ -40,5 +83,5 @@
   "slots": [],
   "canBeComposition": false,
   "created": "2025-05-20T11:53:39.052747+00:00",
-  "updated": "2025-06-18T12:11:54.854555+00:00"
+  "updated": "2025-07-18T07:15:07.504669+00:00"
 }

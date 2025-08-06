@@ -44,6 +44,7 @@
           "imageObjectFit",
           "imageWidth",
           "imageHeight",
+          "imageFill",
           "imageUnoptimized",
           "imagePriority",
           "imageOverlayColor",
@@ -102,6 +103,13 @@
       "id": "imageHeight",
       "name": "Height",
       "type": "number",
+      "typeConfig": null
+    },
+    {
+      "id": "imageFill",
+      "name": "Fill",
+      "type": "checkbox",
+      "helpText": "Fills the parent container",
       "typeConfig": null
     },
     {
@@ -287,7 +295,7 @@
   "titleParameter": "displayName",
   "canBeComposition": false,
   "created": "2025-02-27T10:44:57.510795+00:00",
-  "updated": "2025-07-09T06:34:03.161835+00:00",
+  "updated": "2025-07-17T05:45:03.504362+00:00",
   "variants": [
     {
       "id": "columns",
