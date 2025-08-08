@@ -8,6 +8,7 @@ export enum TOKEN_STYLE_FILE {
   Colors = 'colors',
   Dimensions = 'dimensions',
   Fonts = 'fonts',
+  DefaultFontKey = 'defaultFontKey',
   Borders = 'borders',
   ThemeData = 'themeData',
 }

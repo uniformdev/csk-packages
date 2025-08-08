@@ -49,6 +49,14 @@ export const pushTokenValue = (endPoint: string, body?: BodyInit | null) =>
     return response;
   });
 
-export const syncSuccessLog = (token: TOKEN_STYLE_FILE | CONFIG_FILE, mode: 'pushed' | 'pulled') => {
+export const syncSuccessLog = (token: TOKEN_STYLE_FILE | CONFIG_FILE, mode: 'pushed' | 'pulled' | 'applied') => {
   console.info(FG_GREEN, `The ${token} configuration was successfully ${mode}`);
 };
+
+export function parseJson(str: string) {
+  try {
+    return JSON.parse(str);
+  } catch {
+    throw new Error(`Invalid JSON: ${str}`);
+  }
+}

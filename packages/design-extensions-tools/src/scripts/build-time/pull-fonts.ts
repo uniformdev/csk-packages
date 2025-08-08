@@ -21,8 +21,8 @@ export const buildFontsStyle = async () => {
   const fetchedDefaultFontKey = await defaultFontKeyResponse.text();
 
   addToConfiguration({
-    fonts: fetchedFonts,
-    defaultFontKey: fetchedDefaultFontKey,
+    [TOKEN_STYLE_FILE.Fonts]: fetchedFonts,
+    [TOKEN_STYLE_FILE.DefaultFontKey]: fetchedDefaultFontKey,
   });
 
   syncSuccessLog(TOKEN_STYLE_FILE.Fonts, 'pulled');

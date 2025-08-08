@@ -11,6 +11,10 @@ import {
   pushDimensions,
   pushFonts,
 } from '../src/scripts/build-time';
+import { applyBorders } from './scripts/build-time/apply-borders';
+import { applyColors } from './scripts/build-time/apply-colors';
+import { applyDimensions } from './scripts/build-time/apply-dimensions';
+import { applyFonts } from './scripts/build-time/apply-fonts';
 
 type PullArgs = {
   colors?: boolean;
@@ -85,6 +89,27 @@ program
       }
       return;
     }
+  });
+
+type ApplyArgs = {
+  mode?: 'css' | 'tailwind';
+};
+
+program
+  .command('apply')
+  .description('Apply data to the config file')
+  .option('-m, --mode <mode>', 'apply dex configuration to pure css or tailwindcss', 'tailwind')
+  .action(async (args: ApplyArgs) => {
+    console.info('Applying all configuration...');
+    for (const action of [applyColors, applyDimensions, applyFonts, applyBorders]) {
+      try {
+        await action(args?.mode || 'tailwind');
+      } catch (e) {
+        console.error(e);
+        return;
+      }
+    }
+    return;
   });
 
 type PushArgs = {
