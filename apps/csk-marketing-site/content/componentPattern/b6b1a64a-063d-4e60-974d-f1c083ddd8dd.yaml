@@ -146,9 +146,15 @@ composition:
                           value: image/png
                           type: text
                       _source: uniform-assets
+                width:
+                  type: number
+                  value: '320'
                 border:
                   type: dex-token-selector-parameter
                   value: border-image-radius-medium
+                height:
+                  type: number
+                  value: '448'
                 objectFit:
                   type: dex-segmented-control-parameter
                   value: cover
@@ -210,8 +216,8 @@ composition:
       link: 'yes'
       enableComponentPreview: 'yes'
     hideLockedParameters: true
-created: '2025-06-20T12:39:40.07013+00:00'
-modified: '2025-06-20T13:04:01.730524+00:00'
+created: '2025-08-08T08:08:54.664205+00:00'
+modified: '2025-08-08T08:22:54.664782+00:00'
 pattern: true
 description: >-
   This example is constructed utilizing the Hero component, which incorporates a
