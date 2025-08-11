@@ -1,35 +1,30 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { PATH_TO_STYLE_FOLDER, TOKEN_STYLE_FILE } from '../../constants';
-import { checkEnvironmentVariable, pushTokenValue, syncSuccessLog } from '../../utils';
-import { getValueWithAlias } from '../../utils/getTokenStyles';
-
-const REGEX_DIMENSION_VARS = /--[^:]+: [^;]+;/g;
+import { DEFAULT_CONFIG_FILE_PATH, TOKEN_STYLE_FILE } from '../../constants';
+import { checkEnvironmentVariable, parseJson, pushTokenValue, syncSuccessLog } from '../../utils';
 
 export const pushDimensions = async () => {
   checkEnvironmentVariable(TOKEN_STYLE_FILE.Dimensions, true);
 
-  const pathToStyleFile = path.join(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Dimensions}.css`);
-
-  if (!fs.existsSync(pathToStyleFile)) {
+  if (!fs.existsSync(DEFAULT_CONFIG_FILE_PATH)) {
     console.error(
-      `No such file with styles: ${pathToStyleFile}. You can override it by setting STYLES_PATH environment variable.`
+      `No such file with styles: ${DEFAULT_CONFIG_FILE_PATH}. You can override it by setting STYLES_PATH environment variable.`
     );
     return;
   }
 
-  const dimensionsCssFile = fs.readFileSync(path.resolve(pathToStyleFile), 'utf8');
+  const configurationContent = fs.readFileSync(path.resolve(DEFAULT_CONFIG_FILE_PATH), 'utf8');
 
-  const dimensions = dimensionsCssFile.match(REGEX_DIMENSION_VARS)?.reduce((acc, line) => {
-    const [key, value] = line.split(':');
-    if (!key || !value) return acc;
-    return {
-      ...acc,
-      [key?.replace('--', '')]: getValueWithAlias(value?.trim()?.replace(';', '')),
-    };
-  }, {});
+  const configuration = parseJson(configurationContent);
 
-  await pushTokenValue('setDimensions', JSON.stringify(dimensions));
+  const dimensions = configuration[TOKEN_STYLE_FILE.Dimensions];
+
+  if (!dimensions) {
+    console.error(`No dimensions found in ${DEFAULT_CONFIG_FILE_PATH}`);
+    return;
+  }
+
+  //await pushTokenValue('setDimensions', JSON.stringify(dimensions));
 
   syncSuccessLog(TOKEN_STYLE_FILE.Dimensions, 'pushed');
 };

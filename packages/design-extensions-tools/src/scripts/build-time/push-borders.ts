@@ -1,45 +1,30 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { PATH_TO_STYLE_FOLDER, TOKEN_STYLE_FILE } from '../../constants';
-import { checkEnvironmentVariable, pushTokenValue, syncSuccessLog } from '../../utils';
-import { getValueWithAlias } from '../../utils/getTokenStyles';
-
-const REGEX_BORDER_VARS = /--[^:]+: [^;]+;/g;
+import { PATH_TO_STYLE_FOLDER, DEFAULT_CONFIG_FILE_PATH, TOKEN_STYLE_FILE } from '../../constants';
+import { checkEnvironmentVariable, parseJson, pushTokenValue, syncSuccessLog } from '../../utils';
 
 export const pushBorders = async () => {
   checkEnvironmentVariable(TOKEN_STYLE_FILE.Borders, true);
 
-  const pathToStyleFile = path.join(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Borders}.css`);
-
-  if (!fs.existsSync(pathToStyleFile)) {
+  if (!fs.existsSync(DEFAULT_CONFIG_FILE_PATH)) {
     console.error(
-      `No such file with styles: ${pathToStyleFile}. You can override it by setting STYLES_PATH environment variable.`
+      `No such file with styles: ${DEFAULT_CONFIG_FILE_PATH}. You can override it by setting STYLES_PATH environment variable.`
     );
     return;
   }
 
-  const bordersCssFile = fs.readFileSync(path.resolve(pathToStyleFile), 'utf8');
+  const configurationContent = fs.readFileSync(path.resolve(DEFAULT_CONFIG_FILE_PATH), 'utf8');
 
-  const borders = bordersCssFile
-    .match(REGEX_BORDER_VARS)
-    ?.reduce<Record<string, Record<string, string>>>((acc, line) => {
-      const [key, value] = line.split(':');
-      if (!key || !value) return acc;
-      const lastDashIndex = key.lastIndexOf('-');
+  const configuration = parseJson(configurationContent);
 
-      const borderKey = key.substring(0, lastDashIndex).replace('--', '');
-      const propertyName = key.substring(lastDashIndex + 1);
+  const borders = configuration[TOKEN_STYLE_FILE.Borders];
 
-      return {
-        ...acc,
-        [borderKey]: {
-          ...acc[borderKey],
-          [propertyName]: getValueWithAlias(value?.trim()?.replace(';', '')),
-        },
-      };
-    }, {});
+  if (!borders) {
+    console.error(`No borders found in ${DEFAULT_CONFIG_FILE_PATH}`);
+    return;
+  }
 
-  await pushTokenValue('setBorders', JSON.stringify(borders));
+  //await pushTokenValue('setBorders', JSON.stringify(borders));
 
   syncSuccessLog(TOKEN_STYLE_FILE.Borders, 'pushed');
 };

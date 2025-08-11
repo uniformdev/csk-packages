@@ -1,60 +1,33 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { PATH_TO_STYLE_FOLDER, REGEX_ALIAS_VALUE, TOKEN_STYLE_FILE } from '../../constants';
-import { checkEnvironmentVariable, pushTokenValue, syncSuccessLog } from '../../utils';
-import { getFontFamilyName } from '../../utils/getTokenStyles';
-
-const FIND_FONTS_URL_REGEX = /@import\s+url\(\s*'([^']+)'\s*\);/g;
-const REGEX_FONT_VARS = /--[^:]+: [^;]+;/g;
+import { DEFAULT_CONFIG_FILE_PATH, TOKEN_STYLE_FILE } from '../../constants';
+import { checkEnvironmentVariable, parseJson, pushTokenValue, syncSuccessLog } from '../../utils';
 
 export const pushFonts = async () => {
   checkEnvironmentVariable(TOKEN_STYLE_FILE.Fonts, true);
 
-  const pathToStyleFile = path.join(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Fonts}.css`);
-
-  if (!fs.existsSync(pathToStyleFile)) {
+  if (!fs.existsSync(DEFAULT_CONFIG_FILE_PATH)) {
     console.error(
-      `No such file with styles: ${pathToStyleFile}. You can override it by setting STYLES_PATH environment variable.`
+      `No such file with styles: ${DEFAULT_CONFIG_FILE_PATH}. You can override it by setting STYLES_PATH environment variable.`
     );
     return;
   }
 
-  const fontsCssFile = fs.readFileSync(path.resolve(pathToStyleFile), 'utf8');
+  const configurationContent = fs.readFileSync(path.resolve(DEFAULT_CONFIG_FILE_PATH), 'utf8');
 
-  const fontUrl = FIND_FONTS_URL_REGEX.exec(fontsCssFile)?.[1];
+  const configuration = parseJson(configurationContent);
 
-  const googleFontValues = Object.fromEntries(
-    fontUrl
-      ? new URLSearchParams(new URL(fontUrl).search)
-          .getAll('family')
-          .map(fontValue => [getFontFamilyName(fontValue), fontValue])
-      : []
-  );
+  const fonts = configuration[TOKEN_STYLE_FILE.Fonts];
 
-  const fonts: Record<string, string> =
-    fontsCssFile.match(REGEX_FONT_VARS)?.reduce((acc, line) => {
-      const [key, value] = line.split(':');
-      if (!key || !value) return acc;
-      return {
-        ...acc,
-        [key?.replace('--', '')]: value?.trim()?.replace(';', ''),
-      };
-    }, {}) || {};
+  if (!fonts) {
+    console.error(`No fonts found in ${DEFAULT_CONFIG_FILE_PATH}`);
+    return;
+  }
 
-  const { defaultFont, ...resolvedFonts } = Object.entries(fonts).reduce<Record<string, string>>(
-    (acc, [key, value]) => {
-      if (key === 'default-font') {
-        acc.defaultFont = value.match(REGEX_ALIAS_VALUE)?.[1] || '';
-      } else {
-        acc[key] = googleFontValues[value] || '';
-      }
-      return acc;
-    },
-    {}
-  );
+  const defaultFont = configuration[TOKEN_STYLE_FILE.DefaultFontKey];
 
-  await pushTokenValue('setFonts', JSON.stringify(resolvedFonts));
-  await pushTokenValue('setDefaultFont', JSON.stringify({ defaultFont }));
+  //await pushTokenValue('setFonts', JSON.stringify(fonts));
+  //await pushTokenValue('setDefaultFont', JSON.stringify({ defaultFont }));
 
   syncSuccessLog(TOKEN_STYLE_FILE.Fonts, 'pushed');
 };
