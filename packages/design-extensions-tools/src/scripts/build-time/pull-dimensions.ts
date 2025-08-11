@@ -1,9 +1,9 @@
-import { TOKEN_STYLE_FILE } from '../../constants';
+import { CONFIGURATION_KEYS } from '../../constants';
 import { checkEnvironmentVariable, fetchTokenValue, syncSuccessLog } from '../../utils';
 import addToConfiguration from '../../utils/addToConfiguration';
 
 export const buildDimensions = async () => {
-  if (!checkEnvironmentVariable(TOKEN_STYLE_FILE.Dimensions)) return;
+  if (!checkEnvironmentVariable()) return;
 
   const response = await fetchTokenValue('getDimensions');
 
@@ -17,5 +17,5 @@ export const buildDimensions = async () => {
     dimensions: fetchedDimensions,
   });
 
-  syncSuccessLog(TOKEN_STYLE_FILE.Dimensions, 'pulled');
+  syncSuccessLog(CONFIGURATION_KEYS.Dimensions, 'pulled');
 };

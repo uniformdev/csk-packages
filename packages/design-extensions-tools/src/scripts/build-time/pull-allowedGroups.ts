@@ -1,29 +1,17 @@
-import fs from 'node:fs';
-import path from 'node:path';
-import { PATH_TO_CONFIG_FOLDER, CONFIG_FILE } from '../../constants';
+import { CONFIGURATION_KEYS } from '../../constants';
 import { checkEnvironmentVariable, fetchTokenValue, syncSuccessLog } from '../../utils';
+import addToConfiguration from '../../utils/addToConfiguration';
 
 export const buildAllowedGroups = async () => {
-  if (!checkEnvironmentVariable(CONFIG_FILE.AllowedGroups)) return;
-
-  if (!fs.existsSync(PATH_TO_CONFIG_FOLDER)) {
-    console.error(
-      `No such directory for config files: ${PATH_TO_CONFIG_FOLDER}. You can override it by setting CONFIG_PATH environment variable.`
-    );
-    return;
-  }
+  if (!checkEnvironmentVariable()) return;
 
   const response = await fetchTokenValue('getAllowedGroups');
 
   const fetchedAllowedGroups = await response.json();
 
-  const allowedGroupsPath = path.resolve(PATH_TO_CONFIG_FOLDER, `${CONFIG_FILE.AllowedGroups}.json`);
+  addToConfiguration({
+    [CONFIGURATION_KEYS.AllowedGroups]: fetchedAllowedGroups || {},
+  });
 
-  if (Object.keys(fetchedAllowedGroups).length === 0) {
-    if (fs.existsSync(allowedGroupsPath)) fs.unlinkSync(allowedGroupsPath);
-  } else {
-    fs.writeFileSync(allowedGroupsPath, JSON.stringify(fetchedAllowedGroups, null, 2), 'utf8');
-  }
-
-  syncSuccessLog(CONFIG_FILE.AllowedGroups, 'pulled');
+  syncSuccessLog(CONFIGURATION_KEYS.AllowedGroups, 'pulled');
 };

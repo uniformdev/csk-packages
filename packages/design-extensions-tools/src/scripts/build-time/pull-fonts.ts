@@ -1,9 +1,9 @@
-import { TOKEN_STYLE_FILE } from '../../constants';
+import { CONFIGURATION_KEYS } from '../../constants';
 import { checkEnvironmentVariable, fetchTokenValue, syncSuccessLog } from '../../utils';
 import addToConfiguration from '../../utils/addToConfiguration';
 
 export const buildFontsStyle = async () => {
-  if (!checkEnvironmentVariable(TOKEN_STYLE_FILE.Fonts)) return;
+  if (!checkEnvironmentVariable()) return;
 
   const fontsResponse = await fetchTokenValue('getFonts');
 
@@ -21,9 +21,9 @@ export const buildFontsStyle = async () => {
   const fetchedDefaultFontKey = await defaultFontKeyResponse.text();
 
   addToConfiguration({
-    [TOKEN_STYLE_FILE.Fonts]: fetchedFonts,
-    [TOKEN_STYLE_FILE.DefaultFontKey]: fetchedDefaultFontKey,
+    [CONFIGURATION_KEYS.Fonts]: fetchedFonts,
+    [CONFIGURATION_KEYS.DefaultFontKey]: fetchedDefaultFontKey,
   });
 
-  syncSuccessLog(TOKEN_STYLE_FILE.Fonts, 'pulled');
+  syncSuccessLog(CONFIGURATION_KEYS.Fonts, 'pulled');
 };

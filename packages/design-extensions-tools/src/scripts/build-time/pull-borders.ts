@@ -1,9 +1,9 @@
-import { TOKEN_STYLE_FILE } from '../../constants';
+import { CONFIGURATION_KEYS } from '../../constants';
 import { checkEnvironmentVariable, fetchTokenValue, syncSuccessLog } from '../../utils';
 import addToConfiguration from '../../utils/addToConfiguration';
 
 export const buildBorders = async () => {
-  if (!checkEnvironmentVariable(TOKEN_STYLE_FILE.Borders)) return;
+  if (!checkEnvironmentVariable()) return;
 
   const response = await fetchTokenValue('getBorders');
 
@@ -14,8 +14,8 @@ export const buildBorders = async () => {
   const fetchedBorders = await response.json();
 
   addToConfiguration({
-    [TOKEN_STYLE_FILE.Borders]: fetchedBorders,
+    [CONFIGURATION_KEYS.Borders]: fetchedBorders,
   });
 
-  syncSuccessLog(TOKEN_STYLE_FILE.Borders, 'pulled');
+  syncSuccessLog(CONFIGURATION_KEYS.Borders, 'pulled');
 };

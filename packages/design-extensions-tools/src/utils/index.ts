@@ -1,12 +1,19 @@
-import { BASE_API_URL, CONFIG_FILE, DEFAULT_INTEGRATION_URL, FG_GREEN, TOKEN_STYLE_FILE } from '../constants';
+import {
+  BASE_API_URL,
+  CONFIG_FILE,
+  DEFAULT_INTEGRATION_URL,
+  FG_GREEN,
+  CONFIGURATION_KEYS,
+  CONFIG_FILE_PATH,
+} from '../constants';
 
 export { generateTailwindcssSource } from './generateTailwindcssPatterns';
 
 export { getTokenStyles, getRootSimpleTokensValue, getRootBordersValue } from './getTokenStyles';
 
-export const checkEnvironmentVariable = (tokenFile: string, isForce: boolean = false) => {
+export const checkEnvironmentVariable = (isForce: boolean = false) => {
   if (!isForce && process.env.DEV_MODE === 'true') {
-    console.info(`Skip fetch ${tokenFile} from integration in dev mode`);
+    console.info(`Skip fetch ${CONFIG_FILE_PATH} from integration in dev mode`);
     return false;
   }
 
@@ -49,7 +56,7 @@ export const pushTokenValue = (endPoint: string, body?: BodyInit | null) =>
     return response;
   });
 
-export const syncSuccessLog = (token: TOKEN_STYLE_FILE | CONFIG_FILE, mode: 'pushed' | 'pulled' | 'applied') => {
+export const syncSuccessLog = (token: CONFIGURATION_KEYS | CONFIG_FILE, mode: 'pushed' | 'pulled' | 'applied') => {
   console.info(FG_GREEN, `The ${token} configuration was successfully ${mode}`);
 };
 

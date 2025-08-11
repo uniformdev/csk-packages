@@ -2,13 +2,13 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { generateTailwindcssSource } from 'src/utils/generateTailwindcssPatterns';
 import {
-  TOKEN_STYLE_FILE,
+  CONFIGURATION_KEYS,
   PATH_TO_STYLE_FOLDER,
   DEFAULT_TAILWIND_BORDER_CONF_PATH,
   DEFAULT_BORDER_VARIANTS,
   CONFIG_FILE_PATH,
 } from '../../constants';
-import { checkEnvironmentVariable, getRootBordersValue, parseJson, syncSuccessLog } from '../../utils';
+import { getRootBordersValue, parseJson, syncSuccessLog } from '../../utils';
 
 const generateBordersData = (
   borders: Record<string, { color: string; width: string; radius: string; style: string }>
@@ -39,8 +39,6 @@ const generateBordersData = (
 };
 
 export const applyBorders = async (mode: 'css' | 'tailwind') => {
-  if (!checkEnvironmentVariable(TOKEN_STYLE_FILE.Borders)) return;
-
   if (!fs.existsSync(PATH_TO_STYLE_FOLDER)) {
     console.error(
       `No such directory for style files: ${PATH_TO_STYLE_FOLDER}. You can override it by setting STYLES_PATH environment variable.`
@@ -57,7 +55,7 @@ export const applyBorders = async (mode: 'css' | 'tailwind') => {
 
   const config = parseJson(fs.readFileSync(CONFIG_FILE_PATH, 'utf8'));
 
-  const borders = config[TOKEN_STYLE_FILE.Borders];
+  const borders = config[CONFIGURATION_KEYS.Borders];
 
   if (!borders) {
     console.error(`No borders found in config file: ${CONFIG_FILE_PATH}`);
@@ -75,7 +73,7 @@ export const applyBorders = async (mode: 'css' | 'tailwind') => {
   const cssBorders = getRootBordersValue(borders);
 
   const utilitiesPath = path.resolve(PATH_TO_STYLE_FOLDER, DEFAULT_TAILWIND_BORDER_CONF_PATH);
-  const bordersCssPath = path.resolve(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Borders}.css`);
+  const bordersCssPath = path.resolve(PATH_TO_STYLE_FOLDER, `${CONFIGURATION_KEYS.Borders}.css`);
 
   if (mode === 'tailwind') {
     fs.writeFileSync(utilitiesPath, `${sourceLine}\r\n\r\n${themeBlock}`, 'utf8');
@@ -83,5 +81,5 @@ export const applyBorders = async (mode: 'css' | 'tailwind') => {
 
   fs.writeFileSync(bordersCssPath, cssBorders, 'utf8');
 
-  syncSuccessLog(TOKEN_STYLE_FILE.Borders, 'applied');
+  syncSuccessLog(CONFIGURATION_KEYS.Borders, 'applied');
 };

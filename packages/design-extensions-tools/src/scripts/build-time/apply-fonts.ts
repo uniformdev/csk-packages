@@ -5,10 +5,10 @@ import {
   DEFAULT_FONT_VARIANTS,
   DEFAULT_TAILWIND_FONT_CONF_PATH,
   PATH_TO_STYLE_FOLDER,
-  TOKEN_STYLE_FILE,
+  CONFIGURATION_KEYS,
   CONFIG_FILE_PATH,
 } from '../../constants';
-import { checkEnvironmentVariable, parseJson, syncSuccessLog } from '../../utils';
+import { parseJson, syncSuccessLog } from '../../utils';
 import { getFontUrl, getRootFontsValue } from '../../utils/getTokenStyles';
 
 const generateFontsData = (fonts: Record<string, string>, defaultFontKey: string) => {
@@ -36,8 +36,6 @@ const generateFontsData = (fonts: Record<string, string>, defaultFontKey: string
 };
 
 export const applyFonts = async (mode: 'css' | 'tailwind') => {
-  if (!checkEnvironmentVariable(TOKEN_STYLE_FILE.Fonts)) return;
-
   if (!fs.existsSync(PATH_TO_STYLE_FOLDER)) {
     console.error(
       `No such directory for style files: ${PATH_TO_STYLE_FOLDER}. You can override it by setting STYLES_PATH environment variable.`
@@ -54,8 +52,8 @@ export const applyFonts = async (mode: 'css' | 'tailwind') => {
 
   const config = parseJson(fs.readFileSync(CONFIG_FILE_PATH, 'utf8'));
 
-  const fonts = config[TOKEN_STYLE_FILE.Fonts];
-  const defaultFontKey = config[TOKEN_STYLE_FILE.DefaultFontKey];
+  const fonts = config[CONFIGURATION_KEYS.Fonts];
+  const defaultFontKey = config[CONFIGURATION_KEYS.DefaultFontKey];
 
   if (!fonts) {
     console.error(`No fonts found in config file: ${CONFIG_FILE_PATH}`);
@@ -78,7 +76,7 @@ export const applyFonts = async (mode: 'css' | 'tailwind') => {
   const cssFonts = getRootFontsValue(fonts, defaultFontKey);
   const fontUrl = getFontUrl(fonts);
 
-  const fontsCssPath = path.resolve(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Fonts}.css`);
+  const fontsCssPath = path.resolve(PATH_TO_STYLE_FOLDER, `${CONFIGURATION_KEYS.Fonts}.css`);
 
   const fontsTailwindcssPath = path.resolve(PATH_TO_STYLE_FOLDER, DEFAULT_TAILWIND_FONT_CONF_PATH);
 
@@ -87,5 +85,5 @@ export const applyFonts = async (mode: 'css' | 'tailwind') => {
   }
   fs.writeFileSync(fontsCssPath, `${fontUrl}${cssFonts}`, 'utf8');
 
-  syncSuccessLog(TOKEN_STYLE_FILE.Fonts, 'applied');
+  syncSuccessLog(CONFIGURATION_KEYS.Fonts, 'applied');
 };

@@ -1,4 +1,3 @@
-import { TOKEN_STYLE_FILE } from '../../constants';
 import { checkEnvironmentVariable, fetchTokenValue, getTokenStyles } from '../../utils';
 import { getColorTokensValue, getRootBordersValue } from '../../utils/getTokenStyles';
 
@@ -10,11 +9,7 @@ interface TokenConfig {
 }
 
 export const getTokenConfiguration = async (): Promise<TokenConfig | undefined> => {
-  if (
-    !checkEnvironmentVariable(
-      [TOKEN_STYLE_FILE.Colors, TOKEN_STYLE_FILE.Dimensions, TOKEN_STYLE_FILE.Borders, TOKEN_STYLE_FILE.Fonts].join(',')
-    )
-  ) {
+  if (!checkEnvironmentVariable()) {
     return;
   }
 

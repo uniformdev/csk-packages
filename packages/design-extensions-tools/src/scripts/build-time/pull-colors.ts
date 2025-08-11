@@ -1,9 +1,9 @@
-import { TOKEN_STYLE_FILE } from '../../constants';
+import { CONFIGURATION_KEYS } from '../../constants';
 import { checkEnvironmentVariable, fetchTokenValue, syncSuccessLog } from '../../utils';
 import addToConfiguration from '../../utils/addToConfiguration';
 
 export const buildColors = async () => {
-  if (!checkEnvironmentVariable(TOKEN_STYLE_FILE.Colors)) return;
+  if (!checkEnvironmentVariable()) return;
 
   const response = await fetchTokenValue('getColors');
 
@@ -14,8 +14,8 @@ export const buildColors = async () => {
   const fetchedPalette = await response.json();
 
   addToConfiguration({
-    [TOKEN_STYLE_FILE.Colors]: fetchedPalette,
+    [CONFIGURATION_KEYS.Colors]: fetchedPalette,
   });
 
-  syncSuccessLog(TOKEN_STYLE_FILE.Colors, 'pulled');
+  syncSuccessLog(CONFIGURATION_KEYS.Colors, 'pulled');
 };

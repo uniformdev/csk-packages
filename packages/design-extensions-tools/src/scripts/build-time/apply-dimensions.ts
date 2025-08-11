@@ -7,9 +7,9 @@ import {
   DEFAULT_DIMENSION_VARIANTS,
   DEFAULT_TAILWIND_DIMENSION_CONF_PATH,
   PATH_TO_STYLE_FOLDER,
-  TOKEN_STYLE_FILE,
+  CONFIGURATION_KEYS,
 } from '../../constants';
-import { checkEnvironmentVariable, getRootSimpleTokensValue, parseJson, syncSuccessLog } from '../../utils';
+import { getRootSimpleTokensValue, parseJson, syncSuccessLog } from '../../utils';
 
 const generateDimensionsData = (dimensions: Record<string, { light: string; dark: string }>) => {
   const { dimensionKeys, themeLines } = Object.keys(dimensions).reduce<{
@@ -31,8 +31,6 @@ const generateDimensionsData = (dimensions: Record<string, { light: string; dark
 };
 
 export const applyDimensions = async (mode: 'css' | 'tailwind') => {
-  if (!checkEnvironmentVariable(TOKEN_STYLE_FILE.Dimensions)) return;
-
   if (!fs.existsSync(CONFIG_FILE_PATH)) {
     console.error(
       `No such file: ${CONFIG_FILE_PATH}. You can override it by setting DEX_CONFIG_FILE_PATH environment variable.`
@@ -42,7 +40,7 @@ export const applyDimensions = async (mode: 'css' | 'tailwind') => {
 
   const config = parseJson(fs.readFileSync(CONFIG_FILE_PATH, 'utf8'));
 
-  const dimensions = config[TOKEN_STYLE_FILE.Dimensions];
+  const dimensions = config[CONFIGURATION_KEYS.Dimensions];
 
   if (!dimensions) {
     console.error(`No dimensions found in config file: ${CONFIG_FILE_PATH}`);
@@ -66,7 +64,7 @@ export const applyDimensions = async (mode: 'css' | 'tailwind') => {
 
   const cssDimensions = getRootSimpleTokensValue(dimensions);
 
-  const dimensionsCssPath = path.resolve(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Dimensions}.css`);
+  const dimensionsCssPath = path.resolve(PATH_TO_STYLE_FOLDER, `${CONFIGURATION_KEYS.Dimensions}.css`);
   const dimensionsTailwindcssPath = path.resolve(PATH_TO_STYLE_FOLDER, DEFAULT_TAILWIND_DIMENSION_CONF_PATH);
 
   if (mode === 'tailwind') {
@@ -75,5 +73,5 @@ export const applyDimensions = async (mode: 'css' | 'tailwind') => {
 
   fs.writeFileSync(dimensionsCssPath, cssDimensions, 'utf8');
 
-  syncSuccessLog(TOKEN_STYLE_FILE.Dimensions, 'applied');
+  syncSuccessLog(CONFIGURATION_KEYS.Dimensions, 'applied');
 };
