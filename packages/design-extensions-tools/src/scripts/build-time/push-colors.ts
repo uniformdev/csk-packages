@@ -1,11 +1,19 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { DEFAULT_CONFIG_FILE_PATH, CONFIGURATION_KEYS } from '../../constants';
-import { checkEnvironmentVariable, parseJson, pushTokenValue, syncSuccessLog } from '../../utils';
+import { ConnectionOptions } from '../../types';
+import {
+  checkConnectionOptions,
+  checkEnvironmentVariable,
+  parseJson,
+  pushTokenValue,
+  syncSuccessLog,
+} from '../../utils';
 import { validateColorsConfiguration } from '../../utils/validation';
 
-export const pushColors = async () => {
+export const pushColors = async (connectionOptions: ConnectionOptions) => {
   checkEnvironmentVariable(true);
+  if (!checkConnectionOptions(connectionOptions)) return;
 
   if (!fs.existsSync(DEFAULT_CONFIG_FILE_PATH)) {
     console.error(
@@ -35,7 +43,7 @@ export const pushColors = async () => {
     }
   }
 
-  await pushTokenValue('setColors', JSON.stringify(colors));
+  await pushTokenValue('setColors', JSON.stringify(colors), connectionOptions);
 
   syncSuccessLog(CONFIGURATION_KEYS.Colors, 'pushed');
 };

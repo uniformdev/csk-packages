@@ -1,10 +1,18 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { CONFIGURATION_KEYS, DEFAULT_CONFIG_FILE_PATH } from '../../constants';
-import { checkEnvironmentVariable, parseJson, pushTokenValue, syncSuccessLog } from '../../utils';
+import { ConnectionOptions } from '../../types';
+import {
+  checkConnectionOptions,
+  checkEnvironmentVariable,
+  parseJson,
+  pushTokenValue,
+  syncSuccessLog,
+} from '../../utils';
 
-export const pushAllowedGroups = async () => {
+export const pushAllowedGroups = async (connectionOptions: ConnectionOptions) => {
   checkEnvironmentVariable(true);
+  if (!checkConnectionOptions(connectionOptions)) return;
 
   if (!fs.existsSync(DEFAULT_CONFIG_FILE_PATH)) {
     console.error(
@@ -24,7 +32,7 @@ export const pushAllowedGroups = async () => {
     return;
   }
 
-  await pushTokenValue('setAllowedGroups', JSON.stringify(allowedGroups));
+  await pushTokenValue('setAllowedGroups', JSON.stringify(allowedGroups), connectionOptions);
 
   syncSuccessLog(CONFIGURATION_KEYS.AllowedGroups, 'pushed');
 };

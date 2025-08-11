@@ -1,4 +1,5 @@
 import { program } from 'commander';
+import type { Command } from 'commander';
 import {
   buildAllowedGroups,
   buildBorders,
@@ -15,8 +16,27 @@ import { applyBorders } from './scripts/build-time/apply-borders';
 import { applyColors } from './scripts/build-time/apply-colors';
 import { applyDimensions } from './scripts/build-time/apply-dimensions';
 import { applyFonts } from './scripts/build-time/apply-fonts';
+import { ConnectionOptions } from './types';
 
-type PullArgs = {
+const addConnectionOptions = (cmd: Command) =>
+  cmd
+    .option(
+      '--apiKey <key>',
+      'Uniform API key. Defaults to UNIFORM_API_KEY. Supports dotenv.',
+      process.env.UNIFORM_API_KEY
+    )
+    .option(
+      '--apiHost <url>',
+      'Uniform host. Defaults to UNIFORM_CLI_BASE_URL env var or https://uniform.app. Supports dotenv.',
+      process.env.UNIFORM_CLI_BASE_URL || 'https://uniform.app'
+    )
+    .option(
+      '-p, --project <id>',
+      'Uniform project id. Defaults to UNIFORM_PROJECT_ID env var. Supports dotenv.',
+      process.env.UNIFORM_PROJECT_ID
+    );
+
+type PullArgs = ConnectionOptions & {
   colors?: boolean;
   dimensions?: boolean;
   fonts?: boolean;
@@ -26,9 +46,7 @@ type PullArgs = {
   allSettings: boolean;
 };
 
-program
-  .command('pull')
-  .description('Pull data from the integration')
+addConnectionOptions(program.command('pull').description('Pull data from the integration'))
   .option('-c, --colors', 'colors configuration')
   .option('-d, --dimensions', 'dimensions configuration')
   .option('-f, --fonts', 'fonts configuration')
@@ -37,31 +55,37 @@ program
   .option('-at, --allTokens', 'all tokens')
   .option('-as, --allSettings', 'all settings')
   .action(async (args: PullArgs) => {
+    const connectionOptions: ConnectionOptions = {
+      apiKey: args.apiKey,
+      apiHost: args.apiHost,
+      project: args.project,
+    };
+
     if (args?.colors) {
       console.info('Pulling colors...');
-      buildColors().catch(e => console.error(e));
+      buildColors(connectionOptions).catch(e => console.error(e));
       return;
     } else if (args?.dimensions) {
       console.info('Pulling dimensions...');
-      buildDimensions().catch(e => console.error(e));
+      buildDimensions(connectionOptions).catch(e => console.error(e));
       return;
     } else if (args?.fonts) {
       console.info('Pulling fonts...');
-      buildFontsStyle().catch(e => console.error(e));
+      buildFontsStyle(connectionOptions).catch(e => console.error(e));
       return;
     } else if (args?.borders) {
       console.info('Pulling borders...');
-      buildBorders().catch(e => console.error(e));
+      buildBorders(connectionOptions).catch(e => console.error(e));
       return;
     } else if (args?.groups) {
       console.info('Pulling groups...');
-      buildAllowedGroups().catch(e => console.error(e));
+      buildAllowedGroups(connectionOptions).catch(e => console.error(e));
       return;
     } else if (args?.allTokens) {
       console.info('Pulling all tokens...');
       for (const action of [buildColors, buildDimensions, buildFontsStyle, buildBorders]) {
         try {
-          await action();
+          await action(connectionOptions);
         } catch (e) {
           console.error(e);
           return;
@@ -71,7 +95,7 @@ program
       console.info('Pulling all settings...');
       for (const action of [buildAllowedGroups]) {
         try {
-          await action();
+          await action(connectionOptions);
         } catch (e) {
           console.error(e);
           return;
@@ -81,7 +105,7 @@ program
       console.info('Pulling all configuration...');
       for (const action of [buildColors, buildDimensions, buildFontsStyle, buildBorders, buildAllowedGroups]) {
         try {
-          await action();
+          await action(connectionOptions);
         } catch (e) {
           console.error(e);
           return;
@@ -112,7 +136,7 @@ program
     return;
   });
 
-type PushArgs = {
+type PushArgs = ConnectionOptions & {
   colors?: boolean;
   dimensions?: boolean;
   fonts?: boolean;
@@ -122,9 +146,7 @@ type PushArgs = {
   allSettings: boolean;
 };
 
-program
-  .command('push')
-  .description('Push data to the integration')
+addConnectionOptions(program.command('push').description('Push data to the integration'))
   .option('-c, --colors', 'colors configuration')
   .option('-d, --dimensions', 'dimensions configuration')
   .option('-f, --fonts', 'fonts configuration')
@@ -133,31 +155,37 @@ program
   .option('-at, --allTokens', 'all tokens')
   .option('-as, --allSettings', 'all settings')
   .action(async (args: PushArgs) => {
+    const connectionOptions: ConnectionOptions = {
+      apiKey: args.apiKey,
+      apiHost: args.apiHost,
+      project: args.project,
+    };
+
     if (args?.colors) {
       console.info('Pushing colors...');
-      pushColors().catch(e => console.error(e));
+      pushColors(connectionOptions).catch(e => console.error(e));
       return;
     } else if (args?.dimensions) {
       console.info('Pushing dimensions...');
-      pushDimensions().catch(e => console.error(e));
+      pushDimensions(connectionOptions).catch(e => console.error(e));
       return;
     } else if (args?.fonts) {
       console.info('Pushing fonts...');
-      pushFonts().catch(e => console.error(e));
+      pushFonts(connectionOptions).catch(e => console.error(e));
       return;
     } else if (args?.borders) {
       console.info('Pushing borders...');
-      pushBorders().catch(e => console.error(e));
+      pushBorders(connectionOptions).catch(e => console.error(e));
       return;
     } else if (args?.groups) {
       console.info('Pushing groups...');
-      pushAllowedGroups().catch(e => console.error(e));
+      pushAllowedGroups(connectionOptions).catch(e => console.error(e));
       return;
     } else if (args?.allTokens) {
       console.info('Pushing all tokens...');
       for (const action of [pushColors, pushDimensions, pushFonts, pushBorders]) {
         try {
-          await action();
+          await action(connectionOptions);
         } catch (e) {
           console.error(e);
           return;
@@ -167,7 +195,7 @@ program
       console.info('Pushing all settings...');
       for (const action of [pushAllowedGroups]) {
         try {
-          await action();
+          await action(connectionOptions);
         } catch (e) {
           console.error(e);
           return;
@@ -177,7 +205,7 @@ program
       console.info('Pushing all configuration...');
       for (const action of [pushColors, pushDimensions, pushFonts, pushBorders, pushAllowedGroups]) {
         try {
-          await action();
+          await action(connectionOptions);
         } catch (e) {
           console.error(e);
           return;

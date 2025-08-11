@@ -1,17 +1,19 @@
 import { CONFIGURATION_KEYS } from '../../constants';
-import { checkEnvironmentVariable, fetchTokenValue, syncSuccessLog } from '../../utils';
+import { ConnectionOptions } from '../../types';
+import { checkConnectionOptions, checkEnvironmentVariable, fetchTokenValue, syncSuccessLog } from '../../utils';
 import addToConfiguration from '../../utils/addToConfiguration';
 
-export const buildFontsStyle = async () => {
+export const buildFontsStyle = async (connectionOptions: ConnectionOptions) => {
   if (!checkEnvironmentVariable()) return;
+  if (!checkConnectionOptions(connectionOptions)) return;
 
-  const fontsResponse = await fetchTokenValue('getFonts');
+  const fontsResponse = await fetchTokenValue('getFonts', connectionOptions);
 
   if (!fontsResponse.ok) {
     throw `${fontsResponse.status} ${fontsResponse.statusText}`;
   }
 
-  const defaultFontKeyResponse = await fetchTokenValue('getDefaultFont');
+  const defaultFontKeyResponse = await fetchTokenValue('getDefaultFont', connectionOptions);
 
   if (!defaultFontKeyResponse.ok) {
     throw `${defaultFontKeyResponse.status} ${defaultFontKeyResponse.statusText}`;

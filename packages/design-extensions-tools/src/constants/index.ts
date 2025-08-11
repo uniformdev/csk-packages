@@ -47,6 +47,4 @@ export const CONFIG_FILE_PATH = path.join(
   ...(process.env.DEX_CONFIG_FILE_PATH ?? DEFAULT_CONFIG_FILE_PATH).split(/[\\/]/).filter(Boolean)
 );
 
-export const BASE_API_URL = process.env.UNIFORM_CLI_BASE_URL || 'https://uniform.app';
-
 export const ROOT_COLOR_SCHEME_KEY = 'light';

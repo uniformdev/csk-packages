@@ -1,11 +1,19 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { DEFAULT_CONFIG_FILE_PATH, CONFIGURATION_KEYS } from '../../constants';
-import { checkEnvironmentVariable, parseJson, pushTokenValue, syncSuccessLog } from '../../utils';
+import { ConnectionOptions } from '../../types';
+import {
+  checkConnectionOptions,
+  checkEnvironmentVariable,
+  parseJson,
+  pushTokenValue,
+  syncSuccessLog,
+} from '../../utils';
 import { validateBordersConfiguration } from '../../utils/validation';
 
-export const pushBorders = async () => {
+export const pushBorders = async (connectionOptions: ConnectionOptions) => {
   checkEnvironmentVariable(true);
+  if (!checkConnectionOptions(connectionOptions)) return;
 
   if (!fs.existsSync(DEFAULT_CONFIG_FILE_PATH)) {
     console.error(
@@ -31,7 +39,7 @@ export const pushBorders = async () => {
     throw new Error(error);
   }
 
-  await pushTokenValue('setBorders', JSON.stringify(borders));
+  await pushTokenValue('setBorders', JSON.stringify(borders), connectionOptions);
 
   syncSuccessLog(CONFIGURATION_KEYS.Borders, 'pushed');
 };

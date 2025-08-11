@@ -1,11 +1,19 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { DEFAULT_CONFIG_FILE_PATH, CONFIGURATION_KEYS } from '../../constants';
-import { checkEnvironmentVariable, parseJson, pushTokenValue, syncSuccessLog } from '../../utils';
+import { ConnectionOptions } from '../../types';
+import {
+  checkConnectionOptions,
+  checkEnvironmentVariable,
+  parseJson,
+  pushTokenValue,
+  syncSuccessLog,
+} from '../../utils';
 import { validateFontsConfiguration } from '../../utils/validation';
 
-export const pushFonts = async () => {
+export const pushFonts = async (connectionOptions: ConnectionOptions) => {
   checkEnvironmentVariable(true);
+  if (!checkConnectionOptions(connectionOptions)) return;
 
   if (!fs.existsSync(DEFAULT_CONFIG_FILE_PATH)) {
     console.error(
@@ -33,8 +41,8 @@ export const pushFonts = async () => {
 
   const defaultFont = configuration[CONFIGURATION_KEYS.DefaultFontKey];
 
-  await pushTokenValue('setFonts', JSON.stringify(fonts));
-  await pushTokenValue('setDefaultFont', JSON.stringify({ defaultFont }));
+  await pushTokenValue('setFonts', JSON.stringify(fonts), connectionOptions);
+  await pushTokenValue('setDefaultFont', JSON.stringify({ defaultFont }), connectionOptions);
 
   syncSuccessLog(CONFIGURATION_KEYS.Fonts, 'pushed');
 };

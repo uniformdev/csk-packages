@@ -1,11 +1,13 @@
 import { CONFIGURATION_KEYS } from '../../constants';
-import { checkEnvironmentVariable, fetchTokenValue, syncSuccessLog } from '../../utils';
+import { ConnectionOptions } from '../../types';
+import { checkConnectionOptions, checkEnvironmentVariable, fetchTokenValue, syncSuccessLog } from '../../utils';
 import addToConfiguration from '../../utils/addToConfiguration';
 
-export const buildBorders = async () => {
+export const buildBorders = async (connectionOptions: ConnectionOptions) => {
   if (!checkEnvironmentVariable()) return;
+  if (!checkConnectionOptions(connectionOptions)) return;
 
-  const response = await fetchTokenValue('getBorders');
+  const response = await fetchTokenValue('getBorders', connectionOptions);
 
   if (!response.ok) {
     throw `${response.status} ${response.statusText}`;

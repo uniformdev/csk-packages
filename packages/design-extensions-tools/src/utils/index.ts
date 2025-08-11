@@ -1,11 +1,5 @@
-import {
-  BASE_API_URL,
-  CONFIG_FILE,
-  DEFAULT_INTEGRATION_URL,
-  FG_GREEN,
-  CONFIGURATION_KEYS,
-  CONFIG_FILE_PATH,
-} from '../constants';
+import { ConnectionOptions } from 'src/types';
+import { CONFIG_FILE, DEFAULT_INTEGRATION_URL, FG_GREEN, CONFIGURATION_KEYS, CONFIG_FILE_PATH } from '../constants';
 
 export { generateTailwindcssSource } from './generateTailwindcssPatterns';
 
@@ -17,15 +11,25 @@ export const checkEnvironmentVariable = (isForce: boolean = false) => {
     return false;
   }
 
-  if (!process.env.UNIFORM_PROJECT_ID) {
+  return true;
+};
+
+export const checkConnectionOptions = (connectionOptions: ConnectionOptions) => {
+  if (!connectionOptions.apiKey) {
+    throw new Error('No api key provided');
+  }
+  if (!connectionOptions.apiHost) {
+    throw new Error('No api host provided');
+  }
+  if (!connectionOptions.project) {
     throw new Error('No project id provided');
   }
   return true;
 };
 
-export const fetchTokenValue = (endPoint: string, ...queryParams: string[]) =>
+export const fetchTokenValue = (endPoint: string, connectionOptions: ConnectionOptions, ...queryParams: string[]) =>
   fetch(
-    `${process.env.INTEGRATION_URL || DEFAULT_INTEGRATION_URL}/api/${endPoint}?projectId=${process.env.UNIFORM_PROJECT_ID}${queryParams.length ? `&${queryParams.join('&')}` : ''}`,
+    `${process.env.INTEGRATION_URL || DEFAULT_INTEGRATION_URL}/api/${endPoint}?projectId=${connectionOptions.project}${queryParams.length ? `&${queryParams.join('&')}` : ''}`,
     { cache: 'no-cache' }
   ).then(response => {
     if (!response.ok) {
@@ -37,14 +41,14 @@ export const fetchTokenValue = (endPoint: string, ...queryParams: string[]) =>
     return response;
   });
 
-export const pushTokenValue = (endPoint: string, body?: BodyInit | null) =>
+export const pushTokenValue = (endPoint: string, body: BodyInit | null, connectionOptions: ConnectionOptions) =>
   fetch(
-    `${process.env.INTEGRATION_URL || DEFAULT_INTEGRATION_URL}/api/${endPoint}?projectId=${process.env.UNIFORM_PROJECT_ID}&baseUrl=${BASE_API_URL}`,
+    `${process.env.INTEGRATION_URL || DEFAULT_INTEGRATION_URL}/api/${endPoint}?projectId=${connectionOptions.project}&baseUrl=${connectionOptions.apiHost}`,
     {
       cache: 'no-cache',
       method: 'POST',
       headers: {
-        'x-api-key': process.env.UNIFORM_API_KEY || '',
+        'x-api-key': connectionOptions.apiKey || '',
         'Content-Type': 'application/json',
       },
       body,

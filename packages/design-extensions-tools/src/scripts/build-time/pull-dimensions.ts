@@ -1,11 +1,13 @@
 import { CONFIGURATION_KEYS } from '../../constants';
-import { checkEnvironmentVariable, fetchTokenValue, syncSuccessLog } from '../../utils';
+import { ConnectionOptions } from '../../types';
+import { checkConnectionOptions, checkEnvironmentVariable, fetchTokenValue, syncSuccessLog } from '../../utils';
 import addToConfiguration from '../../utils/addToConfiguration';
 
-export const buildDimensions = async () => {
+export const buildDimensions = async (connectionOptions: ConnectionOptions) => {
   if (!checkEnvironmentVariable()) return;
+  if (!checkConnectionOptions(connectionOptions)) return;
 
-  const response = await fetchTokenValue('getDimensions');
+  const response = await fetchTokenValue('getDimensions', connectionOptions);
 
   if (!response.ok) {
     throw `${response.status} ${response.statusText}`;
