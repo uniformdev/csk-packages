@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from 'react';
 import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
-import { ArrowIcon } from '@/components/ui/_icons';
+import { ArrowIcon } from '@/new-components/ui/_icons';
 import { cn } from '@/utils/styling';
 import { NavigationFlyoutProps, NavigationFlyoutParameters } from '.';
 

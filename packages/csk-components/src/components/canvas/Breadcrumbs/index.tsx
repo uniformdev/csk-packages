@@ -1,6 +1,6 @@
 import { DataWithProperties } from '@uniformdev/canvas';
-import { TextParameters } from '@/components/canvas/Text/parameters';
-import { ComponentProps } from '@/types/cskTypes';
+import { TextParameters } from '@/new-components/canvas/Text';
+import { ComponentProps } from '@/types/canvasTypes';
 
 export type BreadcrumbLink = {
   title: string;

@@ -2,7 +2,7 @@
 
 import { SlotDefinition } from '@uniformdev/canvas-next-rsc-shared-v2';
 import { createCompositionCache } from '@uniformdev/canvas-next-rsc-v2';
-import { ComponentProps } from '@/types/cskTypes';
+import { ComponentProps } from '@/types/canvasTypes';
 
 export const compositionCache = createCompositionCache();
 

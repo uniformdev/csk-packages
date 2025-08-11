@@ -6,7 +6,6 @@ import {
   UniformPageParameters,
   createUniformStaticParams,
 } from '@uniformdev/canvas-next-rsc-v2';
-import { emptyPlaceholderResolver } from '@uniformdev/csk-components/components/canvas/emptyPlaceholders';
 import { compositionCache } from '@uniformdev/csk-components/utils/getSlotComponents';
 import { DesignExtensionsProvider } from '@uniformdev/design-extensions-tools/components/providers/server';
 import { componentResolver } from '@/components';
@@ -28,12 +27,7 @@ export default async function UniformPage(props: UniformPageParameters) {
 
   return (
     <DesignExtensionsProvider isPreviewMode={result.pageState.compositionState === CANVAS_EDITOR_STATE}>
-      <UniformComposition
-        {...result}
-        resolveComponent={componentResolver}
-        resolveEmptyPlaceholder={emptyPlaceholderResolver}
-        compositionCache={compositionCache}
-      />
+      <UniformComposition {...result} resolveComponent={componentResolver} compositionCache={compositionCache} />
     </DesignExtensionsProvider>
   );
 }

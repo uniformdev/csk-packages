@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic';
-import { ContainerParameters } from '@/components/canvas/Container/parameters';
-import { ComponentProps } from '@/types/cskTypes';
+import { ContainerParameters } from '@/new-components/canvas/Container';
+import { ComponentProps } from '@/types/canvasTypes';
 
 export enum ContentAlignment {
   Left = 'left',

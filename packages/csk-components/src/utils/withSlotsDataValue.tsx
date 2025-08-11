@@ -1,6 +1,6 @@
 import { ComponentType, FC } from 'react';
 import { ComponentInstance } from '@uniformdev/canvas';
-import { ComponentProps } from '@/types/cskTypes';
+import { ComponentProps } from '@/types/canvasTypes';
 import { getSlotComponents } from '@/utils/getSlotComponents';
 
 export const withSlotsDataValue = <TProps extends ComponentProps<T>, T>(

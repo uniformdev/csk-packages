@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import { LinkParamValue, CanvasClient, flattenValues } from '@uniformdev/canvas';
 import { ProjectMapClient } from '@uniformdev/project-map';
-import BaseButton, { ButtonVariant } from '@/components/ui/Button';
-import BaseText from '@/components/ui/Text';
+import BaseButton, { ButtonVariant } from '@/new-components/ui/Button';
+import BaseText from '@/new-components/ui/Text';
 import { compositionCache } from '@/utils/getSlotComponents';
 import { formatUniformLink, resolveRouteToPath } from '@/utils/routing';
 import { cn } from '@/utils/styling';

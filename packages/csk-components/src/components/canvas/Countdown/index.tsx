@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import { TextProps as BaseTextProps } from '@/components/ui/Text';
+import { TextProps as BaseTextProps } from '@/new-components/ui/Text';
 import { ComponentProps, ViewPort } from '@/types/cskTypes';
 
 type UniformDate = {

@@ -7,14 +7,14 @@ async function copyContent() {
 
   // Copy components -> canvas
   await copyFolders(
-    path.resolve('src', 'components', 'canvas'),
-    path.resolve('dist', 'content', 'components', 'canvas'),
+    path.resolve('src', 'new-components', 'canvas'),
+    path.resolve('dist', 'content', 'new-components', 'canvas'),
     EXTRACT_CANVAS_COMPONENTS
   );
 
   await copyFolders(
-    path.resolve('src', 'components', 'ui'),
-    path.resolve('dist', 'content', 'components', 'ui'),
+    path.resolve('src', 'new-components', 'ui'),
+    path.resolve('dist', 'content', 'new-components', 'ui'),
     EXTRACT_UI_COMPONENTS
   );
 

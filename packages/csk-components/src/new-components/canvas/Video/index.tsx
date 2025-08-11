@@ -1,0 +1,15 @@
+import { AssetParamValue } from '@uniformdev/assets';
+import { ViewPort } from '@/types/cskTypes';
+
+export type VideoParameters = {
+  video?: AssetParamValue;
+  placeholderImage?: AssetParamValue;
+  autoPlay?: boolean;
+  lazyLoad?: boolean;
+  loop?: boolean;
+  controls?: boolean;
+  muted?: boolean;
+  overlayColor?: string;
+  overlayOpacity?: string;
+  border?: string | ViewPort<string>;
+};

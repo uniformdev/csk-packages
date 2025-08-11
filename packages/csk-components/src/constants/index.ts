@@ -84,7 +84,8 @@ export const EXTRACT_UI_COMPONENTS = [
 
 export const EXTRACT_UTILS = [
   'assets.ts',
-  'createComponentResolver.ts',
+  'createAppRouterComponentResolver.ts',
+  'createPagesRouterComponentResolver.ts',
   'withFlattenParameters.tsx',
   'withSlotsDataValue.tsx',
   'getSlotComponents.ts',
@@ -93,7 +94,7 @@ export const EXTRACT_UTILS = [
   'styling.ts',
 ];
 
-export const EXTRACT_TYPES = ['cskTypes.ts'];
+export const EXTRACT_TYPES = ['cskTypes.ts', 'canvasTypes.ts'];
 
 export enum cskComponentsNames {
   Accordion = 'accordion',

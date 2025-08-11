@@ -1,6 +1,6 @@
 import { FC, ReactNode } from 'react';
-import Container from '@/components/ui/Container';
-import Rating from '@/components/ui/Rating';
+import Container from '@/new-components/ui/Container';
+import Rating from '@/new-components/ui/Rating';
 import { ReviewParameters, ReviewProps } from '.';
 
 type MultiColumnVariantProps = ReviewProps & {

@@ -1,8 +1,8 @@
 'use client';
 
 import { FC } from 'react';
-import Container from '@/components/ui/Container';
-import BaseImage from '@/components/ui/Image';
+import Container from '@/new-components/ui/Container';
+import BaseImage from '@/new-components/ui/Image';
 import { ReplaceFieldsWithAssets } from '@/types/cskTypes';
 import { withFlattenParameters } from '@/utils/withFlattenParameters';
 import { ImageGalleryParameters, ImageGalleryProps } from '.';

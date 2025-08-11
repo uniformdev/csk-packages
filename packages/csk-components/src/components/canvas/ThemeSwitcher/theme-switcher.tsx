@@ -6,7 +6,7 @@ import { useUniformContext } from '@uniformdev/canvas-next-rsc-v2/component';
 import { withFlattenParameters } from '@/utils/withFlattenParameters';
 import { ThemeSwitcherParameters, ThemeSwitcherProps } from '.';
 
-const BaseThemeSwitcher = dynamic(() => import('@/components/ui/ThemeSwitcher').then(mod => mod.default), {
+const BaseThemeSwitcher = dynamic(() => import('@/new-components/ui/ThemeSwitcher').then(mod => mod.default), {
   ssr: false,
 });
 

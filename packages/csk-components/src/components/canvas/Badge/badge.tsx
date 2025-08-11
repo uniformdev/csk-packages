@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { ComponentParameter, UniformText } from '@uniformdev/canvas-next-rsc-v2/component';
-import BaseText from '@/components/ui/Text';
+import BaseText from '@/new-components/ui/Text';
 import { cn } from '@/utils/styling';
 import { withFlattenParameters } from '@/utils/withFlattenParameters';
 import { BadgeParameters, BadgeProps } from '.';

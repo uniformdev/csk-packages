@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import { ComponentParameter, UniformText } from '@uniformdev/canvas-next-rsc-v2/component';
-import BaseIconLabel from '@/components/ui/IconLabel';
-import BaseImage from '@/components/ui/Image';
-import InlineSVG from '@/components/ui/InlineSVG';
+import BaseIconLabel from '@/new-components/ui/IconLabel';
+import BaseImage from '@/new-components/ui/Image';
+import InlineSVG from '@/new-components/ui/InlineSVG';
 import { ReplaceFieldsWithAssets } from '@/types/cskTypes';
 import { formatUniformLink, isExternalLink } from '@/utils/routing';
 import { cn, resolveViewPort } from '@/utils/styling';

@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 import { AssetParamValue } from '@uniformdev/assets';
-import { ContainerParameters } from '@/components/canvas/Container/parameters';
-import { ComponentProps } from '@/types/cskTypes';
+import { ContainerParameters } from '@/new-components/canvas/Container';
+import { ComponentProps } from '@/types/canvasTypes';
 
 export type ImageGalleryParameters = ContainerParameters & {
   aspectRatio?: 'square' | 'video';

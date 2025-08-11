@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
-import Grid from '@/components/ui/Grid';
-import GridItem from '@/components/ui/GridItem';
+import Grid from '@/new-components/ui/Grid';
+import GridItem from '@/new-components/ui/GridItem';
 import { cn, resolveViewPort } from '@/utils/styling';
 import { NavigationFlyoutProps, NavigationFlyoutParameters } from '.';
 

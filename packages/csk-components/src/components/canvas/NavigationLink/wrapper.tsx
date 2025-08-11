@@ -1,5 +1,5 @@
 import { FC, PropsWithChildren } from 'react';
-import BaseLink from '@/components/ui/Link';
+import BaseLink from '@/new-components/ui/Link';
 
 type WrapperProps = PropsWithChildren & {
   href: string;

@@ -1,6 +1,6 @@
 import { ComponentType, FC } from 'react';
 import { flattenValues, FlattenValuesOptions } from '@uniformdev/canvas';
-import { ComponentProps } from '@/types/cskTypes';
+import { ComponentProps } from '@/types/canvasTypes';
 
 export const withFlattenParameters = <TProps extends ComponentProps<T>, T>(
   WrappedComponent: ComponentType<TProps>,

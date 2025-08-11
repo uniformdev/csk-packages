@@ -1,3 +1,4 @@
+import { NextRouter } from 'next/router';
 import { ResolvedRouteGetResponse, RouteGetResponseEdgehancedComposition, LinkParamValue } from '@uniformdev/canvas';
 
 /**
@@ -96,3 +97,24 @@ export const formatUniformLink = (uniformLink?: LinkParamValue): string => {
  * @returns {boolean} - True if the link starts with "http", indicating it is an external link; otherwise, false.
  */
 export const isExternalLink = (href?: string): boolean => href?.startsWith('http') ?? false;
+
+/**
+ * Checks whether the current Next.js route matches the given link.
+ *
+ * Compares `router.asPath` (without query parameters) to `link.path`,
+ * removing any trailing slash and locale segment from the path if necessary.
+ *
+ * @param {import('next/router').NextRouter} router - The Next.js router object.
+ * @param {LinkParamValue} link - The link object that contains the target path (`path`)
+ *                                and optionally dynamic input values (`dynamicInputValues`)
+ *                                such as `locale`.
+ * @returns {boolean} `true` if the current route matches the given link path, otherwise `false`.
+ */
+export const checkIsCurrentRoute = (router: NextRouter, link: LinkParamValue) => {
+  if (!link) return false;
+  const { asPath } = router;
+  const localeFromLink = 'dynamicInputValues' in link ? link.dynamicInputValues?.locale : undefined;
+  const [pathWithoutQuery] = asPath.split('?');
+  const linkPath = link.path === '/' ? link.path : link.path.replace(/\/$/, '');
+  return pathWithoutQuery === (localeFromLink ? linkPath.replace(`/${localeFromLink}`, '') : linkPath);
+};

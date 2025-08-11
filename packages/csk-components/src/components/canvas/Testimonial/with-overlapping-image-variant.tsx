@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import Container from '@/components/ui/Container';
+import Container from '@/new-components/ui/Container';
 import { TestimonialParameters } from '.';
 
 type WithLargeAvatarVariantProps = Pick<

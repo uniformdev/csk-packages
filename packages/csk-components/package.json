@@ -28,9 +28,13 @@
       "types": "./dist/utils/createEmptyPlaceholderResolver.d.mts",
       "default": "./dist/utils/createEmptyPlaceholderResolver.mjs"
     },
-    "./utils/createComponentResolver": {
-      "types": "./dist/utils/createComponentResolver.d.mts",
-      "default": "./dist/utils/createComponentResolver.mjs"
+    "./utils/createAppRouterComponentResolver": {
+      "types": "./dist/utils/createAppRouterComponentResolver.d.mts",
+      "default": "./dist/utils/createAppRouterComponentResolver.mjs"
+    },
+    "./utils/createPagesRouterComponentResolver": {
+      "types": "./dist/utils/createPagesRouterComponentResolver.d.mts",
+      "default": "./dist/utils/createPagesRouterComponentResolver.mjs"
     },
     "./utils/getSlotComponents": {
       "types": "./dist/utils/getSlotComponents.d.mts",
@@ -48,25 +52,17 @@
       "types": "./dist/utils/sitemap.d.mts",
       "default": "./dist/utils/sitemap.mjs"
     },
-    "./components/ui": {
-      "types": "./dist/components/ui/index.d.mts",
-      "default": "./dist/components/ui/index.mjs"
+    "./new-components/adapters/app-router": {
+      "types": "./dist/new-components/adapters/app-router/index.d.mts",
+      "default": "./dist/new-components/adapters/app-router/index.mjs"
     },
-    "./components/canvas": {
-      "types": "./dist/components/canvas/index.d.mts",
-      "default": "./dist/components/canvas/index.mjs"
+    "./new-components/adapters/pages-router": {
+      "types": "./dist/new-components/adapters/pages-router/index.d.mts",
+      "default": "./dist/new-components/adapters/pages-router/index.mjs"
     },
-    "./components/canvas/serverOnly": {
-      "types": "./dist/components/canvas/serverOnly.d.mts",
-      "default": "./dist/components/canvas/serverOnly.mjs"
-    },
-    "./components/canvas/serverClient": {
-      "types": "./dist/components/canvas/serverClient.d.mts",
-      "default": "./dist/components/canvas/serverClient.mjs"
-    },
-    "./components/canvas/emptyPlaceholders": {
-      "types": "./dist/components/canvas/emptyPlaceholders.d.mts",
-      "default": "./dist/components/canvas/emptyPlaceholders.mjs"
+    "./new-components/adapters/app-router/emptyPlaceholderResolver": {
+      "types": "./dist/new-components/adapters/app-router/emptyPlaceholders.d.mts",
+      "default": "./dist/new-components/adapters/app-router/emptyPlaceholders.mjs"
     }
   },
   "types": "./dist/index.d.mts",
@@ -103,9 +99,11 @@
     "@repo/typescript-config": "*",
     "@uniformdev/assets": "20.7.1-alpha.73",
     "@uniformdev/canvas": "20.7.1-alpha.73",
+    "@uniformdev/canvas-next": "20.7.1-alpha.73",
     "@uniformdev/canvas-next-rsc-client-v2": "20.7.1-alpha.73",
     "@uniformdev/canvas-next-rsc-shared-v2": "20.7.1-alpha.73",
     "@uniformdev/canvas-next-rsc-v2": "20.7.1-alpha.73",
+    "@uniformdev/canvas-react": "20.7.1-alpha.73",
     "next": "^15.4.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -116,9 +114,11 @@
   "peerDependencies": {
     "@uniformdev/assets": "20.7.1-alpha.73",
     "@uniformdev/canvas": "20.7.1-alpha.73",
+    "@uniformdev/canvas-next": "20.7.1-alpha.73",
     "@uniformdev/canvas-next-rsc-client-v2": "20.7.1-alpha.73",
     "@uniformdev/canvas-next-rsc-shared-v2": "20.7.1-alpha.73",
     "@uniformdev/canvas-next-rsc-v2": "20.7.1-alpha.73",
+    "@uniformdev/canvas-react": "20.7.1-alpha.73",
     "next": ">=15",
     "react": ">=19",
     "react-dom": ">=19",

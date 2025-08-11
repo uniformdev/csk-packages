@@ -3,7 +3,7 @@
 import { FC, Fragment, useCallback, useState, MouseEvent, FocusEvent } from 'react';
 import { ComponentInstance, flattenValues } from '@uniformdev/canvas';
 import { UniformSlot, UniformText, ComponentParameter } from '@uniformdev/canvas-next-rsc-v2/component';
-import Container from '@/components/ui/Container';
+import Container from '@/new-components/ui/Container';
 import { TabsParameters, TabsProps } from '.';
 import { getButtonClasses, getButtonContainerClasses } from './style-utils';
 
