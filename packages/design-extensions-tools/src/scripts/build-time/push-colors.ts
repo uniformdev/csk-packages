@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { DEFAULT_CONFIG_FILE_PATH, CONFIGURATION_KEYS } from '../../constants';
 import { checkEnvironmentVariable, parseJson, pushTokenValue, syncSuccessLog } from '../../utils';
+import { validateColorsConfiguration } from '../../utils/validation';
 
 export const pushColors = async () => {
   checkEnvironmentVariable(true);
@@ -22,6 +23,16 @@ export const pushColors = async () => {
   if (!colors) {
     console.error(`No colors found in ${DEFAULT_CONFIG_FILE_PATH}`);
     return;
+  }
+
+  const themeKeys = Object.keys(colors);
+
+  for (const key of themeKeys) {
+    const { isValid, error } = validateColorsConfiguration(colors[key]);
+
+    if (!isValid) {
+      throw new Error(error);
+    }
   }
 
   await pushTokenValue('setColors', JSON.stringify(colors));

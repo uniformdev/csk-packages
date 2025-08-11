@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { DEFAULT_CONFIG_FILE_PATH, CONFIGURATION_KEYS } from '../../constants';
 import { checkEnvironmentVariable, parseJson, pushTokenValue, syncSuccessLog } from '../../utils';
+import { validateDimensionsConfiguration } from '../../utils/validation';
 
 export const pushDimensions = async () => {
   checkEnvironmentVariable(true);
@@ -22,6 +23,12 @@ export const pushDimensions = async () => {
   if (!dimensions) {
     console.error(`No dimensions found in ${DEFAULT_CONFIG_FILE_PATH}`);
     return;
+  }
+
+  const { isValid, error } = validateDimensionsConfiguration(dimensions);
+
+  if (!isValid) {
+    throw new Error(error);
   }
 
   await pushTokenValue('setDimensions', JSON.stringify(dimensions));

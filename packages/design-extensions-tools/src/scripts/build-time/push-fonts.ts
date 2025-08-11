@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { DEFAULT_CONFIG_FILE_PATH, CONFIGURATION_KEYS } from '../../constants';
 import { checkEnvironmentVariable, parseJson, pushTokenValue, syncSuccessLog } from '../../utils';
+import { validateFontsConfiguration } from '../../utils/validation';
 
 export const pushFonts = async () => {
   checkEnvironmentVariable(true);
@@ -22,6 +23,12 @@ export const pushFonts = async () => {
   if (!fonts) {
     console.error(`No fonts found in ${DEFAULT_CONFIG_FILE_PATH}`);
     return;
+  }
+
+  const { isValid, error } = validateFontsConfiguration(fonts);
+
+  if (!isValid) {
+    throw new Error(error);
   }
 
   const defaultFont = configuration[CONFIGURATION_KEYS.DefaultFontKey];
