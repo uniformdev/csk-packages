@@ -29,7 +29,7 @@
     "push:content": "uniform sync push",
     "pull:content:dev": "uniform sync pull --config ./uniform.config.dev.ts",
     "push:content:dev": "uniform sync push --config ./uniform.config.dev.ts",
-    "uniform:pull": "run-s pull:dex pull:content",
+    "uniform:pull": "run-s pull:dex apply:dex pull:content",
     "uniform:push": "run-s push:dex push:content",
     "uniform:publish": "uniform context manifest publish",
     "recipes": "csk-recipes init"
