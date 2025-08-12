@@ -1,35 +1,45 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { PATH_TO_STYLE_FOLDER, TOKEN_STYLE_FILE } from '../../constants';
-import { checkEnvironmentVariable, pushTokenValue, syncSuccessLog } from '../../utils';
-import { getValueWithAlias } from '../../utils/getTokenStyles';
+import { DEFAULT_CONFIG_FILE_PATH, CONFIGURATION_KEYS } from '../../constants';
+import { ConnectionOptions } from '../../types';
+import {
+  checkConnectionOptions,
+  checkEnvironmentVariable,
+  parseJson,
+  pushTokenValue,
+  syncSuccessLog,
+} from '../../utils';
+import { validateDimensionsConfiguration } from '../../utils/validation';
 
-const REGEX_DIMENSION_VARS = /--[^:]+: [^;]+;/g;
+export const pushDimensions = async (connectionOptions: ConnectionOptions) => {
+  checkEnvironmentVariable(true);
+  if (!checkConnectionOptions(connectionOptions)) return;
 
-export const pushDimensions = async () => {
-  checkEnvironmentVariable(TOKEN_STYLE_FILE.Dimensions, true);
-
-  const pathToStyleFile = path.join(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Dimensions}.css`);
-
-  if (!fs.existsSync(pathToStyleFile)) {
+  if (!fs.existsSync(DEFAULT_CONFIG_FILE_PATH)) {
     console.error(
-      `No such file with styles: ${pathToStyleFile}. You can override it by setting STYLES_PATH environment variable.`
+      `No such file with styles: ${DEFAULT_CONFIG_FILE_PATH}. You can override it by setting DEX_CONFIG_FILE_PATH environment variable.`
     );
     return;
   }
 
-  const dimensionsCssFile = fs.readFileSync(path.resolve(pathToStyleFile), 'utf8');
+  const configurationContent = fs.readFileSync(path.resolve(DEFAULT_CONFIG_FILE_PATH), 'utf8');
 
-  const dimensions = dimensionsCssFile.match(REGEX_DIMENSION_VARS)?.reduce((acc, line) => {
-    const [key, value] = line.split(':');
-    if (!key || !value) return acc;
-    return {
-      ...acc,
-      [key?.replace('--', '')]: getValueWithAlias(value?.trim()?.replace(';', '')),
-    };
-  }, {});
+  const configuration = parseJson(configurationContent);
 
-  await pushTokenValue('setDimensions', JSON.stringify(dimensions));
+  const dimensions = configuration[CONFIGURATION_KEYS.Dimensions];
 
-  syncSuccessLog(TOKEN_STYLE_FILE.Dimensions, 'pushed');
+  if (!dimensions) {
+    console.error(`No dimensions found in ${DEFAULT_CONFIG_FILE_PATH}`);
+    return;
+  }
+
+  const { isValid, error } = validateDimensionsConfiguration(dimensions);
+
+  if (!isValid) {
+    throw new Error(error);
+  }
+
+  await pushTokenValue('setDimensions', JSON.stringify(dimensions), connectionOptions);
+
+  syncSuccessLog(CONFIGURATION_KEYS.Dimensions, 'pushed');
 };

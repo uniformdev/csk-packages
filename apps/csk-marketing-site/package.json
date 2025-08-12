@@ -1,6 +1,6 @@
 {
   "name": "@uniformdev/csk-marketing-site",
-  "version": "6.1.7",
+  "version": "6.1.8",
   "private": true,
   "engines": {
     "yarn": "please-use-npm",
@@ -22,6 +22,7 @@
     "component:extract": "csk-components extract",
     "component:scaffold": "csk-cli scaffold",
     "pull:dex": "design-extensions-tools pull",
+    "apply:dex": "design-extensions-tools apply -m tailwind",
     "pull:additional": "uniform sync pull",
     "push:dex": "design-extensions-tools push",
     "push:content": "run-s push:base push:additional",
@@ -30,7 +31,7 @@
     "pull:locales": "csk-cli pull -l",
     "sync:category": "tsx ./src/scripts/sync_canvas_cache.ts category ./content/category equals",
     "sync:component": "tsx ./src/scripts/sync_canvas_cache.ts component ./content/component",
-    "uniform:pull": "run-s pull:dex pull:additional sync:category sync:component",
+    "uniform:pull": "run-s pull:dex apply:dex pull:additional sync:category sync:component",
     "uniform:push": "run-s push:dex push:content",
     "uniform:publish": "uniform context manifest publish",
     "make-components-preview": "tsx ./src/scripts/make-preview-images.ts"

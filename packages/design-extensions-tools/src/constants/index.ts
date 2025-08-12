@@ -4,16 +4,17 @@ export const FG_GREEN = '\x1b[32m';
 export const REGEX_BRACKETS = /[{}]/g;
 export const REGEX_ALIAS_VALUE = /var\(--([^)]+)\)/;
 
-export enum TOKEN_STYLE_FILE {
+export enum CONFIGURATION_KEYS {
   Colors = 'colors',
   Dimensions = 'dimensions',
   Fonts = 'fonts',
+  DefaultFontKey = 'defaultFontKey',
   Borders = 'borders',
   ThemeData = 'themeData',
+  AllowedGroups = 'allowedGroups',
 }
 
 export enum CONFIG_FILE {
-  AllowedGroups = 'allowedGroups',
   Locales = 'locales',
 }
 
@@ -37,6 +38,7 @@ export const DEFAULT_TAILWIND_FONT_CONF_PATH = 'tailwindcss.font.css';
 export const DEFAULT_TAILWIND_DIMENSION_CONF_PATH = 'tailwindcss.dimension.css';
 export const DEFAULT_TAILWIND_COLOR_CONF_PATH = 'tailwindcss.colors.css';
 export const DEFAULT_TAILWIND_BORDER_CONF_PATH = 'tailwindcss.border.css';
+export const DEFAULT_CONFIG_FILE_PATH = 'dex.config.json';
 
 export const PATH_TO_STYLE_FOLDER = path.join(
   ...(process.env.STYLES_PATH ?? DEFAULT_STYLES_PATH).split(/[\\/]/).filter(Boolean)
@@ -46,6 +48,8 @@ export const PATH_TO_CONFIG_FOLDER = path.join(
   ...(process.env.CONFIG_PATH ?? DEFAULT_CONFIG_PATH).split(/[\\/]/).filter(Boolean)
 );
 
-export const BASE_API_URL = process.env.UNIFORM_CLI_BASE_URL || 'https://uniform.app';
+export const CONFIG_FILE_PATH = path.join(
+  ...(process.env.DEX_CONFIG_FILE_PATH ?? DEFAULT_CONFIG_FILE_PATH).split(/[\\/]/).filter(Boolean)
+);
 
 export const ROOT_COLOR_SCHEME_KEY = 'light';

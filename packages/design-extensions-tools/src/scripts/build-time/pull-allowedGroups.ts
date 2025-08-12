@@ -1,29 +1,26 @@
-import fs from 'node:fs';
-import path from 'node:path';
-import { PATH_TO_CONFIG_FOLDER, CONFIG_FILE } from '../../constants';
-import { checkEnvironmentVariable, fetchTokenValue, syncSuccessLog } from '../../utils';
+import fs from 'fs';
+import { CONFIGURATION_KEYS, PATH_TO_CONFIG_FOLDER } from '../../constants';
+import { ConnectionOptions } from '../../types';
+import { checkConnectionOptions, checkEnvironmentVariable, fetchTokenValue, syncSuccessLog } from '../../utils';
+import addToConfiguration from '../../utils/addToConfiguration';
 
-export const buildAllowedGroups = async () => {
-  if (!checkEnvironmentVariable(CONFIG_FILE.AllowedGroups)) return;
+export const buildAllowedGroups = async (connectionOptions: ConnectionOptions) => {
+  if (!checkEnvironmentVariable()) return;
+  if (!checkConnectionOptions(connectionOptions)) return;
 
-  if (!fs.existsSync(PATH_TO_CONFIG_FOLDER)) {
-    console.error(
-      `No such directory for config files: ${PATH_TO_CONFIG_FOLDER}. You can override it by setting CONFIG_PATH environment variable.`
-    );
-    return;
-  }
-
-  const response = await fetchTokenValue('getAllowedGroups');
+  const response = await fetchTokenValue('getAllowedGroups', connectionOptions);
 
   const fetchedAllowedGroups = await response.json();
 
-  const allowedGroupsPath = path.resolve(PATH_TO_CONFIG_FOLDER, `${CONFIG_FILE.AllowedGroups}.json`);
+  addToConfiguration({
+    [CONFIGURATION_KEYS.AllowedGroups]: fetchedAllowedGroups || {},
+  });
 
-  if (Object.keys(fetchedAllowedGroups).length === 0) {
-    if (fs.existsSync(allowedGroupsPath)) fs.unlinkSync(allowedGroupsPath);
-  } else {
-    fs.writeFileSync(allowedGroupsPath, JSON.stringify(fetchedAllowedGroups, null, 2), 'utf8');
+  //remove old file if it exists
+  const oldAllowedGroupsPath = `${PATH_TO_CONFIG_FOLDER}/${CONFIGURATION_KEYS.AllowedGroups}.json`;
+  if (fs.existsSync(oldAllowedGroupsPath)) {
+    fs.unlinkSync(oldAllowedGroupsPath);
   }
 
-  syncSuccessLog(CONFIG_FILE.AllowedGroups, 'pulled');
+  syncSuccessLog(CONFIGURATION_KEYS.AllowedGroups, 'pulled');
 };

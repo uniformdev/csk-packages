@@ -1,5 +1,5 @@
-import { TOKEN_STYLE_FILE } from '../../constants';
-import { checkEnvironmentVariable, fetchTokenValue, getTokenStyles } from '../../utils';
+import { ConnectionOptions } from 'src/types';
+import { checkConnectionOptions, checkEnvironmentVariable, fetchTokenValue, getTokenStyles } from '../../utils';
 import { getColorTokensValue, getRootBordersValue } from '../../utils/getTokenStyles';
 
 interface TokenConfig {
@@ -10,15 +10,19 @@ interface TokenConfig {
 }
 
 export const getTokenConfiguration = async (): Promise<TokenConfig | undefined> => {
-  if (
-    !checkEnvironmentVariable(
-      [TOKEN_STYLE_FILE.Colors, TOKEN_STYLE_FILE.Dimensions, TOKEN_STYLE_FILE.Borders, TOKEN_STYLE_FILE.Fonts].join(',')
-    )
-  ) {
+  const connectionOptions: ConnectionOptions = {
+    apiKey: process.env.UNIFORM_API_KEY || '',
+    apiHost: process.env.UNIFORM_CLI_BASE_URL || 'https://uniform.app',
+    project: process.env.UNIFORM_PROJECT_ID || '',
+  };
+
+  if (!checkEnvironmentVariable()) {
     return;
   }
 
-  const configurationResponse = await fetchTokenValue('getConfiguration');
+  if (!checkConnectionOptions(connectionOptions)) return;
+
+  const configurationResponse = await fetchTokenValue('getConfiguration', connectionOptions);
 
   const { colors, dimensions, defaultFont, borders } = await configurationResponse.json();
 

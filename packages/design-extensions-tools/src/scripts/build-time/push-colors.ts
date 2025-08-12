@@ -1,66 +1,49 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { PATH_TO_STYLE_FOLDER, ROOT_COLOR_SCHEME_KEY, TOKEN_STYLE_FILE } from '../../constants';
-import { checkEnvironmentVariable, pushTokenValue, syncSuccessLog } from '../../utils';
-import { getValueWithAlias } from '../../utils/getTokenStyles';
+import { DEFAULT_CONFIG_FILE_PATH, CONFIGURATION_KEYS } from '../../constants';
+import { ConnectionOptions } from '../../types';
+import {
+  checkConnectionOptions,
+  checkEnvironmentVariable,
+  parseJson,
+  pushTokenValue,
+  syncSuccessLog,
+} from '../../utils';
+import { validateColorsConfiguration } from '../../utils/validation';
 
-type Theme = Record<string, string>;
-type Themes = Record<string, Theme>;
+export const pushColors = async (connectionOptions: ConnectionOptions) => {
+  checkEnvironmentVariable(true);
+  if (!checkConnectionOptions(connectionOptions)) return;
 
-const parseCSS = (cssText: string): Themes => {
-  const themes: Themes = {};
-
-  // Split the CSS text by `}` to isolate each block (root or other)
-  const blocks = cssText.split('}');
-
-  blocks.forEach(block => {
-    if (block.trim()) {
-      const [selector, body] = block.split('{').map(part => part.trim());
-
-      if (selector && body) {
-        const themeName = selector === ':root' ? ROOT_COLOR_SCHEME_KEY : selector.replace('.', '');
-
-        themes[themeName] = extractVariables(body);
-      }
-    }
-  });
-
-  return themes;
-};
-
-const extractVariables = (body: string): Theme => {
-  const variables: Theme = {};
-
-  const declarations = body.split(';');
-
-  declarations.forEach(declaration => {
-    const [key, value] = declaration.split(':').map(str => str.trim());
-
-    if (key && value) {
-      variables[key.replace('--', '')] = getValueWithAlias(value?.trim()?.replace(';', ''));
-    }
-  });
-
-  return variables;
-};
-
-export const pushColors = async () => {
-  checkEnvironmentVariable(TOKEN_STYLE_FILE.Colors, true);
-
-  const pathToStyleFile = path.join(PATH_TO_STYLE_FOLDER, `${TOKEN_STYLE_FILE.Colors}.css`);
-
-  if (!fs.existsSync(pathToStyleFile)) {
+  if (!fs.existsSync(DEFAULT_CONFIG_FILE_PATH)) {
     console.error(
-      `No such file with styles: ${pathToStyleFile}. You can override it by setting STYLES_PATH environment variable.`
+      `No such file with styles: ${DEFAULT_CONFIG_FILE_PATH}. You can override it by setting DEX_CONFIG_FILE_PATH environment variable.`
     );
     return;
   }
 
-  const colorsCssFile = fs.readFileSync(path.resolve(pathToStyleFile), 'utf8');
+  const configurationContent = fs.readFileSync(path.resolve(DEFAULT_CONFIG_FILE_PATH), 'utf8');
 
-  const palette = parseCSS(colorsCssFile);
+  const configuration = parseJson(configurationContent);
 
-  await pushTokenValue('setColors', JSON.stringify(palette));
+  const colors = configuration[CONFIGURATION_KEYS.Colors];
 
-  syncSuccessLog(TOKEN_STYLE_FILE.Colors, 'pushed');
+  if (!colors) {
+    console.error(`No colors found in ${DEFAULT_CONFIG_FILE_PATH}`);
+    return;
+  }
+
+  const themeKeys = Object.keys(colors);
+
+  for (const key of themeKeys) {
+    const { isValid, error } = validateColorsConfiguration(colors[key]);
+
+    if (!isValid) {
+      throw new Error(error);
+    }
+  }
+
+  await pushTokenValue('setColors', JSON.stringify(colors), connectionOptions);
+
+  syncSuccessLog(CONFIGURATION_KEYS.Colors, 'pushed');
 };
