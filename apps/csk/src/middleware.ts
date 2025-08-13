@@ -9,6 +9,7 @@ import locales from '@/i18n/locales.json';
 //? if (localization) {
 import { routing } from './i18n/routing';
 //? }
+import { DEVICE_TYPE_COOKIE_NAME, getDeviceType } from './utils/deviceType';
 import { formatPath } from './utils/formatPath';
 
 //? if (localization) {
@@ -25,18 +26,32 @@ export async function middleware(request: NextRequest) {
   if (!baseResponse.ok) return baseResponse;
 
   const response = await uniformMiddleware({
-    rewriteRequestPath: async ({ url }) => ({ path: formatPath(url.pathname, locales.defaultLocale) }),
+    rewriteRequestPath: async ({ url }) => ({
+      path: formatPath(url.pathname, locales.defaultLocale),
+      keys: {
+        search: url.toString(),
+      },
+    }),
   })(request).then(result =>
     result.headers.get('x-middleware-rewrite')
       ? result
       : uniformMiddleware({
-          rewriteRequestPath: async ({ url }) => ({ path: formatPath(url.pathname, undefined) }),
+          rewriteRequestPath: async ({ url }) => ({
+            path: formatPath(url.pathname, undefined),
+            keys: {
+              search: url.toString(),
+            },
+          }),
         })(request)
   );
 
   baseResponse.cookies.getAll().forEach(cookie => {
     response.cookies.set(cookie);
   });
+
+  if (!request.cookies.get(DEVICE_TYPE_COOKIE_NAME)) {
+    response.cookies.set(DEVICE_TYPE_COOKIE_NAME, getDeviceType(request.headers.get('user-agent')));
+  }
 
   return response;
 }
