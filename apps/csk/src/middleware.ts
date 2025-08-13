@@ -1,5 +1,4 @@
 //? if (localization) {
-import { NextRequest } from 'next/server';
 import createIntlMiddleware from 'next-intl/middleware';
 //? } else {
 //? write('import { NextRequest, NextResponse } from "next/server";\n');
@@ -16,7 +15,8 @@ import { formatPath } from './utils/formatPath';
 const intlMiddleware = createIntlMiddleware(routing);
 //? }
 
-export async function middleware(request: NextRequest) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export async function middleware(request: any) {
   //? if (localization) {
   const baseResponse = intlMiddleware(request);
   //? } else {
