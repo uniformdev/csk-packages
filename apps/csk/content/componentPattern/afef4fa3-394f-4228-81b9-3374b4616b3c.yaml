@@ -647,6 +647,18 @@ composition:
           fluidContent:
             type: checkbox
             value: true
+    fallback:
+      - _id: e85f84f2-79e5-4e7d-86c2-67c95b3fffd0
+        type: searchEnginePlaceholder
+        parameters:
+          cards:
+            type: number
+            value: '6'
+          withSidebar:
+            type: checkbox
+            value: true
+        _overridability:
+          hideLockedParameters: true
   _dataResources:
     All Product Brands:
       type: brandList
@@ -654,8 +666,7 @@ composition:
         locale: ${locale}
         search: ''
         filters: '{"type[eq]":"brand"}'
-        uiFilters: >-
-          [{"field":"type","operator":"eq","value":"brand"}]
+        uiFilters: '[{"field":"type","operator":"eq","value":"brand"}]'
         contentTypes: brand
       isPatternParameter: false
       ignorePatternParameterDefault: false
@@ -672,8 +683,7 @@ composition:
         locale: ${locale}
         search: ''
         filters: '{"type[eq]":"productCategory"}'
-        uiFilters: >-
-          [{"field":"type","operator":"eq","value":"productCategory"}]
+        uiFilters: '[{"field":"type","operator":"eq","value":"productCategory"}]'
         contentTypes: productCategory
       isPatternParameter: false
       ignorePatternParameterDefault: false
@@ -683,7 +693,7 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
-created: '2025-05-20T11:53:44.816175+00:00'
-modified: '2025-05-22T11:17:31.50274+00:00'
+created: '2025-04-25T12:20:45.146207+00:00'
+modified: '2025-07-30T15:19:37.895921+00:00'
 pattern: true
 categoryId: adaebea8-ba58-494b-9c3b-9f82906d9415

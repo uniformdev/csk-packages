@@ -1,3 +1,5 @@
+'use client';
+
 import {
   createContext,
   FC,
@@ -8,8 +10,9 @@ import {
   useEffect,
   SetStateAction,
   Dispatch,
+  useRef,
 } from 'react';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import {
   DEFAULT_PAGE_SIZE,
   ENTRIES_SEARCH_ORDER_BY_KEY,
@@ -28,7 +31,10 @@ import {
   Facets,
   OrderBy,
   PageSize,
+  FilterQuery,
 } from '@/types';
+import getEntries from '@/utils/getEntries';
+import getSearchParamsFromUrl from '@/utils/getSearchParamsFromUrl';
 
 interface EntriesSearchContextType {
   contentType?: ContentType;
@@ -51,6 +57,7 @@ interface EntriesSearchContextType {
   orderBy: OrderBy[];
   selectedOrderByQuery: string;
   setOrderBy: (orderByQuery: string) => void;
+  filteredFilterBy?: FilterBy[];
 }
 
 const EntriesSearchContext = createContext<EntriesSearchContextType>({
@@ -80,134 +87,229 @@ const EntriesSearchContext = createContext<EntriesSearchContextType>({
   orderBy: [],
   selectedOrderByQuery: '',
   setOrderBy: () => {},
+  filteredFilterBy: [],
 });
 
 type EntriesSearchContextProviderProps = {
   children: React.ReactNode;
-  filterBy?: FilterBy[];
+  filteredFilterBy?: FilterBy[];
   pageSizes: PageSize[];
   contentType?: ContentType;
-  selectedFilters: Record<string, string[]>;
   orderBy: OrderBy[];
   selectedOrderByQuery: string;
-  search: string;
-  page: number;
-  pageSize: number;
-  entries: Pagination<WithUniformContentEntrySystemParams<Article | Product>>;
-  facets: Facets;
+  initEntries: Pagination<WithUniformContentEntrySystemParams<Article | Product>>;
+  initFacets: Facets;
+  enrichmentBoostedOrderBy?: string;
+  preview?: boolean;
+  facetBy?: string;
+  baseFilterQuery?: FilterQuery;
+  defaultOrderByQuery?: string;
+  filterBy?: FilterBy[];
 };
 
 const EntriesSearchContextProvider: FC<EntriesSearchContextProviderProps> = ({
   children,
-  filterBy,
+  filteredFilterBy = [],
   contentType,
-  selectedFilters,
   orderBy,
   selectedOrderByQuery,
-  search,
-  page,
-  pageSize,
   pageSizes,
-  entries,
-  facets,
+  initEntries,
+  initFacets,
+  enrichmentBoostedOrderBy,
+  facetBy,
+  preview,
+  baseFilterQuery,
+  defaultOrderByQuery,
+  filterBy = [],
 }) => {
+  const isActiveClientSideSearch = useRef(false);
   const router = useRouter();
   const pathname = usePathname();
-  const searchParams = useSearchParams();
-  const [searchBoxValue, setSearchBoxValue] = useState(search);
+  const [newSearchParams, setNewSearchParams] = useState(getSearchParamsFromUrl(window.location.href));
+  const [searchBoxValue, setSearchBoxValue] = useState((newSearchParams?.[ENTRIES_SEARCH_QUERY_KEY] as string) || '');
   const [isLoading, setIsLoading] = useState(false);
+  const [entries, setEntries] = useState(initEntries);
+  const [facets, setFacets] = useState(initFacets);
+
+  const page =
+    Number(newSearchParams?.[ENTRIES_SEARCH_PAGE_KEY]) - 1 && Number(newSearchParams?.[ENTRIES_SEARCH_PAGE_KEY]) - 1 > 0
+      ? Number(newSearchParams?.[ENTRIES_SEARCH_PAGE_KEY]) - 1
+      : FIRST_PAGE;
+  const search = (newSearchParams?.[ENTRIES_SEARCH_QUERY_KEY] as string) || '';
+  const perPage = Number(newSearchParams?.[ENTRIES_SEARCH_PAGE_SIZE_KEY]) || DEFAULT_PAGE_SIZE;
+  const selectedFilters = useMemo(
+    () =>
+      filteredFilterBy?.reduce(
+        (acc, filter) => {
+          const value = newSearchParams?.[filter.fieldId];
+          if (value) {
+            acc[filter.fieldKey] = Array.isArray(value) ? value : [value];
+          }
+          return acc;
+        },
+        {} as Record<string, string[]>
+      ),
+    [filteredFilterBy, newSearchParams]
+  );
+
+  useEffect(() => {
+    if (!isActiveClientSideSearch.current) return;
+    const updateState = async () => {
+      const filterQuery = Object.entries(selectedFilters).reduce((acc, [fieldKey, values]) => {
+        if (!values || values.length === 0) return acc;
+        const filterType = filterBy.find(f => f.fieldKey === fieldKey)?.type;
+
+        if (filterType === 'range') {
+          const [min, max] = values;
+          return {
+            ...acc,
+            [`${fieldKey}[gte]`]: min,
+            [`${fieldKey}[lte]`]: max,
+          };
+        }
+
+        return {
+          ...acc,
+          [`${fieldKey}[in]`]: values,
+        };
+      }, {});
+
+      const newSelectedOrderByQuery = (newSearchParams?.[ENTRIES_SEARCH_ORDER_BY_KEY] as string) || defaultOrderByQuery;
+
+      const { data, facets } = await getEntries<Article | Product>({
+        page,
+        perPage,
+        filters: {
+          type: contentType ? { eq: contentType } : undefined,
+          ...baseFilterQuery,
+          ...filterQuery,
+        },
+        facetBy,
+        search,
+        preview,
+        orderBy: newSelectedOrderByQuery === 'relevance_DESC' ? enrichmentBoostedOrderBy : newSelectedOrderByQuery,
+      });
+
+      setEntries(data);
+      setFacets(facets);
+    };
+
+    setIsLoading(true);
+    updateState()
+      .catch(error => console.error(error))
+      .finally(() => setIsLoading(false));
+  }, [
+    baseFilterQuery,
+    contentType,
+    defaultOrderByQuery,
+    enrichmentBoostedOrderBy,
+    facetBy,
+    filterBy,
+    newSearchParams,
+    page,
+    perPage,
+    preview,
+    search,
+    selectedFilters,
+  ]);
+
+  const updateUrl = useCallback(
+    (params: URLSearchParams, { replace = false }: { replace?: boolean } = {}) => {
+      const qs = params.toString();
+      const url = qs ? `${pathname}?${qs}` : pathname;
+      if (replace) {
+        window.history.replaceState({}, '', url);
+      } else {
+        window.history.pushState({}, '', url);
+      }
+      setNewSearchParams(getSearchParamsFromUrl(window.location.href));
+      isActiveClientSideSearch.current = true;
+    },
+    [pathname]
+  );
 
   const setSearch = useCallback(
-    (search: string) => {
-      setIsLoading(true);
-      const params = new URLSearchParams(searchParams.toString());
+    (value: string) => {
+      const params = new URLSearchParams(window.location.search);
       params.delete(ENTRIES_SEARCH_PAGE_KEY);
-      if (!search) {
+      if (!value) {
         params.delete(ENTRIES_SEARCH_QUERY_KEY);
       } else {
-        params.set(ENTRIES_SEARCH_QUERY_KEY, search);
+        params.set(ENTRIES_SEARCH_QUERY_KEY, value);
       }
-      router.push(`?${params.toString()}`, { scroll: false });
+      updateUrl(params, { replace: true });
     },
-    [router, searchParams]
+    [updateUrl]
   );
 
   const setPage = useCallback(
-    (page: number) => {
-      setIsLoading(true);
-      const params = new URLSearchParams(searchParams.toString());
-      if (page === 0) {
+    (p: number) => {
+      const params = new URLSearchParams(window.location.search);
+      if (p === 0) {
         params.delete(ENTRIES_SEARCH_PAGE_KEY);
       } else {
-        params.set(ENTRIES_SEARCH_PAGE_KEY, (page + 1).toString());
+        params.set(ENTRIES_SEARCH_PAGE_KEY, (p + 1).toString());
       }
-      router.push(`?${params.toString()}`);
+      updateUrl(params); // pushState
     },
-    [router, searchParams]
+    [updateUrl]
   );
 
   const setPageSize = useCallback(
-    (pageSize: number) => {
-      setIsLoading(true);
-      const params = new URLSearchParams(searchParams.toString());
+    (size: number) => {
+      const params = new URLSearchParams(window.location.search);
       params.delete(ENTRIES_SEARCH_PAGE_KEY);
-      params.set(ENTRIES_SEARCH_PAGE_SIZE_KEY, pageSize.toString());
-      router.push(`?${params.toString()}`, { scroll: false });
+      params.set(ENTRIES_SEARCH_PAGE_SIZE_KEY, size.toString());
+      updateUrl(params);
     },
-    [router, searchParams]
+    [updateUrl]
   );
 
   const setOrderBy = useCallback(
     (orderByQuery: string) => {
-      setIsLoading(true);
-      const params = new URLSearchParams(searchParams.toString());
+      const params = new URLSearchParams(window.location.search);
       params.delete(ENTRIES_SEARCH_PAGE_KEY);
       params.set(ENTRIES_SEARCH_ORDER_BY_KEY, orderByQuery);
-      router.push(`?${params.toString()}`, { scroll: false });
+      updateUrl(params);
     },
-    [router, searchParams]
+    [updateUrl]
   );
 
   const setSelectedFilters = useCallback(
-    (selectedFilters: Record<string, string[]>) => {
-      setIsLoading(true);
+    (nextSelected: Record<string, string[]>) => {
       const params = new URLSearchParams();
       params.delete(ENTRIES_SEARCH_PAGE_KEY);
       if (search) {
         params.set(ENTRIES_SEARCH_QUERY_KEY, search);
       }
-      Object.entries(selectedFilters).forEach(([key, value]) => {
-        const filter = filterBy?.find(f => f.fieldKey === key);
+      Object.entries(nextSelected).forEach(([key, value]) => {
+        const filter = filteredFilterBy?.find(f => f.fieldKey === key);
         if (!filter) return;
         value.forEach(v => {
           params.append(filter.fieldId, v);
         });
       });
-      router.push(`?${params.toString()}`, { scroll: false });
+      updateUrl(params);
     },
-    [search, router, filterBy]
+    [filteredFilterBy, search, updateUrl]
   );
 
   const clearFilters = useCallback(() => {
     setIsLoading(true);
-    setSearchBoxValue('');
     router.push(pathname);
-  }, [router, pathname]);
-
-  useEffect(() => {
-    setIsLoading(false);
-  }, [searchParams]);
+  }, [pathname, router]);
 
   const value: EntriesSearchContextType = useMemo(() => {
     return {
       search,
       setSearch,
-      pageSize,
+      pageSize: perPage,
       page,
       setPage,
       setPageSize,
       pageSizes,
-      filterBy,
+      filteredFilterBy,
       contentType,
       selectedFilters,
       setSelectedFilters,
@@ -222,26 +324,25 @@ const EntriesSearchContextProvider: FC<EntriesSearchContextProviderProps> = ({
       setSearchBoxValue,
     };
   }, [
-    search,
-    setSearch,
-    pageSize,
-    page,
-    setPage,
-    setPageSize,
-    pageSizes,
-    filterBy,
+    clearFilters,
     contentType,
-    selectedFilters,
-    setSelectedFilters,
-    orderBy,
-    setOrderBy,
-    selectedOrderByQuery,
     entries,
     facets,
+    filteredFilterBy,
     isLoading,
-    clearFilters,
+    orderBy,
+    page,
+    pageSizes,
+    perPage,
+    search,
     searchBoxValue,
-    setSearchBoxValue,
+    selectedFilters,
+    selectedOrderByQuery,
+    setOrderBy,
+    setPage,
+    setPageSize,
+    setSearch,
+    setSelectedFilters,
   ]);
 
   return <EntriesSearchContext.Provider value={value}>{children}</EntriesSearchContext.Provider>;

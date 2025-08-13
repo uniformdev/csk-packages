@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: entriesSearchEngine
 name: Entries Search Engine
@@ -71,6 +71,13 @@ slots:
     allowAllComponents: true
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
+  - id: fallback
+    name: Fallback
+    allowedComponents:
+      - searchEnginePlaceholder
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: true
 canBeComposition: false
-created: '2025-04-24T11:34:18.714187+00:00'
-updated: '2025-04-24T11:34:18.714187+00:00'
+created: '2025-04-25T12:20:37.118662+00:00'
+updated: '2025-07-30T13:03:08.326496+00:00'

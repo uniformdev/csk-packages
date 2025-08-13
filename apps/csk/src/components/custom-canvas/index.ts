@@ -10,6 +10,7 @@ import CustomComponent from './CustomComponent';
 import DynamicProductRecommendations from './DynamicProductRecommendations';
 import EntriesSearchBox from './EntriesSearchBox';
 import EntriesSearchEngine from './EntriesSearchEngine';
+import SearchEnginePlaceholder from './EntriesSearchEngine/SearchEnginePlaceholder';
 import EntriesSearchFilters from './EntriesSearchFilters';
 import EntriesSearchList from './EntriesSearchList';
 import EntriesSearchPageSize from './EntriesSearchPageSize';
@@ -70,4 +71,5 @@ export const customComponentsMapping: ComponentMapping = {
   dynamicProductRecommendations: DynamicProductRecommendations,
   formattedPrice: FormattedPrice,
   entryPreview: Page,
+  searchEnginePlaceholder: SearchEnginePlaceholder,
 };

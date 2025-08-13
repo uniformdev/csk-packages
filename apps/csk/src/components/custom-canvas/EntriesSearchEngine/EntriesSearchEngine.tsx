@@ -1,6 +1,7 @@
 'use client';
-import { FC, ReactNode } from 'react';
-import { DEFAULT_PAGE_SIZE, FIRST_PAGE } from '@/constants';
+
+import { FC, PropsWithChildren } from 'react';
+import { FIRST_PAGE } from '@/constants';
 import EntriesSearchContextProvider from '@/providers/EntriesSearchContextProvider';
 import {
   Article,
@@ -12,52 +13,58 @@ import {
   WithUniformContentEntrySystemParams,
   OrderBy,
   PageSize,
+  FilterQuery,
 } from '@/types';
 
-type EntriesSearchEngineParameters = {
+type EntriesSearchEngineParameters = PropsWithChildren<{
   contentType?: ContentType;
   filterBy?: FilterBy[];
   entries: Pagination<WithUniformContentEntrySystemParams<Article | Product>>;
   facets: Facets;
-  selectedFilters?: Record<string, string[]>;
-  search: string;
-  page?: number;
-  pageSize: number;
   pageSizes: PageSize[];
   orderBy: OrderBy[];
   selectedOrderByQuery: string;
-  content: ReactNode;
-};
+  enrichmentBoostedOrderBy?: string;
+  preview?: boolean;
+  facetBy?: string;
+  baseFilterQuery?: FilterQuery;
+  defaultOrderByQuery?: string;
+  filteredFilterBy?: FilterBy[];
+}>;
 
 const EntriesSearchEngine: FC<EntriesSearchEngineParameters> = ({
   contentType,
   filterBy,
   entries,
   facets,
-  selectedFilters,
-  search,
-  page,
-  pageSize,
   pageSizes,
   orderBy,
   selectedOrderByQuery,
-  content,
+  enrichmentBoostedOrderBy,
+  preview,
+  facetBy,
+  baseFilterQuery,
+  defaultOrderByQuery,
+  filteredFilterBy,
+  children,
 }) => {
   return (
     <EntriesSearchContextProvider
       contentType={contentType}
       filterBy={filterBy}
-      entries={entries}
-      facets={facets}
-      selectedFilters={selectedFilters || {}}
-      search={search || ''}
-      page={page || FIRST_PAGE}
-      pageSize={pageSize}
+      initEntries={entries}
+      initFacets={facets}
       pageSizes={pageSizes}
       orderBy={orderBy}
       selectedOrderByQuery={selectedOrderByQuery}
+      enrichmentBoostedOrderBy={enrichmentBoostedOrderBy}
+      preview={preview}
+      facetBy={facetBy}
+      baseFilterQuery={baseFilterQuery}
+      defaultOrderByQuery={defaultOrderByQuery}
+      filteredFilterBy={filteredFilterBy}
     >
-      {content}
+      {children}
     </EntriesSearchContextProvider>
   );
 };

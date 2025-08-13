@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, Suspense } from 'react';
 import { draftMode } from 'next/headers';
 import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
 import { ComponentProps } from '@uniformdev/csk-components/types/cskTypes';
@@ -26,7 +26,7 @@ type EntriesSearchEngineParameters = {
   pageSizes?: PageSize[];
   boostEnrichments?: string[];
 };
-type EntriesSearchEngineSlots = 'content';
+type EntriesSearchEngineSlots = 'content' | 'fallback';
 type EntriesSearchEngineProps = ComponentProps<EntriesSearchEngineParameters, EntriesSearchEngineSlots>;
 
 const EntriesSearchEngineWrapper: FC<EntriesSearchEngineProps & EntriesSearchEngineParameters> = async props => {
@@ -145,19 +145,30 @@ const EntriesSearchEngineWrapper: FC<EntriesSearchEngineProps & EntriesSearchEng
   return (
     <EntriesSearchEngine
       {...props}
-      filterBy={filteredFilterBy}
+      filteredFilterBy={filteredFilterBy}
       entries={data}
       facets={facets}
-      selectedFilters={selectedFilters}
-      search={search}
-      page={page}
-      pageSize={perPage}
       orderBy={orderByWithRelevance}
       selectedOrderByQuery={selectedOrderByQuery}
       pageSizes={pageSizes}
-      content={<UniformSlot slot={props.slots.content} />}
-    />
+      enrichmentBoostedOrderBy={enrichmentBoostedOrderBy}
+      preview={isEnabled}
+      facetBy={facetBy}
+      baseFilterQuery={baseFilterQuery}
+      defaultOrderByQuery={defaultOrderByQuery}
+    >
+      <UniformSlot slot={props.slots.content} />
+    </EntriesSearchEngine>
   );
 };
 
-export default withFlattenParameters(EntriesSearchEngineWrapper, { levels: 2 });
+const SuspenseProvider = (props: EntriesSearchEngineProps) =>
+  props.slots.fallback?.items?.length ? (
+    <Suspense fallback={<UniformSlot slot={props.slots.fallback} />}>
+      <EntriesSearchEngineWrapper {...props} />
+    </Suspense>
+  ) : (
+    <EntriesSearchEngineWrapper {...props} />
+  );
+
+export default withFlattenParameters(SuspenseProvider, { levels: 2 });

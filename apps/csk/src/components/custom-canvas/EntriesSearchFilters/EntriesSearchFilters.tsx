@@ -20,7 +20,7 @@ export type FilterByProps = FilterByType & {
 };
 
 const EntriesSearchFilters: FC<ComponentProps<unknown, never>> = () => {
-  const { filterBy, selectedFilters, setSelectedFilters, facets } = useEntriesSearchContext();
+  const { filteredFilterBy, selectedFilters, setSelectedFilters, facets } = useEntriesSearchContext();
 
   const handleFilterChange = useDebouncedCallback((fieldId: string, value: string[]) => {
     setSelectedFilters({ ...selectedFilters, [fieldId]: value });
@@ -28,7 +28,7 @@ const EntriesSearchFilters: FC<ComponentProps<unknown, never>> = () => {
 
   return (
     <div className="flex flex-col gap-y-10">
-      {filterBy?.map(filter => {
+      {filteredFilterBy?.map(filter => {
         const Component = filterByComponents[filter.type];
         return (
           <div key={filter.fieldKey} className="flex flex-col gap-y-2">
