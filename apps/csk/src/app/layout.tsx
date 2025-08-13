@@ -10,6 +10,8 @@ import '@/styles/dimensions.css';
 import '@/styles/fonts.css';
 import '@/styles/borders.css';
 import { customFontVariables } from '@/fonts';
+import { CardProvider } from '@/providers/CardProvider';
+import { FavoritesProvider } from '@/providers/FavoritesProvider';
 import { UniformClientContext } from '@/utils/clientContext';
 //? if (ga) {
 import { GoogleAnalytics } from '@next/third-parties/google';
@@ -27,7 +29,9 @@ export default function RootLayout({
         <NextIntlClientProvider>
           {/* //? } */}
           <NextThemeProvider attribute="class" defaultTheme="light" enableSystem>
-            {children}
+            <CardProvider>
+              <FavoritesProvider>{children}</FavoritesProvider>
+            </CardProvider>
           </NextThemeProvider>
           <Suspense>
             <UniformContext clientContextComponent={UniformClientContext} />
