@@ -1,6 +1,7 @@
 import Color, { ColorInstance } from 'color';
 
 export const REGEX_KEY = /^[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*$/;
+const TOKEN_REF_REGEX = /^\{([\w-]+)\}$/;
 
 export const getColor = (value: string, fallback?: string): ColorInstance | null => {
   try {
@@ -18,7 +19,14 @@ export const checkTokenKeysWithInvalid = (tokensKey: string[]) => {
   };
 };
 
-export const checkColorValueKeys = (colorValue: string[]) => colorValue.filter(value => !getColor(value));
+export const checkColorValueKeys = (colorValues: string[], colorMap: Record<string, string>) =>
+  colorValues.filter(value => {
+    const match = TOKEN_REF_REGEX.exec(value.trim());
+    if (match && match[1]) {
+      return !colorMap[match[1]];
+    }
+    return !getColor(value);
+  });
 
 export const validateConfigurationEntry = (type: string, entry: Record<string, string>) => {
   const { isValid, invalidKeys } = checkTokenKeysWithInvalid(Object.keys(entry));
@@ -54,7 +62,7 @@ export const validateColorsConfiguration = (color: Record<string, string>) => {
     };
   }
 
-  const invalidColorsValues = checkColorValueKeys(colorsValues);
+  const invalidColorsValues = checkColorValueKeys(colorsValues, color);
 
   if (invalidColorsValues.length > 0) {
     return {
