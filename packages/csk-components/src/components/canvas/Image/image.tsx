@@ -45,7 +45,7 @@ const Image: FC<ImageProps & ReplaceFieldsWithAssets<ImageParameters, 'image'>> 
   if (!fill && (!imageWidth || !imageHeight)) {
     console.warn(
       'No dimensions provided for the Next.js Image component. Falling back to a standard <img> tag for rendering.'
-    );
+    ); // eslint-disable-next-line @next/next/no-img-element
     return <img src={resolvedImage.url} alt={title} />;
   }
 
