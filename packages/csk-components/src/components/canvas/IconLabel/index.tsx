@@ -1,8 +1,8 @@
 import { AssetParamValue } from '@uniformdev/assets';
-import { TextParameters } from '@/components/canvas/Text/parameters';
+import { IconLabelProps as BaseIconLabelParameters } from '@/components/ui/IconLabel';
 import { ComponentProps } from '@/types/cskTypes';
 
-export type IconLabelParameters = TextParameters & {
+export type IconLabelParameters = Omit<BaseIconLabelParameters, 'children'> & {
   icon?: AssetParamValue;
 };
 

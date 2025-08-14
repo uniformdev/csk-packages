@@ -17,6 +17,7 @@ export type IconLabelProps = {
   transform?: BaseTextProps['transform'];
   decoration?: BaseTextProps['decoration'];
   letterSpacing?: BaseTextProps['letterSpacing'];
+  iconPosition?: 'left' | 'right';
   lineCountRestrictions?: string;
 };
 
