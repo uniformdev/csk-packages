@@ -1,6 +1,6 @@
 {
   "name": "@uniformdev/component-starter-kit",
-  "version": "6.1.11",
+  "version": "6.1.12",
   "private": true,
   "engines": {
     "yarn": "please-use-npm",
@@ -16,6 +16,7 @@
     "next:dev": "next dev",
     "next:build": "next build",
     "lint": "next lint",
+    "typecheck": "tsc --noEmit",
     "lint:fix": "next lint --fix",
     "format": "prettier --write .",
     "init": "run-s uniform:push uniform:publish",

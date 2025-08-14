@@ -160,4 +160,4 @@ jobs:
         working-directory: apps/csk
         run: |
           echo "Type checking apps/csk after component extraction..."
-          npx tsc --noEmit
+          npm run typecheck
