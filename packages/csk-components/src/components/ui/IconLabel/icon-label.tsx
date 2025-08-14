@@ -18,6 +18,7 @@ export const IconLabel: FC<IconLabelProps> = ({
   textClassName,
   iconClassName,
   className,
+  iconPosition,
 }) => (
   <div
     className={cn(
@@ -25,6 +26,7 @@ export const IconLabel: FC<IconLabelProps> = ({
       {
         [`text-${size}`]: !!size,
         [`text-${color}`]: !!color,
+        'flex-row-reverse': icon && iconPosition === 'right',
       },
       className
     )}

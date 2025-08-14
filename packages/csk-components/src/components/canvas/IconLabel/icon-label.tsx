@@ -19,6 +19,7 @@ const IconLabel: FC<IconLabelProps & ReplaceFieldsWithAssets<IconLabelParameters
   alignment,
   parameters,
   component,
+  iconPosition,
 }) => {
   const [resolvedImage] = icon || [];
   const { url, title = '' } = resolvedImage || {};
@@ -26,7 +27,7 @@ const IconLabel: FC<IconLabelProps & ReplaceFieldsWithAssets<IconLabelParameters
   return (
     <BaseIconLabel
       icon={url ? <BaseImage src={url} alt={title} fill /> : undefined}
-      {...{ size, tag, color, weight, font, transform, decoration, letterSpacing, alignment }}
+      {...{ size, tag, color, weight, font, transform, decoration, letterSpacing, alignment, iconPosition }}
     >
       <UniformText
         placeholder="Text goes here"
