@@ -31,8 +31,8 @@ export const DefaultVariant: FC<DefaultVariantProps> = ({
   <Container className="relative overflow-hidden" {...{ backgroundColor, spacing, border, fluidContent, height }}>
     <div className="absolute left-0 top-0 size-full overflow-hidden">{sectionMedia}</div>
     <Container className="relative flex flex-col gap-8">
-      <div className={cn('flex flex-col gap-4', textAlignmentClass)}>{sectionContent}</div>
-      <div className={cn('flex flex-wrap gap-2', buttonAlignmentClass)}>{sectionCTA}</div>
+      {sectionContent && <div className={cn('flex flex-col gap-4', textAlignmentClass)}>{sectionContent}</div>}
+      {sectionCTA && <div className={cn('flex flex-wrap gap-2', buttonAlignmentClass)}>{sectionCTA}</div>}
     </Container>
   </Container>
 );

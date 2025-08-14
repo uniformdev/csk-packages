@@ -25,8 +25,8 @@ const Section: FC<SectionProps & SectionParameters> = ({
     textAlignmentClass: getTextAlignmentClass({ contentAlignment }),
     buttonAlignmentClass: getButtonAlignmentClass({ contentAlignment }),
     sectionMedia: <UniformSlot slot={slots.sectionMedia} />,
-    sectionContent: <UniformSlot slot={slots.sectionContent} />,
-    sectionCTA: <UniformSlot slot={slots.sectionCTA} />,
+    sectionContent: slots.sectionContent ? <UniformSlot slot={slots.sectionContent} /> : undefined,
+    sectionCTA: slots.sectionCTA ? <UniformSlot slot={slots.sectionCTA} /> : undefined,
   };
 
   switch (variant) {
