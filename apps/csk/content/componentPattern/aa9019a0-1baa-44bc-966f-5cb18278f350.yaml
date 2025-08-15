@@ -10,14 +10,34 @@ composition:
       type: dex-segmented-control-parameter
       value:
         mobile: lg
-        tablet: 2xl
-        desktop: 2xl
+        tablet: ''
+        desktop: ''
     text:
       type: text
-      value: How much does the Component Starter Kit cost?
+      locales:
+        da-dk: Hvor meget koster Komponent Startpakken?
+        de-at: Wie viel kostet das Komponent-Starterkit?
+        de-ch: Wie viel kostet das Component Starter Kit?
+        de-de: Wie viel kostet das Component Starter Kit?
+        en-au: Combien coûte le kit de démarrage de composants ?
+        en-ca: How much does the Component Starter Kit cost?
+        en-gb: How much does the Component Starter Kit cost?
+        en-nl: Hoeveel kost de Component Starter Kit?
+        en-nz: Wie viel kostet das Component Starter Kit?
+        en-us: How much does the Component Starter Kit cost?
+        fr-ca: Combien coûte le kit de démarrage de composants ?
+        fr-ch: Combien coûte le kit de démarrage de composants ?
+        fr-fr: Combien coûte le kit de démarrage de composants ?
+        ja-jp: コンポーネントスターターキットの価格はいくらですか？
+        nl-nl: Hoeveel kost de Component Starter Kit?
+        sv-se: Hur mycket kostar komponentstartpaketet?
+        ar-uae: كم تكلفة مجموعة المكونات الأساسية؟
     color:
       type: dex-color-palette-parameter
       value: text-secondary
+    border:
+      type: dex-token-selector-parameter
+      value: border-bottom
     weight:
       type: dex-segmented-control-parameter
       value: bold
@@ -25,23 +45,9 @@ composition:
       type: dex-space-control-parameter
       value:
         mobile:
-          paddingTop: container-small
-          paddingLeft: container-small
-          marginBottom: ''
-          paddingRight: container-small
           paddingBottom: container-small
-        tablet:
-          paddingTop: container-small
-          paddingLeft: container-small
-          marginBottom: ''
-          paddingRight: container-small
-          paddingBottom: container-small
-        desktop:
-          paddingTop: container-small
-          paddingLeft: container-small
-          marginBottom: ''
-          paddingRight: container-small
-          paddingBottom: container-small
+        tablet: {}
+        desktop: {}
     backgroundColor:
       type: dex-color-palette-parameter
       value: general-color-3
@@ -61,16 +67,63 @@ composition:
                   type: dex-segmented-control-parameter
                   value:
                     mobile: base
-                    tablet: lg
-                    desktop: xl
+                    tablet: ''
+                    desktop: ''
                 text:
                   type: text
-                  value: >-
-                    Exactly $0. These components are totally open source and
-                    available for anyone to use.
+                  locales:
+                    da-dk: >-
+                      Præcis $0. Disse komponenter er fuldstændigt open source
+                      og tilgængelige for alle at bruge.
+                    de-at: >-
+                      Genau 0 $. Diese Komponenten sind völlig quelloffen und
+                      für jedermann nutzbar.
+                    de-ch: >-
+                      Genau 0 $. Diese Komponenten sind völlig quelloffen und
+                      für jeden zur Nutzung verfügbar.
+                    de-de: >-
+                      Genau 0 $. Diese Komponenten sind völlig quelloffen und
+                      für jeden zur Nutzung verfügbar.
+                    en-au: >-
+                      Exactement 0 $. Ces composants sont totalement open source
+                      et disponibles pour tout le monde.
+                    en-ca: >-
+                      Exactly $0. These components are totally open source and
+                      available for anyone to use.
+                    en-gb: >-
+                      Exactly £0. These components are totally open source and
+                      available for anyone to use.
+                    en-nl: >-
+                      Precies $0. Deze componenten zijn volledig open source en
+                      beschikbaar voor iedereen om te gebruiken.
+                    en-nz: >-
+                      Genau $0. Diese Komponenten sind völlig quelloffen und für
+                      jeden zur Nutzung verfügbar.
+                    en-us: >-
+                      Exactly $0. These components are totally open source and
+                      available for anyone to use.
+                    fr-ca: >-
+                      Exactement 0 $. Ces composants sont totalement open source
+                      et disponibles pour tout le monde.
+                    fr-ch: >-
+                      Exactement 0 $. Ces composants sont totalement open source
+                      et disponibles pour tout le monde.
+                    fr-fr: >-
+                      Exactement 0 $. Ces composants sont totalement open source
+                      et disponibles pour tout le monde.
+                    ja-jp: ちょうど0ドルです。これらのコンポーネントは完全にオープンソースで、誰でも使用できます。
+                    nl-nl: >-
+                      Precies $0. Deze componenten zijn volledig open source en
+                      beschikbaar voor iedereen om te gebruiken.
+                    sv-se: >-
+                      Exakt $0. Dessa komponenter är helt öppen källkod och
+                      tillgängliga för vem som helst att använda.
+                    ar-uae: >-
+                      بالضبط $0. هذه المكونات مفتوحة المصدر تمامًا ومتاحة لأي
+                      شخص للاستخدام.
                 color:
                   type: dex-color-palette-parameter
-                  value: text-primary
+                  value: text-secondary
                 weight:
                   type: dex-segmented-control-parameter
                   value: normal
@@ -84,12 +137,30 @@ composition:
           spacing:
             type: dex-space-control-parameter
             value:
-              marginTop: container-small
-              paddingTop: ''
-              paddingBottom: ''
+              mobile:
+                paddingTop: container-small
+              tablet: {}
+              desktop: {}
           displayName:
             type: text
-            value: Content
+            locales:
+              da-dk: Indhold
+              de-at: Inhalt
+              de-ch: Inhalt
+              de-de: Inhalt
+              en-au: Contenu
+              en-ca: Content
+              en-gb: Content
+              en-nl: Inhoud
+              en-nz: Inhalt
+              en-us: Content
+              fr-ca: Contenu
+              fr-ch: Contenu
+              fr-fr: Contenu
+              ja-jp: コンテンツ
+              nl-nl: Inhoud
+              sv-se: Innehåll
+              ar-uae: المحتوى
           fluidContent:
             type: checkbox
             value: true
@@ -103,8 +174,24 @@ composition:
       backgroundColor: 'yes'
     hideLockedParameters: true
   _locales:
-    - en
-created: '2025-03-20T13:29:21.05824+00:00'
-modified: '2025-05-22T11:55:21.063016+00:00'
+    - en-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-nz
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - fr-fr
+    - en-au
+    - ja-jp
+    - ar-uae
+    - de-ch
+    - fr-ch
+created: '2025-03-25T09:38:01.416784+00:00'
+modified: '2025-08-06T12:11:46.148765+00:00'
 pattern: true
 categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

@@ -1,0 +1,1395 @@
+composition:
+  _name: Products Search Engine
+  _id: afef4fa3-394f-4228-81b9-3374b4616b3c
+  type: entriesSearchEngine
+  parameters:
+    orderBy:
+      type: $block
+      value:
+        - _id: d4096feb-1cad-413e-8a2e-a6ffccea811a
+          type: orderBy
+          fields:
+            field:
+              type: text
+              value: relevance
+            title:
+              type: text
+              locales:
+                da-dk: Relevans
+                de-at: Relevanz
+                de-ch: Relevanz
+                de-de: Relevanz
+                en-au: Relevance
+                en-ca: Relevance
+                en-gb: Relevance
+                en-nl: Relevance
+                en-nz: Relevance
+                en-us: Relevance
+                fr-ca: Pertinence
+                fr-ch: Pertinence
+                fr-fr: Pertinence
+                ja-jp: 関連性
+                nl-nl: Relevantie
+                sv-se: Relevans
+                ar-uae: الصلة
+            direction:
+              type: select
+              value: DESC
+        - _id: 2a53ef92-66ce-4c25-96b0-33ddf6ade010
+          type: orderBy
+          fields:
+            field:
+              type: text
+              value: created_at
+            title:
+              type: text
+              locales:
+                da-dk: Nyeste ankomster
+                de-at: Neueste Ankünfte
+                de-ch: Neueste Ankünfte
+                de-de: Neueste Ankünfte
+                en-au: Nouveautés
+                en-ca: Latest Arrivals
+                en-gb: Latest Arrivals
+                en-nl: Nieuwste Aankomsten
+                en-nz: Neueste Ankünfte
+                en-us: Newest Arrivals
+                fr-ca: Nouveautés
+                fr-ch: Nouveautés
+                fr-fr: Nouveautés
+                ja-jp: 最新入荷
+                nl-nl: Nieuwste Aankomsten
+                sv-se: Nyaste ankomster
+                ar-uae: أحدث الوافدين
+            direction:
+              type: select
+              value: DESC
+        - _id: 452e6eab-9055-4bc5-b3bb-2885ed788653
+          type: orderBy
+          fields:
+            field:
+              type: text
+              value: fields.title
+            title:
+              type: text
+              locales:
+                da-dk: 'Alfabetisk: A-Å'
+                de-at: 'Alphabetisch: A-Z'
+                de-ch: 'Alphabetisch: A-Z'
+                de-de: 'Alphabetisch: A-Z'
+                en-au: 'Par ordre alphabétique : A-Z'
+                en-ca: 'Alphabetically: A-Z'
+                en-gb: 'Alphabetically: A-Z'
+                en-nl: 'Alfabetisch: A-Z'
+                en-nz: 'Alphabetisch: A-Z'
+                en-us: 'Alphabetically: A-Z'
+                fr-ca: 'Alphabétiquement : A-Z'
+                fr-ch: 'Par ordre alphabétique : A-Z'
+                fr-fr: 'Par ordre alphabétique : A-Z'
+                ja-jp: アルファベット順：A-Z
+                nl-nl: 'Alfabetisch: A-Z'
+                sv-se: 'Alfabetiskt: A-Ö'
+                ar-uae: 'أبجديًا: أ-ي'
+            direction:
+              type: select
+              value: ASC
+        - _id: 1e2086c5-ee74-4edc-8e79-8856678d86d1
+          type: orderBy
+          fields:
+            field:
+              type: text
+              value: fields.title
+            title:
+              type: text
+              locales:
+                da-dk: 'Alfabetisk: Å-Æ'
+                de-at: 'Alphabetisch: Z-A'
+                de-ch: 'Alphabetisch: Z-A'
+                de-de: 'Alphabetisch: Z-A'
+                en-au: 'Alphabétiquement : Z-A'
+                en-ca: 'Alphabetically: Z-A'
+                en-gb: 'Z-A: Alphabetically'
+                en-nl: 'Alfabetisch: Z-A'
+                en-nz: 'Alphabetisch: Z-A'
+                en-us: 'Alphabetically: Z-A'
+                fr-ca: 'Alphabétiquement : Z-A'
+                fr-ch: 'Alphabétiquement : Z-A'
+                fr-fr: 'Alphabétiquement : Z-A'
+                ja-jp: アルファベット順：Z-A
+                nl-nl: 'Alfabetisch: Z-A'
+                sv-se: 'Alfabetiskt: Ö-A'
+                ar-uae: 'أبجدياً: ز-أ'
+            direction:
+              type: select
+              value: DESC
+        - _id: d7339332-cbd4-4ac2-966a-3af951e08cea
+          type: orderBy
+          fields:
+            field:
+              type: text
+              value: fields.rating
+            title:
+              type: text
+              locales:
+                da-dk: 'Bedømmelse: Højeste først'
+                de-at: 'Bewertung: Höchste zuerst'
+                de-ch: 'Bewertung: Höchste zuerst'
+                de-de: 'Bewertung: Höchste zuerst'
+                en-au: 'Classement : Du plus élevé au plus bas'
+                en-ca: 'Rating: Highest first'
+                en-gb: 'Rating: Highest first'
+                en-nl: 'Beoordeling: Hoogste eerst'
+                en-nz: 'Bewertung: Höchste zuerst'
+                en-us: 'Rating: Highest first'
+                fr-ca: 'Évaluation : Du plus élevé au plus bas'
+                fr-ch: 'Évaluation : Du plus élevé au plus bas'
+                fr-fr: 'Évaluation : Du plus élevé au plus bas'
+                ja-jp: '評価: 高い順'
+                nl-nl: 'Beoordeling: Hoogste eerst'
+                sv-se: 'Betyg: Högst först'
+                ar-uae: 'التقييم: الأعلى أولاً'
+            direction:
+              type: select
+              value: DESC
+        - _id: 7ef0e605-c3d1-4ac8-8793-63b7b409394d
+          type: orderBy
+          fields:
+            field:
+              type: text
+              value: fields.rating
+            title:
+              type: text
+              locales:
+                da-dk: 'Bedømmelse: Laveste først'
+                de-at: 'Bewertung: Niedrigste zuerst'
+                de-ch: 'Bewertung: Niedrigste zuerst'
+                de-de: 'Bewertung: Niedrigste zuerst'
+                en-au: 'Évaluation : Du plus bas au plus élevé'
+                en-ca: 'Rating: Lowest first'
+                en-gb: 'Rating: Lowest first'
+                en-nl: 'Beoordeling: Laagste eerst'
+                en-nz: 'Bewertung: Niedrigste zuerst'
+                en-us: 'Rating: Lowest first'
+                fr-ca: 'Évaluation : Du plus bas au plus élevé'
+                fr-ch: 'Évaluation : Du plus bas au plus élevé'
+                fr-fr: 'Évaluation : Du plus bas au plus élevé'
+                ja-jp: '評価: 低い順'
+                nl-nl: 'Beoordeling: Laagste eerst'
+                sv-se: 'Betyg: Lägst först'
+                ar-uae: 'التقييم: الأقل أولاً'
+            direction:
+              type: select
+              value: ASC
+    filterBy:
+      type: $block
+      value:
+        - _id: 87dea12d-bc3b-4b7d-8b46-5b64f15d4654
+          type: filterBy
+          fields:
+            type:
+              type: select
+              value: multiSelect
+            title:
+              type: text
+              locales:
+                da-dk: Filtrer efter type
+                de-at: Nach Typ filtern
+                de-ch: Nach Typ filtern
+                de-de: Nach Typ filtern
+                en-au: Filtrer par type
+                en-ca: Filter by type
+                en-gb: Filter by type
+                en-nl: Filter op type
+                en-nz: Nach Typ filtern
+                en-us: Filter by type
+                fr-ca: Filtrer par type
+                fr-ch: Filtrer par type
+                fr-fr: Filtrer par type
+                ja-jp: タイプでフィルター
+                nl-nl: Filter op type
+                sv-se: Filtrera efter typ
+                ar-uae: تصفية حسب النوع
+            values:
+              type: $block
+              value:
+                - _id: 18213ddb-3069-427c-b8f3-93a0189f84b2
+                  type: $loop
+                  fields:
+                    body:
+                      type: $block
+                      value:
+                        - _id: 7e04ec3f-7366-417b-ac04-9fafbd9df852
+                          type: filterByItem
+                          fields:
+                            title:
+                              type: text
+                              locales:
+                                da-dk: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                de-at: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                de-ch: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                de-de: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                en-au: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                en-ca: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                en-gb: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                en-nl: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                en-nz: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                en-us: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                fr-ca: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                fr-ch: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                fr-fr: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                ja-jp: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                nl-nl: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                sv-se: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                ar-uae: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                            value:
+                              type: text
+                              value: >-
+                                ${#jptr:/All Product Categories entries Loop
+                                Item/entry/_slug}
+                  _dataResources:
+                    All Product Categories entries Loop Item:
+                      type: sys-reserved-loop
+                      variables:
+                        connectedData: '#jptr:/All Product Categories/entries:fa=c'
+            fieldId:
+              type: text
+              value: category
+            fieldKey:
+              type: text
+              value: fields.subcategory.slug
+            enableFaceting:
+              type: checkbox
+              value: true
+        - _id: c1e35169-72dc-494d-ba9a-03bc76aed46e
+          type: filterBy
+          fields:
+            type:
+              type: select
+              value: multiSelect
+            title:
+              type: text
+              locales:
+                da-dk: Filtrer efter mærke
+                de-at: Nach Marke filtern
+                de-ch: Nach Marke filtern
+                de-de: Nach Marke filtern
+                en-au: Affiner par marque
+                en-ca: Refine by brand
+                en-gb: Refine by brand
+                en-nl: Verfijnen op merk
+                en-nz: Nach Marke verfeinern
+                en-us: Refine by brand
+                fr-ca: Affiner par marque
+                fr-ch: Affiner par marque
+                fr-fr: Affiner par marque
+                ja-jp: ブランドで絞り込む
+                nl-nl: Verfijnen op merk
+                sv-se: Förfina efter märke
+                ar-uae: تصفية حسب العلامة التجارية
+            values:
+              type: $block
+              value:
+                - _id: 84f8bb98-1bb0-444a-9f86-530f5b6a408b
+                  type: $loop
+                  fields:
+                    body:
+                      type: $block
+                      value:
+                        - _id: 11363fe9-01cc-487c-9288-c3db3c3bea0c
+                          type: filterByItem
+                          fields:
+                            title:
+                              type: text
+                              locales:
+                                da-dk: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                de-at: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                de-ch: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                de-de: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                en-au: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                en-ca: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                en-gb: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                en-nl: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                en-nz: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                en-us: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                fr-ca: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                fr-ch: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                fr-fr: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                ja-jp: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                nl-nl: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                sv-se: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                                ar-uae: >-
+                                  ${#jptr:/All Product Categories entries Loop
+                                  Item/entry/fields/title/value}
+                            value:
+                              type: text
+                              value: >-
+                                ${#jptr:/All Product Categories entries Loop
+                                Item/entry/_slug}
+                  _dataResources:
+                    All Product Categories entries Loop Item:
+                      type: sys-reserved-loop
+                      variables:
+                        connectedData: '#jptr:/All Product Brands/entries:fa=c'
+            fieldId:
+              type: text
+              value: brand
+            fieldKey:
+              type: text
+              value: fields.brand.slug
+            enableFaceting:
+              type: checkbox
+              value: true
+        - _id: 6bb609be-43c8-4b6f-b6fe-dbaf4e266db5
+          type: filterBy
+          fields:
+            type:
+              type: select
+              value: range
+            title:
+              type: text
+              locales:
+                da-dk: Filtrer efter kundevurdering
+                de-at: Nach Kundenbewertung filtern
+                de-ch: Nach Kundenbewertung filtern
+                de-de: Nach Kundenbewertung filtern
+                en-au: Affiner par note des clients
+                en-ca: Filter by customer rating
+                en-gb: Refine by customer rating
+                en-nl: Verfijnen op klantbeoordeling
+                en-nz: Nach Kundenbewertung filtern
+                en-us: Refine by customer rating
+                fr-ca: Affiner par évaluation des clients
+                fr-ch: Affiner par note des clients
+                fr-fr: Affiner par note des clients
+                ja-jp: カスタマーレーティングで絞り込む
+                nl-nl: Filteren op klantbeoordeling
+                sv-se: Förfina efter kundbetyg
+                ar-uae: التصفية حسب تقييم العملاء
+            values:
+              type: $block
+              value:
+                - _id: a9dbba2f-64ac-4ed4-b501-9c78d339b6f2
+                  type: filterByItem
+                  fields:
+                    title:
+                      type: text
+                      locales:
+                        da-dk: '0'
+                        de-at: '0'
+                        de-ch: '0'
+                        de-de: '0'
+                        en-au: '0'
+                        en-ca: '0'
+                        en-gb: '0'
+                        en-nl: '0'
+                        en-nz: '0'
+                        en-us: '0'
+                        fr-ca: '0'
+                        fr-ch: '0'
+                        fr-fr: '0'
+                        ja-jp: '0'
+                        nl-nl: '0'
+                        sv-se: '0'
+                        ar-uae: ٠
+                    value:
+                      type: text
+                      value: '0'
+                - _id: 69661140-7aec-49e3-a288-c0b69100ca83
+                  type: filterByItem
+                  fields:
+                    title:
+                      type: text
+                      locales:
+                        da-dk: '1'
+                        de-at: '1'
+                        de-ch: Eins
+                        de-de: Eins
+                        en-au: '1'
+                        en-ca: '1'
+                        en-gb: '1'
+                        en-nl: Eén
+                        en-nz: '1'
+                        en-us: '1'
+                        fr-ca: '1'
+                        fr-ch: Un
+                        fr-fr: Un
+                        ja-jp: '1'
+                        nl-nl: '1'
+                        sv-se: '1'
+                        ar-uae: واحد
+                    value:
+                      type: text
+                      value: '1'
+                - _id: d62707d6-f9e9-4b44-8ff0-537a1097841e
+                  type: filterByItem
+                  fields:
+                    title:
+                      type: text
+                      locales:
+                        da-dk: '2'
+                        de-at: '2'
+                        de-ch: '2'
+                        de-de: '2'
+                        en-au: '2'
+                        en-ca: '2'
+                        en-gb: '2'
+                        en-nl: '2'
+                        en-nz: '2'
+                        en-us: '2'
+                        fr-ca: '2'
+                        fr-ch: '2'
+                        fr-fr: '2'
+                        ja-jp: '2'
+                        nl-nl: '2'
+                        sv-se: '2'
+                        ar-uae: ٢
+                    value:
+                      type: text
+                      value: '2'
+                - _id: f63585fa-2454-4583-952a-c3ea759db8f3
+                  type: filterByItem
+                  fields:
+                    title:
+                      type: text
+                      locales:
+                        da-dk: '3'
+                        de-at: '3'
+                        de-ch: '3'
+                        de-de: '3'
+                        en-au: '3'
+                        en-ca: '3'
+                        en-gb: '3'
+                        en-nl: '3'
+                        en-nz: '3'
+                        en-us: '3'
+                        fr-ca: '3'
+                        fr-ch: '3'
+                        fr-fr: '3'
+                        ja-jp: '3'
+                        nl-nl: '3'
+                        sv-se: '3'
+                        ar-uae: ٣
+                    value:
+                      type: text
+                      value: '3'
+                - _id: d3658452-4518-4a2f-9cba-9f7aa5ab453a
+                  type: filterByItem
+                  fields:
+                    title:
+                      type: text
+                      locales:
+                        da-dk: '4'
+                        de-at: '4'
+                        de-ch: '4'
+                        de-de: '4'
+                        en-au: '4'
+                        en-ca: '4'
+                        en-gb: '4'
+                        en-nl: '4'
+                        en-nz: '4'
+                        en-us: '4'
+                        fr-ca: '4'
+                        fr-ch: '4'
+                        fr-fr: '4'
+                        ja-jp: '4'
+                        nl-nl: '4'
+                        sv-se: '4'
+                        ar-uae: ٤
+                    value:
+                      type: text
+                      value: '4'
+                - _id: 66bbfb57-4748-4234-a3f3-26db60120875
+                  type: filterByItem
+                  fields:
+                    title:
+                      type: text
+                      locales:
+                        da-dk: '5'
+                        de-at: '5'
+                        de-ch: '5'
+                        de-de: '5'
+                        en-au: '5'
+                        en-ca: '5'
+                        en-gb: '5'
+                        en-nl: '5'
+                        en-nz: '5'
+                        en-us: '5'
+                        fr-ca: '5'
+                        fr-ch: '5'
+                        fr-fr: '5'
+                        ja-jp: '5'
+                        nl-nl: '5'
+                        sv-se: '5'
+                        ar-uae: ٥
+                    value:
+                      type: text
+                      value: '5'
+            fieldId:
+              type: text
+              value: rating
+            fieldKey:
+              type: text
+              value: fields.rating
+    pageSizes:
+      type: $block
+      value:
+        - _id: 8dbd1da1-4b00-4fe3-8670-7d402adf8800
+          type: pageSize
+          fields:
+            size:
+              type: number
+              value: '6'
+        - _id: 0843f4b1-24fb-46db-9401-83c03f72d85e
+          type: pageSize
+          fields:
+            size:
+              type: number
+              value: '8'
+        - _id: 54840be6-ad8c-4c8d-a9e9-d2817796ec78
+          type: pageSize
+          fields:
+            size:
+              type: number
+              value: '10'
+    baseFilters:
+      type: $block
+      value:
+        - _id: 0e7faa98-bee9-40eb-ad47-4a8039cc6aeb
+          type: filterBy
+          fields:
+            type:
+              type: select
+              value: select
+            title:
+              type: text
+              locales:
+                da-dk: Kaffemaskiner
+                de-at: Kaffeemaschinen
+                de-ch: Kaffeemaschinen
+                de-de: Kaffeemaschinen
+                en-au: Cafetière
+                en-ca: Coffee Makers
+                en-gb: Coffee Machines
+                en-nl: Koffiezetapparaten
+                en-nz: Kaffeemaschinen
+                en-us: Coffee Makers
+                fr-ca: Cafetière
+                fr-ch: Cafetière
+                fr-fr: Cafetière
+                ja-jp: コーヒーメーカー
+                nl-nl: Koffiezetapparaten
+                sv-se: Kaffebryggare
+                ar-uae: صانعات القهوة
+            values:
+              type: $block
+              value:
+                - _id: 94c23487-86d7-4f26-9bb0-c6167d03df73
+                  type: filterByItem
+                  fields:
+                    title:
+                      type: text
+                      locales:
+                        da-dk: >-
+                          ${#jptr:/Base Product
+                          Category/entry/fields/title/value}
+                        de-at: >-
+                          ${#jptr:/Base Product
+                          Category/entry/fields/title/value}
+                        de-ch: >-
+                          ${#jptr:/Base Product
+                          Category/entry/fields/title/value}
+                        de-de: >-
+                          ${#jptr:/Base Product
+                          Category/entry/fields/title/value}
+                        en-au: >-
+                          ${#jptr:/Base Product
+                          Category/entry/fields/title/value}
+                        en-ca: >-
+                          ${#jptr:/Base Product
+                          Category/entry/fields/title/value}
+                        en-gb: >-
+                          ${#jptr:/Base Product
+                          Category/entry/fields/title/value}
+                        en-nl: >-
+                          ${#jptr:/Base Product
+                          Category/entry/fields/title/value}
+                        en-nz: >-
+                          ${#jptr:/Base Product
+                          Category/entry/fields/title/value}
+                        en-us: >-
+                          ${#jptr:/Base Product
+                          Category/entry/fields/title/value}
+                        fr-ca: >-
+                          ${#jptr:/Base Product
+                          Category/entry/fields/title/value}
+                        fr-ch: >-
+                          ${#jptr:/Base Product
+                          Category/entry/fields/title/value}
+                        fr-fr: >-
+                          ${#jptr:/Base Product
+                          Category/entry/fields/title/value}
+                        ja-jp: >-
+                          ${#jptr:/Base Product
+                          Category/entry/fields/title/value}
+                        nl-nl: >-
+                          ${#jptr:/Base Product
+                          Category/entry/fields/title/value}
+                        sv-se: >-
+                          ${#jptr:/Base Product
+                          Category/entry/fields/title/value}
+                        ar-uae: >-
+                          ${#jptr:/Base Product
+                          Category/entry/fields/title/value}
+                    value:
+                      type: text
+                      value: ${#jptr:/Base Product Category/entry/_slug}
+            fieldId:
+              type: text
+              value: category
+            fieldKey:
+              type: text
+              value: fields.category.slug
+    contentType:
+      type: select
+      value: product
+    boostEnrichments:
+      type: multi-select
+      value:
+        - brand,brand
+  slots:
+    content:
+      - _id: d14122cc-646f-4ac0-b13e-9bae5cf4bec6
+        type: grid
+        slots:
+          gridInner:
+            - _id: d043d637-4bcd-4945-9c16-7c6c373d8694
+              type: gridItem
+              slots:
+                inner:
+                  - _id: c4e468fe-b6cf-4497-8c14-bde24a0e35b8
+                    type: entriesSearchBox
+                    parameters:
+                      size:
+                        type: dex-token-selector-parameter
+                        value: input-large
+                      border:
+                        type: dex-token-selector-parameter
+                        value: border-product-card
+                      placeholder:
+                        type: text
+                        locales:
+                          da-dk: Begynd at søge efter en kaffemaskine
+                          de-at: >-
+                            Beginnen Sie mit der Suche nach einer
+                            Kaffeemaschine.
+                          de-ch: >-
+                            Beginnen Sie mit der Suche nach einer
+                            Kaffeemaschine.
+                          de-de: >-
+                            Beginnen Sie mit der Suche nach einer
+                            Kaffeemaschine.
+                          en-au: Commencez à chercher une cafetière
+                          en-ca: Start searching for a coffee maker
+                          en-gb: Start searching for a coffee machine
+                          en-nl: Begin met zoeken naar een koffiezetapparaat
+                          en-nz: >-
+                            Beginnen Sie mit der Suche nach einer
+                            Kaffeemaschine.
+                          en-us: Start searching for a coffee maker
+                          fr-ca: Commencez à chercher une cafetière
+                          fr-ch: Commencez à chercher une cafetière
+                          fr-fr: Commencez à chercher une cafetière
+                          ja-jp: コーヒーメーカーを探し始める
+                          nl-nl: Begin met zoeken naar een koffiezetapparaat
+                          sv-se: Börja leta efter en kaffebryggare
+                          ar-uae: ابدأ البحث عن ماكينة قهوة
+                    _overridability:
+                      parameters:
+                        placeholder: 'yes'
+              parameters:
+                rowSpan:
+                  type: dex-slider-control-parameter
+                  value: {}
+                rowStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: ''
+                    desktop: ''
+                columnSpan:
+                  type: dex-slider-control-parameter
+                  value:
+                    tablet: span-3
+                    desktop: span-3
+                columnStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: ''
+                    desktop: ''
+                displayName:
+                  type: text
+                  locales:
+                    da-dk: Søgefelt
+                    de-at: Suchfeld
+                    de-ch: Suchfeld
+                    de-de: Suchfeld
+                    en-au: Boîte de recherche
+                    en-ca: Search Bar
+                    en-gb: Search Bar
+                    en-nl: Zoekvak
+                    en-nz: Suchfeld
+                    en-us: Search Box
+                    fr-ca: Boîte de recherche
+                    fr-ch: Barre de recherche
+                    fr-fr: Barre de recherche
+                    ja-jp: 検索ボックス
+                    nl-nl: Zoekvak
+                    sv-se: Sökruta
+                    ar-uae: مربع البحث
+            - _id: c512aff5-9eed-44cf-8756-a06480b64c6d
+              type: entriesSearchSorting
+        parameters:
+          gapX:
+            type: dex-slider-control-parameter
+            value:
+              tablet: '4'
+              desktop: '4'
+          gapY:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '4'
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              mobile: {}
+              tablet: {}
+              desktop: {}
+          alignItems:
+            type: dex-segmented-control-parameter
+            value: center
+          displayName:
+            type: text
+            locales:
+              da-dk: Søgefelt og sortering
+              de-at: Suchfeld und Sortierung
+              de-ch: Suchfeld und Sortierung
+              de-de: Suchfeld und Sortierung
+              en-au: Boîte de recherche et tri
+              en-ca: Search Box and Sorting
+              en-gb: Search Bar and Sorting
+              en-nl: Zoekvak en Sorteren
+              en-nz: Suchfeld und Sortierung
+              en-us: Search Box and Sorting
+              fr-ca: Boîte de recherche et tri
+              fr-ch: Boîte de recherche et tri
+              fr-fr: Boîte de recherche et tri
+              ja-jp: 検索ボックスと並べ替え
+              nl-nl: Zoekvak en Sorteren
+              sv-se: Sökruta och sortering
+              ar-uae: مربع البحث والترتيب
+          columnsCount:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '1'
+              tablet: '4'
+              desktop: '4'
+          fluidContent:
+            type: checkbox
+            value: true
+      - _id: b191f318-e75a-4155-925b-c0656f012b91
+        type: spacer
+        parameters:
+          size:
+            type: dex-token-selector-parameter
+            value: spacer-medium
+      - _id: 186c91b5-816c-4293-9542-7356653198e3
+        type: grid
+        slots:
+          gridInner:
+            - _id: a54fe116-4f8a-441b-81e5-acb47d2beb67
+              type: gridItem
+              slots:
+                inner:
+                  - _id: a5856bb3-2393-45b6-92cb-086bd265427a
+                    type: entriesSearchFilters
+              parameters:
+                rowSpan:
+                  type: dex-slider-control-parameter
+                  value: {}
+                rowStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: ''
+                    desktop: ''
+                columnSpan:
+                  type: dex-slider-control-parameter
+                  value: {}
+                columnStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: ''
+                    desktop: ''
+                displayName:
+                  type: text
+                  locales:
+                    da-dk: Venstre Indhold
+                    de-at: Linker Inhalt
+                    de-ch: Linker Inhalt
+                    de-de: Linker Inhalt
+                    en-au: Contenu de gauche
+                    en-ca: Left Content
+                    en-gb: Left Content
+                    en-nl: Linker inhoud
+                    en-nz: Linker Inhalt
+                    en-us: Left Content
+                    fr-ca: Contenu de gauche
+                    fr-ch: Contenu de gauche
+                    fr-fr: Contenu de gauche
+                    ja-jp: 左のコンテンツ
+                    nl-nl: Linker inhoud
+                    sv-se: Vänster innehåll
+                    ar-uae: المحتوى الأيسر
+            - _id: 73a254c3-eb9f-45d7-8227-7c50f8519c4a
+              type: gridItem
+              slots:
+                inner:
+                  - _id: 5d9987c7-b142-4662-8082-23ce3a803767
+                    type: flex
+                    slots:
+                      flexItem:
+                        - _id: 16928c5e-1074-4fd2-981a-1694bb8d3b6c
+                          type: flexItem
+                          slots:
+                            inner:
+                              - _id: 43d353cc-a36a-4edd-8ef4-fa740a19a71b
+                                type: entriesSearchTotalAmount
+                                parameters:
+                                  textColor:
+                                    type: dex-color-palette-parameter
+                                    value: text-tertiary
+                                  textTemplate:
+                                    type: text
+                                    locales:
+                                      da-dk: Fundet {totalItems} produkt(er)
+                                      de-at: '{totalItems} Produkt(e) gefunden'
+                                      de-ch: '{totalItems} Produkt(e) gefunden'
+                                      de-de: '{totalItems} Produkt(e) gefunden'
+                                      en-au: '{totalItems} produit(s) trouvé(s)'
+                                      en-ca: Found {totalItems} product(s)
+                                      en-gb: Found {totalItems} product(s)
+                                      en-nl: '{totalItems} product(en) gevonden'
+                                      en-nz: '{totalItems} Produkt(e) gefunden'
+                                      en-us: Found {totalItems} product(s)
+                                      fr-ca: '{totalItems} produit(s) trouvé(s)'
+                                      fr-ch: '{totalItems} produit(s) trouvé(s)'
+                                      fr-fr: '{totalItems} produit(s) trouvé(s)'
+                                      ja-jp: '{totalItems}個の商品が見つかりました'
+                                      nl-nl: '{totalItems} product(en) gevonden'
+                                      sv-se: Hittade {totalItems} produkt(er)
+                                      ar-uae: تم العثور على {totalItems} منتج(ات)
+                                _overridability:
+                                  hideLockedParameters: true
+                          parameters:
+                            shrink:
+                              type: dex-segmented-control-parameter
+                              value: '0'
+                            alignSelf:
+                              type: dex-segmented-control-parameter
+                              value: {}
+                            displayName:
+                              type: text
+                              locales:
+                                da-dk: Samlede fundne emner
+                                de-at: Gesamtanzahl der gefundenen Artikel
+                                de-ch: Gesamtanzahl der gefundenen Artikel
+                                de-de: Gesamtanzahl der gefundenen Artikel
+                                en-au: Nombre total d'articles trouvés
+                                en-ca: Total Items Found
+                                en-gb: Total Items Found
+                                en-nl: Totaal aantal gevonden items
+                                en-nz: Gesamtanzahl der gefundenen Artikel
+                                en-us: Total Items Found
+                                fr-ca: Nombre total d'articles trouvés
+                                fr-ch: Nombre total d'articles trouvés
+                                fr-fr: Nombre total d'articles trouvés
+                                ja-jp: 合計アイテム数
+                                nl-nl: Totaal aantal gevonden items
+                                sv-se: Totalt antal hittade objekt
+                                ar-uae: إجمالي العناصر الموجودة
+                          _overridability:
+                            hideLockedParameters: true
+                        - _id: f5572abc-bf1b-48d2-b338-c81fccd00644
+                          type: flex
+                          slots:
+                            flexItem:
+                              - _id: 94c808ae-d49b-426e-a277-dfbf80069d35
+                                type: text
+                                parameters:
+                                  tag:
+                                    type: dex-segmented-control-parameter
+                                    value: span
+                                  size:
+                                    type: dex-segmented-control-parameter
+                                    value:
+                                      mobile: sm
+                                      tablet: sm
+                                      desktop: sm
+                                  text:
+                                    type: text
+                                    locales:
+                                      da-dk: Produkter pr. side
+                                      de-at: Produkte pro Seite
+                                      de-ch: Produkte pro Seite
+                                      de-de: Produkte pro Seite
+                                      en-au: Produits par page
+                                      en-ca: Products per page
+                                      en-gb: Products per page
+                                      en-nl: Producten per pagina
+                                      en-nz: Produkte pro Seite
+                                      en-us: Products per page
+                                      fr-ca: Produits par page
+                                      fr-ch: Produits par page
+                                      fr-fr: Produits par page
+                                      ja-jp: ページごとの製品
+                                      nl-nl: Producten per pagina
+                                      sv-se: Produkter per sida
+                                      ar-uae: المنتجات لكل صفحة
+                                  color:
+                                    type: dex-color-palette-parameter
+                                    value: text-primary
+                                  weight:
+                                    type: dex-segmented-control-parameter
+                                    value: normal
+                                _overridability:
+                                  hideLockedParameters: true
+                              - _id: cbbd20eb-7da3-4272-8a9c-fe1b20fbb80d
+                                type: entriesSearchPageSize
+                                _overridability:
+                                  hideLockedParameters: true
+                          parameters:
+                            gap:
+                              type: dex-slider-control-parameter
+                              value:
+                                mobile: '4'
+                                tablet: '4'
+                                desktop: '4'
+                            spacing:
+                              type: dex-space-control-parameter
+                              value:
+                                mobile: {}
+                                tablet: {}
+                                desktop: {}
+                            direction:
+                              type: dex-segmented-control-parameter
+                              value:
+                                mobile: row
+                                tablet: row
+                                desktop: row
+                            alignItems:
+                              type: dex-segmented-control-parameter
+                              value:
+                                mobile: center
+                                tablet: center
+                                desktop: center
+                            displayName:
+                              type: text
+                              locales:
+                                da-dk: Per side
+                                de-at: Pro Seite
+                                de-ch: Pro Seite
+                                de-de: Pro Seite
+                                en-au: Par page
+                                en-ca: Per page
+                                en-gb: Per page
+                                en-nl: Per pagina
+                                en-nz: Pro Seite
+                                en-us: Per page
+                                fr-ca: Par page
+                                fr-ch: Par page
+                                fr-fr: Par page
+                                ja-jp: ページごと
+                                nl-nl: Per pagina
+                                sv-se: Per sida
+                                ar-uae: لكل صفحة
+                            fluidContent:
+                              type: checkbox
+                              value: true
+                            justifyContent:
+                              type: dex-segmented-control-parameter
+                              value:
+                                mobile: between
+                                tablet: end
+                                desktop: end
+                          _overridability:
+                            hideLockedParameters: true
+                    parameters:
+                      gap:
+                        type: dex-slider-control-parameter
+                        value:
+                          mobile: '4'
+                          tablet: '4'
+                          desktop: '4'
+                      spacing:
+                        type: dex-space-control-parameter
+                        value:
+                          mobile: {}
+                          tablet: {}
+                          desktop: {}
+                      direction:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: row
+                          tablet: row
+                          desktop: row
+                      alignItems:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: center
+                          tablet: center
+                          desktop: center
+                      displayName:
+                        type: text
+                        locales:
+                          da-dk: Topindhold
+                          de-at: Top-Inhalte
+                          de-ch: Top-Inhalte
+                          de-de: Top-Inhalte
+                          en-au: Contenu Principal
+                          en-ca: Top Content
+                          en-gb: Top Content
+                          en-nl: Topinhoud
+                          en-nz: Top-Inhalt
+                          en-us: Top Content
+                          fr-ca: Contenu Principal
+                          fr-ch: Contenu Principal
+                          fr-fr: Contenu Principal
+                          ja-jp: トップコンテンツ
+                          nl-nl: Topinhoud
+                          sv-se: Toppinnehåll
+                          ar-uae: المحتوى الأعلى
+                      fluidContent:
+                        type: checkbox
+                        value: true
+                      justifyContent:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: between
+                          tablet: between
+                          desktop: between
+                    _overridability:
+                      hideLockedParameters: true
+                  - _id: c1ce3297-ca5f-49c8-9a55-91981baf01a9
+                    type: spacer
+                    parameters:
+                      size:
+                        type: dex-token-selector-parameter
+                        value: spacer-small
+                    _overridability:
+                      hideLockedParameters: true
+                  - _id: 166b3e64-f887-4535-99c7-38829cfe7f1e
+                    type: entriesSearchList
+                    parameters:
+                      border:
+                        type: dex-token-selector-parameter
+                        value: border-product-card
+                      textColor:
+                        type: dex-color-palette-parameter
+                        value: text-primary
+                      clearAllFilterText:
+                        type: text
+                        locales:
+                          da-dk: ryd alle filtre
+                          de-at: alle Filter löschen
+                          de-ch: alle Filter löschen
+                          de-de: alle Filter löschen
+                          en-au: clear all filters
+                          en-ca: clear all filters
+                          en-gb: clear all filters
+                          en-nl: clear all filters
+                          en-nz: clear all filters
+                          en-us: clear all filters
+                          fr-ca: effacer tous les filtres
+                          fr-ch: effacer tous les filtres
+                          fr-fr: effacer tous les filtres
+                          ja-jp: すべてのフィルターをクリア
+                          nl-nl: alle filters wissen
+                          sv-se: rensa alla filter
+                          ar-uae: مسح جميع الفلاتر
+                      noResultsFoundText:
+                        type: text
+                        locales:
+                          da-dk: Ingen resultater fundet
+                          de-at: Keine Ergebnisse gefunden
+                          de-ch: Keine Ergebnisse gefunden
+                          de-de: Keine Ergebnisse gefunden
+                          en-au: No results found
+                          en-ca: No results found
+                          en-gb: No results found
+                          en-nl: No results found
+                          en-nz: No results found
+                          en-us: No results found
+                          fr-ca: Aucun résultat trouvé
+                          fr-ch: Aucun résultat trouvé
+                          fr-fr: Aucun résultat trouvé
+                          ja-jp: 結果が見つかりません
+                          nl-nl: Geen resultaten gevonden
+                          sv-se: Inga resultat hittades
+                          ar-uae: لم يتم العثور على نتائج
+                      tryDifferentFiltersText:
+                        type: text
+                        locales:
+                          da-dk: Prøv venligst igen med andre filtre eller
+                          de-at: >-
+                            Bitte versuchen Sie es mit anderen Filtern erneut
+                            oder
+                          de-ch: >-
+                            Bitte versuchen Sie es mit anderen Filtern erneut
+                            oder
+                          de-de: >-
+                            Bitte versuchen Sie es mit anderen Filtern erneut
+                            oder
+                          en-au: Please try again with different filters or
+                          en-ca: Please try again with different filters or
+                          en-gb: Please try again with different filters or
+                          en-nl: Please try again with different filters or
+                          en-nz: Please try again with different filters or
+                          en-us: Please try again with different filters or
+                          fr-ca: Veuillez réessayer avec d'autres filtres ou
+                          fr-ch: Veuillez réessayer avec d'autres filtres ou
+                          fr-fr: Veuillez réessayer avec d'autres filtres ou
+                          ja-jp: 別のフィルターで再試行してください または
+                          nl-nl: Probeer het opnieuw met andere filters of
+                          sv-se: Försök igen med andra filter eller
+                          ar-uae: يرجى المحاولة مرة أخرى باستخدام فلاتر مختلفة أو
+                  - _id: 7eb15994-ff28-4f95-a4fa-ed305b686e0c
+                    type: spacer
+                    parameters:
+                      size:
+                        type: dex-token-selector-parameter
+                        value: spacer-small
+                  - _id: 8c0c2579-12f4-4e6c-8a8e-f24f6cbaa099
+                    type: entriesSearchPagination
+              parameters:
+                rowSpan:
+                  type: dex-slider-control-parameter
+                  value: {}
+                rowStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: ''
+                    desktop: ''
+                columnSpan:
+                  type: dex-slider-control-parameter
+                  value:
+                    tablet: auto
+                    desktop: span-3
+                columnStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: ''
+                    desktop: '2'
+                displayName:
+                  type: text
+                  locales:
+                    da-dk: Rigtigt indhold
+                    de-at: Richtiger Inhalt
+                    de-ch: Richtiger Inhalt
+                    de-de: Richtiger Inhalt
+                    en-au: Contenu Correct
+                    en-ca: Right Content
+                    en-gb: Right Content
+                    en-nl: Juiste Inhoud
+                    en-nz: Rechter Inhalt
+                    en-us: Right Content
+                    fr-ca: Contenu correct
+                    fr-ch: Contenu approprié
+                    fr-fr: Contenu approprié
+                    ja-jp: 右のコンテンツ
+                    nl-nl: Juiste Inhoud
+                    sv-se: Rätt innehåll
+                    ar-uae: المحتوى الصحيح
+        parameters:
+          gapX:
+            type: dex-slider-control-parameter
+            value:
+              desktop: '8'
+          gapY:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '8'
+              tablet: '8'
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              mobile: {}
+              tablet: {}
+              desktop: {}
+          alignItems:
+            type: dex-segmented-control-parameter
+            value: stretch
+          displayName:
+            type: text
+            locales:
+              da-dk: Søg indhold
+              de-at: Inhalt durchsuchen
+              de-ch: Inhalt durchsuchen
+              de-de: Inhalt durchsuchen
+              en-au: Rechercher du contenu
+              en-ca: Search Content
+              en-gb: Search Content
+              en-nl: Zoekinhoud
+              en-nz: Inhalt durchsuchen
+              en-us: Search Content
+              fr-ca: Rechercher du contenu
+              fr-ch: Rechercher du contenu
+              fr-fr: Rechercher du contenu
+              ja-jp: コンテンツを検索
+              nl-nl: Zoek inhoud
+              sv-se: Sök innehåll
+              ar-uae: بحث المحتوى
+          columnsCount:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '1'
+              tablet: '1'
+              desktop: '4'
+          fluidContent:
+            type: checkbox
+            value: true
+    fallback:
+      - _id: e85f84f2-79e5-4e7d-86c2-67c95b3fffd0
+        type: searchEnginePlaceholder
+        parameters:
+          cards:
+            type: number
+            value: '6'
+          withSidebar:
+            type: checkbox
+            value: true
+        _overridability:
+          hideLockedParameters: true
+  _dataResources:
+    All Product Brands:
+      type: brandList
+      variables:
+        locale: ${locale}
+        search: ''
+        filters: '{"type[eq]":"brand"}'
+        uiFilters: '[{"field":"type","operator":"eq","value":"brand"}]'
+        contentTypes: brand
+      isPatternParameter: false
+      ignorePatternParameterDefault: false
+    Base Product Category:
+      type: productCategory
+      variables:
+        locale: ${locale}
+        entryId: 2f6cc670-cdaa-4532-b70e-424206c8d0ba
+      isPatternParameter: true
+      ignorePatternParameterDefault: false
+    All Product Categories:
+      type: productCategoryList
+      variables:
+        locale: ${locale}
+        search: ''
+        filters: '{"type[eq]":"productCategory"}'
+        uiFilters: '[{"field":"type","operator":"eq","value":"productCategory"}]'
+        contentTypes: productCategory
+      isPatternParameter: false
+      ignorePatternParameterDefault: false
+  _overridability:
+    parameters:
+      boostEnrichments: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-nz
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - fr-fr
+    - en-au
+    - ja-jp
+    - ar-uae
+    - de-ch
+    - fr-ch
+created: '2025-05-20T11:53:44.816175+00:00'
+modified: '2025-08-06T12:11:46.482027+00:00'
+pattern: true
+categoryId: adaebea8-ba58-494b-9c3b-9f82906d9415

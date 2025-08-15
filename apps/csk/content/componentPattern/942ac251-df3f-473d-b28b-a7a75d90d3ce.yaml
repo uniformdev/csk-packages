@@ -1,0 +1,551 @@
+composition:
+  _name: Specs Hero
+  _id: 942ac251-df3f-473d-b28b-a7a75d90d3ce
+  type: section
+  variant: columns
+  parameters:
+    displayName:
+      type: text
+      locales:
+        da-dk: Dryppet på udstilling
+        de-at: Der zur Schau gestellte Tropf
+        de-ch: Der Tropf zur Schau gestellt
+        de-de: Der Tropf zur Schau gestellt
+        en-au: Le goutte-à-goutte en exposition
+        en-ca: The drip on display
+        en-gb: The drip on display
+        en-nl: De druppel tentoongesteld
+        en-nz: Der zur Schau gestellte Tropf
+        en-us: The drip on display
+        fr-ca: Le style en vitrine
+        fr-ch: Le style en exposition
+        fr-fr: Le style en exposition
+        ja-jp: 展示されているドリップ
+        nl-nl: De druppel tentoongesteld
+        sv-se: Droppen på displayen
+        ar-uae: التنقيط المعروض
+    contentAlignment:
+      type: dex-segmented-control-parameter
+      value: center
+  slots:
+    sectionMedia:
+      - _id: 76787ced-2bbf-498b-8446-dc81bcadd0c7
+        type: image
+        parameters:
+          fill:
+            type: checkbox
+            value: true
+          image:
+            type: asset
+            value:
+              - _id: 0bc0c399-e986-42c5-9b9f-aeab662b40e8
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: de79cedc-4467-465e-a200-2ca8e57d3328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/hYBKkwcoRgyJH1ZP-DoSaQ-the-drip-on-display.png
+                    type: text
+                  file:
+                    type: file
+                    value: 27b13910-d35b-4008-8c65-0c7017dbcfb6
+                  size:
+                    value: 535879
+                    type: number
+                  title:
+                    type: text
+                    value: the-drip-on-display.png
+                  width:
+                    value: 1076
+                    type: number
+                  height:
+                    value: 748
+                    type: number
+                  mediaType:
+                    value: image/png
+                    type: text
+                _source: uniform-assets
+          objectFit:
+            type: dex-segmented-control-parameter
+            value: contain
+        _overridability:
+          parameters:
+            image: 'yes'
+          hideLockedParameters: true
+    sectionContent:
+      - _id: 02f24106-b9ba-4234-8882-ea6b75655106
+        type: flex
+        slots:
+          flexItem:
+            - _id: fabef422-1ba6-46f9-bb3b-e0bd14099f08
+              type: flex
+              slots:
+                flexItem:
+                  - _id: 450f9239-3309-4f7c-b42d-c80df9f575e4
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: span
+                      size:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: 3xl
+                          tablet: 4xl
+                          desktop: 4xl
+                      text:
+                        type: text
+                        locales:
+                          da-dk: Dryppet på udstilling
+                          de-at: Der zur Schau gestellte Tropf
+                          de-ch: Der Tropf zur Schau gestellt
+                          de-de: Der Tropf zur Schau gestellt
+                          en-au: La goutte exposée
+                          en-ca: The drip on display
+                          en-gb: The drip on display
+                          en-nl: De druppel in de etalage
+                          en-nz: Der Tropf zur Schau gestellt
+                          en-us: The drip on display
+                          fr-ca: Le style en vitrine
+                          fr-ch: Le goutte-à-goutte exposé
+                          fr-fr: Le goutte-à-goutte exposé
+                          ja-jp: 展示されているドリップ
+                          nl-nl: De druppel tentoongesteld
+                          sv-se: Droppen på displayen
+                          ar-uae: التقطير المعروض
+                      color:
+                        type: dex-color-palette-parameter
+                        value: text-secondary
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: bold
+                      alignment:
+                        type: dex-segmented-control-parameter
+                        value: ''
+                    _overridability:
+                      parameters:
+                        text: 'yes'
+                        alignment: 'yes'
+                      hideLockedParameters: true
+                  - _id: 75aa7b89-c0cd-46b2-b676-7421d6963869
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: span
+                      size:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: xs
+                          tablet: lg
+                          desktop: xl
+                      text:
+                        type: text
+                        locales:
+                          da-dk: Overvåg den perfekte brygning
+                          de-at: Überwachen Sie den perfekten Brühvorgang
+                          de-ch: Überwachen Sie den perfekten Brühvorgang
+                          de-de: Überwachen Sie den perfekten Brühvorgang
+                          en-au: Surveillez la préparation parfaite
+                          en-ca: Monitor the perfect brew
+                          en-gb: Monitor the perfect brew
+                          en-nl: Houd toezicht op het perfecte brouwsel
+                          en-nz: Überwachen Sie den perfekten Brühvorgang
+                          en-us: 'Monitor the perfect brew '
+                          fr-ca: Surveillez la préparation parfaite
+                          fr-ch: Surveillez la préparation parfaite
+                          fr-fr: Surveillez la préparation parfaite
+                          ja-jp: 完璧な抽出を監視する
+                          nl-nl: Houd de perfecte brouwsel in de gaten
+                          sv-se: Övervaka den perfekta brygden
+                          ar-uae: راقب التحضير المثالي
+                      color:
+                        type: dex-color-palette-parameter
+                        value: text-featured
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: normal
+                    _overridability:
+                      parameters:
+                        text: 'yes'
+                        alignment: 'yes'
+                      hideLockedParameters: true
+              parameters:
+                gap:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: '4'
+                    tablet: '4'
+                    desktop: '4'
+                spacing:
+                  type: dex-space-control-parameter
+                  value:
+                    mobile: {}
+                    tablet: {}
+                    desktop: {}
+                direction:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: col
+                    tablet: col
+                    desktop: col
+                alignItems:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: start
+                displayName:
+                  type: text
+                  locales:
+                    da-dk: Topindhold
+                    de-at: Top-Inhalt
+                    de-ch: Top-Inhalte
+                    de-de: Top-Inhalte
+                    en-au: Contenu Principal
+                    en-ca: Top Content
+                    en-gb: Top Content
+                    en-nl: Topinhoud
+                    en-nz: Top-Inhalte
+                    en-us: Top Content
+                    fr-ca: Contenu Principal
+                    fr-ch: Contenu Principal
+                    fr-fr: Contenu Principal
+                    ja-jp: トップコンテンツ
+                    nl-nl: Topinhoud
+                    sv-se: Toppinnehåll
+                    ar-uae: المحتوى الأعلى
+                fluidContent:
+                  type: checkbox
+                  value: true
+                justifyContent:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: start
+              _overridability:
+                parameters:
+                  alignItems: 'yes'
+                hideLockedParameters: true
+            - _id: b8fb01ca-a9f4-41e4-89fa-418a2b8ba48c
+              type: flex
+              slots:
+                flexItem:
+                  - _id: 49bcd121-6f8b-458f-8e5e-2d260046d99b
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: span
+                      size:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: sm
+                          tablet: lg
+                          desktop: xl
+                      text:
+                        type: text
+                        locales:
+                          da-dk: >-
+                            Krystalklar klarhed, der sikrer, at brugerne nemt
+                            kan vælge deres ønskede indstillinger og overvåge
+                            bryggeprocessen i realtid. Dens intuitive
+                            grænseflade og levende visuelle elementer løfter
+                            brugeroplevelsen.
+                          de-at: >-
+                            Kristallklare Klarheit, die sicherstellt, dass
+                            Benutzer ihre gewünschten Einstellungen problemlos
+                            auswählen und den Brühvorgang in Echtzeit überwachen
+                            können. Die intuitive Benutzeroberfläche und die
+                            lebendigen Visuals heben das Benutzererlebnis auf
+                            ein neues Niveau.
+                          de-ch: >-
+                            Kristallklare Klarheit, die sicherstellt, dass
+                            Benutzer ihre gewünschten Einstellungen problemlos
+                            auswählen und den Brühvorgang in Echtzeit überwachen
+                            können. Die intuitive Benutzeroberfläche und die
+                            lebendigen Grafiken heben das Benutzererlebnis auf
+                            ein neues Niveau.
+                          de-de: >-
+                            Kristallklare Klarheit, die sicherstellt, dass
+                            Benutzer ihre gewünschten Einstellungen problemlos
+                            auswählen und den Brühvorgang in Echtzeit überwachen
+                            können. Die intuitive Benutzeroberfläche und die
+                            lebendigen Grafiken heben das Benutzererlebnis auf
+                            ein neues Niveau.
+                          en-au: >-
+                            Clarté cristalline, garantissant que les
+                            utilisateurs peuvent facilement sélectionner leurs
+                            paramètres souhaités et surveiller le processus de
+                            brassage en temps réel. Son interface intuitive et
+                            ses visuels éclatants améliorent l'expérience
+                            utilisateur.
+                          en-ca: >-
+                            Crystal-clear clarity, ensuring users can easily
+                            select their desired settings and monitor the
+                            brewing process in real-time. Its intuitive
+                            interface and vibrant visuals elevate the user
+                            experience.
+                          en-gb: >-
+                            Crystal-clear clarity, ensuring users can easily
+                            select their desired settings and monitor the
+                            brewing process in real-time. Its intuitive
+                            interface and vibrant visuals elevate the user
+                            experience.
+                          en-nl: >-
+                            Kristalheldere helderheid, waardoor gebruikers
+                            gemakkelijk hun gewenste instellingen kunnen
+                            selecteren en het brouwproces in realtime kunnen
+                            volgen. De intuïtieve interface en levendige visuals
+                            tillen de gebruikerservaring naar een hoger niveau.
+                          en-nz: >-
+                            Kristallklare Klarheit, die sicherstellt, dass
+                            Benutzer ihre gewünschten Einstellungen problemlos
+                            auswählen und den Brühvorgang in Echtzeit überwachen
+                            können. Die intuitive Benutzeroberfläche und
+                            lebendige Visuals heben das Benutzererlebnis auf ein
+                            neues Niveau.
+                          en-us: >-
+                            Crystal-clear clarity, ensuring users can easily
+                            select their desired settings and monitor the
+                            brewing process in real-time. Its intuitive
+                            interface and vibrant visuals elevate the user
+                            experience
+                          fr-ca: >-
+                            Clarté cristalline, garantissant que les
+                            utilisateurs peuvent facilement sélectionner leurs
+                            paramètres souhaités et surveiller le processus de
+                            préparation en temps réel. Son interface intuitive
+                            et ses visuels vibrants élèvent l'expérience
+                            utilisateur.
+                          fr-ch: >-
+                            Clarté cristalline, garantissant que les
+                            utilisateurs peuvent facilement sélectionner leurs
+                            paramètres souhaités et surveiller le processus de
+                            préparation en temps réel. Son interface intuitive
+                            et ses visuels vibrants élèvent l'expérience
+                            utilisateur.
+                          fr-fr: >-
+                            Clarté cristalline, garantissant que les
+                            utilisateurs peuvent facilement sélectionner leurs
+                            paramètres souhaités et surveiller le processus de
+                            préparation en temps réel. Son interface intuitive
+                            et ses visuels vibrants élèvent l'expérience
+                            utilisateur.
+                          ja-jp: >-
+                            クリスタルクリアな明瞭さにより、ユーザーは簡単に希望の設定を選択し、リアルタイムで抽出プロセスを監視できます。その直感的なインターフェースと鮮やかなビジュアルがユーザー体験を向上させます。
+                          nl-nl: >-
+                            Kristalheldere helderheid, waardoor gebruikers
+                            eenvoudig hun gewenste instellingen kunnen
+                            selecteren en het brouwproces in realtime kunnen
+                            volgen. De intuïtieve interface en levendige visuals
+                            verbeteren de gebruikerservaring.
+                          sv-se: >-
+                            Kristallklar tydlighet, vilket säkerställer att
+                            användarna enkelt kan välja sina önskade
+                            inställningar och övervaka bryggprocessen i realtid.
+                            Dess intuitiva gränssnitt och livfulla visuella
+                            element höjer användarupplevelsen.
+                          ar-uae: >-
+                            وضوح شديد، يضمن للمستخدمين القدرة على اختيار
+                            الإعدادات المطلوبة بسهولة ومراقبة عملية التحضير في
+                            الوقت الفعلي. واجهته البديهية والمرئيات النابضة
+                            بالحياة تعزز تجربة المستخدم.
+                      color:
+                        type: dex-color-palette-parameter
+                        value: text-secondary
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: ''
+                      alignment:
+                        type: dex-segmented-control-parameter
+                        value: left
+                    _overridability:
+                      parameters:
+                        text: 'yes'
+                        alignment: 'yes'
+                      hideLockedParameters: true
+                  - _id: 56869950-c2f4-4cd6-85c8-966b3762e7a6
+                    type: button
+                    parameters:
+                      size:
+                        type: dex-token-selector-parameter
+                        value: button-large
+                      text:
+                        type: text
+                        locales:
+                          da-dk: Lær mere
+                          de-at: Erfahren Sie mehr
+                          de-ch: Erfahren Sie mehr
+                          de-de: Erfahren Sie mehr
+                          en-au: En savoir plus
+                          en-ca: Learn more
+                          en-gb: Learn more
+                          en-nl: Meer informatie
+                          en-nz: Erfahren Sie mehr
+                          en-us: Learn more
+                          fr-ca: En savoir plus
+                          fr-ch: En savoir plus
+                          fr-fr: En savoir plus
+                          ja-jp: 詳細を確認する
+                          nl-nl: Meer informatie
+                          sv-se: Läs mer
+                          ar-uae: تعرف على المزيد
+                      textSize:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: sm
+                          tablet: sm
+                          desktop: sm
+                      textColor:
+                        type: dex-color-palette-parameter
+                        value: text-primary
+                      textWeight:
+                        type: dex-segmented-control-parameter
+                        value: bold
+                      buttonColor:
+                        type: dex-color-palette-parameter
+                        value: button-featured
+                    _overridability:
+                      parameters:
+                        text: 'yes'
+                      hideLockedParameters: true
+              parameters:
+                gap:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: '4'
+                    tablet: '4'
+                    desktop: '4'
+                spacing:
+                  type: dex-space-control-parameter
+                  value:
+                    mobile: {}
+                    tablet: {}
+                    desktop: {}
+                direction:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: col
+                    tablet: col
+                    desktop: col
+                alignItems:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: start
+                displayName:
+                  type: text
+                  locales:
+                    da-dk: Nederste Indhold
+                    de-at: Unterer Inhalt
+                    de-ch: Unterer Inhalt
+                    de-de: Unterer Inhalt
+                    en-au: Contenu inférieur
+                    en-ca: Bottom Content
+                    en-gb: Bottom Content
+                    en-nl: Onderste Inhoud
+                    en-nz: Unterer Inhalt
+                    en-us: Bottom Content
+                    fr-ca: Contenu inférieur
+                    fr-ch: Contenu inférieur
+                    fr-fr: Contenu inférieur
+                    ja-jp: ボトムコンテンツ
+                    nl-nl: Onderste Inhoud
+                    sv-se: Nedersta innehåll
+                    ar-uae: المحتوى السفلي
+                fluidContent:
+                  type: checkbox
+                  value: true
+                justifyContent:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: start
+              _overridability:
+                parameters:
+                  alignItems: 'yes'
+                hideLockedParameters: true
+        parameters:
+          gap:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '8'
+              tablet: '8'
+              desktop: '8'
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              mobile: {}
+              tablet:
+                paddingLeft: container-small
+              desktop:
+                paddingLeft: container-small
+          direction:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: col
+              tablet: col
+              desktop: col
+          alignItems:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: center
+              tablet: center
+          displayName:
+            type: text
+            locales:
+              da-dk: Indhold
+              de-at: Inhalt
+              de-ch: Inhalt
+              de-de: Inhalt
+              en-au: Contenu
+              en-ca: Content
+              en-gb: Content
+              en-nl: Inhoud
+              en-nz: Inhalt
+              en-us: Content
+              fr-ca: Contenu
+              fr-ch: Contenu
+              fr-fr: Contenu
+              ja-jp: コンテンツ
+              nl-nl: Inhoud
+              sv-se: Innehåll
+              ar-uae: المحتوى
+          fluidContent:
+            type: checkbox
+            value: true
+          justifyContent:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: center
+              tablet: center
+              desktop: center
+        _overridability:
+          parameters:
+            spacing: 'yes'
+          hideLockedParameters: true
+  _overridability:
+    variants: true
+    parameters:
+      displayName: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-nz
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - fr-fr
+    - en-au
+    - ja-jp
+    - ar-uae
+    - de-ch
+    - fr-ch
+created: '2025-05-22T09:19:02.43164+00:00'
+modified: '2025-08-06T12:11:45.497479+00:00'
+pattern: true
+categoryId: f22b05f0-c4bf-4158-8ebc-4856e4d453af

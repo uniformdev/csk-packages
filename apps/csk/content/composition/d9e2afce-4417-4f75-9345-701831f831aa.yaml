@@ -1,0 +1,928 @@
+composition:
+  _name: Coffee Beans
+  _id: d9e2afce-4417-4f75-9345-701831f831aa
+  _slug: coffee-beans
+  type: page
+  _overrides:
+    3613f719-1b75-44c5-bac4-446a3ff33c05:
+      parameters:
+        boostEnrichments:
+          type: multi-select
+          value:
+            - subCategory,subcategory
+      dataResources:
+        Base Product Category:
+          type: productCategory
+          variables:
+            locale: ${locale}
+            entryId: ae8e04c4-f20b-46f5-9eb4-7d8f82bbee38
+    d9e2afce-4417-4f75-9345-701831f831aa:
+      parameters:
+        $enr:
+          type: $enr
+          value:
+            - cat: int
+              key: beans
+              str: 5
+        pageTitle:
+          type: text
+          locales:
+            da-dk: >-
+              Premium kaffebønner - friskristede for perfekt smag | Køb
+              kaffebønner online
+            de-at: >-
+              Premium-Kaffeebohnen - Frisch geröstet für perfekten Geschmack |
+              Kaffeebohnen online kaufen
+            de-ch: >-
+              Premium-Kaffeebohnen - Frisch geröstet für perfekten Geschmack |
+              Kaufen Sie Kaffeebohnen online
+            de-de: >-
+              Premium-Kaffeebohnen - Frisch geröstet für perfekten Geschmack |
+              Kaufen Sie Kaffeebohnen online
+            en-au: >-
+              Grains de Café Premium - Fraîchement Torréfiés pour une Saveur
+              Parfaite | Achetez des Grains de Café en Ligne
+            en-ca: >-
+              Premium Coffee Beans - Freshly Roasted for Perfect Flavour | Buy
+              Coffee Beans Online
+            en-gb: >-
+              Premium Coffee Beans - Freshly Roasted for Perfect Flavour | Buy
+              Coffee Beans Online
+            en-nl: >-
+              Premium Koffiebonen - Vers Geroosterd voor Perfecte Smaak | Koop
+              Koffiebonen Online
+            en-nz: >-
+              Premium-Kaffeebohnen - Frisch geröstet für perfekten Geschmack |
+              Kaffeebohnen online kaufen
+            en-us: >-
+              Premium Coffee Beans - Freshly Roasted for Perfect Flavor | Buy
+              Coffee Beans Online
+            fr-ca: >-
+              Grains de café de qualité supérieure - Fraîchement torréfiés pour
+              une saveur parfaite | Achetez des grains de café en ligne
+            fr-ch: >-
+              Grains de Café Premium - Torréfiés Fraîchement pour une Saveur
+              Parfaite | Achetez des Grains de Café en Ligne
+            fr-fr: >-
+              Grains de Café Premium - Torréfiés Fraîchement pour une Saveur
+              Parfaite | Achetez des Grains de Café en Ligne
+            ja-jp: プレミアムコーヒー豆 - 完璧な風味のために新鮮に焙煎 | コーヒー豆をオンラインで購入
+            nl-nl: >-
+              Premium Koffiebonen - Vers Geroosterd voor Perfecte Smaak | Koop
+              Koffiebonen Online
+            sv-se: >-
+              Premium kaffebönor - Nymalda för perfekt smak | Köp kaffebönor
+              online
+            ar-uae: >-
+              حبوب قهوة فاخرة - محمصة طازجة لنكهة مثالية | اشترِ حبوب القهوة عبر
+              الإنترنت
+        pageKeywords:
+          type: text
+          locales:
+            da-dk: >-
+              kaffebønner, køb kaffebønner, bedste kaffebønner, friske
+              kaffebønner, kaffebønner til salg
+            de-at: >-
+              Kaffeebohnen, Kaffeebohnen kaufen, beste Kaffeebohnen, frische
+              Kaffeebohnen, Kaffeebohnen zu verkaufen
+            de-ch: >-
+              Kaffeebohnen, Kaffeebohnen kaufen, beste Kaffeebohnen, frische
+              Kaffeebohnen, Kaffeebohnen zu verkaufen
+            de-de: >-
+              Kaffeebohnen, Kaffeebohnen kaufen, beste Kaffeebohnen, frische
+              Kaffeebohnen, Kaffeebohnen zu verkaufen
+            en-au: >-
+              grains de café, acheter des grains de café, meilleurs grains de
+              café, grains de café frais, grains de café à vendre
+            en-ca: >-
+              coffee beans, buy coffee beans, best coffee beans, fresh coffee
+              beans, coffee beans for sale
+            en-gb: >-
+              coffee beans, buy coffee beans, best coffee beans, fresh coffee
+              beans, coffee beans for sale
+            en-nl: >-
+              koffiebonen, koop koffiebonen, beste koffiebonen, verse
+              koffiebonen, koffiebonen te koop
+            en-nz: >-
+              Kaffeebohnen, Kaffeebohnen kaufen, beste Kaffeebohnen, frische
+              Kaffeebohnen, Kaffeebohnen zu verkaufen
+            en-us: >-
+              coffee beans, buy coffee beans, best coffee beans, fresh coffee
+              beans, coffee beans for sale
+            fr-ca: >-
+              grains de café, acheter des grains de café, meilleurs grains de
+              café, grains de café frais, grains de café à vendre
+            fr-ch: >-
+              grains de café, acheter des grains de café, meilleurs grains de
+              café, grains de café frais, grains de café à vendre
+            fr-fr: >-
+              grains de café, acheter des grains de café, meilleurs grains de
+              café, grains de café frais, grains de café à vendre
+            ja-jp: コーヒー豆、コーヒー豆を買う、最高のコーヒー豆、新鮮なコーヒー豆、販売中のコーヒー豆
+            nl-nl: >-
+              koffiebonen, koop koffiebonen, beste koffiebonen, verse
+              koffiebonen, koffiebonen te koop
+            sv-se: >-
+              kaffebönor, köp kaffebönor, bästa kaffebönor, färska kaffebönor,
+              kaffebönor till salu
+            ar-uae: >-
+              حبوب القهوة، شراء حبوب القهوة، أفضل حبوب القهوة، حبوب القهوة
+              الطازجة، حبوب القهوة للبيع
+        openGraphImage:
+          type: asset
+          value:
+            - _id: a676c4f9-35fc-4830-bf84-01c3ac337a6d
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: 995568b1-190f-4ee1-8e89-5429489f2a00
+                url:
+                  value: >-
+                    https://img.uniform.global/p/b0JtaxSVQxmqWylG6vGC1Q/IM_E56seSJOY5gXs_8CG3g-coffee-beans-og-image.png
+                  type: text
+                file:
+                  type: file
+                  value: 1f267bcc-ab64-4d81-8165-bf104cb6159a
+                size:
+                  value: 831079
+                  type: number
+                title:
+                  type: text
+                  value: coffee-beans-og-image.png
+                width:
+                  value: 1808
+                  type: number
+                height:
+                  value: 908
+                  type: number
+                mediaType:
+                  value: image/png
+                  type: text
+              _source: uniform-assets
+        openGraphTitle:
+          type: text
+          locales:
+            da-dk: >-
+              Premium kaffebønner - Nyristet for perfekt smag | Køb kaffebønner
+              online
+            de-at: >-
+              Premium-Kaffeebohnen - Frisch geröstet für perfekten Geschmack |
+              Kaffeebohnen online kaufen
+            de-ch: >-
+              Premium-Kaffeebohnen - Frisch geröstet für perfekten Geschmack |
+              Kaffeebohnen online kaufen
+            de-de: >-
+              Premium-Kaffeebohnen - Frisch geröstet für perfekten Geschmack |
+              Kaffeebohnen online kaufen
+            en-au: >-
+              Grains de Café Premium - Fraîchement Torréfiés pour une Saveur
+              Parfaite | Acheter des Grains de Café en Ligne
+            en-ca: >-
+              Premium Coffee Beans - Freshly Roasted for Perfect Flavour | Buy
+              Coffee Beans Online
+            en-gb: >-
+              Premium Coffee Beans - Freshly Roasted for Perfect Flavour | Buy
+              Coffee Beans Online
+            en-nl: >-
+              Premium Koffiebonen - Vers Gebrand voor Perfecte Smaak | Koop
+              Koffiebonen Online
+            en-nz: >-
+              Premium-Kaffeebohnen - Frisch geröstet für perfekten Geschmack |
+              Kaffeebohnen online kaufen
+            en-us: >-
+              Premium Coffee Beans - Freshly Roasted for Perfect Flavor | Buy
+              Coffee Beans Online
+            fr-ca: >-
+              Grains de café de qualité supérieure - Torréfiés fraîchement pour
+              une saveur parfaite | Achetez des grains de café en ligne
+            fr-ch: >-
+              Grains de Café Premium - Torréfiés Fraîchement pour une Saveur
+              Parfaite | Achetez des Grains de Café en Ligne
+            fr-fr: >-
+              Grains de Café Premium - Torréfiés Fraîchement pour une Saveur
+              Parfaite | Achetez des Grains de Café en Ligne
+            ja-jp: プレミアムコーヒー豆 - 完璧な風味のために新鮮に焙煎 | コーヒー豆をオンラインで購入
+            nl-nl: >-
+              Premium Koffiebonen - Vers Gebrand voor Perfecte Smaak | Koop
+              Koffiebonen Online
+            sv-se: >-
+              Premium kaffebönor - Nymalda för perfekt smak | Köp kaffebönor
+              online
+            ar-uae: >-
+              حبوب قهوة فاخرة - محمصة طازجة لنكهة مثالية | اشترِ حبوب القهوة عبر
+              الإنترنت
+        pageDescription:
+          type: text
+          locales:
+            da-dk: >-
+              Udforsk vores udvalg af premium kaffebønner, der er hentet fra de
+              bedste kaffeproducerende regioner. Friskristede og tilgængelige i
+              forskellige ristninger, find de perfekte bønner til din
+              kafferitual. Bestil online til levering!
+            de-at: >-
+              Entdecken Sie unsere Auswahl an Premium-Kaffeebohnen, die aus den
+              besten Kaffeeanbaugebieten stammen. Frisch geröstet und in
+              verschiedenen Röstungen erhältlich, finden Sie die perfekten
+              Bohnen für Ihr Kaffeeritual. Bestellen Sie online für die
+              Lieferung!
+            de-ch: >-
+              Entdecken Sie unsere Auswahl an Premium-Kaffeebohnen, die aus den
+              besten Kaffeeanbaugebieten stammen. Frisch geröstet und in
+              verschiedenen Röstungen erhältlich, finden Sie die perfekten
+              Bohnen für Ihr Kaffeeritual. Bestellen Sie online zur Lieferung!
+            de-de: >-
+              Entdecken Sie unsere Auswahl an Premium-Kaffeebohnen, die aus den
+              besten Kaffeeanbaugebieten stammen. Frisch geröstet und in
+              verschiedenen Röstungen erhältlich, finden Sie die perfekten
+              Bohnen für Ihr Kaffeeritual. Bestellen Sie online zur Lieferung!
+            en-au: >-
+              Découvrez notre sélection de grains de café premium, provenant des
+              meilleures régions productrices de café. Fraîchement torréfiés et
+              disponibles en différentes torréfactions, trouvez les grains
+              parfaits pour votre rituel café. Commandez en ligne pour une
+              livraison !
+            en-ca: >-
+              Explore our selection of premium coffee beans, sourced from the
+              best coffee-growing regions. Freshly roasted and available in
+              various roasts, find the perfect beans for your coffee ritual.
+              Order online for delivery!
+            en-gb: >-
+              Explore our selection of premium coffee beans, sourced from the
+              best coffee-growing regions. Freshly roasted and available in
+              various roasts, find the perfect beans for your coffee ritual.
+              Order online for delivery!
+            en-nl: >-
+              Ontdek onze selectie premium koffiebonen, afkomstig uit de beste
+              koffieproducerende regio's. Vers gebrand en beschikbaar in
+              verschillende brandingen, vind de perfecte bonen voor uw
+              koffieritueel. Bestel online voor levering!
+            en-nz: >-
+              Entdecken Sie unsere Auswahl an Premium-Kaffeebohnen, die aus den
+              besten Kaffeeanbaugebieten stammen. Frisch geröstet und in
+              verschiedenen Röstungen erhältlich, finden Sie die perfekten
+              Bohnen für Ihr Kaffeeritual. Bestellen Sie online zur Lieferung!
+            en-us: >-
+              Explore our selection of premium coffee beans, sourced from the
+              best coffee-growing regions. Freshly roasted and available in
+              various roasts, find the perfect beans for your coffee ritual.
+              Order online for delivery!
+            fr-ca: >-
+              Découvrez notre sélection de grains de café de qualité supérieure,
+              provenant des meilleures régions productrices de café. Fraîchement
+              torréfiés et disponibles en différentes torréfactions, trouvez les
+              grains parfaits pour votre rituel café. Commandez en ligne pour la
+              livraison !
+            fr-ch: >-
+              Découvrez notre sélection de grains de café premium, provenant des
+              meilleures régions productrices de café. Fraîchement torréfiés et
+              disponibles en différentes torréfactions, trouvez les grains
+              parfaits pour votre rituel café. Commandez en ligne pour une
+              livraison !
+            fr-fr: >-
+              Découvrez notre sélection de grains de café premium, provenant des
+              meilleures régions productrices de café. Fraîchement torréfiés et
+              disponibles en différentes torréfactions, trouvez les grains
+              parfaits pour votre rituel café. Commandez en ligne pour une
+              livraison !
+            ja-jp: >-
+              最高のコーヒー栽培地域から厳選されたプレミアムコーヒー豆をお楽しみください。新鮮に焙煎され、さまざまなローストでご用意しています。あなたのコーヒー習慣にぴったりの豆を見つけてください。オンラインで注文して配達を受け取りましょう！
+            nl-nl: >-
+              Ontdek onze selectie premium koffiebonen, afkomstig uit de beste
+              koffieproducerende regio's. Vers geroosterd en beschikbaar in
+              verschillende brandingen, vind de perfecte bonen voor jouw
+              koffieritueel. Bestel online voor levering!
+            sv-se: >-
+              Utforska vårt urval av premiumkaffebönor, hämtade från de bästa
+              kaffeodlingsregionerna. Nymalda och tillgängliga i olika
+              rostningar, hitta de perfekta bönorna för din kaffeceremoni.
+              Beställ online för leverans!
+            ar-uae: >-
+              اكتشف مجموعة مختارة من حبوب القهوة الفاخرة، المستوردة من أفضل
+              مناطق زراعة القهوة. محمصة حديثًا ومتوفرة بدرجات تحميص متنوعة، اعثر
+              على الحبوب المثالية لطقوس قهوتك. اطلب عبر الإنترنت للتوصيل!
+        openGraphDescription:
+          type: text
+          locales:
+            da-dk: >-
+              Udforsk vores udvalg af premium kaffebønner, hentet fra de bedste
+              kaffeproducerende regioner. Friskristede og tilgængelige i
+              forskellige ristninger, find de perfekte bønner til din
+              kafferitual. Bestil online til levering!
+            de-at: >-
+              Entdecken Sie unsere Auswahl an Premium-Kaffeebohnen, die aus den
+              besten Kaffeeanbaugebieten stammen. Frisch geröstet und in
+              verschiedenen Röstungen erhältlich, finden Sie die perfekten
+              Bohnen für Ihr Kaffeeritual. Bestellen Sie online zur Lieferung!
+            de-ch: >-
+              Entdecken Sie unsere Auswahl an Premium-Kaffeebohnen, die aus den
+              besten Kaffeeanbaugebieten stammen. Frisch geröstet und in
+              verschiedenen Röstungen erhältlich, finden Sie die perfekten
+              Bohnen für Ihr Kaffeeritual. Bestellen Sie online für die
+              Lieferung!
+            de-de: >-
+              Entdecken Sie unsere Auswahl an Premium-Kaffeebohnen, die aus den
+              besten Kaffeeanbaugebieten stammen. Frisch geröstet und in
+              verschiedenen Röstungen erhältlich, finden Sie die perfekten
+              Bohnen für Ihr Kaffeeritual. Bestellen Sie online für die
+              Lieferung!
+            en-au: >-
+              Découvrez notre sélection de grains de café premium, issus des
+              meilleures régions productrices de café. Fraîchement torréfiés et
+              disponibles en différentes torréfactions, trouvez les grains
+              parfaits pour votre rituel café. Commandez en ligne pour une
+              livraison !
+            en-ca: >-
+              Explore our selection of premium coffee beans, sourced from the
+              best coffee-growing regions. Freshly roasted and available in
+              various roasts, find the perfect beans for your coffee ritual.
+              Order online for delivery!
+            en-gb: >-
+              Explore our selection of premium coffee beans, sourced from the
+              best coffee-growing regions. Freshly roasted and available in
+              various roasts, find the perfect beans for your coffee ritual.
+              Order online for delivery!
+            en-nl: >-
+              Ontdek onze selectie van premium koffiebonen, afkomstig uit de
+              beste koffieproducerende regio's. Vers gebrand en verkrijgbaar in
+              verschillende brandingen, vind de perfecte bonen voor jouw
+              koffieritueel. Bestel online voor levering!
+            en-nz: >-
+              Entdecken Sie unsere Auswahl an hochwertigen Kaffeebohnen, die aus
+              den besten Kaffeeanbaugebieten stammen. Frisch geröstet und in
+              verschiedenen Röstungen erhältlich, finden Sie die perfekten
+              Bohnen für Ihr Kaffeeritual. Bestellen Sie online zur Lieferung!
+            en-us: >-
+              Explore our selection of premium coffee beans, sourced from the
+              best coffee-growing regions. Freshly roasted and available in
+              various roasts, find the perfect beans for your coffee ritual.
+              Order online for delivery!
+            fr-ca: >-
+              Découvrez notre sélection de grains de café de qualité supérieure,
+              provenant des meilleures régions productrices de café. Fraîchement
+              torréfiés et disponibles en différentes torréfactions, trouvez les
+              grains parfaits pour votre rituel café. Commandez en ligne pour la
+              livraison !
+            fr-ch: >-
+              Découvrez notre sélection de grains de café premium, issus des
+              meilleures régions productrices de café. Fraîchement torréfiés et
+              disponibles en différentes torréfactions, trouvez les grains
+              parfaits pour votre rituel café. Commandez en ligne pour une
+              livraison !
+            fr-fr: >-
+              Découvrez notre sélection de grains de café premium, issus des
+              meilleures régions productrices de café. Fraîchement torréfiés et
+              disponibles en différentes torréfactions, trouvez les grains
+              parfaits pour votre rituel café. Commandez en ligne pour une
+              livraison !
+            ja-jp: >-
+              最高のコーヒー栽培地域から厳選されたプレミアムコーヒー豆をお楽しみください。新鮮に焙煎され、さまざまなローストでご用意しています。あなたのコーヒー習慣にぴったりの豆を見つけてください。オンラインで注文して配達を受けましょう！
+            nl-nl: >-
+              Ontdek onze selectie premium koffiebonen, afkomstig uit de beste
+              koffieproducerende regio's. Vers geroosterd en beschikbaar in
+              verschillende brandingen, vind de perfecte bonen voor jouw
+              koffieritueel. Bestel online voor levering!
+            sv-se: >-
+              Utforska vårt urval av premiumkaffebönor, hämtade från de bästa
+              kaffeodlingsregionerna. Nymalda och tillgängliga i olika
+              rostningar, hitta de perfekta bönorna för din kaffeceremoni.
+              Beställ online för leverans!
+            ar-uae: >-
+              استكشف مجموعة حبوب القهوة الفاخرة لدينا، المستوردة من أفضل مناطق
+              زراعة القهوة. محمصة حديثًا ومتوفرة بتشكيلات مختلفة، اعثر على
+              الحبوب المثالية لطقوس قهوتك. اطلب عبر الإنترنت للتوصيل!
+    3613f719-1b75-44c5-bac4-446a3ff33c05|c4e468fe-b6cf-4497-8c14-bde24a0e35b8:
+      parameters:
+        placeholder:
+          type: text
+          locales:
+            da-dk: Begynd at søge efter kaffebønner
+            de-at: Beginnen Sie mit der Suche nach Kaffeebohnen.
+            de-ch: Beginnen Sie mit der Suche nach Kaffeebohnen.
+            de-de: Beginnen Sie mit der Suche nach Kaffeebohnen.
+            en-au: Commencez à chercher des grains de café
+            en-ca: Start searching for coffee beans
+            en-gb: Start searching for coffee beans
+            en-nl: Begin met het zoeken naar koffiebonen
+            en-nz: Beginnen Sie mit der Suche nach Kaffeebohnen
+            en-us: Start searching for a coffee beans
+            fr-ca: Commencez à chercher des grains de café
+            fr-ch: Commencez à chercher des grains de café
+            fr-fr: Commencez à chercher des grains de café
+            ja-jp: コーヒー豆を探し始める
+            nl-nl: Begin met het zoeken naar koffiebonen
+            sv-se: Börja leta efter kaffebönor
+            ar-uae: ابدأ البحث عن حبوب القهوة
+    a031e4b5-bc6b-4e75-80e2-f26f2b8d1362|215f54df-5063-4f0a-81c0-d8bda909b52c:
+      parameters:
+        image:
+          type: asset
+          value:
+            - _id: d8978dfb-6f09-452c-8a3a-6c2ab54ddfaf
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: e894771b-4d96-439b-b315-90a822d545a2
+                url:
+                  value: >-
+                    https://img.uniform.global/p/b0JtaxSVQxmqWylG6vGC1Q/EmUWyVr5RQypgZrR_ajVkw-ideal-beans-for-slow-drip.jpg
+                  type: text
+                file:
+                  type: file
+                  value: 3f3bbe8e-a5f9-4b89-9f72-1f0a2db82f03
+                size:
+                  value: 3885592
+                  type: number
+                title:
+                  type: text
+                  value: ideal-beans-for-slow-drip.jpg
+                width:
+                  value: 4928
+                  type: number
+                height:
+                  value: 3264
+                  type: number
+                mediaType:
+                  value: image/jpeg
+                  type: text
+              _source: uniform-assets
+        overlayColor:
+          type: dex-color-palette-parameter
+          value: general-color-3
+        overlayOpacity:
+          type: dex-slider-control-parameter
+          value: '0.5'
+    a031e4b5-bc6b-4e75-80e2-f26f2b8d1362|edea6a24-f36d-48c7-acdb-e0dbd8ed511e:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: Oplev kuraterede kaffebønner
+            de-at: Entdecken Sie kuratierte Kaffeebohnen
+            de-ch: Entdecken Sie kuratierte Kaffeebohnen
+            de-de: Entdecken Sie kuratierte Kaffeebohnen
+            en-au: Découvrez des grains de café sélectionnés
+            en-ca: Discover curated coffee beans
+            en-gb: Discover curated coffee beans
+            en-nl: Ontdek zorgvuldig geselecteerde koffiebonen
+            en-nz: Entdecken Sie kuratierte Kaffeebohnen
+            en-us: Discover curated coffee beans
+            fr-ca: Découvrez des grains de café sélectionnés
+            fr-ch: Découvrez des grains de café sélectionnés
+            fr-fr: Découvrez des grains de café sélectionnés
+            ja-jp: 厳選されたコーヒー豆を発見する
+            nl-nl: Ontdek zorgvuldig geselecteerde koffiebonen
+            sv-se: Upptäck noggrant utvalda kaffebönor
+            ar-uae: اكتشف حبوب القهوة المختارة بعناية
+    d9e2afce-4417-4f75-9345-701831f831aa|dc2e95be-21b5-4476-a309-f8a34922f528:
+      slots:
+        $slotSectionItems:
+          - _id: a031e4b5-bc6b-4e75-80e2-f26f2b8d1362
+            type: section
+            _pattern: 90b32c21-f5d8-4a40-b971-c97c359ecce9
+            _overridability:
+              parameters:
+                displayName: 'yes'
+              hideLockedParameters: true
+          - _id: 403ac0e1-f7fa-49a7-808d-ce9dcfbdf004
+            type: container
+            slots:
+              containerContent:
+                - _id: 3613f719-1b75-44c5-bac4-446a3ff33c05
+                  type: entriesSearchEngine
+                  _pattern: afef4fa3-394f-4228-81b9-3374b4616b3c
+                  _dataResources:
+                    Base Product Category:
+                      type: productCategory
+                      variables:
+                        locale: ${locale}
+                        entryId: ae8e04c4-f20b-46f5-9eb4-7d8f82bbee38
+                  _overridability:
+                    parameters:
+                      boostEnrichments: 'yes'
+                    hideLockedParameters: true
+            parameters:
+              spacing:
+                type: dex-space-control-parameter
+                value:
+                  mobile:
+                    paddingTop: container-small
+                    paddingRight: container-xsmall
+                  tablet: {}
+                  desktop:
+                    paddingTop: container-medium
+                    paddingLeft: container-small
+                    paddingRight: container-small
+              displayName:
+                type: text
+                locales:
+                  da-dk: Facetteret søgning
+                  de-at: Facettierte Suche
+                  de-ch: Facettensuche
+                  de-de: Facettensuche
+                  en-au: Recherche à facettes
+                  en-ca: Faceted Search
+                  en-gb: Faceted Search
+                  en-nl: Gefacetteerd Zoeken
+                  en-nz: Facettensuche
+                  en-us: Faceted Search
+                  fr-ca: Recherche à facettes
+                  fr-ch: Recherche à facettes
+                  fr-fr: Recherche à facettes
+                  ja-jp: ファセット検索
+                  nl-nl: Gefacetteerd Zoeken
+                  sv-se: Fasetterad sökning
+                  ar-uae: البحث المصفى
+    d9e2afce-4417-4f75-9345-701831f831aa|38f88562-6b70-411b-a550-ada8514eef22|f82aa025-12eb-4c87-b18b-ccc33b20fe02:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            de-at:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            de-de:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-au:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-ca:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-gb:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-nl:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-nz:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            es-us:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            fr-ca:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            fr-fr:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ja-jp:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            nb-no:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            nl-nl:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            sv-se:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ar-ksa:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ar-uae:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+    d9e2afce-4417-4f75-9345-701831f831aa|7607f998-992d-4b35-9fa5-4e560f8c179a|36ef82db-8556-4006-be7a-957216a76758:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: Anbefalet til dig
+            de-at: Empfohlen für Sie
+            de-de: Empfohlen für Sie
+            en-au: Recommended for you
+            en-ca: Recommended for you
+            en-gb: Recommended for you
+            en-nl: Recommended for you
+            en-nz: Recommended for you
+            es-us: Recomendado para ti
+            fr-ca: Recommandé pour vous
+            fr-fr: Recommandé pour vous
+            ja-jp: あなたへのおすすめ
+            nb-no: Anbefalt for deg
+            nl-nl: Aanbevolen voor jou
+            sv-se: Rekommenderat för dig
+            ar-ksa: موصى به لك
+            ar-uae: موصى به لك
+    d9e2afce-4417-4f75-9345-701831f831aa|bbf196c6-4821-414c-9b14-b08fb1c7fede|44623ac6-5327-44e3-ab3e-b7455ff829e8:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-demo
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-demo
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-au:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-nz:
+              path: https://unfrm.to/csk-demo
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-demo
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-demo
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-demo
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-demo
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-demo
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-demo
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-demo
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-demo
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-demo
+              type: url
+    d9e2afce-4417-4f75-9345-701831f831aa|bbf196c6-4821-414c-9b14-b08fb1c7fede|44d64138-618e-4c6a-b4cc-6ea9b9a22cba:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-au:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-nz:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+    d9e2afce-4417-4f75-9345-701831f831aa|bbf196c6-4821-414c-9b14-b08fb1c7fede|6db01010-cff2-458e-85d6-358dc75ca48c:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-sb
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-sb
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-au:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-nz:
+              path: https://unfrm.to/csk-sb
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-sb
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-sb
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-sb
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-sb
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-sb
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-sb
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-sb
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-sb
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-sb
+              type: url
+    d9e2afce-4417-4f75-9345-701831f831aa|bbf196c6-4821-414c-9b14-b08fb1c7fede|ea891105-3b48-41b4-8fa0-6c2ecca00a75:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-docs
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-docs
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-au:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-nz:
+              path: https://unfrm.to/csk-docs
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-docs
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-docs
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-docs
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-docs
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-docs
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-docs
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-docs
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-docs
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-docs
+              type: url
+  _locales:
+    - en-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-nz
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - fr-fr
+    - en-au
+    - ja-jp
+    - ar-uae
+    - de-ch
+    - fr-ch
+  _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
+created: '2025-03-18T13:02:33.533786+00:00'
+modified: '2025-08-06T12:11:55.497197+00:00'
+pattern: false

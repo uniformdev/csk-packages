@@ -1,0 +1,596 @@
+composition:
+  _name: Reviews Hero
+  _id: cb6acfbc-01ca-4eef-b637-6a22df3f86e4
+  type: container
+  parameters:
+    height:
+      type: dex-segmented-control-parameter
+      value: {}
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        mobile: {}
+        tablet: {}
+        desktop: {}
+    displayName:
+      type: text
+      locales:
+        da-dk: Erklæring
+        de-at: Erklärung
+        de-ch: Erklärung
+        de-de: Erklärung
+        en-au: Déclaration
+        en-ca: Statement
+        en-gb: Statement
+        en-nl: Verklaring
+        en-nz: Aussage
+        en-us: Statement
+        fr-ca: Déclaration
+        fr-ch: Déclaration
+        fr-fr: Déclaration
+        ja-jp: 声明
+        nl-nl: Verklaring
+        sv-se: Uttalande
+        ar-uae: بيان
+    fluidContent:
+      type: checkbox
+      value: true
+    backgroundColor:
+      type: dex-color-palette-parameter
+      value: general-color-3
+  slots:
+    containerContent:
+      - _id: 66dbb936-41b2-4769-9686-715aac715aee
+        type: section
+        slots:
+          sectionCTA:
+            - _id: 83f03dee-6787-4fc2-803f-11de7cdf931b
+              type: button
+              _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
+          sectionMedia:
+            - _id: 4dde39a6-ae51-48dc-a8b9-b2f678182a42
+              type: image
+              parameters:
+                image:
+                  type: asset
+                  value:
+                    - _id: 41694638-e7b4-41a6-9bd3-7f8e338eb7fd
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: 6b2c6448-2e43-4b65-810d-e0e730e91987
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/xeeSZLfvSwqVj7c5mZ4sHQ-EspressoMakersReview_OG.png
+                          type: text
+                        file:
+                          type: file
+                          value: f26b93ba-7243-497a-9d62-c2500c8f107d
+                        size:
+                          value: 1585180
+                          type: number
+                        title:
+                          type: text
+                          value: EspressoMakersReview_OG.png
+                        width:
+                          value: 1167
+                          type: number
+                        height:
+                          value: 775
+                          type: number
+                        mediaType:
+                          value: image/png
+                          type: text
+                      _source: uniform-assets
+                objectFit:
+                  type: dex-segmented-control-parameter
+                  value: contain
+              _overridability:
+                parameters:
+                  image: 'yes'
+                hideLockedParameters: true
+          sectionContent:
+            - _id: 4b056631-d58d-415c-99a1-045977206919
+              type: flex
+              slots:
+                flexItem:
+                  - _id: ee9557ac-9678-4825-9fc5-92ddfa20c2d4
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: h2
+                      size:
+                        type: dex-segmented-control-parameter
+                        value:
+                          tablet: 4xl
+                          desktop: 4xl
+                      text:
+                        type: text
+                        locales:
+                          da-dk: >-
+                            Vores maskiner anmeldt af en af de mest anerkendte
+                            espressomaskineproducenter
+                          de-at: >-
+                            Unsere Maschinen wurden von einem der
+                            renommiertesten Espressomaschinenhersteller
+                            überprüft.
+                          de-ch: >-
+                            Unsere Maschinen wurden von einem der
+                            renommiertesten Espressomaschinenhersteller
+                            überprüft.
+                          de-de: >-
+                            Unsere Maschinen wurden von einem der
+                            renommiertesten Espressomaschinenhersteller
+                            überprüft.
+                          en-au: >-
+                            Nos machines examinées par l'un des fabricants de
+                            café espresso les plus acclamés
+                          en-ca: >-
+                            Our machines reviewed by one of the most acclaimed
+                            espresso makers
+                          en-gb: >-
+                            Our machines reviewed by one of the most acclaimed
+                            espresso makers
+                          en-nl: >-
+                            Onze machines beoordeeld door een van de meest
+                            geprezen espressomakers
+                          en-nz: >-
+                            Unsere Maschinen wurden von einem der
+                            renommiertesten Espressomaschinenhersteller
+                            überprüft.
+                          en-us: >-
+                            Our machines reviewed by one of the most acclaimed
+                            espresso makers
+                          fr-ca: >-
+                            Nos machines examinées par l'un des fabricants de
+                            café espresso les plus acclamés
+                          fr-ch: >-
+                            Nos machines examinées par l'un des fabricants de
+                            café espresso les plus renommés
+                          fr-fr: >-
+                            Nos machines examinées par l'un des fabricants de
+                            café espresso les plus renommés
+                          ja-jp: 私たちの機械は、最も称賛されているエスプレッソメーカーの一つによってレビューされました。
+                          nl-nl: >-
+                            Onze machines beoordeeld door een van de meest
+                            geprezen espressomakers.
+                          sv-se: >-
+                            Våra maskiner granskade av en av de mest hyllade
+                            espressotillverkarna
+                          ar-uae: آلاتنا تمت مراجعتها من قبل أحد أشهر صانعي الإسبريسو.
+                      color:
+                        type: dex-color-palette-parameter
+                        value: text-secondary
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: bold
+                      alignment:
+                        type: dex-segmented-control-parameter
+                        value: left
+                    _overridability:
+                      parameters:
+                        text: 'yes'
+                      hideLockedParameters: true
+                  - _id: b16c6892-6d68-4dc3-bc4c-0b4386d8fb77
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: span
+                      size:
+                        type: dex-segmented-control-parameter
+                        value: {}
+                      text:
+                        type: text
+                        locales:
+                          da-dk: >-
+                            Den anerkendte espressomaskineekspert Joanne laFur
+                            har grundigt testet fire forskellige JavaDrip
+                            espressomaskiner og deler sine ekspertindsigter med
+                            kaffeentusiaster, der er ivrige efter deres næste
+                            opgradering. I sin anmeldelse understreger Joanne
+                            vigtigheden af personlige kaffepræferencer og
+                            opfordrer brugerne til at overveje deres bryggevane
+                            sammen med hendes detaljerede fund, så de kan træffe
+                            en informeret beslutning skræddersyet til deres
+                            espressonydelse.
+                          de-at: >-
+                            Die renommierte Espressomaschinenherstellerin Joanne
+                            laFur hat vier verschiedene
+                            JavaDrip-Espressomaschinen gründlich getestet und
+                            bringt ihre fachkundigen Einblicke zu
+                            Kaffeeliebhabern, die auf ihr nächstes Upgrade
+                            gespannt sind. In ihrer Bewertung betont Joanne die
+                            Bedeutung persönlicher Kaffeepreferenzen und
+                            ermutigt die Nutzer, ihre Brühgewohnheiten neben
+                            ihren detaillierten Erkenntnissen zu
+                            berücksichtigen, um eine fundierte Entscheidung zu
+                            treffen, die auf ihren Espressogenuss zugeschnitten
+                            ist.
+                          de-ch: >-
+                            Die renommierte Espressomaschinen-Herstellerin
+                            Joanne laFur hat vier verschiedene
+                            JavaDrip-Espressomaschinen gründlich getestet und
+                            bringt ihre fachkundigen Einblicke zu
+                            Kaffeeliebhabern, die gespannt auf ihr nächstes
+                            Upgrade sind. In ihrer Bewertung betont Joanne die
+                            Bedeutung persönlicher Kaffeepreferenzen und
+                            ermutigt die Nutzer, ihre Brühgewohnheiten neben
+                            ihren detaillierten Erkenntnissen zu
+                            berücksichtigen, um eine fundierte Entscheidung zu
+                            treffen, die auf ihren Espressogenuss zugeschnitten
+                            ist.
+                          de-de: >-
+                            Die renommierte Espressomaschinen-Herstellerin
+                            Joanne laFur hat vier verschiedene
+                            JavaDrip-Espressomaschinen gründlich getestet und
+                            bringt ihre fachkundigen Einblicke zu
+                            Kaffeeliebhabern, die gespannt auf ihr nächstes
+                            Upgrade sind. In ihrer Bewertung betont Joanne die
+                            Bedeutung persönlicher Kaffeepreferenzen und
+                            ermutigt die Nutzer, ihre Brühgewohnheiten neben
+                            ihren detaillierten Erkenntnissen zu
+                            berücksichtigen, um eine fundierte Entscheidung zu
+                            treffen, die auf ihren Espressogenuss zugeschnitten
+                            ist.
+                          en-au: >-
+                            La célèbre fabricante d'espresso Joanne laFur a
+                            rigoureusement testé quatre machines à espresso
+                            JavaDrip distinctes, apportant ses précieuses
+                            analyses aux amateurs de café désireux de passer à
+                            la vitesse supérieure. Tout au long de son
+                            évaluation, Joanne souligne l'importance des
+                            préférences personnelles en matière de café et
+                            encourage les utilisateurs à prendre en compte leurs
+                            habitudes de préparation en plus de ses conclusions
+                            détaillées, afin de s'assurer qu'ils prennent une
+                            décision éclairée adaptée à leur plaisir d'espresso.
+                          en-ca: >-
+                            Renowned espresso maker Joanne laFur has been
+                            rigorously testing four distinct JavaDrip espresso
+                            machines, bringing her expert insights to coffee
+                            enthusiasts eager for their next upgrade. Throughout
+                            her review, Joanne emphasizes the importance of
+                            personal coffee preferences and encourages users to
+                            consider their brewing habits alongside her detailed
+                            findings, ensuring they make an informed decision
+                            tailored to their espresso enjoyment.
+                          en-gb: >-
+                            Renowned espresso maker Joanne laFur has been
+                            rigorously testing four distinct JavaDrip espresso
+                            machines, bringing her expert insights to coffee
+                            enthusiasts eager for their next upgrade. Throughout
+                            her review, Joanne emphasises the importance of
+                            personal coffee preferences and encourages users to
+                            consider their brewing habits alongside her detailed
+                            findings, ensuring they make an informed decision
+                            tailored to their espresso enjoyment.
+                          en-nl: >-
+                            De beroemde espressomaker Joanne laFur heeft vier
+                            verschillende JavaDrip-espressomachines grondig
+                            getest en biedt haar deskundige inzichten aan
+                            koffieliefhebbers die uitkijken naar hun volgende
+                            upgrade. In haar beoordeling benadrukt Joanne het
+                            belang van persoonlijke koffievoorkeuren en moedigt
+                            ze gebruikers aan om hun zetgewoonten in overweging
+                            te nemen naast haar gedetailleerde bevindingen,
+                            zodat ze een weloverwogen beslissing kunnen nemen
+                            die is afgestemd op hun espresso-genot.
+                          en-nz: >-
+                            Die renommierte Espressomaschinen-Herstellerin
+                            Joanne laFur hat vier verschiedene
+                            JavaDrip-Espressomaschinen gründlich getestet und
+                            bringt ihre fachkundigen Einblicke zu
+                            Kaffeeliebhabern, die auf ihr nächstes Upgrade
+                            gespannt sind. In ihrer Rezension betont Joanne die
+                            Bedeutung persönlicher Kaffeepreferenzen und
+                            ermutigt die Benutzer, ihre Brühgewohnheiten neben
+                            ihren detaillierten Erkenntnissen zu
+                            berücksichtigen, um eine fundierte Entscheidung zu
+                            treffen, die auf ihren Espressogenuss zugeschnitten
+                            ist.
+                          en-us: >-
+                            Renowned espresso maker Joanne laFur has been
+                            rigorously testing four distinct JavaDrip espresso
+                            machines, bringing her expert insights to coffee
+                            enthusiasts eager for their next upgrade. Throughout
+                            her review, Joanne emphasizes the importance of
+                            personal coffee preferences and encourages users to
+                            consider their brewing habits alongside her detailed
+                            findings, ensuring they make an informed decision
+                            tailored to their espresso enjoyment.
+                          fr-ca: >-
+                            La célèbre fabricante d'espresso Joanne laFur a
+                            rigoureusement testé quatre machines à espresso
+                            JavaDrip distinctes, apportant ses précieuses
+                            connaissances aux amateurs de café désireux de
+                            passer à la vitesse supérieure. Tout au long de son
+                            évaluation, Joanne souligne l'importance des
+                            préférences personnelles en matière de café et
+                            encourage les utilisateurs à prendre en compte leurs
+                            habitudes de préparation en plus de ses conclusions
+                            détaillées, afin de s'assurer qu'ils prennent une
+                            décision éclairée adaptée à leur plaisir d'espresso.
+                          fr-ch: >-
+                            La célèbre fabricante d'espresso Joanne laFur a
+                            rigoureusement testé quatre machines à espresso
+                            JavaDrip distinctes, apportant ses précieuses
+                            analyses aux amateurs de café désireux de passer à
+                            la vitesse supérieure. Tout au long de son
+                            évaluation, Joanne souligne l'importance des
+                            préférences personnelles en matière de café et
+                            encourage les utilisateurs à prendre en compte leurs
+                            habitudes de préparation en parallèle de ses
+                            conclusions détaillées, afin de s'assurer qu'ils
+                            prennent une décision éclairée adaptée à leur
+                            plaisir de l'espresso.
+                          fr-fr: >-
+                            La célèbre fabricante d'espresso Joanne laFur a
+                            rigoureusement testé quatre machines à espresso
+                            JavaDrip distinctes, apportant ses précieuses
+                            analyses aux amateurs de café désireux de passer à
+                            la vitesse supérieure. Tout au long de son
+                            évaluation, Joanne souligne l'importance des
+                            préférences personnelles en matière de café et
+                            encourage les utilisateurs à prendre en compte leurs
+                            habitudes de préparation en parallèle de ses
+                            conclusions détaillées, afin de s'assurer qu'ils
+                            prennent une décision éclairée adaptée à leur
+                            plaisir de l'espresso.
+                          ja-jp: >-
+                            著名なエスプレッソメーカーのジョアンヌ・ラファーは、4種類のJavaDripエスプレッソマシンを厳密にテストし、次のアップグレードを心待ちにしているコーヒー愛好家に専門的な洞察を提供しています。レビューを通じて、ジョアンヌは個々のコーヒーの好みの重要性を強調し、詳細な調査結果と共に自分の抽出習慣を考慮するようユーザーに促し、エスプレッソの楽しみを最大限に活かせる情報に基づいた決定を下せるようにしています。
+                          nl-nl: >-
+                            De gerenommeerde espressomaker Joanne laFur heeft
+                            vier verschillende JavaDrip-espressomachines grondig
+                            getest en brengt haar deskundige inzichten naar
+                            koffieliefhebbers die uitkijken naar hun volgende
+                            upgrade. In haar beoordeling benadrukt Joanne het
+                            belang van persoonlijke koffievoorkeuren en moedigt
+                            ze gebruikers aan om hun zetgewoonten in overweging
+                            te nemen naast haar gedetailleerde bevindingen,
+                            zodat ze een weloverwogen beslissing kunnen nemen
+                            die is afgestemd op hun espresso-genot.
+                          sv-se: >-
+                            Den berömda espressotillverkaren Joanne laFur har
+                            noggrant testat fyra olika JavaDrip-espressomaskiner
+                            och delar sina expertinsikter med kaffeentusiaster
+                            som är ivriga efter sin nästa uppgradering. Under
+                            hela sin recension betonar Joanne vikten av
+                            personliga kaffepreferenser och uppmuntrar användare
+                            att överväga sina bryggvanor tillsammans med hennes
+                            detaljerade resultat, för att säkerställa att de
+                            fattar ett välgrundat beslut anpassat till deras
+                            espressonjutning.
+                          ar-uae: >-
+                            تقوم صانعة الإسبريسو الشهيرة جوان لا فور باختبار
+                            أربعة ماكينات إسبريسو JavaDrip مختلفة بدقة، مقدمةً
+                            رؤى خبرتها لعشاق القهوة المتحمسين لترقيتهم القادمة.
+                            وخلال مراجعتها، تؤكد جوان على أهمية تفضيلات القهوة
+                            الشخصية وتشجع المستخدمين على مراعاة عاداتهم في
+                            التحضير بجانب نتائجها المفصلة، لضمان اتخاذهم قرارًا
+                            مستنيرًا يتناسب مع استمتاعهم بالإسبريسو.
+                      color:
+                        type: dex-color-palette-parameter
+                        value: text-secondary
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: normal
+                      alignment:
+                        type: dex-segmented-control-parameter
+                        value: left
+                  - _id: 4b835ea3-c2b0-43dd-bb9b-968ab3f48e05
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: span
+                      font:
+                        type: dex-token-selector-parameter
+                        value: secondary
+                      size:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: lg
+                          tablet: lg
+                          desktop: lg
+                      text:
+                        type: text
+                        locales:
+                          da-dk: >-
+                            Leder du efter at opdatere din espressomaskine? Sørg
+                            for at tage et kig på Joanne laFurs anmeldelse af,
+                            hvilke espressomaskiner du skal købe.
+                          de-at: >-
+                            Möchten Sie Ihre Espressomaschine aktualisieren?
+                            Schauen Sie sich unbedingt Joanne laFurs Bewertung
+                            an, welche Espressomaschinen Sie kaufen sollten.
+                          de-ch: >-
+                            Möchten Sie Ihre Espressomaschine aktualisieren?
+                            Schauen Sie sich unbedingt Joanne laFurs Bewertung
+                            an, welche Espressomaschinen Sie kaufen sollten.
+                          de-de: >-
+                            Möchten Sie Ihre Espressomaschine aktualisieren?
+                            Schauen Sie sich unbedingt Joanne laFurs Bewertung
+                            an, welche Espressomaschinen Sie kaufen sollten.
+                          en-au: >-
+                            Cherchez-vous à mettre à jour votre machine à
+                            expresso ? Assurez-vous de consulter l'avis de
+                            Joanne laFur sur les machines à expresso à acheter.
+                          en-ca: >-
+                            Are you looking to update your espresso maker? Make
+                            sure to take a look at Joanne laFur's review of
+                            which Espresso Makers to buy.
+                          en-gb: >-
+                            Are you looking to update your espresso maker? Make
+                            sure to take a look at Joanne laFur's review of
+                            which Espresso Makers to buy.
+                          en-nl: >-
+                            Ben je op zoek naar een update voor je
+                            espressomachine? Zorg ervoor dat je Joanne laFur's
+                            recensie bekijkt over welke espressomachines je moet
+                            kopen.
+                          en-nz: >-
+                            Suchen Sie nach einem neuen Espressomaschine?
+                            Schauen Sie sich unbedingt Joanne laFurs Bewertung
+                            an, welche Espressomaschinen Sie kaufen sollten.
+                          en-us: >-
+                            Are you looking to update your espresso maker? Make
+                            sure to take a look at which Joanne laFur's review
+                            of which Espresso Makers to buy.
+                          fr-ca: >-
+                            Cherchez-vous à mettre à jour votre machine à
+                            espresso? Assurez-vous de consulter l'avis de Joanne
+                            laFur sur les machines à espresso à acheter.
+                          fr-ch: >-
+                            Vous cherchez à mettre à jour votre machine à
+                            expresso ? Assurez-vous de consulter l'avis de
+                            Joanne laFur sur les machines à expresso à acheter.
+                          fr-fr: >-
+                            Vous cherchez à mettre à jour votre machine à
+                            expresso ? Assurez-vous de consulter l'avis de
+                            Joanne laFur sur les machines à expresso à acheter.
+                          ja-jp: >-
+                            エスプレッソメーカーの更新をお考えですか？ジョアンヌ・ラフルの「購入すべきエスプレッソメーカーのレビュー」をぜひご覧ください。
+                          nl-nl: >-
+                            Ben je op zoek naar een nieuwe espressomachine? Zorg
+                            ervoor dat je Joanne laFur's recensie over welke
+                            espressomachines je moet kopen bekijkt.
+                          sv-se: >-
+                            Letar du efter att uppdatera din espressomaskin? Se
+                            till att ta en titt på Joanne laFurs recension av
+                            vilka espressomaskiner du bör köpa.
+                          ar-uae: >-
+                            هل تبحث عن تحديث ماكينة الإسبريسو الخاصة بك؟ تأكد من
+                            إلقاء نظرة على مراجعة جوان لافور حول أي ماكينات
+                            الإسبريسو يجب شراؤها.
+                      color:
+                        type: dex-color-palette-parameter
+                        value: text-secondary
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: bold
+                      alignment:
+                        type: dex-segmented-control-parameter
+                        value: left
+                      letterSpacing:
+                        type: dex-segmented-control-parameter
+                        value: wide
+              parameters:
+                gap:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: '4'
+                    tablet: '4'
+                    desktop: '4'
+                spacing:
+                  type: dex-space-control-parameter
+                  value:
+                    mobile: {}
+                    tablet:
+                      marginLeft: container-large
+                    desktop:
+                      marginLeft: container-large
+                direction:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: col
+                    tablet: col
+                    desktop: col
+                alignItems:
+                  type: dex-segmented-control-parameter
+                  value: {}
+                displayName:
+                  type: text
+                  locales:
+                    da-dk: Indhold
+                    de-at: Inhalt
+                    de-ch: Inhalt
+                    de-de: Inhalt
+                    en-au: Contenu
+                    en-ca: Content
+                    en-gb: Content
+                    en-nl: Inhoud
+                    en-nz: Inhalt
+                    en-us: Content
+                    fr-ca: Contenu
+                    fr-ch: Contenu
+                    fr-fr: Contenu
+                    ja-jp: コンテンツ
+                    nl-nl: Inhoud
+                    sv-se: Innehåll
+                    ar-uae: المحتوى
+                justifyContent:
+                  type: dex-segmented-control-parameter
+                  value: {}
+              _overridability:
+                hideLockedParameters: true
+        variant: columns
+        parameters:
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              paddingTop: container-medium
+              paddingBottom: container-medium
+          displayName:
+            type: text
+            locales:
+              da-dk: Fire brugerprofiler til fuld smagstilpasning
+              de-at: Vier Benutzerprofile für vollständige Geschmacksanpassung
+              de-ch: Vier Benutzerprofile für vollständige Geschmacksanpassung
+              de-de: Vier Benutzerprofile für vollständige Geschmacksanpassung
+              en-au: >-
+                Quatre profils d'utilisateur pour une personnalisation complète
+                du goût
+              en-ca: Four user profiles for full taste customization
+              en-gb: Four user profiles for full taste customisation
+              en-nl: Vier gebruikersprofielen voor volledige smaakaanpassing
+              en-nz: Vier Benutzerprofile für vollständige Geschmacksanpassung
+              en-us: |
+                Four user profiles for full taste customization
+              fr-ca: >-
+                Quatre profils d'utilisateur pour une personnalisation complète
+                du goût
+              fr-ch: >-
+                Quatre profils d'utilisateur pour une personnalisation complète
+                du goût
+              fr-fr: >-
+                Quatre profils d'utilisateur pour une personnalisation complète
+                du goût
+              ja-jp: フルテイストカスタマイズのための4つのユーザープロファイル
+              nl-nl: Vier gebruikersprofielen voor volledige smaakaanpassing
+              sv-se: Fyra användarprofiler för fullständig smakjustering
+              ar-uae: أربع ملفات تعريف للمستخدم لتخصيص كامل للطعم
+          contentAlignment:
+            type: dex-segmented-control-parameter
+            value: center
+        _overridability:
+          parameters:
+            spacing: 'yes'
+            displayName: 'yes'
+            fluidContent: 'yes'
+          hideLockedParameters: true
+  _locales:
+    - en-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-nz
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - fr-fr
+    - en-au
+    - ja-jp
+    - ar-uae
+    - de-ch
+    - fr-ch
+created: '2025-06-18T12:12:06.181274+00:00'
+modified: '2025-08-06T12:11:46.93105+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/reviews_hero.png

@@ -1,0 +1,268 @@
+composition:
+  _name: Container pattern
+  _id: e1162711-ee40-4a8b-b932-859ef691b90c
+  type: container
+  parameters:
+    height:
+      type: dex-segmented-control-parameter
+      value: {}
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        mobile: {}
+        tablet: {}
+        desktop:
+          paddingTop: container-medium
+          paddingBottom: container-medium
+  slots:
+    containerContent:
+      - _id: 1764d052-9668-4189-9ddb-793dac3c09ab
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: h1
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              desktop: 4xl
+          text:
+            type: text
+            locales:
+              da-dk: Titel
+              de-at: Titel
+              de-ch: Titel
+              de-de: Titel
+              en-au: Titre
+              en-ca: Title
+              en-gb: Title
+              en-nl: Titel
+              en-nz: Titel
+              en-us: Title
+              fr-ca: Titre
+              fr-ch: Titre
+              fr-fr: Titre
+              ja-jp: タイトル
+              nl-nl: Titel
+              sv-se: Titel
+              ar-uae: عنوان
+          color:
+            type: dex-color-palette-parameter
+            value: text-primary
+          weight:
+            type: dex-segmented-control-parameter
+            value: bold
+        _overridability:
+          hideLockedParameters: true
+      - _id: 39d84418-235a-4a72-95a0-3e567aa443f3
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: h2
+          text:
+            type: text
+            locales:
+              da-dk: beskrivelse
+              de-at: Beschreibung
+              de-ch: Beschreibung
+              de-de: Beschreibung
+              en-au: description
+              en-ca: description
+              en-gb: description
+              en-nl: beschrijving
+              en-nz: Beschreibung
+              en-us: description
+              fr-ca: description
+              fr-ch: description
+              fr-fr: description
+              ja-jp: 説明
+              nl-nl: beschrijving
+              sv-se: beskrivning
+              ar-uae: الوصف
+        _overridability:
+          hideLockedParameters: true
+      - _id: 3e2f7686-e7fa-4f93-b44f-9bff7fbcc984
+        type: button
+        parameters:
+          link:
+            type: link
+            locales:
+              da-dk:
+                path: /${locale}/summer-campaign
+                type: projectMapNode
+                nodeId: 94663b98-2fd8-4852-b75f-7eb89bbccb63
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              de-at:
+                path: /${locale}/summer-campaign
+                type: projectMapNode
+                nodeId: 94663b98-2fd8-4852-b75f-7eb89bbccb63
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              de-de:
+                path: /${locale}/summer-campaign
+                type: projectMapNode
+                nodeId: 94663b98-2fd8-4852-b75f-7eb89bbccb63
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              en-au:
+                path: /${locale}/summer-campaign
+                type: projectMapNode
+                nodeId: 94663b98-2fd8-4852-b75f-7eb89bbccb63
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              en-ca:
+                path: /${locale}/summer-campaign
+                type: projectMapNode
+                nodeId: 94663b98-2fd8-4852-b75f-7eb89bbccb63
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              en-gb:
+                path: /${locale}/summer-campaign
+                type: projectMapNode
+                nodeId: 94663b98-2fd8-4852-b75f-7eb89bbccb63
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              en-nl:
+                path: /${locale}/summer-campaign
+                type: projectMapNode
+                nodeId: 94663b98-2fd8-4852-b75f-7eb89bbccb63
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              en-nz:
+                path: /${locale}/summer-campaign
+                type: projectMapNode
+                nodeId: 94663b98-2fd8-4852-b75f-7eb89bbccb63
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              en-us:
+                path: /${locale}/summer-campaign
+                type: projectMapNode
+                nodeId: 94663b98-2fd8-4852-b75f-7eb89bbccb63
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              es-us:
+                path: /${locale}/summer-campaign
+                type: projectMapNode
+                nodeId: 94663b98-2fd8-4852-b75f-7eb89bbccb63
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              fr-ca:
+                path: /${locale}/summer-campaign
+                type: projectMapNode
+                nodeId: 94663b98-2fd8-4852-b75f-7eb89bbccb63
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              fr-fr:
+                path: /${locale}/summer-campaign
+                type: projectMapNode
+                nodeId: 94663b98-2fd8-4852-b75f-7eb89bbccb63
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              ja-jp:
+                path: /${locale}/summer-campaign
+                type: projectMapNode
+                nodeId: 94663b98-2fd8-4852-b75f-7eb89bbccb63
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              nb-no:
+                path: /${locale}/summer-campaign
+                type: projectMapNode
+                nodeId: 94663b98-2fd8-4852-b75f-7eb89bbccb63
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              nl-nl:
+                path: /${locale}/summer-campaign
+                type: projectMapNode
+                nodeId: 94663b98-2fd8-4852-b75f-7eb89bbccb63
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              sv-se:
+                path: /${locale}/summer-campaign
+                type: projectMapNode
+                nodeId: 94663b98-2fd8-4852-b75f-7eb89bbccb63
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              ar-ksa:
+                path: /${locale}/summer-campaign
+                type: projectMapNode
+                nodeId: 94663b98-2fd8-4852-b75f-7eb89bbccb63
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              ar-uae:
+                path: /${locale}/summer-campaign
+                type: projectMapNode
+                nodeId: 94663b98-2fd8-4852-b75f-7eb89bbccb63
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+          text:
+            type: text
+            locales:
+              da-dk: Klik på mig
+              de-at: Klick mich
+              de-ch: Klick mich
+              de-de: Klick mich
+              en-au: Cliquez-moi
+              en-ca: Click me
+              en-gb: Click me
+              en-nl: Klik mij
+              en-nz: Klick mich
+              en-us: Click me
+              fr-ca: Cliquez-moi
+              fr-ch: Cliquez-moi
+              fr-fr: Cliquez-moi
+              ja-jp: クリックしてください
+              nl-nl: Klik mij
+              sv-se: Klicka på mig
+              ar-uae: اضغط عليّ
+          textColor:
+            type: dex-color-palette-parameter
+            value: text-secondary
+          buttonColor:
+            type: dex-color-palette-parameter
+            value: button-primary
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    hideLockedParameters: true
+  _locales:
+    - en-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-nz
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - fr-fr
+    - en-au
+    - ja-jp
+    - ar-uae
+    - de-ch
+    - fr-ch
+created: '2025-05-20T11:53:45.018544+00:00'
+modified: '2025-08-06T12:11:47.67045+00:00'
+pattern: true
+categoryId: ae15b0f6-4953-4ccb-9984-ad0525e77b01

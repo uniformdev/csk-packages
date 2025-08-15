@@ -1,5 +1,5 @@
 composition:
-  _name: Title+Text Container
+  _name: Titled Container
   _id: 6fc97589-a549-4105-8b4f-387f64ea2780
   type: flex
   parameters:
@@ -17,10 +17,30 @@ composition:
         desktop: col
     alignItems:
       type: dex-segmented-control-parameter
-      value: ''
+      value:
+        mobile: ''
+        tablet: ''
+        desktop: ''
     displayName:
       type: text
-      value: Title
+      locales:
+        da-dk: Titel
+        de-at: Titel
+        de-ch: Titel
+        de-de: Titel
+        en-au: Titre
+        en-ca: Title
+        en-gb: Title
+        en-nl: Titel
+        en-nz: Titel
+        en-us: Title
+        fr-ca: Titre
+        fr-ch: Titre
+        fr-fr: Titre
+        ja-jp: タイトル
+        nl-nl: Titel
+        sv-se: Titel
+        ar-uae: العنوان
     justifyContent:
       type: dex-segmented-control-parameter
       value:
@@ -32,19 +52,36 @@ composition:
         parameters:
           tag:
             type: dex-segmented-control-parameter
-            value: h2
+            value: span
           size:
             type: dex-segmented-control-parameter
             value:
               mobile: 3xl
               tablet: 3xl
               desktop: 3xl
-          color:
-            type: dex-color-palette-parameter
-            value: text-tertiary
+          text:
+            type: text
+            locales:
+              da-dk: Titel
+              de-at: Titel
+              de-ch: Titel
+              de-de: Titel
+              en-au: Titre
+              en-ca: Title
+              en-gb: Title
+              en-nl: Titel
+              en-nz: Tilte
+              en-us: Tilte
+              fr-ca: Titre
+              fr-ch: Titre
+              fr-fr: Titre
+              ja-jp: タイトル
+              nl-nl: Titel
+              sv-se: Titel
+              ar-uae: عنوان
           weight:
             type: dex-segmented-control-parameter
-            value: bold
+            value: normal
         _overridability:
           parameters:
             tag: 'yes'
@@ -57,13 +94,33 @@ composition:
         parameters:
           tag:
             type: dex-segmented-control-parameter
-            value: p
+            value: span
           size:
             type: dex-segmented-control-parameter
             value:
               mobile: 3xl
               tablet: 3xl
-              desktop: base
+              desktop: xl
+          text:
+            type: text
+            locales:
+              da-dk: Beskrivelse
+              de-at: Beschreibung
+              de-ch: Beschreibung
+              de-de: Beschreibung
+              en-au: Description
+              en-ca: Description
+              en-gb: Description
+              en-nl: Beschrijving
+              en-nz: Beschreibung
+              en-us: 'Description '
+              fr-ca: Description
+              fr-ch: Description
+              fr-fr: Description
+              ja-jp: 説明
+              nl-nl: Beschrijving
+              sv-se: Beskrivning
+              ar-uae: الوصف
           weight:
             type: dex-segmented-control-parameter
             value: normal
@@ -78,7 +135,24 @@ composition:
         parameters:
           name:
             type: text
-            value: Container Content
+            locales:
+              da-dk: Beholderindhold
+              de-at: Containerinhalt
+              de-ch: Behälterinhalt
+              de-de: Behälterinhalt
+              en-au: Contenu du conteneur
+              en-ca: Container Content
+              en-gb: Container Contents
+              en-nl: Containerinhoud
+              en-nz: Behälterinhalt
+              en-us: Container Content
+              fr-ca: Contenu du conteneur
+              fr-ch: Contenu du conteneur
+              fr-fr: Contenu du conteneur
+              ja-jp: コンテナ内容
+              nl-nl: Containerinhoud
+              sv-se: Behållarinnehåll
+              ar-uae: محتوى الحاوية
         _overridability:
           hideLockedParameters: true
   _overridability:
@@ -89,10 +163,26 @@ composition:
       backgroundColor: 'yes'
     hideLockedParameters: true
   _locales:
-    - en
-created: '2025-02-17T15:34:18.713733+00:00'
-modified: '2025-02-17T15:34:18.713733+00:00'
+    - en-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-nz
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - fr-fr
+    - en-au
+    - ja-jp
+    - ar-uae
+    - de-ch
+    - fr-ch
+created: '2025-02-27T10:45:00.033982+00:00'
+modified: '2025-08-06T12:11:44.501729+00:00'
 pattern: true
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/titled-container.jpg
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/titled-container
 categoryId: ae15b0f6-4953-4ccb-9984-ad0525e77b01

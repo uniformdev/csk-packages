@@ -1,0 +1,664 @@
+composition:
+  _name: How To Resources
+  _id: 2fa494d2-d69a-49bc-b728-229a1684d77f
+  type: grid
+  parameters:
+    gapX:
+      type: dex-slider-control-parameter
+      value:
+        desktop: '16'
+    gapY:
+      type: dex-slider-control-parameter
+      value:
+        mobile: '8'
+        tablet: '8'
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        paddingTop: container-large
+        paddingBottom: container-large
+    displayName:
+      type: text
+      locales:
+        da-dk: Sådan ressourcer
+        de-at: Wie man Ressourcen nutzt
+        de-ch: Wie man Ressourcen nutzt
+        de-de: Wie man Ressourcen nutzt
+        en-au: Comment faire des ressources
+        en-ca: How-to resources
+        en-gb: How-to resources
+        en-nl: Hoe te middelen
+        en-nz: Wie man Ressourcen
+        en-us: How to resources
+        fr-ca: Comment faire des ressources
+        fr-ch: Comment faire des ressources
+        fr-fr: Comment faire des ressources
+        ja-jp: リソースの使い方
+        nl-nl: Hoe te bronnen
+        sv-se: Hur man resurser
+        ar-uae: كيفية الموارد
+    columnsCount:
+      type: dex-slider-control-parameter
+      value:
+        mobile: '1'
+        tablet: '1'
+        desktop: '3'
+  slots:
+    gridInner:
+      - _id: 42cf745d-fc16-46b4-953a-6c440e8eef3f
+        type: gridItem
+        slots:
+          inner:
+            - _id: 451e9faf-2c2e-4ffc-a6d6-0999a9f1f446
+              type: flex
+              slots:
+                flexItem:
+                  - _id: e4651e6a-d3ce-489e-940d-b24792291c6f
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: span
+                      size:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: xl
+                          tablet: 2xl
+                          desktop: 3xl
+                      text:
+                        type: text
+                        locales:
+                          da-dk: Sådan får du ressourcer
+                          de-at: Wie man Ressourcen nutzt
+                          de-ch: Wie man Ressourcen nutzt
+                          de-de: Wie man Ressourcen nutzt
+                          en-au: Comment faire des ressources
+                          en-ca: How-to resources
+                          en-gb: How-to resources
+                          en-nl: Hoe te middelen
+                          en-nz: Wie man Ressourcen
+                          en-us: How to resources
+                          fr-ca: Comment faire des ressources
+                          fr-ch: Comment trouver des ressources
+                          fr-fr: Comment trouver des ressources
+                          ja-jp: リソースの使い方
+                          nl-nl: Hoe te bronnen
+                          sv-se: Hur man resurser
+                          ar-uae: كيفية الموارد
+                      color:
+                        type: dex-color-palette-parameter
+                        value: text-primary
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: bold
+                    _overridability:
+                      parameters:
+                        text: 'yes'
+                      hideLockedParameters: true
+                  - _id: a9f2d0cf-ec16-4091-a6c9-5c3baf7fe66e
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: span
+                      size:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: sm
+                          tablet: base
+                          desktop: base
+                      text:
+                        type: text
+                        locales:
+                          da-dk: >-
+                            Opdag trin-for-trin vejledninger designet til at
+                            gøre komplekse opgaver enkle. Vores 'Sådan gør
+                            du'-sektion tilbyder klare, praktiske instruktioner
+                            om et bredt udvalg af emner, hvilket sikrer, at du
+                            har al den information, der er nødvendig for at
+                            udføre opgaver effektivt og med selvtillid. Uanset
+                            om du lærer noget nyt eller bare leder efter en
+                            genopfriskning, vil denne sektion give dig de
+                            indsigter og værktøjer, du har brug for for at få
+                            succes.
+                          de-at: >-
+                            Entdecken Sie Schritt-für-Schritt-Anleitungen, die
+                            komplexe Aufgaben einfach machen. Unser „How
+                            to“-Bereich bietet klare, praktische Anweisungen zu
+                            einer Vielzahl von Themen und stellt sicher, dass
+                            Sie alle Informationen haben, die Sie benötigen, um
+                            Aufgaben effizient und mit Zuversicht zu erledigen.
+                            Egal, ob Sie etwas Neues lernen oder einfach nur Ihr
+                            Wissen auffrischen möchten, dieser Bereich bietet
+                            Ihnen die Einblicke und Werkzeuge, die Sie zum
+                            Erfolg benötigen.
+                          de-ch: >-
+                            Entdecken Sie Schritt-für-Schritt-Anleitungen, die
+                            komplexe Aufgaben einfach machen. Unser „How
+                            to“-Bereich bietet klare, praktische Anweisungen zu
+                            einer Vielzahl von Themen und stellt sicher, dass
+                            Sie alle Informationen haben, die Sie benötigen, um
+                            Aufgaben effizient und sicher zu erledigen. Egal, ob
+                            Sie etwas Neues lernen oder nur eine Auffrischung
+                            benötigen, dieser Abschnitt bietet Ihnen die
+                            Einblicke und Werkzeuge, die Sie zum Erfolg
+                            benötigen.
+                          de-de: >-
+                            Entdecken Sie Schritt-für-Schritt-Anleitungen, die
+                            komplexe Aufgaben einfach machen. Unser „How
+                            to“-Bereich bietet klare, praktische Anweisungen zu
+                            einer Vielzahl von Themen und stellt sicher, dass
+                            Sie alle Informationen haben, die Sie benötigen, um
+                            Aufgaben effizient und sicher zu erledigen. Egal, ob
+                            Sie etwas Neues lernen oder nur eine Auffrischung
+                            benötigen, dieser Abschnitt bietet Ihnen die
+                            Einblicke und Werkzeuge, die Sie zum Erfolg
+                            benötigen.
+                          en-au: >-
+                            Découvrez des guides étape par étape conçus pour
+                            simplifier les tâches complexes. Notre section «
+                            Comment faire » offre des instructions claires et
+                            pratiques sur une large gamme de sujets, vous
+                            assurant d'avoir toutes les informations nécessaires
+                            pour accomplir les tâches de manière efficace et en
+                            toute confiance. Que vous appreniez quelque chose de
+                            nouveau ou que vous cherchiez simplement à vous
+                            rafraîchir la mémoire, cette section vous fournira
+                            les connaissances et les outils dont vous avez
+                            besoin pour réussir.
+                          en-ca: >-
+                            Discover step-by-step guides designed to make
+                            complex tasks simple. Our ‘How to’ section offers
+                            clear, practical instructions on a wide range of
+                            topics, ensuring you have all the information needed
+                            to complete tasks efficiently and confidently.
+                            Whether you’re learning something new or just
+                            looking for a refresher, this section will provide
+                            you with the insights and tools you need to succeed.
+                          en-gb: >-
+                            Discover step-by-step guides designed to make
+                            complex tasks simple. Our ‘How to’ section offers
+                            clear, practical instructions on a wide range of
+                            topics, ensuring you have all the information needed
+                            to complete tasks efficiently and confidently.
+                            Whether you’re learning something new or just
+                            looking for a refresher, this section will provide
+                            you with the insights and tools you need to succeed.
+                          en-nl: >-
+                            Ontdek stapsgewijze handleidingen die zijn ontworpen
+                            om complexe taken eenvoudig te maken. Onze 'How
+                            to'-sectie biedt duidelijke, praktische instructies
+                            over een breed scala aan onderwerpen, zodat je alle
+                            informatie hebt die nodig is om taken efficiënt en
+                            vol vertrouwen uit te voeren. Of je nu iets nieuws
+                            leert of gewoon op zoek bent naar een opfriscursus,
+                            deze sectie biedt je de inzichten en hulpmiddelen
+                            die je nodig hebt om te slagen.
+                          en-nz: >-
+                            Entdecken Sie Schritt-für-Schritt-Anleitungen, die
+                            darauf ausgelegt sind, komplexe Aufgaben einfach zu
+                            machen. Unser „How to“-Bereich bietet klare,
+                            praktische Anweisungen zu einer Vielzahl von Themen
+                            und stellt sicher, dass Sie alle Informationen
+                            haben, die Sie benötigen, um Aufgaben effizient und
+                            mit Zuversicht zu erledigen. Egal, ob Sie etwas
+                            Neues lernen oder nur eine Auffrischung suchen,
+                            dieser Abschnitt bietet Ihnen die Einblicke und
+                            Werkzeuge, die Sie für den Erfolg benötigen.
+                          en-us: >-
+                            Discover step-by-step guides designed to make
+                            complex tasks simple. Our ‘How to’ section offers
+                            clear, practical instructions on a wide range of
+                            topics, ensuring you have all the information needed
+                            to complete tasks efficiently and confidently.
+                            Whether you’re learning something new or just
+                            looking for a refresher, this section will provide
+                            you with the insights and tools you need to succeed.
+                          fr-ca: >-
+                            Découvrez des guides étape par étape conçus pour
+                            simplifier les tâches complexes. Notre section «
+                            Comment faire » offre des instructions claires et
+                            pratiques sur une large gamme de sujets, vous
+                            assurant d'avoir toutes les informations nécessaires
+                            pour accomplir les tâches de manière efficace et en
+                            toute confiance. Que vous appreniez quelque chose de
+                            nouveau ou que vous cherchiez simplement à vous
+                            rafraîchir la mémoire, cette section vous fournira
+                            les perspectives et les outils dont vous avez besoin
+                            pour réussir.
+                          fr-ch: >-
+                            Découvrez des guides étape par étape conçus pour
+                            simplifier les tâches complexes. Notre section «
+                            Comment faire » offre des instructions claires et
+                            pratiques sur une large gamme de sujets, vous
+                            assurant d'avoir toutes les informations nécessaires
+                            pour accomplir vos tâches efficacement et en toute
+                            confiance. Que vous appreniez quelque chose de
+                            nouveau ou que vous cherchiez simplement à vous
+                            rafraîchir la mémoire, cette section vous fournira
+                            les connaissances et les outils dont vous avez
+                            besoin pour réussir.
+                          fr-fr: >-
+                            Découvrez des guides étape par étape conçus pour
+                            simplifier les tâches complexes. Notre section «
+                            Comment faire » offre des instructions claires et
+                            pratiques sur une large gamme de sujets, vous
+                            assurant d'avoir toutes les informations nécessaires
+                            pour accomplir vos tâches efficacement et en toute
+                            confiance. Que vous appreniez quelque chose de
+                            nouveau ou que vous cherchiez simplement à vous
+                            rafraîchir la mémoire, cette section vous fournira
+                            les connaissances et les outils dont vous avez
+                            besoin pour réussir.
+                          ja-jp: >-
+                            複雑な作業を簡単にするために設計されたステップバイステップのガイドを発見してください。私たちの「ハウツー」セクションは、幅広いトピックに関する明確で実用的な指示を提供し、効率的かつ自信を持って作業を完了するために必要なすべての情報を確実に得られるようにします。新しいことを学ぶ場合でも、復習を求めている場合でも、このセクションは成功するために必要な洞察とツールを提供します。
+                          nl-nl: >-
+                            Ontdek stapsgewijze handleidingen die zijn ontworpen
+                            om complexe taken eenvoudig te maken. Onze 'Hoe te'
+                            sectie biedt duidelijke, praktische instructies over
+                            een breed scala aan onderwerpen, zodat je alle
+                            informatie hebt die nodig is om taken efficiënt en
+                            vol vertrouwen uit te voeren. Of je nu iets nieuws
+                            leert of gewoon op zoek bent naar een opfriscursus,
+                            deze sectie biedt je de inzichten en hulpmiddelen
+                            die je nodig hebt om te slagen.
+                          sv-se: >-
+                            Upptäck steg-för-steg-guider utformade för att göra
+                            komplexa uppgifter enkla. Vår 'Hur man gör'-sektion
+                            erbjuder tydliga, praktiska instruktioner om ett
+                            brett spektrum av ämnen, vilket säkerställer att du
+                            har all information som behövs för att slutföra
+                            uppgifter effektivt och med självförtroende. Oavsett
+                            om du lär dig något nytt eller bara letar efter en
+                            uppfräschning, kommer denna sektion att ge dig de
+                            insikter och verktyg du behöver för att lyckas.
+                          ar-uae: >-
+                            اكتشف أدلة خطوة بخطوة مصممة لجعل المهام المعقدة
+                            بسيطة. يقدم قسم "كيف تفعل" لدينا تعليمات واضحة
+                            وعملية حول مجموعة واسعة من المواضيع، مما يضمن حصولك
+                            على جميع المعلومات اللازمة لإكمال المهام بكفاءة
+                            وثقة. سواء كنت تتعلم شيئًا جديدًا أو تبحث فقط عن
+                            تجديد معلوماتك، فإن هذا القسم سيوفر لك الرؤى
+                            والأدوات التي تحتاجها للنجاح.
+                      color:
+                        type: dex-color-palette-parameter
+                        value: text-primary
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: normal
+                    _overridability:
+                      parameters:
+                        text: 'yes'
+                      hideLockedParameters: true
+                  - _id: 088f579b-a38b-4ec9-8474-99d67793284d
+                    type: button
+                    _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
+              parameters:
+                gap:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: '4'
+                    tablet: '4'
+                    desktop: '4'
+                spacing:
+                  type: dex-space-control-parameter
+                  value:
+                    mobile: {}
+                    tablet: {}
+                    desktop: {}
+                direction:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: col
+                    tablet: col
+                    desktop: col
+                alignItems:
+                  type: dex-segmented-control-parameter
+                  value: {}
+                displayName:
+                  type: text
+                  locales:
+                    da-dk: Indhold
+                    de-at: Inhalt
+                    de-ch: Inhalt
+                    de-de: Inhalt
+                    en-au: Contenu
+                    en-ca: Content
+                    en-gb: Content
+                    en-nl: Inhoud
+                    en-nz: Inhalt
+                    en-us: Content
+                    fr-ca: Contenu
+                    fr-ch: Contenu
+                    fr-fr: Contenu
+                    ja-jp: コンテンツ
+                    nl-nl: Inhoud
+                    sv-se: Innehåll
+                    ar-uae: المحتوى
+                fluidContent:
+                  type: checkbox
+                  value: true
+                justifyContent:
+                  type: dex-segmented-control-parameter
+                  value: {}
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          rowSpan:
+            type: dex-slider-control-parameter
+            value: {}
+          rowStart:
+            type: dex-slider-control-parameter
+            value:
+              mobile: ''
+              tablet: ''
+              desktop: ''
+          columnSpan:
+            type: dex-slider-control-parameter
+            value:
+              mobile: ''
+              tablet: ''
+              desktop: ''
+          columnStart:
+            type: dex-slider-control-parameter
+            value:
+              mobile: ''
+              tablet: ''
+              desktop: ''
+          displayName:
+            type: text
+            locales:
+              da-dk: Venstre Indhold
+              de-at: Linker Inhalt
+              de-ch: Linker Inhalt
+              de-de: Linker Inhalt
+              en-au: Contenu de gauche
+              en-ca: Left Content
+              en-gb: Left Content
+              en-nl: Linker inhoud
+              en-nz: Linker Inhalt
+              en-us: Left Content
+              fr-ca: Contenu de gauche
+              fr-ch: Contenu de gauche
+              fr-fr: Contenu de gauche
+              ja-jp: 左のコンテンツ
+              nl-nl: Linker inhoud
+              sv-se: Vänster innehåll
+              ar-uae: محتوى اليسار
+        _overridability:
+          hideLockedParameters: true
+      - _id: 002d10af-6f48-4a50-9108-37791462235e
+        type: gridItem
+        slots:
+          inner:
+            - _id: 3090a8f6-e088-4d8f-a8f0-e6dff9ddb28a
+              type: $slotSection
+              parameters:
+                name:
+                  type: text
+                  locales:
+                    da-dk: Hurtige valg
+                    de-at: Schnellauswahl
+                    de-ch: Schnellauswahl
+                    de-de: Schnellauswahl
+                    en-au: Sélections Rapides
+                    en-ca: Quick Picks
+                    en-gb: Quick Picks
+                    en-nl: Snelle Keuzes
+                    en-nz: Schnellauswahl
+                    en-us: Quick Picks
+                    fr-ca: Sélections rapides
+                    fr-ch: Sélections rapides
+                    fr-fr: Sélections rapides
+                    ja-jp: クイックピック
+                    nl-nl: Snelle Keuzes
+                    sv-se: Snabbval
+                    ar-uae: اختيارات سريعة
+                specific:
+                  type: array
+                  value:
+                    - $p:90cf0a21-78be-4cc6-b460-acb78b5c1f31
+                groupType:
+                  type: text
+                  locales:
+                    da-dk: specifik
+                    de-at: spezifisch
+                    de-ch: spezifisch
+                    de-de: spezifisch
+                    en-au: spécifique
+                    en-ca: specific
+                    en-gb: specific
+                    en-nl: specifiek
+                    en-nz: spezifisch
+                    en-us: specific
+                    fr-ca: spécifique
+                    fr-ch: spécifique
+                    fr-fr: spécifique
+                    ja-jp: 特定の
+                    nl-nl: specifiek
+                    sv-se: specifik
+                    ar-uae: محدد
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          rowSpan:
+            type: dex-slider-control-parameter
+            value: {}
+          rowStart:
+            type: dex-slider-control-parameter
+            value:
+              mobile: ''
+              tablet: ''
+              desktop: '1'
+          columnSpan:
+            type: dex-slider-control-parameter
+            value:
+              desktop: span-2
+          columnStart:
+            type: dex-slider-control-parameter
+            value:
+              mobile: ''
+              tablet: ''
+              desktop: '2'
+          displayName:
+            type: text
+            locales:
+              da-dk: Korrekt indhold
+              de-at: Richtiger Inhalt
+              de-ch: Rechter Inhalt
+              de-de: Rechter Inhalt
+              en-au: Contenu Correct
+              en-ca: Right Content
+              en-gb: Right Content
+              en-nl: Juist Inhoud
+              en-nz: Rechter Inhalt
+              en-us: Right Content
+              fr-ca: Contenu approprié
+              fr-ch: Contenu correct
+              fr-fr: Contenu correct
+              ja-jp: 右のコンテンツ
+              nl-nl: Juiste Inhoud
+              sv-se: Rätt innehåll
+              ar-uae: المحتوى الصحيح
+        _overridability:
+          hideLockedParameters: true
+  _overrides:
+    088f579b-a38b-4ec9-8474-99d67793284d:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: /${locale}/articles
+              type: projectMapNode
+              nodeId: 078321b0-280e-409e-bd7e-bc6a6d0abeae
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            de-at:
+              path: /${locale}/articles
+              type: projectMapNode
+              nodeId: 078321b0-280e-409e-bd7e-bc6a6d0abeae
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            de-de:
+              path: /${locale}/articles
+              type: projectMapNode
+              nodeId: 078321b0-280e-409e-bd7e-bc6a6d0abeae
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-au:
+              path: /${locale}/articles
+              type: projectMapNode
+              nodeId: 078321b0-280e-409e-bd7e-bc6a6d0abeae
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-ca:
+              path: /${locale}/articles
+              type: projectMapNode
+              nodeId: 078321b0-280e-409e-bd7e-bc6a6d0abeae
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-gb:
+              path: /${locale}/articles
+              type: projectMapNode
+              nodeId: 078321b0-280e-409e-bd7e-bc6a6d0abeae
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-nl:
+              path: /${locale}/articles
+              type: projectMapNode
+              nodeId: 078321b0-280e-409e-bd7e-bc6a6d0abeae
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-nz:
+              path: /${locale}/articles
+              type: projectMapNode
+              nodeId: 078321b0-280e-409e-bd7e-bc6a6d0abeae
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-us:
+              path: /${locale}/articles
+              type: projectMapNode
+              nodeId: 078321b0-280e-409e-bd7e-bc6a6d0abeae
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            es-us:
+              path: /${locale}/articles
+              type: projectMapNode
+              nodeId: 078321b0-280e-409e-bd7e-bc6a6d0abeae
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            fr-ca:
+              path: /${locale}/articles
+              type: projectMapNode
+              nodeId: 078321b0-280e-409e-bd7e-bc6a6d0abeae
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            fr-fr:
+              path: /${locale}/articles
+              type: projectMapNode
+              nodeId: 078321b0-280e-409e-bd7e-bc6a6d0abeae
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ja-jp:
+              path: /${locale}/articles
+              type: projectMapNode
+              nodeId: 078321b0-280e-409e-bd7e-bc6a6d0abeae
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            nb-no:
+              path: /${locale}/articles
+              type: projectMapNode
+              nodeId: 078321b0-280e-409e-bd7e-bc6a6d0abeae
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            nl-nl:
+              path: /${locale}/articles
+              type: projectMapNode
+              nodeId: 078321b0-280e-409e-bd7e-bc6a6d0abeae
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            sv-se:
+              path: /${locale}/articles
+              type: projectMapNode
+              nodeId: 078321b0-280e-409e-bd7e-bc6a6d0abeae
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ar-ksa:
+              path: /${locale}/articles
+              type: projectMapNode
+              nodeId: 078321b0-280e-409e-bd7e-bc6a6d0abeae
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ar-uae:
+              path: /${locale}/articles
+              type: projectMapNode
+              nodeId: 078321b0-280e-409e-bd7e-bc6a6d0abeae
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+        text:
+          type: text
+          locales:
+            da-dk: Alle artikler
+            de-at: Alle Artikel
+            de-ch: Alle Artikel
+            de-de: Alle Artikel
+            en-au: Tous les articles
+            en-ca: All articles
+            en-gb: All articles
+            en-nl: Alle artikelen
+            en-nz: Alle Artikel
+            en-us: All articles
+            fr-ca: Tous les articles
+            fr-ch: Tous les articles
+            fr-fr: Tous les articles
+            ja-jp: すべての記事
+            nl-nl: Alle artikelen
+            sv-se: Alla artiklar
+            ar-uae: جميع المقالات
+  _overridability:
+    parameters:
+      displayName: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-nz
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - fr-fr
+    - en-au
+    - ja-jp
+    - ar-uae
+    - de-ch
+    - fr-ch
+created: '2025-03-18T13:02:27.411427+00:00'
+modified: '2025-08-06T12:11:43.50434+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/how-to-resources.jpg
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9
