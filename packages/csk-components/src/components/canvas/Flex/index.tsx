@@ -5,6 +5,7 @@ type Direction = 'row' | 'row-reverse' | 'col' | 'col-reverse';
 type Justify = 'start' | 'end' | 'center' | 'between';
 type AvailableGap = '2' | '8' | '16';
 type Align = 'start' | 'end' | 'center' | 'stretch';
+type Wrap = 'nowrap' | 'wrap' | 'wrap-reverse';
 
 export type FlexAdditionalProps = {
   className?: string;
@@ -16,6 +17,7 @@ export type FlexParameters = ContainerParameters & {
   justifyContent?: Justify | ViewPort<Justify>;
   gap?: AvailableGap | ViewPort<AvailableGap>;
   alignItems?: Align | ViewPort<Align>;
+  wrap?: Wrap | ViewPort<Wrap>;
 };
 
 export enum FlexSlots {

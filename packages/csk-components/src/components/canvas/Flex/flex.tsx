@@ -17,6 +17,7 @@ const Flex: FC<FlexProps & FlexParameters> = ({
   className,
   height,
   wrapperClassName,
+  wrap,
 }) => (
   <BaseFlex
     {...{
@@ -31,6 +32,7 @@ const Flex: FC<FlexProps & FlexParameters> = ({
       height,
       wrapperClassName,
       className,
+      wrap,
     }}
   >
     <UniformSlot slot={slots.flexItem} />

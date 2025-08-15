@@ -22,7 +22,8 @@
 @source inline("{lg:,md:,}self-{start,end,center,baseline,stretch}");
 @source inline("{lg:,md:,}{col,row}-start-{1,2,3,4,5,6,7,8,9,10,11,12,none,subgrid}");
 @source inline("{lg:,md:,}{col,row}-{auto,span-{1,2,3,4,5,6,7,8,9,10,11,12},span-full}");
-@source inline("justify-{start,center,end}");
+@source inline("{lg:,md:,}justify-{start,center,end}");
+@source inline("{lg:,md:,}flex-{nowrap,wrap,wrap-reverse}");
 @source inline("{lg:,md:,}text-{xs,sm,base,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl,8xl,9xl}");
 @source inline("text-{left,center,right}");
 @source inline("{lg:,md:,}font-{normal,medium,bold,extrabold}");

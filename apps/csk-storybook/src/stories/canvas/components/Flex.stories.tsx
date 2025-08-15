@@ -30,6 +30,10 @@ const argTypes: Partial<ArgTypes<FlexParameters>> = {
     control: 'select',
     options: ['start', 'end', 'center', 'stretch'],
   },
+  wrap: {
+    control: 'select',
+    options: ['nowrap', 'wrap', 'wrap-reverse'],
+  },
   gap: { control: 'select', options: ['2', '8', '16'] },
   ...baseContainerArgTypes,
 };
@@ -43,6 +47,7 @@ export const Default: Story = {
     alignItems: 'center',
     backgroundColor: 'text-secondary',
     fluidContent: false,
+    wrap: 'wrap',
   },
   argTypes,
   render: (args: FlexParameters) => {
