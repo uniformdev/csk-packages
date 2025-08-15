@@ -16,6 +16,7 @@ export const Flex: FC<FlexProps> = ({
   fluidContent,
   height,
   children,
+  wrap,
 }) => (
   <BaseContainer {...{ backgroundColor, spacing, border, fluidContent, height, wrapperClassName }}>
     <div
@@ -27,6 +28,7 @@ export const Flex: FC<FlexProps> = ({
           [resolveViewPort(gap, 'gap-{value}')]: gap,
           [resolveViewPort(alignItems, 'items-{value}')]: alignItems,
           [resolveViewPort(height, 'h-{value}')]: height,
+          [resolveViewPort(wrap, 'flex-{value}')]: wrap,
         },
         className
       )}
