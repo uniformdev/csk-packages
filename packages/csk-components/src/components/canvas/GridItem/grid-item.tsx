@@ -8,11 +8,12 @@ const GridItem: FC<GridItemProps & GridItemParameters> = ({
   columnStart,
   columnSpan,
   rowStart,
-  className,
   rowSpan,
+  alignSelf,
+  className,
   slots,
 }) => (
-  <BaseGridItem {...{ columnStart, columnSpan, rowStart, rowSpan, className }}>
+  <BaseGridItem {...{ columnStart, columnSpan, rowStart, rowSpan, alignSelf, className }}>
     <UniformSlot slot={slots.inner} />
   </BaseGridItem>
 );

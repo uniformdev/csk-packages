@@ -40,6 +40,10 @@ const argTypes: Partial<ArgTypes<GridItemParameters>> = {
   columnSpan: { control: 'select', options: SpanOptions },
   rowStart: { control: 'select', options: ['1', '2', '3', '4', '5', '6'] },
   rowSpan: { control: 'select', options: SpanOptions },
+  alignSelf: {
+    control: 'select',
+    options: ['start', 'end', 'center', 'baseline', 'stretch'],
+  },
 };
 
 export const Default: Story = {
@@ -47,6 +51,7 @@ export const Default: Story = {
     displayName: 'Grid Item',
     columnStart: '1',
     columnSpan: 'span-1',
+    alignSelf: 'start',
   },
   argTypes,
   render: (args: GridItemParameters) => {

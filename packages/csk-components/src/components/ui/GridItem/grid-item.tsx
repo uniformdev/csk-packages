@@ -2,7 +2,15 @@ import { FC } from 'react';
 import { cn, resolveViewPort } from '@/utils/styling';
 import { GridItemProps } from '.';
 
-export const GridItem: FC<GridItemProps> = ({ className, columnStart, columnSpan, rowStart, rowSpan, children }) => (
+export const GridItem: FC<GridItemProps> = ({
+  className,
+  columnStart,
+  columnSpan,
+  rowStart,
+  rowSpan,
+  children,
+  alignSelf,
+}) => (
   <div
     className={cn(
       {
@@ -10,6 +18,7 @@ export const GridItem: FC<GridItemProps> = ({ className, columnStart, columnSpan
         [resolveViewPort(columnSpan, 'col-{value}')]: columnSpan,
         [resolveViewPort(rowStart, 'row-start-{value}')]: rowStart,
         [resolveViewPort(rowSpan, 'row-{value}')]: rowSpan,
+        [resolveViewPort(alignSelf, 'self-{value}')]: alignSelf,
       },
       className
     )}

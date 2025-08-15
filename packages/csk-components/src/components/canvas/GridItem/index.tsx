@@ -18,6 +18,7 @@ type AvailableGridItemSpan =
   | 'span-full';
 
 export type AvailableGridItemRowStart = '1' | '2' | '3' | '4' | '5' | '6';
+type Align = 'start' | 'end' | 'center' | 'baseline' | 'stretch';
 
 export type GridItemAdditionalProps = {
   className?: string;
@@ -29,6 +30,7 @@ export type GridItemParameters = {
   columnSpan?: AvailableGridItemSpan | ViewPort<AvailableGridItemSpan>;
   rowStart?: AvailableGridItemRowStart | ViewPort<AvailableGridItemRowStart>;
   rowSpan?: AvailableGridItemSpan | ViewPort<AvailableGridItemSpan>;
+  alignSelf?: Align | ViewPort<Align>;
 };
 
 export enum GridItemSlots {
