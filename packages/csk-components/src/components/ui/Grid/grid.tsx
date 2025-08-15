@@ -14,6 +14,7 @@ export const Grid: FC<GridProps> = ({
   fluidContent,
   height,
   children,
+  alignItems,
 }) => (
   <BaseContainer {...{ backgroundColor, spacing, border, fluidContent, height }}>
     <div
@@ -24,6 +25,7 @@ export const Grid: FC<GridProps> = ({
           [resolveViewPort(gapX, 'gap-x-{value}')]: gapX,
           [resolveViewPort(gapY, 'gap-y-{value}')]: gapY,
           [resolveViewPort(height, 'h-{value}')]: height,
+          [resolveViewPort(alignItems, 'items-{value}')]: alignItems,
         },
         className
       )}

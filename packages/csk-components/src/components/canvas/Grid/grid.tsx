@@ -15,10 +15,11 @@ const Grid: FC<GridProps & GridParameters> = ({
   height,
   slots,
   className,
+  alignItems,
 }) => (
   <BaseGrid
     className={className}
-    {...{ columnsCount, gapX, gapY, backgroundColor, spacing, border, fluidContent, height }}
+    {...{ columnsCount, gapX, gapY, backgroundColor, spacing, border, fluidContent, height, alignItems }}
   >
     <UniformSlot slot={slots.gridInner} />
   </BaseGrid>

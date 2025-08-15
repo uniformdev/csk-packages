@@ -24,6 +24,10 @@ const argTypes: Partial<ArgTypes<GridParameters>> = {
   },
   gapX: { control: 'select', options: ['2', '8', '16'] },
   gapY: { control: 'select', options: ['2', '8', '16'] },
+  alignItems: {
+    control: 'select',
+    options: ['start', 'end', 'center', 'baseline', 'stretch'],
+  },
   ...baseContainerArgTypes,
 };
 
@@ -35,6 +39,7 @@ export const Default: Story = {
     gapY: '8',
     backgroundColor: 'text-secondary',
     fluidContent: false,
+    alignItems: 'start',
   },
   argTypes,
   render: (args: GridParameters) => {
