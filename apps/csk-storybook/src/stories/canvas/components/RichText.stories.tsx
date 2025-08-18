@@ -20,6 +20,7 @@ type Story = StoryObj<typeof RichText>;
 const argTypes: Partial<ArgTypes<RichTextParameters>> = {
   color: { control: 'select', options: colorKeys },
   font: { control: 'select', options: fontKeys },
+  size: { control: 'select', options: ['sm', 'base', 'lg', 'xl', '2xl'] },
   lineCountRestrictions: {
     control: 'select',
     options: ['1', '2', '3', '4', '5', '6', 'none'],
@@ -29,6 +30,7 @@ export const Default: Story = {
   args: {
     color: 'text-primary',
     font: fontKeys[0],
+    size: 'base',
   },
   argTypes,
   render: args => {
