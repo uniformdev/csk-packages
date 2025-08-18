@@ -1,3 +1,38 @@
+import { SVGProps } from 'react';
+
+type SVGAttributes = Record<string, string | number | boolean>;
+type ReactSVGProps = SVGProps<SVGSVGElement>;
+const PRESERVE_AS_STRING = ['id', 'class', 'viewBox', 'preserveAspectRatio'];
+
+const ATTRIBUTE_MAP: Record<string, string> = {
+  class: 'className',
+  'stroke-width': 'strokeWidth',
+  'stroke-linecap': 'strokeLinecap',
+  'stroke-linejoin': 'strokeLinejoin',
+  'stroke-miterlimit': 'strokeMiterlimit',
+  'stroke-dasharray': 'strokeDasharray',
+  'stroke-dashoffset': 'strokeDashoffset',
+  'stroke-opacity': 'strokeOpacity',
+  'fill-opacity': 'fillOpacity',
+  'fill-rule': 'fillRule',
+  'clip-rule': 'clipRule',
+  'clip-path': 'clipPath',
+  'font-family': 'fontFamily',
+  'font-size': 'fontSize',
+  'font-weight': 'fontWeight',
+  'text-anchor': 'textAnchor',
+  'pointer-events': 'pointerEvents',
+  'vector-effect': 'vectorEffect',
+  'color-interpolation': 'colorInterpolation',
+  'dominant-baseline': 'dominantBaseline',
+  'text-rendering': 'textRendering',
+  'shape-rendering': 'shapeRendering',
+  'color-rendering': 'colorRendering',
+  'image-rendering': 'imageRendering',
+  'xml:space': 'xmlSpace',
+  'xmlns:xlink': 'xmlnsXlink',
+} as const;
+
 /**
  * Sanitizes SVG by removing potentially dangerous or unwanted content.
  */
@@ -21,32 +56,52 @@ export const applyCurrentColor = (svg: string): string =>
 /**
  * Extracts attributes from the <svg> tag as key-value pairs.
  */
-export const getSvgAttributes = (svg: string): Record<string, string> => {
-  const match = svg.match(/<svg\s+([^>]*)>/i);
-  if (!match || !match[1]) return {};
+export const getSvgAttributes = (svgContent: string): SVGAttributes => {
+  const svgTagMatch = svgContent.match(/<svg([^>]*)>/i);
+  if (!svgTagMatch) return {};
 
-  const attrString = match[1];
-  const attributes: Record<string, string> = {};
+  const attributesString = svgTagMatch[1];
+  const attributes: SVGAttributes = {};
 
-  const attrRegex = /(\w[\w-]*)=["']([^"']*)["']/g;
-  let result: RegExpExecArray | null;
+  const attrRegex = /(\w+(?:[-:]\w+)*)\s*=\s*["']([^"']*)["']/g;
+  let match;
 
-  while ((result = attrRegex.exec(attrString))) {
-    const [, key, value] = result;
-    if (key && value) {
+  while ((match = attrRegex.exec(attributesString ?? '')) !== null) {
+    const [, key, value] = match;
+
+    if (!key || !value) continue;
+
+    if (value === 'true' || value === 'false') {
+      attributes[key] = value === 'true';
+    } else if (!isNaN(Number(value)) && value !== '' && !PRESERVE_AS_STRING.includes(key)) {
+      attributes[key] = Number(value);
+    } else {
       attributes[key] = value;
     }
   }
 
   return attributes;
 };
-
 /**
  * Extracts inner content from an SVG string (everything inside <svg>...</svg>).
  */
 export const getSvgInnerContent = (svg: string): string => {
   const match = svg.match(/<svg[^>]*>([\s\S]*?)<\/svg>/i);
   return match?.[1] ?? '';
+};
+
+/**
+ * Converts SVG attributes to React props.
+ */
+export const convertSvgAttributesToReactProps = (attributes: SVGAttributes): Partial<ReactSVGProps> => {
+  const reactProps: Record<string, string | number | boolean> = {};
+
+  for (const [key, value] of Object.entries(attributes)) {
+    const reactPropName = ATTRIBUTE_MAP[key] || key;
+    reactProps[reactPropName] = value;
+  }
+
+  return reactProps;
 };
 
 /**

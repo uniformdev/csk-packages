@@ -1,21 +1,23 @@
 'use client';
 
-import { FC, useCallback, useMemo, useState } from 'react';
+import { FC, ReactNode, useCallback, useState } from 'react';
 import { ComponentParameter, UniformText } from '@uniformdev/canvas-next-rsc-v2/component';
 import BaseIconLabel from '@/components/ui/IconLabel';
 import BaseImage from '@/components/ui/Image';
-import InlineSVG from '@/components/ui/InlineSVG';
 import { ReplaceFieldsWithAssets } from '@/types/cskTypes';
 import { cn, resolveViewPort } from '@/utils/styling';
 import { withFlattenParameters } from '@/utils/withFlattenParameters';
-import { NavigationFlyoutParameters, NavigationFlyoutProps } from '.';
-import { NavigationFlyoutPropsDesktopContent } from './desktop';
-import { NavigationFlyoutPropsMobileContent } from './mobile';
+import { NavigationGroupParameters, NavigationGroupProps } from '.';
+import { NavigationGroupDesktopContent } from './desktop';
+import { NavigationGroupMobileContent } from './mobile';
 import { getButtonClasses, getCaretClasses } from './style-utils';
 
-const NavigationFlyout: FC<
-  NavigationFlyoutProps & ReplaceFieldsWithAssets<NavigationFlyoutParameters, 'icon' | 'caretIcon'>
-> = ({
+type NavigationGroupClientProps = NavigationGroupProps &
+  Omit<ReplaceFieldsWithAssets<NavigationGroupParameters, 'caretIcon'>, 'icon'> & {
+    icon: ReactNode | null;
+  };
+
+const NavigationGroupClient: FC<NavigationGroupClientProps> = ({
   icon,
   caretIcon,
   backgroundColor,
@@ -41,23 +43,6 @@ const NavigationFlyout: FC<
   const openFlyout = useCallback(() => setIsOpen(true), []);
   const closeFlyout = useCallback(() => setIsOpen(false), []);
 
-  const hasRightContent = useMemo(
-    () =>
-      Boolean(
-        slots?.navigationFlyoutRightContent?.items?.filter(item => !item?._id.startsWith('placeholder_'))?.length
-      ),
-    [slots]
-  );
-
-  const [resolvedImage] = icon || [];
-  const { url, title = '' } = resolvedImage || {};
-
-  const renderUrl = () => {
-    if (!url) return null;
-
-    return url.endsWith('.svg') ? <InlineSVG src={url} alt={title} fill /> : <BaseImage src={url} alt={title} fill />;
-  };
-
   const actionClassName = cn('transition-all duration-150', {
     [resolveViewPort(hoverEffect, 'group-hover:{value}')]: !!hoverEffect,
   });
@@ -67,9 +52,9 @@ const NavigationFlyout: FC<
 
   return (
     <div className="relative" onMouseLeave={closeFlyout}>
-      <button onMouseEnter={openFlyout} className={getButtonClasses({ color })}>
+      <button onMouseEnter={openFlyout} onClick={openFlyout} className={getButtonClasses({ color })}>
         <BaseIconLabel
-          icon={renderUrl()}
+          icon={icon}
           className={cn('group', className)}
           iconClassName={actionClassName}
           textClassName={actionClassName}
@@ -93,22 +78,14 @@ const NavigationFlyout: FC<
       </button>
 
       <div className="hidden md:block">
-        <NavigationFlyoutPropsDesktopContent
-          hasRightContent={hasRightContent}
-          isOpen={isOpen}
-          {...{ backgroundColor, context, slots, border, component }}
-        />
+        <NavigationGroupDesktopContent isOpen={isOpen} {...{ backgroundColor, context, slots, border }} />
       </div>
 
       <div className="block md:hidden">
-        <NavigationFlyoutPropsMobileContent
-          onClose={closeFlyout}
-          isOpen={isOpen}
-          {...{ backgroundColor, context, slots, border, component }}
-        />
+        <NavigationGroupMobileContent onClose={closeFlyout} isOpen={isOpen} {...{ backgroundColor, context, slots }} />
       </div>
     </div>
   );
 };
 
-export default withFlattenParameters(NavigationFlyout);
+export default withFlattenParameters(NavigationGroupClient);

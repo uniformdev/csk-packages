@@ -1,6 +1,6 @@
 {
   "name": "@uniformdev/component-starter-kit",
-  "version": "6.1.17",
+  "version": "6.1.18",
   "private": true,
   "engines": {
     "yarn": "please-use-npm",
@@ -23,7 +23,7 @@
     "component:extract": "csk-components extract",
     "component:scaffold": "csk-cli scaffold",
     "pull:dex": "design-extensions-tools pull",
-    "apply:dex": "design-extensions-tools apply -m tailwind",
+    "apply:dex": "design-extensions-tools apply",
     "push:dex": "design-extensions-tools push",
     "pull:locales": "csk-cli pull -l",
     "pull:content": "uniform sync pull",
