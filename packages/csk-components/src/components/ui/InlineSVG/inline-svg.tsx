@@ -1,7 +1,14 @@
 import { FC, SVGProps } from 'react';
 import { cn } from '@/utils/styling';
 import { InlineSVGProps } from '.';
-import { fetchSvg, sanitizeSvg, applyCurrentColor, getSvgAttributes, getSvgInnerContent } from './utils';
+import {
+  fetchSvg,
+  sanitizeSvg,
+  applyCurrentColor,
+  getSvgAttributes,
+  getSvgInnerContent,
+  convertSvgAttributesToReactProps,
+} from './utils';
 
 export const InlineSVG: FC<InlineSVGProps> = async ({
   src,
@@ -31,13 +38,16 @@ export const InlineSVG: FC<InlineSVGProps> = async ({
     const attrs = getSvgAttributes(cleaned);
     const content = getSvgInnerContent(cleaned);
 
+    const reactProps = convertSvgAttributesToReactProps(attrs);
+
     const svgProps: SVGProps<SVGSVGElement> = {
-      ...attrs,
+      ...reactProps,
       role: 'img',
       'aria-label': alt,
+      focusable: false,
       width: fill ? '100%' : width,
       height: fill ? '100%' : height,
-      className: cn(attrs.className, className, {
+      className: cn(reactProps.className, className, {
         'absolute inset-0': fill,
       }),
     };
