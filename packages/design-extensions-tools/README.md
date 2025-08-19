@@ -1,124 +1,213 @@
 # @uniformdev/design-extensions-tools
 
-`@uniformdev/design-extensions-tools` is a command-line interface (CLI) tool and a set of utilities for working with design extension integrations. It allows you to manage design tokens, UI components, and configurations efficiently.
+A comprehensive command-line interface (CLI) tool and utility library for managing design tokens, UI components, and configurations in Uniform projects. This tool streamlines the workflow between design systems and development by providing seamless connection with design extensions integration.
 
-## Installation
+## 🚀 Features
 
-To use `@uniformdev/design-extensions-tools`, install it as a dependency in your project:
+- **Design Token Management**: Pull, push, and apply design tokens (colors, dimensions, fonts, borders)
+- **Multi-format Support**: Generate CSS and Tailwind CSS configurations
+- **Environment Configuration**: Flexible configuration via environment variables or CLI options
+
+## 📦 Installation
+
+Install the package as a dependency in your project:
 
 ```bash
 npm install @uniformdev/design-extensions-tools
 ```
 
-## Setup Instructions
+Or install globally for CLI access:
 
-### Wrap Pages with DesignExtensionsProvider
+```bash
+npm install -g @uniformdev/design-extensions-tools
+```
 
-Wrap your page using `DesignExtensionsProvider` from `@uniformdev/design-extensions-tools/components/providers/server`:
+## 🔧 Setup
 
-```typescript jsx
-import { cookies } from 'next/headers';
+### Environment Configuration
+
+Set up your environment variables in a `.env` file:
+
+```bash
+# Required: Your Uniform API key
+UNIFORM_API_KEY=your_api_key_here
+
+# Optional: Custom Uniform host (defaults to https://uniform.app)
+UNIFORM_CLI_BASE_URL=https://uniform.app
+
+# Optional: Project ID (can also be specified via CLI)
+UNIFORM_PROJECT_ID=your_project_id
+```
+
+### Integration with Next.js
+
+Wrap your pages with the `DesignExtensionsProvider` to enable design extension features:
+
+```typescript
+// app/layout.tsx or app/page.tsx
 import { notFound } from 'next/navigation';
+import { CANVAS_EDITOR_STATE } from '@uniformdev/canvas';
 import {
-  createServerUniformContext,
-  ContextUpdateTransfer,
-  PageParameters,
+  resolveRouteFromCode,
   UniformComposition,
-} from '@uniformdev/canvas-next-rsc';
+  UniformPageParameters,
+  createUniformStaticParams,
+} from '@uniformdev/canvas-next-rsc-v2';
 import { emptyPlaceholderResolver } from '@uniformdev/csk-components/components/canvas/emptyPlaceholders';
-import { isRouteWithoutErrors } from '@uniformdev/csk-components/utils/routing';
+import { compositionCache } from '@uniformdev/csk-components/utils/getSlotComponents';
 import { DesignExtensionsProvider } from '@uniformdev/design-extensions-tools/components/providers/server';
 import { componentResolver } from '@/components';
-import locales from '@/i18n/locales.json';
-import retrieveRoute from '@/utils/retrieveRoute';
+import getAllStaticGeneratedPages from '@/utils/getAllStaticGeneratedPages';
 
-export default async function Home(props: PageParameters) {
-  const route = await retrieveRoute(props, locales.defaultLocale);
-  if (!isRouteWithoutErrors(route)) return notFound();
-
-  const cookie = await cookies();
-  const theme = cookie.get('theme')?.value || 'light';
-  const searchParams = await props.searchParams;
-  const serverContext = await createServerUniformContext({
-    searchParams,
+export const generateStaticParams = async () => {
+  const paths = await getAllStaticGeneratedPages();
+  return createUniformStaticParams({
+    paths,
   });
-  const isPreviewMode = searchParams?.preview === 'true';
+};
+
+export default async function UniformPage(props: UniformPageParameters) {
+  const result = await resolveRouteFromCode(props);
+
+  if (!result.route) {
+    notFound();
+  }
 
   return (
-    <DesignExtensionsProvider isPreviewMode={isPreviewMode}>
-      <ContextUpdateTransfer
-        serverContext={serverContext}
-        update={{
-          quirks: {
-            theme,
-          },
-        }}
-      />
+    <DesignExtensionsProvider isPreviewMode={result.pageState.compositionState === CANVAS_EDITOR_STATE}>
       <UniformComposition
-        {...props}
-        route={route}
+        {...result}
         resolveComponent={componentResolver}
-        serverContext={serverContext}
-        mode="server"
         resolveEmptyPlaceholder={emptyPlaceholderResolver}
+        compositionCache={compositionCache}
       />
     </DesignExtensionsProvider>
   );
 }
 
 export { generateMetadata } from '@/utils/metadata';
+
 ```
 
-## Commands
+## 📋 Available Commands
 
-### `pull` Command
+### `pull` - Fetch Design Tokens
 
-The `pull` command fetches design token data from the integration.
-
-#### Usage
+Downloads design token configurations from your integration and creates a `dex.config.json` file.
 
 ```bash
 design-extensions-tools pull [options]
 ```
 
-#### Options
+**Options:**
+- `-c, --colors` - Pull colors configuration
+- `-d, --dimensions` - Pull dimensions configuration  
+- `-f, --fonts` - Pull fonts configuration
+- `-b, --borders` - Pull borders configuration
+- `-g, --groups` - Pull groups configuration
+- `-at, --allTokens` - Pull all token types (colors, dimensions, fonts, borders)
+- `-as, --allSettings` - Pull all settings (groups)
+- `--apiKey <key>` - Uniform API key (defaults to UNIFORM_API_KEY env var)
+- `--apiHost <url>` - Uniform host URL (defaults to UNIFORM_CLI_BASE_URL env var)
+- `-p, --project <id>` - Uniform project ID (defaults to UNIFORM_PROJECT_ID env var)
 
-- `-c, --colors` – Pulls colors configuration.
-- `-d, --dimensions` – Pulls dimensions configuration.
-- `-f, --fonts` – Pulls fonts configuration.
-- `-b, --borders` – Pulls borders configuration.
-- `-g, --groups` – Pulls groups configuration.
-- `-at, --allTokens` – Pulls all tokens.
-- `-as, --allSettings` – Pulls all settings.
-
-#### Example
-
+**Examples:**
 ```bash
+# Pull all design tokens
+design-extensions-tools pull --allTokens
+
+# Pull specific token types
 design-extensions-tools pull --colors --dimensions
+
+# Pull with custom project
+design-extensions-tools pull --colors --project my-project-id
 ```
 
-### `push` Command
+### `apply` - Apply Configuration
 
-The `push` command sends design token data to the integration.
+Applies the `dex.config.json` configuration to generate CSS or Tailwind CSS files.
 
-#### Usage
+```bash
+design-extensions-tools apply [options]
+```
+
+**Options:**
+- `-m, --mode <mode>` - Output format: `css` or `tailwind` (default: `tailwind`)
+
+**Examples:**
+```bash
+# Generate Tailwind CSS configuration (default)
+design-extensions-tools apply
+
+# Generate pure CSS
+design-extensions-tools apply --mode css
+```
+
+### `push` - Upload Design Tokens
+
+Uploads design token configurations from your `dex.config.json` file to the integration.
 
 ```bash
 design-extensions-tools push [options]
 ```
 
-#### Options
+**Options:**
+- `-c, --colors` - Push colors configuration
+- `-d, --dimensions` - Push dimensions configuration
+- `-f, --fonts` - Push fonts configuration
+- `-b, --borders` - Push borders configuration
+- `-g, --groups` - Push groups configuration
+- `-at, --allTokens` - Push all token types
+- `-as, --allSettings` - Push all settings
+- `--apiKey <key>` - Uniform API key (defaults to UNIFORM_API_KEY env var)
+- `--apiHost <url>` - Uniform host URL (defaults to UNIFORM_CLI_BASE_URL env var)
+- `-p, --project <id>` - Uniform project ID (defaults to UNIFORM_PROJECT_ID env var)
 
-- `-c, --colors` – Pushes colors configuration.
-- `-d, --dimensions` – Pushes dimensions configuration.
-- `-f, --fonts` – Pushes fonts configuration.
-- `-b, --borders` – Pushes borders configuration.
-- `-g, --groups` – Pushes groups configuration.
-- `-at, --allTokens` – Pushes all tokens.
-- `-as, --allSettings` – Pushes all settings.
-
-#### Example
-
+**Examples:**
 ```bash
+# Push all design tokens
 design-extensions-tools push --allTokens
+
+# Push specific token types
+design-extensions-tools push --colors --borders
+
+# Push with custom API key
+design-extensions-tools push --colors --apiKey custom-key
+```
+
+## 📁 Configuration File
+
+The tool generates and uses a `dex.config.json` file that contains your design token configurations:
+
+```json
+{
+  "colors": {
+    "light": {
+      "button-primary": "#0052ED",
+      "button-primary-hover": "#0B4ECA",
+      "text-primary": "#001242",
+      "page-background-primary": "#FFFFFF"
+    }
+  },
+  "dimensions": {
+    "container-small": "24px",
+    "container-medium": "48px",
+    "spacer-small": "20px",
+    "spacer-medium": "40px"
+  },
+  "fonts": {
+    "dm-sans": "",
+    "space-mono": ""
+  },
+  "defaultFontKey": "dm-sans",
+  "borders": {
+    "border-primary": {
+      "radius": "25px",
+      "width": "1px",
+      "color": "#E5E7EB",
+      "style": "solid"
+    }
+  },
+  "allowedGroups": {}
+}
 ```
