@@ -1,6 +1,6 @@
 {
   "name": "@uniformdev/csk-marketing-site",
-  "version": "6.1.19",
+  "version": "6.1.20",
   "private": true,
   "engines": {
     "yarn": "please-use-npm",
@@ -9,10 +9,10 @@
     "npm": ">=10"
   },
   "scripts": {
-    "dev": "run-s pull:dex pull:locales next:dev",
-    "build": "run-s pull:locales pull:dex next:build",
+    "dev": "run-s pull:dex apply:dex pull:locales next:dev",
+    "build": "run-s pull:locales pull:dex apply:dex next:build",
     "start": "next start",
-    "dev:watch": "cross-env WATCH=true run-s pull:dex next:dev",
+    "dev:watch": "cross-env WATCH=true run-s pull:dex apply:dex next:dev",
     "next:dev": "next dev",
     "next:build": "next build",
     "lint": "next lint",

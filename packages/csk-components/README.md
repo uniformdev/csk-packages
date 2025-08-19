@@ -26,31 +26,48 @@ STYLES_PATH=
 Wrap your page using `DesignExtensionsProvider` from `@uniformdev/design-extensions-tools/components/providers/server`:
 
 ```typescript jsx
-import { PageParameters, UniformComposition } from '@uniformdev/canvas-next-rsc';
+import { notFound } from 'next/navigation';
+import { CANVAS_EDITOR_STATE } from '@uniformdev/canvas';
+import {
+  resolveRouteFromCode,
+  UniformComposition,
+  UniformPageParameters,
+  createUniformStaticParams,
+} from '@uniformdev/canvas-next-rsc-v2';
 import { emptyPlaceholderResolver } from '@uniformdev/csk-components/components/canvas/emptyPlaceholders';
+import { compositionCache } from '@uniformdev/csk-components/utils/getSlotComponents';
 import { DesignExtensionsProvider } from '@uniformdev/design-extensions-tools/components/providers/server';
 import { componentResolver } from '@/components';
-import locales from '@/i18n/locales.json';
-import retrieveRoute from '@/utils/retrieveRoute';
+import getAllStaticGeneratedPages from '@/utils/getAllStaticGeneratedPages';
 
-export default async function Home(props: PageParameters) {
-  const route = await retrieveRoute(props, locales.defaultLocale);
-  const searchParams = await props.searchParams;
-  const isPreviewMode = searchParams?.is_incontext_editing_mode === 'true';
+export const generateStaticParams = async () => {
+  const paths = await getAllStaticGeneratedPages();
+  return createUniformStaticParams({
+    paths,
+  });
+};
+
+export default async function UniformPage(props: UniformPageParameters) {
+  const result = await resolveRouteFromCode(props);
+
+  if (!result.route) {
+    notFound();
+  }
+
   return (
-    <DesignExtensionsProvider isPreviewMode={isPreviewMode}>
+    <DesignExtensionsProvider isPreviewMode={result.pageState.compositionState === CANVAS_EDITOR_STATE}>
       <UniformComposition
-        {...props}
-        route={route}
+        {...result}
         resolveComponent={componentResolver}
-        mode="server"
         resolveEmptyPlaceholder={emptyPlaceholderResolver}
+        compositionCache={compositionCache}
       />
     </DesignExtensionsProvider>
   );
 }
 
 export { generateMetadata } from '@/utils/metadata';
+
 
 ```
 
@@ -63,12 +80,14 @@ First, add the following scripts to your `package.json`:
 ```json
 "scripts": {
     "pull:dex": "design-extensions-tools pull",
+    "apply:dex": "design-extensions-tools apply",
     "push:dex": "design-extensions-tools push",
 }
 ```
 
 ```bash
 npm run pull:dex
+npm run apply:dex
 ```
 
 ### Import CSS Files
@@ -84,78 +103,52 @@ import '@/styles/borders.css';
 
 ### Extend Tailwind Configuration
 
-To extend Tailwind CSS with new classes and include generated design tokens, update your Tailwind configuration as follows:
+To extend Tailwind CSS with new classes and include generated design tokens, update your globals.css file as follows:
 
 ```typescript
-import type { Config } from 'tailwindcss';
-import plugin from 'tailwindcss/plugin';
-import {
-  generateTailwindcssColorKeysPattern,
-  generateTailwindcssDimensionKeysPattern,
-  generateTailwindcssFontKeysPattern,
-  generateTailwindcssBorderKeysPattern,
-} from '@uniformdev/design-extensions-tools/tailwindcss-conf';
-import typography from '@tailwindcss/typography';
-import theme from './tailwind.config.theme.json';
-import utilities from './tailwind.utilities.json';
+@import 'tailwindcss' source(none);
 
-const safelist = [
-  { pattern: /grid-cols-(1[0-2]|[1-9]|none|subgrid)/, variants: ['lg', 'md'] },
-  { pattern: /gap(?:-(x|y))?-(0(\.5)?|1(\.5)?|2(\.5)?|3(\.5)?|[1-9]?[0-9]|px)/, variants: ['lg', 'md'] },
-  { pattern: /flex-(col|row|col-reverse|row-reverse)/, variants: ['lg', 'md'] },
-  { pattern: /justify-(normal|start|end|center|between|around|evenly|stretch)/, variants: ['lg', 'md'] },
-  { pattern: /items-(start|end|center|baseline|stretch)/, variants: ['lg', 'md'] },
-  { pattern: /self-(start|end|center|baseline|stretch)/, variants: ['lg', 'md'] },
-  { pattern: /(col|row)-start-(1[0-2]|[1-9]|none|subgrid)/, variants: ['lg', 'md'] },
-  { pattern: /(col|row)-(auto|span-(1[0-2]|[1-9]|full))/, variants: ['lg', 'md'] },
-  { pattern: /justify-(start|center|end)/ },
-  { pattern: /text-(xs|sm|base|lg|xl|2xl|3xl|4xl|5xl|6xl|7xl|8xl|9xl)/, variants: ['lg', 'md'] },
-  { pattern: /text-(left|center|right)/ },
-  { pattern: /font-(normal|medium|bold|extrabold)/, variants: ['lg', 'md'] },
-  { pattern: /line-clamp-(none|[1-6])/, variants: ['lg:[&>:not(script)]', 'md:[&>:not(script)]', '[&>:not(script)]'] },
-  { pattern: /(uppercase|lowercase|capitalize)/, variants: ['lg', 'md'] },
-  { pattern: /(underline|overline|line-through)/, variants: ['lg', 'md'] },
-  { pattern: /tracking-(tighter|tight|normal|wide|wider|widest)/, variants: ['lg', 'md'] },
-  { pattern: /aspect-(auto|square|video)/ },
-  { pattern: /shrink-(0|1)/ },
-];
+@source '../components/**/*.{js,ts,jsx,tsx,mdx}';
+@source '../app/**/*.{js,ts,jsx,tsx,mdx}';
+@source '../../../../packages/csk-components/**/*.{js,ts,jsx,tsx,mdx}';
 
-const colorKeys = Object.keys(theme.extend.colors || {});
-if (colorKeys.length) {
-  safelist.push(generateTailwindcssColorKeysPattern(colorKeys));
-}
+@import './tailwindcss.colors.css';
+@import './tailwindcss.dimension.css';
+@import './tailwindcss.font.css';
+@import './tailwindcss.border.css';
 
-const dimensionKeys = Object.keys(theme.extend.spacing || {});
-if (dimensionKeys.length) {
-  safelist.push(...generateTailwindcssDimensionKeysPattern(dimensionKeys));
-}
+@source inline("{lg:,md:,}grid-cols-{1,2,3,4,5,6,7,8,9,10,11,12,none,subgrid}");
+@source inline("{lg:,md:,}gap-{0,0.5,1,1.5,2,2.5,3,3.5,4,5,6,8,10,12,16,20,24,32,40,48,56,64,72,80,96,px}");
+@source inline("{lg:,md:,}gap-x-{0,0.5,1,1.5,2,2.5,3,3.5,4,5,6,8,10,12,16,20,24,32,40,48,56,64,72,80,96,px}");
+@source inline("{lg:,md:,}gap-y-{0,0.5,1,1.5,2,2.5,3,3.5,4,5,6,8,10,12,16,20,24,32,40,48,56,64,72,80,96,px}");
+@source inline("{lg:,md:,}p{x,}-{0,0.5,1,1.5,2,2.5,3,3.5,4,5,6,8,10,12,16,20,24,32,40,48,56,64,72,80,96,px}");
+@source inline("{lg:,md:,}m{x,}-{0,0.5,1,1.5,2,2.5,3,3.5,4,5,6,8,10,12,16,20,24,32,40,48,56,64,72,80,96,px}");
+@source inline("{lg:,md:,}-m{x,}-{0,1,2,3,4,5,6,8,10,12,16,20,24,32,40,48,56,64,72,80,96,px}");
+@source inline("{lg:,md:,}flex-{col,row,col-reverse,row-reverse}");
+@source inline("{lg:,md:,}justify-{normal,start,end,center,between,around,evenly,stretch}");
+@source inline("{lg:,md:,}items-{start,end,center,baseline,stretch}");
+@source inline("{lg:,md:,}self-{start,end,center,baseline,stretch}");
+@source inline("{lg:,md:,}{col,row}-start-{1,2,3,4,5,6,7,8,9,10,11,12,none,subgrid}");
+@source inline("{lg:,md:,}{col,row}-{auto,span-{1,2,3,4,5,6,7,8,9,10,11,12},span-full}");
+@source inline("{lg:,md:,}justify-{start,center,end}");
+@source inline("{lg:,md:,}flex-{nowrap,wrap,wrap-reverse}");
+@source inline("{lg:,md:,}text-{xs,sm,base,lg,xl,2xl,3xl,4xl,5xl,6xl,7xl,8xl,9xl}");
+@source inline("text-{left,center,right}");
+@source inline("{lg:,md:,}font-{normal,medium,bold,extrabold}");
+@source inline("{lg:,md:,}prose-{sm,base,lg,xl,2xl}");
+@source inline("{lg:,md:,}line-clamp-{none,1,2,3,4,5,6}");
+@source inline("{lg:,md:,}{uppercase,lowercase,capitalize}");
+@source inline("{lg:,md:,group-hover:,}{underline,overline,line-through}");
+@source inline("{lg:,md:,}tracking-{tighter,tight,normal,wide,wider,widest}");
+@source inline("aspect-{auto,square,video}");
+@source inline("shrink-{0,1}");
+@source inline("{hover:,group-hover:,}opacity-{0,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100}");
+@source inline("{hover:,group-hover:,}scale-{0,50,75,90,95,100,105,110,125,150}");
+@source inline("h-{full,screen}");
 
-const fontKeys = Object.keys(theme.extend.fontFamily || {});
-if (fontKeys.length) {
-  safelist.push(generateTailwindcssFontKeysPattern(fontKeys));
-}
+@custom-variant dark (&:where(.dark, .dark *));
 
-const borderKeys = Object.keys(utilities || {}).map(key => key.substring(1));
-if (borderKeys.length) {
-  safelist.push(generateTailwindcssBorderKeysPattern(borderKeys));
-}
-
-export default {
-  darkMode: 'class',
-  content: [
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    './node_modules/@uniformdev/csk-components/dist/content/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
-  safelist,
-  theme,
-  plugins: [
-    typography,
-    plugin(function ({ addUtilities }) {
-      addUtilities(utilities);
-    }),
-  ],
-} satisfies Config;
+@plugin "@tailwindcss/typography";
 ```
 
 ## Commands
