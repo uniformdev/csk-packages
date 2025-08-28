@@ -34,7 +34,6 @@ parameters:
     typeConfig:
       collapsed: true
       childrenParams:
-        - alignment
         - size
         - color
         - weight
@@ -42,7 +41,9 @@ parameters:
         - transform
         - decoration
         - letterSpacing
+        - alignment
         - backgroundColor
+        - border
         - spacing
   - id: size
     name: Size
@@ -153,6 +154,11 @@ parameters:
     type: dex-color-palette-parameter
     guidance: Use the Background Color parameter to control component background color.
     typeConfig: null
+  - id: border
+    name: Border
+    type: dex-token-selector-parameter
+    typeConfig:
+      selectedTokenType: border
   - id: spacing
     name: Spacing
     type: dex-space-control-parameter
@@ -163,7 +169,7 @@ parameters:
       selectedGroup: container
 categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/accordion-item.jpg
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/accordion-item.jpg
 useTeamPermissions: true
 slots:
   - id: accordionItemContent
