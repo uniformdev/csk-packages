@@ -9,11 +9,12 @@ interface TokenConfig {
   borders: string;
 }
 
-export const getTokenConfiguration = async (): Promise<TokenConfig | undefined> => {
+export const getTokenConfiguration = async (projectIdProp?: string | string[]): Promise<TokenConfig | undefined> => {
+  const projectId = typeof projectIdProp === 'string' ? projectIdProp : projectIdProp?.[0];
   const connectionOptions: ConnectionOptions = {
     apiKey: process.env.UNIFORM_API_KEY || '',
     apiHost: process.env.UNIFORM_CLI_BASE_URL || 'https://uniform.app',
-    project: process.env.UNIFORM_PROJECT_ID || '',
+    project: projectId || process.env.UNIFORM_PROJECT_ID || '',
   };
 
   if (!checkEnvironmentVariable()) {

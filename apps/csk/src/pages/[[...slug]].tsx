@@ -101,8 +101,10 @@ export const getServerSideProps = withUniformGetServerSideProps({
     if (errors?.some(e => e.type === 'data' || e.type === 'binding')) {
       return { notFound: true };
     }
+
     const preview = Boolean(_context.preview);
-    const tokenConfiguration = !preview && process.env.WATCH !== 'true' ? null : await getTokenConfiguration();
+    const tokenConfiguration =
+      !preview && process.env.WATCH !== 'true' ? null : await getTokenConfiguration(_context.query.projectId);
 
     const breadcrumbs = await getBreadcrumbs(
       composition,

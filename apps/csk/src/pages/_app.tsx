@@ -12,6 +12,7 @@ import '@/styles/borders.css';
 import '@/styles/custom_fonts.css';
 import { resolveAsset } from '@uniformdev/csk-components/utils/assets';
 import { customFontVariables } from '@/fonts';
+import { CoffeeShopProvider } from '@/providers';
 import createUniformContext from '@/utils/canvas/createUniformContext';
 
 type UniformMetadataParameters = {
@@ -111,7 +112,9 @@ const App = ({ Component, pageProps, serverUniformContext }: UniformAppProps<{ d
       <NextThemeProvider attribute="class" defaultTheme="light" enableSystem>
         <UniformContext context={serverUniformContext ?? clientContext} outputType="standard">
           <div className={customFontVariables}>
-            <Component {...pageProps} />
+            <CoffeeShopProvider>
+              <Component {...pageProps} />
+            </CoffeeShopProvider>
           </div>
         </UniformContext>
       </NextThemeProvider>
