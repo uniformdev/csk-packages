@@ -10,8 +10,7 @@ Welcome to the **Uniform Component Starter Kit (CSK6)** monorepo! This repositor
 .husky/                         # Pre-commit hooks to enforce linting rules
 apps/
  ├── csk/                       # Main Next.js 15 App Router application
- ├── csk-marketing-site/        # Marketing site project with component catalog
- └── csk-storybook/             # Interactive environment for visually testing UI components
+ └── csk-marketing-site/        # Marketing site project with component catalog
 packages/
  ├── csk-cli/                   # CLI tool for project setup and automation
  ├── csk-components/            # Component library for building UI
