@@ -1,6 +1,6 @@
 {
   "name": "@uniformdev/csk-marketing-site",
-  "version": "6.1.20",
+  "version": "6.1.21",
   "private": true,
   "engines": {
     "yarn": "please-use-npm",
@@ -37,9 +37,10 @@
     "make-components-preview": "tsx ./src/scripts/make-preview-images.ts"
   },
   "dependencies": {
-    "@uniformdev/canvas-next-rsc-client-v2": "20.7.1-alpha.73",
-    "@uniformdev/canvas-next-rsc-shared-v2": "20.7.1-alpha.73",
-    "@uniformdev/canvas-next-rsc-v2": "20.7.1-alpha.73",
+    "@uniformdev/canvas-next-rsc-client-v2": "20.7.1-alpha.81",
+    "@uniformdev/canvas-next-rsc-shared-v2": "20.7.1-alpha.81",
+    "@uniformdev/canvas-next-rsc-v2": "20.7.1-alpha.81",
+    "@uniformdev/context": "20.7.1-alpha.81",
     "@uniformdev/csk-components": "*",
     "@uniformdev/design-extensions-tools": "*",
     "next": "^15.4.2",
@@ -54,7 +55,7 @@
     "@types/node": "^20.0.0",
     "@types/react": "^19.1.0",
     "@types/react-dom": "^19.1.0",
-    "@uniformdev/cli": "20.7.1-alpha.73",
+    "@uniformdev/cli": "20.7.1-alpha.81",
     "@uniformdev/csk-cli": "*",
     "cross-env": "^7.0.3",
     "eslint": "^9.31.0",
