@@ -14,7 +14,7 @@ export type EmptyPlaceholderMapping = Record<
 
 const createEmptyPlaceholderResolver =
   (_mappings: EmptyPlaceholderMapping) => (_props: ResolveEmptyPlaceholderOptions) => {
-    // TODO: Implement empty placeholder resolver, for now we return null as we don't have target component name. Props contains slotName and slotIndex, it's not enough to identify the target component.
+    // TODO: Implement empty placeholder resolver, for now we return default empty placeholder as we don't have target component name. Props contains slotName and slotIndex, it's not enough to identify the target component.
     // https://linear.app/uniform/issue/SE-662/csk-coffee-shop-template-new-app-router-sdk#comment-a32de2e6
     return DEFAULT_EMPTY_PLACEHOLDER;
   };
