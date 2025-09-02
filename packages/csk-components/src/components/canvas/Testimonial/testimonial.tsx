@@ -1,30 +1,31 @@
 import { FC } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
-import { withFlattenParameters } from '@/utils/withFlattenParameters';
-import { TestimonialVariants, TestimonialProps, TestimonialParameters } from '.';
+import { UniformSlot } from '@uniformdev/canvas-react';
+import { TestimonialVariants, TestimonialProps, TestimonialSlots } from '.';
 import { DefaultVariant } from './default-variant';
 import { WithLargeAvatarVariant } from './with-large-avatar-variant';
 import { WithOverlappingImageVariant } from './with-overlapping-image-variant';
 
-const Testimonial: FC<TestimonialProps & TestimonialParameters> = ({
-  slots,
-  backgroundColor,
-  spacing,
-  border,
-  fluidContent,
-  height,
-  variant,
-}) => {
+const Testimonial: FC<TestimonialProps> = ({ backgroundColor, spacing, border, fluidContent, height, component }) => {
+  const variant = component.variant as TestimonialVariants | undefined;
+
   const variantProps = {
     backgroundColor,
     spacing,
     border,
     fluidContent,
     height,
-    testimonialPrimaryImage: <UniformSlot slot={slots.testimonialPrimaryImage} />,
-    testimonialContent: <UniformSlot slot={slots.testimonialContent} />,
-    testimonialAuthor: <UniformSlot slot={slots.testimonialAuthor} />,
-    testimonialSecondaryImage: <UniformSlot slot={slots.testimonialSecondaryImage} />,
+    testimonialPrimaryImage: (
+      <UniformSlot name={TestimonialSlots.TestimonialPrimaryImage} emptyPlaceholder={<div className="size-full" />} />
+    ),
+    testimonialContent: (
+      <UniformSlot name={TestimonialSlots.TestimonialContent} emptyPlaceholder={<div className="h-20 w-64" />} />
+    ),
+    testimonialAuthor: (
+      <UniformSlot name={TestimonialSlots.TestimonialAuthor} emptyPlaceholder={<div className="h-20 w-64" />} />
+    ),
+    testimonialSecondaryImage: (
+      <UniformSlot name={TestimonialSlots.TestimonialSecondaryImage} emptyPlaceholder={<div className="h-20 w-64" />} />
+    ),
   };
 
   switch (variant) {
@@ -39,4 +40,4 @@ const Testimonial: FC<TestimonialProps & TestimonialParameters> = ({
   }
 };
 
-export default withFlattenParameters(Testimonial);
+export default Testimonial;

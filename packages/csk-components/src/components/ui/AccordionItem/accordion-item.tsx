@@ -1,5 +1,3 @@
-'use client';
-
 import { FC, useCallback, useState } from 'react';
 import Container from '@/components/ui/Container';
 import { cn } from '@/utils/styling';

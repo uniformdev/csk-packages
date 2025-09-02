@@ -1,11 +1,11 @@
 import { FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { UniformRichText, ComponentParameter, UniformText } from '@uniformdev/canvas-next-rsc-v2/component';
+import { flattenValues } from '@uniformdev/canvas';
+import { UniformRichText, UniformText } from '@uniformdev/canvas-react';
 import BaseFooter from '@/components/ui/Footer';
-import { ReplaceFieldsWithAssets } from '@/types/cskTypes';
-import { withFlattenParameters } from '@/utils/withFlattenParameters';
-import { SimpleFooterParameters, SimpleFooterProps } from '.';
+import { resolveAsset } from '@/utils/assets';
+import { FooterLink, SimpleFooterProps } from '.';
 
 const GitHubIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" height="30" viewBox="0 0 35 34" width="30">
@@ -35,51 +35,50 @@ const StorybookIcon = () => (
   </svg>
 );
 
-export const Footer: FC<SimpleFooterProps & ReplaceFieldsWithAssets<SimpleFooterParameters, 'logo'>> = ({
-  logo,
-  links,
-  parameters,
-  component,
-}) => (
-  <BaseFooter
-    logo={logo?.[0]?.url && <Image src={logo?.[0]?.url} alt="Logo" width={180} height={47} />}
-    copyright={<UniformRichText parameter={parameters.copyright as ComponentParameter<string>} component={component} />}
-    content={
-      <div className="flex lg:gap-32 md:gap-16 gap-16">
-        <div className="flex flex-col gap-2">
-          <UniformText
-            className="text-text-tertiary lg:text-base font-bold uppercase"
-            parameter={parameters.footerLinkSectionTitle as ComponentParameter<string>}
-            component={component}
-          />
-          {links?.map(link => (
-            <Link
-              className="text-text-primary font-bold transition-all duration-150 whitespace-nowrap"
-              href={link.link?.path || ''}
-              key={link.title}
-            >
-              {link.title}
-            </Link>
-          ))}
-        </div>
-        <div className="flex gap-4">
-          <Link href="https://unfrm.to/csk-sb">
-            <StorybookIcon />
-          </Link>
-          <Link href="https://unfrm.to/csk-repo">
-            <GitHubIcon />
-          </Link>
-        </div>
-      </div>
-    }
-    backgroundColor="general-color-1"
-    spacing={{
-      paddingTop: 'container-small',
-      paddingBottom: 'container-small',
-    }}
-    border="border-footer"
-    fluidContent={false}
-  />
-);
+export const Footer: FC<SimpleFooterProps> = ({ logo, links }) => {
+  const [resolvedLogo] = resolveAsset(logo);
+  const resolvedLinks = (flattenValues(links) || []) as FooterLink[];
 
-export default withFlattenParameters(Footer);
+  return (
+    <BaseFooter
+      logo={resolvedLogo?.url && <Image src={resolvedLogo?.url} alt="Logo" width={180} height={47} />}
+      copyright={<UniformRichText parameterId="copyright" />}
+      content={
+        <div className="flex lg:gap-32 md:gap-16 gap-16">
+          <div className="flex flex-col gap-2">
+            <UniformText
+              className="text-text-tertiary lg:text-base font-bold uppercase"
+              parameterId="footerLinkSectionTitle"
+            />
+            {resolvedLinks?.map(link => (
+              <Link
+                className="text-text-primary font-bold transition-all duration-150 whitespace-nowrap"
+                href={link.link?.path || ''}
+                key={link.title}
+              >
+                {link.title}
+              </Link>
+            ))}
+          </div>
+          <div className="flex gap-4">
+            <Link href="https://unfrm.to/csk-sb">
+              <StorybookIcon />
+            </Link>
+            <Link href="https://unfrm.to/csk-repo">
+              <GitHubIcon />
+            </Link>
+          </div>
+        </div>
+      }
+      backgroundColor="general-color-1"
+      spacing={{
+        paddingTop: 'container-small',
+        paddingBottom: 'container-small',
+      }}
+      border="border-footer"
+      fluidContent={false}
+    />
+  );
+};
+
+export default Footer;

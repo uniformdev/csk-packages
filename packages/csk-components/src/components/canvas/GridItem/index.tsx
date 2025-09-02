@@ -1,4 +1,5 @@
-import { ComponentProps, ViewPort } from '@/types/cskTypes';
+import { ComponentProps } from '@uniformdev/canvas-react';
+import { ViewPort } from '@/types/cskTypes';
 
 type AvailableGridItemColumnsCount = '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12';
 type AvailableGridItemSpan =
@@ -37,6 +38,6 @@ export enum GridItemSlots {
   Inner = 'inner',
 }
 
-export type GridItemProps = ComponentProps<GridItemParameters, GridItemSlots> & GridItemAdditionalProps;
+export type GridItemProps = ComponentProps<GridItemParameters> & GridItemAdditionalProps;
 
 export { default } from './grid-item';

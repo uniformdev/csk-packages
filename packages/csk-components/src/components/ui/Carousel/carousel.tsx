@@ -1,5 +1,3 @@
-'use client';
-
 import { FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import BaseContainer from '@/components/ui/Container';
 import { cn, resolveViewPort } from '@/utils/styling';

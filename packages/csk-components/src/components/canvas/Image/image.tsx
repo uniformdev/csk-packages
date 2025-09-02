@@ -1,12 +1,12 @@
 import { FC } from 'react';
 import { imageFrom } from '@uniformdev/assets';
+import { useUniformContextualEditingState } from '@uniformdev/canvas-react';
 import BaseImage from '@/components/ui/Image';
 import MediaPlaceholder from '@/components/ui/MediaPlaceholder';
-import { ReplaceFieldsWithAssets } from '@/types/cskTypes';
-import { withFlattenParameters } from '@/utils/withFlattenParameters';
-import { ImageParameters, ImageProps } from '.';
+import { resolveAsset } from '@/utils/assets';
+import { ImageProps } from '.';
 
-const Image: FC<ImageProps & ReplaceFieldsWithAssets<ImageParameters, 'image'>> = async ({
+const Image: FC<ImageProps> = ({
   image,
   objectFit,
   width,
@@ -17,13 +17,13 @@ const Image: FC<ImageProps & ReplaceFieldsWithAssets<ImageParameters, 'image'>> 
   priority,
   fill,
   unoptimized,
-  context,
   component,
 }) => {
-  const [resolvedImage] = image || [];
+  const { previewMode } = useUniformContextualEditingState();
+  const [resolvedImage] = resolveAsset(image);
 
   if (!resolvedImage) {
-    const isEditorPreviewMode = context.isContextualEditing;
+    const isEditorPreviewMode = previewMode === 'editor';
     const isPlaceholder = component?._id?.includes('placeholder_');
 
     if (!isEditorPreviewMode || isPlaceholder) {
@@ -81,4 +81,4 @@ const Image: FC<ImageProps & ReplaceFieldsWithAssets<ImageParameters, 'image'>> 
   );
 };
 
-export default withFlattenParameters(Image);
+export default Image;

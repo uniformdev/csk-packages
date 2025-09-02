@@ -1,14 +1,13 @@
 import { FC, useEffect, useState } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
+import { UniformSlot } from '@uniformdev/canvas-react';
 import { ArrowIcon } from '@/components/ui/_icons';
 import { cn } from '@/utils/styling';
-import { NavigationFlyoutProps, NavigationFlyoutParameters } from '.';
+import { NavigationFlyoutParameters, NavigationFlyoutSlots } from '.';
 
-type NavigationFlyoutPropsMobileContentProps = Pick<NavigationFlyoutProps, 'context' | 'slots' | 'component'> &
-  Pick<NavigationFlyoutParameters, 'backgroundColor'> & {
-    isOpen: boolean;
-    onClose: () => void;
-  };
+type NavigationFlyoutPropsMobileContentProps = Pick<NavigationFlyoutParameters, 'backgroundColor'> & {
+  isOpen: boolean;
+  onClose: () => void;
+};
 
 const useHeaderHeight = () => {
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -26,7 +25,6 @@ const useHeaderHeight = () => {
 export const NavigationFlyoutPropsMobileContent: FC<NavigationFlyoutPropsMobileContentProps> = ({
   isOpen,
   backgroundColor,
-  slots,
   onClose,
 }) => {
   const headerHeight = useHeaderHeight();
@@ -45,8 +43,14 @@ export const NavigationFlyoutPropsMobileContent: FC<NavigationFlyoutPropsMobileC
       </button>
 
       <div className="flex flex-col items-center justify-center gap-y-8 p-4">
-        <UniformSlot slot={slots.navigationFlyoutLeftContent} />
-        <UniformSlot slot={slots.navigationFlyoutRightContent} />
+        <UniformSlot
+          name={NavigationFlyoutSlots.NavigationFlyoutLeftContent}
+          emptyPlaceholder={<div className="h-40 w-48" />}
+        />
+        <UniformSlot
+          name={NavigationFlyoutSlots.NavigationFlyoutRightContent}
+          emptyPlaceholder={<div className="h-40 w-48" />}
+        />
       </div>
     </div>
   );

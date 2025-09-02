@@ -1,16 +1,16 @@
-import { FC } from 'react';
-import { ComponentParameter, UniformText } from '@uniformdev/canvas-next-rsc-v2/component';
+import { FC, useMemo } from 'react';
+import { useRouter } from 'next/router';
+import { UniformText } from '@uniformdev/canvas-react';
 import BaseIconLabel from '@/components/ui/IconLabel';
 import BaseImage from '@/components/ui/Image';
 import InlineSVG from '@/components/ui/InlineSVG';
-import { ReplaceFieldsWithAssets } from '@/types/cskTypes';
-import { formatUniformLink, isExternalLink } from '@/utils/routing';
+import { resolveAsset } from '@/utils/assets';
+import { checkIsCurrentRoute, formatUniformLink, isExternalLink } from '@/utils/routing';
 import { cn, resolveViewPort } from '@/utils/styling';
-import { withFlattenParameters } from '@/utils/withFlattenParameters';
-import { NavigationLinkProps, NavigationLinkParameters } from '.';
+import { NavigationLinkProps } from '.';
 import { Wrapper } from './wrapper';
 
-const NavigationLink: FC<NavigationLinkProps & ReplaceFieldsWithAssets<NavigationLinkParameters, 'icon'>> = ({
+const NavigationLink: FC<NavigationLinkProps> = ({
   icon,
   link,
   activeState,
@@ -23,16 +23,15 @@ const NavigationLink: FC<NavigationLinkProps & ReplaceFieldsWithAssets<Navigatio
   decoration,
   letterSpacing,
   alignment,
-  component,
-  context,
   hoverEffect = '',
   className,
-  parameters,
 }) => {
   const href = formatUniformLink(link);
-  const isActive = !activeState && context.pageState.routePath === href;
+  const router = useRouter();
+  const isCurrentRoute = useMemo(() => checkIsCurrentRoute(router, link), [router, link]);
+  const isActive = activeState && isCurrentRoute;
 
-  const [resolvedImage] = icon || [];
+  const [resolvedImage] = resolveAsset(icon);
   const { url, title = '' } = resolvedImage || {};
 
   const renderUrl = () => {
@@ -55,15 +54,10 @@ const NavigationLink: FC<NavigationLinkProps & ReplaceFieldsWithAssets<Navigatio
         textClassName={actionClassName}
         {...{ size, tag, color, weight, font, transform, decoration, letterSpacing, alignment }}
       >
-        <UniformText
-          placeholder="Text goes here"
-          parameter={parameters.text as ComponentParameter<string>}
-          className="whitespace-nowrap"
-          component={component}
-        />
+        <UniformText placeholder="Text goes here" parameterId="text" className="whitespace-nowrap" />
       </BaseIconLabel>
     </Wrapper>
   );
 };
 
-export default withFlattenParameters(NavigationLink);
+export default NavigationLink;

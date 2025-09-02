@@ -1,26 +1,25 @@
 import { FC } from 'react';
 import { imageFrom } from '@uniformdev/assets';
 
-import { ComponentContext, ComponentParameter, UniformText } from '@uniformdev/canvas-next-rsc-v2/component';
+import { ComponentInstance } from '@uniformdev/canvas';
+import { UniformText } from '@uniformdev/canvas-react';
 import { TextParameters } from '@/components/canvas/Text/parameters';
 import BaseButton, { ButtonVariant } from '@/components/ui/Button';
 import BaseImage from '@/components/ui/Image';
 import MediaPlaceholder from '@/components/ui/MediaPlaceholder';
 import BaseText from '@/components/ui/Text';
-import { ReplaceFieldsWithAssets } from '@/types/cskTypes';
+import { resolveAsset } from '@/utils/assets';
 import { formatUniformLink } from '@/utils/routing';
 import { BaseButtonParameters, BaseImageParameters } from '.';
 
 type ComponentProps = {
-  isEditorPreviewMode?: boolean;
-  component: Pick<ComponentContext, '_id'>;
-  parameter?: ComponentParameter<string | undefined>;
-  variant?: string;
+  component: ComponentInstance;
+  parameterId: string;
+  isEditorPreviewMode: boolean;
 };
 
-export const BaseHeroText: FC<TextParameters & Omit<ComponentProps, 'variant'>> = ({
-  component,
-  parameter,
+export const BaseHeroText: FC<TextParameters & ComponentProps> = ({
+  parameterId,
   text,
   isEditorPreviewMode,
   ...props
@@ -29,26 +28,24 @@ export const BaseHeroText: FC<TextParameters & Omit<ComponentProps, 'variant'>> 
 
   return (
     <BaseText {...props}>
-      <UniformText
-        placeholder="Text goes here"
-        parameter={parameter as ComponentParameter<string>}
-        as={props.tag || undefined}
-        component={component}
-      />
+      <UniformText placeholder="Text goes here" parameterId={parameterId} as={props.tag || undefined} />
     </BaseText>
   );
 };
 
-export const BaseHeroButton: FC<
-  ReplaceFieldsWithAssets<BaseButtonParameters, 'icon'> & { variant?: ButtonVariant } & Omit<ComponentProps, 'variant'>
-> = ({ component, parameter, isEditorPreviewMode, text, ...props }) => {
+export const BaseHeroButton: FC<BaseButtonParameters & { variant?: ButtonVariant } & ComponentProps> = ({
+  parameterId,
+  isEditorPreviewMode,
+  text,
+  ...props
+}) => {
   const { link, icon } = props;
   const href = formatUniformLink(link);
 
   if (!text && !href && !isEditorPreviewMode) return null;
 
   const Icon = () => {
-    const [resolvedImage] = icon || [];
+    const [resolvedImage] = resolveAsset(icon);
     const { url, title = '' } = resolvedImage || {};
     return url ? (
       <BaseImage
@@ -65,18 +62,12 @@ export const BaseHeroButton: FC<
   };
   return (
     <BaseButton {...props} href={href} icon={<Icon />}>
-      <UniformText
-        placeholder="Button text goes here"
-        parameter={parameter as ComponentParameter<string>}
-        component={component}
-      />
+      <UniformText placeholder="Button text goes here" parameterId={parameterId} />
     </BaseButton>
   );
 };
 
-export const BaseHeroImage: FC<
-  ReplaceFieldsWithAssets<BaseImageParameters, 'image'> & Omit<ComponentProps, 'parameter'>
-> = ({
+export const BaseHeroImage: FC<BaseImageParameters & Omit<ComponentProps, 'parameterId'>> = ({
   component,
   isEditorPreviewMode,
   image,
@@ -90,14 +81,13 @@ export const BaseHeroImage: FC<
   priority,
   unoptimized,
   fill,
-  variant,
 }) => {
-  const [resolvedImage] = image || [];
+  const [resolvedImage] = resolveAsset(image);
 
   if (!resolvedImage) {
     const isPlaceholder = component?._id?.includes('placeholder_');
 
-    if (!isEditorPreviewMode || isPlaceholder || !variant) {
+    if (!isEditorPreviewMode || isPlaceholder || !component.variant) {
       return null;
     }
 

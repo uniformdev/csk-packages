@@ -1,6 +1,5 @@
-import dynamic from 'next/dynamic';
+import { ComponentProps } from '@uniformdev/canvas-react';
 import { ContainerParameters } from '@/components/canvas/Container/parameters';
-import { ComponentProps } from '@/types/cskTypes';
 
 export type CarouselParameters = ContainerParameters & {
   itemsPerPage?: string;
@@ -11,7 +10,6 @@ export enum CarouselSlots {
   Items = 'carouselItems',
 }
 
-export type CarouselProps = ComponentProps<CarouselParameters, CarouselSlots>;
+export type CarouselProps = ComponentProps<CarouselParameters>;
 
-export default dynamic(() => import('./carousel').then(mod => mod.default));
-export { CarouselEmptyPlaceholder } from './empty-placeholder';
+export { default } from './carousel';

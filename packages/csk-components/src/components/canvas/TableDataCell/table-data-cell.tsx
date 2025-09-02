@@ -1,12 +1,11 @@
 import { FC } from 'react';
-import { ComponentParameter, UniformText } from '@uniformdev/canvas-next-rsc-v2/component';
-import { withFlattenParameters } from '@/utils/withFlattenParameters';
-import { TableDataCellParameters, TableDataCellProps } from '.';
+import { UniformText } from '@uniformdev/canvas-react';
+import { TableDataCellProps } from '.';
 
-const TableDataCell: FC<TableDataCellProps & TableDataCellParameters> = ({ parameters, component }) => (
+const TableDataCell: FC<TableDataCellProps> = () => (
   <td>
-    <UniformText component={component} parameter={parameters.value as ComponentParameter<string>} placeholder="Value" />
+    <UniformText parameterId="value" placeholder="Value" />
   </td>
 );
 
-export default withFlattenParameters(TableDataCell);
+export default TableDataCell;

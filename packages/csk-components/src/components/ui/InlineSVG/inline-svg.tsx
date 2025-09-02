@@ -1,4 +1,4 @@
-import { FC, SVGProps } from 'react';
+import { FC, SVGProps, useEffect, useState } from 'react';
 import { cn } from '@/utils/styling';
 import { InlineSVGProps } from '.';
 import {
@@ -10,7 +10,7 @@ import {
   convertSvgAttributesToReactProps,
 } from './utils';
 
-export const InlineSVG: FC<InlineSVGProps> = async ({
+export const InlineSVG: FC<InlineSVGProps> = ({
   src,
   className = '',
   width,
@@ -21,7 +21,16 @@ export const InlineSVG: FC<InlineSVGProps> = async ({
   fallback,
   alt,
 }) => {
-  if (!src) return fallback ?? null;
+  const [raw, setRaw] = useState<string | null>(null);
+  useEffect(() => {
+    const run = async () => {
+      const raw = await fetchSvg(src);
+      setRaw(raw);
+    };
+    run();
+  }, [src]);
+
+  if (!src || !raw) return fallback ?? null;
 
   const transformSvg = (svg: string): string => {
     const transformers: Array<(input: string) => string> = [];
@@ -33,7 +42,6 @@ export const InlineSVG: FC<InlineSVGProps> = async ({
   };
 
   try {
-    const raw = await fetchSvg(src);
     const cleaned = transformSvg(raw);
     const attrs = getSvgAttributes(cleaned);
     const content = getSvgInnerContent(cleaned);

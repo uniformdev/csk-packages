@@ -1,12 +1,11 @@
 import { FC } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
-import { withFlattenParameters } from '@/utils/withFlattenParameters';
-import { TableRowProps } from '.';
+import { UniformSlot } from '@uniformdev/canvas-react';
+import { TableRowProps, TableRowSlots } from '.';
 
-const TableRow: FC<TableRowProps> = ({ slots }) => (
+const TableRow: FC<TableRowProps> = () => (
   <tr>
-    <UniformSlot slot={slots.tableRowCells} />
+    <UniformSlot name={TableRowSlots.TableRowCells} />
   </tr>
 );
 
-export default withFlattenParameters(TableRow);
+export default TableRow;

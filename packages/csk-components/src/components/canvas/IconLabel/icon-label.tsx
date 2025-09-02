@@ -1,12 +1,11 @@
 import { FC } from 'react';
-import { ComponentParameter, UniformText } from '@uniformdev/canvas-next-rsc-v2/component';
+import { UniformText } from '@uniformdev/canvas-react';
 import BaseIconLabel from '@/components/ui/IconLabel';
 import BaseImage from '@/components/ui/Image';
-import { ReplaceFieldsWithAssets } from '@/types/cskTypes';
-import { withFlattenParameters } from '@/utils/withFlattenParameters';
-import { IconLabelParameters, IconLabelProps } from '.';
+import { resolveAsset } from '@/utils/assets';
+import { IconLabelProps } from '.';
 
-const IconLabel: FC<IconLabelProps & ReplaceFieldsWithAssets<IconLabelParameters, 'icon'>> = ({
+const IconLabel: FC<IconLabelProps> = ({
   icon,
   size,
   tag,
@@ -17,11 +16,9 @@ const IconLabel: FC<IconLabelProps & ReplaceFieldsWithAssets<IconLabelParameters
   decoration,
   letterSpacing,
   alignment,
-  parameters,
-  component,
   iconPosition,
 }) => {
-  const [resolvedImage] = icon || [];
+  const [resolvedImage] = resolveAsset(icon);
   const { url, title = '' } = resolvedImage || {};
 
   return (
@@ -29,13 +26,9 @@ const IconLabel: FC<IconLabelProps & ReplaceFieldsWithAssets<IconLabelParameters
       icon={url ? <BaseImage src={url} alt={title} fill /> : undefined}
       {...{ size, tag, color, weight, font, transform, decoration, letterSpacing, alignment, iconPosition }}
     >
-      <UniformText
-        placeholder="Text goes here"
-        parameter={parameters.text as ComponentParameter<string>}
-        component={component}
-      />
+      <UniformText placeholder="Text goes here" parameterId="text" />
     </BaseIconLabel>
   );
 };
 
-export default withFlattenParameters(IconLabel);
+export default IconLabel;

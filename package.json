@@ -29,7 +29,12 @@
   },
   "packageManager": "npm@11.6.0",
   "workspaces": [
-    "apps/*",
-    "packages/*"
+    "apps/csk",
+    "packages/csk-cli",
+    "packages/csk-components",
+    "packages/design-extensions-tools",
+    "packages/eslint-config",
+    "packages/internal-scripts",
+    "packages/typescript-config"
   ]
 }
