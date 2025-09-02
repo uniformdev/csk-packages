@@ -1,4 +1,4 @@
-import { ComponentProps } from '@/types/cskTypes';
+import { ComponentProps } from '@uniformdev/canvas-react';
 import { TextParameters } from './parameters';
 
 export type TextProps = ComponentProps<TextParameters>;

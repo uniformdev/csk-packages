@@ -1,15 +1,9 @@
 import { FC } from 'react';
-import { ReplaceFieldsWithAssets } from '@/types/cskTypes';
-import { withFlattenParameters } from '@/utils/withFlattenParameters';
-import { FixedHeroParameters, FixedHeroProps } from '.';
+import { FixedHeroProps } from '.';
 import { DemoHero } from './demo-hero';
 import { getImageParametersFocalPoint } from './utils';
 
-const FixedHero: FC<FixedHeroProps & ReplaceFieldsWithAssets<FixedHeroParameters, 'image' | 'primaryButtonIcon'>> = ({
-  textColor,
-  overlayAutoTint,
-  ...props
-}) => (
+const FixedHero: FC<FixedHeroProps> = ({ textColor, overlayAutoTint, ...props }) => (
   <DemoHero
     {...props}
     // Eyebrow Text Parameters
@@ -50,9 +44,9 @@ const FixedHero: FC<FixedHeroProps & ReplaceFieldsWithAssets<FixedHeroParameters
     imagePriority
     imageObjectFit="cover"
     imageUnoptimized
-    imageContrastBaseColor={!props.variant && overlayAutoTint ? textColor : undefined}
+    imageContrastBaseColor={!props.component.variant && overlayAutoTint ? textColor : undefined}
     imageOverlayOpacity={overlayAutoTint}
-    {...getImageParametersFocalPoint(!!props.variant)}
+    {...getImageParametersFocalPoint(!!props.component.variant)}
     // Presentation Parameters
     spacing={{
       paddingTop: 'container-xlarge',
@@ -60,8 +54,8 @@ const FixedHero: FC<FixedHeroProps & ReplaceFieldsWithAssets<FixedHeroParameters
       paddingRight: 'container-small',
       paddingBottom: 'container-xlarge',
     }}
-    fluidContent={!props.variant}
+    fluidContent={!props.component.variant}
   />
 );
 
-export default withFlattenParameters(FixedHero);
+export default FixedHero;

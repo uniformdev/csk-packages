@@ -1,15 +1,6 @@
 import { FC } from 'react';
-import { SlotDefinition } from '@uniformdev/canvas-next-rsc-shared-v2';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
-import { ReplaceFieldsWithAssets } from '@/types/cskTypes';
-import {
-  DemoHeroVariants,
-  FixedHeroParameters,
-  FixedHeroProps,
-  FlexibleHeroParameters,
-  FlexibleHeroProps,
-  FlexibleHeroSlots,
-} from '.';
+import { UniformSlot, useUniformContextualEditingState } from '@uniformdev/canvas-react';
+import { DemoHeroVariants, FixedHeroProps, FlexibleHeroProps, FlexibleHeroSlots } from '.';
 import { BaseHeroButton, BaseHeroImage, BaseHeroText } from './atoms';
 import { ColumnsVariant } from './columns-variant';
 import { DefaultVariant } from './default-variant';
@@ -18,15 +9,11 @@ import { cleanUpPrefix } from './utils';
 
 type FixedHeroComponentProps = {
   isFlexibleHero?: false;
-  slots: Record<never, SlotDefinition>;
-} & FixedHeroProps &
-  ReplaceFieldsWithAssets<FixedHeroParameters, 'image' | 'primaryButtonIcon'>;
+} & FixedHeroProps;
 
 type FlexibleHeroComponentProps = {
   isFlexibleHero: true;
-  slots: Record<FlexibleHeroSlots, SlotDefinition>;
-} & FlexibleHeroProps &
-  ReplaceFieldsWithAssets<FlexibleHeroParameters, 'image' | 'primaryButtonIcon'>;
+} & FlexibleHeroProps;
 
 export const DemoHero: FC<FixedHeroComponentProps | FlexibleHeroComponentProps> = ({
   // Eyebrow Text Parameters
@@ -102,15 +89,14 @@ export const DemoHero: FC<FixedHeroComponentProps | FlexibleHeroComponentProps> 
   height,
   isFlexibleHero,
   component,
-  context,
-  slots,
-  variant,
-  parameters,
 }) => {
-  const isEditorPreviewMode = context.isContextualEditing;
+  const { previewMode } = useUniformContextualEditingState();
+  const isEditorPreviewMode = previewMode === 'editor';
+
+  const variant = component.variant as DemoHeroVariants | undefined;
 
   const demoHeroContent = isFlexibleHero ? (
-    <UniformSlot slot={slots.flexibleHeroContent} />
+    <UniformSlot name={FlexibleHeroSlots.FlexibleHeroContent} emptyPlaceholder={<div className="h-20" />} />
   ) : (
     <>
       <BaseHeroText
@@ -132,7 +118,7 @@ export const DemoHero: FC<FixedHeroComponentProps | FlexibleHeroComponentProps> 
         )}
         isEditorPreviewMode={isEditorPreviewMode}
         component={component}
-        parameter={parameters.eyebrowTitleText}
+        parameterId="eyebrowTitleText"
       />
       <BaseHeroText
         {...cleanUpPrefix(
@@ -153,7 +139,7 @@ export const DemoHero: FC<FixedHeroComponentProps | FlexibleHeroComponentProps> 
         )}
         isEditorPreviewMode={isEditorPreviewMode}
         component={component}
-        parameter={parameters.titleText}
+        parameterId="titleText"
       />
       <BaseHeroText
         {...cleanUpPrefix(
@@ -174,13 +160,13 @@ export const DemoHero: FC<FixedHeroComponentProps | FlexibleHeroComponentProps> 
         )}
         isEditorPreviewMode={isEditorPreviewMode}
         component={component}
-        parameter={parameters.descriptionText}
+        parameterId="descriptionText"
       />
     </>
   );
 
   const demoHeroCTA = isFlexibleHero ? (
-    <UniformSlot slot={slots.flexibleHeroCta} />
+    <UniformSlot name={FlexibleHeroSlots.FlexibleHeroCta} emptyPlaceholder={<div className="mx-40 h-20 w-full" />} />
   ) : (
     <>
       <BaseHeroButton
@@ -206,7 +192,7 @@ export const DemoHero: FC<FixedHeroComponentProps | FlexibleHeroComponentProps> 
         )}
         isEditorPreviewMode={isEditorPreviewMode}
         component={component}
-        parameter={parameters.primaryButtonText}
+        parameterId="primaryButtonText"
       />
     </>
   );
@@ -240,7 +226,6 @@ export const DemoHero: FC<FixedHeroComponentProps | FlexibleHeroComponentProps> 
           )}
           component={component}
           isEditorPreviewMode={isEditorPreviewMode}
-          variant={variant}
         />
       </>
     ),

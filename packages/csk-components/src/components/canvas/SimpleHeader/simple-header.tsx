@@ -1,28 +1,32 @@
 import { FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { flattenValues } from '@uniformdev/canvas';
 import BaseHeader from '@/components/ui/Header';
 import BaseIconLabel from '@/components/ui/IconLabel';
-import { ReplaceFieldsWithAssets } from '@/types/cskTypes';
+import { resolveAsset } from '@/utils/assets';
 import { cn, resolveViewPort } from '@/utils/styling';
-import { withFlattenParameters } from '@/utils/withFlattenParameters';
-import { SimpleHeaderParameters, SimpleHeaderProps, SimpleHeaderVariants } from '.';
+import { HeaderLink, SimpleHeaderProps, SimpleHeaderVariants } from '.';
 
-const SimpleHeader: FC<SimpleHeaderProps & ReplaceFieldsWithAssets<SimpleHeaderParameters, 'logo'>> = ({
-  variant,
+const SimpleHeader: FC<SimpleHeaderProps> = ({
   logo,
   links,
   backgroundColor,
   textColor,
   hoverTextColor,
+  component,
 }) => {
+  const variant = component.variant as SimpleHeaderVariants | undefined;
+  const [resolvedLogo] = resolveAsset(logo);
+  const resolvedLinks = (flattenValues(links) || []) as HeaderLink[];
+
   return (
     <BaseHeader
       sticky={variant === SimpleHeaderVariants.Sticky}
       leftSection={
-        logo?.[0]?.url && (
+        resolvedLogo?.url && (
           <Link href="/">
-            <Image src={logo?.[0]?.url} alt="Logo" width={50} height={40} />
+            <Image src={resolvedLogo?.url} alt="Logo" width={50} height={40} />
           </Link>
         )
       }
@@ -34,7 +38,7 @@ const SimpleHeader: FC<SimpleHeaderProps & ReplaceFieldsWithAssets<SimpleHeaderP
       }}
       border="none"
     >
-      {links?.map(link => (
+      {resolvedLinks?.map(link => (
         <Link href={link.link?.path || ''} key={link.title}>
           <BaseIconLabel
             className="group"
@@ -60,4 +64,4 @@ const SimpleHeader: FC<SimpleHeaderProps & ReplaceFieldsWithAssets<SimpleHeaderP
   );
 };
 
-export default withFlattenParameters(SimpleHeader);
+export default SimpleHeader;

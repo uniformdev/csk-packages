@@ -1,5 +1,3 @@
-'use client';
-
 import { FC, useCallback, useState } from 'react';
 import dynamic from 'next/dynamic';
 import { cn, resolveViewPort } from '@/utils/styling';

@@ -1,5 +1,6 @@
+import { ComponentProps } from '@uniformdev/canvas-react';
 import { ContainerParameters } from '@/components/canvas/Container/parameters';
-import { ViewPort, ComponentProps } from '@/types/cskTypes';
+import { ViewPort } from '@/types/cskTypes';
 
 type Direction = 'row' | 'row-reverse' | 'col' | 'col-reverse';
 type Justify = 'start' | 'end' | 'center' | 'between';
@@ -24,6 +25,6 @@ export enum FlexSlots {
   FlexItem = 'flexItem',
 }
 
-export type FlexProps = ComponentProps<FlexParameters, FlexSlots> & FlexAdditionalProps;
+export type FlexProps = ComponentProps<FlexParameters> & FlexAdditionalProps;
 
 export { default } from './flex';

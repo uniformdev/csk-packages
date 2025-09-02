@@ -1,5 +1,5 @@
+import { ComponentProps } from '@uniformdev/canvas-react';
 import { FooterProps as BaseFooterProps } from '@/components/ui/Footer';
-import { ComponentProps } from '@/types/cskTypes';
 
 export type FooterParameters = BaseFooterProps;
 
@@ -9,7 +9,6 @@ export enum FooterSlots {
   FooterContent = 'footerContent',
 }
 
-export type FooterProps = ComponentProps<FooterParameters, FooterSlots>;
+export type FooterProps = ComponentProps<FooterParameters>;
 
 export { default } from './footer';
-export { FooterEmptyPlaceholder } from './empty-placeholder';

@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react';
 import Container from '@/components/ui/Container';
 import Rating from '@/components/ui/Rating';
-import { ReviewParameters, ReviewProps } from '.';
+import { ReviewProps } from '.';
 
 type MultiColumnVariantProps = ReviewProps & {
   ReviewImage: ReactNode;
@@ -9,7 +9,7 @@ type MultiColumnVariantProps = ReviewProps & {
   ReviewContent: ReactNode;
 };
 
-export const MultiColumnVariant: FC<MultiColumnVariantProps & ReviewParameters> = ({
+export const MultiColumnVariant: FC<MultiColumnVariantProps> = ({
   stars,
   starsColor,
   activeStarsColor,

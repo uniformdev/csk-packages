@@ -1,15 +1,14 @@
 import { FC, useMemo } from 'react';
-import { ComponentParameter, UniformText } from '@uniformdev/canvas-next-rsc-v2/component';
+import { useRouter } from 'next/router';
+import { UniformText, useUniformContextualEditingState } from '@uniformdev/canvas-react';
 import BaseButton, { ButtonProps as BaseButtonProps } from '@/components/ui/Button';
 import BaseImage from '@/components/ui/Image';
-import { ReplaceFieldsWithAssets } from '@/types/cskTypes';
-import { formatUniformLink } from '@/utils/routing';
-import { withFlattenParameters } from '@/utils/withFlattenParameters';
-import { ButtonParameters, ButtonProps } from '.';
+import { resolveAsset } from '@/utils/assets';
+import { checkIsCurrentRoute, formatUniformLink } from '@/utils/routing';
+import { ButtonProps } from '.';
 
-const Button: FC<ButtonProps & ReplaceFieldsWithAssets<ButtonParameters, 'icon'>> = ({
+const Button: FC<ButtonProps> = ({
   component,
-  context,
   link,
   textColor,
   textFont,
@@ -26,13 +25,16 @@ const Button: FC<ButtonProps & ReplaceFieldsWithAssets<ButtonParameters, 'icon'>
   className,
   onClick,
   text,
-  variant,
-  parameters,
 }) => {
+  const router = useRouter();
+  const isCurrentRoute = useMemo(() => checkIsCurrentRoute(router, link), [router, link]);
+  const { previewMode } = useUniformContextualEditingState();
+  const isEditorPreviewMode = previewMode === 'editor';
+
   const href = formatUniformLink(link);
 
   const iconParameters = useMemo(() => {
-    const [resolvedImage] = icon || [];
+    const [resolvedImage] = resolveAsset(icon);
     const { url, title = '' } = resolvedImage || {};
     if (!url) return undefined;
 
@@ -63,18 +65,18 @@ const Button: FC<ButtonProps & ReplaceFieldsWithAssets<ButtonParameters, 'icon'>
 
   const hasContent = !!text || !!iconParameters;
 
-  if (!hasContent && !context.isContextualEditing) return null;
+  if (!hasContent && !isEditorPreviewMode) return null;
 
   return (
     <BaseButton
-      variant={variant as BaseButtonProps['variant']}
+      variant={component.variant as BaseButtonProps['variant']}
       href={href}
       border={border}
       size={size}
       onClick={onClick}
       className={className}
       textSize={textSize}
-      isActive={context.pageState.routePath === href}
+      isActive={isCurrentRoute}
       textColor={textColor}
       textFont={textFont}
       textWeight={textWeight}
@@ -85,13 +87,9 @@ const Button: FC<ButtonProps & ReplaceFieldsWithAssets<ButtonParameters, 'icon'>
       icon={<Icon />}
       iconPosition={iconPosition}
     >
-      <UniformText
-        placeholder="Button text goes here"
-        parameter={parameters.text as ComponentParameter<string>}
-        component={component}
-      />
+      <UniformText placeholder="Button text goes here" parameterId="text" />
     </BaseButton>
   );
 };
 
-export default withFlattenParameters(Button);
+export default Button;

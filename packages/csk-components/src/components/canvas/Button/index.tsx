@@ -1,7 +1,8 @@
 import { AssetParamValue } from '@uniformdev/assets';
 import { LinkParamValue } from '@uniformdev/canvas';
+import { ComponentProps } from '@uniformdev/canvas-react';
 import { ButtonProps as BaseButtonProps } from '@/components/ui/Button';
-import { ComponentProps, ViewPort } from '@/types/cskTypes';
+import { ViewPort } from '@/types/cskTypes';
 
 export type ButtonParameters = {
   text?: string;

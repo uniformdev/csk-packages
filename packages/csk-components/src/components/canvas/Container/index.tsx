@@ -1,4 +1,4 @@
-import { ComponentProps } from '@/types/cskTypes';
+import { ComponentProps } from '@uniformdev/canvas-react';
 import { ContainerParameters } from './parameters';
 
 export type ContainerAdditionalProps = {
@@ -9,7 +9,7 @@ export enum ContainerSlots {
   ContainerContent = 'containerContent',
 }
 
-export type ContainerProps = ComponentProps<ContainerParameters, ContainerSlots> & ContainerAdditionalProps;
+export type ContainerProps = ComponentProps<ContainerParameters> & ContainerAdditionalProps;
 
 export { type ContainerParameters } from './parameters';
 export { default } from './container';

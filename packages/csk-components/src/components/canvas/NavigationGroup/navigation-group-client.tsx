@@ -1,21 +1,17 @@
-'use client';
-
 import { FC, ReactNode, useCallback, useState } from 'react';
-import { ComponentParameter, UniformText } from '@uniformdev/canvas-next-rsc-v2/component';
+import { UniformText } from '@uniformdev/canvas-react';
 import BaseIconLabel from '@/components/ui/IconLabel';
 import BaseImage from '@/components/ui/Image';
-import { ReplaceFieldsWithAssets } from '@/types/cskTypes';
+import { resolveAsset } from '@/utils/assets';
 import { cn, resolveViewPort } from '@/utils/styling';
-import { withFlattenParameters } from '@/utils/withFlattenParameters';
-import { NavigationGroupParameters, NavigationGroupProps } from '.';
+import { NavigationGroupProps } from '.';
 import { NavigationGroupDesktopContent } from './desktop';
 import { NavigationGroupMobileContent } from './mobile';
 import { getButtonClasses, getCaretClasses } from './style-utils';
 
-type NavigationGroupClientProps = NavigationGroupProps &
-  Omit<ReplaceFieldsWithAssets<NavigationGroupParameters, 'caretIcon'>, 'icon'> & {
-    icon: ReactNode | null;
-  };
+type NavigationGroupClientProps = Omit<NavigationGroupProps, 'icon'> & {
+  icon: ReactNode | null;
+};
 
 const NavigationGroupClient: FC<NavigationGroupClientProps> = ({
   icon,
@@ -31,12 +27,8 @@ const NavigationGroupClient: FC<NavigationGroupClientProps> = ({
   decoration,
   letterSpacing,
   alignment,
-  component,
-  context,
-  slots,
   hoverEffect = '',
   className,
-  parameters,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -47,7 +39,7 @@ const NavigationGroupClient: FC<NavigationGroupClientProps> = ({
     [resolveViewPort(hoverEffect, 'group-hover:{value}')]: !!hoverEffect,
   });
 
-  const [resolvedCaretIcon] = caretIcon || [];
+  const [resolvedCaretIcon] = resolveAsset(caretIcon);
   const { url: caretUrl, title: caretTitle = '' } = resolvedCaretIcon || {};
 
   return (
@@ -60,11 +52,7 @@ const NavigationGroupClient: FC<NavigationGroupClientProps> = ({
           textClassName={actionClassName}
           {...{ size, tag, color, weight, font, transform, decoration, letterSpacing, alignment }}
         >
-          <UniformText
-            placeholder="Text goes here"
-            parameter={parameters.text as ComponentParameter<string>}
-            component={component}
-          />
+          <UniformText placeholder="Text goes here" parameterId="text" />
         </BaseIconLabel>
         {caretUrl && (
           <div
@@ -78,14 +66,14 @@ const NavigationGroupClient: FC<NavigationGroupClientProps> = ({
       </button>
 
       <div className="hidden md:block">
-        <NavigationGroupDesktopContent isOpen={isOpen} {...{ backgroundColor, context, slots, border }} />
+        <NavigationGroupDesktopContent isOpen={isOpen} {...{ backgroundColor, border }} />
       </div>
 
       <div className="block md:hidden">
-        <NavigationGroupMobileContent onClose={closeFlyout} isOpen={isOpen} {...{ backgroundColor, context, slots }} />
+        <NavigationGroupMobileContent onClose={closeFlyout} isOpen={isOpen} {...{ backgroundColor }} />
       </div>
     </div>
   );
 };
 
-export default withFlattenParameters(NavigationGroupClient);
+export default NavigationGroupClient;

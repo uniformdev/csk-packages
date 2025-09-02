@@ -1,5 +1,5 @@
+import { ComponentProps } from '@uniformdev/canvas-react';
 import { ContainerParameters } from '@/components/canvas/Container/parameters';
-import { ComponentProps } from '@/types/cskTypes';
 
 export type AccordionParameters = ContainerParameters;
 
@@ -8,7 +8,6 @@ export enum AccordionSlots {
   AccordionItems = 'accordionItems',
 }
 
-export type AccordionProps = ComponentProps<AccordionParameters, AccordionSlots>;
+export type AccordionProps = ComponentProps<AccordionParameters>;
 
-export { default } from './accordion';
-export { AccordionEmptyPlaceholder } from './empty-placeholder';
+export { Accordion as default } from './accordion';

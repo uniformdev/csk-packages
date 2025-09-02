@@ -1,24 +1,14 @@
-'use client';
-
 import { FC, useState, useEffect, useMemo } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
-import { withFlattenParameters } from '@/utils/withFlattenParameters';
-import { CountdownParameters, CountdownProps, CountdownVariants } from '.';
+import { UniformSlot } from '@uniformdev/canvas-react';
+import { CountdownProps, CountdownSlots, CountdownVariants } from '.';
 import { CountdownUnit } from './constants';
 import { getTextClass, getUnitClass } from './style-utils';
 import { formatTime, renderNumberList } from './utils';
 
 const UNITS_TO_SHOW = [CountdownUnit.Days, CountdownUnit.Hours, CountdownUnit.Minutes, CountdownUnit.Seconds];
 
-const Countdown: FC<CountdownProps & CountdownParameters> = ({
-  targetDate,
-  backgroundColor,
-  textColor,
-  border,
-  size,
-  slots,
-  variant,
-}) => {
+const Countdown: FC<CountdownProps> = ({ targetDate, backgroundColor, textColor, border, size, component }) => {
+  const variant = component.variant as CountdownVariants;
   const [{ timeDifference, ...time }, setTime] = useState(formatTime(targetDate));
 
   const memoizedMaxUnitsCount = useMemo(() => {
@@ -77,10 +67,10 @@ const Countdown: FC<CountdownProps & CountdownParameters> = ({
           })}
         </div>
       ) : (
-        <UniformSlot slot={slots.countdownComplete} />
+        <UniformSlot name={CountdownSlots.CountdownComplete} emptyPlaceholder={null} />
       )}
     </div>
   );
 };
 
-export default withFlattenParameters(Countdown);
+export default Countdown;

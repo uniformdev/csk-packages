@@ -1,8 +1,7 @@
 import { FC } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
-import { withFlattenParameters } from '@/utils/withFlattenParameters';
-import { TabParameters, TabProps } from '.';
+import { UniformSlot } from '@uniformdev/canvas-react';
+import { TabProps, TabSlots } from '.';
 
-const Tab: FC<TabProps & TabParameters> = ({ slots }) => <UniformSlot slot={slots.tabContent} />;
+const Tab: FC<TabProps> = () => <UniformSlot name={TabSlots.TabContent} />;
 
-export default withFlattenParameters(Tab);
+export default Tab;

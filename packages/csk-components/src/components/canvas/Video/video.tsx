@@ -1,13 +1,10 @@
-'use client';
-
 import { FC } from 'react';
 import BaseVideo from '@/components/ui/Video';
-import { ReplaceFieldsWithAssets } from '@/types/cskTypes';
-import { withFlattenParameters } from '@/utils/withFlattenParameters';
-import { VideoParameters, VideoProps } from '.';
+import { resolveAsset } from '@/utils/assets';
+import { VideoProps } from '.';
 import { VideoPlaceholder } from './placeholder';
 
-const Video: FC<VideoProps & ReplaceFieldsWithAssets<VideoParameters, 'video' | 'placeholderImage'>> = ({
+const Video: FC<VideoProps> = ({
   video,
   placeholderImage,
   autoPlay,
@@ -19,15 +16,14 @@ const Video: FC<VideoProps & ReplaceFieldsWithAssets<VideoParameters, 'video' | 
   overlayOpacity,
   border,
   component,
-  context,
 }) => {
-  const [resolvedVideo] = video || [];
-  const [resolvedImage] = placeholderImage || [];
+  const [resolvedVideo] = resolveAsset(video);
+  const [resolvedImage] = resolveAsset(placeholderImage);
 
   const resolvedVideoUrl = resolvedVideo?.url;
 
   if (!resolvedVideoUrl) {
-    return <VideoPlaceholder component={component} context={context} />;
+    return <VideoPlaceholder component={component} />;
   }
 
   return (
@@ -39,4 +35,4 @@ const Video: FC<VideoProps & ReplaceFieldsWithAssets<VideoParameters, 'video' | 
   );
 };
 
-export default withFlattenParameters(Video);
+export default Video;

@@ -1,5 +1,5 @@
+import { ComponentProps } from '@uniformdev/canvas-react';
 import { ContainerParameters } from '@/components/canvas/Container/parameters';
-import { ComponentProps } from '@/types/cskTypes';
 
 export enum ContentAlignment {
   Left = 'left',
@@ -22,7 +22,6 @@ export enum SectionSlots {
   SectionCTA = 'sectionCTA',
 }
 
-export type SectionProps = ComponentProps<SectionParameters, SectionSlots>;
+export type SectionProps = ComponentProps<SectionParameters>;
 
 export { default } from './section';
-export { SectionEmptyPlaceholder } from './empty-placeholder';

@@ -1,5 +1,5 @@
+import { ComponentProps } from '@uniformdev/canvas-react';
 import { ContainerParameters } from '@/components/canvas/Container/parameters';
-import { ComponentProps } from '@/types/cskTypes';
 
 export type ReviewParameters = ContainerParameters & {
   stars?: number;
@@ -18,7 +18,6 @@ export enum ReviewSlots {
   ReviewContent = 'reviewContent',
 }
 
-export type ReviewProps = ComponentProps<ReviewParameters, ReviewSlots>;
+export type ReviewProps = ComponentProps<ReviewParameters>;
 
 export { default } from './review';
-export { ReviewEmptyPlaceholder } from './empty-placeholder';

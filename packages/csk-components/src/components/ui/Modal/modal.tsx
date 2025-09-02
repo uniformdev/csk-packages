@@ -1,5 +1,3 @@
-'use client';
-
 import { FC, useCallback, useState, MouseEvent, useRef, useEffect } from 'react';
 import { cn } from '@/utils/styling';
 import { ModalProps } from '.';
