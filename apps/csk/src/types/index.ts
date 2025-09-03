@@ -138,4 +138,6 @@ export type FilterQuery = {
   [K: string]: string[];
 };
 
+export type BoostInclusions = Record<string, { value: string; score: number }>;
+
 export type ProductBoostEnrichment = 'category' | 'brand' | 'subcategory';
