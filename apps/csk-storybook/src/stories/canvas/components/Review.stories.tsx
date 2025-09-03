@@ -1,10 +1,16 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
-import { Text, Image, Review, ReviewParameters, ReviewVariants } from '@uniformdev/csk-components/components/canvas';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
+import {
+  Text,
+  Image,
+  Review,
+  ReviewParameters,
+  ReviewVariants,
+} from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
 import { ContainerArgTypes } from '@/argTypes';
 import { reviewsDefault } from '@/canvasMock/components/reviews';
-import { createFakeCompositionData, fakeContext } from '@/utils';
-import { ArgTypes, Meta, StoryObj } from '@storybook/react';
+import { createFakeCompositionData } from '@/utils';
+import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';
 import theme from '../../../../themeData.json';
 
 const meta: Meta<typeof Review> = {
@@ -39,16 +45,12 @@ const renderStory = (variant?: ReviewVariants) => (args: ReviewParameters) => {
   );
   return (
     <UniformComposition
-      serverContext={fakeContext}
-      params={Promise.resolve({})}
-      searchParams={Promise.resolve({})}
-      route={route}
+      {...route}
       resolveComponent={createComponentResolver({
-        review: { component: Review },
-        text: { component: Text },
-        image: { component: Image },
+        review: Review,
+        text: Text,
+        image: Image,
       })}
-      mode="server"
     />
   );
 };

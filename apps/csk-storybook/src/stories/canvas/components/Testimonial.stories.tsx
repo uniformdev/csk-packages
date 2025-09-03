@@ -1,4 +1,4 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
 import {
   Text,
   Button,
@@ -6,12 +6,12 @@ import {
   Testimonial,
   TestimonialParameters,
   TestimonialVariants,
-} from '@uniformdev/csk-components/components/canvas';
+} from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
 import { ContainerArgTypes } from '@/argTypes';
 import { getTestimonialDefaultContent } from '@/canvasMock/components/testimonial';
-import { createFakeCompositionData, fakeContext } from '@/utils';
-import { ArgTypes, Meta, StoryObj } from '@storybook/react';
+import { createFakeCompositionData } from '@/utils';
+import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';
 
 const meta: Meta<typeof Testimonial> = {
   title: 'Component Starter Kit/Components/Testimonial',
@@ -39,17 +39,13 @@ const renderStory = (variant?: TestimonialVariants) => (args: TestimonialParamet
   );
   return (
     <UniformComposition
-      serverContext={fakeContext}
-      params={Promise.resolve({})}
-      searchParams={Promise.resolve({})}
-      route={route}
+      {...route}
       resolveComponent={createComponentResolver({
-        testimonial: { component: Testimonial },
-        text: { component: Text },
-        button: { component: Button },
-        image: { component: Image },
+        testimonial: Testimonial,
+        text: Text,
+        button: Button,
+        image: Image,
       })}
-      mode="server"
     />
   );
 };

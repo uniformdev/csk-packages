@@ -1,9 +1,9 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
-import { Button } from '@uniformdev/csk-components/components/canvas';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
+import { Button } from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver, { ComponentMapping } from '@uniformdev/csk-components/utils/createComponentResolver';
 import { SMILE_ASSET } from '@/assets';
-import { createFakeCompositionData, fakeContext } from '@/utils';
-import { Meta, StoryObj } from '@storybook/react';
+import { createFakeCompositionData } from '@/utils';
+import { Meta, StoryObj } from '@storybook/nextjs';
 import theme from '../../../../themeData.json';
 import { ButtonArgTypes } from '../../../argTypes';
 
@@ -18,7 +18,7 @@ export default meta;
 type Story = StoryObj<typeof Button>;
 
 const componentMapper: ComponentMapping = {
-  button: { component: Button },
+  button: Button,
 };
 
 export const Default: Story = {
@@ -38,16 +38,7 @@ export const Default: Story = {
     const route = createFakeCompositionData('button', undefined, {
       ...args,
     });
-    return (
-      <UniformComposition
-        serverContext={fakeContext}
-        params={Promise.resolve({})}
-        searchParams={Promise.resolve({})}
-        route={route}
-        resolveComponent={createComponentResolver(componentMapper)}
-        mode="server"
-      />
-    );
+    return <UniformComposition {...route} resolveComponent={createComponentResolver(componentMapper)} />;
   },
 };
 
@@ -70,15 +61,6 @@ export const WithIcon: Story = {
       ...args,
       icon: SMILE_ASSET,
     });
-    return (
-      <UniformComposition
-        serverContext={fakeContext}
-        params={Promise.resolve({})}
-        searchParams={Promise.resolve({})}
-        route={route}
-        resolveComponent={createComponentResolver(componentMapper)}
-        mode="server"
-      />
-    );
+    return <UniformComposition {...route} resolveComponent={createComponentResolver(componentMapper)} />;
   },
 };

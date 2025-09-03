@@ -1,9 +1,9 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
-import { Image, Link, LinkParameters, Text } from '@uniformdev/csk-components/components/canvas';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
+import { Image, Link, LinkParameters, Text } from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver, { ComponentMapping } from '@uniformdev/csk-components/utils/createComponentResolver';
 import { UNIFORM_LOGO_ASSET } from '@/assets';
-import { createFakeCompositionData, createUniformParameter, fakeContext } from '@/utils';
-import { ArgTypes, Meta, StoryObj } from '@storybook/react';
+import { createFakeCompositionData, createUniformParameter } from '@/utils';
+import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';
 
 const meta: Meta<typeof Link> = {
   title: 'Component Starter Kit/Components/Link',
@@ -18,9 +18,9 @@ const argTypes: Partial<ArgTypes<LinkParameters>> = {
 };
 
 const componentMapper: ComponentMapping = {
-  link: { component: Link },
-  text: { component: Text },
-  image: { component: Image },
+  link: Link,
+  text: Text,
+  image: Image,
 };
 
 export const WithImage: Story = {
@@ -50,16 +50,7 @@ export const WithImage: Story = {
         ],
       }
     );
-    return (
-      <UniformComposition
-        serverContext={fakeContext}
-        params={Promise.resolve({})}
-        searchParams={Promise.resolve({})}
-        route={route}
-        resolveComponent={createComponentResolver(componentMapper)}
-        mode="server"
-      />
-    );
+    return <UniformComposition {...route} resolveComponent={createComponentResolver(componentMapper)} />;
   },
 };
 
@@ -90,15 +81,6 @@ export const WithText: Story = {
         ],
       }
     );
-    return (
-      <UniformComposition
-        serverContext={fakeContext}
-        params={Promise.resolve({})}
-        searchParams={Promise.resolve({})}
-        route={route}
-        resolveComponent={createComponentResolver(componentMapper)}
-        mode="server"
-      />
-    );
+    return <UniformComposition {...route} resolveComponent={createComponentResolver(componentMapper)} />;
   },
 };

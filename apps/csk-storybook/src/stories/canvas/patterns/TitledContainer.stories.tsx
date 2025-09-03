@@ -1,10 +1,17 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
-import { Button, Image, Section, Text, Flex, FlexParameters } from '@uniformdev/csk-components/components/canvas';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
+import {
+  Button,
+  Image,
+  Section,
+  Text,
+  Flex,
+  FlexParameters,
+} from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
 import { ContainerArgTypes } from '@/argTypes';
 import { titledContainerContent } from '@/canvasMock/patterns/titledContainer';
-import { createFakeCompositionData, fakeContext } from '@/utils';
-import { ArgTypes, Meta, StoryObj } from '@storybook/react';
+import { createFakeCompositionData } from '@/utils';
+import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';
 
 const meta: Meta<typeof Flex> = {
   title: 'Component Starter Kit/Patterns/Titled Container',
@@ -39,18 +46,14 @@ export const Default: Story = {
     );
     return (
       <UniformComposition
-        serverContext={fakeContext}
-        params={Promise.resolve({})}
-        searchParams={Promise.resolve({})}
-        route={route}
+        {...route}
         resolveComponent={createComponentResolver({
-          section: { component: Section },
-          text: { component: Text },
-          button: { component: Button },
-          image: { component: Image },
-          flex: { component: Flex },
+          section: Section,
+          text: Text,
+          button: Button,
+          image: Image,
+          flex: Flex,
         })}
-        mode="server"
       />
     );
   },

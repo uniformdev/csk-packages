@@ -1,12 +1,11 @@
-import { AssetParamValue } from '@uniformdev/assets';
-import {
-  DemoHeroContentAlignment,
-  TextParameters,
-  FixedHeroParameters,
-} from '@uniformdev/csk-components/components/canvas';
+import { AssetParamValue, AssetParamValueItem } from '@uniformdev/assets';
+import { LinkParamValue } from '@uniformdev/canvas';
+import { DemoHeroContentAlignment, TextParameters } from '@uniformdev/csk-components/components/canvas/serverClient';
+import { ResolvedAssetFromItem } from '@uniformdev/csk-components/types/cskTypes';
+import { resolveAsset } from '@uniformdev/csk-components/utils/assets';
 import { LIGHT_IMAGE_ASSET } from '@/assets';
 
-export const getFixedHeroContent = (variant?: string): FixedHeroParameters => ({
+export const getFixedHeroContent = (variant?: string) => ({
   displayName: 'Fixed Hero',
 
   eyebrowTitleText: 'SOMETHING FOR THE DEVELOPERS',
@@ -21,9 +20,9 @@ export const getFixedHeroContent = (variant?: string): FixedHeroParameters => ({
   primaryButtonLink: {
     type: 'url',
     path: '/',
-  },
+  } as LinkParamValue,
 
-  image: LIGHT_IMAGE_ASSET.value as AssetParamValue,
+  image: resolveAsset(LIGHT_IMAGE_ASSET.value as AssetParamValue) as ResolvedAssetFromItem<AssetParamValueItem>[],
 
   contentAlignment: DemoHeroContentAlignment.Center,
   textColor: !variant ? 'text-secondary' : 'text-primary',

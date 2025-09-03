@@ -1,9 +1,9 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
-import { Card, RichText, Button, CardParameters } from '@uniformdev/csk-components/components/canvas';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
+import { Card, RichText, Button, CardParameters } from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
 import { cardContentCSK } from '@/canvasMock/patterns/card';
-import { createFakeCompositionData, fakeContext } from '@/utils';
-import { ArgTypes, Meta, StoryObj } from '@storybook/react';
+import { createFakeCompositionData } from '@/utils';
+import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';
 
 const meta: Meta<typeof Card> = {
   title: 'Component Starter Kit/Patterns/Card',
@@ -32,16 +32,12 @@ const renderStory = () => (args: CardParameters) => {
 
   return (
     <UniformComposition
-      serverContext={fakeContext}
-      params={Promise.resolve({})}
-      searchParams={Promise.resolve({})}
-      route={route}
+      {...route}
       resolveComponent={createComponentResolver({
-        card: { component: Card },
-        richText: { component: RichText },
-        button: { component: Button },
+        card: Card,
+        richText: RichText,
+        button: Button,
       })}
-      mode="server"
     />
   );
 };

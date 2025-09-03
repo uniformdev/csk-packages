@@ -1,14 +1,15 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
 import {
   DemoHero,
   FixedHeroParameters,
+  FixedHeroProps,
   DemoHeroVariants as FixedHeroVariants,
-} from '@uniformdev/csk-components/components/canvas';
+} from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
 import { ButtonArgTypes, ContainerArgTypes, TextArgTypes } from '@/argTypes';
 import { getFixedHeroContent } from '@/canvasMock/components/fixedHero';
-import { createFakeCompositionData, fakeContext } from '@/utils';
-import { ArgTypes, Meta, StoryObj } from '@storybook/react';
+import { createFakeCompositionData } from '@/utils';
+import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';
 
 type AddPrefix<T, Prefix extends string> = {
   [Key in keyof T as `${Prefix}${Capitalize<string & Key>}`]: T[Key];
@@ -53,20 +54,16 @@ const argTypes: Partial<ArgTypes<FixedHeroParameters>> = {
   height,
 };
 
-const renderStory = (variant?: FixedHeroVariants) => (args: FixedHeroParameters) => {
+const renderStory = (variant?: FixedHeroVariants) => (args: FixedHeroProps) => {
   const route = createFakeCompositionData('fixedHero', variant, {
     ...args,
   });
   return (
     <UniformComposition
-      serverContext={fakeContext}
-      params={Promise.resolve({})}
-      searchParams={Promise.resolve({})}
-      route={route}
+      {...route}
       resolveComponent={createComponentResolver({
-        fixedHero: { component: DemoHero.FixedHero },
+        fixedHero: DemoHero.FixedHero,
       })}
-      mode="server"
     />
   );
 };

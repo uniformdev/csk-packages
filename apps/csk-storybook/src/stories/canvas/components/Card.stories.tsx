@@ -1,4 +1,4 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
 import {
   Text,
   Button,
@@ -6,14 +6,13 @@ import {
   RichText,
   Card,
   CardParameters,
-  CardProps,
   CardVariants,
-} from '@uniformdev/csk-components/components/canvas';
+} from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
 import { ContainerArgTypes } from '@/argTypes';
 import { cardDefault, cardWithBackgroundImage } from '@/canvasMock/components/card';
-import { createFakeCompositionData, createUniformParameter, fakeContext } from '@/utils';
-import { ArgTypes, Meta, StoryObj } from '@storybook/react';
+import { createFakeCompositionData, createUniformParameter } from '@/utils';
+import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';
 import theme from '../../../../themeData.json';
 
 const borderKeys = theme.borders.map(border => border.borderKey);
@@ -42,28 +41,24 @@ const createStory = ({
   content,
 }: {
   variant?: CardVariants;
-  args: Partial<CardProps>;
+  args: Partial<CardParameters>;
   content: Record<string, Component[]>;
 }): Story => ({
   args,
   argTypes,
-  render: (renderArgs: CardProps) => {
+  render: renderArgs => {
     const route = createFakeCompositionData('card', variant, { ...renderArgs }, content);
 
     return (
       <UniformComposition
-        serverContext={fakeContext}
-        params={Promise.resolve({})}
-        searchParams={Promise.resolve({})}
-        route={route}
+        {...route}
         resolveComponent={createComponentResolver({
-          card: { component: Card },
-          image: { component: Image },
-          text: { component: Text },
-          button: { component: Button },
-          richText: { component: RichText },
+          card: Card,
+          image: Image,
+          text: Text,
+          button: Button,
+          richText: RichText,
         })}
-        mode="server"
       />
     );
   },

@@ -1,4 +1,4 @@
-import { TestimonialVariants } from '@uniformdev/csk-components/components/canvas';
+import { TestimonialVariants } from '@uniformdev/csk-components/components/canvas/serverClient';
 import { IMAGE_ASSET } from '@/assets';
 import { createUniformParameter } from '@/utils';
 

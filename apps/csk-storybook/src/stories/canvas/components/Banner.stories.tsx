@@ -1,14 +1,14 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
 import {
   Text,
   Banner,
   BannerParameters,
   BannerContentAlignment as ContentAlignment,
-} from '@uniformdev/csk-components/components/canvas';
+} from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
 import { ContainerArgTypes } from '@/argTypes';
-import { createFakeCompositionData, createUniformParameter, fakeContext } from '@/utils';
-import { Meta, StoryObj, ArgTypes } from '@storybook/react';
+import { createFakeCompositionData, createUniformParameter } from '@/utils';
+import { Meta, StoryObj, ArgTypes } from '@storybook/nextjs';
 
 // Define meta for the component
 const meta: Meta<typeof Banner> = {
@@ -53,15 +53,11 @@ const renderStory = () => (args: BannerParameters) => {
 
   return (
     <UniformComposition
-      serverContext={fakeContext}
-      params={Promise.resolve({})}
-      searchParams={Promise.resolve({})}
-      route={route}
+      {...route}
       resolveComponent={createComponentResolver({
-        banner: { component: Banner },
-        text: { component: Text },
+        banner: Banner,
+        text: Text,
       })}
-      mode="server"
     />
   );
 };

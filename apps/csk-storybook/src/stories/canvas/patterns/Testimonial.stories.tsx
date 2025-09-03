@@ -1,9 +1,14 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
-import { Testimonial, Image, Text, TestimonialParameters } from '@uniformdev/csk-components/components/canvas';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
+import {
+  Testimonial,
+  Image,
+  Text,
+  TestimonialParameters,
+} from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
 import { testimonialContentCSK } from '@/canvasMock/patterns/testimonial';
-import { createFakeCompositionData, fakeContext } from '@/utils';
-import { ArgTypes, Meta, StoryObj } from '@storybook/react';
+import { createFakeCompositionData } from '@/utils';
+import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';
 
 const meta: Meta<typeof Testimonial> = {
   title: 'Component Starter Kit/Patterns/Testimonial',
@@ -32,16 +37,12 @@ const renderStory = () => (args: TestimonialParameters) => {
 
   return (
     <UniformComposition
-      serverContext={fakeContext}
-      params={Promise.resolve({})}
-      searchParams={Promise.resolve({})}
-      route={route}
+      {...route}
       resolveComponent={createComponentResolver({
-        testimonial: { component: Testimonial },
-        text: { component: Text },
-        image: { component: Image },
+        testimonial: Testimonial,
+        text: Text,
+        image: Image,
       })}
-      mode="server"
     />
   );
 };

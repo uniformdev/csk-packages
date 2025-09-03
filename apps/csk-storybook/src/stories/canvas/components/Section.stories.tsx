@@ -1,4 +1,4 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
 import {
   Section,
   Text,
@@ -7,12 +7,12 @@ import {
   SectionContentAlignment as ContentAlignment,
   SectionParameters,
   SectionVariants,
-} from '@uniformdev/csk-components/components/canvas';
+} from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
 import { ContainerArgTypes } from '@/argTypes';
 import { getSectionDefaultContent } from '@/canvasMock/components/section';
-import { createFakeCompositionData, fakeContext } from '@/utils';
-import { ArgTypes, Meta, StoryObj } from '@storybook/react';
+import { createFakeCompositionData } from '@/utils';
+import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';
 
 const meta: Meta<typeof Section> = {
   title: 'Component Starter Kit/Components/Section',
@@ -41,17 +41,13 @@ const renderStory = (variant?: SectionVariants) => (args: SectionParameters) => 
   );
   return (
     <UniformComposition
-      serverContext={fakeContext}
-      params={Promise.resolve({})}
-      searchParams={Promise.resolve({})}
-      route={route}
+      {...route}
       resolveComponent={createComponentResolver({
-        section: { component: Section },
-        text: { component: Text },
-        button: { component: Button },
-        image: { component: Image },
+        section: Section,
+        text: Text,
+        button: Button,
+        image: Image,
       })}
-      mode="server"
     />
   );
 };

@@ -1,4 +1,4 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
 import {
   Flex,
   Footer,
@@ -10,12 +10,12 @@ import {
   Spacer,
   Text,
   FooterParameters,
-} from '@uniformdev/csk-components/components/canvas';
+} from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
 import { ContainerArgTypes } from '@/argTypes';
 import { footerDefault } from '@/canvasMock/components/footer';
-import { createFakeCompositionData, fakeContext } from '@/utils';
-import { ArgTypes, Meta, StoryObj } from '@storybook/react';
+import { createFakeCompositionData } from '@/utils';
+import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';
 
 const meta: Meta<typeof Footer> = {
   title: 'Component Starter Kit/Components/Footer',
@@ -59,22 +59,18 @@ export const Default: Story = {
     );
     return (
       <UniformComposition
-        serverContext={fakeContext}
-        params={Promise.resolve({})}
-        searchParams={Promise.resolve({})}
-        route={route}
+        {...route}
         resolveComponent={createComponentResolver({
-          footer: { component: Footer },
-          text: { component: Text },
-          image: { component: Image },
-          richText: { component: RichText },
-          flex: { component: Flex },
-          navigationLink: { component: NavigationLink },
-          grid: { component: Grid },
-          gridItem: { component: GridItem },
-          spacer: { component: Spacer },
+          footer: Footer,
+          text: Text,
+          image: Image,
+          richText: RichText,
+          flex: Flex,
+          navigationLink: NavigationLink,
+          grid: Grid,
+          gridItem: GridItem,
+          spacer: Spacer,
         })}
-        mode="server"
       />
     );
   },

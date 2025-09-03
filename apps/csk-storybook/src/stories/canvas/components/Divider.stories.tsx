@@ -1,8 +1,8 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
-import { Divider, DividerParameters } from '@uniformdev/csk-components/components/canvas';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
+import { Divider, DividerParameters } from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
-import { createFakeCompositionData, fakeContext } from '@/utils';
-import { ArgTypes, Meta, StoryObj } from '@storybook/react';
+import { createFakeCompositionData } from '@/utils';
+import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';
 import theme from '../../../../themeData.json';
 
 const colorKeys = theme.colors.map(color => color.colorKey);
@@ -41,14 +41,10 @@ export const Default: Story = {
     });
     return (
       <UniformComposition
-        serverContext={fakeContext}
-        params={Promise.resolve({})}
-        searchParams={Promise.resolve({})}
-        route={route}
+        {...route}
         resolveComponent={createComponentResolver({
-          divider: { component: Divider },
+          divider: Divider,
         })}
-        mode="server"
       />
     );
   },

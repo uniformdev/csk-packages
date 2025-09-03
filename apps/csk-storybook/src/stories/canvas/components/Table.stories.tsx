@@ -1,4 +1,4 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
 import {
   Badge,
   Button,
@@ -9,12 +9,12 @@ import {
   Text,
   Table,
   TableParameters,
-} from '@uniformdev/csk-components/components/canvas';
+} from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver, { ComponentMapping } from '@uniformdev/csk-components/utils/createComponentResolver';
 import { ContainerArgTypes } from '@/argTypes';
 import { tableDefault, tableWithCustomCells } from '@/canvasMock/components/table';
-import { createFakeCompositionData, fakeContext } from '@/utils';
-import { ArgTypes, Meta, StoryObj } from '@storybook/react';
+import { createFakeCompositionData } from '@/utils';
+import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';
 import theme from '../../../../themeData.json';
 
 const meta: Meta<typeof Table> = {
@@ -38,14 +38,14 @@ export default meta;
 type Story = StoryObj<typeof Table>;
 
 const componentMapper: ComponentMapping = {
-  table: { component: Table },
-  tableRow: { component: TableRow },
-  tableHeaderCell: { component: TableHeaderCell },
-  tableDataCell: { component: TableDataCell },
-  tableCustomCell: { component: TableCustomCell },
-  button: { component: Button },
-  text: { component: Text },
-  badge: { component: Badge },
+  table: Table,
+  tableRow: TableRow,
+  tableHeaderCell: TableHeaderCell,
+  tableDataCell: TableDataCell,
+  tableCustomCell: TableCustomCell,
+  button: Button,
+  text: Text,
+  badge: Badge,
 };
 
 export const Default: Story = {
@@ -66,16 +66,7 @@ export const Default: Story = {
       },
       tableDefault
     );
-    return (
-      <UniformComposition
-        serverContext={fakeContext}
-        params={Promise.resolve({})}
-        searchParams={Promise.resolve({})}
-        route={route}
-        resolveComponent={createComponentResolver(componentMapper)}
-        mode="server"
-      />
-    );
+    return <UniformComposition {...route} resolveComponent={createComponentResolver(componentMapper)} />;
   },
 };
 
@@ -96,15 +87,6 @@ export const WithCustomCells: Story = {
       },
       tableWithCustomCells
     );
-    return (
-      <UniformComposition
-        serverContext={fakeContext}
-        params={Promise.resolve({})}
-        searchParams={Promise.resolve({})}
-        route={route}
-        resolveComponent={createComponentResolver(componentMapper)}
-        mode="server"
-      />
-    );
+    return <UniformComposition {...route} resolveComponent={createComponentResolver(componentMapper)} />;
   },
 };

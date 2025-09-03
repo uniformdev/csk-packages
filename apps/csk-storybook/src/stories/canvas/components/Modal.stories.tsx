@@ -1,9 +1,16 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
-import { Button, Flex, Spacer, Text, Modal, ModalParameters } from '@uniformdev/csk-components/components/canvas';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
+import {
+  Button,
+  Flex,
+  Spacer,
+  Text,
+  Modal,
+  ModalParameters,
+} from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver, { ComponentMapping } from '@uniformdev/csk-components/utils/createComponentResolver';
 import { modalDefault, modalWithActionButtons } from '@/canvasMock/components/modal';
-import { createFakeCompositionData, fakeContext } from '@/utils';
-import { ArgTypes, Meta, StoryObj } from '@storybook/react';
+import { createFakeCompositionData } from '@/utils';
+import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';
 import theme from '../../../../themeData.json';
 
 const meta: Meta<typeof Modal> = {
@@ -24,11 +31,11 @@ export default meta;
 type Story = StoryObj<typeof Modal>;
 
 const componentMapper: ComponentMapping = {
-  modal: { component: Modal },
-  button: { component: Button },
-  text: { component: Text },
-  spacer: { component: Spacer },
-  flex: { component: Flex },
+  modal: Modal,
+  button: Button,
+  text: Text,
+  spacer: Spacer,
+  flex: Flex,
 };
 
 export const Default: Story = {
@@ -48,16 +55,7 @@ export const Default: Story = {
       },
       modalDefault
     );
-    return (
-      <UniformComposition
-        serverContext={fakeContext}
-        params={Promise.resolve({})}
-        searchParams={Promise.resolve({})}
-        route={route}
-        resolveComponent={createComponentResolver(componentMapper)}
-        mode="server"
-      />
-    );
+    return <UniformComposition {...route} resolveComponent={createComponentResolver(componentMapper)} />;
   },
 };
 
@@ -78,15 +76,6 @@ export const WithActionButtons: Story = {
       },
       modalWithActionButtons
     );
-    return (
-      <UniformComposition
-        serverContext={fakeContext}
-        params={Promise.resolve({})}
-        searchParams={Promise.resolve({})}
-        route={route}
-        resolveComponent={createComponentResolver(componentMapper)}
-        mode="server"
-      />
-    );
+    return <UniformComposition {...route} resolveComponent={createComponentResolver(componentMapper)} />;
   },
 };

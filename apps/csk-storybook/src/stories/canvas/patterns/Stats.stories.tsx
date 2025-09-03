@@ -1,9 +1,9 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
-import { Flex, Text, Grid, GridParameters } from '@uniformdev/csk-components/components/canvas';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
+import { Flex, Text, Grid, GridParameters } from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
 import { simpleStatsContent, gridStatsContent } from '@/canvasMock/patterns/stats';
-import { createFakeCompositionData, fakeContext } from '@/utils';
-import { ArgTypes, Meta, StoryObj } from '@storybook/react';
+import { createFakeCompositionData } from '@/utils';
+import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';
 
 const meta: Meta<typeof Grid> = {
   title: 'Component Starter Kit/Patterns/Stats',
@@ -30,16 +30,12 @@ const renderStory = (content: typeof simpleStatsContent) => (args: GridParameter
 
   return (
     <UniformComposition
-      serverContext={fakeContext}
-      params={Promise.resolve({})}
-      searchParams={Promise.resolve({})}
-      route={route}
+      {...route}
       resolveComponent={createComponentResolver({
-        grid: { component: Grid },
-        flex: { component: Flex },
-        text: { component: Text },
+        grid: Grid,
+        flex: Flex,
+        text: Text,
       })}
-      mode="server"
     />
   );
 };
