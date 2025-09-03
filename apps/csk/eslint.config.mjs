@@ -15,6 +15,7 @@ const eslintConfig = [
   ...compat.config({
     extends: ['next/core-web-vitals', 'next/typescript', 'prettier', 'plugin:@next/next/recommended'],
     plugins: ['prettier'],
+    ignorePatterns: ['next-env.d.ts'],
     rules: {
       'no-console': ['error', { allow: ['info', 'warn', 'error'] }],
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '_', varsIgnorePattern: '_' }],

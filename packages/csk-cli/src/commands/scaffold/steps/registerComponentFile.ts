@@ -62,7 +62,7 @@ export const registerComponentFile: FileHandler = {
 
       const relativePath = path.relative(process.cwd(), destinationPath);
       await fs.promises.writeFile(destinationPath, await formatWithPrettier(`${updatedData}`));
-      await runCmdCommand(`npx next lint --file ${relativePath} --fix`).catch(() =>
+      await runCmdCommand(`npx eslint ${relativePath} --fix`).catch(() =>
         progressSpinner.fail(
           'Oops, we couldn’t format your mapping file using your lint configuration. Please check it before running.'
         )

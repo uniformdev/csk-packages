@@ -58,7 +58,7 @@ export const registerCanvasComponents = async (destination: string, components: 
     await fs.promises.writeFile(canvasResolverPath, formattedContent);
 
     const relativePath = path.relative(process.cwd(), canvasResolverPath);
-    await runCmdCommand(`npx next lint --file ${relativePath} --fix`).catch(() =>
+    await runCmdCommand(`npx eslint ${relativePath} --fix`).catch(() =>
       spinner?.fail(
         'Could not format your resolver file using your lint configuration. Please check it before running.'
       )
