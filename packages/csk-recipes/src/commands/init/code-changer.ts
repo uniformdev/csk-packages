@@ -92,7 +92,7 @@ export const proceedCodeChange = async (filePath: string, recipes: Recipe[], isM
     await fs.writeFile(filePath, codeAfterCleanup);
 
     if (fileExtension !== '.json') {
-      await runCmdCommand(`npx next lint --file ${filePath} --fix`);
+      await runCmdCommand(`npx eslint ${filePath} --fix`);
     }
   }
 };

@@ -190,7 +190,7 @@ export const indexComponentFile: FileHandler = {
         destinationPath,
         await formatWithPrettier(`${inputSection}\n${typeSection}\n${componentSection}`)
       );
-      await runCmdCommand(`npx next lint --file ${relativePath} --fix`).catch(() =>
+      await runCmdCommand(`npx eslint ${relativePath} --fix`).catch(() =>
         progressSpinner.fail(
           'Oops, we couldn’t format your mapping file using your lint configuration. Please check it before running.'
         )

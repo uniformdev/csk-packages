@@ -1,6 +1,6 @@
 {
   "name": "@uniformdev/component-starter-kit",
-  "version": "6.1.24",
+  "version": "6.1.25",
   "private": true,
   "engines": {
     "yarn": "please-use-npm",
@@ -15,9 +15,9 @@
     "dev:watch": "cross-env WATCH=true run-s pull:dex apply:dex next:dev",
     "next:dev": "next dev",
     "next:build": "next build",
-    "lint": "next lint",
+    "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "lint:fix": "next lint --fix",
+    "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "init": "run-s uniform:push uniform:publish",
     "component:extract": "csk-components extract",
