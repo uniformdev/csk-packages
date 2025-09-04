@@ -4,7 +4,7 @@ import {
   ImageParameters,
   TextParameters,
   VideoParameters,
-} from '@uniformdev/csk-components/components/canvas';
+} from '@uniformdev/csk-components/components/canvas/serverClient';
 import { ArgTypes } from '@storybook/react';
 import theme from '../../themeData.json';
 

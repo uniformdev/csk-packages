@@ -1,14 +1,13 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
 import {
   Countdown,
   CountdownParameters,
-  CountdownProps,
   CountdownVariants,
   TextParameters,
-} from '@uniformdev/csk-components/components/canvas';
+} from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
-import { createFakeCompositionData, fakeContext } from '@/utils';
-import { ArgTypes, Meta, StoryObj } from '@storybook/react';
+import { createFakeCompositionData } from '@/utils';
+import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';
 import theme from '../../../../themeData.json';
 import { TextArgTypes, ContainerArgTypes } from '../../../argTypes';
 
@@ -60,7 +59,7 @@ const getStory = ({
     size,
   },
   argTypes,
-  render: (renderArgs: CountdownProps) => {
+  render: renderArgs => {
     const targetDate = {
       datetime:
         typeof renderArgs.targetDate === 'number'
@@ -73,14 +72,10 @@ const getStory = ({
     });
     return (
       <UniformComposition
-        serverContext={fakeContext}
-        params={Promise.resolve({})}
-        searchParams={Promise.resolve({})}
-        route={route}
+        {...route}
         resolveComponent={createComponentResolver({
-          countdown: { component: Countdown },
+          countdown: Countdown,
         })}
-        mode="server"
       />
     );
   },

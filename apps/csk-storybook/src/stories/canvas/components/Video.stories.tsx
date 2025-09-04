@@ -1,10 +1,10 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
-import { Video } from '@uniformdev/csk-components/components/canvas';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
+import { Video } from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
 import { VideoArgTypes } from '@/argTypes';
 import { IMAGE_ASSET } from '@/assets';
-import { createFakeCompositionData, fakeContext } from '@/utils';
-import { Meta, StoryObj } from '@storybook/react';
+import { createFakeCompositionData } from '@/utils';
+import { Meta, StoryObj } from '@storybook/nextjs';
 
 const meta: Meta<typeof Video> = {
   title: 'Component Starter Kit/Components/Video',
@@ -18,15 +18,9 @@ export const Default: Story = {
   args: {
     video: [
       {
-        _id: '',
-        type: 'video',
-        fields: {
-          url: {
-            type: 'text',
-            value: 'https://res.cloudinary.com/uniform-demos/video/upload/v1693387616/videos/pexels-cristian-rojas.mp4',
-          },
-        },
-        _source: 'custom-url',
+        url: 'https://res.cloudinary.com/uniform-demos/video/upload/v1693387616/videos/pexels-cristian-rojas.mp4',
+        file: 'https://res.cloudinary.com/uniform-demos/video/upload/v1693387616/videos/pexels-cristian-rojas.mp4',
+        id: '1',
       },
     ],
     autoPlay: false,
@@ -43,14 +37,10 @@ export const Default: Story = {
     });
     return (
       <UniformComposition
-        serverContext={fakeContext}
-        params={Promise.resolve({})}
-        searchParams={Promise.resolve({})}
-        route={route}
+        {...route}
         resolveComponent={createComponentResolver({
-          video: { component: Video },
+          video: Video,
         })}
-        mode="server"
       />
     );
   },

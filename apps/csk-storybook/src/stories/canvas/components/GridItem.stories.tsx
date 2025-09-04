@@ -1,10 +1,10 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
-import { Image, GridItem, GridItemParameters } from '@uniformdev/csk-components/components/canvas';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
+import { Image, GridItem, GridItemParameters } from '@uniformdev/csk-components/components/canvas/serverClient';
 import { Grid } from '@uniformdev/csk-components/components/ui';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
 import { IMAGE_ASSET } from '@/assets';
-import { createFakeCompositionData, createUniformParameter, fakeContext } from '@/utils';
-import { ArgTypes, Meta, StoryObj } from '@storybook/react';
+import { createFakeCompositionData, createUniformParameter } from '@/utils';
+import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';
 
 const meta: Meta<typeof GridItem> = {
   title: 'Component Starter Kit/Components/GridItem',
@@ -77,15 +77,11 @@ export const Default: Story = {
     return (
       <Grid columnsCount="12">
         <UniformComposition
-          serverContext={fakeContext}
-          params={Promise.resolve({})}
-          searchParams={Promise.resolve({})}
-          route={route}
+          {...route}
           resolveComponent={createComponentResolver({
-            gridItem: { component: GridItem },
-            image: { component: Image },
+            gridItem: GridItem,
+            image: Image,
           })}
-          mode="server"
         />
       </Grid>
     );

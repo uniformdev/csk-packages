@@ -1,8 +1,8 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
-import { Spacer, SpacerParameters, SpacerVariants } from '@uniformdev/csk-components/components/canvas';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
+import { Spacer, SpacerParameters, SpacerVariants } from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver, { ComponentMapping } from '@uniformdev/csk-components/utils/createComponentResolver';
-import { createFakeCompositionData, fakeContext } from '@/utils';
-import { ArgTypes, Meta, StoryObj } from '@storybook/react';
+import { createFakeCompositionData } from '@/utils';
+import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';
 import theme from '../../../../themeData.json';
 
 const sizeKeys = theme.dimensions.map(dimension => dimension.dimensionKey);
@@ -23,7 +23,7 @@ const argTypes: Partial<ArgTypes<SpacerParameters>> = {
 };
 
 const componentMapper: ComponentMapping = {
-  spacer: { component: Spacer },
+  spacer: Spacer,
 };
 
 export const Default: Story = {
@@ -40,14 +40,7 @@ export const Default: Story = {
         <div className="flex h-20 w-full items-center justify-center rounded bg-gray-200">
           <span>Block 1</span>
         </div>
-        <UniformComposition
-          serverContext={fakeContext}
-          params={Promise.resolve({})}
-          searchParams={Promise.resolve({})}
-          route={route}
-          resolveComponent={createComponentResolver(componentMapper)}
-          mode="server"
-        />
+        <UniformComposition {...route} resolveComponent={createComponentResolver(componentMapper)} />
         <div className="flex h-20 w-full items-center justify-center rounded bg-gray-200">
           <span>Block 2</span>
         </div>
@@ -70,14 +63,7 @@ export const Horizontal: Story = {
         <div className="flex h-20 flex-1 items-center justify-center rounded bg-gray-200">
           <span>Block 1</span>
         </div>
-        <UniformComposition
-          serverContext={fakeContext}
-          params={Promise.resolve({})}
-          searchParams={Promise.resolve({})}
-          route={route}
-          resolveComponent={createComponentResolver(componentMapper)}
-          mode="server"
-        />
+        <UniformComposition {...route} resolveComponent={createComponentResolver(componentMapper)} />
         <div className="flex h-20 flex-1 items-center justify-center rounded bg-gray-200">
           <span>Block 2</span>
         </div>

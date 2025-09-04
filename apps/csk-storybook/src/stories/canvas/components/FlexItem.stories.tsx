@@ -1,10 +1,10 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
-import { Image, FlexItem, FlexItemParameters } from '@uniformdev/csk-components/components/canvas';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
+import { Image, FlexItem, FlexItemParameters } from '@uniformdev/csk-components/components/canvas/serverClient';
 import { Flex } from '@uniformdev/csk-components/components/ui';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
 import { IMAGE_ASSET } from '@/assets';
-import { createFakeCompositionData, createUniformParameter, fakeContext } from '@/utils';
-import { ArgTypes, Meta, StoryObj } from '@storybook/react';
+import { createFakeCompositionData, createUniformParameter } from '@/utils';
+import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';
 
 const meta: Meta<typeof FlexItem> = {
   title: 'Component Starter Kit/Components/FlexItem',
@@ -54,15 +54,11 @@ export const Default: Story = {
     return (
       <Flex gap="4">
         <UniformComposition
-          serverContext={fakeContext}
-          params={Promise.resolve({})}
-          searchParams={Promise.resolve({})}
-          route={route}
+          {...route}
           resolveComponent={createComponentResolver({
-            flexItem: { component: FlexItem },
-            image: { component: Image },
+            flexItem: FlexItem,
+            image: Image,
           })}
-          mode="server"
         />
         <div className="h-[400px] w-full bg-blue-400" />
       </Flex>

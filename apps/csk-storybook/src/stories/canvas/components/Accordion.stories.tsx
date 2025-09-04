@@ -1,10 +1,15 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
-import { Text, AccordionItem, Accordion, AccordionParameters } from '@uniformdev/csk-components/components/canvas';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
+import {
+  Text,
+  AccordionItem,
+  Accordion,
+  AccordionParameters,
+} from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
 import { ContainerArgTypes } from '@/argTypes';
 import { accordionDefault } from '@/canvasMock/components/accordion';
-import { createFakeCompositionData, fakeContext } from '@/utils';
-import { ArgTypes, Meta, StoryObj } from '@storybook/react';
+import { createFakeCompositionData } from '@/utils';
+import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';
 
 const meta: Meta<typeof Accordion> = {
   title: 'Component Starter Kit/Components/Accordion',
@@ -32,18 +37,15 @@ export const Default: Story = {
       },
       accordionDefault
     );
+
     return (
       <UniformComposition
-        serverContext={fakeContext}
-        params={Promise.resolve({})}
-        searchParams={Promise.resolve({})}
-        route={route}
+        {...route}
         resolveComponent={createComponentResolver({
-          accordion: { component: Accordion },
-          accordionItem: { component: AccordionItem },
-          text: { component: Text },
+          accordion: Accordion,
+          accordionItem: AccordionItem,
+          text: Text,
         })}
-        mode="server"
       />
     );
   },

@@ -1,9 +1,9 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
-import { Breadcrumbs, BreadcrumbsParameters } from '@uniformdev/csk-components/components/canvas';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
+import { Breadcrumbs, BreadcrumbsParameters } from '@uniformdev/csk-components/components/canvas/serverOnly';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
 import { TextArgTypes } from '@/argTypes';
-import { createFakeCompositionData, fakeContext } from '@/utils';
-import { ArgTypes, Meta, StoryObj } from '@storybook/react';
+import { createFakeCompositionData } from '@/utils';
+import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';
 import theme from '../../../../themeData.json';
 
 const fontKeys = theme.fonts.map(font => font.fontKey);
@@ -40,44 +40,30 @@ export const Default: Story = {
     font: fontKeys[0],
     links: [
       {
-        fields: {
-          link: {
-            type: 'link',
-            value: {
-              path: '/',
-              type: 'projectMapNode',
-              nodeId: 'b90aa0bf-891d-4e40-9899-0d79eb1b26af',
-              projectMapId: '537d11ff-9ebe-4420-9682-36694477e2f9',
-            },
-          },
-          title: {
-            type: 'text',
-            value: 'Home',
-          },
+        link: {
+          type: 'projectMapNode',
+          path: '/',
+          nodeId: 'b90aa0bf-891d-4e40-9899-0d79eb1b26af',
+          projectMapId: '537d11ff-9ebe-4420-9682-36694477e2f9',
         },
+        title: 'Home',
       },
       {
-        fields: {
-          title: {
-            type: 'text',
-            value: 'Test',
-          },
-        },
+        title: 'Test',
       },
       {
-        fields: {
-          link: {
-            type: 'link',
-            value: {
-              path: 'http://localhost:3000',
-              type: 'url',
-            },
-          },
-          title: {
-            type: 'text',
-            value: 'Item',
-          },
+        link: {
+          type: 'url',
+          path: 'http://localhost:3000',
         },
+        title: 'Item',
+      },
+      {
+        link: {
+          type: 'url',
+          path: 'http://localhost:3000',
+        },
+        title: 'Item',
       },
     ],
   },
@@ -88,14 +74,10 @@ export const Default: Story = {
     });
     return (
       <UniformComposition
-        serverContext={fakeContext}
-        params={Promise.resolve({})}
-        searchParams={Promise.resolve({})}
-        route={route}
+        {...route}
         resolveComponent={createComponentResolver({
-          breadcrumbs: { component: Breadcrumbs },
+          breadcrumbs: Breadcrumbs,
         })}
-        mode="server"
       />
     );
   },

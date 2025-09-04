@@ -1,10 +1,12 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
-import { Tab, Text, Tabs, TabsParameters, TabsVariants } from '@uniformdev/csk-components/components/canvas';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
+import { Tab, Text } from '@uniformdev/csk-components/components/canvas/serverClient';
+import { TabsParameters, TabsVariants, Tabs } from '@uniformdev/csk-components/components/canvas/serverOnly';
 import createComponentResolver, { ComponentMapping } from '@uniformdev/csk-components/utils/createComponentResolver';
+import { compositionCache } from '@uniformdev/csk-components/utils/getSlotComponents';
 import { ContainerArgTypes } from '@/argTypes';
 import { tabsDefault } from '@/canvasMock/components/tabs';
-import { createFakeCompositionData, fakeContext } from '@/utils';
-import { ArgTypes, Meta, StoryObj } from '@storybook/react';
+import { createFakeCompositionData } from '@/utils';
+import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';
 import theme from '../../../../themeData.json';
 
 const meta: Meta<typeof Tabs> = {
@@ -25,7 +27,7 @@ const argTypes: Partial<ArgTypes<TabsParameters>> = {
   ...baseContainerArgTypes,
 };
 
-const getRouteData = (args: TabsParameters, variant = TabsVariants.Default) =>
+const getRouteData = (args: TabsParameters, variant?: TabsVariants) =>
   createFakeCompositionData(
     'tabs',
     variant,
@@ -36,9 +38,9 @@ const getRouteData = (args: TabsParameters, variant = TabsVariants.Default) =>
   );
 
 const componentMapper: ComponentMapping = {
-  tabs: { component: Tabs },
-  tab: { component: Tab },
-  text: { component: Text },
+  tabs: Tabs,
+  tab: Tab,
+  text: Text,
 };
 
 export const Default: Story = {
@@ -50,15 +52,12 @@ export const Default: Story = {
   },
   argTypes,
   render: (args: TabsParameters) => {
-    const route = getRouteData(args, TabsVariants.Default);
+    const route = getRouteData(args);
     return (
       <UniformComposition
-        serverContext={fakeContext}
-        params={Promise.resolve({})}
-        searchParams={Promise.resolve({})}
-        route={route}
+        {...route}
         resolveComponent={createComponentResolver(componentMapper)}
-        mode="server"
+        compositionCache={compositionCache}
       />
     );
   },
@@ -74,15 +73,6 @@ export const Bordered: Story = {
   argTypes,
   render: (args: TabsParameters) => {
     const route = getRouteData(args, TabsVariants.Bordered);
-    return (
-      <UniformComposition
-        serverContext={fakeContext}
-        params={Promise.resolve({})}
-        searchParams={Promise.resolve({})}
-        route={route}
-        resolveComponent={createComponentResolver(componentMapper)}
-        mode="server"
-      />
-    );
+    return <UniformComposition {...route} resolveComponent={createComponentResolver(componentMapper)} />;
   },
 };

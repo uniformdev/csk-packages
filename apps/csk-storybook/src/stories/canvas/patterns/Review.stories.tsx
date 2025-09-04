@@ -1,9 +1,9 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
-import { Image, Text, Grid, GridParameters, Review } from '@uniformdev/csk-components/components/canvas';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
+import { Image, Text, Grid, GridParameters, Review } from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
 import { reviewContentCSK } from '@/canvasMock/patterns/review';
-import { createFakeCompositionData, fakeContext } from '@/utils';
-import { ArgTypes, Meta, StoryObj } from '@storybook/react';
+import { createFakeCompositionData } from '@/utils';
+import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';
 
 const meta: Meta<typeof Grid> = {
   title: 'Component Starter Kit/Patterns/Review',
@@ -30,16 +30,12 @@ const renderStory = (content: typeof reviewContentCSK) => (args: GridParameters)
 
   return (
     <UniformComposition
-      serverContext={fakeContext}
-      params={Promise.resolve({})}
-      searchParams={Promise.resolve({})}
-      route={route}
+      {...route}
       resolveComponent={createComponentResolver({
-        image: { component: Image },
-        text: { component: Text },
-        review: { component: Review },
+        image: Image,
+        text: Text,
+        review: Review,
       })}
-      mode="server"
     />
   );
 };

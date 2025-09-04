@@ -1,4 +1,4 @@
-import type { Preview } from '@storybook/react';
+import type { Preview } from '@storybook/nextjs';
 import '../src/styles/globals.css';
 import '../src/styles/colors.css';
 import '../src/styles/dimensions.css';

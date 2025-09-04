@@ -1,15 +1,15 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
 import {
   Table,
   TableParameters,
   TableRow,
   TableHeaderCell,
   TableDataCell,
-} from '@uniformdev/csk-components/components/canvas';
+} from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
 import { tableContentCSK } from '@/canvasMock/patterns/table';
-import { createFakeCompositionData, fakeContext } from '@/utils';
-import { ArgTypes, Meta, StoryObj } from '@storybook/react';
+import { createFakeCompositionData } from '@/utils';
+import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';
 
 const meta: Meta<typeof Table> = {
   title: 'Component Starter Kit/Patterns/Table',
@@ -37,17 +37,13 @@ const renderStory = () => (args: TableParameters) => {
 
   return (
     <UniformComposition
-      serverContext={fakeContext}
-      params={Promise.resolve({})}
-      searchParams={Promise.resolve({})}
-      route={route}
+      {...route}
       resolveComponent={createComponentResolver({
-        table: { component: Table },
-        tableRow: { component: TableRow },
-        tableHeaderCell: { component: TableHeaderCell },
-        tableDataCell: { component: TableDataCell },
+        table: Table,
+        tableRow: TableRow,
+        tableHeaderCell: TableHeaderCell,
+        tableDataCell: TableDataCell,
       })}
-      mode="server"
     />
   );
 };

@@ -1,9 +1,13 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
-import { Text, AccordionItem, AccordionItemParameters } from '@uniformdev/csk-components/components/canvas';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
+import {
+  Text,
+  AccordionItem,
+  AccordionItemParameters,
+} from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
 import { TextArgTypes } from '@/argTypes';
-import { createFakeCompositionData, createUniformParameter, fakeContext } from '@/utils';
-import { ArgTypes, Meta, StoryObj } from '@storybook/react';
+import { createFakeCompositionData, createUniformParameter } from '@/utils';
+import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';
 
 const meta: Meta<typeof AccordionItem> = {
   title: 'Component Starter Kit/Components/AccordionItem',
@@ -59,15 +63,11 @@ export const Default: Story = {
     );
     return (
       <UniformComposition
-        serverContext={fakeContext}
-        params={Promise.resolve({})}
-        searchParams={Promise.resolve({})}
-        route={route}
+        {...route}
         resolveComponent={createComponentResolver({
-          accordionItem: { component: AccordionItem },
-          text: { component: Text },
+          accordionItem: AccordionItem,
+          text: Text,
         })}
-        mode="server"
       />
     );
   },

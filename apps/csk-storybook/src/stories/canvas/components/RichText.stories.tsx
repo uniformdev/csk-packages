@@ -1,9 +1,9 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
-import { RichText, RichTextParameters } from '@uniformdev/csk-components/components/canvas';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
+import { RichText, RichTextParameters } from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
 import { richTextDefault } from '@/canvasMock/components/richText';
-import { createFakeCompositionData, fakeContext } from '@/utils';
-import { ArgTypes, Meta, StoryObj } from '@storybook/react';
+import { createFakeCompositionData } from '@/utils';
+import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';
 import theme from '../../../../themeData.json';
 
 const colorKeys = theme.colors.map(color => color.colorKey);
@@ -40,14 +40,10 @@ export const Default: Story = {
     });
     return (
       <UniformComposition
-        serverContext={fakeContext}
-        params={Promise.resolve({})}
-        searchParams={Promise.resolve({})}
-        route={route}
+        {...route}
         resolveComponent={createComponentResolver({
-          richText: { component: RichText },
+          richText: RichText,
         })}
-        mode="server"
       />
     );
   },

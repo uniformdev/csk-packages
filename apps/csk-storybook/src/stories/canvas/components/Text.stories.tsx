@@ -1,9 +1,9 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
-import { Text, TextParameters } from '@uniformdev/csk-components/components/canvas';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
+import { Text, TextParameters } from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
 import { TextArgTypes } from '@/argTypes';
-import { createFakeCompositionData, fakeContext } from '@/utils';
-import { ArgTypes, Meta, StoryObj } from '@storybook/react';
+import { createFakeCompositionData } from '@/utils';
+import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';
 import theme from '../../../../themeData.json';
 
 const fontKeys = theme.fonts.map(font => font.fontKey);
@@ -34,14 +34,10 @@ export const Default: Story = {
     });
     return (
       <UniformComposition
-        serverContext={fakeContext}
-        params={Promise.resolve({})}
-        searchParams={Promise.resolve({})}
-        route={route}
+        {...route}
         resolveComponent={createComponentResolver({
-          text: { component: Text },
+          text: Text,
         })}
-        mode="server"
       />
     );
   },

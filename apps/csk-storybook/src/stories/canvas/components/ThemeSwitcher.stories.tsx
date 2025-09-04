@@ -1,9 +1,9 @@
 import { ThemeProvider as NextThemeProvider } from 'next-themes';
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
-import { ThemeSwitcher, ThemeSwitcherParameters } from '@uniformdev/csk-components/components/canvas';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
+import { ThemeSwitcher, ThemeSwitcherParameters } from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
-import { createFakeCompositionData, fakeContext } from '@/utils';
-import { ArgTypes, Meta, StoryObj } from '@storybook/react';
+import { createFakeCompositionData } from '@/utils';
+import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';
 import theme from '../../../../themeData.json';
 
 const meta: Meta<typeof ThemeSwitcher> = {
@@ -35,14 +35,10 @@ export const Default: Story = {
     return (
       <NextThemeProvider attribute="class" defaultTheme="light" enableSystem>
         <UniformComposition
-          serverContext={fakeContext}
-          params={Promise.resolve({})}
-          searchParams={Promise.resolve({})}
-          route={route}
+          {...route}
           resolveComponent={createComponentResolver({
-            themeSwitcher: { component: ThemeSwitcher },
+            themeSwitcher: ThemeSwitcher,
           })}
-          mode="server"
         />
       </NextThemeProvider>
     );

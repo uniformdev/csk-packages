@@ -1,5 +1,5 @@
 import { ComponentInstance } from '@uniformdev/canvas';
-import { UniformComposition } from '@uniformdev/canvas-next-rsc';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
 import {
   Text,
   NavigationFlyout,
@@ -10,11 +10,11 @@ import {
   Image,
   Header,
   HeaderParameters,
-} from '@uniformdev/csk-components/components/canvas';
+} from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
 import { headerDefault, headerWithFlyout, headerWithGroups, headerWithLinks } from '@/canvasMock/components/header';
-import { createFakeCompositionData, fakeContext } from '@/utils';
-import { ArgTypes, Meta, StoryObj } from '@storybook/react';
+import { createFakeCompositionData } from '@/utils';
+import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';
 import theme from '../../../../themeData.json';
 
 const colorKeys = theme.colors.map(color => color.colorKey);
@@ -58,21 +58,17 @@ const renderStory = (content: Record<string, ComponentInstance[]>) => (args: Hea
 
   return (
     <UniformComposition
-      serverContext={fakeContext}
-      params={Promise.resolve({})}
-      searchParams={Promise.resolve({})}
-      route={route}
+      {...route}
       resolveComponent={createComponentResolver({
-        header: { component: Header },
-        text: { component: Text },
-        button: { component: Button },
-        navigationFlyout: { component: NavigationFlyout },
-        navigationGroup: { component: NavigationGroup },
-        navigationLink: { component: NavigationLink },
-        card: { component: Card },
-        image: { component: Image },
+        header: Header,
+        text: Text,
+        button: Button,
+        navigationFlyout: NavigationFlyout,
+        navigationGroup: NavigationGroup,
+        navigationLink: NavigationLink,
+        card: Card,
+        image: Image,
       })}
-      mode="server"
     />
   );
 };
