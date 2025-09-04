@@ -192,6 +192,7 @@ export const headerWithFlyout = createCommonContent([
       navigationFlyoutLeftContent: [
         {
           type: 'navigationLink',
+          _id: 'link-1',
           parameters: createUniformParameter({
             size: 'base',
             link: { type: 'url', path: '/' },
@@ -202,6 +203,7 @@ export const headerWithFlyout = createCommonContent([
         },
         {
           type: 'navigationLink',
+          _id: 'link-2',
           parameters: createUniformParameter({
             size: 'base',
             link: { type: 'url', path: '/' },
@@ -215,6 +217,7 @@ export const headerWithFlyout = createCommonContent([
         {
           type: 'card',
           variant: 'backgroundImage',
+          _id: 'card-1',
           parameters: createUniformParameter({
             spacing: {
               paddingTop: 'container-small',

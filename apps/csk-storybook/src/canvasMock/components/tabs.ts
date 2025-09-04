@@ -11,6 +11,7 @@ export const tabsDefault = {
       tabContent: [
         {
           type: 'text',
+          _id: `text-${index}`,
           parameters: createUniformParameter({
             tag: 'p',
             size: '2xl',
