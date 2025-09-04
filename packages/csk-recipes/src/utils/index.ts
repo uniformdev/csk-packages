@@ -6,7 +6,7 @@ import { confirm, password } from '@inquirer/prompts';
 import { ENV_VARIABLES_DEFAULT_VALUES } from '../constants';
 
 export const runStartDevInteractive = () => {
-  const child = spawn('npm', ['run', 'dev'], {
+  const child = spawn('npm run dev', {
     stdio: 'inherit',
     shell: true,
   });
@@ -89,9 +89,7 @@ export const runCmdCommand = async (command: string): Promise<string> =>
 
 export const spawnCmdCommand = async (command: string): Promise<string> =>
   new Promise((resolve, reject) => {
-    const [cmd = '', ...args] = command.split(' ');
-
-    const process = spawn(cmd, args, { shell: true });
+    const process = spawn(command, { shell: true });
 
     let output = '';
     let errorOutput = '';
