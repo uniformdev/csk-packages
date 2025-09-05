@@ -379,6 +379,15 @@ export const alignWithExternalBranch = async (branchName: string): Promise<void>
   await spawnCmdCommand(GIT_COMMANDS.ALIGN_WITH_EXTERNAL_BRANCH(branchName));
 
   const appPath = fsSync.existsSync(newPath) ? newPath : oldPath;
+
+  // Remove files that are not needed before copying the new app
+  ['content', 'node_modules', '.next'].forEach(file => {
+    const filePath = path.join(process.cwd(), file);
+    if (fsSync.existsSync(filePath)) {
+      fsSync.rmSync(filePath, { recursive: true, force: true });
+    }
+  });
+
   copyDirectory(appPath, process.cwd());
 
   fsSync.rmSync(pathToClonedRepo, { recursive: true, force: true });
