@@ -5,4 +5,8 @@ module.exports = {
     personalization: 'hybrid',
   },
   playgroundPath: '/playground',
+  experimental: {
+    middlewareRuntimeCache: true,
+    quirkSerialization: true,
+  },
 };
