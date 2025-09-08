@@ -18,7 +18,7 @@ const isLocaleInPath = (path: string): boolean => {
  * @param {string} [locale] - The locale to prepend to the path (e.g. "en" or "fr").
  * @returns {string} The formatted path, ensuring it starts with the locale (e.g. "/en/about").
  */
-export const formatPath = (path: string, locale?: string): string => {
+export const formatPath = (path: string, locale?: string | null): string => {
   if (!locale) return path;
 
   if (isLocaleInPath(path)) return path;

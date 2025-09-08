@@ -1,13 +1,24 @@
 import { notFound } from 'next/navigation';
 import { CANVAS_EDITOR_STATE } from '@uniformdev/canvas';
-import { resolveRouteFromCode, UniformComposition, UniformPageParameters } from '@uniformdev/canvas-next-rsc-v2';
+import {
+  createUniformStaticParams,
+  resolveRouteFromCode,
+  UniformComposition,
+  UniformPageParameters,
+} from '@uniformdev/canvas-next-rsc-v2';
 import { emptyPlaceholderResolver } from '@uniformdev/csk-components/components/canvas/emptyPlaceholders';
 import { compositionCache } from '@uniformdev/csk-components/utils/getSlotComponents';
 import { DesignExtensionsProvider } from '@uniformdev/design-extensions-tools/components/providers/server';
 import { componentResolver } from '@/components';
+import getAllStaticGeneratedPages from '@/utils/getAllStaticGeneratedPages';
+
+const AVOID_PATHS = ['/templates'];
 
 export const generateStaticParams = async () => {
-  return [];
+  const paths = await getAllStaticGeneratedPages();
+  return createUniformStaticParams({
+    paths: paths.filter(path => !AVOID_PATHS.includes(path)),
+  });
 };
 
 export default async function UniformPage(props: UniformPageParameters) {
