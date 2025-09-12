@@ -40,7 +40,6 @@ parameters:
           value: end
         - key: Between
           value: between
-      defaultValue: {}
       withViewPort: true
   - id: gap
     name: Gap
@@ -62,7 +61,6 @@ parameters:
           value: '32'
       maxValue: 10
       minValue: 0
-      defaultValue: {}
       withViewPort: true
   - id: alignItems
     name: Align Items
@@ -77,10 +75,6 @@ parameters:
           value: end
         - key: Stretch
           value: stretch
-      defaultValue:
-        mobile: {}
-        tablet: {}
-        desktop: {}
       withViewPort: true
   - id: wrap
     name: Wrap
@@ -111,10 +105,6 @@ parameters:
     type: dex-space-control-parameter
     typeConfig:
       type: dimensions
-      defaultValue:
-        mobile: {}
-        tablet: {}
-        desktop: {}
       withViewPort: true
       selectedGroup: container
   - id: border
@@ -151,4 +141,4 @@ slots:
 titleParameter: displayName
 canBeComposition: false
 created: '2025-01-29T10:47:01.687973+00:00'
-updated: '2025-08-15T11:27:35.716906+00:00'
+updated: '2025-09-12T10:09:15.734781+00:00'

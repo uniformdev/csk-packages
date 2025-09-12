@@ -29,10 +29,6 @@ parameters:
     type: dex-space-control-parameter
     typeConfig:
       type: dimensions
-      defaultValue:
-        mobile: {}
-        tablet: {}
-        desktop: {}
       withViewPort: true
       selectedGroup: container
   - id: border
@@ -95,8 +91,8 @@ slots:
     patternsInAllowedComponents: false
 titleParameter: displayName
 canBeComposition: false
-created: '2025-06-26T12:10:51.462384+00:00'
-updated: '2025-07-04T13:55:29.008225+00:00'
+created: '2025-01-29T10:47:04.285267+00:00'
+updated: '2025-09-12T10:09:14.599275+00:00'
 variants:
   - id: withLargeAvatar
     name: With Large Avatar
