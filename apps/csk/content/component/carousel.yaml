@@ -52,7 +52,6 @@ parameters:
           value: '32'
       maxValue: 10
       minValue: 0
-      defaultValue: {}
       withViewPort: true
   - id: backgroundColor
     name: Background Color
@@ -63,10 +62,6 @@ parameters:
     type: dex-space-control-parameter
     typeConfig:
       type: dimensions
-      defaultValue:
-        mobile: {}
-        tablet: {}
-        desktop: {}
       withViewPort: true
       selectedGroup: container
   - id: border
@@ -102,8 +97,8 @@ slots:
     patternsInAllowedComponents: false
 titleParameter: displayName
 canBeComposition: false
-created: '2025-06-26T12:10:48.639968+00:00'
-updated: '2025-07-04T13:55:28.591094+00:00'
+created: '2025-01-29T10:47:01.262734+00:00'
+updated: '2025-09-12T10:09:13.946853+00:00'
 variants:
   - id: brochure
     name: Brochure
