@@ -7,14 +7,6 @@ export const reviewContentCSK = {
       type: 'number',
       value: 5,
     },
-    spacing: {
-      type: 'dex-space-control-parameter',
-      value: {
-        mobile: {},
-        tablet: {},
-        desktop: {},
-      },
-    },
     starsColor: {
       type: 'dex-color-palette-parameter',
       value: 'general-color-6',

@@ -206,34 +206,22 @@ composition:
                           mobile: '2'
                           tablet: '2'
                           desktop: '2'
-                      spacing:
-                        type: dex-space-control-parameter
-                        value: {}
                       direction:
                         type: dex-segmented-control-parameter
                         value:
                           mobile: col
                           tablet: col
                           desktop: col
-                      alignItems:
-                        type: dex-segmented-control-parameter
-                        value: {}
                       displayName:
                         type: text
                         value: Links
                       fluidContent:
                         type: checkbox
                         value: true
-                      justifyContent:
-                        type: dex-segmented-control-parameter
-                        value: {}
               parameters:
                 shrink:
                   type: dex-segmented-control-parameter
                   value: '0'
-                alignSelf:
-                  type: dex-segmented-control-parameter
-                  value: {}
                 displayName:
                   type: text
                   value: Resources
@@ -434,18 +422,12 @@ composition:
                     mobile: '4'
                     tablet: '4'
                     desktop: '8'
-                spacing:
-                  type: dex-space-control-parameter
-                  value: {}
                 direction:
                   type: dex-segmented-control-parameter
                   value:
                     mobile: row
                     tablet: row
                     desktop: row
-                alignItems:
-                  type: dex-segmented-control-parameter
-                  value: {}
                 displayName:
                   type: text
                   value: Icons
@@ -463,18 +445,12 @@ composition:
               mobile: '16'
               tablet: '16'
               desktop: '32'
-          spacing:
-            type: dex-space-control-parameter
-            value: {}
           direction:
             type: dex-segmented-control-parameter
             value:
               mobile: row
               tablet: row
               desktop: row
-          alignItems:
-            type: dex-segmented-control-parameter
-            value: {}
           displayName:
             type: text
             value: Content
@@ -673,5 +649,5 @@ composition:
           type: text
           value: Storybook
 created: '2025-01-29T11:28:36.555318+00:00'
-modified: '2025-02-18T12:09:14.623783+00:00'
+modified: '2025-09-15T21:00:35.776219+00:00'
 pattern: true

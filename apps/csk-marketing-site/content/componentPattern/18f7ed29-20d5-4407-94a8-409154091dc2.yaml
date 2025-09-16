@@ -51,9 +51,6 @@ composition:
                 tag:
                   type: dex-segmented-control-parameter
                   value: span
-                size:
-                  type: dex-segmented-control-parameter
-                  value: {}
                 text:
                   type: text
                   value: HELLO AND WELCOME! THIS IS
@@ -102,9 +99,6 @@ composition:
                   type: dex-color-palette-parameter
                   value: text-secondary
         parameters:
-          imageFill:
-            type: checkbox
-            value: true
           image:
             type: asset
             value:
@@ -129,6 +123,9 @@ composition:
               paddingLeft: container-small
               paddingRight: container-small
               paddingBottom: container-small
+          imageFill:
+            type: checkbox
+            value: true
           displayName:
             type: text
             value: Flexible Hero
@@ -167,7 +164,7 @@ composition:
     parameters:
       link: 'yes'
     hideLockedParameters: true
-created: '2025-03-03T09:52:28.068199+00:00'
-modified: '2025-03-03T09:52:28.068199+00:00'
+created: '2025-09-15T21:04:40.728296+00:00'
+modified: '2025-09-15T21:04:40.728296+00:00'
 pattern: true
 categoryId: f22b05f0-c4bf-4158-8ebc-4856e4d453af

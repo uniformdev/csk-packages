@@ -4,11 +4,6 @@ export const tableContentCSK = {
   type: 'table',
   parameters: createUniformParameter({
     size: 'table-small',
-    spacing: {
-      mobile: {},
-      tablet: {},
-      desktop: {},
-    },
     displayName: 'Table Default',
   }),
   slots: {

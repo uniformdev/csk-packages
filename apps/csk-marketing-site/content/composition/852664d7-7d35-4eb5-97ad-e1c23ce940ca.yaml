@@ -881,12 +881,6 @@ composition:
                             displayName: 'yes'
                           hideLockedParameters: true
                   parameters:
-                    spacing:
-                      type: dex-space-control-parameter
-                      value:
-                        mobile: {}
-                        tablet: {}
-                        desktop: {}
                     displayName:
                       type: text
                       value: Something for the developers
@@ -1189,12 +1183,6 @@ composition:
                             displayName: 'yes'
                           hideLockedParameters: true
                   parameters:
-                    spacing:
-                      type: dex-space-control-parameter
-                      value:
-                        mobile: {}
-                        tablet: {}
-                        desktop: {}
                     displayName:
                       type: text
                       value: Unleash your content. Unchain from the backlog.
@@ -2001,9 +1989,6 @@ composition:
                               mobile: '4'
                               tablet: '4'
                               desktop: '8'
-                          spacing:
-                            type: dex-space-control-parameter
-                            value: {}
                           direction:
                             type: dex-segmented-control-parameter
                             value:
@@ -2081,17 +2066,9 @@ composition:
                       type: dex-segmented-control-parameter
                       value: contain
             parameters:
-              gapX:
-                type: dex-slider-control-parameter
-                value: {}
-              gapY:
-                type: dex-slider-control-parameter
-                value: {}
               spacing:
                 type: dex-space-control-parameter
                 value:
-                  mobile: {}
-                  tablet: {}
                   desktop:
                     marginBottom: container-small
               displayName:
@@ -2254,5 +2231,5 @@ composition:
           value: Pampers
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-01-29T11:28:47.866853+00:00'
-modified: '2025-07-30T13:27:03.035931+00:00'
+modified: '2025-09-15T21:00:44.951365+00:00'
 pattern: false
