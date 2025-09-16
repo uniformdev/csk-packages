@@ -9,27 +9,18 @@ composition:
         mobile: '2'
         tablet: '8'
         desktop: '8'
-    spacing:
-      type: dex-space-control-parameter
-      value: {}
     direction:
       type: dex-segmented-control-parameter
       value:
         mobile: row
         tablet: row
         desktop: row
-    alignItems:
-      type: dex-segmented-control-parameter
-      value: {}
     displayName:
       type: text
       value: Feature item
     fluidContent:
       type: checkbox
       value: true
-    justifyContent:
-      type: dex-segmented-control-parameter
-      value: {}
   slots:
     flexItem:
       - _id: fe27259d-349e-42e6-aa3e-ef73bea56eb5
@@ -164,9 +155,6 @@ composition:
                   color: 'yes'
                 hideLockedParameters: true
         parameters:
-          alignSelf:
-            type: dex-segmented-control-parameter
-            value: {}
           displayName:
             type: text
             value: Right Content
@@ -176,7 +164,7 @@ composition:
       displayName: 'yes'
     hideLockedParameters: true
 created: '2025-01-29T11:28:34.612747+00:00'
-modified: '2025-02-24T15:04:33.56059+00:00'
+modified: '2025-09-15T21:00:33.14145+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/feature-item.jpg

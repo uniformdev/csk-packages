@@ -48,9 +48,6 @@ composition:
                             tag:
                               type: dex-segmented-control-parameter
                               value: span
-                            size:
-                              type: dex-segmented-control-parameter
-                              value: {}
                             text:
                               type: text
                               value: Block 1
@@ -94,9 +91,6 @@ composition:
                             tag:
                               type: dex-segmented-control-parameter
                               value: span
-                            size:
-                              type: dex-segmented-control-parameter
-                              value: {}
                             text:
                               type: text
                               value: Block 2
@@ -122,21 +116,12 @@ composition:
                     _overridability:
                       hideLockedParameters: true
               parameters:
-                gap:
-                  type: dex-slider-control-parameter
-                  value: {}
-                spacing:
-                  type: dex-space-control-parameter
-                  value: {}
                 direction:
                   type: dex-segmented-control-parameter
                   value:
                     mobile: row
                     tablet: row
                     desktop: row
-                alignItems:
-                  type: dex-segmented-control-parameter
-                  value: {}
                 justifyContent:
                   type: dex-segmented-control-parameter
                   value:
@@ -144,9 +129,6 @@ composition:
               _overridability:
                 hideLockedParameters: true
         parameters:
-          spacing:
-            type: dex-space-control-parameter
-            value: {}
           displayName:
             type: text
             value: Spacer Horizontal
@@ -160,7 +142,7 @@ composition:
       link: 'yes'
       enableComponentPreview: 'yes'
     hideLockedParameters: true
-created: '2025-03-03T09:52:28.281371+00:00'
-modified: '2025-03-03T09:52:28.281371+00:00'
+created: '2025-09-15T21:04:40.675035+00:00'
+modified: '2025-09-15T21:04:40.675035+00:00'
 pattern: true
 categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

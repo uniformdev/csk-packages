@@ -43,17 +43,9 @@ export const simpleStatsContent = {
         type: 'flex',
         _pattern: '7b0d3fc3-d88f-4259-9650-de58fa6aeca7',
         parameters: {
-          gap: {
-            type: 'tp2-slider-control-parameter',
-            value: {},
-          },
           border: {
             type: 'tp2-token-selector-parameter',
             value: '',
-          },
-          spacing: {
-            type: 'tp2-space-control-parameter',
-            value: {},
           },
           direction: {
             type: 'tp2-segmented-control-parameter',
@@ -74,10 +66,6 @@ export const simpleStatsContent = {
           fluidContent: {
             type: 'checkbox',
             value: true,
-          },
-          justifyContent: {
-            type: 'tp2-segmented-control-parameter',
-            value: {},
           },
         },
         slots: {
@@ -137,17 +125,9 @@ export const simpleStatsContent = {
         type: 'flex',
         _pattern: '7b0d3fc3-d88f-4259-9650-de58fa6aeca7',
         parameters: {
-          gap: {
-            type: 'tp2-slider-control-parameter',
-            value: {},
-          },
           border: {
             type: 'tp2-token-selector-parameter',
             value: '',
-          },
-          spacing: {
-            type: 'tp2-space-control-parameter',
-            value: {},
           },
           direction: {
             type: 'tp2-segmented-control-parameter',
@@ -168,10 +148,6 @@ export const simpleStatsContent = {
           fluidContent: {
             type: 'checkbox',
             value: true,
-          },
-          justifyContent: {
-            type: 'tp2-segmented-control-parameter',
-            value: {},
           },
         },
         slots: {
@@ -231,17 +207,9 @@ export const simpleStatsContent = {
         type: 'flex',
         _pattern: '7b0d3fc3-d88f-4259-9650-de58fa6aeca7',
         parameters: {
-          gap: {
-            type: 'tp2-slider-control-parameter',
-            value: {},
-          },
           border: {
             type: 'tp2-token-selector-parameter',
             value: '',
-          },
-          spacing: {
-            type: 'tp2-space-control-parameter',
-            value: {},
           },
           direction: {
             type: 'tp2-segmented-control-parameter',
@@ -262,10 +230,6 @@ export const simpleStatsContent = {
           fluidContent: {
             type: 'checkbox',
             value: true,
-          },
-          justifyContent: {
-            type: 'tp2-segmented-control-parameter',
-            value: {},
           },
         },
         slots: {
@@ -384,10 +348,6 @@ export const gridStatsContent = {
         type: 'flex',
         _pattern: '7b0d3fc3-d88f-4259-9650-de58fa6aeca7',
         parameters: {
-          gap: {
-            type: 'tp2-slider-control-parameter',
-            value: {},
-          },
           border: {
             type: 'tp2-token-selector-parameter',
             value: '',
@@ -420,10 +380,6 @@ export const gridStatsContent = {
           fluidContent: {
             type: 'checkbox',
             value: true,
-          },
-          justifyContent: {
-            type: 'tp2-segmented-control-parameter',
-            value: {},
           },
           backgroundColor: {
             type: 'tp2-color-palette-parameter',
@@ -495,10 +451,6 @@ export const gridStatsContent = {
         type: 'flex',
         _pattern: '7b0d3fc3-d88f-4259-9650-de58fa6aeca7',
         parameters: {
-          gap: {
-            type: 'tp2-slider-control-parameter',
-            value: {},
-          },
           border: {
             type: 'tp2-token-selector-parameter',
             value: '',
@@ -531,10 +483,6 @@ export const gridStatsContent = {
           fluidContent: {
             type: 'checkbox',
             value: true,
-          },
-          justifyContent: {
-            type: 'tp2-segmented-control-parameter',
-            value: {},
           },
           backgroundColor: {
             type: 'tp2-color-palette-parameter',
@@ -606,10 +554,6 @@ export const gridStatsContent = {
         type: 'flex',
         _pattern: '7b0d3fc3-d88f-4259-9650-de58fa6aeca7',
         parameters: {
-          gap: {
-            type: 'tp2-slider-control-parameter',
-            value: {},
-          },
           border: {
             type: 'tp2-token-selector-parameter',
             value: '',
@@ -642,10 +586,6 @@ export const gridStatsContent = {
           fluidContent: {
             type: 'checkbox',
             value: true,
-          },
-          justifyContent: {
-            type: 'tp2-segmented-control-parameter',
-            value: {},
           },
           backgroundColor: {
             type: 'tp2-color-palette-parameter',
@@ -717,10 +657,6 @@ export const gridStatsContent = {
         type: 'flex',
         _pattern: '7b0d3fc3-d88f-4259-9650-de58fa6aeca7',
         parameters: {
-          gap: {
-            type: 'tp2-slider-control-parameter',
-            value: {},
-          },
           border: {
             type: 'tp2-token-selector-parameter',
             value: '',
@@ -753,10 +689,6 @@ export const gridStatsContent = {
           fluidContent: {
             type: 'checkbox',
             value: true,
-          },
-          justifyContent: {
-            type: 'tp2-segmented-control-parameter',
-            value: {},
           },
           backgroundColor: {
             type: 'tp2-color-palette-parameter',
