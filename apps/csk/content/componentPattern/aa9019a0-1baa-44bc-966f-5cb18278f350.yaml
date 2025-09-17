@@ -10,14 +10,17 @@ composition:
       type: dex-segmented-control-parameter
       value:
         mobile: lg
-        tablet: 2xl
-        desktop: 2xl
+        tablet: ''
+        desktop: ''
     text:
       type: text
       value: How much does the Component Starter Kit cost?
     color:
       type: dex-color-palette-parameter
       value: text-secondary
+    border:
+      type: dex-token-selector-parameter
+      value: border-bottom
     weight:
       type: dex-segmented-control-parameter
       value: bold
@@ -25,22 +28,6 @@ composition:
       type: dex-space-control-parameter
       value:
         mobile:
-          paddingTop: container-small
-          paddingLeft: container-small
-          marginBottom: ''
-          paddingRight: container-small
-          paddingBottom: container-small
-        tablet:
-          paddingTop: container-small
-          paddingLeft: container-small
-          marginBottom: ''
-          paddingRight: container-small
-          paddingBottom: container-small
-        desktop:
-          paddingTop: container-small
-          paddingLeft: container-small
-          marginBottom: ''
-          paddingRight: container-small
           paddingBottom: container-small
     backgroundColor:
       type: dex-color-palette-parameter
@@ -61,8 +48,8 @@ composition:
                   type: dex-segmented-control-parameter
                   value:
                     mobile: base
-                    tablet: lg
-                    desktop: xl
+                    tablet: ''
+                    desktop: ''
                 text:
                   type: text
                   value: >-
@@ -70,7 +57,7 @@ composition:
                     available for anyone to use.
                 color:
                   type: dex-color-palette-parameter
-                  value: text-primary
+                  value: text-secondary
                 weight:
                   type: dex-segmented-control-parameter
                   value: normal
@@ -84,9 +71,8 @@ composition:
           spacing:
             type: dex-space-control-parameter
             value:
-              marginTop: container-small
-              paddingTop: ''
-              paddingBottom: ''
+              mobile:
+                paddingTop: container-small
           displayName:
             type: text
             value: Content
@@ -104,7 +90,7 @@ composition:
     hideLockedParameters: true
   _locales:
     - en
-created: '2025-03-20T13:29:21.05824+00:00'
-modified: '2025-05-22T11:55:21.063016+00:00'
+created: '2025-04-22T08:46:43.586311+00:00'
+modified: '2025-09-15T15:24:21.11131+00:00'
 pattern: true
 categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

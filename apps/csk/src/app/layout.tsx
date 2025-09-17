@@ -7,6 +7,8 @@ import '@/styles/dimensions.css';
 import '@/styles/fonts.css';
 import '@/styles/borders.css';
 import { customFontVariables } from '@/fonts';
+import CoffeeShopProvider from '@/providers';
+import { UniformClientContext } from '@/utils/clientContext';
 
 export default function RootLayout({
   children,
@@ -17,10 +19,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className={customFontVariables}>
       <body>
         <NextThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          {children}
+          <CoffeeShopProvider>{children}</CoffeeShopProvider>
         </NextThemeProvider>
         <Suspense>
-          <UniformContext />
+          <UniformContext clientContextComponent={UniformClientContext} />
         </Suspense>
       </body>
     </html>

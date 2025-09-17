@@ -1,0 +1,306 @@
+composition:
+  _name: ℹ️ Context Recommendations
+  _id: 5aa09de0-3fac-4ff5-bbbc-52ca41cb4880
+  _slug: contex-recommendations
+  type: aiConfiguration
+  slots:
+    content:
+      - _id: 1c4f78da-5c3d-4a35-abab-8b0a72ea8bb3
+        type: flexibleHero
+        slots:
+          flexibleHeroContent:
+            - _id: 86865ae7-01a5-4645-a35d-86a0023ab08b
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: h2
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: xl
+                    tablet: xl
+                    desktop: xl
+                text:
+                  type: text
+                  locales:
+                    en: 👀 Look what we found for you
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: medium
+            - _id: cf208c2e-9c6f-4236-9170-46d88f96b41f
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: p
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: base
+                    tablet: base
+                    desktop: base
+                text:
+                  type: text
+                  locales:
+                    en: >-
+                      A few handy things related to your question — might come
+                      in useful!
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+        parameters:
+          $viz:
+            type: $viz
+            value:
+              criteria:
+                clauses:
+                  - op: '!empty'
+                    rule: $dt
+                    value: ''
+                    source: ${#jptr:/Get Entries by Slugs Content/entries/0/entry/_id}
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              mobile:
+                marginTop: container-small
+              tablet:
+                marginTop: container-small
+              desktop:
+                marginTop: container-small
+          displayName:
+            type: text
+            locales:
+              en: Hero
+          fluidContent:
+            type: checkbox
+            value: true
+          contentAlignment:
+            type: dex-segmented-control-parameter
+            value: left
+        _overridability:
+          hideLockedParameters: true
+      - _id: 42eb443e-d704-471e-8d84-e137cbe194fc
+        type: assistantScrollSection
+        slots:
+          content:
+            - _id: a869f34a-de26-4367-8dcb-a81d8fd9cb55
+              type: $loop
+              slots:
+                body:
+                  - _id: b62e09d6-5d79-42b4-89e2-7d72f87b61cf
+                    type: container
+                    slots:
+                      containerContent:
+                        - _id: 7045e9c2-c2d5-49bf-a9b3-859e583de688
+                          type: link
+                          slots:
+                            linkContent:
+                              - _id: a1977632-b1d2-4487-8aeb-1fc5c8f40f85
+                                type: image
+                                parameters:
+                                  image:
+                                    type: asset
+                                    value:
+                                      - _id: a87c1f69-80b0-4064-8720-08e464d511b2
+                                        type: image
+                                        fields:
+                                          url:
+                                            type: text
+                                            value: >-
+                                              ${#jptr:/Get Entries by Slugs Content
+                                              entries Loop Item/entry/_thumbnail}
+                                        _source: custom-url
+                                  width:
+                                    type: number
+                                    value: '300'
+                                  height:
+                                    type: number
+                                    value: '200'
+                                  objectFit:
+                                    type: dex-segmented-control-parameter
+                                    value: cover
+                              - _id: ffbabfc7-4d3f-4f2c-9b95-b55320a6ce88
+                                type: text
+                                parameters:
+                                  tag:
+                                    type: dex-segmented-control-parameter
+                                    value: h2
+                                  font:
+                                    type: dex-token-selector-parameter
+                                    value: primary
+                                  size:
+                                    type: dex-segmented-control-parameter
+                                    value:
+                                      mobile: xl
+                                      tablet: xl
+                                      desktop: xl
+                                  text:
+                                    type: text
+                                    locales:
+                                      en: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                  color:
+                                    type: dex-color-palette-parameter
+                                    value: text-primary
+                                  weight:
+                                    type: dex-segmented-control-parameter
+                                    value: bold
+                                  transform:
+                                    type: dex-segmented-control-parameter
+                                    value: ''
+                                _overridability:
+                                  parameters:
+                                    tag: 'yes'
+                                    text: 'yes'
+                                  hideLockedParameters: true
+                          parameters:
+                            $viz:
+                              type: $viz
+                              value:
+                                criteria:
+                                  clauses:
+                                    - op: is
+                                      rule: $dt
+                                      value: product
+                                      source: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/type}
+                            link:
+                              type: link
+                              value:
+                                path: >-
+                                  /${locale}/products/${#jptr:/Get Entries by
+                                  Slugs Content entries Loop Item/entry/_slug}
+                                type: projectMapNode
+                                nodeId: 702b0e0b-3858-4b5d-99e4-bdb98097ca0f
+                                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                                dynamicInputValues:
+                                  locale: ${locale}
+                                  product-slug: >-
+                                    ${#jptr:/Get Entries by Slugs Content
+                                    entries Loop Item/entry/_slug}
+                            displayName:
+                              type: text
+                              locales:
+                                en: Link for product
+                        - _id: 8b066cef-3d3f-4b30-b282-e8f0b407c234
+                          type: link
+                          slots:
+                            linkContent:
+                              - _id: 753d7a35-36d9-449c-9ab2-6f9db1ae4926
+                                type: image
+                                parameters:
+                                  image:
+                                    type: asset
+                                    value:
+                                      - _id: a87c1f69-80b0-4064-8720-08e464d511b2
+                                        type: image
+                                        fields:
+                                          url:
+                                            type: text
+                                            value: >-
+                                              ${#jptr:/Get Entries by Slugs Content
+                                              entries Loop Item/entry/_thumbnail}
+                                        _source: custom-url
+                                  width:
+                                    type: number
+                                    value: '300'
+                                  height:
+                                    type: number
+                                    value: '200'
+                                  objectFit:
+                                    type: dex-segmented-control-parameter
+                                    value: cover
+                              - _id: 544ba4dc-80de-4604-93ce-67ad05e024d9
+                                type: text
+                                parameters:
+                                  tag:
+                                    type: dex-segmented-control-parameter
+                                    value: h2
+                                  font:
+                                    type: dex-token-selector-parameter
+                                    value: primary
+                                  size:
+                                    type: dex-segmented-control-parameter
+                                    value:
+                                      mobile: xl
+                                      tablet: xl
+                                      desktop: xl
+                                  text:
+                                    type: text
+                                    locales:
+                                      en: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                  color:
+                                    type: dex-color-palette-parameter
+                                    value: text-primary
+                                  weight:
+                                    type: dex-segmented-control-parameter
+                                    value: bold
+                                  transform:
+                                    type: dex-segmented-control-parameter
+                                    value: ''
+                                _overridability:
+                                  parameters:
+                                    tag: 'yes'
+                                    text: 'yes'
+                                  hideLockedParameters: true
+                          parameters:
+                            $viz:
+                              type: $viz
+                              value:
+                                criteria:
+                                  clauses:
+                                    - op: is
+                                      rule: $dt
+                                      value: article
+                                      source: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/type}
+                            link:
+                              type: link
+                              value:
+                                path: >-
+                                  /${locale}/articles/${#jptr:/Get Entries by
+                                  Slugs Content entries Loop Item/entry/_slug}
+                                type: projectMapNode
+                                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                                dynamicInputValues:
+                                  locale: ${locale}
+                                  article-slug: >-
+                                    ${#jptr:/Get Entries by Slugs Content
+                                    entries Loop Item/entry/_slug}
+                            displayName:
+                              type: text
+                              locales:
+                                en: Link for article
+                    parameters:
+                      displayName:
+                        type: text
+                        locales:
+                          en: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+              _dataResources:
+                Get Entries by Slugs Content entries Loop Item:
+                  type: sys-reserved-loop
+                  variables:
+                    connectedData: '#jptr:/Get Entries by Slugs Content/entries:fa=c'
+  _dataResources:
+    Get Entries by Slugs Content:
+      type: getEntriesBySlugs
+      variables:
+        Slugs: ${slugs}
+        Locale: ${locale}
+  _locales:
+    - en
+created: '2025-05-06T09:51:14.967555+00:00'
+modified: '2025-05-07T09:29:36.419885+00:00'
+pattern: false
