@@ -26,6 +26,7 @@ export const EXTRACT_CANVAS_COMPONENTS = [
   'Flex',
   'FlexItem',
   'Footer',
+  'SimpleFooter',
   'Grid',
   'GridItem',
   'Header',
@@ -141,4 +142,5 @@ export enum cskComponentsNames {
   FlexibleHero = 'flexibleHero',
   Breadcrumbs = 'breadcrumbs',
   Footer = 'footer',
+  SimpleFooter = 'simpleFooter',
 }

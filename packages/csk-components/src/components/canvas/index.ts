@@ -30,6 +30,7 @@ import Page from './Page';
 import Review from './Review';
 import RichText from './RichText';
 import Section from './Section';
+import SimpleFooter from './SimpleFooter';
 import SimpleHeader from './SimpleHeader';
 import Spacer from './Spacer';
 import Tab from './Tab';
@@ -85,6 +86,7 @@ export const cskComponentsMapping: ComponentMapping = {
   [cskComponentsNames.NavigationGroup]: NavigationGroup,
   [cskComponentsNames.NavigationFlyout]: NavigationFlyout,
   [cskComponentsNames.Footer]: Footer,
+  [cskComponentsNames.SimpleFooter]: SimpleFooter,
   [cskComponentsNames.ThemeSwitcher]: ThemeSwitcher,
   [cskComponentsNames.Link]: Link,
   [cskComponentsNames.FixedHero]: DemoHero.FixedHero,
