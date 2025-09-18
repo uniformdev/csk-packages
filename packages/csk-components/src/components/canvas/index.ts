@@ -30,6 +30,7 @@ import Page from './Page';
 import Review from './Review';
 import RichText from './RichText';
 import Section from './Section';
+import SimpleHeader from './SimpleHeader';
 import Spacer from './Spacer';
 import Tab from './Tab';
 import Table from './Table';
@@ -59,6 +60,7 @@ export const cskComponentsMapping: ComponentMapping = {
   [cskComponentsNames.Flex]: Flex,
   [cskComponentsNames.FlexItem]: FlexItem,
   [cskComponentsNames.Header]: Header,
+  [cskComponentsNames.SimpleHeader]: SimpleHeader,
   [cskComponentsNames.Section]: Section,
   [cskComponentsNames.IconLabel]: IconLabel,
   [cskComponentsNames.Image]: Image,
