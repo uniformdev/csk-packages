@@ -1,0 +1,36 @@
+composition:
+  _name: Hero (Left Image)
+  _id: d39ed051-35dc-447d-8be0-fc0afb98e694
+  type: fixedHero
+  variant: columns
+  parameters:
+    titleTag:
+      type: dex-segmented-control-parameter
+      value: h2
+    displayName:
+      type: text
+      locales:
+        en: Hero (Left Image)
+  _overridability:
+    parameters:
+      $viz: 'yes'
+      image: 'yes'
+      height: 'no'
+      titleTag: 'yes'
+      textColor: 'no'
+      titleText: 'yes'
+      displayName: 'yes'
+      descriptionText: 'yes'
+      overlayAutoTint: 'no'
+      contentAlignment: 'no'
+      eyebrowTitleText: 'yes'
+      primaryButtonLink: 'yes'
+      primaryButtonText: 'yes'
+      primaryButtonTextColor: 'no'
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2025-09-18T16:22:47.817045+00:00'
+modified: '2025-09-18T16:23:34.094616+00:00'
+pattern: true
+categoryId: f22b05f0-c4bf-4158-8ebc-4856e4d453af

@@ -1,0 +1,62 @@
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: simpleHeader
+name: Simple Header
+icon: border-top
+parameters:
+  - id: displayName
+    name: Display Name
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: logo
+    name: Logo
+    type: asset
+    typeConfig:
+      max: 1
+      allowedTypes:
+        - image
+    localizable: true
+  - id: 98f49787-a9f3-4cae-9f28-bf87a0bba67a
+    name: Links
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - link1Title
+        - link1
+        - link2Title
+        - link2
+  - id: link1Title
+    name: Link 1 Title
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: link1
+    name: Link 1
+    type: link
+    typeConfig: null
+    localizable: true
+  - id: link2Title
+    name: Link 2 Title
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: link2
+    name: Link 2
+    type: link
+    typeConfig: null
+    localizable: true
+categoryId: b1163ce2-5ac7-4347-bc38-a42198180718
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/header-default.jpg
+useTeamPermissions: true
+slots: []
+titleParameter: displayName
+thumbnailParameter: logo
+canBeComposition: false
+created: '2025-09-18T08:14:27.148966+00:00'
+updated: '2025-09-18T09:02:53.611591+00:00'
+variants:
+  - id: sticky
+    name: Sticky
