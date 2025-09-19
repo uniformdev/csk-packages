@@ -52,41 +52,17 @@ parameters:
           allowedTypes:
             - image
     localizable: true
-  - id: content
-    name: Content
-    type: richText
-    typeConfig:
-      elements:
-        builtIn:
-          - h1
-          - h2
-          - h3
-          - h4
-          - h5
-          - h6
-          - unorderedList
-          - orderedList
-          - link
-          - quote
-          - code
-          - table
-          - asset
-          - variable
-      required: false
-      formatting:
-        builtIn:
-          - bold
-          - italic
-          - underline
-          - strikethrough
-          - code
-          - superscript
-          - subscript
-      elementsConfig:
-        asset:
-          allowedTypes:
-            - image
+  - id: footerLinkSectionTitle
+    name: Footer Link Section Title
+    type: text
+    typeConfig: null
     localizable: true
+  - id: links
+    name: Links
+    type: $block
+    typeConfig:
+      allowedTypes:
+        - navigationLink
 categoryId: b1163ce2-5ac7-4347-bc38-a42198180718
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/footer.jpg
@@ -96,4 +72,4 @@ titleParameter: displayName
 thumbnailParameter: logo
 canBeComposition: false
 created: '2025-09-18T09:08:04.504857+00:00'
-updated: '2025-09-18T10:05:54.18948+00:00'
+updated: '2025-09-19T11:26:41.921857+00:00'
