@@ -6,7 +6,8 @@ import { formatPath } from './utils/formatPath';
 
 export async function middleware(request: NextRequest) {
   if (request.nextUrl.pathname === '/playground') {
-    return uniformMiddleware()(request);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    return uniformMiddleware()(request as any);
   }
 
   const baseResponse = NextResponse.next();
@@ -16,21 +17,17 @@ export async function middleware(request: NextRequest) {
   const response = await uniformMiddleware({
     rewriteRequestPath: async ({ url }) => ({
       path: formatPath(url.pathname, locales.defaultLocale),
-      keys: {
-        search: url.toString(),
-      },
     }),
-  })(request).then(result =>
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  })(request as any).then(result =>
     result.headers.get('x-middleware-rewrite')
       ? result
       : uniformMiddleware({
           rewriteRequestPath: async ({ url }) => ({
             path: formatPath(url.pathname, undefined),
-            keys: {
-              search: url.toString(),
-            },
           }),
-        })(request)
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        })(request as any)
   );
 
   baseResponse.cookies.getAll().forEach(cookie => {
@@ -47,5 +44,3 @@ export async function middleware(request: NextRequest) {
 export const config = {
   matcher: ['/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)'],
 };
-
-export const runtime = 'nodejs';
