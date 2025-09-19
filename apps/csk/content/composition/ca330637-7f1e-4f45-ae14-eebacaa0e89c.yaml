@@ -488,30 +488,48 @@ composition:
                       value: image/svg+xml
                       type: text
                   _source: uniform-assets
-          link1:
-            type: link
-            locales:
-              en:
-                path: https://dev-csk-marketing-site.vercel.app/get-started
-                type: url
-          link2:
-            type: link
-            locales:
-              en:
-                path: https://dev-csk-marketing-site.vercel.app/components
-                type: url
-          link1Title:
-            type: text
-            locales:
-              en: Get Started
-          link2Title:
-            type: text
-            locales:
-              en: Components
+          links:
+            type: $block
+            value:
+              - _id: 4398eac8-f13c-45e4-8e7b-b33b228e690f
+                type: navigationLink
+                fields:
+                  link:
+                    type: link
+                    locales:
+                      en:
+                        path: https://dev-csk-marketing-site.vercel.app/get-started
+                        type: url
+                  title:
+                    type: text
+                    locales:
+                      en: Get Started
+              - _id: bb8f2a16-01b3-4f26-94c9-9b49035a7b6f
+                type: navigationLink
+                fields:
+                  link:
+                    type: link
+                    locales:
+                      en:
+                        path: https://dev-csk-marketing-site.vercel.app/components
+                        type: url
+                  title:
+                    type: text
+                    locales:
+                      en: Components
+          textColor:
+            type: dex-color-palette-parameter
+            value: text-secondary
           displayName:
             type: text
             locales:
               en: Simple Header
+          hoverTextColor:
+            type: dex-color-palette-parameter
+            value: text-primary
+          backgroundColor:
+            type: dex-color-palette-parameter
+            value: general-color-3
     pageContent:
       - _id: 55538a5e-dd61-415a-91b3-f918d3cf5f16
         type: fixedHero
@@ -557,5 +575,5 @@ composition:
   _locales:
     - en
 created: '2025-09-18T08:06:30.714914+00:00'
-modified: '2025-09-18T10:09:17.651157+00:00'
+modified: '2025-09-19T10:47:49.999971+00:00'
 pattern: false

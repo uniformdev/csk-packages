@@ -4,10 +4,13 @@ import { ComponentProps } from '@/types/cskTypes';
 export type SimpleHeaderParameters = {
   logo?: AssetParamValue;
   color?: string;
-  link1Title?: string;
-  link1Link?: LinkParamValue;
-  link2Title?: string;
-  link2Link?: LinkParamValue;
+  links?: {
+    title: string;
+    link: LinkParamValue;
+  }[];
+  backgroundColor?: string;
+  textColor?: string;
+  hoverTextColor?: string;
 };
 
 export enum SimpleHeaderVariants {

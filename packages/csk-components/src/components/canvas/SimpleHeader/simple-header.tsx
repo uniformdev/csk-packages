@@ -1,20 +1,20 @@
 import { FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { UniformText, ComponentParameter } from '@uniformdev/canvas-next-rsc-v2/component';
 import BaseHeader from '@/components/ui/Header';
 import BaseIconLabel from '@/components/ui/IconLabel';
 import { ReplaceFieldsWithAssets } from '@/types/cskTypes';
+import { cn, resolveViewPort } from '@/utils/styling';
 import { withFlattenParameters } from '@/utils/withFlattenParameters';
 import { SimpleHeaderParameters, SimpleHeaderProps, SimpleHeaderVariants } from '.';
 
 const SimpleHeader: FC<SimpleHeaderProps & ReplaceFieldsWithAssets<SimpleHeaderParameters, 'logo'>> = ({
   variant,
   logo,
-  parameters,
-  component,
-  link1Link,
-  link2Link,
+  links,
+  backgroundColor,
+  textColor,
+  hoverTextColor,
 }) => {
   return (
     <BaseHeader
@@ -26,7 +26,7 @@ const SimpleHeader: FC<SimpleHeaderProps & ReplaceFieldsWithAssets<SimpleHeaderP
           </Link>
         )
       }
-      backgroundColor="general-color-1"
+      backgroundColor={backgroundColor}
       color="general-color-1"
       spacing={{
         paddingTop: 'container-small',
@@ -34,44 +34,28 @@ const SimpleHeader: FC<SimpleHeaderProps & ReplaceFieldsWithAssets<SimpleHeaderP
       }}
       border="none"
     >
-      <Link href={link1Link?.path || ''}>
-        <BaseIconLabel
-          className="group"
-          size="base"
-          tag="span"
-          color="text-primary"
-          weight="normal"
-          font="sans"
-          letterSpacing="normal"
-          alignment="left"
-        >
-          <UniformText
-            placeholder="Text goes here"
-            parameter={parameters.link1Title as ComponentParameter<string>}
-            className="whitespace-nowrap"
-            component={component}
-          />
-        </BaseIconLabel>
-      </Link>
-      <Link href={link2Link?.path || ''}>
-        <BaseIconLabel
-          className="group"
-          size="base"
-          tag="span"
-          color="text-primary"
-          weight="normal"
-          font="sans"
-          letterSpacing="normal"
-          alignment="left"
-        >
-          <UniformText
-            placeholder="Text goes here"
-            parameter={parameters.link2Title as ComponentParameter<string>}
-            className="whitespace-nowrap"
-            component={component}
-          />
-        </BaseIconLabel>
-      </Link>
+      {links?.map(link => (
+        <Link href={link.link?.path || ''} key={link.title}>
+          <BaseIconLabel
+            className="group"
+            size="base"
+            tag="span"
+            color={textColor}
+            weight="normal"
+            font="sans"
+            letterSpacing="normal"
+            alignment="left"
+          >
+            <span
+              className={cn({
+                [resolveViewPort(hoverTextColor, 'group-hover:text-{value}')]: !!hoverTextColor,
+              })}
+            >
+              {link.title}
+            </span>
+          </BaseIconLabel>
+        </Link>
+      ))}
     </BaseHeader>
   );
 };
