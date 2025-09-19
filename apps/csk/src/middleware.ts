@@ -16,9 +16,6 @@ export async function middleware(request: NextRequest) {
   const response = await uniformMiddleware({
     rewriteRequestPath: async ({ url }) => ({
       path: formatPath(url.pathname, locales.defaultLocale),
-      keys: {
-        search: url.toString(),
-      },
     }),
   })(request).then(result =>
     result.headers.get('x-middleware-rewrite')
@@ -26,9 +23,6 @@ export async function middleware(request: NextRequest) {
       : uniformMiddleware({
           rewriteRequestPath: async ({ url }) => ({
             path: formatPath(url.pathname, undefined),
-            keys: {
-              search: url.toString(),
-            },
           }),
         })(request)
   );
@@ -47,5 +41,3 @@ export async function middleware(request: NextRequest) {
 export const config = {
   matcher: ['/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)'],
 };
-
-export const runtime = 'nodejs';
