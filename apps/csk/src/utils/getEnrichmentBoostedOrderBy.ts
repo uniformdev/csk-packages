@@ -20,6 +20,8 @@ export const filterMaxScores = (data: BoostInclusions): BoostInclusions => {
 };
 
 export const getEnrichmentBoostedOrderBy = async (boostEnrichments: string[]) => {
+  // ToDo: Fix compatibility ppr with chashing
+  return undefined;
   const cookieStore = await cookies();
 
   const scoreCookie = cookieStore.get(UNIFORM_DEFAULT_COOKIE_NAME)?.value;
