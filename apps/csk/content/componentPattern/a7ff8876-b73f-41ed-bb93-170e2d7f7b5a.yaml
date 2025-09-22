@@ -65,6 +65,39 @@ composition:
               type: text
               locales:
                 en: Components
+    favicon:
+      type: asset
+      locales:
+        en:
+          - _id: 091a49a3-0f0b-4a59-91fa-62551cac38f1
+            type: image
+            fields:
+              id:
+                type: text
+                value: 9f964074-61ec-4afb-8d5b-8cb499257744
+              url:
+                value: >-
+                  https://img.uniform.global/p/gaaGBo44T8KlqJ3IGMZtAQ/37Y2aIoiRUa72laHSUWejw-favicon.png
+                type: text
+              file:
+                type: file
+                value: f5f4db6b-da24-45ef-a53e-425af95ec08e
+              size:
+                value: 1139
+                type: number
+              title:
+                type: text
+                value: favicon.png
+              width:
+                value: 69
+                type: number
+              height:
+                value: 79
+                type: number
+              mediaType:
+                value: image/png
+                type: text
+            _source: uniform-assets
     textColor:
       type: dex-color-palette-parameter
       value: text-primary
@@ -89,5 +122,5 @@ composition:
   _locales:
     - en
 created: '2025-09-19T12:26:14.091675+00:00'
-modified: '2025-09-19T12:28:00.408526+00:00'
+modified: '2025-09-22T11:45:55.472663+00:00'
 pattern: true

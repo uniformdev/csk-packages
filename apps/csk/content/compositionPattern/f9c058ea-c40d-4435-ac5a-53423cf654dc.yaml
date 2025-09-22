@@ -3,38 +3,6 @@ composition:
   _id: f9c058ea-c40d-4435-ac5a-53423cf654dc
   type: page
   parameters:
-    favicon:
-      type: asset
-      value:
-        - _id: 7d6cba04-7695-400b-8104-31b397e9b59e
-          type: image
-          fields:
-            id:
-              type: text
-              value: 9f964074-61ec-4afb-8d5b-8cb499257744
-            url:
-              value: >-
-                https://img.uniform.global/p/gaaGBo44T8KlqJ3IGMZtAQ/37Y2aIoiRUa72laHSUWejw-favicon.png
-              type: text
-            file:
-              type: file
-              value: 8090c0e8-680e-4550-93e9-208aee8085c2
-            size:
-              value: 1139
-              type: number
-            title:
-              type: text
-              value: favicon.png
-            width:
-              value: 69
-              type: number
-            height:
-              value: 79
-              type: number
-            mediaType:
-              value: image/png
-              type: text
-          _source: uniform-assets
     pageTitle:
       type: text
       value: Page Title
@@ -69,38 +37,6 @@ composition:
             value: specific
         _overridability:
           hideLockedParameters: true
-  _overrides:
-    38f88562-6b70-411b-a550-ada8514eef22|09b1471d-7aa8-419c-85e1-ba30947775ca:
-      parameters:
-        link:
-          type: link
-          locales:
-            en:
-              path: https://unfrm.to/csk-start
-              type: url
-    38f88562-6b70-411b-a550-ada8514eef22|af0e8859-9cc9-4db7-87a6-92db71e075a4:
-      parameters:
-        link:
-          type: link
-          value:
-            path: https://unfrm.to/csk-lib
-            type: url
-    bbf196c6-4821-414c-9b14-b08fb1c7fede|1226047a-9d32-46c6-8a78-30d6e22e418a:
-      parameters:
-        link:
-          type: link
-          locales:
-            en:
-              path: https://unfrm.to/csk-docs
-              type: url
-    bbf196c6-4821-414c-9b14-b08fb1c7fede|c4586887-719a-4134-b057-87d2f8ea3ee6:
-      parameters:
-        link:
-          type: link
-          locales:
-            en:
-              path: https://unfrm.to/csk-sb
-              type: url
   _overridability:
     parameters:
       $viz: 'yes'
@@ -119,7 +55,7 @@ composition:
   _locales:
     - en
 created: '2025-09-18T08:02:07.756779+00:00'
-modified: '2025-09-19T12:27:38.528231+00:00'
+modified: '2025-09-22T11:45:31.913611+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/global-composition.png

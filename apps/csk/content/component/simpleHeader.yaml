@@ -29,9 +29,18 @@ parameters:
     typeConfig:
       collapsed: true
       childrenParams:
+        - favicon
         - backgroundColor
         - textColor
         - hoverTextColor
+  - id: favicon
+    name: Favicon
+    type: asset
+    typeConfig:
+      max: 1
+      allowedTypes:
+        - image
+    localizable: true
   - id: backgroundColor
     name: Background Color
     type: dex-color-palette-parameter
@@ -57,7 +66,7 @@ titleParameter: displayName
 thumbnailParameter: logo
 canBeComposition: false
 created: '2025-09-18T08:14:27.148966+00:00'
-updated: '2025-09-19T10:29:32.66551+00:00'
+updated: '2025-09-22T11:42:38.041329+00:00'
 variants:
   - id: sticky
     name: Sticky
