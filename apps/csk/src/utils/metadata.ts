@@ -29,8 +29,11 @@ type UniformMetadataParameters = {
   twitterDescription: string;
   twitterImage: AssetParamValue;
   twitterCard: 'summary' | 'summary_large_image' | 'app' | 'player';
+};
+type SimpleHeaderParameters = {
   favicon: AssetParamValue;
 };
+
 /**
  * Generates metadata for a page using Uniform parameters and assets.
  *
@@ -51,8 +54,11 @@ export async function generateMetadata(props: UniformPageParameters): Promise<Me
     compositionApiResponse: { composition },
   } = route;
 
+  const [header] = composition.slots?.pageHeader || [];
+
   // Flatten the composition parameters for easier access
   const parameters = flattenValues(composition, { levels: 0 }) as UniformMetadataParameters;
+  const headerParameters = flattenValues(header, { levels: 0 }) as SimpleHeaderParameters;
 
   // Destructure metadata parameters from the composition
   const {
@@ -67,8 +73,9 @@ export async function generateMetadata(props: UniformPageParameters): Promise<Me
     twitterDescription,
     twitterImage,
     twitterCard,
-    favicon,
   } = parameters || {};
+
+  const { favicon } = headerParameters || {};
 
   // Resolve assets for Open Graph, Twitter, and favicon
   const [resolvedOgImage] = resolveAsset(openGraphImage);

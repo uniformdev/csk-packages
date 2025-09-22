@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: componentsSearchPage
 name: Components Search Page
@@ -124,11 +124,6 @@ parameters:
     name: Background Color
     type: dex-color-palette-parameter
     typeConfig: null
-  - id: favicon
-    name: Favicon
-    type: asset
-    typeConfig:
-      max: 1
 categoryId: c7a1d1d9-cc3f-431c-b55e-6c4af1285108
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/page.jpg
@@ -158,5 +153,5 @@ slots:
 titleParameter: pageTitle
 thumbnailParameter: openGraphImage
 canBeComposition: true
-created: '2025-05-16T06:32:50.797488+00:00'
-updated: '2025-05-16T06:32:50.797488+00:00'
+created: '2025-09-16T08:38:24.132385+00:00'
+updated: '2025-09-22T12:18:47.347146+00:00'

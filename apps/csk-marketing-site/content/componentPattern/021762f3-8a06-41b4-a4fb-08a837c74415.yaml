@@ -7,11 +7,50 @@ composition:
     color:
       type: dex-color-palette-parameter
       value: text-primary
+    favicon:
+      type: asset
+      value:
+        - _id: c7120ae9-da80-4365-bb68-bbeae6740e59
+          type: image
+          fields:
+            id:
+              type: text
+              value: 7c8e9629-cd34-4def-b2f9-f7aa4279792c
+            url:
+              value: >-
+                https://img.uniform.global/p/4Ac1zi8UQeOXsvDsKwotZQ/-Os7iLnIRr-lmxhDKO5nCA-favicon.png
+              type: text
+            file:
+              type: file
+              value: c2f54421-95c5-427d-904d-cbac3e7d6664
+            size:
+              value: 1139
+              type: number
+            title:
+              type: text
+              value: favicon.png
+            width:
+              value: 69
+              type: number
+            height:
+              value: 79
+              type: number
+            mediaType:
+              value: image/png
+              type: text
+          _source: uniform-assets
     spacing:
       type: dex-space-control-parameter
       value:
-        paddingTop: container-small
-        paddingBottom: container-small
+        mobile:
+          paddingTop: container-small
+          paddingBottom: container-small
+        tablet:
+          paddingTop: container-small
+          paddingBottom: container-small
+        desktop:
+          paddingTop: container-small
+          paddingBottom: container-small
     displayName:
       type: text
       value: Header
@@ -38,7 +77,7 @@ composition:
                           value: 0f0670b4-a425-40d3-842b-c7c895d500a5
                         url:
                           value: >-
-                            https://img.uniform.global/p/ZfA3kJm3TDeKyWey802IkQ/nBMvjV7jRpqbDlc_keSWDA-uniformlogo.svg
+                            https://img.uniform.global/p/4Ac1zi8UQeOXsvDsKwotZQ/OWqNRevGTWOjO9eiiq6vnA-uniformlogo.svg
                           type: text
                         file:
                           type: file
@@ -126,8 +165,8 @@ composition:
         activeState:
           type: checkbox
           value: true
-created: '2025-02-17T16:01:09.370239+00:00'
-modified: '2025-02-17T16:01:09.370239+00:00'
+created: '2025-01-29T11:28:34.585683+00:00'
+modified: '2025-09-22T12:18:14.353996+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/main-header.jpg
