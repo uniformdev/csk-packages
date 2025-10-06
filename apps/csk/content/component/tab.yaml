@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: tab
 name: Tab
@@ -7,6 +7,7 @@ parameters:
   - id: text
     name: Text
     type: text
+    guidance: Use the Text parameter to control the text that will be rendered.
     typeConfig: null
     localizable: true
 categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
@@ -23,5 +24,5 @@ slots:
     patternsInAllowedComponents: false
 titleParameter: text
 canBeComposition: false
-created: '2025-02-17T15:34:15.709692+00:00'
-updated: '2025-02-17T15:34:15.709692+00:00'
+created: '2025-01-29T10:47:04.474476+00:00'
+updated: '2025-10-06T11:00:06.577897+00:00'

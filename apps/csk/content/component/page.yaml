@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: page
 name: Page
@@ -123,6 +123,7 @@ parameters:
   - id: backgroundColor
     name: Background Color
     type: dex-color-palette-parameter
+    guidance: Use the Spacing parameter to control component background color.
     typeConfig: null
   - id: favicon
     name: Favicon
@@ -177,5 +178,5 @@ slots:
 titleParameter: pageTitle
 thumbnailParameter: openGraphImage
 canBeComposition: true
-created: '2025-02-17T15:34:15.142676+00:00'
-updated: '2025-02-17T15:34:15.142676+00:00'
+created: '2025-01-29T10:47:02.333016+00:00'
+updated: '2025-10-06T10:40:40.808185+00:00'

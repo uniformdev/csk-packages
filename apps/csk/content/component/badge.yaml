@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: badge
 name: Badge
@@ -7,6 +7,7 @@ parameters:
   - id: text
     name: Text
     type: text
+    guidance: Use the Text parameter to control the text that will be rendered.
     typeConfig: null
     localizable: true
   - id: size
@@ -36,6 +37,7 @@ parameters:
   - id: backgroundColor
     name: Background Color
     type: dex-color-palette-parameter
+    guidance: Use the Spacing parameter to control component background color.
     typeConfig:
       allowColors: []
   - id: textColor
@@ -59,5 +61,5 @@ useTeamPermissions: true
 slots: []
 titleParameter: text
 canBeComposition: false
-created: '2025-02-17T15:34:15.474116+00:00'
-updated: '2025-02-17T15:34:15.474116+00:00'
+created: '2025-01-29T10:47:01.265179+00:00'
+updated: '2025-10-06T11:00:08.688356+00:00'

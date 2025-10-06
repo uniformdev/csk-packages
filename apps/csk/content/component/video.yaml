@@ -7,6 +7,7 @@ parameters:
   - id: displayName
     name: Display Name
     type: text
+    guidance: Used as a display name for the canvas; not rendered in the markup.
     typeConfig: null
     localizable: true
   - id: video
@@ -100,6 +101,7 @@ parameters:
   - id: border
     name: Border
     type: dex-token-selector-parameter
+    guidance: Use the Border parameter to control the component border.
     typeConfig:
       allowTokens:
         - border-image-radius-small
@@ -121,5 +123,5 @@ slots: []
 titleParameter: displayName
 thumbnailParameter: placeholderImage
 canBeComposition: false
-created: '2025-06-26T12:10:52.185441+00:00'
-updated: '2025-07-04T13:55:28.978092+00:00'
+created: '2025-01-29T10:47:04.294063+00:00'
+updated: '2025-10-06T10:40:41.535634+00:00'

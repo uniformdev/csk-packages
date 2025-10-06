@@ -7,6 +7,7 @@ parameters:
   - id: displayName
     name: Display Name
     type: text
+    guidance: Used as a display name for the canvas; not rendered in the markup.
     typeConfig: null
     localizable: true
   - id: 66c64fb5-2d29-4bc8-8b98-02c37b519cee
@@ -112,6 +113,13 @@ parameters:
   - id: height
     name: Height
     type: dex-segmented-control-parameter
+    guidance: >-
+      Use the Height parameter to control the component height. For example:
+
+      Use the h-screen utility to make an element span the entire height of the
+      viewport
+
+      Use h-full utilities to give an element a 100% height.
     helpText: Parameter for setting the height of an element.
     typeConfig:
       options:
@@ -159,7 +167,7 @@ slots: []
 titleParameter: displayName
 canBeComposition: false
 created: '2025-01-29T10:47:01.402162+00:00'
-updated: '2025-07-16T09:45:02.482662+00:00'
+updated: '2025-10-06T10:40:39.125738+00:00'
 variants:
   - id: columns
     name: Columns

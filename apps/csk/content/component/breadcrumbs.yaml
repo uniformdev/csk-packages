@@ -7,6 +7,7 @@ parameters:
   - id: displayName
     name: Display Name
     type: text
+    guidance: Used as a display name for the canvas; not rendered in the markup.
     typeConfig: null
     localizable: true
   - id: separator
@@ -45,6 +46,7 @@ parameters:
   - id: size
     name: Size
     type: dex-segmented-control-parameter
+    guidance: Use the Size parameter to control the font size.
     typeConfig:
       options:
         - key: XS
@@ -73,6 +75,7 @@ parameters:
   - id: color
     name: Color
     type: dex-color-palette-parameter
+    guidance: Use the Color parameter to control the text color.
     typeConfig:
       allowColors: []
       selectedGroup: text
@@ -80,11 +83,13 @@ parameters:
   - id: font
     name: Font
     type: dex-token-selector-parameter
+    guidance: Use the Font parameter to control the font weight.
     typeConfig:
       selectedTokenType: font
   - id: transform
     name: Transform
     type: dex-segmented-control-parameter
+    guidance: Use the Transform to control the capitalization of text.
     typeConfig:
       options:
         - key: Uppercase
@@ -100,5 +105,5 @@ useTeamPermissions: true
 slots: []
 titleParameter: displayName
 canBeComposition: false
-created: '2025-03-20T12:55:43.600905+00:00'
-updated: '2025-06-02T08:35:49.777213+00:00'
+created: '2025-01-29T10:47:01.144155+00:00'
+updated: '2025-10-06T10:40:40.856062+00:00'

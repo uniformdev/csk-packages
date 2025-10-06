@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: button
 name: Button
@@ -7,6 +7,7 @@ parameters:
   - id: text
     name: Text
     type: text
+    guidance: Use the Text parameter to control the text that will be rendered.
     helpText: Provide a value to set the button's label.
     typeConfig:
       multiline: false
@@ -141,6 +142,7 @@ parameters:
   - id: border
     name: Border
     type: dex-token-selector-parameter
+    guidance: Use the Border parameter to control the component border.
     typeConfig:
       selectedTokenType: border
   - id: size
@@ -179,8 +181,8 @@ slots: []
 titleParameter: text
 thumbnailParameter: icon
 canBeComposition: false
-created: '2025-02-17T15:34:15.396123+00:00'
-updated: '2025-02-17T15:34:15.396123+00:00'
+created: '2025-01-29T10:47:01.205539+00:00'
+updated: '2025-10-06T11:00:08.844628+00:00'
 variants:
   - id: link
     name: Link

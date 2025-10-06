@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: modal
 name: Modal
@@ -7,6 +7,7 @@ parameters:
   - id: displayName
     name: Display Name
     type: text
+    guidance: Used as a display name for the canvas; not rendered in the markup.
     typeConfig: null
     localizable: true
   - id: disableCloseModalOnClickOutside
@@ -37,6 +38,7 @@ parameters:
   - id: backgroundColor
     name: Background Color
     type: dex-color-palette-parameter
+    guidance: Use the Spacing parameter to control component background color.
     typeConfig: null
   - id: closeIconColor
     name: Close Icon Color
@@ -68,5 +70,5 @@ slots:
     patternsInAllowedComponents: false
 titleParameter: displayName
 canBeComposition: false
-created: '2025-02-17T15:34:14.933607+00:00'
-updated: '2025-02-17T15:34:14.933607+00:00'
+created: '2025-01-29T10:47:02.33521+00:00'
+updated: '2025-10-06T10:40:40.334787+00:00'
