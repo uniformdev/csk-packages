@@ -7,6 +7,7 @@ parameters:
   - id: icon
     name: Icon
     type: asset
+    guidance: Use the Icon parameter to add an icon to the navigation group.
     typeConfig:
       max: 1
       min: 0
@@ -38,7 +39,7 @@ parameters:
   - id: backgroundColor
     name: Background Color
     type: dex-color-palette-parameter
-    guidance: Use the Spacing parameter to control component background color.
+    guidance: Use the Background Color parameter to control component background color.
     typeConfig: null
   - id: border
     name: Border
@@ -101,13 +102,13 @@ parameters:
   - id: font
     name: Font
     type: dex-token-selector-parameter
-    guidance: Use the Font parameter to control the font weight.
+    guidance: Use the Font parameter to control the font family.
     typeConfig:
       selectedTokenType: font
   - id: transform
     name: Transform
     type: dex-segmented-control-parameter
-    guidance: Use the Transform to control the capitalization of text.
+    guidance: Use the Transform parameter to control the capitalization of text.
     typeConfig:
       options:
         - key: Uppercase
@@ -157,6 +158,7 @@ parameters:
   - id: caretIcon
     name: Caret Icon
     type: asset
+    guidance: Use the Caret Icon parameter to add a dropdown indicator icon.
     typeConfig:
       max: 1
       required: false
@@ -166,6 +168,9 @@ parameters:
   - id: hoverEffect
     name: Hover Effect
     type: dex-segmented-control-parameter
+    guidance: >-
+      Use the Hover Effect parameter to specify the visual style or animation
+      applied to the navigation group when hovered over.
     typeConfig:
       options:
         - key: Underline
@@ -190,4 +195,4 @@ titleParameter: text
 thumbnailParameter: icon
 canBeComposition: false
 created: '2025-01-29T10:47:02.54608+00:00'
-updated: '2025-10-06T11:00:06.742014+00:00'
+updated: '2025-10-06T21:18:49.831011+00:00'

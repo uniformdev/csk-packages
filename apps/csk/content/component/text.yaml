@@ -98,13 +98,13 @@ parameters:
   - id: font
     name: Font
     type: dex-token-selector-parameter
-    guidance: Use the Font parameter to control the font weight.
+    guidance: Use the Font parameter to control the font family.
     typeConfig:
       selectedTokenType: font
   - id: transform
     name: Transform
     type: dex-segmented-control-parameter
-    guidance: Use the Transform to control the capitalization of text.
+    guidance: Use the Transform parameter to control the capitalization of text.
     typeConfig:
       options:
         - key: Uppercase
@@ -187,4 +187,4 @@ slots: []
 titleParameter: text
 canBeComposition: false
 created: '2025-01-29T10:47:04.279848+00:00'
-updated: '2025-09-12T10:09:14.751816+00:00'
+updated: '2025-10-06T21:18:50.659998+00:00'

@@ -7,6 +7,7 @@ parameters:
   - id: icon
     name: Icon
     type: asset
+    guidance: Use the Icon parameter to add an icon to the label.
     typeConfig:
       max: 1
       min: 0
@@ -105,13 +106,13 @@ parameters:
   - id: font
     name: Font
     type: dex-token-selector-parameter
-    guidance: Use the Font parameter to control the font weight.
+    guidance: Use the Font parameter to control the font family.
     typeConfig:
       selectedTokenType: font
   - id: transform
     name: Transform
     type: dex-segmented-control-parameter
-    guidance: Use the Transform to control the capitalization of text.
+    guidance: Use the Transform parameter to control the capitalization of text.
     typeConfig:
       options:
         - key: Uppercase
@@ -161,6 +162,9 @@ parameters:
   - id: iconPosition
     name: Icon Position
     type: dex-segmented-control-parameter
+    guidance: >-
+      Use the Icon Position parameter to define whether the icon appears before
+      or after the label text.
     typeConfig:
       options:
         - key: Left
@@ -177,4 +181,4 @@ titleParameter: text
 thumbnailParameter: icon
 canBeComposition: false
 created: '2025-01-29T10:47:02.566154+00:00'
-updated: '2025-10-06T11:00:08.774507+00:00'
+updated: '2025-10-06T21:18:49.000853+00:00'

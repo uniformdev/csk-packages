@@ -7,6 +7,7 @@ parameters:
   - id: icon
     name: Icon
     type: asset
+    guidance: Use the Icon parameter to add an icon to the navigation link.
     typeConfig:
       max: 1
       min: 0
@@ -20,6 +21,9 @@ parameters:
   - id: link
     name: Link
     type: link
+    guidance: >-
+      Use the Link parameter to specify the URL or page that the navigation item
+      directs to when clicked.
     typeConfig:
       linkTypes:
         tel: true
@@ -28,6 +32,10 @@ parameters:
   - id: activeState
     name: Active state
     type: checkbox
+    guidance: >-
+      Use the Active State parameter to apply specific styles when the current
+      page matches the link’s destination, indicating the active navigation
+      item.
     helpText: >-
       If the current page is equal to the current link value, the active styles
       are applied.
@@ -102,13 +110,13 @@ parameters:
   - id: font
     name: Font
     type: dex-token-selector-parameter
-    guidance: Use the Font parameter to control the font weight.
+    guidance: Use the Font parameter to control the font family.
     typeConfig:
       selectedTokenType: font
   - id: transform
     name: Transform
     type: dex-segmented-control-parameter
-    guidance: Use the Transform to control the capitalization of text.
+    guidance: Use the Transform parameter to control the capitalization of text.
     typeConfig:
       options:
         - key: Uppercase
@@ -158,6 +166,9 @@ parameters:
   - id: hoverEffect
     name: Hover Effect
     type: dex-segmented-control-parameter
+    guidance: >-
+      Use the Hover Effect parameter to define the visual change or animation
+      that appears when the user hovers over the navigation link.
     typeConfig:
       options:
         - key: Underline
@@ -175,4 +186,4 @@ titleParameter: text
 thumbnailParameter: icon
 canBeComposition: false
 created: '2025-01-29T10:47:03.327349+00:00'
-updated: '2025-10-06T11:00:06.844664+00:00'
+updated: '2025-10-06T21:18:50.099523+00:00'

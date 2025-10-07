@@ -7,6 +7,7 @@ parameters:
   - id: image
     name: Image
     type: asset
+    guidance: Use the Image parameter to add an image to display.
     typeConfig:
       max: 1
       min: 1
@@ -23,6 +24,9 @@ parameters:
   - id: objectFit
     name: Object Fit
     type: dex-segmented-control-parameter
+    guidance: >-
+      Use the Object Fit parameter to control how the image is resized or
+      cropped to fit its container.
     typeConfig:
       options:
         - key: Contain
@@ -33,6 +37,7 @@ parameters:
   - id: width
     name: Width
     type: number
+    guidance: Use the Width parameter to set the horizontal dimension of the image.
     helpText: >-
       Defines intrinsic width (not visual size). For 'background' variant, helps
       set focal point.
@@ -40,6 +45,7 @@ parameters:
   - id: height
     name: Height
     type: number
+    guidance: Use the Height parameter to set the vertical dimension of the image.
     helpText: >-
       Defines intrinsic height (not visual size). For 'background' variant,
       helps set focal point.
@@ -47,6 +53,9 @@ parameters:
   - id: fill
     name: Fill
     type: checkbox
+    guidance: >-
+      Use the Fill parameter to make the image automatically fill its parent
+      container while preserving its aspect ratio.
     helpText: Fills the parent container
     typeConfig: null
   - id: 6a821149-f836-49f2-806c-db36ecc79dc8
@@ -60,10 +69,16 @@ parameters:
   - id: unoptimized
     name: Unoptimized
     type: checkbox
+    guidance: >-
+      Use the Unoptimized parameter to disable image optimization and load the
+      original image file directly.
     typeConfig: null
   - id: priority
     name: Priority
     type: checkbox
+    guidance: >-
+      Use the Priority parameter to preload the image, ensuring it loads early
+      for improved performance on key visuals.
     typeConfig: null
   - id: b15f5d41-2729-4c94-9cf3-3930ad7d1122
     name: Presentation
@@ -77,10 +92,16 @@ parameters:
   - id: overlayColor
     name: Overlay Color
     type: dex-color-palette-parameter
+    guidance: >-
+      Use the Overlay Color parameter to apply a color layer over the image for
+      visual enhancement or contrast.
     typeConfig: null
   - id: overlayOpacity
     name: Overlay Opacity
     type: dex-slider-control-parameter
+    guidance: >-
+      Use the Overlay Opacity parameter to adjust the transparency of the
+      overlay color.
     typeConfig:
       type: custom
       options:
@@ -124,4 +145,4 @@ titleParameter: image
 thumbnailParameter: image
 canBeComposition: false
 created: '2025-01-29T10:47:03.370279+00:00'
-updated: '2025-10-06T10:40:40.097607+00:00'
+updated: '2025-10-06T21:18:49.362225+00:00'

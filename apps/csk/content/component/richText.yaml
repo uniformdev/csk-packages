@@ -7,6 +7,9 @@ parameters:
   - id: text
     name: Text
     type: richText
+    guidance: >-
+      Use the Text parameter to add and format rich text content within the
+      component.
     typeConfig:
       elements:
         builtIn:
@@ -77,7 +80,7 @@ parameters:
   - id: font
     name: Font
     type: dex-token-selector-parameter
-    guidance: Use the Font parameter to control the font weight.
+    guidance: Use the Font parameter to control the font family.
     typeConfig:
       selectedTokenType: font
   - id: lineCountRestrictions
@@ -114,4 +117,4 @@ useTeamPermissions: true
 slots: []
 canBeComposition: false
 created: '2025-01-29T10:47:03.280307+00:00'
-updated: '2025-10-06T10:40:41.11874+00:00'
+updated: '2025-10-06T21:18:50.753357+00:00'

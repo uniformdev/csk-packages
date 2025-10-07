@@ -13,6 +13,9 @@ parameters:
   - id: contentAlignment
     name: Content Alignment
     type: dex-segmented-control-parameter
+    guidance: >-
+      Use the Content Alignment parameter to control how the items are
+      positioned within the hero.
     typeConfig:
       options:
         - key: Left
@@ -41,6 +44,7 @@ parameters:
   - id: image
     name: Image
     type: asset
+    guidance: Use the Image parameter to add a hero image.
     typeConfig:
       max: 1
       min: 1
@@ -48,6 +52,9 @@ parameters:
   - id: imageObjectFit
     name: Object Fit
     type: dex-segmented-control-parameter
+    guidance: >-
+      Use the Object Fit parameter to determine how the image should be resized
+      or cropped to fit its hero.
     typeConfig:
       options:
         - key: Contain
@@ -58,31 +65,46 @@ parameters:
   - id: imageWidth
     name: Width
     type: number
+    guidance: Use the Width parameter to set the horizontal size of the image.
     typeConfig: null
   - id: imageHeight
     name: Height
     type: number
+    guidance: Use the Height parameter to set the vertical size of the image.
     typeConfig: null
   - id: imageFill
     name: Fill
     type: checkbox
+    guidance: >-
+      Use the Fill parameter to make the image automatically fill its parent
+      container while maintaining proper aspect ratio and responsiveness.
     helpText: Fills the parent container
     typeConfig: null
   - id: imageUnoptimized
     name: Unoptimized
     type: checkbox
+    guidance: >-
+      Use the Unoptimized parameter to disable Next.js image optimization,
+      loading the image in its original form.
     typeConfig: null
   - id: imagePriority
     name: Priority
     type: checkbox
+    guidance: >-
+      Use the Priority parameter to mark the image for preload, ensuring it
+      loads early for better performance on key visuals.
     typeConfig: null
   - id: imageOverlayColor
     name: Overlay Color
     type: dex-color-palette-parameter
+    guidance: Use the Overlay Color parameter to apply a colored layer over the image.
     typeConfig: null
   - id: imageOverlayOpacity
     name: Overlay Opacity
     type: dex-slider-control-parameter
+    guidance: >-
+      Use the Overlay Opacity parameter to control the transparency level of the
+      overlay color applied to the image.
     typeConfig:
       type: custom
       options:
@@ -111,10 +133,12 @@ parameters:
   - id: imageBorder
     name: Border
     type: dex-token-selector-parameter
+    guidance: >-
+      Use the Border parameter to define the visibility, style, and thickness of
+      the image’s outer edge.
     typeConfig:
       allowTokens:
         - border-image-radius-small
-        - border-image-radius-medium
       selectedTokenType: border
   - id: 9f8178c3-539f-4a1e-8a4e-71bfcedfe223
     name: Presentation Settings
@@ -130,7 +154,7 @@ parameters:
   - id: backgroundColor
     name: Background Color
     type: dex-color-palette-parameter
-    guidance: Use the Spacing parameter to control component background color.
+    guidance: Use the Background Color parameter to control component background color.
     typeConfig: null
   - id: spacing
     name: Spacing
@@ -150,7 +174,7 @@ parameters:
     name: Fluid Content
     type: checkbox
     guidance: >-
-      Use the Fluid Content parameter to control the component height.
+      Use the Fluid Content parameter to control the component width.
 
       This parameter restricts the component within the standard centered
       container by default, or can enable it to render without restrictions
@@ -197,7 +221,7 @@ slots:
 titleParameter: displayName
 canBeComposition: false
 created: '2025-01-29T10:47:01.698204+00:00'
-updated: '2025-10-06T10:40:39.356721+00:00'
+updated: '2025-10-06T21:18:48.574321+00:00'
 variants:
   - id: columns
     name: Columns

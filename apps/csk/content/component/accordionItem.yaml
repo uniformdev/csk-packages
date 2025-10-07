@@ -95,13 +95,13 @@ parameters:
   - id: font
     name: Font
     type: dex-token-selector-parameter
-    guidance: Use the Font parameter to control the font weight.
+    guidance: Use the Font parameter to control the font family.
     typeConfig:
       selectedTokenType: font
   - id: transform
     name: Transform
     type: dex-segmented-control-parameter
-    guidance: Use the Transform to control the capitalization of text.
+    guidance: Use the Transform parameter to control the capitalization of text.
     typeConfig:
       options:
         - key: Uppercase
@@ -151,7 +151,7 @@ parameters:
   - id: backgroundColor
     name: Background Color
     type: dex-color-palette-parameter
-    guidance: Use the Spacing parameter to control component background color.
+    guidance: Use the Background Color parameter to control component background color.
     typeConfig: null
   - id: spacing
     name: Spacing
@@ -175,4 +175,4 @@ slots:
 titleParameter: text
 canBeComposition: false
 created: '2025-01-29T10:47:02.414019+00:00'
-updated: '2025-10-06T11:00:07.191636+00:00'
+updated: '2025-10-06T21:18:50.0874+00:00'

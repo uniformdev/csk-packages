@@ -13,10 +13,16 @@ parameters:
   - id: link
     name: Link
     type: link
+    guidance: >-
+      Use the Link parameter to specify the destination URL or page the
+      component should navigate to when clicked.
     typeConfig: null
   - id: openInNewTab
     name: Open In New Tab
     type: checkbox
+    guidance: >-
+      Use the Open In New Tab parameter to determine whether the link should
+      open in a new browser tab when clicked.
     typeConfig: null
 categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
 previewImageUrl: >-
@@ -32,4 +38,4 @@ slots:
 titleParameter: displayName
 canBeComposition: false
 created: '2025-01-29T10:47:02.34354+00:00'
-updated: '2025-10-06T10:40:40.329644+00:00'
+updated: '2025-10-06T20:29:15.8118+00:00'

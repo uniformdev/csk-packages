@@ -26,6 +26,7 @@ parameters:
   - id: itemsPerPage
     name: Items Per Page
     type: dex-slider-control-parameter
+    guidance: Use the Items Per Page parameter to control the number of items per slide.
     typeConfig:
       step: 1
       type: steps
@@ -36,6 +37,7 @@ parameters:
   - id: gapX
     name: Gap X
     type: dex-slider-control-parameter
+    guidance: Use the Gap X parameter to control gutters between items.
     typeConfig:
       step: 1
       type: custom
@@ -57,7 +59,7 @@ parameters:
   - id: backgroundColor
     name: Background Color
     type: dex-color-palette-parameter
-    guidance: Use the Spacing parameter to control component background color.
+    guidance: Use the Background Color parameter to control component background color.
     typeConfig: null
   - id: spacing
     name: Spacing
@@ -77,7 +79,7 @@ parameters:
     name: Fluid Content
     type: checkbox
     guidance: >-
-      Use the Fluid Content parameter to control the component height.
+      Use the Fluid Content parameter to control the component width.
 
       This parameter restricts the component within the standard centered
       container by default, or can enable it to render without restrictions
@@ -115,7 +117,7 @@ slots:
 titleParameter: displayName
 canBeComposition: false
 created: '2025-01-29T10:47:01.262734+00:00'
-updated: '2025-10-06T10:40:40.963601+00:00'
+updated: '2025-10-06T21:31:31.906056+00:00'
 variants:
   - id: brochure
     name: Brochure
