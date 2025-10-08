@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: page
 name: Page
@@ -16,12 +16,18 @@ parameters:
   - id: pageTitle
     name: Page Title
     type: text
+    guidance: >-
+      Use the Page Title parameter to define the title shown in the browser tab
+      and page metadata for SEO and sharing purposes.
     typeConfig:
       required: false
     localizable: true
   - id: pageDescription
     name: Page Description
     type: text
+    guidance: >-
+      Use the Page Description parameter to set the meta description text for
+      the page, improving SEO and link previews.
     typeConfig:
       multiline: true
       linesCount: 5
@@ -29,6 +35,9 @@ parameters:
   - id: pageKeywords
     name: Page Keywords
     type: text
+    guidance: >-
+      Use the Page Keywords parameter to specify relevant keywords for the
+      page’s metadata, helping search engines understand its content.
     typeConfig: null
     localizable: true
   - id: f4f80134-525c-4989-b414-145f14500d3d
@@ -44,12 +53,18 @@ parameters:
   - id: openGraphTitle
     name: Open Graph Title
     type: text
+    guidance: >-
+      Use the Open Graph Title parameter to define the title displayed when the
+      page is shared on social media platforms.
     helpText: Fallback to Page Title when the value is not set.
     typeConfig: null
     localizable: true
   - id: openGraphDescription
     name: Open Graph Description
     type: text
+    guidance: >-
+      Use the Open Graph Description parameter to set the summary text shown
+      when the page is shared on social media platforms.
     helpText: Fallback to Page Description when the value is not set.
     typeConfig:
       multiline: true
@@ -58,11 +73,17 @@ parameters:
   - id: openGraphImage
     name: Open Graph Image
     type: asset
+    guidance: >-
+      Use the Open Graph Image parameter to set the image for social media
+      previews.
     typeConfig:
       max: 1
   - id: openGraphType
     name: Open Graph Type
     type: select
+    guidance: >-
+      Use the Open Graph Type parameter to specify the content type (e.g.,
+      website, article, video) for social media link previews.
     typeConfig:
       options:
         - text: website
@@ -84,24 +105,36 @@ parameters:
   - id: twitterTitle
     name: Twitter Title
     type: text
+    guidance: >-
+      Use the Twitter Title parameter to define the title displayed when the
+      page is shared on Twitter.
     helpText: Fallback to Page Title when the value is not set.
     typeConfig: null
     localizable: true
   - id: twitterDescription
     name: Twitter Description
     type: text
+    guidance: >-
+      Use the Twitter Description parameter to set the summary text shown when
+      the page is shared on Twitter.
     helpText: Fallback to Page Description when the value is not set.
     typeConfig: null
     localizable: true
   - id: twitterImage
     name: Twitter Image
     type: asset
+    guidance: >-
+      Use the Twitter Image parameter to set a specific image for Twitter
+      previews.
     helpText: Fallback to Open Graph Image when the correct value is not set.
     typeConfig:
       max: 1
   - id: twitterCard
     name: Twitter Card
     type: select
+    guidance: >-
+      Use the Twitter Card parameter to specify the card type (e.g., summary,
+      summary_large_image) used when the page is shared on Twitter.
     typeConfig:
       options:
         - text: summary
@@ -123,10 +156,12 @@ parameters:
   - id: backgroundColor
     name: Background Color
     type: dex-color-palette-parameter
+    guidance: Use the Background Color parameter to control component background color.
     typeConfig: null
   - id: favicon
     name: Favicon
     type: asset
+    guidance: Use the Favicon parameter to set the page favicon icon.
     typeConfig:
       max: 1
 categoryId: c7a1d1d9-cc3f-431c-b55e-6c4af1285108
@@ -177,5 +212,5 @@ slots:
 titleParameter: pageTitle
 thumbnailParameter: openGraphImage
 canBeComposition: true
-created: '2025-02-17T15:34:15.142676+00:00'
-updated: '2025-02-17T15:34:15.142676+00:00'
+created: '2025-01-29T10:47:02.333016+00:00'
+updated: '2025-10-06T21:18:50.616009+00:00'

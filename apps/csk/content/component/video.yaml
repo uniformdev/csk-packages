@@ -7,11 +7,13 @@ parameters:
   - id: displayName
     name: Display Name
     type: text
+    guidance: Used as a display name for the canvas; not rendered in the markup.
     typeConfig: null
     localizable: true
   - id: video
     name: Video
     type: asset
+    guidance: Use the Video parameter to add a video file to the component.
     typeConfig:
       max: 1
       min: 1
@@ -31,10 +33,16 @@ parameters:
   - id: autoPlay
     name: Auto Play
     type: checkbox
+    guidance: >-
+      Use the Auto Play parameter to enable the video to start playing
+      automatically when loaded.
     typeConfig: null
   - id: lazyLoad
     name: Lazy Load
     type: checkbox
+    guidance: >-
+      Use the Lazy Load parameter to display only the video thumbnail initially
+      and load the full video player when the user clicks on it.
     helpText: >-
       Check to show just the video thumbnail, which loads the full player on
       click
@@ -42,11 +50,18 @@ parameters:
   - id: loop
     name: Loop
     type: checkbox
+    guidance: >-
+      Use the Loop parameter to control whether the video should automatically
+      restart after reaching the end.
     helpText: Check or unchek to loop the media
     typeConfig: null
   - id: controls
     name: Controls
     type: checkbox
+    guidance: >-
+      Use the Controls parameter to toggle the display of the video player’s
+      native playback controls. For Vimeo videos, hiding controls requires
+      permission from the video owner.
     helpText: >-
       Check or uncheck to display native player controls.  For Vimeo videos,
       hiding controls must be enabled by the video owner.
@@ -54,6 +69,7 @@ parameters:
   - id: muted
     name: Muted
     type: checkbox
+    guidance: Use the Muted parameter to start video playback with the sound turned off.
     helpText: Mutes the player
     typeConfig: null
   - id: 7bd909b4-6715-44fb-88b3-9a7c9aa182fd
@@ -68,10 +84,16 @@ parameters:
   - id: overlayColor
     name: Overlay Color
     type: dex-color-palette-parameter
+    guidance: >-
+      Use the Overlay Color parameter to apply a color layer over the video for
+      visual enhancement or contrast.
     typeConfig: null
   - id: overlayOpacity
     name: Overlay Opacity
     type: dex-slider-control-parameter
+    guidance: >-
+      Use the Overlay Opacity parameter to adjust the transparency of the
+      overlay color applied to the video.
     typeConfig:
       type: custom
       options:
@@ -100,6 +122,7 @@ parameters:
   - id: border
     name: Border
     type: dex-token-selector-parameter
+    guidance: Use the Border parameter to control the component border.
     typeConfig:
       allowTokens:
         - border-image-radius-small
@@ -107,6 +130,7 @@ parameters:
   - id: placeholderImage
     name: Placeholder Image
     type: asset
+    guidance: Use the Placeholder Image parameter to set a custom video thumbnail.
     helpText: >-
       You can replace video preview image by using this parameter. Work only
       when light is checked
@@ -121,5 +145,5 @@ slots: []
 titleParameter: displayName
 thumbnailParameter: placeholderImage
 canBeComposition: false
-created: '2025-06-26T12:10:52.185441+00:00'
-updated: '2025-07-04T13:55:28.978092+00:00'
+created: '2025-01-29T10:47:04.294063+00:00'
+updated: '2025-10-06T21:18:51.128928+00:00'

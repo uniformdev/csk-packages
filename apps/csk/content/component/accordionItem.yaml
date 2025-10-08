@@ -7,11 +7,15 @@ parameters:
   - id: text
     name: Text
     type: text
+    guidance: Use the Text parameter to control the text that will be rendered.
     typeConfig: null
     localizable: true
   - id: tag
     name: HTML Tag
     type: dex-segmented-control-parameter
+    guidance: >-
+      Use the HTML Tag parameter to control the tag with which the text will be
+      rendered.
     typeConfig:
       options:
         - key: H1
@@ -43,6 +47,7 @@ parameters:
   - id: size
     name: Size
     type: dex-segmented-control-parameter
+    guidance: Use the Size parameter to control the font size.
     typeConfig:
       options:
         - key: XS
@@ -67,6 +72,7 @@ parameters:
   - id: color
     name: Color
     type: dex-color-palette-parameter
+    guidance: Use the Color parameter to control the text color.
     typeConfig:
       allowColors: []
       selectedGroup: text
@@ -74,6 +80,7 @@ parameters:
   - id: weight
     name: Weight
     type: dex-segmented-control-parameter
+    guidance: Use the Weight parameter to control the font weight.
     typeConfig:
       options:
         - key: Normal
@@ -88,11 +95,13 @@ parameters:
   - id: font
     name: Font
     type: dex-token-selector-parameter
+    guidance: Use the Font parameter to control the font family.
     typeConfig:
       selectedTokenType: font
   - id: transform
     name: Transform
     type: dex-segmented-control-parameter
+    guidance: Use the Transform parameter to control the capitalization of text.
     typeConfig:
       options:
         - key: Uppercase
@@ -104,6 +113,7 @@ parameters:
   - id: decoration
     name: Decoration
     type: dex-segmented-control-parameter
+    guidance: Use the Decoration parameter to change the text decoration thickness.
     typeConfig:
       options:
         - key: Underline
@@ -115,6 +125,7 @@ parameters:
   - id: letterSpacing
     name: Letter Spacing
     type: dex-segmented-control-parameter
+    guidance: Use the Letter Spacing parameter to set the letter spacing.
     typeConfig:
       options:
         - key: Tighter
@@ -128,6 +139,7 @@ parameters:
   - id: alignment
     name: Alignment
     type: dex-segmented-control-parameter
+    guidance: Use the Alignment parameter to align the text.
     typeConfig:
       options:
         - key: Left
@@ -139,10 +151,12 @@ parameters:
   - id: backgroundColor
     name: Background Color
     type: dex-color-palette-parameter
+    guidance: Use the Background Color parameter to control component background color.
     typeConfig: null
   - id: spacing
     name: Spacing
     type: dex-space-control-parameter
+    guidance: Use the Spacing parameter to control component margins and padding.
     typeConfig:
       type: dimensions
       withViewPort: true
@@ -161,4 +175,4 @@ slots:
 titleParameter: text
 canBeComposition: false
 created: '2025-01-29T10:47:02.414019+00:00'
-updated: '2025-09-12T10:09:13.826554+00:00'
+updated: '2025-10-06T21:18:50.0874+00:00'

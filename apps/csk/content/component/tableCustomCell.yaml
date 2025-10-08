@@ -7,11 +7,13 @@ parameters:
   - id: displayName
     name: Display Name
     type: text
+    guidance: Used as a display name for the canvas; not rendered in the markup.
     typeConfig: null
     localizable: true
   - id: alignment
     name: Alignment
     type: dex-segmented-control-parameter
+    guidance: Use the Alignment parameter to align the text.
     typeConfig:
       options:
         - key: Left
@@ -33,5 +35,5 @@ slots:
     patternsInAllowedComponents: false
 titleParameter: displayName
 canBeComposition: false
-created: '2025-02-17T15:34:15.833348+00:00'
-updated: '2025-02-17T15:34:15.833348+00:00'
+created: '2025-01-29T10:47:03.563474+00:00'
+updated: '2025-10-06T10:40:41.250353+00:00'

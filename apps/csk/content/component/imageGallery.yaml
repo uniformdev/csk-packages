@@ -7,11 +7,15 @@ parameters:
   - id: displayName
     name: Display Name
     type: text
+    guidance: Used as a display name for the canvas; not rendered in the markup.
     typeConfig: null
     localizable: true
   - id: aspectRatio
     name: Aspect Ratio
     type: dex-segmented-control-parameter
+    guidance: >-
+      Use the Aspect Ratio parameter to define the width-to-height proportion
+      for images within the gallery.
     typeConfig:
       options:
         - key: '1:1'
@@ -22,6 +26,7 @@ parameters:
   - id: items
     name: Items
     type: asset
+    guidance: Use the Items parameter to add images to the gallery.
     typeConfig: {}
     localizable: true
   - id: 9f8178c3-539f-4a1e-8a4e-71bfcedfe223
@@ -38,10 +43,12 @@ parameters:
   - id: backgroundColor
     name: Background Color
     type: dex-color-palette-parameter
+    guidance: Use the Background Color parameter to control component background color.
     typeConfig: null
   - id: spacing
     name: Spacing
     type: dex-space-control-parameter
+    guidance: Use the Spacing parameter to control component margins and padding.
     typeConfig:
       type: dimensions
       withViewPort: true
@@ -49,15 +56,29 @@ parameters:
   - id: border
     name: Border
     type: dex-token-selector-parameter
+    guidance: Use the Border parameter to control the component border.
     typeConfig:
       selectedTokenType: border
   - id: fluidContent
     name: Fluid Content
     type: checkbox
+    guidance: >-
+      Use the Fluid Content parameter to control the component width.
+
+      This parameter restricts the component within the standard centered
+      container by default, or can enable it to render without restrictions
+      across the full screen width.
     typeConfig: null
   - id: height
     name: Height
     type: dex-segmented-control-parameter
+    guidance: >-
+      Use the Height parameter to control the component height. For example:
+
+      Use the h-screen utility to make an element span the entire height of the
+      viewport
+
+      Use h-full utilities to give an element a 100% height.
     helpText: Parameter for setting the height of an element.
     typeConfig:
       options:
@@ -82,4 +103,4 @@ titleParameter: displayName
 thumbnailParameter: items
 canBeComposition: false
 created: '2025-01-29T10:47:02.546142+00:00'
-updated: '2025-09-12T10:09:14.354475+00:00'
+updated: '2025-10-06T21:18:49.270177+00:00'
