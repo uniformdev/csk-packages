@@ -152,18 +152,11 @@ parameters:
       collapsed: true
       childrenParams:
         - backgroundColor
-        - favicon
   - id: backgroundColor
     name: Background Color
     type: dex-color-palette-parameter
     guidance: Use the Background Color parameter to control component background color.
     typeConfig: null
-  - id: favicon
-    name: Favicon
-    type: asset
-    guidance: Use the Favicon parameter to set the page favicon icon.
-    typeConfig:
-      max: 1
 categoryId: c7a1d1d9-cc3f-431c-b55e-6c4af1285108
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/page.jpg
@@ -174,6 +167,7 @@ slots:
     minComponents: 1
     allowedComponents:
       - header
+      - simpleHeader
     allowAllComponents: false
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
@@ -206,6 +200,7 @@ slots:
     name: Page Footer
     allowedComponents:
       - footer
+      - simpleFooter
     allowAllComponents: false
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
@@ -213,4 +208,4 @@ titleParameter: pageTitle
 thumbnailParameter: openGraphImage
 canBeComposition: true
 created: '2025-01-29T10:47:02.333016+00:00'
-updated: '2025-10-06T21:18:50.616009+00:00'
+updated: '2025-10-09T10:53:48.289674+00:00'

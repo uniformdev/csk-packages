@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+# yaml-language-server: $schema=https://uniform.app/schemas/json-schema/component-definition/v1.json
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: componentDetailsPage
 name: Component Details Page
@@ -113,16 +113,10 @@ parameters:
       collapsed: true
       childrenParams:
         - backgroundColor
-        - favicon
   - id: backgroundColor
     name: Background Color
     type: dex-color-palette-parameter
     typeConfig: null
-  - id: favicon
-    name: Favicon
-    type: asset
-    typeConfig:
-      max: 1
 useTeamPermissions: true
 slots:
   - id: pageHeader
@@ -147,5 +141,5 @@ slots:
     patternsInAllowedComponents: false
 titleParameter: pageTitle
 canBeComposition: true
-created: '2025-02-17T16:01:08.463449+00:00'
-updated: '2025-02-17T16:01:08.463449+00:00'
+created: '2025-10-09T11:30:44.000511+00:00'
+updated: '2025-10-09T11:30:44.000511+00:00'

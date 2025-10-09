@@ -1,0 +1,93 @@
+composition:
+  _name: Home
+  _id: 07ccfdca-21a1-460b-a51f-159281c4b39c
+  _slug: ':locale'
+  type: page
+  _overrides:
+    80d2b75c-2dbd-4b2b-ad45-2dbba538b661:
+      parameters:
+        image:
+          type: asset
+          value:
+            - _id: 7277282c-aace-4fbb-99ee-97db434fbed7
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: 246a9113-763f-4330-b55e-dfa654743828
+                url:
+                  value: >-
+                    https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/yDwPqNoCTqa2qj4xJu2PLQ-Rectangle-1-(2).svg
+                  type: text
+                file:
+                  type: file
+                  value: f59b36c9-1607-4597-ba43-c5e4f1e6ba0c
+                size:
+                  value: 423
+                  type: number
+                title:
+                  type: text
+                  value: hero-bg-gradient-light.svg
+                width:
+                  value: 1016
+                  type: number
+                height:
+                  value: 330
+                  type: number
+                mediaType:
+                  value: image/svg+xml
+                  type: text
+              _source: uniform-assets
+        titleText:
+          type: text
+          locales:
+            en: Component Starter Kit
+        descriptionText:
+          type: text
+          locales:
+            en: >-
+              A rich set of components to supercharge building fast, modern,
+              personalized experiences with Uniform DXP.
+        eyebrowTitleText:
+          type: text
+          locales:
+            en: Get your next project started on the right foot
+        primaryButtonLink:
+          type: link
+          locales:
+            en:
+              path: https://unfrm.to/csk-docs
+              type: url
+        primaryButtonText:
+          type: text
+          locales:
+            en: Docs
+    07ccfdca-21a1-460b-a51f-159281c4b39c|dc2e95be-21b5-4476-a309-f8a34922f528:
+      slots:
+        $slotSectionItems:
+          - _id: 80d2b75c-2dbd-4b2b-ad45-2dbba538b661
+            type: fixedHero
+            _pattern: db25526c-e9e6-45f1-acb6-230bf6c0efb4
+            _overridability:
+              parameters:
+                $viz: 'yes'
+                image: 'yes'
+                height: 'no'
+                titleTag: 'yes'
+                textColor: 'no'
+                titleText: 'yes'
+                displayName: 'yes'
+                descriptionText: 'yes'
+                overlayAutoTint: 'no'
+                contentAlignment: 'no'
+                eyebrowTitleText: 'yes'
+                primaryButtonLink: 'yes'
+                primaryButtonText: 'yes'
+                primaryButtonTextColor: 'no'
+              hideLockedParameters: true
+  _locales:
+    - en
+  _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
+created: '2025-10-09T11:11:32.991979+00:00'
+modified: '2025-10-09T11:11:32.991979+00:00'
+pattern: false
