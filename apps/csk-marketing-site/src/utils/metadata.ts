@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { AssetParamValue, AssetParamValueItem } from '@uniformdev/assets';
+import { AssetParamValue } from '@uniformdev/assets';
 import { flattenValues } from '@uniformdev/canvas';
 import { resolveRouteFromCode, UniformPageParameters } from '@uniformdev/canvas-next-rsc-v2';
-import { ResolvedAssetFromItem } from '@uniformdev/csk-components/types/cskTypes';
+import { resolveAsset } from '@uniformdev/csk-components/utils/assets';
 
 type UniformMetadataParameters = {
   pageTitle: string;
@@ -29,17 +29,11 @@ type UniformMetadataParameters = {
   twitterDescription: string;
   twitterImage: AssetParamValue;
   twitterCard: 'summary' | 'summary_large_image' | 'app' | 'player';
-  favicon: AssetParamValue;
 };
 
-/**
- * Resolves a list of assets, filtering out any entries without a valid URL.
- *
- * @param {AssetParamValue | undefined} image - The list of assets to resolve.
- * @returns {ResolvedAsset[]} - An array of resolved assets with valid URLs.
- */
-export const resolveAsset = (image?: AssetParamValue): ResolvedAssetFromItem<AssetParamValueItem>[] =>
-  (flattenValues(image as never) || []).filter(({ url }) => Boolean(url));
+type HeaderParameters = {
+  favicon: AssetParamValue;
+};
 
 /**
  * Generates metadata for a page using Uniform parameters and assets.
@@ -61,8 +55,11 @@ export async function generateMetadata(props: UniformPageParameters): Promise<Me
     compositionApiResponse: { composition },
   } = route;
 
+  const [header] = composition.slots?.pageHeader || [];
+
   // Flatten the composition parameters for easier access
   const parameters = flattenValues(composition, { levels: 0 }) as UniformMetadataParameters;
+  const headerParameters = flattenValues(header, { levels: 0 }) as HeaderParameters;
 
   // Destructure metadata parameters from the composition
   const {
@@ -77,8 +74,9 @@ export async function generateMetadata(props: UniformPageParameters): Promise<Me
     twitterDescription,
     twitterImage,
     twitterCard,
-    favicon,
   } = parameters || {};
+
+  const { favicon } = headerParameters || {};
 
   // Resolve assets for Open Graph, Twitter, and favicon
   const [resolvedOgImage] = resolveAsset(openGraphImage);

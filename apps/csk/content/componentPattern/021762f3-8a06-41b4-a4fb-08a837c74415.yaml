@@ -7,11 +7,51 @@ composition:
     color:
       type: dex-color-palette-parameter
       value: text-primary
+    favicon:
+      type: asset
+      locales:
+        en:
+          - _id: 77df7155-503a-4e37-9a25-8f9246e775c0
+            type: image
+            fields:
+              id:
+                type: text
+                value: 9f964074-61ec-4afb-8d5b-8cb499257744
+              url:
+                value: >-
+                  https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/Af96erKLQr-0rnqY4msIkQ-favicon.png
+                type: text
+              file:
+                type: file
+                value: f5f4db6b-da24-45ef-a53e-425af95ec08e
+              size:
+                value: 1139
+                type: number
+              title:
+                type: text
+                value: favicon.png
+              width:
+                value: 69
+                type: number
+              height:
+                value: 79
+                type: number
+              mediaType:
+                value: image/png
+                type: text
+            _source: uniform-assets
     spacing:
       type: dex-space-control-parameter
       value:
-        paddingTop: container-small
-        paddingBottom: container-small
+        mobile:
+          paddingTop: container-small
+          paddingBottom: container-small
+        tablet:
+          paddingTop: container-small
+          paddingBottom: container-small
+        desktop:
+          paddingTop: container-small
+          paddingBottom: container-small
     displayName:
       type: text
       value: Header
@@ -38,7 +78,7 @@ composition:
                           value: 0f0670b4-a425-40d3-842b-c7c895d500a5
                         url:
                           value: >-
-                            https://img.uniform.global/p/YBXmRPPzQZ-45Yo5jJzHAw/yw_nl-x6RgCEUl3LVg1uqQ-uniformlogo.svg
+                            https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/m2Q91871TPyv9wBSeEh0nA-uniformlogo.svg
                           type: text
                         file:
                           type: file
@@ -110,10 +150,12 @@ composition:
         text:
           type: text
           value: Components
+  _overridability:
+    hideLockedParameters: false
   _locales:
     - en
-created: '2025-02-17T15:34:18.087161+00:00'
-modified: '2025-02-17T15:34:18.087161+00:00'
+created: '2025-01-29T10:47:07.470956+00:00'
+modified: '2025-10-09T11:27:52.976274+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/main-header.jpg
