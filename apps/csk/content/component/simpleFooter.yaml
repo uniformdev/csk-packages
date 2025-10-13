@@ -10,15 +10,21 @@ parameters:
     guidance: Used as a display name for the canvas; not rendered in the markup.
     typeConfig: null
     localizable: true
-  - id: logo
-    name: Logo
-    type: asset
-    guidance: Use the Logo parameter to add a logo for the footer.
-    typeConfig:
-      max: 1
-      allowedTypes:
-        - image
+  - id: footerLinkSectionTitle
+    name: Footer Link Section Title
+    type: text
+    guidance: >-
+      Use the Footer Link Section Title parameter to add a title for the footer
+      link section.
+    typeConfig: null
     localizable: true
+  - id: links
+    name: Links
+    type: $block
+    guidance: Use the Links parameter to add links to the footer.
+    typeConfig:
+      allowedTypes:
+        - navigationLink
   - id: copyright
     name: Copyright
     type: richText
@@ -55,21 +61,15 @@ parameters:
           allowedTypes:
             - image
     localizable: true
-  - id: footerLinkSectionTitle
-    name: Footer Link Section Title
-    type: text
-    guidance: >-
-      Use the Footer Link Section Title parameter to add a title for the footer
-      link section.
-    typeConfig: null
-    localizable: true
-  - id: links
-    name: Links
-    type: $block
-    guidance: Use the Links parameter to add links to the footer.
+  - id: logo
+    name: Logo
+    type: asset
+    guidance: Use the Logo parameter to add a logo for the footer.
     typeConfig:
+      max: 1
       allowedTypes:
-        - navigationLink
+        - image
+    localizable: true
 categoryId: b1163ce2-5ac7-4347-bc38-a42198180718
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/footer.jpg
@@ -79,4 +79,4 @@ titleParameter: displayName
 thumbnailParameter: logo
 canBeComposition: false
 created: '2025-10-09T10:42:42.467115+00:00'
-updated: '2025-10-13T10:17:25.679047+00:00'
+updated: '2025-10-13T13:55:35.538595+00:00'

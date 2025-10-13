@@ -10,15 +10,6 @@ parameters:
     guidance: Used as a display name for the canvas; not rendered in the markup.
     typeConfig: null
     localizable: true
-  - id: logo
-    name: Logo
-    type: asset
-    guidance: Use the Logo parameter to add a logo for the header.
-    typeConfig:
-      max: 1
-      allowedTypes:
-        - image
-    localizable: true
   - id: links
     name: Links
     type: $block
@@ -32,19 +23,9 @@ parameters:
     typeConfig:
       collapsed: true
       childrenParams:
-        - favicon
         - backgroundColor
         - textColor
         - hoverTextColor
-  - id: favicon
-    name: Favicon
-    type: asset
-    guidance: Use the Favicon parameter to add a favicon for page.
-    typeConfig:
-      max: 1
-      allowedTypes:
-        - image
-    localizable: true
   - id: backgroundColor
     name: Background Color
     type: dex-color-palette-parameter
@@ -64,6 +45,32 @@ parameters:
     typeConfig:
       allowColors: []
       selectedGroup: text
+  - id: 6c13aa82-4d57-439c-9edf-4489c266526e
+    name: Images
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - logo
+        - favicon
+  - id: logo
+    name: Logo
+    type: asset
+    guidance: Use the Logo parameter to add a logo for the header.
+    typeConfig:
+      max: 1
+      allowedTypes:
+        - image
+    localizable: true
+  - id: favicon
+    name: Favicon
+    type: asset
+    guidance: Use the Favicon parameter to add a favicon for page.
+    typeConfig:
+      max: 1
+      allowedTypes:
+        - image
+    localizable: true
 categoryId: b1163ce2-5ac7-4347-bc38-a42198180718
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/header-default.jpg
@@ -73,7 +80,7 @@ titleParameter: displayName
 thumbnailParameter: logo
 canBeComposition: false
 created: '2025-10-09T10:42:42.656159+00:00'
-updated: '2025-10-13T10:17:25.669303+00:00'
+updated: '2025-10-13T13:55:35.367418+00:00'
 variants:
   - id: sticky
     name: Sticky
