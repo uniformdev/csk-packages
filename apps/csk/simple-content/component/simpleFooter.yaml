@@ -7,11 +7,13 @@ parameters:
   - id: displayName
     name: Display Name
     type: text
+    guidance: Used as a display name for the canvas; not rendered in the markup.
     typeConfig: null
     localizable: true
   - id: logo
     name: Logo
     type: asset
+    guidance: Use the Logo parameter to add a logo for the footer.
     typeConfig:
       max: 1
       allowedTypes:
@@ -20,6 +22,7 @@ parameters:
   - id: copyright
     name: Copyright
     type: richText
+    guidance: Use the Copyright parameter to add a copyright info for the footer.
     typeConfig:
       elements:
         builtIn:
@@ -55,11 +58,15 @@ parameters:
   - id: footerLinkSectionTitle
     name: Footer Link Section Title
     type: text
+    guidance: >-
+      Use the Footer Link Section Title parameter to add a title for the footer
+      link section.
     typeConfig: null
     localizable: true
   - id: links
     name: Links
     type: $block
+    guidance: Use the Links parameter to add links to the footer.
     typeConfig:
       allowedTypes:
         - navigationLink
@@ -72,4 +79,4 @@ titleParameter: displayName
 thumbnailParameter: logo
 canBeComposition: false
 created: '2025-10-09T10:42:42.467115+00:00'
-updated: '2025-10-09T11:16:16.852344+00:00'
+updated: '2025-10-13T10:17:25.679047+00:00'

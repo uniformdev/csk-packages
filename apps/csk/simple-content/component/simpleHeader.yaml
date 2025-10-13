@@ -7,11 +7,13 @@ parameters:
   - id: displayName
     name: Display Name
     type: text
+    guidance: Used as a display name for the canvas; not rendered in the markup.
     typeConfig: null
     localizable: true
   - id: logo
     name: Logo
     type: asset
+    guidance: Use the Logo parameter to add a logo for the header.
     typeConfig:
       max: 1
       allowedTypes:
@@ -20,6 +22,7 @@ parameters:
   - id: links
     name: Links
     type: $block
+    guidance: Use the Links parameter to add links to the header.
     typeConfig:
       allowedTypes:
         - navigationLink
@@ -36,6 +39,7 @@ parameters:
   - id: favicon
     name: Favicon
     type: asset
+    guidance: Use the Favicon parameter to add a favicon for page.
     typeConfig:
       max: 1
       allowedTypes:
@@ -44,16 +48,19 @@ parameters:
   - id: backgroundColor
     name: Background Color
     type: dex-color-palette-parameter
+    guidance: Use the Background Color parameter to control component background color.
     typeConfig: null
   - id: textColor
     name: Text Color
     type: dex-color-palette-parameter
+    guidance: Use the Text Color parameter to control the text color.
     typeConfig:
       allowColors: []
       selectedGroup: text
   - id: hoverTextColor
     name: Hover Text Color
     type: dex-color-palette-parameter
+    guidance: Use the Hover Text Color parameter to specify hover text color.
     typeConfig:
       allowColors: []
       selectedGroup: text
@@ -66,7 +73,7 @@ titleParameter: displayName
 thumbnailParameter: logo
 canBeComposition: false
 created: '2025-10-09T10:42:42.656159+00:00'
-updated: '2025-10-09T10:42:42.656159+00:00'
+updated: '2025-10-13T10:17:25.669303+00:00'
 variants:
   - id: sticky
     name: Sticky
