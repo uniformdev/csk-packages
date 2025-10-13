@@ -1,13 +1,9 @@
-'use client';
-
 import { FC } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
+import { UniformSlot } from '@uniformdev/canvas-react';
 import BaseCarousel from '@/components/ui/Carousel';
-import { withFlattenParameters } from '@/utils/withFlattenParameters';
-import { CarouselParameters, CarouselProps } from '.';
+import { CarouselProps, CarouselSlots } from '.';
 
-const Carousel: FC<CarouselProps & CarouselParameters> = ({
-  slots,
+const Carousel: FC<CarouselProps> = ({
   backgroundColor,
   spacing,
   border,
@@ -15,23 +11,27 @@ const Carousel: FC<CarouselProps & CarouselParameters> = ({
   height,
   itemsPerPage,
   gapX,
-  variant,
+  component,
 }) => (
   <BaseCarousel
     {...{ backgroundColor, spacing, border, fluidContent, height, itemsPerPage, gapX }}
-    countOfItems={slots.carouselItems?.items.length ?? 0}
-    variant={variant}
+    countOfItems={component?.slots?.[CarouselSlots.Items]?.length ?? 0}
+    variant={component.variant}
   >
     {({ className, style }) => (
-      <UniformSlot slot={slots.carouselItems}>
-        {({ child, key }) => (
-          <div key={key} className={className} style={style}>
-            {child}
-          </div>
-        )}
-      </UniformSlot>
+      <UniformSlot
+        name={CarouselSlots.Items}
+        emptyPlaceholder={<div className="mx-20 h-20 w-full" />}
+        wrapperComponent={({ items }) => {
+          return items.map((item, index) => (
+            <div key={index} className={className} style={style}>
+              {item}
+            </div>
+          ));
+        }}
+      />
     )}
   </BaseCarousel>
 );
 
-export default withFlattenParameters(Carousel);
+export default Carousel;

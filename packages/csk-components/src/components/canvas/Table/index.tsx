@@ -1,5 +1,5 @@
+import { ComponentProps } from '@uniformdev/canvas-react';
 import { ContainerParameters } from '@/components/canvas/Container/parameters';
-import { ComponentProps } from '@/types/cskTypes';
 
 export type TableParameters = ContainerParameters & {
   size?: string;
@@ -11,7 +11,6 @@ export enum TableSlots {
   TableBody = 'tableBody',
 }
 
-export type TableProps = ComponentProps<TableParameters, TableSlots>;
+export type TableProps = ComponentProps<TableParameters>;
 
 export { default } from './table';
-export { TableEmptyPlaceholder } from './empty-placeholder';

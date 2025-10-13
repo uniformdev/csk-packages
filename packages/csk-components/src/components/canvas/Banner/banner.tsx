@@ -1,26 +1,23 @@
-'use client';
-
 import { FC, useCallback, useState } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
+import { UniformSlot } from '@uniformdev/canvas-react';
 import Container from '@/components/ui/Container';
 import { cn } from '@/utils/styling';
-import { withFlattenParameters } from '@/utils/withFlattenParameters';
-import { ContentAlignment, BannerProps, BannerParameters } from '.';
+import { ContentAlignment, BannerProps, BannerSlots } from '.';
 import CloseButton from './close-button';
 import { getContentClasses, getPositionClasses } from './style-utils';
 import { BannerVariants } from './types';
 
-const Banner: FC<BannerProps & BannerParameters> = ({
+const Banner: FC<BannerProps> = ({
   backgroundColor,
   spacing,
   border,
   fluidContent,
-  slots,
   iconColor,
   contentAlignment = ContentAlignment.Center,
   floating = false,
-  variant,
+  component,
 }) => {
+  const variant = component.variant as BannerVariants;
   const [isOpen, setIsOpen] = useState(true);
 
   const handleClose = useCallback(() => {
@@ -40,11 +37,11 @@ const Banner: FC<BannerProps & BannerParameters> = ({
         spacing={spacing}
         fluidContent={fluidContent}
       >
-        <UniformSlot slot={slots.bannerContent} />
+        <UniformSlot name={BannerSlots.BannerContent} emptyPlaceholder={<div className="h-20 w-full" />} />
         {iconColor && <CloseButton onClose={handleClose} iconColor={iconColor} />}
       </Container>
     </Container>
   );
 };
 
-export default withFlattenParameters(Banner);
+export default Banner;

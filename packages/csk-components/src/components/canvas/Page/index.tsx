@@ -1,9 +1,10 @@
-import { UniformSlotProps } from '@uniformdev/canvas-next-rsc-v2/component';
-import { ComponentProps } from '@/types/cskTypes';
+import { ComponentType } from 'react';
+import { ComponentProps, UniformSlotWrapperComponentProps } from '@uniformdev/canvas-react';
+
 export type PageAdditionalProps = {
-  headerCustomRenderer?: UniformSlotProps['children'];
-  contentCustomRenderer?: UniformSlotProps['children'];
-  footerCustomRenderer?: UniformSlotProps['children'];
+  headerCustomRenderer?: ComponentType<UniformSlotWrapperComponentProps>;
+  contentCustomRenderer?: ComponentType<UniformSlotWrapperComponentProps>;
+  footerCustomRenderer?: ComponentType<UniformSlotWrapperComponentProps>;
 };
 
 export type PageParameters = {
@@ -17,7 +18,6 @@ export enum CommonPageSlots {
   PageFooter = 'pageFooter',
 }
 
-export type PageProps = ComponentProps<PageParameters, CommonPageSlots> & PageAdditionalProps;
+export type PageProps = ComponentProps<PageParameters> & PageAdditionalProps;
 
 export { default } from './page';
-export { PageEmptyPlaceholder } from './empty-placeholder';

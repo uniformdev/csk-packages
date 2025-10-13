@@ -1,13 +1,10 @@
-'use client';
-
 import { FC } from 'react';
-import { ComponentParameter, UniformSlot, UniformText } from '@uniformdev/canvas-next-rsc-v2/component';
+import { UniformSlot, UniformText } from '@uniformdev/canvas-react';
 import BaseAccordionItem from '@/components/ui/AccordionItem';
 import BaseText from '@/components/ui/Text';
-import { withFlattenParameters } from '@/utils/withFlattenParameters';
-import { AccordionItemParameters, AccordionItemProps } from '.';
+import { AccordionItemProps, AccordionItemSlots } from '.';
 
-const AccordionItem: FC<AccordionItemProps & AccordionItemParameters> = ({
+const AccordionItem: FC<AccordionItemProps> = ({
   tag,
   alignment,
   color,
@@ -17,12 +14,9 @@ const AccordionItem: FC<AccordionItemProps & AccordionItemParameters> = ({
   transform,
   decoration,
   letterSpacing,
-  slots,
-  component,
   backgroundColor,
   spacing,
   className,
-  parameters,
 }) => (
   <BaseAccordionItem
     {...{
@@ -32,16 +26,11 @@ const AccordionItem: FC<AccordionItemProps & AccordionItemParameters> = ({
     }}
     text={
       <BaseText {...{ alignment, color, size, font, weight, transform, decoration, letterSpacing }}>
-        <UniformText
-          placeholder="Text goes here"
-          parameter={parameters.text as ComponentParameter<string>}
-          as={tag || undefined}
-          component={component}
-        />
+        <UniformText placeholder="Text goes here" parameterId="text" as={tag || undefined} />
       </BaseText>
     }
-    accordionItemContent={<UniformSlot slot={slots.accordionItemContent} />}
+    accordionItemContent={<UniformSlot name={AccordionItemSlots.AccordionItemContent} />}
   />
 );
 
-export default withFlattenParameters(AccordionItem);
+export default AccordionItem;

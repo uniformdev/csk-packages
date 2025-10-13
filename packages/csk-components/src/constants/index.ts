@@ -62,7 +62,6 @@ export const EXTRACT_UI_COMPONENTS = [
   'AccordionItem',
   'Button',
   'Container',
-  'ComponentEmptyPlaceholder',
   'FlexItem',
   'Grid',
   'Header',
@@ -84,16 +83,7 @@ export const EXTRACT_UI_COMPONENTS = [
   'Video',
 ];
 
-export const EXTRACT_UTILS = [
-  'assets.ts',
-  'createComponentResolver.ts',
-  'withFlattenParameters.tsx',
-  'withSlotsDataValue.tsx',
-  'getSlotComponents.ts',
-  'createEmptyPlaceholderResolver.tsx',
-  'routing.ts',
-  'styling.ts',
-];
+export const EXTRACT_UTILS = ['assets.ts', 'createComponentResolver.ts', 'routing.ts', 'styling.ts'];
 
 export const EXTRACT_TYPES = ['cskTypes.ts'];
 

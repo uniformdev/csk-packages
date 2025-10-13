@@ -1,8 +1,7 @@
 import { FC } from 'react';
-import { ComponentParameter, UniformRichText } from '@uniformdev/canvas-next-rsc-v2/component';
+import { UniformRichText } from '@uniformdev/canvas-react';
 import BaseText from '@/components/ui/Text';
 import { cn, resolveViewPort } from '@/utils/styling';
-import { withFlattenParameters } from '@/utils/withFlattenParameters';
 import { RichTextProps, RichTextParameters, RichTextAdditionalProps } from '.';
 
 const RichText: FC<RichTextProps & RichTextParameters & RichTextAdditionalProps> = ({
@@ -10,9 +9,7 @@ const RichText: FC<RichTextProps & RichTextParameters & RichTextAdditionalProps>
   lineCountRestrictions,
   font,
   size,
-  component,
   className,
-  parameters,
 }) => (
   <BaseText lineCountRestrictions={lineCountRestrictions} color={color} font={font}>
     <UniformRichText
@@ -23,11 +20,10 @@ const RichText: FC<RichTextProps & RichTextParameters & RichTextAdditionalProps>
         },
         className
       )}
-      parameter={parameters.text as ComponentParameter<string>}
-      component={component}
+      parameterId="text"
       placeholder="Rich text content goes here..."
     />
   </BaseText>
 );
 
-export default withFlattenParameters(RichText);
+export default RichText;

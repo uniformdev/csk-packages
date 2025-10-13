@@ -1,13 +1,12 @@
-import dynamic from 'next/dynamic';
 import { AssetParamValue } from '@uniformdev/assets';
 import { LinkParamValue } from '@uniformdev/canvas';
+import { ComponentProps } from '@uniformdev/canvas-react';
 import { TextParameters } from '@/components/canvas/Text/parameters';
 import BaseImage from '@/components/ui/Image';
 import InlineSVG from '@/components/ui/InlineSVG';
-import { ComponentProps, ViewPort } from '@/types/cskTypes';
+import { ViewPort } from '@/types/cskTypes';
 import { resolveAsset } from '@/utils/assets';
-
-const NavigationFlyoutClient = dynamic(() => import('./navigation-flyout-client').then(mod => mod.default));
+import NavigationFlyoutClient from './navigation-flyout-client';
 
 export type NavigationFlyoutParameters = TextParameters & {
   icon?: AssetParamValue;
@@ -24,10 +23,10 @@ export enum NavigationFlyoutSlots {
   NavigationFlyoutRightContent = 'navigationFlyoutRightContent',
 }
 
-export type NavigationFlyoutProps = ComponentProps<NavigationFlyoutParameters, NavigationFlyoutSlots>;
+export type NavigationFlyoutProps = ComponentProps<NavigationFlyoutParameters>;
 
 const NavigationFlyout = (props: NavigationFlyoutProps) => {
-  const [resolvedImage] = resolveAsset(props.parameters.icon?.value);
+  const [resolvedImage] = resolveAsset(props.icon);
   const { url, title = '' } = resolvedImage || {};
 
   const renderUrl = () => {
@@ -36,9 +35,7 @@ const NavigationFlyout = (props: NavigationFlyoutProps) => {
     return url.endsWith('.svg') ? <InlineSVG src={url} alt={title} fill /> : <BaseImage src={url} alt={title} fill />;
   };
 
-  return <NavigationFlyoutClient icon={renderUrl()} {...props} />;
+  return <NavigationFlyoutClient {...props} icon={renderUrl()} />;
 };
 
 export default NavigationFlyout;
-
-export { NavigationFlyoutEmptyPlaceholder } from './empty-placeholder';

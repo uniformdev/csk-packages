@@ -1,3 +1,4 @@
+import { NextRouter } from 'next/router';
 import { ResolvedRouteGetResponse, RouteGetResponseEdgehancedComposition, LinkParamValue } from '@uniformdev/canvas';
 
 /**
@@ -96,3 +97,12 @@ export const formatUniformLink = (uniformLink?: LinkParamValue): string => {
  * @returns {boolean} - True if the link starts with "http", indicating it is an external link; otherwise, false.
  */
 export const isExternalLink = (href?: string): boolean => href?.startsWith('http') ?? false;
+
+export const checkIsCurrentRoute = (router: NextRouter, link: LinkParamValue) => {
+  if (!link) return false;
+  const { asPath } = router;
+  const localeFromLink = 'dynamicInputValues' in link ? link.dynamicInputValues?.locale : undefined;
+  const [pathWithoutQuery] = asPath.split('?');
+  const linkPath = link.path === '/' ? link.path : link.path.replace(/\/$/, '');
+  return pathWithoutQuery === (localeFromLink ? linkPath.replace(`/${localeFromLink}`, '') : linkPath);
+};

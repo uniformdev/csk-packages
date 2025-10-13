@@ -1,9 +1,10 @@
 import { AssetParamValue } from '@uniformdev/assets';
 import { LinkParamValue } from '@uniformdev/canvas';
+import { ComponentProps } from '@uniformdev/canvas-react';
 import { ContainerParameters } from '@/components/canvas/Container/parameters';
 import { TextParameters } from '@/components/canvas/Text/parameters';
 import { ButtonVariant, ButtonProps as BaseButtonProps } from '@/components/ui/Button';
-import { ViewPort, ComponentProps } from '@/types/cskTypes';
+import { ViewPort } from '@/types/cskTypes';
 import FixedHero from './fixed-hero';
 import FlexibleHero from './flexible-hero';
 import { PrefixedKeys } from './utils';
@@ -86,8 +87,7 @@ export enum FlexibleHeroSlots {
 }
 
 export type FixedHeroProps = ComponentProps<FixedHeroParameters>;
-export type FlexibleHeroProps = ComponentProps<FlexibleHeroParameters, FlexibleHeroSlots>;
+export type FlexibleHeroProps = ComponentProps<FlexibleHeroParameters>;
 
 const DemoHero = { FixedHero, FlexibleHero };
 export default DemoHero;
-export { FlexibleHeroEmptyPlaceholder } from './empty-placeholder';

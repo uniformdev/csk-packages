@@ -1,1 +1,1 @@
-export { default as DesignExtensionsProvider } from './DesignExtensionsProvider';
+export { default as DesignExtensionsProvider, type DesignExtensionsProviderProps } from './DesignExtensionsProvider';

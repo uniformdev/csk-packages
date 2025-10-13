@@ -1,21 +1,21 @@
 import { FC } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
-import { withFlattenParameters } from '@/utils/withFlattenParameters';
-import { SectionParameters, SectionProps, SectionVariants } from '.';
+import { UniformSlot } from '@uniformdev/canvas-react';
+import { SectionProps, SectionSlots, SectionVariants } from '.';
 import { ColumnsVariant } from './columns-variant';
 import { DefaultVariant } from './default-variant';
 import { getButtonAlignmentClass, getTextAlignmentClass } from './style-utils';
 
-const Section: FC<SectionProps & SectionParameters> = ({
+const Section: FC<SectionProps> = ({
   contentAlignment,
-  slots,
   backgroundColor,
   spacing,
   border,
   fluidContent,
   height,
-  variant,
+  component,
 }) => {
+  const variant = component.variant as SectionVariants;
+
   const variantProps = {
     backgroundColor,
     spacing,
@@ -24,9 +24,15 @@ const Section: FC<SectionProps & SectionParameters> = ({
     height,
     textAlignmentClass: getTextAlignmentClass({ contentAlignment }),
     buttonAlignmentClass: getButtonAlignmentClass({ contentAlignment }),
-    sectionMedia: <UniformSlot slot={slots.sectionMedia} />,
-    sectionContent: slots.sectionContent ? <UniformSlot slot={slots.sectionContent} /> : undefined,
-    sectionCTA: slots.sectionCTA ? <UniformSlot slot={slots.sectionCTA} /> : undefined,
+    sectionMedia: (
+      <UniformSlot name={SectionSlots.SectionMedia} emptyPlaceholder={variant ? null : <div className="size-full" />} />
+    ),
+    sectionContent: component.slots?.sectionContent ? (
+      <UniformSlot name={SectionSlots.SectionContent} emptyPlaceholder={<div className="h-20" />} />
+    ) : undefined,
+    sectionCTA: component.slots?.sectionCTA ? (
+      <UniformSlot name={SectionSlots.SectionCTA} emptyPlaceholder={<div className="mx-40 h-20 w-full" />} />
+    ) : undefined,
   };
 
   switch (variant) {
@@ -38,4 +44,4 @@ const Section: FC<SectionProps & SectionParameters> = ({
   }
 };
 
-export default withFlattenParameters(Section);
+export default Section;

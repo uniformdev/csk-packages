@@ -1,13 +1,12 @@
-import dynamic from 'next/dynamic';
 import { AssetParamValue } from '@uniformdev/assets';
 import { LinkParamValue } from '@uniformdev/canvas';
+import { ComponentProps } from '@uniformdev/canvas-react';
 import { TextParameters } from '@/components/canvas/Text/parameters';
 import BaseImage from '@/components/ui/Image';
 import InlineSVG from '@/components/ui/InlineSVG';
-import { ComponentProps, ViewPort } from '@/types/cskTypes';
+import { ViewPort } from '@/types/cskTypes';
 import { resolveAsset } from '@/utils/assets';
-
-const NavigationGroupClient = dynamic(() => import('./navigation-group-client').then(mod => mod.default));
+import NavigationGroupClient from './navigation-group-client';
 
 export type NavigationGroupParameters = TextParameters & {
   icon?: AssetParamValue;
@@ -23,10 +22,10 @@ export enum NavigationGroupSlots {
   Links = 'links',
 }
 
-export type NavigationGroupProps = ComponentProps<NavigationGroupParameters, NavigationGroupSlots>;
+export type NavigationGroupProps = ComponentProps<NavigationGroupParameters>;
 
 const NavigationGroup = (props: NavigationGroupProps) => {
-  const [resolvedImage] = resolveAsset(props.parameters.icon?.value);
+  const [resolvedImage] = resolveAsset(props.icon);
   const { url, title = '' } = resolvedImage || {};
 
   const renderUrl = () => {
@@ -35,8 +34,7 @@ const NavigationGroup = (props: NavigationGroupProps) => {
     return url.endsWith('.svg') ? <InlineSVG src={url} alt={title} fill /> : <BaseImage src={url} alt={title} fill />;
   };
 
-  return <NavigationGroupClient icon={renderUrl()} {...props} />;
+  return <NavigationGroupClient {...props} icon={renderUrl()} />;
 };
 
 export default NavigationGroup;
-export { NavigationGroupEmptyPlaceholder } from './empty-placeholder';

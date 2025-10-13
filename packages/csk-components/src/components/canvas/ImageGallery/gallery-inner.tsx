@@ -1,10 +1,12 @@
-'use client';
-
 import { FC, ReactNode } from 'react';
-import Masonry from 'react-responsive-masonry';
-import { UniformSlotProps } from '@uniformdev/canvas-next-rsc-v2/component';
+import { MasonryProps } from 'react-responsive-masonry';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import _Masonry from 'react-responsive-masonry/lib/Masonry';
 import { cn } from '@/utils/styling';
 import { ImageGalleryParameters, ImageGalleryProps } from '.';
+
+const Masonry: React.FC<MasonryProps> = props => <_Masonry {...props} />;
 
 const DEFAULT_GALLERY_CONFIG = {
   firstLineCount: 2,
@@ -13,7 +15,7 @@ const DEFAULT_GALLERY_CONFIG = {
 };
 
 type GalleryInnerProps = {
-  slot: UniformSlotProps['slot'];
+  slot?: { items?: { _id: string; component: ReactNode }[] };
   aspectRatio?: ImageGalleryParameters['aspectRatio'];
   config?: ImageGalleryProps['config'];
 };

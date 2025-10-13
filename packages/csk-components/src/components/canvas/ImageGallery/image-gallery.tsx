@@ -1,15 +1,13 @@
-'use client';
-
 import { FC } from 'react';
+import { AssetParamValue } from '@uniformdev/assets';
+import { flattenValues } from '@uniformdev/canvas';
+import CanvasImage from '@/components/canvas/Image';
 import Container from '@/components/ui/Container';
 import BaseImage from '@/components/ui/Image';
-import { ReplaceFieldsWithAssets } from '@/types/cskTypes';
-import { withFlattenParameters } from '@/utils/withFlattenParameters';
-import { ImageGalleryParameters, ImageGalleryProps } from '.';
+import { ImageGalleryProps, ImageGallerySlots } from '.';
 import { GalleryInner } from './gallery-inner';
 
-const ImageGallery: FC<ImageGalleryProps & ReplaceFieldsWithAssets<ImageGalleryParameters, 'items'>> = ({
-  slots,
+const ImageGallery: FC<ImageGalleryProps> = ({
   backgroundColor,
   spacing,
   border,
@@ -18,15 +16,38 @@ const ImageGallery: FC<ImageGalleryProps & ReplaceFieldsWithAssets<ImageGalleryP
   aspectRatio,
   config,
   items,
+  component,
 }) => {
   const slotsToRender = {
-    ...slots.imageGalleryItems,
     items: !items?.length
-      ? slots.imageGalleryItems.items
+      ? component?.slots?.[ImageGallerySlots.Items]?.map((item, index) => {
+          return {
+            _id: `image-${index}-${item?._id}`,
+            component: (
+              <CanvasImage
+                {...(flattenValues(item) as {
+                  width?: number;
+                  height?: number;
+                  objectFit?: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down';
+                  overlayColor?: string;
+                  overlayOpacity?: string;
+                })}
+                image={item?.parameters?.image?.value as AssetParamValue}
+                component={item}
+              />
+            ),
+          };
+        })
       : items.map((item, index) => ({
-          _id: `image-${index}-${item?.id}`,
-          component: <BaseImage src={item.url} alt={item.title || ''} style={{ objectFit: 'cover' }} fill />,
-          $pzCrit: undefined,
+          _id: `image-${index}-${item?._id}`,
+          component: (
+            <BaseImage
+              src={item.fields?.url?.value}
+              alt={item.fields?.title?.value || ''}
+              style={{ objectFit: 'cover' }}
+              fill
+            />
+          ),
         })),
   };
 
@@ -39,4 +60,4 @@ const ImageGallery: FC<ImageGalleryProps & ReplaceFieldsWithAssets<ImageGalleryP
   );
 };
 
-export default withFlattenParameters(ImageGallery);
+export default ImageGallery;

@@ -1,5 +1,5 @@
+import { ComponentProps } from '@uniformdev/canvas-react';
 import { RichTextNode } from '@uniformdev/richtext';
-import { ComponentProps } from '@/types/cskTypes';
 
 type Size = 'sm' | 'base' | 'lg' | 'xl' | '2xl';
 

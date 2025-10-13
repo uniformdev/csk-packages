@@ -1,14 +1,13 @@
 import { FC, useEffect, useState } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
+import { UniformSlot } from '@uniformdev/canvas-react';
 import { ArrowIcon } from '@/components/ui/_icons';
 import { cn } from '@/utils/styling';
-import { NavigationGroupParameters, NavigationGroupProps } from '.';
+import { NavigationGroupParameters, NavigationGroupSlots } from '.';
 
-type NavigationGroupMobileContentProps = Pick<NavigationGroupProps, 'context' | 'slots'> &
-  Pick<NavigationGroupParameters, 'backgroundColor'> & {
-    isOpen: boolean;
-    onClose: () => void;
-  };
+type NavigationGroupMobileContentProps = Pick<NavigationGroupParameters, 'backgroundColor'> & {
+  isOpen: boolean;
+  onClose: () => void;
+};
 
 const useHeaderHeight = () => {
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -26,7 +25,6 @@ const useHeaderHeight = () => {
 export const NavigationGroupMobileContent: FC<NavigationGroupMobileContentProps> = ({
   isOpen,
   backgroundColor,
-  slots,
   onClose,
 }) => {
   const headerHeight = useHeaderHeight();
@@ -45,7 +43,7 @@ export const NavigationGroupMobileContent: FC<NavigationGroupMobileContentProps>
       </button>
 
       <div className="flex flex-col items-center gap-y-4 p-4">
-        <UniformSlot slot={slots.links} />
+        <UniformSlot name={NavigationGroupSlots.Links} emptyPlaceholder={<div className="h-40 w-48" />} />
       </div>
     </div>
   );

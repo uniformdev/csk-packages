@@ -1,5 +1,3 @@
-'use client';
-
 import { FC } from 'react';
 import { setCookie } from 'cookies-next';
 import { useTheme } from 'next-themes';

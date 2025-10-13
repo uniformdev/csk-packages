@@ -1,5 +1,3 @@
-'use client';
-
 import { FC, useState } from 'react';
 import BaseContainer from '@/components/ui/Container';
 import BaseGrid from '@/components/ui/Grid';
