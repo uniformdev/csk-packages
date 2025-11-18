@@ -32,6 +32,8 @@ export const config = [
     settings: { react: { version: 'detect' } },
     rules: {
       ...pluginReactHooks.configs.recommended.rules,
+      // Enable error-boundaries rule (not included in recommended)
+      'react-hooks/error-boundaries': 'error',
       // React scope no longer necessary with new JSX transform.
       'react/react-in-jsx-scope': 'off',
     },

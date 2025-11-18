@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useCallback, useMemo } from 'react';
+import { FC, useCallback, useMemo } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { DataWithProperties, flattenValues } from '@uniformdev/canvas';
 import { Image } from '@uniformdev/csk-components/components/ui';
@@ -26,7 +26,7 @@ interface FilterParameters {
 
 type RecipeFilterProps = ComponentProps<FilterParameters>;
 
-const RecipeFilter: React.FC<RecipeFilterProps & FilterParameters> = ({ id = 'unknown', filterKeys }) => {
+const RecipeFilter: FC<RecipeFilterProps & FilterParameters> = ({ id = 'unknown', filterKeys }) => {
   const searchParams = useSearchParams();
   const router = useRouter();
   const selectedFilterId = useMemo(() => searchParams.get(id) || 'all', [searchParams, id]);

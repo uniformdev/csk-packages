@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 import Container from '@/components/ui/Container';
 import { cn } from '@/utils/styling';
 import { FlexibleHeroParameters } from '.';
@@ -9,9 +9,9 @@ type DefaultVariantProps = {
   border: FlexibleHeroParameters['border'];
   fluidContent: FlexibleHeroParameters['fluidContent'];
   height: FlexibleHeroParameters['height'];
-  demoHeroMedia: React.ReactNode;
-  demoHeroContent: React.ReactNode;
-  demoHeroCTA: React.ReactNode;
+  demoHeroMedia: ReactNode;
+  demoHeroContent: ReactNode;
+  demoHeroCTA: ReactNode;
   textAlignmentClass: string;
   buttonAlignmentClass: string;
 };

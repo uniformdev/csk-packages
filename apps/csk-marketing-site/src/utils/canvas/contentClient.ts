@@ -16,7 +16,7 @@ export const getRecipesByCategory = async ({
 } = {}) => {
   const filters = {
     type: { eq: 'recipe' },
-    ...(Boolean(categoryId) ? { 'fields.categories[eq]': categoryId } : null),
+    ...(categoryId ? { 'fields.categories[eq]': categoryId } : null),
   };
   return getContentClient()
     .getEntries({

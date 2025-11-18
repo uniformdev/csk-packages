@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 import Container from '@/components/ui/Container';
 import { cn } from '@/utils/styling';
 import { SectionParameters } from '.';
@@ -9,9 +9,9 @@ type DefaultVariantProps = {
   border?: SectionParameters['border'];
   fluidContent?: SectionParameters['fluidContent'];
   height?: SectionParameters['height'];
-  sectionMedia: React.ReactNode;
-  sectionContent: React.ReactNode;
-  sectionCTA: React.ReactNode;
+  sectionMedia: ReactNode;
+  sectionContent: ReactNode;
+  sectionCTA: ReactNode;
   textAlignmentClass: string;
   buttonAlignmentClass: string;
 };

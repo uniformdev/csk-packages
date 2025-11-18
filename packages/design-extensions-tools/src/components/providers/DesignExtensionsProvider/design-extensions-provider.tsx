@@ -1,9 +1,8 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable react-hooks/error-boundaries */
 import { FC } from 'react';
 import { DesignExtensionsProviderProps } from '.';
 import { getTokenConfiguration } from '../../../scripts/run-time';
 
-// @ts-ignore: ToDo add types for rsc
 export const DesignExtensionsProvider: FC<DesignExtensionsProviderProps> = async ({
   children,
   isPreviewMode = false,
