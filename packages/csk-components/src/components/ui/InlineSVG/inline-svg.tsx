@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/error-boundaries */
 import { FC, SVGProps } from 'react';
 import { cn } from '@/utils/styling';
 import { InlineSVGProps } from '.';

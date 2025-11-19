@@ -32,27 +32,61 @@ export const config = [
       },
     },
     rules: {
-      'no-console': ['error', { allow: ['info', 'warn', 'error'] }],
+      // TypeScript rules are included in typescript-eslint, override if needed
+      'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '_', varsIgnorePattern: '_' }],
+      'no-console': ['error', { allow: ['info', 'warn', 'error'] }],
       'import/order': [
         'error',
         {
           groups: [['builtin', 'external'], 'internal', ['parent', 'sibling', 'index']],
           pathGroups: [
-            { pattern: '@uniformdev/**', group: 'internal', position: 'before' },
-            { pattern: '@**/**', group: 'internal', position: 'before' },
-            { pattern: 'react', group: 'builtin', position: 'before' },
-            { pattern: 'next', group: 'builtin', position: 'before' },
-            { pattern: 'next**/**', group: 'builtin', position: 'before' },
+            {
+              pattern: '@uniformdev/**',
+              group: 'internal',
+              position: 'before',
+            },
+            {
+              pattern: '@**/**',
+              group: 'internal',
+              position: 'before',
+            },
+            {
+              pattern: 'react',
+              group: 'builtin',
+              position: 'before',
+            },
+            {
+              pattern: 'next',
+              group: 'builtin',
+              position: 'before',
+            },
+            {
+              pattern: 'next**/**',
+              group: 'builtin',
+              position: 'before',
+            },
           ],
           pathGroupsExcludedImportTypes: ['builtin'],
-          alphabetize: { order: 'asc', caseInsensitive: true },
+          alphabetize: {
+            order: 'asc',
+            caseInsensitive: true,
+          },
         },
       ],
     },
   },
   {
-    ignores: ['dist/**', 'node_modules/**', 'next/**', 'storybook-static/**'],
+    ignores: [
+      '.next/**',
+      'out/**',
+      'build/**',
+      'dist/**',
+      'node_modules/**',
+      'next-env.d.ts',
+      '*.config.{js,mjs,cjs,ts}',
+      'storybook-static/**',
+    ],
   },
   {
     files: ['**/*.{ts,tsx,js,jsx}'],

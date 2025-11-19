@@ -82,6 +82,7 @@ export const DemoCard: FC<DemoCardProps & DemoCardParameters & { slotData?: Reco
 
   useEffect(() => {
     if (resolvedTheme) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setCurrentTheme(resolvedTheme);
     }
   }, [resolvedTheme]);

@@ -1,9 +1,10 @@
+import { ReactNode } from 'react';
 import { ContainerProps as BaseContainerProps } from '@/components/ui/Container';
 
 export type FooterProps = Omit<BaseContainerProps, 'height' | 'content'> & {
-  logo?: React.ReactNode;
-  copyright?: React.ReactNode;
-  content?: React.ReactNode;
+  logo?: ReactNode;
+  copyright?: ReactNode;
+  content?: ReactNode;
 };
 
 export { Footer as default } from './footer';

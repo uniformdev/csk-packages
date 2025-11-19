@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 import Container from '@/components/ui/Container';
 import { TestimonialParameters } from '.';
 
@@ -6,10 +6,10 @@ type WithLargeAvatarVariantProps = Pick<
   TestimonialParameters,
   'backgroundColor' | 'spacing' | 'border' | 'fluidContent' | 'height'
 > & {
-  testimonialPrimaryImage: React.ReactNode;
-  testimonialContent: React.ReactNode;
-  testimonialAuthor: React.ReactNode;
-  testimonialSecondaryImage: React.ReactNode;
+  testimonialPrimaryImage: ReactNode;
+  testimonialContent: ReactNode;
+  testimonialAuthor: ReactNode;
+  testimonialSecondaryImage: ReactNode;
 };
 
 export const DefaultVariant: FC<WithLargeAvatarVariantProps> = ({

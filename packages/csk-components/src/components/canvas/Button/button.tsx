@@ -82,6 +82,7 @@ const Button: FC<ButtonProps & ReplaceFieldsWithAssets<ButtonParameters, 'icon'>
       buttonColor={buttonColor}
       hoverButtonColor={hoverButtonColor}
       hoverTextColor={hoverTextColor}
+      // eslint-disable-next-line react-hooks/static-components
       icon={<Icon />}
       iconPosition={iconPosition}
     >

@@ -44,6 +44,7 @@ const AnchorLinks: FC<AnchorLinksProps & AnchorLinksParameters> = ({ size, color
       top: div.offsetTop,
     }));
 
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setAnchorLinks(anchors);
 
     const currentAnchor = anchors.find(anchor => anchor.href === window.location.hash);

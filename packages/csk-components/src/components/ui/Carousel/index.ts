@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import { CSSProperties, ReactElement } from 'react';
 import dynamic from 'next/dynamic';
 import { ContainerProps as BaseContainerProps } from '@/components/ui/Container';
 
@@ -7,7 +7,7 @@ export type CarouselProps = Pick<
   'title' | 'backgroundColor' | 'spacing' | 'border' | 'fluidContent' | 'height'
 > & {
   countOfItems?: number;
-  children: (options: { className?: string; style?: React.CSSProperties }) => ReactElement;
+  children: (options: { className?: string; style?: CSSProperties }) => ReactElement;
   itemsPerPage?: string;
   gapX?: string;
   variant?: string;

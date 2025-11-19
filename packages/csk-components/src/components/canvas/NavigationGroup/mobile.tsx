@@ -16,6 +16,7 @@ const useHeaderHeight = () => {
   useEffect(() => {
     const header = document.getElementById('mobile-header');
     if (header) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setHeaderHeight(header.offsetHeight);
     }
   }, []);

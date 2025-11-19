@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 export type InlineSVGProps = {
   src: string;
   className?: string;
@@ -5,7 +7,7 @@ export type InlineSVGProps = {
   width?: number;
   height?: number;
   sanitize?: boolean;
-  fallback?: React.ReactNode;
+  fallback?: ReactNode;
   useCurrentColor?: boolean;
   alt?: string;
 };

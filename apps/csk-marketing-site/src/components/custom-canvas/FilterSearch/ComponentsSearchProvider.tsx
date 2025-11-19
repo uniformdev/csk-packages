@@ -67,6 +67,7 @@ const ComponentsSearchProvider: FC<PropsWithChildren<ComponentsSearchProviderPro
   const [result, setResult] = useState<CompositionGetListResponse['compositions'] | undefined>(undefined);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setCurrentPage(0);
   }, [pageSize]);
 
@@ -80,6 +81,7 @@ const ComponentsSearchProvider: FC<PropsWithChildren<ComponentsSearchProviderPro
   useEffect(() => {
     if (!enableSearch) {
       if (!!search.length || !!allowCategoryIds?.length) {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setEnableSearch(true);
       }
       return;

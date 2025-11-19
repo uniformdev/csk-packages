@@ -64,6 +64,7 @@ export const BaseHeroButton: FC<
     ) : undefined;
   };
   return (
+    // eslint-disable-next-line react-hooks/static-components
     <BaseButton {...props} href={href} icon={<Icon />}>
       <UniformText
         placeholder="Button text goes here"
