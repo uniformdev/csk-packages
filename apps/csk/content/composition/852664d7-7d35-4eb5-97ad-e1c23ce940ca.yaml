@@ -8,17 +8,53 @@ composition:
       parameters:
         image:
           type: asset
-          value: []
+          value:
+            - _id: d736fe7f-0d3e-4d4b-a854-f070c88c674d
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: 486077aa-19ad-4bc8-9310-eccf34b48aa4
+                url:
+                  value: >-
+                    https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/Vq4v8txbSVWT7QlsKcFW9A-rectangle_light.png
+                  type: text
+                file:
+                  type: file
+                  value: 4fbbd08c-6f27-48ab-9d9a-4bbc665c96c8
+                size:
+                  value: 1350631
+                  type: number
+                title:
+                  type: text
+                  value: rectangle_light.png
+                width:
+                  value: 1536
+                  type: number
+                height:
+                  value: 1024
+                  type: number
+                mediaType:
+                  value: image/png
+                  type: text
+              _source: uniform-assets
         titleText:
           type: text
           locales:
             en: Component Starter Kit
+        displayName:
+          type: text
+          locales:
+            en: Hero
         descriptionText:
           type: text
           locales:
             en: >-
               A rich set of components to supercharge building fast, modern,
               personalized experiences with Uniform DXP.
+        overlayAutoTint:
+          type: dex-slider-control-parameter
+          value: '0'
         eyebrowTitleText:
           type: text
           locales:
@@ -138,7 +174,7 @@ composition:
                 titleText: 'yes'
                 displayName: 'yes'
                 descriptionText: 'yes'
-                overlayAutoTint: 'no'
+                overlayAutoTint: 'yes'
                 contentAlignment: 'no'
                 eyebrowTitleText: 'yes'
                 primaryButtonLink: 'yes'
@@ -149,5 +185,5 @@ composition:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-10-09T13:58:23.777769+00:00'
-modified: '2025-10-09T14:01:08.002261+00:00'
+modified: '2025-10-13T16:00:46.526425+00:00'
 pattern: false
