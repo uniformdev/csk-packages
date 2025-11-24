@@ -1,0 +1,1535 @@
+composition:
+  _name: Articles
+  _id: 3f4d35dd-7510-4068-9c41-3166b271dea3
+  _slug: articles
+  type: page
+  _dataResources:
+    All Article Authors:
+      type: authorList
+      variables:
+        locale: ${locale}
+        search: ''
+        filters: '{"type[eq]":"author"}'
+        uiFilters: '[{"field":"type","operator":"eq","value":"author"}]'
+        contentTypes: author
+    All Article Categories:
+      type: articleCategoryList
+      variables:
+        locale: ${locale}
+        search: ''
+        filters: '{"type[eq]":"articleCategory"}'
+        uiFilters: '[{"field":"type","operator":"eq","value":"articleCategory"}]'
+        contentTypes: articleCategory
+  _overrides:
+    3f4d35dd-7510-4068-9c41-3166b271dea3:
+      parameters:
+        pageTitle:
+          type: text
+          locales:
+            da-dk: Java Drip Kaffebar Artikler - Opdag Din Perfekte Bryg
+            de-at: >-
+              Java Drip Coffee Shop Artikel - Entdecken Sie Ihren perfekten
+              Kaffee
+            de-ch: >-
+              Java Drip Coffee Shop Artikel - Entdecken Sie Ihren perfekten
+              Kaffee
+            de-de: >-
+              Java Drip Coffee Shop Artikel - Entdecken Sie Ihren perfekten
+              Kaffee
+            en-au: >-
+              Articles de Java Drip Coffee Shop - Découvrez votre infusion
+              parfaite
+            en-ca: Java Drip Coffee Shop Articles - Discover Your Perfect Brew
+            en-gb: Java Drip Coffee Shop Articles - Discover Your Perfect Brew
+            en-nl: Java Drip Koffiebar Artikelen - Ontdek Je Perfecte Brouwsel
+            en-nz: >-
+              Java Drip Coffee Shop Artikel - Entdecken Sie Ihren perfekten
+              Kaffee
+            en-us: Java Drip Coffee Shop Articles - Discover Your Perfect Brew
+            fr-ca: >-
+              Articles de Java Drip Coffee Shop - Découvrez votre infusion
+              parfaite
+            fr-ch: >-
+              Articles de Java Drip Coffee Shop - Découvrez votre infusion
+              parfaite
+            fr-fr: >-
+              Articles de Java Drip Coffee Shop - Découvrez votre infusion
+              parfaite
+            ja-jp: ジャバドリップコーヒーショップの記事 - あなたにぴったりの一杯を見つけよう
+            nl-nl: Java Drip Koffiebar Artikelen - Ontdek je Perfecte Brouwsel
+            sv-se: Java Drip Coffee Shop Artiklar - Upptäck ditt perfekta bryggkaffe
+            ar-uae: مقالات مقهى جافا دريب - اكتشف قهوتك المثالية
+        pageKeywords:
+          type: text
+          locales:
+            da-dk: >-
+              Kaffe, Kaffebønner, Bryggeteknikker, Kaffetips, Kaffeartikler,
+              Java Drip, Espresso, Specialkaffe
+            de-at: >-
+              Kaffee, Kaffeebohnen, Brühtechniken, Kaffeetipps, Kaffeeartikel,
+              Java Drip, Espresso, Spezialitätenkaffee
+            de-ch: >-
+              Kaffee, Kaffeebohnen, Brühtechniken, Kaffeetipps, Kaffeeartikel,
+              Java Drip, Espresso, Spezialitätenkaffee
+            de-de: >-
+              Kaffee, Kaffeebohnen, Brühtechniken, Kaffeetipps, Kaffeeartikel,
+              Java Drip, Espresso, Spezialitätenkaffee
+            en-au: >-
+              Café, Grains de café, Techniques d'infusion, Conseils sur le café,
+              Articles sur le café, Goutte à goutte Java, Espresso, Café de
+              spécialité
+            en-ca: >-
+              Coffee, Coffee Beans, Brewing Techniques, Coffee Tips, Coffee
+              Articles, Java Drip, Espresso, Specialty Coffee
+            en-gb: >-
+              Coffee, Coffee Beans, Brewing Techniques, Coffee Tips, Coffee
+              Articles, Java Drip, Espresso, Speciality Coffee
+            en-nl: >-
+              Koffie, Koffiebonen, Zetmethoden, Koffietips, Koffieartikelen,
+              Java Drip, Espresso, Specialty Coffee
+            en-nz: >-
+              Kaffee, Kaffeebohnen, Brühtechniken, Kaffeetipps, Kaffeeartikel,
+              Java Drip, Espresso, Spezialitätenkaffee
+            en-us: >-
+              Coffee, Coffee Beans, Brewing Techniques, Coffee Tips, Coffee
+              Articles, Java Drip, Espresso, Specialty Coffee
+            fr-ca: >-
+              Café, Grains de café, Techniques d'infusion, Conseils sur le café,
+              Articles sur le café, Java Drip, Espresso, Café de spécialité
+            fr-ch: >-
+              Café, Grains de café, Techniques d'infusion, Conseils sur le café,
+              Articles sur le café, Java Drip, Espresso, Café de spécialité
+            fr-fr: >-
+              Café, Grains de café, Techniques d'infusion, Conseils sur le café,
+              Articles sur le café, Java Drip, Espresso, Café de spécialité
+            ja-jp: コーヒー、コーヒー豆、抽出技術、コーヒーのヒント、コーヒー記事、ジャバドリップ、エスプレッソ、スペシャルティコーヒー
+            nl-nl: >-
+              Koffie, Koffiebonen, Zetmethoden, Koffietips, Koffieartikelen,
+              Java Drip, Espresso, Specialty Coffee
+            sv-se: >-
+              Kaffe, Kaffebönor, Bryggtekniker, Kaffetips, Kaffeartiklar, Java
+              Drip, Espresso, Specialkaffe
+            ar-uae: >-
+              قهوة، حبوب القهوة، تقنيات التخمير، نصائح القهوة، مقالات القهوة،
+              جافا دريب، إسبريسو، قهوة مختصة
+        openGraphType:
+          type: select
+          value: website
+        openGraphImage:
+          type: asset
+          value:
+            - _id: 516bf10a-161d-4c99-a806-b2b173621852
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: d0565648-3211-4de9-9b30-ef03c342b554
+                url:
+                  value: >-
+                    https://img.uniform.global/p/b0JtaxSVQxmqWylG6vGC1Q/pQb_C1rURDGnTR8geyw8cQ-articles-og-image.png
+                  type: text
+                file:
+                  type: file
+                  value: bcfc68fe-28a6-4cd7-82d1-18dd2b597b79
+                size:
+                  value: 1805651
+                  type: number
+                title:
+                  type: text
+                  value: articles-og-image.png
+                width:
+                  value: 1808
+                  type: number
+                height:
+                  value: 908
+                  type: number
+                mediaType:
+                  value: image/png
+                  type: text
+              _source: uniform-assets
+        openGraphTitle:
+          type: text
+          locales:
+            da-dk: Java Drip Kaffebar Artikler - Opdag Din Perfekte Bryg
+            de-at: >-
+              Java Drip Coffee Shop Artikel - Entdecken Sie Ihren perfekten
+              Kaffee
+            de-ch: >-
+              Java Drip Coffee Shop Artikel - Entdecken Sie Ihren perfekten
+              Kaffee
+            de-de: >-
+              Java Drip Coffee Shop Artikel - Entdecken Sie Ihren perfekten
+              Kaffee
+            en-au: >-
+              Articles de la Java Drip Coffee Shop - Découvrez votre infusion
+              parfaite
+            en-ca: Java Drip Coffee Shop Articles - Discover Your Perfect Brew
+            en-gb: Java Drip Coffee Shop Articles - Discover Your Perfect Brew
+            en-nl: Java Drip Coffee Shop Artikelen - Ontdek Jouw Perfecte Brouwsel
+            en-nz: >-
+              Java Drip Coffee Shop Artikel - Entdecken Sie Ihren perfekten
+              Kaffee
+            en-us: Java Drip Coffee Shop Articles - Discover Your Perfect Brew
+            fr-ca: >-
+              Articles sur le café goutte-à-goutte Java - Découvrez votre
+              infusion parfaite
+            fr-ch: >-
+              Articles de Java Drip Coffee Shop - Découvrez votre infusion
+              parfaite
+            fr-fr: >-
+              Articles de Java Drip Coffee Shop - Découvrez votre infusion
+              parfaite
+            ja-jp: Javaドリップコーヒーショップの記事 - あなたにぴったりの一杯を見つけよう
+            nl-nl: Java Drip Koffiebar Artikelen - Ontdek Jouw Perfecte Brouwsel
+            sv-se: Java Drip Coffee Shop Artiklar - Upptäck ditt perfekta bryggkaffe
+            ar-uae: مقالات مقهى جافا دريب - اكتشف قهوتك المثالية
+        pageDescription:
+          type: text
+          locales:
+            da-dk: >-
+              Udforsk vores samling af kaffeartikler. Fra at vælge de rigtige
+              kaffebønner til at mestre de perfekte bryggeteknikker, opdag alt
+              hvad du behøver at vide om kaffe her.
+            de-at: >-
+              Entdecken Sie unsere Sammlung von Kaffeeartikeln. Von der Auswahl
+              der richtigen Kaffeebohnen bis hin zum Beherrschen der perfekten
+              Brühtechniken – hier finden Sie alles, was Sie über Kaffee wissen
+              müssen.
+            de-ch: >-
+              Entdecken Sie unsere Sammlung von Kaffeeartikeln. Von der Auswahl
+              der richtigen Kaffeebohnen bis hin zur Beherrschung der perfekten
+              Brühtechniken – entdecken Sie hier alles, was Sie über Kaffee
+              wissen müssen.
+            de-de: >-
+              Entdecken Sie unsere Sammlung von Kaffeeartikeln. Von der Auswahl
+              der richtigen Kaffeebohnen bis hin zur Beherrschung der perfekten
+              Brühtechniken – entdecken Sie hier alles, was Sie über Kaffee
+              wissen müssen.
+            en-au: >-
+              Explorez notre collection d'articles sur le café. Du choix des
+              bons grains de café à la maîtrise des techniques de préparation
+              parfaites, découvrez tout ce que vous devez savoir sur le café
+              ici.
+            en-ca: >-
+              Explore our collection of coffee articles. From choosing the right
+              coffee beans to mastering the perfect brewing techniques, discover
+              all you need to know about coffee here.
+            en-gb: >-
+              Explore our collection of coffee articles. From choosing the right
+              coffee beans to mastering the perfect brewing techniques, discover
+              all you need to know about coffee here.
+            en-nl: >-
+              Verken onze verzameling koffieartikelen. Van het kiezen van de
+              juiste koffiebonen tot het beheersen van de perfecte zetmethoden,
+              ontdek hier alles wat je moet weten over koffie.
+            en-nz: >-
+              Entdecken Sie unsere Sammlung von Kaffeeartikeln. Von der Auswahl
+              der richtigen Kaffeebohnen bis hin zur Beherrschung der perfekten
+              Brühtechniken – entdecken Sie hier alles, was Sie über Kaffee
+              wissen müssen.
+            en-us: >-
+              Explore our collection of coffee articles. From choosing the right
+              coffee beans to mastering the perfect brewing techniques, discover
+              all you need to know about coffee here.
+            fr-ca: >-
+              Explorez notre collection d'articles sur le café. De la sélection
+              des bons grains de café à la maîtrise des techniques de
+              préparation parfaites, découvrez tout ce que vous devez savoir sur
+              le café ici.
+            fr-ch: >-
+              Explorez notre collection d'articles sur le café. Du choix des
+              bons grains de café à la maîtrise des techniques de préparation
+              parfaites, découvrez tout ce que vous devez savoir sur le café
+              ici.
+            fr-fr: >-
+              Explorez notre collection d'articles sur le café. Du choix des
+              bons grains de café à la maîtrise des techniques de préparation
+              parfaites, découvrez tout ce que vous devez savoir sur le café
+              ici.
+            ja-jp: >-
+              コーヒーに関する記事のコレクションを探索してください。適切なコーヒー豆の選び方から完璧な抽出技術の習得まで、コーヒーについて知っておくべきすべてをここで発見してください。
+            nl-nl: >-
+              Verken onze verzameling koffieartikelen. Van het kiezen van de
+              juiste koffiebonen tot het beheersen van de perfecte zetmethodes,
+              ontdek hier alles wat je moet weten over koffie.
+            sv-se: >-
+              Utforska vår samling av kaffeartiklar. Från att välja rätt
+              kaffebönor till att bemästra de perfekta bryggteknikerna, upptäck
+              allt du behöver veta om kaffe här.
+            ar-uae: >-
+              استكشف مجموعتنا من مقالات القهوة. من اختيار حبوب القهوة المناسبة
+              إلى إتقان تقنيات التحضير المثالية، اكتشف كل ما تحتاج لمعرفته حول
+              القهوة هنا.
+        openGraphDescription:
+          type: text
+          locales:
+            da-dk: >-
+              Udforsk vores samling af kaffeartikler. Fra at vælge de rigtige
+              kaffebønner til at mestre de perfekte bryggeteknikker, opdag alt,
+              hvad du behøver at vide om kaffe her.
+            de-at: >-
+              Entdecken Sie unsere Sammlung von Kaffeeartikeln. Von der Auswahl
+              der richtigen Kaffeebohnen bis hin zur Beherrschung der perfekten
+              Brühtechniken – hier erfahren Sie alles, was Sie über Kaffee
+              wissen müssen.
+            de-ch: >-
+              Entdecken Sie unsere Sammlung von Kaffeeartikeln. Von der Auswahl
+              der richtigen Kaffeebohnen bis hin zur Beherrschung der perfekten
+              Brühtechniken – hier erfahren Sie alles, was Sie über Kaffee
+              wissen müssen.
+            de-de: >-
+              Entdecken Sie unsere Sammlung von Kaffeeartikeln. Von der Auswahl
+              der richtigen Kaffeebohnen bis hin zur Beherrschung der perfekten
+              Brühtechniken – hier erfahren Sie alles, was Sie über Kaffee
+              wissen müssen.
+            en-au: >-
+              Explorez notre collection d'articles sur le café. De la sélection
+              des bons grains de café à la maîtrise des techniques de
+              préparation parfaites, découvrez tout ce que vous devez savoir sur
+              le café ici.
+            en-ca: >-
+              Explore our collection of coffee articles. From choosing the right
+              coffee beans to mastering the perfect brewing techniques, discover
+              all you need to know about coffee here.
+            en-gb: >-
+              Explore our collection of coffee articles. From choosing the right
+              coffee beans to mastering the perfect brewing techniques, discover
+              all you need to know about coffee here.
+            en-nl: >-
+              Verken onze verzameling koffieartikelen. Van het kiezen van de
+              juiste koffiebonen tot het beheersen van de perfecte zetmethoden,
+              ontdek hier alles wat je moet weten over koffie.
+            en-nz: >-
+              Entdecken Sie unsere Sammlung von Kaffeeartikeln. Von der Auswahl
+              der richtigen Kaffeebohnen bis hin zur Beherrschung der perfekten
+              Brühtechniken – entdecken Sie hier alles, was Sie über Kaffee
+              wissen müssen.
+            en-us: >-
+              Explore our collection of coffee articles. From choosing the right
+              coffee beans to mastering the perfect brewing techniques, discover
+              all you need to know about coffee here.
+            fr-ca: >-
+              Explorez notre collection d'articles sur le café. Du choix des
+              bons grains de café à la maîtrise des techniques de préparation
+              parfaites, découvrez tout ce que vous devez savoir sur le café
+              ici.
+            fr-ch: >-
+              Explorez notre collection d'articles sur le café. Du choix des
+              bons grains de café à la maîtrise des techniques de préparation
+              parfaites, découvrez tout ce que vous devez savoir sur le café
+              ici.
+            fr-fr: >-
+              Explorez notre collection d'articles sur le café. Du choix des
+              bons grains de café à la maîtrise des techniques de préparation
+              parfaites, découvrez tout ce que vous devez savoir sur le café
+              ici.
+            ja-jp: >-
+              私たちのコーヒー記事のコレクションを探索してください。適切なコーヒー豆の選び方から完璧な抽出技術の習得まで、ここでコーヒーに関するすべてを知ることができます。
+            nl-nl: >-
+              Ontdek onze verzameling koffieartikelen. Van het kiezen van de
+              juiste koffiebonen tot het beheersen van de perfecte zetmethodes,
+              ontdek hier alles wat je moet weten over koffie.
+            sv-se: >-
+              Utforska vår samling av artiklar om kaffe. Från att välja rätt
+              kaffebönor till att bemästra de perfekta bryggteknikerna, upptäck
+              allt du behöver veta om kaffe här.
+            ar-uae: >-
+              استكشف مجموعتنا من مقالات القهوة. من اختيار حبوب القهوة المناسبة
+              إلى إتقان تقنيات التحضير المثالية، اكتشف كل ما تحتاج لمعرفته حول
+              القهوة هنا.
+    3f4d35dd-7510-4068-9c41-3166b271dea3|dc2e95be-21b5-4476-a309-f8a34922f528:
+      slots:
+        $slotSectionItems:
+          - _id: 9a8e179f-df98-4297-b6e8-74da7f904a12
+            type: container
+            _pattern: d9dd4b0a-358f-4b10-be48-77c5088020cc
+            _overridability:
+              parameters:
+                displayName: 'yes'
+              hideLockedParameters: true
+    9a8e179f-df98-4297-b6e8-74da7f904a12|2058ad6d-25b3-4eea-a276-cb996b4188cc:
+      slots:
+        $slotSectionItems:
+          - _id: 04931c78-f13c-4b5f-bafe-f016d18e1c6a
+            type: entriesSearchEngine
+            slots:
+              content:
+                - _id: 3aa897f9-c9e0-44d7-80b3-763e12af4127
+                  type: grid
+                  slots:
+                    gridInner:
+                      - _id: 1c006f17-5bf0-4c8e-bcb3-49f67b75ce4e
+                        type: gridItem
+                        slots:
+                          inner:
+                            - _id: bab79972-79db-4794-aa19-2a14bb8e17a6
+                              type: entriesSearchBox
+                              parameters:
+                                size:
+                                  type: dex-token-selector-parameter
+                                  value: input-large
+                                border:
+                                  type: dex-token-selector-parameter
+                                  value: border-product-card
+                                placeholder:
+                                  type: text
+                                  locales:
+                                    da-dk: Begynd at søge efter en artikel
+                                    de-at: >-
+                                      Beginnen Sie mit der Suche nach einem
+                                      Artikel
+                                    de-ch: >-
+                                      Beginnen Sie mit der Suche nach einem
+                                      Artikel.
+                                    de-de: >-
+                                      Beginnen Sie mit der Suche nach einem
+                                      Artikel.
+                                    en-au: Commencez à rechercher un article
+                                    en-ca: Start searching for an article
+                                    en-gb: Start searching for an article
+                                    en-nl: Begin met zoeken naar een artikel
+                                    en-nz: >-
+                                      Beginnen Sie mit der Suche nach einem
+                                      Artikel
+                                    en-us: Start searching for an article
+                                    fr-ca: Commencez à chercher un article
+                                    fr-ch: Commencez à rechercher un article
+                                    fr-fr: Commencez à rechercher un article
+                                    ja-jp: 記事の検索を開始する
+                                    nl-nl: Begin met het zoeken naar een artikel
+                                    sv-se: Börja söka efter en artikel
+                                    ar-uae: ابدأ البحث عن مقال
+                        parameters:
+                          rowStart:
+                            type: dex-slider-control-parameter
+                            value:
+                              mobile: ''
+                              tablet: ''
+                              desktop: ''
+                          columnSpan:
+                            type: dex-slider-control-parameter
+                            value:
+                              tablet: span-3
+                              desktop: span-3
+                          columnStart:
+                            type: dex-slider-control-parameter
+                            value:
+                              mobile: ''
+                              tablet: ''
+                              desktop: ''
+                          displayName:
+                            type: text
+                            locales:
+                              da-dk: Søgefelt
+                              de-at: Suchfeld
+                              de-ch: Suchfeld
+                              de-de: Suchfeld
+                              en-au: Boîte de recherche
+                              en-ca: Search Bar
+                              en-gb: Search Bar
+                              en-nl: Zoekvak
+                              en-nz: Suchfeld
+                              en-us: Search Box
+                              fr-ca: Boîte de recherche
+                              fr-ch: Barre de recherche
+                              fr-fr: Barre de recherche
+                              ja-jp: 検索ボックス
+                              nl-nl: Zoekvak
+                              sv-se: Sökruta
+                              ar-uae: مربع البحث
+                      - _id: b7e771d2-1634-4b03-91b2-709ecc7fdc02
+                        type: entriesSearchSorting
+                  parameters:
+                    gapX:
+                      type: dex-slider-control-parameter
+                      value:
+                        tablet: '4'
+                        desktop: '4'
+                    gapY:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '4'
+                    alignItems:
+                      type: dex-segmented-control-parameter
+                      value: ''
+                    displayName:
+                      type: text
+                      locales:
+                        da-dk: Søgefelt og sortering
+                        de-at: Suchfeld und Sortierung
+                        de-ch: Suchfeld und Sortierung
+                        de-de: Suchfeld und Sortierung
+                        en-au: Boîte de recherche et tri
+                        en-ca: Search Box and Sorting
+                        en-gb: Search Bar and Sorting
+                        en-nl: Zoekvak en Sorteren
+                        en-nz: Suchfeld und Sortierung
+                        en-us: Search Box and Sorting
+                        fr-ca: Boîte de recherche et tri
+                        fr-ch: Boîte de recherche et tri
+                        fr-fr: Boîte de recherche et tri
+                        ja-jp: 検索ボックスと並べ替え
+                        nl-nl: Zoekvak en Sorteren
+                        sv-se: Sökruta och sortering
+                        ar-uae: مربع البحث والفرز
+                    columnsCount:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '1'
+                        tablet: '4'
+                        desktop: '4'
+                    fluidContent:
+                      type: checkbox
+                      value: true
+                - _id: d51cf988-b2af-4af1-8061-ea4f00e29110
+                  type: spacer
+                  parameters:
+                    size:
+                      type: dex-token-selector-parameter
+                      value: spacer-medium
+                - _id: 314aca46-3226-4b95-8309-401695faa6fb
+                  type: grid
+                  slots:
+                    gridInner:
+                      - _id: 98912376-9781-413d-af64-ccd238f8ca70
+                        type: gridItem
+                        slots:
+                          inner:
+                            - _id: 25f77f34-dcd9-48ea-8e0b-93c14df9055d
+                              type: entriesSearchFilters
+                        parameters:
+                          rowStart:
+                            type: dex-slider-control-parameter
+                            value:
+                              mobile: ''
+                              tablet: ''
+                              desktop: ''
+                          columnStart:
+                            type: dex-slider-control-parameter
+                            value:
+                              mobile: ''
+                              tablet: ''
+                              desktop: ''
+                          displayName:
+                            type: text
+                            locales:
+                              da-dk: Venstre Indhold
+                              de-at: Linker Inhalt
+                              de-ch: Linker Inhalt
+                              de-de: Linker Inhalt
+                              en-au: Contenu de gauche
+                              en-ca: Left Content
+                              en-gb: Left Content
+                              en-nl: Linker Inhoud
+                              en-nz: Linker Inhalt
+                              en-us: Left Content
+                              fr-ca: Contenu de gauche
+                              fr-ch: Contenu de gauche
+                              fr-fr: Contenu de gauche
+                              ja-jp: 左のコンテンツ
+                              nl-nl: Linker inhoud
+                              sv-se: Vänster innehåll
+                              ar-uae: محتوى اليسار
+                      - _id: abdaa09f-7446-432b-b541-82a4ca46871a
+                        type: gridItem
+                        slots:
+                          inner:
+                            - _id: 17a3477f-27a8-4138-adf3-f1f12ee73606
+                              type: entriesSearchList
+                              parameters:
+                                border:
+                                  type: dex-token-selector-parameter
+                                  value: border-product-card
+                                textColor:
+                                  type: dex-color-palette-parameter
+                                  value: text-primary
+                                cardButtonText:
+                                  type: text
+                                  locales:
+                                    da-dk: Læs artikel
+                                    de-at: Artikel lesen
+                                    de-ch: Artikel lesen
+                                    de-de: Artikel lesen
+                                    en-au: Read Article
+                                    en-ca: Read Article
+                                    en-gb: Read Article
+                                    en-nl: Read Article
+                                    en-nz: Read Article
+                                    en-us: Read Article
+                                    fr-ca: Lire l’article
+                                    fr-ch: Lire l’article
+                                    fr-fr: Lire l’article
+                                    ja-jp: 記事を読む
+                                    nl-nl: Artikel lezen
+                                    sv-se: Läs artikel
+                                    ar-uae: اقرأ المقال
+                            - _id: 2b9c6df5-dc65-415f-9cc6-b3e0b5c50942
+                              type: spacer
+                              parameters:
+                                size:
+                                  type: dex-token-selector-parameter
+                                  value: spacer-small
+                            - _id: 7d271a67-441c-48c6-9cc0-22b76d1862e4
+                              type: entriesSearchPagination
+                        parameters:
+                          rowStart:
+                            type: dex-slider-control-parameter
+                            value:
+                              mobile: ''
+                              tablet: ''
+                              desktop: ''
+                          columnSpan:
+                            type: dex-slider-control-parameter
+                            value:
+                              tablet: auto
+                              desktop: span-3
+                          columnStart:
+                            type: dex-slider-control-parameter
+                            value:
+                              mobile: ''
+                              tablet: ''
+                              desktop: '2'
+                          displayName:
+                            type: text
+                            locales:
+                              da-dk: Rigtigt indhold
+                              de-at: Richtiger Inhalt
+                              de-ch: Rechter Inhalt
+                              de-de: Rechter Inhalt
+                              en-au: Contenu Correct
+                              en-ca: Right Content
+                              en-gb: Right Content
+                              en-nl: Juiste Inhoud
+                              en-nz: Richtiger Inhalt
+                              en-us: Right Content
+                              fr-ca: Contenu approprié
+                              fr-ch: Contenu correct
+                              fr-fr: Contenu correct
+                              ja-jp: 右コンテンツ
+                              nl-nl: Juiste Inhoud
+                              sv-se: Rätt innehåll
+                              ar-uae: المحتوى الصحيح
+                  parameters:
+                    gapX:
+                      type: dex-slider-control-parameter
+                      value:
+                        desktop: '8'
+                    gapY:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '8'
+                        tablet: '8'
+                    alignItems:
+                      type: dex-segmented-control-parameter
+                      value: start
+                    displayName:
+                      type: text
+                      locales:
+                        da-dk: Søg indhold
+                        de-at: Suchinhalt
+                        de-ch: Inhalt durchsuchen
+                        de-de: Inhalt durchsuchen
+                        en-au: Rechercher du contenu
+                        en-ca: Search Content
+                        en-gb: Search Content
+                        en-nl: Zoekinhoud
+                        en-nz: Inhalt durchsuchen
+                        en-us: Search Content
+                        fr-ca: Rechercher du contenu
+                        fr-ch: Rechercher du contenu
+                        fr-fr: Rechercher du contenu
+                        ja-jp: コンテンツを検索
+                        nl-nl: Zoekinhoud
+                        sv-se: Sök innehåll
+                        ar-uae: ابحث عن المحتوى
+                    columnsCount:
+                      type: dex-slider-control-parameter
+                      value:
+                        mobile: '1'
+                        tablet: '1'
+                        desktop: '4'
+                    fluidContent:
+                      type: checkbox
+                      value: true
+            parameters:
+              orderBy:
+                type: $block
+                value:
+                  - _id: 9a9702b3-df89-4321-ab69-09e78a2c71ee
+                    type: orderBy
+                    fields:
+                      field:
+                        type: text
+                        value: fields.publishDate
+                        locales:
+                          da-dk: fields.publishDate
+                          de-at: fields.publishDate
+                          de-ch: fields.publishDate
+                          de-de: fields.publishDate
+                          en-au: fields.publishDate
+                          en-ca: fields.publishDate
+                          en-gb: fields.publishDate
+                          en-nl: fields.publishDate
+                          en-nz: fields.publishDate
+                          en-us: fields.publishDate
+                          fr-ca: fields.publishDate
+                          fr-ch: fields.publishDate
+                          fr-fr: fields.publishDate
+                          ja-jp: fields.publishDate
+                          nl-nl: fields.publishDate
+                          sv-se: fields.publishDate
+                          ar-uae: fields.publishDate
+                      title:
+                        type: text
+                        locales:
+                          da-dk: Nyeste først
+                          de-at: Neueste zuerst
+                          de-ch: Neueste zuerst
+                          de-de: Neueste zuerst
+                          en-au: Les plus récents d'abord
+                          en-ca: Newest First
+                          en-gb: Newest First
+                          en-nl: Nieuwste eerst
+                          en-nz: Neueste zuerst
+                          en-us: Newest First
+                          fr-ca: Les plus récents d'abord
+                          fr-ch: Les plus récents d'abord
+                          fr-fr: Les plus récents d'abord
+                          ja-jp: 最新のものから表示
+                          nl-nl: Nieuwste eerst
+                          sv-se: Nyaste först
+                          ar-uae: الأحدث أولاً
+                      direction:
+                        type: select
+                        value: DESC
+              filterBy:
+                type: $block
+                value:
+                  - _id: 0c2c5196-5cb8-46b4-98e4-7ae44fe2ea4c
+                    type: filterBy
+                    fields:
+                      type:
+                        type: select
+                        value: multiSelect
+                      title:
+                        type: text
+                        locales:
+                          da-dk: Vælg en kategori
+                          de-at: Wählen Sie eine Kategorie
+                          de-ch: Wählen Sie eine Kategorie
+                          de-de: Wählen Sie eine Kategorie
+                          en-au: Choisissez une catégorie
+                          en-ca: Choose a category
+                          en-gb: Choose a category
+                          en-nl: Kies een categorie
+                          en-nz: Wählen Sie eine Kategorie
+                          en-us: Pick a category
+                          fr-ca: Choisissez une catégorie
+                          fr-ch: Choisissez une catégorie
+                          fr-fr: Choisissez une catégorie
+                          ja-jp: カテゴリを選択
+                          nl-nl: Kies een categorie
+                          sv-se: Välj en kategori
+                          ar-uae: اختر فئة
+                      values:
+                        type: $block
+                        value:
+                          - _id: 332361c2-be9d-4610-bce7-7b6966c82b71
+                            type: $loop
+                            fields:
+                              body:
+                                type: $block
+                                value:
+                                  - _id: 09af5080-c1e9-4098-a3ff-143badaeb657
+                                    type: filterByItem
+                                    fields:
+                                      title:
+                                        type: text
+                                        locales:
+                                          da-dk: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/fields/title/value}
+                                          de-at: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/fields/title/value}
+                                          de-ch: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/fields/title/value}
+                                          de-de: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/fields/title/value}
+                                          en-au: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/fields/title/value}
+                                          en-ca: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/fields/title/value}
+                                          en-gb: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/fields/title/value}
+                                          en-nl: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/fields/title/value}
+                                          en-nz: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/fields/title/value}
+                                          en-us: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/fields/title/value}
+                                          fr-ca: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/fields/title/value}
+                                          fr-ch: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/fields/title/value}
+                                          fr-fr: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/fields/title/value}
+                                          ja-jp: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/fields/title/value}
+                                          nl-nl: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/fields/title/value}
+                                          sv-se: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/fields/title/value}
+                                          ar-uae: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/fields/title/value}
+                                      value:
+                                        type: text
+                                        value: >-
+                                          ${#jptr:/All Article Categories entries
+                                          Loop Item/entry/_slug}
+                                        locales:
+                                          da-dk: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/_slug}
+                                          de-at: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/_slug}
+                                          de-ch: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/_slug}
+                                          de-de: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/_slug}
+                                          en-au: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/_slug}
+                                          en-ca: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/_slug}
+                                          en-gb: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/_slug}
+                                          en-nl: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/_slug}
+                                          en-nz: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/_slug}
+                                          en-us: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/_slug}
+                                          fr-ca: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/_slug}
+                                          fr-ch: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/_slug}
+                                          fr-fr: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/_slug}
+                                          ja-jp: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/_slug}
+                                          nl-nl: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/_slug}
+                                          sv-se: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/_slug}
+                                          ar-uae: >-
+                                            ${#jptr:/All Article Categories entries
+                                            Loop Item/entry/_slug}
+                            _dataResources:
+                              All Article Categories entries Loop Item:
+                                type: sys-reserved-loop
+                                variables:
+                                  connectedData: '#jptr:/All Article Categories/entries:fa=c'
+                      fieldId:
+                        type: text
+                        value: category
+                        locales:
+                          da-dk: category
+                          de-at: category
+                          de-ch: category
+                          de-de: category
+                          en-au: category
+                          en-ca: category
+                          en-gb: category
+                          en-nl: category
+                          en-nz: category
+                          en-us: category
+                          fr-ca: category
+                          fr-ch: category
+                          fr-fr: category
+                          ja-jp: category
+                          nl-nl: category
+                          sv-se: category
+                          ar-uae: category
+                      fieldKey:
+                        type: text
+                        value: fields.category.slug
+                        locales:
+                          da-dk: fields.category.slug
+                          de-at: fields.category.slug
+                          de-ch: fields.category.slug
+                          de-de: fields.category.slug
+                          en-au: fields.category.slug
+                          en-ca: fields.category.slug
+                          en-gb: fields.category.slug
+                          en-nl: fields.category.slug
+                          en-nz: fields.category.slug
+                          en-us: fields.category.slug
+                          fr-ca: fields.category.slug
+                          fr-ch: fields.category.slug
+                          fr-fr: fields.category.slug
+                          ja-jp: fields.category.slug
+                          nl-nl: fields.category.slug
+                          sv-se: fields.category.slug
+                          ar-uae: fields.category.slug
+                      enableFaceting:
+                        type: checkbox
+                        value: true
+                  - _id: 3c48def4-6328-4efe-97c1-f33a6af5309d
+                    type: filterBy
+                    fields:
+                      type:
+                        type: select
+                        value: multiSelect
+                      title:
+                        type: text
+                        locales:
+                          da-dk: Forfin efter forfatter
+                          de-at: Nach Autor filtern
+                          de-ch: Nach Autor filtern
+                          de-de: Nach Autor filtern
+                          en-au: Affiner par auteur
+                          en-ca: Refine by author
+                          en-gb: Refine by author
+                          en-nl: Verfijnen op auteur
+                          en-nz: Nach Autor filtern
+                          en-us: Refine by author
+                          fr-ca: Affiner par auteur
+                          fr-ch: Affiner par auteur
+                          fr-fr: Affiner par auteur
+                          ja-jp: 著者で絞り込む
+                          nl-nl: Filteren op auteur
+                          sv-se: Förfina efter författare
+                          ar-uae: تصفية حسب المؤلف
+                      values:
+                        type: $block
+                        value:
+                          - _id: 1d8abfc7-4af5-4661-9a6a-a714f9b39ec6
+                            type: $loop
+                            fields:
+                              body:
+                                type: $block
+                                value:
+                                  - _id: 68ae0faf-5420-4e3b-93f3-710cd5cd26ad
+                                    type: filterByItem
+                                    fields:
+                                      title:
+                                        type: text
+                                        locales:
+                                          da-dk: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/fields/name/value}
+                                          de-at: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/fields/name/value}
+                                          de-ch: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/fields/name/value}
+                                          de-de: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/fields/name/value}
+                                          en-au: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/fields/name/value}
+                                          en-ca: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/fields/name/value}
+                                          en-gb: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/fields/name/value}
+                                          en-nl: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/fields/name/value}
+                                          en-nz: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/fields/name/value}
+                                          en-us: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/fields/name/value}
+                                          fr-ca: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/fields/name/value}
+                                          fr-ch: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/fields/name/value}
+                                          fr-fr: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/fields/name/value}
+                                          ja-jp: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/fields/name/value}
+                                          nl-nl: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/fields/name/value}
+                                          sv-se: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/fields/name/value}
+                                          ar-uae: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/fields/name/value}
+                                      value:
+                                        type: text
+                                        value: >-
+                                          ${#jptr:/All Article Authors 0 Loop
+                                          Item/entry/_slug}
+                                        locales:
+                                          da-dk: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/_slug}
+                                          de-at: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/_slug}
+                                          de-ch: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/_slug}
+                                          de-de: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/_slug}
+                                          en-au: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/_slug}
+                                          en-ca: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/_slug}
+                                          en-gb: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/_slug}
+                                          en-nl: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/_slug}
+                                          en-nz: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/_slug}
+                                          en-us: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/_slug}
+                                          fr-ca: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/_slug}
+                                          fr-ch: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/_slug}
+                                          fr-fr: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/_slug}
+                                          ja-jp: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/_slug}
+                                          nl-nl: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/_slug}
+                                          sv-se: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/_slug}
+                                          ar-uae: >-
+                                            ${#jptr:/All Article Authors 0 Loop
+                                            Item/entry/_slug}
+                            _dataResources:
+                              All Article Authors 0 Loop Item:
+                                type: sys-reserved-loop
+                                variables:
+                                  connectedData: '#jptr:/All Article Authors/entries:fa=c'
+                      fieldId:
+                        type: text
+                        value: author
+                        locales:
+                          da-dk: author
+                          de-at: author
+                          de-ch: author
+                          de-de: author
+                          en-au: author
+                          en-ca: author
+                          en-gb: author
+                          en-nl: author
+                          en-nz: author
+                          en-us: author
+                          fr-ca: author
+                          fr-ch: author
+                          fr-fr: author
+                          ja-jp: author
+                          nl-nl: author
+                          sv-se: author
+                          ar-uae: author
+                      fieldKey:
+                        type: text
+                        value: fields.author.slug
+                        locales:
+                          da-dk: fields.author.slug
+                          de-at: fields.author.slug
+                          de-ch: fields.author.slug
+                          de-de: fields.author.slug
+                          en-au: fields.author.slug
+                          en-ca: fields.author.slug
+                          en-gb: fields.author.slug
+                          en-nl: fields.author.slug
+                          en-nz: fields.author.slug
+                          en-us: fields.author.slug
+                          fr-ca: fields.author.slug
+                          fr-ch: fields.author.slug
+                          fr-fr: fields.author.slug
+                          ja-jp: fields.author.slug
+                          nl-nl: fields.author.slug
+                          sv-se: fields.author.slug
+                          ar-uae: fields.author.slug
+                      enableFaceting:
+                        type: checkbox
+                        value: true
+              pageSizes:
+                type: $block
+                value:
+                  - _id: cf603565-4ba5-4657-9c13-67a588c4468d
+                    type: pageSize
+                    fields:
+                      size:
+                        type: number
+                        value: '6'
+              contentType:
+                type: select
+                value: article
+    9a8e179f-df98-4297-b6e8-74da7f904a12|5feefc71-05dd-4004-bfe9-3dd6876628b4:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: Vores kuraterede indhold om alt inden for brygning
+            de-at: Unser kuratierter Inhalt zu allem rund ums Brauen
+            de-ch: Unser kuratierter Inhalt zu allem, was mit Brauen zu tun hat.
+            de-de: Unser kuratierter Inhalt zu allem, was mit Brauen zu tun hat.
+            en-au: Notre contenu sélectionné sur tout ce qui concerne le brassage
+            en-ca: Our curated content on all things brewing
+            en-gb: Our curated content on all things brewing
+            en-nl: >-
+              Onze samengestelde inhoud over alles wat met brouwen te maken
+              heeft
+            en-nz: Unser kuratierter Inhalt zu allem, was mit Brauen zu tun hat.
+            en-us: Our curated content on all things brewing
+            fr-ca: Notre contenu sélectionné sur tout ce qui concerne le brassage
+            fr-ch: Notre contenu sélectionné sur tout ce qui concerne le brassage
+            fr-fr: Notre contenu sélectionné sur tout ce qui concerne le brassage
+            ja-jp: 醸造に関するすべてのキュレーションコンテンツ
+            nl-nl: >-
+              Onze samengestelde inhoud over alles wat met brouwen te maken
+              heeft
+            sv-se: Vårt kuraterade innehåll om allt som rör bryggning
+            ar-uae: محتوانا المختار حول كل ما يتعلق بالتخمير
+    3f4d35dd-7510-4068-9c41-3166b271dea3|38f88562-6b70-411b-a550-ada8514eef22|f82aa025-12eb-4c87-b18b-ccc33b20fe02:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            de-at:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            de-de:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-au:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-ca:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-gb:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-nl:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-nz:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            es-us:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            fr-ca:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            fr-fr:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ja-jp:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            nb-no:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            nl-nl:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            sv-se:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ar-ksa:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ar-uae:
+              path: /${locale}/landing-page
+              type: projectMapNode
+              nodeId: 50be580b-ba2a-48d0-bcea-25e2ede87060
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+    3f4d35dd-7510-4068-9c41-3166b271dea3|7607f998-992d-4b35-9fa5-4e560f8c179a|36ef82db-8556-4006-be7a-957216a76758:
+      parameters:
+        text:
+          type: text
+          locales:
+            da-dk: Anbefalet til dig
+            de-at: Empfohlen für Sie
+            de-de: Empfohlen für Sie
+            en-au: Recommended for you
+            en-ca: Recommended for you
+            en-gb: Recommended for you
+            en-nl: Recommended for you
+            en-nz: Recommended for you
+            es-us: Recomendado para ti
+            fr-ca: Recommandé pour vous
+            fr-fr: Recommandé pour vous
+            ja-jp: あなたへのおすすめ
+            nb-no: Anbefalt for deg
+            nl-nl: Aanbevolen voor jou
+            sv-se: Rekommenderat för dig
+            ar-ksa: موصى به لك
+            ar-uae: موصى به لك
+    3f4d35dd-7510-4068-9c41-3166b271dea3|bbf196c6-4821-414c-9b14-b08fb1c7fede|44623ac6-5327-44e3-ab3e-b7455ff829e8:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-demo
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-demo
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-au:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-demo
+              type: url
+            en-nz:
+              path: https://unfrm.to/csk-demo
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-demo
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-demo
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-demo
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-demo
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-demo
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-demo
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-demo
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-demo
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-demo
+              type: url
+    3f4d35dd-7510-4068-9c41-3166b271dea3|bbf196c6-4821-414c-9b14-b08fb1c7fede|44d64138-618e-4c6a-b4cc-6ea9b9a22cba:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-au:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            en-nz:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-demo-request
+              type: url
+    3f4d35dd-7510-4068-9c41-3166b271dea3|bbf196c6-4821-414c-9b14-b08fb1c7fede|6db01010-cff2-458e-85d6-358dc75ca48c:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-sb
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-sb
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-au:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-sb
+              type: url
+            en-nz:
+              path: https://unfrm.to/csk-sb
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-sb
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-sb
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-sb
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-sb
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-sb
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-sb
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-sb
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-sb
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-sb
+              type: url
+    3f4d35dd-7510-4068-9c41-3166b271dea3|bbf196c6-4821-414c-9b14-b08fb1c7fede|ea891105-3b48-41b4-8fa0-6c2ecca00a75:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: https://unfrm.to/csk-docs
+              type: url
+            de-at:
+              path: https://unfrm.to/csk-docs
+              type: url
+            de-de:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-au:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-ca:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-gb:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-nl:
+              path: https://unfrm.to/csk-docs
+              type: url
+            en-nz:
+              path: https://unfrm.to/csk-docs
+              type: url
+            es-us:
+              path: https://unfrm.to/csk-docs
+              type: url
+            fr-ca:
+              path: https://unfrm.to/csk-docs
+              type: url
+            fr-fr:
+              path: https://unfrm.to/csk-docs
+              type: url
+            ja-jp:
+              path: https://unfrm.to/csk-docs
+              type: url
+            nb-no:
+              path: https://unfrm.to/csk-docs
+              type: url
+            nl-nl:
+              path: https://unfrm.to/csk-docs
+              type: url
+            sv-se:
+              path: https://unfrm.to/csk-docs
+              type: url
+            ar-ksa:
+              path: https://unfrm.to/csk-docs
+              type: url
+            ar-uae:
+              path: https://unfrm.to/csk-docs
+              type: url
+  _locales:
+    - en-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-nz
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - fr-fr
+    - en-au
+    - ja-jp
+    - ar-uae
+    - de-ch
+    - fr-ch
+  _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
+created: '2025-03-18T13:02:32.603847+00:00'
+modified: '2025-09-15T20:27:55.064544+00:00'
+pattern: false

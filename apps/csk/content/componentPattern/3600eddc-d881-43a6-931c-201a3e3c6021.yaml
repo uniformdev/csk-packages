@@ -19,7 +19,24 @@ composition:
         paddingBottom: container-medium
     displayName:
       type: text
-      value: Card Default
+      locales:
+        da-dk: Kort Standard
+        de-at: Standardkarte
+        de-ch: Kartenstandard
+        de-de: Kartenstandard
+        en-au: Défaut de carte
+        en-ca: Card Default
+        en-gb: Card Default
+        en-nl: Standaardkaart
+        en-nz: Kartenstandard
+        en-us: Card Default
+        fr-ca: Carte par défaut
+        fr-ch: Carte par défaut
+        fr-fr: Carte par défaut
+        ja-jp: カードデフォルト
+        nl-nl: Standaardkaart
+        sv-se: Kortstandard
+        ar-uae: البطاقة الافتراضية
     fluidContent:
       type: checkbox
       value: true
@@ -33,62 +50,954 @@ composition:
         parameters:
           text:
             type: richText
-            value:
-              root:
-                type: root
-                format: ''
-                indent: 0
-                version: 1
-                children:
-                  - tag: h2
-                    type: heading
-                    format: ''
-                    indent: 0
-                    version: 1
-                    children:
-                      - mode: normal
-                        text: Component Starter Kit
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 1
-                        version: 1
-                    direction: ltr
-                    textFormat: 1
-                  - type: paragraph
-                    format: ''
-                    indent: 0
-                    version: 1
-                    children:
-                      - mode: normal
-                        text: >-
-                          A production-ready starter kit with reusable
-                          components, design tokens, and modern frontend
-                          tooling.
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 0
-                        version: 1
-                    direction: ltr
-                    textStyle: ''
-                    textFormat: 0
-                  - type: paragraph
-                    format: ''
-                    indent: 0
-                    version: 1
-                    children:
-                      - mode: normal
-                        text: Free (Open Source)
-                        type: text
-                        style: ''
-                        detail: 0
-                        format: 1
-                        version: 1
-                    direction: ltr
-                    textStyle: ''
-                    textFormat: 1
-                direction: ltr
+            locales:
+              da-dk:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: h2
+                      type: heading
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Komponent Startpakke
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textFormat: 1
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Et produktionsklart startpakke med genanvendelige
+                            komponenter, designtokens og moderne
+                            frontend-værktøjer.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Gratis (Open Source)
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 1
+                  direction: ltr
+              de-at:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: h2
+                      type: heading
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Komponenten-Starterkit
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textFormat: 1
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Ein produktionsbereites Starterkit mit
+                            wiederverwendbaren Komponenten, Design-Tokens und
+                            modernem Frontend-Tooling.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Kostenlos (Open Source)
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 1
+                  direction: ltr
+              de-ch:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: h2
+                      type: heading
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Komponenten-Starterkit
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textFormat: 1
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Ein produktionsbereites Starterkit mit
+                            wiederverwendbaren Komponenten, Design-Token und
+                            modernen Frontend-Tools.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Kostenlos (Open Source)
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 1
+                  direction: ltr
+              de-de:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: h2
+                      type: heading
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Komponenten-Starterkit
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textFormat: 1
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Ein produktionsbereites Starterkit mit
+                            wiederverwendbaren Komponenten, Design-Token und
+                            modernen Frontend-Tools.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Kostenlos (Open Source)
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 1
+                  direction: ltr
+              en-au:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: h2
+                      type: heading
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Kit de démarrage de composants
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textFormat: 1
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Un kit de démarrage prêt pour la production avec des
+                            composants réutilisables, des jetons de conception
+                            et des outils frontend modernes.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Gratuit (Open Source)
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 1
+                  direction: ltr
+              en-ca:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: h2
+                      type: heading
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Trousse de Démarrage de Composants
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textFormat: 1
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Une trousse de démarrage prête pour la production
+                            avec des composants réutilisables, des jetons de
+                            conception et des outils frontend modernes.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Gratuit (Open Source)
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 1
+                  direction: ltr
+              en-gb:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: h2
+                      type: heading
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Component Starter Kit
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textFormat: 1
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            A production-ready starter kit with reusable
+                            components, design tokens, and modern frontend
+                            tooling.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Free (Open Source)
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 1
+                  direction: ltr
+              en-nl:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: h2
+                      type: heading
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Component Starter Kit
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textFormat: 1
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Een productieklare starterkit met herbruikbare
+                            componenten, designtokens en moderne frontend-tools.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Gratis (Open Source)
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 1
+                  direction: ltr
+              en-nz:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: h2
+                      type: heading
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Komponenten-Starterkit
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textFormat: 1
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Ein produktionsbereites Starterkit mit
+                            wiederverwendbaren Komponenten, Design-Tokens und
+                            modernen Frontend-Tools.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Kostenlos (Open Source)
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 1
+                  direction: ltr
+              en-us:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: h2
+                      type: heading
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Component Starter Kit
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textFormat: 1
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            A production-ready starter kit with reusable
+                            components, design tokens, and modern frontend
+                            tooling.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Free (Open Source)
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 1
+                  direction: ltr
+              fr-ca:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: h2
+                      type: heading
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Kit de démarrage de composants
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textFormat: 1
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Un kit de démarrage prêt pour la production avec des
+                            composants réutilisables, des jetons de conception
+                            et des outils frontend modernes.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Gratuit (Open Source)
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 1
+                  direction: ltr
+              fr-ch:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: h2
+                      type: heading
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Kit de démarrage de composants
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textFormat: 1
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Un kit de démarrage prêt pour la production avec des
+                            composants réutilisables, des jetons de conception
+                            et des outils frontend modernes.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Gratuit (Open Source)
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 1
+                  direction: ltr
+              fr-fr:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: h2
+                      type: heading
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Kit de démarrage de composants
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textFormat: 1
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Un kit de démarrage prêt pour la production avec des
+                            composants réutilisables, des jetons de conception
+                            et des outils frontend modernes.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Gratuit (Open Source)
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 1
+                  direction: ltr
+              ja-jp:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: h2
+                      type: heading
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: コンポーネントスターターキット
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textFormat: 1
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            再利用可能なコンポーネント、デザイントークン、最新のフロントエンドツールを備えたプロダクション対応のスターターキット。
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: 無料（オープンソース）
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 1
+                  direction: ltr
+              nl-nl:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: h2
+                      type: heading
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Component Starter Kit
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textFormat: 1
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Een productieklare starterkit met herbruikbare
+                            componenten, designtokens en moderne frontend-tools.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Gratis (Open Source)
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 1
+                  direction: ltr
+              sv-se:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: h2
+                      type: heading
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Komponent Startpaket
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textFormat: 1
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            Ett produktionsklart startpaket med återanvändbara
+                            komponenter, designtokens och modern
+                            frontend-verktyg.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: Gratis (Öppen Källkod)
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 1
+                  direction: ltr
+              ar-uae:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: h2
+                      type: heading
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: مجموعة أدوات المكونات
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textFormat: 1
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: >-
+                            مجموعة أدوات جاهزة للإنتاج مع مكونات قابلة لإعادة
+                            الاستخدام، ورموز تصميم، وأدوات واجهة أمامية حديثة.
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 0
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 0
+                    - type: paragraph
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - mode: normal
+                          text: مجاني (مفتوح المصدر)
+                          type: text
+                          style: ''
+                          detail: 0
+                          format: 1
+                          version: 1
+                      direction: ltr
+                      textStyle: ''
+                      textFormat: 1
+                  direction: ltr
           color:
             type: dex-color-palette-parameter
             value: text-primary
@@ -105,7 +1014,24 @@ composition:
             value: button-small
           text:
             type: text
-            value: View Details
+            locales:
+              da-dk: Vis detaljer
+              de-at: Details anzeigen
+              de-ch: Details anzeigen
+              de-de: Details anzeigen
+              en-au: Voir les détails
+              en-ca: View Details
+              en-gb: View Details
+              en-nl: Bekijk details
+              en-nz: Details anzeigen
+              en-us: View Details
+              fr-ca: Voir les détails
+              fr-ch: Voir les détails
+              fr-fr: Voir les détails
+              ja-jp: 詳細を表示
+              nl-nl: Bekijk details
+              sv-se: Visa detaljer
+              ar-uae: عرض التفاصيل
           textColor:
             type: dex-color-palette-parameter
             value: text-secondary
@@ -124,79 +1050,1248 @@ composition:
         parameters:
           text:
             type: richText
-            value:
-              root:
-                type: root
-                format: ''
-                indent: 0
-                version: 1
-                children:
-                  - tag: ul
-                    type: list
-                    start: 1
-                    format: ''
-                    indent: 0
-                    version: 1
-                    children:
-                      - type: listitem
-                        value: 1
-                        format: start
-                        indent: 0
-                        version: 1
-                        children:
-                          - mode: normal
-                            text: Prebuilt components
-                            type: text
-                            style: ''
-                            detail: 0
-                            format: 0
-                            version: 1
-                        direction: ltr
-                      - type: listitem
-                        value: 2
-                        format: start
-                        indent: 0
-                        version: 1
-                        children:
-                          - mode: normal
-                            text: Tailwind support
-                            type: text
-                            style: ''
-                            detail: 0
-                            format: 0
-                            version: 1
-                        direction: ltr
-                      - type: listitem
-                        value: 3
-                        format: start
-                        indent: 0
-                        version: 1
-                        children:
-                          - mode: normal
-                            text: Storybook
-                            type: text
-                            style: ''
-                            detail: 0
-                            format: 0
-                            version: 1
-                        direction: ltr
-                      - type: listitem
-                        value: 4
-                        format: start
-                        indent: 0
-                        version: 1
-                        children:
-                          - mode: normal
-                            text: Vercel integration
-                            type: text
-                            style: ''
-                            detail: 0
-                            format: 0
-                            version: 1
-                        direction: ltr
-                    listType: bullet
-                    direction: ltr
-                direction: ltr
+            locales:
+              da-dk:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: ul
+                      type: list
+                      start: 1
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - type: listitem
+                          value: 1
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Forudbyggede komponenter
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 2
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Tailwind support
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 3
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Storybook
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 4
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Vercel integration
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                      listType: bullet
+                      direction: ltr
+                  direction: ltr
+              de-at:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: ul
+                      type: list
+                      start: 1
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - type: listitem
+                          value: 1
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Vorgefertigte Komponenten
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 2
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Tailwind-Unterstützung
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 3
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Storybook
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 4
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Vercel-Integration
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                      listType: bullet
+                      direction: ltr
+                  direction: ltr
+              de-ch:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: ul
+                      type: list
+                      start: 1
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - type: listitem
+                          value: 1
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Vorgefertigte Komponenten
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 2
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Tailwind-Unterstützung
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 3
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Storybook
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 4
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Vercel-Integration
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                      listType: bullet
+                      direction: ltr
+                  direction: ltr
+              de-de:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: ul
+                      type: list
+                      start: 1
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - type: listitem
+                          value: 1
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Vorgefertigte Komponenten
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 2
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Tailwind-Unterstützung
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 3
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Storybook
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 4
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Vercel-Integration
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                      listType: bullet
+                      direction: ltr
+                  direction: ltr
+              en-au:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: ul
+                      type: list
+                      start: 1
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - type: listitem
+                          value: 1
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Composants préconstruits
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 2
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Support de Tailwind
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 3
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Storybook
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 4
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Intégration Vercel
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                      listType: bullet
+                      direction: ltr
+                  direction: ltr
+              en-ca:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: ul
+                      type: list
+                      start: 1
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - type: listitem
+                          value: 1
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Composants préfabriqués
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 2
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Support Tailwind
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 3
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Storybook
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 4
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Intégration Vercel
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                      listType: bullet
+                      direction: ltr
+                  direction: ltr
+              en-gb:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: ul
+                      type: list
+                      start: 1
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - type: listitem
+                          value: 1
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Prebuilt components
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 2
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Tailwind support
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 3
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Storybook
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 4
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Vercel integration
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                      listType: bullet
+                      direction: ltr
+                  direction: ltr
+              en-nl:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: ul
+                      type: list
+                      start: 1
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - type: listitem
+                          value: 1
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Voorgebouwde componenten
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 2
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Tailwind-ondersteuning
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 3
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Storybook
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 4
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Vercel-integratie
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                      listType: bullet
+                      direction: ltr
+                  direction: ltr
+              en-nz:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: ul
+                      type: list
+                      start: 1
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - type: listitem
+                          value: 1
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Vorgefertigte Komponenten
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 2
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Tailwind-Unterstützung
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 3
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Storybook
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 4
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Vercel-Integration
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                      listType: bullet
+                      direction: ltr
+                  direction: ltr
+              en-us:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: ul
+                      type: list
+                      start: 1
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - type: listitem
+                          value: 1
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Prebuilt components
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 2
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Tailwind support
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 3
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Storybook
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 4
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Vercel integration
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                      listType: bullet
+                      direction: ltr
+                  direction: ltr
+              fr-ca:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: ul
+                      type: list
+                      start: 1
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - type: listitem
+                          value: 1
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Composants préconstruits
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 2
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Support de Tailwind
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 3
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Storybook
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 4
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Intégration Vercel
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                      listType: bullet
+                      direction: ltr
+                  direction: ltr
+              fr-ch:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: ul
+                      type: list
+                      start: 1
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - type: listitem
+                          value: 1
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Composants préconstruits
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 2
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Support de Tailwind
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 3
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Storybook
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 4
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Intégration Vercel
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                      listType: bullet
+                      direction: ltr
+                  direction: ltr
+              fr-fr:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: ul
+                      type: list
+                      start: 1
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - type: listitem
+                          value: 1
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Composants préconstruits
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 2
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Support de Tailwind
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 3
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Storybook
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 4
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Intégration Vercel
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                      listType: bullet
+                      direction: ltr
+                  direction: ltr
+              ja-jp:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: ul
+                      type: list
+                      start: 1
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - type: listitem
+                          value: 1
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: 組み込みコンポーネント
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 2
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Tailwindサポート
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 3
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: ストーリーブック
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 4
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Vercel統合
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                      listType: bullet
+                      direction: ltr
+                  direction: ltr
+              nl-nl:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: ul
+                      type: list
+                      start: 1
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - type: listitem
+                          value: 1
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Voorgebouwde componenten
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 2
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Tailwind-ondersteuning
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 3
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Storybook
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 4
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Vercel-integratie
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                      listType: bullet
+                      direction: ltr
+                  direction: ltr
+              sv-se:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: ul
+                      type: list
+                      start: 1
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - type: listitem
+                          value: 1
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Förbyggda komponenter
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 2
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Tailwind-stöd
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 3
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Storybook
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 4
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Vercel-integration
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                      listType: bullet
+                      direction: ltr
+                  direction: ltr
+              ar-uae:
+                root:
+                  type: root
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - tag: ul
+                      type: list
+                      start: 1
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - type: listitem
+                          value: 1
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: مكونات جاهزة
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 2
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: دعم Tailwind
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 3
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: ستوريبوك
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: listitem
+                          value: 4
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: تكامل Vercel
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                      listType: bullet
+                      direction: ltr
+                  direction: ltr
           color:
             type: dex-color-palette-parameter
             value: text-primary
@@ -210,10 +2305,26 @@ composition:
       displayName: 'yes'
     hideLockedParameters: true
   _locales:
-    - en
-created: '2025-05-16T12:10:05.54514+00:00'
-modified: '2025-05-22T11:55:41.823316+00:00'
+    - en-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-nz
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - fr-fr
+    - en-au
+    - ja-jp
+    - ar-uae
+    - de-ch
+    - fr-ch
+created: '2025-05-20T11:53:42.747461+00:00'
+modified: '2025-08-06T12:11:42.986639+00:00'
 pattern: true
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1747397797/csk-v-next/baseline/preview-images/card-default.jpg
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/card-default.jpg
 categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9

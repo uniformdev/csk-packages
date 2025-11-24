@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
+import { cookies } from 'next/headers';
 import { notFound } from 'next/navigation';
 import { AssetParamValue } from '@uniformdev/assets';
 import { flattenValues } from '@uniformdev/canvas';
 import { resolveRouteFromCode, UniformPageParameters } from '@uniformdev/canvas-next-rsc-v2';
 import { resolveAsset } from '@uniformdev/csk-components/utils/assets';
+import locales from '@/i18n/locales.json';
 
 type UniformMetadataParameters = {
   pageTitle: string;
@@ -44,6 +46,8 @@ type HeaderParameters = {
  */
 export async function generateMetadata(props: UniformPageParameters): Promise<Metadata> {
   const result = await resolveRouteFromCode(props);
+  const cookieStore = await cookies();
+  const currentLocale = cookieStore.get('NEXT_LOCALE')?.value || locales.defaultLocale;
 
   if (!result.route) {
     notFound();
@@ -53,6 +57,7 @@ export async function generateMetadata(props: UniformPageParameters): Promise<Me
 
   const {
     compositionApiResponse: { composition },
+    matchedRoute,
   } = route;
 
   const [header] = composition.slots?.pageHeader || [];
@@ -102,6 +107,19 @@ export async function generateMetadata(props: UniformPageParameters): Promise<Me
       description: twitterDescription || pageDescription,
       images: resolvedTwitterImage?.url || resolvedOgImage?.url,
       card: twitterCard,
+    },
+    alternates: {
+      canonical: matchedRoute.replace(':locale', currentLocale),
+      languages: locales.locales?.reduce(
+        (acc, locale) => {
+          if (locale === currentLocale) {
+            return acc;
+          }
+          acc[locale] = matchedRoute.replace(':locale', locale);
+          return acc;
+        },
+        {} as Record<string, string>
+      ),
     },
   };
 }

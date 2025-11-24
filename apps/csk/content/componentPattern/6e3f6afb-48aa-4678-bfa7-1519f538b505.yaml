@@ -1,0 +1,345 @@
+composition:
+  _name: Cart Items List
+  _id: 6e3f6afb-48aa-4678-bfa7-1519f538b505
+  type: container
+  parameters:
+    displayName:
+      type: text
+      locales:
+        da-dk: Liste over varer i kurv
+        de-at: Warenkorbliste
+        de-ch: Warenkorbliste
+        de-de: Warenkorbliste
+        en-au: Liste des articles du panier
+        en-ca: Cart Items List
+        en-gb: Basket Items List
+        en-nl: Winkelwagen Artikellijst
+        en-nz: Warenkorbliste
+        en-us: Cart Items List
+        fr-ca: Liste des articles du panier
+        fr-ch: Liste des articles du panier
+        fr-fr: Liste des articles du panier
+        ja-jp: カート内商品リスト
+        nl-nl: Winkelwagen Artikelenlijst
+        sv-se: Lista över varor i kundvagnen
+        ar-uae: قائمة عناصر السلة
+  slots:
+    containerContent:
+      - _id: 3e36ea31-e85f-4251-94d0-6ea67380e6c3
+        type: grid
+        slots:
+          gridInner:
+            - _id: b827d634-ea68-4c97-b359-1221ed2543bf
+              type: gridItem
+              slots:
+                inner:
+                  - _id: f4abd913-a80e-4aeb-a311-6bb1a24f0bd2
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: span
+                      size:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: ''
+                          tablet: ''
+                          desktop: ''
+                      text:
+                        type: text
+                        locales:
+                          da-dk: GENSTAND
+                          de-at: ARTIKEL
+                          de-ch: ARTIKEL
+                          de-de: ARTIKEL
+                          en-au: ARTICLE
+                          en-ca: ITEM
+                          en-gb: ITEM
+                          en-nl: ARTIKEL
+                          en-nz: ARTIKEL
+                          en-us: ITEM
+                          fr-ca: ARTICLE
+                          fr-ch: ARTICLE
+                          fr-fr: ARTICLE
+                          ja-jp: アイテム
+                          nl-nl: ITEM
+                          sv-se: FÖREMÅL
+                          ar-uae: بند
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: bold
+              parameters:
+                rowSpan:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                rowStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: ''
+                    desktop: ''
+                columnSpan:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: span-3
+                    desktop: span-3
+                columnStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: ''
+                    desktop: ''
+                displayName:
+                  type: text
+                  locales:
+                    da-dk: Genstand
+                    de-at: Artikel
+                    de-ch: Artikel
+                    de-de: Artikel
+                    en-au: Article
+                    en-ca: Item
+                    en-gb: Item
+                    en-nl: Artikel
+                    en-nz: Artikel
+                    en-us: Item
+                    fr-ca: Article
+                    fr-ch: Article
+                    fr-fr: Article
+                    ja-jp: アイテム
+                    nl-nl: Item
+                    sv-se: Artikel
+                    ar-uae: عنصر
+            - _id: c1c11eb0-e695-4544-a2bb-3a8ad3f33fcf
+              type: gridItem
+              slots:
+                inner:
+                  - _id: fe6b7555-bb4d-4fb3-8201-ff5942f766b2
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: span
+                      text:
+                        type: text
+                        locales:
+                          da-dk: ANTAL
+                          de-at: MENGE
+                          de-ch: MENGE
+                          de-de: MENGE
+                          en-au: QTÉ
+                          en-ca: QTY
+                          en-gb: QTY
+                          en-nl: AANTAL
+                          en-nz: MENGE
+                          en-us: QTY
+                          fr-ca: QTÉ
+                          fr-ch: QTÉ
+                          fr-fr: QTÉ
+                          ja-jp: 数量
+                          nl-nl: AANTAL
+                          sv-se: ANTAL
+                          ar-uae: الكمية
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: bold
+              parameters:
+                rowStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: ''
+                    desktop: ''
+                columnSpan:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: span-1
+                    desktop: span-1
+                columnStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: ''
+                    desktop: ''
+                displayName:
+                  type: text
+                  locales:
+                    da-dk: Antal
+                    de-at: Menge
+                    de-ch: Menge
+                    de-de: Menge
+                    en-au: Qté
+                    en-ca: Qty
+                    en-gb: Qty
+                    en-nl: Aantal
+                    en-nz: Menge
+                    en-us: Qty
+                    fr-ca: Qté
+                    fr-ch: Qté
+                    fr-fr: Qté
+                    ja-jp: 数量
+                    nl-nl: Aantal
+                    sv-se: Antal
+                    ar-uae: الكمية
+            - _id: 2374cd2a-d85b-49d1-9279-1ab2e13446fc
+              type: gridItem
+              slots:
+                inner:
+                  - _id: bc2a1449-eb8e-4f3f-bb04-b1136be7610c
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: p
+                      text:
+                        type: text
+                        locales:
+                          da-dk: PRIS
+                          de-at: PREIS
+                          de-ch: PREIS
+                          de-de: PREIS
+                          en-au: PRIX
+                          en-ca: PRICE
+                          en-gb: PRICE
+                          en-nl: PRIJS
+                          en-nz: PREIS
+                          en-us: PRICE
+                          fr-ca: PRIX
+                          fr-ch: PRIX
+                          fr-fr: PRIX
+                          ja-jp: 価格
+                          nl-nl: PRIJS
+                          sv-se: PRIS
+                          ar-uae: السعر
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: bold
+                      alignment:
+                        type: dex-segmented-control-parameter
+                        value: right
+              parameters:
+                rowStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: ''
+                    desktop: ''
+                columnStart:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: ''
+                    tablet: ''
+                    desktop: ''
+                displayName:
+                  type: text
+                  locales:
+                    da-dk: Pris
+                    de-at: Preis
+                    de-ch: Preis
+                    de-de: Preis
+                    en-au: Prix
+                    en-ca: Price
+                    en-gb: Price
+                    en-nl: Prijs
+                    en-nz: Preis
+                    en-us: Price
+                    fr-ca: Prix
+                    fr-ch: Prix
+                    fr-fr: Prix
+                    ja-jp: 価格
+                    nl-nl: Prijs
+                    sv-se: Pris
+                    ar-uae: السعر
+        parameters:
+          gapX:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '2'
+              tablet: '2'
+              desktop: '2'
+          gapY:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '2'
+              tablet: '2'
+              desktop: '2'
+          border:
+            type: dex-token-selector-parameter
+            value: border-product-card-bottom
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              marginTop: container-large
+              marginBottom: container-small
+              paddingBottom: container-small
+          displayName:
+            type: text
+            locales:
+              da-dk: Kurvoverskrift
+              de-at: Warenkorb-Kopfzeile
+              de-ch: Warenkorb-Kopfzeile
+              de-de: Warenkorb-Kopfzeile
+              en-au: En-tête du panier
+              en-ca: Cart Header
+              en-gb: Basket Header
+              en-nl: Winkelwagenkop
+              en-nz: Warenkorb-Kopfzeile
+              en-us: Cart Header
+              fr-ca: En-tête du panier
+              fr-ch: En-tête du panier
+              fr-fr: En-tête du panier
+              ja-jp: カートヘッダー
+              nl-nl: Winkelwagenkop
+              sv-se: Varukorgens Rubrik
+              ar-uae: رأس العربة
+          columnsCount:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '3'
+              tablet: '5'
+              desktop: '5'
+          fluidContent:
+            type: checkbox
+            value: true
+      - _id: c1cba995-4c3d-471d-866b-7ece3a936b20
+        type: shoppingCart
+        _overridability:
+          hideLockedParameters: true
+  _dataResources:
+    Product List Content:
+      type: productList
+      variables:
+        limit: '50'
+        locale: ${locale}
+        search: ''
+        filters: '{"type[eq]":"product"}'
+        uiFilters: '[{"field":"type","operator":"eq","value":"product"}]'
+        contentTypes: product
+      isPatternParameter: true
+      ignorePatternParameterDefault: false
+  _locales:
+    - en-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-nz
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - fr-fr
+    - en-au
+    - ja-jp
+    - ar-uae
+    - de-ch
+    - fr-ch
+created: '2025-03-18T13:02:29.173932+00:00'
+modified: '2025-09-15T20:27:47.226564+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/cart-items-list.jpg
+categoryId: adaebea8-ba58-494b-9c3b-9f82906d9415

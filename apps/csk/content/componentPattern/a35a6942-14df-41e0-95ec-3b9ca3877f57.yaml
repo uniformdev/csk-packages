@@ -1,0 +1,308 @@
+composition:
+  _name: Special Offer Hero
+  _id: a35a6942-14df-41e0-95ec-3b9ca3877f57
+  type: fixedHero
+  variant: columnsReverse
+  parameters:
+    image:
+      type: asset
+      value:
+        - _id: 4c76f302-f7c8-4e51-b7a1-90ad7fad3420
+          type: image
+          fields:
+            id:
+              type: text
+              value: e7805216-a37b-46b7-b032-cae1df18ae00
+            url:
+              value: >-
+                https://img.uniform.global/p/-4-gL-KXTQmz-m_JqCoP1A/SRB5XSgdS4CTNrxzEu36bQ-BB_WebCTA_NoCopy.png
+              type: text
+            file:
+              type: file
+              value: 29d63318-5291-437a-99c7-b800e63892e3
+            size:
+              value: 2472166
+              type: number
+            title:
+              type: text
+              value: BB_WebCTA_NoCopy.png
+            width:
+              value: 1536
+              type: number
+            height:
+              value: 1024
+              type: number
+            mediaType:
+              value: image/png
+              type: text
+            focalPoint:
+              type: focalPoint
+              value:
+                x: 0.7
+                'y': 0.3
+          _source: uniform-assets
+          _overrides:
+            fields:
+              focalPoint:
+                type: focalPoint
+                value:
+                  x: 0.04
+                  'y': 0.67
+    titleTag:
+      type: dex-segmented-control-parameter
+      value: h1
+    titleText:
+      type: text
+      locales:
+        da-dk: Vores Eksklusive Bønnepakke
+        de-at: Unser Exklusives Bohnen-Bundle
+        de-ch: Unser Exklusives Bohnenpaket
+        de-de: Unser Exklusives Bohnenpaket
+        en-au: Notre Ensemble Exclusif de Grains
+        en-ca: Our Exclusive Beans Bundle
+        en-gb: Our Exclusive Beans Bundle
+        en-nl: Ons Exclusieve Bonenpakket
+        en-nz: Unser Exklusives Bohnen-Bundle
+        en-us: Our Exclusive Beans Bundle
+        fr-ca: Notre ensemble exclusif de grains
+        fr-ch: Notre Ensemble de Grains Exclusif
+        fr-fr: Notre Ensemble de Grains Exclusif
+        ja-jp: 私たちの限定ビーンズバンドル
+        nl-nl: Ons Exclusieve Bonenpakket
+        sv-se: Vårt exklusiva bönpaket
+        ar-uae: باقة حبوبنا الحصرية
+    displayName:
+      type: text
+      locales:
+        da-dk: Hovedhjemhelt
+        de-at: Hauptseite Held
+        de-ch: Hauptseite Held
+        de-de: Hauptseite Held
+        en-au: Héros Principal de la Maison
+        en-ca: Main Home Hero
+        en-gb: Main Home Hero
+        en-nl: Hoofd Home Held
+        en-nz: Hauptheim Held
+        en-us: Main Home Hero
+        fr-ca: Héros Principal de la Maison
+        fr-ch: Héros Principal de la Maison
+        fr-fr: Héros Principal de la Maison
+        ja-jp: メインホームヒーロー
+        nl-nl: Hoofd Thuis Held
+        sv-se: Huvudsida Hjälte
+        ar-uae: الرئيسية الرئيسية البطل
+    descriptionText:
+      type: text
+      locales:
+        da-dk: Håndplukket af Hans Anderson
+        de-at: Ausgewählt von Hans Anderson
+        de-ch: Handverlesen von Hans Anderson
+        de-de: Handverlesen von Hans Anderson
+        en-au: Choisi par Hans Anderson
+        en-ca: Handpicked by Hans Anderson
+        en-gb: Hand-picked by Hans Anderson
+        en-nl: Met zorg geselecteerd door Hans Anderson
+        en-nz: Handverlesen von Hans Anderson
+        en-us: Handpicked by Hans Anderson
+        fr-ca: Choisi par Hans Anderson
+        fr-ch: Sélectionné par Hans Anderson
+        fr-fr: Sélectionné par Hans Anderson
+        ja-jp: ハンス・アンダーソンによって厳選された
+        nl-nl: Met zorg geselecteerd door Hans Anderson
+        sv-se: Handplockad av Hans Anderson
+        ar-uae: مختار بعناية من قبل هانس أندرسون
+    contentAlignment:
+      type: dex-segmented-control-parameter
+      value: left
+    eyebrowTitleText:
+      type: text
+      locales:
+        da-dk: Særtilbud
+        de-at: Sonderangebot
+        de-ch: Sonderangebot
+        de-de: Sonderangebot
+        en-au: Offre spéciale
+        en-ca: Special offer
+        en-gb: Special offer
+        en-nl: Speciale aanbieding
+        en-nz: Sonderangebot
+        en-us: Special offer
+        fr-ca: Offre spéciale
+        fr-ch: Offre spéciale
+        fr-fr: Offre spéciale
+        ja-jp: 特別オファー
+        nl-nl: Speciale aanbieding
+        sv-se: Specialerbjudande
+        ar-uae: عرض خاص
+    primaryButtonLink:
+      type: link
+      locales:
+        da-dk:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        de-at:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        de-de:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        en-au:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        en-ca:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        en-gb:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        en-nl:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        en-nz:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        en-us:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        es-us:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        fr-ca:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        fr-fr:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        ja-jp:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        nb-no:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        nl-nl:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        sv-se:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        ar-ksa:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+        ar-uae:
+          path: /${locale}/beans-bundle
+          type: projectMapNode
+          nodeId: 77389775-4c2c-4114-b135-c66e53ccbda1
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+    primaryButtonText:
+      type: text
+      locales:
+        da-dk: Udforsk pakken
+        de-at: Entdecken Sie das Paket
+        de-ch: Entdecken Sie das Paket
+        de-de: Entdecken Sie das Paket
+        en-au: Explorez le lot
+        en-ca: Explore the bundle
+        en-gb: Explore the bundle
+        en-nl: Verken het pakket
+        en-nz: Erkunde das Paket
+        en-us: Explore the bundle
+        fr-ca: Explorez le forfait
+        fr-ch: Explorez le lot
+        fr-fr: Explorez le lot
+        ja-jp: バンドルを探索する
+        nl-nl: Verken het pakket
+        sv-se: Utforska paketet
+        ar-uae: استكشف الحزمة
+  _locales:
+    - en-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-nz
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - fr-fr
+    - en-au
+    - ja-jp
+    - ar-uae
+    - de-ch
+    - fr-ch
+created: '2025-06-18T12:12:05.559732+00:00'
+modified: '2025-08-06T12:11:45.822961+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/special_offer_hero.png

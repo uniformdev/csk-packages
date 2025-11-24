@@ -1,0 +1,1019 @@
+composition:
+  _name: Article Card (small)
+  _id: 17068a41-f3e9-475b-9a20-730c88c9bf79
+  type: flexCard
+  parameters:
+    displayName:
+      type: text
+      locales:
+        da-dk: Lille Artikelkort
+        de-at: Kleine Artikelkarte
+        de-ch: Kleine Artikelkarte
+        de-de: Kleine Artikelkarte
+        en-au: Petite Carte d'Article
+        en-ca: Small Article Card
+        en-gb: Small Article Card
+        en-nl: Kleine Artikelkaart
+        en-nz: Kleine Artikelkarte
+        en-us: Small Article Card
+        fr-ca: Petite carte d'article
+        fr-ch: Petite Carte d'Article
+        fr-fr: Petite Carte d'Article
+        ja-jp: 小さな記事カード
+        nl-nl: Kleine Artikelkaart
+        sv-se: Liten artikelkort
+        ar-uae: بطاقة مقالة صغيرة
+  slots:
+    cardMedia:
+      - _id: 190f4e8e-91eb-40b2-a5df-bc797d0cca22
+        type: container
+        slots:
+          containerContent:
+            - _id: f02a551f-116f-48d2-99b3-21ebe2ca74e5
+              type: image
+              parameters:
+                image:
+                  type: asset
+                  value:
+                    - _id: f939d422-13d6-4793-aefd-d4584616134a
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: 19be2e44-eeb0-4f3c-9d66-203466b7861c
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/b0JtaxSVQxmqWylG6vGC1Q/UpI4OtMpSnKJXzdE9GETag-beans-logo.svg
+                          type: text
+                        file:
+                          type: file
+                          value: 524add33-dc9e-498b-b9ac-1af275970564
+                        size:
+                          value: 2725
+                          type: number
+                        title:
+                          type: text
+                          value: beans-logo.svg
+                        width:
+                          value: 84
+                          type: number
+                        height:
+                          value: 73
+                          type: number
+                        mediaType:
+                          value: image/svg+xml
+                          type: text
+                      _source: uniform-assets
+                width:
+                  type: number
+                  value: '83'
+                border:
+                  type: dex-token-selector-parameter
+                  value: ''
+                height:
+                  type: number
+                  value: '72'
+                objectFit:
+                  type: dex-segmented-control-parameter
+                  value: cover
+              _overridability:
+                parameters:
+                  image: 'yes'
+                  width: 'no'
+                  height: 'no'
+                  objectFit: 'yes'
+                hideLockedParameters: true
+        parameters:
+          border:
+            type: dex-token-selector-parameter
+            value: border-small-article-card
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              mobile:
+                paddingBottom: container-small
+              tablet:
+                paddingBottom: container-small
+              desktop:
+                paddingBottom: container-small
+          fitContent:
+            type: checkbox
+            value: true
+          displayName:
+            type: text
+            locales:
+              da-dk: Logo Beholder
+              de-at: Logo-Container
+              de-ch: Logo-Container
+              de-de: Logo-Container
+              en-au: Conteneur de Logo
+              en-ca: Logo Container
+              en-gb: Logo Container
+              en-nl: Logo Container
+              en-nz: Logo-Container
+              en-us: Logo Container
+              fr-ca: Conteneur de logo
+              fr-ch: Conteneur de Logo
+              fr-fr: Conteneur de Logo
+              ja-jp: ロゴコンテナ
+              nl-nl: Logo Container
+              sv-se: Logobehållare
+              ar-uae: حاوية الشعار
+          fluidContent:
+            type: checkbox
+            value: true
+        _overridability:
+          hideLockedParameters: true
+    cardContent:
+      - _id: a8707980-d15a-4762-9dea-c3e8ec9e040d
+        type: flex
+        slots:
+          flexItem:
+            - _id: 78f51974-be44-4ed8-b379-47237f91d7e3
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: h2
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: 2xl
+                    tablet: 2xl
+                    desktop: 2xl
+                text:
+                  type: text
+                  locales:
+                    da-dk: ${#jptr:/Article/entry/fields/title/value}
+                    de-at: ${#jptr:/Article/entry/fields/title/value}
+                    de-ch: ${#jptr:/Article/entry/fields/title/value}
+                    de-de: ${#jptr:/Article/entry/fields/title/value}
+                    en-au: ${#jptr:/Article/entry/fields/title/value}
+                    en-ca: ${#jptr:/Article/entry/fields/title/value}
+                    en-gb: ${#jptr:/Article/entry/fields/title/value}
+                    en-nl: ${#jptr:/Article/entry/fields/title/value}
+                    en-nz: ${#jptr:/Article/entry/fields/title/value}
+                    en-us: ${#jptr:/Article/entry/fields/title/value}
+                    fr-ca: ${#jptr:/Article/entry/fields/title/value}
+                    fr-ch: ${#jptr:/Article/entry/fields/title/value}
+                    fr-fr: ${#jptr:/Article/entry/fields/title/value}
+                    ja-jp: ${#jptr:/Article/entry/fields/title/value}
+                    nl-nl: ${#jptr:/Article/entry/fields/title/value}
+                    sv-se: ${#jptr:/Article/entry/fields/title/value}
+                    ar-uae: ${#jptr:/Article/entry/fields/title/value}
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: bold
+              _overridability:
+                parameters:
+                  text: 'yes'
+                hideLockedParameters: true
+            - _id: e0aba200-251a-45f1-a1c2-ac94bbb9ca3f
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: p
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: base
+                    tablet: base
+                    desktop: base
+                text:
+                  type: text
+                  locales:
+                    da-dk: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    de-at: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    de-ch: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    de-de: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    en-au: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    en-ca: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    en-gb: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    en-nl: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    en-nz: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    en-us: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    fr-ca: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    fr-ch: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    fr-fr: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    ja-jp: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    nl-nl: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    sv-se: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    ar-uae: ${#jptr:/Article/entry/fields/shortDescription/value}
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+              _overridability:
+                parameters:
+                  text: 'yes'
+                hideLockedParameters: true
+        parameters:
+          gap:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '2'
+              tablet: '2'
+              desktop: '2'
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              mobile:
+                paddingTop: container-small
+              tablet:
+                paddingTop: container-small
+              desktop:
+                paddingTop: container-small
+          direction:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: col
+              tablet: col
+              desktop: col
+          displayName:
+            type: text
+            locales:
+              da-dk: Indhold
+              de-at: Inhalt
+              de-ch: Inhalt
+              de-de: Inhalt
+              en-au: Contenu
+              en-ca: Content
+              en-gb: Content
+              en-nl: Inhoud
+              en-nz: Inhalt
+              en-us: Content
+              fr-ca: Contenu
+              fr-ch: Contenu
+              fr-fr: Contenu
+              ja-jp: コンテンツ
+              nl-nl: Inhoud
+              sv-se: Innehåll
+              ar-uae: المحتوى
+          fluidContent:
+            type: checkbox
+            value: true
+        _overridability:
+          hideLockedParameters: true
+      - _id: 4a7ce726-321d-4e77-ac0e-a11e42946127
+        type: button
+        variant: link
+        parameters:
+          icon:
+            type: asset
+            locales:
+              da-dk:
+                - _id: 8dd47897-de54-45bf-aaa4-f42f0ab19e36
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: 008412ca-e0e4-4898-8829-f05814d644c3
+                    url:
+                      value: >-
+                        https://img.uniform.global/p/b0JtaxSVQxmqWylG6vGC1Q/L00EzAvbS0SanO6rk_GboQ-icon-chevron-blue.svg
+                      type: text
+                    file:
+                      type: file
+                      value: 3767517e-e3b4-4700-ae21-52d859d27799
+                    size:
+                      value: 217
+                      type: number
+                    title:
+                      type: text
+                      value: icon-chevron-blue.svg
+                    width:
+                      value: 24
+                      type: number
+                    height:
+                      value: 24
+                      type: number
+                    mediaType:
+                      value: image/svg+xml
+                      type: text
+                  _source: uniform-assets
+              de-at:
+                - _id: 8dd47897-de54-45bf-aaa4-f42f0ab19e36
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: 008412ca-e0e4-4898-8829-f05814d644c3
+                    url:
+                      value: >-
+                        https://img.uniform.global/p/b0JtaxSVQxmqWylG6vGC1Q/L00EzAvbS0SanO6rk_GboQ-icon-chevron-blue.svg
+                      type: text
+                    file:
+                      type: file
+                      value: 3767517e-e3b4-4700-ae21-52d859d27799
+                    size:
+                      value: 217
+                      type: number
+                    title:
+                      type: text
+                      value: icon-chevron-blue.svg
+                    width:
+                      value: 24
+                      type: number
+                    height:
+                      value: 24
+                      type: number
+                    mediaType:
+                      value: image/svg+xml
+                      type: text
+                  _source: uniform-assets
+              de-de:
+                - _id: 8dd47897-de54-45bf-aaa4-f42f0ab19e36
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: 008412ca-e0e4-4898-8829-f05814d644c3
+                    url:
+                      value: >-
+                        https://img.uniform.global/p/b0JtaxSVQxmqWylG6vGC1Q/L00EzAvbS0SanO6rk_GboQ-icon-chevron-blue.svg
+                      type: text
+                    file:
+                      type: file
+                      value: 3767517e-e3b4-4700-ae21-52d859d27799
+                    size:
+                      value: 217
+                      type: number
+                    title:
+                      type: text
+                      value: icon-chevron-blue.svg
+                    width:
+                      value: 24
+                      type: number
+                    height:
+                      value: 24
+                      type: number
+                    mediaType:
+                      value: image/svg+xml
+                      type: text
+                  _source: uniform-assets
+              en-au:
+                - _id: 8dd47897-de54-45bf-aaa4-f42f0ab19e36
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: 008412ca-e0e4-4898-8829-f05814d644c3
+                    url:
+                      value: >-
+                        https://img.uniform.global/p/b0JtaxSVQxmqWylG6vGC1Q/L00EzAvbS0SanO6rk_GboQ-icon-chevron-blue.svg
+                      type: text
+                    file:
+                      type: file
+                      value: 3767517e-e3b4-4700-ae21-52d859d27799
+                    size:
+                      value: 217
+                      type: number
+                    title:
+                      type: text
+                      value: icon-chevron-blue.svg
+                    width:
+                      value: 24
+                      type: number
+                    height:
+                      value: 24
+                      type: number
+                    mediaType:
+                      value: image/svg+xml
+                      type: text
+                  _source: uniform-assets
+              en-ca:
+                - _id: 8dd47897-de54-45bf-aaa4-f42f0ab19e36
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: 008412ca-e0e4-4898-8829-f05814d644c3
+                    url:
+                      value: >-
+                        https://img.uniform.global/p/b0JtaxSVQxmqWylG6vGC1Q/L00EzAvbS0SanO6rk_GboQ-icon-chevron-blue.svg
+                      type: text
+                    file:
+                      type: file
+                      value: 3767517e-e3b4-4700-ae21-52d859d27799
+                    size:
+                      value: 217
+                      type: number
+                    title:
+                      type: text
+                      value: icon-chevron-blue.svg
+                    width:
+                      value: 24
+                      type: number
+                    height:
+                      value: 24
+                      type: number
+                    mediaType:
+                      value: image/svg+xml
+                      type: text
+                  _source: uniform-assets
+              en-gb:
+                - _id: 8dd47897-de54-45bf-aaa4-f42f0ab19e36
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: 008412ca-e0e4-4898-8829-f05814d644c3
+                    url:
+                      value: >-
+                        https://img.uniform.global/p/b0JtaxSVQxmqWylG6vGC1Q/L00EzAvbS0SanO6rk_GboQ-icon-chevron-blue.svg
+                      type: text
+                    file:
+                      type: file
+                      value: 3767517e-e3b4-4700-ae21-52d859d27799
+                    size:
+                      value: 217
+                      type: number
+                    title:
+                      type: text
+                      value: icon-chevron-blue.svg
+                    width:
+                      value: 24
+                      type: number
+                    height:
+                      value: 24
+                      type: number
+                    mediaType:
+                      value: image/svg+xml
+                      type: text
+                  _source: uniform-assets
+              en-nl:
+                - _id: 8dd47897-de54-45bf-aaa4-f42f0ab19e36
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: 008412ca-e0e4-4898-8829-f05814d644c3
+                    url:
+                      value: >-
+                        https://img.uniform.global/p/b0JtaxSVQxmqWylG6vGC1Q/L00EzAvbS0SanO6rk_GboQ-icon-chevron-blue.svg
+                      type: text
+                    file:
+                      type: file
+                      value: 3767517e-e3b4-4700-ae21-52d859d27799
+                    size:
+                      value: 217
+                      type: number
+                    title:
+                      type: text
+                      value: icon-chevron-blue.svg
+                    width:
+                      value: 24
+                      type: number
+                    height:
+                      value: 24
+                      type: number
+                    mediaType:
+                      value: image/svg+xml
+                      type: text
+                  _source: uniform-assets
+              en-nz:
+                - _id: 8dd47897-de54-45bf-aaa4-f42f0ab19e36
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: 008412ca-e0e4-4898-8829-f05814d644c3
+                    url:
+                      value: >-
+                        https://img.uniform.global/p/b0JtaxSVQxmqWylG6vGC1Q/L00EzAvbS0SanO6rk_GboQ-icon-chevron-blue.svg
+                      type: text
+                    file:
+                      type: file
+                      value: 3767517e-e3b4-4700-ae21-52d859d27799
+                    size:
+                      value: 217
+                      type: number
+                    title:
+                      type: text
+                      value: icon-chevron-blue.svg
+                    width:
+                      value: 24
+                      type: number
+                    height:
+                      value: 24
+                      type: number
+                    mediaType:
+                      value: image/svg+xml
+                      type: text
+                  _source: uniform-assets
+              en-us:
+                - _id: 8dd47897-de54-45bf-aaa4-f42f0ab19e36
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: 008412ca-e0e4-4898-8829-f05814d644c3
+                    url:
+                      value: >-
+                        https://img.uniform.global/p/b0JtaxSVQxmqWylG6vGC1Q/L00EzAvbS0SanO6rk_GboQ-icon-chevron-blue.svg
+                      type: text
+                    file:
+                      type: file
+                      value: 3767517e-e3b4-4700-ae21-52d859d27799
+                    size:
+                      value: 217
+                      type: number
+                    title:
+                      type: text
+                      value: icon-chevron-blue.svg
+                    width:
+                      value: 24
+                      type: number
+                    height:
+                      value: 24
+                      type: number
+                    mediaType:
+                      value: image/svg+xml
+                      type: text
+                  _source: uniform-assets
+              es-us:
+                - _id: 8dd47897-de54-45bf-aaa4-f42f0ab19e36
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: 008412ca-e0e4-4898-8829-f05814d644c3
+                    url:
+                      value: >-
+                        https://img.uniform.global/p/b0JtaxSVQxmqWylG6vGC1Q/L00EzAvbS0SanO6rk_GboQ-icon-chevron-blue.svg
+                      type: text
+                    file:
+                      type: file
+                      value: 3767517e-e3b4-4700-ae21-52d859d27799
+                    size:
+                      value: 217
+                      type: number
+                    title:
+                      type: text
+                      value: icon-chevron-blue.svg
+                    width:
+                      value: 24
+                      type: number
+                    height:
+                      value: 24
+                      type: number
+                    mediaType:
+                      value: image/svg+xml
+                      type: text
+                  _source: uniform-assets
+              fr-ca:
+                - _id: 8dd47897-de54-45bf-aaa4-f42f0ab19e36
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: 008412ca-e0e4-4898-8829-f05814d644c3
+                    url:
+                      value: >-
+                        https://img.uniform.global/p/b0JtaxSVQxmqWylG6vGC1Q/L00EzAvbS0SanO6rk_GboQ-icon-chevron-blue.svg
+                      type: text
+                    file:
+                      type: file
+                      value: 3767517e-e3b4-4700-ae21-52d859d27799
+                    size:
+                      value: 217
+                      type: number
+                    title:
+                      type: text
+                      value: icon-chevron-blue.svg
+                    width:
+                      value: 24
+                      type: number
+                    height:
+                      value: 24
+                      type: number
+                    mediaType:
+                      value: image/svg+xml
+                      type: text
+                  _source: uniform-assets
+              fr-fr:
+                - _id: 8dd47897-de54-45bf-aaa4-f42f0ab19e36
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: 008412ca-e0e4-4898-8829-f05814d644c3
+                    url:
+                      value: >-
+                        https://img.uniform.global/p/b0JtaxSVQxmqWylG6vGC1Q/L00EzAvbS0SanO6rk_GboQ-icon-chevron-blue.svg
+                      type: text
+                    file:
+                      type: file
+                      value: 3767517e-e3b4-4700-ae21-52d859d27799
+                    size:
+                      value: 217
+                      type: number
+                    title:
+                      type: text
+                      value: icon-chevron-blue.svg
+                    width:
+                      value: 24
+                      type: number
+                    height:
+                      value: 24
+                      type: number
+                    mediaType:
+                      value: image/svg+xml
+                      type: text
+                  _source: uniform-assets
+              ja-jp:
+                - _id: 8dd47897-de54-45bf-aaa4-f42f0ab19e36
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: 008412ca-e0e4-4898-8829-f05814d644c3
+                    url:
+                      value: >-
+                        https://img.uniform.global/p/b0JtaxSVQxmqWylG6vGC1Q/L00EzAvbS0SanO6rk_GboQ-icon-chevron-blue.svg
+                      type: text
+                    file:
+                      type: file
+                      value: 3767517e-e3b4-4700-ae21-52d859d27799
+                    size:
+                      value: 217
+                      type: number
+                    title:
+                      type: text
+                      value: icon-chevron-blue.svg
+                    width:
+                      value: 24
+                      type: number
+                    height:
+                      value: 24
+                      type: number
+                    mediaType:
+                      value: image/svg+xml
+                      type: text
+                  _source: uniform-assets
+              nb-no:
+                - _id: 8dd47897-de54-45bf-aaa4-f42f0ab19e36
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: 008412ca-e0e4-4898-8829-f05814d644c3
+                    url:
+                      value: >-
+                        https://img.uniform.global/p/b0JtaxSVQxmqWylG6vGC1Q/L00EzAvbS0SanO6rk_GboQ-icon-chevron-blue.svg
+                      type: text
+                    file:
+                      type: file
+                      value: 3767517e-e3b4-4700-ae21-52d859d27799
+                    size:
+                      value: 217
+                      type: number
+                    title:
+                      type: text
+                      value: icon-chevron-blue.svg
+                    width:
+                      value: 24
+                      type: number
+                    height:
+                      value: 24
+                      type: number
+                    mediaType:
+                      value: image/svg+xml
+                      type: text
+                  _source: uniform-assets
+              nl-nl:
+                - _id: 8dd47897-de54-45bf-aaa4-f42f0ab19e36
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: 008412ca-e0e4-4898-8829-f05814d644c3
+                    url:
+                      value: >-
+                        https://img.uniform.global/p/b0JtaxSVQxmqWylG6vGC1Q/L00EzAvbS0SanO6rk_GboQ-icon-chevron-blue.svg
+                      type: text
+                    file:
+                      type: file
+                      value: 3767517e-e3b4-4700-ae21-52d859d27799
+                    size:
+                      value: 217
+                      type: number
+                    title:
+                      type: text
+                      value: icon-chevron-blue.svg
+                    width:
+                      value: 24
+                      type: number
+                    height:
+                      value: 24
+                      type: number
+                    mediaType:
+                      value: image/svg+xml
+                      type: text
+                  _source: uniform-assets
+              sv-se:
+                - _id: 8dd47897-de54-45bf-aaa4-f42f0ab19e36
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: 008412ca-e0e4-4898-8829-f05814d644c3
+                    url:
+                      value: >-
+                        https://img.uniform.global/p/b0JtaxSVQxmqWylG6vGC1Q/L00EzAvbS0SanO6rk_GboQ-icon-chevron-blue.svg
+                      type: text
+                    file:
+                      type: file
+                      value: 3767517e-e3b4-4700-ae21-52d859d27799
+                    size:
+                      value: 217
+                      type: number
+                    title:
+                      type: text
+                      value: icon-chevron-blue.svg
+                    width:
+                      value: 24
+                      type: number
+                    height:
+                      value: 24
+                      type: number
+                    mediaType:
+                      value: image/svg+xml
+                      type: text
+                  _source: uniform-assets
+              ar-ksa:
+                - _id: 8dd47897-de54-45bf-aaa4-f42f0ab19e36
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: 008412ca-e0e4-4898-8829-f05814d644c3
+                    url:
+                      value: >-
+                        https://img.uniform.global/p/b0JtaxSVQxmqWylG6vGC1Q/L00EzAvbS0SanO6rk_GboQ-icon-chevron-blue.svg
+                      type: text
+                    file:
+                      type: file
+                      value: 3767517e-e3b4-4700-ae21-52d859d27799
+                    size:
+                      value: 217
+                      type: number
+                    title:
+                      type: text
+                      value: icon-chevron-blue.svg
+                    width:
+                      value: 24
+                      type: number
+                    height:
+                      value: 24
+                      type: number
+                    mediaType:
+                      value: image/svg+xml
+                      type: text
+                  _source: uniform-assets
+              ar-uae:
+                - _id: 8dd47897-de54-45bf-aaa4-f42f0ab19e36
+                  type: image
+                  fields:
+                    id:
+                      type: text
+                      value: 008412ca-e0e4-4898-8829-f05814d644c3
+                    url:
+                      value: >-
+                        https://img.uniform.global/p/b0JtaxSVQxmqWylG6vGC1Q/L00EzAvbS0SanO6rk_GboQ-icon-chevron-blue.svg
+                      type: text
+                    file:
+                      type: file
+                      value: 3767517e-e3b4-4700-ae21-52d859d27799
+                    size:
+                      value: 217
+                      type: number
+                    title:
+                      type: text
+                      value: icon-chevron-blue.svg
+                    width:
+                      value: 24
+                      type: number
+                    height:
+                      value: 24
+                      type: number
+                    mediaType:
+                      value: image/svg+xml
+                      type: text
+                  _source: uniform-assets
+          link:
+            type: link
+            locales:
+              da-dk:
+                path: /${locale}/articles/:article-slug
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              de-at:
+                path: /${locale}/articles/:article-slug
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              de-de:
+                path: /${locale}/articles/:article-slug
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              en-au:
+                path: /${locale}/articles/:article-slug
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              en-ca:
+                path: /${locale}/articles/:article-slug
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              en-gb:
+                path: /${locale}/articles/:article-slug
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              en-nl:
+                path: /${locale}/articles/:article-slug
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              en-nz:
+                path: /${locale}/articles/:article-slug
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              en-us:
+                path: /${locale}/articles/:article-slug
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              es-us:
+                path: /${locale}/articles/:article-slug
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              fr-ca:
+                path: /${locale}/articles/:article-slug
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              fr-fr:
+                path: /${locale}/articles/:article-slug
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              ja-jp:
+                path: /${locale}/articles/:article-slug
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              nb-no:
+                path: /${locale}/articles/:article-slug
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              nl-nl:
+                path: /${locale}/articles/:article-slug
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              sv-se:
+                path: /${locale}/articles/:article-slug
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              ar-ksa:
+                path: /${locale}/articles/:article-slug
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+              ar-uae:
+                path: /${locale}/articles/:article-slug
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+          size:
+            type: dex-token-selector-parameter
+            value: ''
+          text:
+            type: text
+            locales:
+              da-dk: LÆS
+              de-at: LESEN
+              de-ch: LESEN
+              de-de: LESEN
+              en-au: LIRE
+              en-ca: READ
+              en-gb: READ
+              en-nl: LEES
+              en-nz: LESEN
+              en-us: READ
+              fr-ca: LIRE
+              fr-ch: LIRE
+              fr-fr: LIRE
+              ja-jp: 読む
+              nl-nl: LEES
+              sv-se: LÄS
+              ar-uae: اقرأ
+          textSize:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: sm
+              tablet: sm
+              desktop: sm
+          textColor:
+            type: dex-color-palette-parameter
+            value: text-link
+          textWeight:
+            type: dex-segmented-control-parameter
+            value: bold
+          iconPosition:
+            type: dex-segmented-control-parameter
+            value: right
+          textTransform:
+            type: dex-segmented-control-parameter
+            value: uppercase
+        _overridability:
+          parameters:
+            link: 'yes'
+          hideLockedParameters: true
+  _dataResources:
+    Article:
+      type: article
+      variables:
+        slug: whats-up-with-the-slow-drip
+        locale: ${locale}
+      isPatternParameter: true
+      ignorePatternParameterDefault: true
+  _overridability:
+    parameters:
+      displayName: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-nz
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - fr-fr
+    - en-au
+    - ja-jp
+    - ar-uae
+    - de-ch
+    - fr-ch
+created: '2025-05-20T11:53:41.871221+00:00'
+modified: '2025-09-15T20:27:45.239328+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/small-article-card.jpg
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9

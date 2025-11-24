@@ -1,0 +1,541 @@
+composition:
+  _name: Purchase History Card
+  _id: e1383714-61c0-4647-a00b-bb12371df0d7
+  type: grid
+  parameters:
+    gapX:
+      type: dex-slider-control-parameter
+      value:
+        desktop: '4'
+    gapY:
+      type: dex-slider-control-parameter
+      value:
+        mobile: '4'
+    displayName:
+      type: text
+      locales:
+        da-dk: Produkt
+        de-at: Produkt
+        de-ch: Produkt
+        de-de: Produkt
+        en-au: Produit
+        en-ca: Product
+        en-gb: Product
+        en-nl: Product
+        en-nz: Produkt
+        en-us: Product
+        fr-ca: Produit
+        fr-ch: Produit
+        fr-fr: Produit
+        ja-jp: 製品
+        nl-nl: Product
+        sv-se: Produkt
+        ar-uae: منتج
+    columnsCount:
+      type: dex-slider-control-parameter
+      value:
+        mobile: '1'
+        tablet: '12'
+        desktop: '12'
+    fluidContent:
+      type: checkbox
+      value: true
+  slots:
+    gridInner:
+      - _id: 4c743ae4-6ec4-4ba5-8e11-b0cd47c8a061
+        type: gridItem
+        slots:
+          inner:
+            - _id: cdcf7bf5-3f80-4be5-9045-0b58c170bc50
+              type: container
+              slots:
+                containerContent:
+                  - _id: c528e462-6a4f-4c13-9d02-f58663c69855
+                    type: image
+                    parameters:
+                      image:
+                        type: asset
+                        value:
+                          - _id: 92e14291-258f-4ac7-b0a0-67504ad74caf
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: a8e91bd3-5b31-4830-8fad-eb055c1f1ce9
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/b0JtaxSVQxmqWylG6vGC1Q/mOtv8DPzRPq5ztAESjye-w-royale-boulder-camping-french-press-2.png
+                                type: text
+                              file:
+                                type: file
+                                value: 7e0b37fc-80c3-4209-bac2-2fdf4adb344b
+                              size:
+                                value: 250630
+                                type: number
+                              title:
+                                type: text
+                                value: royale-boulder-camping-french-press-2.png
+                              width:
+                                value: 1280
+                                type: number
+                              height:
+                                value: 1280
+                                type: number
+                              mediaType:
+                                value: image/png
+                                type: text
+                            _source: uniform-assets
+                      height:
+                        type: number
+                        value: '170'
+                      objectFit:
+                        type: dex-segmented-control-parameter
+                        value: cover
+                    _overridability:
+                      parameters:
+                        image: 'yes'
+                      hideLockedParameters: true
+              parameters:
+                border:
+                  type: dex-token-selector-parameter
+                  value: border-product-card
+                spacing:
+                  type: dex-space-control-parameter
+                  value:
+                    paddingTop: container-xxsmall
+                    paddingLeft: container-xxsmall
+                    paddingRight: container-xxsmall
+                    paddingBottom: container-xxsmall
+                displayName:
+                  type: text
+                  locales:
+                    da-dk: Billedbeholder
+                    de-at: Bildcontainer
+                    de-ch: Bildcontainer
+                    de-de: Bildcontainer
+                    en-au: Conteneur d'image
+                    en-ca: Image Container
+                    en-gb: Image Container
+                    en-nl: Afbeelding Container
+                    en-nz: Bildcontainer
+                    en-us: Image Container
+                    fr-ca: Conteneur d'image
+                    fr-ch: Conteneur d'image
+                    fr-fr: Conteneur d'image
+                    ja-jp: 画像コンテナ
+                    nl-nl: Afbeeldingscontainer
+                    sv-se: Bildbehållare
+                    ar-uae: حاوية الصور
+                fluidContent:
+                  type: checkbox
+                  value: true
+                backgroundColor:
+                  type: dex-color-palette-parameter
+                  value: general-color-1
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          rowStart:
+            type: dex-slider-control-parameter
+            value:
+              mobile: ''
+              tablet: '1'
+              desktop: '1'
+          columnSpan:
+            type: dex-slider-control-parameter
+            value:
+              tablet: span-3
+              desktop: span-2
+          columnStart:
+            type: dex-slider-control-parameter
+            value:
+              mobile: ''
+              tablet: '1'
+              desktop: '1'
+          displayName:
+            type: text
+            locales:
+              da-dk: Billede
+              de-at: Bild
+              de-ch: Bild
+              de-de: Bild
+              en-au: Image
+              en-ca: Image
+              en-gb: Picture
+              en-nl: Afbeelding
+              en-nz: Bild
+              en-us: Image
+              fr-ca: Image
+              fr-ch: Image
+              fr-fr: Image
+              ja-jp: 画像
+              nl-nl: Afbeelding
+              sv-se: Bild
+              ar-uae: صورة
+        _overridability:
+          hideLockedParameters: true
+      - _id: 0c0e4c2a-b930-4cdc-9b6b-6d022679db99
+        type: gridItem
+        slots:
+          inner:
+            - _id: 8b265e1b-07f0-42e7-bad3-088e84cc29a2
+              type: flex
+              slots:
+                flexItem:
+                  - _id: f8e535bb-d461-4469-975d-81e9b15487cf
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: span
+                      size:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: 2xl
+                          tablet: 2xl
+                          desktop: 2xl
+                      text:
+                        type: text
+                        locales:
+                          da-dk: Cervello di Caffè
+                          de-at: Cervello di Caffè
+                          de-ch: Cervello di Caffè
+                          de-de: Cervello di Caffè
+                          en-au: Cervello de Café
+                          en-ca: Coffee Brain
+                          en-gb: Café Brain
+                          en-nl: Cervello di Caffè
+                          en-nz: Kaffeegehirn
+                          en-us: Cervello di Caffè
+                          fr-ca: Cervello di Caffè
+                          fr-ch: Cervello di Caffè
+                          fr-fr: Cervello di Caffè
+                          ja-jp: カフェ脳
+                          nl-nl: Cervello di Caffè
+                          sv-se: Cervello di Caffè
+                          ar-uae: سيرفيلو دي كافيه
+                      color:
+                        type: dex-color-palette-parameter
+                        value: text-primary
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: bold
+                    _overridability:
+                      parameters:
+                        text: 'yes'
+                      hideLockedParameters: true
+                  - _id: 034abed1-d419-493a-bb5b-4ca6943d7629
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: span
+                      text:
+                        type: text
+                        locales:
+                          da-dk: 'Ordrenummer: 12312, afgivet den 16. marts 2022'
+                          de-at: 'Auftragsnummer: 12312, aufgegeben am 16. März 2022'
+                          de-ch: 'Bestellnummer: 12312, aufgegeben am 16. März 2022'
+                          de-de: 'Bestellnummer: 12312, aufgegeben am 16. März 2022'
+                          en-au: 'Numéro de commande : 12312, passée le 16 mars 2022'
+                          en-ca: 'Order number: 12312, placed on 16 March 2022'
+                          en-gb: 'Order number: 12312, placed on 16th March 2022'
+                          en-nl: 'Ordernummer: 12312, geplaatst op 16 maart 2022'
+                          en-nz: 'Bestellnummer: 12312, aufgegeben am 16. März 2022'
+                          en-us: 'Order number: 12312, placed on March 16th 2022'
+                          fr-ca: 'Numéro de commande : 12312, passé le 16 mars 2022'
+                          fr-ch: 'Numéro de commande : 12312, passé le 16 mars 2022'
+                          fr-fr: 'Numéro de commande : 12312, passé le 16 mars 2022'
+                          ja-jp: '注文番号: 12312、2022年3月16日に注文されました。'
+                          nl-nl: 'Ordernummer: 12312, geplaatst op 16 maart 2022'
+                          sv-se: 'Ordernummer: 12312, lagd den 16 mars 2022'
+                          ar-uae: 'رقم الطلب: 12312، تم تقديمه في 16 مارس 2022'
+                    _overridability:
+                      parameters:
+                        text: 'yes'
+                      hideLockedParameters: true
+                  - _id: cca5ffc7-3f0a-4ded-9371-80b0bbde2711
+                    type: button
+                    variant: link
+                    parameters:
+                      text:
+                        type: text
+                        locales:
+                          da-dk: Se produkt
+                          de-at: Produkt anzeigen
+                          de-ch: Produkt anzeigen
+                          de-de: Produkt anzeigen
+                          en-au: Voir le produit
+                          en-ca: View Product
+                          en-gb: View Product
+                          en-nl: Bekijk product
+                          en-nz: Produkt anzeigen
+                          en-us: View Product
+                          fr-ca: Voir le produit
+                          fr-ch: Voir le produit
+                          fr-fr: Voir le produit
+                          ja-jp: 製品を見る
+                          nl-nl: Bekijk product
+                          sv-se: Visa produkt
+                          ar-uae: عرض المنتج
+                      textSize:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: base
+                          tablet: base
+                          desktop: base
+                      textColor:
+                        type: dex-color-palette-parameter
+                        value: text-primary
+                      textWeight:
+                        type: dex-segmented-control-parameter
+                        value: normal
+                    _overridability:
+                      parameters:
+                        link: 'yes'
+                      hideLockedParameters: true
+              parameters:
+                gap:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: '4'
+                    tablet: '2'
+                    desktop: '2'
+                spacing:
+                  type: dex-space-control-parameter
+                  value:
+                    tablet:
+                      paddingTop: container-small
+                      paddingBottom: container-small
+                    desktop:
+                      paddingTop: container-small
+                      paddingBottom: container-small
+                direction:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: col
+                    tablet: col
+                    desktop: col
+                displayName:
+                  type: text
+                  locales:
+                    da-dk: Indhold
+                    de-at: Inhalt
+                    de-ch: Inhalt
+                    de-de: Inhalt
+                    en-au: Contenu
+                    en-ca: Content
+                    en-gb: Content
+                    en-nl: Inhoud
+                    en-nz: Inhalt
+                    en-us: Content
+                    fr-ca: Contenu
+                    fr-ch: Contenu
+                    fr-fr: Contenu
+                    ja-jp: コンテンツ
+                    nl-nl: Inhoud
+                    sv-se: Innehåll
+                    ar-uae: المحتوى
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          rowStart:
+            type: dex-slider-control-parameter
+            value:
+              mobile: ''
+              tablet: '1'
+              desktop: '1'
+          columnSpan:
+            type: dex-slider-control-parameter
+            value:
+              tablet: span-7
+              desktop: span-9
+          columnStart:
+            type: dex-slider-control-parameter
+            value:
+              mobile: ''
+              tablet: '4'
+              desktop: '3'
+          displayName:
+            type: text
+            locales:
+              da-dk: Centeroplysninger
+              de-at: Zentrumsinformationen
+              de-ch: Zentrumsinformationen
+              de-de: Zentrumsinformationen
+              en-au: Informations sur le centre
+              en-ca: Centre Information
+              en-gb: Centre Information
+              en-nl: Centruminformatie
+              en-nz: Zentrumsinformationen
+              en-us: Center Information
+              fr-ca: Informations sur le centre
+              fr-ch: Informations sur le centre
+              fr-fr: Informations sur le centre
+              ja-jp: センター情報
+              nl-nl: Centruminformatie
+              sv-se: Centruminformation
+              ar-uae: معلومات المركز
+        _overridability:
+          hideLockedParameters: true
+      - _id: bb7be41e-735e-40ee-bb3b-d3cfe8bcb3bd
+        type: gridItem
+        slots:
+          inner:
+            - _id: 5a784209-e016-4a7d-a6fc-65967939bd56
+              type: flex
+              slots:
+                flexItem:
+                  - _id: 343d0838-294f-429d-abff-03fdfc3da33e
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: span
+                      size:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: 2xl
+                          tablet: 2xl
+                          desktop: 2xl
+                      text:
+                        type: text
+                        locales:
+                          da-dk: 599,00 kr.
+                          de-at: "599,00\_$"
+                          de-ch: "599,00\_$"
+                          de-de: "599,00\_$"
+                          en-au: 599,00 $
+                          en-ca: $599.00
+                          en-gb: £599.00
+                          en-nl: $599,00
+                          en-nz: "599,00\_$"
+                          en-us: $599.00
+                          fr-ca: 599,00 $
+                          fr-ch: 599,00 $
+                          fr-fr: 599,00 $
+                          ja-jp: $599.00
+                          nl-nl: €599,00
+                          sv-se: 599,00 $
+                          ar-uae: ٥٩٩٫٠٠ دولار أمريكي
+                      color:
+                        type: dex-color-palette-parameter
+                        value: text-primary
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: normal
+                    _overridability:
+                      parameters:
+                        text: 'yes'
+                      hideLockedParameters: true
+              parameters:
+                spacing:
+                  type: dex-space-control-parameter
+                  value:
+                    tablet:
+                      paddingTop: container-small
+                      paddingBottom: container-small
+                    desktop:
+                      paddingTop: container-small
+                      paddingBottom: container-small
+                direction:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: row
+                    tablet: row
+                    desktop: row
+                displayName:
+                  type: text
+                  locales:
+                    da-dk: Prisindpakning
+                    de-at: Preisverpackung
+                    de-ch: Preisumschlag
+                    de-de: Preisumschlag
+                    en-au: Enveloppe de Prix
+                    en-ca: Price Wrapper
+                    en-gb: Price Enclosure
+                    en-nl: Prijsomslag
+                    en-nz: Preisumschlag
+                    en-us: Price Wrapper
+                    fr-ca: Enveloppe de prix
+                    fr-ch: Enveloppe de Prix
+                    fr-fr: Enveloppe de Prix
+                    ja-jp: 価格ラッパー
+                    nl-nl: Prijsomslag
+                    sv-se: Prisomslag
+                    ar-uae: غلاف السعر
+                justifyContent:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: end
+                    tablet: end
+                    desktop: end
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          rowStart:
+            type: dex-slider-control-parameter
+            value:
+              mobile: ''
+              tablet: '1'
+              desktop: '1'
+          columnSpan:
+            type: dex-slider-control-parameter
+            value:
+              tablet: span-2
+          columnStart:
+            type: dex-slider-control-parameter
+            value:
+              mobile: ''
+              tablet: '11'
+              desktop: '12'
+          displayName:
+            type: text
+            locales:
+              da-dk: Pris
+              de-at: Preis
+              de-ch: Preis
+              de-de: Preis
+              en-au: Prix
+              en-ca: Price
+              en-gb: Price
+              en-nl: Prijs
+              en-nz: Preis
+              en-us: Price
+              fr-ca: Prix
+              fr-ch: Prix
+              fr-fr: Prix
+              ja-jp: 価格
+              nl-nl: Prijs
+              sv-se: Pris
+              ar-uae: السعر
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      displayName: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-nz
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - fr-fr
+    - en-au
+    - ja-jp
+    - ar-uae
+    - de-ch
+    - fr-ch
+created: '2025-03-18T13:02:30.248815+00:00'
+modified: '2025-09-15T20:27:49.217441+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/purchase-history-card.jpg
+categoryId: adaebea8-ba58-494b-9c3b-9f82906d9415

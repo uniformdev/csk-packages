@@ -6,39 +6,30 @@ composition:
   parameters:
     icon:
       type: asset
-      value:
-        - _id: 547d9183-255a-4fe9-adc4-74700ab519cb
-          type: image
-          fields:
-            id:
-              type: text
-              value: bf9daf10-949d-4589-8726-0168d567e0d5
-            url:
-              value: >-
-                https://img.uniform.global/p/YBXmRPPzQZ-45Yo5jJzHAw/DnWsxABVTDSyNaccArrvQQ-arrow-right.svg
-              type: text
-            file:
-              type: file
-              value: 519443cd-5f84-460f-a57c-778bbe1d3daa
-            size:
-              value: 300
-              type: number
-            title:
-              type: text
-              value: arrow-right.svg
-            width:
-              value: 29
-              type: number
-            height:
-              value: 29
-              type: number
-            mediaType:
-              value: image/svg+xml
-              type: text
-          _source: uniform-assets
+      value: []
     size:
       type: dex-token-selector-parameter
       value: ''
+    text:
+      type: text
+      locales:
+        da-dk: Ingen uniform adgang? Anmod om en
+        de-at: Kein einheitlicher Zugang? Einen anfordern
+        de-ch: Kein einheitlicher Zugang? Einen anfordern
+        de-de: Kein einheitlicher Zugang? Einen anfordern
+        en-au: Pas d'accès uniforme ? Demandez-en un.
+        en-ca: No uniform access? Request one
+        en-gb: No uniform access? Request one
+        en-nl: Geen uniform toegang? Vraag er een aan
+        en-nz: Kein einheitlicher Zugang? Einen anfordern
+        en-us: No uniform access? Request one
+        fr-ca: Pas d'accès à l'uniforme? Demandez-en un
+        fr-ch: Pas d'accès uniforme ? Demandez-en un.
+        fr-fr: Pas d'accès uniforme ? Demandez-en un.
+        ja-jp: 制服へのアクセスがありませんか？リクエストしてください。
+        nl-nl: Geen uniform toegang? Vraag er een aan.
+        sv-se: Ingen enhetlig åtkomst? Begär en
+        ar-uae: لا يوجد وصول موحد؟ اطلب واحداً
     textSize:
       type: dex-segmented-control-parameter
       value:
@@ -65,10 +56,26 @@ composition:
       textColor: 'yes'
     hideLockedParameters: true
   _locales:
-    - en
-created: '2025-02-17T15:34:18.061034+00:00'
-modified: '2025-02-17T15:34:18.061034+00:00'
+    - en-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-nz
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - fr-fr
+    - en-au
+    - ja-jp
+    - ar-uae
+    - de-ch
+    - fr-ch
+created: '2025-02-27T10:45:02.205728+00:00'
+modified: '2025-08-06T12:11:42.643695+00:00'
 pattern: true
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/button-link.jpg
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/button-link.jpg
 categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

@@ -16,7 +16,24 @@ composition:
         paddingBottom: ''
     displayName:
       type: text
-      value: Card Example
+      locales:
+        da-dk: Kort Eksempel
+        de-at: Kartenbeispiel
+        de-ch: Kartenbeispiel
+        de-de: Kartenbeispiel
+        en-au: Exemple de Carte
+        en-ca: Card Example
+        en-gb: Card Example
+        en-nl: Kaartvoorbeeld
+        en-nz: Kartenbeispiel
+        en-us: Card Example
+        fr-ca: Exemple de carte
+        fr-ch: Exemple de carte
+        fr-fr: Exemple de carte
+        ja-jp: カードの例
+        nl-nl: Kaartvoorbeeld
+        sv-se: Kortexempel
+        ar-uae: مثال على البطاقة
     fluidContent:
       type: checkbox
       value: true
@@ -28,30 +45,30 @@ composition:
           image:
             type: asset
             value:
-              - _id: 7aeee203-1857-4dd2-b88d-9dea77906eb2
+              - _id: ffc04ba4-ce16-4487-b2d0-0ab45284908d
                 type: image
                 fields:
                   id:
                     type: text
-                    value: 26fde52f-ea1b-4625-bbed-f5e692f1dc9d
+                    value: 96036875-082e-4497-b43c-663bb1682bb9
                   url:
                     value: >-
-                      https://img.uniform.global/p/YBXmRPPzQZ-45Yo5jJzHAw/f3U-i929T6mP6Wb9Xw17Ug-rectangle.jpg
+                      https://img.uniform.global/p/4rXD6MFgTD6MtAve0vmErQ/eQ0YI79mQI2CJuxQxNWDBg-clay-banks-pNEmlb1CMZM-unsplash.jpg
                     type: text
                   file:
                     type: file
-                    value: 29c50181-91f5-43df-9160-4ac208003bfe
+                    value: 5f68ab0d-0cb5-4da3-904a-fba00dd8135a
                   size:
-                    value: 148846
+                    value: 2383415
                     type: number
                   title:
                     type: text
-                    value: rectangle.jpg
+                    value: clay-banks-pNEmlb1CMZM-unsplash.jpg
                   width:
-                    value: 1600
+                    value: 4500
                     type: number
                   height:
-                    value: 689
+                    value: 3000
                     type: number
                   mediaType:
                     value: image/jpeg
@@ -109,16 +126,33 @@ composition:
         text:
           type: text
           value: null
+          locales: {}
   _overridability:
     variants: false
     parameters:
       displayName: 'yes'
     hideLockedParameters: true
   _locales:
-    - en
-created: '2025-02-17T15:34:18.962516+00:00'
-modified: '2025-02-17T15:34:18.962516+00:00'
+    - en-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-nz
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - fr-fr
+    - en-au
+    - ja-jp
+    - ar-uae
+    - de-ch
+    - fr-ch
+created: '2025-03-25T09:38:01.305237+00:00'
+modified: '2025-08-06T12:11:46.335865+00:00'
 pattern: true
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/examples-card.jpg
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/examples-card.jpg
 categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9

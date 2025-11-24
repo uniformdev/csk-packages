@@ -1,0 +1,1026 @@
+composition:
+  _name: Article Components
+  _id: aad9274a-bd28-45e6-99a2-132216105a6d
+  _slug: ':article-slug'
+  type: entryPreview
+  parameters:
+    pageTitle:
+      type: text
+      locales:
+        da-dk: Artikelkomponenter
+        de-at: Artikelkomponenten
+        de-ch: Artikelkomponenten
+        de-de: Artikelkomponenten
+        en-au: Composants de l'article
+        en-ca: Article Components
+        en-gb: Article Components
+        en-nl: Artikelcomponenten
+        en-nz: Artikelkomponenten
+        en-us: Article Components
+        fr-ca: Composants de l'article
+        fr-ch: Composants de l'article
+        fr-fr: Composants de l'article
+        ja-jp: 記事の構成要素
+        nl-nl: Artikelcomponenten
+        sv-se: Artikelkomponenter
+        ar-uae: مكونات المقال
+  slots:
+    pageContent:
+      - _id: fe485767-c888-4622-bf36-b705e66f74b4
+        type: spacer
+        parameters:
+          size:
+            type: dex-token-selector-parameter
+            value: spacer-large
+      - _id: 678bf97c-789d-4239-b34c-8816b902f0f2
+        type: container
+        slots:
+          containerContent:
+            - _id: 7daf10eb-2352-46d2-a24b-a87e2d1731dc
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: h2
+                font:
+                  type: dex-token-selector-parameter
+                  value: secondary
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: 4xl
+                text:
+                  type: text
+                  locales:
+                    da-dk: 'Fremhævet artikelkort:'
+                    de-at: 'Hervorgehobener Artikelkarte:'
+                    de-ch: 'Hervorgehobene Artikelkarte:'
+                    de-de: 'Hervorgehobene Artikelkarte:'
+                    en-au: 'Carte d''article en vedette :'
+                    en-ca: 'Featured Article Card:'
+                    en-gb: 'Featured Article Card:'
+                    en-nl: 'Uitgelicht Artikel Kaart:'
+                    en-nz: 'Hervorgehobene Artikelkarte:'
+                    en-us: 'Featured Article Card:'
+                    fr-ca: 'Carte d''article en vedette :'
+                    fr-ch: 'Carte d''Article en Vedette :'
+                    fr-fr: 'Carte d''Article en Vedette :'
+                    ja-jp: '注目の記事カード:'
+                    nl-nl: 'Uitgelicht Artikel Kaart:'
+                    sv-se: 'Utvald artikelkort:'
+                    ar-uae: 'بطاقة المقالة المميزة:'
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-link
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: bold
+                transform:
+                  type: dex-segmented-control-parameter
+                  value: uppercase
+            - _id: 650ee806-147c-4c58-ab9e-de0a9da783e8
+              type: spacer
+              parameters:
+                size:
+                  type: dex-token-selector-parameter
+                  value: spacer-large
+            - _id: b6fcc659-875e-4380-b0c8-af6777437bc1
+              type: flexCard
+              _pattern: d4bbbede-ffc9-481f-ae83-2d5339f26ee0
+        parameters:
+          displayName:
+            type: text
+            locales:
+              da-dk: Fremhævet Artikelkort
+              de-at: Hervorgehobener Artikelkarte
+              de-ch: Hervorgehobene Artikelkarte
+              de-de: Hervorgehobene Artikelkarte
+              en-au: Carte d'Article en Vedette
+              en-ca: Featured Article Card
+              en-gb: Featured Article Card
+              en-nl: Uitgelicht Artikel Kaart
+              en-nz: Hervorgehobene Artikelkarte
+              en-us: Featured Article Card
+              fr-ca: Carte d'article en vedette
+              fr-ch: Carte d'article en vedette
+              fr-fr: Carte d'article en vedette
+              ja-jp: 注目の記事カード
+              nl-nl: Uitgelicht Artikel Kaart
+              sv-se: Utvald artikelkort
+              ar-uae: بطاقة المقالة المميزة
+      - _id: 737df75a-b80f-4daf-b961-ecdeae7ce845
+        type: spacer
+        parameters:
+          size:
+            type: dex-token-selector-parameter
+            value: spacer-large
+      - _id: 13d491cc-a56a-45d0-9897-85b413c3dc03
+        type: divider
+        parameters:
+          color:
+            type: dex-color-palette-parameter
+            value: general-color-7
+          width:
+            type: dex-slider-control-parameter
+            value: 100%
+          alignment:
+            type: dex-segmented-control-parameter
+            value: center
+          thickness:
+            type: dex-slider-control-parameter
+            value: 1px
+      - _id: df2f4c9b-5295-46a6-bd7d-88870fddb447
+        type: spacer
+        parameters:
+          size:
+            type: dex-token-selector-parameter
+            value: spacer-large
+      - _id: 0e6f79e9-fa63-481c-a12b-68629376f9f5
+        type: container
+        slots:
+          containerContent:
+            - _id: 853d82ad-46f5-495b-af05-2e42bf55b6c1
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: h2
+                font:
+                  type: dex-token-selector-parameter
+                  value: secondary
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: 4xl
+                text:
+                  type: text
+                  locales:
+                    da-dk: 'Lille artikelkort:'
+                    de-at: 'Kleine Artikelkarte:'
+                    de-ch: 'Kleine Artikelkarte:'
+                    de-de: 'Kleine Artikelkarte:'
+                    en-au: 'Petite Carte d''Article :'
+                    en-ca: 'Small Article Card:'
+                    en-gb: 'Small Article Card:'
+                    en-nl: 'Kleine Artikelkaart:'
+                    en-nz: 'Kleine Artikelkarte:'
+                    en-us: 'Small Article Card:'
+                    fr-ca: 'Petite carte d''article :'
+                    fr-ch: 'Petite Carte d''Article :'
+                    fr-fr: 'Petite Carte d''Article :'
+                    ja-jp: '小さな記事カード:'
+                    nl-nl: 'Kleine Artikelkaart:'
+                    sv-se: 'Liten artikelkort:'
+                    ar-uae: 'بطاقة مقالة صغيرة:'
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-link
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: bold
+                transform:
+                  type: dex-segmented-control-parameter
+                  value: uppercase
+            - _id: 5943a8d7-5358-4252-9ae8-b3598530c7fc
+              type: spacer
+              parameters:
+                size:
+                  type: dex-token-selector-parameter
+                  value: spacer-large
+            - _id: bd23faeb-85e2-4b15-a48b-4d22dbb3099e
+              type: flexCard
+              _pattern: 17068a41-f3e9-475b-9a20-730c88c9bf79
+        parameters:
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              desktop:
+                paddingTop: container-large
+                paddingBottom: container-medium
+          displayName:
+            type: text
+            locales:
+              da-dk: Lille artikelkort
+              de-at: Kleine Artikelkarte
+              de-ch: Kleine Artikelkarte
+              de-de: Kleine Artikelkarte
+              en-au: Petite Carte d'Article
+              en-ca: Small Article Card
+              en-gb: Small Article Card
+              en-nl: Kleine Artikelkaart
+              en-nz: Kleine Artikelkarte
+              en-us: Small Article Card
+              fr-ca: Petite carte d'article
+              fr-ch: Petite Carte d'Article
+              fr-fr: Petite Carte d'Article
+              ja-jp: 小さな記事カード
+              nl-nl: Kleine Artikelkaart
+              sv-se: Liten artikelkort
+              ar-uae: بطاقة مقالة صغيرة
+          backgroundColor:
+            type: dex-color-palette-parameter
+            value: general-color-1
+      - _id: e2bf9295-86ee-4486-ba28-7de0fa00277e
+        type: spacer
+        parameters:
+          size:
+            type: dex-token-selector-parameter
+            value: spacer-large
+      - _id: 8be3aaeb-268a-4433-aa4a-7bbc9c70af3f
+        type: divider
+        parameters:
+          color:
+            type: dex-color-palette-parameter
+            value: general-color-7
+          width:
+            type: dex-slider-control-parameter
+            value: 100%
+          alignment:
+            type: dex-segmented-control-parameter
+            value: center
+          thickness:
+            type: dex-slider-control-parameter
+            value: 1px
+      - _id: c421e100-16d2-4d6a-8944-414809d45d55
+        type: spacer
+        parameters:
+          size:
+            type: dex-token-selector-parameter
+            value: spacer-large
+      - _id: 5879b82b-eb67-47b6-a75c-86a3d3b201bf
+        type: container
+        slots:
+          containerContent:
+            - _id: 64e8baeb-4deb-4106-9d7f-f46708d32a83
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: h2
+                font:
+                  type: dex-token-selector-parameter
+                  value: secondary
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: 4xl
+                text:
+                  type: text
+                  locales:
+                    da-dk: 'Artikel Højdepunkt:'
+                    de-at: 'Artikel-Highlight:'
+                    de-ch: 'Artikel-Highlight:'
+                    de-de: 'Artikel-Highlight:'
+                    en-au: 'Mise en avant de l''article :'
+                    en-ca: 'Article Highlight:'
+                    en-gb: 'Article Highlight:'
+                    en-nl: 'Artikel Hoogtepunt:'
+                    en-nz: 'Artikel-Highlight:'
+                    en-us: 'Article Highlight:'
+                    fr-ca: 'Faits saillants de l''article :'
+                    fr-ch: 'Mise en avant de l''article :'
+                    fr-fr: 'Mise en avant de l''article :'
+                    ja-jp: '記事のハイライト:'
+                    nl-nl: 'Artikel Hoogtepunt:'
+                    sv-se: 'Artikelhöjdpunkt:'
+                    ar-uae: 'تسليط الضوء على المقال:'
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-link
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: bold
+                transform:
+                  type: dex-segmented-control-parameter
+                  value: uppercase
+            - _id: cb6b4e01-cef9-46dd-9532-f9a67573ddc7
+              type: spacer
+              parameters:
+                size:
+                  type: dex-token-selector-parameter
+                  value: spacer-large
+            - _id: d0fd5fe7-b6a3-47d0-a0d9-166da2883134
+              type: section
+              slots:
+                sectionCTA:
+                  - _id: 3ac2b31e-7f2b-4384-9d75-615c33d1a3df
+                    type: button
+                    _pattern: 53b59aed-e378-4fcb-9135-20247d92074e
+                sectionMedia:
+                  - _id: 48889c8b-628b-44d3-9922-dfefceafaf4b
+                    type: image
+                    parameters:
+                      image:
+                        type: asset
+                        value:
+                          - _id: 3792e193-873f-4c13-a813-423721f4cefd
+                            type: image
+                            fields:
+                              url:
+                                type: text
+                                value: >-
+                                  ${#jptr:/Article/entry/fields/thumbnail/value/0/fields/url/value}
+                            _source: custom-url
+                      objectFit:
+                        type: dex-segmented-control-parameter
+                        value: contain
+                    _overridability:
+                      parameters:
+                        image: 'no'
+                      hideLockedParameters: true
+                sectionContent:
+                  - _id: bfe7e028-62b7-485f-b3d8-8855148ed80f
+                    type: flex
+                    slots:
+                      flexItem:
+                        - _id: 14124bb6-36fb-4689-a361-7d2bdacae0b5
+                          type: text
+                          parameters:
+                            tag:
+                              type: dex-segmented-control-parameter
+                              value: h2
+                            size:
+                              type: dex-segmented-control-parameter
+                              value:
+                                tablet: 4xl
+                                desktop: 4xl
+                            text:
+                              type: text
+                              locales:
+                                da-dk: |
+                                  ${#jptr:/Article/entry/fields/title/value}
+                                de-at: |
+                                  ${#jptr:/Article/entry/fields/title/value}
+                                de-ch: |
+                                  ${#jptr:/Article/entry/fields/title/value}
+                                de-de: |
+                                  ${#jptr:/Article/entry/fields/title/value}
+                                en-au: |
+                                  ${#jptr:/Article/entry/fields/title/value}
+                                en-ca: |
+                                  ${#jptr:/Article/entry/fields/title/value}
+                                en-gb: |
+                                  ${#jptr:/Article/entry/fields/title/value}
+                                en-nl: |
+                                  ${#jptr:/Article/entry/fields/title/value}
+                                en-nz: |
+                                  ${#jptr:/Article/entry/fields/title/value}
+                                en-us: |
+                                  ${#jptr:/Article/entry/fields/title/value}
+                                fr-ca: |
+                                  ${#jptr:/Article/entry/fields/title/value}
+                                fr-ch: |
+                                  ${#jptr:/Article/entry/fields/title/value}
+                                fr-fr: |
+                                  ${#jptr:/Article/entry/fields/title/value}
+                                ja-jp: |
+                                  ${#jptr:/Article/entry/fields/title/value}
+                                nl-nl: |
+                                  ${#jptr:/Article/entry/fields/title/value}
+                                sv-se: |
+                                  ${#jptr:/Article/entry/fields/title/value}
+                                ar-uae: |
+                                  ${#jptr:/Article/entry/fields/title/value}
+                            color:
+                              type: dex-color-palette-parameter
+                              value: text-primary
+                            weight:
+                              type: dex-segmented-control-parameter
+                              value: bold
+                            alignment:
+                              type: dex-segmented-control-parameter
+                              value: center
+                          _overridability:
+                            parameters:
+                              text: 'no'
+                            hideLockedParameters: true
+                        - _id: 1a949a62-d236-4a59-8165-4e19cea0f7ca
+                          type: text
+                          parameters:
+                            tag:
+                              type: dex-segmented-control-parameter
+                              value: span
+                            text:
+                              type: text
+                              locales:
+                                da-dk: >-
+                                  ${#jptr:/Article/entry/fields/shortDescription/value}
+                                de-at: >-
+                                  ${#jptr:/Article/entry/fields/shortDescription/value}
+                                de-ch: >-
+                                  ${#jptr:/Article/entry/fields/shortDescription/value}
+                                de-de: >-
+                                  ${#jptr:/Article/entry/fields/shortDescription/value}
+                                en-au: >-
+                                  ${#jptr:/Article/entry/fields/shortDescription/value}
+                                en-ca: >-
+                                  ${#jptr:/Article/entry/fields/shortDescription/value}
+                                en-gb: >-
+                                  ${#jptr:/Article/entry/fields/shortDescription/value}
+                                en-nl: >-
+                                  ${#jptr:/Article/entry/fields/shortDescription/value}
+                                en-nz: >-
+                                  ${#jptr:/Article/entry/fields/shortDescription/value}
+                                en-us: >-
+                                  ${#jptr:/Article/entry/fields/shortDescription/value}
+                                fr-ca: >-
+                                  ${#jptr:/Article/entry/fields/shortDescription/value}
+                                fr-ch: >-
+                                  ${#jptr:/Article/entry/fields/shortDescription/value}
+                                fr-fr: >-
+                                  ${#jptr:/Article/entry/fields/shortDescription/value}
+                                ja-jp: >-
+                                  ${#jptr:/Article/entry/fields/shortDescription/value}
+                                nl-nl: >-
+                                  ${#jptr:/Article/entry/fields/shortDescription/value}
+                                sv-se: >-
+                                  ${#jptr:/Article/entry/fields/shortDescription/value}
+                                ar-uae: >-
+                                  ${#jptr:/Article/entry/fields/shortDescription/value}
+                    parameters:
+                      gap:
+                        type: dex-slider-control-parameter
+                        value:
+                          mobile: '4'
+                          tablet: '4'
+                          desktop: '8'
+                      spacing:
+                        type: dex-space-control-parameter
+                        value:
+                          tablet:
+                            marginLeft: container-large
+                          desktop:
+                            marginRight: container-large
+                      direction:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: col
+                          tablet: col
+                          desktop: col
+                      displayName:
+                        type: text
+                        locales:
+                          da-dk: Indhold
+                          de-at: Inhalt
+                          de-ch: Inhalt
+                          de-de: Inhalt
+                          en-au: Contenu
+                          en-ca: Content
+                          en-gb: Content
+                          en-nl: Inhoud
+                          en-nz: Inhalt
+                          en-us: Content
+                          fr-ca: Contenu
+                          fr-ch: Contenu
+                          fr-fr: Contenu
+                          ja-jp: コンテンツ
+                          nl-nl: Inhoud
+                          sv-se: Innehåll
+                          ar-uae: المحتوى
+                    _overridability:
+                      hideLockedParameters: true
+              variant: columnsReverse
+              parameters:
+                spacing:
+                  type: dex-space-control-parameter
+                  value:
+                    paddingTop: container-medium
+                    paddingBottom: container-medium
+                displayName:
+                  type: text
+                  locales:
+                    da-dk: ${#jptr:/Article/entry/fields/title/value}
+                    de-at: ${#jptr:/Article/entry/fields/title/value}
+                    de-ch: ${#jptr:/Article/entry/fields/title/value}
+                    de-de: ${#jptr:/Article/entry/fields/title/value}
+                    en-au: ${#jptr:/Article/entry/fields/title/value}
+                    en-ca: ${#jptr:/Article/entry/fields/title/value}
+                    en-gb: ${#jptr:/Article/entry/fields/title/value}
+                    en-nl: ${#jptr:/Article/entry/fields/title/value}
+                    en-nz: ${#jptr:/Article/entry/fields/title/value}
+                    en-us: ${#jptr:/Article/entry/fields/title/value}
+                    fr-ca: ${#jptr:/Article/entry/fields/title/value}
+                    fr-ch: ${#jptr:/Article/entry/fields/title/value}
+                    fr-fr: ${#jptr:/Article/entry/fields/title/value}
+                    ja-jp: ${#jptr:/Article/entry/fields/title/value}
+                    nl-nl: ${#jptr:/Article/entry/fields/title/value}
+                    sv-se: ${#jptr:/Article/entry/fields/title/value}
+                    ar-uae: ${#jptr:/Article/entry/fields/title/value}
+                contentAlignment:
+                  type: dex-segmented-control-parameter
+                  value: center
+              _overridability:
+                variants: true
+                parameters:
+                  spacing: 'no'
+                  displayName: 'no'
+                  fluidContent: 'no'
+                hideLockedParameters: true
+        parameters:
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              desktop:
+                paddingTop: container-large
+          displayName:
+            type: text
+            locales:
+              da-dk: Artikelhøjdepunkt
+              de-at: Artikel-Highlight
+              de-ch: Artikel-Highlight
+              de-de: Artikel-Highlight
+              en-au: Mise en avant de l'article
+              en-ca: Article Highlight
+              en-gb: Article Highlight
+              en-nl: Artikel Hoogtepunt
+              en-nz: Artikel-Highlight
+              en-us: Article Highlight
+              fr-ca: Mise en évidence de l'article
+              fr-ch: Mise en avant de l'article
+              fr-fr: Mise en avant de l'article
+              ja-jp: 記事のハイライト
+              nl-nl: Artikel Hoogtepunt
+              sv-se: Artikelhöjdpunkt
+              ar-uae: تسليط الضوء على المقالة
+      - _id: d95670f7-65ad-4a3b-90ab-0c1f218f77ec
+        type: spacer
+        parameters:
+          size:
+            type: dex-token-selector-parameter
+            value: spacer-large
+  _dataResources:
+    Article:
+      type: articleBySlug
+      variables:
+        slug: ${article-slug}
+        locale: ${locale}
+  _overrides:
+    3ac2b31e-7f2b-4384-9d75-615c33d1a3df:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            de-at:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            de-de:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            en-au:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            en-ca:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            en-gb:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            en-nl:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            en-nz:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            en-us:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            es-us:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            fr-ca:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            fr-fr:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            ja-jp:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            nb-no:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            nl-nl:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            sv-se:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            ar-ksa:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            ar-uae:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+        text:
+          type: text
+          locales:
+            da-dk: Lær mere
+            de-at: Erfahren Sie mehr
+            de-ch: Erfahren Sie mehr
+            de-de: Erfahren Sie mehr
+            en-au: En savoir plus
+            en-ca: Learn more
+            en-gb: Learn more
+            en-nl: Meer informatie
+            en-nz: Mehr erfahren
+            en-us: Learn more
+            fr-ca: En savoir plus
+            fr-ch: En savoir plus
+            fr-fr: En savoir plus
+            ja-jp: 詳細を確認する
+            nl-nl: Meer informatie
+            sv-se: Läs mer
+            ar-uae: تعرف على المزيد
+    b6fcc659-875e-4380-b0c8-af6777437bc1:
+      dataResources:
+        Article:
+          type: article
+          variables:
+            slug: ${article-slug}
+            locale: ${locale}
+    bd23faeb-85e2-4b15-a48b-4d22dbb3099e:
+      dataResources:
+        Article:
+          type: article
+          variables:
+            slug: ${article-slug}
+            locale: ${locale}
+    b6fcc659-875e-4380-b0c8-af6777437bc1|91a39649-d9d5-4f11-9090-203b4fea8a13:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            de-at:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            de-de:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            en-au:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            en-ca:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            en-gb:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            en-nl:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            en-nz:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            es-us:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            fr-ca:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            fr-fr:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            ja-jp:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            nb-no:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            nl-nl:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            sv-se:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            ar-ksa:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+            ar-uae:
+              path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+                article-slug: ${#jptr:/Article/entry/_slug}
+    bd23faeb-85e2-4b15-a48b-4d22dbb3099e|4a7ce726-321d-4e77-ac0e-a11e42946127:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            de-at:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            de-de:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-au:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-ca:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-gb:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-nl:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-nz:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            es-us:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            fr-ca:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            fr-fr:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ja-jp:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            nb-no:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            nl-nl:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            sv-se:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ar-ksa:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ar-uae:
+              path: /${locale}/articles/:article-slug
+              type: projectMapNode
+              nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+  _locales:
+    - en-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-nz
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - fr-fr
+    - en-au
+    - ja-jp
+    - ar-uae
+    - de-ch
+    - fr-ch
+created: '2025-05-20T11:53:47.936479+00:00'
+modified: '2025-09-15T20:27:55.404664+00:00'
+pattern: false
