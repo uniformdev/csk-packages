@@ -36,6 +36,8 @@ parameters:
     type: dex-token-selector-parameter
     guidance: Use the Border parameter to control the component border.
     typeConfig:
+      allowTokens:
+        - border-footer
       selectedTokenType: border
   - id: fluidContent
     name: Fluid Content
@@ -49,7 +51,7 @@ parameters:
     typeConfig: null
 categoryId: b1163ce2-5ac7-4347-bc38-a42198180718
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/footer.jpg
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/footer.jpg
 useTeamPermissions: true
 slots:
   - id: footerLogo

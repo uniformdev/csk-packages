@@ -2,7 +2,7 @@
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: card
 name: Card
-icon: card-hearts
+icon: card
 parameters:
   - id: displayName
     name: Display Name
@@ -10,6 +10,30 @@ parameters:
     guidance: Used as a display name for the canvas; not rendered in the markup.
     typeConfig: null
     localizable: true
+  - id: lineCountRestrictions
+    name: Line Count Restrictions
+    type: dex-slider-control-parameter
+    typeConfig:
+      step: 1
+      type: custom
+      units: px
+      options:
+        - key: none
+          value: none
+        - key: '1'
+          value: '1'
+        - key: '2'
+          value: '2'
+        - key: '3'
+          value: '3'
+        - key: '4'
+          value: '4'
+        - key: '5'
+          value: '5'
+        - key: '6'
+          value: '6'
+      maxValue: 10
+      minValue: 0
   - id: d17cf463-2fe4-4d1b-b0c5-c97ed1bf5a43
     name: Presentation Settings
     type: group
@@ -68,7 +92,7 @@ parameters:
       withViewPort: true
 categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/card-default.jpg
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/card-default.jpg
 useTeamPermissions: true
 slots:
   - id: cardMedia
@@ -77,6 +101,7 @@ slots:
     allowedComponents:
       - image
       - video
+      - container
     allowAllComponents: false
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
@@ -88,13 +113,16 @@ slots:
       - text
       - richText
       - spacer
+      - container
+      - flex
+      - card
     allowAllComponents: false
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
 titleParameter: displayName
 canBeComposition: false
-created: '2025-01-29T10:47:01.200491+00:00'
-updated: '2025-10-06T21:18:49.976978+00:00'
+created: '2025-01-29T11:09:18.073072+00:00'
+updated: '2025-10-08T11:28:02.514912+00:00'
 variants:
   - id: backgroundImage
     name: Background Image

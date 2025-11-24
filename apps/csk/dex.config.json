@@ -1,28 +1,43 @@
 {
   "colors": {
     "light": {
-      "button-primary": "#0052ED",
-      "button-primary-hover": "#0B4ECA",
-      "button-secondary": "#b10d00",
-      "button-secondary-hover": "#920A00",
-      "button-tertiary": "#FFFFFF",
-      "button-tertiary-hover": "#E6E6E6",
-      "text-primary": "#001242",
-      "text-secondary": "#ffffff",
-      "text-tertiary": "#0052ed",
+      "button-primary": "{general-color-3}",
+      "button-primary-hover": "#333333",
+      "button-secondary": "{general-color-1}",
+      "button-secondary-hover": "#f3ead7",
+      "button-tertiary": "{general-color-2}",
+      "button-tertiary-hover": "#6a5a49",
+      "text-primary": "{general-color-3}",
+      "text-secondary": "{general-color-1}",
+      "text-tertiary": "{general-color-2}",
       "general-color-1": "#FFFFFF",
-      "general-color-2": "#041142",
-      "general-color-3": "#0052ed",
-      "general-color-4": "#df0000",
-      "general-color-5": "#001c6c",
-      "page-background-primary": "#FFFFFF"
+      "general-color-2": "#55493B",
+      "general-color-3": "#000000",
+      "general-color-4": "#61050A",
+      "general-color-5": "#0a2f17",
+      "page-background-primary": "#FFFFFF",
+      "general-color-6": "#FBFAEA",
+      "general-color-7": "#438FD5",
+      "text-link": "{general-color-7}",
+      "general-color-8": "#BDE2D2",
+      "general-color-9": "#FAFAFA",
+      "general-color-10": "#FFFFFFCC",
+      "text-active": "#438FD5",
+      "general-color-11": "#F6F6F6",
+      "general-color-12": "#E4E4E4",
+      "general-color-13": "#F7DF1E",
+      "text-featured": "{general-color-13}",
+      "button-featured": "{general-color-13}"
     }
   },
   "dimensions": {
+    "container-xxsmall": "9px",
+    "container-xsmall": "11px",
     "container-small": "24px",
     "container-medium": "48px",
-    "container-large": "96px",
+    "container-large": "84px",
     "container-xlarge": "120px",
+    "container-xxlarge": "240px",
     "table-small": "4px 8px",
     "table-medium": "12px 16px",
     "table-large": "16px 24px",
@@ -34,38 +49,80 @@
     "spacer-extra-small": "10px",
     "spacer-small": "20px",
     "spacer-medium": "40px",
-    "spacer-large": "80px"
+    "spacer-large": "80px",
+    "input-small": "2px 4px",
+    "input-medium": "4px 8px",
+    "input-large": "8px 16px"
   },
   "fonts": {
-    "dm-sans": "",
-    "space-mono": ""
+    "primary": "",
+    "secondary": ""
   },
-  "defaultFontKey": "dm-sans",
+  "defaultFontKey": "primary",
   "borders": {
-    "border-primary": {
-      "radius": "25px",
-      "width": "1px",
-      "color": "#E5E7EB",
-      "style": "solid"
-    },
-    "border-secondary": {
-      "radius": "10px",
-      "width": "1px",
-      "color": "#DF0000",
-      "style": "solid"
-    },
-    "border-footer": {
-      "radius": "0px",
-      "width": "1px 0px 0px 0px",
-      "color": "#99C6FF",
-      "style": "solid"
-    },
     "border-image-radius-small": {
       "radius": "12px",
       "width": "0px",
       "color": "#000000",
       "style": "solid"
+    },
+    "border-button-secondary": {
+      "radius": "0",
+      "width": "2px",
+      "color": "{general-color-3}",
+      "style": "solid"
+    },
+    "border-button-primary": {
+      "radius": "0px",
+      "width": "2px",
+      "color": "{button-secondary}",
+      "style": "solid"
+    },
+    "border-product-card": {
+      "radius": "0px",
+      "width": "1px",
+      "color": "{general-color-12}",
+      "style": "solid"
+    },
+    "border-small-article-card": {
+      "radius": "0px",
+      "width": "0px 0px 4px 0px",
+      "color": "{general-color-2}",
+      "style": "solid"
+    },
+    "border-personalization-card": {
+      "radius": "0px",
+      "width": "2px",
+      "color": "{general-color-8}",
+      "style": "solid"
+    },
+    "border-product-card-bottom": {
+      "radius": "0px",
+      "width": "0px 0px 1px",
+      "color": "{general-color-12}",
+      "style": "solid"
+    },
+    "border-footer": {
+      "radius": "0px",
+      "width": "1px 0px 0px 0px",
+      "color": "{general-color-13}",
+      "style": "solid"
+    },
+    "border-bottom": {
+      "radius": "0px",
+      "width": "0px 0px 1px 0px",
+      "color": "{general-color-13}",
+      "style": "solid"
     }
   },
-  "allowedGroups": {}
+  "allowedGroups": {
+    "dimension": [
+      "badge",
+      "button",
+      "container",
+      "spacer",
+      "table",
+      "input"
+    ]
+  }
 }

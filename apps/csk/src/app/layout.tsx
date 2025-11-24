@@ -9,6 +9,7 @@ import '@/styles/dimensions.css';
 import '@/styles/fonts.css';
 import '@/styles/borders.css';
 import { customFontVariables } from '@/fonts';
+import CoffeeShopProvider from '@/providers';
 //? if (ga) {
 import { GoogleAnalytics } from '@next/third-parties/google';
 //? }
@@ -25,7 +26,7 @@ export default function RootLayout({
         <NextIntlClientProvider>
           {/* //? } */}
           <NextThemeProvider attribute="class" defaultTheme="light" enableSystem>
-            {children}
+            <CoffeeShopProvider>{children}</CoffeeShopProvider>
           </NextThemeProvider>
           {/* //? if (localization) { */}
         </NextIntlClientProvider>
