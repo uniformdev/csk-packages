@@ -14,7 +14,8 @@ const getContentClient = () =>
   new ContentClient({
     apiKey: process.env.UNIFORM_API_KEY,
     projectId: process.env.UNIFORM_PROJECT_ID,
-    apiHost: process.env.UNIFORM_API_HOST,
+    apiHost: process.env.UNIFORM_CLI_BASE_URL!,
+    edgeApiHost: process.env.UNIFORM_CLI_BASE_EDGE_URL!,
   });
 
 const fetchRecursiveAllEntries = async <T>({ type }: { type: string }) => {

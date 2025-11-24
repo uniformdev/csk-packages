@@ -1,0 +1,344 @@
+composition:
+  _name: 🛒 Cart Recommendations
+  _id: 5288b954-d654-40aa-b439-b01eab5982e9
+  _slug: cart-recommendations
+  type: aiConfiguration
+  slots:
+    content:
+      - _id: 9798b8c1-c28a-4e94-8d18-198eb7fe3092
+        type: assistantScrollSection
+        slots:
+          content:
+            - _id: 566df6bb-c531-4370-979d-c994b066dd12
+              type: $loop
+              slots:
+                body:
+                  - _id: fa11c470-7a4b-4c64-8f7a-cf00bcd4ea8a
+                    type: flex
+                    slots:
+                      flexItem:
+                        - _id: 727003b8-96f1-465d-b540-12773cf48fd1
+                          type: link
+                          _pattern: 1b9cb318-a532-4c1a-af19-c0ee1a66855f
+                        - _id: 3832c4ef-355a-42a8-a62a-66e959c4bb31
+                          type: addToCardButton
+                          _pattern: 20161830-c75e-4695-8622-41032f5be75d
+                    parameters:
+                      gap:
+                        type: dex-slider-control-parameter
+                        value:
+                          mobile: '2'
+                          tablet: '2'
+                          desktop: '2'
+                      direction:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: col
+                          tablet: col
+                          desktop: col
+                      displayName:
+                        type: text
+                        locales:
+                          da-dk: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          de-at: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          de-ch: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          de-de: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          en-au: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          en-ca: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          en-gb: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          en-nl: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          en-nz: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          en-us: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          fr-ca: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          fr-ch: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          fr-fr: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          ja-jp: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          nl-nl: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          sv-se: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          ar-uae: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                      justifyContent:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: between
+                          tablet: between
+                          desktop: between
+              _dataResources:
+                Get Entries by Slugs Content entries Loop Item:
+                  type: sys-reserved-loop
+                  variables:
+                    connectedData: '#jptr:/Get Entries by Slugs Content/entries:fa=c'
+  _dataResources:
+    Get Entries by Slugs Content:
+      type: getEntriesBySlugs
+      variables:
+        Slugs: ${slugs}
+        Locale: ${locale}
+  _overrides:
+    3832c4ef-355a-42a8-a62a-66e959c4bb31:
+      parameters:
+        productSlug:
+          type: text
+          locales:
+            da-dk: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            de-at: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            de-ch: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            de-de: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            en-au: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            en-ca: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            en-gb: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            en-nl: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            en-nz: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            en-us: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            fr-ca: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            fr-ch: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            fr-fr: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            ja-jp: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            nl-nl: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            sv-se: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            ar-uae: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+        openMiniCart:
+          type: checkbox
+          value: null
+    727003b8-96f1-465d-b540-12773cf48fd1:
+      parameters:
+        link:
+          type: link
+          value:
+            path: >-
+              /${locale}/products/${#jptr:/Get Entries by Slugs Content entries
+              Loop Item/entry/_slug}
+            type: projectMapNode
+            nodeId: 702b0e0b-3858-4b5d-99e4-bdb98097ca0f
+            projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+            dynamicInputValues:
+              locale: ${locale}
+              product-slug: >-
+                ${#jptr:/Get Entries by Slugs Content entries Loop
+                Item/entry/_slug}
+        displayName:
+          type: text
+          locales:
+            da-dk: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_name}
+            de-at: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_name}
+            de-ch: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_name}
+            de-de: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_name}
+            en-au: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_name}
+            en-ca: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_name}
+            en-gb: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_name}
+            en-nl: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_name}
+            en-nz: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_name}
+            en-us: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_name}
+            fr-ca: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_name}
+            fr-ch: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_name}
+            fr-fr: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_name}
+            ja-jp: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_name}
+            nl-nl: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_name}
+            sv-se: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_name}
+            ar-uae: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_name}
+    727003b8-96f1-465d-b540-12773cf48fd1|1af937fb-40ae-4938-b1a8-110b8ff73fc4:
+      parameters:
+        displayName:
+          type: text
+          value: ${#jptr:/Get Entries by Slugs Content entries Loop Item/entry/_name}
+    727003b8-96f1-465d-b540-12773cf48fd1|1af937fb-40ae-4938-b1a8-110b8ff73fc4|0952417a-061c-4634-91df-1341269e4054:
+      parameters:
+        image:
+          type: asset
+          value: >-
+            ${#jptr:/Get Entries by Slugs Content entries Loop
+            Item/entry/fields/primaryImage/value}
+    727003b8-96f1-465d-b540-12773cf48fd1|1af937fb-40ae-4938-b1a8-110b8ff73fc4|41f41812-74a8-48f1-9e2a-920dfff8ea04:
+      parameters:
+        productSlug:
+          type: text
+          locales:
+            da-dk: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            de-at: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            de-ch: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            de-de: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            en-au: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            en-ca: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            en-gb: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            en-nl: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            en-nz: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            en-us: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            fr-ca: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            fr-ch: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            fr-fr: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            ja-jp: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            nl-nl: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            sv-se: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+            ar-uae: >-
+              ${#jptr:/Get Entries by Slugs Content entries Loop
+              Item/entry/_slug}
+    727003b8-96f1-465d-b540-12773cf48fd1|1af937fb-40ae-4938-b1a8-110b8ff73fc4|8bad3ddd-add0-43d3-a314-5836bf0c7a93:
+      parameters:
+        text:
+          type: text
+          value: >-
+            ${#jptr:/Get Entries by Slugs Content entries Loop
+            Item/entry/fields/variants/value/0/fields/price/value} ${#jptr:/Get
+            Entries by Slugs Content entries Loop
+            Item/entry/fields/variants/value/0/fields/currency/value}
+    727003b8-96f1-465d-b540-12773cf48fd1|1af937fb-40ae-4938-b1a8-110b8ff73fc4|988f7805-9e0e-4b30-acaf-f97d7dd5099f:
+      parameters:
+        text:
+          type: text
+          value: >-
+            ${#jptr:/Get Entries by Slugs Content entries Loop
+            Item/entry/fields/variants/value/0/fields/title/value}
+  _locales:
+    - en-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-nz
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - fr-fr
+    - en-au
+    - ja-jp
+    - ar-uae
+    - de-ch
+    - fr-ch
+created: '2025-07-10T10:17:59.030683+00:00'
+modified: '2025-08-06T13:10:53.990381+00:00'
+pattern: false

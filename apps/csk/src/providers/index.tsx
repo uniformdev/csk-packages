@@ -1,12 +1,23 @@
 'use client';
 
-import { ReactNode } from 'react';
+import { ReactNode, Suspense } from 'react';
+import Chat from '@/modules/chat/components/ui/Chat';
+import { ChatProvider } from '@/modules/chat/providers/ChatProvider';
 import { CardProvider } from './CardProvider';
 import { FavoritesProvider } from './FavoritesProvider';
 
 const CoffeeShopProvider = ({ children }: { children: ReactNode }) => (
   <CardProvider>
-    <FavoritesProvider>{children}</FavoritesProvider>
+    <FavoritesProvider>
+      <ChatProvider>
+        <div className="flex">
+          <div className="flex-1">{children}</div>
+          <Suspense>
+            <Chat />
+          </Suspense>
+        </div>
+      </ChatProvider>
+    </FavoritesProvider>
   </CardProvider>
 );
 

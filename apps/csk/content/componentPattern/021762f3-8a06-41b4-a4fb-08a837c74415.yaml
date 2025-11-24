@@ -2806,6 +2806,317 @@ composition:
             value: contrast-[.1]
         _overridability:
           hideLockedParameters: true
+      - _id: 741a47a4-4c3c-4242-bf1a-4c8455fdef37
+        type: aiAssistant
+        parameters:
+          modalTitle:
+            type: text
+            locales:
+              da-dk: JavaDrip Shopping Assistant ✨
+              de-at: JavaDrip Shopping Assistant ✨
+              de-ch: JavaDrip Shopping Assistant ✨
+              de-de: JavaDrip Shopping Assistant ✨
+              en-au: JavaDrip Shopping Assistant ✨
+              en-ca: JavaDrip Shopping Assistant ✨
+              en-gb: JavaDrip Shopping Assistant ✨
+              en-nl: JavaDrip Shopping Assistant ✨
+              en-nz: JavaDrip Shopping Assistant ✨
+              en-us: JavaDrip Shopping Assistant ✨
+              fr-ca: Assistant d’achat JavaDrip ✨
+              fr-ch: Assistant d’achat JavaDrip ✨
+              fr-fr: Assistant d’achat JavaDrip ✨
+              ja-jp: JavaDripショッピングアシスタント ✨
+              nl-nl: JavaDrip Shopping Assistant ✨
+              sv-se: JavaDrip Shopping Assistant ✨
+              ar-uae: مساعد التسوق JavaDrip ✨
+          modalSubtitle:
+            type: text
+            locales:
+              da-dk: Drevet af Uniform Context
+              de-at: Unterstützt von Uniform Context
+              de-ch: Unterstützt von Uniform Context
+              de-de: Unterstützt von Uniform Context
+              en-au: Propulsé par Uniform Context
+              en-ca: Powered by Uniform Context
+              en-gb: Powered by Uniform Context
+              en-nl: Aangedreven door Uniform Context
+              en-nz: Powered by Uniform Context
+              en-us: Powered by Uniform Context
+              fr-ca: Propulsé par Uniform Context
+              fr-ch: Propulsé par Uniform Context
+              fr-fr: Propulsé par Uniform Context
+              ja-jp: 提供：Uniform Context
+              nl-nl: Aangedreven door Uniform Context
+              sv-se: Drivs av Uniform Context
+              ar-uae: مدعوم بواسطة Uniform Context
+          starterPrompts:
+            type: $block
+            value:
+              - _id: d61969dc-dda3-43fb-9ae8-b848006a92f5
+                type: starterPrompt
+                fields:
+                  value:
+                    type: text
+                    locales:
+                      da-dk: >-
+                        Kunne du vise mig, hvad der er i min indkøbskurv lige
+                        nu?
+                      de-at: >-
+                        Könnten Sie mir zeigen, was sich gerade in meinem
+                        Einkaufswagen befindet?
+                      de-ch: >-
+                        Könnten Sie mir zeigen, was sich gerade in meinem
+                        Einkaufswagen befindet?
+                      de-de: >-
+                        Könnten Sie mir zeigen, was sich gerade in meinem
+                        Einkaufswagen befindet?
+                      en-au: >-
+                        Pourriez-vous me montrer ce qu'il y a dans mon panier en
+                        ce moment ?
+                      en-ca: Could you show me what’s in my shopping cart right now?
+                      en-gb: >-
+                        Could you show me what’s in my shopping basket right
+                        now?
+                      en-nl: >-
+                        Kunt u me laten zien wat er op dit moment in mijn
+                        winkelwagen zit?
+                      en-nz: >-
+                        Könnten Sie mir zeigen, was sich gerade in meinem
+                        Einkaufswagen befindet?
+                      en-us: Could you show me what’s in my shopping cart right now?
+                      fr-ca: >-
+                        Pourriez-vous me montrer ce qu'il y a dans mon panier en
+                        ce moment ?
+                      fr-ch: >-
+                        Pourriez-vous me montrer ce qu'il y a dans mon panier en
+                        ce moment ?
+                      fr-fr: >-
+                        Pourriez-vous me montrer ce qu'il y a dans mon panier en
+                        ce moment ?
+                      ja-jp: 今、私のショッピングカートに入っているものを見せてくれますか？
+                      nl-nl: Kunt u me laten zien wat er nu in mijn winkelwagen zit?
+                      sv-se: Kan du visa mig vad som finns i min kundvagn just nu?
+                      ar-uae: هل يمكنك أن تريني ما يوجد في عربة التسوق الخاصة بي الآن؟
+              - _id: 2c4192c8-1528-4c63-b2dd-7b431857a7e5
+                type: starterPrompt
+                fields:
+                  value:
+                    type: text
+                    locales:
+                      da-dk: >-
+                        Baseret på hvad jeg kan lide, har du nogle anbefalinger
+                        til mig?
+                      de-at: >-
+                        Basierend auf dem, was mir gefällt, haben Sie
+                        Empfehlungen für mich?
+                      de-ch: >-
+                        Basierend auf dem, was mir gefällt, haben Sie
+                        Empfehlungen für mich?
+                      de-de: >-
+                        Basierend auf dem, was mir gefällt, haben Sie
+                        Empfehlungen für mich?
+                      en-au: >-
+                        En fonction de ce que j'aime, avez-vous des
+                        recommandations pour moi ?
+                      en-ca: >-
+                        Based on what I like, do you have any recommendations
+                        for me?
+                      en-gb: >-
+                        Based on what I like, do you have any recommendations
+                        for me?
+                      en-nl: >-
+                        Op basis van wat ik leuk vind, heb je aanbevelingen voor
+                        mij?
+                      en-nz: >-
+                        Basierend auf dem, was mir gefällt, haben Sie
+                        Empfehlungen für mich?
+                      en-us: >-
+                        Based on what I like, do you have any recommendations
+                        for me?
+                      fr-ca: >-
+                        En fonction de ce que j'aime, avez-vous des
+                        recommandations pour moi ?
+                      fr-ch: >-
+                        En fonction de ce que j'aime, avez-vous des
+                        recommandations pour moi ?
+                      fr-fr: >-
+                        En fonction de ce que j'aime, avez-vous des
+                        recommandations pour moi ?
+                      ja-jp: 私の好みに基づいて、おすすめはありますか？
+                      nl-nl: >-
+                        Op basis van wat ik leuk vind, heb je aanbevelingen voor
+                        mij?
+                      sv-se: >-
+                        Baserat på vad jag gillar, har du några rekommendationer
+                        för mig?
+                      ar-uae: بناءً على ما يعجبني، هل لديك أي توصيات لي؟
+              - _id: f267ccf4-3c00-4ba6-9edf-888813a59ba6
+                type: starterPrompt
+                fields:
+                  value:
+                    type: text
+                    locales:
+                      da-dk: >-
+                        Hej, kunne du tage et kig på min indkøbskurv og foreslå
+                        et par produkter, der kunne passe til mig?
+                      de-at: >-
+                        Hey, könntest du einen Blick auf meinen Einkaufswagen
+                        werfen und ein paar Produkte vorschlagen, die zu mir
+                        passen könnten?
+                      de-ch: >-
+                        Hey, könntest du einen Blick auf meinen Einkaufswagen
+                        werfen und ein paar Produkte vorschlagen, die zu mir
+                        passen könnten?
+                      de-de: >-
+                        Hey, könntest du einen Blick auf meinen Einkaufswagen
+                        werfen und ein paar Produkte vorschlagen, die zu mir
+                        passen könnten?
+                      en-au: >-
+                        Salut, pourrais-tu jeter un œil à mon panier et me
+                        suggérer quelques produits qui pourraient me convenir ?
+                      en-ca: >-
+                        Hey, could you take a look at my shopping cart and
+                        suggest a few products that might suit me?
+                      en-gb: >-
+                        Hi, could you have a look at my shopping trolley and
+                        suggest a few products that might suit me?
+                      en-nl: >-
+                        Hoi, zou je naar mijn winkelwagentje kunnen kijken en
+                        een paar producten kunnen voorstellen die bij mij
+                        passen?
+                      en-nz: >-
+                        Hey, könntest du einen Blick auf meinen Einkaufswagen
+                        werfen und ein paar Produkte vorschlagen, die zu mir
+                        passen könnten?
+                      en-us: >-
+                        Hey, could you take a look at my shopping cart and
+                        suggest a few products that might suit me?
+                      fr-ca: >-
+                        Salut, pourrais-tu jeter un coup d'œil à mon panier et
+                        me suggérer quelques produits qui pourraient me convenir
+                        ?
+                      fr-ch: >-
+                        Salut, pourrais-tu jeter un œil à mon panier et me
+                        suggérer quelques produits qui pourraient me convenir ?
+                      fr-fr: >-
+                        Salut, pourrais-tu jeter un œil à mon panier et me
+                        suggérer quelques produits qui pourraient me convenir ?
+                      ja-jp: ねえ、私のショッピングカートを見て、私に合いそうな商品をいくつか提案してもらえますか？
+                      nl-nl: >-
+                        Hé, zou je naar mijn winkelwagentje kunnen kijken en een
+                        paar producten kunnen voorstellen die bij mij passen?
+                      sv-se: >-
+                        Hej, kan du ta en titt på min kundvagn och föreslå några
+                        produkter som kanske passar mig?
+                      ar-uae: >-
+                        مرحباً، هل يمكنك إلقاء نظرة على عربة التسوق الخاصة بي
+                        واقتراح بعض المنتجات التي قد تناسبني؟
+              - _id: 557f3444-19e2-4bf9-8f44-4b7b568f81b3
+                type: starterPrompt
+                fields:
+                  value:
+                    type: text
+                    locales:
+                      da-dk: Forsøger at forbedre bønneformalingsteknikken
+                      de-at: Versuchen, die Technik des Bohnenmahlens zu verbessern
+                      de-ch: Versuch, die Technik des Bohnenmahlens zu verbessern
+                      de-de: Versuch, die Technik des Bohnenmahlens zu verbessern
+                      en-au: Essayer d'améliorer la technique de mouture des grains
+                      en-ca: Trying to improve bean grinding technique
+                      en-gb: Trying to improve bean grinding technique
+                      en-nl: >-
+                        Proberen de techniek van het malen van bonen te
+                        verbeteren
+                      en-nz: Versuchen, die Technik des Bohnenmahlens zu verbessern
+                      en-us: Trying to improve bean grinding technique
+                      fr-ca: Essayer d'améliorer la technique de mouture des grains
+                      fr-ch: Essayer d'améliorer la technique de mouture des grains
+                      fr-fr: Essayer d'améliorer la technique de mouture des grains
+                      ja-jp: 豆の挽き方を改善しようとしています。
+                      nl-nl: Proberen de bonenmaaltechniek te verbeteren
+                      sv-se: Försöker förbättra tekniken för att mala bönor
+                      ar-uae: محاولة تحسين تقنية طحن الحبوب
+              - _id: 37d73a3f-2965-41d5-8acf-9c256e49a464
+                type: starterPrompt
+                fields:
+                  value:
+                    type: text
+                    locales:
+                      da-dk: >-
+                        Jeg leder efter en espressomaskine, der giver mig præcis
+                        kværning.
+                      de-at: >-
+                        Ich suche eine Espressomaschine, die mir präzises Mahlen
+                        ermöglicht.
+                      de-ch: >-
+                        Ich suche eine Espressomaschine, die mir präzises Mahlen
+                        ermöglicht.
+                      de-de: >-
+                        Ich suche eine Espressomaschine, die mir präzises Mahlen
+                        ermöglicht.
+                      en-au: >-
+                        Je cherche une machine à expresso qui me permette un
+                        broyage précis.
+                      en-ca: >-
+                        I am looking for an espresso machine that gives me
+                        precision grinding.
+                      en-gb: >-
+                        I am looking for an espresso machine that gives me
+                        precision grinding.
+                      en-nl: >-
+                        Ik ben op zoek naar een espressomachine die mij precisie
+                        maalwerk biedt.
+                      en-nz: >-
+                        Ich suche eine Espressomaschine, die mir präzises Mahlen
+                        ermöglicht.
+                      en-us: >-
+                        I am looking for an espresso machine that gives me
+                        precision grinding
+                      fr-ca: >-
+                        Je cherche une machine à espresso qui me permette de
+                        moudre avec précision.
+                      fr-ch: >-
+                        Je cherche une machine à expresso qui me permette un
+                        broyage précis.
+                      fr-fr: >-
+                        Je cherche une machine à expresso qui me permette un
+                        broyage précis.
+                      ja-jp: 精密な挽きを提供するエスプレッソマシンを探しています。
+                      nl-nl: >-
+                        Ik ben op zoek naar een espressomachine die me precisie
+                        in maling biedt.
+                      sv-se: >-
+                        Jag letar efter en espressomaskin som ger mig
+                        precisionsmalning.
+                      ar-uae: أبحث عن آلة إسبريسو توفر لي طحنًا دقيقًا.
+          inputPlaceholder:
+            type: text
+            locales:
+              da-dk: Spørg mig om kaffebønner eller kaffemaskiner 😎
+              de-at: Frag mich alles über Kaffeebohnen oder Kaffeemaschinen 😎
+              de-ch: Frag mich alles über Kaffeebohnen oder Kaffeemaschinen 😎
+              de-de: Frag mich alles über Kaffeebohnen oder Kaffeemaschinen 😎
+              en-au: Ask me anything about coffee beans or coffee makers 😎
+              en-ca: Ask me anything about coffee beans or coffee makers 😎
+              en-gb: Ask me anything about coffee beans or coffee makers 😎
+              en-nl: Ask me anything about coffee beans or coffee makers 😎
+              en-nz: Ask me anything about coffee beans or coffee makers 😎
+              en-us: Ask me anything about coffee beans or coffee makers 😎
+              fr-ca: >-
+                Demande-moi n'importe quoi sur les grains de café ou les
+                cafetières 😎
+              fr-ch: >-
+                Demande-moi n'importe quoi sur les grains de café ou les
+                cafetières 😎
+              fr-fr: >-
+                Demande-moi n'importe quoi sur les grains de café ou les
+                cafetières 😎
+              ja-jp: コーヒー豆やコーヒーメーカーについて何でも聞いてください 😎
+              nl-nl: Vraag me alles over koffiebonen of koffiemachines 😎
+              sv-se: Fråga mig vad som helst om kaffebönor eller kaffebryggare 😎
+              ar-uae: اسألني عن حبوب القهوة أو ماكينات القهوة 😎
+        _overridability:
+          hideLockedParameters: true
       - _id: b6d0de6c-a32d-4c9a-9001-9beb4da71b2b
         type: compositionModal
         slots:

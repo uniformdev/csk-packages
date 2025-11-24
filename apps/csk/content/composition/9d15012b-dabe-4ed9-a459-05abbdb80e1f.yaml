@@ -278,6 +278,9 @@ composition:
             de-at: >-
               ${#jptr:/Product List Content entries Loop
               Item/entry/fields/name/value}
+            de-ch: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
             de-de: >-
               ${#jptr:/Product List Content entries Loop
               Item/entry/fields/name/value}
@@ -296,10 +299,13 @@ composition:
             en-nz: >-
               ${#jptr:/Product List Content entries Loop
               Item/entry/fields/name/value}
-            es-us: >-
+            en-us: >-
               ${#jptr:/Product List Content entries Loop
               Item/entry/fields/name/value}
             fr-ca: >-
+              ${#jptr:/Product List Content entries Loop
+              Item/entry/fields/name/value}
+            fr-ch: >-
               ${#jptr:/Product List Content entries Loop
               Item/entry/fields/name/value}
             fr-fr: >-
@@ -308,16 +314,10 @@ composition:
             ja-jp: >-
               ${#jptr:/Product List Content entries Loop
               Item/entry/fields/name/value}
-            nb-no: >-
-              ${#jptr:/Product List Content entries Loop
-              Item/entry/fields/name/value}
             nl-nl: >-
               ${#jptr:/Product List Content entries Loop
               Item/entry/fields/name/value}
             sv-se: >-
-              ${#jptr:/Product List Content entries Loop
-              Item/entry/fields/name/value}
-            ar-ksa: >-
               ${#jptr:/Product List Content entries Loop
               Item/entry/fields/name/value}
             ar-uae: >-
@@ -1331,20 +1331,20 @@ composition:
           locales:
             da-dk: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
             de-at: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            de-ch: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
             de-de: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
             en-au: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
             en-ca: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
             en-gb: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
             en-nl: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
             en-nz: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
-            es-us: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            en-us: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
             fr-ca: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
+            fr-ch: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
             fr-fr: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
             ja-jp: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
-            nb-no: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
             nl-nl: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
             sv-se: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
-            ar-ksa: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
             ar-uae: ${#jptr:/Product List Content entries Loop Item/entry/_slug}
     4edbd4b0-a384-47be-9aa2-5bfaa7f77fce|56df55a3-a0d4-41b2-b5cd-08a63509a03f|1af937fb-40ae-4938-b1a8-110b8ff73fc4|8bad3ddd-add0-43d3-a314-5836bf0c7a93:
       parameters:
