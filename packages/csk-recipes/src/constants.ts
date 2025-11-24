@@ -11,7 +11,7 @@ export const GIT_BRANCHES = {
   BASELINE_RECIPES: process.env.BASELINE_RECIPES_BRANCH || 'baseline-recipes',
 };
 
-export const RECIPES = ['localization', 'ga', 'uniform-insights', 'shadcn'];
+export const RECIPES = ['localization', 'ga', 'uniform-insights'];
 
 export const TEMPLATES_SPECIFIC_RECIPES: Partial<{
   [key in Template]: {
@@ -71,12 +71,15 @@ export const REQUEST_ENV_VARIABLES_TO_PUSH = ['UNIFORM_PROJECT_ID', 'UNIFORM_API
 export const REQUIRED_ENV_VARIABLES: {
   [key in Recipe]: EnvVariable[];
 } = {
-  'uniform-insights': ['UNIFORM_INSIGHTS_ENDPOINT', 'UNIFORM_INSIGHTS_KEY'],
+  'uniform-insights': [
+    'NEXT_PUBLIC_UNIFORM_PROJECT_ID',
+    'NEXT_PUBLIC_UNIFORM_INSIGHTS_API_URL',
+    'NEXT_PUBLIC_UNIFORM_INSIGHTS_API_KEY',
+  ],
   'ai-assistant': ['OPENAI_API_KEY', 'DATABASE_URL'],
   'ai-assistant-localized': ['OPENAI_API_KEY', 'DATABASE_URL'],
   localization: [],
   ga: ['GOOGLE_ANALYTICS_ID'],
-  shadcn: [],
 };
 
 export const ENV_VARIABLES_VARIANTS: Partial<{
@@ -134,7 +137,6 @@ export const RECIPE_ADDITIONAL_FILES: Partial<{
   localization: [],
   ga: [],
   'uniform-insights': [],
-  shadcn: ['components.json'],
 };
 
 export const META_PROCESABLE_FILE_PATH_SEGMENTS = ['.tsx', '.ts', '.js', '.jsx', '.css'];
