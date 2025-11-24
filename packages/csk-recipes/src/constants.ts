@@ -87,6 +87,7 @@ export const ENV_VARIABLES_VARIANTS: Partial<{
 }> = {
   UNIFORM_CLI_BASE_URL: ['https://uniform.app', 'https://canary.uniform.app'],
   UNIFORM_CLI_BASE_EDGE_URL: ['https://uniform.global', 'https://canary.uniform.global'],
+  NEXT_PUBLIC_UNIFORM_INSIGHTS_API_URL: ['https://analytics.uniform.global', 'https://analytics.eu.uniform.global'],
 };
 
 export const ENV_VARIABLES_DEFAULT_VALUES: Partial<{
@@ -95,6 +96,7 @@ export const ENV_VARIABLES_DEFAULT_VALUES: Partial<{
   UNIFORM_PREVIEW_SECRET: 'hello-world',
   UNIFORM_CLI_BASE_URL: 'https://uniform.app',
   UNIFORM_CLI_BASE_EDGE_URL: 'https://uniform.global',
+  NEXT_PUBLIC_UNIFORM_INSIGHTS_API_URL: 'https://analytics.uniform.global',
 };
 
 export const REQUIRED_UNIFORM_ENV_VARIABLES: EnvVariable[] = [

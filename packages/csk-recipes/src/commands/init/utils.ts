@@ -223,6 +223,11 @@ export const fillEnvVariables = async (
   }
 
   for (const envVariable of requiredEnvVariables) {
+    if (envVariable === 'NEXT_PUBLIC_UNIFORM_PROJECT_ID') {
+      envVariables[envVariable] = '$UNIFORM_PROJECT_ID';
+      continue;
+    }
+
     const possibleVariants = ENV_VARIABLES_VARIANTS[envVariable];
 
     if (possibleVariants?.length) {
