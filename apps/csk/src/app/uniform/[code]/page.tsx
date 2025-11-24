@@ -12,6 +12,7 @@ import { emptyPlaceholderResolver } from '@uniformdev/csk-components/components/
 import { compositionCache } from '@uniformdev/csk-components/utils/getSlotComponents';
 import { DesignExtensionsProvider } from '@uniformdev/design-extensions-tools/components/providers/server';
 import { componentResolver } from '@/components';
+import { UniformClientContext } from '@/utils/clientContext';
 import getAllStaticGeneratedPages from '@/utils/getAllStaticGeneratedPages';
 
 export const generateStaticParams = async () => {
@@ -39,10 +40,12 @@ export default async function UniformPage(props: UniformPageParameters) {
         />
       </DesignExtensionsProvider>
       <Suspense>
-        <UniformContext result={result} />
+        <UniformContext result={result} clientContextComponent={UniformClientContext} />
       </Suspense>
     </>
   );
 }
 
 export { generateMetadata } from '@/utils/metadata';
+
+export const experimental_ppr = true;

@@ -1,0 +1,631 @@
+composition:
+  _name: Personalization Card
+  _id: c2122c4c-1d68-44db-b880-19612776c3df
+  type: grid
+  parameters:
+    gapX:
+      type: dex-slider-control-parameter
+      value:
+        tablet: '4'
+        desktop: '8'
+    gapY:
+      type: dex-slider-control-parameter
+      value:
+        mobile: '8'
+    border:
+      type: dex-token-selector-parameter
+      value: border-personalization-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        marginTop: ''
+        marginLeft: ''
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    alignItems:
+      type: dex-segmented-control-parameter
+      value: start
+    displayName:
+      type: text
+      locales:
+        da-dk: Personliggørelseskort
+        de-at: Personalisierungskarte
+        de-ch: Personalisierungskarte
+        de-de: Personalisierungskarte
+        en-au: Carte de personnalisation
+        en-ca: Personalization Card
+        en-gb: Personalisation Card
+        en-nl: Personalisatiekaart
+        en-nz: Personalisierungskarte
+        en-us: Personalization Card
+        fr-ca: Carte de personnalisation
+        fr-ch: Carte de personnalisation
+        fr-fr: Carte de personnalisation
+        ja-jp: パーソナライゼーションカード
+        nl-nl: Personalisatiekaart
+        sv-se: Personlighetskort
+        ar-uae: بطاقة التخصيص
+    columnsCount:
+      type: dex-slider-control-parameter
+      value:
+        mobile: '1'
+        tablet: '12'
+        desktop: '12'
+    backgroundColor:
+      type: dex-color-palette-parameter
+      value: general-color-9
+  slots:
+    gridInner:
+      - _id: 4b21f7fe-72d6-4234-a77d-10b762f1040e
+        type: gridItem
+        slots:
+          inner:
+            - _id: 1b5cc2fa-94f2-4b49-9036-7fbb26f0759a
+              type: flex
+              slots:
+                flexItem:
+                  - _id: 9b4d01d3-e0f4-4f43-84b3-0f33dd7eeb5c
+                    type: image
+                    parameters:
+                      image:
+                        type: asset
+                        value:
+                          - _id: bf5a0285-26e1-4237-8307-b10f85f2fdac
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: 1da30c5b-9a4f-4c63-9fd0-9525ff979dd5
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/b0JtaxSVQxmqWylG6vGC1Q/lzzsbmbYQhqGfSNe36DPwA-green-cup-of-coffee.svg
+                                type: text
+                              file:
+                                type: file
+                                value: 502ef6f1-cd5a-4849-8371-590a25621cfb
+                              size:
+                                value: 5865
+                                type: number
+                              title:
+                                type: text
+                                value: green-cup-of-coffee.svg
+                              width:
+                                value: 35
+                                type: number
+                              height:
+                                value: 39
+                                type: number
+                              mediaType:
+                                value: image/svg+xml
+                                type: text
+                            _source: uniform-assets
+                      width:
+                        type: number
+                        value: '40'
+                      height:
+                        type: number
+                        value: '40'
+                      objectFit:
+                        type: dex-segmented-control-parameter
+                        value: fill
+                    _overridability:
+                      parameters:
+                        image: 'yes'
+                      hideLockedParameters: true
+              parameters:
+                height:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: full
+                    tablet: full
+                    desktop: full
+                direction:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: row
+                    tablet: row
+                    desktop: row
+                alignItems:
+                  type: dex-segmented-control-parameter
+                  value:
+                    desktop: center
+                displayName:
+                  type: text
+                  locales:
+                    da-dk: Ikon
+                    de-at: Ikone
+                    de-ch: Symbol
+                    de-de: Symbol
+                    en-au: Icône
+                    en-ca: Icon
+                    en-gb: Icon
+                    en-nl: Icoon
+                    en-nz: Symbol
+                    en-us: Icon
+                    fr-ca: Icône
+                    fr-ch: Icône
+                    fr-fr: Icône
+                    ja-jp: アイコン
+                    nl-nl: Icoon
+                    sv-se: Ikon
+                    ar-uae: أيقونة
+                justifyContent:
+                  type: dex-segmented-control-parameter
+                  value:
+                    desktop: center
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          rowStart:
+            type: dex-slider-control-parameter
+            value:
+              mobile: ''
+              tablet: '1'
+              desktop: '1'
+          columnSpan:
+            type: dex-slider-control-parameter
+            value:
+              mobile: ''
+              tablet: span-3
+              desktop: span-1
+          columnStart:
+            type: dex-slider-control-parameter
+            value:
+              mobile: ''
+              tablet: '1'
+              desktop: '1'
+          displayName:
+            type: text
+            locales:
+              da-dk: Billede
+              de-at: Bild
+              de-ch: Bild
+              de-de: Bild
+              en-au: Image
+              en-ca: Image
+              en-gb: Picture
+              en-nl: Afbeelding
+              en-nz: Bild
+              en-us: Image
+              fr-ca: Image
+              fr-ch: Image
+              fr-fr: Image
+              ja-jp: 画像
+              nl-nl: Afbeelding
+              sv-se: Bild
+              ar-uae: صورة
+        _overridability:
+          hideLockedParameters: true
+      - _id: e8ccb0ad-a597-464f-baf4-80d6f268967b
+        type: gridItem
+        slots:
+          inner:
+            - _id: 80995427-6b73-4e98-8587-2cdec9a5854d
+              type: flex
+              slots:
+                flexItem:
+                  - _id: 4e7f1617-1524-4771-bad7-e871c177ef53
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: span
+                      size:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: 2xl
+                          tablet: 2xl
+                          desktop: 2xl
+                      text:
+                        type: text
+                        locales:
+                          da-dk: Cervello di Caffè er blevet aktiveret!
+                          de-at: Cervello di Caffè wurde aktiviert!
+                          de-ch: Cervello di Caffè wurde aktiviert!
+                          de-de: Cervello di Caffè wurde aktiviert!
+                          en-au: Cervello di Caffè a été activé !
+                          en-ca: Cervello di Caffè has been activated!
+                          en-gb: Cervello di Caffè has been activated!
+                          en-nl: Cervello di Caffè is geactiveerd!
+                          en-nz: Cervello di Caffè wurde aktiviert!
+                          en-us: Cervello di Caffè has been activated!
+                          fr-ca: Cervello di Caffè a été activé !
+                          fr-ch: Cervello di Caffè a été activé !
+                          fr-fr: Cervello di Caffè a été activé !
+                          ja-jp: カフェの脳が起動しました！
+                          nl-nl: Cervello di Caffè is geactiveerd!
+                          sv-se: Cervello di Caffè har aktiverats!
+                          ar-uae: تم تفعيل "سيرفيلو دي كافيه"!
+                      color:
+                        type: dex-color-palette-parameter
+                        value: text-primary
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: bold
+                    _overridability:
+                      parameters:
+                        text: 'yes'
+                      hideLockedParameters: true
+                  - _id: 84b8ca9c-90a0-4c34-bd96-a2391bf97f62
+                    type: text
+                    parameters:
+                      tag:
+                        type: dex-segmented-control-parameter
+                        value: span
+                      size:
+                        type: dex-segmented-control-parameter
+                        value:
+                          desktop: base
+                      text:
+                        type: text
+                        locales:
+                          da-dk: >-
+                            Din maskine er nu tilknyttet denne konto, hvilket
+                            giver dig mulighed for at interagere med dit køb og
+                            nå vores supportpersonale på ingen tid.
+                          de-at: >-
+                            Ihre Maschine ist nun mit diesem Konto verknüpft,
+                            sodass Sie mit Ihrem Kauf interagieren und unser
+                            Support-Team schnell erreichen können.
+                          de-ch: >-
+                            Ihre Maschine ist nun mit diesem Konto verknüpft,
+                            sodass Sie mit Ihrem Kauf interagieren und in
+                            kürzester Zeit unser Support-Team erreichen können.
+                          de-de: >-
+                            Ihre Maschine ist nun mit diesem Konto verknüpft,
+                            sodass Sie mit Ihrem Kauf interagieren und in
+                            kürzester Zeit unser Support-Team erreichen können.
+                          en-au: >-
+                            Votre machine est maintenant associée à ce compte,
+                            vous permettant d'interagir avec votre achat et de
+                            contacter notre équipe de support en un rien de
+                            temps.
+                          en-ca: >-
+                            Your machine is now associated with this account,
+                            allowing you to interact with your purchase and
+                            reach our support staff in no time.
+                          en-gb: >-
+                            Your machine is now associated with this account,
+                            allowing you to interact with your purchase and
+                            reach our support staff in no time.
+                          en-nl: >-
+                            Uw machine is nu gekoppeld aan dit account, waardoor
+                            u met uw aankoop kunt communiceren en snel contact
+                            kunt opnemen met onze ondersteuningsmedewerkers.
+                          en-nz: >-
+                            Ihre Maschine ist jetzt mit diesem Konto verknüpft,
+                            sodass Sie mit Ihrem Kauf interagieren und in
+                            kürzester Zeit unser Support-Team erreichen können.
+                          en-us: >-
+                            Your machine is now associated with this account,
+                            allowing you to interact with your purchase and
+                            reach our support staff in no time.
+                          fr-ca: >-
+                            Votre machine est maintenant associée à ce compte,
+                            vous permettant d'interagir avec votre achat et de
+                            joindre notre personnel de soutien en un rien de
+                            temps.
+                          fr-ch: >-
+                            Votre machine est maintenant associée à ce compte,
+                            vous permettant d'interagir avec votre achat et de
+                            joindre notre équipe de support en un rien de temps.
+                          fr-fr: >-
+                            Votre machine est maintenant associée à ce compte,
+                            vous permettant d'interagir avec votre achat et de
+                            joindre notre équipe de support en un rien de temps.
+                          ja-jp: >-
+                            あなたのマシンはこのアカウントに関連付けられましたので、購入品とのやり取りやサポートスタッフへの迅速なアクセスが可能です。
+                          nl-nl: >-
+                            Uw machine is nu gekoppeld aan dit account, waardoor
+                            u kunt communiceren met uw aankoop en snel onze
+                            ondersteuningsmedewerkers kunt bereiken.
+                          sv-se: >-
+                            Din maskin är nu kopplad till detta konto, vilket
+                            gör att du kan interagera med ditt köp och nå vår
+                            supportpersonal på nolltid.
+                          ar-uae: >-
+                            تم الآن ربط جهازك بهذا الحساب، مما يتيح لك التفاعل
+                            مع عملية الشراء والوصول إلى فريق الدعم لدينا في وقت
+                            قصير.
+                      color:
+                        type: dex-color-palette-parameter
+                        value: text-primary
+                      weight:
+                        type: dex-segmented-control-parameter
+                        value: normal
+                    _overridability:
+                      parameters:
+                        text: 'yes'
+                      hideLockedParameters: true
+              parameters:
+                gap:
+                  type: dex-slider-control-parameter
+                  value:
+                    mobile: '4'
+                    tablet: '4'
+                    desktop: '4'
+                spacing:
+                  type: dex-space-control-parameter
+                  value:
+                    paddingTop: ''
+                    paddingBottom: ''
+                direction:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: col
+                    tablet: col
+                    desktop: col
+                alignItems:
+                  type: dex-segmented-control-parameter
+                  value:
+                    desktop: start
+                displayName:
+                  type: text
+                  locales:
+                    da-dk: Indholdsbeholder
+                    de-at: Inhaltscontainer
+                    de-ch: Inhaltscontainer
+                    de-de: Inhaltscontainer
+                    en-au: Conteneur de contenu
+                    en-ca: Content Container
+                    en-gb: Content Container
+                    en-nl: Inhoud Container
+                    en-nz: Inhaltscontainer
+                    en-us: Content Container
+                    fr-ca: Conteneur de contenu
+                    fr-ch: Conteneur de contenu
+                    fr-fr: Conteneur de contenu
+                    ja-jp: コンテントコンテナ
+                    nl-nl: Inhoud Container
+                    sv-se: Innehållsbehållare
+                    ar-uae: حاوية المحتوى
+                fluidContent:
+                  type: checkbox
+                  value: true
+                justifyContent:
+                  type: dex-segmented-control-parameter
+                  value:
+                    desktop: ''
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          rowStart:
+            type: dex-slider-control-parameter
+            value:
+              mobile: ''
+              tablet: '1'
+              desktop: '1'
+          columnSpan:
+            type: dex-slider-control-parameter
+            value:
+              mobile: ''
+              tablet: span-8
+              desktop: span-10
+          columnStart:
+            type: dex-slider-control-parameter
+            value:
+              mobile: ''
+              tablet: '4'
+              desktop: '2'
+          displayName:
+            type: text
+            locales:
+              da-dk: Indhold
+              de-at: Inhalt
+              de-ch: Inhalt
+              de-de: Inhalt
+              en-au: Contenu
+              en-ca: Content
+              en-gb: Content
+              en-nl: Inhoud
+              en-nz: Inhalt
+              en-us: Content
+              fr-ca: Contenu
+              fr-ch: Contenu
+              fr-fr: Contenu
+              ja-jp: コンテンツ
+              nl-nl: Inhoud
+              sv-se: Innehåll
+              ar-uae: المحتوى
+        _overridability:
+          hideLockedParameters: true
+      - _id: 2cbeebf4-b95e-4243-be9d-19fd3baf34a9
+        type: gridItem
+        slots:
+          inner:
+            - _id: 45884bca-9eb3-4f65-84cb-88da6f5860d9
+              type: flex
+              slots:
+                flexItem:
+                  - _id: fa64b7b0-d009-4811-9d23-510515103d7b
+                    type: link
+                    slots:
+                      linkContent:
+                        - _id: 656265eb-730d-499b-b280-fbb3fab6df7a
+                          type: image
+                          parameters:
+                            image:
+                              type: asset
+                              value:
+                                - _id: 236d47ef-b6be-48ef-a989-254f9e16a6bd
+                                  type: image
+                                  fields:
+                                    id:
+                                      type: text
+                                      value: 2c9af7f7-6fb4-49c8-a8cd-f6433e85bab9
+                                    url:
+                                      value: >-
+                                        https://img.uniform.global/p/b0JtaxSVQxmqWylG6vGC1Q/tz-_a8WOS7a2TljP1RQf0w-close.svg
+                                      type: text
+                                    file:
+                                      type: file
+                                      value: e72cfa35-2a87-410c-9475-c4a9c5b1a1b5
+                                    size:
+                                      value: 352
+                                      type: number
+                                    title:
+                                      type: text
+                                      value: close.svg
+                                    width:
+                                      value: 12
+                                      type: number
+                                    height:
+                                      value: 12
+                                      type: number
+                                    mediaType:
+                                      value: image/svg+xml
+                                      type: text
+                                  _source: uniform-assets
+                            width:
+                              type: number
+                              value: '12'
+                            height:
+                              type: number
+                              value: '12'
+                            objectFit:
+                              type: dex-segmented-control-parameter
+                              value: fill
+                          _overridability:
+                            hideLockedParameters: true
+                    parameters:
+                      displayName:
+                        type: text
+                        locales:
+                          da-dk: Link
+                          de-at: Link
+                          de-ch: Link
+                          de-de: Link
+                          en-au: Lien
+                          en-ca: Link
+                          en-gb: Link
+                          en-nl: Link
+                          en-nz: Link
+                          en-us: Link
+                          fr-ca: Lien
+                          fr-ch: Lien
+                          fr-fr: Lien
+                          ja-jp: リンク
+                          nl-nl: Link
+                          sv-se: Länk
+                          ar-uae: رابط
+                    _overridability:
+                      parameters:
+                        link: 'yes'
+                      hideLockedParameters: true
+              parameters:
+                height:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: full
+                    tablet: full
+                    desktop: full
+                direction:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: row
+                    tablet: row
+                    desktop: row
+                alignItems:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: start
+                    tablet: start
+                    desktop: start
+                displayName:
+                  type: text
+                  locales:
+                    da-dk: Luk
+                    de-at: Schließen
+                    de-ch: Schließen
+                    de-de: Schließen
+                    en-au: Fermer
+                    en-ca: Close
+                    en-gb: Close
+                    en-nl: Sluiten
+                    en-nz: Schließen
+                    en-us: Close
+                    fr-ca: Fermer
+                    fr-ch: Fermer
+                    fr-fr: Fermer
+                    ja-jp: 閉じる
+                    nl-nl: Sluiten
+                    sv-se: Stäng
+                    ar-uae: إغلاق
+                justifyContent:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: end
+                    tablet: end
+                    desktop: end
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          rowStart:
+            type: dex-slider-control-parameter
+            value:
+              mobile: ''
+              tablet: '1'
+              desktop: '1'
+          columnSpan:
+            type: dex-slider-control-parameter
+            value:
+              desktop: auto
+          columnStart:
+            type: dex-slider-control-parameter
+            value:
+              mobile: ''
+              tablet: '12'
+              desktop: '12'
+          displayName:
+            type: text
+            locales:
+              da-dk: Linkknap
+              de-at: Linktaste
+              de-ch: Link-Schaltfläche
+              de-de: Link-Schaltfläche
+              en-au: Bouton de lien
+              en-ca: Link Button
+              en-gb: Link Button
+              en-nl: Koppelingsknop
+              en-nz: Linktaste
+              en-us: Link Button
+              fr-ca: Bouton de lien
+              fr-ch: Bouton de lien
+              fr-fr: Bouton de lien
+              ja-jp: リンクボタン
+              nl-nl: Koppelknop
+              sv-se: Länkkknapp
+              ar-uae: زر الرابط
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      displayName: 'yes'
+      fluidContent: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-nz
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - fr-fr
+    - en-au
+    - ja-jp
+    - ar-uae
+    - de-ch
+    - fr-ch
+created: '2025-03-18T13:02:30.255866+00:00'
+modified: '2025-09-15T20:27:48.460458+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/spotlight-card.jpg
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9

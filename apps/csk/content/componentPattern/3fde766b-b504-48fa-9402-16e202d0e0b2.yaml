@@ -1,0 +1,300 @@
+composition:
+  _name: Blog highlight
+  _id: 3fde766b-b504-48fa-9402-16e202d0e0b2
+  type: fixedHero
+  variant: columns
+  parameters:
+    image:
+      type: asset
+      value: ${#jptr:/Article single Content/entry/fields/thumbnail/value}
+    titleTag:
+      type: dex-segmented-control-parameter
+      value: h2
+    titleText:
+      type: text
+      locales:
+        da-dk: ${#jptr:/Article single Content/entry/fields/title/value}
+        de-at: ${#jptr:/Article single Content/entry/fields/title/value}
+        de-ch: ${#jptr:/Article single Content/entry/fields/title/value}
+        de-de: ${#jptr:/Article single Content/entry/fields/title/value}
+        en-au: ${#jptr:/Article single Content/entry/fields/title/value}
+        en-ca: ${#jptr:/Article single Content/entry/fields/title/value}
+        en-gb: ${#jptr:/Article single Content/entry/fields/title/value}
+        en-nl: ${#jptr:/Article single Content/entry/fields/title/value}
+        en-nz: ${#jptr:/Article single Content/entry/fields/title/value}
+        en-us: ${#jptr:/Article single Content/entry/fields/title/value}
+        fr-ca: ${#jptr:/Article single Content/entry/fields/title/value}
+        fr-ch: ${#jptr:/Article single Content/entry/fields/title/value}
+        fr-fr: ${#jptr:/Article single Content/entry/fields/title/value}
+        ja-jp: ${#jptr:/Article single Content/entry/fields/title/value}
+        nl-nl: ${#jptr:/Article single Content/entry/fields/title/value}
+        sv-se: ${#jptr:/Article single Content/entry/fields/title/value}
+        ar-uae: ${#jptr:/Article single Content/entry/fields/title/value}
+    displayName:
+      type: text
+      locales:
+        da-dk: ${#jptr:/Article single Content/entry/fields/title/value}
+        de-at: ${#jptr:/Article single Content/entry/fields/title/value}
+        de-ch: ${#jptr:/Article single Content/entry/fields/title/value}
+        de-de: ${#jptr:/Article single Content/entry/fields/title/value}
+        en-au: ${#jptr:/Article single Content/entry/fields/title/value}
+        en-ca: ${#jptr:/Article single Content/entry/fields/title/value}
+        en-gb: ${#jptr:/Article single Content/entry/fields/title/value}
+        en-nl: ${#jptr:/Article single Content/entry/fields/title/value}
+        en-nz: ${#jptr:/Article single Content/entry/fields/title/value}
+        en-us: ${#jptr:/Article single Content/entry/fields/title/value}
+        fr-ca: ${#jptr:/Article single Content/entry/fields/title/value}
+        fr-ch: ${#jptr:/Article single Content/entry/fields/title/value}
+        fr-fr: ${#jptr:/Article single Content/entry/fields/title/value}
+        ja-jp: ${#jptr:/Article single Content/entry/fields/title/value}
+        nl-nl: ${#jptr:/Article single Content/entry/fields/title/value}
+        sv-se: ${#jptr:/Article single Content/entry/fields/title/value}
+        ar-uae: ${#jptr:/Article single Content/entry/fields/title/value}
+    descriptionText:
+      type: text
+      locales:
+        da-dk: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        de-at: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        de-ch: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        de-de: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        en-au: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        en-ca: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        en-gb: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        en-nl: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        en-nz: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        en-us: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        fr-ca: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        fr-ch: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        fr-fr: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        ja-jp: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        nl-nl: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        sv-se: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+        ar-uae: ${#jptr:/Article single Content/entry/fields/shortDescription/value}
+    contentAlignment:
+      type: dex-segmented-control-parameter
+      value: center
+    eyebrowTitleText:
+      type: text
+      locales:
+        da-dk: Fremhævet blog
+        de-at: Ausgewählter Blog
+        de-ch: Ausgewählter Blog
+        de-de: Ausgewählter Blog
+        en-au: Blog en vedette
+        en-ca: Featured blog
+        en-gb: Featured blog
+        en-nl: Uitgelichte blog
+        en-nz: Ausgewählter Blog
+        en-us: Featured blog
+        fr-ca: Blog en vedette
+        fr-ch: Blog en vedette
+        fr-fr: Blog en vedette
+        ja-jp: 注目のブログ
+        nl-nl: Uitgelichte blog
+        sv-se: Utvald blogg
+        ar-uae: مدونة مميزة
+    primaryButtonLink:
+      type: link
+      locales:
+        da-dk:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        de-at:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        de-de:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        en-au:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        en-ca:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        en-gb:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        en-nl:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        en-nz:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        en-us:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        es-us:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        fr-ca:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        fr-fr:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        ja-jp:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        nb-no:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        nl-nl:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        sv-se:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        ar-ksa:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+        ar-uae:
+          path: /${locale}/articles/${#jptr:/Article single Content/entry/_slug}
+          type: projectMapNode
+          nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+          projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          dynamicInputValues:
+            locale: ${locale}
+            article-slug: ${#jptr:/Article single Content/entry/_slug}
+    primaryButtonText:
+      type: text
+      locales:
+        da-dk: Læs mere
+        de-at: Mehr erfahren
+        de-ch: Mehr erfahren
+        de-de: Mehr erfahren
+        en-au: Lire la suite
+        en-ca: Read more
+        en-gb: Read more
+        en-nl: Lees meer
+        en-nz: Mehr erfahren
+        en-us: Read more
+        fr-ca: Lire la suite
+        fr-ch: Lire la suite
+        fr-fr: Lire la suite
+        ja-jp: 続きを読む
+        nl-nl: Lees meer
+        sv-se: Läs mer
+        ar-uae: اقرأ المزيد
+  _dataResources:
+    Article single Content:
+      type: articleSingle
+      variables:
+        locale: ${locale}
+        entryId: f6663a55-c9e0-46e8-8e06-5abcf3f33d7d
+      isPatternParameter: true
+      ignorePatternParameterDefault: true
+  _overridability:
+    variants: true
+    parameters:
+      $viz: 'yes'
+      eyebrowTitleText: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-nz
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - fr-fr
+    - en-au
+    - ja-jp
+    - ar-uae
+    - de-ch
+    - fr-ch
+created: '2025-05-20T11:53:43.00626+00:00'
+modified: '2025-08-06T12:11:42.973755+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/blog_highlight.png
+categoryId: 3bab40a0-d52d-49b3-8780-b26f737b84a3

@@ -1,0 +1,502 @@
+composition:
+  _name: Article Card
+  _id: d4bbbede-ffc9-481f-ae83-2d5339f26ee0
+  type: flexCard
+  parameters:
+    border:
+      type: dex-token-selector-parameter
+      value: border-product-card
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        paddingTop: container-xsmall
+        paddingLeft: container-xsmall
+        paddingRight: container-xsmall
+        paddingBottom: container-xsmall
+    displayName:
+      type: text
+      locales:
+        da-dk: Article Card | ${#jptr:/Article/entry/_name}
+        de-at: Article Card | ${#jptr:/Article/entry/_name}
+        de-ch: Article Card | ${#jptr:/Article/entry/_name}
+        de-de: Article Card | ${#jptr:/Article/entry/_name}
+        en-au: Article Card | ${#jptr:/Article/entry/_name}
+        en-ca: Article Card | ${#jptr:/Article/entry/_name}
+        en-gb: Article Card | ${#jptr:/Article/entry/_name}
+        en-nl: Article Card | ${#jptr:/Article/entry/_name}
+        en-nz: Article Card | ${#jptr:/Article/entry/_name}
+        en-us: Article Card | ${#jptr:/Article/entry/_name}
+        fr-ca: Article Card | ${#jptr:/Article/entry/_name}
+        fr-ch: Article Card | ${#jptr:/Article/entry/_name}
+        fr-fr: Article Card | ${#jptr:/Article/entry/_name}
+        ja-jp: Article Card | ${#jptr:/Article/entry/_name}
+        nl-nl: Article Card | ${#jptr:/Article/entry/_name}
+        sv-se: Article Card | ${#jptr:/Article/entry/_name}
+        ar-uae: Article Card | ${#jptr:/Article/entry/_name}
+  slots:
+    cardMedia:
+      - _id: 1a083f8a-3c62-4534-80b0-f4b0974b3879
+        type: image
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 2759397f-da75-4031-9d19-c5af8b179f76
+                type: image
+                fields:
+                  url:
+                    type: text
+                    value: >-
+                      ${#jptr:/Article/entry/fields/thumbnail/value/0/fields/url/value}
+                _source: custom-url
+          height:
+            type: number
+            value: '170'
+          objectFit:
+            type: dex-segmented-control-parameter
+            value: cover
+        _overridability:
+          parameters:
+            image: 'yes'
+          hideLockedParameters: true
+    cardContent:
+      - _id: 91073367-d80c-4d4c-82aa-6d69c2aff01a
+        type: flex
+        slots:
+          flexItem:
+            - _id: ae7909ec-a83b-4a6a-9966-5ca24b372679
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: h2
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: 2xl
+                    tablet: 2xl
+                    desktop: 2xl
+                text:
+                  type: text
+                  locales:
+                    da-dk: ${#jptr:/Article/entry/fields/title/value}
+                    de-at: ${#jptr:/Article/entry/fields/title/value}
+                    de-ch: ${#jptr:/Article/entry/fields/title/value}
+                    de-de: ${#jptr:/Article/entry/fields/title/value}
+                    en-au: ${#jptr:/Article/entry/fields/title/value}
+                    en-ca: ${#jptr:/Article/entry/fields/title/value}
+                    en-gb: ${#jptr:/Article/entry/fields/title/value}
+                    en-nl: ${#jptr:/Article/entry/fields/title/value}
+                    en-nz: ${#jptr:/Article/entry/fields/title/value}
+                    en-us: ${#jptr:/Article/entry/fields/title/value}
+                    fr-ca: ${#jptr:/Article/entry/fields/title/value}
+                    fr-ch: ${#jptr:/Article/entry/fields/title/value}
+                    fr-fr: ${#jptr:/Article/entry/fields/title/value}
+                    ja-jp: ${#jptr:/Article/entry/fields/title/value}
+                    nl-nl: ${#jptr:/Article/entry/fields/title/value}
+                    sv-se: ${#jptr:/Article/entry/fields/title/value}
+                    ar-uae: ${#jptr:/Article/entry/fields/title/value}
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: bold
+              _overridability:
+                parameters:
+                  text: 'yes'
+                hideLockedParameters: true
+            - _id: e78908dc-dc95-40d7-9fd3-aea7a3fa1f4f
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: p
+                text:
+                  type: text
+                  locales:
+                    da-dk: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    de-at: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    de-ch: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    de-de: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    en-au: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    en-ca: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    en-gb: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    en-nl: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    en-nz: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    en-us: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    fr-ca: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    fr-ch: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    fr-fr: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    ja-jp: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    nl-nl: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    sv-se: ${#jptr:/Article/entry/fields/shortDescription/value}
+                    ar-uae: ${#jptr:/Article/entry/fields/shortDescription/value}
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+              _overridability:
+                parameters:
+                  text: 'yes'
+                hideLockedParameters: true
+            - _id: 31496ca8-d0f1-47c2-a3e8-55c6515ada4d
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: p
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: base
+                    tablet: base
+                    desktop: base
+                text:
+                  type: text
+                  locales:
+                    da-dk: >-
+                      by
+                      ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}
+                    de-at: >-
+                      by
+                      ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}
+                    de-ch: >-
+                      by
+                      ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}
+                    de-de: >-
+                      by
+                      ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}
+                    en-au: >-
+                      by
+                      ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}
+                    en-ca: >-
+                      by
+                      ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}
+                    en-gb: >-
+                      by
+                      ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}
+                    en-nl: >-
+                      by
+                      ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}
+                    en-nz: >-
+                      by
+                      ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}
+                    en-us: >-
+                      by
+                      ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}
+                    fr-ca: >-
+                      by
+                      ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}
+                    fr-ch: >-
+                      by
+                      ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}
+                    fr-fr: >-
+                      by
+                      ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}
+                    ja-jp: >-
+                      by
+                      ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}
+                    nl-nl: >-
+                      by
+                      ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}
+                    sv-se: >-
+                      by
+                      ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}
+                    ar-uae: >-
+                      by
+                      ${#jptr:/Article/entry/fields/author/value/entry/fields/name/value}
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+              _overridability:
+                parameters:
+                  text: 'yes'
+                hideLockedParameters: true
+        parameters:
+          gap:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '4'
+              tablet: '4'
+              desktop: '4'
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              desktop:
+                paddingTop: container-small
+                paddingBottom: container-small
+          direction:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: col
+              tablet: col
+              desktop: col
+          displayName:
+            type: text
+            locales:
+              da-dk: Indhold
+              de-at: Inhalt
+              de-ch: Inhalt
+              de-de: Inhalt
+              en-au: Contenu
+              en-ca: Content
+              en-gb: Content
+              en-nl: Inhoud
+              en-nz: Inhalt
+              en-us: Content
+              fr-ca: Contenu
+              fr-ch: Contenu
+              fr-fr: Contenu
+              ja-jp: コンテンツ
+              nl-nl: Inhoud
+              sv-se: Innehåll
+              ar-uae: المحتوى
+          fluidContent:
+            type: checkbox
+            value: true
+        _overridability:
+          hideLockedParameters: true
+      - _id: 91a39649-d9d5-4f11-9090-203b4fea8a13
+        type: button
+        parameters:
+          link:
+            type: link
+            locales:
+              da-dk:
+                path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+                  article-slug: ${#jptr:/Article/entry/_slug}
+              de-at:
+                path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+                  article-slug: ${#jptr:/Article/entry/_slug}
+              de-de:
+                path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+                  article-slug: ${#jptr:/Article/entry/_slug}
+              en-au:
+                path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+                  article-slug: ${#jptr:/Article/entry/_slug}
+              en-ca:
+                path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+                  article-slug: ${#jptr:/Article/entry/_slug}
+              en-gb:
+                path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+                  article-slug: ${#jptr:/Article/entry/_slug}
+              en-nl:
+                path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+                  article-slug: ${#jptr:/Article/entry/_slug}
+              en-nz:
+                path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+                  article-slug: ${#jptr:/Article/entry/_slug}
+              en-us:
+                path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+                  article-slug: ${#jptr:/Article/entry/_slug}
+              es-us:
+                path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+                  article-slug: ${#jptr:/Article/entry/_slug}
+              fr-ca:
+                path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+                  article-slug: ${#jptr:/Article/entry/_slug}
+              fr-fr:
+                path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+                  article-slug: ${#jptr:/Article/entry/_slug}
+              ja-jp:
+                path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+                  article-slug: ${#jptr:/Article/entry/_slug}
+              nb-no:
+                path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+                  article-slug: ${#jptr:/Article/entry/_slug}
+              nl-nl:
+                path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+                  article-slug: ${#jptr:/Article/entry/_slug}
+              sv-se:
+                path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+                  article-slug: ${#jptr:/Article/entry/_slug}
+              ar-ksa:
+                path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+                  article-slug: ${#jptr:/Article/entry/_slug}
+              ar-uae:
+                path: /${locale}/articles/${#jptr:/Article/entry/_slug}
+                type: projectMapNode
+                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                dynamicInputValues:
+                  locale: ${locale}
+                  article-slug: ${#jptr:/Article/entry/_slug}
+          size:
+            type: dex-token-selector-parameter
+            value: button-small
+          text:
+            type: text
+            locales:
+              da-dk: Læs artikel
+              de-at: Artikel lesen
+              de-ch: Artikel lesen
+              de-de: Artikel lesen
+              en-au: Lire l'article
+              en-ca: Read Article
+              en-gb: Read Article
+              en-nl: Artikel Lezen
+              en-nz: Artikel lesen
+              en-us: Read Article
+              fr-ca: Lire l'article
+              fr-ch: Lire l'article
+              fr-fr: Lire l'article
+              ja-jp: 記事を読む
+              nl-nl: Artikel lezen
+              sv-se: Läs artikel
+              ar-uae: اقرأ المقال
+          border:
+            type: dex-token-selector-parameter
+            value: border-button-secondary
+          textSize:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: sm
+              tablet: sm
+              desktop: sm
+          textColor:
+            type: dex-color-palette-parameter
+            value: text-primary
+          textWeight:
+            type: dex-segmented-control-parameter
+            value: bold
+          buttonColor:
+            type: dex-color-palette-parameter
+            value: button-secondary
+          textTransform:
+            type: dex-segmented-control-parameter
+            value: uppercase
+          hoverTextColor:
+            type: dex-color-palette-parameter
+            value: text-secondary
+          hoverButtonColor:
+            type: dex-color-palette-parameter
+            value: button-primary
+        _overridability:
+          parameters:
+            link: 'yes'
+            text: 'no'
+          hideLockedParameters: true
+  _dataResources:
+    Article:
+      type: article
+      variables:
+        slug: the-golden-ratio-of-coffee
+        locale: ${locale}
+      isPatternParameter: true
+      ignorePatternParameterDefault: true
+  _overridability:
+    parameters:
+      displayName: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-nz
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - fr-fr
+    - en-au
+    - ja-jp
+    - ar-uae
+    - de-ch
+    - fr-ch
+created: '2025-03-18T13:02:30.199703+00:00'
+modified: '2025-09-15T20:27:49.452568+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/article-card.jpg
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9

@@ -1,4 +1,4 @@
-@source inline("{hover:,group-hover:,lg:,md:,}{bg,text,decoration,border,ring,fill,from,to}-{button-primary,button-primary-hover,button-secondary,button-secondary-hover,button-tertiary,button-tertiary-hover,text-primary,text-secondary,text-tertiary,general-color-1,general-color-2,general-color-3,general-color-4,general-color-5,page-background-primary}");
+@source inline("{hover:,group-hover:,lg:,md:,}{bg,text,decoration,border,ring,fill,from,to}-{button-primary,button-primary-hover,button-secondary,button-secondary-hover,button-tertiary,button-tertiary-hover,text-primary,text-secondary,text-tertiary,general-color-1,general-color-2,general-color-3,general-color-4,general-color-5,page-background-primary,general-color-6,general-color-7,text-link,general-color-8,general-color-9,general-color-10,text-active,general-color-11,general-color-12,general-color-13,text-featured,button-featured}");
 
 @theme {
 	--color-button-primary: var(--button-primary);
@@ -16,4 +16,16 @@
 	--color-general-color-4: var(--general-color-4);
 	--color-general-color-5: var(--general-color-5);
 	--color-page-background-primary: var(--page-background-primary);
+	--color-general-color-6: var(--general-color-6);
+	--color-general-color-7: var(--general-color-7);
+	--color-text-link: var(--text-link);
+	--color-general-color-8: var(--general-color-8);
+	--color-general-color-9: var(--general-color-9);
+	--color-general-color-10: var(--general-color-10);
+	--color-text-active: var(--text-active);
+	--color-general-color-11: var(--general-color-11);
+	--color-general-color-12: var(--general-color-12);
+	--color-general-color-13: var(--general-color-13);
+	--color-text-featured: var(--text-featured);
+	--color-button-featured: var(--button-featured);
 }

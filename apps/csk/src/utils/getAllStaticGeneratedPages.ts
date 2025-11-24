@@ -1,76 +1,83 @@
+import { ContentClient } from '@uniformdev/canvas';
 import { getProjectMapClient } from '@uniformdev/canvas-next-rsc-v2';
-import { ProjectMapNode } from '@uniformdev/project-map';
-import localesConfig from '@/i18n/locales.json';
+import locales from '@/i18n/locales.json';
 
-const LOCALE_SEGMENT = ':locale';
+const ignoredPaths = ['/previews', '/ai-tools', '/modals'];
+const CHUNK_SIZE = 100;
 
-/**
- * Applies localized path segment if available
- */
-const applyLocalizedPathSegment = (
-  path: string,
-  locale: string,
-  locales?: Record<string, { pathSegment: string }>,
-  pathSegment?: string
-): string => {
-  const localizedPath = locales?.[locale];
-
-  if (localizedPath?.pathSegment && pathSegment) {
-    return path.replace(pathSegment, localizedPath.pathSegment);
-  }
-
-  return path;
+export const hasDynamicParameters = (path: string) => {
+  const dynamicParamPattern = /(^|\/):[A-Za-z_][\w-]*/;
+  return dynamicParamPattern.test(path);
 };
 
-/**
- * Generates localized paths for a single project map node
- */
-const generateLocalizedPaths = (node: ProjectMapNode, localeConfig: typeof localesConfig): string[] => {
-  const { path, locales, pathSegment } = node;
-
-  if (!path.includes(LOCALE_SEGMENT)) {
-    return [path];
-  }
-
-  return localeConfig.locales.map(locale => {
-    const pathWithLocale = path.replace(LOCALE_SEGMENT, locale);
-    return applyLocalizedPathSegment(pathWithLocale, locale, locales, pathSegment);
+const getContentClient = () =>
+  new ContentClient({
+    apiKey: process.env.UNIFORM_API_KEY,
+    projectId: process.env.UNIFORM_PROJECT_ID,
+    apiHost: process.env.UNIFORM_API_HOST,
   });
-};
 
-/**
- * Fetches project map nodes from Uniform
- */
-const fetchProjectMapNodes = async (): Promise<ProjectMapNode[]> => {
-  try {
-    const client = getProjectMapClient({
-      cache: {
-        type: 'default',
-      },
+const fetchRecursiveAllEntries = async <T>({ type }: { type: string }) => {
+  const client = getContentClient();
+
+  const fetchEntries = async (skip = 0): Promise<T[]> => {
+    const res = await client.getEntries({
+      filters: { type: { eq: type } },
+      limit: CHUNK_SIZE,
+      offset: skip,
+      withTotalCount: true,
+      skipDataResolution: true,
+      skipOverridesResolution: true,
+      skipPatternResolution: true,
     });
 
-    const { nodes } = await client.getNodes({ tree: false });
-    return nodes ?? [];
-  } catch (error) {
-    console.error('Failed to fetch project map nodes:', error);
-    return [];
-  }
+    const entries = (res.entries ?? []).map(e => e.entry as T);
+    const total = res.totalCount ?? entries.length;
+
+    if (skip + CHUNK_SIZE < total) {
+      const next = await fetchEntries(skip + CHUNK_SIZE);
+      return [...entries, ...next];
+    }
+
+    return entries;
+  };
+
+  return fetchEntries();
 };
 
-/**
- * Generates all static pages for the application
- * Returns an array of paths that should be statically generated
- */
-const getAllStaticGeneratedPages = async (): Promise<string[]> => {
-  const projectMapNodes = await fetchProjectMapNodes();
+const getEntriesProjectMapNodes = async (type: string, nodeBasePath: string) => {
+  const entries = await fetchRecursiveAllEntries<{ _slug?: string }>({
+    type,
+  });
 
-  if (!projectMapNodes.length) {
-    return [];
-  }
+  return entries
+    .map(e => e._slug)
+    .filter((s): s is string => !!s)
+    .map(slug => `${nodeBasePath}/${slug}`);
+};
 
-  const localizedPaths = projectMapNodes.map(node => generateLocalizedPaths(node, localesConfig));
+const getAllStaticGeneratedPages = async () => {
+  const [projectMapNodes, products, articles] = await Promise.all([
+    getProjectMapClient({ cache: { type: 'default' } })
+      .getNodes({ tree: false })
+      .then(({ nodes }) => nodes?.map(({ path }) => path) ?? []),
+    getEntriesProjectMapNodes('product', '/products'),
+    getEntriesProjectMapNodes('article', '/articles'),
+  ]);
 
-  return localizedPaths.flat();
+  // Build only  the default locale - because it is takes to long to build all locales
+  const preparedPaths = [...projectMapNodes, ...products, ...articles].flatMap(path => {
+    if (path.includes(':locale')) {
+      return path.replace(':locale', locales.defaultLocale);
+    }
+    return [path];
+  });
+
+  const filtered = preparedPaths.filter(
+    path => !ignoredPaths.some(ignoredPath => path.includes(ignoredPath)) && !hasDynamicParameters(path)
+  );
+
+  return Array.from(new Set(filtered));
 };
 
 export default getAllStaticGeneratedPages;

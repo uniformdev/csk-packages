@@ -1,0 +1,517 @@
+composition:
+  _name: Locale Selector
+  _id: 0157adc0-cb99-48de-ba2f-a1763fd92108
+  _slug: locale-selector
+  type: modalPage
+  slots:
+    modalPageContent:
+      - _id: b3af9861-f76d-4a85-97a1-51db4bdb9bf8
+        type: flex
+        slots:
+          flexItem:
+            - _id: 9cd749cd-9b34-4c57-8137-52f05bf7dfbf
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: span
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: 3xl
+                    tablet: 4xl
+                    desktop: 4xl
+                text:
+                  type: text
+                  locales:
+                    da-dk: Lokationer og Sprog
+                    de-at: Standorte und Sprachen
+                    de-ch: Standorte und Sprachen
+                    de-de: Standorte und Sprachen
+                    en-au: Emplacements et Langues
+                    en-ca: Locations and Languages
+                    en-gb: Locations and Languages
+                    en-nl: Locaties en Talen
+                    en-nz: Standorte und Sprachen
+                    en-us: Locations and Languages
+                    fr-ca: Emplacements et Langues
+                    fr-ch: Lieux et langues
+                    fr-fr: Lieux et langues
+                    ja-jp: 場所と言語
+                    nl-nl: Locaties en Talen
+                    sv-se: Platser och språk
+                    ar-uae: المواقع واللغات
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: bold
+              _overridability:
+                hideLockedParameters: true
+            - _id: 5d973750-00ca-4eee-a724-b0ff21207da9
+              type: $loop
+              slots:
+                body:
+                  - _id: b6950db1-d3f8-4fd3-8625-9c9d32c902d9
+                    type: flex
+                    slots:
+                      flexItem:
+                        - _id: 876e1b00-226b-4e28-b0c1-d4b037225c1c
+                          type: text
+                          parameters:
+                            tag:
+                              type: dex-segmented-control-parameter
+                              value: span
+                            size:
+                              type: dex-segmented-control-parameter
+                              value:
+                                mobile: base
+                            text:
+                              type: text
+                              locales:
+                                da-dk: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name}
+                                de-at: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name}
+                                de-ch: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name}
+                                de-de: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name}
+                                en-au: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name}
+                                en-ca: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name}
+                                en-gb: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name}
+                                en-nl: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name}
+                                en-nz: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name}
+                                en-us: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name}
+                                fr-ca: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name}
+                                fr-ch: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name}
+                                fr-fr: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name}
+                                ja-jp: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name}
+                                nl-nl: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name}
+                                sv-se: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name}
+                                ar-uae: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name}
+                            color:
+                              type: dex-color-palette-parameter
+                              value: text-primary
+                            weight:
+                              type: dex-segmented-control-parameter
+                              value: bold
+                            transform:
+                              type: dex-segmented-control-parameter
+                              value: uppercase
+                          _overridability:
+                            hideLockedParameters: true
+                        - _id: 1be4ac93-e021-4730-a4dd-2b88ee18dabb
+                          type: grid
+                          slots:
+                            gridInner:
+                              - _id: 6d352b8b-fb95-455d-a3fc-c34115e158cf
+                                type: $loop
+                                slots:
+                                  body:
+                                    - _id: ae08a6c9-395a-446e-adba-afbe633ac019
+                                      type: localeLink
+                                      parameters:
+                                        text:
+                                          type: text
+                                          locales:
+                                            da-dk: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/label}
+                                            de-at: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/label}
+                                            de-ch: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/label}
+                                            de-de: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/label}
+                                            en-au: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/label}
+                                            en-ca: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/label}
+                                            en-gb: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/label}
+                                            en-nl: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/label}
+                                            en-nz: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/label}
+                                            en-us: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/label}
+                                            fr-ca: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/label}
+                                            fr-ch: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/label}
+                                            fr-fr: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/label}
+                                            ja-jp: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/label}
+                                            nl-nl: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/label}
+                                            sv-se: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/label}
+                                            ar-uae: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/label}
+                                        localeCode:
+                                          type: text
+                                          locales:
+                                            da-dk: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/value}
+                                            de-at: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/value}
+                                            de-ch: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/value}
+                                            de-de: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/value}
+                                            en-au: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/value}
+                                            en-ca: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/value}
+                                            en-gb: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/value}
+                                            en-nl: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/value}
+                                            en-nz: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/value}
+                                            en-us: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/value}
+                                            fr-ca: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/value}
+                                            fr-ch: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/value}
+                                            fr-fr: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/value}
+                                            ja-jp: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/value}
+                                            nl-nl: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/value}
+                                            sv-se: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/value}
+                                            ar-uae: >-
+                                              ${#jptr:/Get Localization Settings
+                                              Content Loop Item locales Loop
+                                              Item/value}
+                                      _overridability:
+                                        hideLockedParameters: true
+                                _dataResources:
+                                  Get Localization Settings Content Loop Item locales Loop Item:
+                                    type: sys-reserved-loop
+                                    variables:
+                                      connectedData: >-
+                                        #jptr:/Get Localization Settings Content
+                                        Loop Item/locales:fa=c
+                                _overridability:
+                                  hideLockedParameters: true
+                          parameters:
+                            gapX:
+                              type: dex-slider-control-parameter
+                              value:
+                                mobile: '4'
+                                tablet: '4'
+                                desktop: '4'
+                            gapY:
+                              type: dex-slider-control-parameter
+                              value:
+                                mobile: '4'
+                                tablet: '4'
+                                desktop: '4'
+                            spacing:
+                              type: dex-space-control-parameter
+                              value:
+                                mobile:
+                                  paddingTop: container-xsmall
+                            displayName:
+                              type: text
+                              locales:
+                                da-dk: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name} Locales
+                                de-at: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name} Locales
+                                de-ch: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name} Locales
+                                de-de: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name} Locales
+                                en-au: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name} Locales
+                                en-ca: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name} Locales
+                                en-gb: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name} Locales
+                                en-nl: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name} Locales
+                                en-nz: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name} Locales
+                                en-us: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name} Locales
+                                fr-ca: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name} Locales
+                                fr-ch: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name} Locales
+                                fr-fr: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name} Locales
+                                ja-jp: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name} Locales
+                                nl-nl: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name} Locales
+                                sv-se: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name} Locales
+                                ar-uae: >-
+                                  ${#jptr:/Get Localization Settings Content
+                                  Loop Item/name} Locales
+                            columnsCount:
+                              type: dex-slider-control-parameter
+                              value:
+                                mobile: '1'
+                                tablet: '3'
+                                desktop: '3'
+                          _overridability:
+                            hideLockedParameters: true
+                    parameters:
+                      gap:
+                        type: dex-slider-control-parameter
+                        value:
+                          mobile: ''
+                          tablet: ''
+                          desktop: ''
+                      direction:
+                        type: dex-segmented-control-parameter
+                        value:
+                          mobile: col
+                          tablet: col
+                          desktop: col
+                      displayName:
+                        type: text
+                        locales:
+                          da-dk: >-
+                            ${#jptr:/Get Localization Settings Content Loop
+                            Item/name}
+                          de-at: >-
+                            ${#jptr:/Get Localization Settings Content Loop
+                            Item/name}
+                          de-ch: >-
+                            ${#jptr:/Get Localization Settings Content Loop
+                            Item/name}
+                          de-de: >-
+                            ${#jptr:/Get Localization Settings Content Loop
+                            Item/name}
+                          en-au: >-
+                            ${#jptr:/Get Localization Settings Content Loop
+                            Item/name}
+                          en-ca: >-
+                            ${#jptr:/Get Localization Settings Content Loop
+                            Item/name}
+                          en-gb: >-
+                            ${#jptr:/Get Localization Settings Content Loop
+                            Item/name}
+                          en-nl: >-
+                            ${#jptr:/Get Localization Settings Content Loop
+                            Item/name}
+                          en-nz: >-
+                            ${#jptr:/Get Localization Settings Content Loop
+                            Item/name}
+                          en-us: >-
+                            ${#jptr:/Get Localization Settings Content Loop
+                            Item/name}
+                          fr-ca: >-
+                            ${#jptr:/Get Localization Settings Content Loop
+                            Item/name}
+                          fr-ch: >-
+                            ${#jptr:/Get Localization Settings Content Loop
+                            Item/name}
+                          fr-fr: >-
+                            ${#jptr:/Get Localization Settings Content Loop
+                            Item/name}
+                          ja-jp: >-
+                            ${#jptr:/Get Localization Settings Content Loop
+                            Item/name}
+                          nl-nl: >-
+                            ${#jptr:/Get Localization Settings Content Loop
+                            Item/name}
+                          sv-se: >-
+                            ${#jptr:/Get Localization Settings Content Loop
+                            Item/name}
+                          ar-uae: >-
+                            ${#jptr:/Get Localization Settings Content Loop
+                            Item/name}
+                      fluidContent:
+                        type: checkbox
+                        value: true
+                    _overridability:
+                      hideLockedParameters: true
+              _dataResources:
+                Get Localization Settings Content Loop Item:
+                  type: sys-reserved-loop
+                  variables:
+                    connectedData: '#jptr:/Get Localization Settings Content:fa=c'
+              _overridability:
+                hideLockedParameters: true
+        parameters:
+          gap:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '8'
+              tablet: '8'
+              desktop: '8'
+          direction:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: col
+              tablet: col
+              desktop: col
+          displayName:
+            type: text
+            locales:
+              da-dk: Lokationer
+              de-at: Orte
+              de-ch: Orte
+              de-de: Orte
+              en-au: Lieux
+              en-ca: Locales
+              en-gb: Localities
+              en-nl: Locaties
+              en-nz: Orte
+              en-us: Locales
+              fr-ca: Lieux
+              fr-ch: Lieux
+              fr-fr: Lieux
+              ja-jp: ロケール
+              nl-nl: Locaties
+              sv-se: Platser
+              ar-uae: المواقع
+        _overridability:
+          hideLockedParameters: true
+  _dataResources:
+    Get Localization Settings Content:
+      type: getLocalizationSettings
+      variables: {}
+  _locales:
+    - en-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-nz
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - fr-fr
+    - en-au
+    - ja-jp
+    - ar-uae
+    - de-ch
+    - fr-ch
+created: '2025-07-09T08:22:04.597943+00:00'
+modified: '2025-09-15T20:27:54.171635+00:00'
+pattern: false

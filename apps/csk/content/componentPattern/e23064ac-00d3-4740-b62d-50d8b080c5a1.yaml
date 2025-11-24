@@ -1,0 +1,494 @@
+composition:
+  _name: Error Hero
+  _id: e23064ac-00d3-4740-b62d-50d8b080c5a1
+  type: section
+  variant: columnsReverse
+  parameters:
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        marginTop: container-large
+        marginBottom: container-large
+    displayName:
+      type: text
+      locales:
+        da-dk: Ups
+        de-at: Hoppla
+        de-ch: Hoppla
+        de-de: Hoppla
+        en-au: Oups
+        en-ca: Oops
+        en-gb: Oops
+        en-nl: Oeps
+        en-nz: Hoppla
+        en-us: Opps
+        fr-ca: Oups
+        fr-ch: Oups
+        fr-fr: Oups
+        ja-jp: おっと
+        nl-nl: Oeps
+        sv-se: Oops
+        ar-uae: عذرًا
+    contentAlignment:
+      type: dex-segmented-control-parameter
+      value: center
+  slots:
+    sectionCTA:
+      - _id: >-
+          3547d19f-61ac-4c6a-b7eb-963372fcedaa|fa933a66-ceec-4443-bf4b-2ea8ddd1aba2
+        type: button
+        _pattern: 646faee6-b476-43c6-a1a8-eebe85699889
+    sectionMedia:
+      - _id: >-
+          3547d19f-61ac-4c6a-b7eb-963372fcedaa|3cef9a4a-f0c8-4eeb-a855-a28fd1335351
+        type: image
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 1438c379-a752-469c-ae9c-4378a6069db4
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: cc75676e-5baf-4cbf-a21a-b29387c9cafd
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/b0JtaxSVQxmqWylG6vGC1Q/3x1BgYwiQFe22WEcDLzzhg-error-image.jpeg
+                    type: text
+                  file:
+                    type: file
+                    value: 6e332042-3ffa-4d3b-ab88-accdf8a8655e
+                  size:
+                    value: 5333305
+                    type: number
+                  title:
+                    type: text
+                    value: error-image.jpeg
+                  width:
+                    value: 2576
+                    type: number
+                  height:
+                    value: 3864
+                    type: number
+                  mediaType:
+                    value: image/jpeg
+                    type: text
+                _source: uniform-assets
+          objectFit:
+            type: dex-segmented-control-parameter
+            value: cover
+        _overridability:
+          parameters:
+            image: 'no'
+          hideLockedParameters: true
+    sectionContent:
+      - _id: >-
+          3547d19f-61ac-4c6a-b7eb-963372fcedaa|5af03d0f-f208-4370-a77e-86dc0c60c0e1
+        type: flex
+        slots:
+          flexItem:
+            - _id: >-
+                3547d19f-61ac-4c6a-b7eb-963372fcedaa|74170e2f-021f-4f8c-85dd-885af205a737
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: span
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: xs
+                    tablet: lg
+                    desktop: xl
+                text:
+                  type: text
+                  locales:
+                    da-dk: 404 FEJL
+                    de-at: 404 FEHLER
+                    de-ch: 404 FEHLER
+                    de-de: 404 FEHLER
+                    en-au: ERREUR 404
+                    en-ca: 404 ERROR
+                    en-gb: 404 ERROR
+                    en-nl: 404 FOUT
+                    en-nz: 404 FEHLER
+                    en-us: '404 ERROR  '
+                    fr-ca: ERREUR 404
+                    fr-ch: ERREUR 404
+                    fr-fr: ERREUR 404
+                    ja-jp: 404 エラー
+                    nl-nl: 404 FOUT
+                    sv-se: 404 FEL
+                    ar-uae: خطأ 404
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: bold
+                alignment:
+                  type: dex-segmented-control-parameter
+                  value: left
+                transform:
+                  type: dex-segmented-control-parameter
+                  value: uppercase
+              _overridability:
+                parameters:
+                  text: 'yes'
+                hideLockedParameters: true
+            - _id: e0294e21-1dba-4878-96b0-10864c8f10f6
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: h2
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: 3xl
+                    tablet: 4xl
+                    desktop: 4xl
+                text:
+                  type: text
+                  locales:
+                    da-dk: Beklager, vi kan ikke finde det, du leder efter.
+                    de-at: >-
+                      Entschuldigung, wir können nicht finden, wonach Sie
+                      suchen.
+                    de-ch: >-
+                      Entschuldigung, wir können nicht finden, wonach Sie
+                      suchen.
+                    de-de: >-
+                      Entschuldigung, wir können nicht finden, wonach Sie
+                      suchen.
+                    en-au: Désolé, nous ne pouvons pas trouver ce que vous cherchez.
+                    en-ca: Sorry, we can’t find what you are looking for.
+                    en-gb: Sorry, we can’t find what you’re looking for.
+                    en-nl: Sorry, we kunnen niet vinden wat je zoekt.
+                    en-nz: >-
+                      Entschuldigung, wir können nicht finden, wonach Sie
+                      suchen.
+                    en-us: 'Sorry, we can’t find what you are looking for.  '
+                    fr-ca: Désolé, nous ne pouvons pas trouver ce que vous cherchez.
+                    fr-ch: Désolé, nous ne trouvons pas ce que vous cherchez.
+                    fr-fr: Désolé, nous ne trouvons pas ce que vous cherchez.
+                    ja-jp: 申し訳ありませんが、お探しのものが見つかりません。
+                    nl-nl: Sorry, we kunnen niet vinden waar u naar op zoek bent.
+                    sv-se: Tyvärr, vi kan inte hitta det du letar efter.
+                    ar-uae: عذرًا، لا يمكننا العثور على ما تبحث عنه.
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: bold
+                alignment:
+                  type: dex-segmented-control-parameter
+                  value: left
+              _overridability:
+                parameters:
+                  text: 'yes'
+                hideLockedParameters: true
+            - _id: >-
+                3547d19f-61ac-4c6a-b7eb-963372fcedaa|5016ff87-24e4-4601-9352-ffc7bcacf197
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: span
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: xs
+                    tablet: lg
+                    desktop: xl
+                text:
+                  type: text
+                  locales:
+                    da-dk: >-
+                      Brug navigationen øverst for at hjælpe dig med at komme
+                      tilbage på sporet.
+                    de-at: >-
+                      Verwenden Sie die Navigation oben, um wieder auf den
+                      richtigen Weg zu kommen.
+                    de-ch: >-
+                      Verwenden Sie die Navigation oben, um wieder auf den
+                      richtigen Weg zu kommen.
+                    de-de: >-
+                      Verwenden Sie die Navigation oben, um wieder auf den
+                      richtigen Weg zu kommen.
+                    en-au: >-
+                      Utilisez la navigation en haut pour vous remettre sur la
+                      bonne voie.
+                    en-ca: >-
+                      Use the navigation at the top to help you get back on
+                      track.
+                    en-gb: >-
+                      Use the navigation at the top to help you get back on
+                      track.
+                    en-nl: >-
+                      Gebruik de navigatie bovenaan om u te helpen weer op het
+                      juiste spoor te komen.
+                    en-nz: >-
+                      Verwenden Sie die Navigation oben, um wieder auf den
+                      richtigen Weg zu kommen.
+                    en-us: >-
+                      Use the navigation at the top to help you get back on
+                      track.
+                    fr-ca: >-
+                      Utilisez la navigation en haut pour vous aider à revenir
+                      sur la bonne voie.
+                    fr-ch: >-
+                      Utilisez la navigation en haut pour vous remettre sur la
+                      bonne voie.
+                    fr-fr: >-
+                      Utilisez la navigation en haut pour vous remettre sur la
+                      bonne voie.
+                    ja-jp: 上部のナビゲーションを使用して、元の道に戻るのを助けてください。
+                    nl-nl: >-
+                      Gebruik de navigatie bovenaan om weer op het juiste spoor
+                      te komen.
+                    sv-se: >-
+                      Använd navigeringen högst upp för att hjälpa dig komma
+                      tillbaka på rätt spår.
+                    ar-uae: >-
+                      استخدم التنقل في الأعلى لمساعدتك على العودة إلى المسار
+                      الصحيح.
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+                alignment:
+                  type: dex-segmented-control-parameter
+                  value: left
+              _overridability:
+                parameters:
+                  text: 'yes'
+                hideLockedParameters: true
+        parameters:
+          gap:
+            type: dex-slider-control-parameter
+            value:
+              mobile: '4'
+              tablet: '4'
+              desktop: '4'
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              tablet:
+                marginRight: container-large
+              desktop:
+                marginRight: container-large
+          direction:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: col
+              tablet: col
+              desktop: col
+          displayName:
+            type: text
+            locales:
+              da-dk: Indhold
+              de-at: Inhalt
+              de-ch: Inhalt
+              de-de: Inhalt
+              en-au: Contenu
+              en-ca: Content
+              en-gb: Content
+              en-nl: Inhoud
+              en-nz: Inhalt
+              en-us: Content
+              fr-ca: Contenu
+              fr-ch: Contenu
+              fr-fr: Contenu
+              ja-jp: コンテンツ
+              nl-nl: Inhoud
+              sv-se: Innehåll
+              ar-uae: المحتوى
+        _overridability:
+          hideLockedParameters: true
+  _overrides:
+    3547d19f-61ac-4c6a-b7eb-963372fcedaa|fa933a66-ceec-4443-bf4b-2ea8ddd1aba2:
+      parameters:
+        link:
+          type: link
+          locales:
+            da-dk:
+              path: /${locale}
+              type: projectMapNode
+              nodeId: e7206bd2-8ac2-4e25-937d-8f57292f006b
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            de-at:
+              path: /${locale}
+              type: projectMapNode
+              nodeId: e7206bd2-8ac2-4e25-937d-8f57292f006b
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            de-de:
+              path: /${locale}
+              type: projectMapNode
+              nodeId: e7206bd2-8ac2-4e25-937d-8f57292f006b
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-au:
+              path: /${locale}
+              type: projectMapNode
+              nodeId: e7206bd2-8ac2-4e25-937d-8f57292f006b
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-ca:
+              path: /${locale}
+              type: projectMapNode
+              nodeId: e7206bd2-8ac2-4e25-937d-8f57292f006b
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-gb:
+              path: /${locale}
+              type: projectMapNode
+              nodeId: e7206bd2-8ac2-4e25-937d-8f57292f006b
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-nl:
+              path: /${locale}
+              type: projectMapNode
+              nodeId: e7206bd2-8ac2-4e25-937d-8f57292f006b
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-nz:
+              path: /${locale}
+              type: projectMapNode
+              nodeId: e7206bd2-8ac2-4e25-937d-8f57292f006b
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            en-us:
+              path: /${locale}
+              type: projectMapNode
+              nodeId: e7206bd2-8ac2-4e25-937d-8f57292f006b
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            es-us:
+              path: /${locale}
+              type: projectMapNode
+              nodeId: e7206bd2-8ac2-4e25-937d-8f57292f006b
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            fr-ca:
+              path: /${locale}
+              type: projectMapNode
+              nodeId: e7206bd2-8ac2-4e25-937d-8f57292f006b
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            fr-fr:
+              path: /${locale}
+              type: projectMapNode
+              nodeId: e7206bd2-8ac2-4e25-937d-8f57292f006b
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ja-jp:
+              path: /${locale}
+              type: projectMapNode
+              nodeId: e7206bd2-8ac2-4e25-937d-8f57292f006b
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            nb-no:
+              path: /${locale}
+              type: projectMapNode
+              nodeId: e7206bd2-8ac2-4e25-937d-8f57292f006b
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            nl-nl:
+              path: /${locale}
+              type: projectMapNode
+              nodeId: e7206bd2-8ac2-4e25-937d-8f57292f006b
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            sv-se:
+              path: /${locale}
+              type: projectMapNode
+              nodeId: e7206bd2-8ac2-4e25-937d-8f57292f006b
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ar-ksa:
+              path: /${locale}
+              type: projectMapNode
+              nodeId: e7206bd2-8ac2-4e25-937d-8f57292f006b
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+            ar-uae:
+              path: /${locale}
+              type: projectMapNode
+              nodeId: e7206bd2-8ac2-4e25-937d-8f57292f006b
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+              dynamicInputValues:
+                locale: ${locale}
+        text:
+          type: text
+          locales:
+            da-dk: Gå hjem
+            de-at: Geh nach Hause
+            de-ch: Geh nach Hause
+            de-de: Geh nach Hause
+            en-au: Rentrez chez vous
+            en-ca: Go Home
+            en-gb: Go Home
+            en-nl: Ga naar huis
+            en-nz: Geh nach Hause
+            en-us: Go Home
+            fr-ca: Rentre à la maison
+            fr-ch: Rentre à la maison
+            fr-fr: Rentre à la maison
+            ja-jp: 家に帰る
+            nl-nl: Ga naar huis
+            sv-se: Gå hem
+            ar-uae: اذهب إلى المنزل
+  _overridability:
+    parameters:
+      spacing: 'no'
+      displayName: 'yes'
+      fluidContent: 'no'
+    hideLockedParameters: true
+  _locales:
+    - en-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-nz
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - fr-fr
+    - en-au
+    - ja-jp
+    - ar-uae
+    - de-ch
+    - fr-ch
+created: '2025-03-18T13:02:30.227086+00:00'
+modified: '2025-09-15T20:27:49.327824+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/coffee-shop-template/preview-images/error_hero.png
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9
