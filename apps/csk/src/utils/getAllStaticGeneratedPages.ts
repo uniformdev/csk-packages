@@ -2,7 +2,7 @@ import { ContentClient } from '@uniformdev/canvas';
 import { getProjectMapClient } from '@uniformdev/canvas-next-rsc-v2';
 import locales from '@/i18n/locales.json';
 
-const ignoredPaths = ['/previews'];
+const ignoredPaths = ['/previews', '/ai-tools'];
 const CHUNK_SIZE = 100;
 
 export const hasDynamicParameters = (path: string) => {
