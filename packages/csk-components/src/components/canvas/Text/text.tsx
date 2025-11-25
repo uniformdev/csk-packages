@@ -17,15 +17,19 @@ const Text: FC<TextProps & TextParameters> = ({
   alignment,
   component,
   parameters,
-}) => (
-  <BaseText {...{ color, size, font, weight, transform, decoration, letterSpacing, alignment, lineCountRestrictions }}>
-    <UniformText
-      placeholder="Text goes here"
-      parameter={parameters.text as ComponentParameter<string>}
-      as={tag || undefined}
-      component={component}
-    />
-  </BaseText>
-);
+}) => {
+  return (
+    <BaseText
+      {...{ color, size, font, weight, transform, decoration, letterSpacing, alignment, lineCountRestrictions }}
+    >
+      <UniformText
+        placeholder="Text goes here"
+        parameter={parameters.text as ComponentParameter<string>}
+        as={tag || undefined}
+        component={component}
+      />
+    </BaseText>
+  );
+};
 
 export default withFlattenParameters(Text);

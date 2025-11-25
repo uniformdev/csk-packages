@@ -1,6 +1,5 @@
 import { cn } from '@/utils/styling';
-import { ContentAlignment } from '.';
-import { BannerVariants, ContentClassesProps, PositionClassesProps } from './types';
+import { BannerVariants, ContentClassesProps, PositionClassesProps, ContentAlignment } from '.';
 
 export const getPositionClasses = ({ variant, floating }: PositionClassesProps) =>
   cn({

@@ -61,6 +61,7 @@ export const EXTRACT_UI_COMPONENTS = [
   'Accordion',
   'AccordionItem',
   'Button',
+  'Banner',
   'Container',
   'ComponentEmptyPlaceholder',
   'FlexItem',
