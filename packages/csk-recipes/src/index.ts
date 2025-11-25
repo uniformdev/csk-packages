@@ -5,7 +5,7 @@ program
   .command('init')
   .option('-d, --dev', 'development mode')
   .option('-t, --template <template>', 'template name ("baseline", "coffee-shop", "radiant")')
-  .option('-r, --recipes <recipes...>', 'recipes to include ("localization", "ga", "uniform-insights", "shadcn")')
+  .option('-r, --recipes <recipes...>', 'recipes to include ("localization", "ga", "uniform-insights")')
   .option('-v, --verbose', 'verbose mode')
   .description('Initialize the project')
   .action(initCommand);

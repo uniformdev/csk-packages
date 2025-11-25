@@ -71,13 +71,11 @@ export const proceedCodeChange = async (filePath: string, recipes: Recipe[], isM
   const isLocalizationEnabled = recipes.includes('localization');
   const isGAEnabled = recipes.includes('ga');
   const isUniformInsightsEnabled = recipes.includes('uniform-insights');
-  const isShadcnEnabled = recipes.includes('shadcn');
   const isAiAssistantEnabled = recipes.includes('ai-assistant');
   const transformedCode = new MetaScript(metaProgram).transform({
     localization: isLocalizationEnabled,
     ga: isGAEnabled,
     uniformInsights: isUniformInsightsEnabled,
-    shadcn: isShadcnEnabled,
     aiAssistant: isAiAssistantEnabled,
     monorepo: isMonorepo,
   });

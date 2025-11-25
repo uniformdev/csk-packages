@@ -170,7 +170,6 @@ export const selectRecipes = async (template?: Template): Promise<Recipe[]> => {
     { name: 'Multi-market Localization', value: 'localization' },
     { name: 'Google Analytics', value: 'ga' },
     { name: 'Uniform Insights', value: 'uniform-insights' },
-    { name: 'Shadcn', value: 'shadcn' },
     ...templateRecipes,
   ];
 
@@ -224,6 +223,11 @@ export const fillEnvVariables = async (
   }
 
   for (const envVariable of requiredEnvVariables) {
+    if (envVariable === 'NEXT_PUBLIC_UNIFORM_PROJECT_ID') {
+      envVariables[envVariable] = '$UNIFORM_PROJECT_ID';
+      continue;
+    }
+
     const possibleVariants = ENV_VARIABLES_VARIANTS[envVariable];
 
     if (possibleVariants?.length) {
@@ -272,6 +276,10 @@ export const fillEnvVariablesWithDefaults = async (
   const envVariables: Partial<Record<EnvVariable, string>> = defaultEnvVariables;
 
   for (const envVariable of requiredEnvVariables) {
+    if (envVariable === 'NEXT_PUBLIC_UNIFORM_PROJECT_ID') {
+      envVariables[envVariable] = '$UNIFORM_PROJECT_ID';
+      continue;
+    }
     envVariables[envVariable] = defaultEnvVariables[envVariable] || ENV_VARIABLES_DEFAULT_VALUES[envVariable] || '';
   }
 
