@@ -2,6 +2,7 @@ export { ArrowIcon, ImageIcon, VideoIcon } from './_icons';
 export { default as Button, type ButtonProps, ButtonVariant } from './Button';
 export { default as Carousel, type CarouselProps } from './Carousel';
 export { default as Container, type ContainerProps } from './Container';
+export { default as Banner, type BannerProps, ContentAlignment } from './Banner';
 export { default as Flex, type FlexProps } from './Flex';
 export { default as FlexItem, type FlexItemProps } from './FlexItem';
 export { default as Footer, type FooterProps } from './Footer';

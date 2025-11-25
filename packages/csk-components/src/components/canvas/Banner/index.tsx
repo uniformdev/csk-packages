@@ -1,11 +1,9 @@
-import dynamic from 'next/dynamic';
 import { ContainerParameters } from '@/components/canvas/Container/parameters';
+import { ContentAlignment } from '@/components/ui/Banner';
 import { ComponentProps } from '@/types/cskTypes';
 
-export enum ContentAlignment {
-  Left = 'left',
-  Center = 'center',
-  Right = 'right',
+export enum BannerSlots {
+  BannerContent = 'bannerContent',
 }
 
 export type BannerParameters = ContainerParameters & {
@@ -13,11 +11,9 @@ export type BannerParameters = ContainerParameters & {
   contentAlignment?: ContentAlignment;
   floating?: boolean;
 };
-export enum BannerSlots {
-  BannerContent = 'bannerContent',
-}
 
 export type BannerProps = ComponentProps<BannerParameters, BannerSlots>;
 
-export default dynamic(() => import('./banner').then(mod => mod.default));
-export { BannerEmptyPlaceholder } from './empty-placeholder';
+export { ContentAlignment };
+
+export { default } from './banner';
