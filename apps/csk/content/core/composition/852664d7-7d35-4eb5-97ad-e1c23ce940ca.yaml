@@ -4,71 +4,6 @@ composition:
   _slug: /
   type: page
   _overrides:
-    5e8bdc5f-838d-4915-99b5-fc0f2a2dfa16:
-      parameters:
-        image:
-          type: asset
-          value:
-            - _id: d736fe7f-0d3e-4d4b-a854-f070c88c674d
-              type: image
-              fields:
-                id:
-                  type: text
-                  value: 486077aa-19ad-4bc8-9310-eccf34b48aa4
-                url:
-                  value: >-
-                    https://img.uniform.global/p/gaaGBo44T8KlqJ3IGMZtAQ/Ze4bptBxSsypS_AB5rQ7ng-rectangle_light.png
-                  type: text
-                file:
-                  type: file
-                  value: 4fbbd08c-6f27-48ab-9d9a-4bbc665c96c8
-                size:
-                  value: 1350631
-                  type: number
-                title:
-                  type: text
-                  value: rectangle_light.png
-                width:
-                  value: 1536
-                  type: number
-                height:
-                  value: 1024
-                  type: number
-                mediaType:
-                  value: image/png
-                  type: text
-              _source: uniform-assets
-        titleText:
-          type: text
-          locales:
-            en: Component Starter Kit
-        displayName:
-          type: text
-          locales:
-            en: Hero
-        descriptionText:
-          type: text
-          locales:
-            en: >-
-              A rich set of components to supercharge building fast, modern,
-              personalized experiences with Uniform DXP.
-        overlayAutoTint:
-          type: dex-slider-control-parameter
-          value: '0'
-        eyebrowTitleText:
-          type: text
-          locales:
-            en: Get your next project started on the right foot
-        primaryButtonLink:
-          type: link
-          locales:
-            en:
-              path: https://unfrm.to/csk-docs
-              type: url
-        primaryButtonText:
-          type: text
-          locales:
-            en: Docs
     852664d7-7d35-4eb5-97ad-e1c23ce940ca:
       parameters:
         pageTitle:
@@ -163,7 +98,82 @@ composition:
         $slotSectionItems:
           - _id: 5e8bdc5f-838d-4915-99b5-fc0f2a2dfa16
             type: fixedHero
-            _pattern: db25526c-e9e6-45f1-acb6-230bf6c0efb4
+            parameters:
+              image:
+                type: asset
+                value:
+                  - _id: d736fe7f-0d3e-4d4b-a854-f070c88c674d
+                    type: image
+                    fields:
+                      id:
+                        type: text
+                        value: 486077aa-19ad-4bc8-9310-eccf34b48aa4
+                      url:
+                        value: >-
+                          https://img.uniform.global/p/gaaGBo44T8KlqJ3IGMZtAQ/Ze4bptBxSsypS_AB5rQ7ng-rectangle_light.png
+                        type: text
+                      file:
+                        type: file
+                        value: 4fbbd08c-6f27-48ab-9d9a-4bbc665c96c8
+                      size:
+                        value: 1350631
+                        type: number
+                      title:
+                        type: text
+                        value: rectangle_light.png
+                      width:
+                        value: 1536
+                        type: number
+                      height:
+                        value: 1024
+                        type: number
+                      mediaType:
+                        value: image/png
+                        type: text
+                    _source: uniform-assets
+              titleTag:
+                type: dex-segmented-control-parameter
+                value: h2
+              textColor:
+                type: dex-color-palette-parameter
+                value: text-primary
+              titleText:
+                type: text
+                locales:
+                  en: Component Starter Kit
+              displayName:
+                type: text
+                locales:
+                  en: Hero
+              descriptionText:
+                type: text
+                locales:
+                  en: >-
+                    A rich set of components to supercharge building fast,
+                    modern, personalized experiences with Uniform DXP.
+              overlayAutoTint:
+                type: dex-slider-control-parameter
+                value: '0'
+              contentAlignment:
+                type: dex-segmented-control-parameter
+                value: center
+              eyebrowTitleText:
+                type: text
+                locales:
+                  en: Get your next project started on the right foot
+              primaryButtonLink:
+                type: link
+                locales:
+                  en:
+                    path: https://unfrm.to/csk-docs
+                    type: url
+              primaryButtonText:
+                type: text
+                locales:
+                  en: Docs
+              primaryButtonTextColor:
+                type: dex-color-palette-parameter
+                value: text-secondary
             _overridability:
               parameters:
                 $viz: 'yes'
@@ -185,5 +195,5 @@ composition:
     - en
   _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
 created: '2025-10-10T11:40:51.160398+00:00'
-modified: '2025-10-14T07:24:36.019007+00:00'
+modified: '2025-11-26T12:13:08.575804+00:00'
 pattern: false
