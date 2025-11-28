@@ -1,6 +1,6 @@
 import { execSync } from 'node:child_process';
 import { select } from '@inquirer/prompts';
-import { capitalizeFirstLetter, cleanupProductionFiles, getAvailableCSKVariants } from '../init/utils';
+import { capitalizeFirstLetter, cleanupProductionFiles, getAvailableCSKVariants } from '../../utils';
 
 const pullUniformContent = (config?: string): void => {
   const cwd = process.cwd();

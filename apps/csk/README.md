@@ -47,7 +47,7 @@ Run `npx @uniformdev/cli new` and pick `Next.js` -> `Component Starter Kit` from
    > Make sure your API key has "Developer" role to be able to push content.
 1. `npm install` to install dependencies
 1. Run `npm run init` to initialize your project.
-   > This will push all content from disk (`.\content` folder) and your design settings (colors, fonts, borders, etc. for this default theme).
+   > This command uses `@uniformdev/csk-cli` to push all content from disk (`./content` folder), design settings (colors, fonts, borders, etc.), and publish the context manifest. If CSK variants are available, you'll be prompted to select which one to initialize.
 
 ### Step 2. Run locally in dev mode
 
@@ -66,7 +66,16 @@ This integration brings new parameter types for design and layout control via Un
 
 The following scripts are created to facilitate sync of content between the `./content` folder and your project.
 
-1. Run `npm run push:content` to push data from disk (see `./content`) to your Uniformproject.
+### Complete Project Sync
+
+1. Run `npm run init` to initialize/push everything (content, design extensions, and context manifest) to your Uniform project.
+2. Run `npm run uniform:pull` to pull everything (content and design extensions) from your Uniform project to disk.
+
+These commands use `@uniformdev/csk-cli` and handle the complete synchronization workflow. If CSK variants are available, you'll be prompted to select which one to sync.
+
+### Granular Content Sync
+
+1. Run `npm run push:content` to push data from disk (see `./content`) to your Uniform project.
 1. Run `npm run pull:content` to pull data from your Uniform project to `./content` folder.
 
 Alternatively you can use `npm run pull:content:dev` and `npm run push:content:dev` to pull and push developer-owned content to your local project. The scope of the developer-owned content is defined in the `uniform.config.dev.ts` file.

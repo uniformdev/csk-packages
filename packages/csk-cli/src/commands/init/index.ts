@@ -1,8 +1,17 @@
+import { execSync } from 'node:child_process';
 import { select } from '@inquirer/prompts';
-import { capitalizeFirstLetter, cleanupProductionFiles, getAvailableCSKVariants, pushUniformContent } from './utils';
+import { capitalizeFirstLetter, cleanupProductionFiles, getAvailableCSKVariants } from '../../utils';
 
 type InitArgs = {
   dev?: boolean;
+};
+
+const pushUniformContent = (config?: string): void => {
+  const cwd = process.cwd();
+  execSync('design-extensions-tools push', { stdio: 'inherit', cwd });
+  const syncCommand = config ? `uniform sync push --config ./uniform.config.${config}.ts` : 'uniform sync push';
+  execSync(syncCommand, { stdio: 'inherit', cwd });
+  execSync('uniform context manifest publish', { stdio: 'inherit', cwd });
 };
 
 export const initUniformProject = async (args: InitArgs) => {
