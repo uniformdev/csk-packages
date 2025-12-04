@@ -20,7 +20,7 @@ export default function RootLayout({
           {children}
         </NextThemeProvider>
         <Suspense>
-          <UniformContext />
+          <UniformContext result={undefined} />
         </Suspense>
       </body>
     </html>

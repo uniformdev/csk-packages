@@ -12,13 +12,9 @@ import { DesignExtensionsProvider } from '@uniformdev/design-extensions-tools/co
 import { componentResolver } from '@/components';
 import getAllStaticGeneratedPages from '@/utils/getAllStaticGeneratedPages';
 
-const AVOID_PATHS = ['/templates'];
-
 export const generateStaticParams = async () => {
   const paths = await getAllStaticGeneratedPages();
-  return createUniformStaticParams({
-    paths: paths.filter(path => !AVOID_PATHS.includes(path)),
-  });
+  return createUniformStaticParams({ paths });
 };
 
 export default async function UniformPage(props: UniformPageParameters) {
