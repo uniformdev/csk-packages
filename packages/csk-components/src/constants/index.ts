@@ -108,6 +108,7 @@ export enum cskComponentsNames {
   Carousel = 'carousel',
   Container = 'container',
   Countdown = 'countdown',
+  CookieConsent = 'cookieConsent',
   Divider = 'divider',
   Grid = 'grid',
   GridItem = 'gridItem',

@@ -9,6 +9,7 @@ import Button from './Button';
 import Card from './Card';
 import Carousel from './Carousel';
 import Container from './Container';
+import CookieConsent from './CookieConsent';
 import Countdown from './Countdown';
 import DemoHero from './DemoHero';
 import Divider from './Divider';
@@ -55,6 +56,7 @@ export const cskComponentsMapping: ComponentMapping = {
   [cskComponentsNames.Carousel]: Carousel,
   [cskComponentsNames.Container]: Container,
   [cskComponentsNames.Countdown]: Countdown,
+  [cskComponentsNames.CookieConsent]: CookieConsent,
   [cskComponentsNames.Divider]: Divider,
   [cskComponentsNames.Grid]: Grid,
   [cskComponentsNames.GridItem]: GridItem,
