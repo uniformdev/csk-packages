@@ -144,7 +144,10 @@ export const BaseHeroImage: FC<
       unoptimized={unoptimized}
       priority={priority}
       sizes="100%"
-      style={{ objectFit }}
+      style={{
+        objectFit,
+        objectPosition: focalPoint && !width && !height ? `${focalPoint.x * 100}% ${focalPoint.y * 100}%` : undefined,
+      }}
       overlayColor={overlayColor}
       contrastBaseColor={contrastBaseColor}
       overlayOpacity={overlayOpacity}
