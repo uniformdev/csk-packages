@@ -84,7 +84,7 @@ const CookieConsent: FC<CookieConsentProps & CookieConsentParameters> = ({
     >
       <div className="flex flex-col gap-x-6 md:flex-row p-5 xs:p-10 items-center justify-between w-full">
         <UniformSlot slot={slots.cookieConsentContent} />
-        <div className="flex justify-between gap-2 flex-col sm:gap-0 sm:flex-row md:flex-col lg:flex-row shrink-0 md:justify-start w-full md:w-auto md:space-x-0 md:space-y-2 lg:space-y-0 lg:space-x-3 mt-4 md:mt-0">
+        <div className="flex justify-between gap-2 flex-col sm:flex-row md:flex-col lg:flex-row shrink-0 md:justify-start w-full md:w-auto md:space-x-0 md:space-y-2 lg:space-y-0 lg:space-x-3 mt-4 md:mt-0">
           <BaseButton
             className="w-full cursor-pointer"
             size="button-medium"

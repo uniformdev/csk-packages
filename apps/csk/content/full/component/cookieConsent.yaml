@@ -113,14 +113,16 @@ useTeamPermissions: true
 slots:
   - id: cookieConsentContent
     name: Cookie Consent Content
-    allowedComponents: []
-    allowAllComponents: true
+    allowedComponents:
+      - richText
+      - text
+    allowAllComponents: false
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
 titleParameter: displayName
 canBeComposition: false
-created: '2025-12-03T14:42:40.816541+00:00'
-updated: '2025-12-03T20:37:43.04187+00:00'
+created: '2025-12-05T14:17:32.572562+00:00'
+updated: '2025-12-05T14:21:22.817867+00:00'
 variants:
   - id: top
     name: Top
