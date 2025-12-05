@@ -80,6 +80,7 @@ export const REQUIRED_ENV_VARIABLES: {
   'ai-assistant-localized': ['OPENAI_API_KEY', 'DATABASE_URL'],
   localization: [],
   ga: ['GOOGLE_ANALYTICS_ID'],
+  'cookie-consent': [],
 };
 
 export const ENV_VARIABLES_VARIANTS: Partial<{
@@ -106,22 +107,41 @@ export const REQUIRED_UNIFORM_ENV_VARIABLES: EnvVariable[] = [
 ];
 
 export const RECIPE_SPECIFIC_NOTES = {
-  'ai-assistant': [
-    `🔧 Please create a Data Source with the following settings:
+  'ai-assistant': {
+    Notes: [
+      `🔧 Please create a Data Source with the following settings:
     • Type:          HTTP Request
     • Base URL:      ${process.env.UNIFORM_CLI_BASE_URL || ENV_VARIABLES_DEFAULT_VALUES.UNIFORM_CLI_BASE_URL || 'https://uniform.app'}
     • Query Param:   'projectId' — set this to your Uniform project's ID
     • Header:        'X-Api-Key' — set this to your Uniform API key
     • Public ID:     'uniformApp'`,
-  ],
-  'ai-assistant-localized': [
-    `🔧 Please create a Data Source with the following settings:
+    ],
+    required: true,
+  },
+  'ai-assistant-localized': {
+    Notes: [
+      `🔧 Please create a Data Source with the following settings:
     • Type:          HTTP Request
     • Base URL:      ${process.env.UNIFORM_CLI_BASE_URL || ENV_VARIABLES_DEFAULT_VALUES.UNIFORM_CLI_BASE_URL || 'https://uniform.app'}
     • Query Param:   'projectId' — set this to your Uniform project's ID
     • Header:        'X-Api-Key' — set this to your Uniform API key
     • Public ID:     'uniformApp'`,
-  ],
+    ],
+    required: true,
+  },
+  'cookie-consent': {
+    Notes: [
+      `🔧 To complete the cookie consent setup, you need to add the cookie consent banner to your website.:
+    ${
+      process.env.UNIFORM_PROJECT_ID
+        ? `• Visit Global Page Template using this link: https://uniform.app/projects/${process.env.UNIFORM_PROJECT_ID}/dashboards/canvas/edit/f9c058ea-c40d-4435-ac5a-53423cf654dc 
+        add the Cookie Consent pattern to the page footer section`
+        : '• Visit Global Page Template of your project add the Cookie Consent pattern to the page footer section.'
+    }
+    The banner is automatically presented in the vercel deployment for users located in GDPR-compliant regions`,
+    ],
+    required: false,
+  },
 };
 
 export const TEMPLATE_SPECIFIC_NOTES = {
@@ -179,6 +199,7 @@ const DataSource = {
 export const REQUIRED_DATA_SOURCES = {
   'ai-assistant': [DataSource.UniformApp],
   'ai-assistant-localized': [DataSource.UniformApp],
+  'cookie-consent': [],
 };
 
 export const TEMPLATE_SPECIFIC_DATA_SOURCES = {

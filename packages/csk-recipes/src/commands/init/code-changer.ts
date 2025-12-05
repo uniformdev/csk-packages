@@ -72,12 +72,14 @@ export const proceedCodeChange = async (filePath: string, recipes: Recipe[], isM
   const isGAEnabled = recipes.includes('ga');
   const isUniformInsightsEnabled = recipes.includes('uniform-insights');
   const isAiAssistantEnabled = recipes.includes('ai-assistant');
+  const isCookieConsentEnabled = recipes.includes('cookie-consent');
   const transformedCode = new MetaScript(metaProgram).transform({
     localization: isLocalizationEnabled,
     ga: isGAEnabled,
     uniformInsights: isUniformInsightsEnabled,
     aiAssistant: isAiAssistantEnabled,
     monorepo: isMonorepo,
+    cookieConsent: isCookieConsentEnabled,
   });
 
   const fileExtension = path.extname(filePath);

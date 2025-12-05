@@ -157,27 +157,28 @@ const init = async ({
         isPushedToUniform = true;
       }
     }
-
     const hasMissingEnv = missingEnvKeys.length > 0;
-    if (!hasMissingEnv && (!isNeedToPushCanvasData || isPushedToUniform)) {
-      const startPrompt = 'Would you like to start dev server now?';
-      const buildAndStart = await confirm({ message: startPrompt });
 
-      if (buildAndStart) {
-        runStartDevInteractive();
-        return;
-      }
-    }
-
-    const recipesNotes = recipes
-      .flatMap(recipe => RECIPE_SPECIFIC_NOTES[recipe as keyof typeof RECIPE_SPECIFIC_NOTES] || [])
-      .filter(Boolean);
+    const { importantRecipesNotes, nonImportantRecipesNotes } = recipes.reduce<{
+      importantRecipesNotes: string[];
+      nonImportantRecipesNotes: string[];
+    }>(
+      (acc, recipe) => {
+        const noteObj = RECIPE_SPECIFIC_NOTES[recipe as keyof typeof RECIPE_SPECIFIC_NOTES];
+        if (!noteObj || !noteObj.Notes) return acc;
+        if (noteObj.required) {
+          acc.importantRecipesNotes.push(...noteObj.Notes);
+        } else {
+          acc.nonImportantRecipesNotes.push(...noteObj.Notes);
+        }
+        return acc;
+      },
+      { importantRecipesNotes: [], nonImportantRecipesNotes: [] }
+    );
 
     const templatesNotes = TEMPLATE_SPECIFIC_NOTES[template as keyof typeof TEMPLATE_SPECIFIC_NOTES] || [];
-
-    const notes = [...recipesNotes, ...templatesNotes];
-
-    const shouldShowNotes = notes.length > 0 && !isPushedToUniform;
+    const importantNotes = [...importantRecipesNotes, ...templatesNotes];
+    const shouldShowNotes = importantNotes.length > 0 && !isPushedToUniform;
 
     if (hasMissingEnv || shouldShowNotes) {
       spinner.warn('⚠️  IMPORTANT NOTES BEFORE STARTING THE APPLICATION ⚠️');
@@ -189,7 +190,21 @@ const init = async ({
       }
 
       if (shouldShowNotes) {
-        console.info(`⚠️  Additional Setup Required:\n${notes.join('\n')}\n`);
+        console.info(`⚠️  Additional Setup Required:\n${importantNotes.join('\n')}\n`);
+      }
+    }
+
+    if (nonImportantRecipesNotes.length > 0) {
+      console.info(`\n⚠️  Additional Setup Required:\n${nonImportantRecipesNotes.join('\n')}\n`);
+    }
+
+    if (!hasMissingEnv && (!isNeedToPushCanvasData || isPushedToUniform)) {
+      const startPrompt = 'Would you like to start dev server now?';
+      const buildAndStart = await confirm({ message: startPrompt });
+
+      if (buildAndStart) {
+        runStartDevInteractive();
+        return;
       }
     }
 
