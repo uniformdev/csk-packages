@@ -2,7 +2,10 @@
 
 @source '../components/**/*.{js,ts,jsx,tsx,mdx}';
 @source '../app/**/*.{js,ts,jsx,tsx,mdx}';
+/*? if (monorepo) { */
 @source '../../../../packages/csk-components/**/*.{js,ts,jsx,tsx,mdx}';
+/*? } */
+@source '../../node_modules/@uniformdev/csk-components/dist/content/**/*.{js,ts,jsx,tsx,mdx}';
 
 @import './tailwindcss.colors.css';
 @import './tailwindcss.dimension.css';
