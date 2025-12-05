@@ -170,6 +170,7 @@ export const selectRecipes = async (template?: Template): Promise<Recipe[]> => {
     { name: 'Multi-market Localization', value: 'localization' },
     { name: 'Google Analytics', value: 'ga' },
     { name: 'Uniform Insights', value: 'uniform-insights' },
+    { name: 'Cookie Consent', value: 'cookie-consent' },
     ...templateRecipes,
   ];
 
