@@ -57,8 +57,6 @@ export const EXCLUDE_TEMPLATE_SPECIFIC_RECIPES: Partial<{
 
 export const GIT_COMMANDS = {
   CHECK_IF_GIT: 'git status >/dev/null 2>&1',
-  DIFF_QUIET: `[[ $(git rev-parse --abbrev-ref HEAD) == "${GIT_BRANCHES.GOLD}" ]] && [ -z "$(git status --porcelain)" ] && git diff --quiet origin/${GIT_BRANCHES.GOLD} && echo true || exit 1`,
-  RESET_HARD: `git reset --hard origin/${GIT_BRANCHES.GOLD} && git clean -fd`,
   ALIGN_WITH_EXTERNAL_BRANCH: (branchName: string) =>
     `git clone https://github.com/uniformdev/csk-packages.git --branch ${branchName}`,
   GET_CHANGED_FILES: 'git ls-files --modified --others --exclude-standard',
@@ -131,14 +129,13 @@ export const RECIPE_SPECIFIC_NOTES = {
   },
   'cookie-consent': {
     Notes: [
-      `🔧 To complete the cookie consent setup, you need to add the cookie consent banner to your website.:
-    ${
-      process.env.UNIFORM_PROJECT_ID
-        ? `• Visit Global Page Template using this link: https://uniform.app/projects/${process.env.UNIFORM_PROJECT_ID}/dashboards/canvas/edit/f9c058ea-c40d-4435-ac5a-53423cf654dc 
-        add the Cookie Consent pattern to the page footer section`
-        : '• Visit Global Page Template of your project add the Cookie Consent pattern to the page footer section.'
-    }
-    The banner is automatically presented in the vercel deployment for users located in GDPR-compliant regions`,
+      `🔧 To complete the cookie consent setup, you need to add the cookie consent banner to your website:
+      ${
+        process.env.UNIFORM_PROJECT_ID
+          ? `• Visit Global Page Template using this link: https://uniform.app/projects/${process.env.UNIFORM_PROJECT_ID}/dashboards/canvas/edit/f9c058ea-c40d-4435-ac5a-53423cf654dc and add the Cookie Consent pattern to the page footer section.`
+          : '• Visit Global Page Template of your project and add the Cookie Consent pattern to the page footer section.'
+      }`,
+      `The banner is automatically presented in the vercel deployment for users located in GDPR-compliant regions`,
     ],
     required: false,
   },
