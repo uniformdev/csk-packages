@@ -5,8 +5,11 @@
 
 import fsSync from 'fs';
 import fs from 'fs/promises';
+import { mkdir } from 'node:fs/promises';
+import https from 'node:https';
 import * as ora from 'ora';
 import path from 'path';
+import { Extract } from 'unzipper';
 import { select, checkbox, confirm, input } from '@inquirer/prompts';
 import { EnvVariable, Recipe, Template } from './types';
 import {
@@ -24,8 +27,92 @@ import {
   REQUIRED_UNIFORM_ENV_VARIABLES,
   PACKAGE_VERSION,
   EXCLUDE_TEMPLATE_SPECIFIC_RECIPES,
+  REPO,
+  ORGANIZATION,
 } from '../../constants';
-import { runCmdCommand, spawnCmdCommand } from '../../utils';
+import { runCmdCommand } from '../../utils';
+
+/**
+ * Downloads a GitHub branch as ZIP and extracts it into destDir.
+ * Works on Windows, Linux and macOS the same way.
+ * No .git folder is created – only sources.
+ */
+export async function downloadAndExtractGithubBranch({
+  owner,
+  repo,
+  branch,
+  destDir,
+}: {
+  owner: string;
+  repo: string;
+  branch: string;
+  destDir: string;
+}): Promise<void> {
+  const url = `https://github.com/${owner}/${repo}/archive/refs/heads/${branch}.zip`;
+
+  await mkdir(destDir, { recursive: true });
+
+  await new Promise<void>((resolve, reject) => {
+    https
+      .get(url, res => {
+        if (res.statusCode && res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+          https
+            .get(res.headers.location, redirectRes => {
+              if (redirectRes.statusCode !== 200) {
+                reject(new Error(`Failed to download ZIP after redirect: HTTP ${redirectRes.statusCode}`));
+                return;
+              }
+              redirectRes
+                .pipe(Extract({ path: destDir }))
+                .on('close', () => resolve())
+                .on('error', reject);
+            })
+            .on('error', reject);
+          return;
+        }
+
+        if (res.statusCode !== 200) {
+          reject(new Error(`Failed to download ZIP: HTTP ${res.statusCode}`));
+          return;
+        }
+        res
+          .pipe(Extract({ path: destDir }))
+          .on('close', () => resolve())
+          .on('error', reject);
+      })
+      .on('error', reject);
+  });
+
+  const entries = fsSync.readdirSync(destDir, { withFileTypes: true });
+  const extractedRootDir = entries.find(entry => entry.isDirectory() && entry.name.startsWith(`${repo}-`));
+
+  if (!extractedRootDir) {
+    return;
+  }
+
+  const extractedRootPath = path.join(destDir, extractedRootDir.name);
+
+  const moveRecursive = (src: string, dst: string) => {
+    const items = fsSync.readdirSync(src, { withFileTypes: true });
+
+    for (const item of items) {
+      const srcPath = path.join(src, item.name);
+      const dstPath = path.join(dst, item.name);
+
+      if (item.isDirectory()) {
+        if (!fsSync.existsSync(dstPath)) {
+          fsSync.mkdirSync(dstPath, { recursive: true });
+        }
+        moveRecursive(srcPath, dstPath);
+      } else {
+        fsSync.copyFileSync(srcPath, dstPath);
+      }
+    }
+  };
+
+  moveRecursive(extractedRootPath, destDir);
+  fsSync.rmSync(extractedRootPath, { recursive: true, force: true });
+}
 
 export const verifyGitProject = async (
   spinner: ora.Ora
@@ -349,12 +436,17 @@ export const alignWithExternalBranch = async (branchName: string): Promise<void>
     fsSync.rmSync(pathToClonedRepo, { recursive: true, force: true });
   }
 
-  await spawnCmdCommand(GIT_COMMANDS.ALIGN_WITH_EXTERNAL_BRANCH(branchName));
+  await downloadAndExtractGithubBranch({
+    owner: ORGANIZATION,
+    repo: REPO,
+    branch: branchName,
+    destDir: pathToClonedRepo,
+  });
 
   const appPath = fsSync.existsSync(newPath) ? newPath : oldPath;
 
   // Remove files that are not needed before copying the new app
-  ['content', 'node_modules', '.next'].forEach(file => {
+  ['content', '.next'].forEach(file => {
     const filePath = path.join(process.cwd(), file);
     if (fsSync.existsSync(filePath)) {
       fsSync.rmSync(filePath, { recursive: true, force: true });

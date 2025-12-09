@@ -55,10 +55,11 @@ export const EXCLUDE_TEMPLATE_SPECIFIC_RECIPES: Partial<{
   'coffee-shop-localized': ['localization'],
 };
 
+export const ORGANIZATION = 'uniformdev';
+export const REPO = 'csk-packages';
+
 export const GIT_COMMANDS = {
   CHECK_IF_GIT: 'git status >/dev/null 2>&1',
-  ALIGN_WITH_EXTERNAL_BRANCH: (branchName: string) =>
-    `git clone https://github.com/uniformdev/csk-packages.git --branch ${branchName}`,
   GET_CHANGED_FILES: 'git ls-files --modified --others --exclude-standard',
 };
 
