@@ -11,7 +11,6 @@ import {
 import { Recipe, ProjectConfiguration, Template } from './types';
 import {
   selectTemplate,
-  verifyProjectAlignment,
   selectRecipes,
   getChangedFilesPath,
   fillEnvVariables,
@@ -86,8 +85,15 @@ const init = async ({
     if (!hasGit && !wantsContinue) return;
 
     if (hasGit && !dev) {
-      const misaligned = await verifyProjectAlignment(spinner);
-      if (misaligned) return;
+      spinner.warn(
+        'Before continuing, please note that any uncommitted local changes may be overwritten.\nThe project will be updated according to the selected recipe and template.\nTo avoid losing work, it’s recommended to commit your changes first.'
+      );
+      const shouldContinue = await confirm({
+        message: 'Do you want to continue?',
+      });
+      if (!shouldContinue) {
+        return;
+      }
     }
 
     const isMonorepo = checkIsMonorepo();

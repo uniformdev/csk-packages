@@ -27,42 +27,6 @@ import {
 } from '../../constants';
 import { runCmdCommand, spawnCmdCommand } from '../../utils';
 
-/**
- * Verifies if the project is aligned with the remote GOLD branch.
- * Checks for uncommitted changes and offers to update the branch if needed.
- *
- * @param {ora.Ora} spinner - The spinner instance for loading indication
- * @returns {Promise<boolean>} True if the project has changes and user chose not to update, false otherwise
- * @throws {Error} If git commands fail during verification
- */
-export const verifyProjectAlignment = async (spinner: ora.Ora): Promise<boolean> => {
-  spinner.start('Verifying your project setup and branch alignment...');
-  const hasChanges = await runCmdCommand(GIT_COMMANDS.DIFF_QUIET).then(
-    () => false,
-    () => true
-  );
-
-  if (hasChanges) {
-    spinner.fail(`Your project has uncommitted changes or is out of sync with the latest "${GIT_BRANCHES.GOLD}"`);
-    const wantsToUpdate = await confirm({
-      message: 'Do you want to update your branch with the latest changes from origin?',
-    });
-
-    if (!wantsToUpdate) {
-      spinner.fail('You are not ready to continue. Aborting...');
-      return true;
-    }
-
-    spinner.start('Updating your branch...');
-    await runCmdCommand(GIT_COMMANDS.RESET_HARD);
-    spinner.succeed('Your branch has been updated successfully!');
-  } else {
-    spinner.succeed('Your project is aligned with the remote branch.');
-  }
-
-  return false;
-};
-
 export const verifyGitProject = async (
   spinner: ora.Ora
 ): Promise<{
