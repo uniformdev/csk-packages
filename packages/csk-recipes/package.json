@@ -1,6 +1,6 @@
 {
   "name": "@uniformdev/csk-recipes",
-  "version": "6.1.52",
+  "version": "6.1.53",
   "description": "command-line interface (CLI) and utility functions to help you work with recipes in a CSK project. It simplifies project initialization by allowing you to choose templates and include specific recipes",
   "license": "SEE LICENSE IN LICENSE.txt",
   "engines": {
@@ -40,12 +40,14 @@
     "dotenv": "16.4.7",
     "open": "^10.1.2",
     "ora": "^8.2.0",
-    "prettier": "3.6.2"
+    "prettier": "3.6.2",
+    "unzipper": "^0.12.3"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
     "@types/jest": "^29.5.14",
+    "@types/unzipper": "^0.10.11",
     "@uniformdev/canvas": "20.7.1-alpha.97",
     "next": "^16.0.7",
     "react": "^19.2.1",
