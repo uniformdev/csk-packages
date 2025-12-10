@@ -26,6 +26,7 @@ const ImageGallery: FC<ImageGalleryProps & ReplaceFieldsWithAssets<ImageGalleryP
       : items.map((item, index) => ({
           _id: `image-${index}-${item?.id}`,
           component: <BaseImage src={item.url} alt={item.title || ''} style={{ objectFit: 'cover' }} fill />,
+          variantId: undefined,
           $pzCrit: undefined,
         })),
   };
