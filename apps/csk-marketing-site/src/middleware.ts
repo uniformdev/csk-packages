@@ -3,7 +3,7 @@ import { uniformMiddleware } from '@uniformdev/canvas-next-rsc-v2/middleware';
 import locales from '@/i18n/locales.json';
 import { formatPath } from './utils/formatPath';
 
-export async function proxy(request: NextRequest) {
+export async function middleware(request: NextRequest) {
   return uniformMiddleware({
     rewriteRequestPath: async ({ url }) => ({ path: formatPath(url.pathname, locales.defaultLocale) }),
   })(request).then(result =>
@@ -17,4 +17,5 @@ export async function proxy(request: NextRequest) {
 
 export const config = {
   matcher: ['/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)'],
+  runtime: 'experimental-edge',
 };
