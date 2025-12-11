@@ -1,11 +1,12 @@
 import { HTMLAttributes } from 'react';
 import { AssetParamValueItem } from '@uniformdev/canvas';
 import { ComponentParameter } from '@uniformdev/canvas-next-rsc-shared-v2';
+import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
 
-export type ResolveEmptyPlaceholderOptions = {
-  slotName: string;
-  slotIndex: number;
-};
+type ResolveEmptyPlaceholderFunction = NonNullable<
+  React.ComponentProps<typeof UniformComposition>['resolveEmptyPlaceholder']
+>;
+export type ResolveEmptyPlaceholderOptions = Parameters<ResolveEmptyPlaceholderFunction>[0];
 
 export type ViewPort<T> = {
   desktop?: T;
