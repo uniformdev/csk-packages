@@ -21,6 +21,7 @@ export const EXTRACT_CANVAS_COMPONENTS = [
   'Carousel',
   'Container',
   'Countdown',
+  'CookieConsent',
   'DemoHero',
   'Divider',
   'Flex',
@@ -94,6 +95,7 @@ export const EXTRACT_UTILS = [
   'createEmptyPlaceholderResolver.tsx',
   'routing.ts',
   'styling.ts',
+  'useCookiesConsent.ts',
 ];
 
 export const EXTRACT_TYPES = ['cskTypes.ts'];
