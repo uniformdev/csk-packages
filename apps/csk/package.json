@@ -19,7 +19,7 @@
     "typecheck": "tsc --noEmit",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
-    "init": "csk-cli init --dev",
+    "init": "run-s uniform:push uniform:publish",
     "component:extract": "csk-components extract",
     "component:scaffold": "csk-cli scaffold",
     "pull:dex": "design-extensions-tools pull",
@@ -30,7 +30,7 @@
     "push:content": "uniform sync push",
     "pull:content:dev": "uniform sync pull --config ./uniform.config.dev.ts",
     "push:content:dev": "uniform sync push --config ./uniform.config.dev.ts",
-    "uniform:pull": "csk-cli pull -u --dev",
+    "uniform:pull": "run-s pull:dex apply:dex pull:content",
     "uniform:push": "run-s push:dex push:content",
     "uniform:publish": "uniform context manifest publish",
     "recipes": "csk-recipes init"
