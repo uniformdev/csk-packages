@@ -1,0 +1,574 @@
+composition:
+  _name: ℹ️ Context Recommendations
+  _id: 5aa09de0-3fac-4ff5-bbbc-52ca41cb4880
+  _slug: contex-recommendations
+  type: aiConfiguration
+  slots:
+    content:
+      - _id: 1c4f78da-5c3d-4a35-abab-8b0a72ea8bb3
+        type: flexibleHero
+        slots:
+          flexibleHeroContent:
+            - _id: 86865ae7-01a5-4645-a35d-86a0023ab08b
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: h2
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: xl
+                    tablet: xl
+                    desktop: xl
+                text:
+                  type: text
+                  locales:
+                    da-dk: 👀 Se hvad vi har fundet til dig
+                    de-at: 👀 Schau, was wir für dich gefunden haben
+                    de-ch: 👀 Schau, was wir für dich gefunden haben
+                    de-de: 👀 Schau, was wir für dich gefunden haben
+                    en-au: 👀 Look what we found for you
+                    en-ca: 👀 Look what we found for you
+                    en-gb: 👀 Look what we found for you
+                    en-nl: 👀 Look what we found for you
+                    en-nz: 👀 Look what we found for you
+                    en-us: 👀 Look what we found for you
+                    fr-ca: 👀 Regarde ce que nous avons trouvé pour toi
+                    fr-ch: 👀 Regarde ce que nous avons trouvé pour toi
+                    fr-fr: 👀 Regarde ce que nous avons trouvé pour toi
+                    ja-jp: 👀 見つけたものをチェックしてね
+                    nl-nl: 👀 Kijk wat we voor je hebben gevonden
+                    sv-se: 👀 Kolla vad vi hittade åt dig
+                    ar-uae: 👀 انظر ماذا وجدنا لك
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: medium
+            - _id: cf208c2e-9c6f-4236-9170-46d88f96b41f
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: p
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    mobile: base
+                    tablet: base
+                    desktop: base
+                text:
+                  type: text
+                  locales:
+                    da-dk: >-
+                      Et par nyttige ting relateret til dit spørgsmål — kan være
+                      nyttigt!
+                    de-at: >-
+                      Ein paar nützliche Dinge zu deiner Frage — könnten
+                      hilfreich sein!
+                    de-ch: >-
+                      Ein paar nützliche Dinge zu deiner Frage — könnten
+                      hilfreich sein!
+                    de-de: >-
+                      Ein paar nützliche Dinge zu deiner Frage — könnten
+                      hilfreich sein!
+                    en-au: >-
+                      A few handy things related to your question — might come
+                      in useful!
+                    en-ca: >-
+                      A few handy things related to your question — might come
+                      in useful!
+                    en-gb: >-
+                      A few handy things related to your question — might come
+                      in useful!
+                    en-nl: >-
+                      A few handy things related to your question — might come
+                      in useful!
+                    en-nz: >-
+                      A few handy things related to your question — might come
+                      in useful!
+                    en-us: >-
+                      A few handy things related to your question — might come
+                      in useful!
+                    fr-ca: >-
+                      Quelques éléments utiles en lien avec votre question —
+                      cela pourrait être pratique!
+                    fr-ch: >-
+                      Quelques éléments utiles en lien avec votre question —
+                      cela pourrait être pratique!
+                    fr-fr: >-
+                      Quelques éléments utiles en lien avec votre question —
+                      cela pourrait être pratique!
+                    ja-jp: ご質問に関連する便利な情報をいくつかご紹介します — 役立つかもしれません！
+                    nl-nl: >-
+                      Een paar handige dingen met betrekking tot je vraag —
+                      kunnen van pas komen!
+                    sv-se: >-
+                      Några praktiska saker relaterade till din fråga — kan vara
+                      användbara!
+                    ar-uae: بعض الأشياء المفيدة المتعلقة بسؤالك — قد تكون مفيدة!
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+        parameters:
+          $viz:
+            type: $viz
+            value:
+              criteria:
+                clauses:
+                  - op: '!empty'
+                    rule: $dt
+                    value: ''
+                    source: ${#jptr:/Get Entries by Slugs Content/entries/0/entry/_id}
+          spacing:
+            type: dex-space-control-parameter
+            value:
+              mobile:
+                marginTop: container-small
+              tablet:
+                marginTop: container-small
+              desktop:
+                marginTop: container-small
+          displayName:
+            type: text
+            locales:
+              da-dk: Helt
+              de-at: Held
+              de-ch: Held
+              de-de: Held
+              en-au: Hero
+              en-ca: Hero
+              en-gb: Hero
+              en-nl: Hero
+              en-nz: Hero
+              en-us: Hero
+              fr-ca: Héros
+              fr-ch: Héros
+              fr-fr: Héros
+              ja-jp: ヒーロー
+              nl-nl: Held
+              sv-se: Hjälte
+              ar-uae: بطل
+          fluidContent:
+            type: checkbox
+            value: true
+          contentAlignment:
+            type: dex-segmented-control-parameter
+            value: left
+        _overridability:
+          hideLockedParameters: true
+      - _id: 42eb443e-d704-471e-8d84-e137cbe194fc
+        type: assistantScrollSection
+        slots:
+          content:
+            - _id: a869f34a-de26-4367-8dcb-a81d8fd9cb55
+              type: $loop
+              slots:
+                body:
+                  - _id: b62e09d6-5d79-42b4-89e2-7d72f87b61cf
+                    type: container
+                    slots:
+                      containerContent:
+                        - _id: 7045e9c2-c2d5-49bf-a9b3-859e583de688
+                          type: link
+                          slots:
+                            linkContent:
+                              - _id: a1977632-b1d2-4487-8aeb-1fc5c8f40f85
+                                type: image
+                                parameters:
+                                  image:
+                                    type: asset
+                                    value:
+                                      - _id: a87c1f69-80b0-4064-8720-08e464d511b2
+                                        type: image
+                                        fields:
+                                          url:
+                                            type: text
+                                            value: >-
+                                              ${#jptr:/Get Entries by Slugs Content
+                                              entries Loop Item/entry/_thumbnail}
+                                        _source: custom-url
+                                  width:
+                                    type: number
+                                    value: '300'
+                                  height:
+                                    type: number
+                                    value: '200'
+                                  objectFit:
+                                    type: dex-segmented-control-parameter
+                                    value: cover
+                              - _id: ffbabfc7-4d3f-4f2c-9b95-b55320a6ce88
+                                type: text
+                                parameters:
+                                  tag:
+                                    type: dex-segmented-control-parameter
+                                    value: h2
+                                  font:
+                                    type: dex-token-selector-parameter
+                                    value: primary
+                                  size:
+                                    type: dex-segmented-control-parameter
+                                    value:
+                                      mobile: xl
+                                      tablet: xl
+                                      desktop: xl
+                                  text:
+                                    type: text
+                                    locales:
+                                      da-dk: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      de-at: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      de-ch: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      de-de: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      en-au: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      en-ca: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      en-gb: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      en-nl: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      en-nz: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      en-us: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      fr-ca: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      fr-ch: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      fr-fr: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      ja-jp: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      nl-nl: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      sv-se: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      ar-uae: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                  color:
+                                    type: dex-color-palette-parameter
+                                    value: text-primary
+                                  weight:
+                                    type: dex-segmented-control-parameter
+                                    value: bold
+                                  transform:
+                                    type: dex-segmented-control-parameter
+                                    value: ''
+                                _overridability:
+                                  parameters:
+                                    tag: 'yes'
+                                    text: 'yes'
+                                  hideLockedParameters: true
+                          parameters:
+                            $viz:
+                              type: $viz
+                              value:
+                                criteria:
+                                  clauses:
+                                    - op: is
+                                      rule: $dt
+                                      value: product
+                                      source: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/type}
+                            link:
+                              type: link
+                              value:
+                                path: >-
+                                  /${locale}/products/${#jptr:/Get Entries by
+                                  Slugs Content entries Loop Item/entry/_slug}
+                                type: projectMapNode
+                                nodeId: 702b0e0b-3858-4b5d-99e4-bdb98097ca0f
+                                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                                dynamicInputValues:
+                                  locale: ${locale}
+                                  product-slug: >-
+                                    ${#jptr:/Get Entries by Slugs Content
+                                    entries Loop Item/entry/_slug}
+                            displayName:
+                              type: text
+                              locales:
+                                da-dk: Link til produkt
+                                de-at: Link zum Produkt
+                                de-ch: Link zum Produkt
+                                de-de: Link zum Produkt
+                                en-au: Link for product
+                                en-ca: Link for product
+                                en-gb: Link for product
+                                en-nl: Link for product
+                                en-nz: Link for product
+                                en-us: Link for product
+                                fr-ca: Lien vers le produit
+                                fr-ch: Lien vers le produit
+                                fr-fr: Lien vers le produit
+                                ja-jp: 商品へのリンク
+                                nl-nl: Link naar product
+                                sv-se: Länk till produkt
+                                ar-uae: رابط للمنتج
+                        - _id: 8b066cef-3d3f-4b30-b282-e8f0b407c234
+                          type: link
+                          slots:
+                            linkContent:
+                              - _id: 753d7a35-36d9-449c-9ab2-6f9db1ae4926
+                                type: image
+                                parameters:
+                                  image:
+                                    type: asset
+                                    value:
+                                      - _id: a87c1f69-80b0-4064-8720-08e464d511b2
+                                        type: image
+                                        fields:
+                                          url:
+                                            type: text
+                                            value: >-
+                                              ${#jptr:/Get Entries by Slugs Content
+                                              entries Loop Item/entry/_thumbnail}
+                                        _source: custom-url
+                                  width:
+                                    type: number
+                                    value: '300'
+                                  height:
+                                    type: number
+                                    value: '200'
+                                  objectFit:
+                                    type: dex-segmented-control-parameter
+                                    value: cover
+                              - _id: 544ba4dc-80de-4604-93ce-67ad05e024d9
+                                type: text
+                                parameters:
+                                  tag:
+                                    type: dex-segmented-control-parameter
+                                    value: h2
+                                  font:
+                                    type: dex-token-selector-parameter
+                                    value: primary
+                                  size:
+                                    type: dex-segmented-control-parameter
+                                    value:
+                                      mobile: xl
+                                      tablet: xl
+                                      desktop: xl
+                                  text:
+                                    type: text
+                                    locales:
+                                      da-dk: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      de-at: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      de-ch: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      de-de: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      en-au: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      en-ca: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      en-gb: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      en-nl: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      en-nz: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      en-us: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      fr-ca: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      fr-ch: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      fr-fr: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      ja-jp: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      nl-nl: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      sv-se: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                      ar-uae: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/_name}
+                                  color:
+                                    type: dex-color-palette-parameter
+                                    value: text-primary
+                                  weight:
+                                    type: dex-segmented-control-parameter
+                                    value: bold
+                                  transform:
+                                    type: dex-segmented-control-parameter
+                                    value: ''
+                                _overridability:
+                                  parameters:
+                                    tag: 'yes'
+                                    text: 'yes'
+                                  hideLockedParameters: true
+                          parameters:
+                            $viz:
+                              type: $viz
+                              value:
+                                criteria:
+                                  clauses:
+                                    - op: is
+                                      rule: $dt
+                                      value: article
+                                      source: >-
+                                        ${#jptr:/Get Entries by Slugs Content
+                                        entries Loop Item/entry/type}
+                            link:
+                              type: link
+                              value:
+                                path: >-
+                                  /${locale}/articles/${#jptr:/Get Entries by
+                                  Slugs Content entries Loop Item/entry/_slug}
+                                type: projectMapNode
+                                nodeId: 0b2a6284-3d74-4ef6-a3de-b2617058c861
+                                projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+                                dynamicInputValues:
+                                  locale: ${locale}
+                                  article-slug: >-
+                                    ${#jptr:/Get Entries by Slugs Content
+                                    entries Loop Item/entry/_slug}
+                            displayName:
+                              type: text
+                              locales:
+                                da-dk: Link til artikel
+                                de-at: Link zum Artikel
+                                de-ch: Link zum Artikel
+                                de-de: Link zum Artikel
+                                en-au: Link for article
+                                en-ca: Link for article
+                                en-gb: Link for article
+                                en-nl: Link for article
+                                en-nz: Link for article
+                                en-us: Link for article
+                                fr-ca: Lien vers l’article
+                                fr-ch: Lien vers l’article
+                                fr-fr: Lien vers l’article
+                                ja-jp: 記事へのリンク
+                                nl-nl: Link naar artikel
+                                sv-se: Länk till artikel
+                                ar-uae: رابط للمقال
+                    parameters:
+                      displayName:
+                        type: text
+                        locales:
+                          da-dk: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          de-at: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          de-ch: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          de-de: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          en-au: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          en-ca: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          en-gb: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          en-nl: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          en-nz: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          en-us: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          fr-ca: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          fr-ch: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          fr-fr: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          ja-jp: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          nl-nl: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          sv-se: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+                          ar-uae: >-
+                            ${#jptr:/Get Entries by Slugs Content entries Loop
+                            Item/entry/_name}
+              _dataResources:
+                Get Entries by Slugs Content entries Loop Item:
+                  type: sys-reserved-loop
+                  variables:
+                    connectedData: '#jptr:/Get Entries by Slugs Content/entries:fa=c'
+  _dataResources:
+    Get Entries by Slugs Content:
+      type: getEntriesBySlugs
+      variables:
+        Slugs: ${slugs}
+        Locale: ${locale}
+  _locales:
+    - en-us
+    - fr-ca
+    - en-ca
+    - en-gb
+    - de-de
+    - en-nz
+    - de-at
+    - nl-nl
+    - en-nl
+    - da-dk
+    - sv-se
+    - fr-fr
+    - en-au
+    - ja-jp
+    - ar-uae
+    - de-ch
+    - fr-ch
+created: '2025-07-10T10:18:00.030668+00:00'
+modified: '2025-08-06T13:10:53.84632+00:00'
+pattern: false
