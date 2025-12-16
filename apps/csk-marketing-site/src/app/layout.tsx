@@ -1,6 +1,5 @@
-import { ReactNode, Suspense } from 'react';
+import { ReactNode } from 'react';
 import { ThemeProvider as NextThemeProvider } from 'next-themes';
-import { UniformContext } from '@uniformdev/canvas-next-rsc-v2';
 import '@/styles/globals.css';
 import '@/styles/colors.css';
 import '@/styles/dimensions.css';
@@ -19,9 +18,6 @@ export default function RootLayout({
         <NextThemeProvider attribute="class" defaultTheme="light" enableSystem>
           {children}
         </NextThemeProvider>
-        <Suspense>
-          <UniformContext result={undefined} />
-        </Suspense>
       </body>
     </html>
   );
