@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { notFound } from 'next/navigation';
 import { CANVAS_EDITOR_STATE } from '@uniformdev/canvas';
 import {
@@ -5,6 +6,7 @@ import {
   UniformComposition,
   UniformPageParameters,
   createUniformStaticParams,
+  UniformContext,
 } from '@uniformdev/canvas-next-rsc-v2';
 import { emptyPlaceholderResolver } from '@uniformdev/csk-components/components/canvas/emptyPlaceholders';
 import { compositionCache } from '@uniformdev/csk-components/utils/getSlotComponents';
@@ -27,14 +29,19 @@ export default async function UniformPage(props: UniformPageParameters) {
   }
 
   return (
-    <DesignExtensionsProvider isPreviewMode={result.pageState.compositionState === CANVAS_EDITOR_STATE}>
-      <UniformComposition
-        {...result}
-        resolveComponent={componentResolver}
-        resolveEmptyPlaceholder={emptyPlaceholderResolver}
-        compositionCache={compositionCache}
-      />
-    </DesignExtensionsProvider>
+    <>
+      <DesignExtensionsProvider isPreviewMode={result.pageState.compositionState === CANVAS_EDITOR_STATE}>
+        <UniformComposition
+          {...result}
+          resolveComponent={componentResolver}
+          resolveEmptyPlaceholder={emptyPlaceholderResolver}
+          compositionCache={compositionCache}
+        />
+      </DesignExtensionsProvider>
+      <Suspense>
+        <UniformContext result={result} />
+      </Suspense>
+    </>
   );
 }
 
