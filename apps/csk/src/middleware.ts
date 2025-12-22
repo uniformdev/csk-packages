@@ -10,62 +10,62 @@ import { formatPath } from './utils/formatPath';
 
 const intlMiddleware = createIntlMiddleware(routing);
 
-//? if (cookieConsent) {
-const GDPR_COUNTRIES = [
-  'AL',
-  'AD',
-  'AM',
-  'AT',
-  'AZ',
-  'BE',
-  'BA',
-  'BG',
-  'HR',
-  'CY',
-  'CZ',
-  'DK',
-  'EE',
-  'FI',
-  'FR',
-  'GE',
-  'DE',
-  'GR',
-  'HU',
-  'IS',
-  'IE',
-  'IT',
-  'KZ',
-  'LV',
-  'LI',
-  'LT',
-  'LU',
-  'MT',
-  'MD',
-  'MC',
-  'ME',
-  'MK',
-  'NL',
-  'NO',
-  'PL',
-  'PT',
-  'RO',
-  'SM',
-  'RS',
-  'SK',
-  'SI',
-  'ES',
-  'SE',
-  'CH',
-  'TR',
-  'UA',
-  'GB',
-  'VA',
-  'CN',
-  'BR',
-  'ZA',
-  'AE',
-];
-//? }
+// //? if (cookieConsent) {
+// const GDPR_COUNTRIES = [
+//   'AL',
+//   'AD',
+//   'AM',
+//   'AT',
+//   'AZ',
+//   'BE',
+//   'BA',
+//   'BG',
+//   'HR',
+//   'CY',
+//   'CZ',
+//   'DK',
+//   'EE',
+//   'FI',
+//   'FR',
+//   'GE',
+//   'DE',
+//   'GR',
+//   'HU',
+//   'IS',
+//   'IE',
+//   'IT',
+//   'KZ',
+//   'LV',
+//   'LI',
+//   'LT',
+//   'LU',
+//   'MT',
+//   'MD',
+//   'MC',
+//   'ME',
+//   'MK',
+//   'NL',
+//   'NO',
+//   'PL',
+//   'PT',
+//   'RO',
+//   'SM',
+//   'RS',
+//   'SK',
+//   'SI',
+//   'ES',
+//   'SE',
+//   'CH',
+//   'TR',
+//   'UA',
+//   'GB',
+//   'VA',
+//   'CN',
+//   'BR',
+//   'ZA',
+//   'AE',
+// ];
+// //? }
 
 export async function middleware(request: NextRequest) {
   if (request.nextUrl.pathname === '/playground') {
@@ -74,8 +74,8 @@ export async function middleware(request: NextRequest) {
 
   //? if (cookieConsent) {
   const { country } = geolocation(request);
-  const isGDPRCountry = GDPR_COUNTRIES.includes(country || '');
-  const defaultConsent = !isGDPRCountry;
+  //const isGDPRCountry = GDPR_COUNTRIES.includes(country || '');
+  //const defaultConsent = !isGDPRCountry;
   //? }
 
   const baseResponse = intlMiddleware(request);
@@ -84,7 +84,7 @@ export async function middleware(request: NextRequest) {
 
   const response = await uniformMiddleware({
     //? if (cookieConsent) {
-    defaultConsent,
+    defaultConsent: true,
     //? }
     rewriteRequestPath: async ({ url }) => ({
       path: formatPath(url.pathname),
@@ -97,7 +97,7 @@ export async function middleware(request: NextRequest) {
       ? result
       : uniformMiddleware({
           //? if (cookieConsent) {
-          defaultConsent,
+          defaultConsent: true,
           //? }
           rewriteRequestPath: async ({ url }) => ({
             path: formatPath(url.pathname, undefined),
