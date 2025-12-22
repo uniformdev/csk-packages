@@ -40,4 +40,4 @@ export default async function UniformPage(props: UniformPageParameters) {
 
 export { generateMetadata } from '@/utils/metadata';
 
-export const experimental_ppr = true;
+// export const experimental_ppr = true;
