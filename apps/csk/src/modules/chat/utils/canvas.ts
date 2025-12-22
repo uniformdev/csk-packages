@@ -82,6 +82,7 @@ export const getRecommendProductsFromCanvas = async ({
     name: trackingEventName,
     variations: mapSlotToPersonalizedVariations(variants),
     take: parseInt(count),
+    algorithm: 'ssc',
   });
 
   const suggestedProducts = variations
