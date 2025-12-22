@@ -2,23 +2,29 @@ import { FC } from 'react';
 import { Flex as CSKFlex, Grid } from '@uniformdev/csk-components/components/ui';
 import { getProductRecommendations } from '@/utils/getProductRecommendations';
 import { DynamicRecommendationsProps } from '.';
-import ProductCard, { ProductCardSkeleton } from '../ProductCard';
+import ProductCard from '../ProductCard';
+import { draftMode } from 'next/headers';
 
-const DynamicProductRecommendations: FC<DynamicRecommendationsProps> = async ({
-  title,
-  backgroundColor,
-  spacing,
-  fluidContent,
-  border,
-  height,
-  boostEnrichments = [],
-  maxRecommendations = '3',
-}) => {
-  const products = await getProductRecommendations({
-    boostEnrichments,
-    maxRecommendations: parseInt(maxRecommendations),
-    entryType: 'product',
-  });
+const DynamicProductRecommendations: FC<DynamicRecommendationsProps> = async props => {
+  const {
+    title,
+    backgroundColor,
+    spacing,
+    fluidContent,
+    border,
+    height,
+    boostEnrichments = [],
+    maxRecommendations = '3',
+  } = props;
+  const { isEnabled } = await draftMode();
+  const products = boostEnrichments.length
+    ? await getProductRecommendations({
+        boostEnrichments,
+        maxRecommendations: parseInt(maxRecommendations),
+        entryType: 'product',
+        isPreview: isEnabled,
+      })
+    : [];
 
   return (
     <CSKFlex
@@ -29,7 +35,7 @@ const DynamicProductRecommendations: FC<DynamicRecommendationsProps> = async ({
       {...{ backgroundColor, spacing, border, fluidContent, height }}
     >
       {title}
-
+      {!isEnabled && !products.length && <p>Insufficient behavioral profile to return recommendations.</p>}
       <Grid
         columnsCount={{
           desktop: '3',
@@ -40,11 +46,8 @@ const DynamicProductRecommendations: FC<DynamicRecommendationsProps> = async ({
         gapX="8"
         fluidContent
       >
-        {!products.length
-          ? Array.from({ length: parseInt(maxRecommendations) }, () => 0).map((_, index) => (
-              <ProductCardSkeleton key={index} />
-            ))
-          : products.map(product => {
+        {products?.length
+          ? products.map(product => {
               const { price = 0, currency = 'USD' } = product?.variants?.[0] ?? {};
               return (
                 <ProductCard
@@ -58,7 +61,8 @@ const DynamicProductRecommendations: FC<DynamicRecommendationsProps> = async ({
                   textColor={'primary'}
                 />
               );
-            })}
+            })
+          : null}
       </Grid>
     </CSKFlex>
   );
