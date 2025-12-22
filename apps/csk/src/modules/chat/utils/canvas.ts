@@ -1,9 +1,16 @@
 import { cookies } from 'next/headers';
-import { CANVAS_PERSONALIZE_SLOT, flattenValues, mapSlotToPersonalizedVariations } from '@uniformdev/canvas';
+import {
+  CanvasClient,
+  CANVAS_PERSONALIZE_SLOT,
+  CANVAS_PUBLISHED_STATE,
+  flattenValues,
+  mapSlotToPersonalizedVariations,
+} from '@uniformdev/canvas';
 import { getManifest } from '@uniformdev/canvas-next-rsc-v2';
 import type { ManifestV2 } from '@uniformdev/context';
 import { Context, CookieTransitionDataStore } from '@uniformdev/context';
 import locales from '@/i18n/locales.json';
+import { getProductRecommendations } from '@/utils/getProductRecommendations';
 import resolveRouteFromRoutePath from '@/utils/resolveRouteFromRoutePath';
 import {
   CART_COMPOSITION_PATH,
@@ -11,6 +18,7 @@ import {
   CONTEXT_RECOMMENDATIONS_COMPOSITION_PATH,
   CONTEXT_RECOMMENDATIONS_DYNAMIC_VARIATION_NAME,
   CONTEXT_RECOMMENDATIONS_SLOT_NAME,
+  PRODUCT_RECOMMENDATIONS_PATTERN_ID,
   RELATED_RECOMMENDATIONS_COMPOSITION_PATH,
   RELATED_RECOMMENDATIONS_DYNAMIC_VARIATION_NAME,
   RELATED_RECOMMENDATIONS_SLOT_NAME,
@@ -18,6 +26,7 @@ import {
   USER_RECOMMENDATIONS_SLOT_NAME,
 } from '../constants';
 import {
+  BoostRecommendationsResult,
   CartFromCanvas,
   ContextRecommendationsFromCanvas,
   RelatedProductsFromCanvas,
@@ -111,6 +120,72 @@ export const getRecommendProductsFromCanvas = async ({
       },
     },
     code,
+  };
+};
+
+/**
+ * Fetches the product recommendations component pattern from Uniform
+ * and extracts the boostEnrichments and maxRecommendations parameters.
+ */
+const getRecommendationsPatternConfig = async (): Promise<{
+  boostEnrichments: string[];
+  maxRecommendations: number;
+}> => {
+  const canvasClient = new CanvasClient({
+    apiKey: process.env.UNIFORM_API_KEY,
+    projectId: process.env.UNIFORM_PROJECT_ID,
+    apiHost: process.env.UNIFORM_CLI_BASE_URL!,
+    edgeApiHost: process.env.UNIFORM_CLI_BASE_EDGE_URL!,
+  });
+
+  try {
+    const { composition } = await canvasClient.getCompositionById({
+      compositionId: PRODUCT_RECOMMENDATIONS_PATTERN_ID,
+      state: CANVAS_PUBLISHED_STATE,
+    });
+
+    const params = composition?.parameters || {};
+    const boostEnrichments = (params.boostEnrichments?.value as string[]) || [];
+    const maxRecommendationsValue = params.maxRecommendations?.value;
+    const maxRecommendations = parseInt((maxRecommendationsValue as string) || '10', 10);
+
+    return { boostEnrichments, maxRecommendations };
+  } catch (error) {
+    console.error('[getRecommendationsPatternConfig] Failed to fetch pattern:', error);
+    // Fallback to defaults
+    return {
+      boostEnrichments: ['subCategory,subcategory', 'int,category', 'brand,brand'],
+      maxRecommendations: 10,
+    };
+  }
+};
+
+/**
+ * Alternative recommendation function that uses Typesense boost instead of personalization.
+ * Fetches configuration from the component pattern and uses getProductRecommendations
+ * with enrichment-based boosting for product ordering.
+ * Returns full product data for rendering with the same UI component.
+ */
+export const getRecommendProductsWithBoost = async (): Promise<BoostRecommendationsResult> => {
+  const { boostEnrichments, maxRecommendations } = await getRecommendationsPatternConfig();
+
+  if (!boostEnrichments.length) {
+    return { products: [], productTitles: [] };
+  }
+
+  const products = await getProductRecommendations({
+    boostEnrichments,
+    maxRecommendations,
+    entryType: 'product',
+  });
+
+  const productTitles = products.map(product => ({
+    title: product.title || product.name || '',
+  }));
+
+  return {
+    products,
+    productTitles,
   };
 };
 

@@ -2,6 +2,9 @@ export const AI_PROMPTS_ENTRY_SLUG = 'ai-coffee-assistant-prompts';
 export const SYSTEM_PROMPT_NAME = 'system';
 export const ENTRY_TYPES_TO_SYNC = ['article', 'product'];
 
+// Component pattern ID for product recommendations (used for AI assistant)
+export const PRODUCT_RECOMMENDATIONS_PATTERN_ID = '9fa8b4cd-24ab-4d1a-b2c5-946925aec3e0';
+
 export enum AI_TOOL {
   SET_USER_INTERESTS = 'setUserInterests', // To set user's interests to Uniform
   GET_RECOMMEND_PRODUCTS = 'getRecommendProducts', // To get recommend products from Uniform

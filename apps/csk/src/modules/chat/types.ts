@@ -1,4 +1,5 @@
 import type { RootComponentInstance } from '@uniformdev/canvas';
+import type { Product } from '@/types';
 
 export type UserRecommendationsFromCanvas = {
   products: {
@@ -6,6 +7,11 @@ export type UserRecommendationsFromCanvas = {
   }[];
   composition?: RootComponentInstance;
   code?: string;
+};
+
+export type BoostRecommendationsResult = {
+  products: Product[];
+  productTitles: { title: string }[];
 };
 
 export type PageRecommendationsFromCanvas = { composition: RootComponentInstance | undefined; code?: string };

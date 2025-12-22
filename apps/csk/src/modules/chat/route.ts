@@ -7,8 +7,7 @@ import { openai } from '@ai-sdk/openai';
 
 import { AI_TOOL, SYSTEM_PROMPT_NAME } from './constants';
 import { findRelevantContent } from './rag/ai/embedding';
-import { getUniformScoresFromCookie } from './utils';
-import { getRecommendProductsFromCanvas } from './utils/canvas';
+import { getRecommendProductsWithBoost } from './utils/canvas';
 import { getPromptsFromUniform } from './utils/prompts';
 
 export async function POST(req: Request) {
@@ -48,14 +47,12 @@ export async function POST(req: Request) {
               description: prompts[AI_TOOL.GET_RECOMMEND_PRODUCTS],
               parameters: z.object({}),
               execute: async () => {
-                const { products } = await getRecommendProductsFromCanvas({
-                  scoreCookie: getUniformScoresFromCookie(req.headers.get('cookie') || ''),
-                });
+                const { productTitles } = await getRecommendProductsWithBoost();
                 console.info(
                   `AI-Tool-${[AI_TOOL.GET_RECOMMEND_PRODUCTS]} products:`,
-                  JSON.stringify(products, null, 2)
+                  JSON.stringify(productTitles, null, 2)
                 );
-                return JSON.stringify({ products });
+                return JSON.stringify({ products: productTitles });
               },
             }),
             [AI_TOOL.GET_CART]: tool({

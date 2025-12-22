@@ -3,17 +3,16 @@ import { UIMessage } from 'ai';
 import { AiIcon } from './AiIcon';
 import { Markdown } from './Markdown';
 import {
+  renderBoostRecommendations,
   renderCartComposition,
   renderContextRecommendationsComposition,
   renderRelatedRecommendationsComposition,
-  renderUserRecommendationsComposition,
 } from '../../server-actions/renderComposition';
 import {
   getCartResultFromMessage,
   getContextRecommendationsFromMessage,
   getRecommendProductsFromMessage,
   getRelatedProductsFromMessage,
-  getUniformScoresFromCookie,
 } from '../../utils';
 
 type AiMessageProps = {
@@ -32,9 +31,7 @@ export function useAiMessageUiComponent(message: UIMessage): React.ReactNode | n
 
   useEffect(() => {
     const run = async () => {
-      const component = await renderUserRecommendationsComposition({
-        scoreCookie: getUniformScoresFromCookie(document.cookie),
-      });
+      const component = await renderBoostRecommendations();
       setUiComponent(component);
     };
 
