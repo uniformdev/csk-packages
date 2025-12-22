@@ -8,4 +8,5 @@ module.exports = {
     middlewareRuntimeCache: true,
     quirkSerialization: true,
   },
+  defaultConsent: true,
 };
