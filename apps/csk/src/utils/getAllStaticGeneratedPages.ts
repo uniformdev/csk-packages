@@ -1,5 +1,5 @@
 import { ContentClient } from '@uniformdev/canvas';
-import { getProjectMapClient } from '@uniformdev/canvas-next-rsc-v2';
+import { getProjectMapClient } from '@uniformdev/next-app-router';
 import locales from '@/i18n/locales.json';
 
 const ignoredPaths = ['/previews', '/ai-tools', '/modals'];

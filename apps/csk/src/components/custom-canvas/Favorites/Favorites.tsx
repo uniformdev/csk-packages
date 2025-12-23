@@ -1,7 +1,7 @@
 'use client';
 
 import { FC } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
+import { UniformSlot } from '@uniformdev/next-app-router/component';
 import { Grid } from '@uniformdev/csk-components/components/ui';
 import { resolveAsset } from '@uniformdev/csk-components/utils/assets';
 import { cn } from '@uniformdev/csk-components/utils/styling';

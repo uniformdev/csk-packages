@@ -1,19 +1,20 @@
-import { resolvePlaygroundRoute, UniformPageParameters, UniformPlayground } from '@uniformdev/canvas-next-rsc-v2';
+import { PlaygroundParameters, resolvePlaygroundRoute, UniformPlayground } from '@uniformdev/next-app-router';
 import { emptyPlaceholderResolver } from '@uniformdev/csk-components/components/canvas/emptyPlaceholders';
 import { compositionCache } from '@uniformdev/csk-components/utils/getSlotComponents';
 import { DesignExtensionsProvider } from '@uniformdev/design-extensions-tools/components/providers/server';
 import { componentResolver } from '@/components';
 
-export default async function PlaygroundPage(props: UniformPageParameters) {
-  const result = await resolvePlaygroundRoute(props);
+export default async function PlaygroundPage({ params }: PlaygroundParameters) {
+  const { code } = await params;
   return (
     <DesignExtensionsProvider>
       <div className="px-4 py-14">
         <UniformPlayground
-          route={result}
+          code={code}
+          resolveRoute={resolvePlaygroundRoute}
+          compositionCache={compositionCache}
           resolveComponent={componentResolver}
           resolveEmptyPlaceholder={emptyPlaceholderResolver}
-          compositionCache={compositionCache}
         />
       </div>
     </DesignExtensionsProvider>

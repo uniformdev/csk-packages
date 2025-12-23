@@ -1,13 +1,13 @@
 'use client';
 
 import { FC, ReactNode, useEffect, useState } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
+import { UniformSlot } from '@uniformdev/next-app-router/component';
 import { Modal as BaseModal } from '@uniformdev/csk-components/components/ui';
 import { cn } from '@uniformdev/csk-components/utils/styling';
 import { withFlattenParameters } from '@uniformdev/csk-components/utils/withFlattenParameters';
 import { Loading } from '@/components/custom-ui/Loading';
 import { ModalProps, ModalParameters } from '.';
-import { getComposition } from './get-composition';
+// import { getComposition } from './get-composition';
 
 const Modal: FC<ModalProps & ModalParameters> = ({
   slots,
@@ -25,7 +25,8 @@ const Modal: FC<ModalProps & ModalParameters> = ({
   useEffect(() => {
     const fetchComposition = async () => {
       setIsLoading(true);
-      const composition = await getComposition(compositionNode);
+      const composition = undefined;
+      // await getComposition(compositionNode);
       if (composition) {
         setComposition(composition);
       }
