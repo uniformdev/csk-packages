@@ -1,4 +1,4 @@
-import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
+import { UniformSlot } from '@uniformdev/next-app-router/component';
 import { ComponentProps } from '@uniformdev/csk-components/types/cskTypes';
 import { withFlattenParameters } from '@uniformdev/csk-components/utils/withFlattenParameters';
 

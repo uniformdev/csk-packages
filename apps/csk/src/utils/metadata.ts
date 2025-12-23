@@ -3,7 +3,7 @@ import { cookies } from 'next/headers';
 import { notFound } from 'next/navigation';
 import { AssetParamValue } from '@uniformdev/assets';
 import { flattenValues } from '@uniformdev/canvas';
-import { resolveRouteFromCode, UniformPageParameters } from '@uniformdev/canvas-next-rsc-v2';
+import { resolveRouteFromCode, UniformPageParameters } from '@uniformdev/next-app-router';
 import { resolveAsset } from '@uniformdev/csk-components/utils/assets';
 import locales from '@/i18n/locales.json';
 

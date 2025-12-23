@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { ComponentParameter, UniformText } from '@uniformdev/canvas-next-rsc-v2/component';
+import { ComponentParameter, UniformText } from '@uniformdev/next-app-router/component';
 import BaseIconLabel from '@/components/ui/IconLabel';
 import BaseImage from '@/components/ui/Image';
 import InlineSVG from '@/components/ui/InlineSVG';

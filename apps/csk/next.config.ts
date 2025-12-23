@@ -1,6 +1,6 @@
 import { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
-import { withUniformConfig } from '@uniformdev/canvas-next-rsc-v2/config';
+import { withUniformConfig } from '@uniformdev/next-app-router/config';
 
 const withNextIntl = createNextIntlPlugin();
 

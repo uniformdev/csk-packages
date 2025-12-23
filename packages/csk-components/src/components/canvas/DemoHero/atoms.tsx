@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { imageFrom } from '@uniformdev/assets';
 
-import { ComponentContext, ComponentParameter, UniformText } from '@uniformdev/canvas-next-rsc-v2/component';
+import { ComponentContext, ComponentParameter, UniformText } from '@uniformdev/next-app-router/component';
 import { TextParameters } from '@/components/canvas/Text/parameters';
 import BaseButton, { ButtonVariant } from '@/components/ui/Button';
 import BaseImage from '@/components/ui/Image';

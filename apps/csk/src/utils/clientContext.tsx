@@ -5,7 +5,7 @@ import {
   ClientContextComponent,
   createClientUniformContext,
   useInitUniformContext,
-} from '@uniformdev/canvas-next-rsc-v2/component';
+} from '@uniformdev/next-app-router/component';
 import { ContextPlugin, enableContextDevTools } from '@uniformdev/context';
 //? if (ga) {
 import { enableGoogleGtagAnalytics } from '@uniformdev/context-gtag';

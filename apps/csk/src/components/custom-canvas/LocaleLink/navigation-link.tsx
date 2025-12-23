@@ -4,7 +4,7 @@ import { FC } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { usePathname } from 'next/navigation';
 import { useLocale } from 'next-intl';
-import { ComponentParameter, UniformText } from '@uniformdev/canvas-next-rsc-v2/component';
+import { ComponentParameter, UniformText } from '@uniformdev/next-app-router/component';
 import { IconLabel as BaseIconLabel, Image as BaseImage, InlineSVG } from '@uniformdev/csk-components/components/ui';
 import { resolveAsset } from '@uniformdev/csk-components/utils/assets';
 import { cn, resolveViewPort } from '@uniformdev/csk-components/utils/styling';

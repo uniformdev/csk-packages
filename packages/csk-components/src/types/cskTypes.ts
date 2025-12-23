@@ -1,7 +1,7 @@
 import { HTMLAttributes, ComponentProps as ReactComponentProps } from 'react';
 import { AssetParamValueItem } from '@uniformdev/canvas';
-import { ComponentParameter } from '@uniformdev/canvas-next-rsc-shared-v2';
-import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
+import { ComponentParameter } from '@uniformdev/next-app-router-shared';
+import { UniformComposition } from '@uniformdev/next-app-router';
 
 type ResolveEmptyPlaceholderFunction = NonNullable<
   ReactComponentProps<typeof UniformComposition>['resolveEmptyPlaceholder']
@@ -33,7 +33,7 @@ type ToComponentParameters<T> = {
 export type ComponentProps<
   T,
   S extends string = string,
-> = import('@uniformdev/canvas-next-rsc-v2/component').ComponentProps<ToComponentParameters<T>, S>;
+> = import('@uniformdev/next-app-router/component').ComponentProps<ToComponentParameters<T>, S>;
 
 type ValueOfField<F> = F extends { value: infer V } ? V : never;
 type FlattenFields<T extends AssetParamValueItem> = {

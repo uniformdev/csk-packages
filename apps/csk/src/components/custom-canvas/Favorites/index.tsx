@@ -3,7 +3,7 @@
 import { FC } from 'react';
 import dynamic from 'next/dynamic';
 import { AssetParamValue } from '@uniformdev/assets';
-import { ComponentProps } from '@uniformdev/canvas-next-rsc-v2/component';
+import { ComponentProps } from '@uniformdev/next-app-router/component';
 import { FavoritesSkeleton } from './skeleton';
 
 const FavoritesClient = dynamic(() => import('./Favorites').then(mod => mod.default), {

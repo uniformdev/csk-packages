@@ -1,8 +1,8 @@
 'use client';
 
 import { FC, MouseEvent, ChangeEvent, useMemo, useState } from 'react';
-import { useQuirks } from '@uniformdev/canvas-next-rsc-client-v2';
-import { UniformSlot, useUniformContext } from '@uniformdev/canvas-next-rsc-v2/component';
+import { useQuirks } from '@uniformdev/next-app-router-client';
+import { UniformSlot, useUniformContext } from '@uniformdev/next-app-router/component';
 import { ComponentProps, ViewPort } from '@uniformdev/csk-components/types/cskTypes';
 import { cn } from '@uniformdev/csk-components/utils/styling';
 import { resolveViewPort } from '@uniformdev/csk-components/utils/styling';

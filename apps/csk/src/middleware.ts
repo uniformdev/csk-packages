@@ -1,6 +1,6 @@
 import { NextRequest } from 'next/server';
 import createIntlMiddleware from 'next-intl/middleware';
-import { uniformMiddleware } from '@uniformdev/canvas-next-rsc-v2/middleware';
+import { uniformMiddleware } from '@uniformdev/next-app-router/middleware';
 //? if (cookieConsent) {
 import { geolocation } from '@vercel/functions';
 //? }

@@ -1,7 +1,7 @@
 import { CANVAS_DRAFT_STATE, CANVAS_PUBLISHED_STATE } from '@uniformdev/canvas';
-import { serializeEvaluationResult } from '@uniformdev/canvas-next-rsc-shared-v2';
+import { serializeEvaluationResult } from '@uniformdev/next-app-router-shared';
 
-import { resolveRouteFromCode } from '@uniformdev/canvas-next-rsc-v2';
+import { resolveRouteFromCode } from '@uniformdev/next-app-router';
 
 const resolveRouteFromRoutePath = async (routePath: string, isPreviewMode: boolean = false) => {
   const code = serializeEvaluationResult({

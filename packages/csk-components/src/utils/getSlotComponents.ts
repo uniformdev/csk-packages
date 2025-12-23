@@ -1,7 +1,7 @@
 'server-only';
 
-import { SlotDefinition } from '@uniformdev/canvas-next-rsc-shared-v2';
-import { createCompositionCache } from '@uniformdev/canvas-next-rsc-v2';
+import { SlotDefinition } from '@uniformdev/next-app-router-shared';
+import { createCompositionCache } from '@uniformdev/next-app-router';
 import { ComponentProps } from '@/types/cskTypes';
 
 export const compositionCache = createCompositionCache();
