@@ -1,7 +1,7 @@
 'use client';
 
 import { FC } from 'react';
-import { ComponentParameter, UniformSlot, UniformText } from '@uniformdev/canvas-next-rsc-v2/component';
+import { ComponentParameter, UniformSlot, UniformText } from '@uniformdev/next-app-router/component';
 import BaseAccordionItem from '@/components/ui/AccordionItem';
 import BaseText from '@/components/ui/Text';
 import { withFlattenParameters } from '@/utils/withFlattenParameters';

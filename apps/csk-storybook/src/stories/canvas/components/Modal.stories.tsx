@@ -1,4 +1,3 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
 import {
   Button,
   Flex,
@@ -8,6 +7,7 @@ import {
   ModalParameters,
 } from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver, { ComponentMapping } from '@uniformdev/csk-components/utils/createComponentResolver';
+import { UniformComposition } from '@uniformdev/next-app-router';
 import { modalDefault, modalWithActionButtons } from '@/canvasMock/components/modal';
 import { createFakeCompositionData } from '@/utils';
 import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';

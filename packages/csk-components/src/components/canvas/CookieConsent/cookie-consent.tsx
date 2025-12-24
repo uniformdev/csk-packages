@@ -2,7 +2,7 @@
 
 import { FC, useCallback, useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
-import { ComponentParameter, UniformSlot, UniformText } from '@uniformdev/canvas-next-rsc-v2/component';
+import { ComponentParameter, UniformSlot, UniformText } from '@uniformdev/next-app-router/component';
 import BaseBanner, { BannerVariants } from '@/components/ui/Banner';
 import BaseButton from '@/components/ui/Button';
 import useCookiesConsent from '@/utils/useCookiesConsent';

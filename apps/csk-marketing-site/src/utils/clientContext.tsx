@@ -1,12 +1,12 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import { ContextPlugin, enableContextDevTools } from '@uniformdev/context';
 import {
   ClientContextComponent,
   createClientUniformContext,
   useInitUniformContext,
-} from '@uniformdev/canvas-next-rsc-v2/component';
-import { ContextPlugin, enableContextDevTools } from '@uniformdev/context';
+} from '@uniformdev/next-app-router/component';
 // NOTE: npm install @uniformdev/context-gtag if you need to enable GA4 plugin
 // import { enableGoogleGtagAnalytics } from "@uniformdev/context-gtag";
 

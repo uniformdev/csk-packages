@@ -1,4 +1,3 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
 import {
   Table,
   TableParameters,
@@ -7,6 +6,7 @@ import {
   TableDataCell,
 } from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
+import { UniformComposition } from '@uniformdev/next-app-router';
 import { tableContentCSK } from '@/canvasMock/patterns/table';
 import { createFakeCompositionData } from '@/utils';
 import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';

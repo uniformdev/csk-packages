@@ -1,16 +1,13 @@
-import { Suspense } from 'react';
-import { notFound } from 'next/navigation';
 import { CANVAS_EDITOR_STATE } from '@uniformdev/canvas';
+import { emptyPlaceholderResolver } from '@uniformdev/csk-components/components/canvas/emptyPlaceholders';
+import { compositionCache } from '@uniformdev/csk-components/utils/getSlotComponents';
+import { DesignExtensionsProvider } from '@uniformdev/design-extensions-tools/components/providers/server';
 import {
   resolveRouteFromCode,
   UniformComposition,
   UniformPageParameters,
   createUniformStaticParams,
-  UniformContext,
-} from '@uniformdev/canvas-next-rsc-v2';
-import { emptyPlaceholderResolver } from '@uniformdev/csk-components/components/canvas/emptyPlaceholders';
-import { compositionCache } from '@uniformdev/csk-components/utils/getSlotComponents';
-import { DesignExtensionsProvider } from '@uniformdev/design-extensions-tools/components/providers/server';
+} from '@uniformdev/next-app-router';
 import { componentResolver } from '@/components';
 import getAllStaticGeneratedPages from '@/utils/getAllStaticGeneratedPages';
 
@@ -21,26 +18,28 @@ export const generateStaticParams = async () => {
   });
 };
 
-export default async function UniformPage(props: UniformPageParameters) {
-  const result = await resolveRouteFromCode(props);
+const resolveRouteFromCodeWithCache = async (code: string) => {
+  'use cache';
+  const result = await resolveRouteFromCode({
+    params: Promise.resolve({ code }),
+  });
+  return result;
+};
 
-  if (!result.route) {
-    notFound();
-  }
-
+export default async function UniformPage({ params }: UniformPageParameters) {
+  const { code } = await params;
+  const result = await resolveRouteFromCodeWithCache(code);
   return (
     <>
       <DesignExtensionsProvider isPreviewMode={result.pageState.compositionState === CANVAS_EDITOR_STATE}>
         <UniformComposition
-          {...result}
+          code={code}
+          resolveRoute={resolveRouteFromCode}
           resolveComponent={componentResolver}
           resolveEmptyPlaceholder={emptyPlaceholderResolver}
           compositionCache={compositionCache}
         />
       </DesignExtensionsProvider>
-      <Suspense>
-        <UniformContext result={result} />
-      </Suspense>
     </>
   );
 }

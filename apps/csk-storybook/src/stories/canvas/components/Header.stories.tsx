@@ -1,5 +1,4 @@
 import { ComponentInstance } from '@uniformdev/canvas';
-import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
 import {
   Text,
   NavigationFlyout,
@@ -12,6 +11,7 @@ import {
   HeaderParameters,
 } from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
+import { UniformComposition } from '@uniformdev/next-app-router';
 import { headerDefault, headerWithFlyout, headerWithGroups, headerWithLinks } from '@/canvasMock/components/header';
 import { createFakeCompositionData } from '@/utils';
 import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';

@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
 import { Page as BasePage } from '@uniformdev/csk-components/components/ui';
 import { ComponentProps } from '@uniformdev/csk-components/types/cskTypes';
 import { withFlattenParameters } from '@uniformdev/csk-components/utils/withFlattenParameters';
+import { UniformSlot } from '@uniformdev/next-app-router/component';
 import ComponentsSearchProvider from './ComponentsSearchProvider';
 
 type ComponentsSearchPageParameters = {

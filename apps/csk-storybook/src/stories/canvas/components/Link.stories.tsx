@@ -1,6 +1,6 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
 import { Image, Link, LinkParameters, Text } from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver, { ComponentMapping } from '@uniformdev/csk-components/utils/createComponentResolver';
+import { UniformComposition } from '@uniformdev/next-app-router';
 import { UNIFORM_LOGO_ASSET } from '@/assets';
 import { createFakeCompositionData, createUniformParameter } from '@/utils';
 import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';

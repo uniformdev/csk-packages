@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
+import { UniformSlot } from '@uniformdev/next-app-router/component';
 import Grid from '@/components/ui/Grid';
 import GridItem from '@/components/ui/GridItem';
 import { cn, resolveViewPort } from '@/utils/styling';

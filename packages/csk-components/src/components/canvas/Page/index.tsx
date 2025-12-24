@@ -1,4 +1,4 @@
-import { UniformSlotProps } from '@uniformdev/canvas-next-rsc-v2/component';
+import { UniformSlotProps } from '@uniformdev/next-app-router/component';
 import { ComponentProps } from '@/types/cskTypes';
 export type PageAdditionalProps = {
   headerCustomRenderer?: UniformSlotProps['children'];

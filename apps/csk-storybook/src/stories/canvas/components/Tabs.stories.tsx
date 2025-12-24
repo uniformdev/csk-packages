@@ -1,8 +1,8 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
 import { Tab, Text } from '@uniformdev/csk-components/components/canvas/serverClient';
 import { TabsParameters, TabsVariants, Tabs } from '@uniformdev/csk-components/components/canvas/serverOnly';
 import createComponentResolver, { ComponentMapping } from '@uniformdev/csk-components/utils/createComponentResolver';
 import { compositionCache } from '@uniformdev/csk-components/utils/getSlotComponents';
+import { UniformComposition } from '@uniformdev/next-app-router';
 import { ContainerArgTypes } from '@/argTypes';
 import { tabsDefault } from '@/canvasMock/components/tabs';
 import { createFakeCompositionData } from '@/utils';
