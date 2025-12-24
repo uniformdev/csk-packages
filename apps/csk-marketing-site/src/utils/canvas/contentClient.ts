@@ -3,10 +3,10 @@ import { RecipeItem } from '@/components/custom-canvas/RecipeList';
 
 export const getContentClient = () =>
   new ContentClient({
-    apiKey: process.env.UNIFORM_API_KEY,
-    apiHost: process.env.UNIFORM_CLI_BASE_URL || 'https://canary.uniform.app',
     projectId: process.env.UNIFORM_PROJECT_ID,
-    edgeApiHost: process.env.UNIFORM_CLI_BASE_EDGE_URL || 'https://canary.uniform.global',
+    apiKey: process.env.UNIFORM_API_KEY,
+    apiHost: process.env.UNIFORM_CLI_BASE_URL || 'https://uniform.app',
+    edgeApiHost: process.env.UNIFORM_CLI_BASE_EDGE_URL || 'https://uniform.global',
   });
 
 export const getRecipesByCategory = async ({

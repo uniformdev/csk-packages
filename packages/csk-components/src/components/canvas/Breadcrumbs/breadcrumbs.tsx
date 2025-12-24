@@ -29,6 +29,7 @@ export const Breadcrumbs: FC<
     const client = new ProjectMapClient({
       projectId: process.env.UNIFORM_PROJECT_ID,
       apiKey: process.env.UNIFORM_API_KEY,
+      apiHost: process.env.UNIFORM_CLI_BASE_URL || 'https://uniform.app',
     });
 
     const { projectMapNodes } = compositionCache.getUniformComposition({ id: context?._id }) || {};
@@ -51,6 +52,8 @@ export const Breadcrumbs: FC<
             ? await new CanvasClient({
                 projectId: process.env.UNIFORM_PROJECT_ID,
                 apiKey: process.env.UNIFORM_API_KEY,
+                apiHost: process.env.UNIFORM_CLI_BASE_URL || 'https://uniform.app',
+                edgeApiHost: process.env.UNIFORM_CLI_BASE_EDGE_URL || 'https://uniform.global',
               })
                 .getCompositionById({ compositionId: node.compositionId })
                 .then(({ composition }) => {

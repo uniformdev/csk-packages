@@ -11,10 +11,10 @@ import { supportedParameterHandlers } from './parameterHandlers';
 import { ParameterHandler } from './types';
 
 export const getCanvasClient = async () => {
-  const apiHost = process.env.UNIFORM_CLI_BASE_URL || 'https://uniform.app';
-  const edgeApiHost = process.env.UNIFORM_CLI_BASE_EDGE_URL || 'https://uniform.global';
   let projectId = process.env.UNIFORM_PROJECT_ID;
   let apiKey = process.env.UNIFORM_API_KEY;
+  const apiHost = process.env.UNIFORM_CLI_BASE_URL || 'https://uniform.app';
+  const edgeApiHost = process.env.UNIFORM_CLI_BASE_EDGE_URL || 'https://uniform.global';
 
   if (!projectId) {
     projectId = await input({

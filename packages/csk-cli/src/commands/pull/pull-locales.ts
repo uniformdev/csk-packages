@@ -20,9 +20,9 @@ export const pullLocales = async () => {
   }
 
   const client = new LocaleClient({
-    apiHost: process.env.UNIFORM_CLI_BASE_URL,
-    apiKey: process.env.UNIFORM_API_KEY,
     projectId: process.env.UNIFORM_PROJECT_ID,
+    apiKey: process.env.UNIFORM_API_KEY,
+    apiHost: process.env.UNIFORM_CLI_BASE_URL || 'https://uniform.app',
   });
 
   const localeResponse: LocalesGetResponse = await client.get();
