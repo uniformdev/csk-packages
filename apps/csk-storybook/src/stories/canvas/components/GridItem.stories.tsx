@@ -1,7 +1,7 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
 import { Image, GridItem, GridItemParameters } from '@uniformdev/csk-components/components/canvas/serverClient';
 import { Grid } from '@uniformdev/csk-components/components/ui';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
+import { UniformComposition } from '@uniformdev/next-app-router';
 import { IMAGE_ASSET } from '@/assets';
 import { createFakeCompositionData, createUniformParameter } from '@/utils';
 import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';

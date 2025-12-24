@@ -2,13 +2,13 @@ import { FC, PropsWithChildren } from 'react';
 import Link from 'next/link';
 import classNames from 'classnames';
 import { LinkParamValue } from '@uniformdev/canvas';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
 import { ContainerParameters } from '@uniformdev/csk-components/components/canvas/serverClient';
 import { Container as BaseContainer } from '@uniformdev/csk-components/components/ui';
 import { ComponentProps } from '@uniformdev/csk-components/types/cskTypes';
 import { formatUniformLink } from '@uniformdev/csk-components/utils/routing';
 import { cn } from '@uniformdev/csk-components/utils/styling';
 import { withFlattenParameters } from '@uniformdev/csk-components/utils/withFlattenParameters';
+import { UniformSlot } from '@uniformdev/next-app-router/component';
 import { capitalizeFirstLetter } from '@/utils/text';
 
 const WrapCard: FC<PropsWithChildren & { href?: string; name: string }> = ({ href, name, children }) =>

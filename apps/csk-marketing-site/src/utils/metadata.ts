@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { AssetParamValue } from '@uniformdev/assets';
 import { flattenValues } from '@uniformdev/canvas';
-import { resolveRouteFromCode, UniformPageParameters } from '@uniformdev/canvas-next-rsc-v2';
 import { resolveAsset } from '@uniformdev/csk-components/utils/assets';
+import { resolveRouteFromCode, UniformPageParameters } from '@uniformdev/next-app-router';
 
 type UniformMetadataParameters = {
   pageTitle: string;

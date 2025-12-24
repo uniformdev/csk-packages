@@ -1,6 +1,6 @@
 import { ComponentInstance } from '@uniformdev/canvas';
 
-import { resolveRouteFromCode } from '@uniformdev/canvas-next-rsc-v2';
+import { resolveRouteFromCode } from '@uniformdev/next-app-router';
 
 interface UniformMockParam {
   type: string;

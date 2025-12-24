@@ -1,5 +1,5 @@
 import { FC, useMemo } from 'react';
-import { ComponentParameter, UniformText } from '@uniformdev/canvas-next-rsc-v2/component';
+import { ComponentParameter, UniformText } from '@uniformdev/next-app-router/component';
 import BaseButton, { ButtonProps as BaseButtonProps } from '@/components/ui/Button';
 import BaseImage from '@/components/ui/Image';
 import { ReplaceFieldsWithAssets } from '@/types/cskTypes';

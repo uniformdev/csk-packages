@@ -1,4 +1,3 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
 import {
   Text,
   Banner,
@@ -6,6 +5,7 @@ import {
   BannerContentAlignment as ContentAlignment,
 } from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
+import { UniformComposition } from '@uniformdev/next-app-router';
 import { ContainerArgTypes } from '@/argTypes';
 import { createFakeCompositionData, createUniformParameter } from '@/utils';
 import { Meta, StoryObj, ArgTypes } from '@storybook/nextjs';

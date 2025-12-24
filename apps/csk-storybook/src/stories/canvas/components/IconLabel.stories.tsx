@@ -1,6 +1,6 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
 import { IconLabel, IconLabelParameters } from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
+import { UniformComposition } from '@uniformdev/next-app-router';
 import { TextArgTypes } from '@/argTypes';
 import { ICON_ASSET } from '@/assets';
 import { createFakeCompositionData } from '@/utils';

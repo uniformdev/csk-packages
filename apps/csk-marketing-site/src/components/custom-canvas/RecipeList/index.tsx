@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
 import { ComponentProps } from '@uniformdev/csk-components/types/cskTypes';
 import { withFlattenParameters } from '@uniformdev/csk-components/utils/withFlattenParameters';
+import { UniformSlot } from '@uniformdev/next-app-router/component';
 import RecipeCard from '@/components/custom-ui/RecipeCard';
 import { getRecipesByCategory } from '@/utils/canvas/contentClient';
 

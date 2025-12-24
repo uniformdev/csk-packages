@@ -1,4 +1,3 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
 import {
   Text,
   Button,
@@ -9,6 +8,7 @@ import {
   CardVariants,
 } from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
+import { UniformComposition } from '@uniformdev/next-app-router';
 import { ContainerArgTypes } from '@/argTypes';
 import { cardDefault, cardWithBackgroundImage } from '@/canvasMock/components/card';
 import { createFakeCompositionData, createUniformParameter } from '@/utils';

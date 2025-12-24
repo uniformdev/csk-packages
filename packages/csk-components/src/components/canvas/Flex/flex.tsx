@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
+import { UniformSlot } from '@uniformdev/next-app-router/component';
 import BaseFlex from '@/components/ui/Flex';
 import { withFlattenParameters } from '@/utils/withFlattenParameters';
 import { FlexProps, FlexParameters } from '.';

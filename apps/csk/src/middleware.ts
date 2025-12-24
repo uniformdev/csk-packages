@@ -1,4 +1,4 @@
-import { uniformMiddleware } from '@uniformdev/canvas-next-rsc-v2/middleware';
+import { uniformMiddleware } from '@uniformdev/next-app-router/middleware';
 import locales from '@/i18n/locales.json';
 import { formatPath } from './utils/formatPath';
 

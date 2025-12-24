@@ -1,4 +1,4 @@
-import { getProjectMapClient } from '@uniformdev/canvas-next-rsc-v2';
+import { getProjectMapClient } from '@uniformdev/next-app-router';
 import { ProjectMapNode } from '@uniformdev/project-map';
 import localesConfig from '@/i18n/locales.json';
 

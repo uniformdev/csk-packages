@@ -1,4 +1,3 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
 import {
   Section,
   Text,
@@ -9,6 +8,7 @@ import {
   SectionVariants,
 } from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
+import { UniformComposition } from '@uniformdev/next-app-router';
 import { ContainerArgTypes } from '@/argTypes';
 import { getSectionDefaultContent } from '@/canvasMock/components/section';
 import { createFakeCompositionData } from '@/utils';

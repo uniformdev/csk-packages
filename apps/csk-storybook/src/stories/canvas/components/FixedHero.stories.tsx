@@ -1,4 +1,3 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
 import {
   DemoHero,
   FixedHeroParameters,
@@ -6,6 +5,7 @@ import {
   DemoHeroVariants as FixedHeroVariants,
 } from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
+import { UniformComposition } from '@uniformdev/next-app-router';
 import { ButtonArgTypes, ContainerArgTypes, TextArgTypes } from '@/argTypes';
 import { getFixedHeroContent } from '@/canvasMock/components/fixedHero';
 import { createFakeCompositionData } from '@/utils';

@@ -1,6 +1,6 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
 import { Button } from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver, { ComponentMapping } from '@uniformdev/csk-components/utils/createComponentResolver';
+import { UniformComposition } from '@uniformdev/next-app-router';
 import { SMILE_ASSET } from '@/assets';
 import { createFakeCompositionData } from '@/utils';
 import { Meta, StoryObj } from '@storybook/nextjs';

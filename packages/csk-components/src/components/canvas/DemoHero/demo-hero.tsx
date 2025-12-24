@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { SlotDefinition } from '@uniformdev/canvas-next-rsc-shared-v2';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
+import { UniformSlot } from '@uniformdev/next-app-router/component';
+import { SlotDefinition } from '@uniformdev/next-app-router-shared';
 import { ReplaceFieldsWithAssets } from '@/types/cskTypes';
 import {
   DemoHeroVariants,

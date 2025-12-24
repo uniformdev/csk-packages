@@ -1,7 +1,7 @@
 import { ReactElement } from 'react';
-import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
 import { Image, Carousel, CarouselParameters } from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
+import { UniformComposition } from '@uniformdev/next-app-router';
 import { ContainerArgTypes } from '@/argTypes';
 import { IMAGE_ASSET } from '@/assets';
 import { createFakeCompositionData, createUniformParameter } from '@/utils';

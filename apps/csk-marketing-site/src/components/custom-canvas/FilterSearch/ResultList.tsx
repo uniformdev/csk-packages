@@ -2,9 +2,9 @@
 
 import { FC, Fragment, useEffect, useMemo } from 'react';
 import { ComponentInstance } from '@uniformdev/canvas';
-import { UniformSlot, UniformSlotProps } from '@uniformdev/canvas-next-rsc-v2/component';
 import { Text } from '@uniformdev/csk-components/components/ui';
 import { withFlattenParameters } from '@uniformdev/csk-components/utils/withFlattenParameters';
+import { UniformSlot, UniformSlotProps } from '@uniformdev/next-app-router/component';
 import { ResultListProps } from '.';
 import { useUniformSearchFilterEngineContext } from './ComponentsSearchProvider';
 import { SearchItemSkeleton } from './SearchItemSkeleton';

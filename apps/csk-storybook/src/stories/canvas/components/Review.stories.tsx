@@ -1,4 +1,3 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
 import {
   Text,
   Image,
@@ -7,6 +6,7 @@ import {
   ReviewVariants,
 } from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver from '@uniformdev/csk-components/utils/createComponentResolver';
+import { UniformComposition } from '@uniformdev/next-app-router';
 import { ContainerArgTypes } from '@/argTypes';
 import { reviewsDefault } from '@/canvasMock/components/reviews';
 import { createFakeCompositionData } from '@/utils';

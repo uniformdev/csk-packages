@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { ComponentParameter, UniformText } from '@uniformdev/canvas-next-rsc-v2/component';
+import { ComponentParameter, UniformText } from '@uniformdev/next-app-router/component';
 import BaseText from '@/components/ui/Text';
 import { cn } from '@/utils/styling';
 import { withFlattenParameters } from '@/utils/withFlattenParameters';

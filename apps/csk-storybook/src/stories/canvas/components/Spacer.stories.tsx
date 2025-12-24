@@ -1,6 +1,6 @@
-import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
 import { Spacer, SpacerParameters, SpacerVariants } from '@uniformdev/csk-components/components/canvas/serverClient';
 import createComponentResolver, { ComponentMapping } from '@uniformdev/csk-components/utils/createComponentResolver';
+import { UniformComposition } from '@uniformdev/next-app-router';
 import { createFakeCompositionData } from '@/utils';
 import { ArgTypes, Meta, StoryObj } from '@storybook/nextjs';
 import theme from '../../../../themeData.json';
