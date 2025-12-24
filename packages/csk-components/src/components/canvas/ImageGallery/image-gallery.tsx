@@ -22,7 +22,7 @@ const ImageGallery: FC<ImageGalleryProps & ReplaceFieldsWithAssets<ImageGalleryP
   const slotsToRender = {
     ...slots.imageGalleryItems,
     items: !items?.length
-      ? slots.imageGalleryItems.items
+      ? slots.imageGalleryItems?.items || []
       : items.map((item, index) => ({
           _id: `image-${index}-${item?.id}`,
           component: <BaseImage src={item.url} alt={item.title || ''} style={{ objectFit: 'cover' }} fill />,
