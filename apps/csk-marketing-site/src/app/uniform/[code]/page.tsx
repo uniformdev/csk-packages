@@ -18,9 +18,7 @@ export const generateStaticParams = async () => {
 
 const resolveRouteFromCodeWithCache = async (code: string) => {
   'use cache';
-  const result = await resolveRouteFromCode({
-    params: Promise.resolve({ code }),
-  });
+  const result = await resolveRouteFromCode({ code });
   return result;
 };
 
