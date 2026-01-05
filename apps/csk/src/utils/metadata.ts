@@ -43,7 +43,8 @@ type HeaderParameters = {
  * @throws Will throw an error if the route contains issues or cannot be found.
  */
 export async function generateMetadata(props: UniformPageParameters): Promise<Metadata> {
-  const result = await resolveRouteFromCode(props);
+  const { code } = await props.params;
+  const result = await resolveRouteFromCode({ code });
 
   if (!result.route) {
     notFound();
