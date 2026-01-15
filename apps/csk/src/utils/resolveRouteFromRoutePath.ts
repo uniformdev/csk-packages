@@ -14,13 +14,12 @@ const resolveRouteFromRoutePath = async (routePath: string, isPreviewMode: boole
       rules: undefined,
       defaultConsent: undefined,
       previewMode: undefined,
+      locale: undefined,
     },
   });
 
   return await resolveRouteFromCode({
-    params: Promise.resolve({
-      code,
-    }),
+    code,
   });
 };
 
