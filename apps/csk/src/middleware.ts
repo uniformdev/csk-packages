@@ -7,6 +7,7 @@ import { geolocation } from '@vercel/functions';
 import { routing } from './i18n/routing';
 import { DEVICE_TYPE_COOKIE_NAME, getDeviceType } from './utils/deviceType';
 import { formatPath } from './utils/formatPath';
+import locales from '@/i18n/locales.json';
 
 const intlMiddleware = createIntlMiddleware(routing);
 
@@ -82,9 +83,13 @@ export async function middleware(request: NextRequest) {
 
   if (!baseResponse.ok) return baseResponse;
 
+  const cookieLocale = request.cookies.get('NEXT_LOCALE')?.value;
+  const locale = cookieLocale || locales.defaultLocale;
+
   const response = await uniformMiddleware({
     //? if (cookieConsent) {
     defaultConsent: true,
+    locale,
     //? }
     rewriteRequestPath: async ({ url }) => ({
       path: formatPath(url.pathname),

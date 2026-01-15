@@ -13,17 +13,27 @@ import CoffeeShopProvider from '@/providers';
 import { getDir } from '@/utils/localization';
 //? if (ga) {
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { deserializeEvaluationResult } from '@uniformdev/next-app-router-shared';
 //? }
 
 export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: ReactNode;
+  params: Promise<{ code: string }>;
 }>) {
-  const cookieStore = await cookies();
-  const locale = cookieStore.get('NEXT_LOCALE')?.value || locales?.defaultLocale;
+  const { code } = await params;
+  const pageState = deserializeEvaluationResult({
+    input: code,
+  });
   return (
-    <html lang={locale} dir={getDir(locale)} suppressHydrationWarning className={customFontVariables}>
+    <html
+      lang={pageState.locale!}
+      dir={getDir(pageState.locale!)}
+      suppressHydrationWarning
+      className={customFontVariables}
+    >
       <body>
         <NextIntlClientProvider>
           <NextThemeProvider attribute="class" defaultTheme="light" enableSystem>
