@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { UniformRichText, ComponentParameter, UniformText } from '@uniformdev/canvas-next-rsc-v2/component';
+import { UniformRichText, ComponentParameter, UniformText } from '@uniformdev/next-app-router/component';
 import BaseFooter from '@/components/ui/Footer';
 import { ReplaceFieldsWithAssets } from '@/types/cskTypes';
 import { withFlattenParameters } from '@/utils/withFlattenParameters';

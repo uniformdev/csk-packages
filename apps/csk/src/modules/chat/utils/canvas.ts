@@ -6,7 +6,7 @@ import {
   flattenValues,
   mapSlotToPersonalizedVariations,
 } from '@uniformdev/canvas';
-import { getManifest } from '@uniformdev/canvas-next-rsc-v2';
+import { getManifest } from '@uniformdev/next-app-router';
 import type { ManifestV2 } from '@uniformdev/context';
 import { Context, CookieTransitionDataStore } from '@uniformdev/context';
 import locales from '@/i18n/locales.json';

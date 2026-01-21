@@ -2,7 +2,7 @@
 
 import { createStreamableUI } from 'ai/rsc';
 import { CANVAS_DRAFT_STATE, type RootComponentInstance } from '@uniformdev/canvas';
-import { UniformComposition } from '@uniformdev/canvas-next-rsc-v2';
+import { UniformComposition } from '@uniformdev/next-app-router';
 import { Flex as CSKFlex, Grid } from '@uniformdev/csk-components/components/ui';
 
 import { componentResolver } from '@/components';
@@ -82,36 +82,6 @@ export const renderBoostRecommendations = async () => {
 const renderComposition = async (composition: RootComponentInstance | undefined, code: string | undefined) => {
   const compositionUI = createStreamableUI();
 
-  compositionUI.update(
-    composition && code ? (
-      <UniformComposition
-        pageState={{
-          compositionState: CANVAS_DRAFT_STATE,
-          routePath: '',
-          keys: undefined,
-          components: {},
-          releaseId: undefined,
-          rules: undefined,
-          defaultConsent: undefined,
-          previewMode: undefined,
-        }}
-        route={{
-          type: 'composition',
-          matchedRoute: '',
-          compositionApiResponse: {
-            composition,
-            projectId: '',
-            state: 0,
-            created: '',
-            modified: '',
-            pattern: false,
-          },
-        }}
-        resolveComponent={componentResolver}
-        code={code}
-      />
-    ) : null
-  );
   compositionUI.done();
 
   return compositionUI.value;

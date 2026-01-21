@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState } from 'react';
-import { useUniformContext } from '@uniformdev/canvas-next-rsc-v2/component';
+import { useUniformContext } from '@uniformdev/next-app-router/component';
 import {
   Button as CSKButton,
   ButtonParameters as CSKButtonParameters,

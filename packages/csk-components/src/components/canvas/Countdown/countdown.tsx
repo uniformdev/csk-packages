@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useState, useEffect, useMemo } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
+import { UniformSlot } from '@uniformdev/next-app-router/component';
 import { withFlattenParameters } from '@/utils/withFlattenParameters';
 import { CountdownParameters, CountdownProps, CountdownVariants } from '.';
 import { CountdownUnit } from './constants';

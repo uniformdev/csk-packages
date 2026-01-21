@@ -1,12 +1,13 @@
 import { NextRequest } from 'next/server';
 import createIntlMiddleware from 'next-intl/middleware';
-import { uniformMiddleware } from '@uniformdev/canvas-next-rsc-v2/middleware';
+import { uniformMiddleware } from '@uniformdev/next-app-router/middleware';
 //? if (cookieConsent) {
 import { geolocation } from '@vercel/functions';
 //? }
 import { routing } from './i18n/routing';
 import { DEVICE_TYPE_COOKIE_NAME, getDeviceType } from './utils/deviceType';
 import { formatPath } from './utils/formatPath';
+import locales from '@/i18n/locales.json';
 
 const intlMiddleware = createIntlMiddleware(routing);
 
@@ -82,9 +83,13 @@ export async function middleware(request: NextRequest) {
 
   if (!baseResponse.ok) return baseResponse;
 
+  const cookieLocale = request.cookies.get('NEXT_LOCALE')?.value;
+  const locale = cookieLocale || locales.defaultLocale;
+
   const response = await uniformMiddleware({
     //? if (cookieConsent) {
     defaultConsent: true,
+    locale,
     //? }
     rewriteRequestPath: async ({ url }) => ({
       path: formatPath(url.pathname),

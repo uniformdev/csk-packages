@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { ComponentProps, UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
+import { ComponentProps, UniformSlot } from '@uniformdev/next-app-router/component';
 
 enum RecommendationsSlots {
   Recommendations = 'recommendations',

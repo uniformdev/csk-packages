@@ -1,5 +1,5 @@
 import { ComponentType } from 'react';
-import { ComponentProps } from '@uniformdev/canvas-next-rsc-v2/component';
+import { ComponentProps } from '@uniformdev/next-app-router/component';
 import { ResolveEmptyPlaceholderOptions } from '@/types/cskTypes';
 
 export const DEFAULT_EMPTY_PLACEHOLDER = { component: () => <div className="h-full min-h-20 w-full" /> };

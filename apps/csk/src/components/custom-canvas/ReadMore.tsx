@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useEffect, useRef, useState } from 'react';
-import { ComponentProps, UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
+import { ComponentProps, UniformSlot } from '@uniformdev/next-app-router/component';
 import { Button, ButtonVariant } from '@uniformdev/csk-components/components/ui';
 import { cn } from '@uniformdev/csk-components/utils/styling';
 import { withFlattenParameters } from '@uniformdev/csk-components/utils/withFlattenParameters';

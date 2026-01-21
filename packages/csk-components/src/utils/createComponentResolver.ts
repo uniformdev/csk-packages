@@ -1,4 +1,4 @@
-import { ResolveComponentFunction, ResolveComponentResult } from '@uniformdev/canvas-next-rsc-v2';
+import { ResolveComponentFunction, ResolveComponentResult } from '@uniformdev/next-app-router';
 import ComponentEmptyPlaceholder from '@/components/ui/ComponentEmptyPlaceholder';
 
 export type ComponentMapping = Record<string, ResolveComponentResult['component']>;

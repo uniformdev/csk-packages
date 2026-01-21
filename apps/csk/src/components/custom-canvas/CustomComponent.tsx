@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { ComponentParameter, UniformSlot, UniformText } from '@uniformdev/canvas-next-rsc-v2/component';
+import { ComponentParameter, UniformSlot, UniformText } from '@uniformdev/next-app-router/component';
 import { ComponentProps } from '@uniformdev/csk-components/types/cskTypes';
 import { withFlattenParameters } from '@uniformdev/csk-components/utils/withFlattenParameters';
 

@@ -1,5 +1,5 @@
 import { useCallback, useMemo } from 'react';
-import { useUniformContext } from '@uniformdev/canvas-next-rsc-client-v2';
+import { useUniformContext } from '@uniformdev/next-app-router-client';
 
 const useCookiesConsent = () => {
   const { context } = useUniformContext();

@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
-import { cookies } from 'next/headers';
 import { notFound } from 'next/navigation';
 import { AssetParamValue } from '@uniformdev/assets';
 import { flattenValues } from '@uniformdev/canvas';
-import { resolveRouteFromCode, UniformPageParameters } from '@uniformdev/canvas-next-rsc-v2';
+import { resolveRouteFromCode, UniformPageParameters } from '@uniformdev/next-app-router';
 import { resolveAsset } from '@uniformdev/csk-components/utils/assets';
 import locales from '@/i18n/locales.json';
 
@@ -45,9 +44,9 @@ type HeaderParameters = {
  * @throws Will throw an error if the route contains issues or cannot be found.
  */
 export async function generateMetadata(props: UniformPageParameters): Promise<Metadata> {
-  const result = await resolveRouteFromCode(props);
-  const cookieStore = await cookies();
-  const currentLocale = cookieStore.get('NEXT_LOCALE')?.value || locales.defaultLocale;
+  const { code } = await props.params;
+  const result = await resolveRouteFromCode({ code });
+  const currentLocale = result.pageState.locale!;
 
   if (!result.route) {
     notFound();

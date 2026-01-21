@@ -2,7 +2,7 @@
 
 import { FC } from 'react';
 import dynamic from 'next/dynamic';
-import { useUniformContext } from '@uniformdev/canvas-next-rsc-v2/component';
+import { useUniformContext } from '@uniformdev/next-app-router/component';
 import { withFlattenParameters } from '@/utils/withFlattenParameters';
 import { ThemeSwitcherParameters, ThemeSwitcherProps } from '.';
 

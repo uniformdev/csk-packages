@@ -2,7 +2,7 @@
 
 import { FC, ReactNode } from 'react';
 import Masonry from 'react-responsive-masonry';
-import { UniformSlotProps } from '@uniformdev/canvas-next-rsc-v2/component';
+import { UniformSlotProps } from '@uniformdev/next-app-router/component';
 import { cn } from '@/utils/styling';
 import { ImageGalleryParameters, ImageGalleryProps } from '.';
 

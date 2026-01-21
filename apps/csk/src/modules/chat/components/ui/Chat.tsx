@@ -3,7 +3,7 @@
 import { FC, useEffect, useRef, useState } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { IN_CONTEXT_EDITOR_QUERY_STRING_PARAM } from '@uniformdev/canvas';
-import { useQuirks, useScores, useUniformContext } from '@uniformdev/canvas-next-rsc-client-v2';
+import { useQuirks, useScores, useUniformContext } from '@uniformdev/next-app-router-client';
 import { EnrichmentData } from '@uniformdev/context';
 import { Flex } from '@uniformdev/csk-components/components/ui';
 import { cn } from '@uniformdev/csk-components/utils/styling';

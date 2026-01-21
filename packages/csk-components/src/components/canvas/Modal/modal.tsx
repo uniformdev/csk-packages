@@ -1,7 +1,7 @@
 'use client';
 
 import { FC } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
+import { UniformSlot } from '@uniformdev/next-app-router/component';
 import BaseModal from '@/components/ui/Modal';
 import { withFlattenParameters } from '@/utils/withFlattenParameters';
 import { ModalParameters, ModalProps } from '.';

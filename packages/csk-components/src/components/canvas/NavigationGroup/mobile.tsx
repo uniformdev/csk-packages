@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from 'react';
-import { UniformSlot } from '@uniformdev/canvas-next-rsc-v2/component';
+import { UniformSlot } from '@uniformdev/next-app-router/component';
 import { ArrowIcon } from '@/components/ui/_icons';
 import { cn } from '@/utils/styling';
 import { NavigationGroupParameters, NavigationGroupProps } from '.';

@@ -1,5 +1,5 @@
 import { FC, HTMLInputTypeAttribute } from 'react';
-import { ComponentParameter, UniformText } from '@uniformdev/canvas-next-rsc-v2/component';
+import { ComponentParameter, UniformText } from '@uniformdev/next-app-router/component';
 import { Text, TextProps } from '@uniformdev/csk-components/components/ui';
 import { ComponentProps, ViewPort } from '@uniformdev/csk-components/types/cskTypes';
 import { cn, resolveViewPort } from '@uniformdev/csk-components/utils/styling';

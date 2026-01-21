@@ -1,7 +1,7 @@
 'use client';
 
 import { createContext, useContext, FC, PropsWithChildren, useMemo, useCallback, useEffect, useState } from 'react';
-import { useUniformContext } from '@uniformdev/canvas-next-rsc-v2/component';
+import { useUniformContext } from '@uniformdev/next-app-router/component';
 import ShoppingCartModal from '@/components/custom-ui/ShoppingCartModal';
 import { CART_STORAGE_KEY } from '@/constants';
 import useStorage from '@/hooks/useStorage';

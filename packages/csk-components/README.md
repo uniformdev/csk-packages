@@ -33,7 +33,7 @@ import {
   UniformComposition,
   UniformPageParameters,
   createUniformStaticParams,
-} from '@uniformdev/canvas-next-rsc-v2';
+} from '@uniformdev/next-app-router';
 import { emptyPlaceholderResolver } from '@uniformdev/csk-components/components/canvas/emptyPlaceholders';
 import { compositionCache } from '@uniformdev/csk-components/utils/getSlotComponents';
 import { DesignExtensionsProvider } from '@uniformdev/design-extensions-tools/components/providers/server';

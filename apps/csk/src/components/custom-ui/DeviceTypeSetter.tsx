@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, useEffect } from 'react';
-import { useQuirks, useUniformContext } from '@uniformdev/canvas-next-rsc-client-v2';
+import { useQuirks, useUniformContext } from '@uniformdev/next-app-router-client';
 import { DEVICE_TYPE_COOKIE_NAME, getBestDevicePreset } from '@/utils/deviceType';
 
 type DeviceTypeSetterProps = {

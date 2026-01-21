@@ -1,7 +1,7 @@
 'use client';
 import { FC } from 'react';
 import { useDebouncedCallback } from 'use-debounce';
-import { useUniformContext } from '@uniformdev/canvas-next-rsc-v2/component';
+import { useUniformContext } from '@uniformdev/next-app-router/component';
 import { ComponentProps } from '@uniformdev/csk-components/types/cskTypes';
 import { useEntriesSearchContext } from '@/providers/EntriesSearchContextProvider';
 import { FilterBy as FilterByType } from '@/types';

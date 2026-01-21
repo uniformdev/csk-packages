@@ -1,4 +1,4 @@
-/** @type {import('@uniformdev/canvas-next-rsc-v2/config').UniformServerConfig} */
+/** @type {import('@uniformdev/next-app-router/config').UniformServerConfig} */
 module.exports = {
   //? if (!cookieConsent) {
   //? write('defaultConsent: true,\n');
@@ -9,4 +9,13 @@ module.exports = {
     quirkSerialization: true,
   },
   defaultConsent: true,
+  // canvasCache: {
+  //   bypassCache: true,
+  // },
+  // projectMapCache: {
+  //   bypassCache: true,
+  // },
+  // manifestCache: {
+  //   bypassCache: true,
+  // },
 };

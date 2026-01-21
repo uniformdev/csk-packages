@@ -2,7 +2,7 @@
 
 import { FC, HTMLInputTypeAttribute, ChangeEvent } from 'react';
 import { useDebouncedCallback } from 'use-debounce';
-import { UniformText, ComponentParameter } from '@uniformdev/canvas-next-rsc-v2/component';
+import { UniformText, ComponentParameter } from '@uniformdev/next-app-router/component';
 import { Text, TextProps } from '@uniformdev/csk-components/components/ui';
 import { ViewPort, ComponentProps } from '@uniformdev/csk-components/types/cskTypes';
 import { cn, resolveViewPort } from '@uniformdev/csk-components/utils/styling';
