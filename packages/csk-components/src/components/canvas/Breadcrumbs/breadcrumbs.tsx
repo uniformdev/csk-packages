@@ -4,6 +4,7 @@ import { ProjectMapClient } from '@uniformdev/project-map';
 import BaseButton, { ButtonVariant } from '@/components/ui/Button';
 import BaseText from '@/components/ui/Text';
 import { compositionCache } from '@/utils/getSlotComponents';
+import { getProxyFetch } from '@/utils/proxy';
 import { formatUniformLink, resolveRouteToPath } from '@/utils/routing';
 import { cn } from '@/utils/styling';
 import { withFlattenParameters } from '@/utils/withFlattenParameters';
@@ -26,10 +27,12 @@ export const Breadcrumbs: FC<
 
   const getAutoBreadcrumbs = async (): Promise<BreadcrumbLink[]> => {
     if (isInPattern) return [];
+    const proxyFetch = getProxyFetch();
     const client = new ProjectMapClient({
       projectId: process.env.UNIFORM_PROJECT_ID,
       apiKey: process.env.UNIFORM_API_KEY,
       apiHost: process.env.UNIFORM_CLI_BASE_URL || 'https://uniform.app',
+      fetch: proxyFetch,
     });
 
     const { projectMapNodes } = compositionCache.getUniformComposition({ id: context?._id }) || {};
@@ -54,6 +57,7 @@ export const Breadcrumbs: FC<
                 apiKey: process.env.UNIFORM_API_KEY,
                 apiHost: process.env.UNIFORM_CLI_BASE_URL || 'https://uniform.app',
                 edgeApiHost: process.env.UNIFORM_CLI_BASE_EDGE_URL || 'https://uniform.global',
+                fetch: proxyFetch,
               })
                 .getCompositionById({ compositionId: node.compositionId })
                 .then(({ composition }) => {

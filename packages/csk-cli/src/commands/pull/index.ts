@@ -14,11 +14,11 @@ type PullArgs = {
   uniform?: boolean;
 };
 
-export const pullCommand = async (args: PullArgs) => {
+export const pullCommand = async (args: PullArgs, customFetch?: typeof fetch) => {
   const { dev, uniform, locales } = args || {};
   if (locales) {
     console.info('Pulling locales...');
-    pullLocales().catch(e => console.error(e));
+    pullLocales(customFetch).catch(e => console.error(e));
     return;
   } else if (uniform) {
     console.info('Pulling uniform canvas data...');

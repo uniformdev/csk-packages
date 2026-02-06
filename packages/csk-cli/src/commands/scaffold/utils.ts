@@ -10,7 +10,7 @@ import {
 import { supportedParameterHandlers } from './parameterHandlers';
 import { ParameterHandler } from './types';
 
-export const getCanvasClient = async () => {
+export const getCanvasClient = async (customFetch?: typeof fetch) => {
   let projectId = process.env.UNIFORM_PROJECT_ID;
   let apiKey = process.env.UNIFORM_API_KEY;
   const apiHost = process.env.UNIFORM_CLI_BASE_URL || 'https://uniform.app';
@@ -36,6 +36,7 @@ export const getCanvasClient = async () => {
     projectId,
     edgeApiHost,
     disableSWR: true,
+    ...(customFetch ? { fetch: customFetch } : {}),
   });
 };
 

@@ -11,7 +11,7 @@ type LocalizationSettings = {
   defaultLocale: string | null;
 };
 
-export const pullLocales = async () => {
+export const pullLocales = async (customFetch?: typeof fetch) => {
   if (!fs.existsSync(PATH_TO_LOCALES_FOLDER)) {
     console.error(
       `No such directory for locales files: ${PATH_TO_LOCALES_FOLDER}. You can override it by setting LOCALES_PATH environment variable.`
@@ -23,6 +23,7 @@ export const pullLocales = async () => {
     projectId: process.env.UNIFORM_PROJECT_ID,
     apiKey: process.env.UNIFORM_API_KEY,
     apiHost: process.env.UNIFORM_CLI_BASE_URL || 'https://uniform.app',
+    ...(customFetch ? { fetch: customFetch } : {}),
   });
 
   const localeResponse: LocalesGetResponse = await client.get();

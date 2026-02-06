@@ -1,4 +1,5 @@
 import { SVGProps } from 'react';
+import { getProxyFetch } from '@/utils/proxy';
 
 type SVGAttributes = Record<string, string | number | boolean>;
 type ReactSVGProps = SVGProps<SVGSVGElement>;
@@ -109,7 +110,8 @@ export const convertSvgAttributesToReactProps = (attributes: SVGAttributes): Par
  */
 export const fetchSvg = async (url: string): Promise<string> => {
   try {
-    const response = await fetch(url, {
+    const proxyFetch = getProxyFetch();
+    const response = await proxyFetch(url, {
       headers: {
         Accept: 'image/svg+xml, text/plain, */*',
       },

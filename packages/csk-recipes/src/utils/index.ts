@@ -4,6 +4,7 @@ import { Ora } from 'ora';
 import prettier, { Options } from 'prettier';
 import { confirm, password } from '@inquirer/prompts';
 import { ENV_VARIABLES_DEFAULT_VALUES } from '../constants';
+import { getConfiguredFetch } from './proxy';
 
 export const runStartDevInteractive = () => {
   const child = spawn('npm run dev', {
@@ -133,6 +134,8 @@ export const installDataSources = async (
   accessToken: string,
   spinner: Ora
 ): Promise<void> => {
+  const proxyFetch = getConfiguredFetch();
+
   for (const { data, integrationType } of dataSources) {
     spinner.start(`Installing data source: ${data.displayName}...`);
 
@@ -140,7 +143,7 @@ export const installDataSources = async (
       '/api/v1/data-source',
       process.env.UNIFORM_CLI_BASE_URL || ENV_VARIABLES_DEFAULT_VALUES.UNIFORM_CLI_BASE_URL || 'https://uniform.app'
     );
-    const response = await fetch(url, {
+    const response = await proxyFetch(url, {
       method: 'PUT',
       headers: {
         accept: 'application/json',

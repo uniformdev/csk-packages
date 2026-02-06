@@ -4,11 +4,11 @@ import { PATH_TO_CUSTOM_CANVAS_FOLDER } from './constants';
 import { indexComponentFile, registerComponentFile } from './steps';
 import { getCanvasClient } from './utils';
 
-export const scaffold = async () => {
+export const scaffold = async (customFetch?: typeof fetch) => {
   try {
     const spinner = ora.default();
     console.info('Uniform RSC Scaffolder');
-    const canvasClient = await getCanvasClient();
+    const canvasClient = await getCanvasClient(customFetch);
 
     spinner?.start('Loading Component Definitions');
     const { componentDefinitions: definitions } = await canvasClient.getComponentDefinitions();

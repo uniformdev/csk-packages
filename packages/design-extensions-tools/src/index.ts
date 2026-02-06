@@ -17,6 +17,7 @@ import { applyColors } from './scripts/build-time/apply-colors';
 import { applyDimensions } from './scripts/build-time/apply-dimensions';
 import { applyFonts } from './scripts/build-time/apply-fonts';
 import { ConnectionOptions } from './types';
+import { getProxyUrl, setProxyUrl } from './utils/proxy';
 
 const addConnectionOptions = (cmd: Command) =>
   cmd
@@ -34,7 +35,8 @@ const addConnectionOptions = (cmd: Command) =>
       '-p, --project <id>',
       'Uniform project id. Defaults to UNIFORM_PROJECT_ID env var. Supports dotenv.',
       process.env.UNIFORM_PROJECT_ID
-    );
+    )
+    .option('--proxy <url>', 'HTTPS proxy URL. Defaults to HTTPS_PROXY env var.', getProxyUrl());
 
 type PullArgs = ConnectionOptions & {
   colors?: boolean;
@@ -214,5 +216,10 @@ addConnectionOptions(program.command('push').description('Push data to the integ
       return;
     }
   });
+
+program.hook('preAction', (_thisCommand, actionCommand) => {
+  const opts = actionCommand.opts();
+  setProxyUrl(opts.proxy);
+});
 
 program.parse(process.argv);

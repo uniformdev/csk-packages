@@ -1,5 +1,6 @@
 import { ConnectionOptions } from 'src/types';
 import { CONFIG_FILE, DEFAULT_INTEGRATION_URL, FG_GREEN, CONFIGURATION_KEYS, CONFIG_FILE_PATH } from '../constants';
+import { getConfiguredFetch } from './proxy';
 
 export { generateTailwindcssSource } from './generateTailwindcssPatterns';
 
@@ -28,7 +29,7 @@ export const checkConnectionOptions = (connectionOptions: ConnectionOptions) => 
 };
 
 export const fetchTokenValue = (endPoint: string, connectionOptions: ConnectionOptions, ...queryParams: string[]) =>
-  fetch(
+  getConfiguredFetch()(
     `${process.env.INTEGRATION_URL || DEFAULT_INTEGRATION_URL}/api/${endPoint}?projectId=${connectionOptions.project}${queryParams.length ? `&${queryParams.join('&')}` : ''}`,
     { cache: 'no-cache' }
   ).then(response => {
@@ -42,7 +43,7 @@ export const fetchTokenValue = (endPoint: string, connectionOptions: ConnectionO
   });
 
 export const pushTokenValue = (endPoint: string, body: BodyInit | null, connectionOptions: ConnectionOptions) =>
-  fetch(
+  getConfiguredFetch()(
     `${process.env.INTEGRATION_URL || DEFAULT_INTEGRATION_URL}/api/${endPoint}?projectId=${connectionOptions.project}&baseUrl=${connectionOptions.apiHost}`,
     {
       cache: 'no-cache',

@@ -1,10 +1,12 @@
 import type { MetadataRoute } from 'next';
 import { ProjectMapClient, getNodeActiveCompositionEdition } from '@uniformdev/project-map';
+import { getProxyFetch } from '@/utils/proxy';
 
 const projectMap = new ProjectMapClient({
   projectId: process.env.UNIFORM_PROJECT_ID,
   apiKey: process.env.UNIFORM_API_KEY,
   apiHost: process.env.UNIFORM_CLI_BASE_URL || 'https://uniform.app',
+  fetch: getProxyFetch(),
 });
 
 /**

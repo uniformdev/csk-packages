@@ -1,5 +1,8 @@
 import { program } from 'commander';
 import initCommand from './commands/init';
+import { getProxyUrl, setProxyUrl } from './utils/proxy';
+
+program.option('--proxy <url>', 'HTTPS proxy URL. Defaults to HTTPS_PROXY env var.', getProxyUrl());
 
 program
   .command('init')
@@ -9,5 +12,10 @@ program
   .option('-v, --verbose', 'verbose mode')
   .description('Initialize the project')
   .action(initCommand);
+
+program.hook('preAction', command => {
+  const opts = command.opts();
+  setProxyUrl(opts.proxy);
+});
 
 program.parse(process.argv);
