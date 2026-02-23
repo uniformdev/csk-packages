@@ -4,13 +4,16 @@ import locales from '@/i18n/locales.json';
 import { formatPath } from './utils/formatPath';
 
 export async function middleware(request: NextRequest) {
+  const releaseId = request.nextUrl.searchParams.get('releaseId');
   return uniformMiddleware({
     rewriteRequestPath: async ({ url }) => ({ path: formatPath(url.pathname, locales.defaultLocale) }),
+    ...(releaseId ? { release: { id: releaseId } } : undefined),
   })(request).then(result =>
     result.headers.get('x-middleware-rewrite')
       ? result
       : uniformMiddleware({
           rewriteRequestPath: async ({ url }) => ({ path: formatPath(url.pathname, undefined) }),
+          ...(releaseId ? { release: { id: releaseId } } : undefined),
         })(request)
   );
 }
