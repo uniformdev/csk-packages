@@ -1,6 +1,6 @@
 'use client';
 
-import { ChangeEvent, FC, SVGProps, useCallback, useEffect, useState } from 'react';
+import { ChangeEvent, FC, SVGProps, useCallback, useState } from 'react';
 import classNames from 'classnames';
 import { useDebouncedCallback } from 'use-debounce';
 import { ComponentProps } from '@uniformdev/csk-components/types/cskTypes';
@@ -42,18 +42,17 @@ type SearchBoxProps = ComponentProps<SearchBoxParameters>;
 const SearchBox: FC<SearchBoxProps & SearchBoxParameters> = ({ placeholder, searchDelay = DEFAULT_SEARCH_DELAY }) => {
   const { search, setSearch, isLoading } = useUniformSearchFilterEngineContext();
   const [inputValue, setInputValue] = useState(search);
+  const [prevSearch, setPrevSearch] = useState(search);
+
+  if (search !== prevSearch) {
+    setPrevSearch(search);
+    setInputValue(search);
+  }
 
   const debouncedSearchQuery = useDebouncedCallback(
     value => setSearch(value),
     Number(searchDelay) || DEFAULT_SEARCH_DELAY
   );
-
-  useEffect(() => {
-    if (search !== inputValue) {
-      setInputValue(search);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [search]);
 
   const handleSearchChange = useCallback(
     (event: ChangeEvent<HTMLInputElement>) => {
