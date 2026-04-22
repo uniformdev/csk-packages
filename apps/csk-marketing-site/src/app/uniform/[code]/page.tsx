@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { CANVAS_EDITOR_STATE } from '@uniformdev/canvas';
 import { emptyPlaceholderResolver } from '@uniformdev/csk-components/components/canvas/emptyPlaceholders';
 import { compositionCache } from '@uniformdev/csk-components/utils/getSlotComponents';
@@ -22,7 +23,7 @@ const resolveRouteFromCodeWithCache = async (code: string) => {
   return result;
 };
 
-export default async function UniformPage({ params }: UniformPageParameters) {
+async function UniformContent({ params }: UniformPageParameters) {
   const { code } = await params;
   const result = await resolveRouteFromCodeWithCache(code);
   return (
@@ -35,6 +36,14 @@ export default async function UniformPage({ params }: UniformPageParameters) {
         compositionCache={compositionCache}
       />
     </DesignExtensionsProvider>
+  );
+}
+
+export default async function UniformPage({ params }: UniformPageParameters) {
+  return (
+    <Suspense>
+      <UniformContent params={params} />
+    </Suspense>
   );
 }
 
