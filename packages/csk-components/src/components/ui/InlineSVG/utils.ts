@@ -110,6 +110,7 @@ export const convertSvgAttributesToReactProps = (attributes: SVGAttributes): Par
 export const fetchSvg = async (url: string): Promise<string> => {
   try {
     const response = await fetch(url, {
+      cache: 'force-cache',
       headers: {
         Accept: 'image/svg+xml, text/plain, */*',
       },

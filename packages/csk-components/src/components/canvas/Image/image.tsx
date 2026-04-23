@@ -22,7 +22,7 @@ const Image: FC<ImageProps & ReplaceFieldsWithAssets<ImageParameters, 'image'>> 
 }) => {
   const [resolvedImage] = image || [];
 
-  if (!resolvedImage) {
+  if (!resolvedImage?.url) {
     const isEditorPreviewMode = context.isContextualEditing;
     const isPlaceholder = component?._id?.includes('placeholder_');
 
@@ -49,7 +49,7 @@ const Image: FC<ImageProps & ReplaceFieldsWithAssets<ImageParameters, 'image'>> 
     return <img src={resolvedImage.url} alt={title} />;
   }
 
-  const imageUrl = imageFrom(resolvedImage?.url)
+  const imageUrl = imageFrom(resolvedImage.url)
     .transform({
       width: width,
       height: height,
