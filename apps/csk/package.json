@@ -1,6 +1,6 @@
 {
   "name": "@uniformdev/component-starter-kit",
-  "version": "6.1.68",
+  "version": "6.1.69",
   "private": true,
   "engines": {
     "yarn": "please-use-npm",
@@ -10,7 +10,7 @@
   },
   "scripts": {
     "dev": "run-s pull:dex apply:dex pull:locales next:dev",
-    "build": "run-s pull:locales pull:dex apply:dex next:build",
+    "build": "cross-env NODE_ENV=production run-s pull:locales pull:dex apply:dex next:build",
     "start": "next start",
     "dev:watch": "cross-env WATCH=true run-s pull:dex apply:dex next:dev",
     "next:dev": "next dev",

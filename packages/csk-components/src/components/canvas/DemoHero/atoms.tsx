@@ -95,7 +95,7 @@ export const BaseHeroImage: FC<
 }) => {
   const [resolvedImage] = image || [];
 
-  if (!resolvedImage) {
+  if (!resolvedImage?.url) {
     const isPlaceholder = component?._id?.includes('placeholder_');
 
     if (!isEditorPreviewMode || isPlaceholder || !variant) {
@@ -121,7 +121,7 @@ export const BaseHeroImage: FC<
     return <img src={resolvedImage.url} alt={title} />;
   }
 
-  const imageUrl = imageFrom(resolvedImage?.url)
+  const imageUrl = imageFrom(resolvedImage.url)
     .transform({
       width: width,
       height: height,

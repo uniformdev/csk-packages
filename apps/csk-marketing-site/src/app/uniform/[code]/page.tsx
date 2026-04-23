@@ -16,15 +16,10 @@ export const generateStaticParams = async () => {
   return createUniformStaticParams({ paths });
 };
 
-const resolveRouteFromCodeWithCache = async (code: string) => {
-  'use cache';
-  const result = await resolveRouteFromCode({ code });
-  return result;
-};
-
 export default async function UniformPage({ params }: UniformPageParameters) {
+  'use cache';
   const { code } = await params;
-  const result = await resolveRouteFromCodeWithCache(code);
+  const result = await resolveRouteFromCode({ code });
   return (
     <DesignExtensionsProvider isPreviewMode={result.pageState.compositionState === CANVAS_EDITOR_STATE}>
       <UniformComposition
