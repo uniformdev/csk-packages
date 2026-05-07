@@ -1,6 +1,7 @@
 'use client';
 
 import { FC, useCallback, useState, MouseEvent, useRef, useEffect } from 'react';
+import { resolveColor } from '@/utils/colorPalette';
 import { cn } from '@/utils/styling';
 import { ModalProps } from '.';
 import { CloseIcon } from './close-icon';
@@ -38,6 +39,9 @@ export const Modal: FC<ModalProps> = ({
     e.stopPropagation();
   }, []);
 
+  const closeIcon = resolveColor(closeIconColor, 'fill');
+  const formClasses = getFormClasses({ maxWidth, backgroundColor });
+
   useEffect(() => {
     if (!modalActionsRef.current) return;
     const currentActions = modalActionsRef.current.querySelectorAll('button, a');
@@ -65,15 +69,12 @@ export const Modal: FC<ModalProps> = ({
         >
           <form
             method="dialog"
-            className={cn(getFormClasses({ maxWidth, backgroundColor }), className)}
+            className={cn(formClasses.className, className)}
+            style={formClasses.style}
             onClick={handleClickContent}
           >
             <button onClick={toggleModal} className={getCloseButtonClasses({ disableCloseModalOnClickOutside })}>
-              <CloseIcon
-                className={cn({
-                  [`fill-${closeIconColor}`]: closeIconColor,
-                })}
-              />
+              <CloseIcon className={closeIcon.className} style={closeIcon.style} />
             </button>
             <div className="p-6 md:p-8">{content}</div>
             {actions && (

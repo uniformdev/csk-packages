@@ -2,6 +2,7 @@
 
 import { FC, useCallback, useState } from 'react';
 import dynamic from 'next/dynamic';
+import { resolveColor } from '@/utils/colorPalette';
 import { cn, resolveViewPort } from '@/utils/styling';
 import { VideoProps } from '.';
 import { PlayButton } from './play-button';
@@ -24,6 +25,8 @@ export const Video: FC<VideoProps> = ({
 
   const onPlay = useCallback(() => setPlaying(true), []);
   const onPause = useCallback(() => setPlaying(false), []);
+
+  const overlay = resolveColor(overlayColor, 'background');
 
   return (
     <div className="relative aspect-video size-full [&_video]:!object-cover">
@@ -49,11 +52,10 @@ export const Video: FC<VideoProps> = ({
         </div>
       )}
       <div
-        className={cn('absolute inset-0 pointer-events-none', {
-          [`bg-${overlayColor}`]: overlayColor,
+        className={cn('absolute inset-0 pointer-events-none', overlay.className, {
           [resolveViewPort(border, '{value}')]: border,
         })}
-        style={{ opacity: overlayOpacity || 0 }}
+        style={{ ...overlay.style, opacity: overlayOpacity || 0 }}
       />
     </div>
   );

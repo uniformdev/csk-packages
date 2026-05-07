@@ -1,3 +1,5 @@
+import { CSSProperties } from 'react';
+import { resolveColor } from '@/utils/colorPalette';
 import { cn } from '@/utils/styling';
 import { NavigationGroupParameters } from '.';
 
@@ -13,7 +15,10 @@ export const getCaretClasses = ({ isOpen }: CaretClassesProps) =>
 type ButtonClassesProps = {
   color?: NavigationGroupParameters['color'];
 };
-export const getButtonClasses = ({ color }: ButtonClassesProps) =>
-  cn('flex items-center gap-x-2', {
-    [`text-${color}`]: !!color,
-  });
+export const getButtonClasses = ({ color }: ButtonClassesProps): { className: string; style: CSSProperties } => {
+  const text = resolveColor(color, 'text');
+  return {
+    className: cn('flex items-center gap-x-2', text.className),
+    style: text.style,
+  };
+};

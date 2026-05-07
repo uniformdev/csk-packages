@@ -1,3 +1,5 @@
+import { CSSProperties } from 'react';
+import { resolveColor } from '@/utils/colorPalette';
 import { cn } from '@/utils/styling';
 import { MaxWidthMap, ModalProps } from '.';
 
@@ -14,10 +16,16 @@ type FormClassesProps = {
   maxWidth?: ModalProps['maxWidth'];
   backgroundColor?: ModalProps['backgroundColor'];
 };
-export const getFormClasses = ({ maxWidth, backgroundColor }: FormClassesProps) =>
-  cn('rounded-lg shadow-lg relative', MaxWidthMap[maxWidth || 'small'], {
-    [`bg-${backgroundColor}`]: !!backgroundColor,
-  });
+export const getFormClasses = ({
+  maxWidth,
+  backgroundColor,
+}: FormClassesProps): { className: string; style: CSSProperties } => {
+  const bg = resolveColor(backgroundColor, 'background');
+  return {
+    className: cn('rounded-lg shadow-lg relative', MaxWidthMap[maxWidth || 'small'], bg.className),
+    style: bg.style,
+  };
+};
 
 type CloseButtonClassesProps = {
   disableCloseModalOnClickOutside?: ModalProps['disableCloseModalOnClickOutside'];

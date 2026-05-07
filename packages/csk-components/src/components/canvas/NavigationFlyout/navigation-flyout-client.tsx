@@ -58,9 +58,11 @@ const NavigationFlyoutClient: FC<NavigationFlyoutClientProps> = ({
   const [resolvedCaretIcon] = caretIcon || [];
   const { url: caretUrl, title: caretTitle = '' } = resolvedCaretIcon || {};
 
+  const buttonClasses = getButtonClasses({ color });
+
   return (
     <div className="relative" onMouseLeave={closeFlyout}>
-      <button onMouseEnter={openFlyout} className={getButtonClasses({ color })}>
+      <button onMouseEnter={openFlyout} className={buttonClasses.className} style={buttonClasses.style}>
         <BaseIconLabel
           icon={icon}
           className={cn('group', className)}

@@ -1,6 +1,7 @@
 import { FC, useEffect, useState } from 'react';
 import { UniformSlot } from '@uniformdev/next-app-router/component';
 import { ArrowIcon } from '@/components/ui/_icons';
+import { resolveColor } from '@/utils/colorPalette';
 import { cn } from '@/utils/styling';
 import { NavigationFlyoutProps, NavigationFlyoutParameters } from '.';
 
@@ -31,12 +32,12 @@ export const NavigationFlyoutPropsMobileContent: FC<NavigationFlyoutPropsMobileC
   onClose,
 }) => {
   const headerHeight = useHeaderHeight();
+  const bg = resolveColor(backgroundColor, 'background');
 
   return (
     <div
-      style={{ top: headerHeight }}
-      className={cn('fixed left-0 right-0 bottom-0 z-10 w-full pt-4', {
-        [`bg-${backgroundColor}`]: !!backgroundColor,
+      style={{ ...bg.style, top: headerHeight }}
+      className={cn('fixed left-0 right-0 bottom-0 z-10 w-full pt-4', bg.className, {
         hidden: !isOpen,
         block: isOpen,
       })}

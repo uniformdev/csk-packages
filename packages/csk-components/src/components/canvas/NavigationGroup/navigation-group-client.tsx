@@ -50,9 +50,16 @@ const NavigationGroupClient: FC<NavigationGroupClientProps> = ({
   const [resolvedCaretIcon] = caretIcon || [];
   const { url: caretUrl, title: caretTitle = '' } = resolvedCaretIcon || {};
 
+  const buttonClasses = getButtonClasses({ color });
+
   return (
     <div className="relative" onMouseLeave={closeFlyout}>
-      <button onMouseEnter={openFlyout} onClick={openFlyout} className={getButtonClasses({ color })}>
+      <button
+        onMouseEnter={openFlyout}
+        onClick={openFlyout}
+        className={buttonClasses.className}
+        style={buttonClasses.style}
+      >
         <BaseIconLabel
           icon={icon}
           className={cn('group', className)}

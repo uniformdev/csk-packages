@@ -42,25 +42,25 @@ const Countdown: FC<CountdownProps & CountdownParameters> = ({
     }
   }, [targetDate, timeDifference]);
 
+  const text = getTextClass({ textColor });
+  const unitClass = getUnitClass({
+    variant: variant as CountdownVariants,
+    backgroundColor,
+    border,
+    size,
+  });
+
   return (
     <div>
       {timeDifference ? (
-        <div className={getTextClass({ textColor })}>
+        <div className={text.className} style={text.style}>
           {UNITS_TO_SHOW.map(unit => {
             if (time[unit] === 0 && unit === CountdownUnit.Days) return null;
 
             const currentTime = time[unit];
 
             return (
-              <div
-                key={unit}
-                className={getUnitClass({
-                  variant: variant as CountdownVariants,
-                  backgroundColor,
-                  border,
-                  size,
-                })}
-              >
+              <div key={unit} className={unitClass.className} style={unitClass.style}>
                 <div className="mx-auto">
                   {renderNumberList({
                     maxUnitsCount: memoizedMaxUnitsCount[unit],

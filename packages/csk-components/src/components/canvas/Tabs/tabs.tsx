@@ -43,32 +43,38 @@ export const Tabs: FC<TabsProps & TabsParameters & { slotData?: Record<string, C
     [context.isContextualEditing]
   );
 
+  const buttonContainer = getButtonContainerClasses({ color, variant });
+
   return (
     <Container className="flex flex-col gap-5" {...{ backgroundColor, spacing, border, fluidContent, height }}>
-      <div className={getButtonContainerClasses({ color, variant })}>
-        {tabItems?.map(({ id: currentTabId, [TAB_ITEM_TEXT_PARAMETER_ID]: currentTabText }) => (
-          <button
-            id={currentTabId}
-            key={currentTabId}
-            onClick={handleTabClick}
-            className={getButtonClasses({ color, variant, isActiveTab: currentTabId === activeTabId })}
-          >
-            <UniformText
+      <div className={buttonContainer.className} style={buttonContainer.style}>
+        {tabItems?.map(({ id: currentTabId, [TAB_ITEM_TEXT_PARAMETER_ID]: currentTabText }) => {
+          const buttonClasses = getButtonClasses({ color, variant, isActiveTab: currentTabId === activeTabId });
+          return (
+            <button
               id={currentTabId}
-              placeholder="Text goes here"
-              onFocus={handleContextualEditingTabClick}
-              parameter={
-                {
-                  parameterId: TAB_ITEM_TEXT_PARAMETER_ID,
-                  type: TAB_ITEM_TEXT_PARAMETER_TYPE,
-                  value: currentTabText,
-                  _contextualEditing: { isEditable: true },
-                } as ComponentParameter<string>
-              }
-              component={{ _id: currentTabId }}
-            />
-          </button>
-        ))}
+              key={currentTabId}
+              onClick={handleTabClick}
+              className={buttonClasses.className}
+              style={buttonClasses.style}
+            >
+              <UniformText
+                id={currentTabId}
+                placeholder="Text goes here"
+                onFocus={handleContextualEditingTabClick}
+                parameter={
+                  {
+                    parameterId: TAB_ITEM_TEXT_PARAMETER_ID,
+                    type: TAB_ITEM_TEXT_PARAMETER_TYPE,
+                    value: currentTabText,
+                    _contextualEditing: { isEditable: true },
+                  } as ComponentParameter<string>
+                }
+                component={{ _id: currentTabId }}
+              />
+            </button>
+          );
+        })}
       </div>
       <UniformSlot slot={slots.tabItems}>
         {({ child, _id: currentComponentId, key }) =>

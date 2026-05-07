@@ -1,4 +1,5 @@
 import { FC, MouseEventHandler, SVGProps } from 'react';
+import { resolveColor } from '@/utils/colorPalette';
 import { cn } from '@/utils/styling';
 
 const CloseIcon: FC<SVGProps<SVGSVGElement>> = ({ className, ...restProps }) => (
@@ -18,13 +19,17 @@ type CloseButtonProps = {
   onClose?: MouseEventHandler<HTMLButtonElement>;
   iconColor: string;
 };
-const CloseButton: FC<CloseButtonProps> = ({ onClose, iconColor }) => (
-  <button
-    onClick={onClose}
-    className={cn('absolute right-5 top-1/2 -translate-y-1/2', { [`text-${iconColor}`]: iconColor })}
-  >
-    <CloseIcon />
-  </button>
-);
+const CloseButton: FC<CloseButtonProps> = ({ onClose, iconColor }) => {
+  const icon = resolveColor(iconColor, 'text');
+  return (
+    <button
+      onClick={onClose}
+      className={cn('absolute right-5 top-1/2 -translate-y-1/2', icon.className)}
+      style={icon.style}
+    >
+      <CloseIcon />
+    </button>
+  );
+};
 
 export default CloseButton;
