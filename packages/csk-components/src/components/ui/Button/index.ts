@@ -1,4 +1,4 @@
-import { PropsWithChildren, ReactNode } from 'react';
+import { CSSProperties, PropsWithChildren, ReactNode } from 'react';
 import { ViewPort } from '@/types/cskTypes';
 
 export enum ButtonVariant {
@@ -11,6 +11,7 @@ export type ButtonProps = PropsWithChildren<{
   border?: string | ViewPort<string>;
   size?: string;
   className?: string;
+  style?: CSSProperties;
   textColor?: string;
   textSize?: string | ViewPort<string>;
   textWeight?: string;

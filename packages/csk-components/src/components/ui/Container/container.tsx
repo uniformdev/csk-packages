@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { resolveColor } from '@/utils/colorPalette';
 import { cn, formatSpaceParameterValue, resolveViewPort } from '@/utils/styling';
 import { ContainerProps } from '.';
 
@@ -20,6 +21,8 @@ export const Container: FC<ContainerProps> = ({
     { marginTop, marginBottom, marginRight, marginLeft, paddingTop, paddingBottom, paddingRight, paddingLeft },
   ] = formatSpaceParameterValue(spacing);
 
+  const bg = resolveColor(backgroundColor, 'background');
+
   return (
     <div
       className={cn(
@@ -36,8 +39,8 @@ export const Container: FC<ContainerProps> = ({
     >
       <div
         className={cn(
+          bg.className,
           {
-            [`bg-${backgroundColor}`]: !!backgroundColor,
             [resolveViewPort(marginTop, 'mt-{value}')]: marginTop,
             [resolveViewPort(marginBottom, 'mb-{value}')]: marginBottom,
             [resolveViewPort(marginRight, 'mr-{value}')]: marginRight,
@@ -51,7 +54,7 @@ export const Container: FC<ContainerProps> = ({
           },
           className
         )}
-        style={{ ...fixedSpacingValue, ...style }}
+        style={{ ...bg.style, ...fixedSpacingValue, ...style }}
         {...rest}
       >
         {children}

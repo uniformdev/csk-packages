@@ -4,38 +4,42 @@ import { FC, useState } from 'react';
 import BaseContainer from '@/components/ui/Container';
 import BaseGrid from '@/components/ui/Grid';
 import BaseGridItem from '@/components/ui/GridItem';
+import { resolveColor } from '@/utils/colorPalette';
 import { cn } from '@/utils/styling';
 import { HeaderProps } from './';
 
-const IconBurgerMenu: FC<{ isOpen: boolean; onClick: () => void; color?: string }> = ({ isOpen, onClick, color }) => (
-  <button onClick={onClick} aria-label="Menu" className={cn('w-7 h-7 relative focus:outline-none')}>
-    <div className="absolute left-1/2 top-1/2 block w-7 -translate-x-1/2 -translate-y-1/2">
-      <span
-        aria-hidden="true"
-        className={cn('block absolute h-0.5 w-7 transform transition duration-500 ease-in-out', {
-          'rotate-45': isOpen,
-          ' -translate-y-2': !isOpen,
-          [`bg-${color}`]: !!color,
-        })}
-      />
-      <span
-        aria-hidden="true"
-        className={cn('block absolute h-0.5 w-7 transform transition duration-500 ease-in-out', {
-          'opacity-0': isOpen,
-          [`bg-${color}`]: !!color,
-        })}
-      />
-      <span
-        aria-hidden="true"
-        className={cn('block absolute h-0.5 w-7 transform transition duration-500 ease-in-out', {
-          '-rotate-45': isOpen,
-          ' translate-y-2': !isOpen,
-          [`bg-${color}`]: !!color,
-        })}
-      />
-    </div>
-  </button>
-);
+const IconBurgerMenu: FC<{ isOpen: boolean; onClick: () => void; color?: string }> = ({ isOpen, onClick, color }) => {
+  const bg = resolveColor(color, 'background');
+  return (
+    <button onClick={onClick} aria-label="Menu" className={cn('w-7 h-7 relative focus:outline-none')}>
+      <div className="absolute left-1/2 top-1/2 block w-7 -translate-x-1/2 -translate-y-1/2">
+        <span
+          aria-hidden="true"
+          className={cn('block absolute h-0.5 w-7 transform transition duration-500 ease-in-out', bg.className, {
+            'rotate-45': isOpen,
+            ' -translate-y-2': !isOpen,
+          })}
+          style={bg.style}
+        />
+        <span
+          aria-hidden="true"
+          className={cn('block absolute h-0.5 w-7 transform transition duration-500 ease-in-out', bg.className, {
+            'opacity-0': isOpen,
+          })}
+          style={bg.style}
+        />
+        <span
+          aria-hidden="true"
+          className={cn('block absolute h-0.5 w-7 transform transition duration-500 ease-in-out', bg.className, {
+            '-rotate-45': isOpen,
+            ' translate-y-2': !isOpen,
+          })}
+          style={bg.style}
+        />
+      </div>
+    </button>
+  );
+};
 
 export const MobileHeader: FC<HeaderProps> = ({
   leftSection,

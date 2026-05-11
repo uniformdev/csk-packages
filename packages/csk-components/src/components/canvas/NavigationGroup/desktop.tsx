@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { UniformSlot } from '@uniformdev/next-app-router/component';
+import { resolveColor } from '@/utils/colorPalette';
 import { cn, resolveViewPort } from '@/utils/styling';
 import { NavigationGroupParameters, NavigationGroupProps } from '.';
 
@@ -13,22 +14,25 @@ export const NavigationGroupDesktopContent: FC<NavigationGroupDesktopContentProp
   backgroundColor,
   slots,
   border,
-}) => (
-  <div
-    className={cn('absolute left-0 max-w-64 z-10 pt-4', {
-      hidden: !isOpen,
-      block: isOpen,
-    })}
-  >
+}) => {
+  const bg = resolveColor(backgroundColor, 'background');
+  return (
     <div
-      className={cn({
-        [`bg-${backgroundColor}`]: !!backgroundColor,
-        [resolveViewPort(border, '{value}')]: border,
+      className={cn('absolute left-0 max-w-64 z-10 pt-4', {
+        hidden: !isOpen,
+        block: isOpen,
       })}
     >
-      <div className="flex flex-col gap-y-4 p-4">
-        <UniformSlot slot={slots.links} />
+      <div
+        className={cn(bg.className, {
+          [resolveViewPort(border, '{value}')]: border,
+        })}
+        style={bg.style}
+      >
+        <div className="flex flex-col gap-y-4 p-4">
+          <UniformSlot slot={slots.links} />
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};

@@ -1,10 +1,10 @@
-import { FC } from 'react';
+import { CSSProperties, FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import BaseHeader from '@/components/ui/Header';
 import BaseIconLabel from '@/components/ui/IconLabel';
 import { ReplaceFieldsWithAssets } from '@/types/cskTypes';
-import { cn, resolveViewPort } from '@/utils/styling';
+import { resolveHoverColor } from '@/utils/colorPalette';
 import { withFlattenParameters } from '@/utils/withFlattenParameters';
 import { SimpleHeaderParameters, SimpleHeaderProps, SimpleHeaderVariants } from '.';
 
@@ -16,6 +16,7 @@ const SimpleHeader: FC<SimpleHeaderProps & ReplaceFieldsWithAssets<SimpleHeaderP
   textColor,
   hoverTextColor,
 }) => {
+  const hoverText = resolveHoverColor(hoverTextColor, 'text', 'group-hover');
   return (
     <BaseHeader
       sticky={variant === SimpleHeaderVariants.Sticky}
@@ -46,11 +47,7 @@ const SimpleHeader: FC<SimpleHeaderProps & ReplaceFieldsWithAssets<SimpleHeaderP
             letterSpacing="normal"
             alignment="left"
           >
-            <span
-              className={cn({
-                [resolveViewPort(hoverTextColor, 'group-hover:text-{value}')]: !!hoverTextColor,
-              })}
-            >
+            <span className={hoverText.className} style={hoverText.style as CSSProperties}>
               {link.title}
             </span>
           </BaseIconLabel>

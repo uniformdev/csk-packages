@@ -2,6 +2,7 @@
 
 import { FC, useCallback, useState } from 'react';
 import Container from '@/components/ui/Container';
+import { isCustomColor, resolveColor } from '@/utils/colorPalette';
 import { cn } from '@/utils/styling';
 import { AccordionItemProps } from '.';
 import { IconArrowDown } from './icon-arrow-down';
@@ -17,6 +18,9 @@ export const AccordionItem: FC<AccordionItemProps> = ({
   const [isOpened, setOpened] = useState(false);
   const toggleOpenAccordion = useCallback(() => setOpened(isOpened => !isOpened), []);
 
+  const hasCustomBg = isCustomColor(backgroundColor);
+  const arrowText = resolveColor(backgroundColor, 'text');
+
   return (
     <Container {...{ fluidContent: true }}>
       <Container {...{ backgroundColor, spacing, fluidContent: true, className }}>
@@ -26,10 +30,11 @@ export const AccordionItem: FC<AccordionItemProps> = ({
         >
           {text}
           <div
-            className={cn({
-              [`text-${backgroundColor} invert`]: !!backgroundColor,
+            className={cn(arrowText.className, {
+              invert: !!backgroundColor && !hasCustomBg,
               'text-black dark:text-white': !backgroundColor,
             })}
+            style={arrowText.style}
           >
             {isOpened ? <IconArrowDown /> : <IconArrowUp />}
           </div>

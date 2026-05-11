@@ -88,6 +88,7 @@ export const EXTRACT_UI_COMPONENTS = [
 
 export const EXTRACT_UTILS = [
   'assets.ts',
+  'colorPalette.ts',
   'createComponentResolver.ts',
   'withFlattenParameters.tsx',
   'withSlotsDataValue.tsx',

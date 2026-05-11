@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import BaseText from '@/components/ui/Text';
+import { resolveColor } from '@/utils/colorPalette';
 import { cn } from '@/utils/styling';
 import { IconLabelProps } from '.';
 
@@ -19,34 +20,38 @@ export const IconLabel: FC<IconLabelProps> = ({
   iconClassName,
   className,
   iconPosition,
-}) => (
-  <div
-    className={cn(
-      'flex w-fit items-center gap-x-3',
-      {
-        [`text-${size}`]: !!size,
-        [`text-${color}`]: !!color,
-        'flex-row-reverse': icon && iconPosition === 'right',
-      },
-      className
-    )}
-  >
-    {icon && <div className={cn('relative size-[1em]', iconClassName)}>{icon}</div>}
-    <BaseText
-      {...{
-        alignment,
-        tag,
-        color,
-        size,
-        font,
-        weight,
-        transform,
-        decoration,
-        letterSpacing,
-        className: textClassName,
-      }}
+}) => {
+  const text = resolveColor(color, 'text');
+  return (
+    <div
+      className={cn(
+        'flex w-fit items-center gap-x-3',
+        text.className,
+        {
+          [`text-${size}`]: !!size,
+          'flex-row-reverse': icon && iconPosition === 'right',
+        },
+        className
+      )}
+      style={text.style}
     >
-      {children}
-    </BaseText>
-  </div>
-);
+      {icon && <div className={cn('relative size-[1em]', iconClassName)}>{icon}</div>}
+      <BaseText
+        {...{
+          alignment,
+          tag,
+          color,
+          size,
+          font,
+          weight,
+          transform,
+          decoration,
+          letterSpacing,
+          className: textClassName,
+        }}
+      >
+        {children}
+      </BaseText>
+    </div>
+  );
+};

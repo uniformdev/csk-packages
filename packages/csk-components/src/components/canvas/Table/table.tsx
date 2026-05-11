@@ -14,19 +14,22 @@ const Table: FC<TableProps & TableParameters> = ({
   border,
   fluidContent,
   height,
-}) => (
-  <Container className="flex flex-col gap-5" {...{ backgroundColor, spacing, border, fluidContent, height }}>
-    <div className="overflow-x-auto">
-      <table className={getTableClasses({ size, textColor })}>
-        <thead>
-          <UniformSlot slot={slots.tableHead} />
-        </thead>
-        <tbody>
-          <UniformSlot slot={slots.tableBody} />
-        </tbody>
-      </table>
-    </div>
-  </Container>
-);
+}) => {
+  const tableClasses = getTableClasses({ size, textColor });
+  return (
+    <Container className="flex flex-col gap-5" {...{ backgroundColor, spacing, border, fluidContent, height }}>
+      <div className="overflow-x-auto">
+        <table className={tableClasses.className} style={tableClasses.style}>
+          <thead>
+            <UniformSlot slot={slots.tableHead} />
+          </thead>
+          <tbody>
+            <UniformSlot slot={slots.tableBody} />
+          </tbody>
+        </table>
+      </div>
+    </Container>
+  );
+};
 
 export default withFlattenParameters(Table);

@@ -3,7 +3,7 @@
 import { FC } from 'react';
 import { setCookie } from 'cookies-next';
 import { useTheme } from 'next-themes';
-import { cn } from '@/utils/styling';
+import { resolveColor } from '@/utils/colorPalette';
 import { ThemeSwitcherProps } from '.';
 
 enum Theme {
@@ -42,14 +42,10 @@ export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ iconColor, onChange }) =
     onChange?.(theme);
   };
 
+  const icon = resolveColor(iconColor, 'text');
+
   return (
-    <button
-      aria-label="Theme selector"
-      onClick={toggleTheme}
-      className={cn({
-        [`text-${iconColor}`]: !!iconColor,
-      })}
-    >
+    <button aria-label="Theme selector" onClick={toggleTheme} className={icon.className} style={icon.style}>
       {resolvedTheme === Theme.Dark ? <MoonIcon /> : <SunIcon />}
     </button>
   );

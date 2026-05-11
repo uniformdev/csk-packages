@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { ComponentParameter, UniformText } from '@uniformdev/next-app-router/component';
 import BaseText from '@/components/ui/Text';
-import { cn } from '@/utils/styling';
+import { resolveColor } from '@/utils/colorPalette';
 import { withFlattenParameters } from '@/utils/withFlattenParameters';
 import { BadgeParameters, BadgeProps } from '.';
 import { Dot } from './dot';
@@ -16,23 +16,22 @@ const Badge: FC<BadgeProps & BadgeParameters> = ({
   pill = false,
   size,
   parameters,
-}) => (
-  <div className={getBadgeClass({ pill, size, dotColor, borderColor, backgroundColor })}>
-    {dotColor && (
-      <Dot
-        className={cn({
-          [`fill-${dotColor}`]: dotColor,
-        })}
-      />
-    )}
-    <BaseText color={textColor} size="xs">
-      <UniformText
-        placeholder="Badge text goes here"
-        parameter={parameters.text as ComponentParameter<string>}
-        component={component}
-      />
-    </BaseText>
-  </div>
-);
+}) => {
+  const badge = getBadgeClass({ pill, size, dotColor, borderColor, backgroundColor });
+
+  const dot = resolveColor(dotColor, 'fill');
+  return (
+    <div className={badge.className} style={badge.style}>
+      {dotColor && <Dot className={dot.className} style={dot.style} />}
+      <BaseText color={textColor} size="xs">
+        <UniformText
+          placeholder="Badge text goes here"
+          parameter={parameters.text as ComponentParameter<string>}
+          component={component}
+        />
+      </BaseText>
+    </div>
+  );
+};
 
 export default withFlattenParameters(Badge);

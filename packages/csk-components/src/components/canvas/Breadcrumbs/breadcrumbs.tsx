@@ -3,6 +3,7 @@ import { LinkParamValue, CanvasClient, flattenValues } from '@uniformdev/canvas'
 import { ProjectMapClient } from '@uniformdev/project-map';
 import BaseButton, { ButtonVariant } from '@/components/ui/Button';
 import BaseText from '@/components/ui/Text';
+import { resolveColor } from '@/utils/colorPalette';
 import { compositionCache } from '@/utils/getSlotComponents';
 import { formatUniformLink, resolveRouteToPath } from '@/utils/routing';
 import { cn } from '@/utils/styling';
@@ -91,12 +92,14 @@ export const Breadcrumbs: FC<
     return null;
   }
 
+  const colorResolved = resolveColor(color, 'text');
+
   return (
     <ul
-      className={cn('flex items-center', {
+      className={cn('flex items-center', colorResolved.className, {
         [`text-${size}`]: !!size,
-        [`text-${color}`]: !!color,
       })}
+      style={colorResolved.style}
     >
       {itemToDisplay.map(({ title, link }, index) => (
         <li className="flex items-center" key={`${title}-${index}`}>

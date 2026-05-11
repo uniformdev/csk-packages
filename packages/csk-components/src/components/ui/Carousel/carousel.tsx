@@ -2,6 +2,7 @@
 
 import { FC, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import BaseContainer from '@/components/ui/Container';
+import { isCustomColor, resolveColor } from '@/utils/colorPalette';
 import { cn, resolveViewPort } from '@/utils/styling';
 import { CarouselProps, CarouselVariant } from '.';
 
@@ -49,6 +50,10 @@ export const Carousel: FC<CarouselProps> = ({
     setCurrentIndex(prev => (prev === totalCountOfItems - 1 ? 0 : prev + 1));
   }, [totalCountOfItems]);
 
+  const hasCustomBg = isCustomColor(backgroundColor);
+  const bgFromBackground = resolveColor(backgroundColor, 'background');
+  const textFromBackground = resolveColor(backgroundColor, 'text');
+
   const renderPagination = () => {
     if (variant === CarouselVariant.BROCHURE) {
       return (
@@ -60,11 +65,16 @@ export const Carousel: FC<CarouselProps> = ({
               <button
                 key={`slide-${index}`}
                 onClick={() => setCurrentIndex(index)}
-                className={cn('h-2 rounded-full transition-all duration-300 size-2 opacity-50', {
-                  'w-6 opacity-100': index === currentIndex,
-                  [`bg-${backgroundColor} invert`]: !!backgroundColor,
-                  'bg-black dark:bg-white': !backgroundColor,
-                })}
+                className={cn(
+                  'h-2 rounded-full transition-all duration-300 size-2 opacity-50',
+                  bgFromBackground.className,
+                  {
+                    'w-6 opacity-100': index === currentIndex,
+                    invert: !!backgroundColor && !hasCustomBg,
+                    'bg-black dark:bg-white': !backgroundColor,
+                  }
+                )}
+                style={bgFromBackground.style}
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}
@@ -78,10 +88,11 @@ export const Carousel: FC<CarouselProps> = ({
     if (variant === CarouselVariant.NUMERIC) {
       return (
         <div
-          className={cn('flex py-4 px-4 z-5 gap-x-4 justify-end items-center', {
-            [`text-${backgroundColor} invert`]: !!backgroundColor,
+          className={cn('flex py-4 px-4 z-5 gap-x-4 justify-end items-center', textFromBackground.className, {
+            invert: !!backgroundColor && !hasCustomBg,
             'text-black dark:text-white': !backgroundColor,
           })}
+          style={textFromBackground.style}
         >
           <button onClick={goToPrevious}>❮</button>
           <div className="flex flex-col px-2">
@@ -94,10 +105,15 @@ export const Carousel: FC<CarouselProps> = ({
 
     return (
       <div
-        className={cn('absolute inset-x-5 top-1/2 flex -translate-y-1/2 justify-between', {
-          [`text-${backgroundColor} invert`]: !!backgroundColor,
-          'text-black dark:text-white': !backgroundColor,
-        })}
+        className={cn(
+          'absolute inset-x-5 top-1/2 flex -translate-y-1/2 justify-between',
+          textFromBackground.className,
+          {
+            invert: !!backgroundColor && !hasCustomBg,
+            'text-black dark:text-white': !backgroundColor,
+          }
+        )}
+        style={textFromBackground.style}
       >
         <button onClick={goToPrevious}>❮</button>
         <button onClick={goToNext}>❯</button>
