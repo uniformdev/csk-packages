@@ -57,8 +57,10 @@ export const Text: FC<TextProps> = ({
   // non-contextual path and Tailwind token classes keep working.
   //TODO: remove this once UniformText is updated to support inline styles.
   return (
-    <span style={mergedStyle}>
-      <children.type {...childrenProps} className={cn(baseStyles, childrenProps?.className as string | undefined)} />
-    </span>
+    <children.type
+      {...childrenProps}
+      className={cn(baseStyles, childrenProps?.className as string | undefined)}
+      style={mergedStyle}
+    />
   );
 };
