@@ -1,6 +1,6 @@
 {
   "name": "@uniformdev/csk-cli",
-  "version": "6.1.72",
+  "version": "6.1.73",
   "description": "Command-line interface (CLI) tool designed to streamline the development workflow within Uniform projects. It provides commands for pulling additional data and generating components based on Canvas data",
   "license": "SEE LICENSE IN LICENSE.txt",
   "engines": {
@@ -19,6 +19,10 @@
     "./components": {
       "types": "./dist/components.d.mts",
       "default": "./dist/components.mjs"
+    },
+    "./proxy-fetch": {
+      "types": "./dist/proxy-fetch.d.mts",
+      "default": "./dist/proxy-fetch.mjs"
     }
   },
   "types": "./dist/index.d.mts",
@@ -38,7 +42,8 @@
     "@inquirer/prompts": "^7.1.0",
     "commander": "^9.0.0",
     "dotenv": "16.4.7",
-    "ora": "^8.2.0"
+    "ora": "^8.2.0",
+    "undici": "^7.16.0"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",

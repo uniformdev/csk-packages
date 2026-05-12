@@ -1,5 +1,6 @@
 import { program } from 'commander';
 import type { Command } from 'commander';
+import { setProxyUrl } from '@uniformdev/csk-cli/proxy-fetch';
 import {
   buildAllowedGroups,
   buildBorders,
@@ -34,7 +35,8 @@ const addConnectionOptions = (cmd: Command) =>
       '-p, --project <id>',
       'Uniform project id. Defaults to UNIFORM_PROJECT_ID env var. Supports dotenv.',
       process.env.UNIFORM_PROJECT_ID
-    );
+    )
+    .option('--proxy <url>', 'HTTP(S) proxy URL for outbound requests. Defaults to HTTPS_PROXY/HTTP_PROXY env var.');
 
 type PullArgs = ConnectionOptions & {
   colors?: boolean;
@@ -44,6 +46,7 @@ type PullArgs = ConnectionOptions & {
   groups?: boolean;
   allTokens?: boolean;
   allSettings: boolean;
+  proxy?: string;
 };
 
 addConnectionOptions(program.command('pull').description('Pull data from the integration'))
@@ -55,6 +58,7 @@ addConnectionOptions(program.command('pull').description('Pull data from the int
   .option('-at, --allTokens', 'all tokens')
   .option('-as, --allSettings', 'all settings')
   .action(async (args: PullArgs) => {
+    setProxyUrl(args.proxy);
     const connectionOptions: ConnectionOptions = {
       apiKey: args.apiKey,
       apiHost: args.apiHost,
@@ -144,6 +148,7 @@ type PushArgs = ConnectionOptions & {
   groups?: boolean;
   allTokens?: boolean;
   allSettings: boolean;
+  proxy?: string;
 };
 
 addConnectionOptions(program.command('push').description('Push data to the integration'))
@@ -155,6 +160,7 @@ addConnectionOptions(program.command('push').description('Push data to the integ
   .option('-at, --allTokens', 'all tokens')
   .option('-as, --allSettings', 'all settings')
   .action(async (args: PushArgs) => {
+    setProxyUrl(args.proxy);
     const connectionOptions: ConnectionOptions = {
       apiKey: args.apiKey,
       apiHost: args.apiHost,
