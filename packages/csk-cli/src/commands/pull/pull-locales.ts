@@ -3,6 +3,7 @@ import path from 'node:path';
 import { LocaleClient, LocalesGetResponse } from '@uniformdev/canvas';
 import { CONFIG_FILE, PATH_TO_LOCALES_FOLDER } from './constants';
 import { syncSuccessLog } from './utils';
+import { createProxyFetch, getProxyUrl } from '../../proxy-fetch';
 
 type LocalizationSettings = {
   locales: string[];
@@ -11,7 +12,7 @@ type LocalizationSettings = {
   defaultLocale: string | null;
 };
 
-export const pullLocales = async () => {
+export const pullLocales = async ({ proxy }: { proxy?: string } = {}) => {
   if (!fs.existsSync(PATH_TO_LOCALES_FOLDER)) {
     console.error(
       `No such directory for locales files: ${PATH_TO_LOCALES_FOLDER}. You can override it by setting LOCALES_PATH environment variable.`
@@ -23,6 +24,7 @@ export const pullLocales = async () => {
     projectId: process.env.UNIFORM_PROJECT_ID,
     apiKey: process.env.UNIFORM_API_KEY,
     apiHost: process.env.UNIFORM_CLI_BASE_URL || 'https://uniform.app',
+    fetch: createProxyFetch(getProxyUrl(proxy)),
   });
 
   const localeResponse: LocalesGetResponse = await client.get();

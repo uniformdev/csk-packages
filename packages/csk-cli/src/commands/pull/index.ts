@@ -12,13 +12,14 @@ type PullArgs = {
   allSettings: boolean;
   dev?: boolean;
   uniform?: boolean;
+  proxy?: string;
 };
 
 export const pullCommand = async (args: PullArgs) => {
-  const { dev, uniform, locales } = args || {};
+  const { dev, uniform, locales, proxy } = args || {};
   if (locales) {
     console.info('Pulling locales...');
-    pullLocales().catch(e => console.error(e));
+    pullLocales({ proxy }).catch(e => console.error(e));
     return;
   } else if (uniform) {
     console.info('Pulling uniform canvas data...');

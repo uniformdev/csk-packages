@@ -82,6 +82,17 @@ Alternatively you can use `npm run pull:content:dev` and `npm run push:content:d
 
 > Developer-owned content typically scoped to components, content types, component patterns but can vary based on the stage of your project lifecycle and your preferences. For example, at some point, you may not want to sync assets like images, videos, etc.
 
+## Running behind a corporate proxy
+
+Both the Next.js runtime and the CLI scripts (`pull:dex`, `push:dex`, `pull:locales`) honor `HTTPS_PROXY` / `HTTP_PROXY`:
+
+```bash
+export HTTPS_PROXY=http://your-proxy.example.com:8080
+export HTTP_PROXY=http://your-proxy.example.com:8080
+```
+
+If your proxy intercepts TLS with a custom root CA, also set `NODE_EXTRA_CA_CERTS=/path/to/ca.pem`, otherwise Node rejects the certificate with `UNABLE_TO_VERIFY_LEAF_SIGNATURE`. Each CLI also accepts `--proxy <url>` to override the env var for a single run.
+
 ## Other scripts
 
 ### **Design Extension Sync**
