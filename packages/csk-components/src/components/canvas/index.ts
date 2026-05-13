@@ -27,6 +27,7 @@ import Modal from './Modal';
 import NavigationFlyout from './NavigationFlyout';
 import NavigationGroup from './NavigationGroup';
 import NavigationLink from './NavigationLink';
+import NavigationMegaCategory from './NavigationMegaCategory';
 import Page from './Page';
 import Review from './Review';
 import RichText from './RichText';
@@ -87,6 +88,7 @@ export const cskComponentsMapping: ComponentMapping = {
   [cskComponentsNames.NavigationLink]: NavigationLink,
   [cskComponentsNames.NavigationGroup]: NavigationGroup,
   [cskComponentsNames.NavigationFlyout]: NavigationFlyout,
+  [cskComponentsNames.NavigationMegaCategory]: NavigationMegaCategory,
   [cskComponentsNames.Footer]: Footer,
   [cskComponentsNames.SimpleFooter]: SimpleFooter,
   [cskComponentsNames.ThemeSwitcher]: ThemeSwitcher,
