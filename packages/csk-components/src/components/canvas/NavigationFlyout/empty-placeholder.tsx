@@ -1,6 +1,6 @@
 import { ResolveEmptyPlaceholderOptions } from '@/types/cskTypes';
 import { DEFAULT_EMPTY_PLACEHOLDER } from '@/utils/createEmptyPlaceholderResolver';
-import { NavigationFlyoutSlots } from '.';
+import { NavigationFlyoutSlots } from './types';
 
 export const NavigationFlyoutEmptyPlaceholder = (props: ResolveEmptyPlaceholderOptions) => {
   switch (props.slotName) {

@@ -1,7 +1,7 @@
 import { CSSProperties } from 'react';
 import { resolveColor } from '@/utils/colorPalette';
 import { cn } from '@/utils/styling';
-import { NavigationFlyoutParameters } from '.';
+import type { NavigationFlyoutParameters } from './types';
 
 type CaretClassesProps = {
   isOpen?: boolean;

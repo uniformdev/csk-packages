@@ -1,30 +1,18 @@
 import dynamic from 'next/dynamic';
-import { AssetParamValue } from '@uniformdev/assets';
-import { LinkParamValue } from '@uniformdev/canvas';
-import { TextParameters } from '@/components/canvas/Text/parameters';
 import BaseImage from '@/components/ui/Image';
 import InlineSVG from '@/components/ui/InlineSVG';
-import { ComponentProps, ViewPort } from '@/types/cskTypes';
 import { resolveAsset } from '@/utils/assets';
+import { withSlotsDataValue } from '@/utils/withSlotsDataValue';
+import { NavigationFlyoutProps, NavigationFlyoutSlots } from './types';
 
-const NavigationFlyoutClient = dynamic(() => import('./navigation-flyout-client').then(mod => mod.default));
+export type { NavigationFlyoutParameters, NavigationFlyoutProps } from './types';
+export { NavigationFlyoutSlots, NavigationFlyoutVariants } from './types';
 
-export type NavigationFlyoutParameters = TextParameters & {
-  icon?: AssetParamValue;
-  link?: LinkParamValue;
-  backgroundColor?: string;
-  border?: string | ViewPort<string>;
-  caretIcon?: AssetParamValue;
-  hoverEffect?: string | ViewPort<string>;
-  className?: string;
-};
-
-export enum NavigationFlyoutSlots {
-  NavigationFlyoutLeftContent = 'navigationFlyoutLeftContent',
-  NavigationFlyoutRightContent = 'navigationFlyoutRightContent',
-}
-
-export type NavigationFlyoutProps = ComponentProps<NavigationFlyoutParameters, NavigationFlyoutSlots>;
+const NavigationFlyoutClient = dynamic(() =>
+  import('./navigation-flyout-client').then(mod =>
+    withSlotsDataValue(mod.default, [NavigationFlyoutSlots.NavigationFlyoutLeftContent])
+  )
+);
 
 const NavigationFlyout = (props: NavigationFlyoutProps) => {
   const [resolvedImage] = resolveAsset(props.parameters.icon?.value);

@@ -14,6 +14,7 @@ import { ImageGalleryEmptyPlaceholder } from './ImageGallery/empty-placeholder';
 import { ModalEmptyPlaceholder } from './Modal/empty-placeholder';
 import { NavigationFlyoutEmptyPlaceholder } from './NavigationFlyout/empty-placeholder';
 import { NavigationGroupEmptyPlaceholder } from './NavigationGroup/empty-placeholder';
+import { NavigationMegaCategoryEmptyPlaceholder } from './NavigationMegaCategory/empty-placeholder';
 import { PageEmptyPlaceholder } from './Page/empty-placeholder';
 import { ReviewEmptyPlaceholder } from './Review/empty-placeholder';
 import { SectionEmptyPlaceholder } from './Section/empty-placeholder';
@@ -34,6 +35,7 @@ const cskEmptyPlaceholderMapping: EmptyPlaceholderMapping = {
   [cskComponentsNames.Modal]: ModalEmptyPlaceholder,
   [cskComponentsNames.NavigationFlyout]: NavigationFlyoutEmptyPlaceholder,
   [cskComponentsNames.NavigationGroup]: NavigationGroupEmptyPlaceholder,
+  [cskComponentsNames.NavigationMegaCategory]: NavigationMegaCategoryEmptyPlaceholder,
   [cskComponentsNames.Page]: PageEmptyPlaceholder,
   [cskComponentsNames.Review]: ReviewEmptyPlaceholder,
   [cskComponentsNames.Section]: SectionEmptyPlaceholder,

@@ -79,6 +79,12 @@ export {
   type NavigationGroupParameters,
 } from './NavigationGroup';
 export { default as NavigationLink, type NavigationLinkProps, type NavigationLinkParameters } from './NavigationLink';
+export {
+  default as NavigationMegaCategory,
+  type NavigationMegaCategoryProps,
+  type NavigationMegaCategoryParameters,
+  NavigationMegaCategorySlots,
+} from './NavigationMegaCategory';
 export { default as Page, type PageProps, type PageParameters, CommonPageSlots } from './Page';
 export { default as Review, type ReviewProps, type ReviewParameters, ReviewSlots, ReviewVariants } from './Review';
 export { default as RichText, type RichTextProps, type RichTextParameters } from './RichText';
