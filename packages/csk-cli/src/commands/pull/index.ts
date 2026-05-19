@@ -13,17 +13,18 @@ type PullArgs = {
   dev?: boolean;
   uniform?: boolean;
   proxy?: string;
+  variant?: string;
 };
 
 export const pullCommand = async (args: PullArgs) => {
-  const { dev, uniform, locales, proxy } = args || {};
+  const { dev, uniform, locales, proxy, variant } = args || {};
   if (locales) {
     console.info('Pulling locales...');
     pullLocales({ proxy }).catch(e => console.error(e));
     return;
   } else if (uniform) {
     console.info('Pulling uniform canvas data...');
-    pullUniformProject(!!dev).catch(e => console.error(e));
+    pullUniformProject({ dev, variant }).catch(e => console.error(e));
     return;
   }
 };

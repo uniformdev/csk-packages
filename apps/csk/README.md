@@ -47,7 +47,7 @@ Run `npx @uniformdev/cli new` and pick `Next.js` -> `Component Starter Kit` from
    > Make sure your API key has "Developer" role to be able to push content.
 1. `npm install` to install dependencies
 1. Run `npm run init` to initialize your project.
-   > This command uses `@uniformdev/csk-cli` to push all content from disk (`./content` folder), design settings (colors, fonts, borders, etc.), and publish the context manifest. If CSK variants are available, you'll be prompted to select which one to initialize.
+   > This command uses `@uniformdev/csk-cli` to push all content from disk (`./content` folder), design settings (colors, fonts, borders, etc.), and publish the context manifest. If CSK variants are available you'll be prompted to pick one. See [CSK variants](#csk-variants) for how to skip the prompt in automation (CI, AI codegen, Uniform Platform CLI).
 
 ### Step 2. Run locally in dev mode
 
@@ -71,7 +71,44 @@ The following scripts are created to facilitate sync of content between the `./c
 1. Run `npm run init` to initialize/push everything (content, design extensions, and context manifest) to your Uniform project.
 2. Run `npm run uniform:pull` to pull everything (content and design extensions) from your Uniform project to disk.
 
-These commands use `@uniformdev/csk-cli` and handle the complete synchronization workflow. If CSK variants are available, you'll be prompted to select which one to sync.
+These commands use `@uniformdev/csk-cli` and handle the complete synchronization workflow. If CSK variants are available you'll be prompted to pick one. See [CSK variants](#csk-variants) for how to skip the prompt.
+
+### CSK variants
+
+The starter ships two content variants:
+
+- **`core`** — minimum essentials (page, simple header/footer, fixed hero).
+- **`full`** — the complete component library.
+
+`npm run init` (and `npm run uniform:pull`) **prompts** you to choose a variant interactively — that's the default.
+
+#### Skipping the prompt
+
+For automation (CI, AI codegen, Uniform Platform CLI) the prompt would block, so pass the variant explicitly. Two equivalent ways:
+
+```bash
+# CLI flag — appended via npm's `--`
+npm run init -- --variant=full
+
+# or call csk-cli directly
+npx csk-cli init --dev --variant=full
+```
+
+```bash
+# Environment variable — handy when you can't customize the npm command
+UNIFORM_CSK_VARIANT=full npm run init
+
+# or persist in .env
+UNIFORM_CSK_VARIANT=full
+```
+
+**Resolution precedence** (highest to lowest):
+
+1. `--variant <name>` CLI flag
+2. `UNIFORM_CSK_VARIANT` env variable
+3. Interactive prompt
+
+An unknown value (from `--variant` or the env variable) errors out with the list of available variants rather than silently falling back. Non-TTY callers that don't set either will hang on the prompt — pass `--variant` or set the env var in those environments.
 
 ### Granular Content Sync
 
