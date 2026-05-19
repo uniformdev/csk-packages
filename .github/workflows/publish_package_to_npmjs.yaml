@@ -61,13 +61,15 @@ jobs:
           fi
 
           if [ "${{ inputs.package_name }}" == "all" ]; then
+            echo "Building all packages via turbo (resolves workspace dependency order)..."
+            npm run build:packages
+
             echo "Publishing package(s): ${{ inputs.package_name }}"
             IFS=' ' read -r -a package_array <<< "$PACKAGES"
             for i in "${!package_array[@]}"; do
               pkg=${package_array[$i]}
               echo "Publishing package: $pkg to ${{ inputs.publish_env }} environment"
               cd ./packages/$pkg
-              npm run build
               npm publish $PUBLISH_TAG
               if [ $? -eq 0 ]; then
                 if [ $i -lt $((${#package_array[@]} - 1)) ]; then
@@ -83,9 +85,11 @@ jobs:
               cd -
             done
           else
+            echo "Building @uniformdev/${{ inputs.package_name }} via turbo (includes workspace dependencies)..."
+            npx turbo run build --filter=@uniformdev/${{ inputs.package_name }}
+
             echo "Publishing selected package: ${{ inputs.package_name }} to ${{ inputs.publish_env }} environment"
             cd ./packages/${{ inputs.package_name }}
-            npm run build
             npm publish $PUBLISH_TAG
           fi
         env:
