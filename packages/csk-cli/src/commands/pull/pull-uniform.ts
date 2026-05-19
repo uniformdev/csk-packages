@@ -1,6 +1,10 @@
 import { execSync } from 'node:child_process';
-import { select } from '@inquirer/prompts';
-import { capitalizeFirstLetter, cleanupProductionFiles, getAvailableCSKVariants } from '../../utils';
+import { cleanupProductionFiles, getAvailableCSKVariants, resolveCSKVariant } from '../../utils';
+
+type PullUniformArgs = {
+  dev?: boolean;
+  variant?: string;
+};
 
 const pullUniformContent = (config?: string): void => {
   const cwd = process.cwd();
@@ -10,7 +14,7 @@ const pullUniformContent = (config?: string): void => {
   execSync(syncCommand, { stdio: 'inherit', cwd });
 };
 
-export const pullUniformProject = async (isDev: boolean) => {
+export const pullUniformProject = async ({ dev: isDev = false, variant }: PullUniformArgs = {}) => {
   try {
     const folders = getAvailableCSKVariants();
 
@@ -19,11 +23,7 @@ export const pullUniformProject = async (isDev: boolean) => {
       return;
     }
 
-    const selectedFolder = await select({
-      message: 'Select the CSK variant to pull:',
-      choices: folders.map(folder => ({ name: capitalizeFirstLetter(folder), value: folder })),
-      loop: false,
-    });
+    const selectedFolder = await resolveCSKVariant({ variant, folders, action: 'pull' });
 
     pullUniformContent(selectedFolder);
 

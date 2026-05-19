@@ -1,9 +1,9 @@
 import { execSync } from 'node:child_process';
-import { select } from '@inquirer/prompts';
-import { capitalizeFirstLetter, cleanupProductionFiles, getAvailableCSKVariants } from '../../utils';
+import { cleanupProductionFiles, getAvailableCSKVariants, resolveCSKVariant } from '../../utils';
 
 type InitArgs = {
   dev?: boolean;
+  variant?: string;
 };
 
 const pushUniformContent = (config?: string): void => {
@@ -16,7 +16,7 @@ const pushUniformContent = (config?: string): void => {
 
 export const initUniformProject = async (args: InitArgs) => {
   try {
-    const { dev: isDev = false } = args || {};
+    const { dev: isDev = false, variant } = args || {};
 
     const folders = getAvailableCSKVariants();
 
@@ -25,11 +25,7 @@ export const initUniformProject = async (args: InitArgs) => {
       return;
     }
 
-    const selectedFolder = await select({
-      message: 'Select the CSK variant to push:',
-      choices: folders.map(folder => ({ name: capitalizeFirstLetter(folder), value: folder })),
-      loop: false,
-    });
+    const selectedFolder = await resolveCSKVariant({ variant, folders, action: 'push' });
 
     pushUniformContent(selectedFolder);
 

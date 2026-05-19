@@ -11,6 +11,7 @@ program
   .option('-l, --locales', 'locales configuration')
   .option('-u, --uniform', 'uniform canvas data')
   .option('-d, --dev', 'development mode')
+  .option('-v, --variant <name>', 'CSK variant to use (e.g. core, full); skips the interactive prompt')
   .option('--proxy <url>', 'HTTP(S) proxy URL for outbound requests. Defaults to HTTPS_PROXY/HTTP_PROXY env var.')
   .action(pullCommand);
 
@@ -18,6 +19,7 @@ program
   .command('init')
   .description('Initialize the uniform project')
   .option('-d, --dev', 'development mode')
+  .option('-v, --variant <name>', 'CSK variant to use (e.g. core, full); skips the interactive prompt')
   .action(initUniformProject);
 
 program.parse(process.argv);

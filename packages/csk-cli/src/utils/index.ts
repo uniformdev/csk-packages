@@ -81,6 +81,39 @@ export const capitalizeFirstLetter = (str: string): string => {
   return str.charAt(0).toUpperCase() + str.slice(1);
 };
 
+export const CSK_VARIANT_ENV_VAR = 'UNIFORM_CSK_VARIANT';
+
+type ResolveCSKVariantOpts = {
+  variant?: string;
+  folders: string[];
+  action: 'push' | 'pull';
+};
+
+export const resolveCSKVariant = async ({ variant, folders, action }: ResolveCSKVariantOpts): Promise<string> => {
+  if (variant) {
+    if (!folders.includes(variant)) {
+      throw new Error(`Unknown CSK variant "${variant}". Available: ${folders.join(', ')}`);
+    }
+    return variant;
+  }
+  const envVariant = process.env[CSK_VARIANT_ENV_VAR]?.trim();
+  if (envVariant) {
+    if (!folders.includes(envVariant)) {
+      throw new Error(
+        `Unknown CSK variant "${envVariant}" from ${CSK_VARIANT_ENV_VAR}. Available: ${folders.join(', ')}`
+      );
+    }
+    console.info(`Using CSK variant: ${envVariant} (from ${CSK_VARIANT_ENV_VAR}).`);
+    return envVariant;
+  }
+  const { select } = await import('@inquirer/prompts');
+  return select({
+    message: `Select the CSK variant to ${action}:`,
+    choices: folders.map(folder => ({ name: capitalizeFirstLetter(folder), value: folder })),
+    loop: false,
+  });
+};
+
 export const cleanupProductionFiles = (folders: string[], selectedFolder: string): void => {
   const cwd = process.cwd();
 
