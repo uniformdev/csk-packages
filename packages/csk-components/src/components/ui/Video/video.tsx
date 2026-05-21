@@ -7,7 +7,7 @@ import { cn, resolveViewPort } from '@/utils/styling';
 import { VideoProps } from '.';
 import { PlayButton } from './play-button';
 
-const ReactPlayer = dynamic(() => import('react-player/lazy').then(mod => mod.default), { ssr: false });
+const ReactPlayer = dynamic(() => import('react-player').then(mod => mod.default), { ssr: false });
 
 export const Video: FC<VideoProps> = ({
   url,
@@ -37,7 +37,7 @@ export const Video: FC<VideoProps> = ({
           })}
         >
           <ReactPlayer
-            url={url}
+            src={url}
             playing={playing}
             onPause={onPause}
             onPlay={onPlay}

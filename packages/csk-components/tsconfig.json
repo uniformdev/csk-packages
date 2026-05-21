@@ -7,7 +7,9 @@
       "@/*": [
         "./src/*"
       ]
-    }
+    },
+    "moduleResolution": "bundler",
+    "types": ["node", "react", "react-dom"]
   },
   "include": [
     "src",
