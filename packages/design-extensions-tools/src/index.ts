@@ -55,8 +55,8 @@ addConnectionOptions(program.command('pull').description('Pull data from the int
   .option('-f, --fonts', 'fonts configuration')
   .option('-b, --borders', 'borders configuration')
   .option('-g, --groups', 'groups configuration')
-  .option('-at, --allTokens', 'all tokens')
-  .option('-as, --allSettings', 'all settings')
+  .option('--allTokens', 'all tokens')
+  .option('--allSettings', 'all settings')
   .action(async (args: PullArgs) => {
     setProxyUrl(args.proxy);
     const connectionOptions: ConnectionOptions = {
@@ -157,8 +157,8 @@ addConnectionOptions(program.command('push').description('Push data to the integ
   .option('-f, --fonts', 'fonts configuration')
   .option('-b, --borders', 'borders configuration')
   .option('-g, --groups', 'groups configuration')
-  .option('-at, --allTokens', 'all tokens')
-  .option('-as, --allSettings', 'all settings')
+  .option('--allTokens', 'all tokens')
+  .option('--allSettings', 'all settings')
   .action(async (args: PushArgs) => {
     setProxyUrl(args.proxy);
     const connectionOptions: ConnectionOptions = {

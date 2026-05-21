@@ -1,10 +1,11 @@
 import dynamic from 'next/dynamic';
 import { ImageProps as NextImageProps } from 'next/image';
-import { ReactPlayerProps } from 'react-player';
+import { ReactPlayerProps } from 'react-player/types';
 import { ViewPort } from '@/types/cskTypes';
 
 export type VideoProps = ReactPlayerProps & {
   autoPlay?: boolean;
+  url?: string;
   lazyLoad?: boolean;
   placeholderImageUrl?: string;
   overlayColor?: string;

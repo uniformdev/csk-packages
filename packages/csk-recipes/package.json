@@ -1,6 +1,6 @@
 {
   "name": "@uniformdev/csk-recipes",
-  "version": "6.1.78",
+  "version": "6.1.79",
   "description": "command-line interface (CLI) and utility functions to help you work with recipes in a CSK project. It simplifies project initialization by allowing you to choose templates and include specific recipes",
   "license": "SEE LICENSE IN LICENSE.txt",
   "engines": {
@@ -34,26 +34,26 @@
   "keywords": [],
   "author": "",
   "dependencies": {
-    "@inquirer/prompts": "^7.1.0",
+    "@inquirer/prompts": "^8.4.3",
     "@uniformdev/metascript": "^1.0.0",
-    "commander": "^9.0.0",
-    "dotenv": "16.4.7",
-    "open": "^10.1.2",
-    "ora": "^8.2.0",
-    "prettier": "3.6.2",
+    "commander": "^14.0.3",
+    "dotenv": "17.4.2",
+    "open": "^11.0.0",
+    "ora": "^9.4.0",
+    "prettier": "3.8.3",
     "unzipper": "^0.12.3"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
-    "@types/jest": "^29.5.14",
+    "@types/jest": "^30.0.0",
     "@types/unzipper": "^0.10.11",
     "@uniformdev/canvas": "^20.63.0",
     "next": "^16.2.6",
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3",
-    "tsup": "^8.3.0",
-    "typescript": "^5.7.3"
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3"
   },
   "peerDependencies": {
     "@uniformdev/canvas": "^20.63.0",
