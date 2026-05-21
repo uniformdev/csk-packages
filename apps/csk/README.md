@@ -1,25 +1,8 @@
 # Uniform Component Starter Kit
 
-This is the latest version of the Uniform Component Starter Kit (CSK) - version 6, built specifically for Next.js 15 App Router leveraging React 19, TailwindCSS and TypeScript.
+This is the latest version of the Uniform Component Starter Kit (CSK) - version 7, built specifically for Next.js 16 App Router with cache components support leveraging React 19, TailwindCSS and TypeScript.
 
 > If you are looking for the Next.js Page Router version, check out this older [repo](https://github.com/uniformdev/uniform-component-starter-kit) instead.
-
-## Key changes in v6
-
-1. This version is built specifically for Next.js 15 and React 19, leveraging the latest Uniform SDK v20+, enabled for all the latest Uniform DXP features!
-1. Minimalistic and simplified approach:
-   - zero external dependencies besides @uniformdev, minimum distractions - essentials only in the core version.
-   - Zero components added by default, can add components into your codebase with `npm run component:extract` and customize how you see fit
-   - More templates and solution recipes coming as stand-alone packages.
-1. Revamped theme management system based on a new Design Extensions integration that supports design tokens
-1. More atomic components supporting the authorable components paradigm
-1. Internationalization / localization ready
-1. Removed daisyui
-1. Included standard sitemap implementation
-1. Server-side rendering by default. Static site generation can be enabled on top.
-1. Dev Experience updates: `component:scaffold` and `component:extract` flows, watch mode for design extension update sync and a developer config for content sync that scopes the operation to developer artifacts only.
-
-Check out more about it [here](https://components.uniform.app) where you can copy and paste components from right into your project!
 
 ## Prerequisites
 
@@ -265,3 +248,4 @@ GOOGLE_ANALYTICS_ID=
 ```
 
 > Learn more in the [Google Analytics integration guide](https://docs.uniform.app/docs/integrations/data/google-analytics).
+
