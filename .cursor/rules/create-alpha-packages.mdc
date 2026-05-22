@@ -1,0 +1,10 @@
+---
+description: Cut an alpha release of this monorepo by appending `-alpha.1` to the `version` field in every workspace package.json (root + apps/* + packages/*), removing `package-lock.json`, and running `npm run reinstall` from the repo root. Triggered by phrases like "create alpha packages", "bump alpha", or "alpha release".
+alwaysApply: false
+---
+
+When the user asks to "create alpha packages", "bump alpha", "alpha release", or runs `/create-alpha-packages`, follow the canonical workflow:
+
+@.claude/skills/create-alpha-packages/SKILL.md
+
+That file is the source of truth. Do not deviate; do not improvise the steps. If anything is unclear, ask the user.

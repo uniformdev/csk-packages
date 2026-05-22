@@ -1,0 +1,11 @@
+---
+description: Uniform CMS core concepts — compositions, components, slots, patterns, naming, parameter/field types. Reference loaded when editing Uniform-aware code in apps/ or packages/csk-*.
+globs: apps/**/*.{ts,tsx}, packages/csk-components/**, packages/csk-recipes/**, packages/design-extensions-tools/**
+alwaysApply: false
+---
+
+When working in Uniform-consuming code (component definitions, registrations, composition rendering, patterns, slots), follow the canonical reference:
+
+@docs/uniform/concepts.md
+
+That file is the source of truth. Do not improvise Uniform modeling rules; consult it for slot allowability, pattern semantics, naming conventions, parameter types, and what MCP/AI can and cannot do.
