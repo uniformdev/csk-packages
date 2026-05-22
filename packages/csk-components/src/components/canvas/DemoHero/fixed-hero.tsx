@@ -43,6 +43,7 @@ const FixedHero: FC<FixedHeroProps & ReplaceFieldsWithAssets<FixedHeroParameters
     primaryButtonSize="button-medium"
     primaryButtonTextSize="sm"
     primaryButtonTextWeight="normal"
+    primaryButtonTextColor={props.primaryButtonTextColor || 'text-secondary'}
     primaryButtonButtonColor="button-primary"
     primaryButtonTextTransform="uppercase"
     primaryButtonHoverButtonColor="button-primary-hover"
