@@ -1,0 +1,10 @@
+---
+description: Bump every external @uniformdev/* dependency in this monorepo to its latest npm version, leaving the local @uniformdev/* workspace packages untouched, then wipe the lockfile and run `npm run reinstall`. Triggered by phrases like "update uniform packages" or "bump uniform".
+alwaysApply: false
+---
+
+When the user asks to "update uniform packages", "bump uniform", or runs `/update-uniform-packages`, follow the canonical workflow:
+
+@.claude/skills/update-uniform-packages/SKILL.md
+
+That file is the source of truth. Do not deviate; do not improvise the steps. If anything is unclear, ask the user.

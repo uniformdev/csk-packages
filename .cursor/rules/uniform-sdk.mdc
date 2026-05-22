@@ -1,0 +1,11 @@
+---
+description: Uniform SDK / CLI / MCP usage — env vars, uniform.config.ts, sync push/pull, MCP-vs-CLI rules, App Router catch-all route wiring. Reference loaded when editing Uniform SDK setup, content sync, or routing.
+globs: apps/*/uniform.config.ts, apps/*/content/**, apps/*/.env*, apps/*/src/app/**
+alwaysApply: false
+---
+
+When wiring or maintaining the Uniform SDK in this repo (CLI scripts, env vars, catch-all routes, content sync, MCP usage), follow the canonical reference:
+
+@docs/uniform/sdk.md
+
+Critical rules from that doc: never hand-edit files under `apps/*/content/`; never use `uniform:push` to write entities (use Uniform MCP or the web app); always run `npm run uniform:pull` in the affected app after MCP changes.
