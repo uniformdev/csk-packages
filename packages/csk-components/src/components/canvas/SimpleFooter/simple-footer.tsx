@@ -42,7 +42,7 @@ export const Footer: FC<SimpleFooterProps & ReplaceFieldsWithAssets<SimpleFooter
   component,
 }) => (
   <BaseFooter
-    logo={logo?.[0]?.url && <Image src={logo?.[0]?.url} alt="Logo" width={180} height={47} />}
+    logo={logo?.[0]?.url && <Image src={logo?.[0]?.url} alt="Logo" width={180} height={47} className="h-12 w-auto" />}
     copyright={<UniformRichText parameter={parameters.copyright as ComponentParameter<string>} component={component} />}
     content={
       <div className="flex lg:gap-32 md:gap-16 gap-16">

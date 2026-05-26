@@ -23,7 +23,13 @@ const SimpleHeader: FC<SimpleHeaderProps & ReplaceFieldsWithAssets<SimpleHeaderP
       leftSection={
         logo?.[0]?.url && (
           <Link href="/">
-            <Image src={logo?.[0]?.url} alt="Logo" width={50} height={40} />
+            <Image
+              src={logo[0].url}
+              alt="Logo"
+              width={logo[0].width || 100}
+              height={logo[0].height || 100}
+              className="h-10 w-auto"
+            />
           </Link>
         )
       }
