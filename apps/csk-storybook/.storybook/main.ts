@@ -1,7 +1,7 @@
 import { createRequire } from 'node:module';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import type { Configuration } from 'webpack';
+import webpack, { type Configuration } from 'webpack';
 import type { StorybookConfig } from '@storybook/nextjs';
 
 const require = createRequire(import.meta.url);
@@ -37,6 +37,16 @@ const config: StorybookConfig = {
     const modulesArray = Array.isArray(existingModules) ? existingModules : existingModules ? [existingModules] : [];
 
     config.resolve.modules = [...modulesArray, join(appDir, 'node_modules'), join(rootDir, 'node_modules')];
+
+    // Inject fake Uniform credentials so the SDK's ApiClient constructs without a real key.
+    // The manifest request these would authenticate is mocked in .storybook/preview.ts.
+    config.plugins = config.plugins ?? [];
+    config.plugins.push(
+      new webpack.DefinePlugin({
+        'process.env.UNIFORM_API_KEY': JSON.stringify('storybook-fake-key'),
+        'process.env.UNIFORM_PROJECT_ID': JSON.stringify('storybook-fake-project'),
+      })
+    );
 
     return config;
   },
