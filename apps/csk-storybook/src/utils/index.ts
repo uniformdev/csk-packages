@@ -1,6 +1,7 @@
 import { ComponentInstance } from '@uniformdev/canvas';
 
-import { resolveRouteFromCode } from '@uniformdev/next-app-router';
+import { ResolveRouteFunction, resolveRouteFromCode } from '@uniformdev/next-app-router';
+import { serializeEvaluationResult } from '@uniformdev/next-app-router-shared';
 
 interface UniformMockParam {
   type: string;
@@ -25,15 +26,22 @@ export const createFakeCompositionData = (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   params: Record<string, any>,
   slots?: Record<string, ComponentInstance[]>
-): Awaited<ReturnType<typeof resolveRouteFromCode>> => {
-  return {
-    pageState: {
-      compositionState: 64,
-      routePath: 'fake-route-path',
-      components: {},
-      keys: {},
-      releaseId: 'fake-release-id',
-    },
+): { code: string; resolveRoute: ResolveRouteFunction } => {
+  const pageState = {
+    compositionState: 64,
+    routePath: 'fake-route-path',
+    components: {},
+    keys: {},
+    releaseId: 'fake-release-id',
+    rules: undefined,
+    defaultConsent: undefined,
+    previewMode: undefined,
+    locale: undefined,
+    isPrefetch: undefined,
+  };
+
+  const result: Awaited<ReturnType<typeof resolveRouteFromCode>> = {
+    pageState,
     route: {
       type: 'composition',
       matchedRoute: '/',
@@ -54,6 +62,11 @@ export const createFakeCompositionData = (
         pattern: false,
       },
     },
-    code: 'fake-code',
+    code: serializeEvaluationResult({ payload: pageState }),
+  };
+
+  return {
+    code: result.code,
+    resolveRoute: async () => result,
   };
 };
